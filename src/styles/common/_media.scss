@@ -1,0 +1,34 @@
+$breakpoints: (
+  xs: 1px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
+
+@function media-min-width($screen-sizes-name) {
+  @return ('only screen and (min-width: #{map-get($breakpoints, $screen-sizes-name)})');
+}
+
+@function media-max-width($screen-sizes-name) {
+  @return ('only screen and (max-width: #{map-get($breakpoints, $screen-sizes-name) - 1px})');
+}
+
+$screen-xs: media-min-width('xs');
+$screen-sm: media-min-width('sm');
+$screen-md: media-min-width('md');
+$screen-lg: media-min-width('lg');
+
+$screens-min: (
+  xs: $screen-xs,
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg,
+);
+
+$screen-only-xs: 'only screen and (max-width: #{map-get($breakpoints, 'sm') - 1px})';
+$screen-only-sm: 'only screen and (min-width: #{map-get($breakpoints, 'sm')}) and (max-width: #{map-get($breakpoints, 'md') - 1px})';
+$screen-only-md: 'only screen and (min-width: #{map-get($breakpoints, 'md')}) and (max-width: #{map-get($breakpoints, 'lg') - 1px})';
+
+$screen-max-sm: media-max-width('sm');
+$screen-max-md: media-max-width('md');
+$screen-max-lg: media-max-width('lg');

@@ -1,0 +1,7 @@
+@function spacing($multiplier) {
+  @return $base-spacing * $multiplier;
+}
+
+@function get($map, $key: 'default') {
+  @return map-get($map, $key);
+}
