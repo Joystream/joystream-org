@@ -1,4 +1,16 @@
+import React from 'react';
 import { configure } from '@storybook/react';
+import { addDecorator } from '@storybook/react';
+
+const styles = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '24px',
+};
+
+const CenterDecorator = storyFn => <div style={styles}>{storyFn()}</div>;
+addDecorator(CenterDecorator);
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.js$/);
