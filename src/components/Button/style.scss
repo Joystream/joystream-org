@@ -4,5 +4,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 68px;
+  padding: 0 32px;
+  font-size: 18px;
+  color: $c_black;
   background-color: $c_caribbean-green;
+  border: 2px solid $c_caribbean-green;
+  border-radius: 3px;
+  cursor: pointer;
 }
