@@ -9,6 +9,11 @@ const propTypes = {
   onClick: PropTypes.func,
   href: PropTypes.string,
   disabled: PropTypes.bool,
+  reversed: PropTypes.bool,
+  secondary: PropTypes.bool,
+  secondaryReversed: PropTypes.bool,
+  secondaryLarge: PropTypes.bool,
+  defaultBtn: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -16,33 +21,54 @@ const defaultProps = {
   onClick: null,
   href: null,
   disabled: false,
+  reversed: false,
+  secondary: false,
+  secondaryReversed: false,
+  secondaryLarge: false,
+  defaultBtn: false,
 };
 
-const Button = ({ href, to, className, children, disabled, ...props }) => {
+const Button = ({
+  href,
+  to,
+  className,
+  children,
+  disabled,
+  reversed,
+  secondary,
+  secondaryReversed,
+  secondaryLarge,
+                  defaultBtn,
+  ...props
+}) => {
   const variantsClasses = {
-    'Button--disabled': disabled,
+    'Button--reversed': reversed,
+    'Secondary': secondary,
+    'Secondary Secondary--reversed': secondaryReversed,
+    'Secondary Secondary--large': secondaryLarge,
+    'Default': defaultBtn,
   };
   const classes = classNames(className, 'Button', variantsClasses);
 
   if (to) {
     return (
-      <Link {...props} className={classes} to={to}>
-        {children}
+      <Link { ...props } className={ classes } to={ to }>
+        { children }
       </Link>
     );
   }
 
   if (href) {
     return (
-      <a {...props} className={classes} href={href}>
-        {children}
+      <a { ...props } className={ classes } href={ href }>
+        { children }
       </a>
     );
   }
 
   return (
-    <button type="button" {...props} className={classes} disabled={disabled}>
-      {children}
+    <button type="button" { ...props } className={ classes } disabled={ disabled }>
+      { children }
     </button>
   );
 };
