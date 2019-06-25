@@ -38,37 +38,37 @@ const Button = ({
   secondary,
   secondaryReversed,
   secondaryLarge,
-                  defaultBtn,
+  defaultBtn,
   ...props
 }) => {
   const variantsClasses = {
     'Button--reversed': reversed,
-    'Secondary': secondary,
+    Secondary: secondary,
     'Secondary Secondary--reversed': secondaryReversed,
     'Secondary Secondary--large': secondaryLarge,
-    'Default': defaultBtn,
+    Default: defaultBtn,
   };
   const classes = classNames(className, 'Button', variantsClasses);
 
   if (to) {
     return (
-      <Link { ...props } className={ classes } to={ to }>
-        { children }
+      <Link {...props} className={classes} to={to}>
+        {children}
       </Link>
     );
   }
 
   if (href) {
     return (
-      <a { ...props } className={ classes } href={ href }>
-        { children }
+      <a {...props} className={classes} href={href}>
+        {children}
       </a>
     );
   }
 
   return (
-    <button type="button" { ...props } className={ classes } disabled={ disabled }>
-      { children }
+    <button type="button" {...props} className={classes} disabled={disabled}>
+      {children}
     </button>
   );
 };
