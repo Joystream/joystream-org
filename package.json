@@ -49,6 +49,7 @@
   "scripts": {
     "lint": "eslint --ignore-path .gitignore . --ext js --ext jsx",
     "lint:fix": "yarn lint --fix",
+    "stylelint": "stylelint 'src/**/*.scss'",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
