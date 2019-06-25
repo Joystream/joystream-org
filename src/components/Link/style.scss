@@ -1,0 +1,7 @@
+@import '../../styles/main.scss';
+
+.Link {
+  &--highlighted {
+    color: $c_highlight;
+  }
+}

@@ -1,0 +1,110 @@
+@import '../../styles/main.scss';
+
+$navbar-height: 60px;
+
+.Navbar {
+  position: sticky;
+  top: 0;
+  height: $navbar-height;
+  background-color: $c_black;
+  transition: top 400ms ease 0s;
+
+  &--hidden {
+    top: -$navbar-height;
+  }
+
+  &__container {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 32px;
+    background-color: inherit;
+  }
+
+  &__logo {
+    display: block;
+    width: 100px;
+  }
+
+  &__links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $c_black;
+    transform: translateY(0);
+    transition: transform 400ms ease 0s;
+
+    &--open {
+      transform: translateY(100%);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 20px 20px 20px 32px;
+    line-height: 20px;
+    color: $c_dusty-gray;
+
+    &:hover,
+    &--active {
+      color: $c_white;
+    }
+
+    &--highlighted {
+      color: $c_highlight;
+    }
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $navbar-height;
+    height: $navbar-height;
+    cursor: pointer;
+    background-color: $c_caribbean-green;
+
+    &--active {
+      background-color: $c_silver;
+    }
+
+    &::before {
+      font-size: 20px;
+      color: $c_white;
+      content: '\2630';
+    }
+  }
+
+  @media #{$screen-sm} {
+    &__container {
+      padding: 0 32px;
+    }
+
+    &__links {
+      position: relative;
+      top: 0;
+      z-index: 0;
+      display: block;
+      width: auto;
+      transform: translateY(0);
+    }
+
+    &__link {
+      padding: 20px 0;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+    }
+
+    &__trigger {
+      display: none;
+    }
+  }
+}
