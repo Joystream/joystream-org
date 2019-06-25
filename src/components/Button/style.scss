@@ -2,53 +2,54 @@
 
 .Button {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 56px;
   padding: 0 30px;
   font-size: 18px;
   font-weight: 400;
   line-height: 1;
   color: $c_white;
-  background-color: $c_blue;
-  border-radius: 3px;
   cursor: pointer;
+  background-color: $c_primary-accent;
+  border-radius: 3px;
+
+  &--reversed {
+    color: $c_black;
+    background-color: transparent;
+    border: 2px solid $c_primary-accent;
+  }
 
   @media #{$screen-md} {
     height: 60px;
     padding: 0 40px;
     font-size: 20px;
   }
-
-  &--reversed {
-    background-color: transparent;
-    color: $c_black;
-    border: 2px solid $c_blue;
-  }
 }
+
 .Secondary {
   height: 68px;
   padding: 0 32px;
   font-size: 18px;
   color: $c_black;
-  background-color: $c_caribbean-green;
-  border: 2px solid $c_caribbean-green;
-
-  @media #{$screen-md} {
-    padding: 0 40px;
-    font-size: 22px;
-  }
+  background-color: $c_secondary-accent;
+  border: 2px solid $c_secondary-accent;
 
   &--reversed {
     color: $c_white;
     background-color: transparent;
-    border: 2px solid $c_caribbean-green;
+    border: 2px solid $c_secondary-accent;
   }
 
   &--large {
     height: 60px;
-    font-size: 22px;
     padding: 0 60px;
+    font-size: 22px;
+  }
+
+  @media #{$screen-md} {
+    padding: 0 40px;
+    font-size: 22px;
   }
 }
 
@@ -57,8 +58,8 @@
   height: 38px;
   padding: 0;
   font-size: 14px;
-  color: $c_black;
   font-weight: 600;
+  color: $c_black;
   background-color: $c_white;
 
   @media #{$screen-sm} {

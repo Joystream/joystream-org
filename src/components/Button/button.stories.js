@@ -7,14 +7,14 @@ import Button from './index';
 
 const DarkWrapper = ({ children }) => (
   <div
-    style={{
+    style={ {
       backgroundColor: 'black',
       width: '100vw',
       height: '100px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-    }}
+    } }
   >
     {children}
   </div>
