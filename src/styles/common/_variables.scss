@@ -1,19 +1,14 @@
-$base-spacing: 4px;
-
-$gutter: 28px;
-
-$border-radius: 4px;
+$border-radius: 6px;
 
 $font-sizes: (
-  default: 14px,
-  small: 12px,
-  medium: 16px,
-  large: 24px,
+  small: 16px,
+  normal: 20px,
+  big: 26px,
+  bigger: 28px,
+  large: 30px,
   xlarge: 32px,
-  xxlarge: 36px,
-  xxxlarge: 45px,
+  xxlarge: 40px,
+  xxxlarge: 64px,
 );
 
-$navbar-height: 72px;
-
-$duration: 200ms;
+$duration: 400ms;
