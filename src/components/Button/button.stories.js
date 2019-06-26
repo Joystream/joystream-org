@@ -21,8 +21,11 @@ const DarkWrapper = ({ children }) => (
 );
 
 storiesOf('Button', module)
-  .add('Button', () => (
+  .add('Deafult', () => (
     <Button onClick={action('clicked')}>Explore Acropolis</Button>
+  ))
+  .add('Link', () => (
+    <Button href="#">Explore Acropolis</Button>
   ))
   .add('Reversed', () => (
     <Button onClick={action('clicked')} reversed>
@@ -36,19 +39,26 @@ storiesOf('Button', module)
   ))
   .add('Secondary reversed', () => (
     <DarkWrapper>
-      <Button onClick={action('clicked')} secondaryReversed>
+      <Button onClick={action('clicked')} secondary reversed>
         Launch UI
       </Button>
     </DarkWrapper>
   ))
-  .add('Secondary large', () => (
-    <Button onClick={action('clicked')} secondaryLarge>
+  .add('Large', () => (
+    <Button onClick={action('clicked')} large>
       Accept
     </Button>
   ))
-  .add('Default', () => (
+  .add('Light', () => (
     <DarkWrapper>
-      <Button onClick={action('clicked')} defaultBtn>
+      <Button onClick={action('clicked')} light>
+        Join the newsletter
+      </Button>
+    </DarkWrapper>
+  ))
+  .add('Light small', () => (
+    <DarkWrapper>
+      <Button onClick={action('clicked')} light small>
         Join the newsletter
       </Button>
     </DarkWrapper>

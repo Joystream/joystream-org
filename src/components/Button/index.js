@@ -1,31 +1,33 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
+import cn from 'classnames';
+
 import './style.scss';
 
 const propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   href: PropTypes.string,
-  disabled: PropTypes.bool,
+  to: PropTypes.string,
   reversed: PropTypes.bool,
   secondary: PropTypes.bool,
-  secondaryReversed: PropTypes.bool,
-  secondaryLarge: PropTypes.bool,
-  defaultBtn: PropTypes.bool,
+  large: PropTypes.bool,
+  small: PropTypes.bool,
+  light: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 const defaultProps = {
-  children: null,
   onClick: null,
   href: null,
-  disabled: false,
+  to: null,
   reversed: false,
   secondary: false,
-  secondaryReversed: false,
-  secondaryLarge: false,
-  defaultBtn: false,
+  large: false,
+  small: false,
+  light: false,
+  className: '',
 };
 
 const Button = ({
@@ -33,22 +35,24 @@ const Button = ({
   to,
   className,
   children,
-  disabled,
   reversed,
   secondary,
-  secondaryReversed,
-  secondaryLarge,
-  defaultBtn,
+  light,
+  large,
+  small,
   ...props
 }) => {
-  const variantsClasses = {
-    'Button--reversed': reversed,
-    Secondary: secondary,
-    'Secondary Secondary--reversed': secondaryReversed,
-    'Secondary Secondary--large': secondaryLarge,
-    Default: defaultBtn,
-  };
-  const classes = classNames(className, 'Button', variantsClasses);
+  const classes = cn(
+    className,
+    'Button',
+    {
+      'Button--reversed': reversed,
+      'Button--secondary': secondary,
+      'Button--large': large,
+      'Button--small': small,
+      'Button--light': light,
+    },
+  );
 
   if (to) {
     return (
@@ -67,7 +71,7 @@ const Button = ({
   }
 
   return (
-    <button type="button" {...props} className={classes} disabled={disabled}>
+    <button type="button" {...props} className={classes}>
       {children}
     </button>
   );
