@@ -9,7 +9,7 @@
   line-height: 56px;
   color: $c_white;
   cursor: pointer;
-  background-color: $c_primary-accent;
+  background-color: $c_blue;
   border: 2px solid transparent;
   border-radius: 3px;
 
@@ -22,7 +22,7 @@
   &--reversed {
     color: $c_black;
     background-color: transparent;
-    border-color: $c_primary-accent;
+    border-color: $c_blue;
 
     &:hover,
     &:active {
@@ -32,7 +32,7 @@
 
   &--secondary {
     color: $c_black;
-    background-color: $c_secondary-accent;
+    background-color: $c_caribbean-green;
 
     &:hover,
     &:active {
@@ -42,7 +42,7 @@
     &#{$_r}--reversed {
       color: $c_white;
       background-color: transparent;
-      border-color: $c_secondary-accent;
+      border-color: $c_caribbean-green;
     }
   }
 
