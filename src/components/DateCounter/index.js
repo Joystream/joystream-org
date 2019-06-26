@@ -4,6 +4,7 @@ import { oneOfType, string, instanceOf, bool } from 'prop-types';
 import Countdown from 'react-countdown-now';
 
 import padNumber from '../../utils/padNumber';
+import pluralString from '../../utils/pluralString';
 
 import './style.scss';
 
@@ -37,11 +38,11 @@ const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large
     const parsedDays = Math.floor(days % 7);
 
     const timeObjects = [
-      { label: `week${weeks !== 1 ? 's' : ''}`, value: weeks },
-      { label: `day${parsedDays !== 1 ? 's' : ''}`, value: parsedDays },
-      { label: `hour${hours !== 1 ? 's' : ''}`, value: hours },
-      { label: `minute${minutes !== 1 ? 's' : ''}`, value: minutes },
-      { label: `second${seconds !== 1 ? 's' : ''}`, value: seconds },
+      { label: pluralString('week', weeks), value: weeks },
+      { label: pluralString('day', parsedDays), value: parsedDays },
+      { label: pluralString('hour', hours), value: hours },
+      { label: pluralString('minute', minutes), value: minutes },
+      { label: pluralString('second', seconds), value: seconds },
     ];
 
     if (weeks >= 1) {
