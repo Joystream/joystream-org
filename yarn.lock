@@ -1546,6 +1546,22 @@
     react-inspector "^3.0.2"
     uuid "^3.3.2"
 
+"@storybook/addon-backgrounds@^5.1.9":
+  version "5.1.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-backgrounds/-/addon-backgrounds-5.1.9.tgz#bb02aaaf9246624b06630a40f008cf81496b5199"
+  integrity sha512-3UmDt+WJApHx3YaY0N7XU/r/LaQ/X10ORP6AX0gpIlHqU1h1OeHXjIsFHewk+x/6wRCkAe3Zf3ue9M4/X9hs3A==
+  dependencies:
+    "@storybook/addons" "5.1.9"
+    "@storybook/api" "5.1.9"
+    "@storybook/client-logger" "5.1.9"
+    "@storybook/components" "5.1.9"
+    "@storybook/core-events" "5.1.9"
+    "@storybook/theming" "5.1.9"
+    core-js "^3.0.1"
+    memoizerific "^1.11.3"
+    react "^16.8.3"
+    util-deprecate "^1.0.2"
+
 "@storybook/addon-links@^5.1.9":
   version "5.1.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-5.1.9.tgz#944237bfb318cf4741b417d2b452b0b644650868"
@@ -9915,6 +9931,11 @@ lodash.get@^4.4.2:
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
@@ -12715,6 +12736,14 @@ react-clientside-effect@^1.2.0:
   integrity sha512-foSwZatJak6r+F4OqJ8a+MOWcBi3jwa7/RPdJIDZI1Ck0dn/FJZkkFu7YK+SiZxsCZIrotolxHSobcnBHgIjfw==
   dependencies:
     "@babel/runtime" "^7.0.0"
+
+react-countdown-now@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-countdown-now/-/react-countdown-now-2.1.1.tgz#88901eb776907338da137effbf7cdbec5b9274c6"
+  integrity sha512-DGSd/EGzigIsixQNzPQbk376zG49IVAyMCUkMgDEuIXlIRKQwB44Fg8uA3zrZ+aQVAuzsyb6fJWskPxIP56DYg==
+  dependencies:
+    lodash.isequal "^4.5.0"
+    prop-types "^15.7.2"
 
 react-dev-utils@^4.2.1:
   version "4.2.3"

@@ -29,5 +29,5 @@ module.exports = ({ config }) => {
     include: path.resolve(__dirname, '../'),
   });
 
-  return config;
-};
+  return config
+}
