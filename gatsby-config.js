@@ -45,7 +45,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Titillium Web'],
+          families: ['Titillium Web:200,400,600,700'],
         },
       },
     },
