@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@storybook/addon-backgrounds": "^5.1.9",
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
     "css-loader": "^3.0.0",
