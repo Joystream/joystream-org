@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-stylelint',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -45,7 +46,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Titillium Web'],
+          families: ['Titillium Web:400,600'],
         },
       },
     },
