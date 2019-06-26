@@ -4,15 +4,4 @@
 @import './common/media';
 @import './common/variables';
 @import './common/utils';
-
-p {
-  font-size: get($font-sizes,'small');
-
-  @media #{$screen-md} {
-    font-size: get($font-sizes,'normal');
-  }
-}
-
-ul {
-  list-style-type: square;
-}
+@import './base/general';
