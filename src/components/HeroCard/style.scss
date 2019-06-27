@@ -1,14 +1,20 @@
 @import '../../styles/_main';
 
 .Card {
-  width: 100%;
-  max-width: 70vw;
+  $_r: &;
+
+  max-width: 580px;
   color: $c_white;
   background-color: $c_blue;
   border-radius: $border-radius;
 
-  @media #{$screen-sm} {
-    max-width: 586px;
+  &--error {
+    background-color: $c_rose;
+    #{$_r} {
+      &__header {
+        background-color: $c_raspberry;
+      }
+    }
   }
 
   &__header {
@@ -47,6 +53,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 50px 40px;
+
+
+    @media #{$screen-md} {
+      padding-bottom: 70px;
+    }
   }
+
+  &__title, &__text {
+    color: $c_white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
 }
