@@ -1,0 +1,52 @@
+@import '../../styles/_main';
+
+.Card {
+  width: 100%;
+  max-width: 70vw;
+  color: $c_white;
+  background-color: $c_blue;
+  border-radius: $border-radius;
+
+  @media #{$screen-sm} {
+    max-width: 586px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px;
+    padding: 0 50px;
+    font-size: 18px;
+    color: $c_white;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $c_bluebonnet;
+    border-radius: inherit;
+
+    @media #{$screen-sm} {
+      font-size: 26px;
+    }
+
+    @media #{$screen-md} {
+      justify-content: flex-start;
+      font-size: 30px;
+    }
+  }
+
+  &__icon {
+    margin-right: 20px;
+    width: 32px;
+
+    @media #{$screen-sm} {
+      margin-right: 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+}
