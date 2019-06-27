@@ -27,7 +27,8 @@ $light-font-color: $c_white;
       }
 
       &__separator {
-        padding: 8px 30px;
+        padding: 10px 30px;
+        font-size: 20px;
       }
 
       &__label {
@@ -76,6 +77,10 @@ $light-font-color: $c_white;
         &__value {
           font-size: 55px;
         }
+        &__separator {
+          padding: 12px 20px;
+          font-size: 30px;
+        }
       }
     }
   }
@@ -85,6 +90,10 @@ $light-font-color: $c_white;
       #{$_r} {
         &__value {
           font-size: 65px;
+        }
+        &__separator {
+          padding: 12px 20px;
+          font-size: 40px;
         }
       }
     }
