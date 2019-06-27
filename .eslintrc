@@ -36,7 +36,7 @@
     "object-curly-newline": ["error", { "consistent": true }],
     "object-curly-spacing": [2, "always"],
     "react/jsx-curly-spacing": [2, {
-      "when": "always",
+      "when": "warn",
       "children": true,
       "spacing": {
         "objectLiterals": "always"
