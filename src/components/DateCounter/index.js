@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { oneOfType, string, instanceOf, bool } from 'prop-types';
+import { oneOfType, string, instanceOf, bool, func } from 'prop-types';
 import Countdown from 'react-countdown-now';
 
 import padNumber from '../../utils/padNumber';
@@ -12,23 +12,26 @@ const propTypes = {
   date: oneOfType([string, instanceOf(Date)]),
   large: bool,
   light: bool,
+  onTimeout: oneOfType([bool, func]),
 };
 
 const defaultProps = {
   date: '2019/06/26 17:04',
   large: false,
   light: false,
+  onTimeout: false,
 };
 
 const renderer = (
   { total, days, hours, minutes, seconds },
-  { date, light, large }
+  { date, light, large, onTimeout }
 ) => {
   let defaultTitle = 'Time to launch';
   let defaultSeparator = ':';
   let timeToDisplay = [];
 
   if (!total) {
+    onTimeout && onTimeout();
     defaultTitle = 'Launched on';
     defaultSeparator = '/';
     timeToDisplay = [
@@ -88,11 +91,13 @@ const renderer = (
   );
 };
 
-const DateCounter = ({ date, ...props }) => {
+const DateCounter = ({ date, onTimeout, ...props }) => {
   return (
     <Countdown
       date={date}
-      renderer={countdownProps => renderer(countdownProps, { date, ...props })}
+      renderer={countdownProps =>
+        renderer(countdownProps, { date, onTimeout, ...props })
+      }
     />
   );
 };
