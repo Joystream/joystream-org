@@ -1,6 +1,7 @@
 import React from 'react';
 import { instanceOf, oneOfType, string, bool } from 'prop-types';
 import cn from 'classnames';
+import ReactMarkdown from 'react-markdown';
 
 import './style.scss';
 import { ReactComponent as Calendar } from '../../assets/svg/calendar.svg';
@@ -30,46 +31,53 @@ class HeroCard extends React.Component {
     this.setState({ title: 'Network announced' });
   };
 
-  render() {
-    const { date, error } = this.props;
+  renderTitle = () => {
     const { title } = this.state;
+    const { error } = this.props;
+
+    if (error) {
+      return (
+        <>
+          <Warning className="Card__icon" />
+          Network down
+        </>
+      );
+    }
+
+    return (
+      <>
+        <Calendar className="Card__icon" />
+        {title}
+      </>
+    );
+  };
+
+  renderContent = () => {
+    const { error, content, date } = this.props;
+
+    if (error) {
+      return (
+        <div>
+          <ReactMarkdown source={content} />
+        </div>
+      );
+    }
+
+    return <DateCounter date={date} large light onTimeout={this.setTitle} />;
+  };
+
+  render() {
+    const { error } = this.props;
 
     const classes = cn('Card', {
-      'Card--error': !date,
+      'Card--error': error,
     });
 
     return (
-      <section className={classes}>
-        <h2 className="Card__header">
-          {error ? (
-            <>
-              <Warning className="Card__icon" />
-              Network down
-            </>
-          ) : (
-            <>
-              <Calendar className="Card__icon" />
-              {title}
-            </>
-          )}
-        </h2>
-        <div className="Card__content">
-          {error ? (
-            <div>
-              <p className="Card__title"> Failure identified</p>
-              <p className="Card__text">
-                {' '}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ad
-                cum, doloremque dolores dolorum ducimus est facere facilis illo
-                in nam neque non optio quaerat quisquam repellendus velit, vero
-                voluptatem?
-              </p>
-            </div>
-          ) : (
-            <DateCounter date={date} large light onTimeout={this.setTitle} />
-          )}
-        </div>
-      </section>
+      <div className={classes}>
+        <p className="Card__header">{this.renderTitle()}</p>
+        <div className="Card__content">{this.renderContent()}</div>
+      </div>
     );
   }
 }
