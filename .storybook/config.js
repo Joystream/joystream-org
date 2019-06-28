@@ -1,6 +1,13 @@
 import React from 'react';
 import { configure } from '@storybook/react';
 import { addDecorator } from '@storybook/react';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['Titillium Web:200,400,600,700'],
+  },
+});
 
 const styles = {
   display: 'flex',
