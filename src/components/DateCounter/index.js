@@ -12,15 +12,17 @@ const propTypes = {
   date: oneOfType([string, instanceOf(Date)]),
   large: bool,
   light: bool,
+  className: string,
 };
 
 const defaultProps = {
   date: '2019/06/26 17:04',
   large: false,
   light: false,
+  className: '',
 };
 
-const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large }) => {
+const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large, className }) => {
   let defaultTitle = 'Time to launch';
   let defaultSeparator = ':';
   let timeToDisplay = [];
@@ -55,7 +57,7 @@ const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large
   }
 
   return (
-    <div className={ cn('DateCounter', { 'DateCounter--light': light, 'DateCounter--large': large }) }>
+    <div className={ cn('DateCounter', className, { 'DateCounter--light': light, 'DateCounter--large': large }) }>
       <p className="DateCounter__title">{ defaultTitle }</p>
       <div className="DateCounter__container">
         { timeToDisplay.map((time, i) => {
