@@ -4,10 +4,10 @@ import cn from 'classnames';
 import Button from '../Button';
 import Link from '../Link';
 
-import TwitterIcon from '../../assets/svg/twitter.svg';
-import GithubIcon from '../../assets/svg/github.svg';
-import RocketChatIcon from '../../assets/svg/rocketchat.svg';
-import TelegramIcon from '../../assets/svg/telegram.svg';
+import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
+import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
+import { ReactComponent as RocketChatIcon } from '../../assets/svg/rocketchat.svg';
+import { ReactComponent as TelegramIcon } from '../../assets/svg/telegram.svg';
 
 import './style.scss';
 
@@ -38,23 +38,23 @@ const Footer = () => {
         Join the newsletter
       </Button>
       <div className="Footer__socials">
-        { socialMedias.map(socialMedia => {
+        {socialMedias.map(socialMedia => {
           const Icon = socialMedia.icon;
           return (
-            <a href={ socialMedia.href } className="Footer__social-wrapper" key={ socialMedia.name }>
+            <a href={socialMedia.href} className="Footer__social-wrapper" key={socialMedia.name}>
               <Icon className="Footer__social-icon" />
             </a>
           );
-        }) }
+        })}
       </div>
       <div className="Footer__links">
-        { links.map(link => (
+        {links.map(link => (
           <Link
-            className={ cn('Footer__link', { 'Footer__link--highlighted': link.highlighted }) }
-            key={ link.label }
-            { ...link }
+            className={cn('Footer__link', { 'Footer__link--highlighted': link.highlighted })}
+            key={link.label}
+            {...link}
           >
-            { link.label }
+            {link.label}
           </Link>
         ))}
       </div>
