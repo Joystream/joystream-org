@@ -12,14 +12,14 @@ const propTypes = {
   date: oneOfType([string, instanceOf(Date)]),
   large: bool,
   light: bool,
-  onTimeout: oneOfType([bool, func]),
+  onTimeout: func,
 };
 
 const defaultProps = {
   date: '2019/06/26 17:04',
   large: false,
   light: false,
-  onTimeout: false,
+  onTimeout: null,
 };
 
 const renderer = (
@@ -91,13 +91,11 @@ const renderer = (
   );
 };
 
-const DateCounter = ({ date, onTimeout, ...props }) => {
+const DateCounter = ({ date, ...props }) => {
   return (
     <Countdown
       date={date}
-      renderer={countdownProps =>
-        renderer(countdownProps, { date, onTimeout, ...props })
-      }
+      renderer={countdownProps => renderer(countdownProps, { date, ...props })}
     />
   );
 };

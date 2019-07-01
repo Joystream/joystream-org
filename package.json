@@ -20,7 +20,6 @@
     "gatsby-plugin-manifest": "^2.2.0",
     "gatsby-plugin-offline": "^2.2.0",
     "gatsby-plugin-react-helmet": "^3.1.0",
-    "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-sharp": "^2.2.1",
     "gatsby-plugin-stylelint": "^3.2.0",
@@ -45,8 +44,8 @@
     "stylelint-order": "^3.0.0",
     "stylelint-scss": "^3.8.0",
     "stylelint-webpack-plugin": "^0.10.5",
-    "webfontloader": "^1.6.28",
-    "url-loader": "^2.0.1"
+    "url-loader": "^2.0.1",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

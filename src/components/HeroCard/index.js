@@ -3,51 +3,57 @@ import { instanceOf, oneOfType, string, bool } from 'prop-types';
 import cn from 'classnames';
 import ReactMarkdown from 'react-markdown';
 
-import './style.scss';
 import { ReactComponent as Calendar } from '../../assets/svg/calendar.svg';
 import { ReactComponent as Warning } from '../../assets/svg/warning.svg';
 import DateCounter from '../DateCounter';
 
+import './style.scss';
+
 const propTypes = {
   date: oneOfType([string, instanceOf(Date)]),
   error: bool,
+  content: string,
 };
 
 const defaultProps = {
   date: null,
   error: false,
+  content: null,
+};
+
+const status = {
+  active: { title: 'Network live' },
+  error: { title: 'Network down', icon: Warning, class: 'Card--error' },
+  finished: { title: 'Network announced' },
 };
 
 class HeroCard extends React.Component {
   state = {
-    title: 'Network live',
+    currentStatus: 'active',
   };
 
-  shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return this.state.title !== nextState.title;
+  componentDidMount() {
+    if (this.props.error) {
+      this.setStatus('error');
+    }
   }
 
-  setTitle = () => {
-    this.setState({ title: 'Network announced' });
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return this.state.currentStatus !== nextState.currentStatus;
+  }
+
+  setStatus = status => {
+    this.setState({ currentStatus: status });
   };
 
   renderTitle = () => {
-    const { title } = this.state;
-    const { error } = this.props;
-
-    if (error) {
-      return (
-        <>
-          <Warning className="Card__icon" />
-          Network down
-        </>
-      );
-    }
+    const { currentStatus } = this.state;
+    const Icon = status[currentStatus].icon || Calendar;
 
     return (
       <>
-        <Calendar className="Card__icon" />
-        {title}
+        <Icon className="Card__icon" />
+        {status[currentStatus].title}
       </>
     );
   };
@@ -63,15 +69,20 @@ class HeroCard extends React.Component {
       );
     }
 
-    return <DateCounter date={date} large light onTimeout={this.setTitle} />;
+    return (
+      <DateCounter
+        date={date}
+        large
+        light
+        onTimeout={() => this.setStatus('finished')}
+      />
+    );
   };
 
   render() {
-    const { error } = this.props;
+    const { currentStatus } = this.state;
 
-    const classes = cn('Card', {
-      'Card--error': error,
-    });
+    const classes = cn('Card', status[currentStatus].class);
 
     return (
       <div className={classes}>

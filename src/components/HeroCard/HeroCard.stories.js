@@ -9,7 +9,7 @@ const unfinishedDate = new Date();
 unfinishedDate.setHours(today.getHours() + 2);
 
 storiesOf('HeroCard', module)
-  .add('in progress', () => <HeroCard date={unfinishedDate} />)
+  .add('active', () => <HeroCard date={unfinishedDate} />)
   .add('error', () => (
     <HeroCard
       error
@@ -23,4 +23,4 @@ storiesOf('HeroCard', module)
       /* eslint-enable */
     />
   ))
-  .add('done', () => <HeroCard date="2019/06/27 17:50" />);
+  .add('finished', () => <HeroCard date="2019/06/27 17:50" />);
