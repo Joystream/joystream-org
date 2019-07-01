@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Navbar from '../components/Navbar';
-import DateCounter from '../components/DateCounter';
+import HeroCard from '../components/HeroCard';
 
 const IndexPage = () => (
   <div>
     <Navbar />
-    <DateCounter />
+    <HeroCard date="2019/06/27 17:50" />
   </div>
 );
 

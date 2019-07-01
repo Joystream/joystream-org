@@ -6,6 +6,8 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@storybook/addon-backgrounds": "^5.1.9",
+    "@storybook/addon-viewport": "^5.1.9",
+    "@svgr/webpack": "^4.3.0",
     "axios": "^0.19.0",
     "babel-jest": "^24.8.0",
     "babel-preset-gatsby": "^0.2.0",
@@ -18,10 +20,10 @@
     "gatsby-plugin-manifest": "^2.2.0",
     "gatsby-plugin-offline": "^2.2.0",
     "gatsby-plugin-react-helmet": "^3.1.0",
-    "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-sharp": "^2.2.1",
     "gatsby-plugin-stylelint": "^3.2.0",
+    "gatsby-plugin-svgr": "^2.0.2",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.0",
     "gatsby-transformer-sharp": "^2.2.0",
@@ -33,6 +35,7 @@
     "react-countdown-now": "^2.1.1",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-markdown": "^4.1.0",
     "react-test-renderer": "^16.8.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
@@ -40,7 +43,9 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-order": "^3.0.0",
     "stylelint-scss": "^3.8.0",
-    "stylelint-webpack-plugin": "^0.10.5"
+    "stylelint-webpack-plugin": "^0.10.5",
+    "url-loader": "^2.0.1",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -66,7 +71,7 @@
     "serve": "gatsby serve",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook --loglevel error"
   },
   "repository": {
     "type": "git",

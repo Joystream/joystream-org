@@ -14,7 +14,7 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
-    'gatsby-plugin-react-svg',
+    'gatsby-plugin-svgr',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
