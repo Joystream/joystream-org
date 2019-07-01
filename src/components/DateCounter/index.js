@@ -9,7 +9,7 @@ import pluralString from '../../utils/pluralString';
 import './style.scss';
 
 const propTypes = {
-  date: oneOfType([string, instanceOf(Date)]),
+  date: oneOfType([string, instanceOf(Date)]).isRequired,
   large: bool,
   light: bool,
   className: string,
@@ -17,7 +17,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  date: '2019/06/26 17:04',
   large: false,
   light: false,
   onTimeout: null,
