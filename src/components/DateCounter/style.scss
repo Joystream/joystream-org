@@ -23,11 +23,12 @@ $light-font-color: $c_white;
       }
 
       &__value {
-        font-size: 55px;
+        font-size: 40px;
       }
 
       &__separator {
-        padding: 8px 30px;
+        padding: 10px 30px;
+        font-size: 20px;
       }
 
       &__label {
@@ -68,5 +69,35 @@ $light-font-color: $c_white;
     margin-top: 12px;
     font-size: 12px;
     text-transform: uppercase;
+  }
+
+  @media #{$screen-sm} {
+    &--large {
+      #{$_r} {
+        &__value {
+          font-size: 55px;
+        }
+
+        &__separator {
+          padding: 12px 30px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-md} {
+    &--large {
+      #{$_r} {
+        &__value {
+          font-size: 65px;
+        }
+
+        &__separator {
+          padding: 12px 40px;
+          font-size: 40px;
+        }
+      }
+    }
   }
 }
