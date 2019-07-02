@@ -1,6 +1,7 @@
 import React from 'react';
 import { configure } from '@storybook/react';
-import { addDecorator } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import WebFont from 'webfontloader';
 
 WebFont.load({
@@ -18,6 +19,8 @@ const styles = {
 
 const CenterDecorator = storyFn => <div style={styles}>{storyFn()}</div>;
 addDecorator(CenterDecorator);
+
+addParameters({ viewport: { viewports: { ...INITIAL_VIEWPORTS } } });
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.js$/);
