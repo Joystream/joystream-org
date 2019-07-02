@@ -1,0 +1,64 @@
+@import '../../styles/_main';
+
+.TestnetItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__image {
+    max-width: 200px;
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  @media #{$screen-md} {
+    width: 70%;
+
+    &__image {
+      min-width: 30%;
+      margin-right: 60px;
+      margin-bottom: 0;
+    }
+
+    &__content {
+      font-size: 28px;
+      line-height: 35px;
+      text-align: left;
+    }
+
+    &__wrapper {
+      flex-direction: row;
+    }
+
+    &__counter {
+      display: block;
+    }
+
+    &__button {
+      width: auto;
+    }
+  }
+}
