@@ -71,7 +71,7 @@
     "serve": "gatsby serve",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook --loglevel error"
+    "build-storybook": "build-storybook -c .storybook --loglevel error --quiet"
   },
   "repository": {
     "type": "git",

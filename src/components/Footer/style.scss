@@ -1,0 +1,100 @@
+@import '../../styles/main.scss';
+
+.Footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 10px 60px;
+  background-color: $c_black;
+
+  &__header {
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: 400;
+    color: $c_white;
+  }
+
+  &__button {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 250px;
+    margin-bottom: 60px;
+  }
+
+  &__social-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 16px 0;
+  }
+
+  &__social-icon {
+    width: 40px;
+
+    &:hover,
+    &:active {
+      transform: scale(1.5);
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__link {
+    margin-bottom: 32px;
+    font-size: 18px;
+    color: $c_dusty-gray;
+    text-align: center;
+
+    &:hover,
+    &:active {
+      color: $c_white;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--highlighted {
+      color: $c_caribbean-green;
+
+      &:hover,
+      &:active {
+        color: $c_persian-green;
+      }
+    }
+  }
+
+  @media #{$screen-sm} {
+    &__button {
+      width: auto;
+    }
+
+    &__socials {
+      flex-wrap: nowrap;
+    }
+
+    &__social-icon {
+      width: 25px;
+    }
+
+    &__links {
+      flex-direction: row;
+    }
+
+    &__link {
+      width: 150px;
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+}
