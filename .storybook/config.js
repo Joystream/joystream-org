@@ -1,6 +1,7 @@
 import React from 'react';
 import { configure } from '@storybook/react';
 import { addDecorator } from '@storybook/react';
+import centered from '@storybook/addon-centered/react';
 import WebFont from 'webfontloader';
 
 WebFont.load({
@@ -9,15 +10,7 @@ WebFont.load({
   },
 });
 
-const styles = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  padding: '24px',
-};
-
-const CenterDecorator = storyFn => <div style={styles}>{storyFn()}</div>;
-addDecorator(CenterDecorator);
+addDecorator(centered);
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.js$/);
