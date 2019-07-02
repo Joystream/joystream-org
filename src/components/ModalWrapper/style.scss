@@ -1,0 +1,35 @@
+@import '../../styles/_main';
+
+.Modal {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  width: 100%;
+  max-width: 900px;
+  margin-right: -50%;
+  background-color: $c_white;
+  border-radius: $border-radius;
+  outline: none;
+  transform: translate(-50%, -50%);
+}
+
+.Modal__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .6);
+  opacity: 0;
+  transition: opacity $duration ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
