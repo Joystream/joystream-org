@@ -6,6 +6,12 @@ import { action } from '@storybook/addon-actions';
 import Chip from './index';
 import { ReactComponent as Info } from '../../assets/svg/info.svg';
 
-storiesOf('Chip', module).add('default', () => (
-  <Chip clickHandler={action('clicked')} label="What is this?" icon={Info} />
-));
+storiesOf('Chip', module)
+  .addParameters({
+    backgrounds: [{ name: 'black', value: '#000', default: true }],
+  })
+  .add('default', () => (
+    <Chip clickHandler={action('clicked')} icon={Info}>
+      What is this?
+    </Chip>
+  ));

@@ -6,19 +6,18 @@
   font-size: 16px;
   font-weight: 400;
   color: $c_persian-green;
-  opacity: 1;
+  opacity: .6;
   transition: opacity $duration;
 
   &:hover,
   &:active {
     cursor: pointer;
-    opacity: .6;
+    opacity: 1;
   }
 
   &__icon {
     width: 24px;
     margin-right: 8px;
-    pointer-events: none;
   }
 
   @media #{$screen-md} {
