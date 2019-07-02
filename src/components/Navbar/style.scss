@@ -58,6 +58,11 @@ $navbar-height: 60px;
 
     &--highlighted {
       color: $c_caribbean-green;
+
+      &:hover,
+      &:active {
+        color: $c_persian-green;
+      }
     }
   }
 
