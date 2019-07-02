@@ -4,6 +4,7 @@
   $_r: &;
 
   display: inline-block;
+  width: 100%;
   padding: 0 30px;
   font-size: 18px;
   font-weight: 400;
@@ -63,6 +64,10 @@
     &:active {
       background-color: $c_silver;
     }
+  }
+
+  @media #{$screen-sm} {
+    width: auto;
   }
 
   @media #{$screen-md} {
