@@ -35,13 +35,6 @@
     "max-len": ["warn", { "code": 120 }],
     "object-curly-newline": ["error", { "consistent": true }],
     "object-curly-spacing": [2, "always"],
-    "react/jsx-curly-spacing": [2, {
-      "when": "always",
-      "children": true,
-      "spacing": {
-        "objectLiterals": "always"
-      }
-    }],
     "react/jsx-filename-extension": [1, {
       "extensions": [".js", ".jsx"]
     }],

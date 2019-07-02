@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-stylelint',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -13,7 +14,7 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
-    'gatsby-plugin-react-svg',
+    'gatsby-plugin-svgr',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -45,7 +46,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Titillium Web'],
+          families: ['Titillium Web:200,400,600,700'],
         },
       },
     },

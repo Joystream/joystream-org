@@ -1,0 +1,103 @@
+@import '../../styles/main.scss';
+
+$light-font-color: $c_white;
+
+.DateCounter {
+  $_r: &;
+
+  &--light {
+    color: $light-font-color;
+
+    #{$_r} {
+      &__title,
+      &__value {
+        color: $light-font-color;
+      }
+    }
+  }
+
+  &--large {
+    #{$_r} {
+      &__title {
+        font-size: 16px;
+      }
+
+      &__value {
+        font-size: 40px;
+      }
+
+      &__separator {
+        padding: 10px 30px;
+        font-size: 20px;
+      }
+
+      &__label {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__segment {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__value {
+    font-size: 45px;
+    font-weight: 700;
+    color: $c_blue;
+  }
+
+  &__separator {
+    padding: 8px 20px;
+    font-size: 30px;
+    font-weight: 200;
+  }
+
+  &__label {
+    margin-top: 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  @media #{$screen-sm} {
+    &--large {
+      #{$_r} {
+        &__value {
+          font-size: 55px;
+        }
+
+        &__separator {
+          padding: 12px 30px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-md} {
+    &--large {
+      #{$_r} {
+        &__value {
+          font-size: 65px;
+        }
+
+        &__separator {
+          padding: 12px 40px;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}

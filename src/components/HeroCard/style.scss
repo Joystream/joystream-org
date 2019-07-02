@@ -1,0 +1,108 @@
+@import '../../styles/_main';
+
+.Card {
+  $_r: &;
+
+  width: 100%;
+  max-width: 580px;
+  color: $c_white;
+  background-color: $c_blue;
+  border-radius: $border-radius;
+
+  &--error {
+    background-color: $c_rose;
+
+    #{$_r} {
+      &__header {
+        background-color: $c_raspberry;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $c_white;
+    text-transform: uppercase;
+    background-color: $c_bluebonnet;
+    border-radius: inherit;
+  }
+
+  &__icon {
+    width: 40px;
+    margin-right: 20px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 30px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin-bottom: 12px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: $c_white;
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: $c_black;
+    }
+  }
+
+  @media #{$screen-sm} {
+    &__header {
+      font-size: 26px;
+    }
+
+    &__icon {
+      margin-right: 30px;
+    }
+
+    &__content {
+      padding: 20px 50px 40px;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+  }
+
+  @media #{$screen-md} {
+    &__header {
+      justify-content: flex-start;
+      font-size: 30px;
+    }
+  }
+}
