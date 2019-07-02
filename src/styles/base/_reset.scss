@@ -175,7 +175,6 @@ input {
 }
 
 a {
-  color: $c_bluebonnet;
   text-decoration: none;
 
   &:hover,
@@ -183,18 +182,4 @@ a {
   &:focus {
     text-decoration: none;
   }
-}
-
-p {
-  color: $c_mine-shaft;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-  color: $c_black;
 }

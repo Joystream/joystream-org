@@ -1,11 +1,27 @@
-p {
-  font-size: get($font-sizes,'small');
+@import '../common/colors';
 
-  @media #{$screen-md} {
-    font-size: get($font-sizes,'normal');
-  }
+* {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+p {
+  font-size: 12px;
+  color: $c_mine-shaft;
+}
+a {
+  color: $c_bluebonnet;
 }
 
 ul {
   list-style-type: square;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  color: $c_black;
 }
