@@ -23,10 +23,10 @@
   }
 
   &__counter {
-    margin-top: 40px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 40px;
   }
 
   &__button {
@@ -50,7 +50,6 @@
     }
 
     &__wrapper {
-      align-items: center;
       flex-direction: row;
     }
 
