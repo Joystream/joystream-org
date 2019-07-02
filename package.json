@@ -54,6 +54,7 @@
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "babel-loader": "^8.0.6",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -73,6 +74,11 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -c .storybook --loglevel error --quiet"
   },
+  "pre-commit": [
+    "lint",
+    "stylelint",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
