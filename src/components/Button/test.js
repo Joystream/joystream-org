@@ -8,11 +8,6 @@ import Button from './';
 configure({ adapter: new Adapter() });
 
 describe('Button component', () => {
-  it('renders correctly', () => {
-    const wrapper = shallow(<Button to="/">Test</Button>);
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('renders as a "a" tag', () => {
     const wrapper = shallow(<Button href="/">Home link</Button>);
     expect(wrapper.type()).toEqual('a');
