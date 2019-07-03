@@ -54,7 +54,7 @@ const Indexpage = ({ content }) => (
   <div>
     <Navbar />
     <HeroCard date="2019/06/27 17:50" />
-    <DateCounter />
+    <DateCounter date="2019/06/27 17:50" />
     <Analytics content={mapStatusDataToAnalytics(content)}>
       <Button secondary href="https://blog.joystream.org/athens-incentives/">
         Participate and Earn Monero
