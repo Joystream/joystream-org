@@ -1,17 +1,15 @@
-$base-spacing: 4px;
-
-$gutter: 28px;
-
 $border-radius: 6px;
 
 $font-sizes: (
-  default: 14px,
+  t1: 64px,
+  t2: 40px,
+  t3: 36px,
+  t4: 30px,
+  t5: 28px,
+  t6: 26px,
+  big: 20px,
+  default: 16px,
   small: 12px,
-  medium: 16px,
-  large: 24px,
-  xlarge: 32px,
-  xxlarge: 36px,
-  xxxlarge: 45px,
 );
 
-$duration: 200ms;
+$duration: 400ms;
