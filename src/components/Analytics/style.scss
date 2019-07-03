@@ -3,6 +3,7 @@
 .Analytics {
   position: relative;
   background-color: $c_black;
+  border-radius: $border-radius;
 
   &__container {
     display: flex;
@@ -18,9 +19,9 @@
   &__content {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 0;
     width: 100%;
-    transform: translate(-50%, 50%);
+    transform: translate(0, 50%);
   }
 
   @media #{$screen-sm} {
@@ -34,7 +35,9 @@
     }
 
     &__content {
+      left: 50%;
       width: auto;
+      transform: translate(-50%, 50%);
     }
   }
 
