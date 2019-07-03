@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexPage page renders correctly 1`] = `
+<div>
+  <nav
+    className="Navbar"
+  >
+    <div
+      className="Navbar__container"
+    >
+      <a
+        className="Link"
+        href="/"
+      >
+        <icon-mock
+          className="Navbar__logo"
+        />
+      </a>
+      <div
+        className="Navbar__links"
+      >
+        <a
+          className="Navbar__link Navbar__link--highlighted Link Link--highlighted"
+          href="https://www.jsgenesis.com/#openings"
+          label="We are hiring!"
+        >
+          We are hiring!
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://blog.joystream.org/"
+          label="Blog"
+        >
+          Blog
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://blog.joystream.org/manifesto/"
+          label="Manifesto"
+        >
+          Manifesto
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://github.com/Joystream/whitepaper/blob/master/paper.pdf"
+          label="Whitepaper"
+        >
+          Whitepaper
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="/roles"
+          label="Roles"
+        >
+          Roles
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://github.com/Joystream/joystream"
+          label="Repository"
+        >
+          Repository
+        </a>
+      </div>
+      <div
+        className="Navbar__trigger"
+        onClick={[Function]}
+        role="presentation"
+      />
+    </div>
+  </nav>
+  <div
+    className="Card"
+  >
+    <p
+      className="Card__header"
+    >
+      <icon-mock
+        className="Card__icon"
+      />
+      Network announced
+    </p>
+    <div
+      className="Card__content"
+    >
+      <div
+        className="DateCounter DateCounter--light DateCounter--large"
+      >
+        <p
+          className="DateCounter__title"
+        >
+          Launched on
+        </p>
+        <div
+          className="DateCounter__container"
+        >
+          <div
+            className="DateCounter__segment"
+          >
+            <span
+              className="DateCounter__value"
+            >
+              27
+            </span>
+            <span
+              className="DateCounter__label"
+            >
+              day
+            </span>
+          </div>
+          <span
+            className="DateCounter__value, DateCounter__separator"
+          >
+            /
+          </span>
+          <div
+            className="DateCounter__segment"
+          >
+            <span
+              className="DateCounter__value"
+            >
+              06
+            </span>
+            <span
+              className="DateCounter__label"
+            >
+              month
+            </span>
+          </div>
+          <span
+            className="DateCounter__value, DateCounter__separator"
+          >
+            /
+          </span>
+          <div
+            className="DateCounter__segment"
+          >
+            <span
+              className="DateCounter__value"
+            >
+              19
+            </span>
+            <span
+              className="DateCounter__label"
+            >
+              year
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    className="TitleWrapper"
+  >
+    <h2
+      className="TitleWrapper__title"
+    >
+      Test
+    </h2>
+    content
+  </section>
+</div>
+`;
