@@ -1,0 +1,118 @@
+@import '../../styles/_main';
+
+.RoleCard {
+  $_r: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 30px;
+  overflow: hidden;
+  text-align: center;
+  background-color: $c_white;
+  border-radius: $border-radius;
+
+  &--highlight {
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 141px;
+      height: 141px;
+      padding: 10px;
+      font-size: 18px;
+      color: $c_white;
+      background-color: $c_blue;
+      content: 'New role';
+      transform: rotate(-45deg) translate(-50%, -50%);
+      transform-origin: top left;
+    }
+  }
+
+  &--small {
+    flex-direction: row;
+    padding: 10px;
+
+    #{$_r}__image {
+      width: 80px;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+
+    #{$_r}__title {
+      font-size: 18px;
+    }
+  }
+
+  &:hover {
+    background-color: $c_caribbean-green;
+  }
+
+  &__image {
+    width: 160px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__info {
+    margin-top: 16px;
+    font-size: 14px;
+    white-space: pre;
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  &__counter {
+    font-weight: 700;
+  }
+
+  @media #{$screen-md} {
+    flex-direction: row;
+    padding: 20px 30px;
+    text-align: left;
+
+    &--small {
+      padding: 20px;
+
+      #{$_r}__image {
+        margin-right: 20px;
+      }
+    }
+
+    &__image {
+      margin-right: 32px;
+      margin-bottom: 0;
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &__info {
+      display: flex;
+      font-size: 20px;
+    }
+
+    &__icon {
+      display: inline-block;
+      width: 22px;
+      margin-right: 10px;
+    }
+
+    &__counter {
+      margin-right: 4px;
+    }
+  }
+}
