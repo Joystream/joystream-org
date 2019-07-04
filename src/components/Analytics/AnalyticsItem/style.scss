@@ -1,0 +1,42 @@
+@import '../../../styles/main.scss';
+
+.AnalyticsItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+  text-align: center;
+
+  &__image {
+    max-height: 80px;
+  }
+
+  &__title,
+  &__value {
+    color: $c_white;
+  }
+
+  &__title {
+    margin-top: 32px;
+    font-size: 16px;
+  }
+
+  &__value {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  @media #{$screen-sm} {
+    &__image {
+      max-height: 60px;
+    }
+  }
+
+  @media #{$screen-md} {
+    &__image {
+      max-height: 90px;
+    }
+  }
+}

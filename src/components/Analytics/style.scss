@@ -1,0 +1,51 @@
+@import '../../styles/_main';
+
+.Analytics {
+  position: relative;
+  background-color: $c_black;
+  border-radius: $border-radius;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0 60px;
+    border-radius: $border-radius;
+
+    & > * {
+      flex-basis: calc(100% / 2);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translate(0, 50%);
+  }
+
+  @media #{$screen-sm} {
+    &__container {
+      padding-right: 20px;
+      padding-left: 20px;
+
+      & > * {
+        flex-basis: calc(100% / 3);
+      }
+    }
+
+    &__content {
+      left: 50%;
+      width: auto;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  @media #{$screen-md} {
+    &__container {
+      & > * {
+        flex-basis: calc(100% / 4);
+      }
+    }
+  }
+}
