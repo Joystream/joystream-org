@@ -2,6 +2,7 @@ import React from 'react';
 import { configure } from '@storybook/react';
 import { addDecorator, addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import centered from '@storybook/addon-centered/react';
 import WebFont from 'webfontloader';
 import '../src/styles/global.scss';
 
@@ -11,15 +12,7 @@ WebFont.load({
   },
 });
 
-const styles = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  padding: '24px',
-};
-
-const CenterDecorator = storyFn => <div style={styles}>{storyFn()}</div>;
-addDecorator(CenterDecorator);
+addDecorator(centered);
 
 addParameters({ viewport: { viewports: { ...INITIAL_VIEWPORTS } } });
 
