@@ -38,7 +38,7 @@ const RoleCard = ({ image: Image, title, count, type, className, hasLabel, ...pr
   const classes = cn('RoleCard', className, { 'RoleCard--highlight': hasLabel, 'RoleCard--small': !count });
 
   return (
-    <Link to="/" className={classes} {...props}>
+    <Link className={classes} {...props}>
       <Image className="RoleCard__image" />
       <div className="RoleCard__content">
         <p className="RoleCard__title">{title}</p>

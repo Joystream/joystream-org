@@ -9,6 +9,7 @@ const defaultProps = {
   image: ValidatorsImage,
   title: 'Validator',
   count: 20,
+  to: '/',
 };
 
 storiesOf('RoleCard', module)
@@ -20,4 +21,4 @@ storiesOf('RoleCard', module)
   .add('type current (default)', () => <RoleCard {...defaultProps} />)
   .add('type migration', () => <RoleCard type="migration" {...defaultProps} />)
   .add('type most', () => <RoleCard type="most" {...defaultProps} />)
-  .add('small', () => <RoleCard type="most" image={ValidatorsImage} title="Validator" />);
+  .add('small', () => <RoleCard to="/" type="most" image={ValidatorsImage} title="Validator" />);
