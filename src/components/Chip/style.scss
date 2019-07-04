@@ -17,7 +17,10 @@
 
   &__icon {
     width: 24px;
-    margin-right: 8px;
+  }
+
+  &__text {
+    margin-left: 8px;
   }
 
   @media #{$screen-md} {

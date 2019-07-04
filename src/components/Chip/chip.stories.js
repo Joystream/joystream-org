@@ -14,4 +14,7 @@ storiesOf('Chip', module)
     <Chip clickHandler={action('clicked')} icon={Info}>
       What is this?
     </Chip>
+  ))
+  .add('only icon', () => (
+    <Chip clickHandler={action('clicked')} icon={Info} />
   ));

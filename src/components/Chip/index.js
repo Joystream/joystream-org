@@ -1,17 +1,16 @@
 import React from 'react';
-import { string, node, func } from 'prop-types';
+import { string, node, func, oneOfType, number } from 'prop-types';
 
 import './style.scss';
 
 const propTypes = {
-  children: string,
-  icon: node,
+  children: oneOfType([string, node, number]),
+  icon: node.isRequired,
   clickHandler: func,
 };
 
 const defaultProps = {
   children: null,
-  icon: null,
   clickHandler: null,
 };
 
@@ -20,8 +19,8 @@ const Chip = ({ children, icon, ...props }) => {
 
   return (
     <button className="Chip" {...props}>
-      {icon && <Icon className="Chip__icon" />}
-      {children}
+      <Icon className="Chip__icon" />
+      {children && <span className="Chip__text">{children}</span>}
     </button>
   );
 };
