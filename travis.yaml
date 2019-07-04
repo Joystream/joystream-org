@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - stable
+cache: yarn
+before_script:
+  - yarn
+script:
+  - yarn lint
+  - yarn stylelint
+  - yarn test
