@@ -10,7 +10,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isOpen: false,
   children: null,
 };
 

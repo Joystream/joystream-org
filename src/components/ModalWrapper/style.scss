@@ -3,12 +3,9 @@
 .Modal {
   position: absolute;
   top: 50%;
-  right: auto;
-  bottom: auto;
   left: 50%;
-  width: 100%;
-  max-width: 900px;
-  margin-right: -50%;
+  width: 94%;
+  max-width: 728px;
   background-color: $c_white;
   border-radius: $border-radius;
   outline: none;
@@ -32,4 +29,10 @@
 
 .ReactModal__Overlay--before-close {
   opacity: 0;
+}
+
+@media #{$screen-md} {
+  .Modal {
+    max-width: 900px;
+  }
 }
