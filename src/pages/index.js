@@ -11,46 +11,47 @@ import HeroCard from '../components/HeroCard';
 import DateCounter from '../components/DateCounter';
 import Analytics from '../components/Analytics';
 import Button from '../components/Button';
+import TitleWrapper from '../components/TitleWrapper';
 
 const propTypes = {
   content: shape({
     block_height: number,
-    council: {
+    council: shape({
       election_stage: string,
       members_count: number,
-    },
-    forum: {
+    }),
+    forum: shape({
       posts: number,
       threads: number,
-    },
-    media: {
+    }),
+    media: shape({
       media_files: number,
-    },
-    memberships: {
+    }),
+    memberships: shape({
       platform_members: number,
-    },
-    roles: {
+    }),
+    roles: shape({
       storage_providers: number,
-    },
-    runtime_version: {
+    }),
+    runtime_version: shape({
       impl_name: string,
       spec_name: string,
       spec_version: number,
-    },
-    system: {
+    }),
+    system: shape({
       chain: string,
       name: string,
       peerCount: number,
       version: string,
-    },
-    validators: {
+    }),
+    validators: shape({
       count: number,
       total_stake: string,
-    },
+    }),
   }).isRequired,
 };
 
-const Indexpage = ({ content }) => (
+const IndexPage = ({ content }) => (
   <div>
     <Navbar />
     <HeroCard date="2019/06/27 17:50" />
@@ -60,10 +61,11 @@ const Indexpage = ({ content }) => (
         Participate and Earn Monero
       </Button>
     </Analytics>
+    <TitleWrapper title="Test">content</TitleWrapper>
   </div>
 );
 
-Indexpage.propTypes = propTypes;
+IndexPage.propTypes = propTypes;
 
-export { Indexpage };
-export default withApi(Indexpage, getApiPath('STATUS'));
+export { IndexPage };
+export default withApi(IndexPage, getApiPath('STATUS'));
