@@ -6,9 +6,12 @@ import Link from '../Link';
 
 import { ReactComponent as PeopleIcon } from '../../assets/svg/people.svg';
 
+import { linkPropTypes } from '../../propTypes';
+
 import './style.scss';
 
 const propTypes = {
+  ...linkPropTypes,
   image: func.isRequired,
   title: string.isRequired,
   count: number,
