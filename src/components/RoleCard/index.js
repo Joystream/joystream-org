@@ -38,7 +38,7 @@ const contentTypes = {
 };
 
 const RoleCard = ({ image: Image, title, count, type, className, hasLabel, ...props }) => {
-  const classes = cn('RoleCard', className, { 'RoleCard--highlight': hasLabel, 'RoleCard--small': !count });
+  const classes = cn('RoleCard', className, { 'RoleCard--labeled': hasLabel, 'RoleCard--small': !count });
 
   return (
     <Link className={classes} {...props}>

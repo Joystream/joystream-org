@@ -14,7 +14,7 @@
   background-color: $c_white;
   border-radius: $border-radius;
 
-  &--highlight {
+  &--labeled {
     &::after {
       position: absolute;
       top: 0;
