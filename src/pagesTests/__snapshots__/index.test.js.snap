@@ -69,6 +69,126 @@ exports[`IndexPage page renders correctly 1`] = `
       />
     </div>
   </nav>
+  <section
+    className="Hero Hero--indented"
+  >
+    <div
+      className="Hero__container"
+    >
+      <div
+        className="Hero__content"
+      >
+        <h1
+          className="Hero__title"
+        >
+          Acropolis Network
+        </h1>
+        <div
+          className="Hero__description"
+        >
+          <p
+            className="HeroStory__paragraph"
+          >
+            Explore available roles and pick the one that suits you the most. Influence platforms development earning Monero in the process.
+          </p>
+          <div
+            className="Card"
+          >
+            <p
+              className="Card__header"
+            >
+              <icon-mock
+                className="Card__icon"
+              />
+              Network live
+            </p>
+            <div
+              className="Card__content"
+            >
+              <div
+                className="DateCounter DateCounter--light DateCounter--large"
+              >
+                <p
+                  className="DateCounter__title"
+                >
+                  Time to launch
+                </p>
+                <div
+                  className="DateCounter__container"
+                >
+                  <div
+                    className="DateCounter__segment"
+                  >
+                    <span
+                      className="DateCounter__value"
+                    >
+                      02
+                    </span>
+                    <span
+                      className="DateCounter__label"
+                    >
+                      hours
+                    </span>
+                  </div>
+                  <span
+                    className="DateCounter__value, DateCounter__separator"
+                  >
+                    :
+                  </span>
+                  <div
+                    className="DateCounter__segment"
+                  >
+                    <span
+                      className="DateCounter__value"
+                    >
+                      00
+                    </span>
+                    <span
+                      className="DateCounter__label"
+                    >
+                      minute
+                    </span>
+                  </div>
+                  <span
+                    className="DateCounter__value, DateCounter__separator"
+                  >
+                    :
+                  </span>
+                  <div
+                    className="DateCounter__segment"
+                  >
+                    <span
+                      className="DateCounter__value"
+                    >
+                      00
+                    </span>
+                    <span
+                      className="DateCounter__label"
+                    >
+                      second
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="Plx  "
+        disabled={false}
+        style={
+          Object {
+            "visibility": "hidden",
+          }
+        }
+      >
+        <icon-mock
+          className="Hero__image"
+        />
+      </div>
+    </div>
+  </section>
   <div
     className="Card"
   >
