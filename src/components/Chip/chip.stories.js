@@ -11,10 +11,8 @@ storiesOf('Chip', module)
     backgrounds: [{ name: 'black', value: '#000', default: true }],
   })
   .add('default', () => (
-    <Chip clickHandler={action('clicked')} icon={Info}>
+    <Chip onClick={action('clicked')} icon={Info}>
       What is this?
     </Chip>
   ))
-  .add('only icon', () => (
-    <Chip clickHandler={action('clicked')} icon={Info} />
-  ));
+  .add('only icon', () => <Chip onClick={action('clicked')} icon={Info} />);

@@ -6,12 +6,12 @@ import './style.scss';
 const propTypes = {
   children: oneOfType([string, node, number]),
   icon: node.isRequired,
-  clickHandler: func,
+  onClick: func,
 };
 
 const defaultProps = {
   children: null,
-  clickHandler: null,
+  onClick: null,
 };
 
 const Chip = ({ children, icon, ...props }) => {
