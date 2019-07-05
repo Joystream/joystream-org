@@ -3,19 +3,12 @@ import { string, bool, node } from 'prop-types';
 import { Link as DefaultLink } from 'gatsby';
 import cn from 'classnames';
 
+import { linkPropTypes } from '../../propTypes';
+
 import './style.scss';
 
 const propTypes = {
-  to: (props, propName, componentName) => {
-    if (!props.to && !props.href) {
-      return new Error(`One of props 'to' or 'href' was not specified in '${componentName}'.`);
-    }
-  },
-  href: (props, propName, componentName) => {
-    if (!props.to && !props.href) {
-      return new Error(`One of props 'href' or 'to' was not specified in '${componentName}'.`);
-    }
-  },
+  ...linkPropTypes,
   children: node.isRequired,
   highlighted: bool,
   className: string,
@@ -27,27 +20,22 @@ const defaultProps = {
 };
 
 const Link = ({ to, href, children, highlighted, className, activeClassName, ...props }) => {
-  const classes = cn(
-    className,
-    'Link',
-    {
-      'Link--highlighted': highlighted,
-    },
-  );
+  const classes = cn(className, 'Link', {
+    'Link--highlighted': highlighted,
+  });
 
-  if(href) {
-    return <a href={ href } className={ classes } { ...props }>{ children }</a>;
+  if (href) {
+    return (
+      <a href={href} className={classes} {...props}>
+        {children}
+      </a>
+    );
   }
 
-  if(to) {
+  if (to) {
     return (
-      <DefaultLink
-        to={ to }
-        className={ classes }
-        activeClassName={ activeClassName }
-        { ...props }
-      >
-        { children }
+      <DefaultLink to={to} className={classes} activeClassName={activeClassName} {...props}>
+        {children}
       </DefaultLink>
     );
   }
