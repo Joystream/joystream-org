@@ -4,7 +4,6 @@ import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import Link from './';
-import Button from '../Button/test';
 
 configure({ adapter: new Adapter() });
 
