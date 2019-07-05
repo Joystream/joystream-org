@@ -20,7 +20,6 @@ const ModalWrapper = ({ isOpen, children }) => (
     overlayClassName="Modal__overlay"
     contentLabel="modal"
     closeTimeoutMS={200}
-    shouldCloseOnOverlayClick={false}
     appElement={document.querySelector('body')}
   >
     <div className="Modal__content">{children}</div>

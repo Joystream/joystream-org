@@ -4,7 +4,6 @@ import cn from 'classnames';
 import Button from '../Button';
 
 import './style.scss';
-import { action } from '@storybook/addon-actions';
 
 const propTypes = {
   title: string.isRequired,
@@ -18,11 +17,11 @@ const defaultProps = {
   image: null,
 };
 
-const TestnetModal = ({ title, className, children, image, ...props }) => {
+const TestnetModal = ({ title, className, children, image, closeModal }) => {
   const classes = cn(className, 'TestnetModal');
 
   return (
-    <section className={classes} {...props}>
+    <section className={classes}>
       {image && (
         <div className="TestnetModal__header">
           <img className="TestnetModal__image" src={image} alt={title} />
@@ -31,11 +30,7 @@ const TestnetModal = ({ title, className, children, image, ...props }) => {
       <div className="TestnetModal__container">
         <h2 className="TestnetModal__title">{title}</h2>
         {children}
-        <Button
-          onClick={action('clicked')}
-          large
-          className="TestnetModal__button"
-        >
+        <Button onClick={closeModal} large className="TestnetModal__button">
           Close
         </Button>
       </div>
