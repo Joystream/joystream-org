@@ -4,23 +4,25 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 94%;
-  max-width: 728px;
-  background-color: $c_white;
-  border-radius: $border-radius;
+  padding: 40px 20px;
   outline: none;
   transform: translate(-50%, -50%);
-}
 
-.Modal__overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, .6);
-  opacity: 0;
-  transition: opacity $duration ease-in-out;
+  &__content {
+    background-color: $c_white;
+    border-radius: $border-radius;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    opacity: 0;
+    transition: opacity $duration ease-in-out;
+  }
 }
 
 .ReactModal__Overlay--after-open {

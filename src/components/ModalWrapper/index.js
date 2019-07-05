@@ -23,7 +23,7 @@ const ModalWrapper = ({ isOpen, children }) => (
     shouldCloseOnOverlayClick={false}
     appElement={document.querySelector('body')}
   >
-    <div>{children}</div>
+    <div className="Modal__content">{children}</div>
   </Modal>
 );
 
