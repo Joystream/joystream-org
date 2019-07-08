@@ -70,315 +70,612 @@ exports[`IndexPage page renders correctly 1`] = `
     </div>
   </nav>
   <div
-    className="Card"
+    className="LayoutWrapper"
   >
-    <p
-      className="Card__header"
-    >
-      <icon-mock
-        className="Card__icon"
-      />
-      Network announced
-    </p>
     <div
-      className="Card__content"
+      className="LayoutWrapper__container"
     >
-      <div
-        className="DateCounter DateCounter--light DateCounter--large"
+      <section
+        className="TitleWrapper"
       >
-        <p
-          className="DateCounter__title"
+        <h2
+          className="TitleWrapper__title"
         >
-          Launched on
-        </p>
+          Acropolis Tesnet
+        </h2>
         <div
-          className="DateCounter__container"
+          className="TestnetItem"
         >
           <div
-            className="DateCounter__segment"
+            className="TestnetItem__wrapper"
           >
-            <span
-              className="DateCounter__value"
+            <img
+              alt="Acropolis Tesnet"
+              className="TestnetItem__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
+            />
+            <div
+              className="TestnetItem__container"
             >
-              27
-            </span>
-            <span
-              className="DateCounter__label"
-            >
-              day
-            </span>
+              <p
+                className="TestnetItem__content"
+              >
+                Acropolis is our fourth testnet, with much improved
+                <a
+                  className="Link"
+                  href="https://www.joystream.org/roles#Storage-Provider"
+                >
+                   storage provider 
+                </a>
+                software and an on-chain forum.
+              </p>
+            </div>
           </div>
-          <span
-            className="DateCounter__value, DateCounter__separator"
+          <a
+            className="TestnetItem__button Button"
+            href="/acropolis"
+            label="Explore acropolis"
+            onClick={null}
           >
-            /
-          </span>
+            Explore acropolis
+          </a>
+        </div>
+      </section>
+      <section
+        className="Analytics"
+      >
+        <div
+          className="Analytics__container"
+        >
           <div
-            className="DateCounter__segment"
+            className="AnalyticsItem"
           >
-            <span
-              className="DateCounter__value"
+            <icon-mock
+              className="AnalyticsItem__image"
+            />
+            <p
+              className="AnalyticsItem__title"
             >
-              06
-            </span>
-            <span
-              className="DateCounter__label"
+              Participation Payout
+            </p>
+            <p
+              className="AnalyticsItem__value"
             >
-              month
-            </span>
+              $1576
+            </p>
           </div>
-          <span
-            className="DateCounter__value, DateCounter__separator"
-          >
-            /
-          </span>
           <div
-            className="DateCounter__segment"
+            className="AnalyticsItem"
           >
-            <span
-              className="DateCounter__value"
+            <icon-mock
+              className="AnalyticsItem__image"
+            />
+            <p
+              className="AnalyticsItem__title"
             >
-              19
-            </span>
-            <span
-              className="DateCounter__label"
+              Active Validators
+            </p>
+            <p
+              className="AnalyticsItem__value"
             >
-              year
-            </span>
+              20
+            </p>
+          </div>
+          <div
+            className="AnalyticsItem"
+          >
+            <icon-mock
+              className="AnalyticsItem__image"
+            />
+            <p
+              className="AnalyticsItem__title"
+            >
+              Block Height
+            </p>
+            <p
+              className="AnalyticsItem__value"
+            >
+              1110117
+            </p>
+          </div>
+          <div
+            className="AnalyticsItem"
+          >
+            <icon-mock
+              className="AnalyticsItem__image"
+            />
+            <p
+              className="AnalyticsItem__title"
+            >
+              Council Election Stage
+            </p>
+            <p
+              className="AnalyticsItem__value"
+            >
+              Announcing
+            </p>
+          </div>
+          <div
+            className="AnalyticsItem"
+          >
+            <icon-mock
+              className="AnalyticsItem__image"
+            />
+            <p
+              className="AnalyticsItem__title"
+            >
+              Memberships
+            </p>
+            <p
+              className="AnalyticsItem__value"
+            >
+              164
+            </p>
+          </div>
+          <div
+            className="AnalyticsItem"
+          >
+            <icon-mock
+              className="AnalyticsItem__image"
+            />
+            <p
+              className="AnalyticsItem__title"
+            >
+              Forum Posts
+            </p>
+            <p
+              className="AnalyticsItem__value"
+            >
+              11
+            </p>
+          </div>
+          <div
+            className="AnalyticsItem"
+          >
+            <icon-mock
+              className="AnalyticsItem__image"
+            />
+            <p
+              className="AnalyticsItem__title"
+            >
+              Platform Content Files
+            </p>
+            <p
+              className="AnalyticsItem__value"
+            >
+              9
+            </p>
+          </div>
+          <div
+            className="AnalyticsItem"
+          >
+            <icon-mock
+              className="AnalyticsItem__image"
+            />
+            <p
+              className="AnalyticsItem__title"
+            >
+              Active Storage Providers
+            </p>
+            <p
+              className="AnalyticsItem__value"
+            >
+              10
+            </p>
           </div>
         </div>
-      </div>
+        <div
+          className="Analytics__content"
+        >
+          <a
+            className="Button Button--secondary"
+            href="https://blog.joystream.org/athens-incentives/"
+            onClick={null}
+          >
+            Participate and Earn Monero
+          </a>
+        </div>
+      </section>
     </div>
   </div>
   <div
-    className="DateCounter"
+    className="LayoutWrapper LayoutWrapper--dark"
   >
-    <p
-      className="DateCounter__title"
-    >
-      Launched on
-    </p>
     <div
-      className="DateCounter__container"
+      className="LayoutWrapper__container"
     >
-      <div
-        className="DateCounter__segment"
+      <section
+        className="TitleWrapper"
       >
-        <span
-          className="DateCounter__value"
+        <h2
+          className="TitleWrapper__title"
         >
-          27
-        </span>
-        <span
-          className="DateCounter__label"
+          Become a user, run the platform
+        </h2>
+        <div
+          className="Subheader"
         >
-          day
-        </span>
-      </div>
-      <span
-        className="DateCounter__value, DateCounter__separator"
-      >
-        /
-      </span>
-      <div
-        className="DateCounter__segment"
-      >
-        <span
-          className="DateCounter__value"
+          <h3
+            className="Subheader__title"
+          >
+            Active roles on the current testnet
+          </h3>
+          <p
+            className="Subheader__content"
+          >
+            learn more, join a role and subscribe for more
+          </p>
+          <icon-mock
+            className="Subheader__image"
+          />
+        </div>
+        <div
+          className="ColumnsLayout"
+          data-columns={2}
         >
-          06
-        </span>
-        <span
-          className="DateCounter__label"
+          <a
+            className="RoleCard Link"
+            href="/roles#Validator"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Validator
+              </p>
+              <p
+                className="RoleCard__info"
+              >
+                <icon-mock
+                  className="RoleCard__icon"
+                />
+                <span
+                  className="RoleCard__counter"
+                >
+                  15
+                </span>
+                 currently run this role
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard Link"
+            href="/roles#Council-Member"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Council Member
+              </p>
+              <p
+                className="RoleCard__info"
+              >
+                <icon-mock
+                  className="RoleCard__icon"
+                />
+                <span
+                  className="RoleCard__counter"
+                >
+                  12
+                </span>
+                 currently run this role
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard Link"
+            href="/roles#Storage-Provider"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Storage Provider
+              </p>
+              <p
+                className="RoleCard__info"
+              >
+                <icon-mock
+                  className="RoleCard__icon"
+                />
+                <span
+                  className="RoleCard__counter"
+                >
+                  10
+                </span>
+                 currently run this role
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          className="Subheader"
         >
-          month
-        </span>
-      </div>
-      <span
-        className="DateCounter__value, DateCounter__separator"
-      >
-        /
-      </span>
-      <div
-        className="DateCounter__segment"
-      >
-        <span
-          className="DateCounter__value"
+          <h3
+            className="Subheader__title"
+          >
+            Roles coming in future testnets
+          </h3>
+          <p
+            className="Subheader__content"
+          >
+            choose a role, learn more and subscribe to get updated
+          </p>
+          <icon-mock
+            className="Subheader__image"
+          />
+        </div>
+        <div
+          className="ColumnsLayout"
+          data-columns={3}
         >
-          19
-        </span>
-        <span
-          className="DateCounter__label"
+          <a
+            className="RoleCard RoleCard--small Link"
+            href="/roles"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Membership Screener
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard RoleCard--small Link"
+            href="/roles"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Membership Curator
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard RoleCard--small Link"
+            href="/roles"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Content Curator
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard RoleCard--small Link"
+            href="/roles"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Content Creator
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard RoleCard--small Link"
+            href="/roles"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Bandwidth Provider
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard RoleCard--small Link"
+            href="/roles"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Discovery Provider
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard RoleCard--small Link"
+            href="/roles"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Live Streaming Provider
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard RoleCard--small Link"
+            href="/roles"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Builder
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard RoleCard--small Link"
+            href="/roles"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Communication Moderator
+              </p>
+            </div>
+          </a>
+        </div>
+        <a
+          className="IndexPage__roles-button Button Button--secondary"
+          href="/roles"
+          onClick={null}
         >
-          year
-        </span>
-      </div>
+          Learn more about the roles
+        </a>
+      </section>
     </div>
   </div>
-  <section
-    className="Analytics"
+  <footer
+    className="Footer"
   >
-    <div
-      className="Analytics__container"
+    <p
+      className="Footer__header"
     >
-      <div
-        className="AnalyticsItem"
-      >
-        <icon-mock
-          className="AnalyticsItem__image"
-        />
-        <p
-          className="AnalyticsItem__title"
-        >
-          Participation Payout
-        </p>
-        <p
-          className="AnalyticsItem__value"
-        >
-          $1576
-        </p>
-      </div>
-      <div
-        className="AnalyticsItem"
-      >
-        <icon-mock
-          className="AnalyticsItem__image"
-        />
-        <p
-          className="AnalyticsItem__title"
-        >
-          Active Validators
-        </p>
-        <p
-          className="AnalyticsItem__value"
-        >
-          20
-        </p>
-      </div>
-      <div
-        className="AnalyticsItem"
-      >
-        <icon-mock
-          className="AnalyticsItem__image"
-        />
-        <p
-          className="AnalyticsItem__title"
-        >
-          Block Height
-        </p>
-        <p
-          className="AnalyticsItem__value"
-        >
-          1110117
-        </p>
-      </div>
-      <div
-        className="AnalyticsItem"
-      >
-        <icon-mock
-          className="AnalyticsItem__image"
-        />
-        <p
-          className="AnalyticsItem__title"
-        >
-          Council Election Stage
-        </p>
-        <p
-          className="AnalyticsItem__value"
-        >
-          Announcing
-        </p>
-      </div>
-      <div
-        className="AnalyticsItem"
-      >
-        <icon-mock
-          className="AnalyticsItem__image"
-        />
-        <p
-          className="AnalyticsItem__title"
-        >
-          Memberships
-        </p>
-        <p
-          className="AnalyticsItem__value"
-        >
-          164
-        </p>
-      </div>
-      <div
-        className="AnalyticsItem"
-      >
-        <icon-mock
-          className="AnalyticsItem__image"
-        />
-        <p
-          className="AnalyticsItem__title"
-        >
-          Forum Posts
-        </p>
-        <p
-          className="AnalyticsItem__value"
-        >
-          11
-        </p>
-      </div>
-      <div
-        className="AnalyticsItem"
-      >
-        <icon-mock
-          className="AnalyticsItem__image"
-        />
-        <p
-          className="AnalyticsItem__title"
-        >
-          Platform Content Files
-        </p>
-        <p
-          className="AnalyticsItem__value"
-        >
-          9
-        </p>
-      </div>
-      <div
-        className="AnalyticsItem"
-      >
-        <icon-mock
-          className="AnalyticsItem__image"
-        />
-        <p
-          className="AnalyticsItem__title"
-        >
-          Active Storage Providers
-        </p>
-        <p
-          className="AnalyticsItem__value"
-        >
-          10
-        </p>
-      </div>
-    </div>
+      Get notified
+    </p>
+    <a
+      className="Footer__button Button Button--small Button--light"
+      href="http://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&id=459ba8d1da"
+      onClick={null}
+    >
+      Join the newsletter
+    </a>
     <div
-      className="Analytics__content"
+      className="Footer__socials"
     >
       <a
-        className="Button Button--secondary"
-        href="https://blog.joystream.org/athens-incentives/"
-        onClick={null}
+        className="Footer__social-wrapper"
+        href="https://twitter.com/JoyStreamApp"
       >
-        Participate and Earn Monero
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+      <a
+        className="Footer__social-wrapper"
+        href="https://github.com/Joystream"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+      <a
+        className="Footer__social-wrapper"
+        href="https://chat.joystream.org/home"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+      <a
+        className="Footer__social-wrapper"
+        href="https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
       </a>
     </div>
-  </section>
-  <section
-    className="TitleWrapper"
-  >
-    <h2
-      className="TitleWrapper__title"
+    <div
+      className="Footer__links"
     >
-      Test
-    </h2>
-    content
-  </section>
+      <a
+        className="Footer__link Footer__link--highlighted Link Link--highlighted"
+        href="https://www.jsgenesis.com/#openings"
+        label="We are hiring!"
+      >
+        We are hiring!
+      </a>
+      <a
+        className="Footer__link Link"
+        href="https://blog.joystream.org/"
+        label="Blog"
+      >
+        Blog
+      </a>
+      <a
+        className="Footer__link Link"
+        href="https://blog.joystream.org/manifesto/"
+        label="Manifesto"
+      >
+        Manifesto
+      </a>
+      <a
+        className="Footer__link Link"
+        href="https://github.com/Joystream/joystream"
+        label="Repository"
+      >
+        Repository
+      </a>
+    </div>
+  </footer>
 </div>
 `;
