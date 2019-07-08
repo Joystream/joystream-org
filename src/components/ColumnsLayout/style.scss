@@ -1,0 +1,53 @@
+@import '../../styles/main';
+
+$spacing: 32px;
+$smallSpacing: 20px;
+
+.ColumnsLayout {
+  display: flex;
+  flex-wrap: wrap;
+
+  @for $i from 1 through 4 {
+    $colsCount: 1;
+
+    &[data-columns='#{$i}'] {
+      & > * {
+        flex-basis: calc(100% / #{$colsCount});
+        margin-bottom: $smallSpacing;
+      }
+
+      @media #{$screen-only-sm} {
+        $smCols: 1;
+        @if $i - 1 {
+          $smCols: $i - 1;
+        }
+
+        /* stylelint-disable-next-line */
+        & > * {
+          flex-basis: calc(100% / #{$smCols} - #{$smallSpacing} + #{$smallSpacing} / #{$smCols});
+          @if #{$smCols} > 1 {
+            margin-right: $smallSpacing;
+          } @else {
+            margin-right: 0;
+          }
+        }
+
+        & > *:nth-child(#{$smCols}n) {
+          margin-right: 0;
+        }
+      }
+
+      @media #{$screen-md} {
+        & > * {
+          flex-basis: calc(100% / #{$i} - #{$spacing} + #{$spacing} / #{$i});
+          margin-right: $spacing;
+          margin-bottom: $spacing;
+        }
+
+        & > *:nth-child(#{$i}n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
