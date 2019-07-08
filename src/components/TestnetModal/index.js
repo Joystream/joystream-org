@@ -31,7 +31,7 @@ const TestnetModal = ({
   const classes = cn(className, 'TestnetModal');
 
   return (
-    <ModalWrapper isOpen={isOpen}>
+    <ModalWrapper isOpen={isOpen} closeModal={closeModal}>
       <div className={classes}>
         {image && (
           <div className="TestnetModal__header">
