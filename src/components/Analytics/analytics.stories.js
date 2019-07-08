@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import centered from '@storybook/addon-centered/react';
 
 import Analytics from './index';
 import AnalyticsItem from './AnalyticsItem';
@@ -52,6 +53,7 @@ const exampleExternalData = {
 };
 
 storiesOf('Analytics', module)
+  .addDecorator(centered)
   .add('analytics item', () => <AnalyticsItem {...exampleData} />, {
     backgrounds: [
       {
