@@ -2,3 +2,9 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+%smallContainer {
+  @extend %container;
+
+  max-width: 840px;
+}
