@@ -19,12 +19,12 @@
   &__container {
     padding: 40px 20px 20px;
     text-align: center;
-  }
 
-  &__paragraph {
-    margin-bottom: 40px;
-    font-size: 14px;
-    line-height: 21px;
+    & > p {
+      margin-bottom: 40px;
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__title {
@@ -39,11 +39,11 @@
   @media #{$screen-sm} {
     &__container {
       padding: 60px 100px;
-    }
 
-    &__paragraph {
-      font-size: 18px;
-      line-height: 30px;
+      & > p {
+        font-size: 18px;
+        line-height: 30px;
+      }
     }
 
     &__title {
