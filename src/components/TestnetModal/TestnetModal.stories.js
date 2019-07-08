@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { State, Store } from '@sambego/storybook-state';
 
 import TestnetModal from './index';
-import Button from '../Button';
+import Chip from '../Chip';
 import AcropolisImg from '../../assets/svg/acropolis.svg';
 import HelmetImg from '../../assets/svg/helmet.svg';
 import OwlImg from '../../assets/svg/athens-owl.svg';
+import { ReactComponent as Info } from '../../assets/svg/info.svg';
 
 const acropolisStore = new Store({
   isOpen: false,
@@ -20,6 +20,9 @@ const spartaStore = new Store({
 });
 
 storiesOf('TestnetModal', module)
+  .addParameters({
+    backgrounds: [{ name: 'black', value: '#000', default: true }],
+  })
   .add('Acropolis', () => (
     <div>
       <State store={acropolisStore}>
@@ -37,9 +40,9 @@ storiesOf('TestnetModal', module)
           </p>
         </TestnetModal>
       </State>
-      <Button onClick={() => acropolisStore.set({ isOpen: true })}>
-        Show modal
-      </Button>
+      <Chip onClick={() => acropolisStore.set({ isOpen: true })} icon={Info}>
+        What is this?
+      </Chip>
     </div>
   ))
   .add('Sparta', () => (
@@ -60,9 +63,9 @@ storiesOf('TestnetModal', module)
           </p>
         </TestnetModal>
       </State>
-      <Button onClick={() => athensStore.set({ isOpen: true })}>
-        Show modal
-      </Button>
+      <Chip onClick={() => athensStore.set({ isOpen: true })} icon={Info}>
+        What is this?
+      </Chip>
     </div>
   ))
   .add('Athens', () => (
@@ -83,8 +86,8 @@ storiesOf('TestnetModal', module)
           </p>
         </TestnetModal>
       </State>
-      <Button onClick={() => spartaStore.set({ isOpen: true })}>
-        Show modal
-      </Button>
+      <Chip onClick={() => spartaStore.set({ isOpen: true })} icon={Info}>
+        What is this?
+      </Chip>
     </div>
   ));
