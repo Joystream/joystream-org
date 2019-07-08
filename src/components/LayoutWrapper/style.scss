@@ -1,0 +1,13 @@
+@import '../../styles/main';
+
+.LayoutWrapper {
+  &--dark {
+    background-color: $c_alabaster;
+  }
+
+  &__container {
+    @extend %container;
+
+    padding: 0 30px 130px;
+  }
+}
