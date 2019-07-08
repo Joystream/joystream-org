@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { string, func, bool, oneOfType } from 'prop-types';
+import { node, string, func, bool, oneOfType } from 'prop-types';
 import Plx from 'react-plx';
 
 import './style.scss';
@@ -9,11 +9,13 @@ const propTypes = {
   title: string.isRequired,
   image: oneOfType([func, string]),
   indent: bool,
+  children: node,
 };
 
 const defaultProps = {
   image: null,
   indent: false,
+  children: null,
 };
 
 const Hero = ({ title, children, image: Image, indent, ...props }) => {
@@ -32,18 +34,18 @@ const Hero = ({ title, children, image: Image, indent, ...props }) => {
   ];
 
   return (
-    <section className={ cn('Hero', { 'Hero--indented': indent })}>
+    <section className={cn('Hero', { 'Hero--indented': indent })}>
       <div className="Hero__container">
         <div className="Hero__content">
           <h1 className="Hero__title">{title}</h1>
           <div className="Hero__description">{children}</div>
         </div>
 
-        {Image && <Plx
-          parallaxData={ parallaxData }
-        >
-          <Image className="Hero__image" />
-        </Plx>}
+        {Image && (
+          <Plx parallaxData={parallaxData}>
+            <Image className="Hero__image" />
+          </Plx>
+        )}
       </div>
     </section>
   );

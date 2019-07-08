@@ -43,7 +43,14 @@ $indentation: 60px;
 
   &__image {
     width: 100%;
-    padding: 0 80px 60px;
+    padding: 0 80px 40px;
+  }
+
+  @media #{$screen-sm} {
+    &__title {
+      font-size: 45px;
+      line-height: 45px;
+    }
   }
 
   @media #{$screen-md} {

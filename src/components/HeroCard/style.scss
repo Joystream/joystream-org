@@ -5,6 +5,7 @@
 
   width: 100%;
   max-width: 580px;
+  margin: 0 auto;
   color: $c_white;
   background-color: $c_blue;
   border-radius: $border-radius;
@@ -100,6 +101,8 @@
   }
 
   @media #{$screen-md} {
+    margin: initial;
+
     &__header {
       justify-content: flex-start;
       font-size: 30px;
