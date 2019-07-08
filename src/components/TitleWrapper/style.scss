@@ -2,9 +2,9 @@
 
 .TitleWrapper {
   display: flex;
-  align-items: center;
   flex-direction: column;
   padding-top: 100px;
+  text-align: center;
 
   &__title {
     margin-bottom: 20px;

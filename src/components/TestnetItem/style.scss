@@ -1,9 +1,12 @@
 @import '../../styles/_main';
 
 .TestnetItem {
+  @extend %smallContainer;
+
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 150px;
 
   &__image {
     max-width: 200px;
