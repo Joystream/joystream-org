@@ -127,7 +127,9 @@ table {
   border-spacing: 0;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
