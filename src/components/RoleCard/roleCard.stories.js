@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import centered from '@storybook/addon-centered/react';
 
 import { ReactComponent as ValidatorsImage } from '../../assets/svg/active-validators.svg';
 
@@ -13,6 +14,7 @@ const defaultProps = {
 };
 
 storiesOf('RoleCard', module)
+  .addDecorator(centered)
   .addParameters({
     backgrounds: [{ name: 'black', value: '#000000', default: true }],
   })
