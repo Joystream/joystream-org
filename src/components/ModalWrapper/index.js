@@ -1,12 +1,13 @@
 import React from 'react';
 import Modal from 'react-modal';
-import { bool, node } from 'prop-types';
+import { bool, node, func } from 'prop-types';
 
 import './style.scss';
 
 const propTypes = {
   isOpen: bool.isRequired,
   children: node,
+  closeModal: func.isRequired,
 };
 
 const defaultProps = {
