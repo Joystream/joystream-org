@@ -1,0 +1,31 @@
+@import '../../styles/main.scss';
+
+.HeroStory {
+  &__paragraph {
+    padding-bottom: 60px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media #{$screen-md} {
+    &__group {
+      flex-direction: row;
+    }
+
+    &__button {
+      &:not(:last-child) {
+        margin-right: 16px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
