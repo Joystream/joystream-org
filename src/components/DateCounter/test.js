@@ -1,18 +1,22 @@
 import React from 'react';
-import { configure, render } from 'enzyme';
+import { configure, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import Counter from './';
 
 configure({ adapter: new Adapter() });
 
+const mockFunction = jest.fn();
+
 describe('DateCounter component', () => {
   it('renders "Launched on" title when countdown is finished', () => {
-    const counter = render(<Counter date="2019/06/25 16:26" />);
+    const counter = mount(
+      <Counter date="2019/06/25 16:26" onTimeout={mockFunction} />
+    );
     expect(counter.text().includes('Launched on')).toBe(true);
     expect(counter.text().includes('/')).toBe(true);
     expect(counter.text().includes(':')).toBe(false);
-    expect(counter.text()).toEqual('Launched on25day/06month/19year');
+    expect(counter.props().onTimeout).toHaveBeenCalled();
   });
 
   it('renders "Time to launch" title when countdown is unfinished', () => {
