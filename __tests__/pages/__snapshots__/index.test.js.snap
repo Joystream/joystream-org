@@ -69,6 +69,63 @@ exports[`IndexPage page renders correctly 1`] = `
       />
     </div>
   </nav>
+  <section
+    className="Hero"
+  >
+    <div
+      className="Hero__container"
+    >
+      <div
+        className="Hero__content"
+      >
+        <h1
+          className="Hero__title"
+        >
+          A user governed video platform
+        </h1>
+        <div
+          className="Hero__description"
+        >
+          <p
+            className="IndexPage__hero-paragraph"
+          >
+            Earn Monero by participating in the current Athens testnet
+          </p>
+          <div
+            className="IndexPage__hero-group"
+          >
+            <button
+              className="IndexPage__hero-button Button Button--secondary"
+              onClick={null}
+              type="button"
+            >
+              Earn Monero
+            </button>
+            <button
+              className="IndexPage__hero-button Button Button--reversed Button--secondary"
+              onClick={null}
+              type="button"
+            >
+              Launch UI
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="Plx  "
+        disabled={false}
+        style={
+          Object {
+            "visibility": "hidden",
+          }
+        }
+      >
+        <icon-mock
+          className="Hero__image"
+        />
+      </div>
+    </div>
+  </section>
   <div
     className="LayoutWrapper"
   >

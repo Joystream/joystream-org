@@ -17,13 +17,14 @@ import TitleWrapper from '../components/TitleWrapper';
 import RoleCard from '../components/RoleCard';
 import ColumnsLayout from '../components/ColumnsLayout';
 import LayoutWrapper from '../components/LayoutWrapper';
+import Hero from '../components/Hero';
 
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
+import { ReactComponent as PlatformImage } from '../assets/svg/platform.svg';
 import { ReactComponent as TickImage } from '../assets/svg/tick.svg';
 import { ReactComponent as ValidatorsImage } from '../assets/svg/active-validators.svg';
 import { ReactComponent as StorageImage } from '../assets/svg/storage.svg';
 import { ReactComponent as MemberImage } from '../assets/svg/council-member.svg';
-
 import { ReactComponent as ScreenerImage } from '../assets/svg/screener.svg';
 import { ReactComponent as MembershipCuratorImage } from '../assets/svg/membership-curator.svg';
 import { ReactComponent as ContentCuratorImage } from '../assets/svg/content-curator.svg';
@@ -96,6 +97,18 @@ const roles = {
 const IndexPage = ({ content }) => (
   <div>
     <Navbar />
+
+    <Hero image={PlatformImage} title="A user governed video platform">
+      <p className="IndexPage__hero-paragraph">Earn Monero by participating in the current Athens testnet</p>
+      <div className="IndexPage__hero-group">
+        <Button secondary className="IndexPage__hero-button">
+          Earn Monero
+        </Button>
+        <Button secondary reversed className="IndexPage__hero-button">
+          Launch UI
+        </Button>
+      </div>
+    </Hero>
 
     <LayoutWrapper>
       <TestnetItem

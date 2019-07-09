@@ -1,6 +1,36 @@
+@import '../styles/main.scss';
+
 .IndexPage {
   &__roles-button {
     align-self: center;
     margin-top: 64px;
+  }
+
+  &__hero-paragraph {
+    padding-bottom: 60px;
+  }
+
+  &__hero-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__hero-button {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media #{$screen-md} {
+    &__hero-group {
+      flex-direction: row;
+    }
+
+    &__hero-button {
+      &:not(:last-child) {
+        margin-right: 16px;
+        margin-bottom: 0;
+      }
+    }
   }
 }
