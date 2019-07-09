@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, func } from 'prop-types';
+import { string } from 'prop-types';
 import cn from 'classnames';
 
 import './style.scss';
@@ -7,7 +7,7 @@ import './style.scss';
 const propTypes = {
   title: string.isRequired,
   content: string.isRequired,
-  icon: func,
+  icon: string,
   className: string,
 };
 
