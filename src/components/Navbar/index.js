@@ -5,23 +5,9 @@ import { ReactComponent as Logo } from '../../assets/svg/logo-white.svg';
 
 import Link from '../Link';
 
-import './style.scss';
+import { links } from './data';
 
-const links = [
-  {
-    href: 'https://www.jsgenesis.com/#openings',
-    label: 'We are hiring!',
-    highlighted: true,
-  },
-  { href: 'https://blog.joystream.org/', label: 'Blog' },
-  { href: 'https://blog.joystream.org/manifesto/', label: 'Manifesto' },
-  {
-    href: 'https://github.com/Joystream/whitepaper/blob/master/paper.pdf',
-    label: 'Whitepaper',
-  },
-  { to: '/roles', label: 'Roles' },
-  { href: 'https://github.com/Joystream/joystream', label: 'Repository' },
-];
+import './style.scss';
 
 class Navbar extends React.Component {
   state = {
@@ -66,9 +52,7 @@ class Navbar extends React.Component {
             <Logo className="Navbar__logo" />
           </Link>
 
-          <div
-            className={cn('Navbar__links', { 'Navbar__links--open': isOpen })}
-          >
+          <div className={cn('Navbar__links', { 'Navbar__links--open': isOpen })}>
             {links.map(link => (
               <Link
                 className={cn('Navbar__link', {
