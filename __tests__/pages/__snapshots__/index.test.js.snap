@@ -94,20 +94,20 @@ exports[`IndexPage page renders correctly 1`] = `
           <div
             className="IndexPage__hero-group"
           >
-            <button
+            <a
               className="IndexPage__hero-button Button Button--secondary"
+              href="https://blog.joystream.org/acropolis-incentives/"
               onClick={null}
-              type="button"
             >
               Earn Monero
-            </button>
-            <button
+            </a>
+            <a
               className="IndexPage__hero-button Button Button--reversed Button--secondary"
+              href="https://testnet.joystream.org/"
               onClick={null}
-              type="button"
             >
               Launch UI
-            </button>
+            </a>
           </div>
         </div>
       </div>
