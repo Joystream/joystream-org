@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { IndexPage } from '../pages';
+import { IndexPage } from '../../src/pages';
 
 const testContent = {
   block_height: 1110117,
