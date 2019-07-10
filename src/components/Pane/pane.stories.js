@@ -12,7 +12,7 @@ storiesOf('Pane', module)
     </Pane>
   ))
   .add('disabled', () => (
-    <Pane disabled title="Full Specifications" image={SpecImg} href="#">
+    <Pane disabled title="Full Specifications" image={SpecImg}>
       Read the specs of the newly implemented features of Acropolis.
     </Pane>
   ));
