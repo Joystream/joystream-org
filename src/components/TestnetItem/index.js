@@ -9,7 +9,7 @@ import './style.scss';
 
 const propTypes = {
   title: string.isRequired,
-  image: string.isRequired,
+  image: oneOfType([object, string]).isRequired,
   date: oneOfType([instanceOf(Date), string]),
   button: object,
   className: string,

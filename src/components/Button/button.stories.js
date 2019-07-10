@@ -1,4 +1,5 @@
 import React from 'react';
+import centered from '@storybook/addon-centered/react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
@@ -6,6 +7,7 @@ import { action } from '@storybook/addon-actions';
 import Button from './index';
 
 storiesOf('Button', module)
+  .addDecorator(centered)
   .add('Deafult', () => <Button onClick={action('clicked')}>Explore Acropolis</Button>)
   .add('Link', () => <Button href="#">Explore Acropolis</Button>)
   .add('Reversed', () => (
