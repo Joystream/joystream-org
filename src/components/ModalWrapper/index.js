@@ -14,6 +14,8 @@ const defaultProps = {
   children: null,
 };
 
+Modal.setAppElement('body');
+
 const ModalWrapper = ({ isOpen, children, closeModal }) => (
   <Modal
     isOpen={isOpen}
@@ -21,7 +23,6 @@ const ModalWrapper = ({ isOpen, children, closeModal }) => (
     overlayClassName="Modal__overlay"
     contentLabel="modal"
     closeTimeoutMS={200}
-    appElement={document.querySelector('body')}
     onRequestClose={closeModal}
   >
     <div className="Modal__content">{children}</div>
