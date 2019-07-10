@@ -1,12 +1,13 @@
 import React from 'react';
 import Modal from 'react-modal';
-import { bool, node } from 'prop-types';
+import { bool, node, func } from 'prop-types';
 
 import './style.scss';
 
 const propTypes = {
   isOpen: bool.isRequired,
   children: node,
+  closeModal: func.isRequired,
 };
 
 const defaultProps = {
@@ -15,14 +16,14 @@ const defaultProps = {
 
 Modal.setAppElement('body');
 
-const ModalWrapper = ({ isOpen, children }) => (
+const ModalWrapper = ({ isOpen, children, closeModal }) => (
   <Modal
     isOpen={isOpen}
     className="Modal"
     overlayClassName="Modal__overlay"
     contentLabel="modal"
     closeTimeoutMS={200}
-    shouldCloseOnOverlayClick={false}
+    onRequestClose={closeModal}
   >
     <div className="Modal__content">{children}</div>
   </Modal>
