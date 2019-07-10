@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, node, func, bool } from 'prop-types';
+import { string, node, func, bool, oneOfType } from 'prop-types';
 import cn from 'classnames';
 import Button from '../Button';
 import ModalWrapper from '../ModalWrapper';
@@ -9,7 +9,7 @@ import './style.scss';
 const propTypes = {
   title: string.isRequired,
   children: node.isRequired,
-  image: func,
+  image: oneOfType([func, string]),
   closeModal: func.isRequired,
   isOpen: bool.isRequired,
   className: string,

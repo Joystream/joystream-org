@@ -14,7 +14,7 @@ storiesOf('TestnetModal', module)
       <TestnetModal
         title="The Acropolis of Athens"
         image={AcropolisImg}
-        closeModal={action('close modal')}
+        closeModal={() => action('close modal')}
         isOpen={true}
       >
         <p>
