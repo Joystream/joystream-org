@@ -8,9 +8,9 @@ import cn from 'classnames';
 
 const propTypes = {
   ...linkPropTypes,
-  children: oneOfType([string, node, number]),
-  image: func.isRequired,
   title: string.isRequired,
+  image: func.isRequired,
+  children: oneOfType([string, node, number]),
   className: string,
   disabled: bool,
 };
@@ -18,12 +18,13 @@ const propTypes = {
 const defaultProps = {
   children: null,
   className: '',
+  disabled: false,
 };
 
 const Pane = ({
   title,
-  children,
   image: Image,
+  children,
   className,
   disabled,
   ...props
