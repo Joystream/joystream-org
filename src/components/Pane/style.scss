@@ -8,20 +8,12 @@
   border: 2px solid $c_bluebonnet;
   border-radius: 3px;
 
-  &--disabled {
-    border: 2px solid $c_dusty-gray;
-  }
-
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
     background-color: $c_bluebonnet;
-
-    &#{$_r}--disabled {
-      background-color: $c_dusty-gray;
-    }
   }
 
   &__img {
@@ -62,6 +54,33 @@
     &__title,
     &__paragraph {
       color: $c_white;
+    }
+  }
+
+  &--disabled {
+    border: 2px solid $c_mercury;
+
+    #{$_r}__wrapper {
+      background-color: $c_mercury;
+    }
+
+    #{$_r}__title {
+      color: $c_blue-haze;
+    }
+
+    &:hover,
+    &:active {
+      #{$_r}__content {
+        background-color: $c_white;
+      }
+
+      #{$_r}__title {
+        color: $c_blue-haze;
+      }
+
+      #{$_r}__paragraph {
+        color: $c_black;
+      }
     }
   }
 }

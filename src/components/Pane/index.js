@@ -32,8 +32,10 @@ const Pane = ({
     'Pane--disabled': disabled,
   });
 
+  const Parent = disabled ? 'div' : Link;
+
   return (
-    <Link className={classes} {...props}>
+    <Parent className={classes} {...props}>
       <div className="Pane__wrapper">
         <Image className="Pane__img" />
       </div>
@@ -41,7 +43,7 @@ const Pane = ({
         <p className="Pane__title">{title}</p>
         <p className="Pane__paragraph">{children}</p>
       </div>
-    </Link>
+    </Parent>
   );
 };
 
