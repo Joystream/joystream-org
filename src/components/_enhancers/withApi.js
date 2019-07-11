@@ -6,7 +6,7 @@ export default function withApi(WrappedComponent, apiPath) {
     mounted = true;
 
     state = {
-      content: undefined,
+      content: {},
     };
 
     componentDidMount() {
@@ -34,11 +34,7 @@ export default function withApi(WrappedComponent, apiPath) {
     render() {
       const { content } = this.state;
 
-      if (content) {
-        return <WrappedComponent content={content} {...this.props} />;
-      }
-
-      return null;
+      return <WrappedComponent content={content} {...this.props} />;
     }
   };
 }

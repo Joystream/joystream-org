@@ -1,6 +1,10 @@
 @import '../../styles/main.scss';
 
 .Link {
+  display: inline-flex;
+  align-items: center;
+  white-space: pre-wrap;
+
   &--highlighted {
     color: $c_caribbean-green;
   }
