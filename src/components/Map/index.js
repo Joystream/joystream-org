@@ -28,7 +28,11 @@ const maps = {
 
 const Map = ({ location, title, children, className, ...props }) => {
   return (
-    <div className={cn('Map', className)} style={{ backgroundImage: `url(${maps[location]})`, }} {...props}>
+    <div
+      className={cn('Map', className)}
+      style={{ backgroundImage: `url(${maps[location]})` }}
+      {...props}
+    >
       <PointerImage />
       <p className="Map__info">Map data ©{new Date().getFullYear()} Google</p>
     </div>

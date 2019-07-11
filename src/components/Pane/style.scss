@@ -4,7 +4,9 @@
   $_r: &;
 
   display: flex;
+  align-items: stretch;
   flex-direction: column;
+  width: 100%;
   border: 2px solid $c_bluebonnet;
   border-radius: 3px;
 
@@ -24,6 +26,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
     padding: 30px 10px;
     text-align: center;
     background-color: $c_white;

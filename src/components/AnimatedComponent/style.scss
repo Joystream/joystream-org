@@ -1,0 +1,47 @@
+@import '../../styles/_main';
+
+.Animated {
+  visibility: hidden;
+  animation-fill-mode: both;
+
+  &--fade-in {
+    animation-duration: 600ms;
+    animation-name: fade-in;
+  }
+
+  &--bounce {
+    animation-duration: $duration;
+    animation-name: bounce;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    transform: scale(.8);
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    visibility: visible;
+    transform: scale(1);
+  }
+}
