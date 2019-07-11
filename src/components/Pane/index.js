@@ -11,20 +11,6 @@ const propTypes = {
   children: oneOfType([string, node, number]),
   className: string,
   disabled: bool,
-  to: (props, propName, componentName) => {
-    if (!props.disabled & !props.to && !props.href) {
-      return new Error(
-        `One of props 'to' or 'href' was not specified in '${componentName}'.`
-      );
-    }
-  },
-  href: (props, propName, componentName) => {
-    if (!props.disabled & !props.to && !props.href) {
-      return new Error(
-        `One of props 'href' or 'to' was not specified in '${componentName}'.`
-      );
-    }
-  },
 };
 
 const defaultProps = {
