@@ -1,7 +1,10 @@
 @import '../../styles/_main';
 
 .Analytics {
+  @extend %container;
+
   position: relative;
+  width: 100%;
   background-color: $c_black;
   border-radius: $border-radius;
 

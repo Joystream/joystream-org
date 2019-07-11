@@ -1,4 +1,5 @@
 import React from 'react';
+import centered from '@storybook/addon-centered/react';
 
 import { storiesOf } from '@storybook/react';
 
@@ -9,6 +10,7 @@ const unfinishedDate = new Date();
 unfinishedDate.setHours(today.getHours() + 2);
 
 storiesOf('HeroCard', module)
+  .addDecorator(centered)
   .add('active', () => <HeroCard date={unfinishedDate} />)
   .add('error', () => (
     <HeroCard

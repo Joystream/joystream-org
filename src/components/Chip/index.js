@@ -5,7 +5,7 @@ import './style.scss';
 
 const propTypes = {
   children: oneOfType([string, node, number]),
-  icon: node.isRequired,
+  icon: func.isRequired,
   onClick: func,
 };
 
@@ -14,9 +14,7 @@ const defaultProps = {
   onClick: null,
 };
 
-const Chip = ({ children, icon, ...props }) => {
-  const Icon = icon;
-
+const Chip = ({ children, icon: Icon, ...props }) => {
   return (
     <button className="Chip" {...props}>
       <Icon className="Chip__icon" />

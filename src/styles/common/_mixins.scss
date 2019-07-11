@@ -7,3 +7,9 @@
     padding: 0 32px;
   }
 }
+
+%smallContainer {
+  @extend %container;
+
+  max-width: 840px;
+}

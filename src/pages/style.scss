@@ -1,27 +1,32 @@
 @import '../styles/main.scss';
 
-.HeroStory {
-  &__paragraph {
+.IndexPage {
+  &__roles-button {
+    align-self: center;
+    margin-top: 64px;
+  }
+
+  &__hero-paragraph {
     padding-bottom: 60px;
   }
 
-  &__group {
+  &__hero-group {
     display: flex;
     flex-direction: column;
   }
 
-  &__button {
+  &__hero-button {
     &:not(:last-child) {
       margin-bottom: 16px;
     }
   }
 
   @media #{$screen-md} {
-    &__group {
+    &__hero-group {
       flex-direction: row;
     }
 
-    &__button {
+    &__hero-button {
       &:not(:last-child) {
         margin-right: 16px;
         margin-bottom: 0;
