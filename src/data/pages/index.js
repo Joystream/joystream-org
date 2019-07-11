@@ -1,15 +1,15 @@
-import { ReactComponent as ValidatorsImage } from '../assets/svg/active-validators.svg';
-import { ReactComponent as StorageImage } from '../assets/svg/storage.svg';
-import { ReactComponent as MemberImage } from '../assets/svg/council-member.svg';
-import { ReactComponent as ScreenerImage } from '../assets/svg/screener.svg';
-import { ReactComponent as MembershipCuratorImage } from '../assets/svg/membership-curator.svg';
-import { ReactComponent as ContentCuratorImage } from '../assets/svg/content-curator.svg';
-import { ReactComponent as ContentCreatorImage } from '../assets/svg/content-creator.svg';
-import { ReactComponent as BandwidthProviderImage } from '../assets/svg/bandwidth-provider.svg';
-import { ReactComponent as DiscoveryProviderImage } from '../assets/svg/discovery-provider.svg';
-import { ReactComponent as LiveStreamingProviderImage } from '../assets/svg/live-streaming-provider.svg';
-import { ReactComponent as BuilderImage } from '../assets/svg/builder.svg';
-import { ReactComponent as CommunicationModeratorImage } from '../assets/svg/communication-moderator.svg';
+import { ReactComponent as ValidatorsImage } from '../../assets/svg/active-validators.svg';
+import { ReactComponent as StorageImage } from '../../assets/svg/storage.svg';
+import { ReactComponent as MemberImage } from '../../assets/svg/council-member.svg';
+import { ReactComponent as ScreenerImage } from '../../assets/svg/screener.svg';
+import { ReactComponent as MembershipCuratorImage } from '../../assets/svg/membership-curator.svg';
+import { ReactComponent as ContentCuratorImage } from '../../assets/svg/content-curator.svg';
+import { ReactComponent as ContentCreatorImage } from '../../assets/svg/content-creator.svg';
+import { ReactComponent as BandwidthProviderImage } from '../../assets/svg/bandwidth-provider.svg';
+import { ReactComponent as DiscoveryProviderImage } from '../../assets/svg/discovery-provider.svg';
+import { ReactComponent as LiveStreamingProviderImage } from '../../assets/svg/live-streaming-provider.svg';
+import { ReactComponent as BuilderImage } from '../../assets/svg/builder.svg';
+import { ReactComponent as CommunicationModeratorImage } from '../../assets/svg/communication-moderator.svg';
 
 const roles = {
   active: [

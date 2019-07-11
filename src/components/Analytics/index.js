@@ -32,7 +32,7 @@ const Analytics = ({ className, content, children, ...props }) => {
     <section className={cn('Analytics', className)} {...props}>
       <div className="Analytics__container">
         {items.map(item => {
-          const value = item.key ? content[item.key] : item.value || '-';
+          const value = item.key ? (content[item.key] || '-') : item.value ;
 
           return <AnalyticsItem key={item.title} {...item} value={value} />;
         })}
