@@ -6,13 +6,6 @@ import GoalItem from './';
 
 storiesOf('GoalItem', module)
   .addDecorator(centered)
-  .add('default', () => (
-    <GoalItem title="Build and release an on-chain forum">
-      The final platform will have built in multiple ways of facilitating easy and secure public, and private,
-      communication and information sharing among members. The forum is the first step allowing the platform members to
-      communicate, share ideas and discuss.
-    </GoalItem>
-  ))
   .add('state: achieved (default)', () => (
     <GoalItem title="Rebuild and release the storage node">
       Where the old storage node had some bugs making it unable to sync between clients and required a hardcoded
@@ -24,12 +17,6 @@ storiesOf('GoalItem', module)
       Both content creators and consumers user experience depends on various metrics, but perhaps the most important is
       that the storage node they connect to responds to their request. Whether or not this goal is achieved depends on
       both the reliability of the software, a good reporting system and corrective actions from multiple parties.
-    </GoalItem>
-  ))
-  .add('state: achieved', () => (
-    <GoalItem state="achieved" title="Rebuild and release the storage node">
-      Where the old storage node had some bugs making it unable to sync between clients and required a hardcoded
-      liaison, the new storage node is working as intended with no hierarchy or privileges.
     </GoalItem>
   ))
   .add('state: postponed', () => (

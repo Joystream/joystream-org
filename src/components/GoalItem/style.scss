@@ -8,9 +8,9 @@
   flex-direction: column;
   max-width: 1000px;
   padding: 40px 20px;
-  // padding: 40px 20px 40px 36px;
   text-align: center;
   border-radius: $border-radius;
+  transition: background-color $duration;
 
   &:hover {
     background-color: $c_alabaster;
@@ -37,6 +37,7 @@
   }
 
   &__status {
+    margin-top: 10px;
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
