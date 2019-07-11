@@ -1,0 +1,96 @@
+@import '../../styles/_main';
+
+.GoalItem {
+  $_r: &;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1000px;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: $border-radius;
+  transition: background-color $duration;
+
+  &:hover {
+    background-color: $c_alabaster;
+
+    #{$_r}__status {
+      opacity: 1;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &__icon-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  &__status {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity $duration;
+
+    &--achieved {
+      color: $c_caribbean-green;
+    }
+
+    &--inprogress {
+      color: $c_blue;
+    }
+
+    &--postponed {
+      color: $c_mine-shaft;
+    }
+  }
+
+  &__content {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $c_black;
+  }
+
+  @media #{$screen-sm} {
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 40px;
+    text-align: left;
+
+    &__icon-container {
+      margin-right: 50px;
+      margin-bottom: 0;
+      padding: 0 24px;
+    }
+
+    &__content {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+  }
+}

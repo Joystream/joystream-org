@@ -1,3 +1,5 @@
+import { oneOf } from 'prop-types';
+
 export const linkPropTypes = {
   to: (props, propName, componentName) => {
     if (!props.to && !props.href) {
@@ -9,4 +11,8 @@ export const linkPropTypes = {
       return new Error(`One of props 'href' or 'to' was not specified in '${componentName}'.`);
     }
   },
+};
+
+export const mapPropTypes = {
+  location: oneOf(['athens', 'acropolis', 'sparta']).isRequired,
 };
