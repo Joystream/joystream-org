@@ -12,6 +12,12 @@
     line-height: 38px;
   }
 
+  &__subtitle {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   @media #{$screen-md} {
     padding-top: 150px;
 

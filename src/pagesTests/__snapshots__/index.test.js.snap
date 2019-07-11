@@ -498,6 +498,7 @@ exports[`IndexPage page renders correctly 1`] = `
     >
       Test
     </h2>
+    
     content
   </section>
 </div>
