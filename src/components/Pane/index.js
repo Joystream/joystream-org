@@ -1,9 +1,9 @@
 import React from 'react';
 import { string, node, func, oneOfType, number, bool } from 'prop-types';
-import Link from '../Link';
-
-import './style.scss';
 import cn from 'classnames';
+
+import Link from '../Link';
+import './style.scss';
 
 const propTypes = {
   title: string.isRequired,
