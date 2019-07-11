@@ -1,15 +1,17 @@
 import React from 'react';
 import cn from 'classnames';
-import { oneOf, string, node } from 'prop-types';
+import { string, node } from 'prop-types';
 
 import athensImage from '../../assets/images/athens.png';
 import spartaImage from '../../assets/images/sparta.png';
 import { ReactComponent as PointerImage } from '../../assets/svg/pointer.svg';
 
+import { mapPropTypes } from '../../propTypes';
+
 import './style.scss';
 
 const propTypes = {
-  location: oneOf(['athens', 'acropolis', 'sparta']).isRequired,
+  ...mapPropTypes,
   title: string.isRequired,
   children: node.isRequired,
   className: string,
@@ -26,7 +28,7 @@ const maps = {
 
 const Map = ({ location, title, children, className, ...props }) => {
   return (
-    <div className={cn('Map', className)} style={{ backgroundImage: `url(${maps[location]})` }} {...props}>
+    <div className={cn('Map', className)} style={{ backgroundImage: `url(${maps[location]})`, }} {...props}>
       <PointerImage />
       <p className="Map__info">Map data ©{new Date().getFullYear()} Google</p>
     </div>
