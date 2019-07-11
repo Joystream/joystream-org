@@ -140,6 +140,7 @@ exports[`IndexPage page renders correctly 1`] = `
         >
           Acropolis Tesnet
         </h2>
+        
         <div
           className="TestnetItem"
         >
@@ -353,6 +354,7 @@ exports[`IndexPage page renders correctly 1`] = `
         >
           Become a user, run the platform
         </h2>
+        
         <div
           className="Subheader"
         >
