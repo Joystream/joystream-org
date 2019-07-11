@@ -1,0 +1,64 @@
+@import '../../styles/main.scss';
+
+.MapInfo {
+  width: 100%;
+
+  &__map {
+    height: 40vh;
+  }
+
+  &__content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 60px 40px 0;
+    text-align: center;
+
+    & p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    & a {
+      font-size: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media #{$screen-sm} {
+    display: flex;
+
+    &__map {
+      height: auto;
+      max-width: 50vw;
+    }
+
+    &__content {
+      text-align: left;
+    }
+  }
+
+  @media #{$screen-md} {
+    &__map {
+      height: 70vh;
+    }
+
+    &__content {
+      margin: auto 0;
+      padding: 0 0 0 60px;
+
+      & p,
+      & a {
+        font-size: 20px;
+      }
+    }
+
+    &__title {
+      font-size: 40px;
+    }
+  }
+}
