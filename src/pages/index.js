@@ -70,12 +70,23 @@ const IndexPage = ({ content }) => (
     <Navbar />
 
     <Hero image={PlatformImage} title="A user governed video platform">
-      <p className="IndexPage__hero-paragraph">Earn Monero by participating in the current Athens testnet</p>
+      <p className="IndexPage__hero-paragraph">
+        Earn Monero by participating in the current Athens testnet
+      </p>
       <div className="IndexPage__hero-group">
-        <Button secondary className="IndexPage__hero-button" href="https://blog.joystream.org/acropolis-incentives/">
+        <Button
+          secondary
+          className="IndexPage__hero-button"
+          href="https://blog.joystream.org/acropolis-incentives/"
+        >
           Earn Monero
         </Button>
-        <Button secondary reversed className="IndexPage__hero-button" href="https://testnet.joystream.org/">
+        <Button
+          secondary
+          reversed
+          className="IndexPage__hero-button"
+          href="https://testnet.joystream.org/"
+        >
           Launch UI
         </Button>
       </div>
@@ -88,7 +99,10 @@ const IndexPage = ({ content }) => (
         children={
           <>
             Acropolis is our fourth testnet, with much improved
-            <Link href="https://www.joystream.org/roles#Storage-Provider"> storage provider </Link>
+            <Link href="https://www.joystream.org/roles#Storage-Provider">
+              {' '}
+              storage provider{' '}
+            </Link>
             software and an on-chain forum.
           </>
         }
