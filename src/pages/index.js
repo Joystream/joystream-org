@@ -3,6 +3,7 @@ import { string, shape, number } from 'prop-types';
 
 import getApiPath from '../utils/getApiPath';
 import mapStatusDataToAnalytics from '../utils/mapStatusDataToAnalytics';
+import mapStatusDataToRoles from '../utils/mapStatusDataToRoles';
 
 import withApi from '../components/_enhancers/withApi';
 
@@ -14,7 +15,7 @@ import TestnetItem from '../components/TestnetItem';
 import Analytics from '../components/Analytics';
 import Button from '../components/Button';
 import TitleWrapper from '../components/TitleWrapper';
-import RoleCard from '../components/RoleCard';
+import RoleList from '../components/RoleList';
 import ColumnsLayout from '../components/ColumnsLayout';
 import LayoutWrapper from '../components/LayoutWrapper';
 import Hero from '../components/Hero';
@@ -127,9 +128,10 @@ const IndexPage = ({ content }) => (
           icon={TickImage}
         />
         <ColumnsLayout>
-          {roles.active.map(role => (
-            <RoleCard {...role} key={role.title} />
-          ))}
+          <RoleList
+            roles={roles.active}
+            content={mapStatusDataToRoles(content)}
+          />
         </ColumnsLayout>
         <Subheader
           title="Roles coming in future testnets"
@@ -137,9 +139,10 @@ const IndexPage = ({ content }) => (
           icon={TickImage}
         />
         <ColumnsLayout columnsCount={3}>
-          {roles.future.map(role => (
-            <RoleCard {...role} key={role.title} />
-          ))}
+          <RoleList
+            roles={roles.future}
+            content={mapStatusDataToRoles(content)}
+          />
         </ColumnsLayout>
 
         <Button secondary to="/roles" className="IndexPage__roles-button">

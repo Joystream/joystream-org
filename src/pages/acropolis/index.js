@@ -3,6 +3,7 @@ import { string, shape, number } from 'prop-types';
 
 import getApiPath from '../../utils/getApiPath';
 import mapStatusDataToAnalytics from '../../utils/mapStatusDataToAnalytics';
+import mapStatusDataToRoles from '../../utils/mapStatusDataToRoles';
 
 import withApi from '../../components/_enhancers/withApi';
 
@@ -10,7 +11,7 @@ import BaseLayout from '../../components/_layouts/Base';
 import HeroCard from '../../components/HeroCard';
 import Analytics from '../../components/Analytics';
 import TitleWrapper from '../../components/TitleWrapper';
-import RoleCard from '../../components/RoleCard';
+import RoleList from '../../components/RoleList';
 import ColumnsLayout from '../../components/ColumnsLayout';
 import LayoutWrapper from '../../components/LayoutWrapper';
 import Hero from '../../components/Hero';
@@ -189,9 +190,10 @@ const AcropolisPage = ({ content }) => {
       <LayoutWrapper dark>
         <TitleWrapper title="Roles available on the current testnet">
           <ColumnsLayout>
-            {roles.active.map(role => (
-              <RoleCard {...role} key={role.title} />
-            ))}
+            <RoleList
+              roles={roles.active}
+              content={mapStatusDataToRoles(content)}
+            />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
