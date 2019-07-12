@@ -10,15 +10,17 @@ const propTypes = {
   image: oneOfType([func, string]),
   indent: bool,
   children: node,
+  chip: node,
 };
 
 const defaultProps = {
   image: null,
   indent: false,
   children: null,
+  chip: null,
 };
 
-const Hero = ({ title, children, image: Image, indent, ...props }) => {
+const Hero = ({ title, children, image: Image, indent, chip }) => {
   const parallaxData = [
     {
       start: 0,
@@ -26,7 +28,7 @@ const Hero = ({ title, children, image: Image, indent, ...props }) => {
       properties: [
         {
           startValue: 0,
-          endValue: -100,
+          endValue: -60,
           property: 'translateY',
         },
       ],
@@ -40,11 +42,13 @@ const Hero = ({ title, children, image: Image, indent, ...props }) => {
           <h1 className="Hero__title">{title}</h1>
           <div className="Hero__description">{children}</div>
         </div>
-
         {Image && (
-          <Plx parallaxData={parallaxData}>
-            <Image className="Hero__image" />
-          </Plx>
+          <div className="Hero__image-wrapper">
+            {chip && chip}
+            <Plx parallaxData={parallaxData}>
+              <Image className="Hero__image" />
+            </Plx>
+          </div>
         )}
       </div>
     </section>
