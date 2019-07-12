@@ -5,7 +5,7 @@ import './style.scss';
 
 const propTypes = {
   children: oneOfType([string, node, number]),
-  icon: func.isRequired,
+  icon: oneOfType([func, string]).isRequired,
   onClick: func,
 };
 

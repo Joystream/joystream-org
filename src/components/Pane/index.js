@@ -7,7 +7,7 @@ import './style.scss';
 
 const propTypes = {
   title: string.isRequired,
-  image: func.isRequired,
+  image: oneOfType([func, string]).isRequired,
   children: oneOfType([string, node, number]),
   className: string,
   disabled: bool,

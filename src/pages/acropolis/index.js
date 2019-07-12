@@ -20,18 +20,18 @@ import Chip from '../../components/Chip';
 import Pane from '../../components/Pane';
 import GoalItem from '../../components/GoalItem';
 import Link from '../../components/Link';
+import MapInfo from '../../components/MapInfo';
 
 import { ReactComponent as AcropolisImage } from '../../assets/svg/acropolis.svg';
 import { ReactComponent as Info } from '../../assets/svg/info.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
+import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AcropolisImg from '../../assets/svg/acropolis.svg';
 
 import { roles } from '../../data/pages';
 
 import './style.scss';
-import MapInfo from '../../components/MapInfo';
-import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 
 const propTypes = {
   content: shape({
