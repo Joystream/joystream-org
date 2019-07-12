@@ -14,11 +14,11 @@ const defaultTypes = {
 
 const BaseLayout = ({ children }) => {
   return (
-    <>
+    <div>
       <Navbar />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

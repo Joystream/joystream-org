@@ -2,12 +2,13 @@
 
 .Modal {
   position: absolute;
-  top: 50%;
+  top: 5%;
   left: 50%;
+  z-index: 2;
   width: 100%;
   padding: 40px 20px;
   outline: none;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
 
   &__content {
     background-color: $c_white;
@@ -20,6 +21,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 2;
     background-color: rgba(0, 0, 0, .6);
     opacity: 0;
     transition: opacity $duration ease-in-out;
