@@ -3,7 +3,6 @@ import { node } from 'prop-types';
 
 import Navbar from '../../Navbar';
 import Footer from '../../Footer';
-// Add cookies component here
 
 const propTypes = {
   children: node,
