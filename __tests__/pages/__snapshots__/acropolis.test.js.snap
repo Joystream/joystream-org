@@ -1,0 +1,841 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AcropolisPage page renders correctly 1`] = `
+<div>
+  <nav
+    className="Navbar"
+  >
+    <div
+      className="Navbar__container"
+    >
+      <a
+        className="Link"
+        href="/"
+      >
+        <icon-mock
+          className="Navbar__logo"
+        />
+      </a>
+      <div
+        className="Navbar__links"
+      >
+        <a
+          className="Navbar__link Navbar__link--highlighted Link Link--highlighted"
+          href="https://www.jsgenesis.com/#openings"
+          label="We are hiring!"
+        >
+          We are hiring!
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://blog.joystream.org/"
+          label="Blog"
+        >
+          Blog
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://blog.joystream.org/manifesto/"
+          label="Manifesto"
+        >
+          Manifesto
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://github.com/Joystream/whitepaper/blob/master/paper.pdf"
+          label="Whitepaper"
+        >
+          Whitepaper
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="/roles"
+          label="Roles"
+        >
+          Roles
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://github.com/Joystream/joystream"
+          label="Repository"
+        >
+          Repository
+        </a>
+      </div>
+      <div
+        className="Navbar__trigger"
+        onClick={[Function]}
+        role="presentation"
+      />
+    </div>
+  </nav>
+  <section
+    className="Hero Hero--indented"
+  >
+    <div
+      className="Hero__container"
+    >
+      <div
+        className="Hero__content"
+      >
+        <h1
+          className="Hero__title"
+        >
+          Acropolis Network
+        </h1>
+        <div
+          className="Hero__description"
+        >
+          <p
+            className="AcropolisPage__hero-paragraph"
+          >
+            Explore available roles and pick the one that suits you the most. Influence platforms development earning Monero in the process.
+          </p>
+          <div
+            className="Card"
+          >
+            <p
+              className="Card__header"
+            >
+              <icon-mock
+                className="Card__icon"
+              />
+              Network announced
+            </p>
+            <div
+              className="Card__content"
+            >
+              <div
+                className="DateCounter DateCounter--light DateCounter--large"
+              >
+                <p
+                  className="DateCounter__title"
+                >
+                  Launched on
+                </p>
+                <div
+                  className="DateCounter__container"
+                >
+                  <div
+                    className="DateCounter__segment"
+                  >
+                    <span
+                      className="DateCounter__value"
+                    >
+                      27
+                    </span>
+                    <span
+                      className="DateCounter__label"
+                    >
+                      day
+                    </span>
+                  </div>
+                  <span
+                    className="DateCounter__value, DateCounter__separator"
+                  >
+                    /
+                  </span>
+                  <div
+                    className="DateCounter__segment"
+                  >
+                    <span
+                      className="DateCounter__value"
+                    >
+                      06
+                    </span>
+                    <span
+                      className="DateCounter__label"
+                    >
+                      month
+                    </span>
+                  </div>
+                  <span
+                    className="DateCounter__value, DateCounter__separator"
+                  >
+                    /
+                  </span>
+                  <div
+                    className="DateCounter__segment"
+                  >
+                    <span
+                      className="DateCounter__value"
+                    >
+                      19
+                    </span>
+                    <span
+                      className="DateCounter__label"
+                    >
+                      year
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="Hero__image-wrapper"
+      >
+        <button
+          className="Chip"
+          onClick={[Function]}
+        >
+          <icon-mock
+            className="Chip__icon"
+          />
+          <span
+            className="Chip__text"
+          >
+            What is this?
+          </span>
+        </button>
+        <div
+          className="Plx  "
+          disabled={false}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <icon-mock
+            className="Hero__image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="LayoutWrapper"
+  >
+    <div
+      className="LayoutWrapper__container"
+    >
+      <section
+        className="TitleWrapper"
+      >
+        <h2
+          className="TitleWrapper__title"
+        >
+          Network Statistics
+        </h2>
+        
+        <section
+          className="Analytics"
+        >
+          <div
+            className="Analytics__container"
+          >
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Participation Payout
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                $1576
+              </p>
+            </div>
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Active Validators
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                20
+              </p>
+            </div>
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Block Height
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                1110117
+              </p>
+            </div>
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Council Election Stage
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                Announcing
+              </p>
+            </div>
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Memberships
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                164
+              </p>
+            </div>
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Forum Posts
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                11
+              </p>
+            </div>
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Platform Content Files
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                9
+              </p>
+            </div>
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Active Storage Providers
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                10
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </div>
+  <div
+    className="LayoutWrapper"
+  >
+    <div
+      className="LayoutWrapper__container"
+    >
+      <section
+        className="TitleWrapper"
+      >
+        <h2
+          className="TitleWrapper__title"
+        >
+          Critical Documents
+        </h2>
+        
+        <div
+          className="ColumnsLayout"
+          data-columns={2}
+        >
+          <a
+            className="Pane Link"
+            href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis/specification"
+            target="_blank"
+          >
+            <div
+              className="Pane__wrapper"
+            >
+              <icon-mock
+                className="Pane__img"
+              />
+            </div>
+            <div
+              className="Pane__content"
+            >
+              <p
+                className="Pane__title"
+              >
+                Full Specifications
+              </p>
+              <p
+                className="Pane__paragraph"
+              >
+                Read the specs of the newly implemented features of Acropolis.
+              </p>
+            </div>
+          </a>
+          <a
+            className="Pane Link"
+            href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis"
+            target="_blank"
+          >
+            <div
+              className="Pane__wrapper"
+            >
+              <icon-mock
+                className="Pane__img"
+              />
+            </div>
+            <div
+              className="Pane__content"
+            >
+              <p
+                className="Pane__title"
+              >
+                Release Plan
+              </p>
+              <p
+                className="Pane__paragraph"
+              >
+                Read the release plan as it was made during the planning stage, and learn more about how the development evolved.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div
+    className="LayoutWrapper"
+  >
+    <div
+      className="LayoutWrapper__container"
+    >
+      <section
+        className="TitleWrapper"
+      >
+        <h2
+          className="TitleWrapper__title"
+        >
+          Testnet Goals
+        </h2>
+        <p
+          className="TitleWrapper__subtitle"
+        >
+          The goals below is a simplified representation of the Key Results listed in our Release
+           
+          <a
+            className="Link"
+            href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs"
+          >
+            OKR
+          </a>
+        </p>
+        <div
+          className="GoalItem"
+        >
+          <div
+            className="GoalItem__icon-container"
+          >
+            <icon-mock
+              className="GoalItem__icon"
+            />
+            <p
+              className="GoalItem__status GoalItem__status--achieved"
+            >
+              Achieved
+            </p>
+          </div>
+          <div
+            className="GoalItem__content"
+          >
+            <p
+              className="GoalItem__title"
+            >
+              Build and release an on-chain forum
+            </p>
+            The final platform will have built in multiple ways of facilitating
+            easy and secure public, and private, communication and information
+            sharing among members. The forum is the first step allowing the
+            platform members to communicate, share ideas and discuss.
+          </div>
+        </div>
+        <div
+          className="GoalItem"
+        >
+          <div
+            className="GoalItem__icon-container"
+          >
+            <icon-mock
+              className="GoalItem__icon"
+            />
+            <p
+              className="GoalItem__status GoalItem__status--achieved"
+            >
+              Achieved
+            </p>
+          </div>
+          <div
+            className="GoalItem__content"
+          >
+            <p
+              className="GoalItem__title"
+            >
+              Rebuild and release the storage node
+            </p>
+            Where the old storage node had some bugs making it unable to sync
+            between clients and required a hardcoded liaison, the new storage
+            node is working as intended with no hierarchy or privileges.
+          </div>
+        </div>
+        <div
+          className="GoalItem"
+        >
+          <div
+            className="GoalItem__icon-container"
+          >
+            <icon-mock
+              className="GoalItem__icon"
+            />
+            <p
+              className="GoalItem__status GoalItem__status--inprogress"
+            >
+              In Progress
+            </p>
+          </div>
+          <div
+            className="GoalItem__content"
+          >
+            <p
+              className="GoalItem__title"
+            >
+              Ensure high uptime of storage providers
+            </p>
+            Both content creators and consumers user experience depends on
+            various metrics, but perhaps the most important is that the storage
+            node they connect to responds to their request. Whether or not this
+            goal is achieved depends on both the reliability of the software, a
+            good reporting system and corrective actions from multiple parties.
+          </div>
+        </div>
+        <div
+          className="GoalItem"
+        >
+          <div
+            className="GoalItem__icon-container"
+          >
+            <icon-mock
+              className="GoalItem__icon"
+            />
+            <p
+              className="GoalItem__status GoalItem__status--postponed"
+            >
+              Postponed
+            </p>
+          </div>
+          <div
+            className="GoalItem__content"
+          >
+            <p
+              className="GoalItem__title"
+            >
+              Build the storage node with "tranches"
+            </p>
+            Although the content directory is currently small, at some point
+            it's not feasible to expect all storage providers to have full
+            replication of all the content. Tranches would allow storage
+            providers to select a subset of the content directory, suitable to
+            their capabilities.
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div
+    className="LayoutWrapper LayoutWrapper--dark"
+  >
+    <div
+      className="LayoutWrapper__container"
+    >
+      <section
+        className="TitleWrapper"
+      >
+        <h2
+          className="TitleWrapper__title"
+        >
+          Roles available on the current testnet
+        </h2>
+        
+        <div
+          className="ColumnsLayout"
+          data-columns={2}
+        >
+          <a
+            className="RoleCard Link"
+            href="/roles#Validator"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Validator
+              </p>
+              <p
+                className="RoleCard__info"
+              >
+                <icon-mock
+                  className="RoleCard__icon"
+                />
+                <span
+                  className="RoleCard__counter"
+                >
+                  20
+                </span>
+                 currently run this role
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard Link"
+            href="/roles#Council-Member"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Council Member
+              </p>
+              <p
+                className="RoleCard__info"
+              >
+                <icon-mock
+                  className="RoleCard__icon"
+                />
+                <span
+                  className="RoleCard__counter"
+                >
+                  12
+                </span>
+                 currently run this role
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard RoleCard--labeled Link"
+            href="/roles#Storage-Provider"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Storage Provider
+              </p>
+              <p
+                className="RoleCard__info"
+              >
+                <icon-mock
+                  className="RoleCard__icon"
+                />
+                <span
+                  className="RoleCard__counter"
+                >
+                  10
+                </span>
+                 currently run this role
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <section
+    className="MapInfo"
+  >
+    <div
+      className="Map MapInfo__map"
+      style={
+        Object {
+          "backgroundImage": "url(test-file-stub)",
+        }
+      }
+    >
+      <icon-mock />
+      <p
+        className="Map__info"
+      >
+        Map data ©
+        2019
+         Google
+      </p>
+    </div>
+    <div
+      className="MapInfo__content"
+    >
+      <h1
+        className="MapInfo__title"
+      >
+        Acropolis of Athens
+      </h1>
+      <p>
+        <strong>
+          The Acropolis is a citadel on a hill in the heart of Athens.
+        </strong>
+         
+        It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list "World Heritage Sites".
+        <br />
+        <br />
+        We chose the name as we had to scale back our ambitions for the next testnet after some issues with the release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not intended for Athens.
+        <br />
+        <br />
+        <a
+          className="Link"
+          href="/athens"
+        >
+          <icon-mock />
+           Explore previous testnet
+        </a>
+      </p>
+    </div>
+  </section>
+  <footer
+    className="Footer"
+  >
+    <p
+      className="Footer__header"
+    >
+      Get notified
+    </p>
+    <a
+      className="Footer__button Button Button--small Button--light"
+      href="http://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&id=459ba8d1da"
+      onClick={null}
+    >
+      Join the newsletter
+    </a>
+    <div
+      className="Footer__socials"
+    >
+      <a
+        className="Footer__social-wrapper"
+        href="https://twitter.com/JoyStreamApp"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+      <a
+        className="Footer__social-wrapper"
+        href="https://github.com/Joystream"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+      <a
+        className="Footer__social-wrapper"
+        href="https://chat.joystream.org/home"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+      <a
+        className="Footer__social-wrapper"
+        href="https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+    </div>
+    <div
+      className="Footer__links"
+    >
+      <a
+        className="Footer__link Footer__link--highlighted Link Link--highlighted"
+        href="https://www.jsgenesis.com/#openings"
+        label="We are hiring!"
+      >
+        We are hiring!
+      </a>
+      <a
+        className="Footer__link Link"
+        href="https://blog.joystream.org/"
+        label="Blog"
+      >
+        Blog
+      </a>
+      <a
+        className="Footer__link Link"
+        href="https://blog.joystream.org/manifesto/"
+        label="Manifesto"
+      >
+        Manifesto
+      </a>
+      <a
+        className="Footer__link Link"
+        href="https://github.com/Joystream/joystream"
+        label="Repository"
+      >
+        Repository
+      </a>
+    </div>
+  </footer>
+</div>
+`;
