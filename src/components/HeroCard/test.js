@@ -22,6 +22,13 @@ describe('HeroCard component', () => {
     expect(card.text().includes('Network live')).toBe(true);
   });
 
+  it('renders info HeroCard', () => {
+    const card = shallow(<HeroCard info date="2019/06/25 16:26" />);
+    expect(card.hasClass('Card--info')).toEqual(true);
+    expect(card.state()).toHaveProperty('currentStatus', 'info');
+    expect(card.text().includes('Network replaced')).toBe(true);
+  });
+
   it('renders finished HeroCard', () => {
     const card = mount(<HeroCard date="2019/06/25 16:26" />);
     expect(card.state()).toHaveProperty('currentStatus', 'finished');
