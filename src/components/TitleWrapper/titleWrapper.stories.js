@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import TitleWrapper from './index';
 import Link from '../Link';
 
-storiesOf('TitleWrapper', module)
+storiesOf('Layout|TitleWrapper', module)
   .add('default', () => (
     <TitleWrapper title="Testnet Goals">
       <p>Content</p>

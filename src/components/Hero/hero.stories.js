@@ -16,7 +16,7 @@ const today = new Date();
 const unfinishedDate = new Date();
 unfinishedDate.setHours(today.getHours() + 2);
 
-storiesOf('Hero', module)
+storiesOf('Section|Hero', module)
   .addParameters({
     backgrounds: [{ name: 'black', value: '#000000', default: true }],
   })
@@ -66,13 +66,13 @@ storiesOf('Hero', module)
   ))
   .add('with indent and counter', () => (
     <Hero title="Acropolis Network" image={ AcropolisImage } indent>
-      <p className="HeroStory__paragraph">
+        <p className="HeroStory__paragraph">
         Explore available roles and pick the one that suits you the most.
         Influence platforms development earning Monero in the process.
-      </p>
+        </p>
       <HeroCard date={ unfinishedDate }/>
-    </Hero>
+      </Hero>
   ), {
-    backgrounds: [{ name: 'white', value: '#ffffff', default: true }],
+      backgrounds: [{ name: 'white', value: '#ffffff', default: true }],
   })
   ;

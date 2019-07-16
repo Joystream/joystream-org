@@ -9,7 +9,7 @@ const today = new Date();
 const unfinishedDate = new Date();
 unfinishedDate.setHours(today.getHours() + 2);
 
-storiesOf('HeroCard', module)
+storiesOf('Components|HeroCard', module)
   .addDecorator(centered)
   .add('active', () => <HeroCard date={unfinishedDate} />)
   .add('error', () => (

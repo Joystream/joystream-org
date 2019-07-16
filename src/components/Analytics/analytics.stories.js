@@ -52,7 +52,7 @@ const exampleExternalData = {
   },
 };
 
-storiesOf('Analytics', module)
+storiesOf('Components|Analytics', module)
   .addDecorator(centered)
   .add('analytics item', () => <AnalyticsItem {...exampleData} />, {
     backgrounds: [

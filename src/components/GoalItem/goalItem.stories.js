@@ -4,7 +4,7 @@ import centered from '@storybook/addon-centered/react';
 
 import GoalItem from './';
 
-storiesOf('GoalItem', module)
+storiesOf('Components|GoalItem', module)
   .addDecorator(centered)
   .add('state: achieved (default)', () => (
     <GoalItem title="Rebuild and release the storage node">

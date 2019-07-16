@@ -13,7 +13,7 @@ const defaultProps = {
   to: '/',
 };
 
-storiesOf('RoleCard', module)
+storiesOf('Components|RoleCard', module)
   .addDecorator(centered)
   .addParameters({
     backgrounds: [{ name: 'black', value: '#000000', default: true }],
