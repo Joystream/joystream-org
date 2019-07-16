@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, shape, number } from 'prop-types';
+import { pagePropTypes } from '../propTypes';
 
 import getApiPath from '../utils/getApiPath';
 import mapStatusDataToAnalytics from '../utils/mapStatusDataToAnalytics';
@@ -27,44 +27,6 @@ import { ReactComponent as TickImage } from '../assets/svg/tick.svg';
 import { roles } from '../data/pages';
 
 import './style.scss';
-
-const propTypes = {
-  content: shape({
-    block_height: number,
-    council: shape({
-      election_stage: string,
-      members_count: number,
-    }),
-    forum: shape({
-      posts: number,
-      threads: number,
-    }),
-    media: shape({
-      media_files: number,
-    }),
-    memberships: shape({
-      platform_members: number,
-    }),
-    roles: shape({
-      storage_providers: number,
-    }),
-    runtime_version: shape({
-      impl_name: string,
-      spec_name: string,
-      spec_version: number,
-    }),
-    system: shape({
-      chain: string,
-      name: string,
-      peerCount: number,
-      version: string,
-    }),
-    validators: shape({
-      count: number,
-      total_stake: string,
-    }),
-  }).isRequired,
-};
 
 const IndexPage = ({ content }) => (
   <div>
@@ -99,10 +61,9 @@ const IndexPage = ({ content }) => (
         image={AcropolisImage}
         children={
           <>
-            Acropolis is our fourth testnet, with much improved
+            Acropolis is our fourth testnet, with much improved{' '}
             <Link href="https://www.joystream.org/roles#Storage-Provider">
-              {' '}
-              storage provider{' '}
+              storage provider
             </Link>
             software and an on-chain forum.
           </>
@@ -155,7 +116,7 @@ const IndexPage = ({ content }) => (
   </div>
 );
 
-IndexPage.propTypes = propTypes;
+IndexPage.propTypes = pagePropTypes;
 
 export { IndexPage };
 export default withApi(IndexPage, getApiPath('STATUS'));

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { string, shape, number } from 'prop-types';
+import { pagePropTypes } from '../../propTypes';
 
 import getApiPath from '../../utils/getApiPath';
 import mapStatusDataToAnalytics from '../../utils/mapStatusDataToAnalytics';
@@ -23,7 +23,6 @@ import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
 
 import { ReactComponent as AcropolisImage } from '../../assets/svg/acropolis.svg';
-import { ReactComponent as Info } from '../../assets/svg/info.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
@@ -33,43 +32,7 @@ import { roles } from '../../data/pages';
 
 import './style.scss';
 
-const propTypes = {
-  content: shape({
-    block_height: number,
-    council: shape({
-      election_stage: string,
-      members_count: number,
-    }),
-    forum: shape({
-      posts: number,
-      threads: number,
-    }),
-    media: shape({
-      media_files: number,
-    }),
-    memberships: shape({
-      platform_members: number,
-    }),
-    roles: shape({
-      storage_providers: number,
-    }),
-    runtime_version: shape({
-      impl_name: string,
-      spec_name: string,
-      spec_version: number,
-    }),
-    system: shape({
-      chain: string,
-      name: string,
-      peerCount: number,
-      version: string,
-    }),
-    validators: shape({
-      count: number,
-      total_stake: string,
-    }),
-  }).isRequired,
-};
+import goalsData from './goalsData';
 
 const AcropolisPage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
@@ -80,11 +43,7 @@ const AcropolisPage = ({ content }) => {
         image={AcropolisImage}
         title="Acropolis Network"
         indent
-        chip={
-          <Chip onClick={() => setModalClosed(true)} icon={Info}>
-            What is this?
-          </Chip>
-        }
+        chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
       >
         <p className="AcropolisPage__hero-paragraph">
           Explore available roles and pick the one that suits you the most.
@@ -150,40 +109,11 @@ const AcropolisPage = ({ content }) => {
             </>
           }
         >
-          <GoalItem title="Build and release an on-chain forum">
-            The final platform will have built in multiple ways of facilitating
-            easy and secure public, and private, communication and information
-            sharing among members. The forum is the first step allowing the
-            platform members to communicate, share ideas and discuss.
-          </GoalItem>
-
-          <GoalItem title="Rebuild and release the storage node">
-            Where the old storage node had some bugs making it unable to sync
-            between clients and required a hardcoded liaison, the new storage
-            node is working as intended with no hierarchy or privileges.
-          </GoalItem>
-
-          <GoalItem
-            state="inprogress"
-            title="Ensure high uptime of storage providers"
-          >
-            Both content creators and consumers user experience depends on
-            various metrics, but perhaps the most important is that the storage
-            node they connect to responds to their request. Whether or not this
-            goal is achieved depends on both the reliability of the software, a
-            good reporting system and corrective actions from multiple parties.
-          </GoalItem>
-
-          <GoalItem
-            state="postponed"
-            title='Build the storage node with "tranches"'
-          >
-            Although the content directory is currently small, at some point
-            it's not feasible to expect all storage providers to have full
-            replication of all the content. Tranches would allow storage
-            providers to select a subset of the content directory, suitable to
-            their capabilities.
-          </GoalItem>
+          {goalsData.map(({ title, text, state }) => (
+            <GoalItem state={state} title={title} key={title}>
+              {text}
+            </GoalItem>
+          ))}
         </TitleWrapper>
       </LayoutWrapper>
 
@@ -224,7 +154,7 @@ const AcropolisPage = ({ content }) => {
   );
 };
 
-AcropolisPage.propTypes = propTypes;
+AcropolisPage.propTypes = pagePropTypes;
 
 export { AcropolisPage };
 export default withApi(AcropolisPage, getApiPath('STATUS'));
