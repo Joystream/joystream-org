@@ -66,12 +66,12 @@ storiesOf('Section|Hero', module)
   ))
   .add('with indent and counter', () => (
     <Hero title="Acropolis Network" image={ AcropolisImage } indent>
-        <p className="HeroStory__paragraph">
+      <p className="HeroStory__paragraph">
         Explore available roles and pick the one that suits you the most.
         Influence platforms development earning Monero in the process.
-        </p>
+      </p>
       <HeroCard date={ unfinishedDate }/>
-      </Hero>
+    </Hero>
   ), {
       backgrounds: [{ name: 'white', value: '#ffffff', default: true }],
   })
