@@ -456,120 +456,136 @@ exports[`AcropolisPage page renders correctly 1`] = `
           </a>
         </p>
         <div
-          className="GoalItem"
+          className="Animated"
         >
           <div
-            className="GoalItem__icon-container"
+            className="GoalItem"
           >
-            <icon-mock
-              className="GoalItem__icon"
-            />
-            <p
-              className="GoalItem__status GoalItem__status--achieved"
+            <div
+              className="GoalItem__icon-container"
             >
-              Achieved
-            </p>
-          </div>
-          <div
-            className="GoalItem__content"
-          >
-            <p
-              className="GoalItem__title"
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--achieved"
+              >
+                Achieved
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
             >
-              Build and release an on-chain forum
-            </p>
-            The final platform will have built in multiple ways of facilitating
+              <p
+                className="GoalItem__title"
+              >
+                Build and release an on-chain forum
+              </p>
+              The final platform will have built in multiple ways of facilitating
             easy and secure public, and private, communication and information
             sharing among members. The forum is the first step allowing the
             platform members to communicate, share ideas and discuss.
+            </div>
           </div>
         </div>
         <div
-          className="GoalItem"
+          className="Animated"
         >
           <div
-            className="GoalItem__icon-container"
+            className="GoalItem"
           >
-            <icon-mock
-              className="GoalItem__icon"
-            />
-            <p
-              className="GoalItem__status GoalItem__status--achieved"
+            <div
+              className="GoalItem__icon-container"
             >
-              Achieved
-            </p>
-          </div>
-          <div
-            className="GoalItem__content"
-          >
-            <p
-              className="GoalItem__title"
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--achieved"
+              >
+                Achieved
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
             >
-              Rebuild and release the storage node
-            </p>
-            Where the old storage node had some bugs making it unable to sync
+              <p
+                className="GoalItem__title"
+              >
+                Rebuild and release the storage node
+              </p>
+              Where the old storage node had some bugs making it unable to sync
             between clients and required a hardcoded liaison, the new storage
             node is working as intended with no hierarchy or privileges.
+            </div>
           </div>
         </div>
         <div
-          className="GoalItem"
+          className="Animated"
         >
           <div
-            className="GoalItem__icon-container"
+            className="GoalItem"
           >
-            <icon-mock
-              className="GoalItem__icon"
-            />
-            <p
-              className="GoalItem__status GoalItem__status--inprogress"
+            <div
+              className="GoalItem__icon-container"
             >
-              In Progress
-            </p>
-          </div>
-          <div
-            className="GoalItem__content"
-          >
-            <p
-              className="GoalItem__title"
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--inprogress"
+              >
+                In Progress
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
             >
-              Ensure high uptime of storage providers
-            </p>
-            Both content creators and consumers user experience depends on
+              <p
+                className="GoalItem__title"
+              >
+                Ensure high uptime of storage providers
+              </p>
+              Both content creators and consumers user experience depends on
             various metrics, but perhaps the most important is that the storage
             node they connect to responds to their request. Whether or not this
             goal is achieved depends on both the reliability of the software, a
             good reporting system and corrective actions from multiple parties.
+            </div>
           </div>
         </div>
         <div
-          className="GoalItem"
+          className="Animated"
         >
           <div
-            className="GoalItem__icon-container"
+            className="GoalItem"
           >
-            <icon-mock
-              className="GoalItem__icon"
-            />
-            <p
-              className="GoalItem__status GoalItem__status--postponed"
+            <div
+              className="GoalItem__icon-container"
             >
-              Postponed
-            </p>
-          </div>
-          <div
-            className="GoalItem__content"
-          >
-            <p
-              className="GoalItem__title"
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--postponed"
+              >
+                Postponed
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
             >
-              Build the storage node with "tranches"
-            </p>
-            Although the content directory is currently small, at some point
+              <p
+                className="GoalItem__title"
+              >
+                Build the storage node with "tranches"
+              </p>
+              Although the content directory is currently small, at some point
             it's not feasible to expect all storage providers to have full
             replication of all the content. Tranches would allow storage
             providers to select a subset of the content directory, suitable to
             their capabilities.
+            </div>
           </div>
         </div>
       </section>
@@ -699,7 +715,11 @@ exports[`AcropolisPage page renders correctly 1`] = `
         }
       }
     >
-      <icon-mock />
+      <div
+        className="Animated"
+      >
+        <icon-mock />
+      </div>
       <p
         className="Map__info"
       >

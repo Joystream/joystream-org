@@ -18,7 +18,7 @@ import Hero from '../../components/Hero';
 import TestnetModal from '../../components/TestnetModal';
 import Chip from '../../components/Chip';
 import Pane from '../../components/Pane';
-import GoalItem from '../../components/GoalItem';
+import GoalList from '../../components/GoalList';
 import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
 
@@ -105,11 +105,7 @@ const AcropolisPage = ({ content }) => {
             </>
           }
         >
-          {goalsData.map(({ title, text, state }) => (
-            <GoalItem state={state} title={title} key={title}>
-              {text}
-            </GoalItem>
-          ))}
+          <GoalList data={goalsData} />
         </TitleWrapper>
       </LayoutWrapper>
 
