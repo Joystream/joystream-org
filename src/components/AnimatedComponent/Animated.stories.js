@@ -31,7 +31,9 @@ storiesOf('Animated', module)
   .addDecorator(centered)
   .add('Fade In', () => (
     <div>
-      <p style={{ marginTop: 20 }}>Scroll down to see animation</p>
+      <p style={{ marginTop: 20, textAlign: 'center' }}>
+        Scroll down to see animation
+      </p>
 
       <div style={wrapperStyle}>
         <Animated fadeIn>
@@ -54,7 +56,9 @@ storiesOf('Animated', module)
   ))
   .add('Bounce', () => (
     <div>
-      <p style={{ marginTop: 20 }}>Scroll down to see animation</p>
+      <p style={{ marginTop: 20, textAlign: 'center' }}>
+        Scroll down to see animation
+      </p>
 
       <div style={wrapperStyle}>
         <Animated bounce>

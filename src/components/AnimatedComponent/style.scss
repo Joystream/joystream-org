@@ -1,7 +1,7 @@
 @import '../../styles/_main';
 
 .Animated {
-  visibility: hidden;
+  opacity: 0;
   animation-fill-mode: both;
 
   &--fade-in {
@@ -23,7 +23,6 @@
 
   100% {
     opacity: 1;
-    visibility: visible;
     transform: translateY(0);
   }
 }
@@ -31,7 +30,6 @@
 @keyframes bounce {
   0% {
     opacity: 0;
-    visibility: visible;
     transform: scale(.8);
   }
 
@@ -41,7 +39,7 @@
   }
 
   100% {
-    visibility: visible;
+    opacity: 1;
     transform: scale(1);
   }
 }
