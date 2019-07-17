@@ -1,0 +1,32 @@
+@import '../../styles/main.scss';
+
+.CookiesNotice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0 0 20px 0 rgba($c_black, .1);
+
+  &__content * {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &__link {
+    font-weight: 600;
+  }
+
+  &__container {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  &__accept {
+    margin-left: 12px;
+  }
+}
