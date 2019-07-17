@@ -15,7 +15,7 @@
     "color-hex-case": "lower",
     "string-quotes": "single",
     "font-family-name-quotes": "always-where-recommended",
-    "number-leading-zero": "never",
+    "number-leading-zero": "always",
     "at-rule-empty-line-before": ["always", {
       "ignore": [
         "after-comment",
