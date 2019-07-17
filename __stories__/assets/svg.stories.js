@@ -25,6 +25,7 @@ stories.add('_all', () => {
         const Icon = icon.ReactComponent;
         return (
           <div
+            key={iconsList.keys()[i]}
             style={{
               display: 'flex',
               flexDirection: 'column',
