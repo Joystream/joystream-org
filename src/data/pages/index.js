@@ -13,20 +13,55 @@ import { ReactComponent as CommunicationModeratorImage } from '../../assets/svg/
 
 const roles = {
   active: [
-    { image: ValidatorsImage, title: 'Validator', count: 15, to: '/roles#Validator' },
-    { image: MemberImage, title: 'Council Member', count: 12, to: '/roles#Council-Member' },
-    { image: StorageImage, title: 'Storage Provider', count: 10, to: '/roles#Storage-Provider' },
+    {
+      image: ValidatorsImage,
+      title: 'Validator',
+      count: 15,
+      to: '/roles#Validator',
+    },
+    {
+      image: MemberImage,
+      title: 'Council Member',
+      count: 12,
+      to: '/roles#Council-Member',
+    },
+    {
+      image: StorageImage,
+      title: 'Storage Provider',
+      count: 10,
+      to: '/roles#Storage-Provider',
+    },
   ],
   future: [
     { image: ScreenerImage, title: 'Membership Screener', to: '/roles' },
-    { image: MembershipCuratorImage, title: 'Membership Curator', to: '/roles' },
+    {
+      image: MembershipCuratorImage,
+      title: 'Membership Curator',
+      to: '/roles',
+    },
     { image: ContentCuratorImage, title: 'Content Curator', to: '/roles' },
     { image: ContentCreatorImage, title: 'Content Creator', to: '/roles' },
-    { image: BandwidthProviderImage, title: 'Bandwidth Provider', to: '/roles' },
-    { image: DiscoveryProviderImage, title: 'Discovery Provider', to: '/roles' },
-    { image: LiveStreamingProviderImage, title: 'Live Streaming Provider', to: '/roles' },
+    {
+      image: BandwidthProviderImage,
+      title: 'Bandwidth Provider',
+      to: '/roles',
+    },
+    {
+      image: DiscoveryProviderImage,
+      title: 'Discovery Provider',
+      to: '/roles',
+    },
+    {
+      image: LiveStreamingProviderImage,
+      title: 'Live Streaming Provider',
+      to: '/roles',
+    },
     { image: BuilderImage, title: 'Builder', to: '/roles' },
-    { image: CommunicationModeratorImage, title: 'Communication Moderator', to: '/roles' },
+    {
+      image: CommunicationModeratorImage,
+      title: 'Communication Moderator',
+      to: '/roles',
+    },
   ],
 };
 
