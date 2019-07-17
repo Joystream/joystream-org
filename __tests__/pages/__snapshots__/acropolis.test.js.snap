@@ -366,14 +366,6 @@ exports[`AcropolisPage page renders correctly 1`] = `
           </div>
         </section>
       </section>
-    </div>
-  </div>
-  <div
-    className="LayoutWrapper"
-  >
-    <div
-      className="LayoutWrapper__container"
-    >
       <section
         className="TitleWrapper"
       >
@@ -443,14 +435,6 @@ exports[`AcropolisPage page renders correctly 1`] = `
           </a>
         </div>
       </section>
-    </div>
-  </div>
-  <div
-    className="LayoutWrapper"
-  >
-    <div
-      className="LayoutWrapper__container"
-    >
       <section
         className="TitleWrapper"
       >

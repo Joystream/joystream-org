@@ -70,9 +70,7 @@ const AcropolisPage = ({ content }) => {
         <TitleWrapper title="Network Statistics">
           <Analytics content={mapStatusDataToAnalytics(content)} />
         </TitleWrapper>
-      </LayoutWrapper>
 
-      <LayoutWrapper>
         <TitleWrapper title="Critical Documents">
           <ColumnsLayout>
             <Pane
@@ -94,9 +92,7 @@ const AcropolisPage = ({ content }) => {
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
-      </LayoutWrapper>
 
-      <LayoutWrapper>
         <TitleWrapper
           title="Testnet Goals"
           subtitle={

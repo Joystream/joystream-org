@@ -76,6 +76,7 @@ $indentation: 60px;
 
     &__container {
       flex-direction: row;
+      padding: 0 32px;
 
       & > * {
         flex-basis: 50%;
