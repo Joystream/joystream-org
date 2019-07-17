@@ -10,9 +10,7 @@ const mockFunction = jest.fn();
 
 describe('DateCounter component', () => {
   it('renders "Launched on" title when countdown is finished', () => {
-    const counter = mount(
-      <Counter date="2019/06/25 16:26" onTimeout={mockFunction} />
-    );
+    const counter = mount(<Counter date="2019/06/25 16:26" onTimeout={mockFunction} />);
     expect(counter.text().includes('Launched on')).toBe(true);
     expect(counter.text().includes('/')).toBe(true);
     expect(counter.text().includes(':')).toBe(false);
@@ -66,5 +64,10 @@ describe('DateCounter component', () => {
     const counter = render(<Counter date="2019/06/25 16:26" light large />);
     expect(counter.hasClass('DateCounter--light')).toEqual(true);
     expect(counter.hasClass('DateCounter--large')).toEqual(true);
+  });
+
+  it('renders custom title', () => {
+    const counter = render(<Counter date="2019/06/25 16:26" title="Custom title" />);
+    expect(counter.find('.DateCounter__title').text()).toEqual('Custom title');
   });
 });
