@@ -5,6 +5,7 @@ module.exports = {
     author: '',
   },
   plugins: [
+    'gatsby-plugin-polyfill-io',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-stylelint',
     {

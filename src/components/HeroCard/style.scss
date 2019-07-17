@@ -20,6 +20,16 @@
     }
   }
 
+  &--info {
+    background-color: $c_caribbean-green;
+
+    #{$_r} {
+      &__header {
+        background-color: $c_persian-green;
+      }
+    }
+  }
+
   &__header {
     display: flex;
     align-items: center;

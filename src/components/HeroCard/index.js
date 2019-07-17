@@ -1,5 +1,5 @@
 import React from 'react';
-import { instanceOf, oneOfType, string, bool } from 'prop-types';
+import { instanceOf, oneOfType, string, bool, node } from 'prop-types';
 import cn from 'classnames';
 import ReactMarkdown from 'react-markdown';
 
@@ -12,18 +12,23 @@ import './style.scss';
 const propTypes = {
   date: oneOfType([string, instanceOf(Date)]),
   error: bool,
+  info: bool,
   content: string,
+  counterTitle: oneOfType([string, node]),
 };
 
 const defaultProps = {
   date: null,
   error: false,
+  info: false,
   content: null,
+  counterTitle: '',
 };
 
 const status = {
   active: { title: 'Network live' },
-  error: { title: 'Network down', icon: Warning, class: 'Card--error' },
+  error: { title: 'Network down', icon: Warning },
+  info: { title: 'Network replaced' },
   finished: { title: 'Network announced' },
 };
 
@@ -35,6 +40,9 @@ class HeroCard extends React.Component {
   componentDidMount() {
     if (this.props.error) {
       this.setStatus('error');
+    }
+    if (this.props.info) {
+      this.setStatus('info');
     }
   }
 
@@ -59,7 +67,7 @@ class HeroCard extends React.Component {
   };
 
   renderContent = () => {
-    const { error, content, date } = this.props;
+    const { error, info, content, date, counterTitle } = this.props;
 
     if (error) {
       return (
@@ -74,15 +82,19 @@ class HeroCard extends React.Component {
         date={date}
         large
         light
-        onTimeout={() => this.setStatus('finished')}
+        onTimeout={() => this.setStatus(info ? 'info' : 'finished')}
+        title={counterTitle}
       />
     );
   };
 
   render() {
-    const { currentStatus } = this.state;
+    const { error, info } = this.props;
 
-    const classes = cn('Card', status[currentStatus].class);
+    const classes = cn('Card', {
+      'Card--error': error,
+      'Card--info': info,
+    });
 
     return (
       <div className={classes}>

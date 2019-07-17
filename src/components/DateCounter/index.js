@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { oneOfType, string, instanceOf, bool, func } from 'prop-types';
+import { oneOfType, string, instanceOf, bool, func, node } from 'prop-types';
 import Countdown from 'react-countdown-now';
 
 import padNumber from '../../utils/padNumber';
@@ -14,15 +14,17 @@ const propTypes = {
   light: bool,
   className: string,
   onTimeout: func,
+  title: oneOfType([string, node]),
 };
 
 const defaultProps = {
   large: false,
   light: false,
   onTimeout: null,
+  title: null,
 };
 
-const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large, onTimeout, className }) => {
+const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large, onTimeout, title, className }) => {
   let defaultTitle = 'Time to launch';
   let defaultSeparator = ':';
   let timeToDisplay = [];
@@ -64,7 +66,7 @@ const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large
         'DateCounter--large': large,
       })}
     >
-      <p className="DateCounter__title">{defaultTitle}</p>
+      <p className="DateCounter__title">{title || defaultTitle}</p>
       <div className="DateCounter__container">
         {timeToDisplay.map((time, i) => {
           return (

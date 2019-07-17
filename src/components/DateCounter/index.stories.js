@@ -7,7 +7,7 @@ import Counter from './';
 
 const today = new Date();
 const unfinishedDate = new Date();
-unfinishedDate.setMinutes(today.getMinutes() + 5);
+unfinishedDate.setHours(today.getHours() + 2);
 
 storiesOf('Counter', module)
   .addDecorator(centered)
@@ -22,4 +22,5 @@ storiesOf('Counter', module)
       },
     ],
   })
-  .add('large', () => <Counter large date={unfinishedDate} />);
+  .add('large', () => <Counter large date={unfinishedDate} />)
+  .add('with custom title', () => <Counter date={unfinishedDate} title="Custom title" />);
