@@ -16,20 +16,23 @@ const roles = {
     {
       image: ValidatorsImage,
       title: 'Validator',
-      count: 15,
       to: '/roles#Validator',
+      key: 'validatorsCount',
+      hasLabel: false,
     },
     {
       image: MemberImage,
       title: 'Council Member',
-      count: 12,
       to: '/roles#Council-Member',
+      key: 'councilMembersCount',
+      hasLabel: false,
     },
     {
       image: StorageImage,
       title: 'Storage Provider',
-      count: 10,
       to: '/roles#Storage-Provider',
+      key: 'storageProviders',
+      hasLabel: true,
     },
   ],
   future: [

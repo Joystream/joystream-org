@@ -25,7 +25,9 @@ const ModalWrapper = ({ isOpen, children, closeModal }) => (
     closeTimeoutMS={200}
     onRequestClose={closeModal}
   >
-    <div className="Modal__content">{children}</div>
+    <div className="Modal__container">
+      <div className="Modal__content">{children}</div>
+    </div>
   </Modal>
 );
 

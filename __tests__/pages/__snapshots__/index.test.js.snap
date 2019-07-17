@@ -112,17 +112,21 @@ exports[`IndexPage page renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="Plx  "
-        disabled={false}
-        style={
-          Object {
-            "visibility": "hidden",
-          }
-        }
+        className="Hero__image-wrapper"
       >
-        <icon-mock
-          className="Hero__image"
-        />
+        <div
+          className="Plx  "
+          disabled={false}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <icon-mock
+            className="Hero__image"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -163,11 +167,12 @@ exports[`IndexPage page renders correctly 1`] = `
                 className="TestnetItem__content"
               >
                 Acropolis is our fourth testnet, with much improved
+                 
                 <a
                   className="Link"
                   href="https://www.joystream.org/roles#Storage-Provider"
                 >
-                   storage provider 
+                  storage provider
                 </a>
                 software and an on-chain forum.
               </p>
@@ -400,7 +405,7 @@ exports[`IndexPage page renders correctly 1`] = `
                 <span
                   className="RoleCard__counter"
                 >
-                  15
+                  20
                 </span>
                  currently run this role
               </p>
@@ -437,7 +442,7 @@ exports[`IndexPage page renders correctly 1`] = `
             </div>
           </a>
           <a
-            className="RoleCard Link"
+            className="RoleCard RoleCard--labeled Link"
             href="/roles#Storage-Provider"
           >
             <icon-mock

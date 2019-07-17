@@ -29,7 +29,6 @@
     width: 100%;
     padding: 30px 10px;
     text-align: center;
-    background-color: $c_white;
     transition: background-color $duration;
   }
 
@@ -48,14 +47,12 @@
     transition: color $duration;
   }
 
-  &:hover &,
-  &:active & {
-    &__content {
-      background-color: $c_bluebonnet;
-    }
+  &:hover,
+  &:active {
+    background-color: $c_bluebonnet;
 
-    &__title,
-    &__paragraph {
+    #{$_r}__title,
+    #{$_r}__paragraph {
       color: $c_white;
     }
   }
@@ -73,9 +70,7 @@
 
     &:hover,
     &:active {
-      #{$_r}__content {
-        background-color: $c_white;
-      }
+      background-color: $c_white;
 
       #{$_r}__title {
         color: $c_blue-haze;

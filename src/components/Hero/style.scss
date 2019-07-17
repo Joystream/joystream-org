@@ -41,6 +41,16 @@ $indentation: 60px;
     color: $c_white;
   }
 
+  &__image-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    button {
+      margin-bottom: 20px;
+    }
+  }
+
   &__image {
     width: 100%;
     padding: 0 80px 40px;
@@ -54,7 +64,7 @@ $indentation: 60px;
   }
 
   @media #{$screen-md} {
-    padding: 90px 0 0;
+    padding: 90px 30px 0;
 
     &--indented {
       margin-bottom: $indentation;
@@ -66,6 +76,7 @@ $indentation: 60px;
 
     &__container {
       flex-direction: row;
+      padding: 0 32px;
 
       & > * {
         flex-basis: 50%;
@@ -97,9 +108,16 @@ $indentation: 60px;
       line-height: 78px;
     }
 
+    &__image-wrapper {
+      align-items: stretch;
+
+      button {
+        align-self: flex-end;
+      }
+    }
+
     &__image {
-      padding: 0;
-      padding-left: 32px;
+      padding: 0 0 0 32px;
     }
   }
 }

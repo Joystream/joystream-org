@@ -4,10 +4,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 2;
   width: 100%;
   padding: 40px 20px;
   outline: none;
   transform: translate(-50%, -50%);
+
+  &__container {
+    max-height: 100vh;
+    overflow: scroll;
+  }
 
   &__content {
     background-color: $c_white;
@@ -20,6 +26,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 2;
     background-color: rgba($c_black, .6);
     opacity: 0;
     transition: opacity $duration ease-in-out;

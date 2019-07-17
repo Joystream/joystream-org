@@ -1,13 +1,15 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { IndexPage } from '../../src/pages';
+import { AcropolisPage } from '../../src/pages/acropolis';
 
 import testContent from '../../__mocks__/data/testContent';
 
-describe('IndexPage page', () => {
+describe('AcropolisPage page', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<IndexPage content={testContent} />).toJSON();
+    const tree = renderer
+      .create(<AcropolisPage content={testContent} />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

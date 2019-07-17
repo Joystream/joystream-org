@@ -14,7 +14,7 @@ const propTypes = {
   ...linkPropTypes,
   image: oneOfType([string, func]).isRequired,
   title: string.isRequired,
-  count: number,
+  count: oneOfType([string, number]),
   className: string,
   hasLabel: bool,
   type: oneOf(['current', 'migration', 'most']),
@@ -32,14 +32,28 @@ const numberWrapper = number => {
 };
 
 const contentTypes = {
-  migration: number => <>At migration, {numberWrapper(number)} (max) had this role</>,
+  migration: number => (
+    <>At migration, {numberWrapper(number)} (max) had this role</>
+  ),
   current: number => <>{numberWrapper(number)} currently run this role</>,
-  most: number => <>At most, {numberWrapper(number)} users occupied this role</>,
+  most: number => (
+    <>At most, {numberWrapper(number)} users occupied this role</>
+  ),
 };
 
-const RoleCard = ({ image: Image, title, count, type, className, hasLabel, ...props }) => {
-  const classes = cn('RoleCard', className, { 'RoleCard--labeled': hasLabel, 'RoleCard--small': !count });
-
+const RoleCard = ({
+  image: Image,
+  title,
+  count,
+  type,
+  className,
+  hasLabel,
+  ...props
+}) => {
+  const classes = cn('RoleCard', className, {
+    'RoleCard--labeled': hasLabel,
+    'RoleCard--small': !count,
+  });
   return (
     <Link className={classes} {...props}>
       <Image className="RoleCard__image" />

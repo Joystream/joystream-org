@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { string, node } from 'prop-types';
+import { string } from 'prop-types';
 
 import athensImage from '../../assets/images/athens.png';
 import spartaImage from '../../assets/images/sparta.png';
@@ -12,8 +12,6 @@ import './style.scss';
 
 const propTypes = {
   ...mapPropTypes,
-  title: string.isRequired,
-  children: node.isRequired,
   className: string,
 };
 const defaultProps = {
@@ -26,7 +24,7 @@ const maps = {
   sparta: spartaImage,
 };
 
-const Map = ({ location, title, children, className, ...props }) => {
+const Map = ({ location, className, ...props }) => {
   return (
     <div
       className={cn('Map', className)}

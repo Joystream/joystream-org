@@ -19,7 +19,9 @@ export default function withApi(WrappedComponent, apiPath) {
 
     getData = async () => {
       try {
-        const content = await axios.get(`${process.env.GATSBY_API_URL}${apiPath}`);
+        const content = await axios.get(
+          `${process.env.GATSBY_API_URL}${apiPath}`
+        );
 
         if (this.mounted) {
           this.setState({
