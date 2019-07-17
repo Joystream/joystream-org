@@ -8,6 +8,12 @@
   &__container {
     @extend %container;
 
-    padding: 0 30px 130px;
+    padding-bottom: 60px;
+  }
+
+  @media #{$screen-md} {
+    &__container {
+      padding-bottom: 130px;
+    }
   }
 }
