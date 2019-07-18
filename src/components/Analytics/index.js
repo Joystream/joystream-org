@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import AnalyticsItem from './AnalyticsItem';
 
-import { items } from './data';
+import { defaultItems } from './data';
 
 import './style.scss';
 
@@ -26,7 +26,7 @@ const propTypes = {
 const defaultProps = {
   className: '',
   children: null,
-  items: items,
+  items: defaultItems,
 };
 
 const Analytics = ({ className, content, children, items, ...props }) => {
