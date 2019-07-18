@@ -132,7 +132,7 @@ exports[`AthensPage page renders correctly 1`] = `
                     <span
                       className="DateCounter__value"
                     >
-                      23
+                      24
                     </span>
                     <span
                       className="DateCounter__label"

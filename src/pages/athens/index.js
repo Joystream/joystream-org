@@ -51,7 +51,7 @@ const AthensPage = ({ content }) => {
         </p>
         <HeroCard
           info
-          date="2019/06/24"
+          date="2019/06/24 17:50"
           counterTitle={
             <>
               AFTER LAUNCHING 17 / 04 / 19
