@@ -41,37 +41,6 @@ const roles = {
       type: 'migration',
     },
   ],
-  future: [
-    { image: ScreenerImage, title: 'Membership Screener', to: '/roles' },
-    {
-      image: MembershipCuratorImage,
-      title: 'Membership Curator',
-      to: '/roles',
-    },
-    { image: ContentCuratorImage, title: 'Content Curator', to: '/roles' },
-    { image: ContentCreatorImage, title: 'Content Creator', to: '/roles' },
-    {
-      image: BandwidthProviderImage,
-      title: 'Bandwidth Provider',
-      to: '/roles',
-    },
-    {
-      image: DiscoveryProviderImage,
-      title: 'Discovery Provider',
-      to: '/roles',
-    },
-    {
-      image: LiveStreamingProviderImage,
-      title: 'Live Streaming Provider',
-      to: '/roles',
-    },
-    { image: BuilderImage, title: 'Builder', to: '/roles' },
-    {
-      image: CommunicationModeratorImage,
-      title: 'Communication Moderator',
-      to: '/roles',
-    },
-  ],
 };
 
 const analytics = [
