@@ -32,7 +32,7 @@ const Map = ({ location, className, ...props }) => {
       style={{ backgroundImage: `url(${maps[location]})` }}
       {...props}
     >
-      <Animated bounce>
+      <Animated animation="bounce">
         <PointerImage />
       </Animated>
       <p className="Map__info">Map data ©{new Date().getFullYear()} Google</p>

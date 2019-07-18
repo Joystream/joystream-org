@@ -13,7 +13,7 @@ const GoalList = ({ data }) => {
     <>
       {data.map(({ title, text, state }) => {
         return (
-          <Animated fadeIn key={title}>
+          <Animated animation="fadeIn" key={title}>
             <GoalItem state={state} title={title}>
               {text}
             </GoalItem>
