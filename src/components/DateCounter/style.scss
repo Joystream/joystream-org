@@ -20,6 +20,7 @@ $light-font-color: $c_white;
     #{$_r} {
       &__title {
         font-size: 16px;
+        line-height: 24px;
       }
 
       &__value {

@@ -15,7 +15,7 @@ const defaultProps = {
   threshold: 1,
 };
 
-const Animated = ({ children, animation, threshold }) => {
+const Animated = ({ children, animation, threshold, ...props }) => {
   const [ref, inView] = useInView({
     threshold: threshold,
     triggerOnce: true,
@@ -31,7 +31,7 @@ const Animated = ({ children, animation, threshold }) => {
   });
 
   return (
-    <div ref={ref} className={classes}>
+    <div ref={ref} className={classes} {...props}>
       {children}
     </div>
   );
