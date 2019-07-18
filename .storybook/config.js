@@ -16,7 +16,6 @@ addParameters({ viewport: { viewports: { ...INITIAL_VIEWPORTS } } });
 addDecorator(withInfo);
 
 // automatically import all files ending in *.stories.js
-// const req = require.context('../', true, /(?!node_modules).*\/.stories.js$/);
 const src = require.context('../src', true, /.stories.js$/);
 const common = require.context('../__stories__', true, /.stories.js$/);
 function loadStories() {
