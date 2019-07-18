@@ -14,7 +14,7 @@ const GoalList = ({ data }) => {
       {data.map(({ title, text, state }) => {
         return (
           <Animated animation="fadeIn" key={title}>
-            <GoalItem state={state} title={title}>
+            <GoalItem state={state} title={title} key={title}>
               {text}
             </GoalItem>
           </Animated>

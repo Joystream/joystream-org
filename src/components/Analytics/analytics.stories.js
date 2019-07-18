@@ -63,7 +63,9 @@ storiesOf('Analytics', module)
       },
     ],
   })
-  .add('default', () => <Analytics content={mapStatusDataToAnalytics(exampleExternalData)} />)
+  .add('default', () => (
+    <Analytics content={mapStatusDataToAnalytics(exampleExternalData)} />
+  ))
   .add('with children', () => (
     <Analytics content={mapStatusDataToAnalytics(exampleExternalData)}>
       <Button secondary href="https://blog.joystream.org/athens-incentives/">

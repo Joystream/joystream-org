@@ -1,4 +1,4 @@
-import { number, shape, string, node } from 'prop-types';
+import { number, shape, string, node, array } from 'prop-types';
 import React from 'react';
 import cn from 'classnames';
 
@@ -20,19 +20,21 @@ const propTypes = {
     mediaFiles: number,
     rolesProviders: number,
   }).isRequired,
+  items: array,
 };
 
 const defaultProps = {
   className: '',
   children: null,
+  items: items,
 };
 
-const Analytics = ({ className, content, children, ...props }) => {
+const Analytics = ({ className, content, children, items, ...props }) => {
   return (
     <section className={cn('Analytics', className)} {...props}>
       <div className="Analytics__container">
         {items.map(item => {
-          const value = item.key ? (content[item.key] || '-') : item.value ;
+          const value = item.key ? content[item.key] || '-' : item.value;
 
           return <AnalyticsItem key={item.title} {...item} value={value} />;
         })}

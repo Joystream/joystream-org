@@ -10,6 +10,9 @@ import { ReactComponent as DiscoveryProviderImage } from '../../assets/svg/disco
 import { ReactComponent as LiveStreamingProviderImage } from '../../assets/svg/live-streaming-provider.svg';
 import { ReactComponent as BuilderImage } from '../../assets/svg/builder.svg';
 import { ReactComponent as CommunicationModeratorImage } from '../../assets/svg/communication-moderator.svg';
+import { ReactComponent as payoutImage } from '../../assets/svg/participation-payout.svg';
+import { ReactComponent as blockImage } from '../../assets/svg/block-platform-content-files.svg';
+import { ReactComponent as bookImage } from '../../assets/svg/platform-content-files.svg';
 
 const roles = {
   active: [
@@ -71,4 +74,15 @@ const roles = {
   ],
 };
 
-export { roles };
+const analytics = [
+  { title: 'Participation Payout', image: payoutImage, value: '$1576' },
+  {
+    title: 'Active Validators',
+    image: ValidatorsImage,
+    key: 'validatorsCount',
+  },
+  { title: 'Platform Content Files', image: bookImage, key: 'mediaFiles' },
+  { title: 'Block Height', image: blockImage, key: 'blockHeight' },
+];
+
+export { roles, analytics };

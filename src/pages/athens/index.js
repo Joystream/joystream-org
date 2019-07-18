@@ -28,7 +28,7 @@ import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AthensOwlImg from '../../assets/svg/athens-owl.svg';
 
-import { roles } from '../../data/pages/athens';
+import { analytics, roles } from '../../data/pages/athens';
 
 import './style.scss';
 
@@ -85,7 +85,10 @@ const AthensPage = ({ content }) => {
           title="Network Statistics"
           subtitle="As they were at the end of the network."
         >
-          <Analytics content={mapStatusDataToAnalytics(content)} />
+          <Analytics
+            content={mapStatusDataToAnalytics(content)}
+            items={analytics}
+          />
         </TitleWrapper>
 
         <TitleWrapper title="Critical Documents">
