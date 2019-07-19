@@ -66,7 +66,7 @@ const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large
         'DateCounter--large': large,
       })}
     >
-      <p className="DateCounter__title">{title || defaultTitle}</p>
+      <div className="DateCounter__title">{title || defaultTitle}</div>
       <div className="DateCounter__container">
         {timeToDisplay.map((time, i) => {
           return (
