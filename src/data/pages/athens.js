@@ -51,9 +51,7 @@ const goals = [
   {
     title: 'Enable media on the platform',
     text:
-      /* eslint-disable */
       'As a "user governed media platform", allowing users to upload and consume and content was a major goal for us.',
-    /* eslint-disable */
   },
   {
     title: 'Introduce platform memberships',
@@ -72,7 +70,6 @@ const goals = [
   },
   {
     title: 'Upgrade the runtime through a Council vote',
-    /* eslint-disable */
     text: (
       <>
         The intention was for Jsgenesis to create a proposal for a{' '}
@@ -87,7 +84,6 @@ const goals = [
         with a new genesis block.
       </>
     ),
-    /* eslint-disable */
     state: 'postponed',
   },
 ];
