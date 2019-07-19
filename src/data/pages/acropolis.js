@@ -1,4 +1,4 @@
-export default [
+const goalsData = [
   {
     title: 'Build and release an on-chain forum',
     text: `The final platform will have built in multiple ways of facilitating
@@ -31,3 +31,5 @@ export default [
     state: 'postponed',
   },
 ];
+
+export { goalsData };
