@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '../../components/Link';
 import { ReactComponent as ValidatorsImage } from '../../assets/svg/active-validators.svg';
 import { ReactComponent as StorageImage } from '../../assets/svg/storage.svg';
 import { ReactComponent as MemberImage } from '../../assets/svg/council-member.svg';
@@ -50,9 +51,7 @@ const goals = [
   {
     title: 'Enable media on the platform',
     text:
-      /* eslint-disable */
       'As a "user governed media platform", allowing users to upload and consume and content was a major goal for us.',
-    /* eslint-disable */
   },
   {
     title: 'Introduce platform memberships',
@@ -71,17 +70,20 @@ const goals = [
   },
   {
     title: 'Upgrade the runtime through a Council vote',
-    /* eslint-disable */
-    text: [
-      'The intention was for Jsgenesis to create a proposal for a ',
-      <a href="https://blog.joystream.org/upgrades/">runtime upgrade</a>,
-      ', and have the Council vote on it. If the Council reached quorum, the consensus rules of the system would automatically get upgraded in flight. Unfortunately, the ',
-      <a href="https://blog.joystream.org/sparta-sacked/">
-        Sparta network crashed
-      </a>,
-      ' before we reached this stage, and had to start Athens as a new chain with a new genesis block.',
-    ],
-    /* eslint-disable */
+    text: (
+      <>
+        The intention was for Jsgenesis to create a proposal for a{' '}
+        <Link href="https://blog.joystream.org/upgrades/">runtime upgrade</Link>{' '}
+        and have the Council vote on it. If the Council reached quorum, the
+        consensus rules of the system would automatically get upgraded in
+        flight. Unfortunately, the{' '}
+        <Link href="https://blog.joystream.org/sparta-sacked/">
+          Sparta network crashed
+        </Link>{' '}
+        before we reached this stage, and had to start Athens as a new chain
+        with a new genesis block.
+      </>
+    ),
     state: 'postponed',
   },
 ];
