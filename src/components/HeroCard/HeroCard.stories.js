@@ -32,13 +32,11 @@ storiesOf('Components|HeroCard', module)
       info
       date="2019/06/27 17:50"
       counterTitle={
-        <>
-          <p>
-            AFTER LAUNCHING 17 / 04 / 19
-            <br />
-            THE NETWORK WAS UPGRADED TO <Link to="/acropolis">ACROPOLIS</Link> ON
-          </p>
-        </>
+        <p>
+          AFTER LAUNCHING 17 / 04 / 19
+          <br />
+          THE NETWORK WAS UPGRADED TO <Link to="/acropolis">ACROPOLIS</Link> ON
+        </p>
       }
     />
   ))

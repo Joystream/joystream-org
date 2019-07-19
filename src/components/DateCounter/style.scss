@@ -40,11 +40,13 @@ $light-font-color: $c_white;
   &__title {
     margin-bottom: 12px;
     font-size: 12px;
+    text-align: center;
     text-transform: uppercase;
   }
 
   &__container {
     display: flex;
+    justify-content: center;
   }
 
   &__segment {
@@ -72,6 +74,10 @@ $light-font-color: $c_white;
   }
 
   @media #{$screen-sm} {
+    &__title {
+      text-align: left;
+    }
+
     &--large {
       #{$_r} {
         &__value {
