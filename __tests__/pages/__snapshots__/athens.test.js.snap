@@ -108,7 +108,7 @@ exports[`AthensPage page renders correctly 1`] = `
               <div
                 className="DateCounter DateCounter--light DateCounter--large"
               >
-                <p
+                <div
                   className="DateCounter__title"
                 >
                   AFTER LAUNCHING 17 / 04 / 19
@@ -122,7 +122,7 @@ exports[`AthensPage page renders correctly 1`] = `
                   </a>
                    
                   ON
-                </p>
+                </div>
                 <div
                   className="DateCounter__container"
                 >
