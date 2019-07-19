@@ -86,11 +86,6 @@ $indentation: 60px;
     &__content {
       margin-right: 16px;
       text-align: left;
-
-      p {
-        font-size: 25px;
-        line-height: 40px;
-      }
     }
 
     &__description {
@@ -100,6 +95,8 @@ $indentation: 60px;
       & > p {
         padding-right: 0;
         padding-left: 0;
+        font-size: 25px;
+        line-height: 40px;
       }
     }
 
