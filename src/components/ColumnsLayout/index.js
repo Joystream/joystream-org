@@ -19,9 +19,9 @@ const defaultProps = {
   columnsCount: 2,
 };
 
-const ColumnsLayout = ({ columnsCount, children }) => {
+const ColumnsLayout = ({ columnsCount, children, ...props }) => {
   return (
-    <div className="ColumnsLayout" data-columns={columnsCount}>
+    <div className="ColumnsLayout" data-columns={columnsCount} {...props}>
       {children}
     </div>
   );

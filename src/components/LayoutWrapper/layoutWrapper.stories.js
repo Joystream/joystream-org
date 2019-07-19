@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import LayoutWrapper from './index';
 
-storiesOf('LayoutWrapper', module)
+storiesOf('Layout|LayoutWrapper', module)
   .add('default', () => (
     <LayoutWrapper>
       <div>content</div>

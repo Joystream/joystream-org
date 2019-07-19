@@ -6,7 +6,7 @@ import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 
 import Link from './index';
 
-storiesOf('Link', module)
+storiesOf('Components|Link', module)
   .addDecorator(centered)
   .add('default', () => <Link to="/athens">Go to Athens</Link>)
   .add('highlighted', () => (

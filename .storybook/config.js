@@ -2,6 +2,7 @@ import React from 'react';
 import { configure } from '@storybook/react';
 import { addDecorator, addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { withInfo } from '@storybook/addon-info';
 import WebFont from 'webfontloader';
 import 'intersection-observer';
 import '../src/styles/global.scss';
@@ -13,11 +14,14 @@ WebFont.load({
 });
 
 addParameters({ viewport: { viewports: { ...INITIAL_VIEWPORTS } } });
+addDecorator(withInfo);
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../src', true, /.stories.js$/);
+const src = require.context('../src', true, /.stories.js$/);
+const common = require.context('../__stories__', true, /.stories.js$/);
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  src.keys().forEach(filename => src(filename));
+  common.keys().forEach(filename => common(filename));
 }
 
 // Gatsby's Link overrides:

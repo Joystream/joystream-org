@@ -16,7 +16,7 @@ const today = new Date();
 const unfinishedDate = new Date();
 unfinishedDate.setHours(today.getHours() + 2);
 
-storiesOf('Hero', module)
+storiesOf('Section|Hero', module)
   .addParameters({
     backgrounds: [{ name: 'black', value: '#000000', default: true }],
   })
@@ -73,6 +73,6 @@ storiesOf('Hero', module)
       <HeroCard date={ unfinishedDate }/>
     </Hero>
   ), {
-    backgrounds: [{ name: 'white', value: '#ffffff', default: true }],
+      backgrounds: [{ name: 'white', value: '#ffffff', default: true }],
   })
   ;

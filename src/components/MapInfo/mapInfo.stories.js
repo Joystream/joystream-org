@@ -7,7 +7,7 @@ import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 
 import MapInfo from './index';
 
-storiesOf('Map Info', module).add('Deafult', () => (
+storiesOf('Section|Map Info', module).add('Deafult', () => (
   <MapInfo location="athens" title="The city of Athens">
     <p>
       <strong>Athens is the capital of Greece.</strong> It was also at the heart of Ancient Greece, a powerful
