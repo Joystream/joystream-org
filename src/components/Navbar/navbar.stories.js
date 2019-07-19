@@ -4,4 +4,4 @@ import { storiesOf } from '@storybook/react';
 
 import Navbar from './index';
 
-storiesOf('Navbar', module).add('default', () => <Navbar />);
+storiesOf('Section|Navbar', module).add('default', () => <Navbar />);

@@ -28,11 +28,9 @@ import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AthensOwlImg from '../../assets/svg/athens-owl.svg';
 
-import { analytics, roles } from '../../data/pages/athens';
+import { analytics, roles, goals } from '../../data/pages/athens';
 
 import './style.scss';
-
-import goalsData from './goalsData';
 
 const AthensPage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
@@ -120,7 +118,7 @@ const AthensPage = ({ content }) => {
             </>
           }
         >
-          <GoalList data={goalsData} />
+          <GoalList data={goals} />
         </TitleWrapper>
       </LayoutWrapper>
 

@@ -9,7 +9,7 @@ const styles = {
 };
 const WrapperDecorator = storyFn => <div style={styles}>{storyFn()}</div>;
 
-storiesOf('Map', module)
+storiesOf('Components|Map', module)
   .addDecorator(WrapperDecorator)
   .add('athens', () => <Map location="athens" />)
   .add('acropolis', () => <Map location="acropolis" />)

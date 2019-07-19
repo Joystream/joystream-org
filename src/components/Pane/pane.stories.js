@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import Pane from './index';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 
-storiesOf('Pane', module)
+storiesOf('Components|Pane', module)
   .add('active', () => (
     <Pane title="Full Specifications" image={SpecImg} href="#">
       Read the specs of the newly implemented features of Acropolis.

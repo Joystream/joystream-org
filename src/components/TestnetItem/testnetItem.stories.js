@@ -5,7 +5,7 @@ import TestnetItem from './index';
 import AcropolisImage from '../../assets/svg/acropolis-main.svg';
 import AthensImage from '../../assets/svg/athens-main.svg';
 
-storiesOf('TestnetItem', module)
+storiesOf('Components|TestnetItem', module)
   .add('with counter and button', () => (
     <TestnetItem
       title="Acropolis Testnet"
