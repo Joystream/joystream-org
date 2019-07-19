@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import TestnetModal from './index';
 import AcropolisImg from '../../assets/svg/acropolis.svg';
 
-storiesOf('TestnetModal', module)
+storiesOf('Section|TestnetModal', module)
   .addParameters({
     backgrounds: [{ name: 'black', value: '#000', default: true }],
   })

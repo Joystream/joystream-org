@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 import Chip from './index';
 import { ReactComponent as CalendarIcon } from '../../assets/svg/calendar.svg';
 
-storiesOf('Chip', module)
+storiesOf('Components|Chip', module)
   .addDecorator(centered)
   .addParameters({
     backgrounds: [{ name: 'black', value: '#000', default: true }],

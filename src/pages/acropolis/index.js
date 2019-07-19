@@ -29,10 +29,9 @@ import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AcropolisImg from '../../assets/svg/acropolis.svg';
 
 import { roles } from '../../data/pages';
+import { goalsData } from '../../data/pages/acropolis';
 
 import './style.scss';
-
-import goalsData from './goalsData';
 
 const AcropolisPage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);

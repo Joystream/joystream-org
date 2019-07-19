@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 
 import Button from './index';
 
-storiesOf('Button', module)
+storiesOf('Components|Button', module)
   .addDecorator(centered)
   .add('Deafult', () => <Button onClick={action('clicked')}>Explore Acropolis</Button>)
   .add('Link', () => <Button href="#">Explore Acropolis</Button>)

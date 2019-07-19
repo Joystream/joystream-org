@@ -9,7 +9,7 @@ const today = new Date();
 const unfinishedDate = new Date();
 unfinishedDate.setHours(today.getHours() + 2);
 
-storiesOf('Counter', module)
+storiesOf('Components|Counter', module)
   .addDecorator(centered)
   .add('finished', () => <Counter date="2019/06/25 16:26" />)
   .add('unfinished', () => <Counter date={unfinishedDate} />)
