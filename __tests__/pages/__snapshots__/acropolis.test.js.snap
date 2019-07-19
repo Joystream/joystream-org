@@ -720,8 +720,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
         <strong>
           The Acropolis is a citadel on a hill in the heart of Athens.
         </strong>
-         
-        It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list "World Heritage Sites".
+         It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list "World Heritage Sites".
         <br />
         <br />
         We chose the name as we had to scale back our ambitions for the next testnet after some issues with the release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not intended for Athens.
