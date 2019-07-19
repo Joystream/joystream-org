@@ -33,12 +33,11 @@
     display: flex;
 
     &__map {
-      flex: 1 100%;
-      height: auto;
+      height: 70vh;
+      max-width: 50vw;
     }
 
     &__content {
-      flex: 1 100%;
       margin: auto 0;
       padding: 0 30px 0 20px;
       text-align: left;
