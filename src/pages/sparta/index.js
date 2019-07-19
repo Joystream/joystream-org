@@ -23,11 +23,9 @@ import MapInfo from '../../components/MapInfo';
 import { ReactComponent as SpartaImage } from '../../assets/svg/helmet.svg';
 import SpartaHelmetImg from '../../assets/svg/helmet.svg';
 
-import { analytics, roles } from '../../data/pages/sparta';
+import { analytics, roles, goals } from '../../data/pages/sparta';
 
 import './style.scss';
-
-import goalsData from './goalsData';
 
 const SpartaPage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
@@ -89,7 +87,7 @@ const SpartaPage = ({ content }) => {
             </>
           }
         >
-          <GoalList data={goalsData} />
+          <GoalList data={goals} />
         </TitleWrapper>
       </LayoutWrapper>
 
