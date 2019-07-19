@@ -1,9 +1,10 @@
+import React from 'react';
+import Link from '../../components/Link';
 import { ReactComponent as ValidatorsImage } from '../../assets/svg/active-validators.svg';
 import { ReactComponent as MemberImage } from '../../assets/svg/council-member.svg';
 import { ReactComponent as payoutImage } from '../../assets/svg/participation-payout.svg';
 import { ReactComponent as blockImage } from '../../assets/svg/block-platform-content-files.svg';
 import { ReactComponent as emblemImage } from '../../assets/svg/memberships.svg';
-import React from 'react';
 
 const roles = {
   active: [
@@ -40,11 +41,13 @@ const analytics = [
 const goals = [
   {
     title: 'Build and release a blockchain with a working Council',
-    text: [
-      'As a "user governed media platform", allowing users to elect ',
-      <a href="/roles#Council-Member">Council Members</a>,
-      ' to represent their interest in day to day operations was a major goal for us.',
-    ],
+    text: (
+      <>
+        As a "user governed media platform", allowing users to elect{' '}
+        <Link to="/roles#Council-Member">Council Members</Link> to represent
+        their interest in day to day operations was a major goal for us.
+      </>
+    ),
   },
   {
     title:
