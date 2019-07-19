@@ -515,19 +515,25 @@ exports[`AthensPage page renders correctly 1`] = `
               >
                 Upgrade the runtime through a Council vote
               </p>
-              The intention was for Jsgenesis to create a proposal for a 
+              The intention was for Jsgenesis to create a proposal for a
+               
               <a
+                className="Link"
                 href="https://blog.joystream.org/upgrades/"
               >
                 runtime upgrade
               </a>
-              , and have the Council vote on it. If the Council reached quorum, the consensus rules of the system would automatically get upgraded in flight. Unfortunately, the 
+               
+              and have the Council vote on it. If the Council reached quorum, the consensus rules of the system would automatically get upgraded in flight. Unfortunately, the
+               
               <a
+                className="Link"
                 href="https://blog.joystream.org/sparta-sacked/"
               >
                 Sparta network crashed
               </a>
-               before we reached this stage, and had to start Athens as a new chain with a new genesis block.
+               
+              before we reached this stage, and had to start Athens as a new chain with a new genesis block.
             </div>
           </div>
         </div>
