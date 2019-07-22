@@ -16,7 +16,13 @@ a {
 }
 
 ul {
+  padding-left: 30px;
   list-style-type: square;
+
+  li {
+    margin-bottom: 12px;
+    padding-left: 10px;
+  }
 }
 
 h1,
