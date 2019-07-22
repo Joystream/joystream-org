@@ -14,6 +14,8 @@ class Sidebar extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+    console.log(this.sidebar);
+    window.scrollTo({ top: this.sidebar.offsetTop, behavior: 'smooth' });
   }
 
   componentWillUnmount() {
@@ -29,9 +31,9 @@ class Sidebar extends React.Component {
   render() {
     const { isOpen } = this.state;
     const { data } = this.props;
-
     return (
       <aside
+        ref={ref => (this.sidebar = ref)}
         className={cn('Sidebar ', {
           'Sidebar--sticky': true,
         })}
@@ -46,35 +48,36 @@ class Sidebar extends React.Component {
           <MoreRolesIcon className="Sidebar__trigger-icon" />
           View all Roles
         </div>
+        <div className="Sidebar__wrapper">
+          <div
+            className={cn('Sidebar__container', {
+              'Sidebar__container--open': isOpen,
+            })}
+          >
+            {Object.keys(data).map(key => {
+              const Icon = data[key].icon;
 
-        <div
-          className={cn('Sidebar__container', {
-            'Sidebar__container--open': isOpen,
-          })}
-        >
-          {Object.keys(data).map(key => {
-            const Icon = data[key].icon;
+              return (
+                <div className="Sidebar__group">
+                  <div className="Sidebar__heading">
+                    <Icon className="Sidebar__state-icon" />
+                    <p className="Sidebar__title">{data[key].title}</p>
+                  </div>
 
-            return (
-              <div className="Sidebar__group">
-                <div className="Sidebar__heading">
-                  <Icon className="Sidebar__state-icon" />
-                  <p className="Sidebar__title">{data[key].title}</p>
+                  {data[key].links.map(item => (
+                    <Link
+                      className="Sidebar__link"
+                      activeClassName="Sidebar__link--active"
+                      key={item.label}
+                      {...item}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
                 </div>
-
-                {data[key].links.map(item => (
-                  <Link
-                    className="Sidebar__link"
-                    activeClassName="Sidebar__link--active"
-                    key={item.label}
-                    {...item}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </aside>
     );

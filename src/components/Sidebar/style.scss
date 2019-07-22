@@ -2,12 +2,17 @@
 
 .Sidebar {
   position: relative;
-  background-color: $c_alabaster;
   transition: top 400ms ease 0s;
 
   &--sticky {
     position: sticky;
-    top: 60px;
+    top: $navbar-height;
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 500px;
+    overflow: scroll;
   }
 
   &__trigger {
@@ -33,17 +38,18 @@
 
   &__container {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    z-index: -7;
+    z-index: -1;
     width: 100%;
     padding: 30px;
+    overflow: scroll;
     background-color: $c_alabaster;
-    transform: translateY(0);
+    transform: translateY(-100%);
     transition: transform 400ms ease 0s;
 
     &--open {
-      transform: translateY(100%);
+      transform: translateY(0);
     }
   }
 
@@ -85,11 +91,15 @@
   }
 
   @media #{$screen-sm} {
-    position: sticky;
     top: 0;
+    left: 0;
+    width: 270px;
     height: 100vh;
-    max-width: 270px;
-    overflow: scroll;
+    background-color: $c_alabaster;
+
+    &__wrapper {
+      height: auto;
+    }
 
     &__trigger {
       display: none;
@@ -99,7 +109,7 @@
       position: relative;
       z-index: 0;
       display: block;
-      width: auto;
+      max-width: 270px;
       padding-top: 80px;
       transform: translateY(0);
     }
@@ -112,6 +122,33 @@
 
     &__link {
       font-size: 14px;
+
+      &--active {
+        padding-left: 6px;
+        font-weight: 700;
+        color: $c_black;
+      }
+    }
+  }
+
+  @media #{$screen-md} {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 30%;
+    padding-right: 30px;
+
+    &__heading {
+      margin-bottom: 32px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__link {
+      margin-bottom: 24px;
+      font-size: 16px;
     }
   }
 }
