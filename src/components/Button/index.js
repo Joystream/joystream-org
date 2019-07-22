@@ -15,6 +15,7 @@ const propTypes = {
   large: PropTypes.bool,
   small: PropTypes.bool,
   light: PropTypes.bool,
+  disabled: PropTypes.bool,
   className: PropTypes.string,
 };
 
@@ -27,32 +28,19 @@ const defaultProps = {
   large: false,
   small: false,
   light: false,
+  disabled: false,
   className: '',
 };
 
-const Button = ({
-  href,
-  to,
-  className,
-  children,
-  reversed,
-  secondary,
-  light,
-  large,
-  small,
-  ...props
-}) => {
-  const classes = cn(
-    className,
-    'Button',
-    {
-      'Button--reversed': reversed,
-      'Button--secondary': secondary,
-      'Button--large': large,
-      'Button--small': small,
-      'Button--light': light,
-    },
-  );
+const Button = ({ href, to, className, children, reversed, secondary, light, large, small, disabled, ...props }) => {
+  const classes = cn(className, 'Button', {
+    'Button--reversed': reversed,
+    'Button--secondary': secondary,
+    'Button--large': large,
+    'Button--small': small,
+    'Button--light': light,
+    'Button--disabled': disabled,
+  });
 
   if (to) {
     return (
