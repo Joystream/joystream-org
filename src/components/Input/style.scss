@@ -1,0 +1,17 @@
+@import '../../styles/_main';
+
+.Input {
+  width: 100%;
+  height: 60px;
+  padding: 8px 20px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: $c_alabaster;
+  border: 1px solid $c_blue;
+  border-radius: 3px;
+
+  &:active,
+  &:focus {
+    border-color: $c_picton-blue;
+  }
+}
