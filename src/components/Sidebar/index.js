@@ -32,12 +32,7 @@ class Sidebar extends React.Component {
     const { isOpen } = this.state;
     const { data } = this.props;
     return (
-      <aside
-        ref={ref => (this.sidebar = ref)}
-        className={cn('Sidebar ', {
-          'Sidebar--sticky': true,
-        })}
-      >
+      <aside ref={ref => (this.sidebar = ref)} className="Sidebar ">
         <div
           className={cn('Sidebar__trigger', {
             'Sidebar__trigger--active': isOpen,

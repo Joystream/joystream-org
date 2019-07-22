@@ -1,13 +1,9 @@
 @import '../../styles/main.scss';
 
 .Sidebar {
-  position: relative;
+  position: sticky;
+  top: $navbar-height;
   transition: top 400ms ease 0s;
-
-  &--sticky {
-    position: sticky;
-    top: $navbar-height;
-  }
 
   &__wrapper {
     position: relative;
@@ -40,7 +36,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
     width: 100%;
     padding: 30px;
     overflow: scroll;
