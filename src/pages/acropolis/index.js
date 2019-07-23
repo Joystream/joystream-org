@@ -21,6 +21,7 @@ import Pane from '../../components/Pane';
 import GoalItem from '../../components/GoalItem';
 import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
+import SiteMetadata from '../../components/SiteMetadata';
 
 import { ReactComponent as AcropolisImage } from '../../assets/svg/acropolis.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
@@ -38,6 +39,11 @@ const AcropolisPage = ({ content }) => {
 
   return (
     <BaseLayout>
+      <SiteMetadata
+        title="Joystream: A user governed video platform"
+        description="Explore the upcoming Acropolis Testnet"
+      />
+
       <Hero
         image={AcropolisImage}
         title="Acropolis Network"

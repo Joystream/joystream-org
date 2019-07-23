@@ -19,6 +19,7 @@ import RoleList from '../components/RoleList';
 import ColumnsLayout from '../components/ColumnsLayout';
 import LayoutWrapper from '../components/LayoutWrapper';
 import Hero from '../components/Hero';
+import SiteMetadata from '../components/SiteMetadata';
 
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
 import { ReactComponent as PlatformImage } from '../assets/svg/platform.svg';
@@ -30,6 +31,11 @@ import './style.scss';
 
 const IndexPage = ({ content }) => (
   <div>
+    <SiteMetadata
+      title="Joystream: A user governed video platform"
+      description="Earn monero to participate on our testnets!"
+    />
+
     <Navbar />
 
     <Hero image={PlatformImage} title="A user governed video platform">
