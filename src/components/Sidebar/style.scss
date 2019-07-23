@@ -73,11 +73,13 @@
   &__link {
     display: block;
     margin-bottom: 20px;
+    font-size: 16px;
     line-height: 20px;
     color: $c_black;
 
     &:hover {
       font-weight: 600;
+      cursor: pointer;
     }
 
     &--active {

@@ -8,15 +8,15 @@ const roles = {
     links: [
       {
         label: 'Validator',
-        href: '#validator',
+        ref: 'validator',
       },
       {
         label: 'Membership Screener',
-        href: '#membership-screener',
+        ref: 'membership-screener',
       },
       {
         label: 'Council Members',
-        href: '#council-members',
+        ref: 'council-members',
       },
     ],
   },
@@ -26,15 +26,15 @@ const roles = {
     links: [
       {
         label: 'Banwidth Provider',
-        href: '#banwidth-provider',
+        ref: 'banwidth-provider',
       },
       {
         label: 'Discover Provider',
-        href: '#discover-provider',
+        ref: 'discover-provider',
       },
       {
         label: 'Live Streaming Provider',
-        href: '#live-streaming-provider',
+        ref: 'live-streaming-provider',
       },
     ],
   },

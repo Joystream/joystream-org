@@ -1,25 +1,33 @@
 import React from 'react';
 import cn from 'classnames';
+import { object, func, string } from 'prop-types';
 
 import { ReactComponent as MoreRolesIcon } from '../../assets/svg/arrow-down.svg';
 
-import Link from '../Link';
-
 import './style.scss';
 
+const propTypes = {
+  onElementChange: func.isRequired,
+  currentElement: string.isRequired,
+  data: object.isRequired,
+};
+
 class Sidebar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.linksRefs = [];
+  }
+
   state = {
     isOpen: false,
   };
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-    console.log(this.sidebar);
-    window.scrollTo({ top: this.sidebar.offsetTop, behavior: 'smooth' });
-  }
+    const { currentElement } = this.props;
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    this.setState({
+      activeLink: this.linksRefs[currentElement],
+    });
   }
 
   toggleMenu = () => {
@@ -30,9 +38,10 @@ class Sidebar extends React.Component {
 
   render() {
     const { isOpen } = this.state;
-    const { data } = this.props;
+    const { data, onElementChange } = this.props;
+
     return (
-      <aside ref={ref => (this.sidebar = ref)} className="Sidebar ">
+      <aside className="Sidebar ">
         <div
           className={cn('Sidebar__trigger', {
             'Sidebar__trigger--active': isOpen,
@@ -53,21 +62,26 @@ class Sidebar extends React.Component {
               const Icon = data[key].icon;
 
               return (
-                <div className="Sidebar__group">
+                <div className="Sidebar__group" key={data[key].title}>
                   <div className="Sidebar__heading">
                     <Icon className="Sidebar__state-icon" />
                     <p className="Sidebar__title">{data[key].title}</p>
                   </div>
 
-                  {data[key].links.map(item => (
-                    <Link
-                      className="Sidebar__link"
-                      activeClassName="Sidebar__link--active"
-                      key={item.label}
-                      {...item}
+                  {data[key].links.map(({ ref, label }) => (
+                    <button
+                      className={cn('Sidebar__link', {
+                        'Sidebar__link--active':
+                          this.state.activeLink === this.linksRefs[ref],
+                      })}
+                      key={ref}
+                      ref={linksRefs => (this.linksRefs[ref] = linksRefs)}
+                      onClick={() => {
+                        onElementChange(this.linksRefs[ref]);
+                      }}
                     >
-                      {item.label}
-                    </Link>
+                      {label}
+                    </button>
                   ))}
                 </div>
               );
@@ -78,5 +92,7 @@ class Sidebar extends React.Component {
     );
   }
 }
+
+Sidebar.propTypes = propTypes;
 
 export default Sidebar;
