@@ -1,12 +1,6 @@
 @import '../../styles/main';
 
-$spacing: 32px;
-$smallSpacing: 20px;
-
-.ColumnsLayout {
-  display: flex;
-  flex-wrap: wrap;
-
+@mixin columnArragement($spacing) {
   @for $i from 1 through 4 {
     $colsCount: 1;
 
@@ -49,5 +43,18 @@ $smallSpacing: 20px;
         }
       }
     }
+  }
+}
+
+$smallSpacing: 20px;
+
+.ColumnsLayout {
+  @include columnArragement(32px);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &--large {
+    @include columnArragement(90px);
   }
 }
