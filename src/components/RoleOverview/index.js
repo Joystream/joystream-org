@@ -73,7 +73,6 @@ class RoleOverview extends React.Component {
       }
 
       if (response.result === 'error') {
-        console.error('200 with error', response);
         this.setState({ formError: true });
       } else {
         this.setState({
