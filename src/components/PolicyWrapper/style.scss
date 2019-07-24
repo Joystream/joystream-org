@@ -1,0 +1,39 @@
+@import '../../styles/_main';
+
+.PolicyWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &--left {
+    text-align: left;
+  }
+
+  &__header {
+    padding: 60px 0;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: $c_caribbean-green;
+  }
+
+  @media #{$screen-md} {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
