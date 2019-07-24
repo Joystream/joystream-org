@@ -443,7 +443,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
         >
           Testnet Goals
         </h2>
-        <p
+        <div
           className="TitleWrapper__subtitle"
         >
           The goals below is a simplified representation of the Key Results listed in our Release
@@ -454,7 +454,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
           >
             OKR
           </a>
-        </p>
+        </div>
         <div
           className="GoalItem"
         >
