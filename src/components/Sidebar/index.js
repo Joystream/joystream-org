@@ -15,19 +15,10 @@ const propTypes = {
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
-    this.linksRefs = [];
-  }
-
-  state = {
-    isOpen: false,
-  };
-
-  componentDidMount() {
-    const { currentElement } = this.props;
-
-    this.setState({
-      activeLink: this.linksRefs[currentElement],
-    });
+    this.state = {
+      isOpen: false,
+      activeLink: this.props.currentElement,
+    };
   }
 
   toggleMenu = () => {
@@ -37,7 +28,7 @@ class Sidebar extends React.Component {
   };
 
   render() {
-    const { isOpen } = this.state;
+    const { isOpen, activeLink } = this.state;
     const { data, onElementChange } = this.props;
 
     return (
@@ -71,13 +62,11 @@ class Sidebar extends React.Component {
                   {data[key].links.map(({ ref, label }) => (
                     <button
                       className={cn('Sidebar__link', {
-                        'Sidebar__link--active':
-                          this.state.activeLink === this.linksRefs[ref],
+                        'Sidebar__link--active': activeLink === ref,
                       })}
                       key={ref}
-                      ref={linksRefs => (this.linksRefs[ref] = linksRefs)}
                       onClick={() => {
-                        onElementChange(this.linksRefs[ref]);
+                        onElementChange(ref);
                       }}
                     >
                       {label}

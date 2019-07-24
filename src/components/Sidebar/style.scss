@@ -3,7 +3,7 @@
 .Sidebar {
   position: sticky;
   top: $navbar-height;
-  transition: top 400ms ease 0s;
+  transition: top $duration ease 0s;
 
   &__wrapper {
     position: relative;
@@ -19,7 +19,7 @@
     font-size: 24px;
     cursor: pointer;
     background-color: $c_alabaster;
-    transition: transform 400ms ease 0s;
+    transition: transform $duration ease 0s;
 
     &--active {
       color: $c_white;
@@ -41,7 +41,7 @@
     overflow: scroll;
     background-color: $c_alabaster;
     transform: translateY(-100%);
-    transition: transform 400ms ease 0s;
+    transition: transform $duration ease 0s;
 
     &--open {
       transform: translateY(0);
@@ -90,8 +90,8 @@
   @media #{$screen-sm} {
     top: 0;
     left: 0;
-    width: 270px;
     height: 100vh;
+    max-width: 300px;
     background-color: $c_alabaster;
 
     &__wrapper {
@@ -106,7 +106,6 @@
       position: relative;
       z-index: 0;
       display: block;
-      max-width: 270px;
       padding-top: 80px;
       transform: translateY(0);
     }
@@ -129,12 +128,6 @@
   }
 
   @media #{$screen-md} {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    width: 30%;
-    padding-right: 30px;
-
     &__heading {
       margin-bottom: 32px;
     }
