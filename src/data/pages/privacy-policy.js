@@ -41,6 +41,7 @@ const privacyPolicyItems = [
     ),
   },
   {
+    title: '',
     content: (
       <>
         Company uses <Link href="https://marketingplatform.google.com/about/analytics/">Google Analytics</Link>, with IP

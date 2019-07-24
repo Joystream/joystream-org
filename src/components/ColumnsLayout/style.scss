@@ -1,6 +1,6 @@
 @import '../../styles/main';
 
-@mixin columnArragement($spacing) {
+@mixin columnArragement($spacing, $smallSpacing: 20px) {
   @for $i from 1 through 4 {
     $colsCount: 1;
 
@@ -45,8 +45,6 @@
     }
   }
 }
-
-$smallSpacing: 20px;
 
 .ColumnsLayout {
   @include columnArragement(32px);

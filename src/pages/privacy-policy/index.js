@@ -76,8 +76,8 @@ const PrivacyPolicyPage = () => {
 
         <PolicyWrapper title="Privacy Policy" subtitle="Last updated on the 17th of April 2019">
           <ColumnsLayout columnsCount={2} largeSpacing>
-            {privacyPolicyItems.map(item => (
-              <PolicyItem key={item.title} title={item.title}>{item.content}</PolicyItem>
+            {privacyPolicyItems.map((item, i) => (
+              <PolicyItem key={`${item.title}${i}`} title={item.title}>{item.content}</PolicyItem>
             ))}
           </ColumnsLayout>
         </PolicyWrapper>

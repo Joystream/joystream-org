@@ -6,7 +6,7 @@ import './style.scss';
 
 const propTypes = {
   title: string,
-  children: oneOfType([string, node]),
+  children: oneOfType([string, node]).isRequired,
   className: string,
 };
 
@@ -18,8 +18,8 @@ const defaultProps = {
 const PolicyItem = ({ title, children, className, ...props }) => {
   return (
     <div className={`PolicyItem ${className}`} {...props}>
-      <p className={cn('PolicyItem__title', { 'PolicyItem__title--padded': !title })}>{title}</p>
-      {children}
+      {title && <p className="PolicyItem__title">{title}</p>}
+      <div className={cn('PolicyItem__content', { 'PolicyItem__content--padded': !title })}>{children}</div>
     </div>
   );
 };
