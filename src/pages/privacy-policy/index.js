@@ -77,7 +77,7 @@ const PrivacyPolicyPage = () => {
         <PolicyWrapper title="Privacy Policy" subtitle="Last updated on the 17th of April 2019">
           <ColumnsLayout columnsCount={2} largeSpacing>
             {privacyPolicyItems.map(item => (
-              <PolicyItem title={item.title}>{item.content}</PolicyItem>
+              <PolicyItem key={item.title} title={item.title}>{item.content}</PolicyItem>
             ))}
           </ColumnsLayout>
         </PolicyWrapper>
@@ -87,7 +87,7 @@ const PrivacyPolicyPage = () => {
         <PolicyWrapper title="Cookies Policy" subtitle="Last updated on the 17th of April 2019">
           <ColumnsLayout columnsCount={2} largeSpacing>
             {cookiePolicyItems.map(item => (
-              <PolicyItem title={item.title}>{item.content}</PolicyItem>
+              <PolicyItem key={item.title} title={item.title}>{item.content}</PolicyItem>
             ))}
           </ColumnsLayout>
         </PolicyWrapper>
