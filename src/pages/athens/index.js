@@ -90,7 +90,7 @@ const AthensPage = ({ content }) => {
         </TitleWrapper>
 
         <TitleWrapper title="Critical Documents">
-          <ColumnsLayout>
+          <ColumnsLayout className="ColumnsLayout--documents">
             <Pane image={SpecImg} title="Full Specifications" disabled>
               No specifications was published for Athens.
             </Pane>

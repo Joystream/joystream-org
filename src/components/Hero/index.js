@@ -27,8 +27,8 @@ const Hero = ({ title, children, image: Image, indent, chip }) => {
       end: 500,
       properties: [
         {
-          startValue: 0,
-          endValue: -60,
+          startValue: 40,
+          endValue: -40,
           property: 'translateY',
         },
       ],
