@@ -1,0 +1,29 @@
+@import '../../styles/_main';
+
+$title-height: 44px;
+
+.PolicyItem {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+
+  &__title {
+    padding-bottom: 32px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: $title-height;
+    color: $c_black;
+  }
+
+  @media #{$screen-md} {
+    font-size: 18px;
+
+    &__title {
+      font-size: 26px;
+
+      &--padded {
+        padding-top: $title-height;
+      }
+    }
+  }
+}
