@@ -13,7 +13,7 @@ $indentation: 60px;
     @extend %container;
 
     display: flex;
-    align-items: center;
+    align-items: stretch;
     flex-direction: column-reverse;
     padding: 0;
   }
@@ -45,14 +45,12 @@ $indentation: 60px;
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    button {
-      margin-bottom: 20px;
-    }
+    justify-content: flex-end;
   }
 
   &__image {
     width: 100%;
+    max-height: 500px;
     padding: 0 80px 40px;
   }
 

@@ -1,4 +1,12 @@
-import { number, shape, string, node, array } from 'prop-types';
+import {
+  number,
+  shape,
+  string,
+  node,
+  func,
+  arrayOf,
+  oneOfType,
+} from 'prop-types';
 import React from 'react';
 import cn from 'classnames';
 
@@ -20,7 +28,14 @@ const propTypes = {
     mediaFiles: number,
     rolesProviders: number,
   }).isRequired,
-  items: array,
+  items: arrayOf(
+    shape({
+      title: string,
+      image: oneOfType([func, node]),
+      key: string,
+      value: string,
+    })
+  ),
 };
 
 const defaultProps = {
