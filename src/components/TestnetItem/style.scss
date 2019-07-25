@@ -3,14 +3,16 @@
 .TestnetItem {
   @extend %smallContainer;
 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   margin-bottom: 150px;
 
   &__image {
+    height: 100%;
     max-width: 200px;
     margin-bottom: 32px;
+  }
+
+  &__container {
+    max-width: 100%;
   }
 
   &__content {
@@ -41,7 +43,7 @@
     width: 70%;
 
     &__image {
-      min-width: 30%;
+      // min-width: 30%;
       margin-right: 60px;
       margin-bottom: 0;
     }
