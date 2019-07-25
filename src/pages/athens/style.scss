@@ -1,0 +1,15 @@
+@import '../../styles/main.scss';
+
+.AthensPage {
+  &__hero-paragraph {
+    padding-bottom: 60px;
+  }
+}
+
+.ColumnsLayout--documents {
+  flex-direction: column-reverse;
+
+  @media #{$screen-md} {
+    flex-direction: row;
+  }
+}

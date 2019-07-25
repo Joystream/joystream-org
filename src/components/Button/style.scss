@@ -66,6 +66,15 @@
     }
   }
 
+  &--disabled {
+    background-color: $c_blue-haze;
+
+    &:hover,
+    &:active {
+      background-color: $c_blue-haze;
+    }
+  }
+
   @media #{$screen-sm} {
     width: auto;
   }

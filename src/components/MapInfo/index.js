@@ -3,6 +3,7 @@ import { string, node } from 'prop-types';
 import cn from 'classnames';
 
 import Map from '../Map';
+import Animated from '../AnimatedComponent';
 
 import { mapPropTypes } from '../../propTypes';
 
@@ -20,13 +21,15 @@ const defaultProps = {
   className: '',
 };
 
-const MapInfo = ({ title, children, className, location, ...props }) => {
+const MapInfo = ({ title, children, className, location }) => {
   return (
     <section className={cn('MapInfo', className)}>
       <Map location={location} className="MapInfo__map" />
       <div className="MapInfo__content">
-        <h1 className="MapInfo__title">{title}</h1>
-        {children}
+        <Animated animation="fadeIn" threshold={0}>
+          <h1 className="MapInfo__title">{title}</h1>
+          {children}
+        </Animated>
       </div>
     </section>
   );

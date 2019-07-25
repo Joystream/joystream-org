@@ -489,6 +489,36 @@ exports[`PrivacyPolicyPage page renders correctly 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="CookiesNotice"
+  >
+    <div
+      className="CookiesNotice__container"
+    >
+      <div
+        className="CookiesNotice__content"
+      >
+        <p>
+          This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.
+        </p>
+        <p>
+          <a
+            className="CookiesNotice__link Link"
+            href="/privacy-police"
+          >
+            Find out more ›
+          </a>
+        </p>
+      </div>
+      <button
+        className="CookiesNotice__accept Button Button--secondary"
+        onClick={[Function]}
+        type="button"
+      >
+        Accept
+      </button>
+    </div>
+  </div>
   <footer
     className="Footer"
   >

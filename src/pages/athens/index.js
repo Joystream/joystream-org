@@ -22,67 +22,81 @@ import GoalList from '../../components/GoalList';
 import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
 
-import { ReactComponent as AcropolisImage } from '../../assets/svg/acropolis.svg';
+import { ReactComponent as AthensImage } from '../../assets/svg/athens-owl.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
-import AcropolisImg from '../../assets/svg/acropolis.svg';
+import AthensOwlImg from '../../assets/svg/athens-owl.svg';
 
-import { roles } from '../../data/pages';
-import { goalsData } from '../../data/pages/acropolis';
+import { analytics, roles, goals } from '../../data/pages/athens';
 
 import './style.scss';
 
-const AcropolisPage = ({ content }) => {
+const AthensPage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
 
   return (
     <BaseLayout>
       <Hero
-        image={AcropolisImage}
-        title="Acropolis Network"
+        image={AthensImage}
+        title="Athens Network"
         indent
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
       >
-        <p className="AcropolisPage__hero-paragraph">
+        <p className="AthensPage__hero-paragraph">
           Explore available roles and pick the one that suits you the most.
           Influence platforms development earning Monero in the process.
         </p>
-        <HeroCard date="2019/06/27 17:50" />
+        <HeroCard
+          info
+          date="2019/06/24 17:50"
+          counterTitle={
+            <>
+              AFTER LAUNCHING 17 / 04 / 19
+              <br />
+              THE NETWORK WAS UPGRADED TO <Link to="/acropolis">
+                ACROPOLIS
+              </Link>{' '}
+              ON
+            </>
+          }
+        />
 
         <TestnetModal
-          title="The Acropolis of Athens"
-          image={AcropolisImg}
+          title="Owl of Athena"
+          image={AthensOwlImg}
           closeModal={() => setModalClosed(false)}
           isOpen={isModalOpen}
         >
           <p>
-            <strong>Known for its great architecture, Acropolis'</strong>{' '}
-            perhaps most famous building is the Parthenon. It was built to
-            celebrate their victory over Persian invaders, and is today seen as
-            a symbol for democracy and western civilization.
+            <strong>In Greek mythology, a little owl (Athene noctua)</strong>{' '}
+            traditionally represents or accompanies Athena, the virgin goddess
+            of wisdom. Because of such association, the bird — often referred to
+            as the "owl of Athena" — has been used as a symbol of knowledge,
+            wisdom, perspicacity and erudition throughout the Western world.
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper title="Network Statistics">
-          <Analytics content={mapStatusDataToAnalytics(content)} />
+        <TitleWrapper
+          title="Network Statistics"
+          subtitle="As they were at the end of the network."
+        >
+          <Analytics
+            content={mapStatusDataToAnalytics(content)}
+            items={analytics}
+          />
         </TitleWrapper>
 
         <TitleWrapper title="Critical Documents">
-          <ColumnsLayout>
-            <Pane
-              image={SpecImg}
-              href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis/specification"
-              title="Full Specifications"
-              target="_blank"
-            >
-              Read the specs of the newly implemented features of Acropolis.
+          <ColumnsLayout className="ColumnsLayout--documents">
+            <Pane image={SpecImg} title="Full Specifications" disabled>
+              No specifications was published for Athens.
             </Pane>
             <Pane
               image={ReleaseImg}
-              href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis"
+              href="https://github.com/Joystream/joystream/tree/master/testnets/athens"
               title="Release Plan"
               target="_blank"
             >
@@ -98,13 +112,13 @@ const AcropolisPage = ({ content }) => {
             <>
               The goals below is a simplified representation of the Key Results
               listed in our Release{' '}
-              <Link href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs">
+              <Link href="https://github.com/Joystream/joystream/tree/master/testnets/athens#okrs">
                 OKR
               </Link>
             </>
           }
         >
-          <GoalList data={goalsData} />
+          <GoalList data={goals} />
         </TitleWrapper>
       </LayoutWrapper>
 
@@ -119,24 +133,21 @@ const AcropolisPage = ({ content }) => {
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title="Acropolis of Athens" location="acropolis">
+      <MapInfo title="The city of Athens" location="acropolis">
         <p>
-          <strong>
-            The Acropolis is a citadel on a hill in the heart of Athens.
-          </strong>{' '}
-          It was also at the heart of Ancient Greece, a powerful civilization
-          and empire. Acropolis is famous for its ancient buildings,
-          architecture, historical significance and is one of the main tourist
-          attractions of Athens. It is on UNESCOs list "World Heritage Sites".
+          <strong>Athens is the capital of Greece.</strong> IIt was also at the
+          heart of Ancient Greece, a powerful civilisation and empire. The city
+          is still dominated by 5th-century BC landmarks, including the
+          Acropolis, a hilltop citadel topped with ancient buildings like the
+          colonnaded Parthenon temple.
           <br />
           <br />
-          We chose the name as we had to scale back our ambitions for the next
-          testnet after some issues with the release of Athens. Thus, Acropolis
-          can be considered a sub-release, despite including some new features
-          not intended for Athens.
+          We chose the name Athens as, like our previous testnets, Mesopotamia
+          and Sparta, the ancient Athens' historical significance in the
+          development towards modern democracy and the rule of law.
           <br />
           <br />
-          <Link to="/athens">
+          <Link to="/sparta">
             <PersonIcon /> Explore previous testnet
           </Link>
         </p>
@@ -145,7 +156,7 @@ const AcropolisPage = ({ content }) => {
   );
 };
 
-AcropolisPage.propTypes = pagePropTypes;
+AthensPage.propTypes = pagePropTypes;
 
-export { AcropolisPage };
-export default withApi(AcropolisPage, getApiPath('STATUS'));
+export { AthensPage };
+export default withApi(AthensPage, getApiPath('STATUS'));
