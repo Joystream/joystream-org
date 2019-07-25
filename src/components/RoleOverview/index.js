@@ -255,7 +255,7 @@ class RoleOverview extends React.Component {
         <div className="RoleOverview__content">
           <div className="RoleOverview__overview">
             <p className="RoleOverview__heading">Overview</p>
-            <p className="RoleOverview__details">{overview}</p>
+            <div className="RoleOverview__details">{overview}</div>
           </div>
           <div className="RoleOverview__lists">
             <div className="RoleOverview__list RoleOverview__resposibilities">

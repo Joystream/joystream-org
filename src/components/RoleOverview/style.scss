@@ -50,6 +50,19 @@
     line-height: 26px;
   }
 
+  &__dashList {
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+      text-indent: -4px;
+
+      &::before {
+        content: '-';
+      }
+    }
+  }
+
   &__buttons {
     padding: 40px 0 30px;
   }
