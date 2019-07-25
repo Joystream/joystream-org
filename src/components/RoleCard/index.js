@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number, bool, oneOf, func, oneOfType } from 'prop-types';
+import { string, number, bool, oneOf, oneOfType } from 'prop-types';
 import cn from 'classnames';
 
 import Link from '../Link';
@@ -12,7 +12,7 @@ import './style.scss';
 
 const propTypes = {
   ...linkPropTypes,
-  image: oneOfType([string, func]).isRequired,
+  image: string.isRequired,
   title: string.isRequired,
   count: oneOfType([string, number]),
   className: string,
@@ -42,7 +42,7 @@ const contentTypes = {
 };
 
 const RoleCard = ({
-  image: Image,
+  image,
   title,
   count,
   type,
@@ -56,7 +56,7 @@ const RoleCard = ({
   });
   return (
     <Link className={classes} {...props}>
-      <Image className="RoleCard__image" />
+      <img src={image} alt={title} className="RoleCard__image" />
       <div className="RoleCard__content">
         <p className="RoleCard__title">{title}</p>
         {count && (

@@ -385,8 +385,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard Link"
             href="/roles#Validator"
           >
-            <icon-mock
+            <img
+              alt="Validator"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -415,8 +421,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard Link"
             href="/roles#Council-Member"
           >
-            <icon-mock
+            <img
+              alt="Council Member"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -445,8 +457,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard RoleCard--labeled Link"
             href="/roles#Storage-Provider"
           >
-            <icon-mock
+            <img
+              alt="Storage Provider"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -497,8 +515,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard RoleCard--small Link"
             href="/roles"
           >
-            <icon-mock
+            <img
+              alt="Membership Screener"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -514,8 +538,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard RoleCard--small Link"
             href="/roles"
           >
-            <icon-mock
+            <img
+              alt="Membership Curator"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -531,8 +561,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard RoleCard--small Link"
             href="/roles"
           >
-            <icon-mock
+            <img
+              alt="Content Curator"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -548,8 +584,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard RoleCard--small Link"
             href="/roles"
           >
-            <icon-mock
+            <img
+              alt="Content Creator"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -565,8 +607,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard RoleCard--small Link"
             href="/roles"
           >
-            <icon-mock
+            <img
+              alt="Bandwidth Provider"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -582,8 +630,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard RoleCard--small Link"
             href="/roles"
           >
-            <icon-mock
+            <img
+              alt="Discovery Provider"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -599,8 +653,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard RoleCard--small Link"
             href="/roles"
           >
-            <icon-mock
+            <img
+              alt="Live Streaming Provider"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -616,8 +676,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard RoleCard--small Link"
             href="/roles"
           >
-            <icon-mock
+            <img
+              alt="Builder"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -633,8 +699,14 @@ exports[`IndexPage page renders correctly 1`] = `
             className="RoleCard RoleCard--small Link"
             href="/roles"
           >
-            <icon-mock
+            <img
+              alt="Communication Moderator"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"

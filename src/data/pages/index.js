@@ -1,34 +1,34 @@
-import { ReactComponent as ValidatorsImage } from '../../assets/svg/active-validators.svg';
-import { ReactComponent as StorageImage } from '../../assets/svg/storage.svg';
-import { ReactComponent as MemberImage } from '../../assets/svg/council-member.svg';
-import { ReactComponent as ScreenerImage } from '../../assets/svg/screener.svg';
-import { ReactComponent as MembershipCuratorImage } from '../../assets/svg/membership-curator.svg';
-import { ReactComponent as ContentCuratorImage } from '../../assets/svg/content-curator.svg';
-import { ReactComponent as ContentCreatorImage } from '../../assets/svg/content-creator.svg';
-import { ReactComponent as BandwidthProviderImage } from '../../assets/svg/bandwidth-provider.svg';
-import { ReactComponent as DiscoveryProviderImage } from '../../assets/svg/discovery-provider.svg';
-import { ReactComponent as LiveStreamingProviderImage } from '../../assets/svg/live-streaming-provider.svg';
-import { ReactComponent as BuilderImage } from '../../assets/svg/builder.svg';
-import { ReactComponent as CommunicationModeratorImage } from '../../assets/svg/communication-moderator.svg';
+import validatorsImage from '../../assets/svg/active-validators.svg';
+import storageImage from '../../assets/svg/storage.svg';
+import memberImage from '../../assets/svg/council-member.svg';
+import screenerImage from '../../assets/svg/screener.svg';
+import membershipCuratorImage from '../../assets/svg/membership-curator.svg';
+import contentCuratorImage from '../../assets/svg/content-curator.svg';
+import contentCreatorImage from '../../assets/svg/content-creator.svg';
+import bandwidthProviderImage from '../../assets/svg/bandwidth-provider.svg';
+import discoveryProviderImage from '../../assets/svg/discovery-provider.svg';
+import liveStreamingProviderImage from '../../assets/svg/live-streaming-provider.svg';
+import builderImage from '../../assets/svg/builder.svg';
+import communicationModeratorImage from '../../assets/svg/communication-moderator.svg';
 
 const roles = {
   active: [
     {
-      image: ValidatorsImage,
+      image: validatorsImage,
       title: 'Validator',
       to: '/roles#Validator',
       key: 'validatorsCount',
       hasLabel: false,
     },
     {
-      image: MemberImage,
+      image: memberImage,
       title: 'Council Member',
       to: '/roles#Council-Member',
       key: 'councilMembersCount',
       hasLabel: false,
     },
     {
-      image: StorageImage,
+      image: storageImage,
       title: 'Storage Provider',
       to: '/roles#Storage-Provider',
       key: 'storageProviders',
@@ -36,32 +36,32 @@ const roles = {
     },
   ],
   future: [
-    { image: ScreenerImage, title: 'Membership Screener', to: '/roles' },
+    { image: screenerImage, title: 'Membership Screener', to: '/roles' },
     {
-      image: MembershipCuratorImage,
+      image: membershipCuratorImage,
       title: 'Membership Curator',
       to: '/roles',
     },
-    { image: ContentCuratorImage, title: 'Content Curator', to: '/roles' },
-    { image: ContentCreatorImage, title: 'Content Creator', to: '/roles' },
+    { image: contentCuratorImage, title: 'Content Curator', to: '/roles' },
+    { image: contentCreatorImage, title: 'Content Creator', to: '/roles' },
     {
-      image: BandwidthProviderImage,
+      image: bandwidthProviderImage,
       title: 'Bandwidth Provider',
       to: '/roles',
     },
     {
-      image: DiscoveryProviderImage,
+      image: discoveryProviderImage,
       title: 'Discovery Provider',
       to: '/roles',
     },
     {
-      image: LiveStreamingProviderImage,
+      image: liveStreamingProviderImage,
       title: 'Live Streaming Provider',
       to: '/roles',
     },
-    { image: BuilderImage, title: 'Builder', to: '/roles' },
+    { image: builderImage, title: 'Builder', to: '/roles' },
     {
-      image: CommunicationModeratorImage,
+      image: communicationModeratorImage,
       title: 'Communication Moderator',
       to: '/roles',
     },
