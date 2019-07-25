@@ -1,5 +1,4 @@
 import React from 'react';
-import { pagePropTypes } from '../../propTypes';
 
 import BaseLayout from '../../components/_layouts/Base';
 import LayoutWrapper from '../../components/LayoutWrapper';
@@ -35,7 +34,5 @@ const RolesPage = () => {
     </BaseLayout>
   );
 };
-
-RolesPage.propTypes = pagePropTypes;
 
 export default RolesPage;

@@ -97,10 +97,9 @@ const rolesData = {
         'Run and maintain screening nodes that are always available and performant',
         <>
           Collaborate with{' '}
-          <Link to="roles#Membership-Curator">Membership Curators</Link> and
-          <Link to="roles#Builders">Builders</Link> to improve screening
-          mechanisms by discussing screening techniques, sharing traffic
-          information
+          <Link to="Membership-Curator">Membership Curators</Link> and
+          <Link to="Builders">Builders</Link> to improve screening mechanisms by
+          discussing screening techniques, sharing traffic information
         </>,
         'Be responsive and reactive to changing circumstances',
       ],
@@ -122,10 +121,10 @@ const rolesData = {
           A membership is an integrated representation of identifying
           information and associated activities of an actor on the platform. It
           is possible to create memberships for free through the screeners,
-          described <Link to="roles#Membership-Screener"> above</Link>. Since
-          this invariably be an imperfect process, there must be some means by
-          which bad conduct and fake accounts can be disabled or removed. This
-          is the task of the membership curators.
+          described <Link to="Membership-Screener"> above</Link>. Since this
+          invariably be an imperfect process, there must be some means by which
+          bad conduct and fake accounts can be disabled or removed. This is the
+          task of the membership curators.
         </>
       ),
       responsibilites: [
@@ -134,10 +133,9 @@ const rolesData = {
         'Propose changes to status of memberships which are identified, and participate in any dispute process which may follow',
         /* eslint-enable*/
         <>
-          Collaborate with{' '}
-          <Link to="roles#Membership-Screener"> Screeners</Link> and{' '}
-          <Link to="roles#Builder"> Builders</Link> to improve tools for
-          identifying such members
+          Collaborate with <Link to="Membership-Screener"> Screeners</Link> and{' '}
+          <Link to="Builder"> Builders</Link> to improve tools for identifying
+          such members
         </>,
       ],
       requirements: [
@@ -161,9 +159,9 @@ const rolesData = {
         'Adjudicate possible dispute processes resulting from reports from users',
         'Update information on content to be accurate',
         <>
-          Collaborate with <Link to="roles#Builder"> Builders</Link> to improve
-          both tools, and user facing experiences, to improve the integrity of
-          the content directory
+          Collaborate with <Link to="Builder"> Builders</Link> to improve both
+          tools, and user facing experiences, to improve the integrity of the
+          content directory
         </>,
       ],
       requirements: [
