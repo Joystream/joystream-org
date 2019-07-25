@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AcropolisPage page renders correctly 1`] = `
+exports[`AthensPage page renders correctly 1`] = `
 <div>
   <nav
     className="Navbar"
@@ -81,18 +81,18 @@ exports[`AcropolisPage page renders correctly 1`] = `
         <h1
           className="Hero__title"
         >
-          Acropolis Network
+          Athens Network
         </h1>
         <div
           className="Hero__description"
         >
           <p
-            className="AcropolisPage__hero-paragraph"
+            className="AthensPage__hero-paragraph"
           >
             Explore available roles and pick the one that suits you the most. Influence platforms development earning Monero in the process.
           </p>
           <div
-            className="Card"
+            className="Card Card--info"
           >
             <p
               className="Card__header"
@@ -100,7 +100,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
               <icon-mock
                 className="Card__icon"
               />
-              Network announced
+              Network replaced
             </p>
             <div
               className="Card__content"
@@ -111,7 +111,17 @@ exports[`AcropolisPage page renders correctly 1`] = `
                 <div
                   className="DateCounter__title"
                 >
-                  Launched on
+                  AFTER LAUNCHING 17 / 04 / 19
+                  <br />
+                  THE NETWORK WAS UPGRADED TO 
+                  <a
+                    className="Link"
+                    href="/acropolis"
+                  >
+                    ACROPOLIS
+                  </a>
+                   
+                  ON
                 </div>
                 <div
                   className="DateCounter__container"
@@ -122,7 +132,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
                     <span
                       className="DateCounter__value"
                     >
-                      27
+                      24
                     </span>
                     <span
                       className="DateCounter__label"
@@ -220,7 +230,11 @@ exports[`AcropolisPage page renders correctly 1`] = `
         >
           Network Statistics
         </h2>
-        
+        <p
+          className="TitleWrapper__subtitle"
+        >
+          As they were at the end of the network.
+        </p>
         <section
           className="Analytics"
         >
@@ -270,74 +284,6 @@ exports[`AcropolisPage page renders correctly 1`] = `
               <p
                 className="AnalyticsItem__title"
               >
-                Block Height
-              </p>
-              <p
-                className="AnalyticsItem__value"
-              >
-                1110117
-              </p>
-            </div>
-            <div
-              className="AnalyticsItem"
-            >
-              <icon-mock
-                className="AnalyticsItem__image"
-              />
-              <p
-                className="AnalyticsItem__title"
-              >
-                Council Election Stage
-              </p>
-              <p
-                className="AnalyticsItem__value"
-              >
-                Announcing
-              </p>
-            </div>
-            <div
-              className="AnalyticsItem"
-            >
-              <icon-mock
-                className="AnalyticsItem__image"
-              />
-              <p
-                className="AnalyticsItem__title"
-              >
-                Memberships
-              </p>
-              <p
-                className="AnalyticsItem__value"
-              >
-                164
-              </p>
-            </div>
-            <div
-              className="AnalyticsItem"
-            >
-              <icon-mock
-                className="AnalyticsItem__image"
-              />
-              <p
-                className="AnalyticsItem__title"
-              >
-                Forum Posts
-              </p>
-              <p
-                className="AnalyticsItem__value"
-              >
-                11
-              </p>
-            </div>
-            <div
-              className="AnalyticsItem"
-            >
-              <icon-mock
-                className="AnalyticsItem__image"
-              />
-              <p
-                className="AnalyticsItem__title"
-              >
                 Platform Content Files
               </p>
               <p
@@ -355,12 +301,12 @@ exports[`AcropolisPage page renders correctly 1`] = `
               <p
                 className="AnalyticsItem__title"
               >
-                Active Storage Providers
+                Block Height
               </p>
               <p
                 className="AnalyticsItem__value"
               >
-                10
+                1110117
               </p>
             </div>
           </div>
@@ -376,13 +322,11 @@ exports[`AcropolisPage page renders correctly 1`] = `
         </h2>
         
         <div
-          className="ColumnsLayout"
+          className="ColumnsLayout ColumnsLayout--documents"
           data-columns={2}
         >
-          <a
-            className="Pane Link"
-            href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis/specification"
-            target="_blank"
+          <div
+            className="Pane Pane--disabled"
           >
             <div
               className="Pane__wrapper"
@@ -402,13 +346,13 @@ exports[`AcropolisPage page renders correctly 1`] = `
               <p
                 className="Pane__paragraph"
               >
-                Read the specs of the newly implemented features of Acropolis.
+                No specifications was published for Athens.
               </p>
             </div>
-          </a>
+          </div>
           <a
             className="Pane Link"
-            href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis"
+            href="https://github.com/Joystream/joystream/tree/master/testnets/athens"
             target="_blank"
           >
             <div
@@ -450,7 +394,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
            
           <a
             className="Link"
-            href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs"
+            href="https://github.com/Joystream/joystream/tree/master/testnets/athens#okrs"
           >
             OKR
           </a>
@@ -479,12 +423,9 @@ exports[`AcropolisPage page renders correctly 1`] = `
               <p
                 className="GoalItem__title"
               >
-                Build and release an on-chain forum
+                Enable media on the platform
               </p>
-              The final platform will have built in multiple ways of facilitating
-            easy and secure public, and private, communication and information
-            sharing among members. The forum is the first step allowing the
-            platform members to communicate, share ideas and discuss.
+              As a "user governed media platform", allowing users to upload and consume and content was a major goal for us.
             </div>
           </div>
         </div>
@@ -512,45 +453,9 @@ exports[`AcropolisPage page renders correctly 1`] = `
               <p
                 className="GoalItem__title"
               >
-                Rebuild and release the storage node
+                Introduce platform memberships
               </p>
-              Where the old storage node had some bugs making it unable to sync
-            between clients and required a hardcoded liaison, the new storage
-            node is working as intended with no hierarchy or privileges.
-            </div>
-          </div>
-        </div>
-        <div
-          className="Animated"
-        >
-          <div
-            className="GoalItem"
-          >
-            <div
-              className="GoalItem__icon-container"
-            >
-              <icon-mock
-                className="GoalItem__icon"
-              />
-              <p
-                className="GoalItem__status GoalItem__status--inprogress"
-              >
-                In Progress
-              </p>
-            </div>
-            <div
-              className="GoalItem__content"
-            >
-              <p
-                className="GoalItem__title"
-              >
-                Ensure high uptime of storage providers
-              </p>
-              Both content creators and consumers user experience depends on
-            various metrics, but perhaps the most important is that the storage
-            node they connect to responds to their request. Whether or not this
-            goal is achieved depends on both the reliability of the software, a
-            good reporting system and corrective actions from multiple parties.
+              Although we are building an open blockchain in the sense that users are free to send tokens as they like, the Joystream experience is about having the platform users own, operate and govern the platform. We are agnostic on exactly what parts of the platform will be reserved for members, some actions will require and extra level of screening and accountability.
             </div>
           </div>
         </div>
@@ -578,13 +483,57 @@ exports[`AcropolisPage page renders correctly 1`] = `
               <p
                 className="GoalItem__title"
               >
-                Build the storage node with "tranches"
+                Build and release the storage node
               </p>
-              Although the content directory is currently small, at some point
-            it's not feasible to expect all storage providers to have full
-            replication of all the content. Tranches would allow storage
-            providers to select a subset of the content directory, suitable to
-            their capabilities.
+              Although a storage node was built and used to host and distribute the platform content, it had some bugs making it unable to sync between clients and required a hardcoded liaison.
+            </div>
+          </div>
+        </div>
+        <div
+          className="Animated"
+        >
+          <div
+            className="GoalItem"
+          >
+            <div
+              className="GoalItem__icon-container"
+            >
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--postponed"
+              >
+                Postponed
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
+            >
+              <p
+                className="GoalItem__title"
+              >
+                Upgrade the runtime through a Council vote
+              </p>
+              The intention was for Jsgenesis to create a proposal for a
+               
+              <a
+                className="Link"
+                href="https://blog.joystream.org/upgrades/"
+              >
+                runtime upgrade
+              </a>
+               
+              and have the Council vote on it. If the Council reached quorum, the consensus rules of the system would automatically get upgraded in flight. Unfortunately, the
+               
+              <a
+                className="Link"
+                href="https://blog.joystream.org/sparta-sacked/"
+              >
+                Sparta network crashed
+              </a>
+               
+              before we reached this stage, and had to start Athens as a new chain with a new genesis block.
             </div>
           </div>
         </div>
@@ -631,12 +580,13 @@ exports[`AcropolisPage page renders correctly 1`] = `
                 <icon-mock
                   className="RoleCard__icon"
                 />
+                At migration, 
                 <span
                   className="RoleCard__counter"
                 >
                   20
                 </span>
-                 currently run this role
+                 (max) had this role
               </p>
             </div>
           </a>
@@ -661,12 +611,13 @@ exports[`AcropolisPage page renders correctly 1`] = `
                 <icon-mock
                   className="RoleCard__icon"
                 />
+                At migration, 
                 <span
                   className="RoleCard__counter"
                 >
                   12
                 </span>
-                 currently run this role
+                 (max) had this role
               </p>
             </div>
           </a>
@@ -691,12 +642,13 @@ exports[`AcropolisPage page renders correctly 1`] = `
                 <icon-mock
                   className="RoleCard__icon"
                 />
+                At migration, 
                 <span
                   className="RoleCard__counter"
                 >
                   10
                 </span>
-                 currently run this role
+                 (max) had this role
               </p>
             </div>
           </a>
@@ -737,22 +689,21 @@ exports[`AcropolisPage page renders correctly 1`] = `
         <h1
           className="MapInfo__title"
         >
-          Acropolis of Athens
+          The city of Athens
         </h1>
         <p>
           <strong>
-            The Acropolis is a citadel on a hill in the heart of Athens.
+            Athens is the capital of Greece.
           </strong>
-           
-          It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list "World Heritage Sites".
+           IIt was also at the heart of Ancient Greece, a powerful civilisation and empire. The city is still dominated by 5th-century BC landmarks, including the Acropolis, a hilltop citadel topped with ancient buildings like the colonnaded Parthenon temple.
           <br />
           <br />
-          We chose the name as we had to scale back our ambitions for the next testnet after some issues with the release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not intended for Athens.
+          We chose the name Athens as, like our previous testnets, Mesopotamia and Sparta, the ancient Athens' historical significance in the development towards modern democracy and the rule of law.
           <br />
           <br />
           <a
             className="Link"
-            href="/athens"
+            href="/sparta"
           >
             <icon-mock />
              Explore previous testnet

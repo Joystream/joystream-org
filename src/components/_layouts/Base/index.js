@@ -3,6 +3,7 @@ import { node } from 'prop-types';
 
 import Navbar from '../../Navbar';
 import Footer from '../../Footer';
+import CookiesNotice from '../../CookiesNotice';
 
 const propTypes = {
   children: node,
@@ -17,6 +18,7 @@ const BaseLayout = ({ children }) => {
     <div>
       <Navbar />
       {children}
+      <CookiesNotice />
       <Footer />
     </div>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import { string } from 'prop-types';
 
+import Animated from '../AnimatedComponent';
 import athensImage from '../../assets/images/athens.png';
 import spartaImage from '../../assets/images/sparta.png';
 import { ReactComponent as PointerImage } from '../../assets/svg/pointer.svg';
@@ -31,7 +32,9 @@ const Map = ({ location, className, ...props }) => {
       style={{ backgroundImage: `url(${maps[location]})` }}
       {...props}
     >
-      <PointerImage />
+      <Animated animation="bounce">
+        <PointerImage />
+      </Animated>
       <p className="Map__info">Map data ©{new Date().getFullYear()} Google</p>
     </div>
   );
