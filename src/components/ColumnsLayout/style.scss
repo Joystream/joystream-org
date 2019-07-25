@@ -12,7 +12,7 @@ $smallSpacing: 20px;
 
     &[data-columns='#{$i}'] {
       & > * {
-        flex-basis: calc(100% / #{$colsCount});
+        width: calc(100% / #{$colsCount});
         margin-bottom: $smallSpacing;
       }
 
@@ -24,7 +24,7 @@ $smallSpacing: 20px;
 
         /* stylelint-disable-next-line */
         & > * {
-          flex-basis: calc(100% / #{$smCols} - #{$smallSpacing} + #{$smallSpacing} / #{$smCols});
+          width: calc(100% / #{$smCols} - #{$smallSpacing} + #{$smallSpacing} / #{$smCols});
           @if #{$smCols} > 1 {
             margin-right: $smallSpacing;
           } @else {
@@ -39,7 +39,7 @@ $smallSpacing: 20px;
 
       @media #{$screen-md} {
         & > * {
-          flex-basis: calc(100% / #{$i} - #{$spacing} + #{$spacing} / #{$i});
+          width: calc(100% / #{$i} - #{$spacing} + #{$spacing} / #{$i});
           margin-right: $spacing;
           margin-bottom: $spacing;
         }
