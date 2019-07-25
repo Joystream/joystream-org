@@ -28,6 +28,7 @@ $navbar-height: 60px;
   &__logo {
     display: block;
     width: 100px;
+    height: $navbar-height;
   }
 
   &__links {
