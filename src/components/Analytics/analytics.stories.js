@@ -6,9 +6,12 @@ import Analytics from './index';
 import AnalyticsItem from './AnalyticsItem';
 import Button from '../Button';
 
-import { ReactComponent as blockImage } from '../../assets/svg/block-platform-content-files.svg';
-
 import mapStatusDataToAnalytics from '../../utils/mapStatusDataToAnalytics';
+
+import { ReactComponent as blockImage } from '../../assets/svg/block-platform-content-files.svg';
+import { ReactComponent as payoutImage } from '../../assets/svg/participation-payout.svg';
+import { ReactComponent as validatorsImage } from '../../assets/svg/active-validators.svg';
+import { ReactComponent as emblemImage } from '../../assets/svg/memberships.svg';
 
 const exampleData = {
   title: 'Block Height',
@@ -52,6 +55,17 @@ const exampleExternalData = {
   },
 };
 
+const customItems = [
+  { title: 'Participation Payout', image: payoutImage, value: '$1576' },
+  {
+    title: 'Active Validators',
+    image: validatorsImage,
+    key: 'validatorsCount',
+  },
+  { title: 'Block Height', image: blockImage, key: 'blockHeight' },
+  { title: 'Memberships', image: emblemImage, key: 'membershipsMembers' },
+];
+
 storiesOf('Components|Analytics', module)
   .addDecorator(centered)
   .add('analytics item', () => <AnalyticsItem {...exampleData} />, {
@@ -63,7 +77,15 @@ storiesOf('Components|Analytics', module)
       },
     ],
   })
-  .add('default', () => <Analytics content={mapStatusDataToAnalytics(exampleExternalData)} />)
+  .add('default', () => (
+    <Analytics content={mapStatusDataToAnalytics(exampleExternalData)} />
+  ))
+  .add('custom number of analytics item', () => (
+    <Analytics
+      content={mapStatusDataToAnalytics(exampleExternalData)}
+      items={customItems}
+    />
+  ))
   .add('with children', () => (
     <Analytics content={mapStatusDataToAnalytics(exampleExternalData)}>
       <Button secondary href="https://blog.joystream.org/athens-incentives/">

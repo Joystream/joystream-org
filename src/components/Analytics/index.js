@@ -1,10 +1,18 @@
-import { number, shape, string, node } from 'prop-types';
+import {
+  number,
+  shape,
+  string,
+  node,
+  func,
+  arrayOf,
+  oneOfType,
+} from 'prop-types';
 import React from 'react';
 import cn from 'classnames';
 
 import AnalyticsItem from './AnalyticsItem';
 
-import { items } from './data';
+import { defaultItems } from './data';
 
 import './style.scss';
 
@@ -20,19 +28,28 @@ const propTypes = {
     mediaFiles: number,
     rolesProviders: number,
   }).isRequired,
+  items: arrayOf(
+    shape({
+      title: string,
+      image: oneOfType([func, node]),
+      key: string,
+      value: string,
+    })
+  ),
 };
 
 const defaultProps = {
   className: '',
   children: null,
+  items: defaultItems,
 };
 
-const Analytics = ({ className, content, children, ...props }) => {
+const Analytics = ({ className, content, children, items, ...props }) => {
   return (
     <section className={cn('Analytics', className)} {...props}>
       <div className="Analytics__container">
         {items.map(item => {
-          const value = item.key ? (content[item.key] || '-') : item.value ;
+          const value = item.key ? content[item.key] || '-' : item.value;
 
           return <AnalyticsItem key={item.title} {...item} value={value} />;
         })}
