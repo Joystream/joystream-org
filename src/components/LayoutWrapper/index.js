@@ -15,9 +15,10 @@ const defaultProps = {
   dark: false,
 };
 
-const LayoutWrapper = ({ children, dark, className, ...props }) => {
+const LayoutWrapper = ({ children, dark, gradient, className, ...props }) => {
   const classes = cn('LayoutWrapper', {
     'LayoutWrapper--dark': dark,
+    'LayoutWrapper--gradient': gradient,
   });
 
   return (
