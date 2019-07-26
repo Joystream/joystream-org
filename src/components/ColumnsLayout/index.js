@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { node, string } from 'prop-types';
+import { node, string, bool } from 'prop-types';
 
 import './style.scss';
 
@@ -17,19 +17,21 @@ const propTypes = {
       );
     }
   },
+  largeSpacing: bool,
   children: node.isRequired,
   className: string,
 };
 
 const defaultProps = {
+  largeSpacing: false,
   columnsCount: 2,
   className: '',
 };
 
-const ColumnsLayout = ({ columnsCount, children, className, ...props }) => {
+const ColumnsLayout = ({ columnsCount, largeSpacing, className, children, ...props }) => {
   return (
     <div
-      className={cn('ColumnsLayout', className)}
+      className={cn('ColumnsLayout', className, { 'ColumnsLayout--large': largeSpacing })}
       data-columns={columnsCount}
       {...props}
     >

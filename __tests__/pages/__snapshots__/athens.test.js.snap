@@ -230,11 +230,11 @@ exports[`AthensPage page renders correctly 1`] = `
         >
           Network Statistics
         </h2>
-        <p
+        <div
           className="TitleWrapper__subtitle"
         >
           As they were at the end of the network.
-        </p>
+        </div>
         <section
           className="Analytics"
         >
@@ -387,7 +387,7 @@ exports[`AthensPage page renders correctly 1`] = `
         >
           Testnet Goals
         </h2>
-        <p
+        <div
           className="TitleWrapper__subtitle"
         >
           The goals below is a simplified representation of the Key Results listed in our Release
@@ -398,7 +398,7 @@ exports[`AthensPage page renders correctly 1`] = `
           >
             OKR
           </a>
-        </p>
+        </div>
         <div
           className="Animated"
         >
