@@ -1,19 +1,34 @@
 @import '../../styles/main';
 
 .LayoutWrapper {
+  $_r: &;
+
   &--dark {
     background-color: $c_alabaster;
   }
 
   &--gradient {
-    background-color: #fff;
-    background-image: linear-gradient(90deg, #f8f8f8 50%, #fff 0);
+    #{$_r}__container {
+      padding: 0;
+    }
   }
 
   &__container {
     @extend %container;
 
     padding-bottom: 60px;
+  }
+
+  @media #{$screen-sm} {
+    &--gradient {
+      background-color: #fff;
+      background-image: linear-gradient(90deg, #f8f8f8 50%, #fff 0);
+
+      #{$_r}__container {
+        display: flex;
+        padding: 0 32px;
+      }
+    }
   }
 
   @media #{$screen-md} {

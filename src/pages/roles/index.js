@@ -2,14 +2,15 @@ import React from 'react';
 
 import BaseLayout from '../../components/_layouts/Base';
 import LayoutWrapper from '../../components/LayoutWrapper';
+import Sidebar from '../../components/Sidebar';
 import Hero from '../../components/Hero';
+import RoleOverview from '../../components/RoleOverview';
 
 import { ReactComponent as RolesImage } from '../../assets/svg/roles-hero.svg';
 
 import { rolesData } from '../../data/pages/roles';
 
 import './style.scss';
-import RoleOverview from '../../components/RoleOverview';
 
 const RolesPage = () => {
   return (
@@ -22,13 +23,18 @@ const RolesPage = () => {
       </Hero>
 
       <LayoutWrapper gradient>
+        <Sidebar
+          onElementChange={() => {
+            console.log('change link');
+          }}
+          currentElement="validator"
+          data={rolesData}
+        />
         <div className="RoleOverview__Wrapper">
-          {rolesData.active.map(role => (
-            <RoleOverview {...role} type="active" key={role.title} />
-          ))}
-          {rolesData.upcoming.map(role => (
-            <RoleOverview {...role} key={role.title} />
-          ))}
+          {Object.keys(rolesData).map(key =>
+            rolesData[key].map(role => (
+              <RoleOverview {...role} type={key} key={role.title} />
+            )))}
         </div>
       </LayoutWrapper>
     </BaseLayout>

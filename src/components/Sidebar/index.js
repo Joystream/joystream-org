@@ -3,6 +3,8 @@ import cn from 'classnames';
 import { object, func, string } from 'prop-types';
 
 import { ReactComponent as MoreRolesIcon } from '../../assets/svg/arrow-down.svg';
+import { ReactComponent as TickImage } from '../../assets/svg/tick.svg';
+import { ReactComponent as UpcomingImage } from '../../assets/svg/upcoming.svg';
 
 import './style.scss';
 
@@ -50,26 +52,28 @@ class Sidebar extends React.Component {
             })}
           >
             {Object.keys(data).map(key => {
-              const Icon = data[key].icon;
+              const Icon = key === 'active' ? TickImage : UpcomingImage;
+              const title =
+                key === 'active' ? 'Active roles' : 'Upcoming roles';
 
               return (
-                <div className="Sidebar__group" key={data[key].title}>
+                <div className="Sidebar__group" key={title}>
                   <div className="Sidebar__heading">
                     <Icon className="Sidebar__state-icon" />
-                    <p className="Sidebar__title">{data[key].title}</p>
+                    <p className="Sidebar__title">{title}</p>
                   </div>
 
-                  {data[key].links.map(({ ref, label }) => (
+                  {data[key].map(({ title }) => (
                     <button
                       className={cn('Sidebar__link', {
-                        'Sidebar__link--active': activeLink === ref,
+                        'Sidebar__link--active': activeLink === title,
                       })}
-                      key={ref}
+                      key={title}
                       onClick={() => {
-                        onElementChange(ref);
+                        onElementChange(title);
                       }}
                     >
-                      {label}
+                      {title}
                     </button>
                   ))}
                 </div>
