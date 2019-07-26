@@ -199,8 +199,14 @@ exports[`AcropolisPage page renders correctly 1`] = `
             }
           }
         >
-          <icon-mock
+          <img
+            alt="Acropolis Network"
             className="Hero__image"
+            src={
+              Object {
+                "ReactComponent": "icon-mock",
+              }
+            }
           />
         </div>
       </div>

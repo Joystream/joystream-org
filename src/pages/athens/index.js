@@ -22,7 +22,7 @@ import GoalList from '../../components/GoalList';
 import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
 
-import { ReactComponent as AthensImage } from '../../assets/svg/athens-owl.svg';
+import athensImage from '../../assets/svg/athens-owl.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
@@ -38,7 +38,7 @@ const AthensPage = ({ content }) => {
   return (
     <BaseLayout>
       <Hero
-        image={AthensImage}
+        image={athensImage}
         title="Athens Network"
         indent
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}

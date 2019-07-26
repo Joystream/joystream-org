@@ -209,8 +209,14 @@ exports[`AthensPage page renders correctly 1`] = `
             }
           }
         >
-          <icon-mock
+          <img
+            alt="Athens Network"
             className="Hero__image"
+            src={
+              Object {
+                "ReactComponent": "icon-mock",
+              }
+            }
           />
         </div>
       </div>
@@ -566,7 +572,11 @@ exports[`AthensPage page renders correctly 1`] = `
             <img
               alt="Validator"
               className="RoleCard__image"
-              src="icon-mock"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -599,7 +609,11 @@ exports[`AthensPage page renders correctly 1`] = `
             <img
               alt="Council Member"
               className="RoleCard__image"
-              src="icon-mock"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -632,7 +646,11 @@ exports[`AthensPage page renders correctly 1`] = `
             <img
               alt="Storage Provider"
               className="RoleCard__image"
-              src="icon-mock"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"

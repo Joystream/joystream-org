@@ -1,16 +1,18 @@
 import React from 'react';
 import Link from '../../components/Link';
 import { ReactComponent as ValidatorsImage } from '../../assets/svg/active-validators.svg';
-import { ReactComponent as StorageImage } from '../../assets/svg/storage.svg';
-import { ReactComponent as MemberImage } from '../../assets/svg/council-member.svg';
 import { ReactComponent as payoutImage } from '../../assets/svg/participation-payout.svg';
 import { ReactComponent as blockImage } from '../../assets/svg/block-platform-content-files.svg';
 import { ReactComponent as bookImage } from '../../assets/svg/platform-content-files.svg';
 
+import validatorsImage from '../../assets/svg/active-validators.svg';
+import memberImage from '../../assets/svg/council-member.svg';
+import storageImage from '../../assets/svg/storage.svg';
+
 const roles = {
   active: [
     {
-      image: ValidatorsImage,
+      image: validatorsImage,
       title: 'Validator',
       to: '/roles#Validator',
       key: 'validatorsCount',
@@ -18,7 +20,7 @@ const roles = {
       type: 'migration',
     },
     {
-      image: MemberImage,
+      image: memberImage,
       title: 'Council Member',
       to: '/roles#Council-Member',
       key: 'councilMembersCount',
@@ -26,7 +28,7 @@ const roles = {
       type: 'migration',
     },
     {
-      image: StorageImage,
+      image: storageImage,
       title: 'Storage Provider',
       to: '/roles#Storage-Provider',
       key: 'storageProviders',

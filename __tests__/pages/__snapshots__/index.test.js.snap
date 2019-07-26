@@ -123,8 +123,14 @@ exports[`IndexPage page renders correctly 1`] = `
             }
           }
         >
-          <icon-mock
+          <img
+            alt="A user governed video platform"
             className="Hero__image"
+            src={
+              Object {
+                "ReactComponent": "icon-mock",
+              }
+            }
           />
         </div>
       </div>
@@ -174,7 +180,7 @@ exports[`IndexPage page renders correctly 1`] = `
                 >
                   storage provider
                 </a>
-                software and an on-chain forum.
+                 software and an on-chain forum.
               </p>
             </div>
           </div>

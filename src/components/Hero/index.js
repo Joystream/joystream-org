@@ -1,13 +1,13 @@
 import React from 'react';
 import cn from 'classnames';
-import { node, string, func, bool, oneOfType } from 'prop-types';
+import { node, string, bool } from 'prop-types';
 import Plx from 'react-plx';
 
 import './style.scss';
 
 const propTypes = {
   title: string.isRequired,
-  image: oneOfType([func, string]),
+  image: string,
   indent: bool,
   children: node,
   chip: node,
@@ -20,7 +20,7 @@ const defaultProps = {
   chip: null,
 };
 
-const Hero = ({ title, children, image: Image, indent, chip }) => {
+const Hero = ({ title, children, image, indent, chip }) => {
   const parallaxData = [
     {
       start: 0,
@@ -42,11 +42,11 @@ const Hero = ({ title, children, image: Image, indent, chip }) => {
           <h1 className="Hero__title">{title}</h1>
           <div className="Hero__description">{children}</div>
         </div>
-        {Image && (
+        {image && (
           <div className="Hero__image-wrapper">
             {chip && chip}
             <Plx parallaxData={parallaxData}>
-              <Image className="Hero__image" />
+              <img src={image} alt={title} className="Hero__image" />
             </Plx>
           </div>
         )}
