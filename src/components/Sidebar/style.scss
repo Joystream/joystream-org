@@ -8,6 +8,10 @@ $trigger-height: 50px;
   z-index: 1;
   transition: top $duration ease 0s;
 
+  &--onTop {
+    top: 0;
+  }
+
   &__wrapper {
     position: absolute;
     top: 0;
