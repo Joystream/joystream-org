@@ -12,28 +12,6 @@ import './style.scss';
 class Navbar extends React.Component {
   state = {
     isOpen: false,
-    scrollPosition: 0,
-    isVisible: true,
-  };
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const { scrollPosition } = this.state;
-
-    const currentScrollPos = window.pageYOffset;
-    const isVisible = scrollPosition > currentScrollPos;
-
-    this.setState({
-      scrollPosition: currentScrollPos,
-      isVisible,
-    });
   };
 
   toggleMenu = () => {
@@ -43,7 +21,8 @@ class Navbar extends React.Component {
   };
 
   render() {
-    const { isOpen, isVisible } = this.state;
+    const { isOpen } = this.state;
+    const { isVisible } = this.props;
 
     return (
       <nav className={cn('Navbar', { 'Navbar--hidden': !isVisible })}>
@@ -52,7 +31,9 @@ class Navbar extends React.Component {
             <Logo className="Navbar__logo" />
           </Link>
 
-          <div className={cn('Navbar__links', { 'Navbar__links--open': isOpen })}>
+          <div
+            className={cn('Navbar__links', { 'Navbar__links--open': isOpen })}
+          >
             {links.map(link => (
               <Link
                 className={cn('Navbar__link', {
