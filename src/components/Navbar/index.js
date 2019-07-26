@@ -1,9 +1,10 @@
 import React from 'react';
 import cn from 'classnames';
 
-import { ReactComponent as Logo } from '../../assets/svg/logo-white.svg';
-
+import { ScrollConsumer } from '../_enhancers/ScrollContext';
 import Link from '../Link';
+
+import { ReactComponent as Logo } from '../../assets/svg/logo-white.svg';
 
 import { links } from './data';
 
@@ -22,41 +23,46 @@ class Navbar extends React.Component {
 
   render() {
     const { isOpen } = this.state;
-    const { isVisible } = this.props;
 
     return (
-      <nav className={cn('Navbar', { 'Navbar--hidden': !isVisible })}>
-        <div className="Navbar__container">
-          <Link to="/">
-            <Logo className="Navbar__logo" />
-          </Link>
-
-          <div
-            className={cn('Navbar__links', { 'Navbar__links--open': isOpen })}
-          >
-            {links.map(link => (
-              <Link
-                className={cn('Navbar__link', {
-                  'Navbar__link--highlighted': link.highlighted,
-                })}
-                activeClassName="Navbar__link--active"
-                key={link.label}
-                {...link}
-              >
-                {link.label}
+      <ScrollConsumer>
+        {({ isScrollUp }) => (
+          <nav className={cn('Navbar', { 'Navbar--hidden': !isScrollUp })}>
+            <div className="Navbar__container">
+              <Link to="/">
+                <Logo className="Navbar__logo" />
               </Link>
-            ))}
-          </div>
 
-          <div
-            className={cn('Navbar__trigger', {
-              'Navbar__trigger--active': isOpen,
-            })}
-            onClick={this.toggleMenu}
-            role="presentation"
-          />
-        </div>
-      </nav>
+              <div
+                className={cn('Navbar__links', {
+                  'Navbar__links--open': isOpen,
+                })}
+              >
+                {links.map(link => (
+                  <Link
+                    className={cn('Navbar__link', {
+                      'Navbar__link--highlighted': link.highlighted,
+                    })}
+                    activeClassName="Navbar__link--active"
+                    key={link.label}
+                    {...link}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+
+              <div
+                className={cn('Navbar__trigger', {
+                  'Navbar__trigger--active': isOpen,
+                })}
+                onClick={this.toggleMenu}
+                role="presentation"
+              />
+            </div>
+          </nav>
+        )}
+      </ScrollConsumer>
     );
   }
 }

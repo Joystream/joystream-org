@@ -4,7 +4,7 @@ import { node } from 'prop-types';
 import Navbar from '../../Navbar';
 import Footer from '../../Footer';
 import CookiesNotice from '../../CookiesNotice';
-import withScrollHandle from '../../_enhancers/withScrollHandle';
+import { ScrollProvider } from '../../_enhancers/ScrollContext';
 
 const propTypes = {
   children: node,
@@ -14,19 +14,20 @@ const defaultTypes = {
   children: null,
 };
 
-const BaseLayout = ({ children, isScrollUp }) => {
+const BaseLayout = ({ children }) => {
   return (
-    <div>
-      <Navbar isVisible={isScrollUp} />
-      {children}
-      <CookiesNotice />
-      <Footer />
-    </div>
+    <ScrollProvider>
+      <div>
+        <Navbar />
+        {children}
+        <CookiesNotice />
+        <Footer />
+      </div>
+    </ScrollProvider>
   );
 };
 
 BaseLayout.propTypes = propTypes;
 BaseLayout.defaultTypes = defaultTypes;
 
-export { BaseLayout };
-export default withScrollHandle(BaseLayout);
+export default BaseLayout;
