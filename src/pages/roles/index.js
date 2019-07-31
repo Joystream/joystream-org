@@ -1,4 +1,4 @@
-import React, { useState, useRef, createRef } from 'react';
+import React, { useState, createRef, useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import { InView } from 'react-intersection-observer';
 
@@ -15,19 +15,18 @@ import { rolesData } from '../../data/pages/roles';
 import './style.scss';
 
 const RolesPage = () => {
-  const [elementInViewport, setElementInViewport] = useState('validator');
+  const [elementInViewport, setElementInViewport] = useState('');
 
-  const elementsRef = useRef(
+  const elementsRef = useMemo(() => {
+    const obj = {};
     Object.keys(rolesData).map(key => {
-      return rolesData[key].reduce((result, item) => {
-        result[item.id] = createRef();
-        return result;
-      }, {});
-    })
-  );
+      return rolesData[key].map(item => (obj[item.id] = createRef()));
+    });
+    return obj;
+  }, [rolesData]);
 
   const scrollToElement = id => {
-    const target = ReactDOM.findDOMNode(elementsRef.current[id]);
+    const target = ReactDOM.findDOMNode(elementsRef[id].current);
     window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
   };
 
@@ -59,11 +58,7 @@ const RolesPage = () => {
                 }}
                 key={role.title}
               >
-                <RoleOverview
-                  {...role}
-                  type={key}
-                  ref={ref => (elementsRef.current[role.id] = ref)}
-                />
+                <RoleOverview {...role} type={key} ref={elementsRef[role.id]} />
               </InView>
             )))}
         </div>
