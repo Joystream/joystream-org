@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Link from '../../components/Link';
 import { ReactComponent as ValidatorsImage } from '../../assets/svg/active-validators.svg';
 import { ReactComponent as MemberImage } from '../../assets/svg/council-member.svg';

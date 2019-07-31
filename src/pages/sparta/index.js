@@ -28,7 +28,7 @@ import { analytics, roles, goals } from '../../data/pages/sparta';
 import './style.scss';
 
 const SpartaPage = ({ content }) => {
-  const [isModalOpen, setModalClosed] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   return (
     <BaseLayout>
@@ -36,7 +36,7 @@ const SpartaPage = ({ content }) => {
         image={SpartaImage}
         title="Sparta Network"
         indent
-        chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
+        chip={<Chip onClick={() => setModalOpen(true)}>What is this?</Chip>}
       >
         <p className="SpartaPage__hero-paragraph">
           Explore available roles and pick the one that suits you the most.
@@ -56,7 +56,7 @@ const SpartaPage = ({ content }) => {
         <TestnetModal
           title="Helmet of Sparta"
           image={SpartaHelmetImg}
-          closeModal={() => setModalClosed(false)}
+          closeModal={() => setModalOpen(false)}
           isOpen={isModalOpen}
         >
           <p>
