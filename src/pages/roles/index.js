@@ -26,9 +26,7 @@ class RolesPage extends React.Component {
       elementInViewport: id,
     });
     const target = ReactDOM.findDOMNode(this[id]);
-    window.scrollTo(0, target.offsetTop);
-    // this[id].scrollIntoView({ behavior: 'smooth', block: 'start' });
-    console.log(target);
+    window.scrollTo({ top: target.offsetTop - 40, behavior: 'smooth' });
   };
 
   render() {
