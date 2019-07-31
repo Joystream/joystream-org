@@ -21,7 +21,6 @@ class Sidebar extends React.Component {
     super(props);
     this.state = {
       isOpen: false,
-      activeLink: this.props.currentElement,
     };
   }
 
@@ -32,8 +31,8 @@ class Sidebar extends React.Component {
   };
 
   render() {
-    const { isOpen, activeLink } = this.state;
-    const { data, onElementChange } = this.props;
+    const { isOpen } = this.state;
+    const { data, onElementChange, currentElement } = this.props;
 
     return (
       <ScrollConsumer>
@@ -71,14 +70,14 @@ class Sidebar extends React.Component {
                         <p className="Sidebar__title">{title}</p>
                       </div>
 
-                      {data[key].map(({ title }) => (
+                      {data[key].map(({ title, id }) => (
                         <button
                           className={cn('Sidebar__link', {
-                            'Sidebar__link--active': activeLink === title,
+                            'Sidebar__link--active': currentElement === id,
                           })}
-                          key={title}
+                          key={id}
                           onClick={() => {
-                            onElementChange(title);
+                            onElementChange(id);
                           }}
                         >
                           {title}

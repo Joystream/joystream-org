@@ -16,6 +16,7 @@ import { ReactComponent as CommunicationModeratorImage } from '../../assets/svg/
 const rolesData = {
   active: [
     {
+      id: 'validator',
       image: ValidatorImage,
       title: 'Validator',
       overview: `The Joystream platform state lives on a blockchain consensus system.
@@ -43,6 +44,7 @@ const rolesData = {
       formAction: '',
     },
     {
+      id: 'council-member',
       image: CouncilMemberImage,
       title: 'Council Member',
       overview: `At the heart of the governance process on the platform is the proposal system, 
@@ -67,6 +69,7 @@ const rolesData = {
       formAction: '',
     },
     {
+      id: 'storage-provider',
       image: StorageProviderImage,
       title: 'Storage Provider',
       overview: `There are critical platform assets that do not live on the blockchain, 
@@ -91,6 +94,7 @@ const rolesData = {
   ],
   upcoming: [
     {
+      id: 'membership-screener',
       image: MembershipScreenerImage,
       title: 'Membership Screener',
       overview: `A membership is an integrated representation of identifying information 
@@ -121,6 +125,7 @@ const rolesData = {
       formAction: '',
     },
     {
+      id: 'membership-curator',
       image: MembershipCuratorImage,
       title: 'Membership Curator',
       overview: (
@@ -152,6 +157,7 @@ const rolesData = {
       formAction: '',
     },
     {
+      id: 'content-curator',
       image: ContentCuratorImage,
       title: 'Content Curator',
       overview: `All of the media content published on the platform lives in an on chain content directory.
@@ -179,6 +185,7 @@ const rolesData = {
       formAction: '',
     },
     {
+      id: 'content-creator',
       image: ContentCreatorImage,
       title: 'Content Creator',
       overview: `As a video platform, one of the most important platform assets is the content published 
@@ -194,6 +201,7 @@ const rolesData = {
       formAction: '',
     },
     {
+      id: 'bandwidth-provider',
       image: BandwidthProviderImage,
       title: 'Bandwidth Provider',
       overview: `There are critical platform assets that do not live on the blockchain, such as images 
@@ -215,6 +223,7 @@ const rolesData = {
       formAction: '',
     },
     {
+      id: 'discovery-provider',
       image: DiscoveryProviderImage,
       title: 'Discovery Provider',
       overview: `All of the content on the platform is in a designated content directory, and effectively navigating 
@@ -241,6 +250,7 @@ const rolesData = {
       formAction: '',
     },
     {
+      id: 'live-streaming-provider',
       image: LiveStreamingProviderImage,
       title: 'Live Streaming Provider',
       overview: `The platform supports live video, allowing publisher to distribute content as it is created.
@@ -259,6 +269,7 @@ const rolesData = {
       formAction: '',
     },
     {
+      id: 'builder',
       image: BuilderImage,
       title: 'Builder',
       overview: (
@@ -302,6 +313,7 @@ const rolesData = {
       formAction: '',
     },
     {
+      id: 'communication-moderator',
       image: CommunicationModeratorImage,
       title: 'Communication Moderator',
       overview: `

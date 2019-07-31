@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import BaseLayout from '../../components/_layouts/Base';
 import LayoutWrapper from '../../components/LayoutWrapper';
@@ -12,33 +13,55 @@ import { rolesData } from '../../data/pages/roles';
 
 import './style.scss';
 
-const RolesPage = () => {
-  return (
-    <BaseLayout>
-      <Hero image={RolesImage} title="Discover various roles on the platform">
-        <p className="RolesPage__hero-paragraph">
-          Explore available roles and pick the one that suits you the most.
-          Influence platforms development earning Monero in the process.
-        </p>
-      </Hero>
+class RolesPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      elementInViewport: 'validator',
+    };
+  }
 
-      <LayoutWrapper gradient>
-        <Sidebar
-          onElementChange={() => {
-            console.log('change link');
-          }}
-          currentElement="validator"
-          data={rolesData}
-        />
-        <div className="RoleOverview__Wrapper">
-          {Object.keys(rolesData).map(key =>
-            rolesData[key].map(role => (
-              <RoleOverview {...role} type={key} key={role.title} />
-            )))}
-        </div>
-      </LayoutWrapper>
-    </BaseLayout>
-  );
-};
+  goToElement = id => {
+    this.setState({
+      elementInViewport: id,
+    });
+    const target = ReactDOM.findDOMNode(this[id]);
+    window.scrollTo(0, target.offsetTop);
+    // this[id].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    console.log(target);
+  };
+
+  render() {
+    return (
+      <BaseLayout>
+        <Hero image={RolesImage} title="Discover various roles on the platform">
+          <p className="RolesPage__hero-paragraph">
+            Explore available roles and pick the one that suits you the most.
+            Influence platforms development earning Monero in the process.
+          </p>
+        </Hero>
+
+        <LayoutWrapper gradient>
+          <Sidebar
+            onElementChange={this.goToElement}
+            currentElement={this.state.elementInViewport}
+            data={rolesData}
+          />
+          <div className="RoleOverview__Wrapper">
+            {Object.keys(rolesData).map(key =>
+              rolesData[key].map(role => (
+                <RoleOverview
+                  {...role}
+                  type={key}
+                  key={role.title}
+                  ref={ref => (this[role.id] = ref)}
+                />
+              )))}
+          </div>
+        </LayoutWrapper>
+      </BaseLayout>
+    );
+  }
+}
 
 export default RolesPage;
