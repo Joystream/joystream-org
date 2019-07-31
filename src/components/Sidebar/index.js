@@ -78,6 +78,7 @@ class Sidebar extends React.Component {
                           key={id}
                           onClick={() => {
                             onElementChange(id);
+                            this.toggleMenu();
                           }}
                         >
                           {title}
