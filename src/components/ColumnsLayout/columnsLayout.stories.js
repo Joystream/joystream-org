@@ -21,18 +21,11 @@ const childrenCount = new Array(10).fill(0);
 const children = childrenCount.map(() => <div style={{ ...childStyle() }} />);
 
 storiesOf('Layout|ColumnsLayout', module)
-  .add('2 columns', () => (
-    <ColumnsLayout columnsCount={2}>
+  .add('2 columns', () => <ColumnsLayout columnsCount={2}>{children.map(child => child)}</ColumnsLayout>)
+  .add('3 columns', () => <ColumnsLayout columnsCount={3}>{children.map(child => child)}</ColumnsLayout>)
+  .add('3 columns large spacing', () => (
+    <ColumnsLayout columnsCount={3} largeSpacing>
       {children.map(child => child)}
     </ColumnsLayout>
   ))
-  .add('3 columns', () => (
-    <ColumnsLayout columnsCount={3}>
-      {children.map(child => child)}
-    </ColumnsLayout>
-  ))
-  .add('4 columns', () => (
-    <ColumnsLayout columnsCount={4}>
-      {children.map(child => child)}
-    </ColumnsLayout>
-  ));
+  .add('4 columns', () => <ColumnsLayout columnsCount={4}>{children.map(child => child)}</ColumnsLayout>);
