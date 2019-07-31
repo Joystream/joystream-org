@@ -1,0 +1,598 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpartaPage page renders correctly 1`] = `
+<div>
+  <nav
+    className="Navbar"
+  >
+    <div
+      className="Navbar__container"
+    >
+      <a
+        className="Link"
+        href="/"
+      >
+        <icon-mock
+          className="Navbar__logo"
+        />
+      </a>
+      <div
+        className="Navbar__links"
+      >
+        <a
+          className="Navbar__link Navbar__link--highlighted Link Link--highlighted"
+          href="https://www.jsgenesis.com/#openings"
+          label="We are hiring!"
+        >
+          We are hiring!
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://blog.joystream.org/"
+          label="Blog"
+        >
+          Blog
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://blog.joystream.org/manifesto/"
+          label="Manifesto"
+        >
+          Manifesto
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://github.com/Joystream/whitepaper/blob/master/paper.pdf"
+          label="Whitepaper"
+        >
+          Whitepaper
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="/roles"
+          label="Roles"
+        >
+          Roles
+        </a>
+        <a
+          className="Navbar__link Link"
+          href="https://github.com/Joystream/joystream"
+          label="Repository"
+        >
+          Repository
+        </a>
+      </div>
+      <div
+        className="Navbar__trigger"
+        onClick={[Function]}
+        role="presentation"
+      />
+    </div>
+  </nav>
+  <section
+    className="Hero Hero--indented"
+  >
+    <div
+      className="Hero__container"
+    >
+      <div
+        className="Hero__content"
+      >
+        <h1
+          className="Hero__title"
+        >
+          Sparta Network
+        </h1>
+        <div
+          className="Hero__description"
+        >
+          <p
+            className="SpartaPage__hero-paragraph"
+          >
+            Explore available roles and pick the one that suits you the most. Influence platforms development earning Monero in the process.
+          </p>
+          <div
+            className="Card Card--error"
+          >
+            <p
+              className="Card__header"
+            >
+              <icon-mock
+                className="Card__icon"
+              />
+              Network down
+            </p>
+            <div
+              className="Card__content"
+            >
+              <div>
+                <h3>
+                  FAILURE IDENTIFIED
+                </h3>
+                <p>
+                    On Friday the 29th of March, the Sparta network went down due to a 
+                  <a
+                    href="https://github.com/paritytech/substrate/pull/2130"
+                  >
+                    known bug in substrate
+                  </a>
+                   that we had not pulled down before release.
+                </p>
+                <p>
+                    More details can be found in this 
+                  <a
+                    href="https://blog.joystream.org/sparta-sacked/"
+                  >
+                    blog post
+                  </a>
+                  .
+  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="Hero__image-wrapper"
+      >
+        <button
+          className="Chip"
+          onClick={[Function]}
+        >
+          <icon-mock
+            className="Chip__icon"
+          />
+          <span
+            className="Chip__text"
+          >
+            What is this?
+          </span>
+        </button>
+        <div
+          className="Plx  "
+          disabled={false}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <icon-mock
+            className="Hero__image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    className="LayoutWrapper"
+  >
+    <div
+      className="LayoutWrapper__container"
+    >
+      <section
+        className="TitleWrapper"
+      >
+        <h2
+          className="TitleWrapper__title"
+        >
+          Network Statistics
+        </h2>
+        <div
+          className="TitleWrapper__subtitle"
+        >
+          As they were at the end of the network.
+        </div>
+        <section
+          className="Analytics"
+        >
+          <div
+            className="Analytics__container"
+          >
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Participation Payout
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                $1576
+              </p>
+            </div>
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Active Validators
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                20
+              </p>
+            </div>
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Memberships
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                164
+              </p>
+            </div>
+            <div
+              className="AnalyticsItem"
+            >
+              <icon-mock
+                className="AnalyticsItem__image"
+              />
+              <p
+                className="AnalyticsItem__title"
+              >
+                Block Height
+              </p>
+              <p
+                className="AnalyticsItem__value"
+              >
+                1110117
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section
+        className="TitleWrapper"
+      >
+        <h2
+          className="TitleWrapper__title"
+        >
+          Testnet Goals
+        </h2>
+        <div
+          className="TitleWrapper__subtitle"
+        >
+          The goals below is a simplified and qualitative representation of the Key Results listed in our release OKR.
+        </div>
+        <div
+          className="Animated"
+        >
+          <div
+            className="GoalItem"
+          >
+            <div
+              className="GoalItem__icon-container"
+            >
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--achieved"
+              >
+                Achieved
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
+            >
+              <p
+                className="GoalItem__title"
+              >
+                Build and release a blockchain with a working Council
+              </p>
+              As a "user governed media platform", allowing users to elect
+               
+              <a
+                className="Link"
+                href="/roles#Council-Member"
+              >
+                Council Members
+              </a>
+               to represent their interest in day to day operations was a major goal for us.
+            </div>
+          </div>
+        </div>
+        <div
+          className="Animated"
+        >
+          <div
+            className="GoalItem"
+          >
+            <div
+              className="GoalItem__icon-container"
+            >
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--postponed"
+              >
+                Postponed
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
+            >
+              <p
+                className="GoalItem__title"
+              >
+                Keep the quantity of more or less critical bugs at an acceptable level
+              </p>
+              As demonstrated by the fact that the network crashed, we did not reach our goals in this case.
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div
+    className="LayoutWrapper LayoutWrapper--dark"
+  >
+    <div
+      className="LayoutWrapper__container"
+    >
+      <section
+        className="TitleWrapper"
+      >
+        <h2
+          className="TitleWrapper__title"
+        >
+          Roles available on the Sparta testnet
+        </h2>
+        
+        <div
+          className="ColumnsLayout"
+          data-columns={2}
+        >
+          <a
+            className="RoleCard RoleCard--labeled Link"
+            href="/roles#Validator"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Validator
+              </p>
+              <p
+                className="RoleCard__info"
+              >
+                <icon-mock
+                  className="RoleCard__icon"
+                />
+                At most, 
+                <span
+                  className="RoleCard__counter"
+                >
+                  20
+                </span>
+                 users occupied this role
+              </p>
+            </div>
+          </a>
+          <a
+            className="RoleCard RoleCard--labeled Link"
+            href="/roles#Council-Member"
+          >
+            <icon-mock
+              className="RoleCard__image"
+            />
+            <div
+              className="RoleCard__content"
+            >
+              <p
+                className="RoleCard__title"
+              >
+                Council Member
+              </p>
+              <p
+                className="RoleCard__info"
+              >
+                <icon-mock
+                  className="RoleCard__icon"
+                />
+                At most, 
+                <span
+                  className="RoleCard__counter"
+                >
+                  12
+                </span>
+                 users occupied this role
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <section
+    className="MapInfo"
+  >
+    <div
+      className="Map MapInfo__map"
+      style={
+        Object {
+          "backgroundImage": "url(test-file-stub)",
+        }
+      }
+    >
+      <div
+        className="Animated"
+      >
+        <icon-mock />
+      </div>
+      <p
+        className="Map__info"
+      >
+        Map data ©
+        2019
+         Google
+      </p>
+    </div>
+    <div
+      className="MapInfo__content"
+    >
+      <div
+        className="Animated"
+      >
+        <h1
+          className="MapInfo__title"
+        >
+          The city of Sparta
+        </h1>
+        <p>
+          <strong>
+            Sparta was a prominent city-state in Ancient Greece.
+          </strong>
+           
+          In addition to its military might, it was also unique both for its time and compared to its greek rivals due its defined social system and constitution.
+          <br />
+          <br />
+          We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law, however draconian by modern standard.
+          <br />
+          <br />
+        </p>
+      </div>
+    </div>
+  </section>
+  <div
+    className="CookiesNotice"
+  >
+    <div
+      className="CookiesNotice__container"
+    >
+      <div
+        className="CookiesNotice__content"
+      >
+        <p>
+          This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.
+        </p>
+        <p>
+          <a
+            className="CookiesNotice__link Link"
+            href="/privacy-police"
+          >
+            Find out more ›
+          </a>
+        </p>
+      </div>
+      <button
+        className="CookiesNotice__accept Button Button--secondary"
+        onClick={[Function]}
+        type="button"
+      >
+        Accept
+      </button>
+    </div>
+  </div>
+  <footer
+    className="Footer"
+  >
+    <p
+      className="Footer__header"
+    >
+      Get notified
+    </p>
+    <a
+      className="Footer__button Button Button--small Button--light"
+      href="http://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&id=459ba8d1da"
+      onClick={null}
+    >
+      Join the newsletter
+    </a>
+    <div
+      className="Footer__socials"
+    >
+      <a
+        className="Footer__social-wrapper"
+        href="https://twitter.com/JoyStreamApp"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+      <a
+        className="Footer__social-wrapper"
+        href="https://github.com/Joystream"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+      <a
+        className="Footer__social-wrapper"
+        href="https://chat.joystream.org/home"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+      <a
+        className="Footer__social-wrapper"
+        href="https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA"
+      >
+        <icon-mock
+          className="Footer__social-icon"
+        />
+      </a>
+    </div>
+    <div
+      className="Footer__links"
+    >
+      <a
+        className="Footer__link Footer__link--highlighted Link Link--highlighted"
+        href="https://www.jsgenesis.com/#openings"
+        label="We are hiring!"
+      >
+        We are hiring!
+      </a>
+      <a
+        className="Footer__link Link"
+        href="https://blog.joystream.org/"
+        label="Blog"
+      >
+        Blog
+      </a>
+      <a
+        className="Footer__link Link"
+        href="https://blog.joystream.org/manifesto/"
+        label="Manifesto"
+      >
+        Manifesto
+      </a>
+      <a
+        className="Footer__link Link"
+        href="https://github.com/Joystream/joystream"
+        label="Repository"
+      >
+        Repository
+      </a>
+    </div>
+  </footer>
+</div>
+`;
