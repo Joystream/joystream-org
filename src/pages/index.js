@@ -7,8 +7,7 @@ import mapStatusDataToRoles from '../utils/mapStatusDataToRoles';
 
 import withApi from '../components/_enhancers/withApi';
 
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import BaseLayout from '../components/_layouts/Base';
 import Link from '../components/Link';
 import Subheader from '../components/Subheader';
 import TestnetItem from '../components/TestnetItem';
@@ -30,13 +29,11 @@ import { roles } from '../data/pages';
 import './style.scss';
 
 const IndexPage = ({ content }) => (
-  <div>
+  <BaseLayout>
     <SiteMetadata
       title="Joystream: A user governed video platform"
       description="Earn monero to participate on our testnets!"
     />
-
-    <Navbar />
 
     <Hero image={PlatformImage} title="A user governed video platform">
       <p className="IndexPage__hero-paragraph">
@@ -117,9 +114,7 @@ const IndexPage = ({ content }) => (
         </Button>
       </TitleWrapper>
     </LayoutWrapper>
-
-    <Footer />
-  </div>
+  </BaseLayout>
 );
 
 IndexPage.propTypes = pagePropTypes;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string, oneOfType, bool } from 'prop-types';
+import { node, string, oneOfType, oneOf, number } from 'prop-types';
 import { useInView } from 'react-intersection-observer';
 import cn from 'classnames';
 
@@ -7,28 +7,31 @@ import './style.scss';
 
 const propTypes = {
   children: oneOfType([node, string]).isRequired,
-  fadeIn: bool,
-  bounce: bool,
+  animation: oneOf(['fadeIn', 'bounce']).isRequired,
+  threshold: number,
 };
 
 const defaultProps = {
-  fadeIn: false,
-  bounce: false,
+  threshold: 1,
 };
 
-const Animated = ({ children, fadeIn, bounce }) => {
+const Animated = ({ children, animation, threshold, ...props }) => {
   const [ref, inView] = useInView({
-    threshold: 1,
+    threshold: threshold,
     triggerOnce: true,
   });
 
+  const animationTypes = {
+    fadeIn: 'Animated--fade-in',
+    bounce: 'Animated--bounce',
+  };
+
   const classes = cn('Animated', {
-    'Animated--fade-in': inView && fadeIn,
-    'Animated--bounce': inView && bounce,
+    [`${animationTypes[animation]}`]: inView,
   });
 
   return (
-    <div ref={ref} className={classes}>
+    <div ref={ref} className={classes} {...props}>
       {children}
     </div>
   );

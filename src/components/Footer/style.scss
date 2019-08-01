@@ -50,10 +50,11 @@
   }
 
   &__link {
+    display: flex;
+    justify-content: center;
     margin-bottom: 32px;
     font-size: 18px;
     color: $c_dusty-gray;
-    text-align: center;
 
     &:hover,
     &:active {

@@ -443,7 +443,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
         >
           Testnet Goals
         </h2>
-        <p
+        <div
           className="TitleWrapper__subtitle"
         >
           The goals below is a simplified representation of the Key Results listed in our Release
@@ -454,122 +454,138 @@ exports[`AcropolisPage page renders correctly 1`] = `
           >
             OKR
           </a>
-        </p>
+        </div>
         <div
-          className="GoalItem"
+          className="Animated"
         >
           <div
-            className="GoalItem__icon-container"
+            className="GoalItem"
           >
-            <icon-mock
-              className="GoalItem__icon"
-            />
-            <p
-              className="GoalItem__status GoalItem__status--achieved"
+            <div
+              className="GoalItem__icon-container"
             >
-              Achieved
-            </p>
-          </div>
-          <div
-            className="GoalItem__content"
-          >
-            <p
-              className="GoalItem__title"
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--achieved"
+              >
+                Achieved
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
             >
-              Build and release an on-chain forum
-            </p>
-            The final platform will have built in multiple ways of facilitating
+              <p
+                className="GoalItem__title"
+              >
+                Build and release an on-chain forum
+              </p>
+              The final platform will have built in multiple ways of facilitating
             easy and secure public, and private, communication and information
             sharing among members. The forum is the first step allowing the
             platform members to communicate, share ideas and discuss.
+            </div>
           </div>
         </div>
         <div
-          className="GoalItem"
+          className="Animated"
         >
           <div
-            className="GoalItem__icon-container"
+            className="GoalItem"
           >
-            <icon-mock
-              className="GoalItem__icon"
-            />
-            <p
-              className="GoalItem__status GoalItem__status--achieved"
+            <div
+              className="GoalItem__icon-container"
             >
-              Achieved
-            </p>
-          </div>
-          <div
-            className="GoalItem__content"
-          >
-            <p
-              className="GoalItem__title"
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--achieved"
+              >
+                Achieved
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
             >
-              Rebuild and release the storage node
-            </p>
-            Where the old storage node had some bugs making it unable to sync
+              <p
+                className="GoalItem__title"
+              >
+                Rebuild and release the storage node
+              </p>
+              Where the old storage node had some bugs making it unable to sync
             between clients and required a hardcoded liaison, the new storage
             node is working as intended with no hierarchy or privileges.
+            </div>
           </div>
         </div>
         <div
-          className="GoalItem"
+          className="Animated"
         >
           <div
-            className="GoalItem__icon-container"
+            className="GoalItem"
           >
-            <icon-mock
-              className="GoalItem__icon"
-            />
-            <p
-              className="GoalItem__status GoalItem__status--inprogress"
+            <div
+              className="GoalItem__icon-container"
             >
-              In Progress
-            </p>
-          </div>
-          <div
-            className="GoalItem__content"
-          >
-            <p
-              className="GoalItem__title"
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--inprogress"
+              >
+                In Progress
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
             >
-              Ensure high uptime of storage providers
-            </p>
-            Both content creators and consumers user experience depends on
+              <p
+                className="GoalItem__title"
+              >
+                Ensure high uptime of storage providers
+              </p>
+              Both content creators and consumers user experience depends on
             various metrics, but perhaps the most important is that the storage
             node they connect to responds to their request. Whether or not this
             goal is achieved depends on both the reliability of the software, a
             good reporting system and corrective actions from multiple parties.
+            </div>
           </div>
         </div>
         <div
-          className="GoalItem"
+          className="Animated"
         >
           <div
-            className="GoalItem__icon-container"
+            className="GoalItem"
           >
-            <icon-mock
-              className="GoalItem__icon"
-            />
-            <p
-              className="GoalItem__status GoalItem__status--postponed"
+            <div
+              className="GoalItem__icon-container"
             >
-              Postponed
-            </p>
-          </div>
-          <div
-            className="GoalItem__content"
-          >
-            <p
-              className="GoalItem__title"
+              <icon-mock
+                className="GoalItem__icon"
+              />
+              <p
+                className="GoalItem__status GoalItem__status--postponed"
+              >
+                Postponed
+              </p>
+            </div>
+            <div
+              className="GoalItem__content"
             >
-              Build the storage node with "tranches"
-            </p>
-            Although the content directory is currently small, at some point
+              <p
+                className="GoalItem__title"
+              >
+                Build the storage node with "tranches"
+              </p>
+              Although the content directory is currently small, at some point
             it's not feasible to expect all storage providers to have full
             replication of all the content. Tranches would allow storage
             providers to select a subset of the content directory, suitable to
             their capabilities.
+            </div>
           </div>
         </div>
       </section>
@@ -699,7 +715,11 @@ exports[`AcropolisPage page renders correctly 1`] = `
         }
       }
     >
-      <icon-mock />
+      <div
+        className="Animated"
+      >
+        <icon-mock />
+      </div>
       <p
         className="Map__info"
       >
@@ -711,32 +731,66 @@ exports[`AcropolisPage page renders correctly 1`] = `
     <div
       className="MapInfo__content"
     >
-      <h1
-        className="MapInfo__title"
+      <div
+        className="Animated"
       >
-        Acropolis of Athens
-      </h1>
-      <p>
-        <strong>
-          The Acropolis is a citadel on a hill in the heart of Athens.
-        </strong>
-         
-        It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list "World Heritage Sites".
-        <br />
-        <br />
-        We chose the name as we had to scale back our ambitions for the next testnet after some issues with the release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not intended for Athens.
-        <br />
-        <br />
-        <a
-          className="Link"
-          href="/athens"
+        <h1
+          className="MapInfo__title"
         >
-          <icon-mock />
-           Explore previous testnet
-        </a>
-      </p>
+          Acropolis of Athens
+        </h1>
+        <p>
+          <strong>
+            The Acropolis is a citadel on a hill in the heart of Athens.
+          </strong>
+           
+          It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list "World Heritage Sites".
+          <br />
+          <br />
+          We chose the name as we had to scale back our ambitions for the next testnet after some issues with the release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not intended for Athens.
+          <br />
+          <br />
+          <a
+            className="Link"
+            href="/athens"
+          >
+            <icon-mock />
+             Explore previous testnet
+          </a>
+        </p>
+      </div>
     </div>
   </section>
+  <div
+    className="CookiesNotice"
+  >
+    <div
+      className="CookiesNotice__container"
+    >
+      <div
+        className="CookiesNotice__content"
+      >
+        <p>
+          This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.
+        </p>
+        <p>
+          <a
+            className="CookiesNotice__link Link"
+            href="/privacy-police"
+          >
+            Find out more ›
+          </a>
+        </p>
+      </div>
+      <button
+        className="CookiesNotice__accept Button Button--secondary"
+        onClick={[Function]}
+        type="button"
+      >
+        Accept
+      </button>
+    </div>
+  </div>
   <footer
     className="Footer"
   >

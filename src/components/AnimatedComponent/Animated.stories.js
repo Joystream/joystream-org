@@ -36,19 +36,19 @@ storiesOf('Animated', module)
       </p>
 
       <div style={wrapperStyle}>
-        <Animated fadeIn>
+        <Animated animation="fadeIn">
           <div style={{ ...childStyle() }} />
         </Animated>
 
-        <Animated fadeIn>
+        <Animated animation="fadeIn">
           <div style={{ ...childStyle() }} />
         </Animated>
 
-        <Animated fadeIn>
+        <Animated animation="fadeIn">
           <div style={{ ...childStyle() }} />
         </Animated>
 
-        <Animated fadeIn>
+        <Animated animation="fadeIn">
           <div style={{ ...childStyle() }} />
         </Animated>
       </div>
@@ -61,7 +61,7 @@ storiesOf('Animated', module)
       </p>
 
       <div style={wrapperStyle}>
-        <Animated bounce>
+        <Animated animation="bounce">
           <div style={{ ...childStyle() }} />
         </Animated>
       </div>

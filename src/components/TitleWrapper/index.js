@@ -1,12 +1,12 @@
 import React from 'react';
-import { string, node, oneOfType } from 'prop-types';
+import { string, node, oneOfType, func } from 'prop-types';
 import cn from 'classnames';
 
 import './style.scss';
 
 const propTypes = {
   title: string.isRequired,
-  subtitle: oneOfType([string, node]),
+  subtitle: oneOfType([string, node, func]),
   children: node.isRequired,
   className: string,
 };
@@ -17,16 +17,13 @@ const defaultProps = {
 };
 
 const TitleWrapper = ({ title, subtitle, className, children, ...props }) => {
-  const classes = cn(
-    className,
-    'TitleWrapper',
-  );
+  const classes = cn(className, 'TitleWrapper');
 
   return (
-    <section className={ classes } { ...props }>
-      <h2 className="TitleWrapper__title">{ title }</h2>
-      {subtitle && <p className="TitleWrapper__subtitle">{subtitle}</p>}
-      { children }
+    <section className={classes} {...props}>
+      <h2 className="TitleWrapper__title">{title}</h2>
+      {subtitle && <div className="TitleWrapper__subtitle">{subtitle}</div>}
+      {children}
     </section>
   );
 };
