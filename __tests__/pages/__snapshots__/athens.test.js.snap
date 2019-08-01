@@ -751,7 +751,7 @@ exports[`AthensPage page renders correctly 1`] = `
         <p>
           <a
             className="CookiesNotice__link Link"
-            href="/privacy-police"
+            href="/privacy-policy"
           >
             Find out more ›
           </a>

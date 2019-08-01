@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number, bool, oneOf, oneOfType } from 'prop-types';
+import { string, number, bool, oneOf, oneOfType, object } from 'prop-types';
 import cn from 'classnames';
 
 import Link from '../Link';
@@ -12,7 +12,7 @@ import './style.scss';
 
 const propTypes = {
   ...linkPropTypes,
-  image: string.isRequired,
+  image: object.isRequired,
   title: string.isRequired,
   count: oneOfType([string, number]),
   className: string,

@@ -1,13 +1,13 @@
 import React from 'react';
 import cn from 'classnames';
-import { node, string, bool } from 'prop-types';
+import { node, string, bool, object } from 'prop-types';
 import Plx from 'react-plx';
 
 import './style.scss';
 
 const propTypes = {
   title: string.isRequired,
-  image: string,
+  image: object,
   indent: bool,
   children: node,
   chip: node,
