@@ -32,7 +32,6 @@ function SiteMetadata({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:creator',
-          content: '',
         },
         {
           name: 'twitter:title',
