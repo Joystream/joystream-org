@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import Sidebar from './index';
-import { roles } from './data';
+import { roles } from './mockData';
 
 storiesOf('Section|Sidebar', module).add('default', () => (
   <div style={{ height: '2000px' }}>
