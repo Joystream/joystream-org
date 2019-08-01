@@ -50,7 +50,6 @@ $indentation: 60px;
 
   &__image {
     width: 100%;
-    height: 500px;
     padding: 0 80px 40px;
   }
 
@@ -115,6 +114,7 @@ $indentation: 60px;
     }
 
     &__image {
+      height: 500px;
       padding: 0 0 0 32px;
     }
   }
