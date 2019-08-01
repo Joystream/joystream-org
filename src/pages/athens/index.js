@@ -21,6 +21,7 @@ import Pane from '../../components/Pane';
 import GoalList from '../../components/GoalList';
 import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
+import SiteMetadata from '../../components/SiteMetadata';
 
 import { ReactComponent as AthensImage } from '../../assets/svg/athens-owl.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
@@ -37,6 +38,11 @@ const AthensPage = ({ content }) => {
 
   return (
     <BaseLayout>
+      <SiteMetadata
+        title="Joystream: A user governed video platform"
+        description="Explore the live Athens testnet"
+      />
+
       <Hero
         image={AthensImage}
         title="Athens Network"
