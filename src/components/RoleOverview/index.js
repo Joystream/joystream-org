@@ -237,6 +237,9 @@ class RoleOverview extends React.Component {
       responsibilites,
       requirements,
       className,
+      tutorialLink,
+      questionLink,
+      ...props
     } = this.props;
     const { formVisiblity, formResponseVisiblity } = this.state;
 
@@ -245,7 +248,7 @@ class RoleOverview extends React.Component {
     const RoleIcon = type === 'active' ? TickImage : UpcomingImage;
 
     return (
-      <section className={classes}>
+      <section className={classes} {...props}>
         <div className="RoleOverview__header">
           <h2 className="RoleOverview__title">{title}</h2>
           <RoleIcon className="RoleOverview__icon" />
