@@ -4,6 +4,7 @@ exports[`AthensPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
     description="Explore the live Athens testnet"
+    img="test-file-stub"
     lang="en"
     meta={Array []}
     title="Joystream: A user governed video platform"

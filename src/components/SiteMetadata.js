@@ -1,8 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import logoTwitter from '../assets/images/logo-twitter.png';
 
-function SiteMetadata({ description, lang, meta, title }) {
+const propTypes = {
+  description: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
+  img: PropTypes.node,
+};
+
+const defaultProps = {
+  lang: 'en',
+  meta: [],
+  description: '',
+  img: logoTwitter,
+};
+
+function SiteMetadata({ description, lang, meta, title, img }) {
   return (
     <Helmet
       htmlAttributes={{
@@ -27,11 +43,12 @@ function SiteMetadata({ description, lang, meta, title }) {
           content: 'website',
         },
         {
-          name: 'twitter:card',
-          content: 'summary',
+          property: 'og:image',
+          content: '.' + img,
         },
         {
-          name: 'twitter:creator',
+          name: 'twitter:card',
+          content: 'summary',
         },
         {
           name: 'twitter:title',
@@ -42,6 +59,10 @@ function SiteMetadata({ description, lang, meta, title }) {
           content: description,
         },
         {
+          name: 'twitter:image',
+          content: '.' + img,
+        },
+        {
           name: 'robots',
           content: 'noindex, nofollow',
         },
@@ -50,17 +71,7 @@ function SiteMetadata({ description, lang, meta, title }) {
   );
 }
 
-SiteMetadata.defaultProps = {
-  lang: 'en',
-  meta: [],
-  description: '',
-};
-
-SiteMetadata.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-};
+SiteMetadata.propTypes = propTypes;
+SiteMetadata.defaultProps = defaultProps;
 
 export default SiteMetadata;
