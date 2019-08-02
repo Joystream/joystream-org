@@ -3,7 +3,7 @@
 exports[`PrivacyPolicyPage page renders correctly 1`] = `
 <div>
   <nav
-    className="Navbar"
+    className="Navbar Navbar--hidden"
   >
     <div
       className="Navbar__container"

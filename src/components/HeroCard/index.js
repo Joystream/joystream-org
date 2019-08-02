@@ -38,11 +38,20 @@ class HeroCard extends React.Component {
   };
 
   componentDidMount() {
-    if (this.props.error) {
-      this.setStatus('error');
+    const { error, info, date } = this.props;
+
+    if (error) {
+      return this.setStatus('error');
     }
-    if (this.props.info) {
-      this.setStatus('info');
+
+    const isDatePast = new Date(date) < new Date();
+
+    if (isDatePast) {
+      return this.setStatus(info ? 'info' : 'finished');
+    }
+
+    if (info) {
+      return this.setStatus('info');
     }
   }
 
@@ -77,12 +86,14 @@ class HeroCard extends React.Component {
       );
     }
 
+    const isDatePast = new Date(date) < new Date();
+
     return (
       <DateCounter
         date={date}
         large
         light
-        onTimeout={() => this.setStatus(info ? 'info' : 'finished')}
+        {...(!isDatePast && { onTimeout: () => this.setStatus(info ? 'info' : 'finished') })}
         title={counterTitle}
       />
     );

@@ -1,775 +1,300 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IndexPage page renders correctly 1`] = `
-<div>
-  <nav
-    className="Navbar"
-  >
-    <div
-      className="Navbar__container"
-    >
-      <a
-        className="Link"
-        href="/"
-      >
-        <icon-mock
-          className="Navbar__logo"
-        />
-      </a>
-      <div
-        className="Navbar__links"
-      >
-        <a
-          className="Navbar__link Navbar__link--highlighted Link Link--highlighted"
-          href="https://www.jsgenesis.com/#openings"
-          label="We are hiring!"
-        >
-          We are hiring!
-        </a>
-        <a
-          className="Navbar__link Link"
-          href="https://blog.joystream.org/"
-          label="Blog"
-        >
-          Blog
-        </a>
-        <a
-          className="Navbar__link Link"
-          href="https://blog.joystream.org/manifesto/"
-          label="Manifesto"
-        >
-          Manifesto
-        </a>
-        <a
-          className="Navbar__link Link"
-          href="https://github.com/Joystream/whitepaper/blob/master/paper.pdf"
-          label="Whitepaper"
-        >
-          Whitepaper
-        </a>
-        <a
-          className="Navbar__link Link"
-          href="/roles"
-          label="Roles"
-        >
-          Roles
-        </a>
-        <a
-          className="Navbar__link Link"
-          href="https://github.com/Joystream/joystream"
-          label="Repository"
-        >
-          Repository
-        </a>
-      </div>
-      <div
-        className="Navbar__trigger"
-        onClick={[Function]}
-        role="presentation"
-      />
-    </div>
-  </nav>
-  <section
-    className="Hero"
-  >
-    <div
-      className="Hero__container"
-    >
-      <div
-        className="Hero__content"
-      >
-        <h1
-          className="Hero__title"
-        >
-          A user governed video platform
-        </h1>
-        <div
-          className="Hero__description"
-        >
-          <p
-            className="IndexPage__hero-paragraph"
-          >
-            Earn Monero by participating in the current Athens testnet
-          </p>
-          <div
-            className="IndexPage__hero-group"
-          >
-            <a
-              className="IndexPage__hero-button Button Button--secondary"
-              href="https://blog.joystream.org/acropolis-incentives/"
-              onClick={null}
-            >
-              Earn Monero
-            </a>
-            <a
-              className="IndexPage__hero-button Button Button--reversed Button--secondary"
-              href="https://testnet.joystream.org/"
-              onClick={null}
-            >
-              Launch UI
-            </a>
-          </div>
-        </div>
-      </div>
-      <div
-        className="Hero__image-wrapper"
-      >
-        <div
-          className="Plx  "
-          disabled={false}
-          style={
-            Object {
-              "visibility": "hidden",
-            }
-          }
-        >
-          <icon-mock
-            className="Hero__image"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-  <div
-    className="LayoutWrapper"
-  >
-    <div
-      className="LayoutWrapper__container"
-    >
-      <section
-        className="TitleWrapper"
-      >
-        <h2
-          className="TitleWrapper__title"
-        >
-          Acropolis Tesnet
-        </h2>
-        
-        <div
-          className="TestnetItem"
-        >
-          <div
-            className="TestnetItem__wrapper"
-          >
-            <img
-              alt="Acropolis Tesnet"
-              className="TestnetItem__image"
-              src={
-                Object {
-                  "ReactComponent": "icon-mock",
-                }
-              }
-            />
-            <div
-              className="TestnetItem__container"
-            >
-              <p
-                className="TestnetItem__content"
-              >
-                Acropolis is our fourth testnet, with much improved
-                 
-                <a
-                  className="Link"
-                  href="https://www.joystream.org/roles#Storage-Provider"
-                >
-                  storage provider
-                </a>
-                software and an on-chain forum.
-              </p>
-            </div>
-          </div>
-          <a
-            className="TestnetItem__button Button"
-            href="/acropolis"
-            label="Explore acropolis"
-            onClick={null}
-          >
-            Explore acropolis
-          </a>
-        </div>
-      </section>
-      <section
-        className="Analytics"
-      >
-        <div
-          className="Analytics__container"
-        >
-          <div
-            className="AnalyticsItem"
-          >
-            <icon-mock
-              className="AnalyticsItem__image"
-            />
-            <p
-              className="AnalyticsItem__title"
-            >
-              Participation Payout
-            </p>
-            <p
-              className="AnalyticsItem__value"
-            >
-              $1576
-            </p>
-          </div>
-          <div
-            className="AnalyticsItem"
-          >
-            <icon-mock
-              className="AnalyticsItem__image"
-            />
-            <p
-              className="AnalyticsItem__title"
-            >
-              Active Validators
-            </p>
-            <p
-              className="AnalyticsItem__value"
-            >
-              20
-            </p>
-          </div>
-          <div
-            className="AnalyticsItem"
-          >
-            <icon-mock
-              className="AnalyticsItem__image"
-            />
-            <p
-              className="AnalyticsItem__title"
-            >
-              Block Height
-            </p>
-            <p
-              className="AnalyticsItem__value"
-            >
-              1110117
-            </p>
-          </div>
-          <div
-            className="AnalyticsItem"
-          >
-            <icon-mock
-              className="AnalyticsItem__image"
-            />
-            <p
-              className="AnalyticsItem__title"
-            >
-              Council Election Stage
-            </p>
-            <p
-              className="AnalyticsItem__value"
-            >
-              Announcing
-            </p>
-          </div>
-          <div
-            className="AnalyticsItem"
-          >
-            <icon-mock
-              className="AnalyticsItem__image"
-            />
-            <p
-              className="AnalyticsItem__title"
-            >
-              Memberships
-            </p>
-            <p
-              className="AnalyticsItem__value"
-            >
-              164
-            </p>
-          </div>
-          <div
-            className="AnalyticsItem"
-          >
-            <icon-mock
-              className="AnalyticsItem__image"
-            />
-            <p
-              className="AnalyticsItem__title"
-            >
-              Forum Posts
-            </p>
-            <p
-              className="AnalyticsItem__value"
-            >
-              11
-            </p>
-          </div>
-          <div
-            className="AnalyticsItem"
-          >
-            <icon-mock
-              className="AnalyticsItem__image"
-            />
-            <p
-              className="AnalyticsItem__title"
-            >
-              Platform Content Files
-            </p>
-            <p
-              className="AnalyticsItem__value"
-            >
-              9
-            </p>
-          </div>
-          <div
-            className="AnalyticsItem"
-          >
-            <icon-mock
-              className="AnalyticsItem__image"
-            />
-            <p
-              className="AnalyticsItem__title"
-            >
-              Active Storage Providers
-            </p>
-            <p
-              className="AnalyticsItem__value"
-            >
-              10
-            </p>
-          </div>
-        </div>
-        <div
-          className="Analytics__content"
-        >
-          <a
-            className="Button Button--secondary"
-            href="https://blog.joystream.org/athens-incentives/"
-            onClick={null}
-          >
-            Participate and Earn Monero
-          </a>
-        </div>
-      </section>
-    </div>
-  </div>
-  <div
-    className="LayoutWrapper LayoutWrapper--dark"
-  >
-    <div
-      className="LayoutWrapper__container"
-    >
-      <section
-        className="TitleWrapper"
-      >
-        <h2
-          className="TitleWrapper__title"
-        >
-          Become a user, run the platform
-        </h2>
-        
-        <div
-          className="Subheader"
-        >
-          <h3
-            className="Subheader__title"
-          >
-            Active roles on the current testnet
-          </h3>
-          <p
-            className="Subheader__content"
-          >
-            learn more, join a role and subscribe for more
-          </p>
-          <icon-mock
-            className="Subheader__image"
-          />
-        </div>
-        <div
-          className="ColumnsLayout"
-          data-columns={2}
-        >
-          <a
-            className="RoleCard Link"
-            href="/roles#Validator"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Validator
-              </p>
-              <p
-                className="RoleCard__info"
-              >
-                <icon-mock
-                  className="RoleCard__icon"
-                />
-                <span
-                  className="RoleCard__counter"
-                >
-                  20
-                </span>
-                 currently run this role
-              </p>
-            </div>
-          </a>
-          <a
-            className="RoleCard Link"
-            href="/roles#Council-Member"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Council Member
-              </p>
-              <p
-                className="RoleCard__info"
-              >
-                <icon-mock
-                  className="RoleCard__icon"
-                />
-                <span
-                  className="RoleCard__counter"
-                >
-                  12
-                </span>
-                 currently run this role
-              </p>
-            </div>
-          </a>
-          <a
-            className="RoleCard RoleCard--labeled Link"
-            href="/roles#Storage-Provider"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Storage Provider
-              </p>
-              <p
-                className="RoleCard__info"
-              >
-                <icon-mock
-                  className="RoleCard__icon"
-                />
-                <span
-                  className="RoleCard__counter"
-                >
-                  10
-                </span>
-                 currently run this role
-              </p>
-            </div>
-          </a>
-        </div>
-        <div
-          className="Subheader"
-        >
-          <h3
-            className="Subheader__title"
-          >
-            Roles coming in future testnets
-          </h3>
-          <p
-            className="Subheader__content"
-          >
-            choose a role, learn more and subscribe to get updated
-          </p>
-          <icon-mock
-            className="Subheader__image"
-          />
-        </div>
-        <div
-          className="ColumnsLayout"
-          data-columns={3}
-        >
-          <a
-            className="RoleCard RoleCard--small Link"
-            href="/roles"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Membership Screener
-              </p>
-            </div>
-          </a>
-          <a
-            className="RoleCard RoleCard--small Link"
-            href="/roles"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Membership Curator
-              </p>
-            </div>
-          </a>
-          <a
-            className="RoleCard RoleCard--small Link"
-            href="/roles"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Content Curator
-              </p>
-            </div>
-          </a>
-          <a
-            className="RoleCard RoleCard--small Link"
-            href="/roles"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Content Creator
-              </p>
-            </div>
-          </a>
-          <a
-            className="RoleCard RoleCard--small Link"
-            href="/roles"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Bandwidth Provider
-              </p>
-            </div>
-          </a>
-          <a
-            className="RoleCard RoleCard--small Link"
-            href="/roles"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Discovery Provider
-              </p>
-            </div>
-          </a>
-          <a
-            className="RoleCard RoleCard--small Link"
-            href="/roles"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Live Streaming Provider
-              </p>
-            </div>
-          </a>
-          <a
-            className="RoleCard RoleCard--small Link"
-            href="/roles"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Builder
-              </p>
-            </div>
-          </a>
-          <a
-            className="RoleCard RoleCard--small Link"
-            href="/roles"
-          >
-            <icon-mock
-              className="RoleCard__image"
-            />
-            <div
-              className="RoleCard__content"
-            >
-              <p
-                className="RoleCard__title"
-              >
-                Communication Moderator
-              </p>
-            </div>
-          </a>
-        </div>
-        <a
-          className="IndexPage__roles-button Button Button--secondary"
-          href="/roles"
-          onClick={null}
-        >
-          Learn more about the roles
-        </a>
-      </section>
-    </div>
-  </div>
-  <div
-    className="CookiesNotice"
-  >
-    <div
-      className="CookiesNotice__container"
-    >
-      <div
-        className="CookiesNotice__content"
-      >
-        <p>
-          This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.
-        </p>
-        <p>
-          <a
-            className="CookiesNotice__link Link"
-            href="/privacy-police"
-          >
-            Find out more ›
-          </a>
-        </p>
-      </div>
-      <button
-        className="CookiesNotice__accept Button Button--secondary"
-        onClick={[Function]}
-        type="button"
-      >
-        Accept
-      </button>
-    </div>
-  </div>
-  <footer
-    className="Footer"
+<BaseLayout>
+  <Hero
+    animationEndValue={-40}
+    animationStartValue={0}
+    chip={null}
+    image="icon-mock"
+    indent={false}
+    title="A user governed video platform"
   >
     <p
-      className="Footer__header"
+      className="IndexPage__hero-paragraph"
     >
-      Get notified
+      Earn Monero by participating in the current Athens testnet
     </p>
-    <a
-      className="Footer__button Button Button--small Button--light"
-      href="http://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&id=459ba8d1da"
-      onClick={null}
-    >
-      Join the newsletter
-    </a>
     <div
-      className="Footer__socials"
+      className="IndexPage__hero-group"
     >
-      <a
-        className="Footer__social-wrapper"
-        href="https://twitter.com/JoyStreamApp"
+      <Button
+        className="IndexPage__hero-button"
+        disabled={false}
+        href="https://blog.joystream.org/acropolis-incentives/"
+        large={false}
+        light={false}
+        onClick={null}
+        reversed={false}
+        secondary={true}
+        small={false}
+        to={null}
       >
-        <icon-mock
-          className="Footer__social-icon"
-        />
-      </a>
-      <a
-        className="Footer__social-wrapper"
-        href="https://github.com/Joystream"
+        Earn Monero
+      </Button>
+      <Button
+        className="IndexPage__hero-button"
+        disabled={false}
+        href="https://testnet.joystream.org/"
+        large={false}
+        light={false}
+        onClick={null}
+        reversed={true}
+        secondary={true}
+        small={false}
+        to={null}
       >
-        <icon-mock
-          className="Footer__social-icon"
-        />
-      </a>
-      <a
-        className="Footer__social-wrapper"
-        href="https://chat.joystream.org/home"
-      >
-        <icon-mock
-          className="Footer__social-icon"
-        />
-      </a>
-      <a
-        className="Footer__social-wrapper"
-        href="https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA"
-      >
-        <icon-mock
-          className="Footer__social-icon"
-        />
-      </a>
+        Launch UI
+      </Button>
     </div>
-    <div
-      className="Footer__links"
+  </Hero>
+  <LayoutWrapper
+    className=""
+    dark={false}
+    gradient={false}
+  >
+    <TestnetItem
+      button={
+        Object {
+          "label": "Explore acropolis",
+          "to": "/acropolis",
+        }
+      }
+      className=""
+      date={null}
+      image={
+        Object {
+          "ReactComponent": "icon-mock",
+        }
+      }
+      title="Acropolis Tesnet"
     >
-      <a
-        className="Footer__link Footer__link--highlighted Link Link--highlighted"
-        href="https://www.jsgenesis.com/#openings"
-        label="We are hiring!"
+      Acropolis is our fourth testnet, with much improved
+       
+      <Link
+        className=""
+        highlighted={false}
+        href="https://www.joystream.org/roles#Storage-Provider"
       >
-        We are hiring!
-      </a>
-      <a
-        className="Footer__link Link"
-        href="https://blog.joystream.org/"
-        label="Blog"
+        storage provider
+      </Link>
+      software and an on-chain forum.
+    </TestnetItem>
+    <Analytics
+      className=""
+      content={
+        Object {
+          "blockHeight": 1110117,
+          "councilStage": "Announcing",
+          "forumPosts": 11,
+          "mediaFiles": 9,
+          "membershipsMembers": 164,
+          "rolesProviders": 10,
+          "validatorsCount": 20,
+        }
+      }
+      items={
+        Array [
+          Object {
+            "image": "icon-mock",
+            "title": "Participation Payout",
+            "value": "$1576",
+          },
+          Object {
+            "image": "icon-mock",
+            "key": "validatorsCount",
+            "title": "Active Validators",
+          },
+          Object {
+            "image": "icon-mock",
+            "key": "blockHeight",
+            "title": "Block Height",
+          },
+          Object {
+            "image": "icon-mock",
+            "key": "councilStage",
+            "title": "Council Election Stage",
+          },
+          Object {
+            "image": "icon-mock",
+            "key": "membershipsMembers",
+            "title": "Memberships",
+          },
+          Object {
+            "image": "icon-mock",
+            "key": "forumPosts",
+            "title": "Forum Posts",
+          },
+          Object {
+            "image": "icon-mock",
+            "key": "mediaFiles",
+            "title": "Platform Content Files",
+          },
+          Object {
+            "image": "icon-mock",
+            "key": "rolesProviders",
+            "title": "Active Storage Providers",
+          },
+        ]
+      }
+    >
+      <Button
+        className=""
+        disabled={false}
+        href="https://blog.joystream.org/athens-incentives/"
+        large={false}
+        light={false}
+        onClick={null}
+        reversed={false}
+        secondary={true}
+        small={false}
+        to={null}
       >
-        Blog
-      </a>
-      <a
-        className="Footer__link Link"
-        href="https://blog.joystream.org/manifesto/"
-        label="Manifesto"
+        Participate and Earn Monero
+      </Button>
+    </Analytics>
+  </LayoutWrapper>
+  <LayoutWrapper
+    className=""
+    dark={true}
+    gradient={false}
+  >
+    <TitleWrapper
+      className=""
+      subtitle=""
+      title="Become a user, run the platform"
+    >
+      <Subheader
+        className=""
+        content="learn more, join a role and subscribe for more"
+        icon="icon-mock"
+        title="Active roles on the current testnet"
+      />
+      <ColumnsLayout
+        className=""
+        columnsCount={2}
+        largeSpacing={false}
       >
-        Manifesto
-      </a>
-      <a
-        className="Footer__link Link"
-        href="https://github.com/Joystream/joystream"
-        label="Repository"
+        <RoleList
+          content={
+            Object {
+              "councilMembersCount": 12,
+              "storageProviders": 10,
+              "validatorsCount": 20,
+            }
+          }
+          roles={
+            Array [
+              Object {
+                "hasLabel": false,
+                "image": "icon-mock",
+                "key": "validatorsCount",
+                "title": "Validator",
+                "to": "/roles#Validator",
+              },
+              Object {
+                "hasLabel": false,
+                "image": "icon-mock",
+                "key": "councilMembersCount",
+                "title": "Council Member",
+                "to": "/roles#Council-Member",
+              },
+              Object {
+                "hasLabel": true,
+                "image": "icon-mock",
+                "key": "storageProviders",
+                "title": "Storage Provider",
+                "to": "/roles#Storage-Provider",
+              },
+            ]
+          }
+        />
+      </ColumnsLayout>
+      <Subheader
+        className=""
+        content="choose a role, learn more and subscribe to get updated"
+        icon="icon-mock"
+        title="Roles coming in future testnets"
+      />
+      <ColumnsLayout
+        className=""
+        columnsCount={3}
+        largeSpacing={false}
       >
-        Repository
-      </a>
-    </div>
-  </footer>
-</div>
+        <RoleList
+          content={
+            Object {
+              "councilMembersCount": 12,
+              "storageProviders": 10,
+              "validatorsCount": 20,
+            }
+          }
+          roles={
+            Array [
+              Object {
+                "image": "icon-mock",
+                "title": "Membership Screener",
+                "to": "/roles",
+              },
+              Object {
+                "image": "icon-mock",
+                "title": "Membership Curator",
+                "to": "/roles",
+              },
+              Object {
+                "image": "icon-mock",
+                "title": "Content Curator",
+                "to": "/roles",
+              },
+              Object {
+                "image": "icon-mock",
+                "title": "Content Creator",
+                "to": "/roles",
+              },
+              Object {
+                "image": "icon-mock",
+                "title": "Bandwidth Provider",
+                "to": "/roles",
+              },
+              Object {
+                "image": "icon-mock",
+                "title": "Discovery Provider",
+                "to": "/roles",
+              },
+              Object {
+                "image": "icon-mock",
+                "title": "Live Streaming Provider",
+                "to": "/roles",
+              },
+              Object {
+                "image": "icon-mock",
+                "title": "Builder",
+                "to": "/roles",
+              },
+              Object {
+                "image": "icon-mock",
+                "title": "Communication Moderator",
+                "to": "/roles",
+              },
+            ]
+          }
+        />
+      </ColumnsLayout>
+      <Button
+        className="IndexPage__roles-button"
+        disabled={false}
+        href={null}
+        large={false}
+        light={false}
+        onClick={null}
+        reversed={false}
+        secondary={true}
+        small={false}
+        to="/roles"
+      >
+        Learn more about the roles
+      </Button>
+    </TitleWrapper>
+  </LayoutWrapper>
+</BaseLayout>
 `;

@@ -42,6 +42,7 @@ const AthensPage = ({ content }) => {
         title="Athens Network"
         indent
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
+        animationStartValue={40}
       >
         <p className="AthensPage__hero-paragraph">
           Explore available roles and pick the one that suits you the most.
