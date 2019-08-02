@@ -1,17 +1,16 @@
 import React from 'react';
 import { shallow, configure } from 'enzyme';
+import 'intersection-observer';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 
-import { IndexPage } from '../../src/pages';
-
-import testContent from '../../__mocks__/data/testContent';
+import RolesPage from '../../src/pages/roles';
 
 configure({ adapter: new Adapter() });
 
-describe('IndexPage page', () => {
+describe('RolesPage page', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<IndexPage content={testContent} />);
+    const wrapper = shallow(<RolesPage />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });
