@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, oneOfType, node, oneOf, arrayOf } from 'prop-types';
+import { string, oneOfType, node, oneOf, arrayOf, func } from 'prop-types';
 import cn from 'classnames';
 import axios from 'axios';
 
@@ -18,19 +18,23 @@ import './style.scss';
 const propTypes = {
   className: string,
   type: oneOf(['active', 'upcoming']),
-  image: node.isRequired,
+  image: oneOfType([node, func]).isRequired,
   title: string.isRequired,
-  overview: string.isRequired,
+  overview: oneOfType([string, node]).isRequired,
   responsibilites: arrayOf(oneOfType([string, node])).isRequired,
   requirements: arrayOf(oneOfType([string, node])).isRequired,
   tutorialLink: (props, propName, componentName) => {
     if (props.type === 'active' && !props[propName]) {
-      return new Error(`${propName} is required if type is equal 'active' in '${componentName}'.`);
+      return new Error(
+        `${propName} is required if type is equal 'active' in '${componentName}'.`
+      );
     }
   },
   questionLink: (props, propName, componentName) => {
     if (props.type === 'active' && !props[propName]) {
-      return new Error(`${propName} is required if type is equal 'active' in '${componentName}'.`);
+      return new Error(
+        `${propName} is required if type is equal 'active' in '${componentName}'.`
+      );
     }
   },
   formAction: string.isRequired,
@@ -156,7 +160,12 @@ class RoleOverview extends React.Component {
   };
 
   renderForm = () => {
-    const { formContentVisibility, inputValue, checkboxValue, loading } = this.state;
+    const {
+      formContentVisibility,
+      inputValue,
+      checkboxValue,
+      loading,
+    } = this.state;
     const { type } = this.props;
 
     const btnType = type === 'active' ? 'Join' : 'Subscribe';
@@ -165,7 +174,9 @@ class RoleOverview extends React.Component {
     return (
       <>
         <form
-          onChange={e => this.setState({ isButtonDisabled: !this.form.checkValidity() })}
+          onChange={e =>
+            this.setState({ isButtonDisabled: !this.form.checkValidity() })
+          }
           onSubmit={this.handleSubmit}
           method="post"
           ref={ref => (this.form = ref)}
@@ -197,10 +208,14 @@ class RoleOverview extends React.Component {
                 className="RoleOverview__checkbox"
               />
               <label htmlFor="accept" className="RoleOverview__label">
-                <p className="RoleOverview__form-label">I want to receive emails about this role.</p>
+                <p className="RoleOverview__form-label">
+                  I want to receive emails about this role.
+                </p>
                 <p className="RoleOverview__form-label RoleOverview__form-label--small">
-                  I acknowledge that my information will be transferred to Mailchimp, which has{' '}
-                  <Link href="https://mailchimp.com/legal/">these</Link> privacy practices.
+                  I acknowledge that my information will be transferred to
+                  Mailchimp, which has{' '}
+                  <Link href="https://mailchimp.com/legal/">these</Link> privacy
+                  practices.
                 </p>
               </label>
             </div>
@@ -214,7 +229,18 @@ class RoleOverview extends React.Component {
   };
 
   render() {
-    const { image: Image, type, title, overview, responsibilites, requirements, className } = this.props;
+    const {
+      image: Image,
+      type,
+      title,
+      overview,
+      responsibilites,
+      requirements,
+      className,
+      tutorialLink,
+      questionLink,
+      ...props
+    } = this.props;
     const { formVisiblity, formResponseVisiblity } = this.state;
 
     const classes = cn('RoleOverview', className);
@@ -222,7 +248,7 @@ class RoleOverview extends React.Component {
     const RoleIcon = type === 'active' ? TickImage : UpcomingImage;
 
     return (
-      <section className={classes}>
+      <section className={classes} {...props}>
         <div className="RoleOverview__header">
           <h2 className="RoleOverview__title">{title}</h2>
           <RoleIcon className="RoleOverview__icon" />
@@ -232,22 +258,22 @@ class RoleOverview extends React.Component {
         <div className="RoleOverview__content">
           <div className="RoleOverview__overview">
             <p className="RoleOverview__heading">Overview</p>
-            <p className="RoleOverview__details">{overview}</p>
+            <div className="RoleOverview__details">{overview}</div>
           </div>
           <div className="RoleOverview__lists">
             <div className="RoleOverview__list RoleOverview__resposibilities">
               <p className="RoleOverview__heading--small">Responsibilities</p>
               <ul className="RoleOverview__details">
-                {responsibilites.map(responsibility => (
-                  <li>{responsibility} </li>
+                {responsibilites.map((responsibility, i) => (
+                  <li key={i}>{responsibility} </li>
                 ))}
               </ul>
             </div>
             <div className="RoleOverview__list RoleOverview__requirements">
               <p className="RoleOverview__heading--small">Requirements</p>
               <ul className="RoleOverview__details">
-                {requirements.map(requirement => (
-                  <li>{requirement} </li>
+                {requirements.map((requirement, j) => (
+                  <li key={j}>{requirement} </li>
                 ))}
               </ul>
             </div>

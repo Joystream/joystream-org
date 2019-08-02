@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { node, string, bool, object } from 'prop-types';
+import { node, string, object, bool, number } from 'prop-types';
 import Plx from 'react-plx';
 
 import './style.scss';
@@ -11,6 +11,8 @@ const propTypes = {
   indent: bool,
   children: node,
   chip: node,
+  animationStartValue: number,
+  animationEndValue: number,
 };
 
 const defaultProps = {
@@ -18,17 +20,19 @@ const defaultProps = {
   indent: false,
   children: null,
   chip: null,
+  animationStartValue: 70,
+  animationEndValue: -40,
 };
 
-const Hero = ({ title, children, image, indent, chip }) => {
+const Hero = ({ title, children, image, indent, chip, animationStartValue, animationEndValue }) => {
   const parallaxData = [
     {
       start: 0,
       end: 500,
       properties: [
         {
-          startValue: 40,
-          endValue: -40,
+          startValue: animationStartValue,
+          endValue: animationEndValue,
           property: 'translateY',
         },
       ],

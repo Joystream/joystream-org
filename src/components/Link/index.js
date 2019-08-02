@@ -2,6 +2,7 @@ import React from 'react';
 import { string, bool, node } from 'prop-types';
 import { Link as DefaultLink } from 'gatsby';
 import cn from 'classnames';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { linkPropTypes } from '../../propTypes';
 
@@ -19,22 +20,43 @@ const defaultProps = {
   className: '',
 };
 
-const Link = ({ to, href, children, highlighted, className, activeClassName, ...props }) => {
+const Link = ({
+  to,
+  href,
+  children,
+  highlighted,
+  className,
+  activeClassName,
+  ...props
+}) => {
   const classes = cn(className, 'Link', {
     'Link--highlighted': highlighted,
   });
 
   if (href) {
+    const isInternal = href.startsWith('#');
+    const AnchorElement = isInternal ? AnchorLink : 'a';
+
     return (
-      <a href={href} className={classes} {...props}>
+      <AnchorElement
+        href={href}
+        className={classes}
+        {...(isInternal && { offset: 100 })}
+        {...props}
+      >
         {children}
-      </a>
+      </AnchorElement>
     );
   }
 
   if (to) {
     return (
-      <DefaultLink to={to} className={classes} activeClassName={activeClassName} {...props}>
+      <DefaultLink
+        to={to}
+        className={classes}
+        activeClassName={activeClassName}
+        {...props}
+      >
         {children}
       </DefaultLink>
     );

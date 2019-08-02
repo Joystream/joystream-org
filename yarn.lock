@@ -5940,6 +5940,13 @@ enzyme-adapter-utils@^1.12.0:
     prop-types "^15.7.2"
     semver "^5.6.0"
 
+enzyme-to-json@^3.3.5:
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-3.3.5.tgz#f8eb82bd3d5941c9d8bc6fd9140030777d17d0af"
+  integrity sha512-DmH1wJ68HyPqKSYXdQqB33ZotwfUhwQZW3IGXaNXgR69Iodaoj8TF/D9RjLdz4pEhGq2Tx2zwNUIjBuqoZeTgA==
+  dependencies:
+    lodash "^4.17.4"
+
 enzyme@^3.10.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.10.0.tgz#7218e347c4a7746e133f8e964aada4a3523452f6"
@@ -13115,6 +13122,11 @@ react-addons-create-fragment@^15.6.2:
     loose-envify "^1.3.1"
     object-assign "^4.1.0"
 
+react-anchor-link-smooth-scroll@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/react-anchor-link-smooth-scroll/-/react-anchor-link-smooth-scroll-1.0.12.tgz#5cd49c73e74be6d20b4c05a5e5c72d07ebbedac7"
+  integrity sha512-aaY+9X0yh8YnC0jBfoTKpsiCLdO/Y6pCltww+VB+NnTBPDOvnIdnp1AlazajsDitc1j+cVSQ+yNtaVeTIMQbxw==
+
 react-clientside-effect@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-clientside-effect/-/react-clientside-effect-1.2.1.tgz#feb81abe9531061d4987941c15a00f2b3d0b6071"
@@ -13416,7 +13428,7 @@ react-syntax-highlighter@^8.0.1:
     prismjs "^1.8.4"
     refractor "^2.4.1"
 
-react-test-renderer@^16.0.0-0, react-test-renderer@^16.8.6:
+react-test-renderer@^16.0.0-0:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.8.6.tgz#188d8029b8c39c786f998aa3efd3ffe7642d5ba1"
   integrity sha512-H2srzU5IWYT6cZXof6AhUcx/wEyJddQ8l7cLM/F7gDXYyPr4oq+vCIxJYXVGhId1J706sqziAjuOEjyNkfgoEw==
@@ -14597,6 +14609,11 @@ slice-ansi@^2.1.0:
     ansi-styles "^3.2.0"
     astral-regex "^1.0.0"
     is-fullwidth-code-point "^2.0.0"
+
+smoothscroll-polyfill@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.4.tgz#3a259131dc6930e6ca80003e1cb03b603b69abf8"
+  integrity sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

@@ -4,6 +4,7 @@ import { node } from 'prop-types';
 import Navbar from '../../Navbar';
 import Footer from '../../Footer';
 import CookiesNotice from '../../CookiesNotice';
+import { ScrollProvider } from '../../_enhancers/ScrollContext';
 
 const propTypes = {
   children: node,
@@ -15,12 +16,14 @@ const defaultTypes = {
 
 const BaseLayout = ({ children }) => {
   return (
-    <div>
-      <Navbar />
-      {children}
-      <CookiesNotice />
-      <Footer />
-    </div>
+    <ScrollProvider>
+      <div>
+        <Navbar />
+        {children}
+        <CookiesNotice />
+        <Footer />
+      </div>
+    </ScrollProvider>
   );
 };
 
