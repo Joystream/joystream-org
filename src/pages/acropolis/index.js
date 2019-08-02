@@ -43,6 +43,7 @@ const AcropolisPage = ({ content }) => {
         title="Acropolis Network"
         indent
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
+        animationStartValue={30}
       >
         <p className="AcropolisPage__hero-paragraph">
           Explore available roles and pick the one that suits you the most.

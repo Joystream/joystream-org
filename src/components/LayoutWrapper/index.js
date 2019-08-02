@@ -8,11 +8,13 @@ const propTypes = {
   children: node.isRequired,
   dark: bool,
   className: string,
+  gradient: bool,
 };
 
 const defaultProps = {
   className: '',
   dark: false,
+  gradient: false,
 };
 
 const LayoutWrapper = ({ children, dark, gradient, className, ...props }) => {

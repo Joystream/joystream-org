@@ -32,7 +32,11 @@ const RolesPage = () => {
 
   return (
     <BaseLayout>
-      <Hero image={RolesImage} title="Discover various roles on the platform">
+      <Hero
+        image={RolesImage}
+        title="Discover various roles on the platform"
+        animationStartValue={10}
+      >
         <p className="RolesPage__hero-paragraph">
           Explore available roles and pick the one that suits you the most.
           Influence platforms development earning Monero in the process.

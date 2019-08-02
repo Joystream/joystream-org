@@ -34,13 +34,14 @@ const Link = ({
   });
 
   if (href) {
-    const AnchorElement = href.startsWith('#') ? AnchorLink : 'a';
+    const isInternal = href.startsWith('#');
+    const AnchorElement = isInternal ? AnchorLink : 'a';
 
     return (
       <AnchorElement
         href={href}
         className={classes}
-        offset={href.startsWith('#') ? '100' : undefined}
+        {...(isInternal && { offset: 100 })}
         {...props}
       >
         {children}

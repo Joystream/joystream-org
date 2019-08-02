@@ -1,42 +1,25 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
-const ScrollContext = React.createContext(true);
+const ScrollContext = React.createContext();
 
-export class ScrollProvider extends React.Component {
-  state = {
-    scrollPosition: 0,
-    isScrollUp: true,
-  };
+export const ScrollProvider = ({ children }) => {
+  const scrollPositionRef = useRef(0);
+  const [isScrollUp, setIsScrollUp] = useState(false);
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrollUp(scrollPositionRef.current > window.pageYOffset);
+      scrollPositionRef.current = window.pageYOffset;
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const { scrollPosition } = this.state;
-
-    const currentScrollPos = window.pageYOffset;
-    const isScrollUp = scrollPosition > currentScrollPos;
-
-    this.setState({
-      scrollPosition: currentScrollPos,
-      isScrollUp,
-    });
-  };
-
-  render() {
-    const { children } = this.props;
-
-    return (
-      <ScrollContext.Provider value={{ isScrollUp: this.state.isScrollUp }}>
-        {children}
-      </ScrollContext.Provider>
-    );
-  }
-}
+  return (
+    <ScrollContext.Provider value={{ scrollPosition: scrollPositionRef.current, isScrollUp }}>
+      {children}
+    </ScrollContext.Provider>
+  );
+};
 
 export const ScrollConsumer = ScrollContext.Consumer;
