@@ -27,7 +27,7 @@ module.exports = {
         background_color: '#000000',
         theme_color: '#000000',
         display: 'minimal-ui',
-        icon: 'src/assets/images/gatsby-icon.png',
+        icon: 'src/assets/images/favicon.png',
       },
     },
     {
