@@ -9,7 +9,7 @@ import Hero from '../../components/Hero';
 import RoleOverview from '../../components/RoleOverview';
 import SiteMetadata from '../../components/SiteMetadata';
 
-import { ReactComponent as RolesImage } from '../../assets/svg/roles-hero.svg';
+import rolesImage from '../../assets/svg/roles-hero.svg';
 
 import { rolesData } from '../../data/pages/roles';
 
@@ -39,7 +39,7 @@ const RolesPage = () => {
       />
 
       <Hero
-        image={RolesImage}
+        image={rolesImage}
         title="Discover various roles on the platform"
         animationStartValue={10}
       >

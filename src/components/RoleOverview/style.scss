@@ -83,6 +83,7 @@
 
   &__form-icon {
     width: 20px;
+    height: 20px;
     margin-right: 20px;
   }
 
@@ -135,6 +136,7 @@
     }
 
     &__image {
+      height: 320px;
       margin-bottom: -100px;
     }
 
@@ -176,7 +178,7 @@
     }
 
     &__image {
-      max-width: 400px;
+      width: 400px;
       padding: 0;
     }
 

@@ -21,7 +21,7 @@ import GoalList from '../../components/GoalList';
 import MapInfo from '../../components/MapInfo';
 import SiteMetadata from '../../components/SiteMetadata';
 
-import { ReactComponent as SpartaImage } from '../../assets/svg/helmet.svg';
+import spartaImage from '../../assets/svg/helmet.svg';
 import SpartaHelmetImg from '../../assets/svg/helmet.svg';
 
 import { analytics, roles, goals } from '../../data/pages/sparta';
@@ -39,7 +39,7 @@ const SpartaPage = ({ content }) => {
       />
 
       <Hero
-        image={SpartaImage}
+        image={spartaImage}
         title="Sparta Network"
         indent
         chip={<Chip onClick={() => setModalOpen(true)}>What is this?</Chip>}

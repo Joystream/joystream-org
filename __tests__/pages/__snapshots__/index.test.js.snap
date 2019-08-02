@@ -13,7 +13,11 @@ exports[`IndexPage page renders correctly 1`] = `
     animationEndValue={-40}
     animationStartValue={0}
     chip={null}
-    image="icon-mock"
+    image={
+      Object {
+        "ReactComponent": "icon-mock",
+      }
+    }
     indent={false}
     title="A user governed video platform"
   >
@@ -85,7 +89,7 @@ exports[`IndexPage page renders correctly 1`] = `
       >
         storage provider
       </Link>
-      software and an on-chain forum.
+       software and an on-chain forum.
     </TestnetItem>
     <Analytics
       className=""
@@ -194,21 +198,27 @@ exports[`IndexPage page renders correctly 1`] = `
             Array [
               Object {
                 "hasLabel": false,
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "key": "validatorsCount",
                 "title": "Validator",
                 "to": "/roles#Validator",
               },
               Object {
                 "hasLabel": false,
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "key": "councilMembersCount",
                 "title": "Council Member",
                 "to": "/roles#Council-Member",
               },
               Object {
                 "hasLabel": true,
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "key": "storageProviders",
                 "title": "Storage Provider",
                 "to": "/roles#Storage-Provider",
@@ -239,47 +249,65 @@ exports[`IndexPage page renders correctly 1`] = `
           roles={
             Array [
               Object {
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "title": "Membership Screener",
                 "to": "/roles",
               },
               Object {
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "title": "Membership Curator",
                 "to": "/roles",
               },
               Object {
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "title": "Content Curator",
                 "to": "/roles",
               },
               Object {
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "title": "Content Creator",
                 "to": "/roles",
               },
               Object {
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "title": "Bandwidth Provider",
                 "to": "/roles",
               },
               Object {
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "title": "Discovery Provider",
                 "to": "/roles",
               },
               Object {
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "title": "Live Streaming Provider",
                 "to": "/roles",
               },
               Object {
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "title": "Builder",
                 "to": "/roles",
               },
               Object {
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "title": "Communication Moderator",
                 "to": "/roles",
               },
