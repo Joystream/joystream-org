@@ -52,7 +52,11 @@ class Sidebar extends React.Component {
               <MoreRolesIcon className="Sidebar__trigger-icon" />
               View all Roles
             </div>
-            <div className="Sidebar__wrapper">
+            <div
+              className={cn('Sidebar__wrapper', {
+                'Sidebar__wrapper--open': isOpen,
+              })}
+            >
               <div
                 className={cn('Sidebar__container', {
                   'Sidebar__container--open': isOpen,
@@ -60,8 +64,7 @@ class Sidebar extends React.Component {
               >
                 {Object.keys(data).map(key => {
                   const Icon = key === 'active' ? TickImage : UpcomingImage;
-                  const title =
-                    key === 'active' ? 'Active roles' : 'Upcoming roles';
+                  const title = key === 'active' ? 'Active roles' : 'Upcoming roles';
 
                   return (
                     <div className="Sidebar__group" key={title}>

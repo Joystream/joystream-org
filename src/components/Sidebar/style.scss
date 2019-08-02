@@ -18,8 +18,13 @@ $trigger-height: 50px;
     left: 0;
     z-index: -1;
     width: 100%;
-    height: 500px;
+    max-height: 0;
     overflow: scroll;
+    transition: max-height $duration;
+
+    &--open {
+      max-height: 500px;
+    }
   }
 
   &__trigger {
@@ -44,9 +49,6 @@ $trigger-height: 50px;
   }
 
   &__container {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: calc(30px + #{$trigger-height}) 30px 30px;
     overflow: scroll;
@@ -110,6 +112,7 @@ $trigger-height: 50px;
 
     &__wrapper {
       height: auto;
+      max-height: none;
     }
 
     &__trigger {
