@@ -126,6 +126,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
       <ColumnsLayout
         className=""
         columnsCount={2}
+        largeSpacing={false}
       >
         <Pane
           className=""
@@ -218,6 +219,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
       <ColumnsLayout
         className=""
         columnsCount={2}
+        largeSpacing={false}
       >
         <RoleList
           content={

@@ -173,6 +173,7 @@ exports[`IndexPage page renders correctly 1`] = `
       <ColumnsLayout
         className=""
         columnsCount={2}
+        largeSpacing={false}
       >
         <RoleList
           content={
@@ -218,6 +219,7 @@ exports[`IndexPage page renders correctly 1`] = `
       <ColumnsLayout
         className=""
         columnsCount={3}
+        largeSpacing={false}
       >
         <RoleList
           content={

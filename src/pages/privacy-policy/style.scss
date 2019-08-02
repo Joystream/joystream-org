@@ -1,0 +1,20 @@
+.PrivacyPolicyPage {
+  &__hero-paragraph {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  &__list-item {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}
