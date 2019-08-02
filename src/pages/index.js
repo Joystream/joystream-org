@@ -18,6 +18,7 @@ import RoleList from '../components/RoleList';
 import ColumnsLayout from '../components/ColumnsLayout';
 import LayoutWrapper from '../components/LayoutWrapper';
 import Hero from '../components/Hero';
+import SiteMetadata from '../components/SiteMetadata';
 
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
 import platformImage from '../assets/svg/platform.svg';
@@ -29,10 +30,12 @@ import './style.scss';
 
 const IndexPage = ({ content }) => (
   <BaseLayout>
+    <SiteMetadata
+      title="Joystream: A user governed video platform"
+      description="Earn monero to participate on our testnets!"
+    />
     <Hero image={platformImage} title="A user governed video platform" animationStartValue={0}>
-      <p className="IndexPage__hero-paragraph">
-        Earn Monero by participating in the current Athens testnet
-      </p>
+      <p className="IndexPage__hero-paragraph">Earn Monero by participating in the current Athens testnet</p>
       <div className="IndexPage__hero-group">
         <Button secondary className="IndexPage__hero-button" href="https://blog.joystream.org/acropolis-incentives/">
           Earn Monero

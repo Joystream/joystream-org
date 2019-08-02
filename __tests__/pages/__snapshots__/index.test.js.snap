@@ -2,6 +2,13 @@
 
 exports[`IndexPage page renders correctly 1`] = `
 <BaseLayout>
+  <SiteMetadata
+    description="Earn monero to participate on our testnets!"
+    img="test-file-stub"
+    lang="en"
+    meta={Array []}
+    title="Joystream: A user governed video platform"
+  />
   <Hero
     animationEndValue={-40}
     animationStartValue={0}

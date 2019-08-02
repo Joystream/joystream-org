@@ -7,6 +7,7 @@ import LayoutWrapper from '../../components/LayoutWrapper';
 import Sidebar from '../../components/Sidebar';
 import Hero from '../../components/Hero';
 import RoleOverview from '../../components/RoleOverview';
+import SiteMetadata from '../../components/SiteMetadata';
 
 import rolesImage from '../../assets/svg/roles-hero.svg';
 
@@ -32,6 +33,11 @@ const RolesPage = () => {
 
   return (
     <BaseLayout>
+      <SiteMetadata
+        title="Joystream Platform Roles"
+        description="Read more about current and future roles on the Joystream Platform."
+      />
+
       <Hero
         image={rolesImage}
         title="Discover various roles on the platform"

@@ -19,6 +19,7 @@ import TestnetModal from '../../components/TestnetModal';
 import Chip from '../../components/Chip';
 import GoalList from '../../components/GoalList';
 import MapInfo from '../../components/MapInfo';
+import SiteMetadata from '../../components/SiteMetadata';
 
 import spartaImage from '../../assets/svg/helmet.svg';
 import SpartaHelmetImg from '../../assets/svg/helmet.svg';
@@ -32,6 +33,11 @@ const SpartaPage = ({ content }) => {
 
   return (
     <BaseLayout>
+      <SiteMetadata
+        title="Joystream: A user governed video platform"
+        description="Explore the deprecated Sparta testnet"
+      />
+
       <Hero
         image={spartaImage}
         title="Sparta Network"
