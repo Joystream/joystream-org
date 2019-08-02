@@ -30,8 +30,9 @@ class CookiesNotice extends React.Component {
 
   componentDidMount() {
     const isCookieSet = cookies.get(this.cookieName);
+    const { actionless } = this.props;
 
-    if (isCookieSet) {
+    if (!actionless && isCookieSet) {
       this.setState({ visible: false });
     }
   }
@@ -56,7 +57,7 @@ class CookiesNotice extends React.Component {
             <div className="CookiesNotice__content">
               <p>This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.</p>
               <p>
-                <Link to="/privacy-police" className="CookiesNotice__link">
+                <Link to="/privacy-policy" className="CookiesNotice__link">
                   Find out more ›
                 </Link>
               </p>

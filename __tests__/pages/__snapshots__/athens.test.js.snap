@@ -13,7 +13,11 @@ exports[`AthensPage page renders correctly 1`] = `
         What is this?
       </Chip>
     }
-    image="icon-mock"
+    image={
+      Object {
+        "ReactComponent": "icon-mock",
+      }
+    }
     indent={true}
     title="Athens Network"
   >
@@ -235,7 +239,9 @@ exports[`AthensPage page renders correctly 1`] = `
             Array [
               Object {
                 "hasLabel": false,
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "key": "validatorsCount",
                 "title": "Validator",
                 "to": "/roles#Validator",
@@ -243,7 +249,9 @@ exports[`AthensPage page renders correctly 1`] = `
               },
               Object {
                 "hasLabel": false,
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "key": "councilMembersCount",
                 "title": "Council Member",
                 "to": "/roles#Council-Member",
@@ -251,7 +259,9 @@ exports[`AthensPage page renders correctly 1`] = `
               },
               Object {
                 "hasLabel": true,
-                "image": "icon-mock",
+                "image": Object {
+                  "ReactComponent": "icon-mock",
+                },
                 "key": "storageProviders",
                 "title": "Storage Provider",
                 "to": "/roles#Storage-Provider",

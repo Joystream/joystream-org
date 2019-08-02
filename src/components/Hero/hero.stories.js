@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { ReactComponent as MasksImage } from '../../assets/svg/masks.svg';
-import { ReactComponent as PlatformImage } from '../../assets/svg/platform.svg';
-import { ReactComponent as AcropolisImage } from '../../assets/svg/acropolis.svg';
+import masksImage from '../../assets/svg/masks.svg';
+import platformImage from '../../assets/svg/platform.svg';
+import acropolisImage from '../../assets/svg/acropolis.svg';
 
 import Button from '../Button';
 import Link from '../Link';
@@ -21,15 +21,15 @@ storiesOf('Section|Hero', module)
     backgrounds: [{ name: 'black', value: '#000000', default: true }],
   })
   .add('plain content with an image', () => (
-    <Hero image={MasksImage} title="Discover various roles on the platform">
+    <Hero image={masksImage} title="Discover various roles on the platform">
       <p className="HeroStory__paragraph">
         Explore available roles and pick the one that suits you the most. Influence platforms development earning Monero
         in the process.
       </p>
     </Hero>
   ))
-  .add('custon content', () => (
-    <Hero image={PlatformImage} title="A user governed video platform">
+  .add('custom content', () => (
+    <Hero image={platformImage} title="A user governed video platform">
       <p className="HeroStory__paragraph">Earn Monero by participating in the current Athens testnet</p>
       <div className="HeroStory__group">
         <Button secondary className="HeroStory__button">
@@ -65,7 +65,7 @@ storiesOf('Section|Hero', module)
     </Hero>
   ))
   .add('with indent and counter', () => (
-    <Hero title="Acropolis Network" image={ AcropolisImage } indent>
+    <Hero title="Acropolis Network" image={ acropolisImage } indent>
       <p className="HeroStory__paragraph">
         Explore available roles and pick the one that suits you the most.
         Influence platforms development earning Monero in the process.

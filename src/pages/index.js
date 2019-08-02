@@ -20,7 +20,7 @@ import LayoutWrapper from '../components/LayoutWrapper';
 import Hero from '../components/Hero';
 
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
-import { ReactComponent as PlatformImage } from '../assets/svg/platform.svg';
+import platformImage from '../assets/svg/platform.svg';
 import { ReactComponent as TickImage } from '../assets/svg/tick.svg';
 
 import { roles } from '../data/pages';
@@ -29,24 +29,15 @@ import './style.scss';
 
 const IndexPage = ({ content }) => (
   <BaseLayout>
-    <Hero image={PlatformImage} title="A user governed video platform" animationStartValue={0}>
+    <Hero image={platformImage} title="A user governed video platform" animationStartValue={0}>
       <p className="IndexPage__hero-paragraph">
         Earn Monero by participating in the current Athens testnet
       </p>
       <div className="IndexPage__hero-group">
-        <Button
-          secondary
-          className="IndexPage__hero-button"
-          href="https://blog.joystream.org/acropolis-incentives/"
-        >
+        <Button secondary className="IndexPage__hero-button" href="https://blog.joystream.org/acropolis-incentives/">
           Earn Monero
         </Button>
-        <Button
-          secondary
-          reversed
-          className="IndexPage__hero-button"
-          href="https://testnet.joystream.org/"
-        >
+        <Button secondary reversed className="IndexPage__hero-button" href="https://testnet.joystream.org/">
           Launch UI
         </Button>
       </div>
@@ -59,10 +50,8 @@ const IndexPage = ({ content }) => (
         children={
           <>
             Acropolis is our fourth testnet, with much improved{' '}
-            <Link href="https://www.joystream.org/roles#Storage-Provider">
-              storage provider
-            </Link>
-            software and an on-chain forum.
+            <Link href="https://www.joystream.org/roles#Storage-Provider">storage provider</Link> software and an
+            on-chain forum.
           </>
         }
         button={{
@@ -86,10 +75,7 @@ const IndexPage = ({ content }) => (
           icon={TickImage}
         />
         <ColumnsLayout>
-          <RoleList
-            roles={roles.active}
-            content={mapStatusDataToRoles(content)}
-          />
+          <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} />
         </ColumnsLayout>
         <Subheader
           title="Roles coming in future testnets"
@@ -97,10 +83,7 @@ const IndexPage = ({ content }) => (
           icon={TickImage}
         />
         <ColumnsLayout columnsCount={3}>
-          <RoleList
-            roles={roles.future}
-            content={mapStatusDataToRoles(content)}
-          />
+          <RoleList roles={roles.future} content={mapStatusDataToRoles(content)} />
         </ColumnsLayout>
 
         <Button secondary to="/roles" className="IndexPage__roles-button">

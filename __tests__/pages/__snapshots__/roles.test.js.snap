@@ -6,7 +6,11 @@ exports[`RolesPage page renders correctly 1`] = `
     animationEndValue={-40}
     animationStartValue={10}
     chip={null}
-    image="icon-mock"
+    image={
+      Object {
+        "ReactComponent": "icon-mock",
+      }
+    }
     indent={false}
     title="Discover various roles on the platform"
   >

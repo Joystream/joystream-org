@@ -22,7 +22,7 @@ import GoalList from '../../components/GoalList';
 import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
 
-import { ReactComponent as AcropolisImage } from '../../assets/svg/acropolis.svg';
+import acropolisImage from '../../assets/svg/acropolis.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
@@ -39,7 +39,7 @@ const AcropolisPage = ({ content }) => {
   return (
     <BaseLayout>
       <Hero
-        image={AcropolisImage}
+        image={acropolisImage}
         title="Acropolis Network"
         indent
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}

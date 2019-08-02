@@ -14955,6 +14955,11 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
+stickybits@^3.6.6:
+  version "3.6.6"
+  resolved "https://registry.yarnpkg.com/stickybits/-/stickybits-3.6.6.tgz#ce042cbeaecfcc84cda602be6f5bc99b63e2964c"
+  integrity sha512-+++I84+V+IqRXCDIgSn7tGHXF1BtsPn/Nb3Ve3ZEH2NnTauorHyUFbKTW+nycobxtsGQMnl5V0WdHxGTDdmp+A==
+
 store2@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.7.1.tgz#22070b7dc04748a792fc6912a58ab99d3a21d788"

@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, createContext } from 'react';
 
-const ScrollContext = React.createContext();
+export const ScrollContext = createContext({});
 
 export const ScrollProvider = ({ children }) => {
   const scrollPositionRef = useRef(0);
@@ -21,5 +21,3 @@ export const ScrollProvider = ({ children }) => {
     </ScrollContext.Provider>
   );
 };
-
-export const ScrollConsumer = ScrollContext.Consumer;

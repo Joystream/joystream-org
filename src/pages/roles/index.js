@@ -8,7 +8,7 @@ import Sidebar from '../../components/Sidebar';
 import Hero from '../../components/Hero';
 import RoleOverview from '../../components/RoleOverview';
 
-import { ReactComponent as RolesImage } from '../../assets/svg/roles-hero.svg';
+import rolesImage from '../../assets/svg/roles-hero.svg';
 
 import { rolesData } from '../../data/pages/roles';
 
@@ -33,7 +33,7 @@ const RolesPage = () => {
   return (
     <BaseLayout>
       <Hero
-        image={RolesImage}
+        image={rolesImage}
         title="Discover various roles on the platform"
         animationStartValue={10}
       >

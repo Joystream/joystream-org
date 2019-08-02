@@ -158,8 +158,14 @@ exports[`SpartaPage page renders correctly 1`] = `
             }
           }
         >
-          <icon-mock
+          <img
+            alt="Sparta Network"
             className="Hero__image"
+            src={
+              Object {
+                "ReactComponent": "icon-mock",
+              }
+            }
           />
         </div>
       </div>
@@ -368,8 +374,14 @@ exports[`SpartaPage page renders correctly 1`] = `
             className="RoleCard RoleCard--labeled Link"
             href="/roles#Validator"
           >
-            <icon-mock
+            <img
+              alt="Validator"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -399,8 +411,14 @@ exports[`SpartaPage page renders correctly 1`] = `
             className="RoleCard RoleCard--labeled Link"
             href="/roles#Council-Member"
           >
-            <icon-mock
+            <img
+              alt="Council Member"
               className="RoleCard__image"
+              src={
+                Object {
+                  "ReactComponent": "icon-mock",
+                }
+              }
             />
             <div
               className="RoleCard__content"
@@ -495,7 +513,7 @@ exports[`SpartaPage page renders correctly 1`] = `
         <p>
           <a
             className="CookiesNotice__link Link"
-            href="/privacy-police"
+            href="/privacy-policy"
           >
             Find out more ›
           </a>

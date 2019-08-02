@@ -6,7 +6,7 @@
 
     &[data-columns='#{$i}'] {
       & > * {
-        flex-basis: calc(100% / #{$colsCount});
+        width: calc(100% / #{$colsCount});
         margin-bottom: $smallSpacing;
       }
 
@@ -18,7 +18,7 @@
 
         /* stylelint-disable-next-line */
         & > * {
-          flex-basis: calc(100% / #{$smCols} - #{$smallSpacing} + #{$smallSpacing} / #{$smCols});
+          width: calc(100% / #{$smCols} - #{ceil($smallSpacing - $smallSpacing / $smCols)});
           @if #{$smCols} > 1 {
             margin-right: $smallSpacing;
           } @else {
@@ -33,7 +33,7 @@
 
       @media #{$screen-md} {
         & > * {
-          flex-basis: calc(100% / #{$i} - #{$spacing} + #{$spacing} / #{$i});
+          width: calc(100% / #{$i} - #{ceil($spacing - $spacing / $i)});
           margin-right: $spacing;
           margin-bottom: $spacing;
         }
