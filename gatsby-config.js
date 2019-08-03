@@ -1,8 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: '',
-    description: '',
-    author: '',
+    siteUrl: process.env.SITE_URL,
   },
   plugins: [
     'gatsby-plugin-polyfill-io',
