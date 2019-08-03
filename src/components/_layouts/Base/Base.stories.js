@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import BaseLayout from './';
 
-storiesOf('BaseLayout', module).add('default', () => (
+storiesOf('Layout|BaseLayout', module).add('default', () => (
   <BaseLayout>
     <div style={{ padding: '20px' }}>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium
