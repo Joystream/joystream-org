@@ -78,10 +78,6 @@ function SiteMetadata({ description, lang, meta, title, image }) {
           name: 'twitter:image',
           content: imagePath,
         },
-        {
-          name: 'robots',
-          content: 'noindex, nofollow',
-        },
       ].concat(meta)}
     />
   );

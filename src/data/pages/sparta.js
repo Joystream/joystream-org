@@ -14,7 +14,7 @@ const roles = {
     {
       image: validatorsImage,
       title: 'Validator',
-      to: '/roles#Validator',
+      to: '/roles#validator',
       key: 'validatorsCount',
       hasLabel: true,
       type: 'most',
@@ -22,7 +22,7 @@ const roles = {
     {
       image: memberImage,
       title: 'Council Member',
-      to: '/roles#Council-Member',
+      to: '/roles#council-member',
       key: 'councilMembersCount',
       hasLabel: true,
       type: 'most',
@@ -47,7 +47,7 @@ const goals = [
     text: (
       <>
         As a "user governed media platform", allowing users to elect{' '}
-        <Link to="/roles#Council-Member">Council Members</Link> to represent
+        <Link to="/roles#council-member">Council Members</Link> to represent
         their interest in day to day operations was a major goal for us.
       </>
     ),

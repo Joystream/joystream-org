@@ -85,7 +85,7 @@ exports[`IndexPage page renders correctly 1`] = `
       <Link
         className=""
         highlighted={false}
-        href="https://www.joystream.org/roles#Storage-Provider"
+        to="/roles#storage-provider"
       >
         storage provider
       </Link>
@@ -203,7 +203,7 @@ exports[`IndexPage page renders correctly 1`] = `
                 },
                 "key": "validatorsCount",
                 "title": "Validator",
-                "to": "/roles#Validator",
+                "to": "/roles#validator",
               },
               Object {
                 "hasLabel": false,
@@ -212,7 +212,7 @@ exports[`IndexPage page renders correctly 1`] = `
                 },
                 "key": "councilMembersCount",
                 "title": "Council Member",
-                "to": "/roles#Council-Member",
+                "to": "/roles#council-member",
               },
               Object {
                 "hasLabel": true,
@@ -221,7 +221,7 @@ exports[`IndexPage page renders correctly 1`] = `
                 },
                 "key": "storageProviders",
                 "title": "Storage Provider",
-                "to": "/roles#Storage-Provider",
+                "to": "/roles#storage-provider",
               },
             ]
           }
@@ -253,7 +253,7 @@ exports[`IndexPage page renders correctly 1`] = `
                   "ReactComponent": "icon-mock",
                 },
                 "title": "Membership Screener",
-                "to": "/roles",
+                "to": "/roles#membership-screener",
               },
               Object {
                 "image": Object {
@@ -267,49 +267,49 @@ exports[`IndexPage page renders correctly 1`] = `
                   "ReactComponent": "icon-mock",
                 },
                 "title": "Content Curator",
-                "to": "/roles",
+                "to": "/roles#content-curator",
               },
               Object {
                 "image": Object {
                   "ReactComponent": "icon-mock",
                 },
                 "title": "Content Creator",
-                "to": "/roles",
+                "to": "/roles#content-creator",
               },
               Object {
                 "image": Object {
                   "ReactComponent": "icon-mock",
                 },
                 "title": "Bandwidth Provider",
-                "to": "/roles",
+                "to": "/roles#bandwidth-provider",
               },
               Object {
                 "image": Object {
                   "ReactComponent": "icon-mock",
                 },
                 "title": "Discovery Provider",
-                "to": "/roles",
+                "to": "/roles#discovery-provider",
               },
               Object {
                 "image": Object {
                   "ReactComponent": "icon-mock",
                 },
                 "title": "Live Streaming Provider",
-                "to": "/roles",
+                "to": "/roles#live-streaming-provider",
               },
               Object {
                 "image": Object {
                   "ReactComponent": "icon-mock",
                 },
                 "title": "Builder",
-                "to": "/roles",
+                "to": "/roles#builder",
               },
               Object {
                 "image": Object {
                   "ReactComponent": "icon-mock",
                 },
                 "title": "Communication Moderator",
-                "to": "/roles",
+                "to": "/roles#communication-moderator",
               },
             ]
           }

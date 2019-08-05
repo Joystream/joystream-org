@@ -132,7 +132,7 @@ exports[`SpartaPage page renders correctly 1`] = `
                 <Link
                   className=""
                   highlighted={false}
-                  to="/roles#Council-Member"
+                  to="/roles#council-member"
                 >
                   Council Members
                 </Link>
@@ -182,7 +182,7 @@ exports[`SpartaPage page renders correctly 1`] = `
                 },
                 "key": "validatorsCount",
                 "title": "Validator",
-                "to": "/roles#Validator",
+                "to": "/roles#validator",
                 "type": "most",
               },
               Object {
@@ -192,7 +192,7 @@ exports[`SpartaPage page renders correctly 1`] = `
                 },
                 "key": "councilMembersCount",
                 "title": "Council Member",
-                "to": "/roles#Council-Member",
+                "to": "/roles#council-member",
                 "type": "most",
               },
             ]
