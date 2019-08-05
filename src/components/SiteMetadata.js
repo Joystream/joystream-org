@@ -35,6 +35,10 @@ function SiteMetadata({ description, lang, meta, title, image }) {
 
   const imagePath = site.siteMetadata.siteUrl + image;
 
+  if (process.env.STORYBOOK_META) {
+    return null;
+  }
+
   return (
     <Helmet
       htmlAttributes={{
