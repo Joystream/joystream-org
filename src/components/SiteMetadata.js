@@ -21,10 +21,6 @@ const defaultProps = {
 };
 
 function SiteMetadata({ description, lang, meta, title, image }) {
-  if (process.env.STORYBOOK_META !== undefined) {
-    return null;
-  }
-
   const { site } = useStaticQuery(
     graphql`
       query {
