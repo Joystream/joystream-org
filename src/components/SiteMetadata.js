@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
+
 import logoTwitter from '../assets/images/logo-twitter.png';
 
 const propTypes = {
@@ -8,17 +10,31 @@ const propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  img: PropTypes.node,
+  image: PropTypes.node,
 };
 
 const defaultProps = {
   lang: 'en',
   meta: [],
   description: '',
-  img: logoTwitter,
+  image: logoTwitter,
 };
 
-function SiteMetadata({ description, lang, meta, title, img }) {
+function SiteMetadata({ description, lang, meta, title, image }) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            siteUrl
+          }
+        }
+      }
+    `
+  );
+
+  const imagePath = site.siteMetadata.siteUrl + image;
+
   return (
     <Helmet
       htmlAttributes={{
@@ -44,7 +60,7 @@ function SiteMetadata({ description, lang, meta, title, img }) {
         },
         {
           property: 'og:image',
-          content: '.' + img,
+          content: imagePath,
         },
         {
           name: 'twitter:card',
@@ -60,7 +76,7 @@ function SiteMetadata({ description, lang, meta, title, img }) {
         },
         {
           name: 'twitter:image',
-          content: '.' + img,
+          content: imagePath,
         },
       ].concat(meta)}
     />

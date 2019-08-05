@@ -1,9 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "joystream",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@storybook/addon-backgrounds": "^5.1.9",
     "@storybook/addon-centered": "^5.1.9",
@@ -87,19 +85,12 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -c .storybook --loglevel error --quiet"
+    "storybook": "NODE_ENV=production start-storybook -p 6006",
+    "build-storybook": "gatsby build && NODE_ENV=production build-storybook -c .storybook --loglevel error --quiet"
   },
   "pre-commit": [
     "lint",
     "stylelint",
     "test"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  ]
 }

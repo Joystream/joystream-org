@@ -59,6 +59,9 @@ typings/
 .cache/
 public
 
+# storybook files
+storybook-static
+
 # Mac files
 .DS_Store
 

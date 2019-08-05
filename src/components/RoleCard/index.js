@@ -12,7 +12,7 @@ import './style.scss';
 
 const propTypes = {
   ...linkPropTypes,
-  image: object.isRequired,
+  image: string.isRequired,
   title: string.isRequired,
   count: oneOfType([string, number]),
   className: string,

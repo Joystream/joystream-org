@@ -21,6 +21,6 @@ const goalsData = [
   },
 ];
 
-storiesOf('GoalList', module)
+storiesOf('Section|GoalList', module)
   .addDecorator(centered)
   .add('default', () => <GoalList data={goalsData} />);

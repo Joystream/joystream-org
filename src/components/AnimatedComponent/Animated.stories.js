@@ -27,13 +27,11 @@ const wrapperStyle = {
   justifyContent: 'flex-end',
 };
 
-storiesOf('Animated', module)
+storiesOf('Components|Animated', module)
   .addDecorator(centered)
   .add('Fade In', () => (
     <div>
-      <p style={{ marginTop: 20, textAlign: 'center' }}>
-        Scroll down to see animation
-      </p>
+      <p style={{ marginTop: 20, textAlign: 'center' }}>Scroll down to see animation</p>
 
       <div style={wrapperStyle}>
         <Animated animation="fadeIn">
@@ -56,9 +54,7 @@ storiesOf('Animated', module)
   ))
   .add('Bounce', () => (
     <div>
-      <p style={{ marginTop: 20, textAlign: 'center' }}>
-        Scroll down to see animation
-      </p>
+      <p style={{ marginTop: 20, textAlign: 'center' }}>Scroll down to see animation</p>
 
       <div style={wrapperStyle}>
         <Animated animation="bounce">

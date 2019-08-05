@@ -21,8 +21,8 @@ const PrivacyPolicyPage = () => {
   return (
     <BaseLayout>
       <SiteMetadata
-        title="Joystream: A user governed video platform"
-        description="Explore the live Athens testnet"
+        title="Joystream Privacy and Cookie Policy"
+        description="We take your privacy seriously."
       />
 
       <Hero title="Privacy Policy and Cookies">
