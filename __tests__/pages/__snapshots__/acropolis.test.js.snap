@@ -249,7 +249,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
                 },
                 "key": "validatorsCount",
                 "title": "Validator",
-                "to": "/roles#Validator",
+                "to": "/roles#validator",
               },
               Object {
                 "hasLabel": false,
@@ -258,7 +258,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
                 },
                 "key": "councilMembersCount",
                 "title": "Council Member",
-                "to": "/roles#Council-Member",
+                "to": "/roles#council-member",
               },
               Object {
                 "hasLabel": true,
@@ -267,7 +267,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
                 },
                 "key": "storageProviders",
                 "title": "Storage Provider",
-                "to": "/roles#Storage-Provider",
+                "to": "/roles#storage-provider",
               },
             ]
           }

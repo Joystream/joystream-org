@@ -310,7 +310,7 @@ exports[`SpartaPage page renders correctly 1`] = `
                
               <a
                 className="Link"
-                href="/roles#Council-Member"
+                href="/roles#council-member"
               >
                 Council Members
               </a>
@@ -372,7 +372,7 @@ exports[`SpartaPage page renders correctly 1`] = `
         >
           <a
             className="RoleCard RoleCard--labeled Link"
-            href="/roles#Validator"
+            href="/roles#validator"
           >
             <img
               alt="Validator"
@@ -409,7 +409,7 @@ exports[`SpartaPage page renders correctly 1`] = `
           </a>
           <a
             className="RoleCard RoleCard--labeled Link"
-            href="/roles#Council-Member"
+            href="/roles#council-member"
           >
             <img
               alt="Council Member"

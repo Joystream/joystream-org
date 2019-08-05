@@ -14,7 +14,7 @@ const roles = {
     {
       image: validatorsImage,
       title: 'Validator',
-      to: '/roles#Validator',
+      to: '/roles#validator',
       key: 'validatorsCount',
       hasLabel: false,
       type: 'migration',
@@ -22,7 +22,7 @@ const roles = {
     {
       image: memberImage,
       title: 'Council Member',
-      to: '/roles#Council-Member',
+      to: '/roles#council-member',
       key: 'councilMembersCount',
       hasLabel: false,
       type: 'migration',
@@ -30,7 +30,7 @@ const roles = {
     {
       image: storageImage,
       title: 'Storage Provider',
-      to: '/roles#Storage-Provider',
+      to: '/roles#storage-provider',
       key: 'storageProviders',
       hasLabel: true,
       type: 'migration',
