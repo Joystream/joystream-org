@@ -7,7 +7,7 @@ import './style.scss';
 
 const propTypes = {
   title: string.isRequired,
-  image: object,
+  image: string,
   indent: bool,
   children: node,
   chip: node,

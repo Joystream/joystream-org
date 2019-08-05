@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: process.env.SITE_URL,
+    siteUrl: 'https://joystream.org',
   },
   plugins: [
     'gatsby-plugin-polyfill-io',
