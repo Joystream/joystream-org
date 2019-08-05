@@ -49,6 +49,7 @@ yarn test
 This project uses [Storybook](https://storybook.js.org/) for development purposes.
 Components are divided into several categories: `Components`, `Layout`, `Section`, `Assets`, `Pages` and by default `Other` if no category is specified.
 
+Run `gatsby develop` or `gatsby build` at least once before running Storybook to generate static files usef in the project.
 To run the storybook on `http://localhost:6006/` use:
 
 ```sh
