@@ -87,8 +87,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -c .storybook --loglevel error --quiet STORYBOOK_META=true"
+    "storybook": "STORYBOOK_META=true start-storybook -p 6006",
+    "build-storybook": "STORYBOOK_META=true build-storybook -c .storybook --loglevel error --quiet"
   },
   "pre-commit": [
     "lint",

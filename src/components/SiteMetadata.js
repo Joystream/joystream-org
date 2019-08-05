@@ -21,6 +21,10 @@ const defaultProps = {
 };
 
 function SiteMetadata({ description, lang, meta, title, image }) {
+  if (process.env.STORYBOOK_META !== undefined) {
+    return null;
+  }
+
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -34,10 +38,6 @@ function SiteMetadata({ description, lang, meta, title, image }) {
   );
 
   const imagePath = site.siteMetadata.siteUrl + image;
-
-  if (process.env.STORYBOOK_META) {
-    return null;
-  }
 
   return (
     <Helmet
