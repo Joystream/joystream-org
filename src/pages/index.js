@@ -32,7 +32,7 @@ const IndexPage = ({ content }) => (
   <BaseLayout>
     <SiteMetadata
       title="Joystream: A user governed video platform"
-      description="Earn monero to participate on our testnets!"
+      description="Earn monero for participating on our testnets!"
     />
     <Hero
       image={platformImage}
@@ -40,7 +40,7 @@ const IndexPage = ({ content }) => (
       animationStartValue={0}
     >
       <p className="IndexPage__hero-paragraph">
-        Earn Monero by participating in the current Athens testnet
+        Earn Monero by participating in the current Acropolis testnet
       </p>
       <div className="IndexPage__hero-group">
         <Button
@@ -79,7 +79,7 @@ const IndexPage = ({ content }) => (
       />
 
       <Analytics content={mapStatusDataToAnalytics(content)}>
-        <Button secondary href="https://blog.joystream.org/athens-incentives/">
+        <Button secondary href="https://blog.joystream.org/acropolis-incentives/">
           Participate and Earn Monero
         </Button>
       </Analytics>
