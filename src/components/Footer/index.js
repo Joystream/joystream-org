@@ -15,7 +15,7 @@ const Footer = () => {
       <Button
         href="http://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
         small
-        light
+        secondary
         className="Footer__button"
       >
         Join the newsletter
@@ -31,13 +31,9 @@ const Footer = () => {
         })}
       </div>
       <div className="Footer__links">
-        {links.map(link => (
-          <Link
-            className={cn('Footer__link', { 'Footer__link--highlighted': link.highlighted })}
-            key={link.label}
-            {...link}
-          >
-            {link.label}
+        {links.map(({ label, highlighted, ...link }) => (
+          <Link className={cn('Footer__link', { 'Footer__link--highlighted': highlighted })} key={label} {...link}>
+            {label}
           </Link>
         ))}
       </div>

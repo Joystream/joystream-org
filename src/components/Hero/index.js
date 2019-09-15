@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { node, string, object, bool, number } from 'prop-types';
+import { node, string, bool, number } from 'prop-types';
 import Plx from 'react-plx';
 
 import './style.scss';
@@ -48,10 +48,10 @@ const Hero = ({ title, children, image, indent, chip, animationStartValue, anima
         </div>
         {image && (
           <div className="Hero__image-wrapper">
-            {chip && chip}
             <Plx parallaxData={parallaxData}>
               <img src={image} alt={title} className="Hero__image" />
             </Plx>
+            {chip && <div className="Hero__chip">{chip}</div>}
           </div>
         )}
       </div>

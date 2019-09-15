@@ -4,7 +4,7 @@ import { ReactComponent as RocketChatIcon } from '../../assets/svg/rocketchat.sv
 import { ReactComponent as TelegramIcon } from '../../assets/svg/telegram.svg';
 
 const links = [
-  { href: 'https://www.jsgenesis.com/#openings', label: 'We are hiring!', highlighted: true },
+  { href: 'https://www.jsgenesis.com/#openings', label: 'We are hiring!' },
   { href: 'https://blog.joystream.org/', label: 'Blog' },
   { href: 'https://blog.joystream.org/manifesto/', label: 'Manifesto' },
   { href: 'https://github.com/Joystream/joystream', label: 'Repository' },
@@ -17,7 +17,4 @@ const socialMedias = [
   { icon: TelegramIcon, href: 'https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA', name: 'Telegram' },
 ];
 
-export {
-  links,
-  socialMedias,
-};
+export { links, socialMedias };
