@@ -27,8 +27,8 @@
       padding: 10px;
       font-size: 18px;
       color: $c_white;
-      background-color: $c_blue;
       content: 'New role';
+      background-color: $c_blue-ribbon;
       transform: rotate(-45deg) translate(-50%, -50%);
       transform-origin: top left;
     }
@@ -51,7 +51,14 @@
   }
 
   &:hover {
-    background-color: $c_caribbean-green;
+    background-color: $c_blue-ribbon;
+
+    #{$_r}__title,
+    #{$_r}__info,
+    #{$_r}__counter,
+    #{$_r}__icon {
+      color: $c_white;
+    }
   }
 
   &__image {
@@ -72,10 +79,12 @@
 
   &__icon {
     display: none;
+    color: $c_blue-ribbon;
   }
 
   &__counter {
     font-weight: 700;
+    color: $c_blue-ribbon;
   }
 
   @media #{$screen-md} {

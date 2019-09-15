@@ -50,20 +50,15 @@
     display: inline-block;
     padding: 20px 20px 20px 32px;
     line-height: 20px;
-    color: $c_dusty-gray;
+    color: $c_heather;
 
     &:hover,
     &--active {
       color: $c_white;
     }
 
-    &--highlighted {
-      color: $c_caribbean-green;
-
-      &:hover,
-      &:active {
-        color: $c_persian-green;
-      }
+    &--button {
+      background-color: $c_blue-ribbon;
     }
   }
 
@@ -74,7 +69,7 @@
     width: $navbar-height;
     height: $navbar-height;
     cursor: pointer;
-    background-color: $c_caribbean-green;
+    background-color: $c_blue-ribbon;
 
     &--active {
       background-color: $c_silver;

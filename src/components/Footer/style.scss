@@ -54,7 +54,7 @@
     justify-content: center;
     margin-bottom: 32px;
     font-size: 18px;
-    color: $c_dusty-gray;
+    color: $c_heather;
 
     &:hover,
     &:active {
@@ -66,11 +66,11 @@
     }
 
     &--highlighted {
-      color: $c_caribbean-green;
+      color: $c_blue-ribbon;
 
       &:hover,
       &:active {
-        color: $c_persian-green;
+        color: $c_han_purple;
       }
     }
   }

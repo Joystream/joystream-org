@@ -14,7 +14,7 @@
   transition: background-color $duration;
 
   &:hover {
-    background-color: $c_alabaster;
+    background-color: $c_catskill_white;
 
     #{$_r}__status {
       opacity: 1;
@@ -48,15 +48,15 @@
     transition: opacity $duration;
 
     &--achieved {
-      color: $c_caribbean-green;
+      color: $c_blue-ribbon;
     }
 
     &--inprogress {
-      color: $c_blue;
+      color: $c_blue-ribbon;
     }
 
     &--postponed {
-      color: $c_mine-shaft;
+      color: $c_ebony-clay;
     }
   }
 

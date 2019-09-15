@@ -12,20 +12,19 @@
   color: $c_white;
   text-align: center;
   cursor: pointer;
-  background-color: $c_blue;
+  background-color: $c_blue-ribbon;
   border: 2px solid transparent;
-  border-radius: 3px;
 
   &:hover,
   &:active {
     text-decoration: none;
-    background-color: $c_bluebonnet;
+    background-color: $c_han_purple;
   }
 
   &--reversed {
     color: $c_black;
     background-color: transparent;
-    border-color: $c_blue;
+    border-color: $c_blue-ribbon;
 
     &:hover,
     &:active {
@@ -34,18 +33,17 @@
   }
 
   &--secondary {
-    color: $c_black;
-    background-color: $c_caribbean-green;
+    background-color: $c_blue-ribbon;
 
     &:hover,
     &:active {
-      background-color: $c_persian-green;
+      background-color: $c_han_purple;
     }
 
     &#{$_r}--reversed {
       color: $c_white;
       background-color: transparent;
-      border-color: $c_caribbean-green;
+      border-color: $c_blue-ribbon;
     }
   }
 
