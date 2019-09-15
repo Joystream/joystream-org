@@ -47,6 +47,9 @@ module.exports = {
         google: {
           families: ['Titillium Web:200,400,600,700'],
         },
+        custom: {
+          families: ['Inter'],
+        },
       },
     },
     'gatsby-plugin-sass',
