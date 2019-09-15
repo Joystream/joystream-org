@@ -12,7 +12,7 @@
   overflow: hidden;
   text-align: center;
   background-color: $c_white;
-  border-radius: $border-radius;
+  border-radius: $border-radius-small;
 
   &--labeled {
     &::after {
@@ -22,13 +22,13 @@
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      width: 141px;
-      height: 141px;
+      width: 188px;
+      height: 188px;
       padding: 10px;
       font-size: 18px;
       color: $c_white;
-      content: 'New role';
       background-color: $c_blue-ribbon;
+      content: 'NEW';
       transform: rotate(-45deg) translate(-50%, -50%);
       transform-origin: top left;
     }

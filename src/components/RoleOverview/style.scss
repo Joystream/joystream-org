@@ -9,14 +9,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 20px;
-    background-color: $c_black;
+    padding: 20px;
+    background-color: $c_catskill_white;
     border-radius: $border-radius;
   }
 
   &__title {
     font-size: 28px;
-    color: $c_white;
+    color: $c_blue-ribbon;
   }
 
   &__icon {
@@ -93,7 +93,7 @@
     padding: 40px 0 30px;
     font-size: 18px;
     line-height: 20px;
-    color: $c_blue;
+    color: $c_blue-ribbon;
   }
 
   &__form-input {
@@ -136,7 +136,7 @@
     }
 
     &__image {
-      height: 320px;
+      height: 240px;
       margin-bottom: -100px;
     }
 
@@ -168,27 +168,33 @@
   @media #{$screen-md} {
     &__header {
       align-items: flex-start;
+      align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      padding: 0 50px;
+      padding: 40px;
+
+      &-container {
+        display: flex;
+        align-items: center;
+      }
     }
 
     &__title {
-      padding-top: 50px;
+      max-width: 50%;
     }
 
     &__image {
+      position: absolute;
+      top: 0;
+      right: 0;
       width: 400px;
       padding: 0;
     }
 
     &__icon {
-      position: absolute;
-      bottom: 0;
-      left: 50px;
       display: block;
-      width: 100px;
-      transform: translateY(50%);
+      width: 120px;
+      margin-right: 40px;
     }
 
     &__content {
