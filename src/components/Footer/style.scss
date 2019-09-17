@@ -76,8 +76,19 @@
   }
 
   @media #{$screen-sm} {
+    background-image:
+      url('../../assets/background/footer-left.png'),
+      url('../../assets/background/footer-right.png');
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+
+    &__header {
+      margin-bottom: 120px;
+    }
+
     &__button {
       width: auto;
+      margin-bottom: 96px;
     }
 
     &__socials {

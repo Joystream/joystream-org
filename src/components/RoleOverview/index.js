@@ -8,8 +8,9 @@ import Button from '../Button';
 import Input from '../Input';
 import FormResponse from './FormResponse';
 
-import { ReactComponent as TickImage } from '../../assets/svg/tick.svg';
-import { ReactComponent as UpcomingImage } from '../../assets/svg/upcoming.svg';
+import { ReactComponent as TickImage } from '../../assets/svg/tick-box.svg';
+import { ReactComponent as UpcomingImage } from '../../assets/svg/clock-box.svg';
+
 import { ReactComponent as EnvelopeIcon } from '../../assets/svg/envelop.svg';
 import { ReactComponent as BookIcon } from '../../assets/svg/book.svg';
 

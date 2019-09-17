@@ -51,7 +51,7 @@ $indentation: 60px;
 
   &__image {
     width: 100%;
-    padding: 0 80px 40px;
+    margin-bottom: 32px;
   }
 
   &__chip {
@@ -121,11 +121,6 @@ $indentation: 60px;
       button {
         align-self: flex-end;
       }
-    }
-
-    &__image {
-      height: 500px;
-      padding: 0 0 0 32px;
     }
   }
 }

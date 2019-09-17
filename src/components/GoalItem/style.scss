@@ -19,6 +19,19 @@
     #{$_r}__status {
       opacity: 1;
     }
+
+    #{$_r}__icon-container {
+      background-color: $c_blue-ribbon;
+
+      &--postponed {
+        background-color: $c_raspberry;
+      }
+    }
+
+    #{$_r}__icon {
+      color: $c_white;
+      transform: translateY(-12px);
+    }
   }
 
   &:not(:last-child) {
@@ -26,38 +39,44 @@
   }
 
   &__icon-container {
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
+    height: 118px;
+    min-width: 118px;
     margin-bottom: 20px;
+    background-color: $c_catskill_white;
+    transition: background-color $duration;
+
+    &--postponed {
+      background-color: $c_grayc-chateau;
+
+      & > #{$_r}__icon {
+        color: $c_white;
+      }
+    }
   }
 
   &__icon {
-    width: 72px;
-    height: 72px;
+    width: 40px;
+    height: 40px;
+    color: $c_blue-ribbon;
+    transition: transform $duration, color $duration;
   }
 
   &__status {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 600;
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+    font-size: 14px;
     line-height: 20px;
+    color: $c_white;
     text-align: center;
     white-space: nowrap;
     opacity: 0;
     transition: opacity $duration;
-
-    &--achieved {
-      color: $c_blue-ribbon;
-    }
-
-    &--inprogress {
-      color: $c_blue-ribbon;
-    }
-
-    &--postponed {
-      color: $c_ebony-clay;
-    }
   }
 
   &__content {
@@ -82,7 +101,6 @@
     &__icon-container {
       margin-right: 50px;
       margin-bottom: 0;
-      padding: 0 24px;
     }
 
     &__content {

@@ -53,6 +53,15 @@
   }
 
   @media #{$screen-md} {
+    &__header {
+      background-image:
+        url('../../assets/background/modal-left.png'),
+        url('../../assets/background/modal-right.png');
+      background-position: top left, top right;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
     &__paragraph {
       font-size: get($font-sizes, 'big');
     }

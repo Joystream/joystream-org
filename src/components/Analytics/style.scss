@@ -5,7 +5,7 @@
 
   position: relative;
   width: 100%;
-  background-color: $c_black;
+  background-color: $c_catskill_white;
   border-radius: $border-radius;
 
   &__container {
@@ -45,6 +45,12 @@
   }
 
   @media #{$screen-md} {
+    background-image:
+      url('../../assets/background/stats-corner-left.png'),
+      url('../../assets/background/stats-corner-right.png');
+    background-position: bottom left, bottom right;
+    background-repeat: no-repeat;
+
     &__container {
       & > * {
         flex-basis: calc(100% / 4);

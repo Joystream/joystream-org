@@ -22,6 +22,7 @@
   &__img {
     width: 126px;
     height: 112px;
+    color: $c_white;
   }
 
   &__content {
@@ -61,6 +62,10 @@
   &--disabled {
     pointer-events: none;
     border: 2px solid $c_catskill_white;
+
+    #{$_r}__img {
+      color: rgba($c_ebony-clay, .3);
+    }
 
     #{$_r}__wrapper,
     #{$_r}__content {

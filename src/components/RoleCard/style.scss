@@ -13,6 +13,7 @@
   text-align: center;
   background-color: $c_white;
   border-radius: $border-radius-small;
+  transition: background-color $duration;
 
   &--labeled {
     &::after {
@@ -22,8 +23,8 @@
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      width: 188px;
-      height: 188px;
+      width: 140px;
+      height: 140px;
       padding: 10px;
       font-size: 18px;
       color: $c_white;
@@ -56,14 +57,17 @@
     #{$_r}__title,
     #{$_r}__info,
     #{$_r}__counter,
-    #{$_r}__icon {
+    #{$_r}__icon,
+    #{$_r}__image {
       color: $c_white;
     }
   }
 
   &__image {
-    width: 160px;
+    width: 100px;
+    height: 120px;
     margin-bottom: 20px;
+    color: $c_blue-ribbon;
   }
 
   &__title {
@@ -90,6 +94,7 @@
   @media #{$screen-md} {
     flex-direction: row;
     padding: 20px 30px;
+    padding-left: 40px;
     text-align: left;
 
     &--small {

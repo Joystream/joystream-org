@@ -31,6 +31,16 @@
   }
 
   @media #{$screen-md} {
+    &--dark {
+      background-image:
+        url('../../assets/background/roles-main-left-up.png'),
+        url('../../assets/background/roles-main-left-down.png'),
+        url('../../assets/background/roles-main-right-up.png'),
+        url('../../assets/background/roles-main-right-down.png');
+      background-position: center left, bottom left, center right, bottom right;
+      background-repeat: no-repeat;
+    }
+
     &__container {
       padding-bottom: 130px;
     }
