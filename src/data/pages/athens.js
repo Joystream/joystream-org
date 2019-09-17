@@ -5,9 +5,9 @@ import { ReactComponent as payoutImage } from '../../assets/svg/participation-pa
 import { ReactComponent as blockImage } from '../../assets/svg/block-platform-content-files.svg';
 import { ReactComponent as bookImage } from '../../assets/svg/platform-content-files.svg';
 
-import validatorsImage from '../../assets/svg/active-validators.svg';
-import memberImage from '../../assets/svg/council-member.svg';
-import storageImage from '../../assets/svg/storage.svg';
+import { ReactComponent as validatorsImage } from '../../assets/svg/active-validators.svg';
+import { ReactComponent as memberImage } from '../../assets/svg/council-member.svg';
+import { ReactComponent as storageImage } from '../../assets/svg/platform-content-files.svg';
 
 const roles = {
   active: [
@@ -75,15 +75,10 @@ const goals = [
     text: (
       <>
         The intention was for Jsgenesis to create a proposal for a{' '}
-        <Link href="https://blog.joystream.org/upgrades/">runtime upgrade</Link>{' '}
-        and have the Council vote on it. If the Council reached quorum, the
-        consensus rules of the system would automatically get upgraded in
-        flight. Unfortunately, the{' '}
-        <Link href="https://blog.joystream.org/sparta-sacked/">
-          Sparta network crashed
-        </Link>{' '}
-        before we reached this stage, and had to start Athens as a new chain
-        with a new genesis block.
+        <Link href="https://blog.joystream.org/upgrades/">runtime upgrade</Link> and have the Council vote on it. If the
+        Council reached quorum, the consensus rules of the system would automatically get upgraded in flight.
+        Unfortunately, the <Link href="https://blog.joystream.org/sparta-sacked/">Sparta network crashed</Link> before
+        we reached this stage, and had to start Athens as a new chain with a new genesis block.
       </>
     ),
     state: 'postponed',

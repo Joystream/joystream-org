@@ -23,6 +23,7 @@ import SiteMetadata from '../components/SiteMetadata';
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
 import platformImage from '../assets/svg/platform.svg';
 import { ReactComponent as TickImage } from '../assets/svg/tick.svg';
+import { ReactComponent as ClockImage } from '../assets/svg/clock.svg';
 
 import { roles } from '../data/pages';
 
@@ -82,7 +83,7 @@ const IndexPage = ({ content }) => (
         <Subheader
           title="Roles coming in future testnets"
           content="choose a role, learn more and subscribe to get updated"
-          icon={TickImage}
+          icon={ClockImage}
         />
         <ColumnsLayout columnsCount={3}>
           <RoleList roles={roles.future} content={mapStatusDataToRoles(content)} />

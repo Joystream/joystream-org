@@ -23,9 +23,8 @@ import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
 import SiteMetadata from '../../components/SiteMetadata';
 
-import athensImage from '../../assets/svg/athens-owl.svg';
-import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
-import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
+import athensImage from '../../assets/svg/athens.svg';
+import { ReactComponent as SpecImg } from '../../assets/svg/forum-posts.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AthensOwlImg from '../../assets/svg/athens-owl.svg';
 
@@ -38,21 +37,18 @@ const AthensPage = ({ content }) => {
 
   return (
     <BaseLayout>
-      <SiteMetadata
-        title="Joystream: A user governed video platform"
-        description="Explore the live Athens testnet"
-      />
+      <SiteMetadata title="Joystream: A user governed video platform" description="Explore the live Athens testnet" />
 
       <Hero
         image={athensImage}
         title="Athens Network"
         indent
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
-        animationStartValue={40}
+        animationStartValue={0}
       >
         <p className="AthensPage__hero-paragraph">
-          Explore available roles and pick the one that suits you the most.
-          Influence platforms development earning Monero in the process.
+          Explore available roles and pick the one that suits you the most. Influence platforms development earning
+          Monero in the process.
         </p>
         <HeroCard
           info
@@ -61,10 +57,7 @@ const AthensPage = ({ content }) => {
             <>
               AFTER LAUNCHING 17 / 04 / 19
               <br />
-              THE NETWORK WAS UPGRADED TO <Link to="/acropolis">
-                ACROPOLIS
-              </Link>{' '}
-              ON
+              THE NETWORK WAS UPGRADED TO <Link to="/acropolis">ACROPOLIS</Link> ON
             </>
           }
         />
@@ -76,24 +69,17 @@ const AthensPage = ({ content }) => {
           isOpen={isModalOpen}
         >
           <p>
-            <strong>In Greek mythology, a little owl (Athene noctua)</strong>{' '}
-            traditionally represents or accompanies Athena, the virgin goddess
-            of wisdom. Because of such association, the bird — often referred to
-            as the "owl of Athena" — has been used as a symbol of knowledge,
-            wisdom, perspicacity and erudition throughout the Western world.
+            <strong>In Greek mythology, a little owl (Athene noctua)</strong> traditionally represents or accompanies
+            Athena, the virgin goddess of wisdom. Because of such association, the bird — often referred to as the "owl
+            of Athena" — has been used as a symbol of knowledge, wisdom, perspicacity and erudition throughout the
+            Western world.
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper
-          title="Network Statistics"
-          subtitle="As they were at the end of the network."
-        >
-          <Analytics
-            content={mapStatusDataToAnalytics(content)}
-            items={analytics}
-          />
+        <TitleWrapper title="Network Statistics" subtitle="As they were at the end of the network.">
+          <Analytics content={mapStatusDataToAnalytics(content)} items={analytics} />
         </TitleWrapper>
 
         <TitleWrapper title="Critical Documents">
@@ -102,13 +88,13 @@ const AthensPage = ({ content }) => {
               No specifications was published for Athens.
             </Pane>
             <Pane
-              image={ReleaseImg}
+              image={SpecImg}
               href="https://github.com/Joystream/joystream/tree/master/testnets/athens"
               title="Release Plan"
               target="_blank"
             >
-              Read the release plan as it was made during the planning stage,
-              and learn more about how the development evolved.
+              Read the release plan as it was made during the planning stage, and learn more about how the development
+              evolved.
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
@@ -117,11 +103,8 @@ const AthensPage = ({ content }) => {
           title="Testnet Goals"
           subtitle={
             <>
-              The goals below is a simplified representation of the Key Results
-              listed in our Release{' '}
-              <Link href="https://github.com/Joystream/joystream/tree/master/testnets/athens#okrs">
-                OKR
-              </Link>
+              The goals below is a simplified representation of the Key Results listed in our Release{' '}
+              <Link href="https://github.com/Joystream/joystream/tree/master/testnets/athens#okrs">OKR</Link>
             </>
           }
         >
@@ -132,26 +115,20 @@ const AthensPage = ({ content }) => {
       <LayoutWrapper dark>
         <TitleWrapper title="Roles available on the current testnet">
           <ColumnsLayout>
-            <RoleList
-              roles={roles.active}
-              content={mapStatusDataToRoles(content)}
-            />
+            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
       <MapInfo title="The city of Athens" location="acropolis">
         <p>
-          <strong>Athens is the capital of Greece.</strong> IIt was also at the
-          heart of Ancient Greece, a powerful civilisation and empire. The city
-          is still dominated by 5th-century BC landmarks, including the
-          Acropolis, a hilltop citadel topped with ancient buildings like the
-          colonnaded Parthenon temple.
+          <strong>Athens is the capital of Greece.</strong> IIt was also at the heart of Ancient Greece, a powerful
+          civilisation and empire. The city is still dominated by 5th-century BC landmarks, including the Acropolis, a
+          hilltop citadel topped with ancient buildings like the colonnaded Parthenon temple.
           <br />
           <br />
-          We chose the name Athens as, like our previous testnets, Mesopotamia
-          and Sparta, the ancient Athens' historical significance in the
-          development towards modern democracy and the rule of law.
+          We chose the name Athens as, like our previous testnets, Mesopotamia and Sparta, the ancient Athens'
+          historical significance in the development towards modern democracy and the rule of law.
           <br />
           <br />
           <Link to="/sparta">
