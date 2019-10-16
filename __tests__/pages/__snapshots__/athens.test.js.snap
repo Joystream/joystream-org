@@ -11,7 +11,7 @@ exports[`AthensPage page renders correctly 1`] = `
   />
   <Hero
     animationEndValue={-40}
-    animationStartValue={40}
+    animationStartValue={0}
     chip={
       <Chip
         icon="icon-mock"
@@ -47,8 +47,7 @@ exports[`AthensPage page renders correctly 1`] = `
           >
             ACROPOLIS
           </Link>
-           
-          ON
+           ON
         </React.Fragment>
       }
       date="2019/06/24 17:50"
@@ -70,8 +69,7 @@ exports[`AthensPage page renders correctly 1`] = `
         <strong>
           In Greek mythology, a little owl (Athene noctua)
         </strong>
-         
-        traditionally represents or accompanies Athena, the virgin goddess of wisdom. Because of such association, the bird — often referred to as the "owl of Athena" — has been used as a symbol of knowledge, wisdom, perspicacity and erudition throughout the Western world.
+         traditionally represents or accompanies Athena, the virgin goddess of wisdom. Because of such association, the bird — often referred to as the "owl of Athena" — has been used as a symbol of knowledge, wisdom, perspicacity and erudition throughout the Western world.
       </p>
     </TestnetModal>
   </Hero>
@@ -199,9 +197,7 @@ exports[`AthensPage page renders correctly 1`] = `
                 >
                   runtime upgrade
                 </Link>
-                 
-                and have the Council vote on it. If the Council reached quorum, the consensus rules of the system would automatically get upgraded in flight. Unfortunately, the
-                 
+                 and have the Council vote on it. If the Council reached quorum, the consensus rules of the system would automatically get upgraded in flight. Unfortunately, the 
                 <Link
                   className=""
                   highlighted={false}
@@ -209,8 +205,7 @@ exports[`AthensPage page renders correctly 1`] = `
                 >
                   Sparta network crashed
                 </Link>
-                 
-                before we reached this stage, and had to start Athens as a new chain with a new genesis block.
+                 before we reached this stage, and had to start Athens as a new chain with a new genesis block.
               </React.Fragment>,
               "title": "Upgrade the runtime through a Council vote",
             },
@@ -246,9 +241,7 @@ exports[`AthensPage page renders correctly 1`] = `
             Array [
               Object {
                 "hasLabel": false,
-                "image": Object {
-                  "ReactComponent": "icon-mock",
-                },
+                "image": "icon-mock",
                 "key": "validatorsCount",
                 "title": "Validator",
                 "to": "/roles#validator",
@@ -256,9 +249,7 @@ exports[`AthensPage page renders correctly 1`] = `
               },
               Object {
                 "hasLabel": false,
-                "image": Object {
-                  "ReactComponent": "icon-mock",
-                },
+                "image": "icon-mock",
                 "key": "councilMembersCount",
                 "title": "Council Member",
                 "to": "/roles#council-member",
@@ -266,9 +257,7 @@ exports[`AthensPage page renders correctly 1`] = `
               },
               Object {
                 "hasLabel": true,
-                "image": Object {
-                  "ReactComponent": "icon-mock",
-                },
+                "image": "icon-mock",
                 "key": "storageProviders",
                 "title": "Storage Provider",
                 "to": "/roles#storage-provider",

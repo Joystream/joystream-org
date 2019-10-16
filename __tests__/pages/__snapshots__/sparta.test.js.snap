@@ -177,9 +177,7 @@ exports[`SpartaPage page renders correctly 1`] = `
             Array [
               Object {
                 "hasLabel": true,
-                "image": Object {
-                  "ReactComponent": "icon-mock",
-                },
+                "image": "icon-mock",
                 "key": "validatorsCount",
                 "title": "Validator",
                 "to": "/roles#validator",
@@ -187,9 +185,7 @@ exports[`SpartaPage page renders correctly 1`] = `
               },
               Object {
                 "hasLabel": true,
-                "image": Object {
-                  "ReactComponent": "icon-mock",
-                },
+                "image": "icon-mock",
                 "key": "councilMembersCount",
                 "title": "Council Member",
                 "to": "/roles#council-member",
@@ -210,8 +206,7 @@ exports[`SpartaPage page renders correctly 1`] = `
       <strong>
         Sparta was a prominent city-state in Ancient Greece.
       </strong>
-       
-      In addition to its military might, it was also unique both for its time and compared to its greek rivals due its defined social system and constitution.
+       In addition to its military might, it was also unique both for its time and compared to its greek rivals due its defined social system and constitution.
       <br />
       <br />
       We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law, however draconian by modern standard.

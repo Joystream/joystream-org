@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565.78 527.53">
+    <defs>
+        <pattern id="lines" data-name="lines" width="16" height="16" patternTransform="translate(272 400)" patternUnits="userSpaceOnUse">
+            <path fill="none" d="M0 0h16v16H0z"/>
+            <path class="cls-2" d="M1.98 78.02l66-66M-14.02 78.02l66-66M-30.02 78.02l66-66M-46.02 78.02l66-66M-62.02 78.02l66-66M1.98 62.02l66-66M-14.02 62.02l66-66M-30.02 62.02l66-66M-46.02 62.02l66-66M-62.02 62.02l66-66M1.98 46.02l66-66M-14.02 46.02l66-66M-30.02 46.02l66-66M-46.02 46.02l66-66M-62.02 46.02l66-66M1.98 30.02l66-66M-14.02 30.02l66-66M-30.02 30.02l66-66M-46.02 30.02l66-66M-62.02 30.02l66-66M1.98 14.02l66-66M-14.02 14.02l66-66M-30.02 14.02l66-66M-46.02 14.02l66-66M-62.02 14.02l66-66"/>
+        </pattern>
+        <style>
+            .cls-2,.cls-3,.cls-4,.cls-5{fill:none;stroke:currentColor}.cls-2,.cls-3,.cls-5{stroke-linecap:square}.cls-2,.cls-4,.cls-5{stroke-miterlimit:10}.cls-2{stroke-width:2px}.cls-3,.cls-4,.cls-5{stroke-width:12px}
+        </style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_9" data-name="Layer 9">
+            <path class="cls-3" d="M152.08 159.51V66.39h112.91M446.87 66.39h112.91v247.46H302.13"/>
+            <path class="cls-3" d="M446.87 52.48h-51v-6.73C395.85 23.89 378 5.59 356.11 6a39 39 0 00-38.22 39v7.5h-51v39.16a12.73 12.73 0 0012.7 12.7h154.6a12.74 12.74 0 0012.7-12.7z"/>
+            <circle class="cls-3" cx="356.87" cy="46.37" r="11.98"/>
+            <path class="cls-3" d="M337.36 153.05h157.42M403.52 205.5h91.26M337.36 205.5h28.51M403.52 255.69h53.62M337.36 255.69h28.51"/>
+            <path class="cls-4" d="M274.67 395.21l77.47 77.47-33 33-77.44-77.5M352.14 472.68l8.91 8.92a23.76 23.76 0 010 33.62l.66-.66a23.76 23.76 0 01-33.62 0l-8.92-8.91z"/>
+            <circle class="cls-5" cx="154.34" cy="307.85" r="148.34"/>
+            <path class="cls-5" d="M154.34 197.9a109.7 109.7 0 00-42.68 8.59v150.18h141.22a110 110 0 00-98.54-158.77z"/>
+            <path d="M262.08 285.76h-73.22v-82.33c34.5 10.31 59.66 36.47 73.22 82.33z" stroke-width="12" stroke="currentColor" fill="none"/>
+            <path d="M282.08 232.41v-78.22h-65v19.21a148.89 148.89 0 0165 59.01z" fill="url(#lines)" stroke-width="12" stroke-linecap="square" stroke="currentColor"/>
+            <path d="M111.66 356.67V206.49a110 110 0 10141.22 150.18z" fill="url(#lines)" stroke-width="12" stroke-miterlimit="10" stroke-linecap="square" stroke="currentColor"/>
+        </g>
+    </g>
+</svg>

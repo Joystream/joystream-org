@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number, bool, oneOf, oneOfType, object } from 'prop-types';
+import { string, number, bool, oneOf, oneOfType } from 'prop-types';
 import cn from 'classnames';
 
 import Link from '../Link';
@@ -32,31 +32,19 @@ const numberWrapper = number => {
 };
 
 const contentTypes = {
-  migration: number => (
-    <>At migration, {numberWrapper(number)} (max) had this role</>
-  ),
+  migration: number => <>At migration, {numberWrapper(number)} (max) had this role</>,
   current: number => <>{numberWrapper(number)} currently run this role</>,
-  most: number => (
-    <>At most, {numberWrapper(number)} users occupied this role</>
-  ),
+  most: number => <>At most, {numberWrapper(number)} users occupied this role</>,
 };
 
-const RoleCard = ({
-  image,
-  title,
-  count,
-  type,
-  className,
-  hasLabel,
-  ...props
-}) => {
+const RoleCard = ({ image: Image, title, count, type, className, hasLabel, ...props }) => {
   const classes = cn('RoleCard', className, {
     'RoleCard--labeled': hasLabel,
     'RoleCard--small': !count,
   });
   return (
     <Link className={classes} {...props}>
-      <img src={image} alt={title} className="RoleCard__image" />
+      <Image className="RoleCard__image" />
       <div className="RoleCard__content">
         <p className="RoleCard__title">{title}</p>
         {count && (

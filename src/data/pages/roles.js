@@ -2,8 +2,8 @@ import React from 'react';
 import Link from '../../components/Link';
 import { ReactComponent as ValidatorImage } from '../../assets/svg/active-validators.svg';
 import { ReactComponent as CouncilMemberImage } from '../../assets/svg/council-member.svg';
-import { ReactComponent as StorageProviderImage } from '../../assets/svg/storage.svg';
-import { ReactComponent as MembershipScreenerImage } from '../../assets/svg/screener.svg';
+import { ReactComponent as StorageProviderImage } from '../../assets/svg/platform-content-files.svg';
+import { ReactComponent as MembershipScreenerImage } from '../../assets/svg/membership-screener.svg';
 import { ReactComponent as MembershipCuratorImage } from '../../assets/svg/membership-curator.svg';
 import { ReactComponent as ContentCuratorImage } from '../../assets/svg/content-curator.svg';
 import { ReactComponent as ContentCreatorImage } from '../../assets/svg/content-creator.svg';
@@ -47,10 +47,10 @@ const rolesData = {
       id: 'council-member',
       image: CouncilMemberImage,
       title: 'Council Member',
-      overview: `At the heart of the governance process on the platform is the proposal system, 
-        which allows anyone to submit some suggestion for changing the state or 
-        policy of the platform in some way. These proposals are processed and voted on by a council, 
-        where the participants are referred to as council members. A set on the council is 
+      overview: `At the heart of the governance process on the platform is the proposal system,
+        which allows anyone to submit some suggestion for changing the state or
+        policy of the platform in some way. These proposals are processed and voted on by a council,
+        where the participants are referred to as council members. A set on the council is
         won through an election process, and lasts for some period of time until a new election.`,
       responsibilites: [
         'Discuss the meaning and merits of incoming proposals, covering a broad range of topics',
@@ -58,7 +58,7 @@ const rolesData = {
         'Represent the community members and your constituency to make day to day operations decisions',
       ],
       requirements: [
-        `Proficient with basic data analysis and sufficient reputation and standing within 
+        `Proficient with basic data analysis and sufficient reputation and standing within
         the community to earn supporting votes in elections from other platform members`,
         'A deep understanding of the Joystream platform structure, function and resource allocation',
         'Hold sufficient amount of the native platform token to put at stake',
@@ -72,13 +72,13 @@ const rolesData = {
       id: 'storage-provider',
       image: StorageProviderImage,
       title: 'Storage Provider',
-      overview: `There are critical platform assets that do not live on the blockchain, 
-        such as images and content media. The integrity of these assets is secured by the chain, 
-        but a separate set of storage and distribution nodes enabled uploading and downloading of 
+      overview: `There are critical platform assets that do not live on the blockchain,
+        such as images and content media. The integrity of these assets is secured by the chain,
+        but a separate set of storage and distribution nodes enabled uploading and downloading of
         such data. The storage provider is involved this activity, specifically storing large quantities of data.`,
       responsibilites: [
-        `Run an and maintain storage nodes that store very large quantities of static data, 
-        synchronize with other storage nodes, shares data with distributors, and accepts 
+        `Run an and maintain storage nodes that store very large quantities of static data,
+        synchronize with other storage nodes, shares data with distributors, and accepts
         inbound uploads from end users`,
       ],
       requirements: [
@@ -97,13 +97,13 @@ const rolesData = {
       id: 'membership-screener',
       image: MembershipScreenerImage,
       title: 'Membership Screener',
-      overview: `A membership is an integrated representation of identifying information 
-        and associated activities of an actor on the platform. The direct way of 
-        establishing membership will be to simply pay a one time fee. However, since its 
-        currently challenging for many prospective non-technical end users to obtain, store 
-        and use crypto assets, there will be a way for users to get a membership for free, 
-        which will not require any tokens in order to use the platform in a limited capacity. 
-        The membership screener is the role for the participants responsible for granting such 
+      overview: `A membership is an integrated representation of identifying information
+        and associated activities of an actor on the platform. The direct way of
+        establishing membership will be to simply pay a one time fee. However, since its
+        currently challenging for many prospective non-technical end users to obtain, store
+        and use crypto assets, there will be a way for users to get a membership for free,
+        which will not require any tokens in order to use the platform in a limited capacity.
+        The membership screener is the role for the participants responsible for granting such
         memberships, while screening for Sybill attackers and abusers.`,
       responsibilites: [
         'Run and maintain screening nodes that are always available and performant',
@@ -117,7 +117,7 @@ const rolesData = {
       ],
       requirements: [
         'Experienced with how to setup and maintain high performance IT infrastructure',
-        `Access to highly performant and reliable IT infrastructure, 
+        `Access to highly performant and reliable IT infrastructure,
         with high storage, (up & down) bandwidth and processing capacity`,
         'Familiarity with how online platforms are attacked through botnets, IP anonymization, automated agents, etc.',
         'Hold sufficient amount of the native platform token to put at stake',
@@ -141,7 +141,7 @@ const rolesData = {
       ),
       responsibilites: [
         'Monitor platform level activity for abuse and collusion',
-        `Propose changes to status of memberships which are identified, 
+        `Propose changes to status of memberships which are identified,
         and participate in any dispute process which may follow`,
         <>
           Collaborate with <Link href="#membership-screener"> Screeners</Link>{' '}
@@ -161,14 +161,14 @@ const rolesData = {
       image: ContentCuratorImage,
       title: 'Content Curator',
       overview: `All of the media content published on the platform lives in an on chain content directory.
-         There is a range of different content types, and each type has a schema for a rich 
-         description of its structure, function and policies. For the effective use of of content, 
-         for example in rendering, discovery and monetization, it is critical to ensure the validity 
-         of the published information for all content. In particular, it is also important to resolve 
-         possible disputes about ownership and presence of any piece of content on the platform. 
+         There is a range of different content types, and each type has a schema for a rich
+         description of its structure, function and policies. For the effective use of of content,
+         for example in rendering, discovery and monetization, it is critical to ensure the validity
+         of the published information for all content. In particular, it is also important to resolve
+         possible disputes about ownership and presence of any piece of content on the platform.
          It is the task of the content curators to do the work involved in processes that address these objectives.`,
       responsibilites: [
-        `Monitor the publishing of new content into the content directoyr, 
+        `Monitor the publishing of new content into the content directoyr,
         and respond to reports about contested publications`,
         'Adjudicate possible dispute processes resulting from reports from users',
         'Update information on content to be accurate',
@@ -188,9 +188,9 @@ const rolesData = {
       id: 'content-creator',
       image: ContentCreatorImage,
       title: 'Content Creator',
-      overview: `As a video platform, one of the most important platform assets is the content published 
-        on the platform. Since video is such a flexible media type, which can encompass a wide 
-        range of content categories, it is the primary focus, but the intention is to support 
+      overview: `As a video platform, one of the most important platform assets is the content published
+        on the platform. Since video is such a flexible media type, which can encompass a wide
+        range of content categories, it is the primary focus, but the intention is to support
         a broader range of content types over time. The content creators are those involved in
          creating, publishing and monetizing content on the platform.`,
       responsibilites: ['Publish content and build an audience'],
@@ -204,10 +204,10 @@ const rolesData = {
       id: 'bandwidth-provider',
       image: BandwidthProviderImage,
       title: 'Bandwidth Provider',
-      overview: `There are critical platform assets that do not live on the blockchain, such as images 
-      and content media. The integrity of these assets is secured by the chain, but a separate 
-      set of storage and distribution nodes enabled uploading and downloading of such data. 
-      The bandwidth provider is involved this activity, 
+      overview: `There are critical platform assets that do not live on the blockchain, such as images
+      and content media. The integrity of these assets is secured by the chain, but a separate
+      set of storage and distribution nodes enabled uploading and downloading of such data.
+      The bandwidth provider is involved this activity,
         specifically distributing static data to end users at scale.`,
       responsibilites: [
         'Run and maintain distributor nodes that delivers large volumes of upstream data to a ' +
@@ -215,7 +215,7 @@ const rolesData = {
       ],
       requirements: [
         'Experienced with how to setup and maintain high performance IT infrastructure',
-        `Access to highly performant and reliable IT infrastructure, with high storage 
+        `Access to highly performant and reliable IT infrastructure, with high storage
         capacity and a lot of upstream capacity`,
         'Located within certain bounds to designated geographic areas, in order to limit latency',
         'Hold sufficient amount of the native platform token to put at stake',
@@ -226,14 +226,14 @@ const rolesData = {
       id: 'discovery-provider',
       image: DiscoveryProviderImage,
       title: 'Discovery Provider',
-      overview: `All of the content on the platform is in a designated content directory, and effectively navigating 
-        this directory requires a full copy of this directory. Moreover, in order to do things like search and 
-        context based recommendations one needs to apply some sort of heuristic on top of this directory, 
-        which is also some what sensitive abusive attempts to rank higher. The discovery providers play 
-        the role of responding to such discovery queries to end users, by combining light client inclusion 
+      overview: `All of the content on the platform is in a designated content directory, and effectively navigating
+        this directory requires a full copy of this directory. Moreover, in order to do things like search and
+        context based recommendations one needs to apply some sort of heuristic on top of this directory,
+        which is also some what sensitive abusive attempts to rank higher. The discovery providers play
+        the role of responding to such discovery queries to end users, by combining light client inclusion
         proofs with local search/ranking policy heuristics.`,
       responsibilites: [
-        `Run and maintain discovery nodes that respond to discovery related queries by staying in 
+        `Run and maintain discovery nodes that respond to discovery related queries by staying in
         sync with the content directory, and applying local ranking heuristics.`,
         <>
           Collaborate with <Link href="#builder">Builders</Link> to improve both
@@ -254,7 +254,7 @@ const rolesData = {
       image: LiveStreamingProviderImage,
       title: 'Live Streaming Provider',
       overview: `The platform supports live video, allowing publisher to distribute content as it is created.
-      The live streaming providers are responsible for directly, or indirectly from peer 
+      The live streaming providers are responsible for directly, or indirectly from peer
       providers, taking a (transcoded) stream from the source publisher, and relaying it to end users.`,
       responsibilites: [
         `Run and maintain live streaming nodes that delivers large volumes of upstream data to a large number of
@@ -319,8 +319,8 @@ const rolesData = {
       overview: `
           The platform will have multiple ways of facilitating easy and secure public, and private,
            communication and information sharing among members. In particular, there will be both
-            a forum and messaging capability built in to the platform. But in order for these 
-            spaces to be effective communication modes, some moderation will be required. 
+            a forum and messaging capability built in to the platform. But in order for these
+            spaces to be effective communication modes, some moderation will be required.
             Communication moderators are involved with policing this activity.`,
       responsibilites: [
         `Monitor and supervise public communication channels for compliance with usage policies

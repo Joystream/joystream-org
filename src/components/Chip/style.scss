@@ -4,14 +4,12 @@
   display: flex;
   align-items: center;
   font-size: 16px;
-  color: $c_persian-green;
-  opacity: .6;
+  color: $c_white;
   transition: opacity $duration;
 
   &:hover,
   &:active {
     cursor: pointer;
-    opacity: 1;
   }
 
   &__icon {
@@ -23,10 +21,11 @@
   }
 
   @media #{$screen-md} {
-    font-size: 18px;
+    font-size: 25px;
+    color: $c_ebony-clay;
 
     &__icon {
-      width: 28px;
+      width: 43px;
     }
   }
 }

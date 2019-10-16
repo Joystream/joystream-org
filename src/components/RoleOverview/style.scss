@@ -9,14 +9,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 20px;
-    background-color: $c_black;
+    padding: 20px;
+    background-color: $c_catskill_white;
     border-radius: $border-radius;
   }
 
   &__title {
     font-size: 28px;
-    color: $c_white;
+    font-weight: 700;
+    color: $c_blue-ribbon;
   }
 
   &__icon {
@@ -24,9 +25,11 @@
   }
 
   &__image {
-    width: 100%;
-    max-width: 500px;
-    padding: 0 50px;
+    width: 300px;
+    height: 100%;
+    max-height: 240px;
+    margin-top: 30px;
+    color: $c_blue-ribbon;
   }
 
   &__content {
@@ -93,7 +96,7 @@
     padding: 40px 0 30px;
     font-size: 18px;
     line-height: 20px;
-    color: $c_blue;
+    color: $c_blue-ribbon;
   }
 
   &__form-input {
@@ -136,7 +139,6 @@
     }
 
     &__image {
-      height: 320px;
       margin-bottom: -100px;
     }
 
@@ -168,27 +170,38 @@
   @media #{$screen-md} {
     &__header {
       align-items: flex-start;
+      align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      padding: 0 50px;
+      padding: 40px;
+      background-image:
+        url('../../assets/background/roles-page-corner-left.png'),
+        url('../../assets/background/roles-page-corner-right.png');
+      background-position: bottom left, top right;
+      background-repeat: no-repeat;
+
+      &-container {
+        display: flex;
+        align-items: center;
+      }
     }
 
     &__title {
-      padding-top: 50px;
+      max-width: 50%;
     }
 
     &__image {
-      width: 400px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-right: 55px;
       padding: 0;
     }
 
     &__icon {
-      position: absolute;
-      bottom: 0;
-      left: 50px;
       display: block;
-      width: 100px;
-      transform: translateY(50%);
+      width: 120px;
+      margin-right: 40px;
     }
 
     &__content {

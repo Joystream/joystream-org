@@ -31,13 +31,13 @@ const TestnetItem = ({ title, image, date, className, children, button, ...props
           <div className="TestnetItem__container">
             <p className="TestnetItem__content">{children}</p>
             {date && <DateCounter date={date} className="TestnetItem__counter" />}
+            {button && (
+              <Button {...button} className="TestnetItem__button">
+                {button.label}
+              </Button>
+            )}
           </div>
         </div>
-        {button && (
-          <Button {...button} className="TestnetItem__button">
-            {button.label}
-          </Button>
-        )}
       </div>
     </TitleWrapper>
   );

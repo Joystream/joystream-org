@@ -8,8 +8,9 @@ import Button from '../Button';
 import Input from '../Input';
 import FormResponse from './FormResponse';
 
-import { ReactComponent as TickImage } from '../../assets/svg/tick.svg';
-import { ReactComponent as UpcomingImage } from '../../assets/svg/upcoming.svg';
+import { ReactComponent as TickImage } from '../../assets/svg/tick-box.svg';
+import { ReactComponent as UpcomingImage } from '../../assets/svg/clock-box.svg';
+
 import { ReactComponent as EnvelopeIcon } from '../../assets/svg/envelop.svg';
 import { ReactComponent as BookIcon } from '../../assets/svg/book.svg';
 
@@ -25,16 +26,12 @@ const propTypes = {
   requirements: arrayOf(oneOfType([string, node])).isRequired,
   tutorialLink: (props, propName, componentName) => {
     if (props.type === 'active' && !props[propName]) {
-      return new Error(
-        `${propName} is required if type is equal 'active' in '${componentName}'.`
-      );
+      return new Error(`${propName} is required if type is equal 'active' in '${componentName}'.`);
     }
   },
   questionLink: (props, propName, componentName) => {
     if (props.type === 'active' && !props[propName]) {
-      return new Error(
-        `${propName} is required if type is equal 'active' in '${componentName}'.`
-      );
+      return new Error(`${propName} is required if type is equal 'active' in '${componentName}'.`);
     }
   },
   formAction: string.isRequired,
@@ -160,12 +157,7 @@ class RoleOverview extends React.Component {
   };
 
   renderForm = () => {
-    const {
-      formContentVisibility,
-      inputValue,
-      checkboxValue,
-      loading,
-    } = this.state;
+    const { formContentVisibility, inputValue, checkboxValue, loading } = this.state;
     const { type } = this.props;
 
     const btnType = type === 'active' ? 'Join' : 'Subscribe';
@@ -174,9 +166,7 @@ class RoleOverview extends React.Component {
     return (
       <>
         <form
-          onChange={e =>
-            this.setState({ isButtonDisabled: !this.form.checkValidity() })
-          }
+          onChange={e => this.setState({ isButtonDisabled: !this.form.checkValidity() })}
           onSubmit={this.handleSubmit}
           method="post"
           ref={ref => (this.form = ref)}
@@ -208,14 +198,10 @@ class RoleOverview extends React.Component {
                 className="RoleOverview__checkbox"
               />
               <label htmlFor="accept" className="RoleOverview__label">
-                <p className="RoleOverview__form-label">
-                  I want to receive emails about this role.
-                </p>
+                <p className="RoleOverview__form-label">I want to receive emails about this role.</p>
                 <p className="RoleOverview__form-label RoleOverview__form-label--small">
-                  I acknowledge that my information will be transferred to
-                  Mailchimp, which has{' '}
-                  <Link href="https://mailchimp.com/legal/">these</Link> privacy
-                  practices.
+                  I acknowledge that my information will be transferred to Mailchimp, which has{' '}
+                  <Link href="https://mailchimp.com/legal/">these</Link> privacy practices.
                 </p>
               </label>
             </div>
@@ -250,8 +236,10 @@ class RoleOverview extends React.Component {
     return (
       <section className={classes} {...props}>
         <div className="RoleOverview__header">
-          <h2 className="RoleOverview__title">{title}</h2>
-          <RoleIcon className="RoleOverview__icon" />
+          <div className="RoleOverview__header-container">
+            <RoleIcon className="RoleOverview__icon" />
+            <h2 className="RoleOverview__title">{title}</h2>
+          </div>
           <Image className="RoleOverview__image" />
         </div>
 

@@ -28,16 +28,16 @@ const Navbar = () => {
             'Navbar__links--open': isOpen,
           })}
         >
-          {links.map(link => (
+          {links.map(({ label, isButton, ...link }) => (
             <Link
               className={cn('Navbar__link', {
-                'Navbar__link--highlighted': link.highlighted,
+                'Navbar__link--button': isButton,
               })}
               activeClassName="Navbar__link--active"
-              key={link.label}
+              key={label}
               {...link}
             >
-              {link.label}
+              {label}
             </Link>
           ))}
         </div>

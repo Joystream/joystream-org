@@ -6,8 +6,8 @@ import stickybits from 'stickybits';
 import { ScrollContext } from '../_enhancers/ScrollContext';
 
 import { ReactComponent as MoreRolesIcon } from '../../assets/svg/arrow-down.svg';
-import { ReactComponent as TickImage } from '../../assets/svg/tick.svg';
-import { ReactComponent as UpcomingImage } from '../../assets/svg/upcoming.svg';
+import { ReactComponent as TickImage } from '../../assets/svg/tick-box.svg';
+import { ReactComponent as UpcomingImage } from '../../assets/svg/clock-box.svg';
 
 import './style.scss';
 

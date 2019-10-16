@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 442.04 607.69">
+    <defs>
+        <pattern id="lines" data-name="lines" width="16" height="16" patternTransform="translate(96 496)" patternUnits="userSpaceOnUse">
+            <path class="cls-1" d="M0 0h16v16H0z"/>
+            <path class="cls-2" d="M1.98 78.02l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-2 50l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-2 50l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-2 50l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-2 50l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66"/>
+        </pattern>
+        <pattern id="lines-3" data-name="lines" width="16" height="16" patternTransform="translate(-46 -192.97)" patternUnits="userSpaceOnUse">
+            <path class="cls-1" d="M0 0h16v16H0z"/>
+            <path class="cls-2" d="M1.98 78.02l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-2 50l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-2 50l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-2 50l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-2 50l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66m-82 66l66-66"/>
+        </pattern>
+        <style>
+            .cls-1,.cls-2,.cls-3{fill:none}.cls-2,.cls-3{stroke:#4038ff}.cls-2{stroke-linecap:square}.cls-2,.cls-3{stroke-miterlimit:10}.cls-2{stroke-width:2px}.cls-3{stroke-width:12px}
+        </style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_17" data-name="Layer 17">
+            <path class="cls-3" d="M78.91 339.23L6 402.64v169.65m430.04 0V402.64l-78.81-63.22"/>
+            <path stroke-linejoin="bevel" fill="url(#lines)" stroke-width="12" stroke="#4038ff" d="M357.23 339.42l-66.55-.05-31.57 31.56H186.1l-31.65-31.65-75.54-.06L6 402.64h430.04l-78.81-63.22z"/>
+            <path class="cls-3" d="M128.96 370.93h182.98M179.68 534.14a4 4 0 01-1.16-2.81v-20.86l-15.72-15.71a4 4 0 010-5.63l15.72-15.71v-20.86a4 4 0 014-4h20.86l15.71-15.72a4 4 0 015.63 0l15.71 15.72h20.86a4 4 0 014 4v20.86L281 489.13a4 4 0 010 5.63l-15.72 15.71v20.86a4 4 0 01-4 4H240.4L224.69 551a4 4 0 01-5.63 0l-15.71-15.7h-20.86a4 4 0 01-2.81-1.16zM205 452.56z"/>
+            <path class="cls-3" d="M239.43 535.7l-14.74 14.75a4 4 0 01-5.63 0l-14.74-14.75h-14.27v61.17L221.87 577l31.83 19.89V535.7z"/>
+            <path stroke-width="12" stroke-linecap="square" stroke="#4038ff" fill="none" d="M336.81 212.32l40.45 40.46-118.15 118.15H186.1l-63.16-63.17 134.65-134.65"/>
+            <path class="cls-3" d="M242.25 185.46l-36.81-28.37m-34.18 23.23l17 43.26a17.11 17.11 0 006.59 7.74M219.83 210l-23-53.26"/>
+            <path class="cls-3" d="M316.74 5l-124 79.85c-13.21 10.22-13.21 10.22-24.54 29.51l-37.87 58.36-1.1 77.4a17.19 17.19 0 0034.31-2.33l2.17-57.42 34.7-32.56 44.08 3.33c22.55 4.34 36.14 16.21 36.37 39.5l-.4 43.9c.57 24.93 18.83 29.53 32.82 26.76a38.36 38.36 0 005.78-1.84s1.68-25.13 2.18-30.54l19-58.57s32.64-31.06 17.18-78.84"/>
+            <path fill="#fff" stroke-width="12" stroke-miterlimit="10" stroke="#4038ff" d="M361.21 118.08l22.94-16.99"/>
+            <path d="M254.93 142.26c17.82 3.33 25 20 25.75 36.49V208" stroke-width="12" stroke-miterlimit="10" stroke-linecap="square" stroke="#4038ff" fill="none"/>
+            <path d="M357 102.13c6.32 10.23 3.13 11.69 1.71 19.24l26.22-17.65-38.05-54" fill="url(#lines-3)"/>
+        </g>
+    </g>
+</svg>

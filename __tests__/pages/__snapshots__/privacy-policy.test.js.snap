@@ -148,7 +148,7 @@ exports[`PrivacyPolicyPage page renders correctly 1`] = `
     </PolicyWrapper>
     <PolicyWrapper
       className=""
-      left={false}
+      left={true}
       subtitle="Last updated on the 17th of April 2019"
       title="Privacy Policy"
     >
@@ -245,7 +245,7 @@ exports[`PrivacyPolicyPage page renders correctly 1`] = `
   >
     <PolicyWrapper
       className=""
-      left={false}
+      left={true}
       subtitle="Last updated on the 17th of April 2019"
       title="Cookies Policy"
     >

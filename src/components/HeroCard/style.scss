@@ -7,7 +7,7 @@
   max-width: 580px;
   margin: 0 auto;
   color: $c_white;
-  background-color: $c_blue;
+  background-color: $c_blue-ribbon;
   border-radius: $border-radius;
 
   &--error {
@@ -21,11 +21,11 @@
   }
 
   &--info {
-    background-color: $c_caribbean-green;
+    background-color: $c_blue-ribbon;
 
     #{$_r} {
       &__header {
-        background-color: $c_persian-green;
+        background-color: $c_han_purple;
       }
     }
   }
@@ -39,7 +39,7 @@
     font-weight: 700;
     color: $c_white;
     text-transform: uppercase;
-    background-color: $c_bluebonnet;
+    background-color: $c_han_purple;
     border-radius: inherit;
   }
 

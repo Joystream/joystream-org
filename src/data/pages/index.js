@@ -1,15 +1,15 @@
-import validatorsImage from '../../assets/svg/active-validators.svg';
-import storageImage from '../../assets/svg/storage.svg';
-import memberImage from '../../assets/svg/council-member.svg';
-import screenerImage from '../../assets/svg/screener.svg';
-import membershipCuratorImage from '../../assets/svg/membership-curator.svg';
-import contentCuratorImage from '../../assets/svg/content-curator.svg';
-import contentCreatorImage from '../../assets/svg/content-creator.svg';
-import bandwidthProviderImage from '../../assets/svg/bandwidth-provider.svg';
-import discoveryProviderImage from '../../assets/svg/discovery-provider.svg';
-import liveStreamingProviderImage from '../../assets/svg/live-streaming-provider.svg';
-import builderImage from '../../assets/svg/builder.svg';
-import communicationModeratorImage from '../../assets/svg/communication-moderator.svg';
+import { ReactComponent as validatorsImage } from '../../assets/svg/active-validators.svg';
+import { ReactComponent as storageImage } from '../../assets/svg/platform-content-files.svg';
+import { ReactComponent as memberImage } from '../../assets/svg/council-member.svg';
+import { ReactComponent as screenerImage } from '../../assets/svg/membership-screener.svg';
+import { ReactComponent as membershipCuratorImage } from '../../assets/svg/membership-curator.svg';
+import { ReactComponent as contentCuratorImage } from '../../assets/svg/content-curator.svg';
+import { ReactComponent as contentCreatorImage } from '../../assets/svg/content-creator.svg';
+import { ReactComponent as bandwidthProviderImage } from '../../assets/svg/bandwidth-provider.svg';
+import { ReactComponent as discoveryProviderImage } from '../../assets/svg/discovery-provider.svg';
+import { ReactComponent as liveStreamingProviderImage } from '../../assets/svg/live-streaming-provider.svg';
+import { ReactComponent as builderImage } from '../../assets/svg/builder.svg';
+import { ReactComponent as communicationModeratorImage } from '../../assets/svg/communication-moderator.svg';
 
 const roles = {
   active: [

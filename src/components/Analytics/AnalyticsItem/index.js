@@ -13,8 +13,10 @@ const AnalyticsItem = ({ image: Image, title, value }) => {
   return (
     <div className="AnalyticsItem">
       <Image className="AnalyticsItem__image" />
-      <p className="AnalyticsItem__title">{title}</p>
-      <p className="AnalyticsItem__value">{value}</p>
+      <div>
+        <p className="AnalyticsItem__title">{title}</p>
+        <p className="AnalyticsItem__value">{value}</p>
+      </div>
     </div>
   );
 };
