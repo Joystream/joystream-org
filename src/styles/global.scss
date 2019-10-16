@@ -2,17 +2,28 @@
 @import './common/colors';
 @import './common/media';
 
+@font-face {
+  font-family: Inter;
+  src: url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: bold;
+  src: url('../assets/fonts/Inter-Bold.ttf') format('truetype');
+}
+
 * {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 p {
   font-size: 12px;
-  color: $c_mine-shaft;
+  color: $c_ebony-clay;
 }
 
 a {
-  color: $c_bluebonnet;
+  color: $c_han_purple;
 }
 
 ul {
@@ -31,6 +42,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Titillium Web', sans-serif;
   font-weight: normal;
   color: $c_black;
 }
@@ -38,5 +50,11 @@ h6 {
 @media #{$screen-md} {
   p {
     font-size: 20px;
+  }
+}
+
+@media #{$screen-max-md} {
+  .Plx {
+    transform: none !important;
   }
 }

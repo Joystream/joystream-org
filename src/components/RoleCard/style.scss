@@ -12,7 +12,8 @@
   overflow: hidden;
   text-align: center;
   background-color: $c_white;
-  border-radius: $border-radius;
+  border-radius: $border-radius-small;
+  transition: background-color $duration;
 
   &--labeled {
     &::after {
@@ -22,13 +23,13 @@
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      width: 141px;
-      height: 141px;
+      width: 140px;
+      height: 140px;
       padding: 10px;
       font-size: 18px;
       color: $c_white;
-      background-color: $c_blue;
-      content: 'New role';
+      background-color: $c_blue-ribbon;
+      content: 'NEW';
       transform: rotate(-45deg) translate(-50%, -50%);
       transform-origin: top left;
     }
@@ -51,12 +52,22 @@
   }
 
   &:hover {
-    background-color: $c_caribbean-green;
+    background-color: $c_blue-ribbon;
+
+    #{$_r}__title,
+    #{$_r}__info,
+    #{$_r}__counter,
+    #{$_r}__icon,
+    #{$_r}__image {
+      color: $c_white;
+    }
   }
 
   &__image {
-    width: 160px;
+    width: 100px;
+    height: 120px;
     margin-bottom: 20px;
+    color: $c_blue-ribbon;
   }
 
   &__title {
@@ -72,15 +83,18 @@
 
   &__icon {
     display: none;
+    color: $c_blue-ribbon;
   }
 
   &__counter {
     font-weight: 700;
+    color: $c_blue-ribbon;
   }
 
   @media #{$screen-md} {
     flex-direction: row;
     padding: 20px 30px;
+    padding-left: 40px;
     text-align: left;
 
     &--small {

@@ -19,9 +19,11 @@ const defaultProps = {
 const Subheader = ({ title, content, icon: Icon, className }) => {
   return (
     <div className={cn('Subheader', className)}>
-      <h3 className="Subheader__title">{title}</h3>
-      <p className="Subheader__content">{content}</p>
       <Icon className="Subheader__image" />
+      <div>
+        <h3 className="Subheader__title">{title}</h3>
+        <p className="Subheader__content">{content}</p>
+      </div>
     </div>
   );
 };

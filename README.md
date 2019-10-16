@@ -1,7 +1,5 @@
 # Joystream by Jsgenesis
 
-Foobar is a Python library for dealing with word pluralization.
-
 ## Installation
 
 To install all local dependencies located in `package.json` use:
@@ -12,7 +10,11 @@ yarn
 
 ## Website
 
-1.  **Local development**
+1. **ENVs**
+
+To populate project with environment variables create files `.env.development` for local development and `.env.production` for final build.
+
+2.  **Local development**
 
 ```sh
 gatsby develop
@@ -20,7 +22,7 @@ gatsby develop
 
 Local server will start on `http://localhost:8000/`
 
-2.  **Build**
+3.  **Build**
 
 To build Gatsby project run:
 
@@ -30,7 +32,7 @@ yarn build
 
 After the process is complete, production files will be located in the `public` folder located in the root of the project.
 
-3.  **Test**
+4.  **Test**
 
 Joystream uses [Jest](https://jestjs.io/) for writing tests. Please make sure to write unit and snapshot tests (update if needed). Pre-commit hook won't allow you committing unless all the tests, linters passes.
 

@@ -11,7 +11,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
   />
   <Hero
     animationEndValue={-40}
-    animationStartValue={30}
+    animationStartValue={0}
     chip={
       <Chip
         icon="icon-mock"
@@ -55,8 +55,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
         <strong>
           Known for its great architecture, Acropolis'
         </strong>
-         
-        perhaps most famous building is the Parthenon. It was built to celebrate their victory over Persian invaders, and is today seen as a symbol for democracy and western civilization.
+         perhaps most famous building is the Parthenon. It was built to celebrate their victory over Persian invaders, and is today seen as a symbol for democracy and western civilization.
       </p>
     </TestnetModal>
   </Hero>
@@ -244,27 +243,21 @@ exports[`AcropolisPage page renders correctly 1`] = `
             Array [
               Object {
                 "hasLabel": false,
-                "image": Object {
-                  "ReactComponent": "icon-mock",
-                },
+                "image": "icon-mock",
                 "key": "validatorsCount",
                 "title": "Validator",
                 "to": "/roles#validator",
               },
               Object {
                 "hasLabel": false,
-                "image": Object {
-                  "ReactComponent": "icon-mock",
-                },
+                "image": "icon-mock",
                 "key": "councilMembersCount",
                 "title": "Council Member",
                 "to": "/roles#council-member",
               },
               Object {
                 "hasLabel": true,
-                "image": Object {
-                  "ReactComponent": "icon-mock",
-                },
+                "image": "icon-mock",
                 "key": "storageProviders",
                 "title": "Storage Provider",
                 "to": "/roles#storage-provider",
@@ -284,8 +277,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
       <strong>
         The Acropolis is a citadel on a hill in the heart of Athens.
       </strong>
-       
-      It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list "World Heritage Sites".
+       It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list "World Heritage Sites".
       <br />
       <br />
       We chose the name as we had to scale back our ambitions for the next testnet after some issues with the release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not intended for Athens.

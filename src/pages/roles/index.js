@@ -41,7 +41,7 @@ const RolesPage = () => {
       <Hero
         image={rolesImage}
         title="Discover various roles on the platform"
-        animationStartValue={10}
+        animationStartValue={0}
       >
         <p className="RolesPage__hero-paragraph">
           Explore available roles and pick the one that suits you the most.

@@ -20,9 +20,9 @@ const defaultProps = {
 };
 
 const states = {
-  achieved: { icon: AchievedIcon, name: 'Achieved' },
-  inprogress: { icon: InProgressIcon, name: 'In Progress' },
-  postponed: { icon: PostponedIcon, name: 'Postponed' },
+  achieved: { icon: AchievedIcon, name: 'achieved' },
+  inprogress: { icon: InProgressIcon, name: 'in progress' },
+  postponed: { icon: PostponedIcon, name: 'postponed' },
 };
 
 const GoalItem = ({ title, className, state, children, ...props }) => {
@@ -31,9 +31,9 @@ const GoalItem = ({ title, className, state, children, ...props }) => {
   const Icon = states[state].icon;
   return (
     <div className={classes} {...props}>
-      <div className="GoalItem__icon-container">
+      <div className={`GoalItem__icon-container GoalItem__icon-container--${state}`}>
         <Icon className="GoalItem__icon" />
-        <p className={`GoalItem__status GoalItem__status--${state}`}>{states[state].name}</p>
+        <p className="GoalItem__status">{states[state].name}</p>
       </div>
       <div className="GoalItem__content">
         <p className="GoalItem__title">{title}</p>

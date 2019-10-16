@@ -31,7 +31,7 @@ $indentation: 60px;
       padding-left: 10px;
       font-size: 16px;
       line-height: 26px;
-      color: $c_white;
+      color: $c_oslo-gray;
     }
   }
 
@@ -42,15 +42,23 @@ $indentation: 60px;
   }
 
   &__image-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: flex-end;
+    margin-bottom: 16px;
   }
 
   &__image {
     width: 100%;
-    padding: 0 80px 40px;
+    margin-bottom: 32px;
+  }
+
+  &__chip {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   @media #{$screen-sm} {
@@ -67,6 +75,10 @@ $indentation: 60px;
       margin-bottom: $indentation;
 
       #{$_r}__description {
+        margin-bottom: -$indentation;
+      }
+
+      #{$_r}__image-wrapper {
         margin-bottom: -$indentation;
       }
     }
@@ -104,15 +116,11 @@ $indentation: 60px;
 
     &__image-wrapper {
       align-items: stretch;
+      margin-bottom: 0;
 
       button {
         align-self: flex-end;
       }
-    }
-
-    &__image {
-      height: 500px;
-      padding: 0 0 0 32px;
     }
   }
 }

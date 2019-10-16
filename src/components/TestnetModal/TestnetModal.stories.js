@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import TestnetModal from './index';
-import AcropolisImg from '../../assets/svg/acropolis.svg';
+import AcropolisImg from '../../assets/svg/acropolis-building.svg';
 
 storiesOf('Section|TestnetModal', module)
   .addParameters({
@@ -18,10 +18,9 @@ storiesOf('Section|TestnetModal', module)
         isOpen={true}
       >
         <p>
-          <strong>Known for its great architecture, Acropolis'</strong> perhaps
-          most famous building is the Parthenon. It was built to celebrate their
-          victory over Persian invaders, and is today seen as a symbol for
-          democracy and western civilization.
+          <strong>Known for its great architecture, Acropolis'</strong> perhaps most famous building is the Parthenon.
+          It was built to celebrate their victory over Persian invaders, and is today seen as a symbol for democracy and
+          western civilization.
         </p>
       </TestnetModal>
     </div>
