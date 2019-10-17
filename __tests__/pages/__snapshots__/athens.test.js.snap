@@ -14,17 +14,13 @@ exports[`AthensPage page renders correctly 1`] = `
     animationStartValue={0}
     chip={
       <Chip
-        icon="icon-mock"
+        icon="icon-component-mock"
         onClick={[Function]}
       >
         What is this?
       </Chip>
     }
-    image={
-      Object {
-        "ReactComponent": "icon-mock",
-      }
-    }
+    image="icon-mock"
     indent={true}
     title="Athens Network"
   >
@@ -57,11 +53,7 @@ exports[`AthensPage page renders correctly 1`] = `
     <TestnetModal
       className=""
       closeModal={[Function]}
-      image={
-        Object {
-          "ReactComponent": "icon-mock",
-        }
-      }
+      image="icon-mock"
       isOpen={false}
       title="Owl of Athena"
     >
@@ -99,22 +91,22 @@ exports[`AthensPage page renders correctly 1`] = `
         items={
           Array [
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "title": "Participation Payout",
               "value": "$1576",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "validatorsCount",
               "title": "Active Validators",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "mediaFiles",
               "title": "Platform Content Files",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "blockHeight",
               "title": "Block Height",
             },
@@ -135,7 +127,7 @@ exports[`AthensPage page renders correctly 1`] = `
         <Pane
           className=""
           disabled={true}
-          image="icon-mock"
+          image="icon-component-mock"
           title="Full Specifications"
         >
           No specifications was published for Athens.
@@ -144,7 +136,7 @@ exports[`AthensPage page renders correctly 1`] = `
           className=""
           disabled={false}
           href="https://github.com/Joystream/joystream/tree/master/testnets/athens"
-          image="icon-mock"
+          image="icon-component-mock"
           target="_blank"
           title="Release Plan"
         >
@@ -241,7 +233,7 @@ exports[`AthensPage page renders correctly 1`] = `
             Array [
               Object {
                 "hasLabel": false,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "validatorsCount",
                 "title": "Validator",
                 "to": "/roles#validator",
@@ -249,7 +241,7 @@ exports[`AthensPage page renders correctly 1`] = `
               },
               Object {
                 "hasLabel": false,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "councilMembersCount",
                 "title": "Council Member",
                 "to": "/roles#council-member",
@@ -257,7 +249,7 @@ exports[`AthensPage page renders correctly 1`] = `
               },
               Object {
                 "hasLabel": true,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "storageProviders",
                 "title": "Storage Provider",
                 "to": "/roles#storage-provider",
@@ -289,7 +281,7 @@ exports[`AthensPage page renders correctly 1`] = `
         highlighted={false}
         to="/sparta"
       >
-        <icon-mock />
+        <icon-component-mock />
          Explore previous testnet
       </Link>
     </p>

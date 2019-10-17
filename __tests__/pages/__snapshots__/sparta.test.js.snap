@@ -14,17 +14,13 @@ exports[`SpartaPage page renders correctly 1`] = `
     animationStartValue={70}
     chip={
       <Chip
-        icon="icon-mock"
+        icon="icon-component-mock"
         onClick={[Function]}
       >
         What is this?
       </Chip>
     }
-    image={
-      Object {
-        "ReactComponent": "icon-mock",
-      }
-    }
+    image="icon-mock"
     indent={true}
     title="Sparta Network"
   >
@@ -36,10 +32,13 @@ exports[`SpartaPage page renders correctly 1`] = `
     <HeroCard
       content="
   ### FAILURE IDENTIFIED
-  On Friday the 29th of March, the Sparta network went down due to a [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) that we had not pulled down before release.
 
+  On Friday the 29th of March, the Sparta network went down due to a 
+  [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) 
+  that we had not pulled down before release. 
+  
   More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/).
-  "
+"
       counterTitle=""
       date={null}
       error={true}
@@ -48,11 +47,7 @@ exports[`SpartaPage page renders correctly 1`] = `
     <TestnetModal
       className=""
       closeModal={[Function]}
-      image={
-        Object {
-          "ReactComponent": "icon-mock",
-        }
-      }
+      image="icon-mock"
       isOpen={false}
       title="Helmet of Sparta"
     >
@@ -90,22 +85,22 @@ exports[`SpartaPage page renders correctly 1`] = `
         items={
           Array [
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "title": "Participation Payout",
               "value": "$1576",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "validatorsCount",
               "title": "Active Validators",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "membershipsMembers",
               "title": "Memberships",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "blockHeight",
               "title": "Block Height",
             },
@@ -177,7 +172,7 @@ exports[`SpartaPage page renders correctly 1`] = `
             Array [
               Object {
                 "hasLabel": true,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "validatorsCount",
                 "title": "Validator",
                 "to": "/roles#validator",
@@ -185,7 +180,7 @@ exports[`SpartaPage page renders correctly 1`] = `
               },
               Object {
                 "hasLabel": true,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "councilMembersCount",
                 "title": "Council Member",
                 "to": "/roles#council-member",
@@ -206,12 +201,11 @@ exports[`SpartaPage page renders correctly 1`] = `
       <strong>
         Sparta was a prominent city-state in Ancient Greece.
       </strong>
-       In addition to its military might, it was also unique both for its time and compared to its greek rivals due its defined social system and constitution.
+       
+      In addition to its military might, it was also unique both for its time and compared to its greek rivals due its defined social system and constitution.
       <br />
       <br />
       We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law, however draconian by modern standard.
-      <br />
-      <br />
     </p>
   </MapInfo>
 </BaseLayout>

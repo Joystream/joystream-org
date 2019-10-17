@@ -14,17 +14,13 @@ exports[`AcropolisPage page renders correctly 1`] = `
     animationStartValue={0}
     chip={
       <Chip
-        icon="icon-mock"
+        icon="icon-component-mock"
         onClick={[Function]}
       >
         What is this?
       </Chip>
     }
-    image={
-      Object {
-        "ReactComponent": "icon-mock",
-      }
-    }
+    image="icon-mock"
     indent={true}
     title="Acropolis Network"
   >
@@ -43,11 +39,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
     <TestnetModal
       className=""
       closeModal={[Function]}
-      image={
-        Object {
-          "ReactComponent": "icon-mock",
-        }
-      }
+      image="icon-mock"
       isOpen={false}
       title="The Acropolis of Athens"
     >
@@ -85,42 +77,42 @@ exports[`AcropolisPage page renders correctly 1`] = `
         items={
           Array [
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "title": "Participation Payout",
               "value": "$1576",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "validatorsCount",
               "title": "Active Validators",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "blockHeight",
               "title": "Block Height",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "councilStage",
               "title": "Council Election Stage",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "membershipsMembers",
               "title": "Memberships",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "forumPosts",
               "title": "Forum Posts",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "mediaFiles",
               "title": "Platform Content Files",
             },
             Object {
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "key": "rolesProviders",
               "title": "Active Storage Providers",
             },
@@ -142,7 +134,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
           className=""
           disabled={false}
           href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis/specification"
-          image="icon-mock"
+          image="icon-component-mock"
           target="_blank"
           title="Full Specifications"
         >
@@ -152,7 +144,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
           className=""
           disabled={false}
           href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis"
-          image="icon-mock"
+          image="icon-component-mock"
           target="_blank"
           title="Release Plan"
         >
@@ -243,21 +235,21 @@ exports[`AcropolisPage page renders correctly 1`] = `
             Array [
               Object {
                 "hasLabel": false,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "validatorsCount",
                 "title": "Validator",
                 "to": "/roles#validator",
               },
               Object {
                 "hasLabel": false,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "councilMembersCount",
                 "title": "Council Member",
                 "to": "/roles#council-member",
               },
               Object {
                 "hasLabel": true,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "storageProviders",
                 "title": "Storage Provider",
                 "to": "/roles#storage-provider",
@@ -288,7 +280,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
         highlighted={false}
         to="/athens"
       >
-        <icon-mock />
+        <icon-component-mock />
          Explore previous testnet
       </Link>
     </p>

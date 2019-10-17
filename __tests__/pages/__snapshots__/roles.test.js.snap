@@ -13,11 +13,7 @@ exports[`RolesPage page renders correctly 1`] = `
     animationEndValue={-40}
     animationStartValue={0}
     chip={null}
-    image={
-      Object {
-        "ReactComponent": "icon-mock",
-      }
-    }
+    image="icon-mock"
     indent={false}
     title="Discover various roles on the platform"
   >
@@ -40,7 +36,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "validator",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": "The Joystream platform state lives on a blockchain consensus system.
     This consensus system is a variant of classical BFT consensus combined
     with Proof-of-Stake to determine voting power. A validator is an actor
@@ -67,7 +63,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "council-member",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": "At the heart of the governance process on the platform is the proposal system,
         which allows anyone to submit some suggestion for changing the state or
         policy of the platform in some way. These proposals are processed and voted on by a council,
@@ -91,7 +87,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "storage-provider",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": "There are critical platform assets that do not live on the blockchain,
         such as images and content media. The integrity of these assets is secured by the chain,
         but a separate set of storage and distribution nodes enabled uploading and downloading of
@@ -115,7 +111,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "membership-screener",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": "A membership is an integrated representation of identifying information
         and associated activities of an actor on the platform. The direct way of
         establishing membership will be to simply pay a one time fee. However, since its
@@ -160,7 +156,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "membership-curator",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": <React.Fragment>
                 A membership is an integrated representation of identifying information and associated activities of an actor on the platform. It is possible to create memberships for free through the screeners, described 
                 <Link
@@ -207,7 +203,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "content-curator",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": "All of the media content published on the platform lives in an on chain content directory.
          There is a range of different content types, and each type has a schema for a rich
          description of its structure, function and policies. For the effective use of of content,
@@ -241,7 +237,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "content-creator",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": "As a video platform, one of the most important platform assets is the content published
         on the platform. Since video is such a flexible media type, which can encompass a wide
         range of content categories, it is the primary focus, but the intention is to support
@@ -259,7 +255,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "bandwidth-provider",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": "There are critical platform assets that do not live on the blockchain, such as images
       and content media. The integrity of these assets is secured by the chain, but a separate
       set of storage and distribution nodes enabled uploading and downloading of such data.
@@ -280,7 +276,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "discovery-provider",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": "All of the content on the platform is in a designated content directory, and effectively navigating
         this directory requires a full copy of this directory. Moreover, in order to do things like search and
         context based recommendations one needs to apply some sort of heuristic on top of this directory,
@@ -313,7 +309,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "live-streaming-provider",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": "The platform supports live video, allowing publisher to distribute content as it is created.
       The live streaming providers are responsible for directly, or indirectly from peer
       providers, taking a (transcoded) stream from the source publisher, and relaying it to end users.",
@@ -332,7 +328,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "builder",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": <React.Fragment>
                 The platform runtime, tools, infrastructure software and user facing applications are all meant to evolve over time. A diverse set of contributors are required to facilitate this, including
                 <br />
@@ -375,7 +371,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Object {
               "formAction": "",
               "id": "communication-moderator",
-              "image": "icon-mock",
+              "image": "icon-component-mock",
               "overview": "
           The platform will have multiple ways of facilitating easy and secure public, and private,
            communication and information sharing among members. In particular, there will be both
@@ -414,7 +410,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="validator"
-          image="icon-mock"
+          image="icon-component-mock"
           overview="The Joystream platform state lives on a blockchain consensus system.
     This consensus system is a variant of classical BFT consensus combined
     with Proof-of-Stake to determine voting power. A validator is an actor
@@ -455,7 +451,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="council-member"
-          image="icon-mock"
+          image="icon-component-mock"
           overview="At the heart of the governance process on the platform is the proposal system,
         which allows anyone to submit some suggestion for changing the state or
         policy of the platform in some way. These proposals are processed and voted on by a council,
@@ -493,7 +489,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="storage-provider"
-          image="icon-mock"
+          image="icon-component-mock"
           overview="There are critical platform assets that do not live on the blockchain,
         such as images and content media. The integrity of these assets is secured by the chain,
         but a separate set of storage and distribution nodes enabled uploading and downloading of
@@ -529,7 +525,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="membership-screener"
-          image="icon-mock"
+          image="icon-component-mock"
           overview="A membership is an integrated representation of identifying information
         and associated activities of an actor on the platform. The direct way of
         establishing membership will be to simply pay a one time fee. However, since its
@@ -588,7 +584,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="membership-curator"
-          image="icon-mock"
+          image="icon-component-mock"
           overview={
             <React.Fragment>
               A membership is an integrated representation of identifying information and associated activities of an actor on the platform. It is possible to create memberships for free through the screeners, described 
@@ -651,7 +647,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="content-curator"
-          image="icon-mock"
+          image="icon-component-mock"
           overview="All of the media content published on the platform lives in an on chain content directory.
          There is a range of different content types, and each type has a schema for a rich
          description of its structure, function and policies. For the effective use of of content,
@@ -699,7 +695,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="content-creator"
-          image="icon-mock"
+          image="icon-component-mock"
           overview="As a video platform, one of the most important platform assets is the content published
         on the platform. Since video is such a flexible media type, which can encompass a wide
         range of content categories, it is the primary focus, but the intention is to support
@@ -731,7 +727,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="bandwidth-provider"
-          image="icon-mock"
+          image="icon-component-mock"
           overview="There are critical platform assets that do not live on the blockchain, such as images
       and content media. The integrity of these assets is secured by the chain, but a separate
       set of storage and distribution nodes enabled uploading and downloading of such data.
@@ -766,7 +762,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="discovery-provider"
-          image="icon-mock"
+          image="icon-component-mock"
           overview="All of the content on the platform is in a designated content directory, and effectively navigating
         this directory requires a full copy of this directory. Moreover, in order to do things like search and
         context based recommendations one needs to apply some sort of heuristic on top of this directory,
@@ -813,7 +809,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="live-streaming-provider"
-          image="icon-mock"
+          image="icon-component-mock"
           overview="The platform supports live video, allowing publisher to distribute content as it is created.
       The live streaming providers are responsible for directly, or indirectly from peer
       providers, taking a (transcoded) stream from the source publisher, and relaying it to end users."
@@ -846,7 +842,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="builder"
-          image="icon-mock"
+          image="icon-component-mock"
           overview={
             <React.Fragment>
               The platform runtime, tools, infrastructure software and user facing applications are all meant to evolve over time. A diverse set of contributors are required to facilitate this, including
@@ -905,7 +901,7 @@ exports[`RolesPage page renders correctly 1`] = `
           className=""
           formAction=""
           id="communication-moderator"
-          image="icon-mock"
+          image="icon-component-mock"
           overview="
           The platform will have multiple ways of facilitating easy and secure public, and private,
            communication and information sharing among members. In particular, there will be both
