@@ -28,6 +28,16 @@ import { analytics, roles, goals } from '../../data/pages/sparta';
 
 import './style.scss';
 
+const heroMarkdownContent = `
+  ### FAILURE IDENTIFIED
+
+  On Friday the 29th of March, the Sparta network went down due to a 
+  [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) 
+  that we had not pulled down before release. 
+  
+  More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/).
+`;
+
 const SpartaPage = ({ content }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -45,19 +55,10 @@ const SpartaPage = ({ content }) => {
         chip={<Chip onClick={() => setModalOpen(true)}>What is this?</Chip>}
       >
         <p className="SpartaPage__hero-paragraph">
-          Explore available roles and pick the one that suits you the most. Influence platforms development earning
-          Monero in the process.
+          Explore available roles and pick the one that suits you the most.
+          Influence platforms development earning Monero in the process.
         </p>
-        <HeroCard
-          error /* eslint-disable */
-          content={`
-  ### FAILURE IDENTIFIED
-  On Friday the 29th of March, the Sparta network went down due to a [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) that we had not pulled down before release.
-
-  More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/).
-  `}
-          /* eslint-enable */
-        />
+        <HeroCard error content={heroMarkdownContent} />
 
         <TestnetModal
           title="Helmet of Sparta"
@@ -66,23 +67,30 @@ const SpartaPage = ({ content }) => {
           isOpen={isModalOpen}
         >
           <p>
-            <strong>The Spartan army helmet</strong> represents what Sparta is most known for today, their military
-            might. For it's time, it was also known for its advanced governance system.
+            <strong>The Spartan army helmet</strong> represents what Sparta is
+            most known for today, their military might. For it's time, it was
+            also known for its advanced governance system.
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper title="Network Statistics" subtitle="As they were at the end of the network.">
-          <Analytics content={mapStatusDataToAnalytics(content)} items={analytics} />
+        <TitleWrapper
+          title="Network Statistics"
+          subtitle="As they were at the end of the network."
+        >
+          <Analytics
+            content={mapStatusDataToAnalytics(content)}
+            items={analytics}
+          />
         </TitleWrapper>
 
         <TitleWrapper
           title="Testnet Goals"
           subtitle={
             <>
-              The goals below is a simplified and qualitative representation of the Key Results listed in our release
-              OKR.
+              The goals below is a simplified and qualitative representation of
+              the Key Results listed in our release OKR.
             </>
           }
         >
@@ -93,22 +101,25 @@ const SpartaPage = ({ content }) => {
       <LayoutWrapper dark>
         <TitleWrapper title="Roles available on the Sparta testnet">
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} />
+            <RoleList
+              roles={roles.active}
+              content={mapStatusDataToRoles(content)}
+            />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
       <MapInfo title="The city of Sparta" location="sparta">
         <p>
-          <strong>Sparta was a prominent city-state in Ancient Greece.</strong> In addition to its military might, it
-          was also unique both for its time and compared to its greek rivals due its defined social system and
-          constitution.
+          <strong>Sparta was a prominent city-state in Ancient Greece.</strong>{' '}
+          In addition to its military might, it was also unique both for its
+          time and compared to its greek rivals due its defined social system
+          and constitution.
           <br />
           <br />
-          We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law,
-          however draconian by modern standard.
-          <br />
-          <br />
+          We chose the name Sparta due to it's historical significance in the
+          path towards democracy and rule of law, however draconian by modern
+          standard.
         </p>
       </MapInfo>
     </BaseLayout>
