@@ -32,8 +32,7 @@ import { goalsData, launchDate } from '../../data/pages/rome';
 
 import './style.scss';
 
-const RomeNetworkPage = ({ content }) => {
-  console.log(content);
+const RomePage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
 
   return (
@@ -122,7 +121,7 @@ const RomeNetworkPage = ({ content }) => {
   );
 };
 
-RomeNetworkPage.propTypes = pagePropTypes;
+RomePage.propTypes = pagePropTypes;
 
-export { RomeNetworkPage as AcropolisPage };
-export default withApi(RomeNetworkPage, getApiPath('STATUS'));
+export { RomePage };
+export default withApi(RomePage, getApiPath('STATUS'));
