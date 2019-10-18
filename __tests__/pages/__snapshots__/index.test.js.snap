@@ -63,7 +63,7 @@ exports[`IndexPage page renders correctly 1`] = `
     <TestnetItem
       button={
         Object {
-          "label": "Explore Acropolis",
+          "label": "Explore acropolis",
           "to": "/acropolis",
         }
       }
@@ -156,20 +156,6 @@ exports[`IndexPage page renders correctly 1`] = `
         Participate and Earn Monero
       </Button>
     </Analytics>
-    <TestnetItem
-      button={
-        Object {
-          "label": "Explore Rome",
-          "to": "/rome",
-        }
-      }
-      className=""
-      date="2019/11/4 11:00"
-      image="icon-mock"
-      title="Rome Tesnet"
-    >
-      Rome is our fifth testnet, and we are introducing new roles for you to try out.
-    </TestnetItem>
   </LayoutWrapper>
   <LayoutWrapper
     className=""
