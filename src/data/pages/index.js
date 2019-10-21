@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactComponent as validatorsImage } from '../../assets/svg/active-validators.svg';
 import { ReactComponent as storageImage } from '../../assets/svg/platform-content-files.svg';
 import { ReactComponent as memberImage } from '../../assets/svg/council-member.svg';
@@ -11,7 +12,17 @@ import { ReactComponent as liveStreamingProviderImage } from '../../assets/svg/l
 import { ReactComponent as builderImage } from '../../assets/svg/builder.svg';
 import { ReactComponent as communicationModeratorImage } from '../../assets/svg/communication-moderator.svg';
 
-const roles = {
+export const sharedData = {
+  defaultEmail: 'hello@jsgenesis.com',
+  rolesDescription: (
+    <>
+      Explore available roles and pick the one that suits you the best. Influence the platform's development earning
+      Monero in the process.
+    </>
+  ),
+};
+
+export const roles = {
   active: [
     {
       image: validatorsImage,
@@ -79,5 +90,3 @@ const roles = {
     },
   ],
 };
-
-export { roles };

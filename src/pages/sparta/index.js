@@ -25,8 +25,19 @@ import spartaImage from '../../assets/svg/sparta.svg';
 import SpartaHelmetImg from '../../assets/svg/sparta-helmet.svg';
 
 import { analytics, roles, goals } from '../../data/pages/sparta';
+import { sharedData } from '../../data/pages';
 
 import './style.scss';
+
+const heroMarkdownContent = `
+  ### FAILURE IDENTIFIED
+
+  On Friday the 29th of March, the Sparta network went down due to a 
+  [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) 
+  that we had not pulled down before release. 
+  
+  More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/).
+`;
 
 const SpartaPage = ({ content }) => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -44,20 +55,8 @@ const SpartaPage = ({ content }) => {
         indent
         chip={<Chip onClick={() => setModalOpen(true)}>What is this?</Chip>}
       >
-        <p className="SpartaPage__hero-paragraph">
-          Explore available roles and pick the one that suits you the most. Influence platforms development earning
-          Monero in the process.
-        </p>
-        <HeroCard
-          error /* eslint-disable */
-          content={`
-  ### FAILURE IDENTIFIED
-  On Friday the 29th of March, the Sparta network went down due to a [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) that we had not pulled down before release.
-
-  More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/).
-  `}
-          /* eslint-enable */
-        />
+        <p className="SpartaPage__hero-paragraph">{sharedData.rolesDescription}</p>
+        <HeroCard error content={heroMarkdownContent} />
 
         <TestnetModal
           title="Helmet of Sparta"
@@ -107,8 +106,6 @@ const SpartaPage = ({ content }) => {
           <br />
           We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law,
           however draconian by modern standard.
-          <br />
-          <br />
         </p>
       </MapInfo>
     </BaseLayout>

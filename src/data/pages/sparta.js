@@ -45,7 +45,7 @@ const goals = [
     text: (
       <>
         As a "user governed media platform", allowing users to elect{' '}
-        <Link to="/roles#council-member">Council Members</Link> to represent their interest in day to day operations was
+        <Link to="/roles#council-member">Council Members</Link> to represent their interest in day-to-day operations was
         a major goal for us.
       </>
     ),

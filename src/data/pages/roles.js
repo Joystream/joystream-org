@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '../../components/Link';
+import { sharedData } from '../../data/pages';
 import { ReactComponent as ValidatorImage } from '../../assets/svg/active-validators.svg';
 import { ReactComponent as CouncilMemberImage } from '../../assets/svg/council-member.svg';
 import { ReactComponent as StorageProviderImage } from '../../assets/svg/platform-content-files.svg';
@@ -38,9 +39,8 @@ const rolesData = {
         'Able to securely store keys hot keys',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      tutorialLink:
-        'https://github.com/Joystream/helpdesk/tree/master/roles/validators',
-      questionLink: 'mailto:hello@jsgenesis.com',
+      tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/validators',
+      questionLink: `mailto:${sharedData.defaultEmail}`,
       formAction: '',
     },
     {
@@ -55,7 +55,7 @@ const rolesData = {
       responsibilites: [
         'Discuss the meaning and merits of incoming proposals, covering a broad range of topics',
         'Vote on proposals',
-        'Represent the community members and your constituency to make day to day operations decisions',
+        'Represent the community members and your constituency to make day-to-day operations decisions',
       ],
       requirements: [
         `Proficient with basic data analysis and sufficient reputation and standing within
@@ -63,9 +63,8 @@ const rolesData = {
         'A deep understanding of the Joystream platform structure, function and resource allocation',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      tutorialLink:
-        'https://github.com/Joystream/helpdesk/tree/master/roles/council-members',
-      questionLink: 'mailto:hello@jsgenesis.com',
+      tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/council-members',
+      questionLink: `mailto:${sharedData.defaultEmail}`,
       formAction: '',
     },
     {
@@ -77,7 +76,7 @@ const rolesData = {
         but a separate set of storage and distribution nodes enabled uploading and downloading of
         such data. The storage provider is involved this activity, specifically storing large quantities of data.`,
       responsibilites: [
-        `Run an and maintain storage nodes that store very large quantities of static data,
+        `Run and maintain storage nodes that store very large quantities of static data,
         synchronize with other storage nodes, shares data with distributors, and accepts
         inbound uploads from end users`,
       ],
@@ -86,9 +85,8 @@ const rolesData = {
         'Access to highly performant and reliable IT infrastructure with high storage capacity',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      tutorialLink:
-        'https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers',
-      questionLink: 'mailto:hello@jsgenesis.com',
+      tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers',
+      questionLink: `mailto:${sharedData.defaultEmail}`,
       formAction: '',
     },
   ],
@@ -108,10 +106,9 @@ const rolesData = {
       responsibilites: [
         'Run and maintain screening nodes that are always available and performant',
         <>
-          Collaborate with{' '}
-          <Link href="#membership-curator">Membership Curators</Link> and
-          <Link href="#builder"> Builders</Link> to improve screening mechanisms
-          by discussing screening techniques, sharing traffic information
+          Collaborate with <Link href="#membership-curator">Membership Curators</Link> and
+          <Link href="#builder"> Builders</Link> to improve screening mechanisms by discussing screening techniques,
+          sharing traffic information
         </>,
         'Be responsive and reactive to changing circumstances',
       ],
@@ -130,13 +127,11 @@ const rolesData = {
       title: 'Membership Curator',
       overview: (
         <>
-          A membership is an integrated representation of identifying
-          information and associated activities of an actor on the platform. It
-          is possible to create memberships for free through the screeners,
-          described <Link href="#membership-screener"> above</Link>. Since this
-          invariably be an imperfect process, there must be some means by which
-          bad conduct and fake accounts can be disabled or removed. This is the
-          task of the membership curators.
+          A membership is an integrated representation of identifying information and associated activities of an actor
+          on the platform. It is possible to create memberships for free through the screeners, described{' '}
+          <Link href="#membership-screener"> above</Link>. Since this invariably be an imperfect process, there must be
+          some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the
+          membership curators.
         </>
       ),
       responsibilites: [
@@ -144,9 +139,8 @@ const rolesData = {
         `Propose changes to status of memberships which are identified,
         and participate in any dispute process which may follow`,
         <>
-          Collaborate with <Link href="#membership-screener"> Screeners</Link>{' '}
-          and <Link href="#builder"> Builders</Link> to improve tools for
-          identifying such members
+          Collaborate with <Link href="#membership-screener"> Screeners</Link> and{' '}
+          <Link href="#builder"> Builders</Link> to improve tools for identifying such members
         </>,
       ],
       requirements: [
@@ -173,9 +167,8 @@ const rolesData = {
         'Adjudicate possible dispute processes resulting from reports from users',
         'Update information on content to be accurate',
         <>
-          Collaborate with <Link href="#builder"> Builders</Link> to improve
-          both tools, and user facing experiences, to improve the integrity of
-          the content directory
+          Collaborate with <Link href="#builder"> Builders</Link> to improve both tools, and user facing experiences, to
+          improve the integrity of the content directory
         </>,
       ],
       requirements: [
@@ -210,8 +203,8 @@ const rolesData = {
       The bandwidth provider is involved this activity,
         specifically distributing static data to end users at scale.`,
       responsibilites: [
-        'Run and maintain distributor nodes that delivers large volumes of upstream data to a ' +
-          'large number of simultaneous end users',
+        'Run and maintain distributor nodes that deliver large volumes of upstream data to a large number ' +
+          'of simultaneous end users',
       ],
       requirements: [
         'Experienced with how to setup and maintain high performance IT infrastructure',
@@ -236,9 +229,8 @@ const rolesData = {
         `Run and maintain discovery nodes that respond to discovery related queries by staying in
         sync with the content directory, and applying local ranking heuristics.`,
         <>
-          Collaborate with <Link href="#builder">Builders</Link> to improve both
-          tools, and user facing experiences, to improve the discovery
-          experience
+          Collaborate with <Link href="#builder">Builders</Link> to improve both tools, and user facing experiences, to
+          improve the discovery experience
         </>,
       ],
       requirements: [
@@ -257,8 +249,8 @@ const rolesData = {
       The live streaming providers are responsible for directly, or indirectly from peer
       providers, taking a (transcoded) stream from the source publisher, and relaying it to end users.`,
       responsibilites: [
-        `Run and maintain live streaming nodes that delivers large volumes of upstream data to a large number of
-         simultaneous end users`,
+        'Run and maintain live streaming nodes that deliver large volumes of upstream data to a large number ' +
+          'of simultaneous end users',
       ],
       requirements: [
         'Experienced with how to setup and maintain high performance IT infrastructure',
@@ -274,32 +266,26 @@ const rolesData = {
       title: 'Builder',
       overview: (
         <>
-          The platform runtime, tools, infrastructure software and user facing
-          applications are all meant to evolve over time. A diverse set of
-          contributors are required to facilitate this, including
+          The platform runtime, tools, infrastructure software and user facing applications are all meant to evolve over
+          time. A diverse set of contributors are required to facilitate this, including
           <br />
           <br />
           <ul className="RoleOverview__dashList">
             <li>
-              <strong>Developers:</strong> Software developers, Data scientists,
-              DevOps and QA
+              <strong>Developers:</strong> Software developers, Data scientists, DevOps and QA
             </li>
             <li>
-              <strong>Designers:</strong> Web, Mobile, UX/UI, Branding and
-              Visual Design
+              <strong>Designers:</strong> Web, Mobile, UX/UI, Branding and Visual Design
             </li>
             <li>
-              <strong>Product Managers:</strong> Digital Product Managers,
-              Product Owners and Analysts
+              <strong>Product Managers:</strong> Digital Product Managers, Product Owners and Analysts
             </li>
           </ul>
           <br />
-          All of these contributors are collectively referred to as Builders.
-          Anyone can contribute in the same mode as any of these possible
-          contributor functions, as all the platform source assets are open
-          source and developed in the open. Being a Builder means that one has
-          some scope of responsibility in ongoing efforts, and that one has some
-          predefined reward scheme associated with this responsibility.
+          All of these contributors are collectively referred to as Builders. Anyone can contribute in the same mode as
+          any of these possible contributor functions, as all the platform source assets are open source and developed
+          in the open. Being a Builder means that one has some scope of responsibility in ongoing efforts, and that one
+          has some predefined reward scheme associated with this responsibility.
         </>
       ),
       responsibilites: [

@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
 
 import RoleOverview from './';
+import { sharedData } from '../../data/pages';
 
 import { ReactComponent as ValidatorImage } from '../../assets/svg/active-validators.svg';
 
@@ -29,7 +30,7 @@ const props = {
     'Hold sufficient amount of the native platform token to put at stake',
   ],
   tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/validators',
-  questionLink: 'mailto:hello@jsgenesis.com',
+  questionLink: `mailto:${sharedData.defaultEmail}`,
   formAction: '',
 };
 

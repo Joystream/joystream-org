@@ -4,6 +4,7 @@ import { bool, func } from 'prop-types';
 import Link from '../../Link';
 
 import { ReactComponent as CloseIcon } from '../../../assets/svg/close.svg';
+import { sharedData } from '../../../data/pages';
 
 import './style.scss';
 
@@ -35,12 +36,13 @@ const FormResponse = ({ error, onClose }) => {
         </p>
 
         <p className="FormResponse__text">
-          If you want to interact with us, or other people interested in this role, go to Telegram/RocketChat.
+          If you want to interact with us, or other people interested in this role, go to Telegram.
         </p>
 
         <p className="FormResponse__text">
           <strong>
-            For questions about this list, contact <Link href="mailto:hello@jsgenesis.com">hello@jsgenesis.com</Link>
+            For questions about this list, contact{' '}
+            <Link href={`mailto:${sharedData.defaultEmail}`}>{sharedData.defaultEmail}</Link>
           </strong>
         </p>
 

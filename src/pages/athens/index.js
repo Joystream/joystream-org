@@ -29,6 +29,7 @@ import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AthensOwlImg from '../../assets/svg/athens-owl.svg';
 
 import { analytics, roles, goals } from '../../data/pages/athens';
+import { sharedData } from '../../data/pages';
 
 import './style.scss';
 
@@ -37,7 +38,7 @@ const AthensPage = ({ content }) => {
 
   return (
     <BaseLayout>
-      <SiteMetadata title="Joystream: A user governed video platform" description="Explore the live Athens testnet" />
+      <SiteMetadata title="Joystream: A user governed video platform" description="Explore Athens testnet" />
 
       <Hero
         image={athensImage}
@@ -46,10 +47,7 @@ const AthensPage = ({ content }) => {
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
         animationStartValue={0}
       >
-        <p className="AthensPage__hero-paragraph">
-          Explore available roles and pick the one that suits you the most. Influence platforms development earning
-          Monero in the process.
-        </p>
+        <p className="AthensPage__hero-paragraph">{sharedData.rolesDescription}</p>
         <HeroCard
           info
           date="2019/06/24 17:50"

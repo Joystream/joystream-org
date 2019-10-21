@@ -1,11 +1,7 @@
-import React from 'react';
-import { shallow, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-
+import React from 'react';
 import PrivacyPolicyPage from '../../src/pages/privacy-policy';
-
-configure({ adapter: new Adapter() });
 
 describe('PrivacyPolicyPage page', () => {
   it('renders correctly', () => {

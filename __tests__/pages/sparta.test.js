@@ -1,13 +1,8 @@
-import React from 'react';
-import { shallow, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-
+import React from 'react';
 import { SpartaPage } from '../../src/pages/sparta';
-
 import testContent from '../../__mocks__/data/testContent';
-
-configure({ adapter: new Adapter() });
 
 describe('SpartaPage page', () => {
   it('renders correctly', () => {
