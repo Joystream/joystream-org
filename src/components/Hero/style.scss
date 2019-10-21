@@ -9,6 +9,18 @@ $indentation: 60px;
   padding: 40px 10px;
   background-color: $c_black;
 
+  &--blue {
+    background-color: $c_blue-ribbon;
+
+    #{$_r}__description p {
+      color: $c_white;
+    }
+  }
+
+  &--no-overflow {
+    overflow: hidden;
+  }
+
   &__container {
     @extend %container;
 

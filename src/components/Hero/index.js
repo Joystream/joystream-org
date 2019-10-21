@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { node, string, bool, number } from 'prop-types';
+import { node, string, bool, number, oneOf } from 'prop-types';
 import Plx from 'react-plx';
 
 import './style.scss';
@@ -13,6 +13,8 @@ const propTypes = {
   chip: node,
   animationStartValue: number,
   animationEndValue: number,
+  theme: oneOf(['blue', 'black']),
+  noOverflow: bool,
 };
 
 const defaultProps = {
@@ -22,9 +24,11 @@ const defaultProps = {
   chip: null,
   animationStartValue: 70,
   animationEndValue: -40,
+  theme: 'black',
+  noOverflow: false,
 };
 
-const Hero = ({ title, children, image, indent, chip, animationStartValue, animationEndValue }) => {
+const Hero = ({ title, children, image, indent, chip, animationStartValue, animationEndValue, theme, noOverflow }) => {
   const parallaxData = [
     {
       start: 0,
@@ -40,7 +44,7 @@ const Hero = ({ title, children, image, indent, chip, animationStartValue, anima
   ];
 
   return (
-    <section className={cn('Hero', { 'Hero--indented': indent })}>
+    <section className={cn('Hero', `Hero--${theme}`, { 'Hero--indented': indent, 'Hero--no-overflow': noOverflow })}>
       <div className="Hero__container">
         <div className="Hero__content">
           <h1 className="Hero__title">{title}</h1>

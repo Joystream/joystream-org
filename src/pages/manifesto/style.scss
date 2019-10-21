@@ -1,0 +1,22 @@
+@import '../../styles/main.scss';
+
+.ManifestoPage {
+  .Hero {
+    background: red;
+  }
+  // &__hero-paragraph {
+  //   padding-bottom: 60px;
+  // }
+}
+
+// @media #{$screen-sm} {
+//   .RoleOverview__Wrapper {
+//     padding: 140px 30px 0;
+//   }
+// }
+
+// @media #{$screen-md} {
+//   .RoleOverview__Wrapper {
+//     padding: 120px 0 0 66px;
+//   }
+// }

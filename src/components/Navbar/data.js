@@ -1,6 +1,6 @@
 const links = [
   { href: 'https://blog.joystream.org/', label: 'Blog' },
-  { href: 'https://blog.joystream.org/manifesto/', label: 'Manifesto' },
+  { to: '/manifesto', label: 'Manifesto' },
   {
     href: 'https://github.com/Joystream/whitepaper/blob/master/paper.pdf',
     label: 'Whitepaper',

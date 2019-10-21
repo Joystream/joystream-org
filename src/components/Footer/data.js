@@ -5,7 +5,7 @@ import { ReactComponent as TelegramIcon } from '../../assets/svg/telegram.svg';
 const links = [
   { href: 'https://www.jsgenesis.com/#openings', label: 'We are hiring!' },
   { href: 'https://blog.joystream.org/', label: 'Blog' },
-  { href: 'https://blog.joystream.org/manifesto/', label: 'Manifesto' },
+  { to: '/manifesto', label: 'Manifesto' },
   { href: 'https://github.com/Joystream/joystream', label: 'Repository' },
 ];
 

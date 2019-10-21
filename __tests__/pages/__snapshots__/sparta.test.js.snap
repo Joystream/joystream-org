@@ -22,6 +22,8 @@ exports[`SpartaPage page renders correctly 1`] = `
     }
     image="icon-mock"
     indent={true}
+    noOverflow={false}
+    theme="black"
     title="Sparta Network"
   >
     <p
