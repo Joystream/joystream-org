@@ -16,7 +16,7 @@
     @extend %container;
 
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     padding-right: 0;
     padding-left: 32px;
@@ -59,7 +59,13 @@
     }
 
     &--button {
+      color: $c_white;
       background-color: $c_blue-ribbon;
+      backface-visibility: hidden;
+
+      &:hover {
+        background-color: $c_han_purple;
+      }
     }
   }
 
@@ -83,7 +89,7 @@
     }
   }
 
-  @media #{$screen-md} {
+  @media #{$screen-lg} {
     &__container {
       padding: 0 32px;
     }
@@ -105,6 +111,7 @@
       }
 
       &--button {
+        height: 100%;
         padding: 34px 40px;
       }
     }

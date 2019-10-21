@@ -1,0 +1,79 @@
+@import '../../styles/_main';
+
+.ImageSection {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 10px;
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: $c_blue-ribbon;
+    text-align: center;
+  }
+
+  &__content {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__image-container {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  blockquote {
+    margin: 40px 0;
+    padding-left: 40px;
+    border-left: 2px solid $c_blue-ribbon;
+  }
+
+  @media #{$screen-md} {
+    margin: 150px auto;
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 50px;
+    }
+
+    &__image {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &__text {
+      flex: 0 0 50%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    &__content {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__image-container {
+      position: relative;
+      flex: 0 0 calc(50% - 60px);
+      flex-shrink: 0;
+      max-width: 380px;
+      margin: 0 60px 0 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    blockquote {
+      margin: 40px 0;
+      padding-left: 40px;
+      font-size: .9em;
+      line-height: 1.5;
+      border-left: 2px solid $c_blue-ribbon;
+    }
+  }
+}

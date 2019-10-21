@@ -12,9 +12,6 @@
 
       @media #{$screen-only-sm} {
         $smCols: 1;
-        @if $i - 1 > 0 {
-          $smCols: $i - 1;
-        }
 
         /* stylelint-disable-next-line */
         & > * {
@@ -28,6 +25,9 @@
 
         & > *:nth-child(#{$smCols}n) {
           margin-right: 0;
+        }
+        @if $i - 1 > 0 {
+          $smCols: $i - 1;
         }
       }
 
