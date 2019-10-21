@@ -11,6 +11,7 @@ import SiteMetadata from '../../components/SiteMetadata';
 
 import rolesImage from '../../assets/svg/roles-hero.svg';
 
+import { sharedData } from '../../data/pages';
 import { rolesData } from '../../data/pages/roles';
 
 import './style.scss';
@@ -38,26 +39,15 @@ const RolesPage = () => {
         description="Read more about current and future roles on the Joystream Platform."
       />
 
-      <Hero
-        image={rolesImage}
-        title="Discover various roles on the platform"
-        animationStartValue={0}
-      >
-        <p className="RolesPage__hero-paragraph">
-          Explore available roles and pick the one that suits you the most.
-          Influence platforms development earning Monero in the process.
-        </p>
+      <Hero image={rolesImage} title="Discover various roles on the platform" animationStartValue={0}>
+        <p className="RolesPage__hero-paragraph">{sharedData.rolesDescription}</p>
       </Hero>
 
       <LayoutWrapper gradient>
-        <Sidebar
-          onElementChange={scrollToElement}
-          currentElement={elementInViewport}
-          data={rolesData}
-        />
+        <Sidebar onElementChange={scrollToElement} currentElement={elementInViewport} data={rolesData} />
         <div className="RoleOverview__Wrapper">
-          {Object.keys(rolesData).map(key =>
-            rolesData[key].map(role => (
+          {Object.keys(rolesData).map(key => {
+            return rolesData[key].map(role => (
               <InView
                 as="div"
                 threshold={0.2}
@@ -70,7 +60,8 @@ const RolesPage = () => {
               >
                 <RoleOverview {...role} type={key} ref={elementsRef[role.id]} />
               </InView>
-            )))}
+            ));
+          })}
         </div>
       </LayoutWrapper>
     </BaseLayout>

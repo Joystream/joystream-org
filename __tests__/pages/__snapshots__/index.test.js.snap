@@ -3,7 +3,7 @@
 exports[`IndexPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Earn monero to participate on our testnets!"
+    description="Earn monero for participating on our testnets!"
     image="test-file-stub"
     lang="en"
     meta={Array []}
@@ -20,7 +20,9 @@ exports[`IndexPage page renders correctly 1`] = `
     <p
       className="IndexPage__hero-paragraph"
     >
-      Earn Monero by participating in the current Athens testnet
+      Earn Monero by participating in the current 
+      Acropolis
+       testnet
     </p>
     <div
       className="IndexPage__hero-group"
@@ -63,14 +65,14 @@ exports[`IndexPage page renders correctly 1`] = `
     <TestnetItem
       button={
         Object {
-          "label": "Explore acropolis",
+          "label": "Explore Acropolis",
           "to": "/acropolis",
         }
       }
       className=""
       date={null}
       image="icon-mock"
-      title="Acropolis Tesnet"
+      title="Acropolis Testnet"
     >
       Acropolis is our fourth testnet, with much improved
        
@@ -144,7 +146,7 @@ exports[`IndexPage page renders correctly 1`] = `
       <Button
         className=""
         disabled={false}
-        href="https://blog.joystream.org/athens-incentives/"
+        href="https://blog.joystream.org/acropolis-incentives/"
         large={false}
         light={false}
         onClick={null}

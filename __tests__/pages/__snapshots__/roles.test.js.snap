@@ -20,7 +20,7 @@ exports[`RolesPage page renders correctly 1`] = `
     <p
       className="RolesPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you the most. Influence platforms development earning Monero in the process.
+      Explore available roles and pick the one that suits you the best. Influence the platform's development earning Monero in the process.
     </p>
   </Hero>
   <LayoutWrapper
@@ -79,7 +79,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "responsibilites": Array [
                 "Discuss the meaning and merits of incoming proposals, covering a broad range of topics",
                 "Vote on proposals",
-                "Represent the community members and your constituency to make day to day operations decisions",
+                "Represent the community members and your constituency to make day-to-day operations decisions",
               ],
               "title": "Council Member",
               "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/council-members",
@@ -99,7 +99,7 @@ exports[`RolesPage page renders correctly 1`] = `
                 "Hold sufficient amount of the native platform token to put at stake",
               ],
               "responsibilites": Array [
-                "Run an and maintain storage nodes that store very large quantities of static data,
+                "Run and maintain storage nodes that store very large quantities of static data,
         synchronize with other storage nodes, shares data with distributors, and accepts
         inbound uploads from end users",
               ],
@@ -130,8 +130,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "responsibilites": Array [
                 "Run and maintain screening nodes that are always available and performant",
                 <React.Fragment>
-                  Collaborate with
-                   
+                  Collaborate with 
                   <Link
                     className=""
                     highlighted={false}
@@ -158,7 +157,8 @@ exports[`RolesPage page renders correctly 1`] = `
               "id": "membership-curator",
               "image": "icon-component-mock",
               "overview": <React.Fragment>
-                A membership is an integrated representation of identifying information and associated activities of an actor on the platform. It is possible to create memberships for free through the screeners, described 
+                A membership is an integrated representation of identifying information and associated activities of an actor on the platform. It is possible to create memberships for free through the screeners, described
+                 
                 <Link
                   className=""
                   highlighted={false}
@@ -186,8 +186,8 @@ exports[`RolesPage page renders correctly 1`] = `
                   >
                      Screeners
                   </Link>
+                   and
                    
-                  and 
                   <Link
                     className=""
                     highlighted={false}
@@ -269,7 +269,7 @@ exports[`RolesPage page renders correctly 1`] = `
                 "Hold sufficient amount of the native platform token to put at stake",
               ],
               "responsibilites": Array [
-                "Run and maintain distributor nodes that delivers large volumes of upstream data to a large number of simultaneous end users",
+                "Run and maintain distributor nodes that deliver large volumes of upstream data to a large number of simultaneous end users",
               ],
               "title": "Bandwidth Provider",
             },
@@ -320,8 +320,7 @@ exports[`RolesPage page renders correctly 1`] = `
                 "Hold sufficient amount of the native platform token to put at stake",
               ],
               "responsibilites": Array [
-                "Run and maintain live streaming nodes that delivers large volumes of upstream data to a large number of
-         simultaneous end users",
+                "Run and maintain live streaming nodes that deliver large volumes of upstream data to a large number of simultaneous end users",
               ],
               "title": "Live Streaming Provider",
             },
@@ -470,7 +469,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Array [
               "Discuss the meaning and merits of incoming proposals, covering a broad range of topics",
               "Vote on proposals",
-              "Represent the community members and your constituency to make day to day operations decisions",
+              "Represent the community members and your constituency to make day-to-day operations decisions",
             ]
           }
           title="Council Member"
@@ -504,7 +503,7 @@ exports[`RolesPage page renders correctly 1`] = `
           }
           responsibilites={
             Array [
-              "Run an and maintain storage nodes that store very large quantities of static data,
+              "Run and maintain storage nodes that store very large quantities of static data,
         synchronize with other storage nodes, shares data with distributors, and accepts
         inbound uploads from end users",
             ]
@@ -547,8 +546,7 @@ exports[`RolesPage page renders correctly 1`] = `
             Array [
               "Run and maintain screening nodes that are always available and performant",
               <React.Fragment>
-                Collaborate with
-                 
+                Collaborate with 
                 <Link
                   className=""
                   highlighted={false}
@@ -587,7 +585,8 @@ exports[`RolesPage page renders correctly 1`] = `
           image="icon-component-mock"
           overview={
             <React.Fragment>
-              A membership is an integrated representation of identifying information and associated activities of an actor on the platform. It is possible to create memberships for free through the screeners, described 
+              A membership is an integrated representation of identifying information and associated activities of an actor on the platform. It is possible to create memberships for free through the screeners, described
+               
               <Link
                 className=""
                 highlighted={false}
@@ -619,8 +618,8 @@ exports[`RolesPage page renders correctly 1`] = `
                 >
                    Screeners
                 </Link>
+                 and
                  
-                and 
                 <Link
                   className=""
                   highlighted={false}
@@ -744,7 +743,7 @@ exports[`RolesPage page renders correctly 1`] = `
           }
           responsibilites={
             Array [
-              "Run and maintain distributor nodes that delivers large volumes of upstream data to a large number of simultaneous end users",
+              "Run and maintain distributor nodes that deliver large volumes of upstream data to a large number of simultaneous end users",
             ]
           }
           title="Bandwidth Provider"
@@ -823,8 +822,7 @@ exports[`RolesPage page renders correctly 1`] = `
           }
           responsibilites={
             Array [
-              "Run and maintain live streaming nodes that delivers large volumes of upstream data to a large number of
-         simultaneous end users",
+              "Run and maintain live streaming nodes that deliver large volumes of upstream data to a large number of simultaneous end users",
             ]
           }
           title="Live Streaming Provider"

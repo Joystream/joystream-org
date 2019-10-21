@@ -3,7 +3,7 @@
 exports[`AcropolisPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Explore the upcoming Acropolis Testnet"
+    description="Explore the Acropolis Testnet"
     image="test-file-stub"
     lang="en"
     meta={Array []}
@@ -27,7 +27,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
     <p
       className="AcropolisPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you the most. Influence platforms development earning Monero in the process.
+      Explore available roles and pick the one that suits you the best. Influence the platform's development earning Monero in the process.
     </p>
     <HeroCard
       content={null}

@@ -29,16 +29,23 @@ import { roles } from '../data/pages';
 
 import './style.scss';
 
+const activeTestnet = {
+  name: 'Acropolis',
+  incentivesLink: 'https://blog.joystream.org/acropolis-incentives/',
+};
+
 const IndexPage = ({ content }) => (
   <BaseLayout>
     <SiteMetadata
       title="Joystream: A user governed video platform"
-      description="Earn monero to participate on our testnets!"
+      description="Earn monero for participating on our testnets!"
     />
     <Hero image={platformImage} title="A user governed video platform" animationStartValue={0}>
-      <p className="IndexPage__hero-paragraph">Earn Monero by participating in the current Athens testnet</p>
+      <p className="IndexPage__hero-paragraph">
+        Earn Monero by participating in the current {activeTestnet.name} testnet
+      </p>
       <div className="IndexPage__hero-group">
-        <Button secondary className="IndexPage__hero-button" href="https://blog.joystream.org/acropolis-incentives/">
+        <Button secondary className="IndexPage__hero-button" href={activeTestnet.incentivesLink}>
           Earn Monero
         </Button>
         <Button secondary reversed className="IndexPage__hero-button" href="https://testnet.joystream.org/">
@@ -49,7 +56,7 @@ const IndexPage = ({ content }) => (
 
     <LayoutWrapper>
       <TestnetItem
-        title="Acropolis Tesnet"
+        title="Acropolis Testnet"
         image={AcropolisImage}
         children={
           <>
@@ -58,13 +65,13 @@ const IndexPage = ({ content }) => (
           </>
         }
         button={{
-          label: 'Explore acropolis',
+          label: 'Explore Acropolis',
           to: '/acropolis',
         }}
       />
 
       <Analytics content={mapStatusDataToAnalytics(content)}>
-        <Button secondary href="https://blog.joystream.org/athens-incentives/">
+        <Button secondary href={activeTestnet.incentivesLink}>
           Participate and Earn Monero
         </Button>
       </Analytics>

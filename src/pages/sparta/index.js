@@ -25,6 +25,7 @@ import spartaImage from '../../assets/svg/sparta.svg';
 import SpartaHelmetImg from '../../assets/svg/sparta-helmet.svg';
 
 import { analytics, roles, goals } from '../../data/pages/sparta';
+import { sharedData } from '../../data/pages';
 
 import './style.scss';
 
@@ -54,10 +55,7 @@ const SpartaPage = ({ content }) => {
         indent
         chip={<Chip onClick={() => setModalOpen(true)}>What is this?</Chip>}
       >
-        <p className="SpartaPage__hero-paragraph">
-          Explore available roles and pick the one that suits you the most.
-          Influence platforms development earning Monero in the process.
-        </p>
+        <p className="SpartaPage__hero-paragraph">{sharedData.rolesDescription}</p>
         <HeroCard error content={heroMarkdownContent} />
 
         <TestnetModal
@@ -67,30 +65,23 @@ const SpartaPage = ({ content }) => {
           isOpen={isModalOpen}
         >
           <p>
-            <strong>The Spartan army helmet</strong> represents what Sparta is
-            most known for today, their military might. For it's time, it was
-            also known for its advanced governance system.
+            <strong>The Spartan army helmet</strong> represents what Sparta is most known for today, their military
+            might. For it's time, it was also known for its advanced governance system.
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper
-          title="Network Statistics"
-          subtitle="As they were at the end of the network."
-        >
-          <Analytics
-            content={mapStatusDataToAnalytics(content)}
-            items={analytics}
-          />
+        <TitleWrapper title="Network Statistics" subtitle="As they were at the end of the network.">
+          <Analytics content={mapStatusDataToAnalytics(content)} items={analytics} />
         </TitleWrapper>
 
         <TitleWrapper
           title="Testnet Goals"
           subtitle={
             <>
-              The goals below is a simplified and qualitative representation of
-              the Key Results listed in our release OKR.
+              The goals below is a simplified and qualitative representation of the Key Results listed in our release
+              OKR.
             </>
           }
         >
@@ -101,25 +92,20 @@ const SpartaPage = ({ content }) => {
       <LayoutWrapper dark>
         <TitleWrapper title="Roles available on the Sparta testnet">
           <ColumnsLayout>
-            <RoleList
-              roles={roles.active}
-              content={mapStatusDataToRoles(content)}
-            />
+            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
       <MapInfo title="The city of Sparta" location="sparta">
         <p>
-          <strong>Sparta was a prominent city-state in Ancient Greece.</strong>{' '}
-          In addition to its military might, it was also unique both for its
-          time and compared to its greek rivals due its defined social system
-          and constitution.
+          <strong>Sparta was a prominent city-state in Ancient Greece.</strong> In addition to its military might, it
+          was also unique both for its time and compared to its greek rivals due its defined social system and
+          constitution.
           <br />
           <br />
-          We chose the name Sparta due to it's historical significance in the
-          path towards democracy and rule of law, however draconian by modern
-          standard.
+          We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law,
+          however draconian by modern standard.
         </p>
       </MapInfo>
     </BaseLayout>
