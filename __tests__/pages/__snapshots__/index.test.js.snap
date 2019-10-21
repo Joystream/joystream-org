@@ -3,7 +3,7 @@
 exports[`IndexPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Earn monero to participate on our testnets!"
+    description="Earn monero for participating on our testnets!"
     image="test-file-stub"
     lang="en"
     meta={Array []}
@@ -13,18 +13,16 @@ exports[`IndexPage page renders correctly 1`] = `
     animationEndValue={-40}
     animationStartValue={0}
     chip={null}
-    image={
-      Object {
-        "ReactComponent": "icon-mock",
-      }
-    }
+    image="icon-mock"
     indent={false}
     title="A user governed video platform"
   >
     <p
       className="IndexPage__hero-paragraph"
     >
-      Earn Monero by participating in the current Athens testnet
+      Earn Monero by participating in the current 
+      Acropolis
+       testnet
     </p>
     <div
       className="IndexPage__hero-group"
@@ -67,18 +65,14 @@ exports[`IndexPage page renders correctly 1`] = `
     <TestnetItem
       button={
         Object {
-          "label": "Explore acropolis",
+          "label": "Explore Acropolis",
           "to": "/acropolis",
         }
       }
       className=""
       date={null}
-      image={
-        Object {
-          "ReactComponent": "icon-mock",
-        }
-      }
-      title="Acropolis Tesnet"
+      image="icon-mock"
+      title="Acropolis Testnet"
     >
       Acropolis is our fourth testnet, with much improved
        
@@ -107,42 +101,42 @@ exports[`IndexPage page renders correctly 1`] = `
       items={
         Array [
           Object {
-            "image": "icon-mock",
+            "image": "icon-component-mock",
             "title": "Participation Payout",
             "value": "$1576",
           },
           Object {
-            "image": "icon-mock",
+            "image": "icon-component-mock",
             "key": "validatorsCount",
             "title": "Active Validators",
           },
           Object {
-            "image": "icon-mock",
+            "image": "icon-component-mock",
             "key": "blockHeight",
             "title": "Block Height",
           },
           Object {
-            "image": "icon-mock",
+            "image": "icon-component-mock",
             "key": "councilStage",
             "title": "Council Election Stage",
           },
           Object {
-            "image": "icon-mock",
+            "image": "icon-component-mock",
             "key": "membershipsMembers",
             "title": "Memberships",
           },
           Object {
-            "image": "icon-mock",
+            "image": "icon-component-mock",
             "key": "forumPosts",
             "title": "Forum Posts",
           },
           Object {
-            "image": "icon-mock",
+            "image": "icon-component-mock",
             "key": "mediaFiles",
             "title": "Platform Content Files",
           },
           Object {
-            "image": "icon-mock",
+            "image": "icon-component-mock",
             "key": "rolesProviders",
             "title": "Active Storage Providers",
           },
@@ -152,7 +146,7 @@ exports[`IndexPage page renders correctly 1`] = `
       <Button
         className=""
         disabled={false}
-        href="https://blog.joystream.org/athens-incentives/"
+        href="https://blog.joystream.org/acropolis-incentives/"
         large={false}
         light={false}
         onClick={null}
@@ -178,7 +172,7 @@ exports[`IndexPage page renders correctly 1`] = `
       <Subheader
         className=""
         content="learn more, join a role and subscribe for more"
-        icon="icon-mock"
+        icon="icon-component-mock"
         title="Active roles on the current testnet"
       />
       <ColumnsLayout
@@ -198,21 +192,21 @@ exports[`IndexPage page renders correctly 1`] = `
             Array [
               Object {
                 "hasLabel": false,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "validatorsCount",
                 "title": "Validator",
                 "to": "/roles#validator",
               },
               Object {
                 "hasLabel": false,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "councilMembersCount",
                 "title": "Council Member",
                 "to": "/roles#council-member",
               },
               Object {
                 "hasLabel": true,
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "key": "storageProviders",
                 "title": "Storage Provider",
                 "to": "/roles#storage-provider",
@@ -224,7 +218,7 @@ exports[`IndexPage page renders correctly 1`] = `
       <Subheader
         className=""
         content="choose a role, learn more and subscribe to get updated"
-        icon="icon-mock"
+        icon="icon-component-mock"
         title="Roles coming in future testnets"
       />
       <ColumnsLayout
@@ -243,47 +237,47 @@ exports[`IndexPage page renders correctly 1`] = `
           roles={
             Array [
               Object {
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "title": "Membership Screener",
                 "to": "/roles#membership-screener",
               },
               Object {
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "title": "Membership Curator",
                 "to": "/roles",
               },
               Object {
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "title": "Content Curator",
                 "to": "/roles#content-curator",
               },
               Object {
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "title": "Content Creator",
                 "to": "/roles#content-creator",
               },
               Object {
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "title": "Bandwidth Provider",
                 "to": "/roles#bandwidth-provider",
               },
               Object {
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "title": "Discovery Provider",
                 "to": "/roles#discovery-provider",
               },
               Object {
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "title": "Live Streaming Provider",
                 "to": "/roles#live-streaming-provider",
               },
               Object {
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "title": "Builder",
                 "to": "/roles#builder",
               },
               Object {
-                "image": "icon-mock",
+                "image": "icon-component-mock",
                 "title": "Communication Moderator",
                 "to": "/roles#communication-moderator",
               },

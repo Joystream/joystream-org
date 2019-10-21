@@ -8,11 +8,11 @@ module.exports = {
       '<rootDir>/__mocks__/file-mock.js',
     '.+\\.(svg)$': '<rootDir>/__mocks__/svgr-mock.js',
   },
-  testPathIgnorePatterns: ['node_modules', '.cache'],
+  testPathIgnorePatterns: ['node_modules', '.cache', 'setupTests.js'],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
   globals: {
     __PATH_PREFIX__: '',
   },
   testURL: 'http://localhost',
-  setupFiles: ['<rootDir>/loadershim.js'],
+  setupFiles: ['<rootDir>/loadershim.js', '<rootDir>/__tests__/setupTests.js'],
 };

@@ -29,7 +29,7 @@ import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AcropolisImg from '../../assets/svg/acropolis-building.svg';
 
-import { roles } from '../../data/pages';
+import { sharedData, roles } from '../../data/pages';
 import { goalsData } from '../../data/pages/acropolis';
 
 import './style.scss';
@@ -39,10 +39,7 @@ const AcropolisPage = ({ content }) => {
 
   return (
     <BaseLayout>
-      <SiteMetadata
-        title="Joystream: A user governed video platform"
-        description="Explore the upcoming Acropolis Testnet"
-      />
+      <SiteMetadata title="Joystream: A user governed video platform" description="Explore the Acropolis Testnet" />
 
       <Hero
         image={acropolisImage}
@@ -51,10 +48,7 @@ const AcropolisPage = ({ content }) => {
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
         animationStartValue={0}
       >
-        <p className="AcropolisPage__hero-paragraph">
-          Explore available roles and pick the one that suits you the most. Influence platforms development earning
-          Monero in the process.
-        </p>
+        <p className="AcropolisPage__hero-paragraph">{sharedData.rolesDescription}</p>
         <HeroCard date="2019/06/27 17:50" />
 
         <TestnetModal

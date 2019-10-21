@@ -58,16 +58,14 @@ const goals = [
   {
     title: 'Introduce platform memberships',
     text:
-      /* eslint-disable */
+      /* eslint-disable-next-line */
       'Although we are building an open blockchain in the sense that users are free to send tokens as they like, the Joystream experience is about having the platform users own, operate and govern the platform. We are agnostic on exactly what parts of the platform will be reserved for members, some actions will require and extra level of screening and accountability.',
-    /* eslint-disable */
   },
   {
     title: 'Build and release the storage node',
     text:
-      /* eslint-disable */
+      /* eslint-disable-next-line */
       'Although a storage node was built and used to host and distribute the platform content, it had some bugs making it unable to sync between clients and required a hardcoded liaison.',
-    /* eslint-disable */
     state: 'postponed',
   },
   {

@@ -9,6 +9,7 @@ import Button from '../Button';
 import Link from '../Link';
 import HeroCard from '../HeroCard';
 
+import { sharedData } from '../../data/pages';
 import Hero from './';
 import './hero.stories.scss';
 
@@ -22,15 +23,12 @@ storiesOf('Section|Hero', module)
   })
   .add('plain content with an image', () => (
     <Hero image={masksImage} title="Discover various roles on the platform">
-      <p className="HeroStory__paragraph">
-        Explore available roles and pick the one that suits you the most. Influence platforms development earning Monero
-        in the process.
-      </p>
+      <p className="HeroStory__paragraph">{sharedData.rolesDescription}</p>
     </Hero>
   ))
   .add('custom content', () => (
     <Hero image={platformImage} title="A user governed video platform">
-      <p className="HeroStory__paragraph">Earn Monero by participating in the current Athens testnet</p>
+      <p className="HeroStory__paragraph">Earn Monero by participating in the current testnet</p>
       <div className="HeroStory__group">
         <Button secondary className="HeroStory__button">
           Earn Monero
@@ -85,10 +83,7 @@ storiesOf('Section|Hero', module)
     'with indent and counter',
     () => (
       <Hero title="Acropolis Network" image={acropolisImage} indent>
-        <p className="HeroStory__paragraph">
-          Explore available roles and pick the one that suits you the most. Influence platforms development earning
-          Monero in the process.
-        </p>
+        <p className="HeroStory__paragraph">{sharedData.rolesDescription}</p>
         <HeroCard date={unfinishedDate} />
       </Hero>
     ),

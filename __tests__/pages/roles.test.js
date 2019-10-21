@@ -1,12 +1,8 @@
-import React from 'react';
-import { shallow, configure } from 'enzyme';
-import 'intersection-observer';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-
+import 'intersection-observer';
+import React from 'react';
 import RolesPage from '../../src/pages/roles';
-
-configure({ adapter: new Adapter() });
 
 describe('RolesPage page', () => {
   it('renders correctly', () => {
