@@ -14,6 +14,10 @@ import { ReactComponent as communicationModeratorImage } from '../../assets/svg/
 
 export const sharedData = {
   defaultEmail: 'hello@jsgenesis.com',
+  social: {
+    telegramLink: 'https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA',
+    redditLink: 'https://www.reddit.com/r/JoyStream/',
+  },
   rolesDescription: (
     <>
       Explore available roles and pick the one that suits you the best. Influence the platform's development earning

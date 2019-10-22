@@ -1,20 +1,52 @@
 @import '../../styles/_main';
 
 .ImageSection {
+  $_r: &;
+
   max-width: 1000px;
   margin: 80px auto;
   padding: 0 10px;
 
-  &__title {
+  p {
+    margin-bottom: 1.1em;
+  }
+
+  &--grouped {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+
+    #{$_r}__image-container {
+      width: calc(100% + 50px);
+      margin-left: -25px;
+      background-color: $c_blue-ribbon;
+    }
+  }
+
+  &__title,
+  &__secondary-title {
     margin-bottom: 40px;
     font-size: 40px;
+    line-height: 1.1;
     color: $c_blue-ribbon;
     text-align: center;
   }
 
-  &__content {
+  &__secondary-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: $c_ebony-clay;
+    text-align: left;
+  }
+
+  &__content,
+  p {
     font-size: 14px;
     line-height: 21px;
+  }
+
+  &__text {
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   &__image-container {
@@ -28,14 +60,41 @@
     margin: 40px 0;
     padding-left: 40px;
     border-left: 2px solid $c_blue-ribbon;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @media #{$screen-md} {
     margin: 150px auto;
 
+    &--grouped {
+      margin: 0 auto;
+
+      #{$_r}__text {
+        padding: 100px 100px 50px 0;
+      }
+
+      #{$_r}__image-container {
+        width: auto;
+        max-width: 480px;
+        margin-left: 0;
+      }
+
+      &:last-of-type #{$_r}__text {
+        padding-bottom: 100px;
+      }
+    }
+
     &__title {
       margin-bottom: 60px;
       font-size: 50px;
+    }
+
+    &__secondary-title {
+      margin-bottom: 60px;
+      font-size: 36px;
     }
 
     &__image {
@@ -46,14 +105,17 @@
 
     &__text {
       flex: 0 0 50%;
-      max-width: 600px;
-      margin: 0 auto;
+      margin: 0;
     }
 
     &__content {
       display: flex;
       align-items: stretch;
       justify-content: space-between;
+    }
+
+    &__content,
+    p {
       font-size: 20px;
       line-height: 30px;
     }

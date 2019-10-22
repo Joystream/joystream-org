@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { node, string, bool, number, oneOf } from 'prop-types';
+import { node, string, bool, number, oneOf, oneOfType } from 'prop-types';
 import Plx from 'react-plx';
 
 import './style.scss';
@@ -13,6 +13,7 @@ const propTypes = {
   chip: node,
   animationStartValue: number,
   animationEndValue: number,
+  animationEnd: oneOfType([number, string]),
   theme: oneOf(['blue', 'black']),
   noOverflow: bool,
 };
@@ -24,15 +25,27 @@ const defaultProps = {
   chip: null,
   animationStartValue: 70,
   animationEndValue: -40,
+  animationEnd: 500,
   theme: 'black',
   noOverflow: false,
 };
 
-const Hero = ({ title, children, image, indent, chip, animationStartValue, animationEndValue, theme, noOverflow }) => {
+const Hero = ({
+  title,
+  children,
+  image,
+  indent,
+  chip,
+  animationStartValue,
+  animationEnd,
+  animationEndValue,
+  theme,
+  noOverflow,
+}) => {
   const parallaxData = [
     {
       start: 0,
-      end: 500,
+      end: animationEnd,
       properties: [
         {
           startValue: animationStartValue,

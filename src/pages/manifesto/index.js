@@ -8,22 +8,22 @@ import pageData from '../../data/pages/manifesto';
 import { sharedData } from '../../data/pages';
 
 import fistImage from '../../assets/svg/fist-main.svg';
-import problemImage from '../../assets/svg/problem.svg';
-import goalImage from '../../assets/svg/goal.svg';
-import thesisImage from '../../assets/svg/thesis.svg';
 
 import './style.scss';
 
 const ManifestoPage = () => {
+  const { sections, groupSections } = pageData;
+
   return (
     <BaseLayout className="ManifestoPage">
       <SiteMetadata title="Joystream: A user governed video platform" description="Manifesto" />
 
       <Hero
         image={fistImage}
-        title={pageData.header.title}
+        title={pageData.header}
         animationStartValue={10}
-        animationEndValue={100}
+        animationEndValue={120}
+        animationEnd="100vh"
         indent
         theme="blue"
         noOverflow
@@ -32,37 +32,42 @@ const ManifestoPage = () => {
       </Hero>
 
       <LayoutWrapper>
-        <ImageSection title="Problem" image={problemImage}>
-          We believe that art, be it as literature, music, film, games or performance, is a critical tool through which
-          societies establish a shared understanding of what is common knowledge among all members. These expressions
-          define values and narratives that end up shaping culture, faith and even public policy. It therefore matters
-          deeply how it is financed, distributed and paid for.
-          <br />
-          <br />
-          Digital media has become the primary medium through which such expression is distributed, and digital media
-          platforms have become the key institutions organizing this activity.
-          <br />
-          <blockquote>
-            Unfortunately, due to network effects, economies of scale, regulations and political interests, we are today
-            left with handful of massive institutions which set the terms for how this happens. They are almost entirely
-            unaccountable to normal market and political mechanisms.
-          </blockquote>
+        <ImageSection title={sections.problem.title} image={sections.problem.image} imageOffset={50}>
+          {sections.problem.text}
         </ImageSection>
 
-        <ImageSection title="Goal" image={goalImage}>
-          We call for an arrangement where media platforms are accountable to the people they impact, which are
-          primarily their users, be it as consumers, creatives, third party developer or workers.
-          <blockquote>
-            It is the absence of such accountability which is the fundamental source of any particular problem at any
-            particular time.
-          </blockquote>
+        <ImageSection title={sections.goal.title} image={sections.goal.image}>
+          {sections.goal.text}
         </ImageSection>
 
-        <ImageSection title="Thesis" image={thesisImage}>
-          Our core thesis is that there are two basic challenges which must be addressed to achieve this goal, and that
-          an appropriate application of contemporary distributed systems technology, including blockchains, smart
-          contracts and tokens, is the right means to do so.
+        <ImageSection title={sections.thesis.title} image={sections.thesis.image}>
+          {sections.thesis.text}
         </ImageSection>
+
+        <div className="ManifestoPage__grouped-sections">
+          <ImageSection title={groupSections.wedge.title} image={groupSections.wedge.image} grouped imageOffset={200}>
+            {groupSections.wedge.text}
+          </ImageSection>
+
+          <ImageSection title={groupSections.accountability.title} image={groupSections.accountability.image} grouped>
+            {groupSections.accountability.text}
+          </ImageSection>
+
+          <ImageSection title={groupSections.voice.title} image={groupSections.voice.image} grouped imageOffset={200}>
+            {groupSections.voice.text}
+          </ImageSection>
+
+          <ImageSection title={groupSections.exit.title} image={groupSections.exit.image} grouped imageOffset={200}>
+            {groupSections.exit.text}
+          </ImageSection>
+        </div>
+
+        <h3 className="ManifestoPage__cta">{pageData.callToAction}</h3>
+
+        <section className="ManifestoPage__references">
+          <h2 className="ManifestoPage__references-title">{pageData.references.header}</h2>
+          {pageData.references.text}
+        </section>
       </LayoutWrapper>
     </BaseLayout>
   );

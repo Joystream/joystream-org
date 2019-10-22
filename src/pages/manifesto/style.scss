@@ -1,22 +1,59 @@
 @import '../../styles/main.scss';
 
 .ManifestoPage {
-  .Hero {
-    background: red;
+  &__cta,
+  &__references-title {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.3;
   }
-  // &__hero-paragraph {
-  //   padding-bottom: 60px;
-  // }
+
+  &__cta,
+  &__references {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  &__cta {
+    margin-bottom: 80px;
+  }
+
+  &__references {
+    line-height: 1.5;
+
+    p {
+      margin-bottom: 1.1em;
+    }
+  }
+
+  &__references-title {
+    margin-bottom: 40px;
+  }
 }
 
-// @media #{$screen-sm} {
-//   .RoleOverview__Wrapper {
-//     padding: 140px 30px 0;
-//   }
-// }
+@media #{$screen-md} {
+  .ManifestoPage {
+    &__grouped-sections {
+      margin-bottom: 150px;
+      padding-top: 100px;
+    }
 
-// @media #{$screen-md} {
-//   .RoleOverview__Wrapper {
-//     padding: 120px 0 0 66px;
-//   }
-// }
+    &__cta,
+    &__references {
+      max-width: 1000px;
+    }
+
+    &__cta {
+      margin-bottom: 100px;
+    }
+
+    &__references-title {
+      margin-bottom: 60px;
+    }
+
+    &__cta,
+    &__references-title {
+      font-size: 36px;
+    }
+  }
+}
