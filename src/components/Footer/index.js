@@ -11,7 +11,7 @@ import './style.scss';
 const Footer = () => {
   return (
     <footer className="Footer">
-      <p className="Footer__header">Get notified</p>
+      <h2 className="Footer__header">Get notified</h2>
       <Button
         href="http://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
         small
