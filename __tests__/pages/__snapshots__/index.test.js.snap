@@ -34,12 +34,11 @@ exports[`IndexPage page renders correctly 1`] = `
         className="IndexPage__hero-button"
         disabled={false}
         href="https://blog.joystream.org/acropolis-incentives/"
-        large={false}
+        large={true}
         light={false}
         onClick={null}
         reversed={false}
         secondary={true}
-        small={false}
         to={null}
       >
         Earn Monero
@@ -48,12 +47,11 @@ exports[`IndexPage page renders correctly 1`] = `
         className="IndexPage__hero-button"
         disabled={false}
         href="https://testnet.joystream.org/"
-        large={false}
+        large={true}
         light={false}
         onClick={null}
         reversed={true}
         secondary={true}
-        small={false}
         to={null}
       >
         Launch UI
@@ -155,7 +153,6 @@ exports[`IndexPage page renders correctly 1`] = `
         onClick={null}
         reversed={false}
         secondary={true}
-        small={false}
         to={null}
       >
         Participate and Earn Monero
@@ -297,7 +294,6 @@ exports[`IndexPage page renders correctly 1`] = `
         onClick={null}
         reversed={false}
         secondary={true}
-        small={false}
         to="/roles"
       >
         Learn more about the roles

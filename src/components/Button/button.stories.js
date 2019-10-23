@@ -37,11 +37,6 @@ storiesOf('Components|Button', module)
       ],
     }
   )
-  .add('Large', () => (
-    <Button onClick={action('clicked')} large>
-      Accept
-    </Button>
-  ))
   .add(
     'Light',
     () => (
@@ -60,9 +55,9 @@ storiesOf('Components|Button', module)
     }
   )
   .add(
-    'Light small',
+    'Light large',
     () => (
-      <Button onClick={action('clicked')} light small>
+      <Button onClick={action('clicked')} light large>
         Join the newsletter
       </Button>
     ),
