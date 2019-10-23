@@ -13,6 +13,17 @@
   src: url('../assets/fonts/Inter-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: Px-Grotesk;
+  src: url('../assets/fonts/Px-Grotesk-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Px-Grotesk;
+  font-weight: bold;
+  src: url('../assets/fonts/Px-Grotesk-Bold.ttf') format('truetype');
+}
+
 * {
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -43,7 +54,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: Px-Grotesk, sans-serif;
   font-weight: normal;
   color: $c_black;
 }

@@ -3,17 +3,10 @@ import { configure } from '@storybook/react';
 import { addDecorator, addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withInfo } from '@storybook/addon-info';
-import WebFont from 'webfontloader';
 import 'intersection-observer';
 import smoothscroll from 'smoothscroll-polyfill';
 
 import '../src/styles/global.scss';
-
-WebFont.load({
-  google: {
-    families: ['Titillium Web:200,400,600,700'],
-  },
-});
 
 smoothscroll.polyfill();
 

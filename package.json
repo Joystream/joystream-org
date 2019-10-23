@@ -25,7 +25,6 @@
     "gatsby-plugin-sharp": "^2.2.1",
     "gatsby-plugin-stylelint": "^3.2.0",
     "gatsby-plugin-svgr": "^2.0.2",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.0",
     "gatsby-transformer-sharp": "^2.2.0",
     "get-value": "^3.0.1",
@@ -54,8 +53,7 @@
     "stylelint-order": "^3.0.0",
     "stylelint-scss": "^3.8.0",
     "stylelint-webpack-plugin": "^0.10.5",
-    "url-loader": "^2.1.0",
-    "webfontloader": "^1.6.28"
+    "url-loader": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

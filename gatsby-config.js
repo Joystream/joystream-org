@@ -41,17 +41,6 @@ module.exports = {
         sv: process.env.HJ_SV,
       },
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Titillium Web:200,400,600,700'],
-        },
-        custom: {
-          families: ['Inter'],
-        },
-      },
-    },
     'gatsby-plugin-sass',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
