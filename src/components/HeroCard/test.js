@@ -19,7 +19,7 @@ describe('HeroCard component', () => {
     unfinishedDate.setSeconds(unfinishedDate.getSeconds() + 5000);
     const card = shallow(<HeroCard date={unfinishedDate} />);
     expect(card.state()).toHaveProperty('currentStatus', 'active');
-    expect(card.text().includes('Network live')).toBe(true);
+    expect(card.text().includes('Network announced')).toBe(true);
   });
 
   it('renders info HeroCard', () => {
@@ -32,6 +32,6 @@ describe('HeroCard component', () => {
   it('renders finished HeroCard', () => {
     const card = mount(<HeroCard date="2019/06/25 16:26" />);
     expect(card.state()).toHaveProperty('currentStatus', 'finished');
-    expect(card.text().includes('Network announced')).toBe(true);
+    expect(card.text().includes('Network live')).toBe(true);
   });
 });
