@@ -27,7 +27,7 @@ import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import RomeBuildingImg from '../../assets/svg/rome-building.svg';
 
-import { roles } from '../../data/pages';
+import { roles, sharedData } from '../../data/pages';
 import { goalsData, launchDate } from '../../data/pages/rome';
 
 import './style.scss';
@@ -46,10 +46,7 @@ const RomePage = ({ content }) => {
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
         animationStartValue={0}
       >
-        <p className="RomePage__hero-paragraph">
-          Explore available roles and pick the one that suits you the most. Influence the platforms development, while
-          earning Monero in the process.
-        </p>
+        <p className="RomePage__hero-paragraph">{sharedData.rolesDescription}</p>
         <HeroCard date={launchDate} />
 
         <TestnetModal
@@ -88,7 +85,7 @@ const RomePage = ({ content }) => {
           title="Testnet Goals"
           subtitle={
             <>
-              The goals below is a simplified representation of the Key Results listed in our Release{' '}
+              The goals below are a simplified representation of the Key Results listed in our Release{' '}
               <Link href="https://github.com/Joystream/joystream/tree/master/testnets/rome#release-okrs">OKR</Link>
             </>
           }

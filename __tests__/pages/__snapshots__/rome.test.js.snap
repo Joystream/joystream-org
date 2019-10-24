@@ -30,12 +30,14 @@ exports[`RomePage page renders correctly 1`] = `
     <p
       className="RomePage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you the most. Influence the platforms development, while earning Monero in the process.
+      Explore available roles and pick the one that suits you best. 
+      <br />
+      Influence the platform's development and earn Monero in the process.
     </p>
     <HeroCard
       content={null}
       counterTitle=""
-      date="2019/11/18 9:00"
+      date="2019/11/18 11:00"
       error={false}
       info={false}
     />
@@ -93,7 +95,7 @@ exports[`RomePage page renders correctly 1`] = `
       className=""
       subtitle={
         <React.Fragment>
-          The goals below is a simplified representation of the Key Results listed in our Release
+          The goals below are a simplified representation of the Key Results listed in our Release
            
           <Link
             className=""
@@ -118,10 +120,9 @@ exports[`RomePage page renders correctly 1`] = `
             },
             Object {
               "state": "inprogress",
-              "text": "With a Content Directory system that is both built to last, yet 
-      still meant to be continuously improved on, it has to be put to use. 
-      We will pay for Content Creators to upload a variety of content, and 
-      hopefully learn a lot from the result.",
+              "text": "Rome introduces a Content Directory system that is both built to last, 
+      yet still meant to be continuously improved on. We will pay for Content Creators 
+      to upload a variety of content and we hope to learn a lot from the results.",
               "title": "Populate the content directory with a variety of content",
             },
             Object {

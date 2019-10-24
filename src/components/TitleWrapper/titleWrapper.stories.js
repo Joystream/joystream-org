@@ -16,7 +16,7 @@ storiesOf('Layout|TitleWrapper', module)
       title="Testnet Goals"
       subtitle={
         <p>
-          The goals below is a simplified representation of the Key Results listed in our Release{' '}
+          The goals below are a simplified representation of the Key Results listed in our Release{' '}
           <Link href="/#">OKR</Link>
         </p>
       }

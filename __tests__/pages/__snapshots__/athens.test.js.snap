@@ -30,7 +30,9 @@ exports[`AthensPage page renders correctly 1`] = `
     <p
       className="AthensPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you the best. Influence the platform's development earning Monero in the process.
+      Explore available roles and pick the one that suits you best. 
+      <br />
+      Influence the platform's development and earn Monero in the process.
     </p>
     <HeroCard
       content={null}
@@ -151,7 +153,7 @@ exports[`AthensPage page renders correctly 1`] = `
       className=""
       subtitle={
         <React.Fragment>
-          The goals below is a simplified representation of the Key Results listed in our Release
+          The goals below are a simplified representation of the Key Results listed in our Release
            
           <Link
             className=""

@@ -178,7 +178,7 @@ exports[`IndexPage page renders correctly 1`] = `
       className=""
       date="2019/11/18 11:00"
       image="icon-mock"
-      title="Rome Tesnet"
+      title="Rome Testnet"
     >
       Rome is our fifth testnet, and we are introducing new roles for you to try out.
     </TestnetItem>

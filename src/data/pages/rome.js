@@ -8,10 +8,9 @@ const goalsData = [
   },
   {
     title: 'Populate the content directory with a variety of content',
-    text: `With a Content Directory system that is both built to last, yet 
-      still meant to be continuously improved on, it has to be put to use. 
-      We will pay for Content Creators to upload a variety of content, and 
-      hopefully learn a lot from the result.`,
+    text: `Rome introduces a Content Directory system that is both built to last, 
+      yet still meant to be continuously improved on. We will pay for Content Creators 
+      to upload a variety of content and we hope to learn a lot from the results.`,
     state: 'inprogress',
   },
   {

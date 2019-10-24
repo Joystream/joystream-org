@@ -88,7 +88,7 @@ const IndexPage = ({ content }) => (
 
     <LayoutWrapper>
       <TestnetItem
-        title="Rome Tesnet"
+        title="Rome Testnet"
         image={RomeImage}
         children="Rome is our fifth testnet, and we are introducing new roles for you to try out."
         date={romeNetworkLaunchDate}
