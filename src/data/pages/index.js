@@ -28,8 +28,8 @@ export const sharedData = {
   },
   rolesDescription: (
     <>
-      Explore available roles and pick the one that suits you best. <br />
-      Influence the platform's development and earn Monero in the process.
+      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Monero
+      in the process.
     </>
   ),
 };
