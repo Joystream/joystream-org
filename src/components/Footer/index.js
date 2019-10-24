@@ -1,12 +1,28 @@
 import React from 'react';
-import cn from 'classnames';
-
 import Button from '../Button';
 import Link from '../Link';
 
-import { links, socialMedias } from './data';
+import { joystreamLinks, githubLinks, usefulLinks, socialMedias } from './data';
 
 import './style.scss';
+
+const FooterSection = ({ title, links }) => {
+  return (
+    <div className="Footer__section">
+      <h6 className="Footer__section-title">{title}</h6>
+      {links.map(({ label, ...link }) => {
+        const LinkComponent = link.to ? Link : 'a';
+        const props = link.to ? link : { ...link, target: '_blank', rel: 'noopener noreferrer' };
+
+        return (
+          <LinkComponent key={label} className="Footer__section-link" {...props}>
+            {label}
+          </LinkComponent>
+        );
+      })}
+    </div>
+  );
+};
 
 const Footer = () => {
   return (
@@ -19,22 +35,22 @@ const Footer = () => {
       >
         Join the newsletter
       </Button>
-      <div className="Footer__socials">
-        {socialMedias.map(socialMedia => {
-          const Icon = socialMedia.icon;
-          return (
-            <a href={socialMedia.href} className="Footer__social-wrapper" key={socialMedia.name}>
-              <Icon className="Footer__social-icon" />
-            </a>
-          );
-        })}
-      </div>
-      <div className="Footer__links">
-        {links.map(({ label, highlighted, ...link }) => (
-          <Link className={cn('Footer__link', { 'Footer__link--highlighted': highlighted })} key={label} {...link}>
-            {label}
-          </Link>
-        ))}
+      <div className="Footer__layout">
+        <FooterSection title="Joystream" links={joystreamLinks} />
+        <FooterSection title="Github" links={githubLinks} />
+        <FooterSection title="Useful links" links={usefulLinks} />
+
+        <div className="Footer__section">
+          <h6 className="Footer__section-title">Follow us</h6>
+
+          <div className="Footer__socials">
+            {socialMedias.map(({ icon: Icon, name, href }) => (
+              <a href={href} className="Footer__social-link" key={name}>
+                <Icon className="Footer__social-icon" />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   );

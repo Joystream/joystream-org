@@ -3,17 +3,29 @@ import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
 import { ReactComponent as TelegramIcon } from '../../assets/svg/telegram.svg';
 import { sharedData } from '../../data/pages';
 
-const links = [
-  { href: 'https://www.jsgenesis.com/#openings', label: 'We are hiring!' },
-  { href: 'https://blog.joystream.org/', label: 'Blog' },
+const joystreamLinks = [
+  { href: sharedData.links.blog, label: 'Blog' },
   { to: '/manifesto', label: 'Manifesto' },
-  { href: 'https://github.com/Joystream/joystream', label: 'Repository' },
+  { to: '/roles', label: 'Roles' },
+];
+
+const githubLinks = [
+  {
+    href: sharedData.links.whitepaper,
+    label: 'Whitepaper',
+  },
+  { href: sharedData.links.repository, label: 'Repository' },
+];
+
+const usefulLinks = [
+  { href: sharedData.links.openings, label: 'We are hiring!' },
+  { to: '/', label: 'Brand guidance' },
 ];
 
 const socialMedias = [
-  { icon: TwitterIcon, href: 'https://twitter.com/JoyStreamApp', name: 'Twitter' },
-  { icon: GithubIcon, href: 'https://github.com/Joystream', name: 'Github' },
+  { icon: TwitterIcon, href: sharedData.social.twitter, name: 'Twitter' },
+  { icon: GithubIcon, href: sharedData.links.github, name: 'Github' },
   { icon: TelegramIcon, href: sharedData.social.telegramLink, name: 'Telegram' },
 ];
 
-export { links, socialMedias };
+export { joystreamLinks, githubLinks, usefulLinks, socialMedias };
