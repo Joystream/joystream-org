@@ -54,6 +54,10 @@
     line-height: 72px;
   }
 
+  &--nowrap {
+    white-space: nowrap;
+  }
+
   &--light {
     color: $c_black;
     background-color: $c_white;

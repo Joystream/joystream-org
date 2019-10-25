@@ -16,6 +16,7 @@ const propTypes = {
   light: PropTypes.bool,
   disabled: PropTypes.bool,
   className: PropTypes.string,
+  noWrap: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -28,15 +29,17 @@ const defaultProps = {
   light: false,
   disabled: false,
   className: '',
+  noWrap: false,
 };
 
-const Button = ({ href, to, className, children, reversed, secondary, light, large, disabled, ...props }) => {
+const Button = ({ href, to, className, children, reversed, secondary, light, large, disabled, noWrap, ...props }) => {
   const classes = cn(className, 'Button', {
     'Button--reversed': reversed,
     'Button--secondary': secondary,
     'Button--large': large,
     'Button--light': light,
     'Button--disabled': disabled,
+    'Button--nowrap': noWrap,
   });
 
   if (to) {

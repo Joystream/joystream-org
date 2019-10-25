@@ -45,10 +45,17 @@ const IndexPage = ({ content }) => (
         Earn Monero by participating in the current {activeTestnet.name} testnet
       </p>
       <div className="IndexPage__hero-group">
-        <Button large secondary className="IndexPage__hero-button" href={activeTestnet.incentivesLink}>
+        <Button noWrap large secondary className="IndexPage__hero-button" href={activeTestnet.incentivesLink}>
           Earn Monero
         </Button>
-        <Button large secondary reversed className="IndexPage__hero-button" href="https://testnet.joystream.org/">
+        <Button
+          noWrap
+          large
+          secondary
+          reversed
+          className="IndexPage__hero-button"
+          href="https://testnet.joystream.org/"
+        >
           Launch UI
         </Button>
       </div>
