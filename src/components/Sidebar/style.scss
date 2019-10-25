@@ -19,7 +19,7 @@ $trigger-height: 50px;
     z-index: -1;
     width: 100%;
     max-height: 0;
-    overflow: scroll;
+    overflow: auto;
     transition: max-height $duration;
 
     &--open {
@@ -51,7 +51,6 @@ $trigger-height: 50px;
   &__container {
     width: 100%;
     padding: calc(30px + #{$trigger-height}) 30px 30px;
-    overflow: scroll;
     background-color: $c_catskill_white;
     transform: translateY(-100%);
     transition: transform $duration ease 0s;
@@ -108,7 +107,7 @@ $trigger-height: 50px;
     width: 100%;
     height: 100vh;
     max-width: 230px;
-    overflow: scroll;
+    overflow: auto;
     background-color: $c_catskill_white;
 
     &__wrapper {
