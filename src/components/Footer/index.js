@@ -37,7 +37,7 @@ const Footer = () => {
       </Button>
       <div className="Footer__layout">
         <FooterSection title="Joystream" links={joystreamLinks} />
-        <FooterSection title="Github" links={githubLinks} />
+        <FooterSection title="GitHub" links={githubLinks} />
         <FooterSection title="Useful links" links={usefulLinks} />
 
         <div className="Footer__section">
