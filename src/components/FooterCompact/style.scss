@@ -1,0 +1,66 @@
+@import '../../styles/main.scss';
+
+.FooterCompact {
+  background: $c_black;
+
+  &__container {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+  }
+
+  &__logo {
+    display: none;
+    height: 24px;
+    color: $c_blue-ribbon;
+  }
+
+  &__socials {
+    display: flex;
+  }
+
+  &__social-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 8px;
+    padding-bottom: 16px;
+  }
+
+  &__social-icon {
+    width: 14px;
+
+    &:hover,
+    &:active {
+      transform: scale(1.5);
+    }
+  }
+
+  &__link {
+    font-family: $font-primary;
+    font-size: 12px;
+    font-weight: bold;
+    color: $c_light-purple;
+  }
+}
+
+@media #{$screen-sm} {
+  .FooterCompact {
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__logo {
+      display: block;
+    }
+
+    &__social-wrapper {
+      padding: 16px 0;
+    }
+  }
+}
