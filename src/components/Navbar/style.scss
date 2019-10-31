@@ -1,12 +1,24 @@
 @import '../../styles/main.scss';
 
 .Navbar {
+  $r: &;
+
   position: sticky;
   top: 0;
   z-index: 2;
   height: $navbar-height;
   background-color: $c_black;
   transition: top 400ms ease 0s;
+
+  &--light {
+    background-color: $c_blue-ribbon;
+
+    #{$r} {
+      &__logo {
+        color: $c_white;
+      }
+    }
+  }
 
   &--hidden {
     top: -$navbar-height;
@@ -27,6 +39,7 @@
     display: block;
     width: 150px;
     height: $navbar-height;
+    color: $c_blue-ribbon;
   }
 
   &__links {
@@ -91,6 +104,30 @@
   }
 
   @media #{$screen-lg} {
+    &--light {
+      #{$r} {
+        &__link {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: $navbar-height;
+          color: $c_white;
+
+          &--active::after {
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            display: block;
+            width: 80%;
+            height: 4px;
+            background-color: $c_white;
+            content: '';
+          }
+        }
+      }
+    }
+
     &__container {
       padding: 0 32px;
     }
@@ -100,7 +137,11 @@
       top: 0;
       z-index: 0;
       display: block;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
       width: auto;
+      background-color: transparent;
       transform: translateY(0);
     }
 

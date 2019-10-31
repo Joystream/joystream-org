@@ -1,0 +1,32 @@
+@import '../../styles/_main';
+
+$size: 80px;
+
+.ActionButton {
+  display: none;
+  align-items: center;
+
+  &__text {
+    margin-right: 32px;
+    font-family: $font-primary;
+    font-size: 20px;
+    color: $c_white;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $size;
+    height: $size;
+    background-color: $c_blue-ribbon;
+    border-radius: 50%;
+  }
+}
+
+@media #{$screen-md} {
+  .ActionButton {
+    display: flex;
+  }
+}
