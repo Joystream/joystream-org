@@ -163,7 +163,7 @@ $indentation: 60px;
   &__image-container {
     position: absolute;
     top: 15%;
-    width: 100%;
+    width: calc(100% - 20px);
 
     &::after {
       display: block;
@@ -229,6 +229,58 @@ $indentation: 60px;
 
     &__page-link {
       bottom: 80px;
+    }
+  }
+}
+
+.StoryDescription {
+  background-color: $c_black;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__header,
+  &__footer {
+    font-size: 20px;
+    line-height: 30px;
+    color: $c_white;
+  }
+
+  &__text {
+    p {
+      margin-bottom: 1em;
+      padding-right: 20px;
+      font-size: 14px;
+      line-height: 21px;
+      color: $c_light-gray;
+    }
+  }
+}
+
+@media #{$screen-md} {
+  .StoryDescription {
+    &__header,
+    &__footer {
+      font-size: 30px;
+      line-height: 45px;
+      color: $c_white;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__header {
+      max-width: 50%;
+      margin-bottom: 80px;
+    }
+
+    &__footer {
+      max-width: 900px;
+      margin: 20px auto 0;
+      text-align: center;
     }
   }
 }
