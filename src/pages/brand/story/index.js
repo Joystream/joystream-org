@@ -90,6 +90,8 @@ const StoryPage = () => {
           dynamic.
         </p>
       </LayoutWrapper>
+
+      <LayoutWrapper className="StoryLogo">Blue text</LayoutWrapper>
     </BrandLayout>
   );
 };
