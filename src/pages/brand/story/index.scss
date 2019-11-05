@@ -2,12 +2,34 @@
 
 $indentation: 60px;
 
+.Story {
+  &__multi-section {
+    position: relative;
+    background: $c_black;
+
+    @media #{$screen-md} {
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        display: block;
+        content: url('../../../assets/svg/multi-section-pattern.svg');
+      }
+    }
+
+    @media #{$screen-lg} {
+      &::before {
+        left: calc(50% + 20px);
+      }
+    }
+  }
+}
+
 .StoryHeader {
   $_r: &;
 
   width: 100%;
   color: $c_white;
-  background-color: $c_black;
   background-image: url('../../../assets/svg/brand-story-header.svg');
   background-position: left top;
   background-repeat: no-repeat;
@@ -22,13 +44,10 @@ $indentation: 60px;
   }
 
   &__container {
-    @extend %container;
-
     position: relative;
     display: flex;
     align-items: stretch;
     flex-direction: column-reverse;
-    padding: 0;
   }
 
   &__description {
@@ -80,10 +99,6 @@ $indentation: 60px;
     padding-bottom: 0;
     background-image: none;
 
-    .LayoutWrapper__container {
-      padding-bottom: 0;
-    }
-
     &__container {
       flex-direction: row;
     }
@@ -108,10 +123,6 @@ $indentation: 60px;
     &__image-wrapper {
       width: 50%;
       padding: 0 120px 0;
-      background-image: url('../../../assets/svg/brand-story-header.svg');
-      background-position: left top;
-      background-repeat: no-repeat;
-      background-size: 100% auto;
     }
 
     &__image {
@@ -122,7 +133,6 @@ $indentation: 60px;
 
 .StoryWebsite {
   position: relative;
-  background-color: $c_black;
 
   &__title {
     font-size: 40px;
@@ -133,11 +143,16 @@ $indentation: 60px;
   &__container-dark,
   &__container-blue {
     position: relative;
+    margin: 0 -20px;
 
     &::after {
       display: block;
       padding-bottom: 63%;
       content: '';
+    }
+
+    @media #{$screen-sm} {
+      margin: 0;
     }
   }
 
@@ -190,14 +205,6 @@ $indentation: 60px;
   }
 }
 
-@media #{$screen-only-sm} {
-  .StoryWebsite {
-    .LayoutWrapper__container {
-      padding: 0;
-    }
-  }
-}
-
 @media #{$screen-sm} {
   .StoryWebsite {
     &__row {
@@ -234,8 +241,6 @@ $indentation: 60px;
 }
 
 .StoryDescription {
-  background-color: $c_black;
-
   &__header {
     margin-bottom: 40px;
   }
@@ -247,9 +252,13 @@ $indentation: 60px;
     color: $c_white;
   }
 
+  &__text-col {
+    max-width: 560px;
+  }
+
   &__text {
     p {
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
       padding-right: 20px;
       font-size: 14px;
       line-height: 21px;
@@ -267,9 +276,10 @@ $indentation: 60px;
       color: $c_white;
     }
 
-    &__text {
+    &__text p {
       font-size: 20px;
       line-height: 30px;
+      color: $c_grayc-chateau;
     }
 
     &__header {
@@ -279,7 +289,7 @@ $indentation: 60px;
 
     &__footer {
       max-width: 900px;
-      margin: 20px auto 0;
+      margin: 30px auto 0;
       text-align: center;
     }
   }
