@@ -25,7 +25,7 @@
   }
 
   &__container {
-    @extend %container;
+    @extend %largeContainer;
 
     display: flex;
     align-items: stretch;

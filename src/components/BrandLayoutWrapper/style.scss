@@ -1,0 +1,27 @@
+@import '../../styles/main';
+
+.BrandLayoutWrapper {
+  $_r: &;
+
+  &--dark {
+    background-color: $c_black;
+  }
+
+  &--blue {
+    background-color: $c_blue-ribbon;
+  }
+
+  &__container {
+    @extend %largeContainer;
+
+    position: relative;
+    z-index: 1;
+    padding-bottom: 60px;
+  }
+
+  @media #{$screen-md} {
+    &__container {
+      padding-bottom: 130px;
+    }
+  }
+}
