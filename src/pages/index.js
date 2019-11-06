@@ -21,7 +21,7 @@ import Hero from '../components/Hero';
 import SiteMetadata from '../components/SiteMetadata';
 
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
-import platformImage from '../assets/svg/platform.svg';
+import heroImage from '../assets/svg/hero-builder.svg';
 import { ReactComponent as TickImage } from '../assets/svg/tick.svg';
 import { ReactComponent as ClockImage } from '../assets/svg/clock.svg';
 
@@ -40,7 +40,7 @@ const IndexPage = ({ content }) => (
       title="Joystream: A user governed video platform"
       description="Earn monero for participating on our testnets!"
     />
-    <Hero image={platformImage} title="A user governed video platform" animationStartValue={0}>
+    <Hero image={heroImage} title="A user governed video platform" animationStartValue={0}>
       <p className="IndexPage__hero-paragraph">
         Earn Monero by participating in the current {activeTestnet.name} testnet
       </p>
