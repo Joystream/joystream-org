@@ -21,16 +21,24 @@
     }
   }
 
-  @media #{$screen-md} {
+  @media #{$screen-sm} {
     &__hero-group {
       flex-direction: row;
     }
 
     &__hero-button {
+      flex-grow: 1;
+
       &:not(:last-child) {
         margin-right: 16px;
         margin-bottom: 0;
       }
+    }
+  }
+
+  @media #{$screen-md} {
+    &__hero-button {
+      flex-grow: 0;
     }
   }
 }
