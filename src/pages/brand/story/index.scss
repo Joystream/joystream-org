@@ -296,6 +296,125 @@ $indentation: 60px;
 }
 
 .StoryLogo {
+  overflow: hidden;
   color: $c_white;
   background-color: $c_blue-ribbon;
+
+  &__logos-container {
+    position: relative;
+    margin: 0 -20px;
+    padding: 0 20px;
+    background: url('../../../assets/svg/bg-brand-logo-top.svg') top center no-repeat;
+    background-size: 100% auto;
+
+    &::before {
+      display: block;
+      padding-bottom: 175%;
+      content: '';
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    width: 200px;
+    transform: translate(-50%, 0);
+  }
+
+  &__blueprint {
+    margin: 20px 0 80px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    color: $c_white;
+  }
+
+  &__sketch-img {
+    position: relative;
+    margin: 80px 0;
+
+    img {
+      position: absolute;
+      transform: scale(1.15);
+    }
+
+    &::after {
+      display: block;
+      padding-bottom: 75%;
+      content: '';
+    }
+  }
+
+  &__text {
+    p {
+      margin-bottom: 1.5em;
+      font-size: 20px;
+      line-height: 30px;
+      color: $c_white;
+    }
+  }
+}
+
+@media #{$screen-sm} {
+  .StoryLogo {
+    padding: 120px 0;
+    color: $c_white;
+    background-color: $c_blue-ribbon;
+
+    &__container {
+      background: url('../../../assets//svg/bg-brand-logo-pattern.svg') top left;
+      background-size: 100% auto;
+    }
+
+    &__logos-container {
+      height: 600px;
+      margin: 0;
+      padding: 0;
+      background-size: 50%;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__blueprint {
+      position: absolute;
+      right: 0;
+      width: 40%;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      width: 40%;
+      margin-top: 120px;
+      margin-right: 40px;
+      font-size: 60px;
+      font-weight: normal;
+      line-height: 70px;
+    }
+
+    &__sketch-img {
+      flex-grow: 1;
+      margin: 0;
+      margin-right: 80px;
+    }
+
+    &__text {
+      margin-top: 140px;
+
+      p {
+        width: 80%;
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
+  }
 }
