@@ -6,8 +6,11 @@ import Button from '../../../components/Button';
 import ActionButton from '../../../components/ActionButton';
 import LayoutWrapper from '../../../components/LayoutWrapper';
 import laptopImg from '../../../assets/images/laptop-website.png';
+import sketchImg from '../../../assets/images/logo-sketches.png';
 import wavesImg from '../../../assets/svg/waves.svg';
 import logoImg from '../../../assets/svg/logo-mark.svg';
+import { ReactComponent as Logotype } from '../../../assets/svg/logo-white.svg';
+import blueprintImg from '../../../assets/svg/logo-blueprint.svg';
 import ColumnsLayout from '../../../components/ColumnsLayout';
 import './index.scss';
 
@@ -99,7 +102,46 @@ const StoryPage = () => {
         </BrandLayoutWrapper>
       </div>
 
-      <BrandLayoutWrapper className="StoryLogo">Blue text</BrandLayoutWrapper>
+      <BrandLayoutWrapper className="StoryLogo">
+        <div className="StoryLogo__logos-container">
+          <Logotype className="StoryLogo__logo" style={{ color: 'white' }} />
+          <img className="StoryLogo__blueprint" src={blueprintImg} alt="" />
+        </div>
+
+        <div className="StoryLogo__header">
+          <h2 className="StoryLogo__title">
+            We want to free the media, inspire people and connect them using platform
+          </h2>
+
+          <div className="StoryLogo__sketch-img">
+            <img src={sketchImg} alt="" />
+          </div>
+        </div>
+
+        <ColumnsLayout className="StoryLogo__text">
+          <div>
+            <div className="StoryLogo__text-col">
+              <p>
+                Creating the Joystream brand prooved to be challenging due to its unparalleled nature and the fact that
+                it evolves rapidly.
+              </p>
+              <p>
+                Not only we had to take into account a very wide and diverse user base but also we had to create a brand
+                that will be futureproof and flexible enough to cover both existing and upcoming needs of the project
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="StoryLogo__text-col">
+              <p>
+                Joystream branding within itself is quite metaphoric and symbolic often referring to symbolism of
+                ancient cities, culture, arts and philosophies.
+              </p>
+              <p>The challenge was to combine it with a very modern and complex technologies.</p>
+            </div>
+          </div>
+        </ColumnsLayout>
+      </BrandLayoutWrapper>
     </BrandLayout>
   );
 };
