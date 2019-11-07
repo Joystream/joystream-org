@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600"><defs><style>.cls-1,.cls-2,.cls-3,.cls-5{fill:none;}.cls-2,.cls-3,.cls-4,.cls-5{stroke:#4038ff;}.cls-2,.cls-3{stroke-linecap:square;}.cls-2,.cls-3,.cls-5{stroke-miterlimit:10;}.cls-2{stroke-width:2px;}.cls-3,.cls-4,.cls-5{stroke-width:12px;}.cls-4{stroke-linejoin:bevel;fill:url(#lines);}</style><pattern id="lines" data-name="lines" width="16" height="16" patternTransform="translate(-256 480)" patternUnits="userSpaceOnUse" viewBox="0 0 16 16"><rect class="cls-1" width="16" height="16"/><line class="cls-2" x1="1.98" y1="78.02" x2="67.98" y2="12.02"/><line class="cls-2" x1="-14.02" y1="78.02" x2="51.98" y2="12.02"/><line class="cls-2" x1="-30.02" y1="78.02" x2="35.98" y2="12.02"/><line class="cls-2" x1="-46.02" y1="78.02" x2="19.98" y2="12.02"/><line class="cls-2" x1="-62.02" y1="78.02" x2="3.98" y2="12.02"/><line class="cls-2" x1="1.98" y1="62.02" x2="67.98" y2="-3.98"/><line class="cls-2" x1="-14.02" y1="62.02" x2="51.98" y2="-3.98"/><line class="cls-2" x1="-30.02" y1="62.02" x2="35.98" y2="-3.98"/><line class="cls-2" x1="-46.02" y1="62.02" x2="19.98" y2="-3.98"/><line class="cls-2" x1="-62.02" y1="62.02" x2="3.98" y2="-3.98"/><line class="cls-2" x1="1.98" y1="46.02" x2="67.98" y2="-19.98"/><line class="cls-2" x1="-14.02" y1="46.02" x2="51.98" y2="-19.98"/><line class="cls-2" x1="-30.02" y1="46.02" x2="35.98" y2="-19.98"/><line class="cls-2" x1="-46.02" y1="46.02" x2="19.98" y2="-19.98"/><line class="cls-2" x1="-62.02" y1="46.02" x2="3.98" y2="-19.98"/><line class="cls-2" x1="1.98" y1="30.02" x2="67.98" y2="-35.98"/><line class="cls-2" x1="-14.02" y1="30.02" x2="51.98" y2="-35.98"/><line class="cls-2" x1="-30.02" y1="30.02" x2="35.98" y2="-35.98"/><line class="cls-2" x1="-46.02" y1="30.02" x2="19.98" y2="-35.98"/><line class="cls-2" x1="-62.02" y1="30.02" x2="3.98" y2="-35.98"/><line class="cls-2" x1="1.98" y1="14.02" x2="67.98" y2="-51.98"/><line class="cls-2" x1="-14.02" y1="14.02" x2="51.98" y2="-51.98"/><line class="cls-2" x1="-30.02" y1="14.02" x2="35.98" y2="-51.98"/><line class="cls-2" x1="-46.02" y1="14.02" x2="19.98" y2="-51.98"/><line class="cls-2" x1="-62.02" y1="14.02" x2="3.98" y2="-51.98"/></pattern></defs><title>Blockchain (2)-2x</title><g id="Layer_2" data-name="Layer 2"><g id="Blockchain"><polyline class="cls-3" points="482.88 500.13 630.54 500.13 630.54 298.77 482.88 298.77"/><line class="cls-4" x1="482.87" y1="500.14" x2="482.87" y2="298.77"/><polyline class="cls-3" points="335.21 500.13 482.88 500.13 482.88 298.77 335.21 298.77"/><polygon class="cls-3" points="482.88 97.4 453.27 134.31 453.18 298.77 482.88 298.77 630.54 298.77 630.54 97.4 482.88 97.4"/><polygon class="cls-4" points="482.88 298.77 482.88 97.4 453.27 134.31 453.18 298.77 482.88 298.77"/><circle class="cls-5" cx="412.32" cy="401.07" r="14.64"/><circle class="cls-5" cx="556.5" cy="401.07" r="14.64"/><circle class="cls-5" cx="556.5" cy="198.09" r="14.64"/><line class="cls-5" x1="426.96" y1="401.07" x2="541.86" y2="401.07"/><polygon class="cls-3" points="187.54 298.77 157.93 335.67 157.84 466 187.54 500.13 335.21 500.13 335.21 298.77 187.54 298.77"/><polygon class="cls-4" points="187.54 500.13 187.54 298.77 157.93 335.67 157.84 466 187.54 500.13"/><circle class="cls-5" cx="264.65" cy="401.07" r="14.64"/><line class="cls-5" x1="279.29" y1="401.07" x2="394.19" y2="401.07"/><line class="cls-5" x1="556.5" y1="386.44" x2="556.5" y2="212.72"/><rect class="cls-1" width="800" height="600"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 586.37 501.36">
+    <defs>
+        <pattern id="lines" data-name="lines" width="16" height="16" patternTransform="translate(-256 480)" patternUnits="userSpaceOnUse">
+            <path fill="none" d="M0 0h16v16H0z"/>
+            <path class="cls-2" d="M1.98 78.02l66-66M-14.02 78.02l66-66M-30.02 78.02l66-66M-46.02 78.02l66-66M-62.02 78.02l66-66M1.98 62.02l66-66M-14.02 62.02l66-66M-30.02 62.02l66-66M-46.02 62.02l66-66M-62.02 62.02l66-66M1.98 46.02l66-66M-14.02 46.02l66-66M-30.02 46.02l66-66M-46.02 46.02l66-66M-62.02 46.02l66-66M1.98 30.02l66-66M-14.02 30.02l66-66M-30.02 30.02l66-66M-46.02 30.02l66-66M-62.02 30.02l66-66M1.98 14.02l66-66M-14.02 14.02l66-66M-30.02 14.02l66-66M-46.02 14.02l66-66M-62.02 14.02l66-66"/>
+        </pattern>
+        <style>
+            .cls-2,.cls-3,.cls-5{fill:none}.cls-2,.cls-3,.cls-4,.cls-5{stroke:#4038ff}.cls-2,.cls-3{stroke-linecap:square}.cls-2,.cls-3,.cls-5{stroke-miterlimit:10}.cls-2{stroke-width:2px}.cls-3,.cls-4,.cls-5{stroke-width:12px}.cls-4{stroke-linejoin:bevel;fill:url(#lines)}
+        </style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_28" data-name="Layer 28">
+            <path class="cls-3" d="M400.94 495.36h179.43V250.68H400.94"/>
+            <path class="cls-4" d="M400.94 495.36V250.68"/>
+            <path class="cls-3" d="M221.51 495.36h179.43V250.68H221.51M400.94 6l-35.97 44.84-.11 199.84h215.51V6H400.94z"/>
+            <path class="cls-4" d="M400.94 250.68V6l-35.97 44.84-.11 199.84h36.08z"/>
+            <circle class="cls-5" cx="315.21" cy="374.99" r="17.79"/>
+            <circle class="cls-5" cx="490.4" cy="374.99" r="17.79"/>
+            <circle class="cls-5" cx="490.4" cy="128.34" r="17.79"/>
+            <path class="cls-5" d="M332.99 374.99h139.63"/>
+            <path class="cls-3" d="M42.08 250.68L6.11 295.52 6 453.87l36.08 41.49h179.43V250.68H42.08z"/>
+            <path class="cls-4" d="M42.08 495.36V250.68L6.11 295.52 6 453.87l36.08 41.49z"/>
+            <circle class="cls-5" cx="135.78" cy="374.99" r="17.79"/>
+            <path class="cls-5" d="M153.56 374.99h139.63M490.4 357.2V146.12"/>
+        </g>
+    </g>
+</svg>
