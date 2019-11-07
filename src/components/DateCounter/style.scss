@@ -74,26 +74,26 @@ $light-font-color: $c_white;
     text-transform: uppercase;
   }
 
-  @media #{$screen-sm} {
-    &__title {
-      text-align: left;
-    }
-
+  @media #{media-min-width(550px)} {
     &--large {
       #{$_r} {
         &__value {
-          font-size: 55px;
+          font-size: 65px;
         }
 
         &__separator {
-          padding: 12px 30px;
-          font-size: 30px;
+          padding: 12px 40px;
+          font-size: 40px;
         }
       }
     }
   }
 
   @media #{$screen-md} {
+    &__title {
+      text-align: left;
+    }
+
     &--large {
       #{$_r} {
         &__value {
