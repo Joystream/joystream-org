@@ -132,14 +132,11 @@
   @media #{$screen-sm} {
     &__header {
       padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     &__title {
       font-size: 36px;
-    }
-
-    &__image {
-      margin-bottom: -100px;
     }
 
     &__content {
@@ -196,6 +193,7 @@
       right: 0;
       max-width: 30%;
       margin-right: 55px;
+      margin-bottom: -100px;
       padding: 0;
     }
 
