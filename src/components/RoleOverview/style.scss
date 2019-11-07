@@ -165,16 +165,18 @@
   }
 
   @media #{$screen-md} {
+    $icon-width: 120px;
+
     &__header {
       align-items: flex-start;
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
       padding: 40px;
-      background-image:
-        url('../../assets/background/roles-page-corner-left.png'),
+      background-image: url('../../assets/background/roles-page-corner-left.png'),
         url('../../assets/background/roles-page-corner-right.png');
       background-position: bottom left, top right;
+      position: relative;
       background-repeat: no-repeat;
 
       &-container {
@@ -183,23 +185,27 @@
       }
     }
 
+    &__header-container {
+      width: 100%;
+    }
+
     &__title {
-      max-width: 50%;
+      max-width: calc(65% - #{$icon-width});
     }
 
     &__image {
       position: absolute;
       top: 0;
       right: 0;
-      max-width: 30%;
-      margin-right: 55px;
+      max-width: calc(40% - #{$icon-width});
+      margin-right: 40px;
       margin-bottom: -100px;
       padding: 0;
     }
 
     &__icon {
       display: block;
-      width: 120px;
+      width: $icon-width;
       margin-right: 40px;
     }
 
@@ -219,6 +225,12 @@
       &:not(:last-child) {
         margin-right: 24px;
       }
+    }
+  }
+
+  @media #{$screen-lg} {
+    &__icon {
+      max-width: auto;
     }
   }
 }
