@@ -1,1 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600"><defs><style>.cls-1,.cls-2,.cls-4,.cls-5{fill:none;}.cls-2,.cls-3,.cls-4,.cls-5{stroke:#4038ff;stroke-linecap:square;}.cls-2,.cls-3,.cls-4{stroke-miterlimit:10;}.cls-2{stroke-width:2px;}.cls-3,.cls-4,.cls-5{stroke-width:12px;}.cls-3{fill:url(#lines);}</style><pattern id="lines" data-name="lines" width="16" height="16" patternUnits="userSpaceOnUse" viewBox="0 0 16 16"><rect class="cls-1" width="16" height="16"/><line class="cls-2" x1="1.98" y1="78.02" x2="67.98" y2="12.02"/><line class="cls-2" x1="-14.02" y1="78.02" x2="51.98" y2="12.02"/><line class="cls-2" x1="-30.02" y1="78.02" x2="35.98" y2="12.02"/><line class="cls-2" x1="-46.02" y1="78.02" x2="19.98" y2="12.02"/><line class="cls-2" x1="-62.02" y1="78.02" x2="3.98" y2="12.02"/><line class="cls-2" x1="1.98" y1="62.02" x2="67.98" y2="-3.98"/><line class="cls-2" x1="-14.02" y1="62.02" x2="51.98" y2="-3.98"/><line class="cls-2" x1="-30.02" y1="62.02" x2="35.98" y2="-3.98"/><line class="cls-2" x1="-46.02" y1="62.02" x2="19.98" y2="-3.98"/><line class="cls-2" x1="-62.02" y1="62.02" x2="3.98" y2="-3.98"/><line class="cls-2" x1="1.98" y1="46.02" x2="67.98" y2="-19.98"/><line class="cls-2" x1="-14.02" y1="46.02" x2="51.98" y2="-19.98"/><line class="cls-2" x1="-30.02" y1="46.02" x2="35.98" y2="-19.98"/><line class="cls-2" x1="-46.02" y1="46.02" x2="19.98" y2="-19.98"/><line class="cls-2" x1="-62.02" y1="46.02" x2="3.98" y2="-19.98"/><line class="cls-2" x1="1.98" y1="30.02" x2="67.98" y2="-35.98"/><line class="cls-2" x1="-14.02" y1="30.02" x2="51.98" y2="-35.98"/><line class="cls-2" x1="-30.02" y1="30.02" x2="35.98" y2="-35.98"/><line class="cls-2" x1="-46.02" y1="30.02" x2="19.98" y2="-35.98"/><line class="cls-2" x1="-62.02" y1="30.02" x2="3.98" y2="-35.98"/><line class="cls-2" x1="1.98" y1="14.02" x2="67.98" y2="-51.98"/><line class="cls-2" x1="-14.02" y1="14.02" x2="51.98" y2="-51.98"/><line class="cls-2" x1="-30.02" y1="14.02" x2="35.98" y2="-51.98"/><line class="cls-2" x1="-46.02" y1="14.02" x2="19.98" y2="-51.98"/><line class="cls-2" x1="-62.02" y1="14.02" x2="3.98" y2="-51.98"/></pattern></defs><title>Platform-content-files (2)-2x</title><g id="Layer_2" data-name="Layer 2"><g id="Platform-content-files"><path class="cls-3" d="M108.68,182.66A37.39,37.39,0,0,1,146,145.17c14.91,0,28.75,13,28.75,37.49Z"/><path class="cls-4" d="M146,145.17H284.81v.24"/><path class="cls-4" d="M240.72,423.32a37.37,37.37,0,0,1-37.27,37.49c-14.9,0-28.75-13-28.75-37.49V182.66"/><path class="cls-3" d="M284.81,460.81H212.23c-8.78,0-.67-.73-.18-.93,17.36-7,26.85-18.64,28.67-36.56h44.09"/><path class="cls-5" d="M218.47,198.71h66.34"/><path class="cls-5" d="M218.47,251.81h66.34"/><path class="cls-5" d="M218.47,304.91h66.34"/><path class="cls-5" d="M218.47,355.63h61.08"/><path class="cls-3" d="M200.43,145.22a47.79,47.79,0,0,1,47.64-47.93c19.05,0,36.74,16.66,36.74,47.93Z"/><path class="cls-4" d="M284.81,452.78v0ZM248.07,97.29H494.39v.31m0,0a49.08,49.08,0,0,1,5.45-.31c19.05,0,36.74,16.66,36.74,47.93V452.78"/><path class="cls-4" d="M369.19,452.78a47.78,47.78,0,0,1-47.63,47.93c-19.06,0-36.75-16.66-36.75-47.93"/><path class="cls-3" d="M332.55,499.52c-.63.26-11,1.19.22,1.19H543.39A47.78,47.78,0,0,0,591,452.78H369.19C366.86,475.7,354.74,490.55,332.55,499.52Z"/><path class="cls-5" d="M340.74,165.72H484.25"/><path class="cls-5" d="M340.74,233.59H484.25"/><path class="cls-5" d="M340.74,301.46H484.25"/><path class="cls-5" d="M340.74,366.28h89.65"/><path class="cls-4" d="M536.58,145.17h68.59v.23m0,0a38.05,38.05,0,0,1,4.15-.23c14.53,0,28,12.7,28,36.54V416.24"/><path class="cls-3" d="M536.58,416.24H678.85a36.43,36.43,0,0,1-36.32,36.54H536.58"/><path class="cls-5" d="M536.58,197.35h60.86"/><path class="cls-5" d="M536.58,249.1h60.86"/><path class="cls-5" d="M536.58,300.85h60.86"/><path class="cls-5" d="M536.58,350.28h38"/><line class="cls-4" x1="284.81" y1="145.22" x2="284.81" y2="460.81"/><rect class="cls-1" width="800" height="600"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600">
+  <defs>
+    <style>.cls-1,.cls-2,.cls-4,.cls-5{fill:none;}.cls-2,.cls-3,.cls-4,.cls-5{stroke:currentColor;stroke-linecap:square;}.cls-2,.cls-3,.cls-4{stroke-miterlimit:10;}.cls-2{stroke-width:2px;}.cls-3,.cls-4,.cls-5{stroke-width:12px;}.cls-3{fill:url(#lines);}</style>
+    <pattern id="lines" data-name="lines" width="16" height="16" patternUnits="userSpaceOnUse" viewBox="0 0 16 16">
+      <rect class="cls-1" width="16" height="16"/>
+      <line class="cls-2" x1="1.98" y1="78.02" x2="67.98" y2="12.02"/>
+      <line class="cls-2" x1="-14.02" y1="78.02" x2="51.98" y2="12.02"/>
+      <line class="cls-2" x1="-30.02" y1="78.02" x2="35.98" y2="12.02"/>
+      <line class="cls-2" x1="-46.02" y1="78.02" x2="19.98" y2="12.02"/>
+      <line class="cls-2" x1="-62.02" y1="78.02" x2="3.98" y2="12.02"/>
+      <line class="cls-2" x1="1.98" y1="62.02" x2="67.98" y2="-3.98"/>
+      <line class="cls-2" x1="-14.02" y1="62.02" x2="51.98" y2="-3.98"/>
+      <line class="cls-2" x1="-30.02" y1="62.02" x2="35.98" y2="-3.98"/>
+      <line class="cls-2" x1="-46.02" y1="62.02" x2="19.98" y2="-3.98"/>
+      <line class="cls-2" x1="-62.02" y1="62.02" x2="3.98" y2="-3.98"/>
+      <line class="cls-2" x1="1.98" y1="46.02" x2="67.98" y2="-19.98"/>
+      <line class="cls-2" x1="-14.02" y1="46.02" x2="51.98" y2="-19.98"/>
+      <line class="cls-2" x1="-30.02" y1="46.02" x2="35.98" y2="-19.98"/>
+      <line class="cls-2" x1="-46.02" y1="46.02" x2="19.98" y2="-19.98"/>
+      <line class="cls-2" x1="-62.02" y1="46.02" x2="3.98" y2="-19.98"/>
+      <line class="cls-2" x1="1.98" y1="30.02" x2="67.98" y2="-35.98"/>
+      <line class="cls-2" x1="-14.02" y1="30.02" x2="51.98" y2="-35.98"/>
+      <line class="cls-2" x1="-30.02" y1="30.02" x2="35.98" y2="-35.98"/>
+      <line class="cls-2" x1="-46.02" y1="30.02" x2="19.98" y2="-35.98"/>
+      <line class="cls-2" x1="-62.02" y1="30.02" x2="3.98" y2="-35.98"/>
+      <line class="cls-2" x1="1.98" y1="14.02" x2="67.98" y2="-51.98"/>
+      <line class="cls-2" x1="-14.02" y1="14.02" x2="51.98" y2="-51.98"/>
+      <line class="cls-2" x1="-30.02" y1="14.02" x2="35.98" y2="-51.98"/>
+      <line class="cls-2" x1="-46.02" y1="14.02" x2="19.98" y2="-51.98"/>
+      <line class="cls-2" x1="-62.02" y1="14.02" x2="3.98" y2="-51.98"/>
+    </pattern>
+  </defs>
+  <title>Platform-content-files (2)-2x</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Platform-content-files">
+      <path class="cls-3" d="M108.68,182.66A37.39,37.39,0,0,1,146,145.17c14.91,0,28.75,13,28.75,37.49Z"/>
+      <path class="cls-4" d="M146,145.17H284.81v.24"/>
+      <path class="cls-4" d="M240.72,423.32a37.37,37.37,0,0,1-37.27,37.49c-14.9,0-28.75-13-28.75-37.49V182.66"/>
+      <path class="cls-3" d="M284.81,460.81H212.23c-8.78,0-.67-.73-.18-.93,17.36-7,26.85-18.64,28.67-36.56h44.09"/>
+      <path class="cls-5" d="M218.47,198.71h66.34"/>
+      <path class="cls-5" d="M218.47,251.81h66.34"/>
+      <path class="cls-5" d="M218.47,304.91h66.34"/>
+      <path class="cls-5" d="M218.47,355.63h61.08"/>
+      <path class="cls-3" d="M200.43,145.22a47.79,47.79,0,0,1,47.64-47.93c19.05,0,36.74,16.66,36.74,47.93Z"/>
+      <path class="cls-4" d="M284.81,452.78v0ZM248.07,97.29H494.39v.31m0,0a49.08,49.08,0,0,1,5.45-.31c19.05,0,36.74,16.66,36.74,47.93V452.78"/>
+      <path class="cls-4" d="M369.19,452.78a47.78,47.78,0,0,1-47.63,47.93c-19.06,0-36.75-16.66-36.75-47.93"/>
+      <path class="cls-3" d="M332.55,499.52c-.63.26-11,1.19.22,1.19H543.39A47.78,47.78,0,0,0,591,452.78H369.19C366.86,475.7,354.74,490.55,332.55,499.52Z"/>
+      <path class="cls-5" d="M340.74,165.72H484.25"/>
+      <path class="cls-5" d="M340.74,233.59H484.25"/>
+      <path class="cls-5" d="M340.74,301.46H484.25"/>
+      <path class="cls-5" d="M340.74,366.28h89.65"/>
+      <path class="cls-4" d="M536.58,145.17h68.59v.23m0,0a38.05,38.05,0,0,1,4.15-.23c14.53,0,28,12.7,28,36.54V416.24"/>
+      <path class="cls-3" d="M536.58,416.24H678.85a36.43,36.43,0,0,1-36.32,36.54H536.58"/>
+      <path class="cls-5" d="M536.58,197.35h60.86"/>
+      <path class="cls-5" d="M536.58,249.1h60.86"/>
+      <path class="cls-5" d="M536.58,300.85h60.86"/>
+      <path class="cls-5" d="M536.58,350.28h38"/>
+      <line class="cls-4" x1="284.81" y1="145.22" x2="284.81" y2="460.81"/>
+      <rect class="cls-1" width="800" height="600"/>
+    </g>
+  </g>
+</svg>

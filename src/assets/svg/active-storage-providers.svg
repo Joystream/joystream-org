@@ -1,1 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600"><defs><style>.cls-1,.cls-2,.cls-3,.cls-5,.cls-7{fill:none;}.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{stroke:#4038ff;}.cls-2,.cls-3,.cls-4,.cls-7{stroke-linecap:square;}.cls-2,.cls-5,.cls-6,.cls-7{stroke-miterlimit:10;}.cls-2{stroke-width:2px;}.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{stroke-width:12px;}.cls-4{fill:url(#lines);}.cls-6{fill:#fff;}.cls-8{fill:url(#lines-7);}</style><pattern id="lines" data-name="lines" width="16" height="16" patternTransform="translate(509.39 576)" patternUnits="userSpaceOnUse" viewBox="0 0 16 16"><rect class="cls-1" width="16" height="16"/><line class="cls-2" x1="1.98" y1="78.02" x2="67.98" y2="12.02"/><line class="cls-2" x1="-14.02" y1="78.02" x2="51.98" y2="12.02"/><line class="cls-2" x1="-30.02" y1="78.02" x2="35.98" y2="12.02"/><line class="cls-2" x1="-46.02" y1="78.02" x2="19.98" y2="12.02"/><line class="cls-2" x1="-62.02" y1="78.02" x2="3.98" y2="12.02"/><line class="cls-2" x1="1.98" y1="62.02" x2="67.98" y2="-3.98"/><line class="cls-2" x1="-14.02" y1="62.02" x2="51.98" y2="-3.98"/><line class="cls-2" x1="-30.02" y1="62.02" x2="35.98" y2="-3.98"/><line class="cls-2" x1="-46.02" y1="62.02" x2="19.98" y2="-3.98"/><line class="cls-2" x1="-62.02" y1="62.02" x2="3.98" y2="-3.98"/><line class="cls-2" x1="1.98" y1="46.02" x2="67.98" y2="-19.98"/><line class="cls-2" x1="-14.02" y1="46.02" x2="51.98" y2="-19.98"/><line class="cls-2" x1="-30.02" y1="46.02" x2="35.98" y2="-19.98"/><line class="cls-2" x1="-46.02" y1="46.02" x2="19.98" y2="-19.98"/><line class="cls-2" x1="-62.02" y1="46.02" x2="3.98" y2="-19.98"/><line class="cls-2" x1="1.98" y1="30.02" x2="67.98" y2="-35.98"/><line class="cls-2" x1="-14.02" y1="30.02" x2="51.98" y2="-35.98"/><line class="cls-2" x1="-30.02" y1="30.02" x2="35.98" y2="-35.98"/><line class="cls-2" x1="-46.02" y1="30.02" x2="19.98" y2="-35.98"/><line class="cls-2" x1="-62.02" y1="30.02" x2="3.98" y2="-35.98"/><line class="cls-2" x1="1.98" y1="14.02" x2="67.98" y2="-51.98"/><line class="cls-2" x1="-14.02" y1="14.02" x2="51.98" y2="-51.98"/><line class="cls-2" x1="-30.02" y1="14.02" x2="35.98" y2="-51.98"/><line class="cls-2" x1="-46.02" y1="14.02" x2="19.98" y2="-51.98"/><line class="cls-2" x1="-62.02" y1="14.02" x2="3.98" y2="-51.98"/></pattern><pattern id="lines-7" data-name="lines" width="16" height="16" patternTransform="translate(125.39 109.33)" patternUnits="userSpaceOnUse" viewBox="0 0 16 16"><rect class="cls-1" width="16" height="16"/><line class="cls-2" x1="1.98" y1="78.02" x2="67.98" y2="12.02"/><line class="cls-2" x1="-14.02" y1="78.02" x2="51.98" y2="12.02"/><line class="cls-2" x1="-30.02" y1="78.02" x2="35.98" y2="12.02"/><line class="cls-2" x1="-46.02" y1="78.02" x2="19.98" y2="12.02"/><line class="cls-2" x1="-62.02" y1="78.02" x2="3.98" y2="12.02"/><line class="cls-2" x1="1.98" y1="62.02" x2="67.98" y2="-3.98"/><line class="cls-2" x1="-14.02" y1="62.02" x2="51.98" y2="-3.98"/><line class="cls-2" x1="-30.02" y1="62.02" x2="35.98" y2="-3.98"/><line class="cls-2" x1="-46.02" y1="62.02" x2="19.98" y2="-3.98"/><line class="cls-2" x1="-62.02" y1="62.02" x2="3.98" y2="-3.98"/><line class="cls-2" x1="1.98" y1="46.02" x2="67.98" y2="-19.98"/><line class="cls-2" x1="-14.02" y1="46.02" x2="51.98" y2="-19.98"/><line class="cls-2" x1="-30.02" y1="46.02" x2="35.98" y2="-19.98"/><line class="cls-2" x1="-46.02" y1="46.02" x2="19.98" y2="-19.98"/><line class="cls-2" x1="-62.02" y1="46.02" x2="3.98" y2="-19.98"/><line class="cls-2" x1="1.98" y1="30.02" x2="67.98" y2="-35.98"/><line class="cls-2" x1="-14.02" y1="30.02" x2="51.98" y2="-35.98"/><line class="cls-2" x1="-30.02" y1="30.02" x2="35.98" y2="-35.98"/><line class="cls-2" x1="-46.02" y1="30.02" x2="19.98" y2="-35.98"/><line class="cls-2" x1="-62.02" y1="30.02" x2="3.98" y2="-35.98"/><line class="cls-2" x1="1.98" y1="14.02" x2="67.98" y2="-51.98"/><line class="cls-2" x1="-14.02" y1="14.02" x2="51.98" y2="-51.98"/><line class="cls-2" x1="-30.02" y1="14.02" x2="35.98" y2="-51.98"/><line class="cls-2" x1="-46.02" y1="14.02" x2="19.98" y2="-51.98"/><line class="cls-2" x1="-62.02" y1="14.02" x2="3.98" y2="-51.98"/></pattern></defs><title>Storage-provider (2)-2x</title><g id="Layer_2" data-name="Layer 2"><g id="Storage-provider"><path class="cls-3" d="M184.82,135.21v73.21"/><path class="cls-3" d="M282.44,135.21v73.21"/><path class="cls-3" d="M136,68.1V409.76h97.62V68.1Z"/><path class="cls-3" d="M233.63,68.1V409.76h97.62V68.1Z"/><path class="cls-4" d="M136,335.82v73.94h97.62V335.82Z"/><path class="cls-4" d="M233.63,335.82v73.94h97.62V335.82Z"/><path class="cls-3" d="M380.06,135.21v73.21"/><path class="cls-3" d="M54.16,409.7h453"/><path class="cls-3" d="M331.25,68.1V409.76h97.61V68.1Z"/><path class="cls-4" d="M331.25,335.82v73.94h97.61V335.82Z"/><circle class="cls-3" cx="184.82" cy="227.37" r="18.94"/><circle class="cls-3" cx="282.44" cy="227.37" r="18.94"/><circle class="cls-3" cx="380.06" cy="227.37" r="18.94"/><path class="cls-3" d="M565.86,134.58v73.21"/><path class="cls-3" d="M614.67,383.13V67.46H517.05V310"/><line class="cls-5" x1="614.67" y1="360.79" x2="647.43" y2="366.63"/><line class="cls-5" x1="614.67" y1="321.95" x2="665.65" y2="353.22"/><path class="cls-5" d="M645.78,250.23a20.06,20.06,0,0,0-26.09,3.48h0A20,20,0,0,0,621.45,282l52.44,46.91"/><path class="cls-5" d="M650.86,581.54l68.26-157.86c6.16-18.48,6.16-18.48,4.62-44.54L722.54,298l-49.21-75.7a20.05,20.05,0,0,0-31.73,24.53l35.18,57L664.31,358l-44.88,25.4c-24.66,10.44-45.54,7.77-60.89-14.66l-28.12-42.79c-16.74-23.78-37.42-16.39-49.18-4.61a44.32,44.32,0,0,0-4.4,5.54s14.69,25.44,17.72,31l19.61,69.1s-11.46,51.3,34.55,87.55"/><line class="cls-6" x1="534.37" y1="500.9" x2="523.17" y2="532.26"/><path class="cls-7" d="M621.64,408.46c-19.42,8.34-37.19-3.1-48.65-18.65l-19-28.36"/><path class="cls-8" d="M552.76,516.2c-13.57-6.16-11.28-9.87-15-18.63l-14.8,36.27,76.43,29.36"/><circle class="cls-3" cx="565.86" cy="232.94" r="18.94"/><path class="cls-4" d="M558.54,368.7c14.36,21,33.54,24.66,56.13,16.52V336H537.06Z"/><rect class="cls-1" width="800" height="600"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600">
+  <defs>
+    <style>.cls-1,.cls-2,.cls-3,.cls-5,.cls-7{fill:none;}.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{stroke:currentColor;}.cls-2,.cls-3,.cls-4,.cls-7{stroke-linecap:square;}.cls-2,.cls-5,.cls-6,.cls-7{stroke-miterlimit:10;}.cls-2{stroke-width:2px;}.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{stroke-width:12px;}.cls-4{fill:url(#lines);}.cls-6{fill:#fff;}.cls-8{fill:url(#lines-7);}</style>
+    <pattern id="lines" data-name="lines" width="16" height="16" patternTransform="translate(509.39 576)" patternUnits="userSpaceOnUse" viewBox="0 0 16 16">
+      <rect class="cls-1" width="16" height="16"/>
+      <line class="cls-2" x1="1.98" y1="78.02" x2="67.98" y2="12.02"/>
+      <line class="cls-2" x1="-14.02" y1="78.02" x2="51.98" y2="12.02"/>
+      <line class="cls-2" x1="-30.02" y1="78.02" x2="35.98" y2="12.02"/>
+      <line class="cls-2" x1="-46.02" y1="78.02" x2="19.98" y2="12.02"/>
+      <line class="cls-2" x1="-62.02" y1="78.02" x2="3.98" y2="12.02"/>
+      <line class="cls-2" x1="1.98" y1="62.02" x2="67.98" y2="-3.98"/>
+      <line class="cls-2" x1="-14.02" y1="62.02" x2="51.98" y2="-3.98"/>
+      <line class="cls-2" x1="-30.02" y1="62.02" x2="35.98" y2="-3.98"/>
+      <line class="cls-2" x1="-46.02" y1="62.02" x2="19.98" y2="-3.98"/>
+      <line class="cls-2" x1="-62.02" y1="62.02" x2="3.98" y2="-3.98"/>
+      <line class="cls-2" x1="1.98" y1="46.02" x2="67.98" y2="-19.98"/>
+      <line class="cls-2" x1="-14.02" y1="46.02" x2="51.98" y2="-19.98"/>
+      <line class="cls-2" x1="-30.02" y1="46.02" x2="35.98" y2="-19.98"/>
+      <line class="cls-2" x1="-46.02" y1="46.02" x2="19.98" y2="-19.98"/>
+      <line class="cls-2" x1="-62.02" y1="46.02" x2="3.98" y2="-19.98"/>
+      <line class="cls-2" x1="1.98" y1="30.02" x2="67.98" y2="-35.98"/>
+      <line class="cls-2" x1="-14.02" y1="30.02" x2="51.98" y2="-35.98"/>
+      <line class="cls-2" x1="-30.02" y1="30.02" x2="35.98" y2="-35.98"/>
+      <line class="cls-2" x1="-46.02" y1="30.02" x2="19.98" y2="-35.98"/>
+      <line class="cls-2" x1="-62.02" y1="30.02" x2="3.98" y2="-35.98"/>
+      <line class="cls-2" x1="1.98" y1="14.02" x2="67.98" y2="-51.98"/>
+      <line class="cls-2" x1="-14.02" y1="14.02" x2="51.98" y2="-51.98"/>
+      <line class="cls-2" x1="-30.02" y1="14.02" x2="35.98" y2="-51.98"/>
+      <line class="cls-2" x1="-46.02" y1="14.02" x2="19.98" y2="-51.98"/>
+      <line class="cls-2" x1="-62.02" y1="14.02" x2="3.98" y2="-51.98"/>
+    </pattern>
+    <pattern id="lines-7" data-name="lines" width="16" height="16" patternTransform="translate(125.39 109.33)" patternUnits="userSpaceOnUse" viewBox="0 0 16 16">
+      <rect class="cls-1" width="16" height="16"/>
+      <line class="cls-2" x1="1.98" y1="78.02" x2="67.98" y2="12.02"/>
+      <line class="cls-2" x1="-14.02" y1="78.02" x2="51.98" y2="12.02"/>
+      <line class="cls-2" x1="-30.02" y1="78.02" x2="35.98" y2="12.02"/>
+      <line class="cls-2" x1="-46.02" y1="78.02" x2="19.98" y2="12.02"/>
+      <line class="cls-2" x1="-62.02" y1="78.02" x2="3.98" y2="12.02"/>
+      <line class="cls-2" x1="1.98" y1="62.02" x2="67.98" y2="-3.98"/>
+      <line class="cls-2" x1="-14.02" y1="62.02" x2="51.98" y2="-3.98"/>
+      <line class="cls-2" x1="-30.02" y1="62.02" x2="35.98" y2="-3.98"/>
+      <line class="cls-2" x1="-46.02" y1="62.02" x2="19.98" y2="-3.98"/>
+      <line class="cls-2" x1="-62.02" y1="62.02" x2="3.98" y2="-3.98"/>
+      <line class="cls-2" x1="1.98" y1="46.02" x2="67.98" y2="-19.98"/>
+      <line class="cls-2" x1="-14.02" y1="46.02" x2="51.98" y2="-19.98"/>
+      <line class="cls-2" x1="-30.02" y1="46.02" x2="35.98" y2="-19.98"/>
+      <line class="cls-2" x1="-46.02" y1="46.02" x2="19.98" y2="-19.98"/>
+      <line class="cls-2" x1="-62.02" y1="46.02" x2="3.98" y2="-19.98"/>
+      <line class="cls-2" x1="1.98" y1="30.02" x2="67.98" y2="-35.98"/>
+      <line class="cls-2" x1="-14.02" y1="30.02" x2="51.98" y2="-35.98"/>
+      <line class="cls-2" x1="-30.02" y1="30.02" x2="35.98" y2="-35.98"/>
+      <line class="cls-2" x1="-46.02" y1="30.02" x2="19.98" y2="-35.98"/>
+      <line class="cls-2" x1="-62.02" y1="30.02" x2="3.98" y2="-35.98"/>
+      <line class="cls-2" x1="1.98" y1="14.02" x2="67.98" y2="-51.98"/>
+      <line class="cls-2" x1="-14.02" y1="14.02" x2="51.98" y2="-51.98"/>
+      <line class="cls-2" x1="-30.02" y1="14.02" x2="35.98" y2="-51.98"/>
+      <line class="cls-2" x1="-46.02" y1="14.02" x2="19.98" y2="-51.98"/>
+      <line class="cls-2" x1="-62.02" y1="14.02" x2="3.98" y2="-51.98"/>
+    </pattern>
+  </defs>
+  <title>Storage-provider (2)-2x</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Storage-provider">
+      <path class="cls-3" d="M184.82,135.21v73.21"/>
+      <path class="cls-3" d="M282.44,135.21v73.21"/>
+      <path class="cls-3" d="M136,68.1V409.76h97.62V68.1Z"/>
+      <path class="cls-3" d="M233.63,68.1V409.76h97.62V68.1Z"/>
+      <path class="cls-4" d="M136,335.82v73.94h97.62V335.82Z"/>
+      <path class="cls-4" d="M233.63,335.82v73.94h97.62V335.82Z"/>
+      <path class="cls-3" d="M380.06,135.21v73.21"/>
+      <path class="cls-3" d="M54.16,409.7h453"/>
+      <path class="cls-3" d="M331.25,68.1V409.76h97.61V68.1Z"/>
+      <path class="cls-4" d="M331.25,335.82v73.94h97.61V335.82Z"/>
+      <circle class="cls-3" cx="184.82" cy="227.37" r="18.94"/>
+      <circle class="cls-3" cx="282.44" cy="227.37" r="18.94"/>
+      <circle class="cls-3" cx="380.06" cy="227.37" r="18.94"/>
+      <path class="cls-3" d="M565.86,134.58v73.21"/>
+      <path class="cls-3" d="M614.67,383.13V67.46H517.05V310"/>
+      <line class="cls-5" x1="614.67" y1="360.79" x2="647.43" y2="366.63"/>
+      <line class="cls-5" x1="614.67" y1="321.95" x2="665.65" y2="353.22"/>
+      <path class="cls-5" d="M645.78,250.23a20.06,20.06,0,0,0-26.09,3.48h0A20,20,0,0,0,621.45,282l52.44,46.91"/>
+      <path class="cls-5" d="M650.86,581.54l68.26-157.86c6.16-18.48,6.16-18.48,4.62-44.54L722.54,298l-49.21-75.7a20.05,20.05,0,0,0-31.73,24.53l35.18,57L664.31,358l-44.88,25.4c-24.66,10.44-45.54,7.77-60.89-14.66l-28.12-42.79c-16.74-23.78-37.42-16.39-49.18-4.61a44.32,44.32,0,0,0-4.4,5.54s14.69,25.44,17.72,31l19.61,69.1s-11.46,51.3,34.55,87.55"/>
+      <line class="cls-6" x1="534.37" y1="500.9" x2="523.17" y2="532.26"/>
+      <path class="cls-7" d="M621.64,408.46c-19.42,8.34-37.19-3.1-48.65-18.65l-19-28.36"/>
+      <path class="cls-8" d="M552.76,516.2c-13.57-6.16-11.28-9.87-15-18.63l-14.8,36.27,76.43,29.36"/>
+      <circle class="cls-3" cx="565.86" cy="232.94" r="18.94"/>
+      <path class="cls-4" d="M558.54,368.7c14.36,21,33.54,24.66,56.13,16.52V336H537.06Z"/>
+      <rect class="cls-1" width="800" height="600"/>
+    </g>
+  </g>
+</svg>
