@@ -13,10 +13,12 @@
   }
 
   &__icon {
+    flex-shrink: 0;
     width: 24px;
   }
 
   &__text {
+    flex-shrink: 0;
     margin-left: 8px;
   }
 
