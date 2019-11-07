@@ -11,10 +11,16 @@ const keys = {
 };
 
 const mapStatusDataToAnalytics = data => {
-  return Object.keys(keys).reduce((prev, curr) => {
+  const mappedData = Object.keys(keys).reduce((prev, curr) => {
     prev[curr] = getValue(data, keys[curr]);
     return prev;
   }, {});
+
+  if (mappedData.blockHeight) {
+    mappedData.blockHeight = Math.round(mappedData.blockHeight / 1000) + 'k';
+  }
+
+  return mappedData;
 };
 
 export default mapStatusDataToAnalytics;

@@ -21,7 +21,7 @@ const propTypes = {
   children: node,
   content: shape({
     validatorsCount: number,
-    blockHeight: number,
+    blockHeight: string,
     councilStage: string,
     membershipsMembers: number,
     forumPosts: number,

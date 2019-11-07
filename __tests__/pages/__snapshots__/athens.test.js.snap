@@ -82,7 +82,7 @@ exports[`AthensPage page renders correctly 1`] = `
         className=""
         content={
           Object {
-            "blockHeight": 1110117,
+            "blockHeight": "1110k",
             "councilStage": "Announcing",
             "forumPosts": 11,
             "mediaFiles": 9,
