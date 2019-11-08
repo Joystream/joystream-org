@@ -89,22 +89,9 @@ $light-font-color: $c_white;
     }
   }
 
-  @media #{$screen-md} {
+  @media #{$screen-lg} {
     &__title {
       text-align: left;
-    }
-
-    &--large {
-      #{$_r} {
-        &__value {
-          font-size: 65px;
-        }
-
-        &__separator {
-          padding: 12px 40px;
-          font-size: 40px;
-        }
-      }
     }
   }
 }

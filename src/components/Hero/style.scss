@@ -39,17 +39,19 @@ $indentation: 60px;
     margin: 16px 0;
 
     & > p {
+      max-width: 500px;
+      margin: 0 auto;
       padding-right: 10px;
       padding-left: 10px;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 26px;
       color: $c_oslo-gray;
     }
   }
 
   &__title {
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 45px;
+    line-height: 45px;
     color: $c_white;
   }
 
@@ -63,6 +65,7 @@ $indentation: 60px;
 
   &__image {
     width: 100%;
+    min-width: 300px;
     margin-bottom: 32px;
   }
 
@@ -74,13 +77,12 @@ $indentation: 60px;
   }
 
   @media #{$screen-sm} {
-    &__title {
-      font-size: 45px;
-      line-height: 45px;
+    &__image {
+      min-width: 500px;
     }
   }
 
-  @media #{$screen-md} {
+  @media #{$screen-lg} {
     padding: 90px 30px 0;
 
     &--indented {
@@ -115,6 +117,7 @@ $indentation: 60px;
 
       & > p {
         max-width: 590px;
+        margin: 0;
         padding-right: 0;
         padding-left: 0;
         font-size: 25px;
@@ -129,6 +132,7 @@ $indentation: 60px;
 
     &__image-wrapper {
       align-items: stretch;
+      justify-content: center;
       margin-bottom: 0;
 
       button {
