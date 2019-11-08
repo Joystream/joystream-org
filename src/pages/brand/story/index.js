@@ -5,6 +5,7 @@ import BrandLayoutWrapper from '../../../components/BrandLayoutWrapper';
 import Button from '../../../components/Button';
 import ActionButton from '../../../components/ActionButton';
 import LayoutWrapper from '../../../components/LayoutWrapper';
+import brandExplanationImg from '../../../assets/images/square-face.png';
 import laptopImg from '../../../assets/images/laptop-website.png';
 import sketchImg from '../../../assets/images/logo-sketches.png';
 import wavesImg from '../../../assets/svg/waves.svg';
@@ -102,7 +103,7 @@ const StoryPage = () => {
         </BrandLayoutWrapper>
       </div>
 
-      <BrandLayoutWrapper className="StoryLogo">
+      <BrandLayoutWrapper blue className="StoryLogo">
         <div className="StoryLogo__logos-container">
           <Logotype className="StoryLogo__logo" style={{ color: 'white' }} />
           <img className="StoryLogo__blueprint" src={blueprintImg} alt="" />
@@ -141,6 +142,26 @@ const StoryPage = () => {
             </div>
           </div>
         </ColumnsLayout>
+      </BrandLayoutWrapper>
+
+      <BrandLayoutWrapper className="StoryExplanation">
+        <div className="StoryExplanation__wrapper">
+          <img src={brandExplanationImg} className="StoryExplanation__image" alt="" />
+          <div className="StoryExplanation__content">
+            <h2 className="StoryExplanation__title">Explaining the Brand</h2>
+            <div className="StoryExplanation__text">
+              <p>
+                Our new branding is about finding good balance between very modern and simplistic tone of communication
+                with symbolism and complexity of modern world problems and technologies.
+              </p>
+              <p>Mosaic, geometrical patterns and shapes combined with explicit colours and symbolic illustrations.</p>
+              <p>
+                Descriptive icons in combination with simple glyph style system icons and experimental detalic
+                illustration style.
+              </p>
+            </div>
+          </div>
+        </div>
       </BrandLayoutWrapper>
     </BrandLayout>
   );
