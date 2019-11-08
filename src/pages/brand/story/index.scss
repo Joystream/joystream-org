@@ -363,7 +363,6 @@ $indentation: 60px;
   .StoryLogo {
     padding: 120px 0;
     color: $c_white;
-    background-color: $c_blue-ribbon;
 
     &__container {
       background: url('../../../assets//svg/bg-brand-logo-pattern.svg') top left;
@@ -415,6 +414,61 @@ $indentation: 60px;
         font-size: 24px;
         line-height: 34px;
       }
+    }
+  }
+}
+
+.StoryExplanation {
+  &__image {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    color: $c_blue-ribbon;
+  }
+
+  &__text p {
+    margin-bottom: 1.5em;
+    font-size: 14px;
+    line-height: 21px;
+    color: $c_ebony-clay;
+  }
+}
+
+@media #{$screen-md} {
+  .StoryExplanation {
+    &__wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top: 180px;
+    }
+
+    &__content {
+      width: 40%;
+    }
+
+    &__image {
+      width: 50%;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      margin-bottom: 80px;
+      font-size: 60px;
+      font-weight: normal;
+      line-height: 70px;
+    }
+
+    &__text p {
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 }
