@@ -88,80 +88,81 @@ exports[`IndexPage page renders correctly 1`] = `
       </Link>
        software and an on-chain forum.
     </TestnetItem>
-    <Analytics
-      className=""
-      content={
-        Object {
-          "blockHeight": "1110k",
-          "councilStage": "Announcing",
-          "forumPosts": 11,
-          "mediaFiles": 9,
-          "membershipsMembers": 164,
-          "rolesProviders": 10,
-          "validatorsCount": 20,
-        }
-      }
-      items={
-        Array [
-          Object {
-            "image": "icon-component-mock",
-            "title": "Participation Payout",
-            "value": "$1576",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "validatorsCount",
-            "title": "Active Validators",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "blockHeight",
-            "title": "Block Height",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "councilStage",
-            "title": "Council Election Stage",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "membershipsMembers",
-            "title": "Memberships",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "forumPosts",
-            "title": "Forum Posts",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "mediaFiles",
-            "title": "Platform Content Files",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "rolesProviders",
-            "title": "Active Storage Providers",
-          },
-        ]
-      }
-    >
-      <Button
-        className=""
-        disabled={false}
-        href="https://blog.joystream.org/acropolis-incentives/"
-        large={false}
-        light={false}
-        noWrap={false}
-        onClick={null}
-        reversed={false}
-        secondary={true}
-        to={null}
-      >
-        Participate and Earn Monero
-      </Button>
-    </Analytics>
   </LayoutWrapper>
+  <Analytics
+    className=""
+    content={
+      Object {
+        "blockHeight": "1110k",
+        "councilStage": "Announcing",
+        "forumPosts": 11,
+        "mediaFiles": 9,
+        "membershipsMembers": 164,
+        "rolesProviders": 10,
+        "validatorsCount": 20,
+      }
+    }
+    items={
+      Array [
+        Object {
+          "image": "icon-component-mock",
+          "title": "Participation Payout",
+          "value": "$1576",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "validatorsCount",
+          "title": "Active Validators",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "blockHeight",
+          "title": "Block Height",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "councilStage",
+          "title": "Council Election Stage",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "membershipsMembers",
+          "title": "Memberships",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "forumPosts",
+          "title": "Forum Posts",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "mediaFiles",
+          "title": "Platform Content Files",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "rolesProviders",
+          "title": "Active Storage Providers",
+        },
+      ]
+    }
+    large={true}
+  >
+    <Button
+      className=""
+      disabled={false}
+      href="https://blog.joystream.org/acropolis-incentives/"
+      large={false}
+      light={false}
+      noWrap={false}
+      onClick={null}
+      reversed={false}
+      secondary={true}
+      to={null}
+    >
+      Participate and Earn Monero
+    </Button>
+  </Analytics>
   <LayoutWrapper
     className=""
     dark={true}

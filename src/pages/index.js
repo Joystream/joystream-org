@@ -76,13 +76,13 @@ const IndexPage = ({ content }) => (
           to: '/acropolis',
         }}
       />
-
-      <Analytics content={mapStatusDataToAnalytics(content)}>
-        <Button secondary href={activeTestnet.incentivesLink}>
-          Participate and Earn Monero
-        </Button>
-      </Analytics>
     </LayoutWrapper>
+
+    <Analytics large content={mapStatusDataToAnalytics(content)}>
+      <Button secondary href={activeTestnet.incentivesLink}>
+        Participate and Earn Monero
+      </Button>
+    </Analytics>
 
     <LayoutWrapper dark>
       <TitleWrapper title="Become a user, run the platform">
