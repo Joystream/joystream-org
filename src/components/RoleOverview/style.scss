@@ -1,5 +1,7 @@
 @import '../../styles/_main';
 
+$icon-size: 120px;
+
 .RoleOverview {
   max-width: 900px;
   margin-bottom: 200px;
@@ -165,8 +167,6 @@
   }
 
   @media #{$screen-md} {
-    $icon-width: 120px;
-
     &__header {
       position: relative;
       align-items: flex-start;
@@ -188,22 +188,23 @@
     }
 
     &__title {
-      max-width: calc(65% - #{$icon-width});
+      max-width: calc(65% - #{$icon-size});
     }
 
     &__image {
       position: absolute;
-      top: 0;
-      right: 0;
-      max-width: calc(40% - #{$icon-width});
-      margin-right: 40px;
-      margin-bottom: -100px;
+      top: 50%;
+      right: 30px;
+      max-width: calc(38% - #{$icon-size});
+      max-height: 90px;
+      margin: 0;
       padding: 0;
+      transform: translate(0, -50%);
     }
 
     &__icon {
       display: block;
-      width: $icon-width;
+      width: $icon-size;
       margin-right: 40px;
     }
 
@@ -226,9 +227,29 @@
     }
   }
 
+  @media #{media-min-width(1160px)} {
+    &__image {
+      max-width: calc(45% - #{$icon-size});
+      max-height: $icon-size;
+    }
+  }
+
   @media #{$screen-lg} {
     &__icon {
       max-width: auto;
+    }
+
+    &__image {
+      top: 0;
+      right: 0;
+      height: 100%;
+      max-width: calc(40% - #{$icon-size});
+      max-height: initial;
+      max-height: 240px;
+      margin-top: 30px;
+      margin-right: 40px;
+      margin-bottom: -100px;
+      transform: none;
     }
   }
 }
