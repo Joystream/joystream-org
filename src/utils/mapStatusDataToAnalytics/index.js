@@ -17,7 +17,7 @@ const mapStatusDataToAnalytics = data => {
   }, {});
 
   if (mappedData.blockHeight) {
-    mappedData.blockHeight = Math.round(mappedData.blockHeight / 1000) + 'k';
+    mappedData.blockHeight = Math.floor(mappedData.blockHeight / 1000) + 'k';
   }
 
   return mappedData;
