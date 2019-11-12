@@ -37,8 +37,18 @@
   }
 
   @media #{$screen-md} {
+    &__hero-group {
+      justify-content: center;
+    }
+
     &__hero-button {
       flex-grow: 0;
+    }
+  }
+
+  @media #{$screen-lg} {
+    &__hero-group {
+      justify-content: flex-start;
     }
   }
 }
