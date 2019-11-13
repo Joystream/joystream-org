@@ -302,28 +302,28 @@ $indentation: 60px;
 
   &__logos-container {
     position: relative;
-    margin: 0 -20px;
-    padding: 0 20px;
-    background: url('../../../assets/svg/bg-brand-logo-top.svg') top center no-repeat;
-    background-size: 100% auto;
+  }
 
-    &::before {
-      display: block;
-      padding-bottom: 175%;
-      content: '';
-    }
+  &__logo-container {
+    position: relative;
+    margin: 0 -20px;
   }
 
   &__logo {
     position: absolute;
-    top: 32%;
+    top: 50%;
     left: 50%;
-    width: 200px;
-    transform: translate(-50%, 0);
+    width: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__logo-background {
+    width: 100%;
   }
 
   &__blueprint {
-    margin: 20px 0 80px;
+    display: block;
+    margin: 20px auto 80px;
   }
 
   &__title {
@@ -365,25 +365,23 @@ $indentation: 60px;
     color: $c_white;
 
     &__container {
-      background: url('../../../assets//svg/bg-brand-logo-pattern.svg') top left;
-      background-size: 100% auto;
+      background: url('../../../assets//svg/bg-brand-logo-pattern.svg') top center;
+      background-size: calc(100% - 40px) auto;
     }
 
     &__logos-container {
-      height: 600px;
-      margin: 0;
-      padding: 0;
-      background-size: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
 
-      &::before {
-        display: none;
-      }
+    &__logo-container {
+      width: 47%;
+      margin: -120px 0 0;
     }
 
     &__blueprint {
-      position: absolute;
-      right: 0;
       width: 40%;
+      margin: 0;
     }
 
     &__header {
@@ -418,6 +416,14 @@ $indentation: 60px;
   }
 }
 
+@media #{$screen-md} {
+  .StoryLogo {
+    &__container {
+      background-size: calc(100% - 64px) auto;
+    }
+  }
+}
+
 .StoryExplanation {
   &__image {
     margin-top: 40px;
@@ -444,6 +450,7 @@ $indentation: 60px;
   .StoryExplanation {
     &__wrapper {
       display: flex;
+      align-items: flex-start;
       flex-direction: row-reverse;
       justify-content: space-between;
       margin-top: 180px;
