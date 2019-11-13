@@ -4,13 +4,13 @@ import BrandLayout from '../../../components/_layouts/Brand';
 import BrandLayoutWrapper from '../../../components/BrandLayoutWrapper';
 import Button from '../../../components/Button';
 import ActionButton from '../../../components/ActionButton';
-import LayoutWrapper from '../../../components/LayoutWrapper';
 import brandExplanationImg from '../../../assets/images/square-face.png';
 import laptopImg from '../../../assets/images/laptop-website.png';
 import sketchImg from '../../../assets/images/logo-sketches.png';
 import wavesImg from '../../../assets/svg/waves.svg';
 import logoImg from '../../../assets/svg/logo-mark.svg';
 import { ReactComponent as Logotype } from '../../../assets/svg/logo-white.svg';
+import logoBackground from '../../../assets/svg/bg-brand-logo-top.svg';
 import blueprintImg from '../../../assets/svg/logo-blueprint.svg';
 import ColumnsLayout from '../../../components/ColumnsLayout';
 import './index.scss';
@@ -105,7 +105,10 @@ const StoryPage = () => {
 
       <BrandLayoutWrapper blue className="StoryLogo">
         <div className="StoryLogo__logos-container">
-          <Logotype className="StoryLogo__logo" style={{ color: 'white' }} />
+          <div className="StoryLogo__logo-container">
+            <img className="StoryLogo__logo-background" src={logoBackground} alt="" />
+            <Logotype className="StoryLogo__logo" style={{ color: 'white' }} />
+          </div>
           <img className="StoryLogo__blueprint" src={blueprintImg} alt="" />
         </div>
 
