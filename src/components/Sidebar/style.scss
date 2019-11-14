@@ -6,6 +6,7 @@ $trigger-height: 50px;
   position: sticky;
   top: $navbar-height;
   z-index: 1;
+  flex-shrink: 0;
   transition: top $duration ease 0s;
 
   &--onTop {

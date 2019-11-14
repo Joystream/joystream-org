@@ -27,9 +27,9 @@ $icon-size: 120px;
   }
 
   &__image {
-    width: 300px;
-    height: 100%;
-    max-height: 240px;
+    width: 100%;
+    max-width: 300px;
+    max-height: 150px;
     margin-top: 30px;
     color: $c_blue-ribbon;
   }
@@ -183,27 +183,30 @@ $icon-size: 120px;
       &-container {
         display: flex;
         align-items: center;
-        width: 100%;
+        min-width: 0;
       }
     }
 
     &__title {
-      max-width: calc(65% - #{$icon-size});
+      margin-right: 20px;
+    }
+
+    &__image-container {
+      display: flex;
+      align-items: flex-end;
+      height: 120px;
     }
 
     &__image {
-      position: absolute;
-      top: 50%;
-      right: 30px;
-      max-width: calc(38% - #{$icon-size});
-      max-height: 90px;
+      width: auto;
+      height: 100%;
+      max-width: 120px;
       margin: 0;
-      padding: 0;
-      transform: translate(0, -50%);
     }
 
     &__icon {
       display: block;
+      flex-shrink: 0;
       width: $icon-size;
       margin-right: 40px;
     }
@@ -227,10 +230,9 @@ $icon-size: 120px;
     }
   }
 
-  @media #{media-min-width(1160px)} {
+  @media #{media-min-width(1060px)} {
     &__image {
-      max-width: calc(45% - #{$icon-size});
-      max-height: $icon-size;
+      max-width: none;
     }
   }
 
@@ -239,17 +241,13 @@ $icon-size: 120px;
       max-width: auto;
     }
 
-    &__image {
-      top: 0;
-      right: 0;
-      height: 100%;
-      max-width: calc(40% - #{$icon-size});
-      max-height: initial;
-      max-height: 240px;
-      margin-top: 30px;
-      margin-right: 40px;
-      margin-bottom: -100px;
-      transform: none;
+    &__header-container {
+      flex-grow: 1;
+    }
+
+    &__title {
+      max-width: 330px;
+      margin-right: 20px;
     }
   }
 }
