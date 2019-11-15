@@ -1,12 +1,6 @@
 import React from 'react';
-import cn from 'classnames';
-
-import Button from '../Button';
-import Link from '../Link';
-
 import { ReactComponent as Logo } from '../../assets/svg/logo-white.svg';
 import { socialMedias } from '../Footer/data';
-
 import './style.scss';
 
 const FooterCompact = () => {
