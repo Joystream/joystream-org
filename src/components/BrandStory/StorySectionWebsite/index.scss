@@ -60,6 +60,7 @@
   &__page-link {
     position: absolute;
     bottom: 30%;
+    z-index: 2;
     display: block;
     width: 100%;
     font-size: 20px;

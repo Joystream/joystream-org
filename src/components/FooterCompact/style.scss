@@ -51,6 +51,7 @@
 @media #{$screen-sm} {
   .FooterCompact {
     &__container {
+      position: relative;
       flex-direction: row;
       justify-content: space-between;
     }
@@ -59,8 +60,19 @@
       display: block;
     }
 
+    &__link {
+      font-size: 16px;
+    }
+
     &__social-wrapper {
       padding: 16px 0;
+    }
+
+    &__socials {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
