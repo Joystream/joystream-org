@@ -1,0 +1,63 @@
+@import '../../../styles/_main';
+
+.StorySectionExplanation {
+  &__image {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    color: $c_blue-ribbon;
+  }
+
+  &__text p {
+    margin-bottom: 1.5em;
+    font-size: 14px;
+    line-height: 21px;
+    color: $c_ebony-clay;
+  }
+
+  &__action {
+    position: absolute;
+    right: 32px;
+    bottom: 60px;
+  }
+}
+
+@media #{$screen-md} {
+  .StorySectionExplanation {
+    &__wrapper {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top: 180px;
+    }
+
+    &__content {
+      width: 40%;
+    }
+
+    &__image {
+      width: 50%;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      margin-bottom: 80px;
+      font-size: 60px;
+      font-weight: normal;
+      line-height: 70px;
+    }
+
+    &__text p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}

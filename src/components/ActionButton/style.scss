@@ -11,7 +11,9 @@ $size: 80px;
   cursor: pointer;
 
   &--on-black {
-    color: $c_white #{$r}__button {
+    color: $c_white;
+
+    #{$r}__button {
       background-color: $c_blue-ribbon;
     }
   }
