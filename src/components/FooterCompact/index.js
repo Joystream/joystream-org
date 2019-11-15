@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../../assets/svg/logo-white.svg';
 import { socialMedias } from '../Footer/data';
+import Link from '../Link';
 import './style.scss';
 
 const FooterCompact = () => {
@@ -18,7 +19,9 @@ const FooterCompact = () => {
             );
           })}
         </div>
-        <div className="FooterCompact__link">joystream.org</div>
+        <Link to="/" className="FooterCompact__link">
+          joystream.org
+        </Link>
       </div>
     </footer>
   );
