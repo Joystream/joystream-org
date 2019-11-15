@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, createRef } from 'react';
 import Link from '../../../components/Link';
 import BrandLayout from '../../../components/_layouts/Brand';
 import BrandLayoutWrapper from '../../../components/BrandLayoutWrapper';
@@ -13,13 +13,30 @@ import { ReactComponent as Logotype } from '../../../assets/svg/logo-white.svg';
 import logoBackground from '../../../assets/svg/bg-brand-logo-top.svg';
 import blueprintImg from '../../../assets/svg/logo-blueprint.svg';
 import ColumnsLayout from '../../../components/ColumnsLayout';
+import ReactDOM from 'react-dom';
 import './index.scss';
 
 const StoryPage = () => {
+  const elementsRef = useMemo(
+    () => ({
+      'section-header': createRef(),
+      'section-website': createRef(),
+      'section-website-desc': createRef(),
+      'section-logo': createRef(),
+      'section-brand-explanation': createRef(),
+    }),
+    []
+  );
+
+  const scrollToElement = id => {
+    const target = ReactDOM.findDOMNode(elementsRef[id].current);
+    window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+  };
+
   return (
     <BrandLayout>
       <div className="Story__multi-section">
-        <BrandLayoutWrapper className="StoryHeader">
+        <BrandLayoutWrapper className="StoryHeader" ref={elementsRef['section-header']}>
           <div className="StoryHeader__container">
             <div className="StoryHeader__content">
               <h2 className="StoryHeader__title">What Joystream project is all about</h2>
@@ -39,10 +56,10 @@ const StoryPage = () => {
               <img className="StoryHeader__image" src={logoImg} alt="" />
             </div>
           </div>
-          <ActionButton className="StoryHeader__action" />
+          <ActionButton className="StoryHeader__action" onClick={() => scrollToElement('section-website')} />
         </BrandLayoutWrapper>
 
-        <BrandLayoutWrapper className="StoryWebsite">
+        <BrandLayoutWrapper className="StoryWebsite" ref={elementsRef['section-website']}>
           <h3 className="StoryWebsite__title">The Website</h3>
           <div className="StoryWebsite__row">
             <div className="StoryWebsite__container-dark">
@@ -57,9 +74,11 @@ const StoryPage = () => {
               <img src={laptopImg} className="StoryWebsite__image" alt="" />
             </div>
           </div>
+
+          <ActionButton className="StoryWebsite__action" onClick={() => scrollToElement('section-website-desc')} />
         </BrandLayoutWrapper>
 
-        <BrandLayoutWrapper className="StoryDescription">
+        <BrandLayoutWrapper className="StoryDescription" ref={elementsRef['section-website-desc']}>
           <p className="StoryDescription__header">
             Our brand identity consists of few key visual elements: logo, typeface, illustrations, patter, colour
             palette and iconography.
@@ -103,7 +122,7 @@ const StoryPage = () => {
         </BrandLayoutWrapper>
       </div>
 
-      <BrandLayoutWrapper blue className="StoryLogo">
+      <BrandLayoutWrapper blue className="StoryLogo" ref={elementsRef['section-logo']}>
         <div className="StoryLogo__logos-container">
           <div className="StoryLogo__logo-container">
             <img className="StoryLogo__logo-background" src={logoBackground} alt="" />
@@ -145,9 +164,15 @@ const StoryPage = () => {
             </div>
           </div>
         </ColumnsLayout>
+
+        <ActionButton
+          className="StoryLogo__action"
+          variant="on-blue"
+          onClick={() => scrollToElement('section-brand-explanation')}
+        />
       </BrandLayoutWrapper>
 
-      <BrandLayoutWrapper className="StoryExplanation">
+      <BrandLayoutWrapper className="StoryExplanation" ref={elementsRef['section-brand-explanation']}>
         <div className="StoryExplanation__wrapper">
           <img src={brandExplanationImg} className="StoryExplanation__image" alt="" />
           <div className="StoryExplanation__content">
@@ -165,6 +190,13 @@ const StoryPage = () => {
             </div>
           </div>
         </div>
+
+        <ActionButton
+          className="StoryExplanation__action"
+          variant="on-white"
+          direction="up"
+          onClick={() => scrollToElement('section-header')}
+        />
       </BrandLayoutWrapper>
     </BrandLayout>
   );

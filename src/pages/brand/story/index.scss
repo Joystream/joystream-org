@@ -89,7 +89,7 @@ $indentation: 60px;
 
   &__action {
     position: absolute;
-    right: 0;
+    right: 32px;
     bottom: 120px;
   }
 }
@@ -237,6 +237,12 @@ $indentation: 60px;
     &__page-link {
       bottom: 80px;
     }
+
+    &__action {
+      position: absolute;
+      right: 32px;
+      bottom: 150px;
+    }
   }
 }
 
@@ -357,6 +363,13 @@ $indentation: 60px;
       color: $c_white;
     }
   }
+
+  &__action {
+    position: absolute;
+    right: 32px;
+    bottom: 0;
+    transform: translate(0, 50%);
+  }
 }
 
 @media #{$screen-sm} {
@@ -443,6 +456,12 @@ $indentation: 60px;
     font-size: 14px;
     line-height: 21px;
     color: $c_ebony-clay;
+  }
+
+  &__action {
+    position: absolute;
+    right: 32px;
+    bottom: 60px;
   }
 }
 

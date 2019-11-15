@@ -3,14 +3,37 @@
 $size: 80px;
 
 .ActionButton {
+  $r: &;
+
   display: none;
   align-items: center;
+  color: $c_white;
+  cursor: pointer;
+
+  &--on-black {
+    color: $c_white #{$r}__button {
+      background-color: $c_blue-ribbon;
+    }
+  }
+
+  &--on-white {
+    color: $c_ebony-clay;
+
+    #{$r}__button {
+      background-color: $c_blue-ribbon;
+    }
+  }
+
+  &--on-blue {
+    #{$r}__button {
+      background-color: $c_black;
+    }
+  }
 
   &__text {
     margin-right: 32px;
     font-family: $font-primary;
     font-size: 20px;
-    color: $c_white;
     text-transform: uppercase;
   }
 
@@ -22,6 +45,12 @@ $size: 80px;
     height: $size;
     background-color: $c_blue-ribbon;
     border-radius: 50%;
+  }
+
+  &__arrow {
+    &--top {
+      transform: rotate(180deg);
+    }
   }
 }
 

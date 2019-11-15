@@ -17,18 +17,18 @@ const defaultProps = {
   blue: false,
 };
 
-const BrandLayoutWrapper = ({ children, dark, blue, className, ...props }) => {
+const BrandLayoutWrapper = React.forwardRef(({ children, dark, blue, className, ...props }, ref) => {
   const classes = cn('BrandLayoutWrapper', className, {
     'BrandLayoutWrapper--dark': dark,
     'BrandLayoutWrapper--blue': blue,
   });
 
   return (
-    <div className={classes} {...props}>
+    <div className={classes} {...props} ref={ref}>
       <div className={cn('BrandLayoutWrapper__container', className && `${className}__container`)}>{children}</div>
     </div>
   );
-};
+});
 
 BrandLayoutWrapper.propTypes = propTypes;
 BrandLayoutWrapper.defaultProps = defaultProps;
