@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 597.29 535.22">
-    <defs>
-        <pattern id="lines" data-name="lines" width="16" height="16" patternTransform="translate(0 256)" patternUnits="userSpaceOnUse">
-            <path fill="none" d="M0 0h16v16H0z"/>
-            <path class="cls-2" d="M1.98 78.02l66-66M-14.02 78.02l66-66M-30.02 78.02l66-66M-46.02 78.02l66-66M-62.02 78.02l66-66M1.98 62.02l66-66M-14.02 62.02l66-66M-30.02 62.02l66-66M-46.02 62.02l66-66M-62.02 62.02l66-66M1.98 46.02l66-66M-14.02 46.02l66-66M-30.02 46.02l66-66M-46.02 46.02l66-66M-62.02 46.02l66-66M1.98 30.02l66-66M-14.02 30.02l66-66M-30.02 30.02l66-66M-46.02 30.02l66-66M-62.02 30.02l66-66M1.98 14.02l66-66M-14.02 14.02l66-66M-30.02 14.02l66-66M-46.02 14.02l66-66M-62.02 14.02l66-66"/>
-        </pattern>
-        <style>
+  <defs>
+    <pattern id="lines" data-name="lines" width="16" height="16" patternTransform="translate(0 256)" patternUnits="userSpaceOnUse">
+      <path fill="none" d="M0 0h16v16H0z"/>
+      <path class="cls-2" d="M1.98 78.02l66-66M-14.02 78.02l66-66M-30.02 78.02l66-66M-46.02 78.02l66-66M-62.02 78.02l66-66M1.98 62.02l66-66M-14.02 62.02l66-66M-30.02 62.02l66-66M-46.02 62.02l66-66M-62.02 62.02l66-66M1.98 46.02l66-66M-14.02 46.02l66-66M-30.02 46.02l66-66M-46.02 46.02l66-66M-62.02 46.02l66-66M1.98 30.02l66-66M-14.02 30.02l66-66M-30.02 30.02l66-66M-46.02 30.02l66-66M-62.02 30.02l66-66M1.98 14.02l66-66M-14.02 14.02l66-66M-30.02 14.02l66-66M-46.02 14.02l66-66M-62.02 14.02l66-66"/>
+    </pattern>
+    <style>
             .cls-2,.cls-5,.cls-6,.cls-7{fill:none;stroke:currentColor;stroke-miterlimit:10}.cls-2,.cls-7{stroke-linecap:square}.cls-2{stroke-width:2px}.cls-5,.cls-6,.cls-7{stroke-width:12px}.cls-6{fill-rule:evenodd}
-        </style>
-    </defs>
-    <g id="Layer_2" data-name="Layer 2">
-        <g id="Warstwa_8" data-name="Warstwa 8">
-            <path d="M443.08 474.87v53H151.52v-53" fill="url(#lines)" stroke-width="12" stroke="currentColor" stroke-miterlimit="10"/>
-            <path d="M205.09 147.84h47v196l-34.54 23.91V187.68c-.7-17.86-4.43-31.68-12.46-39.84z" fill="url(#lines)"/>
-            <path class="cls-5" d="M355.86 140.77l19.69-14.13a25.9 25.9 0 0011.53-21.55 25.89 25.89 0 00-25.9-25.89M233.41 79.2a25.89 25.89 0 00-25.89 25.89 25.88 25.88 0 0011.53 21.55l16.69 11.13a25.88 25.88 0 0111.53 21.55v178.14a25.9 25.9 0 01-17 24.34L125 408.61v66.26h344.58v-66.26l-75-38.94"/>
-            <path id="Rectangle-Copy-21" class="cls-6" d="M342.06 140.93a29.74 29.74 0 000 59.48h33.17a29.74 29.74 0 000-59.48z"/>
-            <path id="Rectangle-Copy-23" class="cls-6" d="M333.25 259.84a29.28 29.28 0 000 58.55h49.07a29.28 29.28 0 000-58.55z"/>
-            <path id="Rectangle-Copy-22" class="cls-6" d="M330.19 201.12a29.69 29.69 0 000 59.37h55.19a29.69 29.69 0 000-59.37z"/>
-            <path id="Rectangle-Copy-24" class="cls-6" d="M348.19 318.17a29.26 29.26 0 000 58.51h27.24a29.26 29.26 0 000-58.51z"/>
-            <path id="Path-8" class="cls-5" d="M241.41 143.53l-38.15-1.68q-18.66 1.23-23.19-13.93l22.55-59.7q0-42.07-27.24-57.84C165 4.39 155.8 5.67 146 7.64l-23.78 61.09L77.8 130.3q-14.35 28.11-7.8 63.17t26.62 55.65q-18.48 30.78-13.58 70t51.23 60l53 .5"/>
-            <path id="Line-2" class="cls-5" d="M98.94 350.12L5 357.9"/>
-            <path id="Line-2-Copy-3" class="cls-5" d="M67.94 158.28L7.39 158"/>
-            <path id="Line-2-Copy-3-2" data-name="Line-2-Copy-3" class="cls-5" d="M94.07 247.19L45.68 247"/>
-            <path id="Line-2-Copy-3-3" data-name="Line-2-Copy-3" class="cls-5" d="M474 443.39H124.7"/>
-            <path id="Line-2-Copy-3-4" data-name="Line-2-Copy-3" class="cls-5" d="M597.29 529.15L0 529.22"/>
-            <path class="cls-7" d="M80.08 225.32c6.88 17 27.6 29 54.89 27.83M190.29 244c29.66-10 57.28-34.69 57-62"/>
-            <path class="cls-5" d="M228.59 82.43c0 7.31 31.81 13.24 71.06 13.24s71.06-5.93 71.06-13.24"/>
-            <path class="cls-5" d="M228.59 83.66c0-7.31 31.81-13.24 71.06-13.24s71.06 5.93 71.06 13.24"/>
-        </g>
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Warstwa_8" data-name="Warstwa 8">
+      <path d="M443.08 474.87v53H151.52v-53" fill="url(#lines)" stroke-width="12" stroke="currentColor" stroke-miterlimit="10"/>
+      <path d="M205.09 147.84h47v196l-34.54 23.91V187.68c-.7-17.86-4.43-31.68-12.46-39.84z" fill="url(#lines)"/>
+      <path class="cls-5" d="M355.86 140.77l19.69-14.13a25.9 25.9 0 0011.53-21.55 25.89 25.89 0 00-25.9-25.89M233.41 79.2a25.89 25.89 0 00-25.89 25.89 25.88 25.88 0 0011.53 21.55l16.69 11.13a25.88 25.88 0 0111.53 21.55v178.14a25.9 25.9 0 01-17 24.34L125 408.61v66.26h344.58v-66.26l-75-38.94"/>
+      <path id="Rectangle-Copy-21" class="cls-6" d="M342.06 140.93a29.74 29.74 0 000 59.48h33.17a29.74 29.74 0 000-59.48z"/>
+      <path id="Rectangle-Copy-23" class="cls-6" d="M333.25 259.84a29.28 29.28 0 000 58.55h49.07a29.28 29.28 0 000-58.55z"/>
+      <path id="Rectangle-Copy-22" class="cls-6" d="M330.19 201.12a29.69 29.69 0 000 59.37h55.19a29.69 29.69 0 000-59.37z"/>
+      <path id="Rectangle-Copy-24" class="cls-6" d="M348.19 318.17a29.26 29.26 0 000 58.51h27.24a29.26 29.26 0 000-58.51z"/>
+      <path id="Path-8" class="cls-5" d="M241.41 143.53l-38.15-1.68q-18.66 1.23-23.19-13.93l22.55-59.7q0-42.07-27.24-57.84C165 4.39 155.8 5.67 146 7.64l-23.78 61.09L77.8 130.3q-14.35 28.11-7.8 63.17t26.62 55.65q-18.48 30.78-13.58 70t51.23 60l53 .5"/>
+      <path id="Line-2" class="cls-5" d="M98.94 350.12L5 357.9"/>
+      <path id="Line-2-Copy-3" class="cls-5" d="M67.94 158.28L7.39 158"/>
+      <path id="Line-2-Copy-3-2" data-name="Line-2-Copy-3" class="cls-5" d="M94.07 247.19L45.68 247"/>
+      <path id="Line-2-Copy-3-3" data-name="Line-2-Copy-3" class="cls-5" d="M474 443.39H124.7"/>
+      <path id="Line-2-Copy-3-4" data-name="Line-2-Copy-3" class="cls-5" d="M597.29 529.15L0 529.22"/>
+      <path class="cls-7" d="M80.08 225.32c6.88 17 27.6 29 54.89 27.83M190.29 244c29.66-10 57.28-34.69 57-62"/>
+      <path class="cls-5" d="M228.59 82.43c0 7.31 31.81 13.24 71.06 13.24s71.06-5.93 71.06-13.24"/>
+      <path class="cls-5" d="M228.59 83.66c0-7.31 31.81-13.24 71.06-13.24s71.06 5.93 71.06 13.24"/>
     </g>
+  </g>
 </svg>

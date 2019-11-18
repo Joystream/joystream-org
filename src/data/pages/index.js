@@ -14,6 +14,18 @@ import { ReactComponent as communicationModeratorImage } from '../../assets/svg/
 
 export const sharedData = {
   defaultEmail: 'hello@jsgenesis.com',
+  social: {
+    telegramLink: 'https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA',
+    redditLink: 'https://www.reddit.com/r/JoyStream/',
+    twitterLink: 'https://twitter.com/JoyStreamApp',
+  },
+  links: {
+    blog: 'https://blog.joystream.org/',
+    whitepaper: 'https://github.com/Joystream/whitepaper/blob/master/paper.pdf',
+    repository: 'https://github.com/Joystream/joystream',
+    github: 'https://github.com/Joystream',
+    openings: 'https://www.jsgenesis.com/#openings',
+  },
   rolesDescription: (
     <>
       Explore available roles and pick the one that suits you the best. Influence the platform's development earning

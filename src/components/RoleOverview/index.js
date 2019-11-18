@@ -240,7 +240,9 @@ class RoleOverview extends React.Component {
             <RoleIcon className="RoleOverview__icon" />
             <h2 className="RoleOverview__title">{title}</h2>
           </div>
-          <Image className="RoleOverview__image" />
+          <div className="RoleOverview__image-container">
+            <Image className="RoleOverview__image" />
+          </div>
         </div>
 
         <div className="RoleOverview__content">

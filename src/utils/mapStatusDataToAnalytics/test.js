@@ -1,7 +1,7 @@
 import mapStatusDataToAnalytics from './index';
 
 const input = {
-  block_height: 1110117,
+  block_height: 1101117,
   council: {
     election_stage: 'Announcing',
     members_count: 12,
@@ -40,7 +40,7 @@ describe('mapStatusDataToAnalytics function', () => {
   it('retuns correct structure of data', () => {
     const expectedOutput = {
       validatorsCount: 20,
-      blockHeight: 1110117,
+      blockHeight: '1101k',
       councilStage: 'Announcing',
       membershipsMembers: 164,
       forumPosts: 11,
@@ -58,7 +58,7 @@ describe('mapStatusDataToAnalytics function', () => {
 
     const expectedOutput = {
       validatorsCount: undefined,
-      blockHeight: 1110117,
+      blockHeight: '1110k',
       councilStage: undefined,
       membershipsMembers: undefined,
       forumPosts: undefined,

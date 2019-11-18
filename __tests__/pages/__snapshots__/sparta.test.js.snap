@@ -10,6 +10,7 @@ exports[`SpartaPage page renders correctly 1`] = `
     title="Joystream: A user governed video platform"
   />
   <Hero
+    animationEnd={500}
     animationEndValue={-40}
     animationStartValue={70}
     chip={
@@ -22,6 +23,8 @@ exports[`SpartaPage page renders correctly 1`] = `
     }
     image="icon-mock"
     indent={true}
+    noOverflow={false}
+    theme="black"
     title="Sparta Network"
   >
     <p
@@ -73,7 +76,7 @@ exports[`SpartaPage page renders correctly 1`] = `
         className=""
         content={
           Object {
-            "blockHeight": 1110117,
+            "blockHeight": "1110k",
             "councilStage": "Announcing",
             "forumPosts": 11,
             "mediaFiles": 9,

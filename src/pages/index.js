@@ -21,7 +21,7 @@ import Hero from '../components/Hero';
 import SiteMetadata from '../components/SiteMetadata';
 
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
-import platformImage from '../assets/svg/platform.svg';
+import heroImage from '../assets/svg/hero-builder.svg';
 import { ReactComponent as TickImage } from '../assets/svg/tick.svg';
 import { ReactComponent as ClockImage } from '../assets/svg/clock.svg';
 
@@ -40,15 +40,22 @@ const IndexPage = ({ content }) => (
       title="Joystream: A user governed video platform"
       description="Earn monero for participating on our testnets!"
     />
-    <Hero image={platformImage} title="A user governed video platform" animationStartValue={0}>
+    <Hero image={heroImage} title="A user governed video platform" animationStartValue={0}>
       <p className="IndexPage__hero-paragraph">
         Earn Monero by participating in the current {activeTestnet.name} testnet
       </p>
       <div className="IndexPage__hero-group">
-        <Button secondary className="IndexPage__hero-button" href={activeTestnet.incentivesLink}>
+        <Button noWrap large secondary className="IndexPage__hero-button" href={activeTestnet.incentivesLink}>
           Earn Monero
         </Button>
-        <Button secondary reversed className="IndexPage__hero-button" href="https://testnet.joystream.org/">
+        <Button
+          noWrap
+          large
+          secondary
+          reversed
+          className="IndexPage__hero-button"
+          href="https://testnet.joystream.org/"
+        >
           Launch UI
         </Button>
       </div>
@@ -69,13 +76,13 @@ const IndexPage = ({ content }) => (
           to: '/acropolis',
         }}
       />
-
-      <Analytics content={mapStatusDataToAnalytics(content)}>
-        <Button secondary href={activeTestnet.incentivesLink}>
-          Participate and Earn Monero
-        </Button>
-      </Analytics>
     </LayoutWrapper>
+
+    <Analytics large content={mapStatusDataToAnalytics(content)}>
+      <Button secondary href={activeTestnet.incentivesLink}>
+        Participate and Earn Monero
+      </Button>
+    </Analytics>
 
     <LayoutWrapper dark>
       <TitleWrapper title="Become a user, run the platform">

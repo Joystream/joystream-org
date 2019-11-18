@@ -10,11 +10,14 @@ exports[`PrivacyPolicyPage page renders correctly 1`] = `
     title="Joystream Privacy and Cookie Policy"
   />
   <Hero
+    animationEnd={500}
     animationEndValue={-40}
     animationStartValue={70}
     chip={null}
     image={null}
     indent={false}
+    noOverflow={false}
+    theme="black"
     title="Privacy Policy and Cookies"
   >
     <p

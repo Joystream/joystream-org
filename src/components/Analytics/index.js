@@ -1,12 +1,4 @@
-import {
-  number,
-  shape,
-  string,
-  node,
-  func,
-  arrayOf,
-  oneOfType,
-} from 'prop-types';
+import { number, shape, string, node, bool, func, arrayOf, oneOfType } from 'prop-types';
 import React from 'react';
 import cn from 'classnames';
 
@@ -19,9 +11,10 @@ import './style.scss';
 const propTypes = {
   className: string,
   children: node,
+  large: bool,
   content: shape({
     validatorsCount: number,
-    blockHeight: number,
+    blockHeight: string,
     councilStage: string,
     membershipsMembers: number,
     forumPosts: number,
@@ -44,14 +37,14 @@ const defaultProps = {
   items: defaultItems,
 };
 
-const Analytics = ({ className, content, children, items, ...props }) => {
+const Analytics = ({ className, content, children, items, large, ...props }) => {
   return (
-    <section className={cn('Analytics', className)} {...props}>
+    <section className={cn('Analytics', className, { 'Analytics--large': large })} {...props}>
       <div className="Analytics__container">
         {items.map(item => {
           const value = item.key ? content[item.key] || '-' : item.value;
 
-          return <AnalyticsItem key={item.title} {...item} value={value} />;
+          return <AnalyticsItem key={item.title} {...item} value={value} inline={large} />;
         })}
       </div>
       {children && <div className="Analytics__content">{children}</div>}

@@ -1,6 +1,8 @@
 @import '../../../styles/main.scss';
 
 .AnalyticsItem {
+  $r: &;
+
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -12,6 +14,10 @@
     color: $c_blue-ribbon;
   }
 
+  &__image-container {
+    width: 100%;
+  }
+
   &__title {
     margin-top: 32px;
     font-size: 16px;
@@ -19,6 +25,7 @@
 
   &__value {
     margin-top: 20px;
+    font-family: $font-primary;
     font-size: 32px;
     font-weight: 700;
     line-height: 36px;
@@ -33,6 +40,39 @@
   @media #{$screen-md} {
     &__image {
       max-height: 90px;
+    }
+  }
+
+  @media #{$screen-lg} {
+    &--inline {
+      flex-direction: row;
+      margin-top: 90px;
+      text-align: left;
+
+      #{$r} {
+        &__image {
+          flex-grow: 1;
+          max-height: 90px;
+        }
+
+        &__image-container {
+          display: flex;
+          align-items: center;
+          flex-grow: 0;
+          flex-shrink: 0;
+          justify-content: center;
+          width: 60px;
+          margin-right: 30px;
+        }
+
+        &__value {
+          margin-top: 12px;
+        }
+
+        &__title {
+          margin-top: 0;
+        }
+      }
     }
   }
 }

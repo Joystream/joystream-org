@@ -25,7 +25,7 @@ const RolesPage = () => {
       return rolesData[key].map(item => (obj[item.id] = createRef()));
     });
     return obj;
-  }, [rolesData]);
+  }, []);
 
   const scrollToElement = id => {
     const target = ReactDOM.findDOMNode(elementsRef[id].current);

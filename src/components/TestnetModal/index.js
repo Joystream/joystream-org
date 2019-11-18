@@ -20,14 +20,7 @@ const defaultProps = {
   image: null,
 };
 
-const TestnetModal = ({
-  title,
-  children,
-  image,
-  closeModal,
-  className,
-  isOpen,
-}) => {
+const TestnetModal = ({ title, children, image, closeModal, className, isOpen }) => {
   const classes = cn(className, 'TestnetModal');
 
   return (
@@ -41,7 +34,7 @@ const TestnetModal = ({
         <div className="TestnetModal__container">
           <h2 className="TestnetModal__title">{title}</h2>
           {children}
-          <Button onClick={closeModal} large className="TestnetModal__button">
+          <Button onClick={closeModal} className="TestnetModal__button">
             Close
           </Button>
         </div>
