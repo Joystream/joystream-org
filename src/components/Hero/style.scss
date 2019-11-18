@@ -6,7 +6,7 @@ $indentation: 60px;
   $_r: &;
 
   width: 100%;
-  padding: 40px 10px;
+  padding: 0 10px;
   background-color: $c_black;
 
   &--blue {
@@ -32,6 +32,7 @@ $indentation: 60px;
 
   &__content {
     flex: 1;
+    margin-bottom: 40px;
     text-align: center;
   }
 
@@ -60,6 +61,7 @@ $indentation: 60px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 40px;
     margin-bottom: 16px;
   }
 
@@ -83,7 +85,7 @@ $indentation: 60px;
   }
 
   @media #{$screen-lg} {
-    padding: 90px 30px 0;
+    padding: 0 30px;
 
     &--indented {
       margin-bottom: $indentation;
@@ -107,6 +109,7 @@ $indentation: 60px;
     }
 
     &__content {
+      margin-top: 90px;
       margin-right: 16px;
       text-align: left;
     }
@@ -122,7 +125,6 @@ $indentation: 60px;
         padding-left: 0;
         font-size: 25px;
         line-height: 40px;
-        max-width: 590px;
       }
     }
 
@@ -134,6 +136,7 @@ $indentation: 60px;
     &__image-wrapper {
       align-items: stretch;
       justify-content: center;
+      margin-top: 0;
       margin-bottom: 0;
 
       button {
