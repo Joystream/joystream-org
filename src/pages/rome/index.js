@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import { pagePropTypes } from '../../propTypes';
 
 import getApiPath from '../../utils/getApiPath';
-import mapStatusDataToAnalytics from '../../utils/mapStatusDataToAnalytics';
 import mapStatusDataToRoles from '../../utils/mapStatusDataToRoles';
 
 import withApi from '../../components/_enhancers/withApi';
 
 import BaseLayout from '../../components/_layouts/Base';
 import HeroCard from '../../components/HeroCard';
-import Analytics from '../../components/Analytics';
 import TitleWrapper from '../../components/TitleWrapper';
 import RoleList from '../../components/RoleList';
 import ColumnsLayout from '../../components/ColumnsLayout';
@@ -23,66 +21,57 @@ import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
 import SiteMetadata from '../../components/SiteMetadata';
 
-import acropolisImage from '../../assets/svg/acropolis.svg';
+import romeImage from '../../assets/svg/rome.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
-import AcropolisImg from '../../assets/svg/acropolis-building.svg';
+import RomeBuildingImg from '../../assets/svg/rome-building.svg';
 
-import { sharedData, roles } from '../../data/pages';
-import { goalsData } from '../../data/pages/acropolis';
+import { roles, sharedData } from '../../data/pages';
+import { goalsData, launchDate } from '../../data/pages/rome';
 
 import './style.scss';
 
-const AcropolisPage = ({ content }) => {
+const RomePage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
 
   return (
     <BaseLayout>
-      <SiteMetadata title="Joystream: A user governed video platform" description="Explore the Acropolis Testnet" />
+      <SiteMetadata title="Joystream: A user governed video platform" description="Explore the upcoming Rome Testnet" />
 
       <Hero
-        image={acropolisImage}
-        title="Acropolis Network"
+        image={romeImage}
+        title="Rome Network"
         indent
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
         animationStartValue={0}
       >
-        <p className="AcropolisPage__hero-paragraph">{sharedData.rolesDescription}</p>
-        <HeroCard date="2019/06/27 17:50" />
+        <p className="RomePage__hero-paragraph">{sharedData.rolesDescription}</p>
+        <HeroCard date={launchDate} />
 
         <TestnetModal
-          title="The Acropolis of Athens"
-          image={AcropolisImg}
+          title="Rome"
+          image={RomeBuildingImg}
           closeModal={() => setModalClosed(false)}
           isOpen={isModalOpen}
         >
           <p>
-            <strong>Known for its great architecture, Acropolis'</strong> perhaps most famous building is the Parthenon.
-            It was built to celebrate their victory over Persian invaders, and is today seen as a symbol for democracy
-            and western civilization.
+            <strong>The Roman empire left many landmarks.</strong> Their architecture and engineering skills was
+            unparalleled during their might. The concept of aqueducts was not devised by the Romans, but their beauty
+            and extent is.
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper title="Network Statistics">
-          <Analytics content={mapStatusDataToAnalytics(content)} />
-        </TitleWrapper>
-
         <TitleWrapper title="Critical Documents">
           <ColumnsLayout>
-            <Pane
-              image={SpecImg}
-              href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis/specification"
-              title="Full Specifications"
-              target="_blank"
-            >
-              Read the specs of the newly implemented features of Acropolis.
+            <Pane image={SpecImg} disabled title="Full Specifications">
+              Specs to be released
             </Pane>
             <Pane
               image={ReleaseImg}
-              href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis"
+              href="https://github.com/Joystream/joystream/tree/master/testnets/rome"
               title="Release Plan"
               target="_blank"
             >
@@ -97,7 +86,7 @@ const AcropolisPage = ({ content }) => {
           subtitle={
             <>
               The goals below are a simplified representation of the Key Results listed in our Release{' '}
-              <Link href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs">OKR</Link>
+              <Link href="https://github.com/Joystream/joystream/tree/master/testnets/rome#release-okrs">OKR</Link>
             </>
           }
         >
@@ -106,28 +95,22 @@ const AcropolisPage = ({ content }) => {
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title="Roles available on the current testnet">
+        <TitleWrapper title="Incentivized Roles for the Rome Network">
           <ColumnsLayout>
             <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title="Acropolis of Athens" location="acropolis">
+      <MapInfo title="Rome" location="rome">
         <p>
-          <strong>The Acropolis is a citadel on a hill in the heart of Athens.</strong> It was also at the heart of
-          Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings,
-          architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs
-          list "World Heritage Sites".
+          <strong>Rome was the capital of the great Roman Empire during its peak.</strong> As with previous testnet
+          names, the Roman Empire and Rome was another important step in the rise of democracy, the rule of law, and
+          modern governance structures.
           <br />
           <br />
-          We chose the name as we had to scale back our ambitions for the next testnet after some issues with the
-          release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not
-          intended for Athens.
-          <br />
-          <br />
-          <Link to="/athens">
-            <PersonIcon /> Explore previous testnet
+          <Link to="/acropolis">
+            <PersonIcon /> Explore current testnet
           </Link>
         </p>
       </MapInfo>
@@ -135,7 +118,7 @@ const AcropolisPage = ({ content }) => {
   );
 };
 
-AcropolisPage.propTypes = pagePropTypes;
+RomePage.propTypes = pagePropTypes;
 
-export { AcropolisPage };
-export default withApi(AcropolisPage, getApiPath('STATUS'));
+export { RomePage };
+export default withApi(RomePage, getApiPath('STATUS'));

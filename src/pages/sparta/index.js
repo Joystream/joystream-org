@@ -78,12 +78,7 @@ const SpartaPage = ({ content }) => {
 
         <TitleWrapper
           title="Testnet Goals"
-          subtitle={
-            <>
-              The goals below is a simplified and qualitative representation of the Key Results listed in our release
-              OKR.
-            </>
-          }
+          subtitle={<>The goals below are a simplified representation of the Key Results listed in our release OKR.</>}
         >
           <GoalList data={goals} />
         </TitleWrapper>

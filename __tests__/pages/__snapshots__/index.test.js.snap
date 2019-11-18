@@ -165,6 +165,26 @@ exports[`IndexPage page renders correctly 1`] = `
   </Analytics>
   <LayoutWrapper
     className=""
+    dark={false}
+    gradient={false}
+  >
+    <TestnetItem
+      button={
+        Object {
+          "label": "Explore Rome",
+          "to": "/rome",
+        }
+      }
+      className=""
+      date="2019/11/18 11:00"
+      image="icon-mock"
+      title="Rome Testnet"
+    >
+      Rome is our fifth testnet, and we are introducing new roles for you to try out.
+    </TestnetItem>
+  </LayoutWrapper>
+  <LayoutWrapper
+    className=""
     dark={true}
     gradient={false}
   >

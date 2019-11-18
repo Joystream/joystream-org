@@ -18,7 +18,7 @@ export const linkPropTypes = {
 };
 
 export const mapPropTypes = {
-  location: oneOf(['athens', 'acropolis', 'sparta']).isRequired,
+  location: oneOf(['athens', 'acropolis', 'sparta', 'rome']).isRequired,
 };
 
 export const pagePropTypes = {

@@ -5,6 +5,7 @@ import { string } from 'prop-types';
 import Animated from '../AnimatedComponent';
 import athensImage from '../../assets/images/athens.png';
 import spartaImage from '../../assets/images/sparta.png';
+import romeImage from '../../assets/images/rome.png';
 import { ReactComponent as PointerImage } from '../../assets/svg/pointer.svg';
 
 import { mapPropTypes } from '../../propTypes';
@@ -23,6 +24,7 @@ const maps = {
   athens: athensImage,
   acropolis: athensImage,
   sparta: spartaImage,
+  rome: romeImage,
 };
 
 const Map = ({ location, className, ...props }) => {
