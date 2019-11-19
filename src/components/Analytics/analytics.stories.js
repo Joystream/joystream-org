@@ -94,4 +94,11 @@ storiesOf('Components|Analytics', module)
         Participate and Earn Monero
       </Button>
     </Analytics>
+  ))
+  .add('with title', () => (
+    <Analytics title="Testnet Metrics" large content={mapStatusDataToAnalytics(exampleExternalData)}>
+      <Button secondary href="https://blog.joystream.org/athens-incentives/">
+        Participate and Earn Monero
+      </Button>
+    </Analytics>
   ));
