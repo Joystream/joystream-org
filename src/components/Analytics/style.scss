@@ -24,6 +24,7 @@
       &__container {
         @extend %container;
 
+        max-width: 1400px;
         padding: 20px 32px 60px;
       }
     }

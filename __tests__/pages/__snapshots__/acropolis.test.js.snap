@@ -97,7 +97,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
             Object {
               "image": "icon-component-mock",
               "key": "councilStage",
-              "title": "Council Election Stage",
+              "title": "Election Stage",
             },
             Object {
               "image": "icon-component-mock",
@@ -112,12 +112,12 @@ exports[`AcropolisPage page renders correctly 1`] = `
             Object {
               "image": "icon-component-mock",
               "key": "mediaFiles",
-              "title": "Platform Content Files",
+              "title": "Platform Files",
             },
             Object {
               "image": "icon-component-mock",
               "key": "rolesProviders",
-              "title": "Active Storage Providers",
+              "title": "Storage Providers",
             },
           ]
         }
