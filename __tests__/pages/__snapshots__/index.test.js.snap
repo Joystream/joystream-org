@@ -18,7 +18,7 @@ exports[`IndexPage page renders correctly 1`] = `
     indent={false}
     noOverflow={false}
     theme="black"
-    title="A user governed video platform"
+    title="A user-governed video platform"
   >
     <p
       className="IndexPage__hero-paragraph"
@@ -176,7 +176,7 @@ exports[`IndexPage page renders correctly 1`] = `
         }
       }
       className=""
-      date="2019/11/18 11:00"
+      date="2019/12/16 11:00"
       image="icon-mock"
       title="Rome Testnet"
     >

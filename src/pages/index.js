@@ -42,7 +42,7 @@ const IndexPage = ({ content }) => (
       title="Joystream: A user governed video platform"
       description="Earn monero for participating on our testnets!"
     />
-    <Hero image={heroImage} title="A user governed video platform" animationStartValue={0}>
+    <Hero image={heroImage} title="A user-governed video platform" animationStartValue={0}>
       <p className="IndexPage__hero-paragraph">
         Earn Monero by participating in the current {activeTestnet.name} testnet
       </p>
