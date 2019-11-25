@@ -1,0 +1,27 @@
+@import '../../../styles/_main';
+
+.GuidesPage {
+  background-color: $c_black;
+
+  &__wrapper {
+    color: $c_white;
+  }
+}
+
+.RoleOverview__Wrapper {
+  min-width: 0;
+  padding: 140px 20px 0;
+  background-color: $c_white;
+}
+
+@media #{$screen-sm} {
+  .RoleOverview__Wrapper {
+    padding: 140px 30px 0;
+  }
+}
+
+@media #{$screen-md} {
+  .RoleOverview__Wrapper {
+    padding: 120px 0 0 66px;
+  }
+}
