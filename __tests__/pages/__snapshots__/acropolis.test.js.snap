@@ -30,9 +30,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
     <p
       className="AcropolisPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you best. 
-      <br />
-      Influence the platform's development and earn Monero in the process.
+      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Monero in the process.
     </p>
     <HeroCard
       content={null}
@@ -99,7 +97,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
             Object {
               "image": "icon-component-mock",
               "key": "councilStage",
-              "title": "Council Election Stage",
+              "title": "Election Stage",
             },
             Object {
               "image": "icon-component-mock",
@@ -114,12 +112,12 @@ exports[`AcropolisPage page renders correctly 1`] = `
             Object {
               "image": "icon-component-mock",
               "key": "mediaFiles",
-              "title": "Platform Content Files",
+              "title": "Platform Files",
             },
             Object {
               "image": "icon-component-mock",
               "key": "rolesProviders",
-              "title": "Active Storage Providers",
+              "title": "Storage Providers",
             },
           ]
         }

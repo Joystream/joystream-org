@@ -18,7 +18,7 @@ exports[`IndexPage page renders correctly 1`] = `
     indent={false}
     noOverflow={false}
     theme="black"
-    title="A user governed video platform"
+    title="A user-governed video platform"
   >
     <p
       className="IndexPage__hero-paragraph"
@@ -122,7 +122,7 @@ exports[`IndexPage page renders correctly 1`] = `
         Object {
           "image": "icon-component-mock",
           "key": "councilStage",
-          "title": "Council Election Stage",
+          "title": "Election Stage",
         },
         Object {
           "image": "icon-component-mock",
@@ -137,16 +137,17 @@ exports[`IndexPage page renders correctly 1`] = `
         Object {
           "image": "icon-component-mock",
           "key": "mediaFiles",
-          "title": "Platform Content Files",
+          "title": "Platform Files",
         },
         Object {
           "image": "icon-component-mock",
           "key": "rolesProviders",
-          "title": "Active Storage Providers",
+          "title": "Storage Providers",
         },
       ]
     }
     large={true}
+    title="Testnet Metrics"
   >
     <Button
       className=""
@@ -176,7 +177,7 @@ exports[`IndexPage page renders correctly 1`] = `
         }
       }
       className=""
-      date="2019/11/18 11:00"
+      date="2019/12/16 11:00"
       image="icon-mock"
       title="Rome Testnet"
     >

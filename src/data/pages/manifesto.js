@@ -1,6 +1,6 @@
 import React from 'react';
 import problemImage from '../../assets/svg/problem.svg';
-import goalImage from '../../assets/svg/goal.svg';
+import goalImage from '../../assets/images/goal.png';
 import thesisImage from '../../assets/svg/thesis.svg';
 import wedgeImage from '../../assets/svg/the-wedge.svg';
 import accountabilityImage from '../../assets/svg/accountability.svg';

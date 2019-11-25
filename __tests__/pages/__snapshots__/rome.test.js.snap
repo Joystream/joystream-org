@@ -30,14 +30,12 @@ exports[`RomePage page renders correctly 1`] = `
     <p
       className="RomePage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you best. 
-      <br />
-      Influence the platform's development and earn Monero in the process.
+      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Monero in the process.
     </p>
     <HeroCard
       content={null}
       counterTitle=""
-      date="2019/11/18 11:00"
+      date="2019/12/16 11:00"
       error={false}
       info={false}
     />

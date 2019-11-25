@@ -24,6 +24,7 @@
       &__container {
         @extend %container;
 
+        max-width: 1400px;
         padding: 20px 32px 60px;
       }
     }
@@ -46,6 +47,14 @@
     left: 0;
     width: 100%;
     transform: translate(0, 50%);
+  }
+
+  &__title {
+    padding: 40px 0 0;
+    font-size: 30px;
+    line-height: 38px;
+    color: $c_blue-ribbon;
+    text-align: center;
   }
 
   @media #{media-min-width(450px)} {
@@ -84,6 +93,11 @@
       & > * {
         flex-basis: calc(100% / 4);
       }
+    }
+
+    &__title {
+      font-size: 40px;
+      line-height: 45px;
     }
   }
 
