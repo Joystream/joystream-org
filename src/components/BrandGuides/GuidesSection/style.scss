@@ -1,0 +1,49 @@
+@import '../../../styles/_main';
+
+.GuidesSection {
+  &__section-title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    line-height: 60px;
+    color: inherit;
+  }
+
+  &__subsection {
+    margin-bottom: 80px;
+  }
+
+  &__subsection-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 33px;
+    color: inherit;
+  }
+
+  &__image {
+    margin-bottom: 40px;
+  }
+
+  &__image-description {
+    max-width: 320px;
+    margin-bottom: 40px;
+    font-size: 12px;
+    line-height: 16px;
+    color: inherit;
+    text-align: center;
+  }
+
+  &__sub-title {
+    margin-bottom: 40px;
+    font-family: $font-secondary;
+    font-size: 20px;
+    line-height: 30px;
+    color: inherit;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 21px;
+    color: $c_light-gray;
+  }
+}
