@@ -55,7 +55,7 @@ exports[`ManifestoPage page renders correctly 1`] = `
       </blockquote>
     </ImageSection>
     <ImageSection
-      image="icon-mock"
+      image="test-file-stub"
       title="Goal"
     >
       <p>
