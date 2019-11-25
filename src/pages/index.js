@@ -80,7 +80,7 @@ const IndexPage = ({ content }) => (
       />
     </LayoutWrapper>
 
-    <Analytics large content={mapStatusDataToAnalytics(content)}>
+    <Analytics title="Testnet Metrics" large content={mapStatusDataToAnalytics(content)}>
       <Button secondary href={activeTestnet.incentivesLink}>
         Participate and Earn Monero
       </Button>
