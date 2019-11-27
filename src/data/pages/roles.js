@@ -36,7 +36,7 @@ const rolesData = {
         'Experienced with how to setup and maintain high performance IT infrastructure',
         `Access to highly performant and reliable IT infrastructure, with high storage,
     (up & down) bandwidth and processing capacity`,
-        'Able to securely store keys hot keys',
+        'Able to securely store keys',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/validators',
@@ -50,7 +50,7 @@ const rolesData = {
       overview: `At the heart of the governance process on the platform is the proposal system,
         which allows anyone to submit some suggestion for changing the state or
         policy of the platform in some way. These proposals are processed and voted on by a council,
-        where the participants are referred to as council members. A set on the council is
+        where the participants are referred to as council members. A seat on the council is
         won through an election process, and lasts for some period of time until a new election.`,
       responsibilites: [
         'Discuss the meaning and merits of incoming proposals, covering a broad range of topics',
@@ -58,7 +58,7 @@ const rolesData = {
         'Represent the community members and your constituency to make day-to-day operations decisions',
       ],
       requirements: [
-        `Proficient with basic data analysis and sufficient reputation and standing within
+        `Proficiency with basic data analysis and sufficient reputation and standing within
         the community to earn supporting votes in elections from other platform members`,
         'A deep understanding of the Joystream platform structure, function and resource allocation',
         'Hold sufficient amount of the native platform token to put at stake',
@@ -73,11 +73,11 @@ const rolesData = {
       title: 'Storage Provider',
       overview: `There are critical platform assets that do not live on the blockchain,
         such as images and content media. The integrity of these assets is secured by the chain,
-        but a separate set of storage and distribution nodes enabled uploading and downloading of
-        such data. The storage provider is involved this activity, specifically storing large quantities of data.`,
+        but a separate set of storage and distribution nodes enables uploading and downloading of
+        such data. The storage provider is involved this activity, specifically by storing large quantities of data.`,
       responsibilites: [
         `Run and maintain storage nodes that store very large quantities of static data,
-        synchronize with other storage nodes, shares data with distributors, and accepts
+        synchronize with other storage nodes, share data with distributors, and accepts
         inbound uploads from end users`,
       ],
       requirements: [
@@ -101,7 +101,7 @@ const rolesData = {
         currently challenging for many prospective non-technical end users to obtain, store
         and use crypto assets, there will be a way for users to get a membership for free,
         which will not require any tokens in order to use the platform in a limited capacity.
-        The membership screener is the role for the participants responsible for granting such
+        The membership screener is the role responsible for granting such
         memberships, while screening for Sybill attackers and abusers.`,
       responsibilites: [
         'Run and maintain screening nodes that are always available and performant',
@@ -129,7 +129,7 @@ const rolesData = {
         <>
           A membership is an integrated representation of identifying information and associated activities of an actor
           on the platform. It is possible to create memberships for free through the screeners, described{' '}
-          <Link href="#membership-screener"> above</Link>. Since this invariably be an imperfect process, there must be
+          <Link href="#membership-screener"> above</Link>. Since this is invariably an imperfect process, there must be
           some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the
           membership curators.
         </>
@@ -154,15 +154,15 @@ const rolesData = {
       id: 'content-curator',
       image: ContentCuratorImage,
       title: 'Content Curator',
-      overview: `All of the media content published on the platform lives in an on chain content directory.
-         There is a range of different content types, and each type has a schema for a rich
+      overview: `All of the media content published on the platform lives in an on-chain content directory.
+         There are a range of different content types, and each type has a schema for a rich
          description of its structure, function and policies. For the effective use of of content,
          for example in rendering, discovery and monetization, it is critical to ensure the validity
          of the published information for all content. In particular, it is also important to resolve
          possible disputes about ownership and presence of any piece of content on the platform.
          It is the task of the content curators to do the work involved in processes that address these objectives.`,
       responsibilites: [
-        `Monitor the publishing of new content into the content directoyr,
+        `Monitor the publishing of new content into the content directory,
         and respond to reports about contested publications`,
         'Adjudicate possible dispute processes resulting from reports from users',
         'Update information on content to be accurate',
@@ -183,7 +183,7 @@ const rolesData = {
       title: 'Content Creator',
       overview: `As a video platform, one of the most important platform assets is the content published
         on the platform. Since video is such a flexible media type, which can encompass a wide
-        range of content categories, it is the primary focus, but the intention is to support
+        range of content categories, it is the primary focus. However, the intention is to support
         a broader range of content types over time. The content creators are those involved in
          creating, publishing and monetizing content on the platform.`,
       responsibilites: ['Publish content and build an audience'],
@@ -199,9 +199,9 @@ const rolesData = {
       title: 'Bandwidth Provider',
       overview: `There are critical platform assets that do not live on the blockchain, such as images
       and content media. The integrity of these assets is secured by the chain, but a separate
-      set of storage and distribution nodes enabled uploading and downloading of such data.
+      set of storage and distribution nodes enable uploading and downloading of such data.
       The bandwidth provider is involved this activity,
-        specifically distributing static data to end users at scale.`,
+        specifically by distributing static data to end users at scale.`,
       responsibilites: [
         'Run and maintain distributor nodes that deliver large volumes of upstream data to a large number ' +
           'of simultaneous end users',
@@ -224,9 +224,9 @@ const rolesData = {
         context based recommendations one needs to apply some sort of heuristic on top of this directory,
         which is also some what sensitive abusive attempts to rank higher. The discovery providers play
         the role of responding to such discovery queries to end users, by combining light client inclusion
-        proofs with local search/ranking policy heuristics.`,
+        proofs with local search and ranking policy heuristics.`,
       responsibilites: [
-        `Run and maintain discovery nodes that respond to discovery related queries by staying in
+        `Run and maintain discovery nodes that respond to discovery-related queries by staying in
         sync with the content directory, and applying local ranking heuristics.`,
         <>
           Collaborate with <Link href="#builder">Builders</Link> to improve both tools, and user facing experiences, to
