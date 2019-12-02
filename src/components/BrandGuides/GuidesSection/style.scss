@@ -4,6 +4,7 @@
   &__section-title {
     margin-bottom: 40px;
     font-size: 48px;
+    font-weight: 600;
     line-height: 60px;
     color: inherit;
   }
@@ -20,30 +21,120 @@
   }
 
   &__image {
+    position: relative;
+    display: block;
     margin-bottom: 40px;
   }
 
   &__image-description {
     max-width: 320px;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
     font-size: 12px;
     line-height: 16px;
     color: inherit;
     text-align: center;
   }
 
+  &__blue {
+    position: relative;
+    padding-bottom: 40px;
+
+    > * {
+      position: relative;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -20px;
+      display: block;
+      width: calc(100% + 40px);
+      height: 100%;
+      background-color: $c_blue-ribbon;
+      content: '';
+    }
+
+    &--bottom::before {
+      top: 50%;
+      height: 50%;
+    }
+
+    @media #{$screen-xl} {
+      padding-right: 120px;
+
+      &::before {
+        left: -120px;
+        width: calc(100% + 120px);
+      }
+    }
+  }
+
   &__sub-title {
+    max-width: 680px;
     margin-bottom: 40px;
     font-family: $font-secondary;
     font-size: 20px;
     line-height: 30px;
     color: inherit;
+
+    @media #{$screen-sm} {
+      font-size: 30px;
+      line-height: 45px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+    font-family: $font-primary;
+    font-size: 20px;
+    line-height: 30px;
+    color: inherit;
+
+    &--h1 {
+      font-size: 60px;
+      line-height: 70px;
+    }
+
+    &--h2 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &--h3 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &--h4 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__detail-text {
+    margin-bottom: 20px;
+    font-size: 8px;
+    font-weight: 600;
+    line-height: 10px;
+    color: $c_white;
+
+    @media #{$screen-sm} {
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 30px;
+    }
   }
 
   &__text {
+    max-width: 800px;
     margin-bottom: 40px;
     font-size: 14px;
     line-height: 21px;
     color: $c_light-gray;
+
+    @media #{$screen-sm} {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

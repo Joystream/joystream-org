@@ -1,6 +1,5 @@
 @import '../../styles/main.scss';
 
-$trigger-height: 50px;
 $trigger-size: 80px;
 
 .BrandSidebar {
@@ -10,49 +9,46 @@ $trigger-size: 80px;
   top: $navbar-height;
   left: 0;
   z-index: 1;
-  // overflow: hidden;
-  margin: 0 -10px;
+  margin: 0 -20px;
   color: $c_white;
-  transform: translate(100%, 0);
-  transition: top $duration ease 0s, transform $duration;
-
-  p {
-    color: $c_white;
-  }
+  transition: top $duration ease 0s;
 
   &--onTop {
     top: 0;
 
-    #{$r}__container {
-      height: 100vh;
+    #{$r} {
+      &__wrapper {
+        height: 100vh;
+      }
     }
   }
 
   &--open {
-    transform: translate(#{$trigger-size}, 0);
+    @media #{$screen-only-xs} {
+      #{$r} {
+        &__trigger {
+          transform: translateX(calc(-100vw + #{$trigger-size}));
+        }
 
-    #{$r}__trigger-icon {
-      transform: scaleX(-1);
+        &__trigger-icon {
+          transform: scaleX(-1);
+        }
+
+        &__wrapper {
+          width: calc(100vw - #{$trigger-size});
+          transition-delay: 0s;
+        }
+
+        &__container {
+          transform: translate(0, 0);
+        }
+      }
     }
-  }
-
-  &__wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
-    overflow: auto;
-
-    //   &--open {
-    //     transform: translateX(0);
-    //   }
   }
 
   &__trigger {
     position: absolute;
-    left: -#{$trigger-size};
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,223 +57,74 @@ $trigger-size: 80px;
     font-size: 24px;
     cursor: pointer;
     background-color: $c_ebony-clay;
+    transition: transform $duration ease;
   }
 
   &__trigger-icon {
     transition: transform $duration;
   }
 
-  &__container {
-    width: calc(100vw - #{$trigger-size});
-    height: calc(100vh - 80px);
-    padding: calc(30px + #{$trigger-height}) 30px 30px;
-    overflow: auto;
-    background-color: $c_ebony-clay;
-    transition: height $duration;
-  }
-
-  &__group {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-  }
-
-  &__heading {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  &__state-icon {
-    width: 32px;
-    margin-right: 10px;
-  }
-
-  &__title {
-    font-size: 16px;
-    font-weight: 600;
-  }
-
-  &__link {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 20px;
-    color: $c_white;
-    text-align: left;
-
-    &:hover {
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    &--active {
-      color: $c_blue-ribbon;
-    }
-  }
-
-  @media #{$screen-sm} {
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    // height: 100vh;
-    max-width: 230px;
-    overflow: auto;
-
-    &__wrapper {
-      height: auto;
-      max-height: none;
-    }
-
-    &__trigger {
-      display: none;
-    }
-
-    &__container {
-      position: relative;
-      z-index: 0;
-      display: block;
-      padding-top: calc(#{$navbar-height} + 20px);
-      transform: translateY(0);
-    }
-
-    &__group {
-      &:not(:last-child) {
-        margin-bottom: 40px;
-      }
-    }
-
-    &__link {
-      font-size: 14px;
-
-      &--active {
-        padding-left: 6px;
-        font-weight: 700;
-        color: $c_black;
-
-        &:hover {
-          font-weight: 700;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-  @media #{$screen-md} {
-    max-width: 270px;
-
-    &__container {
-      padding-left: 0;
-    }
-
-    &__heading {
-      margin-bottom: 32px;
-    }
-
-    &__title {
-      font-size: 20px;
-    }
-
-    &__link {
-      margin-bottom: 24px;
-      font-size: 16px;
-    }
-  }
-}
-
-// ======================
-
-$trigger-height: 50px;
-
-.Sidebar {
-  position: sticky;
-  top: $navbar-height;
-  z-index: 1;
-  flex-shrink: 0;
-  transition: top $duration ease 0s;
-
-  &--onTop {
-    top: 0;
-  }
-
   &__wrapper {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    max-height: 0;
-    overflow: auto;
-    transition: max-height $duration;
-
-    &--open {
-      max-height: 500px;
-    }
-  }
-
-  &__trigger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: $trigger-height;
-    font-size: 24px;
-    cursor: pointer;
-    background-color: $c_catskill_white;
-    transition: transform $duration ease 0s;
-
-    &--active {
-      color: $c_white;
-      background-color: $c_silver;
-    }
-  }
-
-  &__trigger-icon {
-    width: 35px;
-    margin-right: 20px;
+    right: 0;
+    width: 0;
+    height: calc(100vh - #{$navbar-height});
+    overflow: hidden;
+    transition: width 0s $duration, height $duration 0s;
   }
 
   &__container {
-    width: 100%;
-    padding: calc(30px + #{$trigger-height}) 30px 30px;
-    background-color: $c_catskill_white;
-    transform: translateY(-100%);
-    transition: transform $duration ease 0s;
+    width: calc(100vw - #{$trigger-size});
+    height: 100%;
+    padding: 40px 30px 30px 52px;
+    overflow: auto;
+    background-color: $c_ebony-clay;
+    transform: translate(100%, 0);
+    transition: transform $duration ease;
+  }
 
-    &--open {
-      transform: translateY(0);
-    }
+  &__sub-group {
+    padding: 40px 0 16px 12px;
   }
 
   &__group {
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 24px;
     }
   }
 
-  &__heading {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  &__link,
+  &__sub-link {
+    display: block;
+    line-height: 1.25;
+    text-align: left;
   }
 
-  &__state-icon {
-    width: 32px;
-    margin-right: 10px;
-  }
+  &__sub-link {
+    font-size: 14px;
+    font-weight: 300;
+    color: $c_light-gray;
 
-  &__title {
-    font-size: 16px;
-    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      color: $c_white;
+      cursor: pointer;
+    }
+
+    &--active {
+      font-weight: 400;
+      color: $c_white;
+    }
   }
 
   &__link {
-    display: block;
-    margin-bottom: 20px;
+    position: relative;
+    font-family: $font-primary;
     font-size: 16px;
-    line-height: 20px;
-    color: $c_black;
-    text-align: left;
+    color: $c_white;
 
     &:hover {
       font-weight: 600;
@@ -285,7 +132,19 @@ $trigger-height: 50px;
     }
 
     &--active {
-      color: $c_blue-ribbon;
+      font-weight: 600;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        display: block;
+        width: 4px;
+        height: 16px;
+        background: $c_blue-ribbon;
+        content: '';
+        transform: translate(0, -50%);
+      }
     }
   }
 
@@ -294,14 +153,14 @@ $trigger-height: 50px;
     left: 0;
     z-index: 0;
     width: 100%;
+    width: 25%;
     height: 100vh;
-    max-width: 230px;
-    overflow: auto;
-    background-color: $c_catskill_white;
+    margin: 0;
 
     &__wrapper {
-      height: auto;
-      max-height: none;
+      position: relative;
+      width: auto;
+      height: 100%;
     }
 
     &__trigger {
@@ -312,23 +171,23 @@ $trigger-height: 50px;
       position: relative;
       z-index: 0;
       display: block;
-      padding-top: calc(#{$navbar-height} + 20px);
-      transform: translateY(0);
+      width: 100%;
+      height: 100%;
+      padding-top: 100px;
+      padding-left: 20px;
+      background: none;
+      transform: translate(0, 0);
     }
 
-    &__group {
-      &:not(:last-child) {
-        margin-bottom: 40px;
-      }
+    &__sub-link {
+      font-size: 18px;
     }
 
     &__link {
-      font-size: 14px;
+      font-size: 22px;
 
       &--active {
-        padding-left: 6px;
         font-weight: 700;
-        color: $c_black;
 
         &:hover {
           font-weight: 700;
@@ -338,24 +197,24 @@ $trigger-height: 50px;
     }
   }
 
-  @media #{$screen-md} {
-    max-width: 270px;
+  // @media #{$screen-md} {
+  //   max-width: 270px;
 
-    &__container {
-      padding-left: 0;
-    }
+  //   &__container {
+  //     padding-left: 0;
+  //   }
 
-    &__heading {
-      margin-bottom: 32px;
-    }
+  //   &__heading {
+  //     margin-bottom: 32px;
+  //   }
 
-    &__title {
-      font-size: 20px;
-    }
+  //   &__title {
+  //     font-size: 20px;
+  //   }
 
-    &__link {
-      margin-bottom: 24px;
-      font-size: 16px;
-    }
-  }
+  //   &__link {
+  //     margin-bottom: 24px;
+  //     font-size: 16px;
+  //   }
+  // }
 }
