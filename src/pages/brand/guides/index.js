@@ -1,85 +1,116 @@
 import React from 'react';
+import { Heading, Section, SubSection, SubTitle, Text } from '../../../components/BrandGuides/GuidesSection';
+import GuidesSectionLogo from '../../../components/BrandGuides/GuidesSectionLogo';
+import BrandLayoutWrapper from '../../../components/BrandLayoutWrapper';
+import BrandSidebar, { SidebarProvider } from '../../../components/BrandSidebar';
+import SiteMetadata from '../../../components/SiteMetadata';
 import BrandLayout from '../../../components/_layouts/Brand';
+import guidesData from '../../../data/pages/brand/guides';
 import './index.scss';
 
-import { useState, createRef, useMemo } from 'react';
-import ReactDOM from 'react-dom';
-import { InView } from 'react-intersection-observer';
-
-import BrandLayoutWrapper from '../../../components/BrandLayoutWrapper';
-import BrandSidebar from '../../../components/BrandSidebar';
-import Button from '../../../components/Button';
-import SiteMetadata from '../../../components/SiteMetadata';
-
-import { sharedData } from '../../../data/pages';
-import guidesData from '../../../data/pages/brand/guides';
-import { rolesData } from '../../../data/pages/roles';
-import logoDevelopmentImg from '../../../assets/images/logo-development.png';
-import logoConstructionImg from '../../../assets/images/logomark-construction.png';
-import logoExclusionImg from '../../../assets/images/logomark-exclusion.png';
-import downloadImg from '../../../assets/svg/download.svg';
-import { Section, SubSection, Text, SubTitle, Image } from '../../../components/BrandGuides/GuidesSection';
-
 const GuidesPage = () => {
+  const { sidebar } = guidesData;
+
   return (
     <BrandLayout>
-      <SiteMetadata
-        title="Joystream Platform Roles"
-        description="Read more about current and future roles on the Joystream Platform."
-      />
+      <SiteMetadata title="Joystream Brand Guide" />
 
       <BrandLayoutWrapper className="GuidesPage">
-        {/* <BrandSidebar onElementChange={scrollToElement} currentElement={elementInViewport} data={guidesData.sections} /> */}
-        <div className="GuidesPage__wrapper">
-          <Section title="Logo">
-            <SubSection>
-              <SubTitle>
-                "...Our brand should carry this feeling of experimentation, excitement and building something ethical
-                and dynamic."
-              </SubTitle>
-              <Image src={logoDevelopmentImg} alt="" />
-              <Text>
-                Before we agreed on a final logo concept we went through multiple iterations of various concepts. We
-                have explored various ideas in depth...
-              </Text>
+        <SidebarProvider>
+          <BrandSidebar data={guidesData.sidebar} />
+          <div className="GuidesPage__wrapper">
+            <GuidesSectionLogo />
 
-              <Button href={logoDevelopmentImg} download="logo">
-                <img src={downloadImg} alt="" />
-                Download logo
-              </Button>
-            </SubSection>
+            <Section title="Branding Colour Palette" id={sidebar[1].id}>
+              <SubSection>
+                <SubTitle>
+                  Our brand colours combine three primary colours, Black, White and Blue. They define the mood and
+                  present values such as:
+                </SubTitle>
 
-            <SubSection title="01. Logomark Construction">
-              <Text>
-                Finally we came up with a logomark that combines several simple principles which translate well to the
-                voice of the brand.
-              </Text>
-              <Image src={logoConstructionImg} alt="" />
-              <Text>
-                Logomark is a combination of letter J (acronym of the name Joystream) and three parallel stripes that
-                are representation of the stream, flow of information and technology.
-              </Text>
-              <Image
-                description="Logomarks exclusion zone is equal to the blue square height (marked as 5a in the diagram)."
-                src={logoExclusionImg}
-                alt=""
-              />
-            </SubSection>
+                <Text>Stability, Trust, Freedom, Responsibility, Loyalty, Wisdom, Confidence, Intelligence</Text>
+              </SubSection>
 
-            <SubSection title="02. Logo Construction">
-              <Text>
-                Joystream Logo is a combination of the logomark and dedicated typography that was designed to be the
-                best link between logomark and what Joystream stands for. It is firm and technical but shows plasticity
-                and sense of a structure.
-              </Text>
-              <Image src={logoConstructionImg} alt="" />
-              <Text>
-                Logomark is a combination of letter J (acronym of the name Joystream) and three parallel stripes that
-                are representation of the stream, flow of information and technology.
-              </Text>
-            </SubSection>
-          </Section>
-        </div>
+              <SubSection title="01. Primary Colours">
+                <Text>
+                  Primarly used colors are black, Joystream blue which is a distinctive colour that helps to put focus
+                  and draw attention. Colour white to calm, provide clarity and good readability.
+                </Text>
+                <Text>
+                  One additional colour to combine with the three primary colours is blue tinted grey, its purpose is
+                  similar to white but gives a good amount of contrast to the white elements when necessary.
+                </Text>
+              </SubSection>
+
+              <SubSection title="02. Supportive Colour Palette">
+                <Text>
+                  Supportive palette serves a purpose of convenience and usability. They provide a comprehensive range
+                  of different shades of primary colours and can be utilised in many different ways depending on a need.
+                </Text>
+              </SubSection>
+
+              <SubSection title="03. Secondary Colour Palette">
+                <Text>
+                  These are colours that can represent certain states of the network, they can stand for an error,
+                  success, warning and more.
+                </Text>
+              </SubSection>
+            </Section>
+
+            <Section title="Iconography" id={sidebar[2].id}>
+              <SubSection>
+                <SubTitle>
+                  Icons can be devided into two groups with different purpose. Descriptive icons are form of a
+                  substitute for illustrations and system icons are purely functional part of the interface.
+                </SubTitle>
+              </SubSection>
+
+              <SubSection title="01. Descriptive Icons">
+                <Text>
+                  Joystream iconography is a custom, comprehensive icon style that helps explaining certain complex
+                  topics in a simple, digestable manner.
+                </Text>
+
+                <Text>
+                  They are not always very direct and often carry a symbolic meaning but they help visualising and
+                  estinguish important elements.
+                </Text>
+              </SubSection>
+
+              <SubSection title="02. System Icons">
+                <Text>
+                  System icons in their basic style combine two colours: Black and Joystream Blue. Their purpose is to
+                  represent certain actions on the website or platform. They are readable even in small sizes down to
+                  18x18px.
+                </Text>
+
+                <Text>
+                  They are not always very direct and often carry a symbolic meaning but they help visualising and
+                  estinguish important elements.
+                </Text>
+
+                <Heading variant="h2">Types of system icons</Heading>
+                <Text>
+                  We destinguish four types of system icons and they should be used preferably in their basic style but
+                  can be used interchangeably when neccessary.
+                </Text>
+              </SubSection>
+            </Section>
+
+            <Section title="Joystream Illustrations" id={sidebar[3].id}>
+              <SubSection>
+                <SubTitle>
+                  Joystream Illustrations are symbolic representation of important steps in the Joystream project, for
+                  example a new testnet, role on the network or other equaly significant subject.
+                </SubTitle>
+                <SubTitle>
+                  They can be quite visualy complex despite using only three colors and no gradients.{' '}
+                </SubTitle>
+              </SubSection>
+              <SubSection>{/* <Heading>Construction</Heading> */}</SubSection>
+            </Section>
+          </div>
+        </SidebarProvider>
       </BrandLayoutWrapper>
     </BrandLayout>
   );

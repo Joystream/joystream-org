@@ -1,42 +1,49 @@
 export default {
-  sections: [
+  sidebar: [
     {
-      name: 'Logo',
+      title: 'Logo',
       id: 'logo',
       subSections: [
-        { name: 'Overview', id: 'logo' },
-        { name: 'Construction' },
-        { name: 'Use Cases' },
-        { name: 'Social icons' },
-        { name: 'Forbidden use' },
+        { title: 'Overview', id: 'logo-overview' },
+        { title: 'Construction', id: 'logo-construction' },
+        { title: 'Use Cases', id: 'logo-use-cases' },
+        { title: 'Social icons', id: 'logo-social-icons' },
+        { title: 'Forbidden use', id: 'logo-forbidden-use' },
       ],
     },
     {
-      name: 'Colour palette',
+      title: 'Colour palette',
+      id: 'colour-palette',
       subSections: [],
     },
     {
-      name: 'Iconography',
+      title: 'Iconography',
+      id: 'iconography',
       subSections: [],
     },
     {
-      name: 'Illustrations',
+      title: 'Illustrations',
+      id: 'illustrations',
       subSections: [],
     },
     {
-      name: 'Patterns',
+      title: 'Patterns',
+      id: 'patterns',
       subSections: [],
     },
     {
-      name: 'Typography',
+      title: 'Typography',
+      id: 'typography',
       subSections: [],
     },
     {
-      name: 'Photography',
+      title: 'Photography',
+      id: 'photography',
       subSections: [],
     },
     {
-      name: 'Motion',
+      title: 'Motion',
+      id: 'motion',
       subSections: [],
     },
   ],

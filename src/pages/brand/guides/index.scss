@@ -4,24 +4,23 @@
   background-color: $c_black;
 
   &__wrapper {
+    padding: 80px 0 0;
     color: $c_white;
+
+    @media #{$screen-sm} {
+      width: 75%;
+      padding: 100px 0 0;
+    }
+
+    @media #{$screen-xl} {
+      padding: 100px 0 0 160px;
+      border-left: 1px solid $c_ebony-clay;
+    }
   }
-}
 
-.RoleOverview__Wrapper {
-  min-width: 0;
-  padding: 140px 20px 0;
-  background-color: $c_white;
-}
-
-@media #{$screen-sm} {
-  .RoleOverview__Wrapper {
-    padding: 140px 30px 0;
-  }
-}
-
-@media #{$screen-md} {
-  .RoleOverview__Wrapper {
-    padding: 120px 0 0 66px;
+  &__container {
+    @media #{$screen-sm} {
+      display: flex;
+    }
   }
 }
