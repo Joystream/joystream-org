@@ -12,7 +12,7 @@ export const Section = React.memo(({ className, children, title, ...props }) => 
   return (
     <InView
       as="div"
-      threshold={0.2}
+      threshold={0}
       onChange={inView => {
         if (inView) setCurrentElement(props.id);
       }}
