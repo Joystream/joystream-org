@@ -12,6 +12,7 @@ const propTypes = {
   className: string,
   children: node,
   large: bool,
+  title: string,
   content: shape({
     validatorsCount: number,
     blockHeight: string,
@@ -37,9 +38,10 @@ const defaultProps = {
   items: defaultItems,
 };
 
-const Analytics = ({ className, content, children, items, large, ...props }) => {
+const Analytics = ({ title, className, content, children, items, large, ...props }) => {
   return (
     <section className={cn('Analytics', className, { 'Analytics--large': large })} {...props}>
+      {title && <h2 className="Analytics__title">{title}</h2>}
       <div className="Analytics__container">
         {items.map(item => {
           const value = item.key ? content[item.key] || '-' : item.value;

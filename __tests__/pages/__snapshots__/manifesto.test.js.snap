@@ -25,7 +25,7 @@ exports[`ManifestoPage page renders correctly 1`] = `
     <p
       className="AcropolisPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you the best. Influence the platform's development earning Monero in the process.
+      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Monero in the process.
     </p>
   </Hero>
   <LayoutWrapper
@@ -55,7 +55,7 @@ exports[`ManifestoPage page renders correctly 1`] = `
       </blockquote>
     </ImageSection>
     <ImageSection
-      image="icon-mock"
+      image="test-file-stub"
       title="Goal"
     >
       <p>

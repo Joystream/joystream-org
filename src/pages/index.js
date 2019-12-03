@@ -22,10 +22,12 @@ import SiteMetadata from '../components/SiteMetadata';
 
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
 import heroImage from '../assets/svg/hero-builder.svg';
+import RomeImage from '../assets/svg/rome-main.svg';
 import { ReactComponent as TickImage } from '../assets/svg/tick.svg';
 import { ReactComponent as ClockImage } from '../assets/svg/clock.svg';
 
 import { roles } from '../data/pages';
+import { launchDate as romeNetworkLaunchDate } from '../data/pages/rome';
 
 import './style.scss';
 
@@ -40,7 +42,7 @@ const IndexPage = ({ content }) => (
       title="Joystream: A user governed video platform"
       description="Earn monero for participating on our testnets!"
     />
-    <Hero image={heroImage} title="A user governed video platform" animationStartValue={0}>
+    <Hero image={heroImage} title="A user-governed video platform" animationStartValue={0}>
       <p className="IndexPage__hero-paragraph">
         Earn Monero by participating in the current {activeTestnet.name} testnet
       </p>
@@ -78,11 +80,24 @@ const IndexPage = ({ content }) => (
       />
     </LayoutWrapper>
 
-    <Analytics large content={mapStatusDataToAnalytics(content)}>
+    <Analytics title="Testnet Metrics" large content={mapStatusDataToAnalytics(content)}>
       <Button secondary href={activeTestnet.incentivesLink}>
         Participate and Earn Monero
       </Button>
     </Analytics>
+
+    <LayoutWrapper>
+      <TestnetItem
+        title="Rome Testnet"
+        image={RomeImage}
+        children="Rome is our fifth testnet, and we are introducing new roles for you to try out."
+        date={romeNetworkLaunchDate}
+        button={{
+          label: 'Explore Rome',
+          to: '/rome',
+        }}
+      />
+    </LayoutWrapper>
 
     <LayoutWrapper dark>
       <TitleWrapper title="Become a user, run the platform">
