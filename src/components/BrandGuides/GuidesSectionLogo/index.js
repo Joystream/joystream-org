@@ -17,6 +17,7 @@ import slide5 from '../../../assets/images/slides/logo/5.png';
 import slide6 from '../../../assets/images/slides/logo/6.png';
 import { ReactComponent as Logo } from '../../../assets/svg/logo-white.svg';
 import { ReactComponent as LargeLogo } from '../../../assets/svg/logo-large-white.svg';
+import { ReactComponent as LogoMark } from '../../../assets/svg/logo-mark.svg';
 import downloadImg from '../../../assets/svg/download.svg';
 import guidesData from '../../../data/pages/brand/guides';
 import Button from '../../Button';
@@ -120,6 +121,27 @@ export default () => {
             <div className="SafeUse__description">
               Vertical lockup should never be narrower than 70px in digital or 15mm in print.
             </div>
+          </div>
+        </div>
+      </SubSection>
+
+      <SubSection title="04. Social Icons">
+        <Text>
+          In cases when the Joystream brand has already been established we can simply use the icon on its own. While
+          the icon can exist without the wordmark, the wordmark should never exist without the icon.
+        </Text>
+        <div className="SocialIcons__row">
+          <div className="SocialIcons__icon SocialIcons__icon--blue SocialIcons__icon--bg-white">
+            <LogoMark />
+          </div>
+          <div className="SocialIcons__icon SocialIcons__icon--white SocialIcons__icon--bg-blue">
+            <LogoMark />
+          </div>
+          <div className="SocialIcons__icon SocialIcons__icon--white SocialIcons__icon--bg-black">
+            <LogoMark />
+          </div>
+          <div className="SocialIcons__icon SocialIcons__icon--black SocialIcons__icon--bg-white">
+            <LogoMark />
           </div>
         </div>
       </SubSection>
