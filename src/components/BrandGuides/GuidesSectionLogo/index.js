@@ -15,6 +15,8 @@ import slide3 from '../../../assets/images/slides/logo/3.png';
 import slide4 from '../../../assets/images/slides/logo/4.png';
 import slide5 from '../../../assets/images/slides/logo/5.png';
 import slide6 from '../../../assets/images/slides/logo/6.png';
+import { ReactComponent as Logo } from '../../../assets/svg/logo-white.svg';
+import { ReactComponent as LargeLogo } from '../../../assets/svg/logo-large-white.svg';
 import downloadImg from '../../../assets/svg/download.svg';
 import guidesData from '../../../data/pages/brand/guides';
 import Button from '../../Button';
@@ -90,6 +92,36 @@ export default () => {
         </Text>
 
         <Slider slides={[slide1, slide2, slide3, slide4, slide5, slide6]} />
+      </SubSection>
+
+      <SubSection>
+        <SubTitle bold>The smallest safe use</SubTitle>
+        <Text>
+          In order to ensure the best visual communication of the logo, it is best presented in size between{' '}
+          <strong>200 and 500+px</strong> width on digital devices.
+        </Text>
+        <div className="GuidesSectionLogo__safe-use SafeUse">
+          <div className="SafeUse__col">
+            <div className="SafeUse__logos">
+              <Logo className="SafeUse__logo SafeUse__logo--xl" />
+              <Logo className="SafeUse__logo SafeUse__logo--md" />
+              <Logo className="SafeUse__logo SafeUse__logo--sm" />
+            </div>
+            <div className="SafeUse__description">
+              The Joystream logo should never be narrower than 100px in digital or 20mm in print horisontal lockup.
+            </div>
+          </div>
+          <div className="SafeUse__col">
+            <div className="SafeUse__logos SafeUse__logos--horizontal">
+              <LargeLogo className="SafeUse__large-logo SafeUse__large-logo--xl" />
+              <LargeLogo className="SafeUse__large-logo SafeUse__large-logo--md" />
+              <LargeLogo className="SafeUse__large-logo SafeUse__large-logo--sm" />
+            </div>
+            <div className="SafeUse__description">
+              Vertical lockup should never be narrower than 70px in digital or 15mm in print.
+            </div>
+          </div>
+        </div>
       </SubSection>
 
       <SubSection title="05. Forbidden uses of the logo" id={subSection[4].id}>

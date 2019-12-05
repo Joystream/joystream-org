@@ -56,7 +56,7 @@ SubSection.propTypes = {
 
 export const SubTitle = ({ className, children, bold, ...props }) => {
   return (
-    <p className={cn('GuidesSection__sub-title', className)} {...props}>
+    <p className={cn('GuidesSection__sub-title', className, { 'GuidesSection__sub-title--bold': bold })} {...props}>
       {children}
     </p>
   );
