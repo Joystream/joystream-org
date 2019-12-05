@@ -1,17 +1,26 @@
 import React from 'react';
-import './style.scss';
-
-import Button from '../../Button';
-import { Section, SubSection, Text, SubTitle, Image, BlueSection, DetailText } from '../GuidesSection';
-
-import guidesData from '../../../data/pages/brand/guides';
+import schematicsDark from '../../../assets/images/logo-construction-schematics-dark.png';
+import schematicsWhite from '../../../assets/images/logo-construction-schematics-white.png';
 import logoDevelopmentImg from '../../../assets/images/logo-development.png';
 import logoConstructionImg from '../../../assets/images/logomark-construction.png';
 import logoExclusionImg from '../../../assets/images/logomark-exclusion.png';
+import forbiddenSlide1 from '../../../assets/images/slides/logo-forbidden/1.png';
+import forbiddenSlide2 from '../../../assets/images/slides/logo-forbidden/2.png';
+import forbiddenSlide3 from '../../../assets/images/slides/logo-forbidden/3.png';
+import forbiddenSlide4 from '../../../assets/images/slides/logo-forbidden/4.png';
+import forbiddenSlide5 from '../../../assets/images/slides/logo-forbidden/5.png';
+import slide1 from '../../../assets/images/slides/logo/1.png';
+import slide2 from '../../../assets/images/slides/logo/2.png';
+import slide3 from '../../../assets/images/slides/logo/3.png';
+import slide4 from '../../../assets/images/slides/logo/4.png';
+import slide5 from '../../../assets/images/slides/logo/5.png';
+import slide6 from '../../../assets/images/slides/logo/6.png';
 import downloadImg from '../../../assets/svg/download.svg';
-
-import schematicsWhite from '../../../assets/images/logo-construction-schematics-white.png';
-import schematicsDark from '../../../assets/images/logo-construction-schematics-dark.png';
+import guidesData from '../../../data/pages/brand/guides';
+import Button from '../../Button';
+import { Slider } from '../../Slider';
+import { BlueSection, DetailText, Image, Section, SubSection, SubTitle, Text } from '../GuidesSection';
+import './style.scss';
 
 export default () => {
   const section = guidesData.sidebar[0];
@@ -79,7 +88,21 @@ export default () => {
           Joystream Logo is primarly used in it’s original form on white backgrounds but it can also be used in it’s
           complimentary forms if necessary. Examples show such use cases below.
         </Text>
-        {/* slider */}
+
+        <Slider slides={[slide1, slide2, slide3, slide4, slide5, slide6]} />
+      </SubSection>
+
+      <SubSection title="05. Forbidden uses of the logo" id={subSection[4].id}>
+        <Text>
+          Logotype and the icon ought to follow certain rules and there are general cases of use that should be avoided
+          at all cost! In order to preserve the brand voice remember to avoid following examples:
+        </Text>
+
+        <Slider
+          size="large"
+          withSpacing
+          slides={[forbiddenSlide1, forbiddenSlide2, forbiddenSlide3, forbiddenSlide4, forbiddenSlide5]}
+        />
       </SubSection>
     </Section>
   );

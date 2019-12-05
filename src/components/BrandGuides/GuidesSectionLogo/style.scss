@@ -58,4 +58,17 @@
     margin: 0 auto;
     margin-bottom: 80px;
   }
+
+  &__slider-logo {
+    width: 50%;
+    color: $c_blue-ribbon;
+
+    &--black > g > path {
+      fill: $c_black;
+    }
+
+    &--white {
+      color: $c_white;
+    }
+  }
 }

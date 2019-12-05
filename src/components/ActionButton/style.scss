@@ -50,6 +50,8 @@ $size: 80px;
   }
 
   &__arrow {
+    color: $c_white;
+
     &--top {
       transform: rotate(180deg);
     }

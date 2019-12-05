@@ -24,7 +24,7 @@ export default {
     {
       title: 'Illustrations',
       id: 'illustrations',
-      subSections: [],
+      subSections: [{ title: 'Overview', id: 'illustrations-overview' }],
     },
     {
       title: 'Patterns',
