@@ -1,10 +1,8 @@
-import React, { useState, useContext, useRef, useEffect } from 'react';
 import cn from 'classnames';
-import { array, func, string, bool } from 'prop-types';
+import { array, bool } from 'prop-types';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import stickybits from 'stickybits';
-
 import { ScrollContext } from '../_enhancers/ScrollContext';
-
 import './style.scss';
 
 export const SidebarContext = React.createContext({});

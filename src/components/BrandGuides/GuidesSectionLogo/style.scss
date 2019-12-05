@@ -153,3 +153,55 @@
     }
   }
 }
+
+.SocialIcons {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+  }
+
+  &__icon {
+    position: relative;
+    width: 20%;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      display: block;
+      padding-bottom: 100%;
+      content: '';
+    }
+
+    &--white {
+      color: $c_white;
+    }
+
+    &--blue {
+      color: $c_blue-ribbon;
+    }
+
+    &--black {
+      color: $c_black;
+    }
+
+    &--bg-white {
+      background-color: $c_white;
+    }
+
+    &--bg-blue {
+      background-color: $c_blue-ribbon;
+    }
+
+    &--bg-black {
+      background-color: $c_black;
+      border: 1px solid $c_ebony-clay;
+    }
+  }
+}

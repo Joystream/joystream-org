@@ -1,6 +1,6 @@
 import React from 'react';
 import { func } from 'prop-types';
-import logoImg from '../../../assets/svg/logo-mark.svg';
+import { ReactComponent as Logo } from '../../../assets/svg/logo-mark.svg';
 import ActionButton from '../../ActionButton';
 import BrandLayoutWrapper from '../../BrandLayoutWrapper';
 import Button from '../../Button';
@@ -23,7 +23,7 @@ const StorySectionHeader = React.forwardRef(({ onActionClick }, ref) => {
           <Button large>{data.header.buttonText}</Button>
         </div>
         <div className="StorySectionHeader__image-wrapper">
-          <img className="StorySectionHeader__image" src={logoImg} alt="" />
+          <Logo className="StorySectionHeader__image" />
         </div>
       </div>
       <ActionButton className="StorySectionHeader__action" onClick={onActionClick} />

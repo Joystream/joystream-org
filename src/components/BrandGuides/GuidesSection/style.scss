@@ -18,6 +18,11 @@
     font-size: 24px;
     line-height: 33px;
     color: inherit;
+
+    @media #{$screen-sm} {
+      font-size: 40px;
+      line-height: 60px;
+    }
   }
 
   &__image {
