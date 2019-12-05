@@ -63,11 +63,13 @@ const BrandSidebar = ({ data }) => {
       <div className="BrandSidebar__wrapper">
         <div className="BrandSidebar__container">
           {data.map(({ id, title, subSections }) => {
+            const isActive = currentElement === id;
+
             return (
               <div className="BrandSidebar__group" key={id}>
                 <button
                   className={cn('BrandSidebar__link', {
-                    'BrandSidebar__link--active': currentElement === id,
+                    'BrandSidebar__link--active': isActive,
                   })}
                   onClick={() => {
                     scrollToElement(id);
@@ -77,7 +79,7 @@ const BrandSidebar = ({ data }) => {
                   {title}
                 </button>
 
-                {subSections.length > 0 && (
+                {isActive && subSections.length > 0 && (
                   <div className="BrandSidebar__sub-group">
                     {subSections.map(({ title, id }) => {
                       return (

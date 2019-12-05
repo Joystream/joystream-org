@@ -19,6 +19,8 @@
   }
 
   &__container {
+    padding-bottom: 0;
+
     @media #{$screen-sm} {
       display: flex;
     }
