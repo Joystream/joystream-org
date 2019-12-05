@@ -77,6 +77,10 @@
     line-height: 30px;
     color: inherit;
 
+    &--bold {
+      font-weight: 600;
+    }
+
     @media #{$screen-sm} {
       font-size: 30px;
       line-height: 45px;
@@ -131,6 +135,11 @@
     font-size: 14px;
     line-height: 21px;
     color: $c_light-gray;
+
+    strong {
+      font-weight: 600;
+      color: $c_white;
+    }
 
     @media #{$screen-sm} {
       font-size: 20px;
