@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heading, Section, SubSection, SubTitle, Text } from '../../../components/BrandGuides/GuidesSection';
 import GuidesSectionLogo from '../../../components/BrandGuides/GuidesSectionLogo';
+import GuidesSectionIllustrations from '../../../components/BrandGuides/GuidesSectionIllustrations';
 import BrandLayoutWrapper from '../../../components/BrandLayoutWrapper';
 import BrandSidebar, { SidebarProvider } from '../../../components/BrandSidebar';
 import SiteMetadata from '../../../components/SiteMetadata';
@@ -97,18 +98,7 @@ const GuidesPage = () => {
               </SubSection>
             </Section>
 
-            <Section title="Joystream Illustrations" id={sidebar[3].id}>
-              <SubSection>
-                <SubTitle>
-                  Joystream Illustrations are symbolic representation of important steps in the Joystream project, for
-                  example a new testnet, role on the network or other equaly significant subject.
-                </SubTitle>
-                <SubTitle>
-                  They can be quite visualy complex despite using only three colors and no gradients.{' '}
-                </SubTitle>
-              </SubSection>
-              <SubSection>{/* <Heading>Construction</Heading> */}</SubSection>
-            </Section>
+            <GuidesSectionIllustrations />
           </div>
         </SidebarProvider>
       </BrandLayoutWrapper>

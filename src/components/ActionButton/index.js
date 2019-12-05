@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { oneOf } from 'prop-types';
 import React from 'react';
-import arrowImg from '../../assets/svg/arrow-down-small.svg';
+import { ReactComponent } from '../../assets/svg/arrow-down-small.svg';
 import './style.scss';
 
 const propTypes = {
@@ -20,8 +20,7 @@ const ActionButton = ({ children, direction, className, variant, ...props }) => 
     <div className={cn('ActionButton', className, `ActionButton--${variant}`)} {...props}>
       <div className="ActionButton__text">{children}</div>
       <div className="ActionButton__button">
-        <img
-          src={arrowImg}
+        <ReactComponent
           className={cn('ActionButton__arrow', { 'ActionButton__arrow--top': direction === 'up' })}
           alt=""
         />

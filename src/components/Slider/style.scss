@@ -1,0 +1,154 @@
+@import '../../styles/main.scss';
+
+.Slider {
+  &__track {
+    overflow: hidden;
+  }
+
+  &__carousel {
+    width: 246px;
+    overflow: visible;
+
+    @media #{$screen-sm} {
+      width: 347px;
+
+      &--large {
+        width: 441px;
+      }
+    }
+  }
+
+  &__slide-inner--spaced {
+    padding-right: 20px;
+
+    @media #{$screen-sm} {
+      padding-right: 40px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+
+    @media #{$screen-md} {
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  &__inner-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    max-width: 560px;
+  }
+
+  &__dots {
+    $_bg-color: rgba($c_white, .1);
+
+    position: relative;
+    flex-grow: 1;
+    height: 5px;
+    margin: 0 20px;
+    background: $_bg-color;
+    border: 1px solid transparent;
+    border-radius: 2px;
+  }
+
+  &__indicator {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background: $c_blue-ribbon;
+    border-radius: inherit;
+    transition: transform .5s ease;
+  }
+
+  &__themes {
+    display: flex;
+    margin-top: 36px;
+
+    @media #{$screen-md} {
+      margin-top: 0;
+      margin-left: 60px;
+    }
+  }
+
+  &__theme {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 50%;
+
+    &--white {
+      background: $c_white;
+    }
+
+    &--blue {
+      background: $c_blue-ribbon;
+    }
+
+    &--black {
+      background: $c_black;
+      border-color: $c_ebony-clay;
+    }
+
+    &--selected {
+      &::before {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        display: block;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        border: 1px solid $c_white;
+        border-radius: 50%;
+        content: '';
+      }
+    }
+  }
+
+  &__button {
+    color: $c_white;
+
+    &:hover {
+      color: $c_blue-ribbon;
+    }
+  }
+
+  &__arrow {
+    &--back {
+      transform: rotate(90deg);
+    }
+
+    &--forward {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &--white {
+      color: $c_black;
+      background: $c_white;
+    }
+
+    &--blue {
+      background: $c_blue-ribbon;
+    }
+
+    &--black {
+      background: $c_black;
+    }
+  }
+}
