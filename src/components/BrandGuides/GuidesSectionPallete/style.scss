@@ -1,5 +1,50 @@
 @import '../../../styles/_main';
 
+.GuidesSectionPallete {
+  &__boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__box-blue {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__box-light,
+  &__box-dark {
+    width: calc(50% - 10px);
+  }
+
+  &__color-array {
+    width: calc(33.33% - 10px);
+  }
+
+  &__color-array-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 680px;
+    margin-top: 80px;
+  }
+
+  @media #{$screen-sm} {
+    &__box-blue {
+      width: calc(50% - 20px);
+      margin-bottom: 0;
+    }
+
+    &__box-light,
+    &__box-dark {
+      width: calc(25% - 20px);
+    }
+
+    &__color-array {
+      width: calc(33.33% - 20px);
+    }
+  }
+}
+
 .ColorTile {
   margin-bottom: 40px;
   padding: 40px;
@@ -55,5 +100,39 @@
     &--small {
       padding: 14px 40px;
     }
+  }
+}
+
+.ColorBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: inherit;
+
+  &__name {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.ColorBoxContainer {
+  color: $c_white;
+
+  &--border {
+    border: 1px solid $c_ebony-clay;
+  }
+
+  &--dark-text {
+    color: $c_ebony-clay;
+  }
+}
+
+.ColorArray {
+  &__color-stop {
+    width: 100%;
+    height: 20px;
   }
 }

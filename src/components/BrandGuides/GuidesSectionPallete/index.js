@@ -1,9 +1,8 @@
+import cn from 'classnames';
+import { array, bool, string } from 'prop-types';
 import React from 'react';
 import guidesData from '../../../data/pages/brand/guides';
-import { Slide, Slider } from '../../Slider';
 import { Section, SubSection, SubTitle, Text } from '../GuidesSection';
-import cn from 'classnames';
-import { string, array, bool } from 'prop-types';
 import './style.scss';
 
 const ColorTile = ({ small, noMargin, withBorder, textColor = '#FFF', name, cmyk, rgb, hex }) => {
@@ -48,13 +47,50 @@ ColorTile.propTypes = {
   withBorder: bool,
 };
 
+const ColorBoxContainer = ({ darkText, withBorder, className, ...props }) => {
+  return (
+    <div
+      className={cn('ColorBoxContainer', className, {
+        'ColorBoxContainer--border': withBorder,
+        'ColorBoxContainer--dark-text': darkText,
+      })}
+      {...props}
+    />
+  );
+};
+
+const ColorBox = ({ name, hex, size = 1 }) => {
+  return (
+    <div className="ColorBox" style={{ height: size * 60, background: hex }}>
+      {name && <div className="ColorBox__name">{name}</div>}
+      {hex}
+    </div>
+  );
+};
+
+const ColorArray = ({ hex, className }) => {
+  const ColorStop = ({ opacity = 1 }) => (
+    <div className="ColorArray__color-stop" style={{ background: hex, opacity }} />
+  );
+
+  return (
+    <div className={cn('ColorArray', className)}>
+      <ColorStop />
+      <ColorStop opacity={0.6} />
+      <ColorStop opacity={0.4} />
+      <ColorStop opacity={0.2} />
+      <ColorStop opacity={0.1} />
+    </div>
+  );
+};
+
 export default () => {
   const section = guidesData.sidebar[1];
   const subSection = section.subSections;
 
   return (
     <Section title="Branding Colour Palette" id={section.id}>
-      <SubSection>
+      <SubSection id={subSection[0].id}>
         <SubTitle>
           Our brand colours combine three primary colours, Black, White and Blue. They define the mood and present
           values such as:
@@ -63,7 +99,7 @@ export default () => {
         <Text>Stability, Trust, Freedom, Responsibility, Loyalty, Wisdom, Confidence, Intelligence</Text>
       </SubSection>
 
-      <SubSection title="01. Primary Colours">
+      <SubSection title="01. Primary Colours" id={subSection[1].id}>
         <Text>
           Primarly used colors are black, Joystream blue which is a distinctive colour that helps to put focus and draw
           attention. Colour white to calm, provide clarity and good readability.
@@ -85,18 +121,47 @@ export default () => {
         <ColorTile withBorder name="Black" hex="#000000" cmyk={[30, 30, 30, 100]} rgb={[0, 0, 0]} />
       </SubSection>
 
-      <SubSection title="02. Supportive Colour Palette">
+      <SubSection title="02. Supportive Colour Palette" id={subSection[2].id}>
         <Text>
           Supportive palette serves a purpose of convenience and usability. They provide a comprehensive range of
           different shades of primary colours and can be utilised in many different ways depending on a need.
         </Text>
+        <div className="GuidesSectionPallete__boxes">
+          <ColorBoxContainer className="GuidesSectionPallete__box-blue">
+            <ColorBox hex="#261EE4" />
+            <ColorBox hex="#2F2FF4" />
+            <ColorBox name="Joystream Blue" hex="#4038FF" size={2} />
+            <ColorBox hex="#5252FF" />
+            <ColorBox hex="#6C6CFF" />
+          </ColorBoxContainer>
+
+          <ColorBoxContainer darkText className="GuidesSectionPallete__box-light">
+            <ColorBox hex="#A7AEB7" />
+            <ColorBox hex="#D3D8E0" />
+            <ColorBox hex="#E8EDF6" size={2} />
+            <ColorBox hex="#F2F5F9" />
+            <ColorBox hex="#FFFFFF" />
+          </ColorBoxContainer>
+
+          <ColorBoxContainer withBorder className="GuidesSectionPallete__box-dark">
+            <ColorBox hex="#000000" size={4} />
+            <ColorBox hex="#121519" />
+            <ColorBox hex="#1F252E" />
+          </ColorBoxContainer>
+        </div>
       </SubSection>
 
-      <SubSection title="03. Secondary Colour Palette">
+      <SubSection title="03. Secondary Colour Palette" id={subSection[3].id}>
         <Text>
           These are colours that can represent certain states of the network, they can stand for an error, success,
           warning and more.
         </Text>
+
+        <div className="GuidesSectionPallete__color-array-container">
+          <ColorArray hex="#FF3861" className="GuidesSectionPallete__color-array" />
+          <ColorArray hex="#00DBB0" className="GuidesSectionPallete__color-array" />
+          <ColorArray hex="#FFE538" className="GuidesSectionPallete__color-array" />
+        </div>
       </SubSection>
     </Section>
   );
