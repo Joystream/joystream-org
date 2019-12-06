@@ -14,7 +14,12 @@ export default {
     {
       title: 'Colour palette',
       id: 'colour-palette',
-      subSections: [],
+      subSections: [
+        { title: 'Overview', id: 'pallete-overview' },
+        { title: 'Primary Colours', id: 'pallete-colours' },
+        { title: 'Supportive Pallete', id: 'pallete-supportive' },
+        { title: 'Secondary Pallete', id: 'pallete-secondary' },
+      ],
     },
     {
       title: 'Iconography',
