@@ -2,6 +2,7 @@ import React from 'react';
 import { Heading, Section, SubSection, SubTitle, Text } from '../../../components/BrandGuides/GuidesSection';
 import GuidesSectionLogo from '../../../components/BrandGuides/GuidesSectionLogo';
 import GuidesSectionIllustrations from '../../../components/BrandGuides/GuidesSectionIllustrations';
+import GuidesSectionPallete from '../../../components/BrandGuides/GuidesSectionPallete';
 import BrandLayoutWrapper from '../../../components/BrandLayoutWrapper';
 import BrandSidebar, { SidebarProvider } from '../../../components/BrandSidebar';
 import SiteMetadata from '../../../components/SiteMetadata';
@@ -22,41 +23,7 @@ const GuidesPage = () => {
           <div className="GuidesPage__wrapper">
             <GuidesSectionLogo />
 
-            <Section title="Branding Colour Palette" id={sidebar[1].id}>
-              <SubSection>
-                <SubTitle>
-                  Our brand colours combine three primary colours, Black, White and Blue. They define the mood and
-                  present values such as:
-                </SubTitle>
-
-                <Text>Stability, Trust, Freedom, Responsibility, Loyalty, Wisdom, Confidence, Intelligence</Text>
-              </SubSection>
-
-              <SubSection title="01. Primary Colours">
-                <Text>
-                  Primarly used colors are black, Joystream blue which is a distinctive colour that helps to put focus
-                  and draw attention. Colour white to calm, provide clarity and good readability.
-                </Text>
-                <Text>
-                  One additional colour to combine with the three primary colours is blue tinted grey, its purpose is
-                  similar to white but gives a good amount of contrast to the white elements when necessary.
-                </Text>
-              </SubSection>
-
-              <SubSection title="02. Supportive Colour Palette">
-                <Text>
-                  Supportive palette serves a purpose of convenience and usability. They provide a comprehensive range
-                  of different shades of primary colours and can be utilised in many different ways depending on a need.
-                </Text>
-              </SubSection>
-
-              <SubSection title="03. Secondary Colour Palette">
-                <Text>
-                  These are colours that can represent certain states of the network, they can stand for an error,
-                  success, warning and more.
-                </Text>
-              </SubSection>
-            </Section>
+            <GuidesSectionPallete />
 
             <Section title="Iconography" id={sidebar[2].id}>
               <SubSection>

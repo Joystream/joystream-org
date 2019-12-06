@@ -1,0 +1,59 @@
+@import '../../../styles/_main';
+
+.ColorTile {
+  margin-bottom: 40px;
+  padding: 40px;
+  line-height: 1.5;
+  color: $c_black;
+
+  &--no-margin {
+    margin-bottom: 0;
+  }
+
+  &--border {
+    border: 1px solid $c_ebony-clay;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: inherit;
+
+    @media #{$screen-sm} {
+      margin-bottom: 0;
+    }
+  }
+
+  &__section {
+    display: flex;
+    margin-top: 10px;
+
+    @media #{$screen-sm} {
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+
+  &__color-name {
+    width: 70px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__color-value {
+    font-size: 18px;
+  }
+
+  @media #{$screen-sm} {
+    display: flex;
+    align-items: center;
+
+    > * {
+      width: 25%;
+    }
+
+    &--small {
+      padding: 14px 40px;
+    }
+  }
+}
