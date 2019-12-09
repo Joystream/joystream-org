@@ -7,6 +7,11 @@ import { ReactComponent as BellSvg } from '../../../assets/svg/bell.svg';
 import descriptiveBoxImg from '../../../assets/images/descriptive-box.png';
 import descriptiveIconsDesktop from '../../../assets/images/descriptive-icons-desktop.png';
 import descriptiveIconsMobile from '../../../assets/images/descriptive-icons-mobile.png';
+import constructionIcon from '../../../assets/svg/icon-construction.svg';
+import iconsBasic from '../../../assets/images/icons-basic.png';
+import iconsBlueOutlines from '../../../assets/images/icons-blue-outlines.png';
+import iconsWhiteOutlines from '../../../assets/images/icons-white-outlines.png';
+import iconsFull from '../../../assets/images/icons-full.png';
 
 import { ReactComponent as ContentSvg } from '../../../assets/svg/content-curator.svg';
 import { ReactComponent as DiscoverySvg } from '../../../assets/svg/discovery-provider.svg';
@@ -29,6 +34,15 @@ const IconSlide = ({ description, children }) => {
       {children}
       <span className="IconSlide__description">{description}</span>
     </ThemeSlide>
+  );
+};
+
+const ShowcaseRow = ({ image, title }) => {
+  return (
+    <div className="Iconography__showcase-row">
+      <h2 className="Iconography__showcase-title">{title}</h2>
+      <img className="Iconography__showcase-image" src={image} alt="" />
+    </div>
   );
 };
 
@@ -117,17 +131,29 @@ export default () => {
           System icons in their basic style combine two colours: Black and Joystream Blue. Their purpose is to represent
           certain actions on the website or platform. They are readable even in small sizes down to 18x18px.
         </Text>
+        <SubTitle bold>Construction</SubTitle>
 
-        <Text>
-          They are not always very direct and often carry a symbolic meaning but they help visualising and estinguish
-          important elements.
-        </Text>
-
+        <div className="Iconography__system-icon">
+          <img src={constructionIcon} alt="" className="Iconography__system-icon-image" />
+          <div>
+            <Text>System Icons are drawn using 2px strokes with square linecaps on a 24px grid frame.</Text>
+            <Text>
+              When possible, icons should have subtle blue accents in ammounts no greater than 40% of the whole.
+            </Text>
+          </div>
+        </div>
         <SubTitle bold>Types of system icons</SubTitle>
         <Text>
           We destinguish four types of system icons and they should be used preferably in their basic style but can be
           used interchangeably when neccessary.
         </Text>
+
+        <div className="Iconography__showcase">
+          <ShowcaseRow title="Basic style" image={iconsBasic} />
+          <ShowcaseRow title="Blue outlines" image={iconsBlueOutlines} />
+          <ShowcaseRow title="White outlines" image={iconsWhiteOutlines} />
+          <ShowcaseRow title="Full style" image={iconsFull} />
+        </div>
       </SubSection>
     </Section>
   );
