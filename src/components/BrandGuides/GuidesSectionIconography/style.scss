@@ -1,0 +1,136 @@
+@import '../../../styles/_main';
+
+.Iconography {
+  &__icon-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media #{$screen-sm} {
+      margin-top: 100px;
+    }
+  }
+
+  &__icon-descriptive,
+  &__icon-system {
+    position: relative;
+    width: 100%;
+
+    &::after {
+      display: block;
+      padding-bottom: 72%;
+      content: '';
+    }
+
+    > svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__icon-type {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+
+    @media #{$screen-sm} {
+      flex-direction: column;
+      width: calc(50% - 20px);
+    }
+  }
+
+  &__icon-text {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: $c_white;
+
+    @media #{$screen-sm} {
+      margin-top: 40px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  &__icon-descriptive {
+    margin-bottom: 40px;
+    color: $c_blue-ribbon;
+    background: $c_white;
+
+    > svg {
+      width: 30%;
+    }
+
+    @media #{$screen-sm} {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon-system {
+    background-color: $c_black;
+    border: 1px solid $c_ebony-clay;
+
+    > svg {
+      width: 25%;
+    }
+  }
+
+  &__descriptive-box {
+    display: block;
+
+    @media #{$screen-sm} {
+      display: none;
+    }
+  }
+
+  &__descriptive-icons {
+    &--mobile {
+      display: block;
+
+      @media #{$screen-sm} {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media #{$screen-sm} {
+        display: block;
+      }
+    }
+  }
+}
+
+.BrandListItem {
+  display: flex;
+  max-width: 800px;
+
+  &__bullet {
+    flex-shrink: 0;
+    width: 78px;
+    font-family: $font-primary;
+    font-size: 30px;
+    color: $c_blue-ribbon;
+  }
+}
+
+.IconSlide {
+  position: relative;
+
+  > svg {
+    flex-grow: 1;
+    max-width: 50%;
+    max-height: 50%;
+  }
+
+  &__description {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    font-family: $font-primary;
+    font-size: 10px;
+    font-weight: bold;
+  }
+}

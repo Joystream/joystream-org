@@ -17,15 +17,19 @@ import './style.scss';
 
 const availableThemes = ['white', 'blue', 'black'];
 
-export const Slide = ({ theme = 'white', children, className, ...props }) => {
+const SliderThemeContext = React.createContext({});
+
+export const ThemeSlide = ({ children, className, ...props }) => {
+  const { selectedTheme } = React.useContext(SliderThemeContext);
+
   return (
-    <div className={cn('Slider__slide', `Slider__slide--${theme}`, className)} {...props}>
+    <div className={cn('Slider__slide', `Slider__slide--${selectedTheme}`, className)} {...props}>
       {children}
     </div>
   );
 };
 
-Slide.propTypes = {
+ThemeSlide.propTypes = {
   theme: oneOf(availableThemes),
 };
 
@@ -78,64 +82,66 @@ export const Slider = ({ withSpacing, slides, themes = [], size = 'default' }) =
         'Slider--large': size === 'large',
       })}
     >
-      <div className="Slider__track" style={{ width: `calc(100vw - ${offsetLeft}px)` }}>
-        <ReactSlider ref={containerRef} className="Slider__carousel">
-          {slides.map((slide, i) => {
-            const themeSlide = slide[selectedTheme] || slide;
+      <SliderThemeContext.Provider value={{ selectedTheme }}>
+        <div className="Slider__track" style={{ width: `calc(100vw - ${offsetLeft}px)` }}>
+          <ReactSlider ref={containerRef} className="Slider__carousel">
+            {slides.map((slide, i) => {
+              const themeSlide = slide[selectedTheme] || slide;
 
-            return (
-              <ReactSlide
-                className="Slider__slide"
-                innerClassName={cn(withSpacing && 'Slider__slide-inner--spaced')}
-                key={i}
-                index={i}
-              >
-                {typeof themeSlide === 'string' ? <img alt="" src={themeSlide} /> : themeSlide}
-              </ReactSlide>
-            );
-          })}
-        </ReactSlider>
-      </div>
-      <div className="Slider__controls">
-        <div className="Slider__inner-controls">
-          <ButtonBack className="Slider__button">
-            <ArrowSvg className="Slider__arrow Slider__arrow--back" />
-          </ButtonBack>
-          <DotGroup
-            className="Slider__dots"
-            renderDots={({ currentSlide, visibleSlides, totalSlides }) => {
               return (
-                <div
-                  className="Slider__indicator"
-                  style={{
-                    width: `${(visibleSlides / totalSlides) * 100}%`,
-                    transform: `translateX(${currentSlide * 100}%)`,
-                  }}
-                />
-              );
-            }}
-          />
-          <ButtonNext className="Slider__button">
-            <ArrowSvg className="Slider__arrow Slider__arrow--forward" />
-          </ButtonNext>
-        </div>
-
-        {themes.length > 0 && (
-          <div className="Slider__themes">
-            {themes.map(themeName => {
-              return (
-                <button
-                  key={themeName}
-                  className={cn('Slider__theme', `Slider__theme--${themeName}`, {
-                    'Slider__theme--selected': themeName === selectedTheme,
-                  })}
-                  onClick={() => setTheme(themeName)}
-                />
+                <ReactSlide
+                  className="Slider__slide"
+                  innerClassName={cn(withSpacing && 'Slider__slide-inner--spaced')}
+                  key={i}
+                  index={i}
+                >
+                  {typeof themeSlide === 'string' ? <img alt="" src={themeSlide} /> : themeSlide}
+                </ReactSlide>
               );
             })}
+          </ReactSlider>
+        </div>
+        <div className="Slider__controls">
+          <div className="Slider__inner-controls">
+            <ButtonBack className="Slider__button">
+              <ArrowSvg className="Slider__arrow Slider__arrow--back" />
+            </ButtonBack>
+            <DotGroup
+              className="Slider__dots"
+              renderDots={({ currentSlide, visibleSlides, totalSlides }) => {
+                return (
+                  <div
+                    className="Slider__indicator"
+                    style={{
+                      width: `${(visibleSlides / totalSlides) * 100}%`,
+                      transform: `translateX(${currentSlide * 100}%)`,
+                    }}
+                  />
+                );
+              }}
+            />
+            <ButtonNext className="Slider__button">
+              <ArrowSvg className="Slider__arrow Slider__arrow--forward" />
+            </ButtonNext>
           </div>
-        )}
-      </div>
+
+          {themes.length > 0 && (
+            <div className="Slider__themes">
+              {themes.map(themeName => {
+                return (
+                  <button
+                    key={themeName}
+                    className={cn('Slider__theme', `Slider__theme--${themeName}`, {
+                      'Slider__theme--selected': themeName === selectedTheme,
+                    })}
+                    onClick={() => setTheme(themeName)}
+                  />
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </SliderThemeContext.Provider>
     </CarouselProvider>
   );
 };

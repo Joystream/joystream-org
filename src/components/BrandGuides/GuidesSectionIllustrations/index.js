@@ -1,6 +1,6 @@
 import React from 'react';
 import guidesData from '../../../data/pages/brand/guides';
-import { Slide, Slider } from '../../Slider';
+import { Slider } from '../../Slider';
 import { Section, SubSection, SubTitle } from '../GuidesSection';
 import './style.scss';
 
@@ -16,21 +16,7 @@ export default () => {
           new testnet, role on the network or other equaly significant subject.
         </SubTitle>
         <SubTitle>They can be quite visualy complex despite using only three colors and no gradients.</SubTitle>
-        <Slider
-          themes={['white', 'blue']}
-          size="large"
-          withSpacing
-          slides={[
-            {
-              white: <Slide theme="white">Slide one</Slide>,
-              blue: <Slide theme="blue">Slide one</Slide>,
-            },
-            {
-              white: <Slide theme="white">Slide two</Slide>,
-              blue: <Slide theme="blue">Slide two</Slide>,
-            },
-          ]}
-        />
+        <Slider themes={['white', 'blue']} size="large" withSpacing slides={[]} />
       </SubSection>
     </Section>
   );
