@@ -101,6 +101,56 @@
       }
     }
   }
+
+  &__system-icon {
+    max-width: 800px;
+
+    @media #{$screen-sm} {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__system-icon-image {
+    @media #{$screen-sm} {
+      margin-right: 40px;
+    }
+  }
+
+  &__showcase {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+    @media #{$screen-sm} {
+      margin: 0 -20px;
+    }
+  }
+
+  &__showcase-row {
+    width: 50%;
+    margin-bottom: 40px;
+    padding: 0 10px;
+
+    @media #{$screen-sm} {
+      width: 25%;
+      padding: 0 20px;
+    }
+  }
+
+  &__showcase-title {
+    margin-bottom: 20px;
+    font-family: $font-secondary;
+    font-size: 12px;
+    font-weight: 600;
+    color: $c_white;
+
+    @media #{$screen-sm} {
+      margin-bottom: 40px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
 }
 
 .BrandListItem {
