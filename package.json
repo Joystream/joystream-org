@@ -37,6 +37,7 @@
     "pre-commit": "^1.2.2",
     "prop-types": "^15.7.2",
     "pure-react-carousel": "^1.24.1",
+    "rc-slider": "^8.7.1",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-countdown-now": "^2.1.1",
