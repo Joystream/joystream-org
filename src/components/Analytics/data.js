@@ -8,7 +8,7 @@ import { ReactComponent as filesImage } from '../../assets/svg/active-storage-pr
 import { ReactComponent as bookImage } from '../../assets/svg/platform-content-files.svg';
 
 const defaultItems = [
-  { title: 'Participation Payout', image: payoutImage, value: '$1576' },
+  { title: 'Participation Payout', image: payoutImage, value: '$11904' },
   {
     title: 'Active Validators',
     image: validatorsImage,
