@@ -74,10 +74,15 @@ export const DetailText = ({ className, ...props }) => {
   return <p className={cn('GuidesSection__detail-text', className)} {...props} />;
 };
 
-export const Heading = ({ className, children, variant, ...props }) => {
+export const Heading = ({ className, bold, children, variant, ...props }) => {
   const Component = variant;
   return (
-    <Component className={cn('GuidesSection__heading', `GuidesSection__heading--${variant}`)} {...props}>
+    <Component
+      className={cn('GuidesSection__heading', `GuidesSection__heading--${variant}`, {
+        'GuidesSection__heading--bold': bold,
+      })}
+      {...props}
+    >
       {children}
     </Component>
   );
