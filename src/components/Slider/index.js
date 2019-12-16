@@ -34,12 +34,13 @@ ThemeSlide.propTypes = {
 };
 
 const sizes = {
+  small: [305, 171],
   default: [246, 152],
   large: [441, 300],
 };
 
 const propTypes = {
-  size: oneOf(['default', 'large']),
+  size: oneOf(['small', 'default', 'large']),
   themes: arrayOf(oneOf(availableThemes)),
   slides: oneOfType([
     arrayOf(node),
