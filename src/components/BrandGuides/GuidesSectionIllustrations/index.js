@@ -6,6 +6,8 @@ import cn from 'classnames';
 
 import faceBlueImg from '../../../assets/images/face-blue.png';
 import faceDarkImg from '../../../assets/images/face-dark.png';
+import masksDesktopImg from '../../../assets/images/masks-desktop.png';
+import masksMobileImg from '../../../assets/images/masks-mobile.png';
 import { ReactComponent as ArrowSvg } from '../../../assets/svg/arrow-down-small.svg';
 
 import RcSlider from 'rc-slider';
@@ -106,6 +108,22 @@ export default () => {
         </Text>
 
         <ImageReveal />
+      </SubSection>
+
+      <SubSection>
+        <SubTitle bold>Construction</SubTitle>
+        <Text>
+          Illustrations should be simple enough to be readable even in smaller resolutions down to 300x300px but they
+          shouldn’t be vague either.
+        </Text>
+
+        <img src={masksMobileImg} className="Illustrations__masks-mobile" alt="" />
+        <img src={masksDesktopImg} className="Illustrations__masks-desktop" alt="" />
+
+        <Text>
+          The ammount of detail should be adequate to what the illustration represents, in most cases they should be
+          used no smaller than 500x500px.
+        </Text>
       </SubSection>
     </Section>
   );
