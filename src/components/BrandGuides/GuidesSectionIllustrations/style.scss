@@ -98,14 +98,14 @@
       }
 
       &-rail {
-        background: rgba($c_white, .1);
+        background: rgba($c_white, 0.1);
       }
 
       &-track {
         height: 3px;
         margin: 1px;
         background: $c_blue-ribbon;
-        transition: transform .5s ease;
+        transition: transform 0.5s ease;
       }
     }
 
@@ -168,7 +168,7 @@
     border: 1px solid transparent;
 
     &--border {
-      border-color: rgba($c_white, .2);
+      border-color: rgba($c_white, 0.2);
     }
 
     @media #{$screen-lg} {
@@ -178,5 +178,31 @@
 
   @media #{$screen-lg} {
     padding: 0 10px;
+  }
+}
+
+.Illustrations {
+  &__masks-desktop {
+    display: none;
+    margin-bottom: 40px;
+
+    @media #{$screen-sm} {
+      display: block;
+      margin-left: -40px;
+    }
+
+    @media #{$screen-xl} {
+      display: block;
+      margin-left: -120px;
+    }
+  }
+
+  &__masks-mobile {
+    display: block;
+    margin-bottom: 40px;
+
+    @media #{$screen-sm} {
+      display: none;
+    }
   }
 }
