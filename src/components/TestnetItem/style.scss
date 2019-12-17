@@ -24,6 +24,7 @@
   }
 
   &__content {
+    max-width: 460px;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
@@ -39,7 +40,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 40px;
+    margin: 40px auto 0;
   }
 
   &__button {
@@ -79,6 +80,7 @@
 
     &__counter {
       display: block;
+      margin: 40px 0 0;
     }
 
     &__button {
