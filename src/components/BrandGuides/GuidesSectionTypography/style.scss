@@ -86,4 +86,12 @@
     font-size: 14px;
     color: $c_light-blue;
   }
+
+  &__desktop-br {
+    display: none;
+
+    @media #{$screen-md} {
+      display: block;
+    }
+  }
 }

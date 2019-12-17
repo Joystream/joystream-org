@@ -6,6 +6,7 @@ import GuidesSectionIconography from '../../../components/BrandGuides/GuidesSect
 import GuidesSectionMotion from '../../../components/BrandGuides/GuidesSectionMotion';
 import GuidesSectionTypography from '../../../components/BrandGuides/GuidesSectionTypography';
 import GuidesSectionPhotography from '../../../components/BrandGuides/GuidesSectionPhotography';
+import GuidesSectionPatterns from '../../../components/BrandGuides/GuidesSectionPatterns';
 import BrandLayoutWrapper from '../../../components/BrandLayoutWrapper';
 import BrandSidebar, { SidebarProvider } from '../../../components/BrandSidebar';
 import SiteMetadata from '../../../components/SiteMetadata';
@@ -29,6 +30,8 @@ const GuidesPage = () => {
             <GuidesSectionIconography />
 
             <GuidesSectionIllustrations />
+
+            <GuidesSectionPatterns />
 
             <GuidesSectionTypography />
 

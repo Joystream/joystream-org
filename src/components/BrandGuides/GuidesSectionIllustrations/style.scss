@@ -98,14 +98,14 @@
       }
 
       &-rail {
-        background: rgba($c_white, 0.1);
+        background: rgba($c_white, .1);
       }
 
       &-track {
         height: 3px;
         margin: 1px;
         background: $c_blue-ribbon;
-        transition: transform 0.5s ease;
+        transition: transform .5s ease;
       }
     }
 
@@ -168,7 +168,7 @@
     border: 1px solid transparent;
 
     &--border {
-      border-color: rgba($c_white, 0.2);
+      border-color: rgba($c_white, .2);
     }
 
     @media #{$screen-lg} {
@@ -204,5 +204,10 @@
     @media #{$screen-sm} {
       display: none;
     }
+  }
+
+  &__slide-img {
+    max-width: 80%;
+    max-height: 80%;
   }
 }
