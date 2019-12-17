@@ -13,6 +13,7 @@ export const Section = React.memo(({ className, children, title, ...props }) => 
     <InView
       as="div"
       threshold={0}
+      rootMargin="0px 0px -80% 0px"
       onChange={inView => {
         if (inView) setCurrentElement(props.id);
       }}
@@ -37,7 +38,8 @@ export const SubSection = React.memo(({ children, title, className, ...props }) 
   return (
     <InView
       as="div"
-      threshold={0.25}
+      threshold={0}
+      rootMargin="0px 0px -80% 0px"
       onChange={inView => {
         if (inView) setCurrentSubElement(props.id);
       }}

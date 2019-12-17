@@ -1,7 +1,7 @@
 import React from 'react';
 import guidesData from '../../../data/pages/brand/guides';
 import { ThemeSlide, Slider } from '../../Slider';
-import { Section, SubSection, SubTitle, Text, Heading } from '../GuidesSection';
+import { Section, SubSection, SubTitle, Text } from '../GuidesSection';
 import { ReactComponent as BellSvg } from '../../../assets/svg/bell.svg';
 
 import descriptiveBoxImg from '../../../assets/images/descriptive-box.png';
@@ -52,7 +52,7 @@ export default () => {
 
   return (
     <Section title="Iconography" id={section.id}>
-      <SubSection>
+      <SubSection id={subSection[0].id}>
         <SubTitle>
           Icons can be devided into two groups with different purpose. Descriptive icons are form of a substitute for
           illustrations and system icons are purely functional part of the interface.
@@ -73,7 +73,7 @@ export default () => {
         </div>
       </SubSection>
 
-      <SubSection title="01. Descriptive Icons">
+      <SubSection title="01. Descriptive Icons" id={subSection[1].id}>
         <Text>
           Joystream iconography is a custom, comprehensive icon style that helps explaining certain complex topics in a
           simple, digestable manner.
@@ -126,7 +126,7 @@ export default () => {
         />
       </SubSection>
 
-      <SubSection title="02. System Icons">
+      <SubSection title="02. System Icons" id={subSection[2].id}>
         <Text>
           System icons in their basic style combine two colours: Black and Joystream Blue. Their purpose is to represent
           certain actions on the website or platform. They are readable even in small sizes down to 18x18px.

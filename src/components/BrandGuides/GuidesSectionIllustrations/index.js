@@ -88,11 +88,10 @@ const ImageReveal = () => {
 
 export default () => {
   const section = guidesData.sidebar[3];
-  const subSection = section.subSections;
 
   return (
     <Section title="Illustartions" id={section.id}>
-      <SubSection id={subSection[0].id}>
+      <SubSection>
         <SubTitle>
           Joystream Illustrations are symbolic representation of important steps in the Joystream project, for example a
           new testnet, role on the network or other equaly significant subject.
@@ -110,7 +109,7 @@ export default () => {
           })}
         />
       </SubSection>
-      <SubSection title="Construction" id={subSection[0].id}>
+      <SubSection title="Construction">
         <Text>
           Illustrations will often go combined with patterns and in case of putting it on a blue background, the oultine
           of the illustration can be changed to a Joystream Blue in order to create a good color balance with patterns

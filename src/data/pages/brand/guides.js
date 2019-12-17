@@ -5,7 +5,8 @@ export default {
       id: 'logo',
       subSections: [
         { title: 'Overview', id: 'logo-overview' },
-        { title: 'Construction', id: 'logo-construction' },
+        { title: 'Logomark', id: 'logo-construction' },
+        { title: 'Construction', id: 'logomark-construction' },
         { title: 'Use Cases', id: 'logo-use-cases' },
         { title: 'Social icons', id: 'logo-social-icons' },
         { title: 'Forbidden use', id: 'logo-forbidden-use' },
@@ -24,32 +25,31 @@ export default {
     {
       title: 'Iconography',
       id: 'iconography',
-      subSections: [],
+      subSections: [
+        { title: 'Overview', id: 'iconography-overview' },
+        { title: 'Descriptive Icons', id: 'iconography-descriptive' },
+        { title: 'System Icons', id: 'iconography-system' },
+      ],
     },
     {
       title: 'Illustrations',
       id: 'illustrations',
-      subSections: [{ title: 'Overview', id: 'illustrations-overview' }],
     },
     {
       title: 'Patterns',
       id: 'patterns',
-      subSections: [],
     },
     {
       title: 'Typography',
       id: 'typography',
-      subSections: [],
     },
     {
       title: 'Photography',
       id: 'photography',
-      subSections: [],
     },
     {
       title: 'Motion',
       id: 'motion',
-      subSections: [],
     },
   ],
 };

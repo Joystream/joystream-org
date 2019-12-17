@@ -17,8 +17,7 @@ const TypographyBlockRow = ({ title, description, children, className }) => {
 };
 
 export default () => {
-  const section = guidesData.sidebar[2];
-  const subSection = section.subSections;
+  const section = guidesData.sidebar[5];
 
   return (
     <Section title="Typography" id={section.id}>

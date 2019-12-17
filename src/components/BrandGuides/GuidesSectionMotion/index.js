@@ -1,18 +1,12 @@
 import React from 'react';
-import guidesData from '../../../data/pages/brand/guides';
-import { ThemeSlide, Slider } from '../../Slider';
-import { Section, SubSection, SubTitle, Text, Heading } from '../GuidesSection';
-import { ReactComponent as BellSvg } from '../../../assets/svg/bell.svg';
-
 import motionLogo from '../../../assets/images/motion-logo.png';
-
 import { ReactComponent as WarningSvg } from '../../../assets/svg/warning.svg';
-
+import guidesData from '../../../data/pages/brand/guides';
+import { Section, SubSection, SubTitle } from '../GuidesSection';
 import './style.scss';
 
 export default () => {
-  const section = guidesData.sidebar[2];
-  const subSection = section.subSections;
+  const section = guidesData.sidebar[7];
 
   return (
     <Section title="Motion" id={section.id}>

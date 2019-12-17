@@ -1,23 +1,19 @@
-import React, { useState, createRef, useEffect } from 'react';
-import guidesData from '../../../data/pages/brand/guides';
-import { Slider } from '../../Slider';
-import { Section, SubSection, SubTitle, Text } from '../GuidesSection';
-
+import React from 'react';
+import patternsDistances from '../../../assets/images/patterns-distances.png';
+import patternsSpacing from '../../../assets/images/patterns-spacing.png';
 import slide1 from '../../../assets/images/slides/patterns/1.png';
 import slide2 from '../../../assets/images/slides/patterns/2.png';
 import slide3 from '../../../assets/images/slides/patterns/3.png';
-
-import patternsSpacing from '../../../assets/images/patterns-spacing.png';
-import patternsDistances from '../../../assets/images/patterns-distances.png';
-import patternsSquares from '../../../assets/svg/patterns-squares.svg';
-import patternsDensity from '../../../assets/svg/patterns-density.svg';
 import patternsColors from '../../../assets/svg/patterns-colors.svg';
-
+import patternsDensity from '../../../assets/svg/patterns-density.svg';
+import patternsSquares from '../../../assets/svg/patterns-squares.svg';
+import guidesData from '../../../data/pages/brand/guides';
+import { Slider } from '../../Slider';
+import { Section, SubSection, SubTitle, Text } from '../GuidesSection';
 import './style.scss';
 
 export default () => {
-  const section = guidesData.sidebar[3];
-  const subSection = section.subSections;
+  const section = guidesData.sidebar[4];
 
   return (
     <Section title="Joystream Patterns" id={section.id}>
