@@ -1,14 +1,7 @@
+import cn from 'classnames';
 import React from 'react';
 import guidesData from '../../../data/pages/brand/guides';
-import { ThemeSlide, Slider } from '../../Slider';
-import { Section, SubSection, SubTitle, Text, Heading, BlueSection } from '../GuidesSection';
-import { ReactComponent as BellSvg } from '../../../assets/svg/bell.svg';
-
-import cn from 'classnames';
-import motionLogo from '../../../assets/images/motion-logo.png';
-
-import { ReactComponent as WarningSvg } from '../../../assets/svg/warning.svg';
-
+import { BlueSection, Heading, Section, SubSection, SubTitle, Text } from '../GuidesSection';
 import './style.scss';
 
 const TypographyBlockRow = ({ title, description, children, className }) => {
@@ -66,26 +59,62 @@ export default () => {
             and Inter UI for paragraph and call-to-action text.
           </Text>
 
-          <TypographyBlockRow title="H1" description="PX Grotesk Bold/Regular, 54/80">
+          <TypographyBlockRow
+            title="H1"
+            description={
+              <>
+                PX Grotesk Bold
+                <br className="TypographyBlock__desktop-br" />
+                /Regular, 54/80
+              </>
+            }
+          >
             <Heading bold variant="h1">
               The spectacle before us was indeed sublime.
             </Heading>
           </TypographyBlockRow>
 
-          <TypographyBlockRow title="H2" description="PX Grotesk Bold/Regular, 40/48">
+          <TypographyBlockRow
+            title="H2"
+            description={
+              <>
+                PX Grotesk Bold
+                <br className="TypographyBlock__desktop-br" />
+                /Regular, 40/48
+              </>
+            }
+          >
             <Heading bold variant="h2">
               Question marks and exclamation points.
             </Heading>
           </TypographyBlockRow>
 
-          <TypographyBlockRow title="H3" description="PX Grotesk Bold/Regular, 40/48">
+          <TypographyBlockRow
+            title="H3"
+            description={
+              <>
+                PX Grotesk Bold
+                <br className="TypographyBlock__desktop-br" />
+                /Regular, 40/48
+              </>
+            }
+          >
             <Heading bold variant="h3">
               Every introduction to the problems of aesthetics begins by acknowledging the existence and claims of two
               methods of attack.
             </Heading>
           </TypographyBlockRow>
 
-          <TypographyBlockRow title="H4" description="PX Grotesk Bold/Regular, 32/40">
+          <TypographyBlockRow
+            title="H4"
+            description={
+              <>
+                PX Grotesk Bold
+                <br className="TypographyBlock__desktop-br" />
+                /Regular, 32/40
+              </>
+            }
+          >
             <Heading bold variant="h4">
               Methodologies of Aesthetics
             </Heading>

@@ -1,19 +1,19 @@
-import React, { useState, createRef, useEffect } from 'react';
-import guidesData from '../../../data/pages/brand/guides';
-import { Slider } from '../../Slider';
-import { Section, SubSection, SubTitle, Text } from '../GuidesSection';
 import cn from 'classnames';
-
+import RcSlider from 'rc-slider';
+import 'rc-slider/assets/index.css';
+import React, { createRef, useEffect, useState } from 'react';
 import faceBlueImg from '../../../assets/images/face-blue.png';
 import faceDarkImg from '../../../assets/images/face-dark.png';
 import masksDesktopImg from '../../../assets/images/masks-desktop.png';
 import masksMobileImg from '../../../assets/images/masks-mobile.png';
 import { ReactComponent as ArrowSvg } from '../../../assets/svg/arrow-down-small.svg';
-
-import RcSlider from 'rc-slider';
-
-import 'rc-slider/assets/index.css';
+import guidesData from '../../../data/pages/brand/guides';
+import importAll from '../../../utils/importAll';
+import { Slider, ThemeSlide } from '../../Slider';
+import { Section, SubSection, SubTitle, Text } from '../GuidesSection';
 import './style.scss';
+
+const sliderAssets = importAll(require.context('../../../assets/images/slides/illustrations', false, /\.png$/));
 
 const ColorFigure = ({ color, withBorder }) => {
   return (
@@ -98,7 +98,17 @@ export default () => {
           new testnet, role on the network or other equaly significant subject.
         </SubTitle>
         <SubTitle>They can be quite visualy complex despite using only three colors and no gradients.</SubTitle>
-        <Slider size="large" withSpacing slides={[]} />
+
+        <Slider
+          withSpacing
+          slides={sliderAssets.map(assetPath => {
+            return (
+              <ThemeSlide>
+                <img className="Illustrations__slide-img" src={assetPath} alt="" />
+              </ThemeSlide>
+            );
+          })}
+        />
       </SubSection>
       <SubSection title="Construction" id={subSection[0].id}>
         <Text>
