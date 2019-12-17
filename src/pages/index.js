@@ -44,7 +44,7 @@ const IndexPage = ({ content }) => (
     />
     <Hero image={heroImage} title={<>The video <br/> platform DAO</>} animationStartValue={0}>
       <p className="IndexPage__hero-paragraph">
-        Joystream is a video platform controlled, operated and owned by its users
+        Joystream is a video platform controlled, owned and operated by its users
       </p>
       <div className="IndexPage__hero-group">
         <Button noWrap large secondary className="IndexPage__hero-button" href={activeTestnet.incentivesLink}>
