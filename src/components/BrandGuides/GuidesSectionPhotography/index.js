@@ -1,14 +1,12 @@
-import React, { useState, createRef, useEffect } from 'react';
-import guidesData from '../../../data/pages/brand/guides';
-import { Slider } from '../../Slider';
-import { Section, SubSection, SubTitle, Text } from '../GuidesSection';
-
+import React from 'react';
+import peopleImg from '../../../assets/images/people.png';
+import photographyImg from '../../../assets/images/photography.png';
 import slide1 from '../../../assets/images/slides/photography/1.png';
 import slide2 from '../../../assets/images/slides/photography/2.png';
 import slide3 from '../../../assets/images/slides/photography/3.png';
-import peopleImg from '../../../assets/images/people.png';
-import photographyImg from '../../../assets/images/photography.png';
-
+import guidesData from '../../../data/pages/brand/guides';
+import { Slider } from '../../Slider';
+import { Section, SubSection, SubTitle, Text } from '../GuidesSection';
 import './style.scss';
 
 const GradientBar = ({ startColor, endColor }) => {
@@ -25,8 +23,7 @@ const GradientBar = ({ startColor, endColor }) => {
 };
 
 export default () => {
-  const section = guidesData.sidebar[3];
-  const subSection = section.subSections;
+  const section = guidesData.sidebar[6];
 
   return (
     <Section title="Photography" id={section.id}>

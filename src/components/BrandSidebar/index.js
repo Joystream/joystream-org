@@ -77,7 +77,7 @@ const BrandSidebar = ({ data }) => {
                   {title}
                 </button>
 
-                {isActive && subSections.length > 0 && (
+                {isActive && subSections && subSections.length > 0 && (
                   <div className="BrandSidebar__sub-group">
                     {subSections.map(({ title, id }) => {
                       return (

@@ -4,17 +4,6 @@ import schematicsWhite from '../../../assets/images/logo-construction-schematics
 import logoDevelopmentImg from '../../../assets/images/logo-development.png';
 import logoConstructionImg from '../../../assets/images/logomark-construction.png';
 import logoExclusionImg from '../../../assets/images/logomark-exclusion.png';
-import forbiddenSlide1 from '../../../assets/images/slides/logo-forbidden/1.png';
-import forbiddenSlide2 from '../../../assets/images/slides/logo-forbidden/2.png';
-import forbiddenSlide3 from '../../../assets/images/slides/logo-forbidden/3.png';
-import forbiddenSlide4 from '../../../assets/images/slides/logo-forbidden/4.png';
-import forbiddenSlide5 from '../../../assets/images/slides/logo-forbidden/5.png';
-import slide1 from '../../../assets/images/slides/logo/1.png';
-import slide2 from '../../../assets/images/slides/logo/2.png';
-import slide3 from '../../../assets/images/slides/logo/3.png';
-import slide4 from '../../../assets/images/slides/logo/4.png';
-import slide5 from '../../../assets/images/slides/logo/5.png';
-import slide6 from '../../../assets/images/slides/logo/6.png';
 import { ReactComponent as Logo } from '../../../assets/svg/logo-white.svg';
 import { ReactComponent as LargeLogo } from '../../../assets/svg/logo-large-white.svg';
 import { ReactComponent as LogoMark } from '../../../assets/svg/logo-mark.svg';
@@ -24,6 +13,11 @@ import Button from '../../Button';
 import { Slider } from '../../Slider';
 import { BlueSection, DetailText, Image, Section, SubSection, SubTitle, Text } from '../GuidesSection';
 import './style.scss';
+
+import importAll from '../../../utils/importAll';
+
+const forbiddenLogoSlides = importAll(require.context('../../../assets/images/slides/logo-forbidden', false, /\.png$/));
+const logoSlides = importAll(require.context('../../../assets/images/slides/logo', false, /\.png$/));
 
 export default () => {
   const section = guidesData.sidebar[0];
@@ -92,10 +86,8 @@ export default () => {
           complimentary forms if necessary. Examples show such use cases below.
         </Text>
 
-        <Slider slides={[slide1, slide2, slide3, slide4, slide5, slide6]} />
-      </SubSection>
+        <Slider slides={logoSlides} />
 
-      <SubSection>
         <SubTitle bold>The smallest safe use</SubTitle>
         <Text>
           In order to ensure the best visual communication of the logo, it is best presented in size between{' '}
@@ -125,7 +117,7 @@ export default () => {
         </div>
       </SubSection>
 
-      <SubSection title="04. Social Icons">
+      <SubSection title="04. Social Icons" id={subSection[4].id}>
         <Text>
           In cases when the Joystream brand has already been established we can simply use the icon on its own. While
           the icon can exist without the wordmark, the wordmark should never exist without the icon.
@@ -146,17 +138,13 @@ export default () => {
         </div>
       </SubSection>
 
-      <SubSection title="05. Forbidden uses of the logo" id={subSection[4].id}>
+      <SubSection title="05. Forbidden uses of the logo" id={subSection[5].id}>
         <Text>
           Logotype and the icon ought to follow certain rules and there are general cases of use that should be avoided
           at all cost! In order to preserve the brand voice remember to avoid following examples:
         </Text>
 
-        <Slider
-          size="large"
-          withSpacing
-          slides={[forbiddenSlide1, forbiddenSlide2, forbiddenSlide3, forbiddenSlide4, forbiddenSlide5]}
-        />
+        <Slider size="large" withSpacing slides={forbiddenLogoSlides} />
       </SubSection>
     </Section>
   );
