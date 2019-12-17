@@ -42,7 +42,7 @@ const IndexPage = ({ content }) => (
       title="Joystream: A user governed video platform"
       description="Earn monero for participating on our testnets!"
     />
-    <Hero image={heroImage} title="The video </br> platform DAO" animationStartValue={0}>
+    <Hero image={heroImage} title={<>The video <br/> platform DAO</>} animationStartValue={0}>
       <p className="IndexPage__hero-paragraph">
         Joystream is a video platform controlled, operated and owned by its users
       </p>
