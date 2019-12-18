@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <Section title="Motion" id={section.id}>
-      <SubSection>
+      <SubSection buttonToTop>
         <SubTitle>
           Joystream is an experimental and exciting platform and so should be its motion along with the interactions.
         </SubTitle>

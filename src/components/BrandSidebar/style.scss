@@ -148,6 +148,17 @@ $trigger-size: 80px;
     }
   }
 
+  &--light {
+    @media #{$screen-sm} {
+      #{$r} {
+        &__link,
+        &__sub-link {
+          color: $c_ebony-clay;
+        }
+      }
+    }
+  }
+
   @media #{$screen-sm} {
     top: 0;
     left: 0;

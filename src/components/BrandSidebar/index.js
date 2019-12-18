@@ -35,7 +35,7 @@ const propTypes = {
   light: bool,
 };
 
-const BrandSidebar = ({ data }) => {
+const BrandSidebar = ({ data, light }) => {
   const { currentElement, currentSubElement } = useContext(SidebarContext);
   const [isOpen, setIsOpen] = useState(false);
   const context = useContext(ScrollContext);
@@ -52,6 +52,7 @@ const BrandSidebar = ({ data }) => {
       className={cn('BrandSidebar', {
         'BrandSidebar--onTop': !isScrollUp,
         'BrandSidebar--open': isOpen,
+        'BrandSidebar--light': light,
       })}
     >
       <div className="BrandSidebar__trigger" onClick={() => setIsOpen(!isOpen)} role="presentation">

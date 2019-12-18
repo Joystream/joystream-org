@@ -175,4 +175,10 @@
       line-height: 30px;
     }
   }
+
+  &__action-button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 80px 0;
+  }
 }

@@ -6,6 +6,8 @@ import BrandLayout from '../../../components/_layouts/Brand';
 import assetsData from '../../../data/pages/brand/assets';
 import './index.scss';
 
+const AssetsSection = () => {};
+
 const GuidesPage = () => {
   return (
     <BrandLayout>
@@ -13,7 +15,7 @@ const GuidesPage = () => {
 
       <BrandLayoutWrapper className="AssetsPage">
         <SidebarProvider>
-          <BrandSidebar data={assetsData.sidebar} />
+          <BrandSidebar data={assetsData.sidebar} light />
           <div className="AssetsPage__wrapper"></div>
         </SidebarProvider>
       </BrandLayoutWrapper>
