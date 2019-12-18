@@ -87,7 +87,7 @@ export default () => {
         <img className="Iconography__descriptive-icons--mobile" src={descriptiveIconsMobile} alt="" />
         <img className="Iconography__descriptive-icons--desktop" src={descriptiveIconsDesktop} alt="" />
 
-        <SubTitle bold>Construction</SubTitle>
+        <SubTitle small>Construction</SubTitle>
 
         <BrandListItem bulletText="01.">
           <Text>
@@ -104,7 +104,7 @@ export default () => {
           </Text>
         </BrandListItem>
 
-        <SubTitle bold>Icons at 100% scale should fit into a box of 800x500px.</SubTitle>
+        <div className="Iconography__description">Icons at 100% scale should fit into a box of 800x500px.</div>
 
         <img src={descriptiveBoxImg} className="Iconography__descriptive-box" alt="" />
 
@@ -131,18 +131,22 @@ export default () => {
           System icons in their basic style combine two colours: Black and Joystream Blue. Their purpose is to represent
           certain actions on the website or platform. They are readable even in small sizes down to 18x18px.
         </Text>
-        <SubTitle bold>Construction</SubTitle>
 
-        <div className="Iconography__system-icon">
-          <img src={constructionIcon} alt="" className="Iconography__system-icon-image" />
-          <div>
-            <Text>System Icons are drawn using 2px strokes with square linecaps on a 24px grid frame.</Text>
-            <Text>
-              When possible, icons should have subtle blue accents in ammounts no greater than 40% of the whole.
-            </Text>
+        <div className="Iconography__system-icon-container">
+          <SubTitle small>Construction</SubTitle>
+
+          <div className="Iconography__system-icon">
+            <img src={constructionIcon} alt="" className="Iconography__system-icon-image" />
+            <div>
+              <Text>System Icons are drawn using 2px strokes with square linecaps on a 24px grid frame.</Text>
+              <Text>
+                When possible, icons should have subtle blue accents in ammounts no greater than 40% of the whole.
+              </Text>
+            </div>
           </div>
         </div>
-        <SubTitle bold>Types of system icons</SubTitle>
+
+        <SubTitle small>Types of system icons</SubTitle>
         <Text>
           We destinguish four types of system icons and they should be used preferably in their basic style but can be
           used interchangeably when neccessary.

@@ -7,6 +7,10 @@
     font-weight: 600;
     line-height: 60px;
     color: inherit;
+
+    @media #{$screen-sm} {
+      margin-bottom: 80px;
+    }
   }
 
   &__subsection {
@@ -30,6 +34,10 @@
     position: relative;
     display: block;
     margin-bottom: 40px;
+
+    @media #{$screen-sm} {
+      margin: 80px 0;
+    }
   }
 
   &__image-description {
@@ -83,11 +91,21 @@
     line-height: 30px;
     color: inherit;
 
-    &--bold {
-      font-weight: 600;
+    &--small {
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1;
+
+      @media #{$screen-sm} {
+        margin-bottom: 40px;
+        font-size: 30px;
+        line-height: 1;
+      }
     }
 
     @media #{$screen-sm} {
+      margin-bottom: 80px;
       font-size: 30px;
       line-height: 45px;
     }

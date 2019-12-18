@@ -29,7 +29,7 @@ export default () => {
         </SubTitle>
       </SubSection>
       <SubSection>
-        <SubTitle bold>Construction</SubTitle>
+        <SubTitle small>Construction</SubTitle>
         <Text>
           Patterns virtually consist of six different pieces that can be rotated by 90 degrees in any direction and
           should always have the dimensions of a perfect square.
@@ -53,7 +53,7 @@ export default () => {
       </SubSection>
 
       <SubSection>
-        <SubTitle bold>How to use patterns</SubTitle>
+        <SubTitle small>How to use patterns</SubTitle>
         <Text>
           Patterns can use five various colours depending on what background is used beneath and what is their main
           purpose in specific situation.
@@ -67,7 +67,7 @@ export default () => {
       </SubSection>
 
       <SubSection>
-        <SubTitle bold>Patterns in use - examples</SubTitle>
+        <SubTitle small>Patterns in use - examples</SubTitle>
         <Slider slides={[slide1, slide2, slide3]} size="small" withSpacing />
       </SubSection>
     </Section>

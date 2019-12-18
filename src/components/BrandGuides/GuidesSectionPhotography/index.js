@@ -35,7 +35,7 @@ export default () => {
         </SubTitle>
       </SubSection>
       <SubSection>
-        <SubTitle bold>How to use photography</SubTitle>
+        <SubTitle small>How to use photography</SubTitle>
         <Text>
           Since Joystream is a unique and experimental project it provides a wide variety of the topics it can cover. It
           is highly technical especially now when we are in the community building phase, so good deal of the
@@ -76,7 +76,7 @@ export default () => {
           colours.
         </Text>
 
-        <SubTitle bold>Photography in use - examples</SubTitle>
+        <SubTitle small>Photography in use - examples</SubTitle>
         <Slider size="small" withSpacing slides={[slide1, slide2, slide3]} />
       </SubSection>
     </Section>

@@ -54,7 +54,7 @@ const propTypes = {
   ]),
 };
 
-export const Slider = ({ withSpacing, slides, themes = [], size = 'default' }) => {
+export const Slider = ({ className, withSpacing, slides, themes = [], size = 'default' }) => {
   const [offsetLeft, setOffsetLeft] = useState(0);
   const [selectedTheme, setTheme] = useState('white');
   const containerRef = createRef();
@@ -79,9 +79,13 @@ export const Slider = ({ withSpacing, slides, themes = [], size = 'default' }) =
       naturalSlideHeight={sizes[size][1]}
       totalSlides={slides.length}
       visibleSlides={1}
-      className={cn('Slider', {
-        'Slider--large': size === 'large',
-      })}
+      className={cn(
+        'Slider',
+        {
+          'Slider--large': size === 'large',
+        },
+        className
+      )}
     >
       <SliderThemeContext.Provider value={{ selectedTheme }}>
         <div className="Slider__track" style={{ width: `calc(100vw - ${offsetLeft}px)` }}>
