@@ -11,7 +11,7 @@ const TypographyBlockRow = ({ title, description, children, className }) => {
         <div className="TypographyBlock__row-title">{title}</div>
         <div className="TypographyBlock__row-description">{description}</div>
       </div>
-      <div>{children}</div>
+      <div className="TypographyBlock__row-content">{children}</div>
     </div>
   );
 };

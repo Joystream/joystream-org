@@ -17,7 +17,7 @@ const defaultProps = {
 const brandLinks = [
   { to: '/brand/story', label: 'Brand Story' },
   { to: '/brand/guides', label: 'Brand Guides' },
-  { to: '/brand/download', label: 'Download Assets' },
+  { to: '/brand/assets', label: 'Download Assets' },
 ];
 
 const BrandLayout = ({ children }) => {

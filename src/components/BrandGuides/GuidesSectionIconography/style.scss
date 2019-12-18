@@ -30,6 +30,14 @@
     }
   }
 
+  &__system-icon-container {
+    margin: 80px 0;
+
+    @media #{$screen-sm} {
+      margin: 160px 0;
+    }
+  }
+
   &__icon-type {
     display: flex;
     flex-direction: column-reverse;
@@ -98,6 +106,7 @@
 
       @media #{$screen-sm} {
         display: block;
+        margin-bottom: 80px;
       }
     }
   }
@@ -152,6 +161,18 @@
       text-align: center;
     }
   }
+
+  &__description {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    @media #{$screen-sm} {
+      margin-bottom: 80px;
+      font-size: 20px;
+    }
+  }
 }
 
 .BrandListItem {
@@ -164,6 +185,11 @@
     font-family: $font-primary;
     font-size: 30px;
     color: $c_blue-ribbon;
+
+    @media #{$screen-sm} {
+      width: 120px;
+      font-size: 40px;
+    }
   }
 }
 

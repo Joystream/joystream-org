@@ -24,7 +24,7 @@ export default () => {
   const subSection = section.subSections;
 
   return (
-    <Section title="Logo" id={section.id}>
+    <Section title="Logo" id={section.id} className="GuidesSectionLogo">
       <SubSection id={subSection[0].id}>
         <SubTitle>
           "...Our brand should carry this feeling of experimentation, excitement and building something ethical and
@@ -86,13 +86,14 @@ export default () => {
           complimentary forms if necessary. Examples show such use cases below.
         </Text>
 
-        <Slider slides={logoSlides} />
+        <Slider slides={logoSlides} className="GuidesSectionLogo__slider" />
 
-        <SubTitle bold>The smallest safe use</SubTitle>
+        <SubTitle small>The smallest safe use</SubTitle>
         <Text>
           In order to ensure the best visual communication of the logo, it is best presented in size between{' '}
           <strong>200 and 500+px</strong> width on digital devices.
         </Text>
+
         <div className="GuidesSectionLogo__safe-use SafeUse">
           <div className="SafeUse__col">
             <div className="SafeUse__logos">
@@ -104,6 +105,7 @@ export default () => {
               The Joystream logo should never be narrower than 100px in digital or 20mm in print horisontal lockup.
             </div>
           </div>
+
           <div className="SafeUse__col">
             <div className="SafeUse__logos SafeUse__logos--horizontal">
               <LargeLogo className="SafeUse__large-logo SafeUse__large-logo--xl" />

@@ -45,11 +45,15 @@ const ImageReveal = () => {
             clip: `rect(0px, ${clipWidth}px, auto, auto)`,
           }}
         >
-          <img src={faceBlueImg} className="ImageReveal__image" alt="" />
+          <div className="ImageReveal__image">
+            <img src={faceBlueImg} alt="" />
+          </div>
         </div>
 
         <div className="ImageReveal__image-container ImageReveal__image-container--black">
-          <img src={faceDarkImg} className="ImageReveal__image" alt="" />
+          <div className="ImageReveal__image">
+            <img src={faceDarkImg} alt="" />
+          </div>
         </div>
 
         <div className="ImageReveal__color-boxes ImageReveal__color-boxes--left">
@@ -120,7 +124,7 @@ export default () => {
       </SubSection>
 
       <SubSection>
-        <SubTitle bold>Construction</SubTitle>
+        <SubTitle small>Construction</SubTitle>
         <Text>
           Illustrations should be simple enough to be readable even in smaller resolutions down to 300x300px but they
           shouldn’t be vague either.

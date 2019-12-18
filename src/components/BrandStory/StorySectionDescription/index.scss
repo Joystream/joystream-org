@@ -13,7 +13,9 @@
   }
 
   &__text-col {
-    max-width: 560px;
+    @media #{$screen-md} {
+      max-width: 560px;
+    }
   }
 
   &__text {
