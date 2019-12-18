@@ -96,26 +96,6 @@
       margin: 0;
     }
 
-    &__header {
-      display: flex;
-      align-items: center;
-    }
-
-    &__title {
-      width: 40%;
-      margin-top: 120px;
-      margin-right: 40px;
-      font-size: 60px;
-      font-weight: normal;
-      line-height: 70px;
-    }
-
-    &__sketch-img {
-      flex-grow: 1;
-      margin: 0;
-      margin-right: 80px;
-    }
-
     &__text {
       margin-top: 140px;
 
@@ -132,6 +112,33 @@
   .StorySectionLogo {
     &__container {
       background-size: calc(100% - 64px) auto;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      width: 40%;
+      margin-top: 120px;
+      margin-right: 40px;
+    }
+
+    &__sketch-img {
+      flex-grow: 1;
+      margin: 0;
+      margin-right: 80px;
+    }
+  }
+}
+
+@media #{$screen-lg} {
+  .StorySectionLogo {
+    &__title {
+      font-size: 60px;
+      font-weight: normal;
+      line-height: 70px;
     }
   }
 }

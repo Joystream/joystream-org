@@ -1,7 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, createRef } from 'react';
+import ReactDOM from 'react-dom';
 import { string, node, func, oneOf, bool } from 'prop-types';
 import cn from 'classnames';
 import { SidebarContext } from '../../../components/BrandSidebar';
+import ActionButton from '../../../components/ActionButton';
 import { InView } from 'react-intersection-observer';
 
 import './style.scss';
@@ -30,10 +32,12 @@ Section.propTypes = {
   title: string,
   onEnterViewport: func,
   id: string.isRequired,
+  buttonToTop: bool,
 };
 
-export const SubSection = React.memo(({ children, title, className, ...props }) => {
+export const SubSection = React.memo(({ children, title, className, buttonToTop, ...props }) => {
   const { setCurrentSubElement } = useContext(SidebarContext);
+  const buttonRef = createRef();
 
   return (
     <InView
@@ -47,6 +51,21 @@ export const SubSection = React.memo(({ children, title, className, ...props }) 
       <div className={cn('GuidesSection__subsection', className)} {...props}>
         {title && <h4 className="GuidesSection__subsection-title">{title}</h4>}
         {children}
+        <div className="GuidesSection__action-button" ref={buttonRef}>
+          <ActionButton
+            direction={buttonToTop ? 'up' : 'down'}
+            onClick={() => {
+              if (buttonToTop) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                const { offsetTop, offsetHeight } = ReactDOM.findDOMNode(buttonRef.current);
+                window.scrollTo({ top: offsetTop + offsetHeight + 120, behavior: 'smooth' });
+              }
+            }}
+          >
+            {buttonToTop ? 'Back' : 'More'}
+          </ActionButton>
+        </div>
       </div>
     </InView>
   );
