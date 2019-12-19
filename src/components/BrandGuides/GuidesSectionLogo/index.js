@@ -36,7 +36,10 @@ export default () => {
           explored various ideas in depth...
         </Text>
 
-        <Button href={logoDevelopmentImg} download="logo">
+        <Button
+          href="https://raw.githubusercontent.com/Joystream/design/master/Assets-full/ZIPPED%20files/Logo.zip"
+          download
+        >
           <img src={downloadImg} alt="" />
           Download logo
         </Button>
