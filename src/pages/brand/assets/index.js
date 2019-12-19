@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AssetsSection from '../../../components/BrandAssets/AssetsSection';
 import AssetTile from '../../../components/BrandAssets/AssetTile';
 import BrandLayoutWrapper from '../../../components/BrandLayoutWrapper';
@@ -7,6 +7,7 @@ import SiteMetadata from '../../../components/SiteMetadata';
 import BrandLayout from '../../../components/_layouts/Brand';
 import fullAssets from '../../../data/pages/brand/assets-full';
 import padNumber from '../../../utils/padNumber';
+import scrollToIdElement from '../../../utils/scrollToIdElement';
 import './index.scss';
 
 const ASSETS_LINK = 'https://raw.githubusercontent.com/Joystream/design/master/Assets-full';
@@ -80,11 +81,15 @@ const sections = [
 ];
 
 const GuidesPage = () => {
-  const [openSections, setOpenSections] = useState([]);
+  const [openSection, setOpenSection] = useState(sections[0].id);
 
-  const openSection = id => setOpenSections([...openSections, id]);
-  const closeSection = id => setOpenSections(openSections.filter(sectionId => sectionId !== id));
-  const toggleSection = id => (openSections.includes(id) ? closeSection(id) : openSection(id));
+  const toggleSection = id => {
+    setOpenSection(openSection === id ? undefined : id);
+  };
+
+  useEffect(() => {
+    openSection && scrollToIdElement(openSection);
+  }, [openSection]);
 
   return (
     <BrandLayout>
@@ -92,12 +97,7 @@ const GuidesPage = () => {
 
       <BrandLayoutWrapper className="AssetsPage">
         <SidebarProvider>
-          <BrandSidebar
-            data={sections}
-            light
-            onSectionClick={id => toggleSection(id)}
-            activeSectionIds={openSections}
-          />
+          <BrandSidebar data={sections} light onSectionClick={id => toggleSection(id)} activeSectionId={openSection} />
 
           <div className="AssetsPage__wrapper">
             {sections.map(
@@ -112,7 +112,7 @@ const GuidesPage = () => {
                     prefix={padNumber(index + 1)}
                     title={displayTitle || title}
                     downloadHref={downloadHref}
-                    isOpen={openSections.includes(id)}
+                    isOpen={openSection === id}
                     filesCount={filesCount || 0}
                     toggleOpen={() => toggleSection(id)}
                   >

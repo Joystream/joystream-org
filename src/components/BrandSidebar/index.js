@@ -1,8 +1,9 @@
 import cn from 'classnames';
-import { array, bool } from 'prop-types';
+import { array, bool, string } from 'prop-types';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import stickybits from 'stickybits';
 import { ScrollContext } from '../_enhancers/ScrollContext';
+import scrollToIdElement from '../../utils/scrollToIdElement';
 import './style.scss';
 
 export const SidebarContext = React.createContext({});
@@ -24,19 +25,13 @@ export const SidebarProvider = props => {
   );
 };
 
-const scrollToElement = id => {
-  const target = document.getElementById(id);
-  if (!target) return;
-  window.scrollTo({ top: target.offsetTop + 20, behavior: 'smooth' });
-};
-
 const propTypes = {
   data: array.isRequired,
-  activeSectionIds: array,
+  activeSectionId: string,
   light: bool,
 };
 
-const BrandSidebar = ({ data, light, activeSectionIds = [], onSectionClick }) => {
+const BrandSidebar = ({ data, light, activeSectionId, onSectionClick }) => {
   const { currentElement, currentSubElement } = useContext(SidebarContext);
   const [isOpen, setIsOpen] = useState(false);
   const context = useContext(ScrollContext);
@@ -63,7 +58,7 @@ const BrandSidebar = ({ data, light, activeSectionIds = [], onSectionClick }) =>
       <div className="BrandSidebar__wrapper">
         <div className="BrandSidebar__container">
           {data.map(({ id, title, subSections }) => {
-            const isActive = currentElement === id || activeSectionIds.includes(id);
+            const isActive = currentElement === id || activeSectionId === id;
 
             return (
               <div className="BrandSidebar__group" key={id}>
@@ -75,7 +70,7 @@ const BrandSidebar = ({ data, light, activeSectionIds = [], onSectionClick }) =>
                     if (onSectionClick) {
                       onSectionClick(id);
                     } else {
-                      scrollToElement(id);
+                      scrollToIdElement(id);
                       setIsOpen(!isOpen);
                     }
                   }}
@@ -93,7 +88,7 @@ const BrandSidebar = ({ data, light, activeSectionIds = [], onSectionClick }) =>
                           })}
                           key={id}
                           onClick={() => {
-                            scrollToElement(id);
+                            scrollToIdElement(id);
                             setIsOpen(!isOpen);
                           }}
                         >
