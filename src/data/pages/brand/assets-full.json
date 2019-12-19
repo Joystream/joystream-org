@@ -1,0 +1,1587 @@
+{
+  "fileCommentary": "This file was created using `npm run fetch-assets-data`.It fetches assets data from joystream/design repo.If files change there, is should be re-run.",
+  "data": {
+    "illustrations": [
+      {
+        "name": "Acropolis.svg",
+        "path": "Assets-full/Illustrations/SVG/Acropolis.svg",
+        "sha": "22730c3871a5a36b6c6d38ab7d1a4377a58fc9ea",
+        "size": 328722,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Acropolis.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Acropolis.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/22730c3871a5a36b6c6d38ab7d1a4377a58fc9ea",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Illustrations/SVG/Acropolis.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Acropolis.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/22730c3871a5a36b6c6d38ab7d1a4377a58fc9ea",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Acropolis.svg"
+        }
+      },
+      {
+        "name": "Athens.svg",
+        "path": "Assets-full/Illustrations/SVG/Athens.svg",
+        "sha": "6e197004a10777c8a49550f64a7ebc6a80acf9e6",
+        "size": 37739,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Athens.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Athens.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/6e197004a10777c8a49550f64a7ebc6a80acf9e6",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Illustrations/SVG/Athens.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Athens.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/6e197004a10777c8a49550f64a7ebc6a80acf9e6",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Athens.svg"
+        }
+      },
+      {
+        "name": "Hero.svg",
+        "path": "Assets-full/Illustrations/SVG/Hero.svg",
+        "sha": "ef1b34418ed20ae6271b44812680c17c4fdf2c61",
+        "size": 76884,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Hero.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Hero.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/ef1b34418ed20ae6271b44812680c17c4fdf2c61",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Illustrations/SVG/Hero.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Hero.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/ef1b34418ed20ae6271b44812680c17c4fdf2c61",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Hero.svg"
+        }
+      },
+      {
+        "name": "Mask.svg",
+        "path": "Assets-full/Illustrations/SVG/Mask.svg",
+        "sha": "155d4a13df967e189ba2d4e0ee7640bb4022a784",
+        "size": 197382,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Mask.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Mask.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/155d4a13df967e189ba2d4e0ee7640bb4022a784",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Illustrations/SVG/Mask.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Mask.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/155d4a13df967e189ba2d4e0ee7640bb4022a784",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Mask.svg"
+        }
+      },
+      {
+        "name": "Roles.svg",
+        "path": "Assets-full/Illustrations/SVG/Roles.svg",
+        "sha": "602ab7b108398cc2697cf5f932d004ee39446e46",
+        "size": 76234,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Roles.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Roles.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/602ab7b108398cc2697cf5f932d004ee39446e46",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Illustrations/SVG/Roles.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Roles.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/602ab7b108398cc2697cf5f932d004ee39446e46",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Roles.svg"
+        }
+      },
+      {
+        "name": "Rome small.svg",
+        "path": "Assets-full/Illustrations/SVG/Rome small.svg",
+        "sha": "fdba53e0d8998afe242c98f99b581b052700e085",
+        "size": 458349,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Rome%20small.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Rome%20small.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/fdba53e0d8998afe242c98f99b581b052700e085",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Illustrations/SVG/Rome%20small.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Rome%20small.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/fdba53e0d8998afe242c98f99b581b052700e085",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Rome%20small.svg"
+        }
+      },
+      {
+        "name": "Rome.svg",
+        "path": "Assets-full/Illustrations/SVG/Rome.svg",
+        "sha": "50499547cdbd7e7e0cb61b9878503dbca1d1882a",
+        "size": 914725,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Rome.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Rome.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/50499547cdbd7e7e0cb61b9878503dbca1d1882a",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Illustrations/SVG/Rome.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Rome.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/50499547cdbd7e7e0cb61b9878503dbca1d1882a",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Rome.svg"
+        }
+      },
+      {
+        "name": "Sparta.svg",
+        "path": "Assets-full/Illustrations/SVG/Sparta.svg",
+        "sha": "2c31ee39383fbdffa407f0d12819324c19533c18",
+        "size": 8124,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Sparta.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Sparta.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/2c31ee39383fbdffa407f0d12819324c19533c18",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Illustrations/SVG/Sparta.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Illustrations/SVG/Sparta.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/2c31ee39383fbdffa407f0d12819324c19533c18",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Illustrations/SVG/Sparta.svg"
+        }
+      }
+    ],
+    "descriptiveIcons": [
+      {
+        "name": "Announcing.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Announcing.svg",
+        "sha": "079208d5bfa321356f5b9dc90b993467c8ec46cd",
+        "size": 5267,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Announcing.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Announcing.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/079208d5bfa321356f5b9dc90b993467c8ec46cd",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Announcing.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Announcing.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/079208d5bfa321356f5b9dc90b993467c8ec46cd",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Announcing.svg"
+        }
+      },
+      {
+        "name": "Bandwidth-provider.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Bandwidth-provider.svg",
+        "sha": "7d8b3a22add4b54766ef9a20b61095d19795d4c7",
+        "size": 6051,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Bandwidth-provider.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Bandwidth-provider.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/7d8b3a22add4b54766ef9a20b61095d19795d4c7",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Bandwidth-provider.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Bandwidth-provider.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/7d8b3a22add4b54766ef9a20b61095d19795d4c7",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Bandwidth-provider.svg"
+        }
+      },
+      {
+        "name": "Blockchain.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Blockchain.svg",
+        "sha": "79d20697b395329f280e31a63231a8317d819d50",
+        "size": 3467,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Blockchain.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Blockchain.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/79d20697b395329f280e31a63231a8317d819d50",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Blockchain.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Blockchain.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/79d20697b395329f280e31a63231a8317d819d50",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Blockchain.svg"
+        }
+      },
+      {
+        "name": "Builder.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Builder.svg",
+        "sha": "5cf8d444aaa05c85266a76a1a766af5342451150",
+        "size": 6278,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Builder.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Builder.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/5cf8d444aaa05c85266a76a1a766af5342451150",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Builder.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Builder.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/5cf8d444aaa05c85266a76a1a766af5342451150",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Builder.svg"
+        }
+      },
+      {
+        "name": "Communication-moderator.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Communication-moderator.svg",
+        "sha": "261660b980213422345c26ad68a037330b9c04d2",
+        "size": 4839,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Communication-moderator.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Communication-moderator.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/261660b980213422345c26ad68a037330b9c04d2",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Communication-moderator.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Communication-moderator.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/261660b980213422345c26ad68a037330b9c04d2",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Communication-moderator.svg"
+        }
+      },
+      {
+        "name": "Computer.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Computer.svg",
+        "sha": "d07298cd9d012d9e65e505760ee4b7cf94684ee0",
+        "size": 3251,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Computer.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Computer.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/d07298cd9d012d9e65e505760ee4b7cf94684ee0",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Computer.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Computer.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/d07298cd9d012d9e65e505760ee4b7cf94684ee0",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Computer.svg"
+        }
+      },
+      {
+        "name": "Content-creator.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Content-creator.svg",
+        "sha": "7ada8b3101c5aaca5cd58cd3f71c3ec0b9b1a8c6",
+        "size": 4086,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Content-creator.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Content-creator.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/7ada8b3101c5aaca5cd58cd3f71c3ec0b9b1a8c6",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Content-creator.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Content-creator.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/7ada8b3101c5aaca5cd58cd3f71c3ec0b9b1a8c6",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Content-creator.svg"
+        }
+      },
+      {
+        "name": "Content-curator.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Content-curator.svg",
+        "sha": "b84c2c08f25ae56d2fc347bf6c3bd74f98b76131",
+        "size": 6516,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Content-curator.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Content-curator.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/b84c2c08f25ae56d2fc347bf6c3bd74f98b76131",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Content-curator.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Content-curator.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/b84c2c08f25ae56d2fc347bf6c3bd74f98b76131",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Content-curator.svg"
+        }
+      },
+      {
+        "name": "Council-members.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Council-members.svg",
+        "sha": "576a9feb5dbae3032e4bb621e7c95b9749efdcb1",
+        "size": 3764,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Council-members.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Council-members.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/576a9feb5dbae3032e4bb621e7c95b9749efdcb1",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Council-members.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Council-members.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/576a9feb5dbae3032e4bb621e7c95b9749efdcb1",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Council-members.svg"
+        }
+      },
+      {
+        "name": "Data-distribution.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Data-distribution.svg",
+        "sha": "337e8e2b893a913c0cbaa47e04834bdb0e33e5fa",
+        "size": 4273,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Data-distribution.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Data-distribution.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/337e8e2b893a913c0cbaa47e04834bdb0e33e5fa",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Data-distribution.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Data-distribution.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/337e8e2b893a913c0cbaa47e04834bdb0e33e5fa",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Data-distribution.svg"
+        }
+      },
+      {
+        "name": "Discovery-provider.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Discovery-provider.svg",
+        "sha": "3729113cad821280eadd3b42531630a9303c631c",
+        "size": 6636,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Discovery-provider.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Discovery-provider.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/3729113cad821280eadd3b42531630a9303c631c",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Discovery-provider.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Discovery-provider.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/3729113cad821280eadd3b42531630a9303c631c",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Discovery-provider.svg"
+        }
+      },
+      {
+        "name": "Election.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Election.svg",
+        "sha": "d41ea9541fe685206eea3058c8e652b442a9241d",
+        "size": 6047,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Election.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Election.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/d41ea9541fe685206eea3058c8e652b442a9241d",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Election.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Election.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/d41ea9541fe685206eea3058c8e652b442a9241d",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Election.svg"
+        }
+      },
+      {
+        "name": "Forum-posts.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Forum-posts.svg",
+        "sha": "7680e501fce2f19a68839b92538a3d93cb1e8f1b",
+        "size": 4252,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Forum-posts.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Forum-posts.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/7680e501fce2f19a68839b92538a3d93cb1e8f1b",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Forum-posts.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Forum-posts.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/7680e501fce2f19a68839b92538a3d93cb1e8f1b",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Forum-posts.svg"
+        }
+      },
+      {
+        "name": "Governance.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Governance.svg",
+        "sha": "e14a7c2906479035f207ad5fa289172947c6d012",
+        "size": 4492,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Governance.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Governance.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/e14a7c2906479035f207ad5fa289172947c6d012",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Governance.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Governance.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/e14a7c2906479035f207ad5fa289172947c6d012",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Governance.svg"
+        }
+      },
+      {
+        "name": "Incentive.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Incentive.svg",
+        "sha": "89dc5ee1fc17c6a294098bff4b9ae2a039bc5102",
+        "size": 4478,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Incentive.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Incentive.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/89dc5ee1fc17c6a294098bff4b9ae2a039bc5102",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Incentive.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Incentive.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/89dc5ee1fc17c6a294098bff4b9ae2a039bc5102",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Incentive.svg"
+        }
+      },
+      {
+        "name": "Live-streaming-provider.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Live-streaming-provider.svg",
+        "sha": "7d8c4066daca081919dea312f4cfae8977ce576a",
+        "size": 3697,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Live-streaming-provider.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Live-streaming-provider.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/7d8c4066daca081919dea312f4cfae8977ce576a",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Live-streaming-provider.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Live-streaming-provider.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/7d8c4066daca081919dea312f4cfae8977ce576a",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Live-streaming-provider.svg"
+        }
+      },
+      {
+        "name": "Map-of-navigation.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Map-of-navigation.svg",
+        "sha": "b16a1905ad2ee01a8ec729c884f1618282a0776b",
+        "size": 3736,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Map-of-navigation.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Map-of-navigation.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/b16a1905ad2ee01a8ec729c884f1618282a0776b",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Map-of-navigation.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Map-of-navigation.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/b16a1905ad2ee01a8ec729c884f1618282a0776b",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Map-of-navigation.svg"
+        }
+      },
+      {
+        "name": "Membership-curator.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Membership-curator.svg",
+        "sha": "dbb2f1ae905c86dbe93c17a39b17cee18c5c4c61",
+        "size": 6079,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Membership-curator.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Membership-curator.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/dbb2f1ae905c86dbe93c17a39b17cee18c5c4c61",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Membership-curator.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Membership-curator.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/dbb2f1ae905c86dbe93c17a39b17cee18c5c4c61",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Membership-curator.svg"
+        }
+      },
+      {
+        "name": "Membership-screener.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Membership-screener.svg",
+        "sha": "36abd31db5ae297f31f039a9a65da8b41020f080",
+        "size": 5647,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Membership-screener.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Membership-screener.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/36abd31db5ae297f31f039a9a65da8b41020f080",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Membership-screener.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Membership-screener.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/36abd31db5ae297f31f039a9a65da8b41020f080",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Membership-screener.svg"
+        }
+      },
+      {
+        "name": "Membership.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Membership.svg",
+        "sha": "8c262e55a838c3d5f9cc48fa70980a348d408309",
+        "size": 5456,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Membership.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Membership.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/8c262e55a838c3d5f9cc48fa70980a348d408309",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Membership.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Membership.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/8c262e55a838c3d5f9cc48fa70980a348d408309",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Membership.svg"
+        }
+      },
+      {
+        "name": "Node-network.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Node-network.svg",
+        "sha": "1a8ef34113f1ea4deff79fb9ecd678a0f9aa5594",
+        "size": 3598,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Node-network.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Node-network.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/1a8ef34113f1ea4deff79fb9ecd678a0f9aa5594",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Node-network.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Node-network.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/1a8ef34113f1ea4deff79fb9ecd678a0f9aa5594",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Node-network.svg"
+        }
+      },
+      {
+        "name": "Payment.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Payment.svg",
+        "sha": "b0699a04dfd4e7aa79b1e4410ab8516edf6a9cf1",
+        "size": 4519,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Payment.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Payment.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/b0699a04dfd4e7aa79b1e4410ab8516edf6a9cf1",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Payment.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Payment.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/b0699a04dfd4e7aa79b1e4410ab8516edf6a9cf1",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Payment.svg"
+        }
+      },
+      {
+        "name": "Platform-content-files.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Platform-content-files.svg",
+        "sha": "7f0877ebccf5ac27eba3aabe811f6b3e05ae5450",
+        "size": 3932,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Platform-content-files.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Platform-content-files.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/7f0877ebccf5ac27eba3aabe811f6b3e05ae5450",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Platform-content-files.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Platform-content-files.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/7f0877ebccf5ac27eba3aabe811f6b3e05ae5450",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Platform-content-files.svg"
+        }
+      },
+      {
+        "name": "Staking.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Staking.svg",
+        "sha": "d0ebe4917ce64e9e44d2b0b01e84ef116a8bff27",
+        "size": 6171,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Staking.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Staking.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/d0ebe4917ce64e9e44d2b0b01e84ef116a8bff27",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Staking.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Staking.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/d0ebe4917ce64e9e44d2b0b01e84ef116a8bff27",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Staking.svg"
+        }
+      },
+      {
+        "name": "Storage-provider.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Storage-provider.svg",
+        "sha": "ded73eabfd55b706c0ac3e460991c485228ffb7b",
+        "size": 6065,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Storage-provider.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Storage-provider.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/ded73eabfd55b706c0ac3e460991c485228ffb7b",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Storage-provider.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Storage-provider.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/ded73eabfd55b706c0ac3e460991c485228ffb7b",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Storage-provider.svg"
+        }
+      },
+      {
+        "name": "Storage.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Storage.svg",
+        "sha": "be13dab1a0d402f932d06b83f77d2531b7e49548",
+        "size": 2940,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Storage.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Storage.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/be13dab1a0d402f932d06b83f77d2531b7e49548",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Storage.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Storage.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/be13dab1a0d402f932d06b83f77d2531b7e49548",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Storage.svg"
+        }
+      },
+      {
+        "name": "Validator.svg",
+        "path": "Assets-full/Descriptive Icons/SVG/Validator.svg",
+        "sha": "9772644bcbf98089a3a76cabbd2cbf323a4ef98a",
+        "size": 4311,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Validator.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Validator.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/9772644bcbf98089a3a76cabbd2cbf323a4ef98a",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Descriptive%20Icons/SVG/Validator.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Descriptive%20Icons/SVG/Validator.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/9772644bcbf98089a3a76cabbd2cbf323a4ef98a",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Descriptive%20Icons/SVG/Validator.svg"
+        }
+      }
+    ],
+    "systemIcons": [
+      {
+        "name": "arrow.svg",
+        "path": "Assets-full/System Icons/Line Basic/arrow.svg",
+        "sha": "ad2c89ab2755a065cebef62e7eb461ef80288043",
+        "size": 730,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/arrow.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/arrow.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/ad2c89ab2755a065cebef62e7eb461ef80288043",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/arrow.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/arrow.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/ad2c89ab2755a065cebef62e7eb461ef80288043",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/arrow.svg"
+        }
+      },
+      {
+        "name": "bell.svg",
+        "path": "Assets-full/System Icons/Line Basic/bell.svg",
+        "sha": "e8bc620cbd066610a178e4745de4b3e4f483868e",
+        "size": 861,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/bell.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/bell.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/e8bc620cbd066610a178e4745de4b3e4f483868e",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/bell.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/bell.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/e8bc620cbd066610a178e4745de4b3e4f483868e",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/bell.svg"
+        }
+      },
+      {
+        "name": "calendar.svg",
+        "path": "Assets-full/System Icons/Line Basic/calendar.svg",
+        "sha": "a03a7a0413e118e8289437c5f64e3c86596597ec",
+        "size": 914,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/calendar.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/calendar.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/a03a7a0413e118e8289437c5f64e3c86596597ec",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/calendar.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/calendar.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/a03a7a0413e118e8289437c5f64e3c86596597ec",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/calendar.svg"
+        }
+      },
+      {
+        "name": "clock.svg",
+        "path": "Assets-full/System Icons/Line Basic/clock.svg",
+        "sha": "2e9108da7f84e265e1bbd9ccc81f6ee06ca40098",
+        "size": 731,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/clock.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/clock.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/2e9108da7f84e265e1bbd9ccc81f6ee06ca40098",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/clock.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/clock.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/2e9108da7f84e265e1bbd9ccc81f6ee06ca40098",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/clock.svg"
+        }
+      },
+      {
+        "name": "download.svg",
+        "path": "Assets-full/System Icons/Line Basic/download.svg",
+        "sha": "89a5208866cf8dc194405c62b4ebb9384ece4f78",
+        "size": 1020,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/download.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/download.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/89a5208866cf8dc194405c62b4ebb9384ece4f78",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/download.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/download.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/89a5208866cf8dc194405c62b4ebb9384ece4f78",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/download.svg"
+        }
+      },
+      {
+        "name": "file.svg",
+        "path": "Assets-full/System Icons/Line Basic/file.svg",
+        "sha": "fba5f17d4797dc6c308da80b2922605ba6d1ecec",
+        "size": 976,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/file.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/file.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/fba5f17d4797dc6c308da80b2922605ba6d1ecec",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/file.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/file.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/fba5f17d4797dc6c308da80b2922605ba6d1ecec",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/file.svg"
+        }
+      },
+      {
+        "name": "mail.svg",
+        "path": "Assets-full/System Icons/Line Basic/mail.svg",
+        "sha": "44123b79a27079212f5db3b38f495162ff29caa0",
+        "size": 924,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/mail.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/mail.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/44123b79a27079212f5db3b38f495162ff29caa0",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/mail.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/mail.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/44123b79a27079212f5db3b38f495162ff29caa0",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/mail.svg"
+        }
+      },
+      {
+        "name": "menu.svg",
+        "path": "Assets-full/System Icons/Line Basic/menu.svg",
+        "sha": "7284e46e43975f83622ad9f10e6043d7a00ad9a1",
+        "size": 785,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/menu.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/menu.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/7284e46e43975f83622ad9f10e6043d7a00ad9a1",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/menu.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/menu.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/7284e46e43975f83622ad9f10e6043d7a00ad9a1",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/menu.svg"
+        }
+      },
+      {
+        "name": "monitor.svg",
+        "path": "Assets-full/System Icons/Line Basic/monitor.svg",
+        "sha": "726554027c550eabcef291bf5295e05245c85bc1",
+        "size": 754,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/monitor.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/monitor.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/726554027c550eabcef291bf5295e05245c85bc1",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/monitor.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/monitor.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/726554027c550eabcef291bf5295e05245c85bc1",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/monitor.svg"
+        }
+      },
+      {
+        "name": "navigation.svg",
+        "path": "Assets-full/System Icons/Line Basic/navigation.svg",
+        "sha": "d4f3c8c710153b4639d5da15ab02d6b66c4f7b23",
+        "size": 690,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/navigation.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/navigation.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/d4f3c8c710153b4639d5da15ab02d6b66c4f7b23",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/navigation.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/navigation.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/d4f3c8c710153b4639d5da15ab02d6b66c4f7b23",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/navigation.svg"
+        }
+      },
+      {
+        "name": "ok.svg",
+        "path": "Assets-full/System Icons/Line Basic/ok.svg",
+        "sha": "560d1576a4d5698f07778aaf794444651923b8bf",
+        "size": 670,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/ok.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/ok.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/560d1576a4d5698f07778aaf794444651923b8bf",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/ok.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/ok.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/560d1576a4d5698f07778aaf794444651923b8bf",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/ok.svg"
+        }
+      },
+      {
+        "name": "play.svg",
+        "path": "Assets-full/System Icons/Line Basic/play.svg",
+        "sha": "b483ca1423215379c86e3d28805320bf5c22bfdf",
+        "size": 663,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/play.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/play.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/b483ca1423215379c86e3d28805320bf5c22bfdf",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/System%20Icons/Line%20Basic/play.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/System%20Icons/Line%20Basic/play.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/b483ca1423215379c86e3d28805320bf5c22bfdf",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/System%20Icons/Line%20Basic/play.svg"
+        }
+      }
+    ],
+    "logo": [
+      {
+        "name": "Logo-horisontal-basic-white.svg",
+        "path": "Assets-full/Logo/SVG/Logo-horisontal-basic-white.svg",
+        "sha": "cc5c5b0143b911654ffa432214e866f6a26309e3",
+        "size": 3842,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-horisontal-basic-white.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-horisontal-basic-white.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/cc5c5b0143b911654ffa432214e866f6a26309e3",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo/SVG/Logo-horisontal-basic-white.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-horisontal-basic-white.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/cc5c5b0143b911654ffa432214e866f6a26309e3",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-horisontal-basic-white.svg"
+        }
+      },
+      {
+        "name": "Logo-horisontal-basic.svg",
+        "path": "Assets-full/Logo/SVG/Logo-horisontal-basic.svg",
+        "sha": "fbd5bca02b3146442c8d37ddcac28109c197b784",
+        "size": 3804,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-horisontal-basic.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-horisontal-basic.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/fbd5bca02b3146442c8d37ddcac28109c197b784",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo/SVG/Logo-horisontal-basic.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-horisontal-basic.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/fbd5bca02b3146442c8d37ddcac28109c197b784",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-horisontal-basic.svg"
+        }
+      },
+      {
+        "name": "Logo-horisontal-mono-white.svg",
+        "path": "Assets-full/Logo/SVG/Logo-horisontal-mono-white.svg",
+        "sha": "780b5a1a0bdb7147587da97d457136b081bbcf1b",
+        "size": 3820,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-horisontal-mono-white.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-horisontal-mono-white.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/780b5a1a0bdb7147587da97d457136b081bbcf1b",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo/SVG/Logo-horisontal-mono-white.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-horisontal-mono-white.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/780b5a1a0bdb7147587da97d457136b081bbcf1b",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-horisontal-mono-white.svg"
+        }
+      },
+      {
+        "name": "Logo-vertical-basic-white.svg",
+        "path": "Assets-full/Logo/SVG/Logo-vertical-basic-white.svg",
+        "sha": "360a1531f81722db73e360a88cf0ffbeb084515c",
+        "size": 3842,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-vertical-basic-white.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-vertical-basic-white.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/360a1531f81722db73e360a88cf0ffbeb084515c",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo/SVG/Logo-vertical-basic-white.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-vertical-basic-white.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/360a1531f81722db73e360a88cf0ffbeb084515c",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-vertical-basic-white.svg"
+        }
+      },
+      {
+        "name": "Logo-vertical-basic.svg",
+        "path": "Assets-full/Logo/SVG/Logo-vertical-basic.svg",
+        "sha": "b48f3394a2a69254f3c09caa2571cb84b4f34191",
+        "size": 3804,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-vertical-basic.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-vertical-basic.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/b48f3394a2a69254f3c09caa2571cb84b4f34191",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo/SVG/Logo-vertical-basic.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-vertical-basic.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/b48f3394a2a69254f3c09caa2571cb84b4f34191",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-vertical-basic.svg"
+        }
+      },
+      {
+        "name": "Logo-vertical-mono-white.svg",
+        "path": "Assets-full/Logo/SVG/Logo-vertical-mono-white.svg",
+        "sha": "dcf8e8110759b67f9bbb1408259fc91cbd609c47",
+        "size": 3820,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-vertical-mono-white.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-vertical-mono-white.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/dcf8e8110759b67f9bbb1408259fc91cbd609c47",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo/SVG/Logo-vertical-mono-white.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo/SVG/Logo-vertical-mono-white.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/dcf8e8110759b67f9bbb1408259fc91cbd609c47",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo/SVG/Logo-vertical-mono-white.svg"
+        }
+      }
+    ],
+    "twitterCovers": [
+      {
+        "name": "Twitter-template-01.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-01.svg",
+        "sha": "1adbd53dd8d7edf581fbbdd6360a1766535dca2d",
+        "size": 14608,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-01.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-01.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/1adbd53dd8d7edf581fbbdd6360a1766535dca2d",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-01.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-01.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/1adbd53dd8d7edf581fbbdd6360a1766535dca2d",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-01.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-02.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-02.svg",
+        "sha": "50909b919114c5a52ad9389917c350b446fe0ed0",
+        "size": 199138,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-02.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-02.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/50909b919114c5a52ad9389917c350b446fe0ed0",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-02.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-02.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/50909b919114c5a52ad9389917c350b446fe0ed0",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-02.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-03.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-03.svg",
+        "sha": "32dbc34ca83861c1864832ac818df4e56d2405e1",
+        "size": 25192,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-03.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-03.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/32dbc34ca83861c1864832ac818df4e56d2405e1",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-03.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-03.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/32dbc34ca83861c1864832ac818df4e56d2405e1",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-03.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-04.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-04.svg",
+        "sha": "912cc8d03803f2ed2cebe9d71e34f814f88a3e61",
+        "size": 212815,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-04.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-04.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/912cc8d03803f2ed2cebe9d71e34f814f88a3e61",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-04.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-04.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/912cc8d03803f2ed2cebe9d71e34f814f88a3e61",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-04.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-05.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-05.svg",
+        "sha": "dec712f3784c40555b75d03da3e3dbc16311696a",
+        "size": 26809,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-05.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-05.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/dec712f3784c40555b75d03da3e3dbc16311696a",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-05.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-05.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/dec712f3784c40555b75d03da3e3dbc16311696a",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-05.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-06.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-06.svg",
+        "sha": "0541173094bb8b7b6f8b7b8f1c0611367c503c31",
+        "size": 28667,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-06.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-06.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/0541173094bb8b7b6f8b7b8f1c0611367c503c31",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-06.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-06.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/0541173094bb8b7b6f8b7b8f1c0611367c503c31",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-06.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-07.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-07.svg",
+        "sha": "97ea83a31688148b25d307ed18db6930f3d2996b",
+        "size": 33678,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-07.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-07.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/97ea83a31688148b25d307ed18db6930f3d2996b",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-07.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-07.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/97ea83a31688148b25d307ed18db6930f3d2996b",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-07.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-08.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-08.svg",
+        "sha": "895cc1127716cadd9408ad82993f2535a46a92e0",
+        "size": 33678,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-08.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-08.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/895cc1127716cadd9408ad82993f2535a46a92e0",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-08.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-08.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/895cc1127716cadd9408ad82993f2535a46a92e0",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-08.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-09.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-09.svg",
+        "sha": "d16856e55ab544e2c708b1c4353b2581a807386e",
+        "size": 33678,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-09.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-09.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/d16856e55ab544e2c708b1c4353b2581a807386e",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-09.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-09.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/d16856e55ab544e2c708b1c4353b2581a807386e",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-09.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-10.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-10.svg",
+        "sha": "d300234bcb2304bb20dad2ba9a64e0116e7c90d4",
+        "size": 26067,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-10.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-10.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/d300234bcb2304bb20dad2ba9a64e0116e7c90d4",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-10.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-10.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/d300234bcb2304bb20dad2ba9a64e0116e7c90d4",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-10.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-11.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-11.svg",
+        "sha": "c080eb9ed4c91d0dc5f071e0b82a1ffa403295b0",
+        "size": 36859,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-11.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-11.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/c080eb9ed4c91d0dc5f071e0b82a1ffa403295b0",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-11.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-11.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/c080eb9ed4c91d0dc5f071e0b82a1ffa403295b0",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-11.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-12.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-12.svg",
+        "sha": "7f7a4f2beac81b5729788370081e4080986a0f18",
+        "size": 247948,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-12.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-12.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/7f7a4f2beac81b5729788370081e4080986a0f18",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-12.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-12.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/7f7a4f2beac81b5729788370081e4080986a0f18",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-12.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-13.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-13.svg",
+        "sha": "d30551023495f0a64cd42df5ef835c77e3d267f6",
+        "size": 230954,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-13.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-13.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/d30551023495f0a64cd42df5ef835c77e3d267f6",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-13.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-13.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/d30551023495f0a64cd42df5ef835c77e3d267f6",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-13.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-14.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-14.svg",
+        "sha": "bc72a1daba4924d8253969f65ce0bbb0e178501c",
+        "size": 218388,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-14.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-14.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/bc72a1daba4924d8253969f65ce0bbb0e178501c",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-14.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-14.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/bc72a1daba4924d8253969f65ce0bbb0e178501c",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-14.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-15.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-15.svg",
+        "sha": "dfeca4a4dfe8fc1f7f0e999e95dec5a60d48aab9",
+        "size": 36888,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-15.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-15.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/dfeca4a4dfe8fc1f7f0e999e95dec5a60d48aab9",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-15.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-15.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/dfeca4a4dfe8fc1f7f0e999e95dec5a60d48aab9",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-15.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-16.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-16.svg",
+        "sha": "66d34f2bd43411c00f36e8d0d6623130d2ad6195",
+        "size": 26081,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-16.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-16.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/66d34f2bd43411c00f36e8d0d6623130d2ad6195",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-16.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-16.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/66d34f2bd43411c00f36e8d0d6623130d2ad6195",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-16.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-17.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-17.svg",
+        "sha": "c37473a232c29e07cc0fd5b2c750f42cd2ec8686",
+        "size": 209400,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-17.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-17.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/c37473a232c29e07cc0fd5b2c750f42cd2ec8686",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-17.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-17.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/c37473a232c29e07cc0fd5b2c750f42cd2ec8686",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-17.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-18.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-18.svg",
+        "sha": "06521479edaab3e236fc8faa788308ac86812f06",
+        "size": 271824,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-18.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-18.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/06521479edaab3e236fc8faa788308ac86812f06",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-18.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-18.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/06521479edaab3e236fc8faa788308ac86812f06",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-18.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-19.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-19.svg",
+        "sha": "507991b19b98bfdf82cdbaa144c17955910e2120",
+        "size": 214542,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-19.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-19.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/507991b19b98bfdf82cdbaa144c17955910e2120",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-19.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-19.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/507991b19b98bfdf82cdbaa144c17955910e2120",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-19.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-20.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-20.svg",
+        "sha": "8da29560ecc7696f2eca1dcb105843f2e1c6a6ea",
+        "size": 47804,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-20.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-20.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/8da29560ecc7696f2eca1dcb105843f2e1c6a6ea",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-20.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-20.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/8da29560ecc7696f2eca1dcb105843f2e1c6a6ea",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-20.svg"
+        }
+      },
+      {
+        "name": "Twitter-template-21.svg",
+        "path": "Assets-full/Twitter Covers/SVG/Twitter-template-21.svg",
+        "sha": "60e722b55e8e7c13a4bf6a512a284dabc8d6bee0",
+        "size": 219445,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-21.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-21.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/60e722b55e8e7c13a4bf6a512a284dabc8d6bee0",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-21.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Twitter%20Covers/SVG/Twitter-template-21.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/60e722b55e8e7c13a4bf6a512a284dabc8d6bee0",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Twitter%20Covers/SVG/Twitter-template-21.svg"
+        }
+      }
+    ],
+    "blogCovers": [
+      {
+        "name": "Blog-te2plate-01.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-te2plate-01.svg",
+        "sha": "9a763eed8597f77c8ab1109f68617a10e4e5a4c8",
+        "size": 29136,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-te2plate-01.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-te2plate-01.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/9a763eed8597f77c8ab1109f68617a10e4e5a4c8",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-te2plate-01.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-te2plate-01.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/9a763eed8597f77c8ab1109f68617a10e4e5a4c8",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-te2plate-01.svg"
+        }
+      },
+      {
+        "name": "Blog-template-01.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-01.svg",
+        "sha": "a4f83f913822e7407d0818d994e5db84f063bee3",
+        "size": 17825,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-01.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-01.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/a4f83f913822e7407d0818d994e5db84f063bee3",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-01.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-01.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/a4f83f913822e7407d0818d994e5db84f063bee3",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-01.svg"
+        }
+      },
+      {
+        "name": "Blog-template-03.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-03.svg",
+        "sha": "0f80351d80c72928f814e7d78faf6d33239cb4e8",
+        "size": 17820,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-03.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-03.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/0f80351d80c72928f814e7d78faf6d33239cb4e8",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-03.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-03.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/0f80351d80c72928f814e7d78faf6d33239cb4e8",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-03.svg"
+        }
+      },
+      {
+        "name": "Blog-template-04.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-04.svg",
+        "sha": "e3fefe5417930fd12877fcf8a6be90d119658b3f",
+        "size": 29140,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-04.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-04.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/e3fefe5417930fd12877fcf8a6be90d119658b3f",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-04.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-04.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/e3fefe5417930fd12877fcf8a6be90d119658b3f",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-04.svg"
+        }
+      },
+      {
+        "name": "Blog-template-05.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-05.svg",
+        "sha": "3e434c470154fec0d1d027a13d881ee49e3851d1",
+        "size": 933053,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-05.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-05.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/3e434c470154fec0d1d027a13d881ee49e3851d1",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-05.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-05.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/3e434c470154fec0d1d027a13d881ee49e3851d1",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-05.svg"
+        }
+      },
+      {
+        "name": "Blog-template-06.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-06.svg",
+        "sha": "12b5a0afda03ede99d9973e7f4902f82fe0c319a",
+        "size": 29133,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-06.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-06.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/12b5a0afda03ede99d9973e7f4902f82fe0c319a",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-06.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-06.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/12b5a0afda03ede99d9973e7f4902f82fe0c319a",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-06.svg"
+        }
+      },
+      {
+        "name": "Blog-template-07.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-07.svg",
+        "sha": "c6cc0da2f29e6f35a6e21686a62909ccae6799f8",
+        "size": 46883,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-07.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-07.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/c6cc0da2f29e6f35a6e21686a62909ccae6799f8",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-07.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-07.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/c6cc0da2f29e6f35a6e21686a62909ccae6799f8",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-07.svg"
+        }
+      },
+      {
+        "name": "Blog-template-08.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-08.svg",
+        "sha": "5041511351441dfa650304bec45b39dbcd819853",
+        "size": 82470,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-08.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-08.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/5041511351441dfa650304bec45b39dbcd819853",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-08.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-08.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/5041511351441dfa650304bec45b39dbcd819853",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-08.svg"
+        }
+      },
+      {
+        "name": "Blog-template-09.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-09.svg",
+        "sha": "d2ac633e8912c671f1724d21db1284f9c736d2a8",
+        "size": 53577,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-09.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-09.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/d2ac633e8912c671f1724d21db1284f9c736d2a8",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-09.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-09.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/d2ac633e8912c671f1724d21db1284f9c736d2a8",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-09.svg"
+        }
+      },
+      {
+        "name": "Blog-template-10.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-10.svg",
+        "sha": "649ffa18b4d4eab2bb13c8f842cd64a6b4cda8e1",
+        "size": 377594,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-10.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-10.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/649ffa18b4d4eab2bb13c8f842cd64a6b4cda8e1",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-10.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-10.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/649ffa18b4d4eab2bb13c8f842cd64a6b4cda8e1",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-10.svg"
+        }
+      },
+      {
+        "name": "Blog-template-11.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-11.svg",
+        "sha": "a17ec91cdc4f843846662630388f0727a59c84b0",
+        "size": 258408,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-11.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-11.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/a17ec91cdc4f843846662630388f0727a59c84b0",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-11.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-11.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/a17ec91cdc4f843846662630388f0727a59c84b0",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-11.svg"
+        }
+      },
+      {
+        "name": "Blog-template-12.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-12.svg",
+        "sha": "624ac4c8a7e3a3a519a7903180cd79cefe336d29",
+        "size": 72883,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-12.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-12.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/624ac4c8a7e3a3a519a7903180cd79cefe336d29",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-12.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-12.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/624ac4c8a7e3a3a519a7903180cd79cefe336d29",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-12.svg"
+        }
+      },
+      {
+        "name": "Blog-template-13.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-13.svg",
+        "sha": "d6d6b11cbe8634487f5d6ab04c878b740fb204da",
+        "size": 31937,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-13.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-13.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/d6d6b11cbe8634487f5d6ab04c878b740fb204da",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-13.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-13.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/d6d6b11cbe8634487f5d6ab04c878b740fb204da",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-13.svg"
+        }
+      },
+      {
+        "name": "Blog-template-14.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-14.svg",
+        "sha": "344bfe7233fca4017ffae38fb0e794960895ab7f",
+        "size": 410553,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-14.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-14.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/344bfe7233fca4017ffae38fb0e794960895ab7f",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-14.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-14.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/344bfe7233fca4017ffae38fb0e794960895ab7f",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-14.svg"
+        }
+      },
+      {
+        "name": "Blog-template-15.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-15.svg",
+        "sha": "b65c9b1bc7ec14c06d59e9d1f48b84f463a84418",
+        "size": 26485,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-15.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-15.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/b65c9b1bc7ec14c06d59e9d1f48b84f463a84418",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-15.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-15.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/b65c9b1bc7ec14c06d59e9d1f48b84f463a84418",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-15.svg"
+        }
+      },
+      {
+        "name": "Blog-template-16.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog-template-16.svg",
+        "sha": "02729f98c372333ad196933c29710dbddb548102",
+        "size": 31118,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-16.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-16.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/02729f98c372333ad196933c29710dbddb548102",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog-template-16.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog-template-16.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/02729f98c372333ad196933c29710dbddb548102",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog-template-16.svg"
+        }
+      },
+      {
+        "name": "Blog1 Copy 7.svg",
+        "path": "Assets-full/Blog Covers/SVG/Blog1 Copy 7.svg",
+        "sha": "03701c81839e90c1d81b8ab15a78b52bcccd3cc9",
+        "size": 29285,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog1%20Copy%207.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog1%20Copy%207.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/03701c81839e90c1d81b8ab15a78b52bcccd3cc9",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Blog%20Covers/SVG/Blog1%20Copy%207.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Blog%20Covers/SVG/Blog1%20Copy%207.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/03701c81839e90c1d81b8ab15a78b52bcccd3cc9",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Blog%20Covers/SVG/Blog1%20Copy%207.svg"
+        }
+      }
+    ],
+    "logoIcon": [
+      {
+        "name": "Icon-basic-0bg.svg",
+        "path": "Assets-full/Logo Icon/SVG/Icon-basic-0bg.svg",
+        "sha": "e4281f37b761f27637267dfe3f700514708c8614",
+        "size": 723,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-basic-0bg.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-basic-0bg.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/e4281f37b761f27637267dfe3f700514708c8614",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo%20Icon/SVG/Icon-basic-0bg.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-basic-0bg.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/e4281f37b761f27637267dfe3f700514708c8614",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-basic-0bg.svg"
+        }
+      },
+      {
+        "name": "Icon-basic-1bg.svg",
+        "path": "Assets-full/Logo Icon/SVG/Icon-basic-1bg.svg",
+        "sha": "b57d0e2e8d80b96e8275e0defa3ed432b1e211ee",
+        "size": 808,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-basic-1bg.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-basic-1bg.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/b57d0e2e8d80b96e8275e0defa3ed432b1e211ee",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo%20Icon/SVG/Icon-basic-1bg.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-basic-1bg.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/b57d0e2e8d80b96e8275e0defa3ed432b1e211ee",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-basic-1bg.svg"
+        }
+      },
+      {
+        "name": "Icon-mono-black-0bg.svg",
+        "path": "Assets-full/Logo Icon/SVG/Icon-mono-black-0bg.svg",
+        "sha": "64095b965e915d78984a955c40f97e8e72d5498f",
+        "size": 609,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-mono-black-0bg.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-mono-black-0bg.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/64095b965e915d78984a955c40f97e8e72d5498f",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo%20Icon/SVG/Icon-mono-black-0bg.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-mono-black-0bg.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/64095b965e915d78984a955c40f97e8e72d5498f",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-mono-black-0bg.svg"
+        }
+      },
+      {
+        "name": "Icon-mono-black-1bg.svg",
+        "path": "Assets-full/Logo Icon/SVG/Icon-mono-black-1bg.svg",
+        "sha": "a002630fef8640099e6857c0e79da3b974d823ea",
+        "size": 722,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-mono-black-1bg.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-mono-black-1bg.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/a002630fef8640099e6857c0e79da3b974d823ea",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo%20Icon/SVG/Icon-mono-black-1bg.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-mono-black-1bg.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/a002630fef8640099e6857c0e79da3b974d823ea",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-mono-black-1bg.svg"
+        }
+      },
+      {
+        "name": "Icon-mono-white-0bg.svg",
+        "path": "Assets-full/Logo Icon/SVG/Icon-mono-white-0bg.svg",
+        "sha": "e1bb065f14764beb8f4864cc7cefd077fbb0bbaa",
+        "size": 725,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-mono-white-0bg.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-mono-white-0bg.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/e1bb065f14764beb8f4864cc7cefd077fbb0bbaa",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo%20Icon/SVG/Icon-mono-white-0bg.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-mono-white-0bg.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/e1bb065f14764beb8f4864cc7cefd077fbb0bbaa",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-mono-white-0bg.svg"
+        }
+      },
+      {
+        "name": "Icon-mono-white-1bg-black.svg",
+        "path": "Assets-full/Logo Icon/SVG/Icon-mono-white-1bg-black.svg",
+        "sha": "6464c504b8cab632c0160c96046c2bab881bc368",
+        "size": 784,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-mono-white-1bg-black.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-mono-white-1bg-black.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/6464c504b8cab632c0160c96046c2bab881bc368",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo%20Icon/SVG/Icon-mono-white-1bg-black.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-mono-white-1bg-black.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/6464c504b8cab632c0160c96046c2bab881bc368",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-mono-white-1bg-black.svg"
+        }
+      },
+      {
+        "name": "Icon-mono-white-1bg-blue.svg",
+        "path": "Assets-full/Logo Icon/SVG/Icon-mono-white-1bg-blue.svg",
+        "sha": "67dd1b71f20a9f45e1399753dd1a9e4b959a3403",
+        "size": 818,
+        "url": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-mono-white-1bg-blue.svg?ref=master",
+        "html_url": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-mono-white-1bg-blue.svg",
+        "git_url": "https://api.github.com/repos/Joystream/design/git/blobs/67dd1b71f20a9f45e1399753dd1a9e4b959a3403",
+        "download_url": "https://raw.githubusercontent.com/Joystream/design/master/Assets-full/Logo%20Icon/SVG/Icon-mono-white-1bg-blue.svg",
+        "type": "file",
+        "_links": {
+          "self": "https://api.github.com/repos/Joystream/design/contents/Assets-full/Logo%20Icon/SVG/Icon-mono-white-1bg-blue.svg?ref=master",
+          "git": "https://api.github.com/repos/Joystream/design/git/blobs/67dd1b71f20a9f45e1399753dd1a9e4b959a3403",
+          "html": "https://github.com/Joystream/design/blob/master/Assets-full/Logo%20Icon/SVG/Icon-mono-white-1bg-blue.svg"
+        }
+      }
+    ]
+  }
+}

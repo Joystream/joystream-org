@@ -32,10 +32,11 @@ const scrollToElement = id => {
 
 const propTypes = {
   data: array.isRequired,
+  activeSectionIds: array,
   light: bool,
 };
 
-const BrandSidebar = ({ data, light }) => {
+const BrandSidebar = ({ data, light, activeSectionIds = [], onSectionClick }) => {
   const { currentElement, currentSubElement } = useContext(SidebarContext);
   const [isOpen, setIsOpen] = useState(false);
   const context = useContext(ScrollContext);
@@ -62,7 +63,7 @@ const BrandSidebar = ({ data, light }) => {
       <div className="BrandSidebar__wrapper">
         <div className="BrandSidebar__container">
           {data.map(({ id, title, subSections }) => {
-            const isActive = currentElement === id;
+            const isActive = currentElement === id || activeSectionIds.includes(id);
 
             return (
               <div className="BrandSidebar__group" key={id}>
@@ -71,8 +72,12 @@ const BrandSidebar = ({ data, light }) => {
                     'BrandSidebar__link--active': isActive,
                   })}
                   onClick={() => {
-                    scrollToElement(id);
-                    setIsOpen(!isOpen);
+                    if (onSectionClick) {
+                      onSectionClick(id);
+                    } else {
+                      scrollToElement(id);
+                      setIsOpen(!isOpen);
+                    }
                   }}
                 >
                   {title}

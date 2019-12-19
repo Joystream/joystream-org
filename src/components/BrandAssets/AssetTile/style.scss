@@ -1,0 +1,86 @@
+@import '../../../styles/_main';
+
+.AssetTile {
+  $_r: &;
+
+  padding: 10px;
+
+  &__inner {
+    position: relative;
+    background: $c_white;
+
+    &--dark {
+      background: $c_black;
+    }
+
+    &:hover {
+      z-index: 2;
+      transform: scale(1.2);
+      box-shadow: 0 2px 40px 0 rgba(0, 0, 0, .1);
+
+      #{$_r}__download {
+        display: flex;
+      }
+    }
+  }
+
+  &__download {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    font-family: $font-secondary;
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 24px;
+    color: $c_white;
+    transform: translate(0, 50%);
+
+    img {
+      height: 10px;
+      margin: 0 0 0 10px;
+    }
+
+    @media #{$screen-sm} {
+      font-size: 9px;
+      line-height: 32px;
+
+      img {
+        height: 14px;
+      }
+    }
+
+    @media #{$screen-md} {
+      font-size: 12px;
+    }
+  }
+
+  &__asset {
+    position: relative;
+    border: 1px solid $c_sky-white;
+
+    &::after {
+      display: block;
+      padding-bottom: 100%;
+      content: '';
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 70%;
+    max-height: 70%;
+    transform: translate(-50%, -50%);
+
+    &--full-width {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

@@ -6,12 +6,12 @@
 
     @media #{$screen-sm} {
       width: 75%;
-      padding: 100px 0 0;
+      padding: 100px 0;
     }
 
     @media #{$screen-xl} {
-      padding: 100px 0 0 160px;
-      border-left: 1px solid $c_ebony-clay;
+      padding: 100px 0 100px 160px;
+      border-left: 1px solid $c_sky-white;
     }
   }
 
