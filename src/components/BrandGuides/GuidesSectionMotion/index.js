@@ -1,5 +1,5 @@
 import React from 'react';
-import motionLogo from '../../../assets/images/motion-logo.png';
+import motionVideo from '../../../assets/videos/Final_1.mp4';
 import { ReactComponent as WarningSvg } from '../../../assets/svg/warning.svg';
 import guidesData from '../../../data/pages/brand/guides';
 import { Section, SubSection, SubTitle } from '../GuidesSection';
@@ -28,7 +28,8 @@ export default () => {
           </div>
         </div>
 
-        <img src={motionLogo} alt="" />
+        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+        <video className="Motion__video" src={motionVideo} autoPlay="autoplay" loop muted />
       </SubSection>
     </Section>
   );

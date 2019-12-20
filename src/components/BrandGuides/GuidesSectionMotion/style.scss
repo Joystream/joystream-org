@@ -33,4 +33,9 @@
       font-size: 24px;
     }
   }
+
+  &__video {
+    width: 100%;
+    border: 1px solid $c_ebony-clay;
+  }
 }
