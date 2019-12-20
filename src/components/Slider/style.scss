@@ -1,19 +1,44 @@
 @import '../../styles/main.scss';
 
 .Slider {
+  $_r: &;
+
   &__track {
     overflow: hidden;
   }
 
   &__carousel {
-    width: 246px;
     overflow: visible;
+  }
+
+  &__carousel,
+  &__inner-controls {
+    width: 246px;
 
     @media #{$screen-sm} {
       width: 347px;
+    }
+  }
 
-      &--large {
-        width: 441px;
+  &--large {
+    #{$_r} {
+      &__carousel,
+      &__inner-controls {
+        @media #{$screen-sm} {
+          width: 441px;
+        }
+      }
+    }
+  }
+
+  &--spaced {
+    #{$_r}__inner-controls {
+      margin-right: -20px;
+      padding-right: 20px;
+
+      @media #{$screen-sm} {
+        margin-right: -40px;
+        padding-right: 40px;
       }
     }
   }
@@ -41,8 +66,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 75%;
-    max-width: 560px;
+    // width: 75%;
+    // max-width: 560px;
   }
 
   &__dots {

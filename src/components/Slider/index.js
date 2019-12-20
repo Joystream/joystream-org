@@ -83,6 +83,7 @@ export const Slider = ({ className, withSpacing, slides, themes = [], size = 'de
         'Slider',
         {
           'Slider--large': size === 'large',
+          'Slider--spaced': withSpacing,
         },
         className
       )}

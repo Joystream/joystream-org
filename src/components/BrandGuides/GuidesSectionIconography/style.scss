@@ -86,6 +86,7 @@
 
   &__descriptive-box {
     display: block;
+    margin-bottom: 40px;
 
     @media #{$screen-sm} {
       display: none;
@@ -95,6 +96,7 @@
   &__descriptive-icons {
     &--mobile {
       display: block;
+      margin-bottom: 40px;
 
       @media #{$screen-sm} {
         display: none;
@@ -122,6 +124,8 @@
   }
 
   &__system-icon-image {
+    margin-bottom: 40px;
+
     @media #{$screen-sm} {
       margin-right: 40px;
     }
