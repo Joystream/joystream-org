@@ -1,5 +1,5 @@
 import React from 'react';
-import motionVideo from '../../../assets/videos/Final_1.mp4';
+import motionVideo from '../../../assets/videos/mark.mp4';
 import { ReactComponent as WarningSvg } from '../../../assets/svg/warning.svg';
 import guidesData from '../../../data/pages/brand/guides';
 import { Section, SubSection, SubTitle } from '../GuidesSection';
