@@ -60,6 +60,10 @@ export default () => {
           </div>
         </div>
 
+        <Text>
+          Link below allows you to create consistent duotones with any photography after inputing the proper two
+          Joystream colours.
+        </Text>
         <a
           href="https://duotone.shapefactory.co/"
           target="_blank"
