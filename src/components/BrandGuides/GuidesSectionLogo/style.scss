@@ -95,7 +95,7 @@
     width: 100%;
     margin-bottom: 80px;
 
-    @media #{$screen-sm} {
+    @media #{media-min-width(500px)} {
       width: 50%;
       margin-top: 40px;
     }
@@ -108,7 +108,7 @@
     line-height: 1.5;
     color: $c_white;
 
-    @media #{$screen-sm} {
+    @media #{media-min-width(500px)} {
       padding-top: 40px;
       font-size: 14px;
     }
@@ -117,14 +117,19 @@
   &__logos {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 
     &--horizontal {
       flex-direction: row;
       margin-bottom: 40px;
 
-      @media #{$screen-sm} {
+      @media #{media-min-width(500px)} {
         height: 177px;
       }
+    }
+
+    @media #{media-min-width(500px)} {
+      margin-top: 0;
     }
   }
 
