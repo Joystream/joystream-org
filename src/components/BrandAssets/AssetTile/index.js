@@ -5,15 +5,21 @@ import Button from '../../../components/Button';
 import { string, bool } from 'prop-types';
 import './style.scss';
 
-const AssetTile = ({ src, darkTheme, fullWidth }) => {
+const AssetTile = ({ src, downloadHref, darkTheme, fullWidth, large }) => {
   return (
-    <div className="AssetTile">
+    <div className={cn('AssetTile', { 'AssetTile--large': large })}>
       <div className={cn('AssetTile__inner', { 'AssetTile__inner--dark': darkTheme })}>
         <div className={cn('AssetTile__asset')}>
           <img src={src} alt="" className={cn('AssetTile__image', { 'AssetTile__image--full-width': fullWidth })} />
         </div>
 
-        <Button className="AssetTile__download" href={src} download target="_blank" rel="noopener noreferrer">
+        <Button
+          className="AssetTile__download"
+          href={downloadHref || src}
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Download
           <img src={downloadImg} alt="" />
         </Button>
@@ -24,7 +30,9 @@ const AssetTile = ({ src, darkTheme, fullWidth }) => {
 
 AssetTile.propTypes = {
   src: string.isRequired,
+  downloadHref: string,
   darkTheme: bool,
+  large: bool,
   fullWidth: bool,
 };
 

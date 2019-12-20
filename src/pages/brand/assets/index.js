@@ -8,9 +8,11 @@ import BrandLayout from '../../../components/_layouts/Brand';
 import fullAssets from '../../../data/pages/brand/assets-full';
 import padNumber from '../../../utils/padNumber';
 import scrollToIdElement from '../../../utils/scrollToIdElement';
+import typographyImg from '../../../assets/images/typography-overview.png';
 import './index.scss';
 
 const ASSETS_LINK = 'https://raw.githubusercontent.com/Joystream/design/master/Assets-full';
+const FONT_DOWNLOAD_URL = 'https://www.fontsquirrel.com/fonts/download/inter';
 
 const getPackageLink = path => encodeURI(ASSETS_LINK + '/ZIPPED files' + path);
 
@@ -56,8 +58,12 @@ const sections = [
   },
   {
     title: 'Typography',
-    downloadHref: 'https://www.fontsquirrel.com/fonts/download/inter',
+    downloadHref: FONT_DOWNLOAD_URL,
     filesCount: 19,
+    assets: [typographyImg],
+    renderAsset: assetPath => {
+      return <AssetTile large downloadHref={FONT_DOWNLOAD_URL} src={assetPath} />;
+    },
     id: 'typography',
   },
   {

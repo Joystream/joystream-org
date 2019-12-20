@@ -80,13 +80,5 @@
       height: 1px;
       background: $c_blue-ribbon;
     }
-
-    > * {
-      flex: 0 0 25%;
-
-      @media #{$screen-sm} {
-        flex: 0 0 16.66%;
-      }
-    }
   }
 }
