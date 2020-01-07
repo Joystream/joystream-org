@@ -182,6 +182,16 @@
 }
 
 .Illustrations {
+  &__masks-description {
+    margin: 0 auto;
+    text-align: center;
+
+    @media #{$screen-sm} {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
   &__masks-desktop {
     display: none;
     margin-bottom: 40px;

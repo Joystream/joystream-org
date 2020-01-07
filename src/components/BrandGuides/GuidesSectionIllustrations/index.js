@@ -133,7 +133,7 @@ export default () => {
         <img src={masksMobileImg} className="Illustrations__masks-mobile" alt="" />
         <img src={masksDesktopImg} className="Illustrations__masks-desktop" alt="" />
 
-        <Text>
+        <Text className="Illustrations__masks-description">
           The ammount of detail should be adequate to what the illustration represents, in most cases they should be
           used no smaller than 500x500px.
         </Text>
