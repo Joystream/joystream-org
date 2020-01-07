@@ -18,13 +18,22 @@
     }
   }
 
-  &__text {
-    p {
-      margin-bottom: 1.5em;
-      padding-right: 20px;
-      font-size: 14px;
-      line-height: 21px;
-      color: $c_light-gray;
+  &__text p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 21px;
+    color: $c_light-gray;
+    padding-right: 20px;
+  }
+}
+
+@media #{$screen-sm} {
+  .StorySectionDescription {
+    &__text p {
+      margin-bottom: 40px;
+      font-size: 20px;
+      line-height: 30px;
+      color: $c_grayc-chateau;
     }
   }
 }
@@ -36,12 +45,6 @@
       font-size: 30px;
       line-height: 45px;
       color: $c_white;
-    }
-
-    &__text p {
-      font-size: 20px;
-      line-height: 30px;
-      color: $c_grayc-chateau;
     }
 
     &__header {
