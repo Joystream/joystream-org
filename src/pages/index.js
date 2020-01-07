@@ -39,8 +39,8 @@ const activeTestnet = {
 const IndexPage = ({ content }) => (
   <BaseLayout>
     <SiteMetadata
-      title="Joystream: A user governed video platform"
-      description="Earn monero for participating on our testnets!"
+      title="Joystream: The video platform DAO"
+      description="Joystream is a video platform controlled, owned and operated by its users."
     />
     <Hero image={heroImage} title={<>The video <br/> platform DAO</>} animationStartValue={0}>
       <p className="IndexPage__hero-paragraph">
