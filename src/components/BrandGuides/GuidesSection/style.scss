@@ -42,7 +42,7 @@
 
   &__image-description {
     max-width: 320px;
-    margin: 0 auto 40px;
+    margin: 0 auto;
     font-size: 12px;
     line-height: 16px;
     color: inherit;
@@ -180,10 +180,11 @@
   }
 
   &__action-button {
-    display: flex;
-    justify-content: flex-end;
+    display: none;
 
     @media #{$screen-md} {
+      display: flex;
+      justify-content: flex-end;
       margin: 80px 0;
     }
   }
