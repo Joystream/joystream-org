@@ -70,10 +70,22 @@
   }
 }
 
+@media #{$screen-sm} {
+  .StorySectionHeader {
+    &__button {
+      width: 100%;
+    }
+  }
+}
+
 @media #{$screen-md} {
   .StorySectionHeader {
     padding-bottom: 0;
     background-image: none;
+
+    &__button {
+      width: auto;
+    }
 
     &__container {
       flex-direction: row;
@@ -93,7 +105,7 @@
 
     &__content {
       width: 50%;
-      margin: 220px 0;
+      margin: 160px 0;
     }
 
     &__image-wrapper {
