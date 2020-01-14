@@ -45,8 +45,8 @@ const SpartaPage = ({ content }) => {
   return (
     <BaseLayout>
       <SiteMetadata
-        title="Joystream: A user governed video platform"
-        description="Explore the deprecated Sparta testnet"
+        title="Joystream: The video platform DAO"
+        description="Explore the Sparta testnet"
       />
 
       <Hero
