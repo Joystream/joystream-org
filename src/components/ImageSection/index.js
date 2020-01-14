@@ -6,7 +6,7 @@ import './style.scss';
 
 const propTypes = {
   image: string.isRequired,
-  title: string.isRequired,
+  title: string,
   grouped: bool,
   imageOffset: number,
 };

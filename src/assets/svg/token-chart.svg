@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="409" height="409" viewBox="0 0 409 409">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#4038FF" stroke="#FFF" stroke-width="1.925" d="M203.037609,0.964629014 C91.3462947,1.48424364 0.962390781,92.4105206 0.962390781,204.5 C0.962390781,316.589479 91.3462947,407.515756 203.037609,408.035371 L203.037609,0.964629014 Z"/>
+    <path fill="#92A2B7" d="M203.000014,2 C316.770665,2 409,94.1685251 409,207.864163 C409,229.532663 405.650043,250.419255 399.439459,270.034932 L203,206.38 L203.000014,2 Z"/>
+    <path fill="#C5D1E0" stroke="#FFF" stroke-width="1.925" d="M203.075,203 L400.123983,268.595716 C372.369021,349.643979 294.59913,408 203,408 L203,203 L203.075,203 Z"/>
+    <text fill="#FFF" font-family="PxGrotesk-Bold, Px Grotesk" font-size="44.391" font-weight="bold">
+      <tspan x="41" y="215">50</tspan> <tspan x="94.235" y="215" font-size="22.196">%</tspan>
+    </text>
+    <text fill="#FFF" font-family="PxGrotesk-Bold, Px Grotesk" font-size="44.391" font-weight="bold">
+      <tspan x="247" y="326">20</tspan> <tspan x="300.235" y="326" font-size="22.196">%</tspan>
+    </text>
+    <text fill="#FFF" font-family="PxGrotesk-Bold, Px Grotesk" font-size="44.391" font-weight="bold">
+      <tspan x="273" y="148">30</tspan> <tspan x="326.235" y="148" font-size="22.196">%</tspan>
+    </text>
+    <circle cx="204.5" cy="203.5" r="65.5" fill="#FFF"/>
+  </g>
+</svg>
