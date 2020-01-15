@@ -35,7 +35,7 @@ exports[`RomePage page renders correctly 1`] = `
     <HeroCard
       content={null}
       counterTitle=""
-      date="2019/12/16 11:00"
+      date="2020/01/20 11:00"
       error={false}
       info={false}
     />

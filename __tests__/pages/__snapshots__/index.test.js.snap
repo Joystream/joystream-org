@@ -18,14 +18,18 @@ exports[`IndexPage page renders correctly 1`] = `
     indent={false}
     noOverflow={false}
     theme="black"
-    title="A user-governed video platform"
+    title={
+      <React.Fragment>
+        The video 
+        <br />
+         platform DAO
+      </React.Fragment>
+    }
   >
     <p
       className="IndexPage__hero-paragraph"
     >
-      Earn Monero by participating in the current 
-      Acropolis
-       testnet
+      Joystream is a video platform controlled, owned and operated by its users
     </p>
     <div
       className="IndexPage__hero-group"
@@ -107,7 +111,7 @@ exports[`IndexPage page renders correctly 1`] = `
         Object {
           "image": "icon-component-mock",
           "title": "Participation Payout",
-          "value": "$1576",
+          "value": "$11904",
         },
         Object {
           "image": "icon-component-mock",
@@ -177,7 +181,7 @@ exports[`IndexPage page renders correctly 1`] = `
         }
       }
       className=""
-      date="2019/12/16 11:00"
+      date="2020/01/20 11:00"
       image="icon-mock"
       title="Rome Testnet"
     >
