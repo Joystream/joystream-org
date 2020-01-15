@@ -56,13 +56,22 @@ const propTypes = {
 export const Slider = ({ className, withSpacing, slides, themes = [], size = 'default' }) => {
   const [selectedTheme, setTheme] = useState('white');
   const containerRef = createRef();
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const visibleSlides = screenWidth < 768 ? 1 : 2;
+
+  React.useEffect(() => {
+    const updateScreenWidth = () => setScreenWidth(window.innerWidth);
+
+    window.addEventListener('resize', updateScreenWidth);
+    return () => window.removeEventListener('resize', updateScreenWidth);
+  }, []);
 
   return (
     <CarouselProvider
       naturalSlideWidth={sizes[size][0] + (withSpacing ? 20 : 0)}
       naturalSlideHeight={sizes[size][1]}
       totalSlides={slides.length}
-      visibleSlides={2}
+      visibleSlides={visibleSlides}
       className={cn(
         'Slider',
         {
@@ -101,7 +110,7 @@ export const Slider = ({ className, withSpacing, slides, themes = [], size = 'de
                   <div
                     className="Slider__indicator"
                     style={{
-                      width: `${(1 / (totalSlides - 1)) * 100}%`,
+                      width: `${(1 / (totalSlides - (visibleSlides === 2 ? 1 : 0))) * 100}%`,
                       transform: `translateX(${currentSlide * 100}%)`,
                     }}
                   />
