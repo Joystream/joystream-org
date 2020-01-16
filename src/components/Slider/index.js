@@ -89,7 +89,7 @@ export const Slider = ({ className, withSpacing, slides, themes = [], size = 'de
             return (
               <ReactSlide
                 className="Slider__slide"
-                innerClassName={cn(withSpacing && 'Slider__slide-inner--spaced')}
+                innerClassName={cn('Slider__slide-inner', withSpacing && 'Slider__slide-inner--spaced')}
                 key={i}
                 index={i}
               >
