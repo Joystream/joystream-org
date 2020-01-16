@@ -139,17 +139,18 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    border: 1px solid transparent;
     transition: color $_transition, background $_transition, border-color $_transition;
 
     &--white {
       color: $c_blue-ribbon;
       background: $c_white;
+      border: 1px solid transparent;
     }
 
     &--blue {
       color: $c_white;
       background: $c_blue-ribbon;
+      border: 1px solid transparent;
     }
 
     &--black {
