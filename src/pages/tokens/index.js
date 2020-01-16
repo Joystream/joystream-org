@@ -53,7 +53,7 @@ const TokensPage = () => {
       <LayoutWrapper>
         <h2 className="TokensPage__title">Purpose of the Token</h2>
 
-        <ImageSection image={vaultShapesImage}>
+        <ImageSection image={vaultShapesImage} imageClassName="TokensPage__section-image">
           <h4 className="TokensPage__sub-title">Staking</h4>
           <p>
             Participants must stake some amount of this token to be able to participate on the platform in some
@@ -62,19 +62,19 @@ const TokensPage = () => {
           </p>
         </ImageSection>
 
-        <ImageSection image={buildingShapesImage}>
+        <ImageSection image={buildingShapesImage} imageClassName="TokensPage__section-image">
           <h4 className="TokensPage__sub-title">Governance</h4>
           <p>Value transfer, such as for transaction fees, memberships or accessing monetised content.</p>
         </ImageSection>
 
-        <ImageSection image={exchangeShapesImage}>
+        <ImageSection image={exchangeShapesImage} imageClassName="TokensPage__section-image">
           <h4 className="TokensPage__sub-title">Payment</h4>
           <p>Value transfer, such as for transaction fees, memberships or accessing monetised content.</p>
         </ImageSection>
 
         <h2 className="TokensPage__title">Circulating Token Supply</h2>
 
-        <ImageSection image={desktopImage}>
+        <ImageSection image={desktopImage} imageClassName="TokensPage__large-section-image">
           Unlike coins like Bitcoin, where there is a fixed inflatin schedule, the Joystream platform will mint and burn
           tokens according to rules an parameters which are subject to change.
           <br />
@@ -89,7 +89,9 @@ const TokensPage = () => {
             In the mean time, you can join our current active testnet and earn Monero, and learn what is required to
             participate when we are live.
           </p>
-          <Button light>Join the current testnet</Button>
+          <Button light href="https://testnet.joystream.org/acropolis/pioneer/#/">
+            Join the current testnet
+          </Button>
         </div>
       </LayoutWrapper>
 

@@ -35,7 +35,7 @@
 
   &__allocations-text {
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto 0;
     font-size: 18px;
     line-height: 1.5;
     color: $c_ebony-clay;
@@ -46,18 +46,36 @@
     }
   }
 
+  &__section-image {
+    transform: translate(-11%, 0);
+
+    @media #{$screen-md} {
+      transform: none;
+    }
+  }
+
+  &__large-section-image {
+    transform: translate(-6%, 0);
+
+    @media #{$screen-md} {
+      transform: none;
+    }
+  }
+
   &__legend {
     display: inline-flex;
     flex-direction: column;
-    margin: 40px 0;
+    margin: 60px 0;
 
     @media #{$screen-md} {
       display: flex;
+      margin: 40px 0;
     }
   }
 
   &__disclaimer-text {
     margin-top: 60px;
+    padding: 0 20px;
     font-size: 14px;
     font-style: italic;
     line-height: 1.5;
@@ -78,6 +96,10 @@
 
     @media #{$screen-md} {
       margin-top: 94px;
+    }
+
+    @media #{$screen-lg} {
+      padding: 0;
     }
   }
 }

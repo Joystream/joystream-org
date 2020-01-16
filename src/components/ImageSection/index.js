@@ -5,7 +5,8 @@ import cn from 'classnames';
 import './style.scss';
 
 const propTypes = {
-  image: string.isRequired,
+  image: string,
+  imageClassName: string,
   title: string,
   grouped: bool,
   imageOffset: number,
@@ -13,16 +14,14 @@ const propTypes = {
 
 const defaultProps = {};
 
-const ImageSection = ({ image, title, children, grouped, imageOffset }) => {
+const ImageSection = ({ image, title, children, grouped, imageOffset, imageClassName }) => {
   return (
     <section className={cn('ImageSection', { 'ImageSection--grouped': grouped })}>
       {!grouped && <h3 className={'ImageSection__title'}>{title}</h3>}
 
       <div className="ImageSection__content">
         <div className="ImageSection__image-container">
-          <img
-            src={image}
-            alt=""
+          <div
             className="ImageSection__image"
             style={
               imageOffset && {
@@ -30,7 +29,9 @@ const ImageSection = ({ image, title, children, grouped, imageOffset }) => {
                 top: imageOffset,
               }
             }
-          />
+          >
+            <img src={image} alt="" className={imageClassName} />
+          </div>
         </div>
         <div className="ImageSection__text">
           {grouped && <h4 className="ImageSection__secondary-title">{title}</h4>}
