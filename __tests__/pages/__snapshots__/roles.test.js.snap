@@ -53,7 +53,7 @@ exports[`RolesPage page renders correctly 1`] = `
                 "Experienced with how to setup and maintain high performance IT infrastructure",
                 "Access to highly performant and reliable IT infrastructure, with high storage,
     (up & down) bandwidth and processing capacity",
-                "Able to securely store keys hot keys",
+                "Able to securely store keys",
                 "Hold sufficient amount of the native platform token to put at stake",
               ],
               "responsibilites": Array [
@@ -70,11 +70,11 @@ exports[`RolesPage page renders correctly 1`] = `
               "overview": "At the heart of the governance process on the platform is the proposal system,
         which allows anyone to submit some suggestion for changing the state or
         policy of the platform in some way. These proposals are processed and voted on by a council,
-        where the participants are referred to as council members. A set on the council is
+        where the participants are referred to as council members. A seat on the council is
         won through an election process, and lasts for some period of time until a new election.",
               "questionLink": "mailto:hello@jsgenesis.com",
               "requirements": Array [
-                "Proficient with basic data analysis and sufficient reputation and standing within
+                "Proficiency with basic data analysis and sufficient reputation and standing within
         the community to earn supporting votes in elections from other platform members",
                 "A deep understanding of the Joystream platform structure, function and resource allocation",
                 "Hold sufficient amount of the native platform token to put at stake",
@@ -93,8 +93,8 @@ exports[`RolesPage page renders correctly 1`] = `
               "image": "icon-component-mock",
               "overview": "There are critical platform assets that do not live on the blockchain,
         such as images and content media. The integrity of these assets is secured by the chain,
-        but a separate set of storage and distribution nodes enabled uploading and downloading of
-        such data. The storage provider is involved this activity, specifically storing large quantities of data.",
+        but a separate set of storage and distribution nodes enables uploading and downloading of
+        such data. The storage provider is involved this activity, specifically by storing large quantities of data.",
               "questionLink": "mailto:hello@jsgenesis.com",
               "requirements": Array [
                 "Experienced with how to setup and maintain high performance IT infrastructure",
@@ -103,7 +103,7 @@ exports[`RolesPage page renders correctly 1`] = `
               ],
               "responsibilites": Array [
                 "Run and maintain storage nodes that store very large quantities of static data,
-        synchronize with other storage nodes, shares data with distributors, and accepts
+        synchronize with other storage nodes, share data with distributors, and accepts
         inbound uploads from end users",
               ],
               "title": "Storage Provider",
@@ -121,7 +121,7 @@ exports[`RolesPage page renders correctly 1`] = `
         currently challenging for many prospective non-technical end users to obtain, store
         and use crypto assets, there will be a way for users to get a membership for free,
         which will not require any tokens in order to use the platform in a limited capacity.
-        The membership screener is the role for the participants responsible for granting such
+        The membership screener is the role responsible for granting such
         memberships, while screening for Sybill attackers and abusers.",
               "requirements": Array [
                 "Experienced with how to setup and maintain high performance IT infrastructure",
@@ -169,7 +169,7 @@ exports[`RolesPage page renders correctly 1`] = `
                 >
                    above
                 </Link>
-                . Since this invariably be an imperfect process, there must be some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the membership curators.
+                . Since this is invariably an imperfect process, there must be some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the membership curators.
               </React.Fragment>,
               "requirements": Array [
                 "Proficient with basic data analysis and scripting",
@@ -207,8 +207,8 @@ exports[`RolesPage page renders correctly 1`] = `
               "formAction": "",
               "id": "content-curator",
               "image": "icon-component-mock",
-              "overview": "All of the media content published on the platform lives in an on chain content directory.
-         There is a range of different content types, and each type has a schema for a rich
+              "overview": "All of the media content published on the platform lives in an on-chain content directory.
+         There are a range of different content types, and each type has a schema for a rich
          description of its structure, function and policies. For the effective use of of content,
          for example in rendering, discovery and monetization, it is critical to ensure the validity
          of the published information for all content. In particular, it is also important to resolve
@@ -219,7 +219,7 @@ exports[`RolesPage page renders correctly 1`] = `
                 "Hold sufficient amount of the native platform token to put at stake",
               ],
               "responsibilites": Array [
-                "Monitor the publishing of new content into the content directoyr,
+                "Monitor the publishing of new content into the content directory,
         and respond to reports about contested publications",
                 "Adjudicate possible dispute processes resulting from reports from users",
                 "Update information on content to be accurate",
@@ -243,7 +243,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "image": "icon-component-mock",
               "overview": "As a video platform, one of the most important platform assets is the content published
         on the platform. Since video is such a flexible media type, which can encompass a wide
-        range of content categories, it is the primary focus, but the intention is to support
+        range of content categories, it is the primary focus. However, the intention is to support
         a broader range of content types over time. The content creators are those involved in
          creating, publishing and monetizing content on the platform.",
               "requirements": Array [
@@ -261,9 +261,9 @@ exports[`RolesPage page renders correctly 1`] = `
               "image": "icon-component-mock",
               "overview": "There are critical platform assets that do not live on the blockchain, such as images
       and content media. The integrity of these assets is secured by the chain, but a separate
-      set of storage and distribution nodes enabled uploading and downloading of such data.
+      set of storage and distribution nodes enable uploading and downloading of such data.
       The bandwidth provider is involved this activity,
-        specifically distributing static data to end users at scale.",
+        specifically by distributing static data to end users at scale.",
               "requirements": Array [
                 "Experienced with how to setup and maintain high performance IT infrastructure",
                 "Access to highly performant and reliable IT infrastructure, with high storage
@@ -285,7 +285,7 @@ exports[`RolesPage page renders correctly 1`] = `
         context based recommendations one needs to apply some sort of heuristic on top of this directory,
         which is also some what sensitive abusive attempts to rank higher. The discovery providers play
         the role of responding to such discovery queries to end users, by combining light client inclusion
-        proofs with local search/ranking policy heuristics.",
+        proofs with local search and ranking policy heuristics.",
               "requirements": Array [
                 "Experienced with how to setup and maintain high performance IT infrastructure",
                 "Access to highly performant and reliable IT infrastructure",
@@ -293,7 +293,7 @@ exports[`RolesPage page renders correctly 1`] = `
                 "Hold sufficient amount of the native platform token to put at stake",
               ],
               "responsibilites": Array [
-                "Run and maintain discovery nodes that respond to discovery related queries by staying in
+                "Run and maintain discovery nodes that respond to discovery-related queries by staying in
         sync with the content directory, and applying local ranking heuristics.",
                 <React.Fragment>
                   Collaborate with 
@@ -427,7 +427,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "Experienced with how to setup and maintain high performance IT infrastructure",
               "Access to highly performant and reliable IT infrastructure, with high storage,
     (up & down) bandwidth and processing capacity",
-              "Able to securely store keys hot keys",
+              "Able to securely store keys",
               "Hold sufficient amount of the native platform token to put at stake",
             ]
           }
@@ -457,12 +457,12 @@ exports[`RolesPage page renders correctly 1`] = `
           overview="At the heart of the governance process on the platform is the proposal system,
         which allows anyone to submit some suggestion for changing the state or
         policy of the platform in some way. These proposals are processed and voted on by a council,
-        where the participants are referred to as council members. A set on the council is
+        where the participants are referred to as council members. A seat on the council is
         won through an election process, and lasts for some period of time until a new election."
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "Proficient with basic data analysis and sufficient reputation and standing within
+              "Proficiency with basic data analysis and sufficient reputation and standing within
         the community to earn supporting votes in elections from other platform members",
               "A deep understanding of the Joystream platform structure, function and resource allocation",
               "Hold sufficient amount of the native platform token to put at stake",
@@ -494,8 +494,8 @@ exports[`RolesPage page renders correctly 1`] = `
           image="icon-component-mock"
           overview="There are critical platform assets that do not live on the blockchain,
         such as images and content media. The integrity of these assets is secured by the chain,
-        but a separate set of storage and distribution nodes enabled uploading and downloading of
-        such data. The storage provider is involved this activity, specifically storing large quantities of data."
+        but a separate set of storage and distribution nodes enables uploading and downloading of
+        such data. The storage provider is involved this activity, specifically by storing large quantities of data."
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
@@ -507,7 +507,7 @@ exports[`RolesPage page renders correctly 1`] = `
           responsibilites={
             Array [
               "Run and maintain storage nodes that store very large quantities of static data,
-        synchronize with other storage nodes, shares data with distributors, and accepts
+        synchronize with other storage nodes, share data with distributors, and accepts
         inbound uploads from end users",
             ]
           }
@@ -534,7 +534,7 @@ exports[`RolesPage page renders correctly 1`] = `
         currently challenging for many prospective non-technical end users to obtain, store
         and use crypto assets, there will be a way for users to get a membership for free,
         which will not require any tokens in order to use the platform in a limited capacity.
-        The membership screener is the role for the participants responsible for granting such
+        The membership screener is the role responsible for granting such
         memberships, while screening for Sybill attackers and abusers."
           requirements={
             Array [
@@ -597,7 +597,7 @@ exports[`RolesPage page renders correctly 1`] = `
               >
                  above
               </Link>
-              . Since this invariably be an imperfect process, there must be some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the membership curators.
+              . Since this is invariably an imperfect process, there must be some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the membership curators.
             </React.Fragment>
           }
           requirements={
@@ -650,8 +650,8 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction=""
           id="content-curator"
           image="icon-component-mock"
-          overview="All of the media content published on the platform lives in an on chain content directory.
-         There is a range of different content types, and each type has a schema for a rich
+          overview="All of the media content published on the platform lives in an on-chain content directory.
+         There are a range of different content types, and each type has a schema for a rich
          description of its structure, function and policies. For the effective use of of content,
          for example in rendering, discovery and monetization, it is critical to ensure the validity
          of the published information for all content. In particular, it is also important to resolve
@@ -665,7 +665,7 @@ exports[`RolesPage page renders correctly 1`] = `
           }
           responsibilites={
             Array [
-              "Monitor the publishing of new content into the content directoyr,
+              "Monitor the publishing of new content into the content directory,
         and respond to reports about contested publications",
               "Adjudicate possible dispute processes resulting from reports from users",
               "Update information on content to be accurate",
@@ -700,7 +700,7 @@ exports[`RolesPage page renders correctly 1`] = `
           image="icon-component-mock"
           overview="As a video platform, one of the most important platform assets is the content published
         on the platform. Since video is such a flexible media type, which can encompass a wide
-        range of content categories, it is the primary focus, but the intention is to support
+        range of content categories, it is the primary focus. However, the intention is to support
         a broader range of content types over time. The content creators are those involved in
          creating, publishing and monetizing content on the platform."
           requirements={
@@ -732,9 +732,9 @@ exports[`RolesPage page renders correctly 1`] = `
           image="icon-component-mock"
           overview="There are critical platform assets that do not live on the blockchain, such as images
       and content media. The integrity of these assets is secured by the chain, but a separate
-      set of storage and distribution nodes enabled uploading and downloading of such data.
+      set of storage and distribution nodes enable uploading and downloading of such data.
       The bandwidth provider is involved this activity,
-        specifically distributing static data to end users at scale."
+        specifically by distributing static data to end users at scale."
           requirements={
             Array [
               "Experienced with how to setup and maintain high performance IT infrastructure",
@@ -770,7 +770,7 @@ exports[`RolesPage page renders correctly 1`] = `
         context based recommendations one needs to apply some sort of heuristic on top of this directory,
         which is also some what sensitive abusive attempts to rank higher. The discovery providers play
         the role of responding to such discovery queries to end users, by combining light client inclusion
-        proofs with local search/ranking policy heuristics."
+        proofs with local search and ranking policy heuristics."
           requirements={
             Array [
               "Experienced with how to setup and maintain high performance IT infrastructure",
@@ -781,7 +781,7 @@ exports[`RolesPage page renders correctly 1`] = `
           }
           responsibilites={
             Array [
-              "Run and maintain discovery nodes that respond to discovery related queries by staying in
+              "Run and maintain discovery nodes that respond to discovery-related queries by staying in
         sync with the content directory, and applying local ranking heuristics.",
               <React.Fragment>
                 Collaborate with 
