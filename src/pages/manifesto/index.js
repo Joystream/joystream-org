@@ -16,7 +16,7 @@ const ManifestoPage = () => {
 
   return (
     <BaseLayout className="ManifestoPage">
-      <SiteMetadata title="Joystream: A user governed video platform" description="Manifesto" />
+      <SiteMetadata title="Joystream: The video platform DAO" description="Read the Joystream Manifesto" />
 
       <Hero
         image={fistImage}

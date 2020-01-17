@@ -7,7 +7,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: A user governed video platform"
+    title="Joystream: The video platform DAO"
   />
   <Hero
     animationEnd={500}

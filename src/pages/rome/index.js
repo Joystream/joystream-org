@@ -37,7 +37,7 @@ const RomePage = ({ content }) => {
 
   return (
     <BaseLayout>
-      <SiteMetadata title="Joystream: A user governed video platform" description="Explore the upcoming Rome Testnet" />
+      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Rome Testnet" />
 
       <Hero
         image={romeImage}

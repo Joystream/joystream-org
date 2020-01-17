@@ -3,11 +3,11 @@
 exports[`IndexPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Earn monero for participating on our testnets!"
+    description="Joystream is a video platform controlled, owned and operated by its users."
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: A user governed video platform"
+    title="Joystream: The video platform DAO"
   />
   <Hero
     animationEnd={500}

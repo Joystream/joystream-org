@@ -3,11 +3,11 @@
 exports[`RolesPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Read more about current and future roles on the Joystream Platform."
+    description="Read more about current and future roles on the Joystream platform"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream Platform Roles"
+    title="Joystream: The video platform DAO"
   />
   <Hero
     animationEnd={500}
