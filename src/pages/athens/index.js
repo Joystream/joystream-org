@@ -38,7 +38,7 @@ const AthensPage = ({ content }) => {
 
   return (
     <BaseLayout>
-      <SiteMetadata title="Joystream: A user governed video platform" description="Explore Athens testnet" />
+      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Athens Testnet" />
 
       <Hero
         image={athensImage}

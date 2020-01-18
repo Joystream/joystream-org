@@ -39,7 +39,7 @@ const AcropolisPage = ({ content }) => {
 
   return (
     <BaseLayout>
-      <SiteMetadata title="Joystream: A user governed video platform" description="Explore the Acropolis Testnet" />
+      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Acropolis Testnet" />
 
       <Hero
         image={acropolisImage}

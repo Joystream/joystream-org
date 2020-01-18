@@ -5,11 +5,11 @@ exports[`ManifestoPage page renders correctly 1`] = `
   className="ManifestoPage"
 >
   <SiteMetadata
-    description="Manifesto"
+    description="Read the Joystream Manifesto"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: A user governed video platform"
+    title="Joystream: The video platform DAO"
   />
   <Hero
     animationEnd="100vh"
