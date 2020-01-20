@@ -1,15 +1,8 @@
 [[redirects]]
   from = "https://joystream.co"
-  to = "https://joystream.org"
+  to = "https://www.joystream.org"
   status = 301
-  force = true
 [[redirects]]
   from = "https://www.joystream.co"
-  to = "https://joystream.org"
+  to = "https://www.joystream.org"
   status = 301
-  force = true
-[[redirects]]
-  from = "https://www.joystream.org"
-  to = "https://joystream.org"
-  status = 301
-  force = true
