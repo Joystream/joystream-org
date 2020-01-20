@@ -20,7 +20,7 @@ const githubLinks = [
 const usefulLinks = [{ href: sharedData.links.openings, label: 'We are hiring!' }];
 
 const socialMedias = [
-  { icon: TwitterIcon, href: sharedData.social.twitter, name: 'Twitter' },
+  { icon: TwitterIcon, href: sharedData.social.twitterLink, name: 'Twitter' },
   { icon: GithubIcon, href: sharedData.links.github, name: 'Github' },
   { icon: TelegramIcon, href: sharedData.social.telegramLink, name: 'Telegram' },
 ];
