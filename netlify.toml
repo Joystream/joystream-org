@@ -8,8 +8,3 @@
   to = "https://joystream.org"
   status = 301
   force = true
-[[redirects]]
-  from = "https://www.joystream.org"
-  to = "https://joystream.org"
-  status = 301
-  force = true
