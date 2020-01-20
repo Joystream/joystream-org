@@ -26,10 +26,10 @@ const defaultProps = {
 };
 
 const status = {
-  active: { title: 'Network live' },
+  active: { title: 'Network announced' },
   error: { title: 'Network down', icon: Warning },
   info: { title: 'Network replaced' },
-  finished: { title: 'Network announced' },
+  finished: { title: 'Network live' },
 };
 
 class HeroCard extends React.Component {

@@ -25,7 +25,7 @@ const RolesPage = () => {
       return rolesData[key].map(item => (obj[item.id] = createRef()));
     });
     return obj;
-  }, [rolesData]);
+  }, []);
 
   const scrollToElement = id => {
     const target = ReactDOM.findDOMNode(elementsRef[id].current);
@@ -35,8 +35,8 @@ const RolesPage = () => {
   return (
     <BaseLayout>
       <SiteMetadata
-        title="Joystream Platform Roles"
-        description="Read more about current and future roles on the Joystream Platform."
+        title="Joystream: The video platform DAO"
+        description="Read more about current and future roles on the Joystream platform"
       />
 
       <Hero image={rolesImage} title="Discover various roles on the platform" animationStartValue={0}>

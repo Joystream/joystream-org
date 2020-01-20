@@ -3,13 +3,14 @@
 exports[`AthensPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Explore Athens testnet"
+    description="Explore the Athens Testnet"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: A user governed video platform"
+    title="Joystream: The video platform DAO"
   />
   <Hero
+    animationEnd={500}
     animationEndValue={-40}
     animationStartValue={0}
     chip={
@@ -22,12 +23,14 @@ exports[`AthensPage page renders correctly 1`] = `
     }
     image="icon-mock"
     indent={true}
+    noOverflow={false}
+    theme="black"
     title="Athens Network"
   >
     <p
       className="AthensPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you the best. Influence the platform's development earning Monero in the process.
+      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Monero in the process.
     </p>
     <HeroCard
       content={null}
@@ -79,7 +82,7 @@ exports[`AthensPage page renders correctly 1`] = `
         className=""
         content={
           Object {
-            "blockHeight": 1110117,
+            "blockHeight": "1110k",
             "councilStage": "Announcing",
             "forumPosts": 11,
             "mediaFiles": 9,
@@ -148,7 +151,7 @@ exports[`AthensPage page renders correctly 1`] = `
       className=""
       subtitle={
         <React.Fragment>
-          The goals below is a simplified representation of the Key Results listed in our Release
+          The goals below are a simplified representation of the Key Results listed in our Release
            
           <Link
             className=""

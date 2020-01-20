@@ -25,14 +25,13 @@ describe('Button component', () => {
 
   it('composes classes correctly based on props', () => {
     const wrapper = shallow(
-      <Button reversed secondary large small light>
+      <Button reversed secondary large light>
         Button label
       </Button>
     );
     expect(wrapper.hasClass('Button--reversed')).toEqual(true);
     expect(wrapper.hasClass('Button--secondary')).toEqual(true);
     expect(wrapper.hasClass('Button--large')).toEqual(true);
-    expect(wrapper.hasClass('Button--small')).toEqual(true);
     expect(wrapper.hasClass('Button--light')).toEqual(true);
   });
 

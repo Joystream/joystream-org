@@ -39,7 +39,7 @@ const AcropolisPage = ({ content }) => {
 
   return (
     <BaseLayout>
-      <SiteMetadata title="Joystream: A user governed video platform" description="Explore the Acropolis Testnet" />
+      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Acropolis Testnet" />
 
       <Hero
         image={acropolisImage}
@@ -96,7 +96,7 @@ const AcropolisPage = ({ content }) => {
           title="Testnet Goals"
           subtitle={
             <>
-              The goals below is a simplified representation of the Key Results listed in our Release{' '}
+              The goals below are a simplified representation of the Key Results listed in our Release{' '}
               <Link href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs">OKR</Link>
             </>
           }

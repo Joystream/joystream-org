@@ -21,11 +21,13 @@ import Hero from '../components/Hero';
 import SiteMetadata from '../components/SiteMetadata';
 
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
-import platformImage from '../assets/svg/platform.svg';
+import heroImage from '../assets/svg/hero-builder.svg';
+import RomeImage from '../assets/svg/rome-main.svg';
 import { ReactComponent as TickImage } from '../assets/svg/tick.svg';
 import { ReactComponent as ClockImage } from '../assets/svg/clock.svg';
 
 import { roles } from '../data/pages';
+import { launchDate as romeNetworkLaunchDate } from '../data/pages/rome';
 
 import './style.scss';
 
@@ -37,18 +39,33 @@ const activeTestnet = {
 const IndexPage = ({ content }) => (
   <BaseLayout>
     <SiteMetadata
-      title="Joystream: A user governed video platform"
-      description="Earn monero for participating on our testnets!"
+      title="Joystream: The video platform DAO"
+      description="Joystream is a video platform controlled, owned and operated by its users."
     />
-    <Hero image={platformImage} title="A user governed video platform" animationStartValue={0}>
+    <Hero
+      image={heroImage}
+      title={
+        <>
+          The video <br /> platform DAO
+        </>
+      }
+      animationStartValue={0}
+    >
       <p className="IndexPage__hero-paragraph">
-        Earn Monero by participating in the current {activeTestnet.name} testnet
+        Joystream is a video platform controlled, owned and operated by its users
       </p>
       <div className="IndexPage__hero-group">
-        <Button secondary className="IndexPage__hero-button" href={activeTestnet.incentivesLink}>
+        <Button noWrap large secondary className="IndexPage__hero-button" href={activeTestnet.incentivesLink}>
           Earn Monero
         </Button>
-        <Button secondary reversed className="IndexPage__hero-button" href="https://testnet.joystream.org/">
+        <Button
+          noWrap
+          large
+          secondary
+          reversed
+          className="IndexPage__hero-button"
+          href="https://testnet.joystream.org/"
+        >
           Launch UI
         </Button>
       </div>
@@ -69,12 +86,25 @@ const IndexPage = ({ content }) => (
           to: '/acropolis',
         }}
       />
+    </LayoutWrapper>
 
-      <Analytics content={mapStatusDataToAnalytics(content)}>
-        <Button secondary href={activeTestnet.incentivesLink}>
-          Participate and Earn Monero
-        </Button>
-      </Analytics>
+    <Analytics title="Testnet Metrics" large content={mapStatusDataToAnalytics(content)}>
+      <Button secondary href={activeTestnet.incentivesLink}>
+        Participate and Earn Monero
+      </Button>
+    </Analytics>
+
+    <LayoutWrapper>
+      <TestnetItem
+        title="Rome Testnet"
+        image={RomeImage}
+        children="Rome is our fifth testnet, and we are introducing new roles for you to try out."
+        date={romeNetworkLaunchDate}
+        button={{
+          label: 'Explore Rome',
+          to: '/rome',
+        }}
+      />
     </LayoutWrapper>
 
     <LayoutWrapper dark>

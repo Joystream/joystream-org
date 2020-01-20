@@ -3,26 +3,33 @@
 exports[`IndexPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Earn monero for participating on our testnets!"
+    description="Joystream is a video platform controlled, owned and operated by its users."
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: A user governed video platform"
+    title="Joystream: The video platform DAO"
   />
   <Hero
+    animationEnd={500}
     animationEndValue={-40}
     animationStartValue={0}
     chip={null}
     image="icon-mock"
     indent={false}
-    title="A user governed video platform"
+    noOverflow={false}
+    theme="black"
+    title={
+      <React.Fragment>
+        The video 
+        <br />
+         platform DAO
+      </React.Fragment>
+    }
   >
     <p
       className="IndexPage__hero-paragraph"
     >
-      Earn Monero by participating in the current 
-      Acropolis
-       testnet
+      Joystream is a video platform controlled, owned and operated by its users
     </p>
     <div
       className="IndexPage__hero-group"
@@ -31,12 +38,12 @@ exports[`IndexPage page renders correctly 1`] = `
         className="IndexPage__hero-button"
         disabled={false}
         href="https://blog.joystream.org/acropolis-incentives/"
-        large={false}
+        large={true}
         light={false}
+        noWrap={true}
         onClick={null}
         reversed={false}
         secondary={true}
-        small={false}
         to={null}
       >
         Earn Monero
@@ -45,12 +52,12 @@ exports[`IndexPage page renders correctly 1`] = `
         className="IndexPage__hero-button"
         disabled={false}
         href="https://testnet.joystream.org/"
-        large={false}
+        large={true}
         light={false}
+        noWrap={true}
         onClick={null}
         reversed={true}
         secondary={true}
-        small={false}
         to={null}
       >
         Launch UI
@@ -85,79 +92,101 @@ exports[`IndexPage page renders correctly 1`] = `
       </Link>
        software and an on-chain forum.
     </TestnetItem>
-    <Analytics
-      className=""
-      content={
+  </LayoutWrapper>
+  <Analytics
+    className=""
+    content={
+      Object {
+        "blockHeight": "1110k",
+        "councilStage": "Announcing",
+        "forumPosts": 11,
+        "mediaFiles": 9,
+        "membershipsMembers": 164,
+        "rolesProviders": 10,
+        "validatorsCount": 20,
+      }
+    }
+    items={
+      Array [
         Object {
-          "blockHeight": 1110117,
-          "councilStage": "Announcing",
-          "forumPosts": 11,
-          "mediaFiles": 9,
-          "membershipsMembers": 164,
-          "rolesProviders": 10,
-          "validatorsCount": 20,
+          "image": "icon-component-mock",
+          "title": "Participation Payout",
+          "value": "$12633",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "validatorsCount",
+          "title": "Active Validators",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "blockHeight",
+          "title": "Block Height",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "councilStage",
+          "title": "Election Stage",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "membershipsMembers",
+          "title": "Memberships",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "forumPosts",
+          "title": "Forum Posts",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "mediaFiles",
+          "title": "Platform Files",
+        },
+        Object {
+          "image": "icon-component-mock",
+          "key": "rolesProviders",
+          "title": "Storage Providers",
+        },
+      ]
+    }
+    large={true}
+    title="Testnet Metrics"
+  >
+    <Button
+      className=""
+      disabled={false}
+      href="https://blog.joystream.org/acropolis-incentives/"
+      large={false}
+      light={false}
+      noWrap={false}
+      onClick={null}
+      reversed={false}
+      secondary={true}
+      to={null}
+    >
+      Participate and Earn Monero
+    </Button>
+  </Analytics>
+  <LayoutWrapper
+    className=""
+    dark={false}
+    gradient={false}
+  >
+    <TestnetItem
+      button={
+        Object {
+          "label": "Explore Rome",
+          "to": "/rome",
         }
       }
-      items={
-        Array [
-          Object {
-            "image": "icon-component-mock",
-            "title": "Participation Payout",
-            "value": "$1576",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "validatorsCount",
-            "title": "Active Validators",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "blockHeight",
-            "title": "Block Height",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "councilStage",
-            "title": "Council Election Stage",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "membershipsMembers",
-            "title": "Memberships",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "forumPosts",
-            "title": "Forum Posts",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "mediaFiles",
-            "title": "Platform Content Files",
-          },
-          Object {
-            "image": "icon-component-mock",
-            "key": "rolesProviders",
-            "title": "Active Storage Providers",
-          },
-        ]
-      }
+      className=""
+      date="2020/02/07 11:00"
+      image="icon-mock"
+      title="Rome Testnet"
     >
-      <Button
-        className=""
-        disabled={false}
-        href="https://blog.joystream.org/acropolis-incentives/"
-        large={false}
-        light={false}
-        onClick={null}
-        reversed={false}
-        secondary={true}
-        small={false}
-        to={null}
-      >
-        Participate and Earn Monero
-      </Button>
-    </Analytics>
+      Rome is our fifth testnet, and we are introducing new roles for you to try out.
+    </TestnetItem>
   </LayoutWrapper>
   <LayoutWrapper
     className=""
@@ -291,10 +320,10 @@ exports[`IndexPage page renders correctly 1`] = `
         href={null}
         large={false}
         light={false}
+        noWrap={false}
         onClick={null}
         reversed={false}
         secondary={true}
-        small={false}
         to="/roles"
       >
         Learn more about the roles

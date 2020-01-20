@@ -27,18 +27,20 @@
     margin-bottom: 32px;
     font-size: 32px;
     line-height: 45px;
+    color: $c_blue-ribbon;
   }
 
   @media #{$screen-sm} {
     display: flex;
+    align-items: stretch;
 
     &__map {
-      height: 70vh;
+      height: initial;
       max-width: 50vw;
     }
 
     &__content {
-      margin: auto 0;
+      margin: 150px 0;
       padding: 0 30px 0 20px;
       text-align: left;
 
@@ -56,7 +58,6 @@
 
       & p,
       & a {
-        font-size: 20px;
         line-height: 30px;
       }
     }

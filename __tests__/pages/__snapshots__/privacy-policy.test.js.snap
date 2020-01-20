@@ -3,18 +3,21 @@
 exports[`PrivacyPolicyPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="We take your privacy seriously."
+    description="Joystream Privacy and Cookie Policy"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream Privacy and Cookie Policy"
+    title="Joystream: The video platform DAO"
   />
   <Hero
+    animationEnd={500}
     animationEndValue={-40}
     animationStartValue={70}
     chip={null}
     image={null}
     indent={false}
+    noOverflow={false}
+    theme="black"
     title="Privacy Policy and Cookies"
   >
     <p

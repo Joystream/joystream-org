@@ -13,4 +13,5 @@ storiesOf('Components|Map', module)
   .addDecorator(WrapperDecorator)
   .add('athens', () => <Map location="athens" />)
   .add('acropolis', () => <Map location="acropolis" />)
-  .add('sparta', () => <Map location="sparta" />);
+  .add('sparta', () => <Map location="sparta" />)
+  .add('rome', () => <Map location="rome" />);

@@ -6,8 +6,20 @@ $indentation: 60px;
   $_r: &;
 
   width: 100%;
-  padding: 40px 10px;
+  padding: 0 10px;
   background-color: $c_black;
+
+  &--blue {
+    background-color: $c_blue-ribbon;
+
+    #{$_r}__description p {
+      color: $c_white;
+    }
+  }
+
+  &--no-overflow {
+    overflow: hidden;
+  }
 
   &__container {
     @extend %container;
@@ -20,6 +32,7 @@ $indentation: 60px;
 
   &__content {
     flex: 1;
+    margin-bottom: 40px;
     text-align: center;
   }
 
@@ -27,17 +40,19 @@ $indentation: 60px;
     margin: 16px 0;
 
     & > p {
+      max-width: 500px;
+      margin: 0 auto;
       padding-right: 10px;
       padding-left: 10px;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 26px;
       color: $c_oslo-gray;
     }
   }
 
   &__title {
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 45px;
+    line-height: 45px;
     color: $c_white;
   }
 
@@ -46,11 +61,13 @@ $indentation: 60px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 40px;
     margin-bottom: 16px;
   }
 
   &__image {
     width: 100%;
+    min-width: 300px;
     margin-bottom: 32px;
   }
 
@@ -62,14 +79,13 @@ $indentation: 60px;
   }
 
   @media #{$screen-sm} {
-    &__title {
-      font-size: 45px;
-      line-height: 45px;
+    &__image {
+      min-width: 500px;
     }
   }
 
-  @media #{$screen-md} {
-    padding: 90px 30px 0;
+  @media #{$screen-lg} {
+    padding: 0 30px;
 
     &--indented {
       margin-bottom: $indentation;
@@ -93,6 +109,7 @@ $indentation: 60px;
     }
 
     &__content {
+      margin-top: 90px;
       margin-right: 16px;
       text-align: left;
     }
@@ -102,6 +119,8 @@ $indentation: 60px;
       padding: 0;
 
       & > p {
+        max-width: 590px;
+        margin: 0;
         padding-right: 0;
         padding-left: 0;
         font-size: 25px;
@@ -116,6 +135,8 @@ $indentation: 60px;
 
     &__image-wrapper {
       align-items: stretch;
+      justify-content: center;
+      margin-top: 0;
       margin-bottom: 0;
 
       button {

@@ -1,4 +1,4 @@
-# Joystream by Jsgenesis
+![Joystream Website](./website_new.svg)
 
 ## Installation
 

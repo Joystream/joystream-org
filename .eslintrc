@@ -10,10 +10,12 @@
     "browser": true,
     "jest": true
   },
+  "settings": {
+    "import/extensions": [".js", ".jsx"],
+  },
   "rules": {
     "semi": ["warn", "always"],
     "comma-dangle": ["warn", "always-multiline"],
-    "import/extensions": [".js", ".jsx"],
     "function-paren-newline": ["error", "consistent"],
     "jsx-a11y/anchor-is-valid": [ "error", {
       "components": [ "Link" ],

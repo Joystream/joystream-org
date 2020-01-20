@@ -27,7 +27,9 @@ const TestnetItem = ({ title, image, date, className, children, button, ...props
     <TitleWrapper title={title} className={className} {...props}>
       <div className="TestnetItem">
         <div className="TestnetItem__wrapper">
-          <img className="TestnetItem__image" src={image} alt={title} />
+          <div className="TestnetItem__image-container">
+            <img className="TestnetItem__image" src={image} alt={title} />
+          </div>
           <div className="TestnetItem__container">
             <p className="TestnetItem__content">{children}</p>
             {date && <DateCounter date={date} className="TestnetItem__counter" />}

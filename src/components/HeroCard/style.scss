@@ -34,8 +34,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 50px;
-    font-size: 18px;
+    padding: 30px 20px;
+    font-size: 26px;
     font-weight: 700;
     color: $c_white;
     text-transform: uppercase;
@@ -44,6 +44,7 @@
   }
 
   &__icon {
+    flex-shrink: 0;
     width: 34px;
     height: 34px;
     margin-right: 20px;
@@ -63,7 +64,7 @@
     h6,
     p {
       margin-bottom: 12px;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 400;
       line-height: 24px;
       color: $c_white;
@@ -86,19 +87,23 @@
     }
   }
 
-  @media #{$screen-sm} {
+  @media #{media-min-width(550px)} {
+    &__content {
+      padding: 20px 50px 40px;
+    }
+
     &__header {
-      font-size: 26px;
+      padding: 30px 50px;
+      font-size: 30px;
     }
 
     &__icon {
       width: 40px;
       margin-right: 30px;
     }
-
+  }
+  @media #{$screen-sm} {
     &__content {
-      padding: 20px 50px 40px;
-
       h1,
       h2,
       h3,
@@ -112,12 +117,11 @@
     }
   }
 
-  @media #{$screen-md} {
+  @media #{$screen-lg} {
     margin: initial;
 
     &__header {
       justify-content: flex-start;
-      font-size: 30px;
     }
   }
 }

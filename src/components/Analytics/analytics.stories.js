@@ -77,17 +77,26 @@ storiesOf('Components|Analytics', module)
       },
     ],
   })
-  .add('default', () => (
-    <Analytics content={mapStatusDataToAnalytics(exampleExternalData)} />
-  ))
+  .add('default', () => <Analytics content={mapStatusDataToAnalytics(exampleExternalData)} />)
   .add('custom number of analytics item', () => (
-    <Analytics
-      content={mapStatusDataToAnalytics(exampleExternalData)}
-      items={customItems}
-    />
+    <Analytics content={mapStatusDataToAnalytics(exampleExternalData)} items={customItems} />
   ))
   .add('with children', () => (
     <Analytics content={mapStatusDataToAnalytics(exampleExternalData)}>
+      <Button secondary href="https://blog.joystream.org/athens-incentives/">
+        Participate and Earn Monero
+      </Button>
+    </Analytics>
+  ))
+  .add('large', () => (
+    <Analytics large content={mapStatusDataToAnalytics(exampleExternalData)}>
+      <Button secondary href="https://blog.joystream.org/athens-incentives/">
+        Participate and Earn Monero
+      </Button>
+    </Analytics>
+  ))
+  .add('with title', () => (
+    <Analytics title="Testnet Metrics" large content={mapStatusDataToAnalytics(exampleExternalData)}>
       <Button secondary href="https://blog.joystream.org/athens-incentives/">
         Participate and Earn Monero
       </Button>

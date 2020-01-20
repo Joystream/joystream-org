@@ -1,14 +1,16 @@
+import { sharedData } from '../../data/pages';
+
 const links = [
-  { href: 'https://blog.joystream.org/', label: 'Blog' },
-  { href: 'https://blog.joystream.org/manifesto/', label: 'Manifesto' },
+  { href: sharedData.links.blog, label: 'Blog' },
+  { to: '/manifesto', label: 'Manifesto' },
   {
-    href: 'https://github.com/Joystream/whitepaper/blob/master/paper.pdf',
+    href: sharedData.links.whitepaper,
     label: 'Whitepaper',
   },
   { to: '/roles', label: 'Roles' },
-  { href: 'https://github.com/Joystream/joystream', label: 'Repository' },
+  { href: sharedData.links.repository, label: 'Repository' },
   {
-    href: 'https://www.jsgenesis.com/#openings',
+    href: sharedData.links.openings,
     label: 'We are hiring!',
     isButton: true,
   },

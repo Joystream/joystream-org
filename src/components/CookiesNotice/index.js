@@ -63,7 +63,7 @@ class CookiesNotice extends React.Component {
               </p>
             </div>
 
-            <Button className="CookiesNotice__accept" onClick={this.onAccept} secondary>
+            <Button large className="CookiesNotice__accept" onClick={this.onAccept} secondary>
               Accept
             </Button>
           </div>

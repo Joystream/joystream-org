@@ -1,5 +1,7 @@
 @import '../../styles/_main';
 
+$icon-size: 120px;
+
 .RoleOverview {
   max-width: 900px;
   margin-bottom: 200px;
@@ -25,9 +27,9 @@
   }
 
   &__image {
-    width: 300px;
-    height: 100%;
-    max-height: 240px;
+    width: 100%;
+    max-width: 300px;
+    max-height: 150px;
     margin-top: 30px;
     color: $c_blue-ribbon;
   }
@@ -132,14 +134,11 @@
   @media #{$screen-sm} {
     &__header {
       padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     &__title {
       font-size: 36px;
-    }
-
-    &__image {
-      margin-bottom: -100px;
     }
 
     &__content {
@@ -169,6 +168,7 @@
 
   @media #{$screen-md} {
     &__header {
+      position: relative;
       align-items: flex-start;
       align-items: center;
       flex-direction: row;
@@ -183,24 +183,31 @@
       &-container {
         display: flex;
         align-items: center;
+        min-width: 0;
       }
     }
 
     &__title {
-      max-width: 50%;
+      margin-right: 20px;
+    }
+
+    &__image-container {
+      display: flex;
+      align-items: flex-end;
+      height: 120px;
     }
 
     &__image {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin-right: 55px;
-      padding: 0;
+      width: auto;
+      height: 100%;
+      max-width: 120px;
+      margin: 0;
     }
 
     &__icon {
       display: block;
-      width: 120px;
+      flex-shrink: 0;
+      width: $icon-size;
       margin-right: 40px;
     }
 
@@ -220,6 +227,27 @@
       &:not(:last-child) {
         margin-right: 24px;
       }
+    }
+  }
+
+  @media #{media-min-width(1060px)} {
+    &__image {
+      max-width: none;
+    }
+  }
+
+  @media #{$screen-lg} {
+    &__icon {
+      max-width: auto;
+    }
+
+    &__header-container {
+      flex-grow: 1;
+    }
+
+    &__title {
+      max-width: 330px;
+      margin-right: 20px;
     }
   }
 }

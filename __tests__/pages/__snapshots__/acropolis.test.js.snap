@@ -7,9 +7,10 @@ exports[`AcropolisPage page renders correctly 1`] = `
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: A user governed video platform"
+    title="Joystream: The video platform DAO"
   />
   <Hero
+    animationEnd={500}
     animationEndValue={-40}
     animationStartValue={0}
     chip={
@@ -22,12 +23,14 @@ exports[`AcropolisPage page renders correctly 1`] = `
     }
     image="icon-mock"
     indent={true}
+    noOverflow={false}
+    theme="black"
     title="Acropolis Network"
   >
     <p
       className="AcropolisPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you the best. Influence the platform's development earning Monero in the process.
+      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Monero in the process.
     </p>
     <HeroCard
       content={null}
@@ -65,7 +68,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
         className=""
         content={
           Object {
-            "blockHeight": 1110117,
+            "blockHeight": "1110k",
             "councilStage": "Announcing",
             "forumPosts": 11,
             "mediaFiles": 9,
@@ -79,7 +82,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
             Object {
               "image": "icon-component-mock",
               "title": "Participation Payout",
-              "value": "$1576",
+              "value": "$12633",
             },
             Object {
               "image": "icon-component-mock",
@@ -94,7 +97,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
             Object {
               "image": "icon-component-mock",
               "key": "councilStage",
-              "title": "Council Election Stage",
+              "title": "Election Stage",
             },
             Object {
               "image": "icon-component-mock",
@@ -109,12 +112,12 @@ exports[`AcropolisPage page renders correctly 1`] = `
             Object {
               "image": "icon-component-mock",
               "key": "mediaFiles",
-              "title": "Platform Content Files",
+              "title": "Platform Files",
             },
             Object {
               "image": "icon-component-mock",
               "key": "rolesProviders",
-              "title": "Active Storage Providers",
+              "title": "Storage Providers",
             },
           ]
         }
@@ -156,7 +159,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
       className=""
       subtitle={
         <React.Fragment>
-          The goals below is a simplified representation of the Key Results listed in our Release
+          The goals below are a simplified representation of the Key Results listed in our Release
            
           <Link
             className=""

@@ -44,10 +44,7 @@ const SpartaPage = ({ content }) => {
 
   return (
     <BaseLayout>
-      <SiteMetadata
-        title="Joystream: A user governed video platform"
-        description="Explore the deprecated Sparta testnet"
-      />
+      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Sparta testnet" />
 
       <Hero
         image={spartaImage}
@@ -78,12 +75,7 @@ const SpartaPage = ({ content }) => {
 
         <TitleWrapper
           title="Testnet Goals"
-          subtitle={
-            <>
-              The goals below is a simplified and qualitative representation of the Key Results listed in our release
-              OKR.
-            </>
-          }
+          subtitle={<>The goals below are a simplified representation of the Key Results listed in our release OKR.</>}
         >
           <GoalList data={goals} />
         </TitleWrapper>

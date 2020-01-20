@@ -38,7 +38,7 @@ const AthensPage = ({ content }) => {
 
   return (
     <BaseLayout>
-      <SiteMetadata title="Joystream: A user governed video platform" description="Explore Athens testnet" />
+      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Athens Testnet" />
 
       <Hero
         image={athensImage}
@@ -101,7 +101,7 @@ const AthensPage = ({ content }) => {
           title="Testnet Goals"
           subtitle={
             <>
-              The goals below is a simplified representation of the Key Results listed in our Release{' '}
+              The goals below are a simplified representation of the Key Results listed in our Release{' '}
               <Link href="https://github.com/Joystream/joystream/tree/master/testnets/athens#okrs">OKR</Link>
             </>
           }
