@@ -38,8 +38,8 @@ const TokensPage = () => {
             the Joystream token
           </>
         }
-        animationStartValue={10}
-        animationEndValue={120}
+        animationStartValue={0}
+        animationEndValue={60}
         animationEnd="100vh"
         noOverflow
       >
