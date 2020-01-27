@@ -56,11 +56,12 @@ const propTypes = {
 export const Slider = ({ className, withSpacing, slides, themes = [], size = 'default' }) => {
   const [selectedTheme, setTheme] = useState('white');
   const containerRef = createRef();
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState();
   const visibleSlides = screenWidth < 768 ? 1 : 2;
 
   React.useEffect(() => {
     const updateScreenWidth = () => setScreenWidth(window.innerWidth);
+    updateScreenWidth();
 
     window.addEventListener('resize', updateScreenWidth);
     return () => window.removeEventListener('resize', updateScreenWidth);
