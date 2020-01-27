@@ -106,21 +106,21 @@ export default () => {
     <Section title={section.title} id={section.id}>
       <SubSection id={subSection[0].id}>
         <SubTitle>
-          Our brand colours combine three primary colours, Black, White and Blue. They define the mood and present
-          values such as:
+          Our brand colors combine three primary colors: black, white and blue. They define the mood and present
+          brand values including:
         </SubTitle>
 
-        <Text>Stability, Trust, Freedom, Responsibility, Loyalty, Wisdom, Confidence, Intelligence</Text>
+        <Text>Stability, Trust, Freedom, Responsibility, Loyalty, Wisdom, Confidence and Intelligence</Text>
       </SubSection>
 
-      <SubSection title="01. Primary Colours" id={subSection[1].id}>
+      <SubSection title="01. Primary Colors" id={subSection[1].id}>
         <Text>
-          Primarly used colors are black, Joystream blue which is a distinctive colour that helps to put focus and draw
-          attention. Colour white to calm, provide clarity and good readability.
+          Our primarly used colors are black and Joystream blue, a distinctive color that helps to put focus and draw
+          attention. The color white can be deployed in order to calm, provide clarity and offer improved readability.
         </Text>
         <Text>
-          One additional colour to combine with the three primary colours is blue tinted grey, its purpose is similar to
-          white but gives a good amount of contrast to the white elements when necessary.
+          One additional color to combine with the three primary colors is blue tinted grey, its purpose is comparable to
+          that of white but it also gives a good amount of contrast to the existing white elements where necessary.
         </Text>
         <ColorTile name="Joystream Blue" hex="#4038FF" cmyk={[87, 73, 0, 0]} rgb={[64, 56, 255]} />
         <ColorTile noMargin textColor="#000" name="White" hex="#FFFFFF" cmyk={[0, 0, 0, 0]} rgb={[255, 255, 255]} />
@@ -135,10 +135,10 @@ export default () => {
         <ColorTile withBorder name="Black" hex="#000000" cmyk={[30, 30, 30, 100]} rgb={[0, 0, 0]} />
       </SubSection>
 
-      <SubSection title="02. Supportive Colour Palette" id={subSection[2].id}>
+      <SubSection title="02. Supportive Color Palette" id={subSection[2].id}>
         <Text>
-          Supportive palette serves a purpose of convenience and usability. They provide a comprehensive range of
-          different shades of primary colours and can be utilised in many different ways depending on a need.
+          Our supportive palette serves the purpose of convenience and usability. This pallete provides a comprehensive range of
+          different shades of primary colors and can be utilised in many different ways depending on requirements.
         </Text>
         <div className="GuidesSectionPallete__boxes">
           <ColorBoxContainer className="GuidesSectionPallete__box-blue">
@@ -165,9 +165,9 @@ export default () => {
         </div>
       </SubSection>
 
-      <SubSection title="03. Secondary Colour Palette" id={subSection[3].id}>
+      <SubSection title="03. Secondary Color Palette" id={subSection[3].id}>
         <Text>
-          These are colours that can represent certain states of the network, they can stand for an error, success,
+          These are further colous that can represent certain states of the network, they can stand for an error, success,
           warning and more.
         </Text>
 
