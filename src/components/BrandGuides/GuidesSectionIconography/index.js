@@ -54,8 +54,8 @@ export default () => {
     <Section title={section.title} id={section.id}>
       <SubSection id={subSection[0].id}>
         <SubTitle>
-          Icons can be devided into two groups with different purpose. Descriptive icons are form of a substitute for
-          illustrations and system icons are purely functional part of the interface.
+          Icons can be divided into two groups with different purposes. Descriptive icons are a substitute for
+          illustrations and system icons are a purely functional part of the interface.
         </SubTitle>
         <div className="Iconography__icon-types">
           <div className="Iconography__icon-type">
@@ -75,12 +75,12 @@ export default () => {
 
       <SubSection title="01. Descriptive Icons" id={subSection[1].id}>
         <Text>
-          Joystream iconography is a custom, comprehensive icon style that helps explaining certain complex topics in a
+          Joystream iconography is a custom, comprehensive icon style that helps in explaining certain complex topics in a
           simple, digestable manner.
         </Text>
 
         <Text>
-          They are not always very direct and often carry a symbolic meaning but they help visualising and estinguish
+          They are not always very direct and often carry a symbolic meaning but they help to emphasize
           important elements.
         </Text>
 
@@ -91,7 +91,7 @@ export default () => {
 
         <BrandListItem bulletText="01.">
           <Text>
-            Characteristic feature of the descriptive icons are paralell striped fills. They are a translation of logo
+            Characteristic features of the descriptive icons include paralell striped fills. They are a translation of logo
             stripes and represent shadows.
           </Text>
           <Text>Lines have an angle of 45° they should have 2px girth and 8px space between them at 100% scale.</Text>
@@ -128,7 +128,7 @@ export default () => {
 
       <SubSection title="02. System Icons" id={subSection[2].id}>
         <Text>
-          System icons in their basic style combine two colours: Black and Joystream Blue. Their purpose is to represent
+          System icons in their basic style combine two colors: black and Joystream Blue. Their purpose is to represent
           certain actions on the website or platform. They are readable even in small sizes down to 18x18px.
         </Text>
 
@@ -140,7 +140,7 @@ export default () => {
             <div>
               <Text>System Icons are drawn using 2px strokes with square linecaps on a 24px grid frame.</Text>
               <Text>
-                When possible, icons should have subtle blue accents in ammounts no greater than 40% of the whole.
+                Where possible, icons should have subtle blue accents representing no greater than 40% of the whole.
               </Text>
             </div>
           </div>
@@ -148,8 +148,8 @@ export default () => {
 
         <SubTitle small>Types of system icons</SubTitle>
         <Text>
-          We destinguish four types of system icons and they should be used preferably in their basic style but can be
-          used interchangeably when neccessary.
+          We distinguish four types of system icons and they should be used preferably in their basic style but can be
+          used interchangeably where neccessary.
         </Text>
 
         <div className="Iconography__showcase">
