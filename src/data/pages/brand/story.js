@@ -2,17 +2,16 @@ import React from 'react';
 
 export default {
   header: {
-    title: 'All About Joystream',
+    title: 'Joystream Brand Story',
     description: (
       <>
         Joystream offers a modern, experimental solution to the problem of accountable governance in digital media.{' '}
-        <strong>
+        <br><br><strong>
           Our objective is to build a user-governed video platform with a strong sense of community and freedom.
         </strong>{' '}
-        Find out more about the foundations in our Manifesto.
       </>
     ),
-    buttonText: 'Manifesto',
+    buttonText: 'Read Our Manifesto',
   },
   website: {
     title: 'The Website',
@@ -21,7 +20,7 @@ export default {
   description: {
     header: (
       <>
-        Our brand identity consists of few key visual elements: our logo, typeface, illustrations, patter, colour palette
+        Our brand identity consists of few key visual elements: our logo, typeface, illustrations, patterns, colour palette
         and iconography.
       </>
     ),
