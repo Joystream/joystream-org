@@ -69,9 +69,23 @@ const ColorBox = ({ name, hex, size = 1 }) => {
 };
 
 const ColorArray = ({ hex, className }) => {
-  const ColorStop = ({ opacity = 1 }) => (
-    <div className="ColorArray__color-stop" style={{ background: hex, opacity }} />
-  );
+  const opacityHex = {
+    '1': 'FF',
+    '0.6': '99',
+    '0.4': '66',
+    '0.2': '33',
+    '0.1': '1A',
+  };
+
+  const ColorStop = ({ opacity = 1 }) => {
+    const alphaHex = '#' + hex.replace('#', '') + opacityHex[opacity];
+
+    return (
+      <div className="ColorArray__color-stop" style={{ background: alphaHex, color: opacity === 1 && '#000' }}>
+        {alphaHex}
+      </div>
+    );
+  };
 
   return (
     <div className={cn('ColorArray', className)}>
