@@ -28,14 +28,14 @@ const LegendItem = ({ color, percentage, description }) => {
 const TokensPage = () => {
   return (
     <BaseLayout className="TokensPage">
-      <SiteMetadata title="Joystream: A user governed video platform" description="Tokens" />
+      <SiteMetadata title="Joystream: The video platform DAO" description="Tokens" />
 
       <Hero
         image={tokensImage}
         title={
           <>
             Understanding <br />
-            the Joystream token
+            the JOY token
           </>
         }
         animationStartValue={0}
@@ -44,9 +44,8 @@ const TokensPage = () => {
         noOverflow
       >
         <p className="AcropolisPage__hero-paragraph">
-          The joystream platform has two different kinds of tokens. In order to further clarify how the system will
-          likely work at the launch of the main network, it would be a benefit to explain key aspects of both token
-          types.
+          This page briefly explains our plans for the Joystream Network (JOY) Token, whic we plan to make
+          available upon mainnet launch.
         </p>
       </Hero>
 
@@ -56,15 +55,15 @@ const TokensPage = () => {
         <ImageSection image={vaultShapesImage} imageClassName="TokensPage__section-image">
           <h4 className="TokensPage__sub-title">Staking</h4>
           <p>
-            Participants must stake some amount of this token to be able to participate on the platform in some
+            Participants must stake some amount of tokens to be able to participate on the platform in some
             operational role, for example in order to earn a reward. The staked funds may be slashed if the party
-            misbehaves
+            misbehaves in this role.
           </p>
         </ImageSection>
 
         <ImageSection image={buildingShapesImage} imageClassName="TokensPage__section-image">
           <h4 className="TokensPage__sub-title">Governance</h4>
-          <p>Value transfer, such as for transaction fees, memberships or accessing monetised content.</p>
+          <p>Tokens can be used to make decisions on the platform by voting in Joystream's built-in democratic processes.</p>
         </ImageSection>
 
         <ImageSection image={exchangeShapesImage} imageClassName="TokensPage__section-image">
@@ -75,18 +74,18 @@ const TokensPage = () => {
         <h2 className="TokensPage__title">Circulating Token Supply</h2>
 
         <ImageSection image={desktopImage} imageClassName="TokensPage__large-section-image">
-          Unlike coins like Bitcoin, where there is a fixed inflatin schedule, the Joystream platform will mint and burn
-          tokens according to rules an parameters which are subject to change.
+          Unlike cryptocurrencies such as Bitcoin, where there is a fixed inflation schedule, the Joystream platform will mint and burn
+          tokens according to rules and parameters which are subject to change.
           <br />
           <br />
-          This, in combination with the low friction updating of the system rules, means that it is not possible to
+          This, in combination with the low friction associated with the updating of the system rules, means that it is not possible to
           determine the token supply up front.
         </ImageSection>
 
         <div className="ActionCard">
           <h2 className="ActionCard__title">Token Aquisition</h2>
           <p className="ActionCard__content">
-            In the mean time, you can join our current active testnet and earn Monero, and learn what is required to
+            In the mean time, you can join our currently active testnet and earn Monero, and learn what is required to
             participate when we are live.
           </p>
           <Button light href="https://testnet.joystream.org/acropolis/pioneer/#/">
@@ -100,9 +99,9 @@ const TokensPage = () => {
           <div className="TokensPage__allocations">
             <div className="TokensPage__allocations-content">
               <div className="TokensPage__allocations-text">
-                The initial allocaiton of this token in the main network launch is as given below.This means that when
+                The initial allocation of this token in the main network launch is as given below. This means that when
                 the system starts, the allocation of token will first look like this, but tokens will get minted on
-                every block, which will dilute this set of stakeholders.
+                every block, which will dilute this set of initial stakeholders.
               </div>
               <div className="TokensPage__legend">
                 <LegendItem color="#3B3FFF" percentage={50} description="Team+Investors" />
