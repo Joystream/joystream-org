@@ -44,8 +44,8 @@ const TokensPage = () => {
         noOverflow
       >
         <p className="AcropolisPage__hero-paragraph">
-          This page briefly explains our plans for the Joystream Network (JOY) Token, whic we plan to make
-          available upon mainnet launch.
+          This page briefly explains our plans for the Joystream Network Token (JOY), which we plan to make
+          available upon the launch of our mainnet.
         </p>
       </Hero>
 
@@ -56,7 +56,7 @@ const TokensPage = () => {
           <h4 className="TokensPage__sub-title">Staking</h4>
           <p>
             Participants must stake some amount of tokens to be able to participate on the platform in some
-            operational role, for example in order to earn a reward. The staked funds may be slashed if the party
+            operational role, for example in order to earn a reward. These staked funds may be slashed if the party
             misbehaves in this role.
           </p>
         </ImageSection>
@@ -85,7 +85,7 @@ const TokensPage = () => {
         <div className="ActionCard">
           <h2 className="ActionCard__title">Token Aquisition</h2>
           <p className="ActionCard__content">
-            In the mean time, you can join our currently active testnet and earn Monero, and learn what is required to
+            The JOY token does not yet exist. In the meantime however, you can join our currently active testnet and earn Monero, and learn what is required to
             participate when we are live.
           </p>
           <Button light href="https://testnet.joystream.org/acropolis/pioneer/#/">
@@ -100,7 +100,7 @@ const TokensPage = () => {
             <div className="TokensPage__allocations-content">
               <div className="TokensPage__allocations-text">
                 The initial allocation of this token in the main network launch is as given below. This means that when
-                the system starts, the allocation of token will first look like this, but tokens will get minted on
+                the system starts, the allocation of token will first look like this, but tokens will get minted at
                 every block, which will dilute this set of initial stakeholders.
               </div>
               <div className="TokensPage__legend">
