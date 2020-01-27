@@ -24,6 +24,7 @@
   &__allocations {
     @media #{$screen-md} {
       display: flex;
+      justify-content: center;
     }
   }
 
