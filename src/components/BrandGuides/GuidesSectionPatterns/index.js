@@ -16,7 +16,7 @@ export default () => {
   const section = guidesData.sidebar[4];
 
   return (
-    <Section title="Joystream Patterns" id={section.id}>
+    <Section title={section.title} id={section.id}>
       <SubSection>
         <SubTitle>
           Patterns are close translation of the logomark (J) into a form of geometrical shapes representing flow of

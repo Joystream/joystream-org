@@ -26,7 +26,7 @@ export default () => {
   const section = guidesData.sidebar[6];
 
   return (
-    <Section title="Photography" id={section.id}>
+    <Section title={section.title} id={section.id}>
       <SubSection>
         <SubTitle>
           Photography should be relevant to the topic they are describing but they shouldn’t be limited only to the

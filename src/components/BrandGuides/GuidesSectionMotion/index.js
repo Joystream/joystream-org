@@ -9,7 +9,7 @@ export default () => {
   const section = guidesData.sidebar[7];
 
   return (
-    <Section title="Motion" id={section.id} style={{ overflow: 'hidden' }}>
+    <Section title={section.title} id={section.id} style={{ overflow: 'hidden' }}>
       <SubSection buttonToTop>
         <SubTitle>
           Joystream is an experimental and exciting platform and so should be its motion along with the interactions.

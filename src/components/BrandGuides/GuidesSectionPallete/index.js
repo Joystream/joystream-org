@@ -103,7 +103,7 @@ export default () => {
   const subSection = section.subSections;
 
   return (
-    <Section title="Branding Colour Palette" id={section.id}>
+    <Section title={section.title} id={section.id}>
       <SubSection id={subSection[0].id}>
         <SubTitle>
           Our brand colours combine three primary colours, Black, White and Blue. They define the mood and present

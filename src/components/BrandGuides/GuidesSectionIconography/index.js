@@ -51,7 +51,7 @@ export default () => {
   const subSection = section.subSections;
 
   return (
-    <Section title="Iconography" id={section.id}>
+    <Section title={section.title} id={section.id}>
       <SubSection id={subSection[0].id}>
         <SubTitle>
           Icons can be devided into two groups with different purpose. Descriptive icons are form of a substitute for

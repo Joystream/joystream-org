@@ -24,7 +24,7 @@ export default () => {
   const subSection = section.subSections;
 
   return (
-    <Section title="Logo" id={section.id} className="GuidesSectionLogo">
+    <Section title={section.title} id={section.id} className="GuidesSectionLogo">
       <SubSection id={subSection[0].id}>
         <SubTitle>
           "...Our brand should carry this feeling of experimentation, excitement and building something ethical and

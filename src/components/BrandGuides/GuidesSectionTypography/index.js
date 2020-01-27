@@ -20,7 +20,7 @@ export default () => {
   const section = guidesData.sidebar[5];
 
   return (
-    <Section title="Typography" id={section.id}>
+    <Section title={section.title} id={section.id}>
       <SubSection>
         <SubTitle>
           Our typefaces are simple, comprehensive and modern. It is a reflection of our brand and our voice. We choose

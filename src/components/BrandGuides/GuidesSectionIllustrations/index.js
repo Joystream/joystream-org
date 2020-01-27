@@ -94,7 +94,7 @@ export default () => {
   const section = guidesData.sidebar[3];
 
   return (
-    <Section title="Illustartions" id={section.id}>
+    <Section title={section.title} id={section.id}>
       <SubSection>
         <SubTitle>
           Joystream Illustrations are symbolic representation of important steps in the Joystream project, for example a
