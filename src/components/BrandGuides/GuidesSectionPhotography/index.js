@@ -29,21 +29,22 @@ export default () => {
     <Section title={section.title} id={section.id}>
       <SubSection>
         <SubTitle>
-          Photography should be relevant to the topic they are describing but they shouldn’t be limited only to the
-          technology. Joystream is much more than just technology, it is unifying, fresh and joyful. Imagery should
-          convey this mood to the users.
+          Photographs should be relevant to the topic they are describing but they shouldn’t be limited only to
+          technology. Joystream is much more than just technology; it is unifying, fresh and joyful. Imagery should
+          convey this mood to users.
         </SubTitle>
       </SubSection>
       <SubSection>
         <SubTitle small>How to use photography</SubTitle>
         <Text>
-          Since Joystream is a unique and experimental project it provides a wide variety of the topics it can cover. It
-          is highly technical especially now when we are in the community building phase, so good deal of the
-          photographies will be tech related.
+          Since Joystream is a unique and experimental project it provides a wide variety of the topics which might be 
+          associated with it in terms of photography.
+          It is highly technical especially now when we are in the community building phase, so good deal of the
+          photographs will be tech related.
         </Text>
 
         <Text>
-          One way to make sure the photographies are consistent is to use them in dual tones deriving from Branding
+          One way to make sure the photographs are consistent is to use them in dual tones deriving from branding
           colors. For that purpose we can use a handy tool to consistently change images to dual tones as described
           below.
         </Text>
@@ -61,7 +62,7 @@ export default () => {
         </div>
 
         <Text>
-          Link below allows you to create consistent duotones with any photography after inputing the proper two
+          The link below allows you to create consistent duotones with any photography after inputing the proper two
           Joystream colours.
         </Text>
         <a
@@ -74,9 +75,9 @@ export default () => {
         </a>
 
         <Text>
-          The mood that photos transfer is really important. It should by all means give a feel of building trust,
-          community and joy. Photographies should show good ammount of diversity as it is meant to be for extremely wide
-          variety of users. They don’t have to be used in dual tones but it is best if they are not „screaming” with
+          The mood that photos convey is extremely important. It should by all means give a feel of building trust,
+          community and joy. Photographs should show good amount of diversity as it is meant to be for an extremely wide
+          variety of users. They don’t have to be used in dual tones but it is best if they are not "screaming" with
           colours.
         </Text>
 
