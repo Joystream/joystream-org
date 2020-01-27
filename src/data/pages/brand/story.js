@@ -6,12 +6,12 @@ export default {
     description: (
       <>
         Joystream offers a modern, experimental solution to the problem of accountable governance in digital media.{' '}
-        <br><br><strong>
+        <strong>
           Our objective is to build a user-governed video platform with a strong sense of community and freedom.
         </strong>{' '}
       </>
     ),
-    buttonText: 'Read Our Manifesto',
+    buttonText: 'Manifesto',
   },
   website: {
     title: 'The Website',
