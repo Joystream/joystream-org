@@ -97,8 +97,8 @@ export default () => {
     <Section title={section.title} id={section.id}>
       <SubSection>
         <SubTitle>
-          Joystream Illustrations are symbolic representation of important steps in the Joystream project, for example a
-          new testnet, role on the network or other equaly significant subject.
+          Joystream Illustrations are symbolic representation of important concepts within the Joystream project. These might include a
+          a new testnet, a particular role on the network or any other equally significant subject.
         </SubTitle>
         <SubTitle>They can be quite visualy complex despite using only three colors and no gradients.</SubTitle>
 
@@ -115,8 +115,8 @@ export default () => {
       </SubSection>
       <SubSection title="Construction">
         <Text>
-          Illustrations will often go combined with patterns and in case of putting it on a blue background, the oultine
-          of the illustration can be changed to a Joystream Blue in order to create a good color balance with patterns
+          Illustrations will often be combined with patterns and in the case of putting them on a blue background, the outline
+          of the illustration can be changed to Joystream Blue in order to create a good color balance between patterns
           and the background.
         </Text>
 
@@ -126,8 +126,7 @@ export default () => {
       <SubSection>
         <SubTitle small>Construction</SubTitle>
         <Text>
-          Illustrations should be simple enough to be readable even in smaller resolutions down to 300x300px but they
-          shouldn’t be vague either.
+          Illustrations should be simple enough to be distinctive even in smaller resolutions down to 300x300px.
         </Text>
 
         <img src={masksMobileImg} className="Illustrations__masks-mobile" alt="" />
@@ -135,7 +134,7 @@ export default () => {
 
         <Text className="Illustrations__masks-description">
           The ammount of detail should be adequate to what the illustration represents, in most cases they should be
-          used no smaller than 500x500px.
+          deployed at sizes no smaller than 500x500px.
         </Text>
       </SubSection>
     </Section>
