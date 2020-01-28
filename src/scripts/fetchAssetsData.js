@@ -36,6 +36,10 @@ const get = (path, options) => {
   });
 };
 
+const filterByTypes = (data, allowed = []) => {
+  return data.filter(({ type }) => allowed.includes(type));
+};
+
 const saveJsonData = data => {
   const fileCommentary =
     'This file was created using `npm run fetch-assets-data`.' +
@@ -51,20 +55,19 @@ const getAllData = async () => {
   const logo = await get('/contents/logo/logo/SVG');
   const logoIcon = await get('/contents/logo/logo icon/SVG');
   const descriptiveIcons = await get('/contents/icons/new-icons/SVG');
-  // const systemIcons = await get('/contents/Assets-full/System Icons/Line Basic');
   const systemIcons = await get('/contents/icons/system-icons/SVG/line');
   const illustrations = await get('/contents/illustrations/SVG');
   const twitterCovers = await get('/contents/social-media/twitter/covers/SVG');
   const blogCovers = await get('/contents/blog/covers/SVG');
 
   return {
-    illustrations,
-    descriptiveIcons,
-    systemIcons,
-    logo,
-    twitterCovers,
-    blogCovers,
-    logoIcon,
+    illustrations: filterByTypes(illustrations, ['file']),
+    descriptiveIcons: filterByTypes(descriptiveIcons, ['file']),
+    systemIcons: filterByTypes(systemIcons, ['file']),
+    logo: filterByTypes(logo, ['file']),
+    twitterCovers: filterByTypes(twitterCovers, ['file']),
+    blogCovers: filterByTypes(blogCovers, ['file']),
+    logoIcon: filterByTypes(logoIcon, ['file']),
   };
 };
 

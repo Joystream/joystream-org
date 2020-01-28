@@ -1047,22 +1047,6 @@
         }
       },
       {
-        "name": "blue",
-        "path": "icons/system-icons/SVG/line/blue",
-        "sha": "9ee863fb47a23b2a50bbb53311c6f5c5e4b374df",
-        "size": 0,
-        "url": "https://api.github.com/repos/Joystream/design/contents/icons/system-icons/SVG/line/blue?ref=master",
-        "html_url": "https://github.com/Joystream/design/tree/master/icons/system-icons/SVG/line/blue",
-        "git_url": "https://api.github.com/repos/Joystream/design/git/trees/9ee863fb47a23b2a50bbb53311c6f5c5e4b374df",
-        "download_url": null,
-        "type": "dir",
-        "_links": {
-          "self": "https://api.github.com/repos/Joystream/design/contents/icons/system-icons/SVG/line/blue?ref=master",
-          "git": "https://api.github.com/repos/Joystream/design/git/trees/9ee863fb47a23b2a50bbb53311c6f5c5e4b374df",
-          "html": "https://github.com/Joystream/design/tree/master/icons/system-icons/SVG/line/blue"
-        }
-      },
-      {
         "name": "calendar copy 2.svg",
         "path": "icons/system-icons/SVG/line/calendar copy 2.svg",
         "sha": "96574fc5e841491ef5db05df5c39e886c6dbbea3",
@@ -1236,22 +1220,6 @@
           "self": "https://api.github.com/repos/Joystream/design/contents/icons/system-icons/SVG/line/play.svg?ref=master",
           "git": "https://api.github.com/repos/Joystream/design/git/blobs/5855a1f23df3ea3d531b889af379d07d1bf22474",
           "html": "https://github.com/Joystream/design/blob/master/icons/system-icons/SVG/line/play.svg"
-        }
-      },
-      {
-        "name": "white",
-        "path": "icons/system-icons/SVG/line/white",
-        "sha": "06ef1da23666041e1a273f4598f867cf248b4ee5",
-        "size": 0,
-        "url": "https://api.github.com/repos/Joystream/design/contents/icons/system-icons/SVG/line/white?ref=master",
-        "html_url": "https://github.com/Joystream/design/tree/master/icons/system-icons/SVG/line/white",
-        "git_url": "https://api.github.com/repos/Joystream/design/git/trees/06ef1da23666041e1a273f4598f867cf248b4ee5",
-        "download_url": null,
-        "type": "dir",
-        "_links": {
-          "self": "https://api.github.com/repos/Joystream/design/contents/icons/system-icons/SVG/line/white?ref=master",
-          "git": "https://api.github.com/repos/Joystream/design/git/trees/06ef1da23666041e1a273f4598f867cf248b4ee5",
-          "html": "https://github.com/Joystream/design/tree/master/icons/system-icons/SVG/line/white"
         }
       }
     ],
