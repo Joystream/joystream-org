@@ -48,13 +48,14 @@ const saveJsonData = data => {
 };
 
 const getAllData = async () => {
-  const logo = await get('/contents/Assets-full/Logo/SVG');
-  const logoIcon = await get('/contents/Assets-full/Logo Icon/SVG');
-  const descriptiveIcons = await get('/contents/Assets-full/Descriptive Icons/SVG');
-  const systemIcons = await get('/contents/Assets-full/System Icons/Line Basic');
-  const illustrations = await get('/contents/Assets-full/Illustrations/SVG');
-  const twitterCovers = await get('/contents/Assets-full/Twitter Covers/SVG');
-  const blogCovers = await get('/contents/Assets-full/Blog Covers/SVG');
+  const logo = await get('/contents/logo/logo/SVG');
+  const logoIcon = await get('/contents/logo/logo icon/SVG');
+  const descriptiveIcons = await get('/contents/icons/new-icons/SVG');
+  // const systemIcons = await get('/contents/Assets-full/System Icons/Line Basic');
+  const systemIcons = await get('/contents/icons/system-icons/SVG/line');
+  const illustrations = await get('/contents/illustrations/SVG');
+  const twitterCovers = await get('/contents/social-media/twitter/covers/SVG');
+  const blogCovers = await get('/contents/blog/covers/SVG');
 
   return {
     illustrations,
