@@ -3,7 +3,7 @@ import { sharedData } from '../../data/pages';
 const links = [
   { to: '/manifesto', label: 'Manifesto' },
   { to: '/roles', label: 'Roles' },
-  { to: '/tokens', label: 'Tokens' },
+  { to: '/token', label: 'Token' },
   {
     href: sharedData.links.whitepaper,
     label: 'Whitepaper',

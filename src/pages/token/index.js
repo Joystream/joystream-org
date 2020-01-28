@@ -44,8 +44,8 @@ const TokensPage = () => {
         noOverflow
       >
         <p className="AcropolisPage__hero-paragraph">
-          This page briefly explains our plans for the Joystream Network Token (JOY), which we plan to make
-          available upon the launch of our mainnet.
+          The Joystream Network Token (JOY) will be a fundamental component of the platform once it is live, playing a
+          role in governance, staking and as a method of payment.
         </p>
       </Hero>
 
@@ -55,15 +55,17 @@ const TokensPage = () => {
         <ImageSection image={vaultShapesImage} imageClassName="TokensPage__section-image">
           <h4 className="TokensPage__sub-title">Staking</h4>
           <p>
-            Participants must stake some amount of tokens to be able to participate on the platform in some
-            operational role, for example in order to earn a reward. These staked funds may be slashed if the party
-            misbehaves in this role.
+            Participants must stake some amount of tokens to be able to participate on the platform in some operational
+            role, for example in order to earn a reward. These staked funds may be slashed if the party misbehaves in
+            this role.
           </p>
         </ImageSection>
 
         <ImageSection image={buildingShapesImage} imageClassName="TokensPage__section-image">
           <h4 className="TokensPage__sub-title">Governance</h4>
-          <p>Tokens can be used to make decisions on the platform by voting in Joystream's built-in democratic processes.</p>
+          <p>
+            Tokens can be used to make decisions on the platform by voting in Joystream's built-in democratic processes.
+          </p>
         </ImageSection>
 
         <ImageSection image={exchangeShapesImage} imageClassName="TokensPage__section-image">
@@ -74,19 +76,19 @@ const TokensPage = () => {
         <h2 className="TokensPage__title">Circulating Token Supply</h2>
 
         <ImageSection image={desktopImage} imageClassName="TokensPage__large-section-image">
-          Unlike cryptocurrencies such as Bitcoin, where there is a fixed inflation schedule, the Joystream platform will mint and burn
-          tokens according to rules and parameters which are subject to change.
+          Unlike cryptocurrencies such as Bitcoin, where there is a fixed inflation schedule, the Joystream platform
+          will mint and burn tokens according to rules and parameters which are subject to change.
           <br />
           <br />
-          This, in combination with the low friction associated with the updating of the system rules, means that it is not possible to
-          determine the token supply up front.
+          This, in combination with the low friction associated with the updating of the system rules, means that it is
+          not possible to determine the token supply up front.
         </ImageSection>
 
         <div className="ActionCard">
           <h2 className="ActionCard__title">Token Aquisition</h2>
           <p className="ActionCard__content">
-            The JOY token does not yet exist. In the meantime however, you can join our currently active testnet and earn Monero, and learn what is required to
-            participate when we are live.
+            The JOY token does not yet exist. In the meantime however, you can join our currently active testnet and
+            earn Monero, and learn what is required to participate when we are live.
           </p>
           <Button light href="https://testnet.joystream.org/acropolis/pioneer/#/">
             Join the current testnet
@@ -94,6 +96,7 @@ const TokensPage = () => {
         </div>
       </LayoutWrapper>
 
+      {/* 
       <LayoutWrapper dark>
         <TitleWrapper title="Allocation of Tokens">
           <div className="TokensPage__allocations">
@@ -112,7 +115,8 @@ const TokensPage = () => {
             <img className="TokensPage__allocations-chart" src={tokensChart} alt="" />
           </div>
         </TitleWrapper>
-      </LayoutWrapper>
+      </LayoutWrapper> 
+      */}
 
       <LayoutWrapper>
         <h2 className="TokensPage__title">Disclaimer</h2>
