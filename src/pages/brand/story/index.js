@@ -6,6 +6,7 @@ import StorySectionHeader from '../../../components/BrandStory/StorySectionHeade
 import StorySectionLogo from '../../../components/BrandStory/StorySectionLogo';
 import StorySectionWebsite from '../../../components/BrandStory/StorySectionWebsite';
 import BrandLayout from '../../../components/_layouts/Brand';
+import SiteMetadata from '../../../components/SiteMetadata';
 import './index.scss';
 
 const StoryPage = () => {
@@ -27,6 +28,8 @@ const StoryPage = () => {
 
   return (
     <BrandLayout>
+      <SiteMetadata title="Joystream: The video platform DAO" />
+
       <div className="Story__multi-section">
         <StorySectionHeader
           ref={elementsRef['section-header']}
