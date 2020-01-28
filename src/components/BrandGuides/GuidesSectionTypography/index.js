@@ -23,7 +23,7 @@ export default () => {
     <Section title={section.title} id={section.id}>
       <SubSection>
         <SubTitle>
-          Our typefaces are simple, comprehensive and modern. It is a reflection of our brand and our voice. We choose
+          Our typefaces are simple, comprehensive and modern. This is a reflection of our brand and our voice. We chose
           the appropriate typeface weights from PX Grotesk (regular, bold) and Inter family for specific touchpoints and
           to create clear hierarchies of information and messages.
         </SubTitle>
@@ -48,7 +48,7 @@ export default () => {
 
         <Text>
           If either two typefaces are impossible to use please choose Arial Regular. This may be required across PC
-          operating systems or electronic internal documents, in diferent offices worldwide. Don’t use Arial for any
+          operating systems or electronic internal documents or in diferent offices worldwide. Don’t use Arial for any
           print materials.
         </Text>
 
@@ -125,7 +125,7 @@ export default () => {
               people who want to engage in platform governance and work. This refers to people who enjoy building,
               fostering and participating in nascent communities. They are driven by a sense of purpose, and also the
               motivation to get in early on something that can become big and important. These people are often highly
-              social, enjoy working in groups with common purpose, self directed, digital native and often outsiders in
+              social, enjoy working in groups with common purpose, are self directed, digital natives and often outsiders in
               the offine world.
             </Text>
           </TypographyBlockRow>

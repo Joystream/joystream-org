@@ -19,19 +19,19 @@ export default () => {
     <Section title={section.title} id={section.id}>
       <SubSection>
         <SubTitle>
-          Patterns are close translation of the logomark (J) into a form of geometrical shapes representing flow of
-          information, technology and experimental nature.
+          Patterns are close translation of the logomark (J) into variants of geometrical shapes representing the flow of
+          information, technology and Joystream's experimental brand personality.
         </SubTitle>
 
         <SubTitle>
-          They were introduced as a support tool to make certain elements stand-out, build mood and as an inherent
-          element of visual identity of the brand.
+          They were introduced as a support tool to make certain elements stand-out, to build mood and as an inherent
+          element of the visual identity of the brand.
         </SubTitle>
       </SubSection>
       <SubSection>
         <SubTitle small>Construction</SubTitle>
         <Text>
-          Patterns virtually consist of six different pieces that can be rotated by 90 degrees in any direction and
+          Patterns visually consist of six different pieces that can be rotated by 90 degrees in any direction and
           should always have the dimensions of a perfect square.
         </Text>
 
@@ -55,13 +55,13 @@ export default () => {
       <SubSection>
         <SubTitle small>How to use patterns</SubTitle>
         <Text>
-          Patterns can use five various colours depending on what background is used beneath and what is their main
-          purpose in specific situation.
+          Patterns can use one of five different colors depending on what background is used beneath and what their main
+          purpose is in a given situation.
         </Text>
 
         <img src={patternsColors} alt="" className="Patterns__colors" />
 
-        <Text>Depending on the situation can be used more or less densly.</Text>
+        <Text>Depending on the situation these can be used more or less densely.</Text>
 
         <img src={patternsDensity} alt="" className="Patterns__density" />
       </SubSection>

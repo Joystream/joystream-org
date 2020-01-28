@@ -27,37 +27,37 @@ export default () => {
     <Section title={section.title} id={section.id} className="GuidesSectionLogo">
       <SubSection id={subSection[0].id}>
         <SubTitle>
-          "...Our brand should carry this feeling of experimentation, excitement and building something ethical and
-          dynamic."
+          Our brand should promote a feeling of experimentation, excitement and building something ethical and
+          dynamic.
         </SubTitle>
         <Image src={logoDevelopmentImg} alt="" />
         <Text>
-          Before we agreed on a final logo concept we went through multiple iterations of various concepts. We have
-          explored various ideas in depth...
+          Before we agreed on a final logo concept we went through multiple iterations of various concepts. We explored
+          various ideas in depth before settling on the final logo concept.
         </Text>
 
         <Button
-          href="https://raw.githubusercontent.com/Joystream/design/master/Assets-full/ZIPPED%20files/Logo.zip"
+          href="https://raw.githubusercontent.com/Joystream/design/master/logo"
           download
         >
           <img src={downloadImg} alt="" />
-          Download logo
+          Download Logo
         </Button>
       </SubSection>
 
       <SubSection title="01. Logomark Construction" id={subSection[1].id}>
         <Text>
-          Finally we came up with a logomark that combines several simple principles which translate well to the voice
+          In the end we came up with a logomark that combines several simple principles which translate well to the voice
           of the brand.
         </Text>
         <Image src={logoConstructionImg} alt="" />
         <Text>
-          Logomark is a combination of letter J (acronym of the name Joystream) and three parallel stripes that are
-          representation of the stream, flow of information and technology.
+          Our logomark is a combination of the letter J (to represent the name Joystream) and three parallel stripes that are
+          a representation of streaming data and the flow of information and technology.
         </Text>
         <Image
           className="GuidesSectionLogo__exclusion-img"
-          description="Logomarks exclusion zone is equal to the blue square height (marked as 5a in the diagram)."
+          description="Logomark's exclusion zone is equal to the blue square height (marked as 5a in the diagram)."
           src={logoExclusionImg}
           alt=""
         />
@@ -65,8 +65,8 @@ export default () => {
 
       <SubSection title="02. Logo Construction" id={subSection[2].id}>
         <Text>
-          Joystream Logo is a combination of the logomark and dedicated typography that was designed to be the best link
-          between logomark and what Joystream stands for. It is firm and technical but shows plasticity and sense of a
+          The Joystream logo is a combination of the logomark and dedicated typography that was designed to be the best link
+          between the logomark and what Joystream stands for. It is firm and technical but shows plasticity and sense of a
           structure.
         </Text>
 
@@ -85,7 +85,7 @@ export default () => {
 
       <SubSection title="03. Logo Use Cases" id={subSection[3].id}>
         <Text>
-          Joystream Logo is primarly used in it’s original form on white backgrounds but it can also be used in it’s
+          The Joystream logo is primarly used in its original form on white backgrounds but it can also be used in its
           complimentary forms if necessary. Examples show such use cases below.
         </Text>
 
@@ -93,7 +93,7 @@ export default () => {
 
         <SubTitle small>The smallest safe use</SubTitle>
         <Text>
-          In order to ensure the best visual communication of the logo, it is best presented in size between{' '}
+          In order to ensure the best visual presentation of the logo, it is best offered in sizes between{' '}
           <strong>200 and 500+px</strong> width on digital devices.
         </Text>
 
@@ -145,8 +145,8 @@ export default () => {
 
       <SubSection title="05. Forbidden uses of the logo" id={subSection[5].id}>
         <Text>
-          Logotype and the icon ought to follow certain rules and there are general cases of use that should be avoided
-          at all cost! In order to preserve the brand voice remember to avoid following examples:
+          The logotype and the icon must follow certain rules and there are general cases of use that should be avoided
+          at all costs! In order to preserve the brand voice remember to avoid examples such as the following:
         </Text>
 
         <Slider size="large" withSpacing slides={forbiddenLogoSlides} />
