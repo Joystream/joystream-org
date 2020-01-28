@@ -20,7 +20,7 @@ const StorySectionHeader = React.forwardRef(({ onActionClick }, ref) => {
           <div className="StorySectionHeader__description">
             <p>{data.header.description}</p>
           </div>
-          <Button className="StorySectionHeader__button" large>
+          <Button to="/manifesto" className="StorySectionHeader__button" large>
             {data.header.buttonText}
           </Button>
         </div>
