@@ -1,0 +1,49 @@
+@import '../../../styles/_main';
+
+.Photography {
+  &__gradient {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__gradient-bar {
+    width: 100%;
+    height: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__gradient-text {
+    font-size: 16px;
+    color: $c_grayc-chateau;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 40px;
+
+    @media #{$screen-sm} {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__col {
+    @media #{$screen-sm} {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__row {
+    margin-bottom: 40px;
+
+    @media #{$screen-sm} {
+      width: calc(50% - 20px);
+      margin-bottom: 80px;
+    }
+  }
+}

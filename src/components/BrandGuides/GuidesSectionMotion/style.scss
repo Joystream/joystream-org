@@ -1,0 +1,41 @@
+@import '../../../styles/_main';
+
+.Motion {
+  &__warning {
+    max-width: 680px;
+    margin: 80px 0;
+    color: $c_blue-ribbon;
+
+    @media #{$screen-sm} {
+      display: flex;
+      align-items: center;
+      margin-bottom: 160px;
+    }
+  }
+
+  &__warning-icon {
+    flex-shrink: 0;
+    width: 145px;
+    margin-bottom: 42px;
+
+    @media #{$screen-sm} {
+      width: 180px;
+      margin-right: 56px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__warning-text {
+    font-size: 16px;
+    line-height: 1.5;
+
+    @media #{$screen-sm} {
+      font-size: 24px;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    border: 1px solid $c_ebony-clay;
+  }
+}

@@ -1,0 +1,49 @@
+@import '../../../styles/_main';
+
+.Patterns {
+  &__squares,
+  &__colors {
+    margin-bottom: 40px;
+
+    @media #{$screen-sm} {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__squares {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  &__colors {
+    width: 100%;
+    max-width: 560px;
+  }
+
+  &__density {
+    width: 100%;
+  }
+
+  &__spacing {
+    margin-bottom: 80px;
+
+    @media #{$screen-sm} {
+      width: 55%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__row {
+    @media #{$screen-sm} {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__distances {
+    @media #{$screen-sm} {
+      width: 40%;
+      margin: 0 80px;
+    }
+  }
+}

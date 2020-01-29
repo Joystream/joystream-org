@@ -111,7 +111,7 @@ exports[`IndexPage page renders correctly 1`] = `
         Object {
           "image": "icon-component-mock",
           "title": "Participation Payout",
-          "value": "$12633",
+          "value": "$13467",
         },
         Object {
           "image": "icon-component-mock",

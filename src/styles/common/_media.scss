@@ -2,7 +2,8 @@ $breakpoints: (
   xs: 1px,
   sm: 768px,
   md: 992px,
-  lg: 1200px
+  lg: 1200px,
+  xl: 1400px,
 );
 
 @function media-min-width($screen-sizes-name) {
@@ -19,12 +20,14 @@ $screen-xs: media-min-width('xs');
 $screen-sm: media-min-width('sm');
 $screen-md: media-min-width('md');
 $screen-lg: media-min-width('lg');
+$screen-xl: media-min-width('xl');
 
 $screens-min: (
   xs: $screen-xs,
   sm: $screen-sm,
   md: $screen-md,
   lg: $screen-lg,
+  xl: $screen-xl,
 );
 
 $screen-only-xs: 'only screen and (max-width: #{map-get($breakpoints, 'sm') - 1px})';
