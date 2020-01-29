@@ -66,15 +66,15 @@ const sections = [
     },
     id: 'typography',
   },
-  {
-    title: 'Twitter Covers',
-    downloadHref: getPackageLink('/Twitter Covers.zip'),
-    assets: fullAssets.data.twitterCovers,
-    assetTileProps: {
-      fullWidth: true,
-    },
-    id: 'twitter-covers',
-  },
+  // {
+  //   title: 'Twitter Covers',
+  //   downloadHref: getPackageLink('/Twitter Covers.zip'),
+  //   assets: fullAssets.data.twitterCovers,
+  //   assetTileProps: {
+  //     fullWidth: true,
+  //   },
+  //   id: 'twitter-covers',
+  // },
   {
     title: 'Blog Post Covers',
     downloadHref: getPackageLink('/Blog Covers.zip'),
