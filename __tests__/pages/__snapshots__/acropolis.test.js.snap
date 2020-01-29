@@ -82,7 +82,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
             Object {
               "image": "icon-component-mock",
               "title": "Participation Payout",
-              "value": "$11904",
+              "value": "$13467",
             },
             Object {
               "image": "icon-component-mock",
