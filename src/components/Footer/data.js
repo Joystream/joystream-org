@@ -7,6 +7,7 @@ const joystreamLinks = [
   { href: sharedData.links.blog, label: 'Blog' },
   { to: '/manifesto', label: 'Manifesto' },
   { to: '/roles', label: 'Roles' },
+  { to: '/token', label: 'Token' },
 ];
 
 const githubLinks = [
