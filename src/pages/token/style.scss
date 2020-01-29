@@ -1,0 +1,181 @@
+@import '../../styles/main.scss';
+
+.TokensPage {
+  &__title {
+    margin-top: 50px;
+    font-size: 40px;
+    color: $c_blue-ribbon;
+    text-align: center;
+
+    @media #{$screen-md} {
+      margin-top: 150px;
+      font-size: 50px;
+    }
+  }
+
+  &__sub-title {
+    margin-bottom: 30px;
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-weight: bold;
+    color: $c_blue-ribbon;
+  }
+
+  &__allocations {
+    @media #{$screen-md} {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__allocations-content {
+    @media #{$screen-md} {
+      width: 50%;
+    }
+  }
+
+  &__allocations-text {
+    width: 80%;
+    margin: 20px auto 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $c_ebony-clay;
+
+    @media #{$screen-md} {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  &__section-image {
+    transform: translate(-11%, 0);
+
+    @media #{$screen-md} {
+      transform: none;
+    }
+  }
+
+  &__large-section-image {
+    transform: translate(-6%, 0);
+
+    @media #{$screen-md} {
+      transform: none;
+    }
+  }
+
+  &__legend {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 60px 0;
+
+    @media #{$screen-md} {
+      display: flex;
+      margin: 40px 0;
+    }
+  }
+
+  &__disclaimer-text {
+    margin-top: 60px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.5;
+
+    a {
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: inherit;
+
+      @media #{$screen-md} {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media #{$screen-md} {
+      margin-top: 94px;
+    }
+
+    @media #{$screen-lg} {
+      padding: 0;
+    }
+  }
+}
+
+.ActionCard {
+  padding: 50px;
+  color: $c_white;
+  text-align: center;
+  background: $c_blue-ribbon;
+
+  &__title,
+  &__content {
+    margin: 0 auto 20px;
+
+    @media #{$screen-md} {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    color: $c_white;
+
+    @media #{$screen-md} {
+      font-size: 50px;
+    }
+  }
+
+  &__content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: inherit;
+
+    @media #{$screen-sm} {
+      width: 80%;
+    }
+
+    @media #{$screen-md} {
+      font-size: 18px;
+    }
+  }
+
+  @media #{$screen-sm} {
+    background-image: url('../../assets/background/card-left.png'), url('../../assets/background/card-right.png');
+    background-position: bottom left, top right;
+    background-repeat: no-repeat;
+  }
+
+  @media #{$screen-md} {
+    padding: 100px;
+  }
+}
+
+.LegendItem {
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  &__box {
+    width: 28px;
+    height: 8px;
+    margin-right: 30px;
+    border: 2px solid $c_white;
+  }
+
+  &__text {
+    font-size: 24px;
+    color: $c_ebony-clay;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
