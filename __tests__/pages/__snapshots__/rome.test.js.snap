@@ -3,11 +3,11 @@
 exports[`RomePage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Explore the upcoming Rome Testnet"
+    description="Explore the Rome Testnet"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: A user governed video platform"
+    title="Joystream: The video platform DAO"
   />
   <Hero
     animationEnd={500}
@@ -35,7 +35,7 @@ exports[`RomePage page renders correctly 1`] = `
     <HeroCard
       content={null}
       counterTitle=""
-      date="2020/01/20 11:00"
+      date="2020/02/07 11:00"
       error={false}
       info={false}
     />

@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "https://joystream.co"
+  to = "https://joystream.org"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.joystream.co"
+  to = "https://joystream.org"
+  status = 301
+  force = true

@@ -6,7 +6,7 @@ import Plx from 'react-plx';
 import './style.scss';
 
 const propTypes = {
-  title: string.isRequired,
+  title: node.isRequired,
   image: string,
   indent: bool,
   children: node,

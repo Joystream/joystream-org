@@ -17,7 +17,7 @@ import './style.scss';
 const PrivacyPolicyPage = () => {
   return (
     <BaseLayout>
-      <SiteMetadata title="Joystream Privacy and Cookie Policy" description="We take your privacy seriously." />
+      <SiteMetadata title="Joystream: The video platform DAO" description="Joystream Privacy and Cookie Policy" />
 
       <Hero title="Privacy Policy and Cookies">
         <p className="PrivacyPolicyPage__hero-paragraph">
