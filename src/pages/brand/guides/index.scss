@@ -1,0 +1,26 @@
+@import '../../../styles/_main';
+
+.GuidesPage {
+  background-color: $c_black;
+
+  &__wrapper {
+    color: $c_white;
+
+    @media #{$screen-sm} {
+      width: 75%;
+    }
+
+    @media #{$screen-xl} {
+      padding-left: 160px;
+      border-left: 1px solid $c_ebony-clay;
+    }
+  }
+
+  &__container {
+    padding-bottom: 0;
+
+    @media #{$screen-sm} {
+      display: flex;
+    }
+  }
+}

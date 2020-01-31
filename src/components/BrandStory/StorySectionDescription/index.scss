@@ -1,0 +1,61 @@
+@import '../../../styles/_main';
+
+.StorySectionDescription {
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__header,
+  &__footer {
+    font-size: 20px;
+    line-height: 30px;
+    color: $c_white;
+  }
+
+  &__text-col {
+    @media #{$screen-md} {
+      max-width: 560px;
+    }
+  }
+
+  &__text p {
+    margin-bottom: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 21px;
+    color: $c_light-gray;
+  }
+}
+
+@media #{$screen-sm} {
+  .StorySectionDescription {
+    &__text p {
+      margin-bottom: 40px;
+      font-size: 20px;
+      line-height: 30px;
+      color: $c_grayc-chateau;
+    }
+  }
+}
+
+@media #{$screen-md} {
+  .StorySectionDescription {
+    &__header,
+    &__footer {
+      font-size: 30px;
+      line-height: 45px;
+      color: $c_white;
+    }
+
+    &__header {
+      max-width: 50%;
+      margin-bottom: 80px;
+    }
+
+    &__footer {
+      max-width: 900px;
+      margin: 30px auto 0;
+      text-align: center;
+    }
+  }
+}

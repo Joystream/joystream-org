@@ -1,0 +1,25 @@
+@import '../../../styles/_main';
+
+.AssetsPage {
+  &__wrapper {
+    padding: 80px 0 0;
+
+    @media #{$screen-sm} {
+      width: 75%;
+      padding: 100px 0;
+    }
+
+    @media #{$screen-xl} {
+      padding: 100px 0 100px 160px;
+      border-left: 1px solid $c_sky-white;
+    }
+  }
+
+  &__container {
+    padding-bottom: 0;
+
+    @media #{$screen-sm} {
+      display: flex;
+    }
+  }
+}

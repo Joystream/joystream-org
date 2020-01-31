@@ -1,0 +1,144 @@
+@import '../../../styles/_main';
+
+.StorySectionLogo {
+  overflow: hidden;
+  color: $c_white;
+  background-color: $c_blue-ribbon;
+
+  &__logos-container {
+    position: relative;
+  }
+
+  &__logo-container {
+    position: relative;
+    margin: 0 -20px;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__logo-background {
+    width: 100%;
+  }
+
+  &__blueprint {
+    display: block;
+    margin: 20px auto 80px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    color: $c_white;
+  }
+
+  &__sketch-img {
+    position: relative;
+    margin: 80px 0;
+
+    img {
+      position: absolute;
+      transform: scale(1.15);
+    }
+
+    &::after {
+      display: block;
+      padding-bottom: 75%;
+      content: '';
+    }
+  }
+
+  &__text {
+    p {
+      margin-bottom: 1.5em;
+      font-size: 20px;
+      line-height: 30px;
+      color: $c_white;
+    }
+  }
+
+  &__action {
+    position: absolute;
+    right: 32px;
+    bottom: 0;
+    transform: translate(0, 50%);
+  }
+}
+
+@media #{$screen-sm} {
+  .StorySectionLogo {
+    padding: 120px 0;
+    color: $c_white;
+
+    &__container {
+      background: url('../../../assets//svg/bg-brand-logo-pattern.svg') top center;
+      background-size: calc(100% - 40px) auto;
+    }
+
+    &__logos-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__logo-container {
+      width: 47%;
+      margin: -120px 0 0;
+    }
+
+    &__blueprint {
+      width: 40%;
+      margin: 0;
+    }
+
+    &__text {
+      margin-top: 140px;
+
+      p {
+        width: 80%;
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
+  }
+}
+
+@media #{$screen-md} {
+  .StorySectionLogo {
+    &__container {
+      background-size: calc(100% - 64px) auto;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      width: 40%;
+      margin-top: 120px;
+      margin-right: 40px;
+    }
+
+    &__sketch-img {
+      flex-grow: 1;
+      margin: 0;
+      margin-right: 80px;
+    }
+  }
+}
+
+@media #{$screen-lg} {
+  .StorySectionLogo {
+    &__title {
+      font-size: 60px;
+      font-weight: normal;
+      line-height: 70px;
+    }
+  }
+}

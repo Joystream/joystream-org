@@ -1,0 +1,143 @@
+@import '../../../styles/_main';
+
+.GuidesSectionPallete {
+  &__boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__box-blue {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__box-light,
+  &__box-dark {
+    width: calc(50% - 10px);
+  }
+
+  &__color-array {
+    width: calc(33.33% - 10px);
+  }
+
+  &__color-array-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+
+  @media #{$screen-sm} {
+    &__box-blue {
+      width: calc(50% - 20px);
+      margin-bottom: 0;
+    }
+
+    &__box-light,
+    &__box-dark {
+      width: calc(25% - 20px);
+    }
+
+    &__color-array {
+      width: calc(33.33% - 20px);
+    }
+  }
+}
+
+.ColorTile {
+  margin-bottom: 40px;
+  padding: 40px;
+  line-height: 1.5;
+  color: $c_black;
+
+  &--no-margin {
+    margin-bottom: 0;
+  }
+
+  &--border {
+    border: 1px solid $c_ebony-clay;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: inherit;
+
+    @media #{$screen-sm} {
+      margin-bottom: 0;
+    }
+  }
+
+  &__section {
+    display: flex;
+    margin-top: 10px;
+
+    @media #{$screen-sm} {
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+
+  &__color-name {
+    width: 70px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__color-value {
+    font-size: 18px;
+  }
+
+  @media #{$screen-sm} {
+    display: flex;
+    align-items: center;
+
+    > * {
+      width: 25%;
+    }
+
+    &--small {
+      padding: 14px 40px;
+    }
+  }
+}
+
+.ColorBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: inherit;
+
+  &__name {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.ColorBoxContainer {
+  color: $c_white;
+
+  &--border {
+    border: 1px solid $c_ebony-clay;
+  }
+
+  &--dark-text {
+    color: $c_ebony-clay;
+  }
+}
+
+.ColorArray {
+  &__color-stop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    font-size: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}

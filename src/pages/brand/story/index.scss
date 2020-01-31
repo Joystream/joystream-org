@@ -1,0 +1,26 @@
+@import '../../../styles/_main';
+
+$indentation: 60px;
+
+.Story {
+  &__multi-section {
+    position: relative;
+    background: $c_black;
+
+    @media #{$screen-md} {
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        display: block;
+        content: url('../../../assets/svg/multi-section-pattern.svg');
+      }
+    }
+
+    @media #{$screen-lg} {
+      &::before {
+        left: calc(50% + 20px);
+      }
+    }
+  }
+}

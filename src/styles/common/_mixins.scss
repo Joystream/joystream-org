@@ -18,3 +18,18 @@
 
   max-width: 840px;
 }
+
+%largeContainer {
+  $padding: 20px;
+
+  max-width: calc(1400px + 2 * #{$padding});
+  margin: 0 auto;
+  padding: 0 $padding;
+
+  @media #{$screen-md} {
+    $padding: 32px;
+
+    max-width: calc(1400px + 2 * #{$padding});
+    padding: 0 $padding;
+  }
+}

@@ -67,3 +67,15 @@ yarn build-storybook
 ```
 
 After the process is complete, production files will be located in the `storybook-static` folder located next to other files in the root of the project.
+
+## Branding
+
+#### Assets
+
+All Branding assets are available in [joystream design repository](https://github.com/Joystream/design/tree/master/Assets-full). In case any of them changes, a script should be ran to include changes on the joystream branding page, and any changes introduced by it should be commited and deployed.
+
+Assets refresh script:
+
+```sh
+yarn fetch-assets-data
+```

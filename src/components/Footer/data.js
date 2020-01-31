@@ -7,6 +7,7 @@ const joystreamLinks = [
   { href: sharedData.links.blog, label: 'Blog' },
   { to: '/manifesto', label: 'Manifesto' },
   { to: '/roles', label: 'Roles' },
+  { to: '/token', label: 'Token' },
 ];
 
 const githubLinks = [
@@ -17,7 +18,10 @@ const githubLinks = [
   { href: sharedData.links.repository, label: 'Repository' },
 ];
 
-const usefulLinks = [{ href: sharedData.links.openings, label: 'We are hiring!' }];
+const usefulLinks = [
+  { href: sharedData.links.openings, label: 'We are hiring!' },
+  { to: '/brand/guides', label: 'Brand guidance' },
+];
 
 const socialMedias = [
   { icon: TwitterIcon, href: sharedData.social.twitterLink, name: 'Twitter' },

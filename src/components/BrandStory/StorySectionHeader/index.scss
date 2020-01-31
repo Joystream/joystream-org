@@ -1,0 +1,120 @@
+@import '../../../styles/_main';
+
+.StorySectionHeader {
+  $_r: &;
+
+  width: 100%;
+  color: $c_white;
+  background-image: url('../../../assets/svg/brand-story-header.svg');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    color: inherit;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+
+    p {
+      font-size: 20px;
+      line-height: 30px;
+      color: $c_grayc-chateau;
+    }
+
+    strong {
+      font-weight: normal;
+      color: $c_white;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding: 80px 72px;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 192px;
+    color: $c_blue-ribbon;
+  }
+
+  &__chip {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__action {
+    position: absolute;
+    right: 32px;
+    bottom: 120px;
+  }
+}
+
+@media #{$screen-sm} {
+  .StorySectionHeader {
+    &__button {
+      width: 100%;
+    }
+  }
+}
+
+@media #{$screen-md} {
+  .StorySectionHeader {
+    padding-bottom: 0;
+    background-image: none;
+
+    &__button {
+      width: auto;
+    }
+
+    &__container {
+      flex-direction: row;
+    }
+
+    &__title {
+      margin-bottom: 80px;
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 70px;
+      color: inherit;
+    }
+
+    &__description {
+      margin-bottom: 80px;
+    }
+
+    &__content {
+      width: 50%;
+      margin: 160px 0;
+    }
+
+    &__image-wrapper {
+      width: 50%;
+      padding: 0 120px 0;
+    }
+
+    &__image {
+      max-width: initial;
+    }
+  }
+}
