@@ -96,7 +96,6 @@ const TokensPage = () => {
         </div>
       </LayoutWrapper>
 
-      {/* 
       <LayoutWrapper dark>
         <TitleWrapper title="Allocation of Tokens">
           <div className="TokensPage__allocations">
@@ -115,8 +114,7 @@ const TokensPage = () => {
             <img className="TokensPage__allocations-chart" src={tokensChart} alt="" />
           </div>
         </TitleWrapper>
-      </LayoutWrapper> 
-      */}
+      </LayoutWrapper>
 
       <LayoutWrapper>
         <h2 className="TokensPage__title">Disclaimer</h2>
