@@ -28,7 +28,7 @@ const ManifestoPage = () => {
         theme="blue"
         noOverflow
       >
-        <p className="AcropolisPage__hero-paragraph">{sharedData.rolesDescription}</p>
+        <p className="AcropolisPage__hero-paragraph">{pageData.subtitle}</p>
       </Hero>
 
       <LayoutWrapper>

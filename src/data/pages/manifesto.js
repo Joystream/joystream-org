@@ -10,6 +10,12 @@ import { sharedData } from './';
 
 export default {
   header: 'The Joystream Manifesto',
+  subtitle: (
+    <>
+      Our Manifesto sets out both the problems we believe are associated with digital media platforms in their current
+      form as well as our proposed solution to these concerns.
+    </>
+  ),
   sections: {
     problem: {
       title: 'Problem',
