@@ -30,6 +30,6 @@ const goalsData = [
   },
 ];
 
-const launchDate = '2020/02/21 11:00';
+const launchDate = '2020/03/09 11:00';
 
 export { goalsData, launchDate };
