@@ -31,7 +31,7 @@
     "get-value": "^3.0.1",
     "identity-obj-proxy": "^3.0.0",
     "intersection-observer": "^0.7.0",
-    "jest": "^24.8.0",
+    "jest": "^25.1.0",
     "jsdom": "^15.1.1",
     "node-sass": "^4.12.0",
     "pre-commit": "^1.2.2",
@@ -69,8 +69,10 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
+    "jest-preset-gatsby": "^1.0.29",
     "pre-commit": "^1.2.2",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.12.0"
   },
   "keywords": [
     "gatsby"
