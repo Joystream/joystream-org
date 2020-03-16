@@ -181,7 +181,7 @@ exports[`IndexPage page renders correctly 1`] = `
         }
       }
       className=""
-      date="2020/03/17 11:00"
+      date="2020/03/17 15:00"
       image="icon-mock"
       title="Rome Testnet"
     >
