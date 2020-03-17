@@ -8,20 +8,6 @@ import { ReactComponent as storageImage } from '../../assets/svg/platform-conten
 const roles = {
   active: [
     {
-      image: contentCreatorImage,
-      title: 'Content Creator',
-      key: 'contentCreatorsCount',
-      to: '/roles#content-creator',
-      hasLabel: true,
-    },
-    {
-      image: contentCuratorImage,
-      title: 'Content Curator',
-      key: 'contentCuratorsCount',
-      to: '/roles#content-curator',
-      hasLabel: true,
-    },
-    {
       image: validatorsImage,
       title: 'Validator',
       to: '/roles#validator',
@@ -40,7 +26,7 @@ const roles = {
       title: 'Storage Provider',
       to: '/roles#storage-provider',
       key: 'storageProviders',
-      hasLabel: false,
+      hasLabel: true,
     },
   ]
 };
