@@ -1,4 +1,37 @@
-const goalsData = [
+import { ReactComponent as contentCreatorImage } from '../../assets/svg/content-creator.svg';
+import { ReactComponent as contentCuratorImage } from '../../assets/svg/content-curator.svg';
+import { ReactComponent as validatorsImage } from '../../assets/svg/active-validators.svg';
+import { ReactComponent as memberImage } from '../../assets/svg/council-member.svg';
+import { ReactComponent as storageImage } from '../../assets/svg/platform-content-files.svg';
+
+
+const roles = {
+  active: [
+    {
+      image: validatorsImage,
+      title: 'Validator',
+      to: '/roles#validator',
+      key: 'validatorsCount',
+      hasLabel: false,
+    },
+    {
+      image: memberImage,
+      title: 'Council Member',
+      to: '/roles#council-member',
+      key: 'councilMembersCount',
+      hasLabel: false,
+    },
+    {
+      image: storageImage,
+      title: 'Storage Provider',
+      to: '/roles#storage-provider',
+      key: 'storageProviders',
+      hasLabel: true,
+    },
+  ]
+};
+
+const goals = [
   {
     title: 'Build and release an on-chain forum',
     text: `The final platform will have built in multiple ways of facilitating
@@ -19,7 +52,6 @@ const goalsData = [
             node they connect to responds to their request. Whether or not this
             goal is achieved depends on both the reliability of the software, a
             good reporting system and corrective actions from multiple parties.`,
-    state: 'inprogress',
   },
   {
     title: 'Build the storage node with "tranches"',
@@ -32,4 +64,4 @@ const goalsData = [
   },
 ];
 
-export { goalsData };
+export { roles, goals };
