@@ -224,7 +224,7 @@ exports[`RomePage page renders correctly 1`] = `
       <Link
         className=""
         highlighted={false}
-        to="/acropolis"
+        to="https://testnet.joystream.org/"
       >
         <icon-component-mock />
          Explore current testnet

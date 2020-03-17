@@ -109,7 +109,7 @@ const RomePage = ({ content }) => {
           modern governance structures.
           <br />
           <br />
-          <Link to="/acropolis">
+          <Link to="https://testnet.joystream.org/">
             <PersonIcon /> Explore current testnet
           </Link>
         </p>

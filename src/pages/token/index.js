@@ -90,7 +90,7 @@ const TokensPage = () => {
             The JOY token does not yet exist. In the meantime however, you can join our currently active testnet and
             earn Monero, and learn what is required to participate when we are live.
           </p>
-          <Button light href="https://testnet.joystream.org/acropolis/pioneer/#/">
+          <Button light href="https://testnet.joystream.org">
             Join the current testnet
           </Button>
         </div>
