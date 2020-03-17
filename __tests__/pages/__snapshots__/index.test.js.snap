@@ -37,7 +37,7 @@ exports[`IndexPage page renders correctly 1`] = `
       <Button
         className="IndexPage__hero-button"
         disabled={false}
-        href="https://blog.joystream.org/acropolis-incentives/"
+        href="https://blog.joystream.org/rome-incentives/"
         large={true}
         light={false}
         noWrap={true}
@@ -72,25 +72,34 @@ exports[`IndexPage page renders correctly 1`] = `
     <TestnetItem
       button={
         Object {
-          "label": "Explore Acropolis",
-          "to": "/acropolis",
+          "label": "Explore Rome",
+          "to": "/rome",
         }
       }
       className=""
       date={null}
       image="icon-mock"
-      title="Acropolis Testnet"
+      title="Rome Testnet"
     >
-      Acropolis is our fourth testnet, with much improved
+      Rome is our fifth testnet, which introduces two new roles, 
        
+      the 
       <Link
         className=""
         highlighted={false}
-        to="/roles#storage-provider"
+        to="/roles#content-creator"
       >
-        storage provider
+        Content Creator
       </Link>
-       software and an on-chain forum.
+       and 
+      <Link
+        className=""
+        highlighted={false}
+        to="/roles#content-curator"
+      >
+        Content Curator
+      </Link>
+      .
     </TestnetItem>
   </LayoutWrapper>
   <Analytics
@@ -156,7 +165,7 @@ exports[`IndexPage page renders correctly 1`] = `
     <Button
       className=""
       disabled={false}
-      href="https://blog.joystream.org/acropolis-incentives/"
+      href="https://blog.joystream.org/rome-incentives/"
       large={false}
       light={false}
       noWrap={false}
@@ -168,26 +177,6 @@ exports[`IndexPage page renders correctly 1`] = `
       Participate and Earn Monero
     </Button>
   </Analytics>
-  <LayoutWrapper
-    className=""
-    dark={false}
-    gradient={false}
-  >
-    <TestnetItem
-      button={
-        Object {
-          "label": "Explore Rome",
-          "to": "/rome",
-        }
-      }
-      className=""
-      date="2020/03/17 15:00"
-      image="icon-mock"
-      title="Rome Testnet"
-    >
-      Rome is our fifth testnet, and we are introducing new roles for you to try out.
-    </TestnetItem>
-  </LayoutWrapper>
   <LayoutWrapper
     className=""
     dark={true}
@@ -220,6 +209,20 @@ exports[`IndexPage page renders correctly 1`] = `
           roles={
             Array [
               Object {
+                "hasLabel": true,
+                "image": "icon-component-mock",
+                "key": "contentCreatorsCount",
+                "title": "Content Creator",
+                "to": "/roles#content-creator",
+              },
+              Object {
+                "hasLabel": true,
+                "image": "icon-component-mock",
+                "key": "contentCuratorsCount",
+                "title": "Content Curator",
+                "to": "/roles#content-curator",
+              },
+              Object {
                 "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "validatorsCount",
@@ -234,7 +237,7 @@ exports[`IndexPage page renders correctly 1`] = `
                 "to": "/roles#council-member",
               },
               Object {
-                "hasLabel": true,
+                "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "storageProviders",
                 "title": "Storage Provider",
@@ -274,16 +277,6 @@ exports[`IndexPage page renders correctly 1`] = `
                 "image": "icon-component-mock",
                 "title": "Membership Curator",
                 "to": "/roles",
-              },
-              Object {
-                "image": "icon-component-mock",
-                "title": "Content Curator",
-                "to": "/roles#content-curator",
-              },
-              Object {
-                "image": "icon-component-mock",
-                "title": "Content Creator",
-                "to": "/roles#content-creator",
               },
               Object {
                 "image": "icon-component-mock",

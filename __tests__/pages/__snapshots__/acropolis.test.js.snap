@@ -34,10 +34,22 @@ exports[`AcropolisPage page renders correctly 1`] = `
     </p>
     <HeroCard
       content={null}
-      counterTitle=""
-      date="2019/06/27 17:50"
+      counterTitle={
+        <React.Fragment>
+          REPLACED BY 
+          <Link
+            className=""
+            highlighted={false}
+            to="/rome"
+          >
+            ROME
+          </Link>
+           ON
+        </React.Fragment>
+      }
+      date="2020/03/17 15:42"
       error={false}
-      info={false}
+      info={true}
     />
     <TestnetModal
       className=""
@@ -59,70 +71,6 @@ exports[`AcropolisPage page renders correctly 1`] = `
     dark={false}
     gradient={false}
   >
-    <TitleWrapper
-      className=""
-      subtitle=""
-      title="Network Statistics"
-    >
-      <Analytics
-        className=""
-        content={
-          Object {
-            "blockHeight": "1110k",
-            "councilStage": "Announcing",
-            "forumPosts": 11,
-            "mediaFiles": 9,
-            "membershipsMembers": 164,
-            "rolesProviders": 10,
-            "validatorsCount": 20,
-          }
-        }
-        items={
-          Array [
-            Object {
-              "image": "icon-component-mock",
-              "title": "Participation Payout",
-              "value": "$14808",
-            },
-            Object {
-              "image": "icon-component-mock",
-              "key": "validatorsCount",
-              "title": "Active Validators",
-            },
-            Object {
-              "image": "icon-component-mock",
-              "key": "blockHeight",
-              "title": "Block Height",
-            },
-            Object {
-              "image": "icon-component-mock",
-              "key": "councilStage",
-              "title": "Election Stage",
-            },
-            Object {
-              "image": "icon-component-mock",
-              "key": "membershipsMembers",
-              "title": "Memberships",
-            },
-            Object {
-              "image": "icon-component-mock",
-              "key": "forumPosts",
-              "title": "Forum Posts",
-            },
-            Object {
-              "image": "icon-component-mock",
-              "key": "mediaFiles",
-              "title": "Platform Files",
-            },
-            Object {
-              "image": "icon-component-mock",
-              "key": "rolesProviders",
-              "title": "Storage Providers",
-            },
-          ]
-        }
-      />
-    </TitleWrapper>
     <TitleWrapper
       className=""
       subtitle=""
@@ -189,7 +137,6 @@ exports[`AcropolisPage page renders correctly 1`] = `
               "title": "Rebuild and release the storage node",
             },
             Object {
-              "state": "inprogress",
               "text": "Both content creators and consumers user experience depends on
             various metrics, but perhaps the most important is that the storage
             node they connect to responds to their request. Whether or not this
@@ -219,7 +166,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
     <TitleWrapper
       className=""
       subtitle=""
-      title="Roles available on the current testnet"
+      title="Roles available on this testnet"
     >
       <ColumnsLayout
         className=""

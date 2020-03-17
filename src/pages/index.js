@@ -32,8 +32,8 @@ import { launchDate as romeNetworkLaunchDate } from '../data/pages/rome';
 import './style.scss';
 
 const activeTestnet = {
-  name: 'Acropolis',
-  incentivesLink: 'https://blog.joystream.org/acropolis-incentives/',
+  name: 'Rome',
+  incentivesLink: 'https://blog.joystream.org/rome-incentives/',
 };
 
 const IndexPage = ({ content }) => (
@@ -73,17 +73,17 @@ const IndexPage = ({ content }) => (
 
     <LayoutWrapper>
       <TestnetItem
-        title="Acropolis Testnet"
-        image={AcropolisImage}
+        title="Rome Testnet"
+        image={RomeImage}
         children={
           <>
-            Acropolis is our fourth testnet, with much improved{' '}
-            <Link to="/roles#storage-provider">storage provider</Link> software and an on-chain forum.
+            Rome is our fifth testnet, which introduces two new roles, {' '}
+            the <Link to="/roles#content-creator">Content Creator</Link> and <Link to="/roles#content-curator">Content Curator</Link>.
           </>
         }
         button={{
-          label: 'Explore Acropolis',
-          to: '/acropolis',
+          label: 'Explore Rome',
+          to: '/rome',
         }}
       />
     </LayoutWrapper>
@@ -93,6 +93,11 @@ const IndexPage = ({ content }) => (
         Participate and Earn Monero
       </Button>
     </Analytics>
+
+    {/* 
+
+    We are commenting out the "next testnet section",
+    enable when we have announced it.
 
     <LayoutWrapper>
       <TestnetItem
@@ -106,6 +111,8 @@ const IndexPage = ({ content }) => (
         }}
       />
     </LayoutWrapper>
+
+    */}
 
     <LayoutWrapper dark>
       <TitleWrapper title="Become a user, run the platform">
