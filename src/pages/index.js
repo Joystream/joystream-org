@@ -78,7 +78,7 @@ const IndexPage = ({ content }) => (
         children={
           <>
             Rome is our fifth testnet, which introduces two new roles, {' '}
-            the <Link to="/roles#content-creator">content creator</Link> and <Link to="/roles#content-curator">content curator</Link>.
+            the <Link to="/roles#content-creator">Content Creator</Link> and <Link to="/roles#content-curator">Content Curator</Link>.
           </>
         }
         button={{

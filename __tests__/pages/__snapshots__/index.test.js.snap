@@ -89,7 +89,7 @@ exports[`IndexPage page renders correctly 1`] = `
         highlighted={false}
         to="/roles#content-creator"
       >
-        content creator
+        Content Creator
       </Link>
        and 
       <Link
@@ -97,7 +97,7 @@ exports[`IndexPage page renders correctly 1`] = `
         highlighted={false}
         to="/roles#content-curator"
       >
-        content curator
+        Content Curator
       </Link>
       .
     </TestnetItem>

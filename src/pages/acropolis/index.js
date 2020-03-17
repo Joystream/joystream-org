@@ -29,8 +29,8 @@ import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AcropolisImg from '../../assets/svg/acropolis-building.svg';
 
-import { sharedData, roles } from '../../data/pages';
-import { goalsData } from '../../data/pages/acropolis';
+import { roles, goals } from '../../data/pages/acropolis';
+import { sharedData } from '../../data/pages';
 
 import './style.scss';
 
@@ -49,7 +49,15 @@ const AcropolisPage = ({ content }) => {
         animationStartValue={0}
       >
         <p className="AcropolisPage__hero-paragraph">{sharedData.rolesDescription}</p>
-        <HeroCard date="2019/06/27 17:50" />
+        <HeroCard
+          info
+          date="2020/03/17 15:42"
+          counterTitle={
+            <>
+              REPLACED BY <Link to="/rome">ROME</Link> ON
+            </>
+          }
+        />
 
         <TestnetModal
           title="The Acropolis of Athens"
@@ -66,9 +74,14 @@ const AcropolisPage = ({ content }) => {
       </Hero>
 
       <LayoutWrapper>
+
+        {/*
+
         <TitleWrapper title="Network Statistics">
           <Analytics content={mapStatusDataToAnalytics(content)} />
         </TitleWrapper>
+        
+        */}
 
         <TitleWrapper title="Critical Documents">
           <ColumnsLayout>
@@ -101,12 +114,12 @@ const AcropolisPage = ({ content }) => {
             </>
           }
         >
-          <GoalList data={goalsData} />
+          <GoalList data={goals} />
         </TitleWrapper>
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title="Roles available on the current testnet">
+        <TitleWrapper title="Roles available on this testnet">
           <ColumnsLayout>
             <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} />
           </ColumnsLayout>
