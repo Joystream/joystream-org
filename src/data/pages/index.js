@@ -37,6 +37,20 @@ export const sharedData = {
 export const roles = {
   active: [
     {
+      image: contentCreatorImage,
+      title: 'Content Creator',
+      key: 'contentCreatorsCount',
+      to: '/roles#content-creator',
+      hasLabel: true,
+    },
+    {
+      image: contentCuratorImage,
+      title: 'Content Curator',
+      key: 'contentCuratorsCount',
+      to: '/roles#content-curator',
+      hasLabel: true,
+    },
+    {
       image: validatorsImage,
       title: 'Validator',
       to: '/roles#validator',
@@ -55,7 +69,7 @@ export const roles = {
       title: 'Storage Provider',
       to: '/roles#storage-provider',
       key: 'storageProviders',
-      hasLabel: true,
+      hasLabel: false,
     },
   ],
   future: [
@@ -68,16 +82,6 @@ export const roles = {
       image: membershipCuratorImage,
       title: 'Membership Curator',
       to: '/roles',
-    },
-    {
-      image: contentCuratorImage,
-      title: 'Content Curator',
-      to: '/roles#content-curator',
-    },
-    {
-      image: contentCreatorImage,
-      title: 'Content Creator',
-      to: '/roles#content-creator',
     },
     {
       image: bandwidthProviderImage,

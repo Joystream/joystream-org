@@ -169,6 +169,20 @@ exports[`RomePage page renders correctly 1`] = `
           roles={
             Array [
               Object {
+                "hasLabel": true,
+                "image": "icon-component-mock",
+                "key": "contentCreatorsCount",
+                "title": "Content Creator",
+                "to": "/roles#content-creator",
+              },
+              Object {
+                "hasLabel": true,
+                "image": "icon-component-mock",
+                "key": "contentCuratorsCount",
+                "title": "Content Curator",
+                "to": "/roles#content-curator",
+              },
+              Object {
                 "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "validatorsCount",
@@ -183,7 +197,7 @@ exports[`RomePage page renders correctly 1`] = `
                 "to": "/roles#council-member",
               },
               Object {
-                "hasLabel": true,
+                "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "storageProviders",
                 "title": "Storage Provider",
