@@ -169,14 +169,14 @@ exports[`RomePage page renders correctly 1`] = `
           roles={
             Array [
               Object {
-                "hasLabel": true,
+                "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "contentCreatorsCount",
                 "title": "Content Creator",
                 "to": "/roles#content-creator",
               },
               Object {
-                "hasLabel": true,
+                "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "contentCuratorsCount",
                 "title": "Content Curator",
