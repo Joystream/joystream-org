@@ -14,4 +14,5 @@ storiesOf('Components|Map', module)
   .add('athens', () => <Map location="athens" />)
   .add('acropolis', () => <Map location="acropolis" />)
   .add('sparta', () => <Map location="sparta" />)
-  .add('rome', () => <Map location="rome" />);
+  .add('rome', () => <Map location="rome" />)
+  .add('constantinople', () => <Map location="constantinople" />);

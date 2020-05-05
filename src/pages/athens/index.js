@@ -87,7 +87,7 @@ const AthensPage = ({ content }) => {
             </Pane>
             <Pane
               image={SpecImg}
-              href="https://github.com/Joystream/joystream/tree/master/testnets/athens"
+              href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens"
               title="Release Plan"
               target="_blank"
             >
@@ -102,7 +102,7 @@ const AthensPage = ({ content }) => {
           subtitle={
             <>
               The goals below are a simplified representation of the Key Results listed in our Release{' '}
-              <Link href="https://github.com/Joystream/joystream/tree/master/testnets/athens#okrs">OKR</Link>
+              <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens#okrs">OKR</Link>
             </>
           }
         >

@@ -75,12 +75,12 @@ exports[`RomePage page renders correctly 1`] = `
           image="icon-component-mock"
           title="Full Specifications"
         >
-          Specs to be released
+          No specifications were published for Rome.
         </Pane>
         <Pane
           className=""
           disabled={false}
-          href="https://github.com/Joystream/joystream/tree/master/testnets/rome"
+          href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome"
           image="icon-component-mock"
           target="_blank"
           title="Release Plan"
@@ -98,7 +98,7 @@ exports[`RomePage page renders correctly 1`] = `
           <Link
             className=""
             highlighted={false}
-            href="https://github.com/Joystream/joystream/tree/master/testnets/rome#release-okrs"
+            href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome#release-okrs"
           >
             OKR
           </Link>
@@ -110,31 +110,27 @@ exports[`RomePage page renders correctly 1`] = `
         data={
           Array [
             Object {
-              "state": "inprogress",
-              "text": "The Rome testnet is built around the introduction of a new content 
-      directory, that can be added to, modified and improved without requiring 
+              "text": "The Rome testnet is built around the introduction of a new content
+      directory, that can be added to, modified and improved without requiring
       runtime upgrades. All key results and goals are derived from this.",
               "title": "Build a dynamic, flexible and user friendly content directory",
             },
             Object {
-              "state": "inprogress",
-              "text": "Rome introduces a Content Directory system that is both built to last, 
-      yet still meant to be continuously improved on. We will pay for Content Creators 
+              "text": "Rome introduces a Content Directory system that is both built to last,
+      yet still meant to be continuously improved on. We will pay for Content Creators
       to upload a variety of content and we hope to learn a lot from the results.",
               "title": "Populate the content directory with a variety of content",
             },
             Object {
-              "state": "inprogress",
-              "text": "With a new Content Directory, and incentives to upload content, 
-      we need monitoring. The Content Curators will require staking, and 
+              "text": "With a new Content Directory, and incentives to upload content,
+      we need monitoring. The Content Curators will require staking, and
       will be paid in both testnet tokens and Monero.",
               "title": "Introduce the new Content Curator role",
             },
             Object {
-              "state": "inprogress",
-              "text": "Without Content Creators, there won't be any content. Granted, 
-      adding another level on top of the membership requirement may seem 
-      like a hurdle, but it will allow users to upload with multiple 
+              "text": "Without Content Creators, there won't be any content. Granted,
+      adding another level on top of the membership requirement may seem
+      like a hurdle, but it will allow users to upload with multiple
       profiles.",
               "title": "Add Content Creator profiles",
             },
@@ -169,14 +165,14 @@ exports[`RomePage page renders correctly 1`] = `
           roles={
             Array [
               Object {
-                "hasLabel": true,
+                "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "contentCreatorsCount",
                 "title": "Content Creator",
                 "to": "/roles#content-creator",
               },
               Object {
-                "hasLabel": true,
+                "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "contentCuratorsCount",
                 "title": "Content Curator",

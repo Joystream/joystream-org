@@ -23,11 +23,13 @@ import SiteMetadata from '../components/SiteMetadata';
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
 import heroImage from '../assets/svg/hero-builder.svg';
 import RomeImage from '../assets/svg/rome-main.svg';
+import constantinopleImage from '../assets/svg/constantinople-main.svg';
 import { ReactComponent as TickImage } from '../assets/svg/tick.svg';
 import { ReactComponent as ClockImage } from '../assets/svg/clock.svg';
 
 import { roles } from '../data/pages';
 import { launchDate as romeNetworkLaunchDate } from '../data/pages/rome';
+import { launchDate as constantinopleNetworkLaunchDate } from '../data/pages/constantinople';
 
 import './style.scss';
 
@@ -94,25 +96,21 @@ const IndexPage = ({ content }) => (
       </Button>
     </Analytics>
 
-    {/* 
-
-    We are commenting out the "next testnet section",
-    enable when we have announced it.
 
     <LayoutWrapper>
       <TestnetItem
-        title="Rome Testnet"
-        image={RomeImage}
-        children="Rome is our fifth testnet, and we are introducing new roles for you to try out."
-        date={romeNetworkLaunchDate}
+        title="Constantinople Testnet"
+        image={constantinopleImage}
+        children="Constantinople is our sixth testnet, offering an improved proposal system."
+        date={constantinopleNetworkLaunchDate}
         button={{
-          label: 'Explore Rome',
-          to: '/rome',
+          label: 'Explore Constantinople',
+          to: '/constantinople',
         }}
       />
     </LayoutWrapper>
 
-    */}
+
 
     <LayoutWrapper dark>
       <TitleWrapper title="Become a user, run the platform">

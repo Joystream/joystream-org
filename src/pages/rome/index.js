@@ -66,12 +66,15 @@ const RomePage = ({ content }) => {
       <LayoutWrapper>
         <TitleWrapper title="Critical Documents">
           <ColumnsLayout>
-            <Pane image={SpecImg} disabled title="Full Specifications">
-              Specs to be released
+            <Pane
+              image={SpecImg}
+              disabled title="Full Specifications"
+            >
+              No specifications were published for Rome.
             </Pane>
             <Pane
               image={ReleaseImg}
-              href="https://github.com/Joystream/joystream/tree/master/testnets/rome"
+              href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome"
               title="Release Plan"
               target="_blank"
             >
@@ -86,7 +89,7 @@ const RomePage = ({ content }) => {
           subtitle={
             <>
               The goals below are a simplified representation of the Key Results listed in our Release{' '}
-              <Link href="https://github.com/Joystream/joystream/tree/master/testnets/rome#release-okrs">OKR</Link>
+              <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome#release-okrs">OKR</Link>
             </>
           }
         >
