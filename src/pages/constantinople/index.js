@@ -23,7 +23,7 @@ import SiteMetadata from '../../components/SiteMetadata';
 
 import constantinopleImage from '../../assets/svg/constantinople.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
-import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
+import { ReactComponent as BlogImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import constantinopleBuildingImg from '../../assets/svg/constantinople-building.svg';
 
@@ -46,7 +46,10 @@ const ConstantinoplePage = ({ content }) => {
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
         animationStartValue={0}
       >
-        <p className="ConstantinoplePage__hero-paragraph">{sharedData.rolesDescription}</p>
+        <p className="ConstantinoplePage__hero-paragraph">
+          The Constantinople testnet introduces an improved proposals system
+          and a fiat-backed token model for participant compensation.
+        </p>
         <HeroCard date={launchDate} />
 
         <TestnetModal
@@ -67,17 +70,21 @@ const ConstantinoplePage = ({ content }) => {
       <LayoutWrapper>
         <TitleWrapper title="Critical Documents">
           <ColumnsLayout>
-            <Pane image={SpecImg} disabled title="Full Specifications">
-              Specs to be released
-            </Pane>
             <Pane
-              image={ReleaseImg}
+              image={SpecImg}
               href="https://github.com/Joystream/joystream-landing/tree/master/testnets/constantinople"
               title="Release Plan"
               target="_blank"
+          >
+            Read the release plan as it was made during the planning stage, and learn more about how the development
+            evolved.
+            </Pane>
+            <Pane image={BlogImg}
+              title="Announcement Blog Post"
+              href="https://blog.joystream.org/announcing-constantinople/"
+              target="_blank"
             >
-              Read the release plan as it was made during the planning stage, and learn more about how the development
-              evolved.
+              Read a brief primer on the Constantinople testnet and its objectives.
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
@@ -104,7 +111,7 @@ const ConstantinoplePage = ({ content }) => {
 
       <MapInfo title="Constantinople" location="constantinople">
         <p>
-          <strong>Constantinople was the capital city of the Roman Empire during the fourth century. </strong>
+          <strong>Constantinople was the capital city of the Eastern Roman Empire during the fourth century. </strong>
           It was famed for its massive and complex defences as well as its architectural masterpieces
           and opulent aristocratic palaces. As was the case with the city, we hope our Constantinople
           testnet will be a worthy successor to Rome.

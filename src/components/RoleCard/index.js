@@ -33,7 +33,7 @@ const numberWrapper = number => {
 
 const contentTypes = {
   migration: number => <>At migration, {numberWrapper(number)} (max) had this role</>,
-  current: number => <>{numberWrapper(number)} currently run this role</>,
+  current: number => <>{numberWrapper(number)} currently run this role on Rome</>,
   most: number => <>At most, {numberWrapper(number)} users occupied this role</>,
 };
 
