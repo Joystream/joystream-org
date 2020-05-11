@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-export function usePromise(promise) {
+export default function usePromise(promise) {
   const [state, setState] = useState({ value: null, error: null, isPending: true });
 
   let isSubscribed = true;
