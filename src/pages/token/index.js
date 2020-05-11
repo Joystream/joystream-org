@@ -123,22 +123,21 @@ const TokensPage = () => {
             This disclaimer applies to the webpage accessible at{' '}
             <a href="www.joystream.org/token">www.joystream.org/token</a> as well as all other webpages, digital
             services or applications published by Jsgenesis (the “Company”). The disclaimer also applies to any material
-            published by Company in any other format in connection with the JOY token (the “Token”).
-            Publications made by Company and all information contained within them are not directed at or intended for
-            use by any person resident or located in any jurisdiction where (1) the distribution of such information is
-            contrary to the laws of such jurisdiction; or (2) such distribution is prohibited without obtaining the
-            necessary licenses or authorizations by the relevant branch, subsidiary or affiliate office of Company and
-            such licenses or authorizations have not been obtained.
-            Company does not provide investment, legal or tax advice and nothing herein should be construed as being
-            financial, legal, tax or other advice. Unless specifically stated otherwise, all price information is
-            indicative only. No representation or warranty, either express or implied, is provided in relation to the
-            accuracy, completeness or reliability of the materials, nor are they a complete statement of the securities,
-            markets or developments referred to herein. The materials should not be regarded by recipients as a
-            substitute for the exercise of their own judgment.
-            All information and materials published, distributed or otherwise made available by Company in relation to
-            Token are provided for informational purposes, for your non-commercial, personal use only. No information or
-            materials published by Company constitutes a solicitation, an offer, or a recommendation to buy or sell any
-            investment instruments, to effect any transactions, or to conclude any legal act of any kind whatsoever.
+            published by Company in any other format in connection with the JOY token (the “Token”). Publications made
+            by Company and all information contained within them are not directed at or intended for use by any person
+            resident or located in any jurisdiction where (1) the distribution of such information is contrary to the
+            laws of such jurisdiction; or (2) such distribution is prohibited without obtaining the necessary licenses
+            or authorizations by the relevant branch, subsidiary or affiliate office of Company and such licenses or
+            authorizations have not been obtained. Company does not provide investment, legal or tax advice and nothing
+            herein should be construed as being financial, legal, tax or other advice. Unless specifically stated
+            otherwise, all price information is indicative only. No representation or warranty, either express or
+            implied, is provided in relation to the accuracy, completeness or reliability of the materials, nor are they
+            a complete statement of the securities, markets or developments referred to herein. The materials should not
+            be regarded by recipients as a substitute for the exercise of their own judgment. All information and
+            materials published, distributed or otherwise made available by Company in relation to Token are provided
+            for informational purposes, for your non-commercial, personal use only. No information or materials
+            published by Company constitutes a solicitation, an offer, or a recommendation to buy or sell any investment
+            instruments, to effect any transactions, or to conclude any legal act of any kind whatsoever.
           </p>
         </div>
       </LayoutWrapper>

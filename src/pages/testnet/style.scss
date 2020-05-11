@@ -1,0 +1,80 @@
+@import '../../styles/main.scss';
+
+
+.PendingExchanges {
+  display: flex;
+}
+
+.ExchangeCard {
+  margin: 1.875rem;
+  padding: 0 1.25rem;
+  text-align: center;
+  background-color: $c_white;
+  border-radius: 3px;
+
+  &__address {
+    max-width: 240px;
+    margin: 1.25rem auto;
+    padding: 1.375rem 2.875rem;
+    font-size: .875rem;
+    color: $c_white;
+    background-color: $c_blue_ribbon;
+    background-image: url('../../assets/background/roles-main-left-up.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+
+    &:first-child {
+      font-weight: 300;
+    }
+
+    & > h2 {
+      overflow: hidden;
+      font-size: 2em;
+      color: inherit;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__blockNumber {
+    font-size: 1rem;
+    font-weight: 300;
+
+    span:first-of-type {
+      font-weight: 700;
+      color: $c_blue_ribbon;
+    }
+  }
+
+  &__tokens {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.45;
+
+    & > h1 {
+      font-size: 2.8125rem;
+      line-height: 1.2;
+      color: $c_blue_ribbon;
+    }
+
+    &__dollarAmount {
+      color: $c_grayc-chateau;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    font-size: .8125rem;
+
+    span:first-of-type {
+      font-weight: bold;
+    }
+  }
+}
