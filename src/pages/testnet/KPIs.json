@@ -1,0 +1,22 @@
+{
+  "KPIs": [
+    {
+      "title": "Examplary Title of KPI",
+      "description": "The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node.",
+      "reward": "325",
+      "number": 1
+    },
+    {
+      "title": "Examplary Title of KPI",
+      "description": "The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node.",
+      "reward": "13225",
+      "number": 2
+    },
+    {
+      "title": "Examplary Title of KPI",
+      "description": "The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node.",
+      "reward": "3225",
+      "number": 3
+    }
+  ]
+}

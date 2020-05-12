@@ -4,6 +4,152 @@ body {
   overflow-x: hidden;
 }
 
+.Hero__description > p.Hero__Paragraph {
+  margin-bottom: 3.75rem;
+}
+
+.KPIs__Links {
+  display: flex;
+  flex-direction: column;
+
+  &__Document__Icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  &__Link {
+    margin-bottom: 1.875rem;
+  }
+
+  &__Button {
+    max-width: 15.625rem;
+  }
+}
+
+.KPIs__Values {
+  &__Card {
+    margin-bottom: 2.5rem;
+    padding: 2.5rem;
+    text-align: left;
+
+    &:hover {
+      background-color: $c_catskill_white;
+    }
+
+
+
+    &__Header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      margin-left: 2.5rem;
+      font-size: 1.625rem;
+
+
+      & > h1 {
+        font-weight: bold;
+      }
+
+      & > h2 {
+        color: $c_blue_ribbon;
+      }
+    }
+
+    &__Number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 8rem;
+      height: 8rem;
+      margin-right: 2.5rem;
+      background-color: $c_catskill_white;
+
+      & > h2 {
+        font-size: 2.8125rem;
+        color: $c_blue_ribbon;
+      }
+    }
+
+    &:hover &__Number {
+      background-color: $c_blue_ribbon;
+
+      & > h2 {
+        color: $c_white;
+      }
+    }
+
+    &__Description {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.KPIs__Explainer {
+  &__Replenishment {
+    & > h1 {
+      margin-bottom: 1.875rem;
+      font-size: 1.5rem;
+    }
+
+    &__Card {
+      display: flex;
+      justify-content: space-around;
+      max-width: 30rem;
+      padding: 2.5rem 4.5rem 1.5rem 2.5rem;
+      color: $c_white;
+      background-color: $c_blue_ribbon;
+      border-radius: .375rem;
+
+      &__Values {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 4.065rem;
+        line-height: 1;
+      }
+
+      &__Price {
+        margin: auto 2.5rem auto 1.875rem;
+      }
+
+      &__Slash {
+        margin: auto 1.875rem;
+        font-size: 2.5rem;
+        line-height: 1.5;
+      }
+
+      &__Days {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        & span:last-child {
+          font-size: .875rem;
+        }
+      }
+    }
+  }
+
+  & blockquote h1 {
+    margin-bottom: 1.25rem;
+    font-size: 1.875rem;
+    line-height: 1.33;
+    color: $c_blue_ribbon;
+  }
+
+  & .ImageSection__title {
+    margin-bottom: 5.875rem;
+  }
+
+  & .ImageSection__image-container {
+    display: flex;
+    justify-content: center;
+    background-image: url('../../assets/background/testnet-kpis.svg');
+  }
+}
+
 .Stats {
   color: $c_white;
   background-color: $c_blue_ribbon;
