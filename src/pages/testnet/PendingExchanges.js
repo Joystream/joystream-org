@@ -1,6 +1,14 @@
 import React from 'react';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import { formatNumber } from '../../utils/formatNumber';
+import formatDate from '../../utils/formatDate';
 import useAxios from '../../utils/useAxios';
+
+// TODO: Add the designer SVG
+function NoExchanges() {
+  return <div>No exchanges here...</div>;
+}
 
 function ExchangeCard({ address, number, tokens, usd, createdAt }) {
   return (
@@ -21,7 +29,7 @@ function ExchangeCard({ address, number, tokens, usd, createdAt }) {
         <div>
           Exchange <span>#{number}</span>
         </div>
-        <div>{createdAt}</div>
+        <div>{formatDate(createdAt)}</div>
       </div>
     </div>
   );
@@ -39,16 +47,27 @@ export default function PendingExchanges() {
   const { exchanges } = data;
   return (
     <div className="Exchanges__Pending">
-      {exchanges.map((exchange, idx) => (
-        <ExchangeCard
-          key={`${idx}-${exchange.number}`}
-          number={idx}
-          tokens={exchange.tokens}
-          usd={exchange.usdTotal}
-          address={exchange.account}
-          createdAt={exchange.createdAt}
-        />
-      ))}
+      {exchanges.length === 0 ? (
+        <NoExchanges />
+      ) : (
+        <CarouselProvider naturalSlideWidth={100} naturalSlideHeight={125} totalSlides={exchanges.length}>
+          <Slider>
+            {exchanges.map((exchange, idx) => (
+              <Slide key={`${idx}-${exchange.number}`} index={idx}>
+                <ExchangeCard
+                  number={idx}
+                  tokens={exchange.tokens}
+                  usd={exchange.usdTotal}
+                  address={exchange.account}
+                  createdAt={exchange.createdAt}
+                />
+              </Slide>
+            ))}
+          </Slider>
+          <ButtonBack />
+          <ButtonNext />
+        </CarouselProvider>
+      )}
     </div>
   );
 }

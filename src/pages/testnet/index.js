@@ -38,7 +38,7 @@ function TestnetPage() {
           real cash. <br /> <br /> At any time, there will be a certain number of tJOY tokens in circulation, and there
           will be a certain
         </p>
-
+        {/*TODO: Make this a Link */}
         <Button>Learn More</Button>
       </Hero>
 
@@ -65,6 +65,7 @@ function TestnetPage() {
             <h1>Current replenishment values</h1>
             <div className="KPIs__Explainer__Replenishment__Card">
               <div className="KPIs__Explainer__Replenishment__Card__Values">
+                {/* TODO: Add the correct SVG*/}
                 <div className="KPIs__Explainer__Replenishment__Card__Icon">🕐</div>
                 <div className="KPIs__Explainer__Replenishment__Card__Icon">$50</div>
                 <div className="KPIs__Explainer__Replenishment__Card__Slash">/</div>
@@ -87,10 +88,12 @@ function TestnetPage() {
             <p>The set of KPIs, and the terms associated with them, will change over time.</p>
           </blockquote>
           <div className="KPIs__Links">
+            {/* // TODO: Add Correct Link */}
             <Link to="https://google.com" className="KPIs__Links__Link">
               <DocumentIcon className="KPIs__Links__Document__Icon" />
               See full list of KPI’s
             </Link>
+            {/* // TODO: Make this a link */}
             <Button className="KPIs__Links__Button">Jump to KPI’s</Button>
           </div>
         </ImageSection>

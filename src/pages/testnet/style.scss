@@ -222,6 +222,7 @@ body {
   }
 
   &__Card {
+    max-width: 15rem;
     margin: 1.875rem;
     padding: 0 1.25rem;
     text-align: center;
@@ -235,6 +236,7 @@ body {
       font-size: .875rem;
       color: $c_white;
       background-color: $c_blue_ribbon;
+      // TODO: Use correct SVG
       background-image: url('../../assets/background/roles-main-left-up.png');
       background-repeat: no-repeat;
       background-size: cover;
