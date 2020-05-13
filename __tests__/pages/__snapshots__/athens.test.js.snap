@@ -138,7 +138,7 @@ exports[`AthensPage page renders correctly 1`] = `
         <Pane
           className=""
           disabled={false}
-          href="https://github.com/Joystream/joystream/tree/master/testnets/athens"
+          href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens"
           image="icon-component-mock"
           target="_blank"
           title="Release Plan"
@@ -156,7 +156,7 @@ exports[`AthensPage page renders correctly 1`] = `
           <Link
             className=""
             highlighted={false}
-            href="https://github.com/Joystream/joystream/tree/master/testnets/athens#okrs"
+            href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens#okrs"
           >
             OKR
           </Link>

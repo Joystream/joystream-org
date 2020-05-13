@@ -41,14 +41,14 @@ export const roles = {
       title: 'Content Creator',
       key: 'contentCreatorsCount',
       to: '/roles#content-creator',
-      hasLabel: true,
+      hasLabel: false,
     },
     {
       image: contentCuratorImage,
       title: 'Content Curator',
       key: 'contentCuratorsCount',
       to: '/roles#content-curator',
-      hasLabel: true,
+      hasLabel: false,
     },
     {
       image: validatorsImage,
