@@ -34,9 +34,9 @@ function TestnetPage() {
         noOverflow
       >
         {content.Hero.text}
-        <Link to={content.Hero.ctaLink}>
+        <a href={content.Hero.ctaLink.to} target="_blank" rel="noopener noreferrer">
           <Button>Learn More</Button>
-        </Link>
+        </a>
       </Hero>
 
       <LayoutWrapper className="Stats">
@@ -67,13 +67,18 @@ function TestnetPage() {
         <ImageSection image={content.KPIsExplainer.sections.second.image}>
           {content.KPIsExplainer.sections.second.text}
           <div className="KPIs__Links">
-            <Link to={content.KPIsExplainer.sections.links.first.to} className="KPIs__Links__Link">
+            <a
+              href={content.KPIsExplainer.sections.links.first.to}
+              className="KPIs__Links__Link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <DocumentIcon className="KPIs__Links__Document__Icon" />
               {content.KPIsExplainer.sections.links.first.text}
-            </Link>
-            <Link to={content.KPIsExplainer.sections.links.second.to}>
+            </a>
+            <a href={content.KPIsExplainer.sections.links.second.to} target="_blank" rel="noopener noreferrer">
               <Button className="KPIs__Links__Button">{content.KPIsExplainer.sections.links.second.text}</Button>
-            </Link>
+            </a>
           </div>
         </ImageSection>
         <LiveKPIs />
@@ -82,9 +87,9 @@ function TestnetPage() {
       <LayoutWrapper className="Exchanges Exchanges__Container">
         <TitleWrapper title={content.Exchanges.title} subtitle={content.Exchanges.subtitle}>
           <PendingExchanges />
-          <Link to={content.Exchanges.link.to}>
+          <a to={content.Exchanges.link.to} target="_blank" rel="noopener noreferrer">
             <Button className="Exchanges__Button">{content.Exchanges.link.text}</Button>
-          </Link>
+          </a>
         </TitleWrapper>
       </LayoutWrapper>
       <LayoutWrapper className="Dynamics">
