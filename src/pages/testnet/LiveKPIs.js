@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import data from './KPIs.json';
-import { ReactComponent as ArrowIcon } from '../../assets/svg/arrow-down.svg';
+import { ReactComponent as ArrowIcon } from '../../assets/svg/KPI-arrow.svg';
 import TitleWrapper from '../../components/TitleWrapper';
 import { formatNumber } from '../../utils/formatNumber';
 
