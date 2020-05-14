@@ -32,12 +32,11 @@ body {
     margin-bottom: 2.5rem;
     padding: 2.5rem;
     text-align: left;
+    cursor: pointer;
 
     &:hover {
       background-color: $c_catskill_white;
     }
-
-
 
     &__Header {
       display: flex;
@@ -45,7 +44,6 @@ body {
       margin-bottom: 1.25rem;
       margin-left: 2.5rem;
       font-size: 1.625rem;
-
 
       & > h1 {
         font-weight: bold;
@@ -69,6 +67,24 @@ body {
       & > h2 {
         font-size: 2.8125rem;
         color: $c_blue_ribbon;
+      }
+
+      &__Hover {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        & > span {
+          margin-top: .625rem;
+          font-size: .875rem;
+          color: $c_white;
+        }
+
+        &__Icon {
+          width: 2rem;
+          transform: rotate(270deg);
+        }
       }
     }
 
@@ -102,6 +118,18 @@ body {
       background-color: $c_blue_ribbon;
       border-radius: .375rem;
 
+      &__Days {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &__Text {
+          font-size: .875rem;
+          color: $c_white;
+          text-transform: capitalize;
+        }
+      }
+
       &__Values {
         display: flex;
         justify-content: space-between;
@@ -119,16 +147,6 @@ body {
         font-size: 2.5rem;
         line-height: 1.5;
       }
-
-      &__Days {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
-        & span:last-child {
-          font-size: .875rem;
-        }
-      }
     }
   }
 
@@ -144,9 +162,21 @@ body {
   }
 
   & .ImageSection__image-container {
-    display: flex;
-    justify-content: center;
     background-image: url('../../assets/background/testnet-kpis.svg');
+  }
+
+  & .ImageSection__image {
+    width: 100%;
+  }
+
+  & .ImageSection__image > img:first-of-type {
+    max-width: 20.625rem;
+    max-height: 18rem;
+  }
+
+  & .ImageSection__image > img:last-of-type {
+    max-width: 18rem;
+    max-height: 14.5rem;
   }
 }
 
@@ -213,12 +243,78 @@ body {
     justify-content: center;
 
     & .TitleWrapper__subtitle {
+      max-width: 49rem;
+      margin-right: auto;
+      margin-left: auto;
       color: $c_grayc-chateau;
+    }
+  }
+
+  &__Empty {
+    display: flex;
+    flex-direction: column;
+    margin: 3.75rem auto 5.625rem;
+
+    &__Title {
+      margin-top: 2.5rem;
+      font-size: 1.25rem;
+      color: $c_white;
+    }
+
+    &__Icon {
+      max-width: 20.5rem;
     }
   }
 
   &__Pending {
     display: flex;
+    flex-direction: column;
+
+    &__Container {
+      display: flex;
+    }
+
+    &__Bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      max-width: 36rem;
+      margin: 4rem auto;
+
+      &__Progress {
+        width: 100%;
+        height: 5px;
+        background-color: $c_ebony_clay;
+        border-radius: 999px;
+
+        &__Indicator {
+          height: 5px;
+          background-color: #8351ed;
+          border-radius: 999px;
+        }
+      }
+
+      &__Button {
+        &__Back {
+          margin-right: 1.25rem;
+          padding: 0;
+
+          & > svg {
+            transform: rotate(90deg);
+          }
+        }
+
+        &__Next {
+          margin-left: 1.25rem;
+          padding: 0;
+
+          & > svg {
+            transform: rotate(270deg);
+          }
+        }
+      }
+    }
   }
 
   &__Card {
@@ -236,9 +332,7 @@ body {
       font-size: .875rem;
       color: $c_white;
       background-color: $c_blue_ribbon;
-      // TODO: Use correct SVG
-      background-image: url('../../assets/background/roles-main-left-up.png');
-      background-repeat: no-repeat;
+      background-image: url('../../assets/background/exchange-card-pattern.svg');
       background-size: cover;
       border-radius: 3px;
 
@@ -246,7 +340,7 @@ body {
         font-weight: 300;
       }
 
-      & > h2 {
+      &__value {
         overflow: hidden;
         font-size: 2em;
         color: inherit;
@@ -274,7 +368,7 @@ body {
       margin-bottom: 2.5rem;
       line-height: 1.45;
 
-      & > h1 {
+      &__value {
         font-size: 2.8125rem;
         line-height: 1.2;
         color: $c_blue_ribbon;
@@ -305,5 +399,13 @@ body {
   &__Button {
     max-width: 15.625rem;
     margin: 5rem auto;
+  }
+
+  &__Bar {
+    display: flex;
+
+    &__Button .Button {
+      background-color: transparent !important;
+    }
   }
 }

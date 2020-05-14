@@ -1,5 +1,5 @@
 export const formatNumber = n =>
-  n
+  Number(n)
     .toLocaleString('en-US')
     .split(',')
     .join(' ');

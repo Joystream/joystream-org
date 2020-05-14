@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import data from './KPIs.json';
+import { ReactComponent as ArrowIcon } from '../../assets/svg/arrow-down.svg';
 import TitleWrapper from '../../components/TitleWrapper';
 import { formatNumber } from '../../utils/formatNumber';
 
 function KPI({ number, title, description, reward }) {
+  const [hover, setOver] = useState(false);
   return (
-    <div className="KPIs__Values__Card">
+    <div className="KPIs__Values__Card" onMouseEnter={() => setOver(true)} onMouseLeave={() => setOver(false)}>
       <div className="KPIs__Values__Card__Number">
-        <h2>{leadingZero(number)}</h2>
+        {hover ? (
+          <div className="KPIs__Values__Card__Number__Hover">
+            <ArrowIcon className="KPIs__Values__Card__Number__Hover__Icon" />
+            <span>more</span>
+          </div>
+        ) : (
+          <h2>{leadingZero(number)}</h2>
+        )}
       </div>
       <div>
         <div className="KPIs__Values__Card__Header">

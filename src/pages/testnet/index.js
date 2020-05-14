@@ -1,7 +1,10 @@
 import React from 'react';
 import bountyImage from '../../assets/svg/bounties.svg';
-import tokensImage from '../../assets/svg/tokens.svg';
+import coinMinterHero from '../../assets/svg/coin-minter-hero.svg';
+import replenishmentImage from '../../assets/svg/replenishment.svg';
+import rewardImage from '../../assets/svg/reward.svg';
 import { ReactComponent as DocumentIcon } from '../../assets/svg/document.svg';
+import { ReactComponent as TimeIsMoneyIcon } from '../../assets/svg/money-time.svg';
 
 import Button from '../../components/Button';
 import Hero from '../../components/Hero';
@@ -22,7 +25,7 @@ function TestnetPage() {
       <SiteMetadata title="Joystream: The video platform DAO" description="Tokens" />
 
       <Hero
-        image={tokensImage}
+        image={coinMinterHero}
         title={
           <>
             Testnet Incentive <br /> Module
@@ -38,8 +41,9 @@ function TestnetPage() {
           real cash. <br /> <br /> At any time, there will be a certain number of tJOY tokens in circulation, and there
           will be a certain
         </p>
-        {/*TODO: Make this a Link */}
-        <Button>Learn More</Button>
+        <Link to="https://duckduckgo.com">
+          <Button>Learn More</Button>
+        </Link>
       </Hero>
 
       <LayoutWrapper className="Stats">
@@ -48,7 +52,7 @@ function TestnetPage() {
         </TitleWrapper>
       </LayoutWrapper>
       <LayoutWrapper className="KPIs__Explainer">
-        <ImageSection title="Value Backing dynamics" image={bountyImage}>
+        <ImageSection title="Value Backing dynamics" image={replenishmentImage}>
           <p>There are two dynamics that impact the amount of value backing the tokens at any given time.</p>
           <p>
             All else being equal, as these two rewards are added to the pool, the redemption price of the tokens
@@ -65,19 +69,20 @@ function TestnetPage() {
             <h1>Current replenishment values</h1>
             <div className="KPIs__Explainer__Replenishment__Card">
               <div className="KPIs__Explainer__Replenishment__Card__Values">
-                {/* TODO: Add the correct SVG*/}
-                <div className="KPIs__Explainer__Replenishment__Card__Icon">🕐</div>
+                <div className="KPIs__Explainer__Replenishment__Card__Icon">
+                  <TimeIsMoneyIcon />
+                </div>
                 <div className="KPIs__Explainer__Replenishment__Card__Icon">$50</div>
                 <div className="KPIs__Explainer__Replenishment__Card__Slash">/</div>
                 <div className="KPIs__Explainer__Replenishment__Card__Days">
                   <span>12</span>
-                  <span>days</span>
+                  <h2 className="KPIs__Explainer__Replenishment__Card__Days__Text">days</h2>
                 </div>
               </div>
             </div>
           </div>
         </ImageSection>
-        <ImageSection image={bountyImage}>
+        <ImageSection image={rewardImage}>
           <blockquote>
             <h1>KPI Rewards</h1>
             <p>
@@ -93,8 +98,10 @@ function TestnetPage() {
               <DocumentIcon className="KPIs__Links__Document__Icon" />
               See full list of KPI’s
             </Link>
-            {/* // TODO: Make this a link */}
-            <Button className="KPIs__Links__Button">Jump to KPI’s</Button>
+            {/* // TODO: Add Correct Link */}
+            <Link to="https://duckduckgo.com">
+              <Button className="KPIs__Links__Button">Jump to KPI’s</Button>
+            </Link>
           </div>
         </ImageSection>
         <LiveKPIs />
