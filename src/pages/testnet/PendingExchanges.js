@@ -5,12 +5,13 @@ import formatDate from '../../utils/formatDate';
 import useAxios from '../../utils/useAxios';
 import Button from '../../components/Button';
 import { ReactComponent as ArrowIcon } from '../../assets/svg/arrow-down-small.svg';
+import content from '../../data/pages/testnet';
 
 function NoExchanges() {
   return (
     <div className="Exchanges__Empty">
       <EmptyExchanges className="Exchanges__Empty__Icon" />
-      <h1 className="Exchanges__Empty__Title">No Pending Exchanges Currently.</h1>
+      <h1 className="Exchanges__Empty__Title">{content.Exchanges.emptyMessage}</h1>
     </div>
   );
 }
@@ -67,7 +68,6 @@ export default function PendingExchanges() {
   const { exchanges } = data;
 
   const progress = Math.round((100 * (viewIdx + MAX_IN_VIEW)) / exchanges.length);
-  console.log(progress);
   return (
     <div className="Exchanges__Pending">
       {exchanges.length === 0 ? (

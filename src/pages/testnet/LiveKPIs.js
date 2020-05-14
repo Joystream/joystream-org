@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import data from './KPIs.json';
 import { ReactComponent as ArrowIcon } from '../../assets/svg/KPI-arrow.svg';
 import TitleWrapper from '../../components/TitleWrapper';
+import content from '../../data/pages/testnet';
 import { formatNumber } from '../../utils/formatNumber';
 
 function KPI({ number, title, description, reward }) {
@@ -32,7 +32,7 @@ function KPI({ number, title, description, reward }) {
 }
 
 export default function LiveKPIs() {
-  const { KPIs } = data;
+  const { KPIs } = content.KPIsValues;
   return (
     <TitleWrapper title="Current set of KPIs" className="KPIs__Values">
       {KPIs.map((kpi, idx) => (
