@@ -4,6 +4,14 @@ body {
   overflow-x: hidden;
 }
 
+.BreakText {
+  & p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
 .Hero__description > p.Hero__Paragraph {
   margin-bottom: 3.75rem;
 }

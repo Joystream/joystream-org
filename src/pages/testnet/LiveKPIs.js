@@ -2,12 +2,24 @@ import React, { useState } from 'react';
 import { ReactComponent as ArrowIcon } from '../../assets/svg/KPI-arrow.svg';
 import TitleWrapper from '../../components/TitleWrapper';
 import content from '../../data/pages/testnet';
+import { useSpring, animated } from 'react-spring';
 import { formatNumber } from '../../utils/formatNumber';
 
 function KPI({ number, title, description, reward }) {
-  const [hover, setOver] = useState(false);
+  const [expand, setExpand] = useState(false);
+  const [hover, setHover] = useState(false);
+  const containerProps = useSpring({ minHeight: expand ? '30rem' : '10rem', from: { minHeight: '10rem' } });
   return (
-    <div className="KPIs__Values__Card" onMouseEnter={() => setOver(true)} onMouseLeave={() => setOver(false)}>
+    // eslint-disable-next-line jsx-a11y/interactive-supports-focus
+    <animated.div
+      style={containerProps}
+      className={`KPIs__Values__Card ${expand ? '' : 'BreakText'}`}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      onClick={() => {
+        setExpand(!expand);
+      }}
+    >
       <div className="KPIs__Values__Card__Number">
         {hover ? (
           <div className="KPIs__Values__Card__Number__Hover">
@@ -27,7 +39,7 @@ function KPI({ number, title, description, reward }) {
           <p>{description}</p>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 
