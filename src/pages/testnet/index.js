@@ -1,8 +1,5 @@
 import React from 'react';
-import bountyImage from '../../assets/svg/bounties.svg';
-import coinMinterHero from '../../assets/svg/coin-minter-hero.svg';
-import replenishmentImage from '../../assets/svg/replenishment.svg';
-import rewardImage from '../../assets/svg/reward.svg';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { ReactComponent as DocumentIcon } from '../../assets/svg/document.svg';
 import { ReactComponent as TimeIsMoneyIcon } from '../../assets/svg/money-time.svg';
 
@@ -11,7 +8,6 @@ import Hero from '../../components/Hero';
 import ImageSection from '../../components/ImageSection';
 import LayoutWrapper from '../../components/LayoutWrapper';
 import SiteMetadata from '../../components/SiteMetadata';
-import Link from '../../components/Link';
 import TitleWrapper from '../../components/TitleWrapper';
 import BaseLayout from '../../components/_layouts/Base';
 import PendingExchanges from './PendingExchanges';
@@ -76,12 +72,13 @@ function TestnetPage() {
               <DocumentIcon className="KPIs__Links__Document__Icon" />
               {content.KPIsExplainer.sections.links.first.text}
             </a>
-            <a href={content.KPIsExplainer.sections.links.second.to} target="_blank" rel="noopener noreferrer">
+            <AnchorLink to="/testnet#LiveKPIs">
               <Button className="KPIs__Links__Button">{content.KPIsExplainer.sections.links.second.text}</Button>
-            </a>
+            </AnchorLink>
           </div>
         </ImageSection>
-        <LiveKPIs />
+
+        <LiveKPIs id="LiveKPIs" />
       </LayoutWrapper>
 
       <LayoutWrapper className="Exchanges Exchanges__Container">

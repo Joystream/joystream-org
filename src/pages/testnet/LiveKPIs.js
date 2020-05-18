@@ -31,10 +31,10 @@ function KPI({ number, title, description, reward }) {
   );
 }
 
-export default function LiveKPIs() {
+export default function LiveKPIs({ id }) {
   const { KPIs } = content.KPIsValues;
   return (
-    <TitleWrapper title="Current set of KPIs" className="KPIs__Values">
+    <TitleWrapper title="Current set of KPIs" className="KPIs__Values" id={id}>
       {KPIs.map((kpi, idx) => (
         <KPI
           key={`${kpi.title} - ${idx}`}

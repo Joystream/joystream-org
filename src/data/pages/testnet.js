@@ -23,7 +23,7 @@ export default {
     ),
     image: coinMinterHero,
     ctaLink: {
-      to: 'https://duckduckgo.com',
+      to: 'https://blog.joystream.org/constantinople-incentives/',
     },
   },
   Numbers: {
@@ -67,11 +67,11 @@ export default {
       },
       links: {
         first: {
-          to: 'https://duckduckgo.com',
+          to: 'https://blog.joystream.org/constantinople-kpis/',
           text: 'See full list of KPI’s',
         },
         second: {
-          to: 'https://duckduckgo.com',
+          to: 'testnet#KPIsValues',
           text: 'Jump to KPI’s',
         },
       },
