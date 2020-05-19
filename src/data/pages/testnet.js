@@ -8,16 +8,11 @@ const { KPIs } = data;
 
 export default {
   Hero: {
-    title: (
-      <>
-        Testnet Incentive <br /> Module
-      </>
-    ),
+    title: <>Testnet Incentives</>,
     text: (
       <p className="Hero__Paragraph">
-        Joystream testnets will going forward have a token, called tJOY, which users can exchange with Jsgenesis for
-        real cash. <br /> <br /> At any time, there will be a certain number of tJOY tokens in circulation, and there
-        will be a certain
+        In order to more closely simulate the economy of our mainnet, participants on testnets can now earn Joystream
+        Testnet Tokens (tJOYs) backed by fiat currency.
       </p>
     ),
     image: coinMinterHero,
