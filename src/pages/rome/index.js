@@ -52,7 +52,7 @@ const RomePage = ({ content }) => {
           date="2020/05/20 15:00"
           counterTitle={
             <>
-              REPLACED BY <Link to="/constantinople">CONSTANTINOPLE</Link> ON
+              REPLACED BY CONSTANTINOPLE ON
             </>
           }
         />

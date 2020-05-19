@@ -36,15 +36,7 @@ exports[`RomePage page renders correctly 1`] = `
       content={null}
       counterTitle={
         <React.Fragment>
-          REPLACED BY 
-          <Link
-            className=""
-            highlighted={false}
-            to="/constantinople"
-          >
-            CONSTANTINOPLE
-          </Link>
-           ON
+          REPLACED BY CONSTANTINOPLE ON
         </React.Fragment>
       }
       date="2020/05/20 15:00"
