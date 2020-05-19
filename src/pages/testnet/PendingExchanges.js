@@ -5,6 +5,7 @@ import formatDate from '../../utils/formatDate';
 import useAxios from '../../utils/useAxios';
 import Button from '../../components/Button';
 import { ReactComponent as ArrowIcon } from '../../assets/svg/arrow-down-small.svg';
+import Loader from './Loader';
 import content from '../../data/pages/testnet';
 
 function NoExchanges() {
@@ -47,7 +48,7 @@ export default function PendingExchanges() {
   const [viewIdx, setViewIdx] = useState(0);
 
   if (!error && loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   } else if (error) {
     console.error(error);
     return <div>Error...</div>;

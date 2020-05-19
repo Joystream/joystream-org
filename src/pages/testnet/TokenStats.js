@@ -1,6 +1,7 @@
 import React from 'react';
 import { formatNumber } from '../../utils/formatNumber';
 import useAxios from '../../utils/useAxios';
+import Loader from './Loader';
 
 const DataLabel = ({ title, value }) => {
   return (
@@ -15,7 +16,7 @@ export default function TokenStats() {
   const [data, loading, error] = useAxios();
 
   if (loading && !error) {
-    return <div>Loading...</div>;
+    return <Loader />;
   } else if (error) {
     console.error(error);
     return <div>Error...</div>;
