@@ -37,7 +37,7 @@ exports[`IndexPage page renders correctly 1`] = `
       <Button
         className="IndexPage__hero-button"
         disabled={false}
-        href="https://blog.joystream.org/rome-incentives/"
+        href="/testnet/"
         large={true}
         light={false}
         noWrap={true}
@@ -46,7 +46,7 @@ exports[`IndexPage page renders correctly 1`] = `
         secondary={true}
         to={null}
       >
-        Earn Monero
+        Earn Tokens
       </Button>
       <Button
         className="IndexPage__hero-button"
@@ -72,34 +72,16 @@ exports[`IndexPage page renders correctly 1`] = `
     <TestnetItem
       button={
         Object {
-          "label": "Explore Rome",
-          "to": "/rome",
+          "label": "Explore Constantinople",
+          "to": "/constantinople",
         }
       }
       className=""
       date={null}
       image="icon-mock"
-      title="Rome Testnet"
+      title="Constantinople Testnet"
     >
-      Rome is our fifth testnet, which introduces two new roles, 
-       
-      the 
-      <Link
-        className=""
-        highlighted={false}
-        to="/roles#content-creator"
-      >
-        Content Creator
-      </Link>
-       and 
-      <Link
-        className=""
-        highlighted={false}
-        to="/roles#content-curator"
-      >
-        Content Curator
-      </Link>
-      .
+      Constantinople is our sixth testnet, offering an improved proposal system and a fiat-backed token model.
     </TestnetItem>
   </LayoutWrapper>
   <Analytics
@@ -177,26 +159,6 @@ exports[`IndexPage page renders correctly 1`] = `
       Participate and Earn Monero
     </Button>
   </Analytics>
-  <LayoutWrapper
-    className=""
-    dark={false}
-    gradient={false}
-  >
-    <TestnetItem
-      button={
-        Object {
-          "label": "Explore Constantinople",
-          "to": "/constantinople",
-        }
-      }
-      className=""
-      date="2020/05/20 15:00"
-      image="icon-mock"
-      title="Constantinople Testnet"
-    >
-      Constantinople is our sixth testnet, offering an improved proposal system.
-    </TestnetItem>
-  </LayoutWrapper>
   <LayoutWrapper
     className=""
     dark={true}

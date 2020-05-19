@@ -57,8 +57,8 @@ const IndexPage = ({ content }) => (
         Joystream is a video platform controlled, owned and operated by its users
       </p>
       <div className="IndexPage__hero-group">
-        <Button noWrap large secondary className="IndexPage__hero-button" href={activeTestnet.incentivesLink}>
-          Earn Monero
+        <Button noWrap large secondary className="IndexPage__hero-button" href="/testnet/">
+          Earn Tokens
         </Button>
         <Button
           noWrap
@@ -75,17 +75,16 @@ const IndexPage = ({ content }) => (
 
     <LayoutWrapper>
       <TestnetItem
-        title="Rome Testnet"
-        image={RomeImage}
+        title="Constantinople Testnet"
+        image={constantinopleImage}
         children={
           <>
-            Rome is our fifth testnet, which introduces two new roles, {' '}
-            the <Link to="/roles#content-creator">Content Creator</Link> and <Link to="/roles#content-curator">Content Curator</Link>.
+            Constantinople is our sixth testnet, offering an improved proposal system and a fiat-backed token model.
           </>
         }
         button={{
-          label: 'Explore Rome',
-          to: '/rome',
+          label: 'Explore Constantinople',
+          to: '/constantinople',
         }}
       />
     </LayoutWrapper>
@@ -95,6 +94,10 @@ const IndexPage = ({ content }) => (
         Participate and Earn Monero
       </Button>
     </Analytics>
+
+    {/*
+    We are commenting out the "next testnet section",
+    enable when we have announced it.
 
 
     <LayoutWrapper>
@@ -110,7 +113,7 @@ const IndexPage = ({ content }) => (
       />
     </LayoutWrapper>
 
-
+    */}
 
     <LayoutWrapper dark>
       <TitleWrapper title="Become a user, run the platform">
