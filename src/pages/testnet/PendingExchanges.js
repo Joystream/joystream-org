@@ -51,7 +51,11 @@ export default function PendingExchanges() {
     return <Loader />;
   } else if (error) {
     console.error(error);
-    return <div>Error...</div>;
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center', color: 'white' }}>
+        Something went wrong :( Check the console for more information.
+      </div>
+    );
   }
 
   let handleNext = () => {
@@ -75,17 +79,20 @@ export default function PendingExchanges() {
         <NoExchanges />
       ) : (
         <div className="Exchanges__Pending__Container">
-          {exchanges.slice(viewIdx, viewIdx + MAX_IN_VIEW).map((exchange, idx) => (
-            <ExchangeCard
-              key={`${idx}-${exchange.title}`}
-              number={idx + viewIdx + 1}
-              blockNumber={exchange.blockNumber}
-              tokens={exchange.tokens}
-              usd={exchange.usdTotal}
-              address={exchange.account}
-              createdAt={exchange.createdAt}
-            />
-          ))}
+          {exchanges
+            .reverse()
+            .slice(viewIdx, viewIdx + MAX_IN_VIEW)
+            .map((exchange, idx) => (
+              <ExchangeCard
+                key={`${idx}-${exchange.title}`}
+                number={idx + viewIdx + 1}
+                blockNumber={exchange.blockNumber}
+                tokens={exchange.tokens}
+                usd={exchange.usdTotal}
+                address={exchange.account}
+                createdAt={exchange.createdAt}
+              />
+            ))}
         </div>
       )}
       <div className="Exchanges__Pending__Bar">
