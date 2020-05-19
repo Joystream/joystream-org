@@ -54,7 +54,7 @@ const AcropolisPage = ({ content }) => {
           date="2020/03/17 15:42"
           counterTitle={
             <>
-              REPLACED BY <Link to="/rome">ROME</Link> ON
+              REPLACED BY ROME ON
             </>
           }
         />
@@ -80,7 +80,7 @@ const AcropolisPage = ({ content }) => {
         <TitleWrapper title="Network Statistics">
           <Analytics content={mapStatusDataToAnalytics(content)} />
         </TitleWrapper>
-        
+
         */}
 
         <TitleWrapper title="Critical Documents">

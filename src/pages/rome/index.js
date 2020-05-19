@@ -47,7 +47,15 @@ const RomePage = ({ content }) => {
         animationStartValue={0}
       >
         <p className="RomePage__hero-paragraph">{sharedData.rolesDescription}</p>
-        <HeroCard date={launchDate} />
+        <HeroCard
+          info
+          date="2020/05/20 15:00"
+          counterTitle={
+            <>
+              REPLACED BY CONSTANTINOPLE ON
+            </>
+          }
+        />
 
         <TestnetModal
           title="Rome"
