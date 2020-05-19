@@ -1,22 +1,34 @@
 {
   "KPIs": [
     {
-      "title": "Examplary Title of KPI",
-      "description": "The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node.",
-      "reward": "325",
+      "title": "Average block time < 6.025s & maintain 10 validators",
+      "description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
+      "reward": "100",
+      "startDate": "20:05:2020 - 16:00 GMT",
+      "measurementPeriod": "7 days",
+      "annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the Measurement period",
+      "successEvents": [
+        "Timestamp of block n+100382 must be smaller than the Timestamp of block n+604,710,000",
+        "Maintain a total of least 10 validators throughout the Measurement period"
+      ],
+      "endDate": "28:05:2020 - 16:00 GMT",
       "number": 1
     },
     {
-      "title": "Examplary Title of KPI",
-      "description": "The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node.The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node.The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node. the blockchain(s) assembled by the Full Node.",
-      "reward": "13225",
+      "title": "All proposals are cleared before they expire AND at no continuous 24h period are there 5 proposal in the active stage",
+      "description": "For the governance process to work, all proposals must be dealt with professionally, and in reasonable time frame to avoiding blocking new proposals coming in.",
+      "reward": "120",
+      "measurementPeriod": "7 days",
+      "startDate": "20:05:2020 - 16:00 GMT",
+      "successEvents": [
+        "No proposals expire due to missing votes",
+        "At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)",
+        "For each new proposal, a forum post is opened for discussion between the council and other interested parties"
+      ],
+      "annihilation":"No malicious or unreasonable proposals are approved.",
+      "endDate": "28:05:2020 - 16:00 GMT",
       "number": 2
-    },
-    {
-      "title": "Examplary Title of KPI",
-      "description": "The term „Blockchain” refers to the blockchain(s) assembled by the Full Node. Refers to the blockchain(s) assembled by the Full Node.",
-      "reward": "3225",
-      "number": 3
     }
   ]
 }
+
