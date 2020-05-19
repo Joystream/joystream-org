@@ -1,7 +1,6 @@
 import React from 'react';
 import rewardImage from '../../assets/svg/reward.svg';
 import replenishmentImage from '../../assets/svg/replenishment.svg';
-import bountyImage from '../../assets/svg/bounties.svg';
 import coinMinterHero from '../../assets/svg/coin-minter-hero.svg';
 import data from '../KPIs.json';
 
@@ -91,20 +90,5 @@ export default {
       to: 'https://duckduckgo.com',
       text: 'View full list',
     },
-  },
-  Dynamics: {
-    title: 'Testnet tokens dynamics',
-    image: bountyImage,
-    text: (
-      <>
-        <p>
-          The number of testnet tokens is impacted by new tokens being generated as rewards on the blockchain for
-          different roles.
-        </p>
-        <p>
-          All else being equal, as the number of new tokens are generated, the redemption price of the tokens declines.
-        </p>
-      </>
-    ),
   },
 };

@@ -89,11 +89,6 @@ function TestnetPage() {
           </a>
         </TitleWrapper>
       </LayoutWrapper>
-      <LayoutWrapper className="Dynamics">
-        <ImageSection title={content.Dynamics.title} image={content.Dynamics.image}>
-          {content.Dynamics.text}
-        </ImageSection>
-      </LayoutWrapper>
     </BaseLayout>
   );
 }
