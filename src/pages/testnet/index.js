@@ -84,9 +84,9 @@ function TestnetPage() {
       <LayoutWrapper className="Exchanges Exchanges__Container">
         <TitleWrapper title={content.Exchanges.title} subtitle={content.Exchanges.subtitle}>
           <PendingExchanges />
-          <a to={content.Exchanges.link.to} target="_blank" rel="noopener noreferrer">
+          {/* <a to={content.Exchanges.link.to} target="_blank" rel="noopener noreferrer">
             <Button className="Exchanges__Button">{content.Exchanges.link.text}</Button>
-          </a>
+          </a> */}
         </TitleWrapper>
       </LayoutWrapper>
     </BaseLayout>
