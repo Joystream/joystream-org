@@ -19,16 +19,15 @@
       "description": "For the governance process to work, all proposals must be dealt with professionally, and in reasonable time frame to avoiding blocking new proposals coming in.",
       "reward": "120",
       "measurementPeriod": "7 days",
-      "startDate": "20:05:2020 - 16:00 GMT",
+      "startDate": "20/05/2020 - 16:00 GMT",
       "successEvents": [
         "No proposals expire due to missing votes",
         "At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)",
         "For each new proposal, a forum post is opened for discussion between the council and other interested parties"
       ],
-      "annihilation":"No malicious or unreasonable proposals are approved.",
-      "endDate": "28:05:2020 - 16:00 GMT",
+      "annihilation": "No malicious or unreasonable proposals are approved.",
+      "endDate": "28/05/2020 - 16:00 GMT",
       "number": 2
     }
   ]
 }
-

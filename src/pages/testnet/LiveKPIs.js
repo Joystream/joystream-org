@@ -5,7 +5,7 @@ import content from '../../data/pages/testnet';
 import { useSpring, animated } from 'react-spring';
 import { formatNumber } from '../../utils/formatNumber';
 
-function KPI({ number, title, description, reward }) {
+function KPI({ number, title, description, reward, measurementPeriod, startDate, successEvents }) {
   const [expand, setExpand] = useState(false);
   const [hover, setHover] = useState(false);
   const containerProps = useSpring({ minHeight: expand ? '30rem' : '10rem', from: { minHeight: '10rem' } });
@@ -38,6 +38,28 @@ function KPI({ number, title, description, reward }) {
         <div className="KPIs__Values__Card__Description">
           <p>{description}</p>
         </div>
+        {expand && (
+          <div className="KPIs__Values__Card__Info">
+            <div className="KPIs__Values__Card__Info__Dates">
+              <div className="KPIs__Values__Card__Info__Dates__Start">
+                <span className="KPIs__Values__Card__Info__Dates__Label">Starts at:</span>
+                <span className="KPIs__Values__Card__Info__Dates__Value">{startDate}</span>
+              </div>
+              <div className="KPIs__Values__Card__Info__Dates__Period">
+                <span className="KPIs__Values__Card__Info__Dates__Label">Measurement Period:</span>
+                <span className="KPIs__Values__Card__Info__Dates__Value">{measurementPeriod}</span>
+              </div>
+            </div>
+            <div className="KPIs__Values__Card__Info__Success">
+              <span>Successful if:</span>
+              <ul>
+                {successEvents.map((ev, idx) => (
+                  <li key={idx}>{ev}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
     </animated.div>
   );
@@ -54,6 +76,9 @@ export default function LiveKPIs({ id }) {
           title={kpi.title}
           description={kpi.description}
           reward={kpi.reward}
+          measurementPeriod={kpi.measurementPeriod}
+          startDate={kpi.startDate}
+          successEvents={kpi.successEvents}
         />
       ))}
     </TitleWrapper>
