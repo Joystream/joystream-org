@@ -267,6 +267,10 @@ body {
   background-image: url('../../assets/background/footer-left.png');
   background-repeat: no-repeat;
 
+  & p {
+    color: $c_grayc-chateau;
+  }
+
   &__Container {
     display: flex;
     align-items: center;
