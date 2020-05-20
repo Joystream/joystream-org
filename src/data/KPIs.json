@@ -8,7 +8,7 @@
       "measurementPeriod": "7 days",
       "annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the Measurement period",
       "successEvents": [
-        "Timestamp of block n+100382 must be smaller than the Timestamp of block n+604,710,000",
+        "The difference between timestamps of block 910367 and block 1010749 must be less than 604,710,000 milliseconds",
         "Maintain a total of least 10 validators throughout the Measurement period"
       ],
       "endDate": "28:05:2020 - 16:00 GMT",
