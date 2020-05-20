@@ -6,6 +6,9 @@ import data from '../KPIs.json';
 
 const { KPIs } = data;
 
+// Doesn't look like process.env works here. for now, just hardcode the burner address value here
+const JSGENESIS_BURNER_ADDRESS = '5CktGSAEApx6Z2fK5NnK3dZNwD3Hi1YHhna3aTDHULSAXGdg';
+
 export default {
   Hero: {
     title: <>Testnet Incentives</>,
@@ -78,8 +81,19 @@ export default {
   },
   Exchanges: {
     title: 'Pending exchanges',
-    subtitle:
-      'The tokens sent to Jsgenesis in this exchange are burned, hence the final price of the token is unaffected by such an exchange.',
+    subtitle: (
+      <div>
+        <p>
+          To initiate an exchange, set your memo to an XMR address of your choice and make a transfer to Jsgenesis
+          burner address: <span style={{ color: 'white' }}>{JSGENESIS_BURNER_ADDRESS}</span>
+        </p>
+        <br />
+        <p>
+          Tokens sent to Jsgenesis in this exchange are burned, hence the final price of the token is unaffected by such
+          an exchange.
+        </p>
+      </div>
+    ),
     emptyMessage: 'No pending exchanges currently',
     link: {
       to: 'https://duckduckgo.com',

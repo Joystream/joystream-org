@@ -72,27 +72,28 @@ export default function PendingExchanges() {
 
   const { exchanges } = data;
 
-  const progress = Math.round((100 * (viewIdx + MAX_IN_VIEW)) / exchanges.length);
+  const progress =
+    MAX_IN_VIEW <= exchanges.length
+      ? Math.round((100 * (viewIdx + MAX_IN_VIEW)) / exchanges.length)
+      : Math.round((100 * viewIdx) / exchanges.length);
+
   return (
     <div className="Exchanges__Pending">
       {exchanges.length === 0 ? (
         <NoExchanges />
       ) : (
         <div className="Exchanges__Pending__Container">
-          {exchanges
-            .reverse()
-            .slice(viewIdx, viewIdx + MAX_IN_VIEW)
-            .map((exchange, idx) => (
-              <ExchangeCard
-                key={`${idx}-${exchange.title}`}
-                number={idx + viewIdx + 1}
-                blockNumber={exchange.blockNumber}
-                tokens={exchange.tokens}
-                usd={exchange.usdTotal}
-                address={exchange.account}
-                createdAt={exchange.createdAt}
-              />
-            ))}
+          {exchanges.slice(viewIdx, viewIdx + MAX_IN_VIEW).map((exchange, idx) => (
+            <ExchangeCard
+              key={`${idx}-${exchange.title}`}
+              number={idx + viewIdx + 1}
+              blockNumber={exchange.blockHeight}
+              tokens={exchange.amount}
+              usd={exchange.amountUSD}
+              address={exchange.sender}
+              createdAt={exchange.date}
+            />
+          ))}
         </div>
       )}
       <div className="Exchanges__Pending__Bar">
