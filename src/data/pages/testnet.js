@@ -39,7 +39,7 @@ export default {
               increases.
             </p>
             <blockquote>
-              <h1>Replinishment</h1>
+              <h1>Replenishment</h1>
               <p>
                 At some regular interval, which may itself be updated over time, some quantity of USD value is added to
                 the pool of value.
