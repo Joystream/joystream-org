@@ -34,7 +34,7 @@ const ImageReveal = () => {
 
   useEffect(() => {
     setClipWidth((defaultValue * containerRef.current.offsetWidth) / 100);
-  }, []);
+  }, [containerRef]);
 
   return (
     <div className="ImageReveal">

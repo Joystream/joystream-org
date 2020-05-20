@@ -28,7 +28,7 @@ const roles = {
       key: 'storageProviders',
       hasLabel: true,
     },
-  ]
+  ],
 };
 
 const goals = [
