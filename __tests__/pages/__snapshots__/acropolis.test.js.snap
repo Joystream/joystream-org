@@ -36,15 +36,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
       content={null}
       counterTitle={
         <React.Fragment>
-          REPLACED BY 
-          <Link
-            className=""
-            highlighted={false}
-            to="/rome"
-          >
-            ROME
-          </Link>
-           ON
+          REPLACED BY ROME ON
         </React.Fragment>
       }
       date="2020/03/17 15:42"

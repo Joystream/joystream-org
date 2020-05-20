@@ -1,0 +1,446 @@
+@import '../../styles/main.scss';
+
+body {
+  overflow-x: hidden;
+}
+
+.BreakText {
+  & p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.Hero__description > p.Hero__Paragraph {
+  margin-bottom: 3.75rem;
+}
+
+.KPIs__Links {
+  display: flex;
+  flex-direction: column;
+
+  &__Document__Icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  &__Link {
+    margin-bottom: 1.875rem;
+  }
+
+  &__Button {
+    max-width: 15.625rem;
+  }
+}
+
+.KPIs__Values {
+  &__Card {
+    margin-bottom: 2.5rem;
+    padding: 2.5rem;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $c_catskill_white;
+    }
+
+    &__Header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      margin-left: 2.5rem;
+      font-size: 1.625rem;
+
+      & > h1 {
+        font-weight: bold;
+      }
+
+      & > h2 {
+        color: $c_blue_ribbon;
+      }
+    }
+
+    &__Number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 8rem;
+      height: 8rem;
+      margin-right: 2.5rem;
+      background-color: $c_catskill_white;
+
+      & > h2 {
+        font-size: 2.8125rem;
+        color: $c_blue_ribbon;
+      }
+
+      &__Hover {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        & > span {
+          margin-top: .625rem;
+          font-size: .875rem;
+          color: $c_white;
+        }
+      }
+    }
+
+    &__Info {
+      margin-top: 4rem;
+      font-size: 1.25rem;
+
+      & > * {
+        margin-bottom: 1.25rem;
+      }
+
+      &__Dates {
+        & > div {
+          margin-bottom: 2rem;
+        }
+
+        &__Value {
+          font-style: italic;
+        }
+
+        &__Label {
+          margin-right: 1rem;
+        }
+      }
+
+      &__Success > span {
+        display: inline-block;
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    &:hover &__Number {
+      background-color: $c_blue_ribbon;
+
+      & > h2 {
+        color: $c_white;
+      }
+    }
+
+    &__Description {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.KPIs__Explainer {
+  &__Replenishment {
+    & > h1 {
+      margin-bottom: 1.875rem;
+      font-size: 1.5rem;
+    }
+
+    &__Card {
+      display: flex;
+      justify-content: space-around;
+      max-width: 30rem;
+      padding: 2.5rem 4.5rem 1.5rem 2.5rem;
+      color: $c_white;
+      background-color: $c_blue_ribbon;
+      border-radius: .375rem;
+
+      &__Days {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &__Text {
+          font-size: .875rem;
+          color: $c_white;
+          text-transform: capitalize;
+        }
+      }
+
+      &__Values {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 4.065rem;
+        line-height: 1;
+      }
+
+      &__Price {
+        margin: auto 2.5rem auto 1.875rem;
+      }
+
+      &__Slash {
+        margin: auto 1.875rem;
+        font-size: 2.5rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  & blockquote h1 {
+    margin-bottom: 1.25rem;
+    font-size: 1.875rem;
+    line-height: 1.33;
+    color: $c_blue_ribbon;
+  }
+
+  & .ImageSection__title {
+    margin-bottom: 5.875rem;
+  }
+
+  & .ImageSection__image-container {
+    background-image: url('../../assets/background/testnet-kpis.svg');
+  }
+
+  & .ImageSection__image {
+    width: 100%;
+  }
+
+  & .ImageSection__image > img:first-of-type {
+    max-width: 20.625rem;
+    max-height: 18rem;
+  }
+
+  & .ImageSection__image > img:last-of-type {
+    max-width: 18rem;
+    max-height: 14.5rem;
+  }
+}
+
+.Stats {
+  color: $c_white;
+  background-color: $c_blue_ribbon;
+  background-image: url('../../assets/background/footer-left.png');
+  background-repeat: repeat-y;
+  background-blend-mode: lighten;
+
+  &__Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+  }
+
+  & .TitleWrapper__title {
+    margin-bottom: 6.25rem;
+    color: $c_white;
+  }
+
+  &__Label {
+    width: 100%;
+    margin: 0 0 9.375rem 4rem;
+    text-align: left;
+
+    &__Text {
+      font-size: 1.875rem;
+      font-weight: 300;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    &__Value {
+      font-size: 5rem;
+      color: $c_white;
+    }
+  }
+}
+
+.Dynamics {
+  & .ImageSection__image-container {
+    display: flex;
+    justify-content: center;
+    background-image: url('../../assets/background/testnet.svg');
+    background-size: cover;
+  }
+
+  & .ImageSection__title {
+    margin-bottom: 5.875rem;
+  }
+}
+
+.Exchanges {
+  background-color: $c_black;
+  background-image: url('../../assets/background/footer-left.png');
+  background-repeat: no-repeat;
+
+  & p {
+    color: $c_grayc-chateau;
+  }
+
+  &__Container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    & .TitleWrapper__subtitle {
+      max-width: 49rem;
+      margin-right: auto;
+      margin-left: auto;
+      color: $c_grayc-chateau;
+    }
+  }
+
+  &__Empty {
+    display: flex;
+    flex-direction: column;
+    margin: 3.75rem auto 5.625rem;
+
+    &__Title {
+      margin-top: 2.5rem;
+      font-size: 1.25rem;
+      color: $c_white;
+    }
+
+    &__Icon {
+      max-width: 20.5rem;
+    }
+  }
+
+  &__Pending {
+    display: flex;
+    flex-direction: column;
+
+    &__Container {
+      display: flex;
+    }
+
+    &__Bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      max-width: 36rem;
+      margin: 4rem auto;
+
+      &__Progress {
+        width: 100%;
+        height: 5px;
+        background-color: $c_ebony_clay;
+        border-radius: 999px;
+
+        &__Indicator {
+          height: 5px;
+          background-color: #8351ed;
+          border-radius: 999px;
+        }
+      }
+
+      &__Button {
+        &__Back {
+          margin-right: 1.25rem;
+          padding: 0;
+
+          & > svg {
+            transform: rotate(90deg);
+          }
+        }
+
+        &__Next {
+          margin-left: 1.25rem;
+          padding: 0;
+
+          & > svg {
+            transform: rotate(270deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__Card {
+    max-width: 15rem;
+    margin: 1.875rem;
+    padding: 0 1.25rem;
+    text-align: center;
+    background-color: $c_white;
+    border-radius: 3px;
+
+    &__address {
+      max-width: 240px;
+      margin: 1.25rem auto;
+      padding: 1.375rem 2.875rem;
+      font-size: .875rem;
+      color: $c_white;
+      background-color: $c_blue_ribbon;
+      background-image: url('../../assets/background/exchange-card-pattern.svg');
+      background-size: cover;
+      border-radius: 3px;
+
+      &:first-child {
+        font-weight: 300;
+      }
+
+      &__value {
+        overflow: hidden;
+        font-size: 2em;
+        color: inherit;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &__blockNumber {
+      font-size: 1rem;
+      font-weight: 300;
+
+      span:first-of-type {
+        font-weight: 700;
+        color: $c_blue_ribbon;
+      }
+    }
+
+    &__tokens {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.45;
+
+      &__value {
+        font-size: 2.8125rem;
+        line-height: 1.2;
+        color: $c_blue_ribbon;
+      }
+
+      &__dollarAmount {
+        color: $c_grayc-chateau;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      font-size: .8125rem;
+
+      span:first-of-type {
+        font-weight: bold;
+      }
+    }
+
+    button {
+      max-width: 15.625rem;
+      margin: 5rem auto;
+    }
+  }
+
+  &__Button {
+    max-width: 15.625rem;
+    margin: 5rem auto;
+  }
+
+  &__Bar {
+    display: flex;
+
+    &__Button .Button {
+      background-color: transparent !important;
+    }
+  }
+}

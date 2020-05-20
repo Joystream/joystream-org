@@ -34,10 +34,14 @@ exports[`RomePage page renders correctly 1`] = `
     </p>
     <HeroCard
       content={null}
-      counterTitle=""
-      date="2020/03/17 15:00"
+      counterTitle={
+        <React.Fragment>
+          REPLACED BY CONSTANTINOPLE ON
+        </React.Fragment>
+      }
+      date="2020/05/20 15:00"
       error={false}
-      info={false}
+      info={true}
     />
     <TestnetModal
       className=""
