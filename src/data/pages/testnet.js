@@ -7,7 +7,7 @@ import data from '../KPIs.json';
 const { KPIs } = data;
 
 // Doesn't look like process.env works here. for now, just hardcode the burner address value here
-const JSGENESIS_BURNER_ADDRESS = '5CktGSAEApx6Z2fK5NnK3dZNwD3Hi1YHhna3aTDHULSAXGdg';
+const JSGENESIS_BURNER_ADDRESS = '5D5PhZQNJzcJXVBxwJxZcsutjKPqUPydrvpu6HeiBfMaeKQu';
 
 export default {
   Hero: {
