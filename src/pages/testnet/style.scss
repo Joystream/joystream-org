@@ -1,6 +1,9 @@
 @import '../../styles/main.scss';
 
+html,
 body {
+  height: 100%;
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -50,8 +53,7 @@ body {
       display: flex;
       justify-content: space-between;
       margin-bottom: 1.25rem;
-      margin-left: 2.5rem;
-      font-size: 1.625rem;
+      font-size: 1.25rem;
 
       & > h1 {
         font-weight: bold;
@@ -60,6 +62,11 @@ body {
       & > h2 {
         color: $c_blue_ribbon;
       }
+
+      @media #{$screen-sm} {
+        margin-left: 2.5rem;
+        font-size: 1.625rem;
+      }
     }
 
     &__Number {
@@ -67,13 +74,11 @@ body {
       align-items: center;
       justify-content: center;
       float: left;
-      width: 8rem;
-      height: 8rem;
       margin-right: 2.5rem;
-      background-color: $c_catskill_white;
+
 
       & > h2 {
-        font-size: 2.8125rem;
+        font-size: 1.5rem;
         color: $c_blue_ribbon;
       }
 
@@ -89,11 +94,24 @@ body {
           color: $c_white;
         }
       }
+
+      @media #{$screen-sm} {
+        & {
+          width: 8rem;
+          height: 8rem;
+          background-color: $c_catskill_white;
+        }
+
+        & > h2 {
+          font-size: 2.8125rem;
+          color: $c_blue_ribbon;
+        }
+      }
     }
 
     &__Info {
       margin-top: 4rem;
-      font-size: 1.25rem;
+      font-size: 1rem;
 
       & > * {
         margin-bottom: 1.25rem;
@@ -105,7 +123,7 @@ body {
         }
 
         &__Value {
-          font-style: italic;
+          font-weight: bold;
         }
 
         &__Label {
@@ -214,7 +232,6 @@ body {
 .Stats {
   color: $c_white;
   background-color: $c_blue_ribbon;
-  background-image: url('../../assets/background/footer-left.png');
   background-repeat: repeat-y;
   background-blend-mode: lighten;
 
@@ -243,9 +260,19 @@ body {
     }
 
     &__Value {
-      font-size: 5rem;
+      font-size: 3rem;
       color: $c_white;
     }
+
+    @media #{$screen-sm} {
+      &__Value {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  @media #{$screen-sm} {
+    background-image: url('../../assets/background/footer-left.png');
   }
 }
 
@@ -264,7 +291,6 @@ body {
 
 .Exchanges {
   background-color: $c_black;
-  background-image: url('../../assets/background/footer-left.png');
   background-repeat: no-repeat;
 
   & p {
@@ -442,5 +468,9 @@ body {
     &__Button .Button {
       background-color: transparent !important;
     }
+  }
+
+  @media #{$screen-sm} {
+    background-image: url('../../assets/background/footer-left.png');
   }
 }
