@@ -1,7 +1,7 @@
 import axios from 'axios';
 import usePromise from '../usePromise';
 
-const defaultUrl = process.env.GATSBY_API_URL || 'http://localhost:8081';
+const defaultUrl = process.env.GATSBY_API_URL || 'https://status.joystream.app/status';
 
 export default function useAxios(url = defaultUrl) {
   const [response, loading, error] = usePromise(() => axios.get(url));

@@ -1,5 +1,6 @@
 const apiPaths = {
   STATUS: () => 'status',
+  '/': () => '',
 };
 
 export default function getApiPath(apiPathName, ...rest) {
