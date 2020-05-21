@@ -75,6 +75,8 @@ export default function PendingExchanges() {
   const progress =
     MAX_IN_VIEW < exchanges.length ? Math.round((100 * (viewIdx + MAX_IN_VIEW)) / exchanges.length) : 1 * 100;
 
+  console.log('exchanges', exchanges);
+
   return (
     <div className="Exchanges__Pending">
       {exchanges.length === 0 ? (

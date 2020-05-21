@@ -78,9 +78,7 @@ const IndexPage = ({ content }) => (
         title="Constantinople Testnet"
         image={constantinopleImage}
         children={
-          <>
-            Constantinople is our sixth testnet, offering an improved proposal system and a fiat-backed token model.
-          </>
+          <>Constantinople is our sixth testnet, offering an improved proposal system and a fiat-backed token model.</>
         }
         button={{
           label: 'Explore Constantinople',
@@ -145,4 +143,4 @@ const IndexPage = ({ content }) => (
 IndexPage.propTypes = pagePropTypes;
 
 export { IndexPage };
-export default withApi(IndexPage, getApiPath('STATUS'));
+export default withApi(IndexPage, getApiPath('/'));
