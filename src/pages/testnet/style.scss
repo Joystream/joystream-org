@@ -38,6 +38,26 @@ body {
   }
 }
 
+.OnlyXs {
+  position: absolute;
+  top: 9999px;
+  left: 9999px;
+}
+
+@media #{$screen-only-xs} {
+  .OnlyLg {
+    position: absolute;
+    top: 9999px;
+    left: 9999px;
+  }
+
+  .OnlyXs {
+    position: unset;
+    top: unset;
+    left: unset;
+  }
+}
+
 .KPIs__Values {
   &__Card {
     margin-bottom: 2.5rem;
@@ -50,12 +70,20 @@ body {
     }
 
     &__Header {
-      display: flex;
-      justify-content: space-between;
       margin-bottom: 1.25rem;
       font-size: 1.25rem;
 
-      & > h1 {
+      &__Top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        & > h2 {
+          color: $c_blue_ribbon;
+        }
+      }
+
+      &__Title {
         font-weight: bold;
       }
 
@@ -75,7 +103,6 @@ body {
       justify-content: center;
       float: left;
       margin-right: 2.5rem;
-
 
       & > h2 {
         font-size: 1.5rem;
@@ -123,11 +150,17 @@ body {
         }
 
         &__Value {
-          font-weight: bold;
+          color: $c_blue_ribbon;
         }
 
         &__Label {
-          margin-right: 1rem;
+          margin-right: .5rem;
+        }
+
+        @media #{$screen-sm} {
+          &__Label {
+            margin-right: 1rem;
+          }
         }
       }
 
@@ -137,16 +170,25 @@ body {
       }
     }
 
-    &:hover &__Number {
-      background-color: $c_blue_ribbon;
+    &__Description {
+      font-size: 1.125rem;
+    }
 
-      & > h2 {
-        color: $c_white;
+    @media #{$screen-sm} {
+      &__Header {
+        display: flex;
+        justify-content: space-between;
       }
     }
 
-    &__Description {
-      font-size: 1.125rem;
+    @media #{$screen-sm} {
+      &:hover &__Number {
+        background-color: $c_blue_ribbon;
+
+        & > h2 {
+          color: $c_white;
+        }
+      }
     }
   }
 }
@@ -162,7 +204,7 @@ body {
       display: flex;
       justify-content: space-around;
       max-width: 30rem;
-      padding: 2.5rem 4.5rem 1.5rem 2.5rem;
+      padding: 1.5rem 2.5rem .5rem 1.5rem;
       color: $c_white;
       background-color: $c_blue_ribbon;
       border-radius: .375rem;
@@ -183,7 +225,7 @@ body {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        font-size: 4.065rem;
+        font-size: 2.5rem;
         line-height: 1;
       }
 
@@ -191,10 +233,19 @@ body {
         margin: auto 2.5rem auto 1.875rem;
       }
 
-      &__Slash {
-        margin: auto 1.875rem;
-        font-size: 2.5rem;
-        line-height: 1.5;
+      @media #{$screen-sm} {
+        & {
+          padding: 2.5rem 4.5rem 1.5rem 2.5rem;
+        }
+
+        &__Values {
+          font-size: 4.065rem;
+        }
+
+        &__Slash {
+          font-size: 2.5rem;
+          line-height: 1.5;
+        }
       }
     }
   }

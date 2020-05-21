@@ -20,20 +20,27 @@ function KPI({ number, title, description, reward, measurementPeriod, startDate,
         setExpand(!expand);
       }}
     >
-      <div className="KPIs__Values__Card__Number">
+      {/* TODO: Add classes and markup to hide on media query*/}
+      <div className="KPIs__Values__Card__Number OnlyLg">
         {hover ? (
-          <div className="KPIs__Values__Card__Number__Hover">
-            <ArrowIcon className="KPIs__Values__Card__Number__Hover__Icon" />
-            <span>more</span>
-          </div>
+          <>
+            <div className="KPIs__Values__Card__Number__Hover ">
+              <ArrowIcon className="KPIs__Values__Card__Number__Hover__Icon" />
+              <span>more</span>
+            </div>
+          </>
         ) : (
           <h2>{leadingZero(number)}</h2>
         )}
       </div>
       <div>
         <div className="KPIs__Values__Card__Header">
-          <h1>{title}</h1>
-          <h2>${formatNumber(reward)}</h2>
+          <div className="OnlyXs KPIs__Values__Card__Header__Top">
+            <h2>{leadingZero(number)}</h2>
+            <h2>${formatNumber(reward)}</h2>
+          </div>
+          <h1 className="KPIs__Values__Card__Header__Title">{title}</h1>
+          <h2 className="OnlyLg">${formatNumber(reward)}</h2>
         </div>
         <div className="KPIs__Values__Card__Description">
           <p>{description}</p>
