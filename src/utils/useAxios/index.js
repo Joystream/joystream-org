@@ -9,6 +9,7 @@ export default function useAxios(url = defaultUrl) {
   if (loading && !error) {
     return [null, loading, null];
   } else if (error) {
+    console.log(error);
     return [null, false, error];
   }
 

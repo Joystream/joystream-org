@@ -2,9 +2,9 @@
 
 html,
 body {
-  height: 100%;
   margin: 0;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .BreakText {
@@ -40,15 +40,15 @@ body {
 
 .OnlyXs {
   position: absolute;
-  top: 9999px;
-  left: 9999px;
+  top: -9999px;
+  left: -9999px;
 }
 
 @media #{$screen-only-xs} {
   .OnlyLg {
     position: absolute;
-    top: 9999px;
-    left: 9999px;
+    top: -9999px;
+    left: -9999px;
   }
 
   .OnlyXs {
@@ -523,5 +523,10 @@ body {
 
   @media #{$screen-sm} {
     background-image: url('../../assets/background/footer-left.png');
+  }
+
+  @media #{$screen-lg} {
+    background-image: url('../../assets/background/footer-left.png'), url('../../assets/background/footer-right.png');
+    background-position: center left, center right;
   }
 }
