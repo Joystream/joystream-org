@@ -19,7 +19,7 @@ export default function TokenStats() {
     return <Loader />;
   } else if (error) {
     console.error(error);
-    return <div>Error...</div>;
+    return <div>{JSON.stringify(error)}</div>;
   }
   const { dollarPool, actualIssuance, price } = data;
 
