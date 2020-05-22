@@ -18,5 +18,5 @@ export default function usePromise(promise) {
   }, []);
 
   const { value, error, isPending } = state;
-  return [value, error, isPending, execute];
+  return [value, isPending, error, execute];
 }
