@@ -44,7 +44,7 @@ function ExchangeCard({ address, number, blockNumber, tokens, usd, createdAt }) 
 
 export default function PendingExchanges() {
   const MAX_IN_VIEW = 4;
-  const [data, error, loading] = useAxios();
+  const [data, loading, error] = useAxios();
   const [viewIdx, setViewIdx] = useState(0);
 
   if (!error && loading) {
