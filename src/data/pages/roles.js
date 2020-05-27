@@ -89,6 +89,53 @@ const rolesData = {
       questionLink: `mailto:${sharedData.defaultEmail}`,
       formAction: '',
     },
+    {
+      id: 'content-curator',
+      image: ContentCuratorImage,
+      title: 'Content Curator',
+      overview: `All of the media content published on the platform lives in an on-chain content directory.
+         There are a range of different content types, and each type has a schema for a rich
+         description of its structure, function and policies. For the effective use of of content,
+         for example in rendering, discovery and monetization, it is critical to ensure the validity
+         of the published information for all content. In particular, it is also important to resolve
+         possible disputes about ownership and presence of any piece of content on the platform.
+         It is the task of the content curators to do the work involved in processes that address these objectives.`,
+      responsibilites: [
+        `Monitor the publishing of new content into the content directory,
+        and respond to reports about contested publications`,
+        'Adjudicate possible dispute processes resulting from reports from users',
+        'Update information on content to be accurate',
+        <>
+          Collaborate with <Link href="#builder"> Builders</Link> to improve both tools, and user facing experiences, to
+          improve the integrity of the content directory
+        </>,
+      ],
+      requirements: [
+        'Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants',
+        'Hold sufficient amount of the native platform token to put at stake',
+      ],
+      tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-curators',
+      questionLink: `mailto:${sharedData.defaultEmail}`,
+      formAction: '',
+    },
+    {
+      id: 'content-creator',
+      image: ContentCreatorImage,
+      title: 'Content Creator',
+      overview: `As a video platform, one of the most important platform assets is the content published
+        on the platform. Since video is such a flexible media type, which can encompass a wide
+        range of content categories, it is the primary focus. However, the intention is to support
+        a broader range of content types over time. The content creators are those involved in
+         creating, publishing and monetizing content on the platform.`,
+      responsibilites: ['Publish content and build an audience'],
+      requirements: [
+        'Have the right to publish existing or new content to the platform',
+        'Hold sufficient amount of the native platform token to put at stake',
+      ],
+      tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-creators',
+      questionLink: `mailto:${sharedData.defaultEmail}`,
+      formAction: '',
+    },
   ],
   upcoming: [
     {
@@ -146,49 +193,6 @@ const rolesData = {
       requirements: [
         'Proficient with basic data analysis and scripting',
         'A deep understanding of the Joystream platform structure, function and attack vectors',
-        'Hold sufficient amount of the native platform token to put at stake',
-      ],
-      formAction: '',
-    },
-    {
-      id: 'content-curator',
-      image: ContentCuratorImage,
-      title: 'Content Curator',
-      overview: `All of the media content published on the platform lives in an on-chain content directory.
-         There are a range of different content types, and each type has a schema for a rich
-         description of its structure, function and policies. For the effective use of of content,
-         for example in rendering, discovery and monetization, it is critical to ensure the validity
-         of the published information for all content. In particular, it is also important to resolve
-         possible disputes about ownership and presence of any piece of content on the platform.
-         It is the task of the content curators to do the work involved in processes that address these objectives.`,
-      responsibilites: [
-        `Monitor the publishing of new content into the content directory,
-        and respond to reports about contested publications`,
-        'Adjudicate possible dispute processes resulting from reports from users',
-        'Update information on content to be accurate',
-        <>
-          Collaborate with <Link href="#builder"> Builders</Link> to improve both tools, and user facing experiences, to
-          improve the integrity of the content directory
-        </>,
-      ],
-      requirements: [
-        'Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants',
-        'Hold sufficient amount of the native platform token to put at stake',
-      ],
-      formAction: '',
-    },
-    {
-      id: 'content-creator',
-      image: ContentCreatorImage,
-      title: 'Content Creator',
-      overview: `As a video platform, one of the most important platform assets is the content published
-        on the platform. Since video is such a flexible media type, which can encompass a wide
-        range of content categories, it is the primary focus. However, the intention is to support
-        a broader range of content types over time. The content creators are those involved in
-         creating, publishing and monetizing content on the platform.`,
-      responsibilites: ['Publish content and build an audience'],
-      requirements: [
-        'Have the right to publish existing or new content to the platform',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
       formAction: '',
