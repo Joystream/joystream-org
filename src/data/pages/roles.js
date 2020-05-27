@@ -115,7 +115,7 @@ const rolesData = {
         'Hold sufficient amount of the native platform token to put at stake',
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-curators',
-      questionLink: `mailto:${sharedData.defaultEmail}`,
+      questionLink: `mailto:hello@jsgenesis.com`,
       formAction: '',
     },
     {
@@ -133,7 +133,7 @@ const rolesData = {
         'Hold sufficient amount of the native platform token to put at stake',
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-creators',
-      questionLink: `mailto:${sharedData.defaultEmail}`,
+      questionLink: `mailto:hello@jsgenesis.com`,
       formAction: '',
     },
   ],
