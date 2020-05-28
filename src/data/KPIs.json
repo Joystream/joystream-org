@@ -34,7 +34,7 @@
 			"measurementPeriod": "7 days",
 			"startDate": "29:05:2020 - 16:00 GMT",
 			"successEvents": [
-				"At least 50 new *curated* videos added to the media page",
+				"At least 50 new curated videos added to the media page",
 				"Total runtime of videos exceeds 3h",
 				"An instructional video that guides a new user through all the steps for uploading and editing a video on the platform"
 			],
