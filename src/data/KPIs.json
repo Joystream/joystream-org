@@ -29,7 +29,7 @@
 		},
 		{
 			"title": "Content Creation",
-			"description": "To improve the current state of available videos, we will incentivize it.",
+			"description": "To improve the current state of available videos, we will incentivize it. <br>",
 			"reward": "120",
 			"measurementPeriod": "7 days",
 			"startDate": "29:05:2020 - 16:00 GMT",
