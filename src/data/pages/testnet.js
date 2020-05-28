@@ -44,6 +44,9 @@ export default {
                 At some regular interval, which may itself be updated over time, some quantity of USD value is added to
                 the pool of value.
               </p>
+              <p>
+                <i>Last replenishment: $250 added on May 25th</i>
+              </p>
             </blockquote>
           </>
         ),
