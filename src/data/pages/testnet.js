@@ -68,11 +68,11 @@ export default {
       links: {
         first: {
           to: 'https://blog.joystream.org/constantinople-kpis/',
-          text: 'See full list of KPI’s',
+          text: 'Further details and KPI history',
         },
         second: {
           to: 'testnet#KPIsValues',
-          text: 'Jump to KPI’s',
+          text: 'Jump to KPIs',
         },
       },
     },
