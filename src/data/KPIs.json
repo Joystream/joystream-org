@@ -1,61 +1,60 @@
 {
-  "KPIs": [
-    {
-      "title": "Block Production",
-      "description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
-      "reward": "50",
-      "startDate": "29:05:2020 - 16:00 GMT",
-      "measurementPeriod": "7 days",
-      "annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the Measurement period",
-      "successEvents": [
-        "The difference between timestamps of block <n> and block <n+100382> must be less than 604,710,000 milliseconds",
-      ],
-      "endDate": "06/06/2020 - 16:00 GMT",
-      "number": 1.1
-    },
-    {
-      "title": "Proposal Clearance",
-      "description": "For the governance process to work, all proposals must be dealt with professionally, and in reasonable time frame to avoiding blocking new proposals coming in.",
-      "reward": "90",
-      "measurementPeriod": "7 days",
-      "startDate": "29:05:2020 - 16:00 GMT",
-      "successEvents": [
-        "No proposals expire due to missing votes",
-        "At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)",
-        "For each new proposal, a forum post is opened for discussion between the Council and other interested parties"
-      ],
-      "annihilation": "No malicious or unreasonable proposals are approved.",
-      "endDate": "06/06/2020 - 16:00 GMT",
-      "number": 1.2
-    },
-    {
-      "title": "Content Creation",
-      "description": "To improve the current state of available videos, we will incentivize it.",
-      "reward": "120",
-      "measurementPeriod": "7 days",
-      "startDate": "29:05:2020 - 16:00 GMT",
-      "successEvents": [
-        "At least 50 new *curated* videos added to the media page",
-        "Total runtime of videos exceeds 3h",
-        "An instructional video that guides a new user through all the steps for uploading and editing a video on the platform"
-      ],
-      "annihilation": "A video not in line with the platform ToS remains available for more than 24h.",
-      "endDate": "06/06/2020 - 16:00 GMT",
-      "number": 1.3
-    },
-    {
-      "title": "State of the Network Reporting",
-      "description": "There needs to be some level of accountability and transparency for the Council. Weekly reports would help the users make informed votes.",
-      "reward": "100",
-      "measurementPeriod": "3 days",
-      "startDate": "28:05:2020 - 16:00 GMT",
-      "successEvents": [
-        "The Council produces a report on the state of the network tokenomics, and its accounts.",
-        "The Council produces a report on the its own performance.",
-      ],
-      "annihilation": "The report contains incorrect data.",
-      "endDate": "01/05/2020 - 16:00 GMT",
-      "number": 1.4
-    },
-  ]
+	"KPIs": [{
+			"title": "Block Production",
+			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
+			"reward": "50",
+			"startDate": "29:05:2020 - 16:00 GMT",
+			"measurementPeriod": "7 days",
+			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the Measurement period",
+			"successEvents": [
+				"The difference between timestamps of block <n> and block <n+100382> must be less than 604,710,000 milliseconds"
+			],
+			"endDate": "06/06/2020 - 16:00 GMT",
+			"number": 1.1
+		},
+		{
+			"title": "Proposal Clearance",
+			"description": "For the governance process to work, all proposals must be dealt with professionally, and in reasonable time frame to avoiding blocking new proposals coming in.",
+			"reward": "90",
+			"measurementPeriod": "7 days",
+			"startDate": "29:05:2020 - 16:00 GMT",
+			"successEvents": [
+				"No proposals expire due to missing votes",
+				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)",
+				"For each new proposal, a forum post is opened for discussion between the Council and other interested parties"
+			],
+			"annihilation": "No malicious or unreasonable proposals are approved.",
+			"endDate": "06/06/2020 - 16:00 GMT",
+			"number": 1.2
+		},
+		{
+			"title": "Content Creation",
+			"description": "To improve the current state of available videos, we will incentivize it.",
+			"reward": "120",
+			"measurementPeriod": "7 days",
+			"startDate": "29:05:2020 - 16:00 GMT",
+			"successEvents": [
+				"At least 50 new *curated* videos added to the media page",
+				"Total runtime of videos exceeds 3h",
+				"An instructional video that guides a new user through all the steps for uploading and editing a video on the platform"
+			],
+			"annihilation": "A video not in line with the platform ToS remains available for more than 24h.",
+			"endDate": "06/06/2020 - 16:00 GMT",
+			"number": 1.3
+		},
+		{
+			"title": "State of the Network Reporting",
+			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reports would help the users make informed votes.",
+			"reward": "100",
+			"measurementPeriod": "3 days",
+			"startDate": "28:05:2020 - 16:00 GMT",
+			"successEvents": [
+				"The Council produces a report on the state of the network tokenomics, and its accounts.",
+				"The Council produces a report on the its own performance."
+			],
+			"annihilation": "The report contains incorrect data.",
+			"endDate": "01/05/2020 - 16:00 GMT",
+			"number": 1.4
+		}
+	]
 }
