@@ -44,6 +44,9 @@ export default {
                 At some regular interval, which may itself be updated over time, some quantity of USD value is added to
                 the pool of value.
               </p>
+              <p>
+                <i>Last replenishment: $250 added on May 25th</i>
+              </p>
             </blockquote>
           </>
         ),
@@ -65,11 +68,11 @@ export default {
       links: {
         first: {
           to: 'https://blog.joystream.org/constantinople-kpis/',
-          text: 'See full list of KPI’s',
+          text: 'Further details and KPI history',
         },
         second: {
           to: 'testnet#KPIsValues',
-          text: 'Jump to KPI’s',
+          text: 'Jump to KPIs',
         },
       },
     },
