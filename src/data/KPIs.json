@@ -67,7 +67,7 @@
 			"startDate": "05:06:2020 - 16:00 GMT",
 			"successEvents": [
 				"A first version template is created. It includes the relevant data, and a format for presenting them.",
-				"A user-friendly script is created, that only takes blockheights as inputs, and returns the data needed in **A**."
+				"A user-friendly script is created, that only takes blockheights as inputs, and returns the data needed."
 			],
 			"annihilation": "The report contains incorrect data.",
 			"endDate": "13/06/2020 - 16:00 GMT",
