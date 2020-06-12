@@ -5,7 +5,17 @@ import content from '../../data/pages/testnet';
 import { useSpring, animated } from 'react-spring';
 import { formatNumber } from '../../utils/formatNumber';
 
-function KPI({ number, title, description, reward, measurementPeriod, startDate, successEvents }) {
+function KPI({
+  number,
+  title,
+  description,
+  reward,
+  annihilation,
+  gradeDate,
+  measurementPeriod,
+  startDate,
+  successEvents,
+}) {
   const [expand, setExpand] = useState(false);
   const [hover, setHover] = useState(false);
   const containerProps = useSpring({ minHeight: expand ? '30rem' : '10rem', from: { minHeight: '10rem' } });
@@ -52,6 +62,10 @@ function KPI({ number, title, description, reward, measurementPeriod, startDate,
                 <span className="KPIs__Values__Card__Info__Dates__Label">Starts at:</span>
                 <span className="KPIs__Values__Card__Info__Dates__Value">{startDate}</span>
               </div>
+              <div className="KPIs__Values__Card__Info__Dates__Start">
+                <span className="KPIs__Values__Card__Info__Dates__Label">Grading Date:</span>
+                <span className="KPIs__Values__Card__Info__Dates__Value">{gradeDate}</span>
+              </div>
               <div className="KPIs__Values__Card__Info__Dates__Period">
                 <span className="KPIs__Values__Card__Info__Dates__Label">Measurement Period:</span>
                 <span className="KPIs__Values__Card__Info__Dates__Value">{measurementPeriod}</span>
@@ -59,11 +73,15 @@ function KPI({ number, title, description, reward, measurementPeriod, startDate,
             </div>
             <div className="KPIs__Values__Card__Info__Success">
               <span>Successful if:</span>
-              <ul>
+              <ol>
                 {successEvents.map((ev, idx) => (
                   <li key={idx}>{ev}</li>
                 ))}
-              </ul>
+              </ol>
+            </div>
+            <div className="KPIs__Values__Card__Info__Dates__Start">
+              <span className="KPIs__Values__Card__Info__Dates__Label">Annihilation Condition:</span>
+              <span className="KPIs__Values__Card__Info__Dates__Value">{annihilation}</span>
             </div>
           </div>
         )}
@@ -84,7 +102,9 @@ export default function LiveKPIs({ id }) {
           description={kpi.description}
           reward={kpi.reward}
           measurementPeriod={kpi.measurementPeriod}
+          annihilation={kpi.annihilation}
           startDate={kpi.startDate}
+          gradeDate={kpi.gradeDate}
           successEvents={kpi.successEvents}
         />
       ))}

@@ -1,77 +1,106 @@
 {
-	"KPIs": [{
-			"title": "Block Production",
-			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
-			"reward": "50",
-			"startDate": "05:06:2020 - 16:00 GMT",
-			"measurementPeriod": "7 days",
-			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the Measurement period",
-			"successEvents": [
-				"The difference between timestamps of block <n> and block <n+100382> must be less than 604,710,000 milliseconds"
-			],
-			"endDate": "13/06/2020 - 16:00 GMT",
-			"number": 2.1
-		},
-		{
-			"title": "Proposal Clearance",
-			"description": "For the governance process to work, all proposals must be dealt with professionally, and in reasonable time frame to avoiding blocking new proposals coming in.",
-			"reward": "60",
-			"measurementPeriod": "7 days",
-			"startDate": "05:06:2020 - 16:00 GMT",
-			"successEvents": [
-				"No proposals expire due to missing votes",
-				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)",
-				"For each new proposal, a forum post is opened for discussion between the Council and other interested parties"
-			],
-			"annihilation": "No malicious or unreasonable proposals are approved.",
-			"endDate": "13/06/2020 - 16:00 GMT",
-			"number": 2.2
-		},
-		{
-			"title": "Content Curation",
-			"description": "Effective Content Curation is a fundamental contributor towards the success of the platform, and it requires definite improvement.",
-			"reward": "120",
-			"measurementPeriod": "7 days",
-			"startDate": "05:06:2020 - 16:00 GMT",
-			"successEvents": [
-				"The Curators publishes a 'Curation Policy' in the forum.",
-				"A Curator responds to all requests made on the forum within 24h.",
-				"All (video) entities with unplayable content are located and listed on the forum. All channel owners are assisted to replace media file.",
-				"All (video) entities containing playable content are curated and displayed.",
-				"All channels that warrants so get 'Verified'",
-				"All files in the 'dataDirectory' not linked to an entity are located and listed on the forum for removal."
-			],
-			"annihilation": "A video not in line with the platform ToS remains available for more than 24h.",
-			"endDate": "13/06/2020 - 16:00 GMT",
-			"number": 2.3
-		},
-		{
-			"title": "State of the Network Reporting",
-			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reports would help the users make informed votes.",
-			"reward": "60",
-			"measurementPeriod": "5 days",
-			"startDate": "05:06:2020 - 16:00 GMT",
-			"successEvents": [
-				"Constantinople Council #0 produces a text report covering its own workflow, challenges, thinking and performance.",
-				"Constantinople Council #1 produces a text report covering its own workflow, challenges, thinking and performance."
-			],
-			"annihilation": "The report contains incorrect information.",
-			"endDate": "11/05/2020 - 16:00 GMT",
-			"number": 2.4
-		},
-		{
-			"title": "Network Reporting: Template & Tools",
-			"description": "The Council did not manage to complete the previous KPI for 'State of the Network Reporting'. This is important enough to fund.",
-			"reward": "100",
-			"measurementPeriod": "7 days",
-			"startDate": "05:06:2020 - 16:00 GMT",
-			"successEvents": [
-				"A first version template is created. It includes the relevant data, and a format for presenting them.",
-				"A user-friendly script is created, that only takes blockheights as inputs, and returns the data needed."
-			],
-			"annihilation": "The report contains incorrect data.",
-			"endDate": "13/06/2020 - 16:00 GMT",
-			"number": 2.5
-		}
-	]
+  "KPIs": [
+    {
+      "title": "Block Production",
+      "description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
+      "reward": "50",
+      "startDate": "12:06:2020 - 16:00 GMT",
+      "measurementPeriod": "7 days",
+      "annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period",
+      "successEvents": [
+        "The difference between timestamps of block <n> and block <n+100382> must be less than 604,710,000 milliseconds"
+      ],
+      "gradeDate": "20.06.2020 - 16:00 GMT",
+      "number": 4.1
+    },
+    {
+      "title": "Proposal Clearance",
+      "description": "For the governance process to work, all proposals must be dealt with professionally, and in a reasonable time frame to avoiding blocking new proposals coming in.",
+      "reward": "60",
+      "measurementPeriod": "7 days",
+      "startDate": "12:06:2020 - 16:00 GMT",
+      "successEvents": [
+        "No proposals expire due to missing votes",
+        "At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)",
+        "After the runtime upgrade at block #1279512, the propsal discussion system is used for all new propsals",
+        "All forum posts discussing old proposals are added to the their respective proposal discussion with metadata"
+      ],
+      "annihilation": "No malicious or unreasonable proposals are approved.",
+      "gradeDate": "20.06.2020 - 16:00 GMT",
+      "number": 4.2
+    },
+    {
+      "title": "Content Curation",
+      "description": "Effective Content Curation is a fundamental contributor towards the success of the platform, and it requires definite improvement.",
+      "reward": "80",
+      "measurementPeriod": "7 days",
+      "startDate": "12.06.2020 - 16:00 GMT",
+      "successEvents": [
+        "All videos with unplayable content are moderated.",
+        "All (video) entities containing playable content are curated and displayed.",
+        "All channels that warrants so get 'Verified",
+        "The featuered videos are updated twice"
+      ],
+      "annihilation": "A video not in line with the platform ToS remains available for more than 24h",
+      "gradeDate": "20.06.2020 - 16:00 GMT",
+      "number": 4.3
+    },
+    {
+      "title": "Council Performance Review and Minutes",
+      "description": "There needs to be some level of accountability and transparency for the Council. Weekly reports will allow users make informed votes.",
+      "reward": "60",
+      "measurementPeriod": "3 days",
+      "startDate": "12:06:2020 - 16:00 GMT",
+      "successEvents": [
+        "The second Council on Constantinople (#1139611-#1240411) produces a log of events, with all of the Council's actions, challenges and tasks.",
+        "This is accompanied by a report covering its own workflow, challenges, thinking and performance."
+      ],
+      "annihilation": "The report contains incorrect information.",
+      "gradeDate": "20.06.2020 - 16:00 GMT",
+      "number": 4.4
+    },
+    {
+      "title": "Tokenomics and State of the Network Reporting",
+      "description": "In addition to the above, there needs to be bookeeping/accounting of the platform's spending, and some general network data.",
+      "reward": "100",
+      "measurementPeriod": "3 days",
+      "startDate": "12:06:2020 - 16:00 GMT",
+      "successEvents": [
+        "The second Council on Constantinople (#1139611-#1240411) produces a report based on the newest template`*`.",
+        "The script (in typescript) that produces the output is made avaiable alongside the report."
+      ],
+      "annihilation": "The report contains incorrect information.",
+      "gradeDate": "20.05.2020 - 16:00 GMT",
+      "number": 4.5
+    },
+    {
+      "title": "Forum Sudo",
+      "description": "As the usage of the forum has increased significantly, it's time to have proper maintenance, moderation and support.",
+      "reward": "50",
+      "measurementPeriod": "3 days",
+      "startDate": "12:06:2020 - 16:00 GMT",
+      "successEvents": [
+        "The Council selects one (or more that shares a key) users to act as the forum sudo.",
+        "The forum sudo cleans up the forum, and creates new categories and subcategories in a way agreed upon.",
+        "All reports are added in the new, appropriate categories, with links to relevant information."
+      ],
+      "annihilation": "The forum sudo goes rogue.",
+      "gradeDate": "20.05.2020 - 16:00 GMT",
+      "number": 4.6
+    },
+    {
+      "title": "Storage Providers Stay Up After the Runtime Uprade",
+      "description": "Due to the runtime upgrade at block #1279512, the Storage Providers need to upgrade and restart their nodes",
+      "reward": "50",
+      "measurementPeriod": "1/2 day",
+      "startDate": "15:06:2020 ~ 10:00 GMT",
+      "successEvents": [
+        "Within 100 blocks of the upgrade, half of the Storage Providers are up and working.",
+        "Within 7200 blocks of the upgrade, all the Storage Providers are up and working."
+      ],
+      "annihilation": "All Storage Providers are fired before the upgrade",
+      "gradeDate": "20.05.2020 - 16:00 GMT",
+      "number": 4.7
+    }
+  ]
 }
