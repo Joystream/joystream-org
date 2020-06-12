@@ -32,17 +32,16 @@
     {
       "title": "Content Curation",
       "description": "Effective Content Curation is a fundamental contributor towards the success of the platform, and it requires definite improvement.",
-      "reward": "100",
+      "reward": "80",
       "measurementPeriod": "7 days",
-      "startDate": "12:06:2020 - 16:00 GMT",
+      "startDate": "12.06.2020 - 16:00 GMT",
       "successEvents": [
-        "The Curator group publishes a 'Curation Policy' in the forum.",
-        "All (video) entities with unplayable content are located and listed on the forum. All channel owners are assisted to replace media file.",
+        "All videos with unplayable content are moderated.",
         "All (video) entities containing playable content are curated and displayed.",
-        "All channels that warrants verification are given a 'Verified' status",
-        "All files in the 'dataDirectory' not linked to an entity are located and listed on the forum for removal."
+        "All channels that warrants so get 'Verified",
+        "The featuered videos are updated twice"
       ],
-      "annihilation": "A video not in line with the platform ToS remains available for more than 24h.",
+      "annihilation": "A video not in line with the platform ToS remains available for more than 24h",
       "gradeDate": "20.06.2020 - 16:00 GMT",
       "number": 4.3
     },
