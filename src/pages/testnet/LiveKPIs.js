@@ -73,11 +73,11 @@ function KPI({
             </div>
             <div className="KPIs__Values__Card__Info__Success">
               <span>Successful if:</span>
-              <ul>
+              <ol>
                 {successEvents.map((ev, idx) => (
                   <li key={idx}>{ev}</li>
                 ))}
-              </ul>
+              </ol>
             </div>
             <div className="KPIs__Values__Card__Info__Dates__Start">
               <span className="KPIs__Values__Card__Info__Dates__Label">Annihilation Condition:</span>

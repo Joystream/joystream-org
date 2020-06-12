@@ -6,6 +6,16 @@ body {
   overflow-y: scroll;
 }
 
+ol {
+  padding-left: 30px;
+  list-style-type: decimal;
+}
+
+ol > li {
+  margin-bottom: 12px;
+  padding-left: 10px;
+}
+
 .BreakText {
   & p {
     overflow: hidden;
