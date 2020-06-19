@@ -14,7 +14,7 @@
 		},
 		{
 			"title": "Validator Stake",
-			"description": "To ensure no foul play by Validators, the incentives must be strong enough to keep them honest.",
+			"description": "To ensure no foul play by Validators, we must ensure that the incentives are strong enough to keep them honest.",
 			"reward": "200",
 			"measurementPeriod": "7 days",
 			"startDate": "19:06:2020 - 16:00 GMT",
@@ -59,13 +59,13 @@
 		},
 		{
 			"title": "Tokenomics and State of the Network Reporting",
-			"description": "In addition to the above, there needs to be bookeeping/accounting of the platform's spending, and some general network data.",
+			"description": "In addition to the above, there needs to be bookkeeping/accounting of the platform's spending, and some general network data.",
 			"reward": "100",
 			"measurementPeriod": "3 days",
 			"startDate": "19:06:2020 - 16:00 GMT",
 			"successEvents": [
 				"The fourth Council on Constantinople (#1240411-#1341211) produces a report based on the newest template`*`.",
-				"The script (in typescript) that produces the output is made avaiable alongside the report."
+				"The script (in typescript) that produces the output is made available alongside the report."
 			],
 			"annihilation": "The report contains incorrect information.",
 			"gradeDate": "28.06.2020 - 16:00 GMT",
