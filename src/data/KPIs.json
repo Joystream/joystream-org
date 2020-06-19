@@ -1,76 +1,75 @@
 {
-  "KPIs": [
-    {
-      "title": "Block Production",
-      "description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
-      "reward": "50",
-      "startDate": "19:06:2020 - 16:00 GMT",
-      "measurementPeriod": "7 days",
-      "annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period",
-      "successEvents": [
-        "The difference between timestamps of block #1341211 and block #1441593 must be less than 604,710,000 milliseconds"
-      ],
-      "gradeDate": "28.06.2020 - 16:00 GMT",
-      "number": 5.1
-    },
-    {
-      "title": "Validator Stake",
-      "description": "To ensure no foul play by Validators, the incentives must be strong enough to keep them honest.",
-      "reward": "200",
-      "measurementPeriod": "7 days",
-      "startDate": "19:06:2020 - 16:00 GMT",
-      "successEvents": [
-        "Have the Validators earn >20% of the max on average over the last 72,000 blocks (5 days)",
-        "Have the Validators earn >30% of the max on average over the last 57,600 blocks (4 days)",
-        "Have the Validators earn >40% of the max on average over the last 43,200 blocks (3 days)",
-        "Have the Validators earn >50% of the max on average over the last 28,800 blocks (2 days)",
-      ],
-      "annihilation": "NA",
-      "gradeDate": "28.06.2020 - 16:00 GMT",
-      "number": 5.2
-    },
-    {
-      "title": "Proposal Clearance",
-      "description": "For the governance process to work, all proposals must be dealt with professionally, and in a reasonable time frame to avoiding blocking new proposals coming in.",
-      "reward": "60",
-      "measurementPeriod": "7 days",
-      "startDate": "19:06:2020 - 16:00 GMT",
-      "successEvents": [
-        "No proposals expire due to missing votes",
-        "At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)",
-        "All forum posts discussing old proposals are added to the their respective proposal discussion with metadata"
-      ],
-      "annihilation": "No malicious or unreasonable proposals are approved.",
-      "gradeDate": "28.06.2020 - 16:00 GMT",
-      "number": 5.3
-    },
-    {
-      "title": "Council Performance Review and Minutes",
-      "description": "There needs to be some level of accountability and transparency for the Council. Weekly reports will allow users make informed votes.",
-      "reward": "60",
-      "measurementPeriod": "3 days",
-      "startDate": "19:06:2020 - 16:00 GMT",
-      "successEvents": [
-        "The fourth Council on Constantinople (#1240411-#1341211) produces a log of events, with all of the Council's actions, challenges and tasks.",
-        "This is accompanied by a report covering its own workflow, challenges, thinking and performance."
-      ],
-      "annihilation": "The report contains incorrect information.",
-      "gradeDate": "28.06.2020 - 16:00 GMT",
-      "number": 5.4
-    },
-    {
-      "title": "Tokenomics and State of the Network Reporting",
-      "description": "In addition to the above, there needs to be bookeeping/accounting of the platform's spending, and some general network data.",
-      "reward": "100",
-      "measurementPeriod": "3 days",
-      "startDate": "19:06:2020 - 16:00 GMT",
-      "successEvents": [
-        "The fourth Council on Constantinople (#1240411-#1341211) produces a report based on the newest template`*`.",
-        "The script (in typescript) that produces the output is made avaiable alongside the report."
-      ],
-      "annihilation": "The report contains incorrect information.",
-      "gradeDate": "28.06.2020 - 16:00 GMT",
-      "number": 5.5
-    }
-  ]
+	"KPIs": [{
+			"title": "Block Production",
+			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
+			"reward": "50",
+			"startDate": "19:06:2020 - 16:00 GMT",
+			"measurementPeriod": "7 days",
+			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period",
+			"successEvents": [
+				"The difference between timestamps of block #1341211 and block #1441593 must be less than 604,710,000 milliseconds"
+			],
+			"gradeDate": "28.06.2020 - 16:00 GMT",
+			"number": 5.1
+		},
+		{
+			"title": "Validator Stake",
+			"description": "To ensure no foul play by Validators, the incentives must be strong enough to keep them honest.",
+			"reward": "200",
+			"measurementPeriod": "7 days",
+			"startDate": "19:06:2020 - 16:00 GMT",
+			"successEvents": [
+				"Have the Validators earn >20% of the max on average over the last 72,000 blocks (5 days)",
+				"Have the Validators earn >30% of the max on average over the last 57,600 blocks (4 days)",
+				"Have the Validators earn >40% of the max on average over the last 43,200 blocks (3 days)",
+				"Have the Validators earn >50% of the max on average over the last 28,800 blocks (2 days)"
+			],
+			"annihilation": "NA",
+			"gradeDate": "28.06.2020 - 16:00 GMT",
+			"number": 5.2
+		},
+		{
+			"title": "Proposal Clearance",
+			"description": "For the governance process to work, all proposals must be dealt with professionally, and in a reasonable time frame to avoiding blocking new proposals coming in.",
+			"reward": "60",
+			"measurementPeriod": "7 days",
+			"startDate": "19:06:2020 - 16:00 GMT",
+			"successEvents": [
+				"No proposals expire due to missing votes",
+				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)",
+				"All forum posts discussing old proposals are added to the their respective proposal discussion with metadata"
+			],
+			"annihilation": "No malicious or unreasonable proposals are approved.",
+			"gradeDate": "28.06.2020 - 16:00 GMT",
+			"number": 5.3
+		},
+		{
+			"title": "Council Performance Review and Minutes",
+			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reports will allow users make informed votes.",
+			"reward": "60",
+			"measurementPeriod": "3 days",
+			"startDate": "19:06:2020 - 16:00 GMT",
+			"successEvents": [
+				"The fourth Council on Constantinople (#1240411-#1341211) produces a log of events, with all of the Council's actions, challenges and tasks.",
+				"This is accompanied by a report covering its own workflow, challenges, thinking and performance."
+			],
+			"annihilation": "The report contains incorrect information.",
+			"gradeDate": "28.06.2020 - 16:00 GMT",
+			"number": 5.4
+		},
+		{
+			"title": "Tokenomics and State of the Network Reporting",
+			"description": "In addition to the above, there needs to be bookeeping/accounting of the platform's spending, and some general network data.",
+			"reward": "100",
+			"measurementPeriod": "3 days",
+			"startDate": "19:06:2020 - 16:00 GMT",
+			"successEvents": [
+				"The fourth Council on Constantinople (#1240411-#1341211) produces a report based on the newest template`*`.",
+				"The script (in typescript) that produces the output is made avaiable alongside the report."
+			],
+			"annihilation": "The report contains incorrect information.",
+			"gradeDate": "28.06.2020 - 16:00 GMT",
+			"number": 5.5
+		}
+	]
 }
