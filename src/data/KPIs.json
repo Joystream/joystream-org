@@ -2,74 +2,68 @@
 	"KPIs": [{
 			"title": "Block Production",
 			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
-			"reward": "50",
-			"startDate": "19:06:2020 - 16:00 GMT",
+			"reward": "20",
+			"startDate": "26:06:2020 - 16:00 GMT",
 			"measurementPeriod": "7 days",
 			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period",
 			"successEvents": [
-				"The difference between timestamps of block #1341211 and block #1441593 must be less than 604,710,000 milliseconds"
+				"The difference between timestamps of block #1442011 and block #1542393 must be less than 604,710,000 milliseconds"
 			],
-			"gradeDate": "28.06.2020 - 16:00 GMT",
-			"number": 5.1
-		},
-		{
-			"title": "Validator Stake",
-			"description": "To ensure no foul play by Validators, we must ensure that the incentives are strong enough to keep them honest.",
-			"reward": "200",
-			"measurementPeriod": "7 days",
-			"startDate": "19:06:2020 - 16:00 GMT",
-			"successEvents": [
-				"Have the Validators earn >20% of the max on average over the last 72,000 blocks (5 days)",
-				"Have the Validators earn >30% of the max on average over the last 57,600 blocks (4 days)",
-				"Have the Validators earn >40% of the max on average over the last 43,200 blocks (3 days)",
-				"Have the Validators earn >50% of the max on average over the last 28,800 blocks (2 days)"
-			],
-			"annihilation": "NA",
-			"gradeDate": "28.06.2020 - 16:00 GMT",
-			"number": 5.2
+			"gradeDate": "05.07.2020 - 16:00 GMT",
+			"number": 6.1
 		},
 		{
 			"title": "Proposal Clearance",
 			"description": "For the governance process to work, all proposals must be dealt with professionally, and in a reasonable time frame to avoiding blocking new proposals coming in.",
-			"reward": "60",
+			"reward": "50",
 			"measurementPeriod": "7 days",
-			"startDate": "19:06:2020 - 16:00 GMT",
+			"startDate": "26:06:2020 - 16:00 GMT",
 			"successEvents": [
 				"No proposals expire due to missing votes",
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)",
-				"All forum posts discussing old proposals are added to the their respective proposal discussion with metadata"
 			],
 			"annihilation": "No malicious or unreasonable proposals are approved.",
-			"gradeDate": "28.06.2020 - 16:00 GMT",
-			"number": 5.3
+			"gradeDate": "05.07.2020 - 16:00 GMT",
+			"number": 6.2
 		},
 		{
-			"title": "Council Performance Review and Minutes",
-			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reports will allow users make informed votes.",
-			"reward": "60",
-			"measurementPeriod": "3 days",
-			"startDate": "19:06:2020 - 16:00 GMT",
+			"title": "Council Reporting",
+			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reporting of workflow and 'Tokenomics' will allow users make informed votes.",
+			"reward": "120",
+			"measurementPeriod": "7 days",
+			"startDate": "26:06:2020 - 16:00 GMT",
 			"successEvents": [
-				"The fourth Council on Constantinople (#1240411-#1341211) produces a log of events, with all of the Council's actions, challenges and tasks.",
+				"The fifth Council on Constantinople (#1341211-#1442010) produces a log of events, with all of the Council's actions, challenges and tasks.",
 				"This is accompanied by a report covering its own workflow, challenges, thinking and performance."
-			],
-			"annihilation": "The report contains incorrect information.",
-			"gradeDate": "28.06.2020 - 16:00 GMT",
-			"number": 5.4
-		},
-		{
-			"title": "Tokenomics and State of the Network Reporting",
-			"description": "In addition to the above, there needs to be bookkeeping/accounting of the platform's spending, and some general network data.",
-			"reward": "100",
-			"measurementPeriod": "3 days",
-			"startDate": "19:06:2020 - 16:00 GMT",
-			"successEvents": [
-				"The fourth Council on Constantinople (#1240411-#1341211) produces a report based on the newest template`*`.",
+				"The fifth Council on Constantinople (#1341211-#1442010) produces a report based on the newest template.",
 				"The script (in typescript) that produces the output is made available alongside the report."
 			],
-			"annihilation": "The report contains incorrect information.",
-			"gradeDate": "28.06.2020 - 16:00 GMT",
-			"number": 5.5
+			"annihilation": "The reports contains incorrect information.",
+			"gradeDate": "05.07.2020 - 16:00 GMT",
+			"number": 6.3
+		},
+		{
+			"title": "Telegram Bots",
+			"description": "Some Telegram bots have already been created, but they need some improvements and to be present in the main channel. Details can be found in the blog.",
+			"reward": "400",
+			"measurementPeriod": "3 days",
+			"startDate": "26:06:2020 - 16:00 GMT",
+			"successEvents": [
+				"Block Production: At the end of each era, reports the status of the Validator set.`*`",
+				"Storage Providers: Reports 'expired', 'down' and 'offline' Storate Providers.`*`",
+				"Proposals: Reports all 'Proposal Status' changes.`*`",
+				"Council: Reports all 'Council' and 'Council Election' status changes.`*`",
+				"Forum: Reports all new 'posts', 'threads' and 'categories' made.`*`",
+				"Curators: Reports all new 'Openings' and status changes of openings.`*`",
+				"Channels: Reports all new 'Channels' made.`*`",
+				"Content: Reports 'Entity properties' changed in the 'Video Class'.`*`",
+				"`*`To qualify: The council 'Approves' the bots in one or more 'Text Proposal(s)'. ",
+				"`*`To qualify: Step by step instructions for adding the bots to a channel.",
+				"`*`To qualify: A PR for each bot, licensed under GPLv3, made to the 'Community Repo'.",
+			],
+			"annihilation": "Bots contain malicious code",
+			"gradeDate": "05.07.2020 - 16:00 GMT",
+			"number": 6.4
 		}
 	]
 }
