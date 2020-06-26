@@ -20,7 +20,7 @@
 			"startDate": "26:06:2020 - 16:00 GMT",
 			"successEvents": [
 				"No proposals expire due to missing votes",
-				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)",
+				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)"
 			],
 			"annihilation": "No malicious or unreasonable proposals are approved.",
 			"gradeDate": "05.07.2020 - 16:00 GMT",
@@ -34,7 +34,7 @@
 			"startDate": "26:06:2020 - 16:00 GMT",
 			"successEvents": [
 				"The fifth Council on Constantinople (#1341211-#1442010) produces a log of events, with all of the Council's actions, challenges and tasks.",
-				"This is accompanied by a report covering its own workflow, challenges, thinking and performance."
+				"This is accompanied by a report covering its own workflow, challenges, thinking and performance.",
 				"The fifth Council on Constantinople (#1341211-#1442010) produces a report based on the newest template.",
 				"The script (in typescript) that produces the output is made available alongside the report."
 			],
@@ -59,7 +59,7 @@
 				"Content: Reports 'Entity properties' changed in the 'Video Class'.`*`",
 				"`*`To qualify: The council 'Approves' the bots in one or more 'Text Proposal(s)'. ",
 				"`*`To qualify: Step by step instructions for adding the bots to a channel.",
-				"`*`To qualify: A PR for each bot, licensed under GPLv3, made to the 'Community Repo'.",
+				"`*`To qualify: A PR for each bot, licensed under GPLv3, made to the 'Community Repo'."
 			],
 			"annihilation": "Bots contain malicious code",
 			"gradeDate": "05.07.2020 - 16:00 GMT",
