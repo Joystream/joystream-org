@@ -33,7 +33,7 @@
 			"measurementPeriod": "7 days",
 			"startDate": "03:07:2020 ~17:00 GMT - #1542811",
 			"successEvents": [
-				"Agree on a concept, based on the information outlined [here](https://testnet.joystream.org/#/proposals/30).",
+				"Agree on a concept, based on the information outlined here: https://testnet.joystream.org/#/proposals/30",
 				"A PR to the community, based on what was agreed in 1, is opened.",
 				"A proposal to merge the PR is made and approved."
 			],
