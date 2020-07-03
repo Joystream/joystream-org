@@ -3,51 +3,66 @@
 			"title": "Block Production",
 			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
 			"reward": "20",
-			"startDate": "26:06:2020 - 16:00 GMT",
+			"startDate": "03:07:2020 ~17:00 GMT - #1542811",
 			"measurementPeriod": "7 days",
 			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period.",
 			"successEvents": [
 				"The difference between timestamps of block #1442011 and block #1542393 must be less than 604,710,000 milliseconds."
 			],
-			"gradeDate": "05.07.2020 - 16:00 GMT",
-			"number": 6.1
+			"gradeDate": "12.07.2020 - 16:00 GMT",
+			"number": 7.1
 		},
 		{
 			"title": "Proposal Clearance",
 			"description": "For the governance process to work, all proposals must be dealt with professionally, and in a reasonable time frame to avoiding blocking new proposals coming in.",
 			"reward": "50",
 			"measurementPeriod": "7 days",
-			"startDate": "26:06:2020 - 16:00 GMT",
+			"startDate": "03:07:2020 ~17:00 GMT - #1542811",
 			"successEvents": [
 				"No proposals expire due to missing votes.",
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)."
 			],
 			"annihilation": "No malicious or unreasonable proposals are approved.",
-			"gradeDate": "05.07.2020 - 16:00 GMT",
-			"number": 6.2
+			"gradeDate": "12.07.2020 - 16:00 GMT",
+			"number": 7.2
+		},
+		{
+			"title": "Improve Community Repo",
+			"description": "For the community to submit KPI deliverables, contribute code and maintain publish ideas, the community Github repo needs improvements.",
+			"reward": "100",
+			"measurementPeriod": "7 days",
+			"startDate": "03:07:2020 ~17:00 GMT - #1542811",
+			"successEvents": [
+				"Agree on a concept, based on the information outlined [here](https://testnet.joystream.org/#/proposals/30).",
+				"A PR to the community, based on what was agreed in 1, is opened.",
+				"A proposal to merge the PR is made and approved."
+			],
+			"annihilation": "A PR is approved despite not being in line with the concepts in 1 and 2.",
+			"gradeDate": "12.07.2020 - 16:00 GMT",
+			"number": 7.3
 		},
 		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reporting of workflow and 'Tokenomics' will allow users make informed votes.",
 			"reward": "120",
 			"measurementPeriod": "7 days",
-			"startDate": "26:06:2020 - 16:00 GMT",
+			"startDate": "03:07:2020 ~17:00 GMT - #1542811",
 			"successEvents": [
-				"The fifth Council on Constantinople (#1341211-#1442010) produces a log of events, with all of the Council's actions, challenges and tasks.",
+				"The fifth Council on Constantinople (#1442010-#1542810) produces a log of events, with all of the Council's actions, challenges and tasks.",
 				"This is accompanied by a report covering its own workflow, challenges, thinking and performance.",
-				"The fifth Council on Constantinople (#1341211-#1442010) produces a report based on the newest template.",
+				"The fifth Council on Constantinople (#1442010-#1542810) produces a report based on the newest template.",
 				"The script (in typescript) that produces the output is made available alongside the report."
 			],
 			"annihilation": "The reports contains incorrect information.",
-			"gradeDate": "05.07.2020 - 16:00 GMT",
-			"number": 6.3
+			"gradeDate": "12.07.2020 - 16:00 GMT",
+			"number": 7.4
 		},
 		{
 			"title": "Telegram Bots",
-			"description": "Some Telegram bots have already been created, but they need some improvements and to be presented in the main channel. Details can be found in the blog.",
+			"description": "Some Telegram bots have already been created, but they need some improvements and to be presented in the main channel. More details can be found in the blog.",
 			"reward": "400",
-			"measurementPeriod": "3 days",
-			"startDate": "26:06:2020 - 16:00 GMT",
+			"measurementPeriod": "14 days",
+			"startDate": "03:07:2020 ~17:00 GMT - #1542811",
 			"successEvents": [
 				"Validators: At the end of each 'era', reports the status of the Validator set. Also report 'slashes'.",
 				"Storage Providers: Reports 'expired', 'down' and 'offline' Storage Providers.",
@@ -59,8 +74,8 @@
 				"Content: Reports 'entity' properties changed in the Video Class."
 			],
 			"annihilation": "Bots contain malicious code.",
-			"gradeDate": "05.07.2020 - 16:00 GMT",
-			"number": 6.4
+			"gradeDate": "19.07.2020 - 16:00 GMT",
+			"number": 7.5
 		}
 	]
 }
