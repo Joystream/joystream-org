@@ -39,8 +39,8 @@ const RolesPage = () => {
         description="Read more about current and future roles on the Joystream platform"
       />
 
-      <Hero image={rolesImage} title="Discover various roles on the platform" animationStartValue={0}>
-        <p className="RolesPage__hero-paragraph">{sharedData.rolesDescription}</p>
+      <Hero image={rolesImage} title="Choose your preferred role" animationStartValue={0}>
+        <p className="RolesPage__hero-paragraph">Participating in a role on our testnet lets you earn tJOY while influencing the platform's ongoing development.</p>
       </Hero>
 
       <LayoutWrapper gradient>
