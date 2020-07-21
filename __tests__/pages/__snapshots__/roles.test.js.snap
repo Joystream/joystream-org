@@ -23,7 +23,7 @@ exports[`RolesPage page renders correctly 1`] = `
     <p
       className="RolesPage__hero-paragraph"
     >
-      Participating in a role on our testnet lets you earn tJOY while influencing the platform's development
+      Participating in a role on our testnet lets you earn tJOY while influencing the platform's ongoing development.
     </p>
   </Hero>
   <LayoutWrapper

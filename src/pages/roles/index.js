@@ -40,7 +40,7 @@ const RolesPage = () => {
       />
 
       <Hero image={rolesImage} title="Choose your preferred role" animationStartValue={0}>
-        <p className="RolesPage__hero-paragraph">Participating in a role on our testnet lets you earn tJOY while influencing the platform's development</p>
+        <p className="RolesPage__hero-paragraph">Participating in a role on our testnet lets you earn tJOY while influencing the platform's ongoing development.</p>
       </Hero>
 
       <LayoutWrapper gradient>
