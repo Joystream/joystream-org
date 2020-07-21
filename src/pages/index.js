@@ -42,7 +42,7 @@ const IndexPage = ({ content }) => (
   <BaseLayout>
     <SiteMetadata
       title="Joystream: The video platform DAO"
-      description="Joystream is a video platform controlled, owned and operated by its users."
+      description="Joystream is a video platform controlled, owned, and operated by its users."
     />
     <Hero
       image={heroImage}
@@ -54,7 +54,7 @@ const IndexPage = ({ content }) => (
       animationStartValue={0}
     >
       <p className="IndexPage__hero-paragraph">
-        Joystream is a video platform controlled, owned and operated by its users
+        Joystream is a video platform controlled, owned, and operated by its users.
       </p>
       <div className="IndexPage__hero-group">
         <Button noWrap large secondary className="IndexPage__hero-button" href="/testnet/">

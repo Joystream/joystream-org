@@ -14,8 +14,7 @@ export default {
     title: <>Testnet Incentives</>,
     text: (
       <p className="Hero__Paragraph">
-        In order to more closely simulate the economy of our mainnet, participants on testnets can now earn Joystream
-        Testnet Tokens (tJOYs) backed by fiat currency.
+        Participants on our testnets can now earn Joystream Testnet Tokens (tJOYs) backed by fiat currency.
       </p>
     ),
     image: coinMinterHero,

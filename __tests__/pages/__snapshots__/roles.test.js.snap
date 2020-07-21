@@ -18,12 +18,12 @@ exports[`RolesPage page renders correctly 1`] = `
     indent={false}
     noOverflow={false}
     theme="black"
-    title="Discover various roles on the platform"
+    title="Choose your preferred role"
   >
     <p
       className="RolesPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Monero in the process.
+      Participating in a role on our testnet lets you earn tJOY while influencing the platform's development
     </p>
   </Hero>
   <LayoutWrapper
