@@ -25,9 +25,9 @@ export default function TokenStats() {
 
   return (
     <div className="Stats__Container">
-      <DataLabel title="Price:" value={`$${Number(price).toPrecision(3)}`} />
-      <DataLabel title="Backing Value:" value={`$${formatNumber(dollarPool.size)}`} />
-      <DataLabel title="Supply:" value={`${formatNumber(actualIssuance)}`} />
+      <DataLabel title="Price" value={`$${Number(price).toPrecision(3)}`} />
+      <DataLabel title="Backing Value" value={`$${formatNumber(dollarPool.size)}`} />
+      <DataLabel title="Supply" value={`${formatNumber(actualIssuance)}`} />
     </div>
   );
 }
