@@ -3,59 +3,61 @@
 			"title": "Block Production",
 			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
 			"reward": "50",
-			"startDate": "17:07:2020 ~17:30 GMT - #1744411",
+			"startDate": "24:07:2020 ~17:30 GMT - #1845211",
 			"measurementPeriod": "7 days",
 			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period.",
 			"successEvents": [
-				"The difference between timestamps of block #1744411 and block #1844793 must be less than 604,710,000 milliseconds."
+				"The difference between timestamps of block #1845211 and block #1945593 must be less than 604,710,000 milliseconds."
 			],
-			"gradeDate": "26.07.2020 - 16:00 GMT",
-			"number": 9.1
+			"gradeDate": "02.08.2020 - 16:00 GMT",
+			"number": 10.1
 		},
 		{
 			"title": "Proposal Clearance",
 			"description": "For the governance process to work, all proposals must be dealt with professionally, and in a reasonable time frame to avoiding blocking new proposals coming in.",
 			"reward": "50",
 			"measurementPeriod": "7 days",
-			"startDate": "17:07:2020 ~17:30 GMT - #1744411",
+			"startDate": "24:07:2020 ~17:30 GMT - #1845211",
 			"successEvents": [
 				"No proposals expire due to missing votes.",
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)."
 			],
 			"annihilation": "No malicious or unreasonable proposals are approved.",
-			"gradeDate": "26.07.2020 - 16:00 GMT",
-			"number": 9.2
-		},
-		{
-			"title": "Improve Community Repo",
-			"description": "For the community to submit KPI deliverables, contribute code and maintain publish ideas, the community Github repo needs improvements.",
-			"reward": "150",
-			"measurementPeriod": "7 days",
-			"startDate": "17:07:2020 ~17:30 GMT - #1744411",
-			"successEvents": [
-				"Agree on a concept, based on the information outlined here: https://testnet.joystream.org/#/proposals/30",
-				"A PR to the community, based on what was agreed in 1, is opened.",
-				"A proposal to merge the PR is made and approved."
-			],
-			"annihilation": "A PR is approved despite not being in line with the concepts in 1 and 2.",
-			"gradeDate": "26.07.2020 - 16:00 GMT",
-			"number": 9.3
+			"gradeDate": "02.08.2020 - 16:00 GMT",
+			"number": 10.2
 		},
 		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reporting of workflow and 'Tokenomics' will allow users make informed votes.",
 			"reward": "200",
 			"measurementPeriod": "7 days",
-			"startDate": "17:07:2020 ~17:30 GMT - #1744411",
+			"startDate": "24:07:2020 ~17:30 GMT - #1845211",
 			"successEvents": [
-				"The sixth Council on Constantinople (#1643611-#1744410) produces a log of events, with all of the Council's actions, challenges and tasks.",
+				"The eighth Council on Constantinople (#1744411-#1845210) produces a log of events, with all of the Council's actions, challenges and tasks.",
 				"This is accompanied by a report covering its own workflow, challenges, thinking and performance.",
-				"The sixth Council on Constantinople (#1643611-#1744410) produces a report based on the newest template.",
+				"The eighth Council on Constantinople (#1744411-#1845210) produces a report based on the newest template.",
 				"The script (in typescript) that produces the output is made available alongside the report."
 			],
 			"annihilation": "The reports contains incorrect information.",
-			"gradeDate": "26.07.2020 - 16:00 GMT",
-			"number": 9.4
+			"gradeDate": "02.08.2020 - 16:00 GMT",
+			"number": 10.3
+		},
+		{
+			"title": "Storage Provider Post Runtime Upgrade",
+			"description": "After the runtime upgrade, scheduled at approx. block #1916000, the platform needs to restore the storage system.",
+			"reward": "200",
+			"measurementPeriod": "7 days",
+			"startDate": "24:07:2020 ~17:30 GMT - #1845211",
+			"successEvents": [
+				"Create an opening for a storage lead.",
+				"Open it for applications.",
+				"Choose a new storage lead.",
+				"Fund the storage provider mint.",
+				"Ensure at least 4 storage-nodes are up and running."
+			],
+			"annihilation": "The storage lead fails to run a storage-node.",
+			"gradeDate": "02.08.2020 - 16:00 GMT",
+			"number": 10.4
 		},
 		{
 			"title": "Telegram Bots",
@@ -75,7 +77,7 @@
 			],
 			"annihilation": "Bots contain malicious code.",
 			"gradeDate": "09.08.2020 - 16:00 GMT",
-			"number": 9.5
+			"number": 10.5
 		}
 	]
 }
