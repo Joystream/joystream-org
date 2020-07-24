@@ -116,4 +116,5 @@ function leadingZero(n) {
   if (n < 10 && n > 0) {
     return `0${n}`;
   }
+  return n;
 }
