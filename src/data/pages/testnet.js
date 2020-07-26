@@ -44,7 +44,7 @@ export default {
                 the pool of value.
               </p>
               <p>
-                <i>Last replenishment: $200 added on July 12th</i>
+                <i>Last replenishment: $150 added on July 26th</i>
               </p>
             </blockquote>
           </>
