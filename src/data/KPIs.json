@@ -3,68 +3,68 @@
 			"title": "Block Production",
 			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
 			"reward": "50",
-			"startDate": "24:07:2020 ~17:30 GMT - #1845211",
+			"startDate": "31.07.2020 ~18:00 GMT - #1946011",
 			"measurementPeriod": "7 days",
 			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period.",
 			"successEvents": [
 				"The difference between timestamps of block #1845211 and block #1945593 must be less than 604,710,000 milliseconds."
 			],
-			"gradeDate": "02.08.2020 - 16:00 GMT",
-			"number": 10.1
+			"gradeDate": "09.08.2020 - 16:00 GMT",
+			"number": 11.1
 		},
 		{
 			"title": "Proposal Clearance",
 			"description": "For the governance process to work, all proposals must be dealt with professionally, and in a reasonable time frame to avoiding blocking new proposals coming in.",
 			"reward": "50",
 			"measurementPeriod": "7 days",
-			"startDate": "24:07:2020 ~17:30 GMT - #1845211",
+			"startDate": "31.07.2020 ~18:00 GMT - #1946011",
 			"successEvents": [
 				"No proposals expire due to missing votes.",
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)."
 			],
 			"annihilation": "No malicious or unreasonable proposals are approved.",
-			"gradeDate": "02.08.2020 - 16:00 GMT",
-			"number": 10.2
+			"gradeDate": "09.08.2020 - 16:00 GMT",
+			"number": 11.2
 		},
 		{
 			"title": "Council Reporting",
-			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reporting of workflow and 'Tokenomics' will allow users make informed votes.",
+			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reporting of workflow and 'Tokenomics' will allow users make informed votes. Note that all reports must be submitted as a PR to the Community Repo, with a link to discussions.",
 			"reward": "200",
 			"measurementPeriod": "7 days",
-			"startDate": "24:07:2020 ~17:30 GMT - #1845211",
+			"startDate": "31.07.2020 ~18:00 GMT - #1946011",
 			"successEvents": [
-				"The eighth Council on Constantinople (#1744411-#1845210) produces a log of events, with all of the Council's actions, challenges and tasks.",
+				"The ninth Council on Constantinople (#1845211-#1946010) produces a log of events, with all of the Council's actions, challenges and tasks.",
 				"This is accompanied by a report covering its own workflow, challenges, thinking and performance.",
-				"The eighth Council on Constantinople (#1744411-#1845210) produces a report based on the newest template.",
+				"The ninth Council on Constantinople (#1845211-#1946010) produces a report based on the newest template.",
 				"The script (in typescript) that produces the output is made available alongside the report."
 			],
 			"annihilation": "The reports contains incorrect information.",
-			"gradeDate": "02.08.2020 - 16:00 GMT",
-			"number": 10.3
+			"gradeDate": "09.08.2020 - 16:00 GMT",
+			"number": 11.3
 		},
 		{
 			"title": "Storage Provider Post Runtime Upgrade",
-			"description": "After the runtime upgrade, scheduled at approx. block #1916000, the platform needs to restore the storage system.",
+			"description": "After the runtime upgrade at block #1914789, the platform needs to restore the storage system.",
 			"reward": "200",
 			"measurementPeriod": "7 days",
-			"startDate": "24:07:2020 ~17:30 GMT - #1845211",
+			"startDate": "31.07.2020 ~18:00 GMT - #1946011",
 			"successEvents": [
-				"Create an opening for a storage lead.",
-				"Open it for applications.",
-				"Choose a new storage lead.",
-				"Fund the storage provider mint.",
+				"Discuss, and decide on the rewards for the Lead.",
+				"Start the review process, and discuss canditates.",
+				"Choose a new Storage Lead.",
+				"Set a budget for the Storage Working Group, and fund the Storage Provider Mint.",
 				"Ensure at least 4 storage-nodes are up and running."
 			],
-			"annihilation": "The storage lead fails to run a storage-node.",
-			"gradeDate": "02.08.2020 - 16:00 GMT",
-			"number": 10.4
+			"annihilation": "The Storage Lead fails to run a storage-node.",
+			"gradeDate": "09.08.2020 - 16:00 GMT",
+			"number": 11.4
 		},
 		{
 			"title": "Telegram Bots",
 			"description": "Some Telegram bots have already been created, but they need some improvements and to be presented in the main channel. More details can be found in the blog.",
 			"reward": "800",
 			"measurementPeriod": "21 days",
-			"startDate": "03:07:2020 ~17:00 GMT - #1542811",
+			"startDate": "03.07.2020 ~17:00 GMT - #1542811",
 			"successEvents": [
 				"Validators: At the end of each 'era', reports the status of the Validator set. Also report 'slashes'.",
 				"Storage Providers: Reports 'expired', 'down' and 'offline' Storage Providers.",
@@ -77,7 +77,7 @@
 			],
 			"annihilation": "Bots contain malicious code.",
 			"gradeDate": "09.08.2020 - 16:00 GMT",
-			"number": 10.5
+			"number": 11.5
 		}
 	]
 }
