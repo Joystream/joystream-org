@@ -7,7 +7,7 @@
 			"measurementPeriod": "7 days",
 			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period.",
 			"successEvents": [
-				"The difference between timestamps of block #1845211 and block #1945593 must be less than 604,710,000 milliseconds."
+				"The difference between timestamps of block #1946011 and block #2046393 must be less than 604,710,000 milliseconds."
 			],
 			"gradeDate": "09.08.2020 - 16:00 GMT",
 			"number": 11.1
