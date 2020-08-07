@@ -3,81 +3,77 @@
 			"title": "Block Production",
 			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
 			"reward": "50",
-			"startDate": "31.07.2020 ~18:00 GMT - #1946011",
+			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
 			"measurementPeriod": "7 days",
 			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period.",
 			"successEvents": [
-				"The difference between timestamps of block #1946011 and block #2046393 must be less than 604,710,000 milliseconds."
+				"The difference between timestamps of block #2046811 and block #2147193 must be less than 604,710,000 milliseconds."
 			],
-			"gradeDate": "09.08.2020 - 16:00 GMT",
-			"number": 11.1
+			"gradeDate": "16.08.2020 - 16:00 GMT",
+			"number": 12.1
 		},
 		{
 			"title": "Proposal Clearance",
 			"description": "For the governance process to work, all proposals must be dealt with professionally, and in a reasonable time frame to avoiding blocking new proposals coming in.",
 			"reward": "50",
 			"measurementPeriod": "7 days",
-			"startDate": "31.07.2020 ~18:00 GMT - #1946011",
+			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
 			"successEvents": [
 				"No proposals expire due to missing votes.",
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)."
 			],
 			"annihilation": "No malicious or unreasonable proposals are approved.",
-			"gradeDate": "09.08.2020 - 16:00 GMT",
-			"number": 11.2
+			"gradeDate": "16.08.2020 - 16:00 GMT",
+			"number": 12.2
 		},
 		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reporting of workflow and 'Tokenomics' will allow users make informed votes. Note that all reports must be submitted as a PR to the Community Repo, with a link to discussions.",
 			"reward": "200",
 			"measurementPeriod": "7 days",
-			"startDate": "31.07.2020 ~18:00 GMT - #1946011",
+			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
 			"successEvents": [
-				"The ninth Council on Constantinople (#1845211-#1946010) produces a log of events, with all of the Council's actions, challenges and tasks.",
+				"The tenth Council on Constantinople (#1946011-#2046810) produces a log of events, with all of the Council's actions, challenges and tasks.",
 				"This is accompanied by a report covering its own workflow, challenges, thinking and performance.",
-				"The ninth Council on Constantinople (#1845211-#1946010) produces a report based on the newest template.",
+				"The tenth Council on Constantinople (#1946011-#2046810) produces a report based on the newest template.",
 				"The script (in typescript) that produces the output is made available alongside the report."
 			],
 			"annihilation": "The reports contains incorrect information.",
-			"gradeDate": "09.08.2020 - 16:00 GMT",
-			"number": 11.3
+			"gradeDate": "16.08.2020 - 16:00 GMT",
+			"number": 12.3
 		},
 		{
 			"title": "Storage Provider Post Runtime Upgrade",
 			"description": "After the runtime upgrade at block #1914789, the platform needs to restore the storage system.",
-			"reward": "200",
+			"reward": "100",
 			"measurementPeriod": "7 days",
-			"startDate": "31.07.2020 ~18:00 GMT - #1946011",
+			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
 			"successEvents": [
-				"Discuss, and decide on the rewards for the Lead.",
-				"Start the review process, and discuss canditates.",
 				"Choose a new Storage Lead.",
 				"Set a budget for the Storage Working Group, and fund the Storage Provider Mint.",
-				"Ensure at least 4 storage-nodes are up and running."
+				"Ensure at least 4 storage-nodes are fully synced, and up and running.",
+				"Once Success event 3 is achieved fully sycned, the storage node with Worker ID 1 is fired."
 			],
-			"annihilation": "The Storage Lead fails to run a storage-node.",
-			"gradeDate": "09.08.2020 - 16:00 GMT",
-			"number": 11.4
+			"annihilation": "No new fully synced storage-nodes running at end of the measurement period.",
+			"gradeDate": "16.08.2020 - 16:00 GMT",
+			"number": 12.4
 		},
 		{
-			"title": "Telegram Bots",
-			"description": "Some Telegram bots have already been created, but they need some improvements and to be presented in the main channel. More details can be found in the blog.",
-			"reward": "800",
-			"measurementPeriod": "21 days",
-			"startDate": "03.07.2020 ~17:00 GMT - #1542811",
+			"title": "Determine A New KPI Structure",
+			"description": "The KPI system has not worked as intended. An improved system will be proposed as a Text Proposal before block #2086850.",
+			"reward": "500",
+			"measurementPeriod": "7 days",
+			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
 			"successEvents": [
-				"Validators: At the end of each 'era', reports the status of the Validator set. Also report 'slashes'.",
-				"Storage Providers: Reports 'expired', 'down' and 'offline' Storage Providers.",
-				"Proposals: Reports all proposal status changes.",
-				"Council: Reports Council and Council Election status changes.",
-				"Forum: Reports new posts, threads and categories made.",
-				"Curators: Reports new job openings and status changes of openings.",
-				"Channels: Reports new Channels made.",
-				"Content: Reports 'entity' properties changed in the Video Class."
+				"The proposed system is evaluated by the Council, and opinions are contributed by >8 CMs in the Proposal Discussion.",
+				"Other community members, with a total balance+stake >5% of issuance, provide feedback on the forum.",
+				"Based on the feedback given, the Council creates a list of questions and suggested changes in the form of an approved Text Proposal.",
+				"If a new design is agreed upon by Jsgenesis and the community, a PR documenting the system in full is opened in the Community Repo.",
+				"The group or person that created this PR, receives at tJOY equivalent to at least USD 100 through a Spending Proposal."
 			],
 			"annihilation": "Bots contain malicious code.",
-			"gradeDate": "09.08.2020 - 16:00 GMT",
-			"number": 11.5
+			"gradeDate": "16.08.2020 - 16:00 GMT",
+			"number": 12.5
 		}
 	]
 }
