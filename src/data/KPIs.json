@@ -59,17 +59,17 @@
 			"number": 12.4
 		},
 		{
-			"title": "Determine A New KPI Structure",
+			"title": "Determine New KPI Structure",
 			"description": "The KPI system has not worked as intended. An improved system will be proposed as a Text Proposal before block #2086850.",
 			"reward": "500",
 			"measurementPeriod": "7 days",
 			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
 			"successEvents": [
-				"The proposed system is evaluated by the Council, and opinions are contributed by >8 CMs in the Proposal Discussion.",
+				"The proposed system is evaluated by the Council, and opinions are contributed by >8 CMs in the proposal discussion.",
 				"Other community members, with a total balance+stake >5% of issuance, provide feedback on the forum.",
 				"Based on the feedback given, the Council creates a list of questions and suggested changes in the form of an approved Text Proposal.",
 				"If a new design is agreed upon by Jsgenesis and the community, a PR documenting the system in full is opened in the Community Repo.",
-				"The group or person that created this PR, receives at tJOY equivalent to at least USD 100 through a Spending Proposal."
+				"The group or person that created this PR, receives the tJOY equivalent of at least $100USD through a Spending Proposal."
 			],
 			"annihilation": "Bots contain malicious code.",
 			"gradeDate": "16.08.2020 - 16:00 GMT",
