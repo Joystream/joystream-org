@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200px" height="464px" viewBox="0 0 1200 464" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>C531FC7F-49A5-4CC3-A16E-3DA68B406955</title>
+    <g id="Hydra-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hydra-Page_v3" transform="translate(-120.000000, -6018.000000)">
+            <g id="Section-#3" transform="translate(0.000000, 3310.000000)">
+                <g id="03" transform="translate(120.000000, 2381.000000)">
+                    <g id="Snippet" transform="translate(0.000000, 327.000000)">
+                        <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="1200" height="464" rx="3"></rect>
+                        <text id="export-async-functio" font-family="PxGroteskRegular, Px Grotesk" font-size="24" font-weight="normal" line-spacing="32">
+                            <tspan x="40" y="65" fill="#FF2955">export async function </tspan>
+                            <tspan x="284.078125" y="65" fill="#00DBB0">handleMemberRegistered</tspan>
+                            <tspan x="566.441406" y="65" fill="#000000">(db: DB) {</tspan>
+                            <tspan x="40" y="97" fill="#000000">	</tspan>
+                            <tspan x="68" y="97" fill="#A7AEB7">//Get event data</tspan>
+                            <tspan x="250.671875" y="97" fill="#000000"></tspan>
+                            <tspan x="40" y="129" fill="#000000">	</tspan>
+                            <tspan x="68" y="129" fill="#FF2955">const</tspan>
+                            <tspan x="129.195312" y="129" fill="#000000"> { AccountId, MemberId } </tspan>
+                            <tspan x="406.367188" y="129" fill="#4038FF">=</tspan>
+                            <tspan x="420.757812" y="129" fill="#000000"> db.</tspan>
+                            <tspan x="461.679688" y="129" fill="#4038FF">event.event_params</tspan>
+                            <tspan x="686.632812" y="129" fill="#000000">;</tspan>
+                            <tspan x="40" y="161" fill="#000000"></tspan>
+                            <tspan x="40" y="193" fill="#000000">	</tspan>
+                            <tspan x="68" y="193" fill="#FF2955">const</tspan>
+                            <tspan x="129.195312" y="193" fill="#000000"> member </tspan>
+                            <tspan x="231.207031" y="193" fill="#4038FF">=</tspan>
+                            <tspan x="245.597656" y="193" fill="#000000"> </tspan>
+                            <tspan x="251.691406" y="193" fill="#FF2955">new</tspan>
+                            <tspan x="296.480469" y="193" fill="#000000"> MemberRegistereds({ </tspan>
+                            <tspan x="545.832031" y="193" fill="#4038FF">accountId</tspan>
+                            <tspan x="655.390625" y="193" fill="#000000">:  AccountId.</tspan>
+                            <tspan x="791.621094" y="193" fill="#00DBB0">toString</tspan>
+                            <tspan x="880.378906" y="193" fill="#000000">(), </tspan>
+                            <tspan x="907.871094" y="193" fill="#4038FF">memberId</tspan>
+                            <tspan x="1018.66016" y="193" fill="#000000">: +MemberId };</tspan>
+                            <tspan x="40" y="225" fill="#000000"></tspan>
+                            <tspan x="40" y="257" fill="#A7AEB7">	//Save to database.</tspan>
+                            <tspan x="286.554688" y="257" fill="#000000"></tspan>
+                            <tspan x="40" y="289" fill="#000000">	db.</tspan>
+                            <tspan x="102.828125" y="289" fill="#00DBB0">save</tspan>
+                            <tspan x="153.59375" y="289" fill="#000000">&lt;MemberRegistereds&gt;(member);</tspan>
+                            <tspan x="40" y="321" fill="#000000"></tspan>
+                            <tspan x="40" y="353" fill="#000000">	</tspan>
+                            <tspan x="68" y="353" fill="#A7AEB7">//Query from datebase</tspan>
+                            <tspan x="320.164062" y="353" fill="#000000"></tspan>
+                            <tspan x="40" y="385" fill="#000000">	</tspan>
+                            <tspan x="68" y="385" fill="#FF2955">const</tspan>
+                            <tspan x="129.195312" y="385" fill="#000000"> m </tspan>
+                            <tspan x="161.726562" y="385" fill="#4038FF">=</tspan>
+                            <tspan x="176.117188" y="385" fill="#000000"> </tspan>
+                            <tspan x="182.210938" y="385" fill="#FF2955">await</tspan>
+                            <tspan x="241.578125" y="385" fill="#000000"> db.</tspan>
+                            <tspan x="282.5" y="385" fill="#00DBB0">get</tspan>
+                            <tspan x="318.746094" y="385" fill="#000000">(MemberRegistereds, { </tspan>
+                            <tspan x="574.378906" y="385" fill="#4038FF">where</tspan>
+                            <tspan x="640.882812" y="385" fill="#000000">: { </tspan>
+                            <tspan x="668.609375" y="385" fill="#4038FF">memberId</tspan>
+                            <tspan x="779.398438" y="385" fill="#000000">: </tspan>
+                            <tspan x="791.773438" y="385" fill="#4038FF">123</tspan>
+                            <tspan x="834.945312" y="385" fill="#000000"> } });</tspan>
+                            <tspan x="40" y="417" fill="#000000">}</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
