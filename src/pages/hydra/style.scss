@@ -273,7 +273,7 @@
 
     & > div {
       position: absolute;
-      width: 100%;
+      width: min-content;
       height: 100%;
     }
   }
