@@ -14,7 +14,7 @@ import { Snippet, Video, Features } from '../../components/HydraPage';
 function HydraPage() {
   return (
     <BaseLayout>
-      <div className="Hero">
+      <div className="Hydra__Hero">
         <Hero
           image={content.Hero.image}
           title={content.Hero.title}

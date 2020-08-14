@@ -9,7 +9,7 @@ import { ReactComponent as Snippet } from '../../assets/svg/snippet.svg';
 // Icons
 import { ReactComponent as TelegramIcon } from '../../assets/svg/telegram.svg';
 import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
-import { ReactComponent as PlaygroundIcon } from '../../assets/svg/telegram.svg';
+import { ReactComponent as PlaygroundIcon } from '../../assets/svg/kusama.svg';
 import { ReactComponent as DocumentIcon } from '../../assets/svg/document.svg';
 
 // svg
@@ -19,8 +19,6 @@ import ComplexClient from '../../assets/svg/complex-client.svg';
 import NoSearch from '../../assets/svg/no-search.svg';
 import Costly from '../../assets/svg/costly.svg';
 import OverFetching from '../../assets/svg/over-fetching.svg';
-import BloatedRuntime from '../../assets/svg/bloated-runtime.svg';
-
 import CommandJSIcon from '../../assets/svg/command-js.svg';
 
 export default {
@@ -115,19 +113,6 @@ export default {
           </>
         ),
       },
-      {
-        image: BloatedRuntime,
-        text: (
-          <>
-            <h1>Bloated Runtime State</h1>
-            <p>
-              Some put their query or search indexes in their storage to alleviate some of these problems, but this has
-              its own costs. Results in more complex runtime logic, bloated storage state, lack of flexibility across
-              apps, and making runtime migrations very hard due to the size of the state.
-            </p>
-          </>
-        ),
-      },
     ],
   },
   Snippet: {
@@ -139,34 +124,30 @@ export default {
     title: 'Powerful queries in GraphQL',
     subtitle: 'Provide application developers a powerful GraphQL API for your blockchain state and history',
     code: {
-      input: (
-        <pre>
-          {`{
-	hero  {
-		name
-		# Queries can have vomments!
-		friends {
-			name
-		}
-	}
-}`}
-        </pre>
-      ),
-      result: (
-        <pre>
-          {`{
-	"data" :  {
-		"hero" :  {
-			"name" : "R2-D2",
-			"friends" :  [
-			  {
-				"name" :  "Luke Skywalker"
-			  },
-			  {
-				"name" :  "Han Solo"
-			  },`}
-        </pre>
-      ),
+      input: `
+      {
+        hero  {
+          name
+          # Queries can have comments!
+          friends {
+            name
+          }
+        }
+      }
+      `,
+      result: `
+      {
+        "data" :  {
+          "hero" :  {
+            "name" : "R2-D2",
+            "friends" :  [
+              {
+              "name" :  "Luke Skywalker"
+              },
+              {
+              "name" :  "Han Solo"
+              },
+      `,
     },
   },
   YourOwnNode: {
@@ -236,12 +217,14 @@ export default {
           id: Int!
           firstName: String
           lastName: String
-          posts: [Post}
+          posts: [Post]
         }
+
         type Query {
-          posts: [Post}
+          posts: [Post]
           author(id: ID!): Author
         }
+
         type Post {
           id: Int!
           title: String
@@ -253,22 +236,25 @@ export default {
         name: 'Filtering',
         text:
           'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
-        code: `type Author {
-            id: Int!
-            firstName: String
-            lastName: String
-            posts: [Post}
-          }
-          type Query {
-            posts: [Post}
-            author(id: ID!): Author
-          }
-          type Post {
-            id: Int!
-            title: String
-            author: Author
-            votes: Int
-          }`,
+        code: `
+        type Author {
+          id: Int!
+          firstName: String
+          lastName: String
+          posts: [Post]
+        }
+
+        type Query {
+          posts: [Post]
+          author(id: ID!): Author
+        }
+
+        type Post {
+          id: Int!
+          title: String
+          author: Author
+          votes: Int
+        }`,
       },
       {
         name: 'Pagination',
@@ -279,12 +265,14 @@ export default {
           id: Int!
           firstName: String
           lastName: String
-          posts: [Post}
+          posts: [Post]
         }
+
         type Query {
-          posts: [Post}
+          posts: [Post]
           author(id: ID!): Author
         }
+
         type Post {
           id: Int!
           title: String
@@ -297,88 +285,96 @@ export default {
         text:
           'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
         code: `
-          type Author {
-            id: Int!
-            firstName: String
-            lastName: String
-            posts: [Post}
-          }
-          type Query {
-            posts: [Post}
-            author(id: ID!): Author
-          }
-          type Post {
-            id: Int!
-            title: String
-            author: Author
-            votes: Int
-          }`,
+        type Author {
+          id: Int!
+          firstName: String
+          lastName: String
+          posts: [Post]
+        }
+
+        type Query {
+          posts: [Post]
+          author(id: ID!): Author
+        }
+
+        type Post {
+          id: Int!
+          title: String
+          author: Author
+          votes: Int
+        }`,
       },
       {
         name: 'Polymorphism',
         text:
           'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
         code: `
-          type Author {
-            id: Int!
-            firstName: String
-            lastName: String
-            posts: [Post}
-          }
-          type Query {
-            posts: [Post}
-            author(id: ID!): Author
-          }
-          type Post {
-            id: Int!
-            title: String
-            author: Author
-            votes: Int
-          }`,
+        type Author {
+          id: Int!
+          firstName: String
+          lastName: String
+          posts: [Post]
+        }
+
+        type Query {
+          posts: [Post]
+          author(id: ID!): Author
+        }
+
+        type Post {
+          id: Int!
+          title: String
+          author: Author
+          votes: Int
+        }`,
       },
       {
         name: 'Algebraic Types',
         text:
           'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
         code: `
-          type Author {
-            id: Int!
-            firstName: String
-            lastName: String
-            posts: [Post}
-          }
-          type Query {
-            posts: [Post}
-            author(id: ID!): Author
-          }
-          type Post {
-            id: Int!
-            title: String
-            author: Author
-            votes: Int
-          }`,
+        type Author {
+          id: Int!
+          firstName: String
+          lastName: String
+          posts: [Post]
+        }
+
+        type Query {
+          posts: [Post]
+          author(id: ID!): Author
+        }
+
+        type Post {
+          id: Int!
+          title: String
+          author: Author
+          votes: Int
+        }`,
       },
       {
         name: 'Full FRAME pallet support',
         text:
           'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
         code: `
-          type Author {
-            id: Int!
-            firstName: String
-            lastName: String
-            posts: [Post}
-          }
-          type Query {
-            posts: [Post}
-            author(id: ID!): Author
-          }
-          type Post {
-            id: Int!
-            title: String
-            author: Author
-            votes: Int
-          }`,
+        type Author {
+          id: Int!
+          firstName: String
+          lastName: String
+          posts: [Post]
+        }
+
+        type Query {
+          posts: [Post]
+          author(id: ID!): Author
+        }
+
+        type Post {
+          id: Int!
+          title: String
+          author: Author
+          votes: Int
+        }`,
       },
     ],
   },
