@@ -144,7 +144,7 @@ export default {
           {`{
 	hero  {
 		name
-		# Queries can have vomments!
+		# Queries can have comments!
 		friends {
 			name
 		}
@@ -183,7 +183,7 @@ export default {
   Video: {
     title: 'Play a video tutorial',
     video: {
-      src: 'https://www.youtube.com/watch?v=s49CT4DTAkw',
+      src: 'https://www.youtube.com/watch?v=kIqBch8wO7I',
     },
   },
   GetStarted: {
@@ -194,23 +194,23 @@ export default {
         name: 'Documentation',
         icon: DocumentIcon,
         link: {
-          to: 'Documentation',
-          as: 'Go to the Documentation',
+          to: 'https://app.gitbook.com/@dzhelezov/s/hydra-docs/v/query_node_spec/query-node/docs',
+          as: 'Documentation',
         },
       },
       {
         name: 'Github Repository',
         icon: GithubIcon,
         link: {
-          to: 'Documentation',
-          as: 'Go to the Repository',
+          to: 'https://github.com/Joystream/joystream/tree/query_node/query-node/substrate-query-framework/cli',
+          as: 'Github repo',
         },
       },
       {
         name: 'Kusama Playground',
         icon: PlaygroundIcon,
         link: {
-          to: 'Kusamaaaa',
+          to: 'https://hakusama.joystream.app/graphql',
           as: 'Go to the Playground',
         },
       },
@@ -218,7 +218,7 @@ export default {
         name: 'Telegram Channel',
         icon: TelegramIcon,
         link: {
-          to: 'tele',
+          to: '#',
           as: 'Go to the Channel',
         },
       },
@@ -230,155 +230,105 @@ export default {
       {
         name: 'Full-text Search',
         text:
-          'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
+          'Decorate any number of String fields in the input schema with @fulltext(query: "myquery") to seach across different fields and entities.',
         code: `
-        type Author {
-          id: Int!
-          firstName: String
-          lastName: String
-          posts: [Post}
+        # Input schema
+        type Post @entity {
+          text: String @fulltext(query: "forum-text-query"),
+          title: String @fulltext(query: "forum-text-query")
         }
-        type Query {
-          posts: [Post}
-          author(id: ID!): Author
+       
+        type Comment @entity {
+          text: String @fulltext(query: "forum-text-query"),
+          title: String @fulltext(query: "forum-text-query")
         }
-        type Post {
-          id: Int!
-          title: String
-          author: Author
-          votes: Int
-        }`,
+        `,
       },
       {
         name: 'Filtering',
         text:
-          'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
-        code: `type Author {
-            id: Int!
-            firstName: String
-            lastName: String
-            posts: [Post}
+          'Any entity field can be used for OpenCRUD filtering',
+        code: `
+        query {
+          proposals(where: { bond_gt: "10000", value_gt: "800000000000000", status_eq: REJECTED }) {
+            proposer
+            version
+            value
+            status
+            beneficiary
+            bond
           }
-          type Query {
-            posts: [Post}
-            author(id: ID!): Author
-          }
-          type Post {
-            id: Int!
-            title: String
-            author: Author
-            votes: Int
-          }`,
+        }
+        `,
       },
       {
         name: 'Pagination',
         text:
-          'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
+          'Each GraphQL query supports pagination out-of-the-box',
         code: `
-        type Author {
-          id: Int!
-          firstName: String
-          lastName: String
-          posts: [Post}
-        }
-        type Query {
-          posts: [Post}
-          author(id: ID!): Author
-        }
-        type Post {
-          id: Int!
-          title: String
-          author: Author
-          votes: Int
+        query {
+          proposals(offset: 10, limit: 5) {
+            proposer
+            version
+            value
+            status
+            beneficiary
+            bond
+          }
         }`,
       },
       {
         name: 'Ordering',
         text:
-          'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
+          'Order by any primitive field',
         code: `
-          type Author {
-            id: Int!
-            firstName: String
-            lastName: String
-            posts: [Post}
+        query {
+          proposals(limit: 5, orderBy:  value_ASC) {
+            value
+            status
           }
-          type Query {
-            posts: [Post}
-            author(id: ID!): Author
-          }
-          type Post {
-            id: Int!
-            title: String
-            author: Author
-            votes: Int
-          }`,
+        }`,
       },
       {
         name: 'Polymorphism',
         text:
-          'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
+          'Native support of GraphQL interfaces and type inline fragments',
         code: `
-          type Author {
-            id: Int!
-            firstName: String
-            lastName: String
-            posts: [Post}
-          }
-          type Query {
-            posts: [Post}
-            author(id: ID!): Author
-          }
-          type Post {
-            id: Int!
-            title: String
-            author: Author
-            votes: Int
+        query {
+          profiles(limit: 5, offset: 5, orderBy: about_ASC, where: { about_eq: "joystreamer" }) {
+              about
+              __typename 
+              ... on Member {
+                handle
+              }
+              ... on Account {
+                accountId
+              }
+            }
           }`,
       },
       {
         name: 'Algebraic Types',
         text:
-          'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
+          'Construct rich and queriable algebraic types with @variant directive',
         code: `
-          type Author {
-            id: Int!
-            firstName: String
-            lastName: String
-            posts: [Post}
-          }
-          type Query {
-            posts: [Post}
-            author(id: ID!): Author
-          }
-          type Post {
-            id: Int!
-            title: String
-            author: Author
-            votes: Int
-          }`,
-      },
-      {
-        name: 'Full FRAME pallet support',
-        text:
-          'Short description of the feature. Description and matching snippet revealed on click. Only one position can be revealed at the time.',
-        code: `
-          type Author {
-            id: Int!
-            firstName: String
-            lastName: String
-            posts: [Post}
-          }
-          type Query {
-            posts: [Post}
-            author(id: ID!): Author
-          }
-          type Post {
-            id: Int!
-            title: String
-            author: Author
-            votes: Int
-          }`,
+        type Noob @variant {
+          follows: Influencer!
+          hates: Influencer!
+        }
+        
+        union Influencer = Degen | Whale 
+        
+        type Degen @variant {
+          leverege: BigInt
+        }
+        
+        type Whale @variant {
+          amount: BigInt
+          ticker: String
+        }
+        
+        union Status = Noob | Degen | Whale`,
       },
     ],
   },
