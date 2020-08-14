@@ -76,8 +76,8 @@ const ConstantinoplePage = ({ content }) => {
               title="Release Plan"
               target="_blank"
           >
-            Read the release plan as it was made during the planning stage, and learn more about how the development
-            evolved.
+              Read the release plan as it was made during the planning stage, and learn more about how the development
+              evolved.
             </Pane>
             <Pane image={BlogImg}
               title="Announcement Blog Post"
