@@ -3,77 +3,99 @@
 			"title": "Block Production",
 			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
 			"reward": "50",
-			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
+			"startDate": "14.08.2020 ~18:00 GMT - #2147611",
 			"measurementPeriod": "7 days",
 			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period.",
 			"successEvents": [
-				"The difference between timestamps of block #2046811 and block #2147193 must be less than 604,710,000 milliseconds."
+				"The difference between timestamps of block #2147611 and block #2247993 must be less than 604,710,000 milliseconds."
 			],
-			"gradeDate": "16.08.2020 - 16:00 GMT",
-			"number": 12.1
+			"gradeDate": "23.08.2020 - 16:00 GMT",
+			"number": 13.1
 		},
 		{
 			"title": "Proposal Clearance",
 			"description": "For the governance process to work, all proposals must be dealt with professionally, and in a reasonable time frame to avoiding blocking new proposals coming in.",
 			"reward": "50",
 			"measurementPeriod": "7 days",
-			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
+			"startDate": "14.08.2020 ~18:00 GMT - #2147611",
 			"successEvents": [
 				"No proposals expire due to missing votes.",
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h)."
 			],
 			"annihilation": "No malicious or unreasonable proposals are approved.",
-			"gradeDate": "16.08.2020 - 16:00 GMT",
-			"number": 12.2
+			"gradeDate": "23.08.2020 - 16:00 GMT",
+			"number": 13.2
 		},
 		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reporting of workflow and 'Tokenomics' will allow users make informed votes. Note that all reports must be submitted as a PR to the Community Repo, with a link to discussions.",
 			"reward": "200",
 			"measurementPeriod": "7 days",
-			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
+			"startDate": "14.08.2020 ~18:00 GMT - #2147611",
 			"successEvents": [
-				"The tenth Council on Constantinople (#1946011-#2046810) produces a log of events, with all of the Council's actions, challenges and tasks.",
+				"The tenth Council on Constantinople (#2046811-#2147610) produces a log of events, with all of the Council's actions, challenges and tasks.",
 				"This is accompanied by a report covering its own workflow, challenges, thinking and performance.",
-				"The tenth Council on Constantinople (#1946011-#2046810) produces a report based on the newest template.",
+				"The tenth Council on Constantinople (#2046811-#2147610) produces a report based on the newest template.",
 				"The script (in typescript) that produces the output is made available alongside the report."
 			],
 			"annihilation": "The reports contains incorrect information.",
-			"gradeDate": "16.08.2020 - 16:00 GMT",
-			"number": 12.3
+			"gradeDate": "23.08.2020 - 16:00 GMT",
+			"number": 13.3
 		},
 		{
 			"title": "Storage Provider Post Runtime Upgrade",
 			"description": "After the runtime upgrade at block #1914789, the platform needs to restore the storage system.",
 			"reward": "100",
 			"measurementPeriod": "7 days",
-			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
+			"startDate": "14.08.2020 ~18:00 GMT - #2147611",
 			"successEvents": [
-				"Choose a new Storage Lead.",
 				"Set a budget for the Storage Working Group, and fund the Storage Provider Mint.",
 				"Ensure at least 4 storage-nodes are fully synced, and up and running.",
-				"Once Success event 3 is achieved fully sycned, the storage node with Worker ID 1 is fired."
+				"Once Success event 2 is achieved fully sycned, the storage node with Worker ID 1 is fired."
 			],
 			"annihilation": "No new fully synced storage-nodes running at end of the measurement period.",
-			"gradeDate": "16.08.2020 - 16:00 GMT",
-			"number": 12.4
+			"gradeDate": "23.08.2020 - 16:00 GMT",
+			"number": 13.4
 		},
 		{
-			"title": "Determine New KPI Structure",
-			"description": "The KPI system has not worked as intended. An improved system will be proposed as a Text Proposal before block #2086850.",
-			"reward": "500",
+			"title": "Appoint Council Secretary",
+			"description": "In preparation for some changes to the KPI system, the Council must appoint one of their own as the Council Secretary, responsible for adding Council Reports (13.3) and representing the Council in the community repo (with some enhanced repo maintenance privileges).",
+			"reward": "100",
 			"measurementPeriod": "7 days",
-			"startDate": "07.08.2020 ~18:00 GMT - #2046811",
+			"startDate": "14.08.2020 ~18:00 GMT - #2147611",
 			"successEvents": [
-				"The proposed system is evaluated by the Council, and opinions are contributed by >8 CMs in the proposal discussion.",
-				"Other community members, with a total balance+stake >5% of issuance, provide feedback on the forum.",
-				"Based on the feedback given, the Council creates a list of questions and suggested changes in the form of an approved Text Proposal.",
-				"If a new design is agreed upon by Jsgenesis and the community, a PR documenting the system in full is opened in the Community Repo.",
-				"The group or person that created this PR, receives the tJOY equivalent of at least $100USD through a Spending Proposal."
+				"The Council informally appoints a Council Secretary through a spending proposal and pays them an appropriate rate for their responsibilities (below).",
+				"The spending proposal must provide a link to the Council Secretary's GitHub account so we can provide them with a higher permission level on the community repo."
 			],
-			"annihilation": "Not applicable.",
-			"gradeDate": "16.08.2020 - 16:00 GMT",
-			"number": 12.5
+			"annihilation": "No Council Secretary is appointed.",
+			"gradeDate": "23.08.2020 - 16:00 GMT",
+			"number": 13.5
+		},
+		{
+			"title": "Council Secretary Adds Council Reports",
+			"description": "Past Council Reports have not been included in the community repo. These need to be added for purposes of accountability and transparency.",
+			"reward": "150",
+			"measurementPeriod": "7 days",
+			"startDate": "14.08.2020 ~18:00 GMT - #2147611",
+			"successEvents": [
+				"The Council Secretary adds all previous Council reports to the community repo (via Pull Request)"
+			],
+			"annihilation": "No Council Reports are added to the repo.",
+			"gradeDate": "23.08.2020 - 16:00 GMT",
+			"number": 13.6
+		},
+		{
+			"title": "Council Secretary Adds Tokenomics Reports",
+			"description": "Past Tokemomics & State of the Network reports have not been included in the community repo. These need to be added to help participants better understand how our testnets operate.",
+			"reward": "150",
+			"measurementPeriod": "7 days",
+			"startDate": "14.08.2020 ~18:00 GMT - #2147611",
+			"successEvents": [
+				"The Council Secretary adds all previous Tokemomics & State of the Network reports to the community repo (via Pull Request)"
+			],
+			"annihilation": "No Tokenomics Reports are added to the repo.",
+			"gradeDate": "23.08.2020 - 16:00 GMT",
+			"number": 13.7
 		}
 	]
 }
