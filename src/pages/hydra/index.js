@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import LayoutWrapper from '../../components/LayoutWrapper';
 import Hero from '../../components/Hero';
@@ -53,17 +54,21 @@ function HydraPage() {
         <TitleWrapper title={content.GetStarted.title} subtitle={content.GetStarted.subtitle} />
         <div className="GetStarted__Container">
           {content.GetStarted.links.map(link => (
-            <div className="GetStarted__Card">
-              <div
-                className={`GetStarted__Card__Icon${link.name === 'Documentation' ? ' GetStarted__Card__IconDoc' : ''}`}
-              >
-                {link.icon()}
+            <Link to={link.link.to}>
+              <div className="GetStarted__Card">
+                <div
+                  className={`GetStarted__Card__Icon${
+                    link.name === 'Documentation' ? ' GetStarted__Card__IconDoc' : ''
+                  }`}
+                >
+                  {link.icon()}
+                </div>
+                <div className="GetStarted__Card__Text">
+                  <h1>{link.name}</h1>
+                  <a href={link.link.to}>{link.link.as}</a>
+                </div>
               </div>
-              <div className="GetStarted__Card__Text">
-                <h1>{link.name}</h1>
-                <a href={link.link.to}>{link.link.as}</a>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </LayoutWrapper>
