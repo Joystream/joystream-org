@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import Media from 'react-media';
-import { animated, useTransition } from 'react-spring';
+import { animated, useTransition, useSpring } from 'react-spring';
 import Code from './Code';
 
 export default function Features({ features }) {
@@ -52,13 +52,20 @@ export default function Features({ features }) {
 }
 
 function Feature({ name, text, selected, onClick }) {
+  const props = useSpring({
+    maxHeight: selected ? '245px' : '95px',
+  });
   return (
-    <div className={`Features__Element ${selected ? 'Features__Element__Selected' : ''}`} onClick={onClick}>
+    <animated.div
+      className={`Features__Element ${selected ? 'Features__Element__Selected' : ''}`}
+      onClick={onClick}
+      style={props}
+    >
       <span>{selected ? '-' : '+'}</span>
       <div>
-        <h3>{name}</h3>
+        <h3 style={{ fontWeight: selected ? 'bold' : 'normal' }}>{name}</h3>
         {selected && <p>{text}</p>}
       </div>
-    </div>
+    </animated.div>
   );
 }

@@ -9,7 +9,7 @@ import { ReactComponent as Snippet } from '../../assets/svg/snippet.svg';
 // Icons
 import { ReactComponent as TelegramIcon } from '../../assets/svg/telegram.svg';
 import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
-import { ReactComponent as PlaygroundIcon } from '../../assets/svg/telegram.svg';
+import { ReactComponent as PlaygroundIcon } from '../../assets/svg/kusama.svg';
 import { ReactComponent as DocumentIcon } from '../../assets/svg/document.svg';
 
 // svg
@@ -19,8 +19,6 @@ import ComplexClient from '../../assets/svg/complex-client.svg';
 import NoSearch from '../../assets/svg/no-search.svg';
 import Costly from '../../assets/svg/costly.svg';
 import OverFetching from '../../assets/svg/over-fetching.svg';
-import BloatedRuntime from '../../assets/svg/bloated-runtime.svg';
-
 import CommandJSIcon from '../../assets/svg/command-js.svg';
 
 export default {
@@ -115,19 +113,6 @@ export default {
           </>
         ),
       },
-      {
-        image: BloatedRuntime,
-        text: (
-          <>
-            <h1>Bloated Runtime State</h1>
-            <p>
-              Some put their query or search indexes in their storage to alleviate some of these problems, but this has
-              its own costs. Results in more complex runtime logic, bloated storage state, lack of flexibility across
-              apps, and making runtime migrations very hard due to the size of the state.
-            </p>
-          </>
-        ),
-      },
     ],
   },
   Snippet: {
@@ -139,34 +124,30 @@ export default {
     title: 'Powerful queries in GraphQL',
     subtitle: 'Provide application developers a powerful GraphQL API for your blockchain state and history',
     code: {
-      input: (
-        <pre>
-          {`{
-	hero  {
-		name
-		# Queries can have comments!
-		friends {
-			name
-		}
-	}
-}`}
-        </pre>
-      ),
-      result: (
-        <pre>
-          {`{
-	"data" :  {
-		"hero" :  {
-			"name" : "R2-D2",
-			"friends" :  [
-			  {
-				"name" :  "Luke Skywalker"
-			  },
-			  {
-				"name" :  "Han Solo"
-			  },`}
-        </pre>
-      ),
+      input: `
+      {
+        hero  {
+          name
+          # Queries can have comments!
+          friends {
+            name
+          }
+        }
+      }
+      `,
+      result: `
+      {
+        "data" :  {
+          "hero" :  {
+            "name" : "R2-D2",
+            "friends" :  [
+              {
+              "name" :  "Luke Skywalker"
+              },
+              {
+              "name" :  "Han Solo"
+              },
+      `,
     },
   },
   YourOwnNode: {
@@ -246,11 +227,14 @@ export default {
       },
       {
         name: 'Filtering',
-        text:
-          'Any entity field can be used for OpenCRUD filtering',
+        text: 'Any entity field can be used for OpenCRUD filtering',
         code: `
         query {
-          proposals(where: { bond_gt: "10000", value_gt: "800000000000000", status_eq: REJECTED }) {
+          proposals(where: { 
+            bond_gt: "10000",
+            value_gt: "800000000000000",
+            status_eq: REJECTED
+          }) {
             proposer
             version
             value
@@ -263,8 +247,7 @@ export default {
       },
       {
         name: 'Pagination',
-        text:
-          'Each GraphQL query supports pagination out-of-the-box',
+        text: 'Each GraphQL query supports pagination out-of-the-box',
         code: `
         query {
           proposals(offset: 10, limit: 5) {
@@ -279,8 +262,7 @@ export default {
       },
       {
         name: 'Ordering',
-        text:
-          'Order by any primitive field',
+        text: 'Order by any primitive field',
         code: `
         query {
           proposals(limit: 5, orderBy:  value_ASC) {
@@ -291,11 +273,15 @@ export default {
       },
       {
         name: 'Polymorphism',
-        text:
-          'Native support of GraphQL interfaces and type inline fragments',
+        text: 'Native support of GraphQL interfaces and type inline fragments',
         code: `
         query {
-          profiles(limit: 5, offset: 5, orderBy: about_ASC, where: { about_eq: "joystreamer" }) {
+          profiles(
+            limit: 5,
+            offset: 5,
+            orderBy: about_ASC,
+            where: { about_eq: "joystreamer" }
+          ) {
               about
               __typename 
               ... on Member {
@@ -309,8 +295,7 @@ export default {
       },
       {
         name: 'Algebraic Types',
-        text:
-          'Construct rich and queriable algebraic types with @variant directive',
+        text: 'Construct rich and queriable algebraic types with @variant directive',
         code: `
         type Noob @variant {
           follows: Influencer!

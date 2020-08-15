@@ -1,23 +1,5 @@
 @import '../../styles/main';
 
-.TitleWrapper {
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 100px;
-  text-align: center;
-
-  &__title {
-    font-size: 50px;
-  }
-
-  &__subtitle {
-    max-width: 585px;
-    margin: 0;
-    font-size: 20px;
-    line-height: 1.4;
-  }
-}
-
 .ValueProp > * + * {
   margin-bottom: 100px;
 }
@@ -27,29 +9,21 @@
   border-top: 1px solid $c_catskill_white;
 }
 
-.Hero {
-  & p {
-    max-width: 480px;
-    font-size: map-get($map: $font-sizes, $key: big);
-    line-height: 1.45;
-  }
+.Hydra__Hero {
+  @media #{$screen_lg} {
+    & .Hero__container {
+      max-width: 1440px;
+    }
 
-  &__container {
-    max-width: calc(1200px + 2 * 120px);
-  }
+    & .Hero__content {
+      max-width: 500px;
+      margin-right: 66px;
+    }
 
-  &__title {
-    max-width: 500px;
-    margin: auto;
-  }
-
-  &__image-wrapper {
-    flex-basis: 66%;
-    margin-left: 66px;
-  }
-
-  &__image {
-    max-width: 720px;
+    & .Hero__image {
+      height: 600px;
+      min-width: 720px;
+    }
   }
 }
 
@@ -61,6 +35,20 @@
   background-position: left 577px, right -250px;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
+
+  & .TitleWrapper {
+    margin-bottom: 100px;
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      max-width: 585px;
+      margin: auto;
+    }
+  }
 
   & p {
     max-width: 500px;
@@ -157,6 +145,20 @@
 .ValueProp {
   align-items: center;
 
+  & .TitleWrapper {
+    margin-bottom: 100px;
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      max-width: 585px;
+      margin: auto;
+    }
+  }
+
   &__Container {
     position: relative;
     display: grid;
@@ -164,59 +166,73 @@
     grid-template-columns: 1fr;
     row-gap: 60px;
 
-    @media #{$screen_md} {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  .ImageSection {
-    margin: 0;
-    text-align: left;
-    background-image: url('../../assets/background/testnet-kpis.svg');
-    background-repeat: repeat-y;
-
-    &__content {
-      display: grid;
-      grid-template-rows: 175px 1fr;
-    }
-
-    &__title {
+    & .ImageSection {
       margin: 0;
-    }
+      text-align: left;
+      background-image: url('../../assets/background/testnet-kpis.svg');
+      background-repeat: repeat-y;
 
-    &__text {
-      margin-top: 32px;
-    }
+      &__content {
+        display: grid;
+        grid-template-rows: 175px 1fr;
+      }
 
-    &__image {
-      width: 100%;
+      &__title {
+        margin: 0;
+      }
 
-      & > img {
-        max-width: 175px;
-        max-height: 140px;
-        min-width: 175px;
-        min-height: 140px;
+      &__text {
+        margin-top: 32px;
+      }
+
+      &__image {
+        width: 100%;
+
+        & > img {
+          max-width: 175px;
+          max-height: 140px;
+          min-width: 175px;
+          min-height: 140px;
+        }
+      }
+
+      h1 {
+        margin-bottom: 30px;
+        font-family: $font-secondary;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $c_blue_ribbon;
+      }
+
+      p {
+        max-width: 480px;
+        font-size: 22px;
+        line-height: 1.45;
       }
     }
 
-    h1 {
-      margin-bottom: 30px;
-      font-family: $font-secondary;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 1.2;
-      color: $c_blue_ribbon;
-    }
-
-    p {
-      max-width: 480px;
-      font-size: 18px;
-      line-height: 1.66;
+    @media #{$screen_md} {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
 
 .Features {
+  & .TitleWrapper {
+    margin-bottom: 100px;
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      max-width: 585px;
+      margin: auto;
+    }
+  }
+
   &__Container {
     display: grid;
     width: 100%;
@@ -257,13 +273,25 @@
 
     & > div {
       position: absolute;
-      width: 100%;
+      width: min-content;
       height: 100%;
     }
   }
 }
 
 .Video {
+  & .TitleWrapper {
+    &__title {
+      margin-bottom: 74px;
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      max-width: 585px;
+      margin: auto;
+    }
+  }
+
   .VideoPlayer {
     position: relative;
     z-index: 1;
@@ -273,7 +301,7 @@
     min-height: 800px;
     margin-bottom: -360px;
 
-    .react-player__preview {
+    & .react-player__preview {
       background-color: $c_black;
       background-image: url('../../assets/svg/hydra-video-poster.svg') !important;
       background-repeat: no-repeat;
@@ -290,8 +318,112 @@
       }
     }
 
-    .react-player__shadow {
+    &__Release__Text {
+      position: absolute;
+      bottom: 245px;
+      left: 540px;
+      display: flex;
+      padding: 1px;
+      color: $c_white;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      & > span {
+        margin-right: 13px;
+        font-family: $font-primary;
+        font-size: 1rem;
+        line-height: 1.45;
+      }
+    }
+
+    & .react-player__shadow {
       opacity: 0;
+    }
+  }
+}
+
+.Snippet {
+  & .TitleWrapper {
+    margin-bottom: 100px;
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      max-width: 585px;
+      margin: auto;
+    }
+  }
+
+  &__Container {
+    display: grid;
+    color: $c_white;
+    grid-template-columns: 1fr 80px 1fr;
+
+    & pre {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+
+      & > code {
+        font-family: $font-primary;
+      }
+    }
+  }
+
+  &__Input {
+    background-color: $c_black;
+  }
+
+  &__Output {
+    background-color: $c_blue_ribbon;
+  }
+
+  &__ColoredBox {
+    display: flex;
+    align-items: stretch;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+
+    & > div {
+      min-width: 4px;
+      min-height: 4px;
+    }
+  }
+
+  &__Decoration {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & > div:nth-of-type(4n + 1) {
+      flex-direction: column;
+      background-color: $c_black;
+
+      & > div:nth-of-type(2n + 1) {
+        background-color: $c_blue_ribbon;
+      }
+    }
+    /* stylelint-disable-next-line no-descending-specificity */
+    & > div:nth-of-type(4n) {
+      background-color: $c_black;
+
+      & > div:nth-of-type(2n + 1) {
+        background-color: $c_blue_ribbon;
+      }
+    }
+    /* stylelint-disable-next-line no-descending-specificity */
+    & > div:nth-of-type(4n + 2) {
+      background-color: $c_blue_ribbon;
+    }
+    /* stylelint-disable-next-line no-descending-specificity */
+    & > div:nth-of-type(4n + 3) {
+      background-color: $c_black;
     }
   }
 }

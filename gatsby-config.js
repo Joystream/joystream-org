@@ -16,7 +16,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-svgr',
       options: {
-        exclude: /$snippet.svg/,
+        exclude: /(hydra-hero.svg)$/,
       },
     },
     'gatsby-plugin-anchor-links',
