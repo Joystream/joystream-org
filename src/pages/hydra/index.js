@@ -6,6 +6,7 @@ import Hero from '../../components/Hero';
 import ImageSection from '../../components/ImageSection';
 import TitleWrapper from '../../components/TitleWrapper';
 import BaseLayout from '../../components/_layouts/Base';
+import SiteMetadata from '../../components/SiteMetadata';
 import './style.scss';
 
 import content from '../../data/pages/hydra';
