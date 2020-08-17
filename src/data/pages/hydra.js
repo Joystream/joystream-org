@@ -199,7 +199,7 @@ export default {
         name: 'Telegram Channel',
         icon: TelegramIcon,
         link: {
-          to: '#',
+          to: 'https://t.me/HydraDevs',
           as: 'Go to the Channel',
         },
       },
