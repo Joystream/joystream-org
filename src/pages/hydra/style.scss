@@ -1,0 +1,429 @@
+@import '../../styles/main';
+
+.ValueProp > * + * {
+  margin-bottom: 100px;
+}
+
+.Features__List > * + * {
+  padding-top: 30px;
+  border-top: 1px solid $c_catskill_white;
+}
+
+.Hydra__Hero {
+  @media #{$screen_lg} {
+    & .Hero__container {
+      max-width: 1440px;
+    }
+
+    & .Hero__content {
+      max-width: 500px;
+      margin-right: 66px;
+    }
+
+    & .Hero__image {
+      height: 600px;
+      min-width: 720px;
+    }
+  }
+}
+
+.GetStarted {
+  padding-top: 360px;
+  padding-bottom: 160px;
+  background-color: $c_catskill_white;
+  background-image: url('../../assets/svg/hydra-light-bg.svg'), url('../../assets/svg/hydra-light-bg.svg');
+  background-position: left 577px, right -250px;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+
+  & .TitleWrapper {
+    margin-bottom: 100px;
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      max-width: 585px;
+      margin: auto;
+    }
+  }
+
+  & p {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  &__Container {
+    display: grid;
+    margin: 80px auto 0;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  &__Card {
+    display: flex;
+    width: 100%;
+    max-width: 485px;
+    padding: 38px 84px 38px 38px;
+    font-size: 18px;
+    line-height: 1.33;
+    color: $c_black;
+    text-align: left;
+    background-color: $c_white;
+
+    &:hover {
+      background-color: $c_blue_ribbon;
+    }
+
+    &:hover > &__Text > * {
+      color: $c_white;
+    }
+
+    &:hover > &__Text > *::after {
+      background-color: $c_white;
+    }
+
+    &__Icon {
+      width: 91px;
+      height: 91px;
+
+      & path {
+        fill: currentColor;
+      }
+    }
+
+    &__IconDoc {
+      path:first-of-type {
+        stroke: currentColor;
+      }
+    }
+
+    &:hover > &__IconDoc {
+      path:nth-of-type(2) {
+        stroke: $c_blue_ribbon;
+      }
+    }
+
+    &__Text {
+      margin: 15px 0 16px;
+      margin-left: 38px;
+
+      & > h1 {
+        margin-bottom: 4px;
+        font-size: map-get($map: $font-sizes, $key: t5);
+        line-height: 1.14;
+        white-space: nowrap;
+      }
+
+      & > a {
+        position: relative;
+        color: $c_blue_ribbon;
+
+        &::after {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin-left: 8px;
+          vertical-align: middle;
+          background-color: $c_blue_ribbon;
+          content: '';
+          mask: url('../../assets/svg/KPI-arrow.svg');
+          mask-size: cover;
+        }
+      }
+    }
+  }
+  @media #{$screen_md} {
+    &__Container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.ValueProp {
+  align-items: center;
+
+  & .TitleWrapper {
+    margin-bottom: 100px;
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      max-width: 585px;
+      margin: auto;
+    }
+  }
+
+  &__Container {
+    position: relative;
+    display: grid;
+    column-gap: 130px;
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+
+    & .ImageSection {
+      margin: 0;
+      text-align: left;
+      background-image: url('../../assets/background/testnet-kpis.svg');
+      background-repeat: repeat-y;
+
+      &__content {
+        display: grid;
+        grid-template-rows: 175px 1fr;
+      }
+
+      &__title {
+        margin: 0;
+      }
+
+      &__text {
+        margin-top: 32px;
+      }
+
+      &__image {
+        width: 100%;
+
+        & > img {
+          max-width: 175px;
+          max-height: 140px;
+          min-width: 175px;
+          min-height: 140px;
+        }
+      }
+
+      h1 {
+        margin-bottom: 30px;
+        font-family: $font-secondary;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $c_blue_ribbon;
+      }
+
+      p {
+        max-width: 480px;
+        font-size: 22px;
+        line-height: 1.45;
+      }
+    }
+
+    @media #{$screen_md} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.Features {
+  & .TitleWrapper {
+    margin-bottom: 100px;
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      max-width: 585px;
+      margin: auto;
+    }
+  }
+
+  &__Container {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    column-gap: 130px;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__Element {
+    display: flex;
+    font-size: 32px;
+    line-height: 1;
+
+    & span:first-of-type {
+      margin-right: 20px;
+      color: $c_blue_ribbon;
+    }
+
+    & h3:first-of-type {
+      margin-bottom: 30px;
+      font-family: $font-secondary;
+    }
+
+    & p:first-of-type {
+      max-width: 440px;
+      margin-bottom: 24px;
+      font-size: 22px;
+      line-height: 1.45;
+    }
+  }
+
+  &__Snippets__List {
+    position: relative;
+
+    & > div {
+      position: absolute;
+      width: min-content;
+      height: 100%;
+    }
+  }
+}
+
+.Video {
+  & .TitleWrapper {
+    &__title {
+      margin-bottom: 74px;
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      max-width: 585px;
+      margin: auto;
+    }
+  }
+
+  .VideoPlayer {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    margin-bottom: -360px;
+
+    & .react-player__preview {
+      background-color: $c_black;
+      background-image: url('../../assets/svg/hydra-video-poster.svg') !important;
+      background-repeat: no-repeat;
+      background-size: unset !important;
+
+      &::after {
+        position: absolute;
+        right: 80px;
+        bottom: 80px;
+        width: 136px;
+        height: 26px;
+        background-image: url('../../assets/svg/logo-basic-white.svg');
+        content: '';
+      }
+    }
+
+    &__Release__Text {
+      position: absolute;
+      bottom: 245px;
+      left: 540px;
+      display: flex;
+      padding: 1px;
+      color: $c_white;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      & > span {
+        margin-right: 13px;
+        font-family: $font-primary;
+        font-size: 1rem;
+        line-height: 1.45;
+      }
+    }
+
+    & .react-player__shadow {
+      opacity: 0;
+    }
+  }
+}
+
+.Snippet {
+  & .TitleWrapper {
+    margin-bottom: 100px;
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      max-width: 585px;
+      margin: auto;
+    }
+  }
+
+  &__Container {
+    display: grid;
+    color: $c_white;
+    grid-template-columns: 1fr 80px 1fr;
+
+    & pre {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+
+      & > code {
+        font-family: $font-primary;
+      }
+    }
+  }
+
+  &__Input {
+    background-color: $c_black;
+  }
+
+  &__Output {
+    background-color: $c_blue_ribbon;
+  }
+
+  &__ColoredBox {
+    display: flex;
+    align-items: stretch;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+
+    & > div {
+      min-width: 4px;
+      min-height: 4px;
+    }
+  }
+
+  &__Decoration {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & > div:nth-of-type(4n + 1) {
+      flex-direction: column;
+      background-color: $c_black;
+
+      & > div:nth-of-type(2n + 1) {
+        background-color: $c_blue_ribbon;
+      }
+    }
+    /* stylelint-disable-next-line no-descending-specificity */
+    & > div:nth-of-type(4n) {
+      background-color: $c_black;
+
+      & > div:nth-of-type(2n + 1) {
+        background-color: $c_blue_ribbon;
+      }
+    }
+    /* stylelint-disable-next-line no-descending-specificity */
+    & > div:nth-of-type(4n + 2) {
+      background-color: $c_blue_ribbon;
+    }
+    /* stylelint-disable-next-line no-descending-specificity */
+    & > div:nth-of-type(4n + 3) {
+      background-color: $c_black;
+    }
+  }
+}

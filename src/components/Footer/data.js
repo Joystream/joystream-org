@@ -8,6 +8,7 @@ const joystreamLinks = [
   { to: '/manifesto', label: 'Manifesto' },
   { to: '/roles', label: 'Roles' },
   { to: '/token', label: 'Token' },
+  { to: '/hydra', label: 'Hydra' },
 ];
 
 const githubLinks = [

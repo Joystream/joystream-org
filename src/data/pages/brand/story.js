@@ -93,10 +93,10 @@ export default {
           symbolism and complexity of modern world problems and technologies.
         </p>
         <p>Our branding uses mosaic, geometrical patterns and shapes combined with explicit colours and symbolic 
-      illustrations.</p>
+          illustrations.</p>
         <p>
           We also deploy descriptive icons in combination with simple glyph style system icons and an experimental 
-      illustration style.
+          illustration style.
         </ p>
       </>
     ),

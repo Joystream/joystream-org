@@ -13,7 +13,12 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
-    'gatsby-plugin-svgr',
+    {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        exclude: /(hydra-hero.svg)$/,
+      },
+    },
     'gatsby-plugin-anchor-links',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
