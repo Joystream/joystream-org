@@ -15,6 +15,7 @@ import { Snippet, Video, Features } from '../../components/HydraPage';
 function HydraPage() {
   return (
     <BaseLayout>
+      <SiteMetadata title="Hydra - A Substrate query node framework" description="Inspired by The Graph, it gives a smooth way to provide powerful GraphQL queries to app developers over your Substrate blockchain state and history." />
       <div className="Hydra__Hero">
         <Hero
           image={content.Hero.image}
