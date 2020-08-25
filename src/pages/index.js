@@ -34,7 +34,7 @@ import { launchDate as constantinopleNetworkLaunchDate } from '../data/pages/con
 import './style.scss';
 
 const activeTestnet = {
-  name: 'constantinople',
+  name: 'Constantinople',
   incentivesLink: 'https://blog.joystream.org/constantinople-incentives/',
 };
 
