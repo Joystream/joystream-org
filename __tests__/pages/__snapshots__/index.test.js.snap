@@ -161,6 +161,26 @@ exports[`IndexPage page renders correctly 1`] = `
   </Analytics>
   <LayoutWrapper
     className=""
+    dark={false}
+    gradient={false}
+  >
+    <TestnetItem
+      button={
+        Object {
+          "label": "Explore Alexandria",
+          "to": "/alexandria",
+        }
+      }
+      className=""
+      date="2020/09/15 15:00"
+      image="icon-mock"
+      title="Alexandria Testnet"
+    >
+      Alexandria is our seventh testnet, focused on a variety of important technical improvements.
+    </TestnetItem>
+  </LayoutWrapper>
+  <LayoutWrapper
+    className=""
     dark={true}
     gradient={false}
   >
