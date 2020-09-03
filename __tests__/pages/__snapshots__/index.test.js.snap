@@ -102,7 +102,7 @@ exports[`IndexPage page renders correctly 1`] = `
         Object {
           "image": "icon-component-mock",
           "title": "Participation Payout",
-          "value": "$22781",
+          "value": "$24029",
         },
         Object {
           "image": "icon-component-mock",
@@ -172,7 +172,7 @@ exports[`IndexPage page renders correctly 1`] = `
         }
       }
       className=""
-      date="2020/09/15 15:00"
+      date="2020/09/15 10:00"
       image="icon-mock"
       title="Alexandria Testnet"
     >
