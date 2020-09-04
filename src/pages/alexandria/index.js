@@ -46,7 +46,7 @@ const AlexandriaPage = ({ content }) => {
         chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
         animationStartValue={0}
       >
-        <p className="ConstantinoplePage__hero-paragraph">
+        <p className="AlexandriaPage__hero-paragraph">
           The Alexandria release focuses on important technical updates
           which will facilitate more efficient future development.
         </p>
