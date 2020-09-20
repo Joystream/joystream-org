@@ -33,18 +33,14 @@ export default {
         text: (
           <>
             <p>There are two dynamics that impact the amount of value backing the tokens at any given time.</p>
-            <p>
-              All else being equal, as these two rewards are added to the pool, the redemption price of the tokens
-              increases.
-            </p>
             <blockquote>
               <h1>Replenishment</h1>
               <p>
-                At some regular interval, which may itself be updated over time, some quantity of USD value is added to
-                the pool of value.
+                The fiat pool will be topped up weekly, without minting new tokens,
+                effectively increasing the exchange rate (all else being equal).
               </p>
               <p>
-                <i>Last replenishment: $150 added on September 6th</i>
+                Last replenishment: <i>$150 on September 20th</i>
               </p>
             </blockquote>
           </>
@@ -54,19 +50,23 @@ export default {
         image: replenishmentImage,
         text: (
           <blockquote>
-            <h1>KPI Rewards</h1>
+            <h1>KPI and Bounty Rewards</h1>
             <p>
-              At any given time, there is a set of key performance indicators (KPI) which define success metrics for the
-              overall system, and how much value is added to the reward pool. The actual success of the system is judged
-              by Jsgenesis representatives at designated times.
+              For every new Council term, Jsgenesis will create Council KPIs, each
+              assigned a USD value. If the goals are achieved, Jsgenesis will reward
+              the Council without affecting the exchange rate.
             </p>
-            <p>The set of KPIs, and the terms associated with them, will change over time.</p>
+            <p>
+              Jsgenesis will also create Community KPIs, similar to bounties, but managed by the Council.
+              These are also assigned a USD value, and if achieved, Jsgenesis will (indirectly)
+              reward the individual or group that achieved the goals.
+            </p>
           </blockquote>
         ),
       },
       links: {
         first: {
-          to: 'https://blog.joystream.org/constantinople-kpis/',
+          to: 'https://blog.joystream.org/alexandria-kpis/',
           text: 'Further details and KPI history',
         },
         second: {
@@ -77,7 +77,7 @@ export default {
     },
   },
   KPIsValues: {
-    title: 'Current set of KPIs',
+    title: 'Council KPIs',
     // This array holds the KPIs. To change them or add them, use KPIs.json
     KPIs: [...KPIs],
   },
