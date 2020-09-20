@@ -21,13 +21,13 @@ export default function TokenStats() {
     console.error(error);
     return <div>{JSON.stringify(error)}</div>;
   }
-  const { dollarPool, actualIssuance, price } = data;
+  const { dollarPool, totalIssuance, price } = data;
 
   return (
     <div className="Stats__Container">
       <DataLabel title="Price" value={`$${Number(price).toPrecision(3)}`} />
       <DataLabel title="Backing Value" value={`$${formatNumber(dollarPool.size)}`} />
-      <DataLabel title="Supply" value={`${formatNumber(actualIssuance)}`} />
+      <DataLabel title="Supply" value={`${formatNumber(totalIssuance)}`} />
     </div>
   );
 }
