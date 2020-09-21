@@ -93,7 +93,7 @@ function KPI({
 export default function LiveKPIs({ id }) {
   const { KPIs } = content.KPIsValues;
   return (
-    <TitleWrapper title="Current set of KPIs" className="KPIs__Values" id={id}>
+    <TitleWrapper title="Council KPIs" className="KPIs__Values" id={id}>
       {KPIs.map((kpi, idx) => (
         <KPI
           key={`${kpi.title} - ${idx}`}

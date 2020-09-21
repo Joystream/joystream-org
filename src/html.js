@@ -10,11 +10,11 @@ export default function HTML(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link
           rel="stylesheet"
-          href="https://ben.click/Optimo_11264_K0tfnA/Optimo-PxGrotesk/PxGroteskRegular-Regular.css"
+          href="https://eu-central-1.linodeobjects.com/atlas-assets/fonts/Optimo-PxGrotesk/PxGroteskRegular-Regular.css"
         />
         <link
           rel="stylesheet"
-          href="https://ben.click/Optimo_11264_K0tfnA/Optimo-PxGrotesk/PxGroteskBold-Regular.css"
+          href="https://eu-central-1.linodeobjects.com/atlas-assets/fonts/Optimo-PxGrotesk/PxGroteskBold-Regular.css"
         />
         {props.headComponents}
       </head>
