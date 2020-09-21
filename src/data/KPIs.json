@@ -1,76 +1,16 @@
 {
 	"KPIs": [{
-			"title": "Block Production",
-			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer (divided by 1000).",
-			"reward": "50",
-			"startDate": "13.09.2020 ~00:00 UTC - #2565211",
-			"measurementPeriod": "7 days",
-			"annihilation": "Block finalization lags more than 600 blocks behind head at any point throughout the measurement period.",
+			"title": "To be deployed later today!",
+			"description": "As the new chain will start without a Council, the KPIs are not made (yet)",
+			"reward": "0",
+			"startDate": "21.09.2020 ~09:00 UTC - #1",
+			"measurementPeriod": "1 day",
+			"annihilation": "NA",
 			"successEvents": [
-				"The difference between timestamps of block #2565211 and block #2665593 must be less than 604,710,000 milliseconds."
+				"NA"
 			],
-			"gradeDate": "21.09.2020 - 12:00 UTC",
-			"number": 17.1
-		},
-		{
-			"title": "Proposal Clearance",
-			"description": "For the governance process to work, all Proposals must be dealt with professionally, and in a reasonable time frame to avoiding blocking new Proposals coming in.",
-			"reward": "50",
-			"measurementPeriod": "7 days",
-			"startDate": "13.09.2020 ~00:00 UTC - #2565211",
-			"successEvents": [
-				"No Proposals expire due to missing votes.",
-				"At no point will the number of active Proposal stay at 5 for longer than 14,400 blocks (~24h)."
-			],
-			"annihilation": "No malicious or unreasonable Proposals are approved.",
-			"gradeDate": "21.09.2020 - 12:00 UTC",
-			"number": 17.2
-		},
-		{
-			"title": "Council Reporting",
-			"description": "There needs to be some level of accountability and transparency for the Council. Weekly reporting of workflow and 'Tokenomics' will allow users make informed votes. Note that all reports must be submitted as a PR to the Community Repo, with a link to discussions.",
-			"reward": "200",
-			"measurementPeriod": "7 days",
-			"startDate": "13.09.2020 ~00:00 UTC - #2565211",
-			"successEvents": [
-				"The 15th Council on Constantinople (#2464411-#2565210) produces a log of events, with all of the Council's actions, challenges and tasks.",
-				"This is accompanied by a report covering its own workflow, challenges, thinking and performance.",
-				"The 15th Council on Constantinople (#2464411-#2565210) produces a report based on the newest template.",
-				"The script (in typescript) that produces the output is made available alongside the report."
-			],
-			"annihilation": "The reports contains incorrect information.",
-			"gradeDate": "21.09.2020 - 12:00 UTC",
-			"number": 17.3
-    },
-    {
-			"title": "Appoint New Council Secretary",
-			"description": "In preparation for some changes to the KPI system, the Council must appoint one of their own as the Council Secretary, responsible for adding Council Reports (17.3) and representing the Council in the community repo (with some enhanced repo maintenance privileges).",
-			"reward": "50",
-			"measurementPeriod": "7 days",
-			"startDate": "13.09.2020 ~00:00 UTC - #2565211",
-			"successEvents": [
-				"The Council informally appoints a Council Secretary through a spending Proposal and pays them an appropriate rate for their responsibilities (below).",
-				"The spending Proposal must provide a link to the Council Secretary's GitHub account so we can provide them with a higher permission level on the community repo."
-			],
-			"annihilation": "No Council Secretary is appointed.",
-      "gradeDate": "21.09.2020 - 12:00 UTC",
-			"number": 17.4
-    },
-    {
-			"title": "Council Approves New Rewards, KPI system and Chain Paramaters for Alexandria",
-			"description": "With the new testnet (on a new chain) Alexandria fast approaching, some changes will be made. Jsgenesis will make a Text Proposal listing each proposed change (quantitative and qualitative). This proposal will be created before 00:00 UTC on Tuesday.",
-			"reward": "200",
-			"measurementPeriod": "5 days",
-			"startDate": "15.09.2020 ~00:00 UTC - #2594011",
-			"successEvents": [
-				"The Council opens up a forum post, to discuss with the community, and evaluates the changes proposed.",
-        "The Council Secretary makes a Proposal that presents a summary of the discussions, addressing each item in the Proposal. Finally, it contains a conclusion, with their rationale for agreeing, or disagreeing with each individual value.",
-        "The Councils Proposal is approved."
-			],
-			"annihilation": "The approved Proposal fails to include arguments against their conclusion.",
-      "gradeDate": "21.09.2020 - 12:00 UTC",
-			"number": 17.5
-    }
+			"gradeDate": "NA",
+			"number": 0.0
+		}
   ]
 }
-

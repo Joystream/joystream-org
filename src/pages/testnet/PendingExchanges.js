@@ -70,7 +70,7 @@ export default function PendingExchanges() {
     }
   };
 
-  const { exchanges } = data;
+  const exchanges = data.exchanges.filter(exchange => exchange.status === 'PENDING');
 
   const progress =
     MAX_IN_VIEW < exchanges.length ? Math.round((100 * (viewIdx + MAX_IN_VIEW)) / exchanges.length) : 1 * 100;

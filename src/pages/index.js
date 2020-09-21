@@ -34,8 +34,8 @@ import { launchDate as alexandriaNetworkLaunchDate } from '../data/pages/alexand
 import './style.scss';
 
 const activeTestnet = {
-  name: 'Constantinople',
-  incentivesLink: 'https://blog.joystream.org/constantinople-incentives/',
+  name: 'Alexandria',
+  incentivesLink: 'https://www.joystream.org/testnet',
 };
 
 const IndexPage = ({ content }) => (
@@ -75,14 +75,14 @@ const IndexPage = ({ content }) => (
 
     <LayoutWrapper>
       <TestnetItem
-        title="Constantinople Testnet"
-        image={constantinopleImage}
+        title="Alexandria Testnet"
+        image={alexandriaImage}
         children={
-          <>Constantinople is our sixth testnet, offering an improved proposal system and a fiat-backed token model.</>
+          <>Alexandria is our seventh testnet, introducing a variety of important technical improvements.</>
         }
         button={{
-          label: 'Explore Constantinople',
-          to: '/constantinople',
+          label: 'Explore Alexandria',
+          to: '/alexandria',
         }}
       />
     </LayoutWrapper>
@@ -92,6 +92,8 @@ const IndexPage = ({ content }) => (
         Participate and Earn Monero
       </Button>
     </Analytics>
+
+    {/*
 
     <LayoutWrapper>
       <TestnetItem
@@ -105,6 +107,8 @@ const IndexPage = ({ content }) => (
         }}
       />
     </LayoutWrapper>
+
+    */}
 
     <LayoutWrapper dark>
       <TitleWrapper title="Become a user, run the platform">

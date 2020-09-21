@@ -48,9 +48,16 @@ const ConstantinoplePage = ({ content }) => {
       >
         <p className="ConstantinoplePage__hero-paragraph">
           The Constantinople testnet introduces an improved proposals system
-          and fiat-backed token model for participant compensation.
-        </p>
-        <HeroCard date={launchDate} />
+          and fiat-backed token model for participant compensation.</p>
+        <HeroCard
+          info
+          date="2020/09/21 09:00"
+          counterTitle={
+            <>
+              REPLACED BY ALEXANDRIA ON
+            </>
+          }
+          />
 
         <TestnetModal
           title="Constantinople"
