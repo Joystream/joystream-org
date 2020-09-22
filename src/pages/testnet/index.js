@@ -15,6 +15,7 @@ import TokenStats from './TokenStats';
 import LiveKPIs from './LiveKPIs';
 import content from '../../data/pages/testnet';
 import './style.scss';
+import CommunityBounties from './CommunityBounties';
 
 function TestnetPage() {
   return (
@@ -79,6 +80,7 @@ function TestnetPage() {
         </ImageSection>
 
         <LiveKPIs id="LiveKPIs" />
+        <CommunityBounties id="Bounties" />
       </LayoutWrapper>
 
       <LayoutWrapper className="Exchanges Exchanges__Container">
