@@ -104,7 +104,7 @@
 	],
 	"Bounties": [{
 			"title": "Update Telegram Bot",
-			"description": "As the old bot is not compatible with the new '@joystream-types', it needs to fixed as soon as possible. Full details can be found <a href='https://github.com/Joystream/community-repo/issues/23>here</a>.",
+			"description": "As the old bot is not compatible with the new '@joystream-types', it needs to fixed as soon as possible. Full details can be found <a href='https://github.com/Joystream/community-repo/issues/23'>here</a>.",
 			"reward": "150 (max)",
 			"published": "22.09.2020",
 			"successEvents": [
