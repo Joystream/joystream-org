@@ -126,7 +126,7 @@
 		},
 		{
 			"title": "Research and Testing of 'polkadot-js extension'",
-			"description": "After the upgrade, we have enabled the <a href='https://github.com/polkadot-js/extension'> as part of Pioneer. However, it has not been tested fully on our platform.",
+			"description": "After the upgrade, we have enabled the <a href='https://github.com/polkadot-js/extension'>polkadot-js extension</a> as part of Pioneer. However, it has not been tested fully on our platform.",
 			"reward": "150",
 			"published": "22.09.2020",
 			"successEvents": [
