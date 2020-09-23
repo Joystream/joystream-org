@@ -141,7 +141,7 @@
 		},
 		{
 			"title": "Improve Telegram Bot(s)",
-			"description": "After the updates in Bounty #1, it will be appropriate to improve the bot(s) and add further functionality.",
+			"description": "After the updates in Bounty #1 have been completed, it will be appropriate to improve the bot(s) and add further functionality.",
 			"reward": "TBA",
 			"published": "TBA",
 			"successEvents": [
