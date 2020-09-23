@@ -145,6 +145,14 @@ ol > li {
       }
     }
 
+    &__Description {
+      font-size: 1.125rem;
+
+      & > a {
+        text-decoration: underline;
+      }
+    }
+
     &__Info {
       margin-top: 4rem;
       font-size: 1rem;
@@ -156,6 +164,10 @@ ol > li {
       &__Dates {
         & > div {
           margin-bottom: 2rem;
+
+          & > span > a {
+            text-decoration: underline;
+          }
         }
 
         &__Value {
@@ -177,10 +189,6 @@ ol > li {
         display: inline-block;
         margin-bottom: 1.25rem;
       }
-    }
-
-    &__Description {
-      font-size: 1.125rem;
     }
 
     @media #{$screen-sm} {

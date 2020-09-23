@@ -15,6 +15,7 @@ import TokenStats from './TokenStats';
 import LiveKPIs from './LiveKPIs';
 import content from '../../data/pages/testnet';
 import './style.scss';
+import CommunityBounties from './CommunityBounties';
 
 function TestnetPage() {
   return (
@@ -50,10 +51,10 @@ function TestnetPage() {
                 <div className="KPIs__Explainer__Replenishment__Card__Icon">
                   <TimeIsMoneyIcon />
                 </div>
-                <div className="KPIs__Explainer__Replenishment__Card__Icon">$150</div>
+                <div className="KPIs__Explainer__Replenishment__Card__Icon">$600</div>
                 <div className="KPIs__Explainer__Replenishment__Card__Slash">/</div>
                 <div className="KPIs__Explainer__Replenishment__Card__Days">
-                  <span>7</span>
+                  <span>14</span>
                   <h2 className="KPIs__Explainer__Replenishment__Card__Days__Text">days</h2>
                 </div>
               </div>
@@ -79,6 +80,7 @@ function TestnetPage() {
         </ImageSection>
 
         <LiveKPIs id="LiveKPIs" />
+        <CommunityBounties id="Bounties" />
       </LayoutWrapper>
 
       <LayoutWrapper className="Exchanges Exchanges__Container">
