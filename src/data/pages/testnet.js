@@ -19,7 +19,7 @@ export default {
     ),
     image: coinMinterHero,
     ctaLink: {
-      to: 'https://blog.joystream.org/constantinople-incentives/',
+      to: 'https://github.com/Joystream/helpdesk#incentives',
     },
   },
   Numbers: {
@@ -57,9 +57,9 @@ export default {
               the Council without affecting the exchange rate.
             </p>
             <p>
-              Jsgenesis will also create Community KPIs, similar to bounties, but managed by the Council.
-              These are also assigned a USD value, and if achieved, Jsgenesis will (indirectly)
-              reward the individual or group that achieved the goals.
+              Jsgenesis will also create <a href="https://github.com/Joystream/community-repo/issues?q=is%3Aissue+label%3Acommunity-bounty+">Community KPIs</a>, 
+              similar to bounties, but managed by the Council. These are also assigned a USD value, and if achieved, 
+              Jsgenesis will (indirectly) reward the individual or group that achieved the goals.
             </p>
           </blockquote>
         ),
