@@ -1,7 +1,7 @@
 import mapStatusDataToRoles from './index';
 
 const input = {
-  block_height: 1110117,
+  finalizedBlockHeight: 1110117,
   council: {
     election_stage: 'Announcing',
     members_count: 12,

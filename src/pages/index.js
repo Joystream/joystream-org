@@ -58,7 +58,7 @@ const IndexPage = ({ content }) => (
       </p>
       <div className="IndexPage__hero-group">
         <Button noWrap large secondary className="IndexPage__hero-button" href="/testnet/">
-          Earn Tokens
+          Earn Money
         </Button>
         <Button
           noWrap
