@@ -1,7 +1,7 @@
 import mapStatusDataToAnalytics from './index';
 
 const input = {
-  block_height: 1101117,
+  finalizedBlockHeight: 1101117,
   council: {
     election_stage: 'Announcing',
     members_count: 12,
@@ -53,7 +53,7 @@ describe('mapStatusDataToAnalytics function', () => {
 
   it('retuns undefined values for missing keys', () => {
     const modifiedInput = {
-      block_height: 1110117,
+      finalizedBlockHeight: 1110117,
     };
 
     const expectedOutput = {

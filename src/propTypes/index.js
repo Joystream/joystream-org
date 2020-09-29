@@ -18,12 +18,12 @@ export const linkPropTypes = {
 };
 
 export const mapPropTypes = {
-  location: oneOf(['athens', 'acropolis', 'sparta', 'rome', 'constantinople']).isRequired,
+  location: oneOf(['athens', 'acropolis', 'sparta', 'rome', 'constantinople', 'alexandria']).isRequired,
 };
 
 export const pagePropTypes = {
   content: shape({
-    block_height: number,
+    finalizedBlockHeight: number,
     council: shape({
       election_stage: string,
       members_count: number,
