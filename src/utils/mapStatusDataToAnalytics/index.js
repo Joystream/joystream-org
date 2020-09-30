@@ -2,7 +2,7 @@ import getValue from 'get-value';
 
 const keys = {
   validatorsCount: 'validators.count',
-  blockHeight: 'block_height',
+  blockHeight: 'finalizedBlockHeight',
   councilStage: 'council.election_stage',
   membershipsMembers: 'memberships.platform_members',
   forumPosts: 'forum.posts',
