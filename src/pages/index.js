@@ -25,11 +25,12 @@ import heroImage from '../assets/svg/hero-builder.svg';
 import RomeImage from '../assets/svg/rome-main.svg';
 import constantinopleImage from '../assets/svg/constantinople-main.svg';
 import alexandriaImage from '../assets/svg/alexandria-main.svg';
+import babylonImage from '../assets/svg/babylon-main.svg';
 import { ReactComponent as TickImage } from '../assets/svg/tick.svg';
 import { ReactComponent as ClockImage } from '../assets/svg/clock.svg';
 
 import { roles } from '../data/pages';
-import { launchDate as alexandriaNetworkLaunchDate } from '../data/pages/alexandria';
+import { launchDate as babylonNetworkLaunchDate } from '../data/pages/babylon';
 
 import './style.scss';
 
@@ -89,26 +90,22 @@ const IndexPage = ({ content }) => (
 
     <Analytics title="Testnet Metrics" large content={mapStatusDataToAnalytics(content)}>
       <Button secondary href={activeTestnet.incentivesLink}>
-        Participate and Earn Monero
+        Participate and Earn BCH
       </Button>
     </Analytics>
 
-    {/*
-
     <LayoutWrapper>
       <TestnetItem
-        title="Alexandria Testnet"
-        image={alexandriaImage}
-        children="Alexandria is our seventh testnet, focused on a variety of important technical improvements."
-        date={alexandriaNetworkLaunchDate}
+        title="Babylon Testnet"
+        image={babylonImage}
+        children="Babylon is our eighth testnet, focused on improvements to media publishing and consumption on the platform."
+        date={babylonNetworkLaunchDate}
         button={{
-          label: 'Explore Alexandria',
-          to: '/alexandria',
+          label: 'Explore Babylon',
+          to: '/babylon',
         }}
       />
     </LayoutWrapper>
-
-    */}
 
     <LayoutWrapper dark>
       <TitleWrapper title="Become a user, run the platform">
