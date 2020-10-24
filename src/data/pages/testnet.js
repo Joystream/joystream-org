@@ -57,8 +57,8 @@ export default {
               the Council without affecting the exchange rate.
             </p>
             <p>
-              Jsgenesis will also create <a href="https://github.com/Joystream/community-repo/issues?q=is%3Aissue+label%3Acommunity-bounty+">Community KPIs</a>, 
-              similar to bounties, but managed by the Council. These are also assigned a USD value, and if achieved, 
+              Jsgenesis will also create <a href="https://github.com/Joystream/community-repo/issues?q=is%3Aissue+label%3Acommunity-bounty+">Community KPIs</a>,
+              similar to bounties, but managed by the Council. These are also assigned a USD value, and if achieved,
               Jsgenesis will (indirectly) reward the individual or group that achieved the goals.
             </p>
           </blockquote>
@@ -86,7 +86,7 @@ export default {
     subtitle: (
       <div>
         <p>
-          To initiate an exchange, set your memo to an XMR address of your choice and make a transfer to Jsgenesis
+          To initiate an exchange, set your memo to an BCH address of your choice and make a transfer to Jsgenesis
           burner address: <span style={{ color: 'white' }}>{JSGENESIS_BURNER_ADDRESS}</span>
         </p>
         <br />

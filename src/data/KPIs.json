@@ -1,80 +1,80 @@
 {
 	"KPIs": [{
 			"title": "Proposal Clearance",
-			"description": "For the governance process to function properly, all proposals must be processed professionally, and in a reasonable time frame to avoiding blocking new proposals coming in.",
+			"description": "For the governance process to function properly, all proposals must be processed effectively, and in a reasonable time frame to avoiding blocking new proposals coming in.",
 			"reward": "0",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "09.10.2020 ~18:25 UTC - #259201",
+			"startDate": "23.10.2020 ~23:20 UTC - #460801",
 			"successEvents": [
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h).",
 				"No malicious or unreasonable proposals are approved."
 			],
-			"annihilation": "Unlike other 'annihilations', failure for this KPI will result on the loss ALL KPI rewards, and a new Council Election will be started immediately.",
-			"gradeDate": "26.10.2020 - 12:00 UTC",
-			"number": 2.1
+			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards, and a new Council Election will be started immediately.",
+			"gradeDate": "09.11.2020 - 12:00 UTC",
+			"number": 3.1
 		},
 		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. For each `term` the Council must produce a report of 'events' and 'Tokenomics' to allow users make informed votes. This must be submitted as a PR to the Community Repo.",
 			"reward": "0",
 			"measurementPeriod": "16 days",
-			"startDate": "09.10.2020 ~18:25 UTC - #259201",
+			"startDate": "23.10.2020 ~23:20 UTC - #460801",
 			"successEvents": [
-				"The second Council on Alexandria (#259201-#460801) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
+				"The Third Council on Alexandria (#460801-#662401) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
 			],
-			"annihilation": "Unlike other 'annihilations', failure for this KPI will result on the loss ALL KPI rewards.",
-			"gradeDate": "26.10.2020 - 12:00 UTC",
-			"number": 2.2
+			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards.",
+			"gradeDate": "09.11.2020 - 12:00 UTC",
+			"number": 3.2
 		},
 		{
 			"title": "Appoint New Council Secretary",
 			"description": "The Council must appoint one of their own as the Council Secretary, responsible for adding Council Reports and representing the Council in the Community Repo (with some enhanced repository maintenance privileges).",
 			"reward": "50",
 			"measurementPeriod": "5 days",
-			"startDate": "09.10.2020 ~18:25 UTC - #259201",
+			"startDate": "23.10.2020 ~23:20 UTC - #460801",
 			"successEvents": [
 				"The Council informally appoints a Council Secretary through a spending proposal and pays them an appropriate rate for their responsibilities.",
 				"The spending proposal must provide a link to the Council Secretary's GitHub account so we can provide them 'triage' permissions on the community repo."
 			],
 			"annihilation": "No Council Secretary is appointed.",
-			"gradeDate": "26.10.2020 - 12:00 UTC",
-			"number": 2.3
+			"gradeDate": "09.11.2020 - 12:00 UTC",
+			"number": 3.3
 		},
 		{
 			"title": "Block Production",
 			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer.",
 			"reward": "150",
-			"startDate": "09.10.2020 ~18:25 UTC - #259201",
+			"startDate": "23.10.2020 ~23:20 UTC - #460801",
 			"measurementPeriod": "14 days (Full Council Term)",
 			"successEvents": [
-				"The difference between the timestamp of blocks #259201 and #460801 must be less than 1213632000.",
+				"The difference between the timestamp of blocks #460801 and #662401 must be less than 1213632000.",
 				"The total Validator+Nominator stake averages over 15% of total issuance.",
 				"The total Validator+Nominator stake averages over 20% of total issuance."
 			],
-			"annihilation": "Block `finalization` lags more than 3600 blocks behind `best` at any point throughout the measurement period.",
-			"gradeDate": "26.10.2020 - 12:00 UTC",
-			"number": 2.4
+			"annihilation": "The difference between the timestamp of blocks #460801 and #662401 is over 1219680000, or the total Validator+Nominator stake averages under 10% of total issuance.",
+			"gradeDate": "09.11.2020 - 12:00 UTC",
+			"number": 3.4
 		},
 		{
 			"title": "Managing the Working Groups",
 			"description": "Ensuring a high quality of service delivered by the Working Groups is a key part of the Councils workload.",
-			"reward": "150",
+			"reward": "100",
 			"measurementPeriod": "14 days",
-			"startDate": "09.10.2020 ~18:25 UTC - #259201",
+			"startDate": "23.10.2020 ~23:20 UTC - #460801",
 			"successEvents": [
 				"New budgets are set for each group, taking the 'Recurring Replenishment', platform inflation and the costs for each role into account.",
-				"The Council perform spotchecks, and reports the results."
+				"The Council perform spotchecks of working groups performance, and reports the results."
 			],
 			"annihilation": "Fewer than two Curators and three Storage Providers (Leads included) are operating at the end of the measurement period.",
-			"gradeDate": "26.10.2020 - 12:00 UTC",
-			"number": 2.5
+			"gradeDate": "09.11.2020 - 12:00 UTC",
+			"number": 3.5
 		},
 		{
 			"title": "Managing Community Bounties",
 			"description": "Managing Community Bounties will be a growing part of the Councils workload. Establishing good workflows for this will be iterative and situational.",
 			"reward": "250",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "09.10.2020 ~18:25 UTC - #259201",
+			"startDate": "23.10.2020 ~23:20 UTC - #460801",
 			"successEvents": [
 				"An overview and explanation of the the Community Bounty system is produced for the Community Repo",
 				"Community Bounty #1 - 'Update Telegram Bot', is submitted within the Council Term.",
@@ -82,20 +82,20 @@
 				"Community Bounty #3 - 'Improve Telegram Bot(s), is assigned within the Council Term.",
 				"The Council presents a list of potential Bounties they think would be of value for the project"
 			],
-			"annihilation": "Unlike standard `annihilations`, any rewards paid for a Bounty that exceeds what Jsgenesis pays will be deducted from the Councils KPI rewards.",
-			"gradeDate": "26.10.2020 - 12:00 UTC",
-			"number": 2.6
+			"annihilation": "Unlike standard `annihilations`, any rewards paid for a Bounty that exceeds what Jsgenesis pays will be deducted from the Councils KPI rewards. Failure to submit a bot that satisfies success event 1 of bounty with id 1 will also lead to annihilation.",
+			"gradeDate": "09.11.2020 - 12:00 UTC",
+			"number": 3.6
 		}
 	],
 	"Bounties": [{
 			"title": "Update Telegram Bot",
 			"description": "As the old bot is not compatible with the new '@joystream-types', it needs to fixed as soon as possible. Full details can be found <a href='https://github.com/Joystream/community-repo/issues/23'>here</a>. Note that the bounty has been updated.",
-			"reward": "200 (max)",
+			"reward": "300 (max)",
 			"published": "22.09.2020",
 			"successEvents": [
-				"The existing bot is upgraded to function with the new types - 100",
-				"The bot is re-written in typescript - 50",
-				"The 'bug' associated with the finalization of Proposals are fixed - 50"
+				"The existing bot is upgraded to function with the new types - 150",
+				"The bot is re-written in typescript - 75",
+				"The 'bug' associated with the finalization of Proposals are fixed - 75"
 			],
 			"annihilation": "The bot contains malicious code.",
 			"conditions": [
@@ -106,7 +106,7 @@
 			"reviewPeriod": "72 hours from the time the Council submits the Bounty to Jsgenesis.",
 			"id": 1,
 			"status": "Open",
-			"deadline": "20.10.2020 - 00:00 UTC. The reward drops by USD 10 for each day after that."
+			"deadline": "01.11.2020 - 00:00 UTC. If not submitted by this time, Jsgenesis will produce a bot."
 		},
 		{
 			"title": "Research and Testing of 'polkadot-js extension'",

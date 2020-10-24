@@ -8,6 +8,7 @@ import spartaImage from '../../assets/images/sparta.png';
 import romeImage from '../../assets/images/rome.png';
 import constantinopleImage from '../../assets/images/constantinople.png';
 import alexandriaImage from '../../assets/images/alexandria.png';
+import babylonImage from '../../assets/images/babylon.png';
 import { ReactComponent as PointerImage } from '../../assets/svg/pointer.svg';
 
 import { mapPropTypes } from '../../propTypes';
@@ -29,6 +30,7 @@ const maps = {
   rome: romeImage,
   constantinople: constantinopleImage,
   alexandria: alexandriaImage,
+  babylon: babylonImage,
 };
 
 const Map = ({ location, className, ...props }) => {

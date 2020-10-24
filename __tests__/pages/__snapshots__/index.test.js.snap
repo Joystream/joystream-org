@@ -156,9 +156,29 @@ exports[`IndexPage page renders correctly 1`] = `
       secondary={true}
       to={null}
     >
-      Participate and Earn Monero
+      Participate and Earn BCH
     </Button>
   </Analytics>
+  <LayoutWrapper
+    className=""
+    dark={false}
+    gradient={false}
+  >
+    <TestnetItem
+      button={
+        Object {
+          "label": "Explore Babylon",
+          "to": "/babylon",
+        }
+      }
+      className=""
+      date="2020/11/30 10:00"
+      image="icon-mock"
+      title="Babylon Testnet"
+    >
+      Babylon is our eighth testnet, focused on improvements to media publishing and consumption on the platform.
+    </TestnetItem>
+  </LayoutWrapper>
   <LayoutWrapper
     className=""
     dark={true}
