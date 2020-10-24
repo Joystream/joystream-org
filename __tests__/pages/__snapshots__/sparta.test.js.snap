@@ -30,7 +30,7 @@ exports[`SpartaPage page renders correctly 1`] = `
     <p
       className="SpartaPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Monero in the process.
+      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Bitcoin Cash in the process.
     </p>
     <HeroCard
       content="

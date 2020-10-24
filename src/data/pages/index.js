@@ -28,7 +28,7 @@ export const sharedData = {
   },
   rolesDescription: (
     <>
-      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Monero
+      Explore available roles and pick the one that suits you best. Influence the platform's development and earn Bitcoin Cash
       in the process.
     </>
   ),

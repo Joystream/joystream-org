@@ -90,7 +90,7 @@ const IndexPage = ({ content }) => (
 
     <Analytics title="Testnet Metrics" large content={mapStatusDataToAnalytics(content)}>
       <Button secondary href={activeTestnet.incentivesLink}>
-        Participate and Earn Monero
+        Participate and Earn BCH
       </Button>
     </Analytics>
 
