@@ -85,10 +85,10 @@ const TokensPage = () => {
         </ImageSection>
 
         <div className="ActionCard">
-          <h2 className="ActionCard__title">Token Aquisition</h2>
+          <h2 className="ActionCard__title">Token Acquisition</h2>
           <p className="ActionCard__content">
             The JOY token does not yet exist. In the meantime however, you can join our currently active testnet and
-            earn Monero, and learn what is required to participate when we are live.
+            earn real money, while learning what is required to participate when we are live on mainnet.
           </p>
           <Button light href="https://testnet.joystream.org">
             Join the current testnet
