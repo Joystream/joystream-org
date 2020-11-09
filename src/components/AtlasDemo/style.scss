@@ -1,0 +1,260 @@
+@import '../../styles/_main.scss';
+
+.AtlasDemo {
+  width: 100%;
+  padding-top: 3rem;
+  background-color: $c_black;
+
+  & + div {
+    padding-top: 5rem;
+  }
+
+  &__container {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    color: $c_white;
+    text-align: center;
+  }
+
+  &__title--focused {
+    opacity: 0;
+    animation: fadeout 1s;
+  }
+
+  &__paragraph {
+    width: 50%;
+    margin: 3rem 0 2rem 0;
+    font-size: 1.5rem;
+    color: $c_oslo-gray;
+    text-align: center;
+  }
+
+  &__buttons {
+    & button {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+  }
+
+  &__announcement {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 21.5rem;
+    margin-bottom: -5rem;
+    background-color: $c_blue-ribbon;
+    transform: translateY(5rem);
+
+    & > img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 5rem;
+      height: 12rem;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    &__info {
+      margin: 0 0 2rem 3rem;
+      font-size: 1rem;
+      color: white;
+    }
+
+    &__form {
+      width: 38%;
+      margin-left: 3rem;
+
+      & > input {
+        width: 70%;
+        height: 3.5rem;
+        padding-left: 1.5rem;
+        font-size: .8rem;
+        color: white;
+        background-color: $c_han_purple;
+        border: none;
+        box-shadow: 0 0 0 .01rem white;
+      }
+
+      & > input::placeholder {
+        color: white;
+      }
+
+      & > button {
+        width: 30%;
+        height: 3.6rem;
+        font-size: 1rem;
+        color: $c_blue-ribbon;
+        cursor: pointer;
+        background-color: white;
+        border: none;
+      }
+
+      & > button:hover {
+        background-color: $c_mercury;
+      }
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__announcement {
+      & > img {
+        height: 9rem;
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      & > button {
+        width: 49%;
+        margin: 0;
+      }
+    }
+
+    &__paragraph {
+      width: 80%;
+      margin-top: 2rem;
+    }
+
+    &__announcement {
+      height: 16rem;
+      margin-bottom: -4rem;
+      transform: translateY(3rem);
+
+      & > img {
+        left: 7%;
+        height: 7rem;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__title--focused {
+      opacity: 1;
+      animation: none;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      justify-content: space-between;
+
+      & > button {
+        width: 100%;
+        margin: .5rem 0;
+      }
+    }
+
+    &__paragraph {
+      margin-top: 0;
+    }
+
+    &__announcement {
+      height: 19rem;
+      transform: translateY(4.5rem);
+
+      &__form {
+        width: 70%;
+        margin: 0;
+      }
+
+      &__info {
+        margin: 7.5rem 0 1.5rem 0;
+      }
+
+      & > img {
+        top: 1.7rem;
+        right: 0;
+        bottom: auto;
+        left: 0;
+        height: 6rem;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    padding-top: 1rem;
+
+    &__paragraph {
+      width: 95%;
+      font-size: 1.2rem;
+    }
+
+    &__buttons {
+      & > button {
+        padding: 0;
+      }
+    }
+
+    &__announcement {
+      height: 17rem;
+
+      &__form {
+        width: 90%;
+
+        & > button {
+          font-size: .8rem;
+        }
+      }
+
+      &__info {
+        margin-top: 6rem 0 1rem 0;
+        padding: 0 1rem;
+        text-align: center;
+      }
+
+      & > img {
+        top: 1.3rem;
+        height: 5rem;
+      }
+    }
+  }
+
+  /* stylelint-disable */
+
+  @keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeintohalf {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: .5;
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
