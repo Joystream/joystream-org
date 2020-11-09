@@ -65,6 +65,7 @@ exports[`IndexPage page renders correctly 1`] = `
       </Button>
     </div>
   </Hero>
+  <AtlasDemo />
   <LayoutWrapper
     className=""
     dark={false}

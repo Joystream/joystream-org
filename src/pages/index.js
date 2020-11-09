@@ -19,6 +19,7 @@ import ColumnsLayout from '../components/ColumnsLayout';
 import LayoutWrapper from '../components/LayoutWrapper';
 import Hero from '../components/Hero';
 import SiteMetadata from '../components/SiteMetadata';
+import AtlasDemo from '../components/AtlasDemo';
 
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
 import heroImage from '../assets/svg/hero-builder.svg';
@@ -73,6 +74,8 @@ const IndexPage = ({ content }) => (
         </Button>
       </div>
     </Hero>
+
+    <AtlasDemo />
 
     <LayoutWrapper>
       <TestnetItem

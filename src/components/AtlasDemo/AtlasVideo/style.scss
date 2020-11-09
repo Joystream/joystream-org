@@ -1,0 +1,94 @@
+@import '../../../styles/_main';
+
+.AtlasDemo__video {
+  position: relative;
+  width: 65%;
+  margin: 5rem 0;
+  cursor: pointer;
+  transition: transform 1.2s ease-out;
+
+  &:hover,
+  &--focused {
+    transform: scale(1.4);
+  }
+
+  &__thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/images/thumbnail-atlas.png');
+    background-position: center;
+    background-size: cover;
+    border: .25rem solid $c_blue-ribbon;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: black;
+    opacity: .5;
+    animation: fadeintohalf 1s;
+  }
+
+  & > video {
+    width: 100%;
+    height: 100%;
+    border: .25rem solid $c_blue-ribbon;
+  }
+
+  &__playbutton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 3rem;
+    margin: auto;
+    visibility: hidden;
+  }
+
+  &__playbutton--hovered {
+    visibility: visible;
+    animation: fadein 1.5s;
+  }
+
+  &__atlasbutton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 300;
+    height: 4rem;
+    margin: auto;
+    animation: fadein 1s;
+  }
+
+  @media #{$screen-max-sm} {
+    width: 100%;
+    margin: 3rem 0;
+
+    &:hover,
+    &--focused {
+      transform: scale(1);
+    }
+
+    &__atlasbutton {
+      width: 10rem;
+      padding: 0;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__atlasbutton {
+      width: 6rem;
+      height: 3rem;
+      font-size: .8rem;
+    }
+  }
+}
