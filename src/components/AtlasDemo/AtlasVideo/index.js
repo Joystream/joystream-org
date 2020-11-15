@@ -132,6 +132,8 @@ const AtlasVideo = () => {
             videoRef.current.pause();
             videoRef.current.currentTime = 0;
           }}
+          onCanPlayThrough={() => setVideoIsLoading(false)}
+          onWaiting={() => setVideoIsLoading(true)}
           ref={videoRef}
           muted="muted"
         >
