@@ -2,14 +2,69 @@
 
 .AtlasDemo__video {
   position: relative;
-  width: 65%;
+  width: 52.8rem;
+  height: 33rem;
   margin: 5rem 0;
   cursor: pointer;
-  transition: transform 1.2s ease-out;
+  box-sizing: border-box;
+  transition: all 2s;
 
   &:hover,
   &--focused {
-    transform: scale(1.4);
+    width: 47.45rem;
+    transform: scale(1.5);
+  }
+
+  .absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__logo-wrapper {
+    @extend .absolute;
+
+    z-index: 3;
+    background-color: black;
+    opacity: 0;
+    animation: fadeinandout 3s;
+    animation-fill-mode: forwards;
+  }
+
+  &__logo {
+    @extend .absolute;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeinandleavetop 2.5s;
+    animation-fill-mode: forwards;
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: $c_light-gray;
+      text-align: center;
+    }
+
+    svg {
+      height: 4rem;
+      color: $c_blue-ribbon;
+    }
+  }
+
+  &__overlay {
+    @extend .absolute;
+
+    z-index: 1;
+    background-color: black;
+    outline: .25rem solid $c_blue-ribbon;
+    outline-offset: -.1rem;
+    opacity: .7;
+    animation: fadeintohalf 1s;
   }
 
   &__thumbnail {
@@ -17,78 +72,242 @@
     width: 100%;
     height: 100%;
     background-image: url('../../../assets/images/thumbnail-atlas.png');
-    background-position: center;
-    background-size: cover;
-    border: .25rem solid $c_blue-ribbon;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
+    outline: .15rem solid $c_blue-ribbon;
+    transition: all 2s;
   }
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    background-color: black;
-    opacity: .5;
-    animation: fadeintohalf 1s;
+  &__thumbnail--hovered {
+    background-size: 100% 100%;
+    outline: .25rem solid $c_blue-ribbon;
+    outline-offset: -.1rem;
+  }
+
+  &__thumbnail--disappeared {
+    opacity: 0;
+  }
+
+  &__loader {
+    @extend .absolute;
+
+    width: 20%;
+    height: 20%;
+    margin: auto;
+    animation: fadein 2s;
+
+    circle {
+      stroke: #8583bf;
+      stroke-opacity: 1;
+    }
   }
 
   & > video {
     width: 100%;
     height: 100%;
-    border: .25rem solid $c_blue-ribbon;
+    background-color: black;
+    outline: .25rem solid $c_blue-ribbon;
+    outline-offset: -.1rem;
+    box-sizing: border-box;
   }
 
   &__playbutton {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 3rem;
+    @extend .absolute;
+
+    height: 6rem;
     margin: auto;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s, bottom 1.5s, transform 1s;
+    transition: all 1.5s;
   }
 
   &__playbutton--hovered {
-    visibility: visible;
-    animation: fadein 1.5s;
+    bottom: 0;
+    opacity: 1;
+  }
+
+  &__playbutton--playing {
+    bottom: 0;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: center;
   }
 
   &__atlasbutton {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 300;
+    @extend .absolute;
+
+    z-index: 2;
     height: 4rem;
     margin: auto;
-    animation: fadein 1s;
+    opacity: 0;
+    transform: scale(.606);
+    animation: slidefrombottom 1.5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
   }
 
-  @media #{$screen-max-sm} {
-    width: 100%;
+  @media #{$screen-max-lg} {
+    width: 41.6rem;
+    height: 26rem;
+
+    &:hover,
+    &--focused {
+      width: 37.44rem;
+      transform: scale(1.5);
+    }
+  }
+
+  @media #{$screen-max-md} {
+    width: 37.44rem;
+    height: 26rem;
     margin: 3rem 0;
 
     &:hover,
     &--focused {
+      width: 37.44rem;
       transform: scale(1);
     }
 
     &__atlasbutton {
-      width: 10rem;
+      width: 15rem;
+      height: 5rem;
       padding: 0;
-      font-size: 1rem;
+      font-size: 1.4rem;
+    }
+
+    &__overlay {
+      outline: .15rem solid $c_blue-ribbon;
+    }
+
+    &__thumbnail {
+      background-size: 100% 100%;
+      outline: .15rem solid $c_blue-ribbon;
+      outline-offset: -.1rem;
+    }
+
+    &__thumbnail--hovered {
+      outline: .15rem solid $c_blue-ribbon;
+    }
+
+    & > video {
+      outline: .15rem solid $c_blue-ribbon;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    width: 30.24rem;
+    height: 21rem;
+
+    &:hover,
+    &--focused {
+      width: 30.24rem;
+    }
+
+    &__logo {
+      p {
+        font-size: 1rem;
+      }
+
+      svg {
+        height: 3rem;
+      }
+    }
+
+    &__playbutton {
+      height: 5rem;
     }
   }
 
   @media (max-width: 550px) {
-    &__atlasbutton {
-      width: 6rem;
-      height: 3rem;
-      font-size: .8rem;
+    width: 21.6rem;
+    height: 15rem;
+
+    &:hover,
+    &--focused {
+      width: 21.6rem;
     }
+
+    &__playbutton {
+      height: 4rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    width: 17.28rem;
+    height: 12rem;
+
+    &:hover,
+    &--focused {
+      width: 17.28rem;
+    }
+  }
+}
+
+@keyframes slidefrombottom {
+  from {
+    top: 35%;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeintohalf {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: .7;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinandleavetop {
+  0% {
+    opacity: 0;
+  }
+
+  75% {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  100% {
+    bottom: 8rem;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeinandout {
+  0% {
+    opacity: 0;
+  }
+
+  25%,
+  80% {
+    opacity: 1;
+  }
+
+  99% {
+    z-index: 2;
+    opacity: 0;
+  }
+
+  100% {
+    z-index: 0;
   }
 }
