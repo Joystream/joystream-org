@@ -1,18 +1,23 @@
 @import '../../../styles/_main';
 
+$outline-regular: .35rem solid $c_blue-ribbon;
+$outline-hovered: .26rem solid $c_blue-ribbon;
+
 .AtlasDemo__video {
   position: relative;
-  width: 52.8rem;
-  height: 33rem;
-  margin: 5rem 0;
+  width: 88rem;
+  height: 52.8rem;
+  margin: 2rem 0;
   cursor: pointer;
+  transform: scale(.625);
   box-sizing: border-box;
   transition: all 2s;
 
   &:hover,
   &--focused {
-    width: 47.45rem;
-    transform: scale(1.5);
+    width: 76rem;
+    height: 52.8rem;
+    transform: scale(1);
   }
 
   .absolute {
@@ -28,6 +33,8 @@
 
     z-index: 3;
     background-color: black;
+    outline: $outline-hovered;
+    outline-offset: -.1rem;
     opacity: 0;
     animation: fadeinandout 3s;
     animation-fill-mode: forwards;
@@ -45,13 +52,13 @@
 
     p {
       margin-bottom: 1rem;
-      font-size: 1rem;
+      font-size: 1.6rem;
       color: $c_light-gray;
       text-align: center;
     }
 
     svg {
-      height: 4rem;
+      height: 6.4rem;
       color: $c_blue-ribbon;
     }
   }
@@ -59,9 +66,9 @@
   &__overlay {
     @extend .absolute;
 
-    z-index: 1;
+    z-index: 2;
     background-color: black;
-    outline: .25rem solid $c_blue-ribbon;
+    outline: $outline-hovered;
     outline-offset: -.1rem;
     opacity: .7;
     animation: fadeintohalf 1s;
@@ -69,19 +76,19 @@
 
   &__thumbnail {
     position: absolute;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    background-image: url('../../../assets/images/thumbnail-atlas.png');
     background-position: top left;
     background-repeat: no-repeat;
-    background-size: 100% 110%;
-    outline: .15rem solid $c_blue-ribbon;
+    background-size: 100% 115%;
+    outline: $outline-regular;
     transition: all 2s;
   }
 
   &__thumbnail--hovered {
     background-size: 100% 100%;
-    outline: .25rem solid $c_blue-ribbon;
+    outline: $outline-hovered;
     outline-offset: -.1rem;
   }
 
@@ -92,6 +99,7 @@
   &__loader {
     @extend .absolute;
 
+    z-index: 2;
     width: 20%;
     height: 20%;
     margin: auto;
@@ -103,19 +111,29 @@
     }
   }
 
+  &__hide {
+    @extend .absolute;
+
+    background-color: black;
+  }
+
   & > video {
     width: 100%;
     height: 100%;
     background-color: black;
-    outline: .25rem solid $c_blue-ribbon;
+    outline: $outline-hovered;
     outline-offset: -.1rem;
     box-sizing: border-box;
   }
 
   &__playbutton {
-    @extend .absolute;
-
-    height: 6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 3rem;
+    left: 0;
+    z-index: 2;
+    height: 9rem;
     margin: auto;
     opacity: 0;
     transition: opacity 1.5s, bottom 1.5s, transform 1s;
@@ -138,23 +156,38 @@
     @extend .absolute;
 
     z-index: 2;
+    width: 12rem;
     height: 4rem;
     margin: auto;
     opacity: 0;
-    transform: scale(.606);
     animation: slidefrombottom 1.5s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
   }
 
-  @media #{$screen-max-lg} {
-    width: 41.6rem;
-    height: 26rem;
+  @media (max-width: 1250px) {
+    width: 80rem;
+    height: 48rem;
 
     &:hover,
     &--focused {
-      width: 37.44rem;
-      transform: scale(1.5);
+      width: 69.1rem;
+      height: 48rem;
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    width: 64.84rem;
+    height: 38.8rem;
+
+    &:hover,
+    &--focused {
+      width: 56rem;
+      height: 38.8rem;
+    }
+
+    &__playbutton {
+      height: 7rem;
     }
   }
 
@@ -162,21 +195,24 @@
     width: 37.44rem;
     height: 26rem;
     margin: 3rem 0;
+    transform: scale(1);
 
     &:hover,
     &--focused {
       width: 37.44rem;
-      transform: scale(1);
+      height: 26rem;
     }
 
     &__atlasbutton {
-      width: 15rem;
-      height: 5rem;
+      width: 10rem;
+      height: 3rem;
       padding: 0;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
-    &__overlay {
+    &__overlay,
+    & > video,
+    &__thumbnail--hovered {
       outline: .15rem solid $c_blue-ribbon;
     }
 
@@ -186,12 +222,18 @@
       outline-offset: -.1rem;
     }
 
-    &__thumbnail--hovered {
-      outline: .15rem solid $c_blue-ribbon;
-    }
+    &__logo {
+      p {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: $c_light-gray;
+        text-align: center;
+      }
 
-    & > video {
-      outline: .15rem solid $c_blue-ribbon;
+      svg {
+        height: 4rem;
+        color: $c_blue-ribbon;
+      }
     }
   }
 
@@ -202,6 +244,7 @@
     &:hover,
     &--focused {
       width: 30.24rem;
+      height: 21rem;
     }
 
     &__logo {
@@ -226,6 +269,7 @@
     &:hover,
     &--focused {
       width: 21.6rem;
+      height: 15rem;
     }
 
     &__playbutton {
@@ -240,6 +284,17 @@
     &:hover,
     &--focused {
       width: 17.28rem;
+      height: 12rem;
+    }
+
+    &__logo {
+      p {
+        font-size: .7rem;
+      }
+
+      svg {
+        height: 2rem;
+      }
     }
   }
 }
@@ -303,7 +358,7 @@
   }
 
   99% {
-    z-index: 2;
+    z-index: 3;
     opacity: 0;
   }
 

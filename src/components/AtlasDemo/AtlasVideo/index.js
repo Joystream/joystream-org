@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './style.scss';
 import Play from '../../../assets/svg/atlas-demo-play.svg';
 import AtlasDemoVideo from '../../../assets/videos/AtlasDemo.mp4';
@@ -6,6 +6,7 @@ import cn from 'classnames';
 import Button from '../../Button';
 import Loader from 'react-loader-spinner';
 import { ReactComponent as Logo } from '../../../assets/svg/logo-white.svg';
+import AtlasThumbnail from '../../../assets/images/thumbnail-atlas.png';
 
 const AtlasVideo = () => {
   const videoRef = useRef();
@@ -15,6 +16,7 @@ const AtlasVideo = () => {
   const [videoIsLoading, setVideoIsLoading] = useState();
   const [videoIsFocused, setVideoIsFocused] = useState(false);
   const [videoHasEnded, setVideoHasEnded] = useState(false);
+  const [imageIsLoading, setImageIsLoading] = useState(true);
 
   const handlePlayVideo = () => {
     if (videoIsPlaying) {
@@ -29,48 +31,59 @@ const AtlasVideo = () => {
     }
   };
 
+  useEffect(() => {
+    // Since there are no events that we can listen to for background-image, we have to implement the load ourselves.
+    // This preloads the image and in the meantime we can show a loader.
+
+    let thumbnail = document.querySelector('.AtlasDemo__video__thumbnail');
+    let preloaderImg = document.createElement('img');
+    thumbnail.classList.add('AtlasDemo__video__thumbnail--disappeared');
+    // preloaderImg.src = 'https://source.unsplash.com/user/erondu/7680x4320';
+    preloaderImg.src = AtlasThumbnail;
+
+    preloaderImg.addEventListener('load', event => {
+      thumbnail.classList.remove('AtlasDemo__video__thumbnail--disappeared');
+      // thumbnail.style.backgroundImage = `url(${'https://source.unsplash.com/user/erondu/7680x4320'})`;
+      thumbnail.style.backgroundImage = `url(${AtlasThumbnail})`;
+      setImageIsLoading(false);
+      preloaderImg = null;
+    });
+
+    // Similarly to background-image, we need to implement a loader until the whole video been loaded.
+    // This is not intended to be possible and therefore we use this workaround.
+
+    let video = document.querySelector('video');
+
+    setVideoIsLoading(true);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', AtlasDemoVideo, true);
+    xhr.responseType = 'arraybuffer';
+
+    xhr.onload = function(oEvent) {
+      var blob = new Blob([oEvent.target.response], { type: 'video/mp4' });
+      console.log(blob);
+      video.src = URL.createObjectURL(blob);
+
+      setVideoIsLoading(false);
+    };
+
+    xhr.send();
+  }, []);
+
   return (
     <>
       <h2 className={cn('AtlasDemo__title', { 'AtlasDemo__title--focused': videoIsHovered })}> Try It Out</h2>
       <div
         className={cn('AtlasDemo__video', { 'AtlasDemo__video--focused': videoIsFocused })}
-        onMouseEnter={() => {
-          setVideoIsHovered(true);
-        }}
+        onMouseEnter={() => setVideoIsHovered(true)}
         onMouseLeave={() => {
           if (!videoIsFocused) {
             setVideoIsHovered(false);
-            videoRef.current.pause();
           }
         }}
       >
-        {videoHasEnded && (
-          <div className="AtlasDemo__video__logo-wrapper">
-            <div className="AtlasDemo__video__logo">
-              <p>brought to you by</p>
-              <Logo />
-            </div>
-          </div>
-        )}
-        {videoHasEnded && (
-          <div
-            role="presentation"
-            className="AtlasDemo__video__overlay"
-            onClick={() => {
-              setVideoHasEnded(false);
-              setVideoIsFocused(false);
-            }}
-          ></div>
-        )}
-        <div
-          role="presentation"
-          className={cn('AtlasDemo__video__thumbnail', {
-            'AtlasDemo__video__thumbnail--hovered': videoIsHovered,
-            'AtlasDemo__video__thumbnail--disappeared': videoIsPlaying,
-          })}
-          onClick={() => handlePlayVideo()}
-        ></div>
-        {videoIsFocused && videoIsLoading && (
+        {(imageIsLoading || videoIsLoading) && (
           <Loader
             className="AtlasDemo__video__loader"
             type="Oval"
@@ -80,33 +93,72 @@ const AtlasVideo = () => {
             timeout={0}
           />
         )}
+        {videoHasEnded && (
+          <>
+            <div className="AtlasDemo__video__logo-wrapper">
+              <div className="AtlasDemo__video__logo">
+                <p>brought to you by</p>
+                <Logo />
+              </div>
+            </div>
+            <div
+              role="presentation"
+              className="AtlasDemo__video__overlay"
+              onClick={() => {
+                setVideoHasEnded(false);
+                setVideoIsFocused(false);
+              }}
+            ></div>
+          </>
+        )}
+        <div
+          role="presentation"
+          className={cn('AtlasDemo__video__thumbnail', {
+            'AtlasDemo__video__thumbnail--hovered': videoIsHovered,
+            'AtlasDemo__video__thumbnail--disappeared': videoIsPlaying,
+          })}
+          onClick={() => {
+            if (!imageIsLoading && !videoIsLoading) {
+              handlePlayVideo();
+            }
+          }}
+        ></div>
+        {videoIsLoading && <div className="AtlasDemo__video__hide"></div>}
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <video
-          preload="none"
-          onClick={() => handlePlayVideo()}
+          onClick={() => {
+            if (!imageIsLoading && !videoIsLoading) {
+              handlePlayVideo();
+            }
+          }}
           onEnded={() => {
             setVideoHasEnded(true);
             setVideoIsPlaying(false);
             videoRef.current.pause();
             videoRef.current.currentTime = 0;
           }}
-          onCanPlayThrough={() => setVideoIsLoading(false)}
-          onWaiting={() => setVideoIsLoading(true)}
           ref={videoRef}
+          muted="muted"
         >
-          <source src={AtlasDemoVideo} type="video/mp4" />
+          {/* <source type="video/mp4" /> */}
         </video>
-        <img
-          role="presentation"
-          onClick={() => handlePlayVideo()}
-          className={cn('AtlasDemo__video__playbutton', {
-            'AtlasDemo__video__playbutton--hovered': !videoHasEnded && !videoIsPlaying && videoIsHovered,
-            'AtlasDemo__video__playbutton--playing': videoIsPlaying,
-          })}
-          src={Play}
-          alt="Play button"
-        />
-        {videoHasEnded && <Button className="AtlasDemo__video__atlasbutton">Go to Atlas</Button>}
+        {!imageIsLoading && !videoIsLoading && (
+          <img
+            role="presentation"
+            onClick={() => handlePlayVideo()}
+            className={cn('AtlasDemo__video__playbutton', {
+              'AtlasDemo__video__playbutton--hovered': !videoHasEnded && !videoIsPlaying && videoIsHovered,
+              'AtlasDemo__video__playbutton--playing': videoIsPlaying,
+            })}
+            src={Play}
+            alt="Play button"
+          />
+        )}
+        {videoHasEnded && (
+          <Button href="https://testnet.joystream.org/#/media" className="AtlasDemo__video__atlasbutton">
+            Try It Out
+          </Button>
+        )}
       </div>
     </>
   );
