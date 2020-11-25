@@ -43,7 +43,7 @@
     transition-delay: .5s;
   }
 
-  &__title--focused {
+  &__title--hidden {
     opacity: 0;
     transition-delay: 0s;
   }
@@ -72,7 +72,7 @@
       display: none;
     }
 
-    &__title--focused {
+    &__title--hidden {
       opacity: 1;
       animation: none;
     }
