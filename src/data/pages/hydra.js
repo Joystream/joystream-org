@@ -175,7 +175,7 @@ export default {
         name: 'Documentation',
         icon: DocumentIcon,
         link: {
-          to: 'https://app.gitbook.com/@dzhelezov/s/hydra-docs/v/query_node_spec/query-node/docs',
+          to: 'https://app.gitbook.com/@dzhelezov/s/hydra-docs/',
           as: 'Documentation',
         },
       },
@@ -183,7 +183,7 @@ export default {
         name: 'Github Repository',
         icon: GithubIcon,
         link: {
-          to: 'https://github.com/Joystream/joystream/tree/query_node/query-node/substrate-query-framework/cli',
+          to: 'https://github.com/Joystream/hydra',
           as: 'Github repo',
         },
       },
@@ -191,7 +191,7 @@ export default {
         name: 'Kusama Playground',
         icon: PlaygroundIcon,
         link: {
-          to: 'https://hakusama.joystream.app/graphql',
+          to: 'https://indexer-kusama.joystream.app/graphql',
           as: 'Go to the Playground',
         },
       },
