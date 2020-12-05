@@ -48,7 +48,7 @@
 			"measurementPeriod": "14 days (Full Council Term)",
 			"successEvents": [
 				"The difference between the timestamp of blocks #1065601 and #1267201 must be less than 1229760000 (avg 6.1s/block).",
-				"The total Validator+Nominator stake averages between 20% and 30% of total issuance.",
+				"The total Validator+Nominator stake averages between 20% and 30% of total issuance."
 			],
 			"annihilation": "The difference between the timestamp of blocks #1065601 and #1267201 is over 1260000000 (avg 6.25s/block), or the total Validator+Nominator stake averages under 10% of total issuance.",
 			"gradeDate": "21.12.2020 - 18:00 UTC",
@@ -144,15 +144,15 @@
 			"published": "05.12.2020",
 			"successEvents": [
 				"Validators/Block Production - $75",
-        "Storage Providers - $100",
-        "Proposals - $50"
+				"Storage Providers - $100",
+				"Proposals - $50"
 			],
 			"annihilation": "If the Council submits a bot containing malicious code for review by Jsgenesis, the Council will be deducted the total amount requested for the Bounty.",
 			"conditions": [
-        "The source code is licensed under GPLv3",
+				"The source code is licensed under GPLv3",
 				"The bot builds on <a href='https://github.com/Joystream/community-repo/pull/36'>existing code</a>, in typescript",
-        "As soon as the Council approves the (final) spending proposal, a PR with all the source code is made to this Repo.",
-        "This includes complete, step by step, instructions for deploying the bot."
+				"As soon as the Council approves the (final) spending proposal, a PR with all the source code is made to this Repo.",
+				"This includes complete, step by step, instructions for deploying the bot."
 			],
 			"reviewPeriod": "7 days from the time the Council submits the Bounty to Jsgenesis.",
 			"id": 3,
@@ -165,11 +165,11 @@
 			"published": "05.12.2020",
 			"successEvents": [
 				"Provide details on how to create a sticker pack on Telegram - $100",
-        "Produce a sticker pack with at least 10 Joystream branded/related stickers - $300 (max)"
+				"Produce a sticker pack with at least 10 Joystream branded/related stickers - $300 (max)"
 			],
 			"annihilation": "Stickers contain artwork that violates any licenses or copyrights.",
 			"conditions": [
-        "Artwork is made available in the Community Repo",
+				"Artwork is made available in the Community Repo",
 				"Must be in good taste, and related to the project.",
 				"Grading for success event 2 will be highly subjective."
 			],
