@@ -175,7 +175,7 @@ export default {
         name: 'Documentation',
         icon: DocumentIcon,
         link: {
-          to: 'https://app.gitbook.com/@dzhelezov/s/hydra-docs/',
+          to: 'https://dzhelezov.gitbook.io/hydra/',
           as: 'Documentation',
         },
       },
