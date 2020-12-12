@@ -12,7 +12,7 @@ const AtlasDemo = () => {
         <img src={BackgroundRight} alt="" className="AtlasDemo__background-right"></img>
         <div className="AtlasDemo__container">
           <AtlasVideo />
-          <Button href="https://testnet.joystream.org/#/media"  className="AtlasDemo__try-out-button" secondary large >Try It Out</Button>
+          <Button href="https://play.joystream.org/"  className="AtlasDemo__try-out-button" secondary large >Try It Out</Button>
         </div>
       </div>
     );
