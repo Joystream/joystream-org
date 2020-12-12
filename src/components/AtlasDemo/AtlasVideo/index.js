@@ -149,7 +149,7 @@ const AtlasVideo = () => {
           />
         )}
         {videoHasEnded && (
-          <Button href="https://testnet.joystream.org/#/media" className="AtlasDemo__video__atlasbutton">
+          <Button href="https://play.joystream.org/" className="AtlasDemo__video__atlasbutton">
             Try It Out
           </Button>
         )}
