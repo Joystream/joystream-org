@@ -62,7 +62,7 @@
 			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
 			"successEvents": [
 				"New budgets are set for each group, taking the 'Recurring Replenishment', platform inflation and the costs for each role into account.",
-				"As the 'old' Curators will still be paid (assuming there are tokens in the mint), the Council must ensure that the mint is empty before block #1290000",
+				"As the 'old' Curators will still be paid (assuming there are tokens in the mint), the Council must ensure that the mint is empty before block #1292500",
 				"In addition, remove 'old' Curators from their job. This cannot by done through the Proposal system AFTER the upgrade.",
 				"After the upgrade, the Storage Providers must upgrade their storage nodes in order to still function.",
 				"Hire a new Curator Lead."
