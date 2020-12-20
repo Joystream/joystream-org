@@ -4,98 +4,87 @@
 			"description": "For the governance process to function properly, all proposals must be processed effectively, and in a reasonable time frame to avoiding blocking new proposals coming in.",
 			"reward": "0",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "05.12.2020 ~18:00 UTC - #1065601",
+			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
 			"successEvents": [
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h).",
 				"No malicious or unreasonable proposals are approved."
 			],
 			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards, and a new Council Election will be started immediately.",
-			"gradeDate": "21.12.2020 - 18:00 UTC",
-			"number": 6.1
+			"gradeDate": "05.01.2021 - 18:00 UTC",
+			"number": 7.1
 		},
 		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. For each Term the Council must produce a report of 'events' and 'Tokenomics' to allow users to make informed votes. This must be submitted as a PR to the Community Repo.",
 			"reward": "0",
 			"measurementPeriod": "16 days",
-			"startDate": "05.12.2020 ~18:00 UTC - #1065601",
+			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
 			"successEvents": [
-				"The fifth Council on Alexandria (#1065601-#1267201) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
+				"The fifth Council on Alexandria (#1267201-#1468801) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
 			],
 			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards.",
-			"gradeDate": "21.12.2020 - 18:00 UTC",
-			"number": 6.2
+			"gradeDate": "05.01.2021 - 18:00 UTC",
+			"number": 7.2
 		},
 		{
 			"title": "Appoint New Council Secretary",
 			"description": "The Council must appoint one of their own as the Council Secretary, responsible for adding Council Reports and representing the Council in the Community Repo (with some enhanced repository maintenance privileges).",
 			"reward": "50",
 			"measurementPeriod": "5 days",
-			"startDate": "05.12.2020 ~18:00 UTC - #1065601",
+			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
 			"successEvents": [
 				"The Council informally appoints a Council Secretary through a spending proposal and pays them an appropriate rate for their responsibilities.",
 				"The spending proposal must provide a link to the Council Secretary's GitHub account so we can provide them 'triage' permissions on the community repo."
 			],
 			"annihilation": "No Council Secretary is appointed.",
-			"gradeDate": "21.12.2020 - 18:00 UTC",
-			"number": 6.3
+			"gradeDate": "05.01.2021 - 18:00 UTC",
+			"number": 7.3
 		},
 		{
 			"title": "Block Production",
 			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer.",
 			"reward": "50",
-			"startDate": "05.12.2020 ~18:00 UTC - #1065601",
+			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
 			"measurementPeriod": "14 days (Full Council Term)",
 			"successEvents": [
-				"The difference between the timestamp of blocks #1065601 and #1267201 must be less than 1229760000 (avg 6.1s/block).",
+				"The difference between the timestamp of blocks #1267201 and #1468801 must be less than 1229760000 (avg 6.1s/block).",
 				"The total Validator+Nominator stake averages between 20% and 30% of total issuance."
 			],
-			"annihilation": "The difference between the timestamp of blocks #1065601 and #1267201 is over 1260000000 (avg 6.25s/block), or the total Validator+Nominator stake averages under 10% of total issuance.",
-			"gradeDate": "21.12.2020 - 18:00 UTC",
-			"number": 6.4
+			"annihilation": "The difference between the timestamp of blocks #1267201 and #1468801 is over 1260000000 (avg 6.25s/block), or the total Validator+Nominator stake averages under 10% of total issuance.",
+			"gradeDate": "05.01.2021 - 18:00 UTC",
+			"number": 7.4
 		},
 		{
 			"title": "Managing the Working Groups",
-			"description": "Ensuring a high quality of service is delivered by the Working Groups is a key part of the Council's workload.",
-			"reward": "100",
-			"measurementPeriod": "14 days",
-			"startDate": "05.12.2020 ~18:00 UTC - #1065601",
+			"description": "In addition to the regular tasks, the runtime upgrade will require extra work in terms of management. In particular as the Curator Working Group module will be changed.",
+			"reward": "200",
+			"measurementPeriod": "7 days",
+			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
 			"successEvents": [
 				"New budgets are set for each group, taking the 'Recurring Replenishment', platform inflation and the costs for each role into account.",
-				"The Council perform spotchecks of working groups performance, and reports the results. More details are available by following the link above to 'Further details and KPI history'."
+				"As the 'old' Curators will still be paid (assuming there are tokens in the mint), the Council must ensure that the mint is empty before block #1290000",
+				"In addition, remove 'old' Curators from their job. This cannot by done through the Proposal system AFTER the upgrade.",
+				"After the upgrade, the Storage Providers must upgrade their storage nodes in order to still function.",
+				"Hire a new Curator Lead."
 			],
-			"annihilation": "Council and/or Jsgenesis spotchecks shows less than 3 SPs up and running at any point during the Term.",
-			"gradeDate": "21.12.2020 - 18:00 UTC",
-			"number": 6.5
-		},
-		{
-			"title": "Quality Content Sourcing",
-			"description": "With the new consumer app fast approaching, new quality content is desired. The Council needs to find a way to source more quality content for the platform.",
-			"reward": "100",
-			"measurementPeriod": "14 days",
-			"startDate": "05.12.2020 ~18:00 UTC - #1065601",
-			"successEvents": [
-				"The Council delivers a report, outlining how the Joystream can populate the content directory with quality content under sufficiently permissive licenses. Details in Community Repo issue 53.",
-				"The Council perform spotchecks of working groups' performance, and reports the results. More details are available by following the link above to 'Further details and KPI history'."
-			],
-			"annihilation": "NA",
-			"gradeDate": "21.12.2020 - 18:00 UTC",
-			"number": 6.6
+			"annihilation": "There are Storage Providers that haven't upgraded after block #1368001",
+			"gradeDate": "05.01.2021 - 18:00 UTC",
+			"number": 7.5
 		},
 		{
 			"title": "Managing Community Bounties",
 			"description": "Managing Community Bounties will be a growing part of the Council's workload. Establishing good workflows for this will be iterative and situational.",
 			"reward": "300",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "05.12.2020 ~18:00 UTC - #1065601",
+			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
 			"successEvents": [
 				"Community Bounty #2 - 'Research and Testing of `polkadot-js extension`', is submitted within the Council Term.",
 				"Success events 1-3 of Community Bounty #4 - 'Improve Telegram Bot(s)' (#3 re-issued) are submitted within the Council Term.",
-				"Council fulfills their scope of work for opening Community Bounty #5"
+				"Community Bounty #5 - 'Joystream Telegram Sticker pack', in line with the approved scheme outlined in proposal #69, has recieved at least one approved entry."
 			],
 			"annihilation": "Unlike standard `annihilations`, any rewards paid for a Bounty that exceeds what Jsgenesis pays will be deducted from the Council's KPI rewards.",
-			"gradeDate": "21.12.2020 - 18:00 UTC",
-			"number": 6.7
+			"gradeDate": "05.01.2021 - 18:00 UTC",
+			"number": 7.6
 		}
 	],
 	"Bounties": [{
