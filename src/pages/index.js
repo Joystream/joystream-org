@@ -19,6 +19,7 @@ import ColumnsLayout from '../components/ColumnsLayout';
 import LayoutWrapper from '../components/LayoutWrapper';
 import Hero from '../components/Hero';
 import SiteMetadata from '../components/SiteMetadata';
+import AtlasDemo from '../components/AtlasDemo';
 
 import AcropolisImage from '../assets/svg/acropolis-main.svg';
 import heroImage from '../assets/svg/hero-builder.svg';
@@ -35,7 +36,7 @@ import { launchDate as babylonNetworkLaunchDate } from '../data/pages/babylon';
 import './style.scss';
 
 const activeTestnet = {
-  name: 'Alexandria',
+  name: 'Babylon',
   incentivesLink: 'https://www.joystream.org/testnet',
 };
 
@@ -74,16 +75,18 @@ const IndexPage = ({ content }) => (
       </div>
     </Hero>
 
+    <AtlasDemo />
+
     <LayoutWrapper>
       <TestnetItem
-        title="Alexandria Testnet"
-        image={alexandriaImage}
+        title="Babylon Testnet"
+        image={babylonImage}
         children={
-          <>Alexandria is our seventh testnet, introducing a variety of important technical improvements.</>
+          <>Babylon is our eighth testnet, focused on improvements to media publishing and consumption on the platform.</>
         }
         button={{
-          label: 'Explore Alexandria',
-          to: '/alexandria',
+          label: 'Explore Babylon',
+          to: '/babylon',
         }}
       />
     </LayoutWrapper>
@@ -93,6 +96,8 @@ const IndexPage = ({ content }) => (
         Participate and Earn Money
       </Button>
     </Analytics>
+
+    {/*
 
     <LayoutWrapper>
       <TestnetItem
@@ -106,6 +111,8 @@ const IndexPage = ({ content }) => (
         }}
       />
     </LayoutWrapper>
+
+    */}
 
     <LayoutWrapper dark>
       <TitleWrapper title="Become a user, run the platform">
