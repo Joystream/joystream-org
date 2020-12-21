@@ -48,9 +48,16 @@ const AlexandriaPage = ({ content }) => {
       >
         <p className="AlexandriaPage__hero-paragraph">
           The Alexandria release focuses on important technical updates
-          which will facilitate more efficient future development.
-        </p>
-        <HeroCard date={launchDate} />
+          which will facilitate more efficient future development.</p>
+        <HeroCard
+          info
+          date="2020/12/21 15:00"
+          counterTitle={
+            <>
+              REPLACED BY BABYLON ON
+            </>
+          }
+          />
 
         <TestnetModal
           title="Alexandria"
