@@ -73,16 +73,16 @@ exports[`IndexPage page renders correctly 1`] = `
     <TestnetItem
       button={
         Object {
-          "label": "Explore Alexandria",
-          "to": "/alexandria",
+          "label": "Explore Babylon",
+          "to": "/babylon",
         }
       }
       className=""
       date={null}
       image="icon-mock"
-      title="Alexandria Testnet"
+      title="Babylon Testnet"
     >
-      Alexandria is our seventh testnet, introducing a variety of important technical improvements.
+      Babylon is our eighth testnet, focused on improvements to media publishing and consumption on the platform.
     </TestnetItem>
   </LayoutWrapper>
   <Analytics
@@ -160,26 +160,6 @@ exports[`IndexPage page renders correctly 1`] = `
       Participate and Earn Money
     </Button>
   </Analytics>
-  <LayoutWrapper
-    className=""
-    dark={false}
-    gradient={false}
-  >
-    <TestnetItem
-      button={
-        Object {
-          "label": "Explore Babylon",
-          "to": "/babylon",
-        }
-      }
-      className=""
-      date="2020/12/21 15:00"
-      image="icon-mock"
-      title="Babylon Testnet"
-    >
-      Babylon is our eighth testnet, focused on improvements to media publishing and consumption on the platform.
-    </TestnetItem>
-  </LayoutWrapper>
   <LayoutWrapper
     className=""
     dark={true}
