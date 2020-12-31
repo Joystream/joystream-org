@@ -1,6 +1,7 @@
 import { sharedData } from '../../data/pages';
 
 const links = [
+  { to: '/founding-members', label: 'Founding members' },
   { to: '/manifesto', label: 'Manifesto' },
   { to: '/roles', label: 'Roles' },
   { to: '/testnet', label: 'Incentives' },

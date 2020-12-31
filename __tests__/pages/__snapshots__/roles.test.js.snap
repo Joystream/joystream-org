@@ -17,6 +17,7 @@ exports[`RolesPage page renders correctly 1`] = `
     image="icon-mock"
     indent={false}
     noOverflow={false}
+    reverse={false}
     theme="black"
     title="Choose your preferred role"
   >
