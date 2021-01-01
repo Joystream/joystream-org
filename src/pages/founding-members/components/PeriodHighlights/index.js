@@ -51,7 +51,7 @@ const PeriodHighlights = ({ tableOneData, tableTwoData }) => (
         <h3 className="FoundingMembersPage__period-highlight__title">New Founding Members</h3>
         <Table className="FoundingMembersPage__period-highlight__table" gridLayout="1.5fr 1fr">
           <Table.Header className="FoundingMembersPage__period-highlight__table__header">
-            <Table.HeaderItem>Name</Table.HeaderItem>
+            <Table.HeaderItem>Last period highlights</Table.HeaderItem>
             <Table.HeaderItem>Referrer</Table.HeaderItem>
           </Table.Header>
           <Table.Body className="FoundingMembersPage__period-highlight__table__body">
@@ -67,7 +67,7 @@ const PeriodHighlights = ({ tableOneData, tableTwoData }) => (
         <h3 className="FoundingMembersPage__period-highlight__title">Direct scoring numbers</h3>
         <Table className="FoundingMembersPage__period-highlight__table" gridLayout="1.5fr 1fr">
           <Table.Header className="FoundingMembersPage__period-highlight__table__header">
-            <Table.HeaderItem>Name</Table.HeaderItem>
+            <Table.HeaderItem>Last period highlights</Table.HeaderItem>
             <Table.HeaderItem textAlign="right">Score</Table.HeaderItem>
           </Table.Header>
           <Table.Body className="FoundingMembersPage__period-highlight__table__body">
