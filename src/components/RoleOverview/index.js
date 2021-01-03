@@ -130,14 +130,14 @@ class RoleOverview extends React.Component {
     return <FormResponse error={formError} onClose={this.hideForm} />;
   };
 
-  renderFormTitle = () => {
+  renderFormTitle = (title) => {
     const { type } = this.props;
 
     if (type === 'active') {
       return (
         <>
           <BookIcon className="RoleOverview__form-icon" />
-          Join the Council Member role now!
+          Receive regular updates on the {title} role!
         </>
       );
     }
@@ -156,7 +156,7 @@ class RoleOverview extends React.Component {
     });
   };
 
-  renderForm = () => {
+  renderForm = (title) => {
     const { formContentVisibility, inputValue, checkboxValue, loading } = this.state;
     const { type } = this.props;
 
@@ -171,7 +171,7 @@ class RoleOverview extends React.Component {
           method="post"
           ref={ref => (this.form = ref)}
         >
-          <p className="RoleOverview__form-title">{this.renderFormTitle()}</p>
+          <p className="RoleOverview__form-title">{this.renderFormTitle(title)}</p>
           <Input
             placeholder="Your email address"
             type="email"
@@ -270,7 +270,7 @@ class RoleOverview extends React.Component {
           </div>
 
           {type === 'active' && this.renderButtons()}
-          {formVisiblity && this.renderForm()}
+          {formVisiblity && this.renderForm(title)}
           {formResponseVisiblity && this.renderFormResponse()}
         </div>
       </section>
