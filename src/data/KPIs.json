@@ -4,87 +4,98 @@
 			"description": "For the governance process to function properly, all proposals must be processed effectively, and in a reasonable time frame to avoiding blocking new proposals coming in.",
 			"reward": "0",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
+			"startDate": "03.01.2021 ~02:00 UTC - #1468801",
 			"successEvents": [
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h).",
 				"No malicious or unreasonable proposals are approved."
 			],
 			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards, and a new Council Election will be started immediately.",
-			"gradeDate": "05.01.2021 - 18:00 UTC",
-			"number": 7.1
+			"gradeDate": "19.01.2021 - 18:00 UTC",
+			"number": 8.1
 		},
 		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. For each Term the Council must produce a report of 'events' and 'Tokenomics' to allow users to make informed votes. This must be submitted as a PR to the Community Repo.",
 			"reward": "0",
 			"measurementPeriod": "16 days",
-			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
+			"startDate": "03.01.2021 ~02:00 UTC - #1468801",
 			"successEvents": [
-				"The fifth Council on Alexandria (#1267201-#1468801) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
+				"The Second Council on Babylon (#1468801-#1670401) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
 			],
 			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards.",
-			"gradeDate": "05.01.2021 - 18:00 UTC",
-			"number": 7.2
+			"gradeDate": "19.01.2021 - 18:00 UTC",
+			"number": 8.2
 		},
 		{
 			"title": "Appoint New Council Secretary",
 			"description": "The Council must appoint one of their own as the Council Secretary, responsible for adding Council Reports and representing the Council in the Community Repo (with some enhanced repository maintenance privileges).",
 			"reward": "50",
 			"measurementPeriod": "5 days",
-			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
+			"startDate": "03.01.2021 ~02:00 UTC - #1468801",
 			"successEvents": [
 				"The Council informally appoints a Council Secretary through a spending proposal and pays them an appropriate rate for their responsibilities.",
 				"The spending proposal must provide a link to the Council Secretary's GitHub account so we can provide them 'triage' permissions on the community repo."
 			],
 			"annihilation": "No Council Secretary is appointed.",
-			"gradeDate": "05.01.2021 - 18:00 UTC",
-			"number": 7.3
+			"gradeDate": "19.01.2021 - 18:00 UTC",
+			"number": 8.3
 		},
 		{
 			"title": "Block Production",
 			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer.",
 			"reward": "50",
-			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
+			"startDate": "03.01.2021 ~02:00 UTC - #1468801",
 			"measurementPeriod": "14 days (Full Council Term)",
 			"successEvents": [
-				"The difference between the timestamp of blocks #1267201 and #1468801 must be less than 1229760000 (avg 6.1s/block).",
+				"The difference between the timestamp of blocks #1468801 and #1670401 must be less than 1229760000 (avg 6.1s/block).",
 				"The total Validator+Nominator stake averages between 20% and 30% of total issuance."
 			],
-			"annihilation": "The difference between the timestamp of blocks #1267201 and #1468801 is over 1260000000 (avg 6.25s/block), or the total Validator+Nominator stake averages under 10% of total issuance.",
-			"gradeDate": "05.01.2021 - 18:00 UTC",
-			"number": 7.4
+			"annihilation": "The difference between the timestamp of blocks #1468801 and #1670401 is over 1260000000 (avg 6.25s/block), or the total Validator+Nominator stake averages under 10% of total issuance.",
+			"gradeDate": "19.01.2021 - 18:00 UTC",
+			"number": 8.4
 		},
 		{
 			"title": "Managing the Working Groups",
 			"description": "In addition to the regular tasks, the runtime upgrade will require extra work in terms of management. In particular as the Curator Working Group module will be changed.",
-			"reward": "200",
+			"reward": "100",
 			"measurementPeriod": "7 days",
-			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
+			"startDate": "03.01.2021 ~02:00 UTC - #1468801",
 			"successEvents": [
-				"New budgets are set for each group, taking the 'Recurring Replenishment', platform inflation and the costs for each role into account.",
-				"As the 'old' Curators will still be paid (assuming there are tokens in the mint), the Council must ensure that the mint is empty before block #1292500",
-				"In addition, remove 'old' Curators from their job. This cannot by done through the Proposal system AFTER the upgrade.",
-				"After the upgrade, the Storage Providers must upgrade their storage nodes in order to still function.",
+				"New budgets are set for each group, taking the 'Recurring Replenishment', platform inflation and the costs and platform needs for each role into account.",
 				"Hire a new Curator Lead."
 			],
 			"annihilation": "There are Storage Providers that haven't upgraded after block #1368001",
-			"gradeDate": "05.01.2021 - 18:00 UTC",
-			"number": 7.5
+			"gradeDate": "19.01.2021 - 18:00 UTC",
+			"number": 8.5
+		},
+		{
+			"title": "Joystream Sprocket",
+			"description": "Start the Joystream Sprocket based on issue #1966 in the 'joystream' repo. At least $200 of funding will be made available by Jsgenesis.",
+			"reward": "100",
+			"measurementPeriod": "14 days (Full Council Term)",
+			"startDate": "03.01.2021 ~02:00 UTC - #1468801",
+			"successEvents": [
+				"A complete plan for starting the first Joystream Sprocket is created.",
+				"A list of achievable wants and needs (technical or other) to start it up is submitted. Some of this may be a new bounty (see KPI 8.7-2)."
+			],
+			"annihilation": "NA",
+			"gradeDate": "19.01.2021 - 18:00 UTC",
+			"number": 8.6
 		},
 		{
 			"title": "Managing Community Bounties",
 			"description": "Managing Community Bounties will be a growing part of the Council's workload. Establishing good workflows for this will be iterative and situational.",
 			"reward": "300",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "19.12.2020 ~21:00 UTC - #1267201",
+			"startDate": "03.01.2021 ~02:00 UTC - #1468801",
 			"successEvents": [
-				"Community Bounty #2 - 'Research and Testing of `polkadot-js extension`', is submitted within the Council Term.",
-				"Success events 1-3 of Community Bounty #4 - 'Improve Telegram Bot(s)' (#3 re-issued) are submitted within the Council Term.",
-				"Community Bounty #5 - 'Joystream Telegram Sticker pack', in line with the approved scheme outlined in proposal #69, has recieved at least one approved entry."
+				"Community Bounty #5 - 'Joystream Telegram Sticker pack', in line with the approved scheme outlined in proposal #69, has recieved at least one approved entry.",
+				"Based on KPI 8.6-2, create the bounty/bounties needed.",
+				"Create one (complete) new bounty, based Community feedback and wishes, and present the full 'issue' text as a PR."
 			],
 			"annihilation": "Unlike standard `annihilations`, any rewards paid for a Bounty that exceeds what Jsgenesis pays will be deducted from the Council's KPI rewards.",
-			"gradeDate": "05.01.2021 - 18:00 UTC",
-			"number": 7.6
+			"gradeDate": "19.01.2021 - 18:00 UTC",
+			"number": 8.7
 		}
 	],
 	"Bounties": [{
@@ -124,7 +135,7 @@
 			],
 			"reviewPeriod": "72 hours from the time the Council submits the Bounty to Jsgenesis.",
 			"id": 2,
-			"status": "Open"
+			"status": "Submitted"
 		},
 		{
 			"title": "Improve Telegram Bot(s)",
@@ -145,7 +156,7 @@
 			],
 			"reviewPeriod": "7 days from the time the Council submits the Bounty to Jsgenesis.",
 			"id": 3,
-			"status": "Open"
+			"status": "Submitted"
 		},
 		{
 			"title": "Joystream Telegram Sticker pack",
