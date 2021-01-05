@@ -41,7 +41,7 @@ const rolesData = {
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/validators',
       questionLink: `mailto:${sharedData.defaultEmail}`,
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=26a32a8d8d',
     },
     {
       id: 'council-member',
@@ -65,7 +65,7 @@ const rolesData = {
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/council-members',
       questionLink: `mailto:${sharedData.defaultEmail}`,
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=51a3da04f8',
     },
     {
       id: 'storage-provider',
@@ -87,7 +87,7 @@ const rolesData = {
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers',
       questionLink: `mailto:${sharedData.defaultEmail}`,
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460',
     },
     {
       id: 'content-curator',
@@ -116,7 +116,7 @@ const rolesData = {
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-curators',
       questionLink: 'mailto:hello@jsgenesis.com',
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93',
     },
     {
       id: 'content-creator',
@@ -134,7 +134,7 @@ const rolesData = {
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-creators',
       questionLink: 'mailto:hello@jsgenesis.com',
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=0ea466b90d',
     },
   ],
   upcoming: [
@@ -166,7 +166,7 @@ const rolesData = {
         'Familiarity with how online platforms are attacked through botnets, IP anonymization, automated agents, etc.',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2a9bd4a3ed',
     },
     {
       id: 'membership-curator',
@@ -195,7 +195,7 @@ const rolesData = {
         'A deep understanding of the Joystream platform structure, function and attack vectors',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=bd10fbb23f',
     },
     {
       id: 'bandwidth-provider',
@@ -217,7 +217,7 @@ const rolesData = {
         'Located within certain bounds to designated geographic areas, in order to limit latency',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2d978eeb0c',
     },
     {
       id: 'discovery-provider',
@@ -243,7 +243,7 @@ const rolesData = {
         'Able to formulate, test and suggest new ranking heuristics for use by discovery provider nodes',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=766d15796d',
     },
     {
       id: 'live-streaming-provider',
@@ -262,7 +262,7 @@ const rolesData = {
         'Located within certain bounds to designated geographic areas, in order to limit latency',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=4ea03faa7a',
     },
     {
       id: 'builder',
@@ -300,7 +300,7 @@ const rolesData = {
         'Have specific skills required for contributing in the given way',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276',
     },
     {
       id: 'communication-moderator',
@@ -323,7 +323,7 @@ const rolesData = {
         'Clear written communicator, ideally with good command of more than one language',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=46a98ea4be',
     },
   ],
 };

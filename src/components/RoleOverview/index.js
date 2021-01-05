@@ -130,14 +130,14 @@ class RoleOverview extends React.Component {
     return <FormResponse error={formError} onClose={this.hideForm} />;
   };
 
-  renderFormTitle = () => {
+  renderFormTitle = (title) => {
     const { type } = this.props;
 
     if (type === 'active') {
       return (
         <>
           <BookIcon className="RoleOverview__form-icon" />
-          Join the Council Member role now!
+          Receive regular updates on the {title} role!
         </>
       );
     }
@@ -156,7 +156,7 @@ class RoleOverview extends React.Component {
     });
   };
 
-  renderForm = () => {
+  renderForm = (title, formAction) => {
     const { formContentVisibility, inputValue, checkboxValue, loading } = this.state;
     const { type } = this.props;
 
@@ -167,15 +167,19 @@ class RoleOverview extends React.Component {
       <>
         <form
           onChange={e => this.setState({ isButtonDisabled: !this.form.checkValidity() })}
-          onSubmit={this.handleSubmit}
           method="post"
           ref={ref => (this.form = ref)}
+          action={formAction}
+          name="mc-embedded-subscribe-form"
+          target='_blank'
+          noValidate
         >
-          <p className="RoleOverview__form-title">{this.renderFormTitle()}</p>
+          <p className="RoleOverview__form-title">{this.renderFormTitle(title)}</p>
           <Input
             placeholder="Your email address"
             type="email"
             className="RoleOverview__form-input"
+            name='EMAIL'
             required
             onFocus={this.showFormContent}
             onChange={this.inputChange}
@@ -205,7 +209,7 @@ class RoleOverview extends React.Component {
                 </p>
               </label>
             </div>
-            <Button type="submit" disabled={this.state.isButtonDisabled}>
+            <Button type="submit" name='subscribe' disabled={this.state.isButtonDisabled}>
               {btnLabel}
             </Button>
           </div>
@@ -225,6 +229,7 @@ class RoleOverview extends React.Component {
       className,
       tutorialLink,
       questionLink,
+      formAction,
       ...props
     } = this.props;
     const { formVisiblity, formResponseVisiblity } = this.state;
@@ -270,7 +275,7 @@ class RoleOverview extends React.Component {
           </div>
 
           {type === 'active' && this.renderButtons()}
-          {formVisiblity && this.renderForm()}
+          {formVisiblity && this.renderForm(title, formAction)}
           {formResponseVisiblity && this.renderFormResponse()}
         </div>
       </section>
