@@ -15,7 +15,7 @@ import useWindowDimensions from '../../utils/useWindowDimensions';
 
 import './style.scss';
 
-import { referrerData, scoreData, fullData } from './data';
+import { referrerData, scoreData, fullData } from '../../data/pages/founding-members';
 
 export const ArrowButton = ({ link, text, className }) => {
   return (
@@ -50,7 +50,7 @@ const FoundingMembersPage = () => {
           </p>
           <ArrowButton
             className="FoundingMembersPage__hero-button"
-            link="https://www.google.com"
+            link="https://t.me/JoyStreamOfficial"
             text="Join our Telegram"
           />
         </Hero>
@@ -77,7 +77,7 @@ const FoundingMembersPage = () => {
             </p>
             <ArrowButton
               className="FoundingMembersPage__cta__button"
-              link="https://www.google.com"
+              link="https://t.me/JoyStreamOfficial"
               text={width <= 768 ? "Join now" : "Join our Telegram"}
             />
           </div>

@@ -55,7 +55,7 @@ const PeriodHighlights = ({ tableOneData, tableTwoData }) => (
             <Table.HeaderItem>Referrer</Table.HeaderItem>
           </Table.Header>
           <Table.Body className="FoundingMembersPage__period-highlight__table__body">
-            {tableOneData.map((foundingMember, index) => (
+            {tableOneData?.map((foundingMember, index) => (
               <Table.Row key={index} className="FoundingMembersPage__period-highlight__table__row">
                 <PeriodHighlight key={index} userData={foundingMember} />
               </Table.Row>
@@ -71,7 +71,7 @@ const PeriodHighlights = ({ tableOneData, tableTwoData }) => (
             <Table.HeaderItem textAlign="right">Score</Table.HeaderItem>
           </Table.Header>
           <Table.Body className="FoundingMembersPage__period-highlight__table__body">
-            {tableTwoData.map((foundingMember, index) => (
+            {tableTwoData?.map((foundingMember, index) => (
               <Table.Row key={index} className="FoundingMembersPage__period-highlight__table__row">
                 <PeriodHighlight key={index} userData={foundingMember} />
               </Table.Row>

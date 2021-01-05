@@ -33,12 +33,12 @@ const CardCarousel = ({ children }) => {
   };
 
   const setStructure = () => {
-    if (children.length <= 3) {
+    if (children?.length <= 3) {
       return {
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 400px)',
       };
-    } else if (children.length === 4) {
+    } else if (children?.length === 4) {
       return {
         display: 'grid',
         gridTemplateColumns: 'repeat(4, 295px)',

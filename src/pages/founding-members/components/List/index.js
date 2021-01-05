@@ -44,10 +44,10 @@ const Card = ({ founderData: { main, referrer, score, referralScore } }) => (
 const List = ({ data }) => (
   <div className="FoundingMembersPage__list">
     <h2 className="FoundingMembersPage__list__title">
-      List of current founding members <span>{data.length}</span>
+      List of current founding members <span>{data?.length}</span>
     </h2>
     <CardCarousel>
-      {data.map((founderData, index) => (
+      {data?.map((founderData, index) => (
         <Card founderData={founderData} key={index} />
       ))}
     </CardCarousel>

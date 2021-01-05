@@ -1,5 +1,4 @@
-import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
-import Avatar from './temp.svg';
+import Avatar from '../../pages/founding-members/temp.svg';
 
 export const referrerData = [
   {
