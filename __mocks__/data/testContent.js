@@ -10,6 +10,8 @@ export default {
   },
   media: {
     media_files: 9,
+    activeCurators: 3,
+    channels: 20
   },
   memberships: {
     platform_members: 164,

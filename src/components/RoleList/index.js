@@ -7,12 +7,12 @@ const propTypes = {
   content: object.isRequired,
 };
 
-const RoleList = ({ roles, content }) => {
+const RoleList = ({ roles, content, oldTestnet }) => {
   return (
     <>
       {roles.map(role => {
         const count = role.key ? content[role.key] || '-' : role.count;
-        return <RoleCard {...role} key={role.title} count={count} />;
+        return <RoleCard {...role} key={role.title} count={count} oldTestnet={oldTestnet} />;
       })}
     </>
   );
