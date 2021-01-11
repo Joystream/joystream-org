@@ -185,6 +185,8 @@ exports[`IndexPage page renders correctly 1`] = `
         <RoleList
           content={
             Object {
+              "contentCreatorsCount": 20,
+              "contentCuratorsCount": 3,
               "councilMembersCount": 12,
               "storageProviders": 10,
               "validatorsCount": 20,
@@ -245,6 +247,8 @@ exports[`IndexPage page renders correctly 1`] = `
         <RoleList
           content={
             Object {
+              "contentCreatorsCount": 20,
+              "contentCuratorsCount": 3,
               "councilMembersCount": 12,
               "storageProviders": 10,
               "validatorsCount": 20,

@@ -121,7 +121,7 @@ const AcropolisPage = ({ content }) => {
       <LayoutWrapper dark>
         <TitleWrapper title="Roles available on this testnet">
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} />
+            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet/>
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>

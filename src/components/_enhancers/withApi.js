@@ -18,14 +18,14 @@ export default function withApi(WrappedComponent, apiPath) {
     }
 
     getData = async () => {
-      const apiUrl = process.env.GATSBY_API_URL;
+      const apiUrl = process.env.GATSBY_API_URL || "https://status.joystream.app/";
 
       if (!apiUrl) {
         return;
       }
 
       try {
-        const content = await axios.get(`${apiUrl}${apiPath}`);
+        const content = await axios.get(`${apiUrl}`);
 
         if (this.mounted) {
           this.setState({

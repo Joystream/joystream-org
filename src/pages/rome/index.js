@@ -108,7 +108,7 @@ const RomePage = ({ content }) => {
       <LayoutWrapper dark>
         <TitleWrapper title="Incentivized Roles for the Rome Network">
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} />
+            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
