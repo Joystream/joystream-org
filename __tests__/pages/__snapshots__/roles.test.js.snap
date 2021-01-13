@@ -108,6 +108,26 @@ exports[`RolesPage page renders correctly 1`] = `
         inbound uploads from end users",
               ],
               "title": "Storage Provider",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead",
+            },
+            Object {
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460",
+              "id": "storage-lead",
+              "image": "icon-component-mock",
+              "overview": "The Storage Lead is hired directly by the Council through the proposals system and
+      is dedicated to the hiring, firing and wider management of Storage Providers on the network.",
+              "questionLink": "mailto:hello@jsgenesis.com",
+              "requirements": Array [
+                "Experienced with how to setup and maintain high performance IT infrastructure",
+                "Ability to effectively manage and coordinate the actions of the Storage Providers",
+                "Hold sufficient amount of the native platform token to put at stake",
+              ],
+              "responsibilites": Array [
+                "The Storage Lead is responsible for ensuring that Storage Providers are performing adequately.
+        Each one must hold a complete and up-to-date copy of the content directory and ensure uptime in
+        order to effectively serve content consumers.",
+              ],
+              "title": "Storage Lead",
               "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers",
             },
             Object {
@@ -165,6 +185,28 @@ exports[`RolesPage page renders correctly 1`] = `
               ],
               "title": "Content Creator",
               "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-creators",
+            },
+            Object {
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93",
+              "id": "content-lead",
+              "image": "icon-component-mock",
+              "overview": "The Council has the power to appoint a Content Curator Lead for the network who can hire further
+      Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing
+      with the council, the Lead can also decide to fire curators who are not performing their jobs adequately.",
+              "questionLink": "mailto:hello@jsgenesis.com",
+              "requirements": Array [
+                "Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
+                "Hold sufficient amount of the native platform token to put at stake",
+              ],
+              "responsibilites": Array [
+                "Monitor the publishing of new content into the content directory,
+        and respond to reports about contested publications",
+                "Adjudicate possible dispute processes resulting from reports from users",
+                "Update information on content to be accurate",
+                "Manage and coordinate the actions of the Content Working Group",
+              ],
+              "title": "Content Lead",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead",
             },
           ],
           "upcoming": Array [
@@ -520,6 +562,40 @@ exports[`RolesPage page renders correctly 1`] = `
             ]
           }
           title="Storage Provider"
+          tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead"
+          type="active"
+        />
+      </InView>
+      <InView
+        as="div"
+        key="Storage Lead"
+        onChange={[Function]}
+        threshold={0.2}
+        triggerOnce={false}
+      >
+        <RoleOverview
+          className=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460"
+          id="storage-lead"
+          image="icon-component-mock"
+          overview="The Storage Lead is hired directly by the Council through the proposals system and
+      is dedicated to the hiring, firing and wider management of Storage Providers on the network."
+          questionLink="mailto:hello@jsgenesis.com"
+          requirements={
+            Array [
+              "Experienced with how to setup and maintain high performance IT infrastructure",
+              "Ability to effectively manage and coordinate the actions of the Storage Providers",
+              "Hold sufficient amount of the native platform token to put at stake",
+            ]
+          }
+          responsibilites={
+            Array [
+              "The Storage Lead is responsible for ensuring that Storage Providers are performing adequately.
+        Each one must hold a complete and up-to-date copy of the content directory and ensure uptime in
+        order to effectively serve content consumers.",
+            ]
+          }
+          title="Storage Lead"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers"
           type="active"
         />
@@ -613,6 +689,42 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
+        key="Content Lead"
+        onChange={[Function]}
+        threshold={0.2}
+        triggerOnce={false}
+      >
+        <RoleOverview
+          className=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93"
+          id="content-lead"
+          image="icon-component-mock"
+          overview="The Council has the power to appoint a Content Curator Lead for the network who can hire further
+      Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing
+      with the council, the Lead can also decide to fire curators who are not performing their jobs adequately."
+          questionLink="mailto:hello@jsgenesis.com"
+          requirements={
+            Array [
+              "Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
+              "Hold sufficient amount of the native platform token to put at stake",
+            ]
+          }
+          responsibilites={
+            Array [
+              "Monitor the publishing of new content into the content directory,
+        and respond to reports about contested publications",
+              "Adjudicate possible dispute processes resulting from reports from users",
+              "Update information on content to be accurate",
+              "Manage and coordinate the actions of the Content Working Group",
+            ]
+          }
+          title="Content Lead"
+          tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead"
+          type="active"
+        />
+      </InView>
+      <InView
+        as="div"
         key="Membership Screener"
         onChange={[Function]}
         threshold={0.2}
