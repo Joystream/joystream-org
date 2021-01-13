@@ -1,12 +1,17 @@
 @import '../../../../styles/main';
 
 .FoundingMembersPage {
-  &__list {
+  &__list-wrapper {
     padding: 490px 0 120px 0;
     background-color: #f2f5f9;
+  }
+
+  &__list {
+    width: 1242px;
+    margin: 0 auto;
 
     &__title {
-      margin: 0 0 40px 101px;
+      margin: 0 0 40px 0;
       font-family: $font-primary;
       font-size: 40px;
       line-height: 48px;
@@ -117,13 +122,20 @@
     }
   }
 
-  @media #{$screen-max-md} {
+  @media (max-width: 1300px) {
     &__list {
-      padding: 850px 0 70px 0;
+      width: 100%;
+      margin: 0;
 
       &__title {
-        margin-left: 20px;
+        padding-left: 40px;
       }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__list-wrapper {
+      padding: 850px 0 70px 0;
     }
   }
 
@@ -137,7 +149,7 @@
   }
 
   @media (max-width: 510px) {
-    &__list {
+    &__list-wrapper {
       padding-top: 1050px;
     }
   }

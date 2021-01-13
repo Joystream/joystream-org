@@ -5,9 +5,18 @@
     display: flex;
     justify-content: center;
 
+    &--secondary {
+      // margin-top: -20px;
+      position: relative;
+    }
+
     &__wrapper {
       padding: 165px 0 80px 0;
       background-color: #f2f5f9;
+
+      &--secondary {
+        padding-top: 0;
+      }
     }
 
     &__title {
@@ -17,6 +26,12 @@
       line-height: 32px;
       letter-spacing: 0;
       text-align: center;
+    }
+
+    &__title--secondary {
+      position: relative;
+      margin-top: -132px;
+      color: white;
     }
 
     &__header {
@@ -38,6 +53,10 @@
       line-height: 24px;
       letter-spacing: 0;
       color: #4038ff;
+    }
+
+    &__title--secondary {
+      color: #dee3e9;
     }
 
     &__table {
@@ -142,10 +161,18 @@
       &__wrapper {
         padding: 306px 0 80px 0;
         background-color: #f2f5f9;
+
+        &--secondary {
+          padding-top: 0;
+        }
       }
 
       &__title {
         margin: 0;
+
+        &--secondary {
+          margin-top: -140px;
+        }
       }
     }
 
@@ -165,6 +192,12 @@
       align-items: center;
       flex-direction: column;
       justify-content: initial;
+
+      div:nth-of-type(2) {
+        h3 {
+          color: #4038ff;
+        }
+      }
     }
 
     &__period-highlight {

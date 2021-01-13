@@ -7,10 +7,54 @@
     background-color: black;
   }
 
-  &__hero-button {
-    width: 250px;
-    height: 80px;
-    margin-top: 32px;
+  &__hero {
+    @extend %largeContainer;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      width: 606px;
+      margin-right: 20px;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+      font-family: $font-primary;
+      font-size: 60px;
+      line-height: 68px;
+      letter-spacing: 0;
+      color: white;
+    }
+
+    &__paragraph {
+      margin-bottom: 32px;
+      font-family: $font-secondary;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: #a7aeb7;
+    }
+
+    &__button {
+      width: 250px;
+      height: 80px;
+    }
+
+    &__image-wrapper {
+      margin-left: 20px;
+    }
+
+    &__image {
+      width: 100%;
+
+      &--secondary {
+        display: none;
+      }
+    }
   }
 
   &__cta-wrapper {
@@ -87,11 +131,25 @@
 
   @media #{$screen-max-lg} {
     &__hero-wrapper {
+      padding-top: 48px;
       padding-bottom: 220px;
     }
   }
 
   @media #{$screen-max-md} {
+    &__hero {
+      flex-direction: column;
+
+      &__content {
+        margin-right: 0;
+      }
+
+      &__image-wrapper {
+        margin-top: 60px;
+        margin-left: 0;
+      }
+    }
+
     &__cta {
       grid-template-columns: initial;
       grid-template-rows: 1fr 1fr;
@@ -121,6 +179,40 @@
   }
 
   @media #{$screen-max-sm} {
+    &__hero {
+      &__content {
+        width: 370px;
+      }
+
+      &__title {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      &__paragraph {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__button {
+        width: 335px;
+        height: 60px;
+      }
+
+      &__image-wrapper {
+        margin: 28px 0 20px 0;
+        // max-width: 850px;
+      }
+
+      &__image {
+        display: none;
+
+        &--secondary {
+          display: block;
+        }
+      }
+    }
+
     &__cta-wrapper {
       padding: 75px 0 35px 0;
     }

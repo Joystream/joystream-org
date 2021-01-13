@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowButton } from '../../index';
 import UnitedStatesCircle from '../../../../assets/svg/united-states-flag-circle.svg';
-import CanadaCircle from '../../../../assets/svg/canada-flag-circle.svg';
 import Tokens from '../../../../assets/svg/tokens-no-bg.svg';
 
 import './style.scss';
@@ -42,7 +41,6 @@ const TakePart = () => (
       <ArrowButton link="#0" text="Join now" className="FoundingMembersPage__take-part__join-button" />
       <p className="FoundingMembersPage__take-part__excluded-text">Countries that are excluded from that program: </p>
       <img src={UnitedStatesCircle} className="FoundingMembersPage__take-part__us-flag" alt='us flag icon'/>
-      <img src={CanadaCircle} className="FoundingMembersPage__take-part__canada-flag" alt='canadian flag icon'/>
     </div>
     <img src={Tokens} className="FoundingMembersPage__take-part__tokens" alt='two tokens'/>
   </div>

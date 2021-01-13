@@ -16,6 +16,57 @@
     font-size: 32px;
     font-weight: 400;
     color: $c_white;
+
+    &--secondary {
+      display: block;
+    }
+  }
+
+  &__form-wrapper {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 24px 0 120px 0;
+
+    &__title {
+      margin-bottom: 5px;
+      font-family: $font-primary;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: 0;
+      color: white;
+    }
+
+    &__subtitle {
+      font-family: $font-secondary;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -.4000000059604645px;
+      color: #a7aeb7;
+    }
+
+    &__input {
+      width: 354px;
+      margin: 0 10px;
+    }
+
+    &__button {
+      width: 198px;
+      margin: 0 10px;
+      padding: 0;
+
+      &--secondary {
+        display: block;
+      }
+    }
   }
 
   &__button {
@@ -24,9 +75,15 @@
   }
 
   &__layout {
+    @extend %container;
+
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
+
+    &--secondary {
+      width: auto;
+    }
   }
 
   &__section {
@@ -60,10 +117,34 @@
 
   &__socials {
     display: flex;
+
+    &--secondary {
+      flex-direction: row;
+    }
   }
 
   &__social-link {
     margin-right: 24px;
+
+    &--secondary {
+      display: flex;
+      width: fit-content;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__social-name {
+    display: none;
+    margin-left: 12px;
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -.4000000059604645px;
+    color: #a7aeb7;
+
+    &:hover {
+      color: $c_white;
+    }
   }
 
   &__social-icon {
@@ -82,18 +163,46 @@
     background-repeat: no-repeat;
     background-size: auto 100%;
 
+    &--secondary {
+      padding: 90px 0 40px;
+      background-image: url('../../assets/background/footer-bottom-secondary.svg');
+      background-position: bottom left;
+      background-repeat: repeat-x;
+      background-size: auto 30px;
+    }
+
     &__header {
       margin-bottom: 80px;
       font-size: 40px;
+
+      &--secondary {
+        display: none;
+      }
+    }
+
+    &__form-wrapper {
+      display: flex;
     }
 
     &__button {
       width: auto;
       margin-bottom: 120px;
+
+      &--secondary {
+        display: none;
+      }
+    }
+
+    &__layout--secondary {
+      width: 100%;
     }
 
     &__socials {
       flex-wrap: nowrap;
+
+      &--secondary {
+        flex-direction: column;
+      }
     }
 
     &__section {
@@ -103,6 +212,10 @@
 
     &__section-title {
       margin-bottom: 24px;
+    }
+
+    &__social-name {
+      display: block;
     }
   }
 }

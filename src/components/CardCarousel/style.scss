@@ -3,7 +3,6 @@
 .CardCarousel {
   &__cards {
     display: flex;
-    padding-left: 100px;
     overflow-x: hidden;
 
     & > div {
@@ -56,9 +55,9 @@
     }
   }
 
-  @media #{$screen-max-md} {
+  @media (max-width: 1300px) {
     &__cards {
-      padding-left: 20px;
+      padding-left: 40px;
     }
   }
 
