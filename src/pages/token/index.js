@@ -121,7 +121,7 @@ const TokensPage = () => {
         <div className="TokensPage__disclaimer-text">
           <p>
             This disclaimer applies to the webpage accessible at{' '}
-            <a href="www.joystream.org/token">www.joystream.org/token</a> as well as all other webpages, digital
+            <a href="https://www.joystream.org/token">www.joystream.org/token</a> as well as all other webpages, digital
             services or applications published by Jsgenesis (the “Company”). The disclaimer also applies to any material
             published by Company in any other format in connection with the JOY token (the “Token”). Publications made
             by Company and all information contained within them are not directed at or intended for use by any person

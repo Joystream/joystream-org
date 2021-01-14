@@ -111,7 +111,7 @@ const ConstantinoplePage = ({ content }) => {
       <LayoutWrapper dark>
         <TitleWrapper title="Incentivized Roles for the Constantinople Network">
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} />
+            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
