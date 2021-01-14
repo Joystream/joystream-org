@@ -158,13 +158,6 @@
       letter-spacing: -.4000000059604645px;
       color: #dfe4ea;
     }
-
-    &__seperator {
-      font-size: 56px;
-      font-weight: 700;
-      line-height: 62px;
-      color: white;
-    }
   }
 
   @media #{$screen-max-lg} {
@@ -220,6 +213,14 @@
 
       &__buttons {
         margin-top: 25px;
+      }
+
+      &__summary-button {
+        margin-bottom: 7px;
+      }
+
+      &__announcement-button {
+        margin-top: 7px;
       }
     }
   }

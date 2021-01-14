@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowButton } from '../../index';
-import Counter from '../../../../components/DateCounter';
 import useWindowDimensions from '../../../../utils/useWindowDimensions';
 import Countdown from 'react-countdown-now';
 
