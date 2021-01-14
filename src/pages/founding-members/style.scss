@@ -18,7 +18,7 @@
       display: flex;
       flex-direction: column;
       width: 606px;
-      margin-right: 20px;
+      margin-right: auto;
     }
 
     &__title {
@@ -181,7 +181,7 @@
   @media #{$screen-max-sm} {
     &__hero {
       &__content {
-        width: 370px;
+        width: 335px;
       }
 
       &__title {
@@ -201,7 +201,6 @@
 
       &__image-wrapper {
         margin: 28px 0 20px 0;
-        // max-width: 850px;
       }
 
       &__image {

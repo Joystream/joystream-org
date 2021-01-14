@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState, useCallback, useLayoutEffect } from 'react';
 import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
 
 import './style.scss';
@@ -8,20 +8,17 @@ const SCROLL_AMOUNT = 300;
 const CardCarousel = ({ children }) => {
   const listRef = useRef();
   const [scrollPosition, setScrollPosition] = useState(0);
-  let maxScrollLeft;
-
-  if (listRef.current) {
-    maxScrollLeft = listRef.current.scrollWidth - listRef.current.clientWidth;
-  }
+  const [maxScrollLeft, setMaxScrollLeft] = useState(undefined);
 
   useEffect(() => {
     function handleResize() {
-      if (listRef.current) {
-        maxScrollLeft = listRef.current.scrollWidth - listRef.current.clientWidth;
-      }
+      setMaxScrollLeft(listRef.current.scrollWidth - listRef.current.clientWidth);
     }
 
     window.addEventListener('resize', handleResize);
+
+    handleResize();
+
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
