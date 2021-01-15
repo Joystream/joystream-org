@@ -14,14 +14,14 @@ const defaultTypes = {
   children: null,
 };
 
-const BaseLayout = ({ children, secondary }) => {
+const BaseLayout = ({ children }) => {
   return (
     <ScrollProvider>
       <div>
         <Navbar />
         {children}
         <CookiesNotice />
-        <Footer secondary={secondary}/>
+        <Footer />
       </div>
     </ScrollProvider>
   );
