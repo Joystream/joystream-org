@@ -89,7 +89,7 @@ const Metrics = ({ tableOneData, tableTwoData }) => (
           </Table>
           <ArrowButton
             className="FoundingMembersPage__leaderboard__button"
-            link="https://www.google.com"
+            link="/founding-members/leaderboards"
             text="Show all direct score rankings"
           />
         </div>
@@ -112,7 +112,7 @@ const Metrics = ({ tableOneData, tableTwoData }) => (
         </Table>
         <ArrowButton
           className="FoundingMembersPage__leaderboard__button"
-          link="https://www.google.com"
+          link="/founding-members/leaderboards"
           text="Show all referral score rankings"
         />
       </div>
