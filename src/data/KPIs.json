@@ -61,7 +61,7 @@
 			"measurementPeriod": "7 days",
 			"startDate": "17.01.2021 ~12:00 UTC - #1670401",
 			"successEvents": [
-				"New budgets are set for each group, taking the 'Recurring Replenishment', platform inflation and the costs and platform needs for each role into account.",
+				"New budgets are set for each group, taking the 'Recurring Replenishment', platform inflation and the costs and platform needs for each role into account."
 			],
 			"annihilation": "NA",
 			"gradeDate": "01.02.2021 - 18:00 UTC",
@@ -189,7 +189,7 @@
 			],
 			"annihilation": "NA.",
 			"conditions": [
-				"The report is issued as a PR to the Community Repo",
+				"The report is issued as a PR to the Community Repo"
 			],
 			"reviewPeriod": "7 days from the time the Council submits the Bounty to Jsgenesis.",
 			"id": 6,
@@ -197,4 +197,3 @@
 		}
 	]
 }
-
