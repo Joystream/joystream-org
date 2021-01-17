@@ -30,10 +30,18 @@ $indentation: 60px;
     padding: 0;
   }
 
+  &__container--reverse {
+    flex-direction: column;
+  }
+
   &__content {
     flex: 1;
     margin-bottom: 40px;
     text-align: center;
+  }
+
+  &__content--reverse {
+    margin: 40px 0 20px 0;
   }
 
   &__description {
@@ -63,6 +71,10 @@ $indentation: 60px;
     flex-direction: column;
     margin-top: 40px;
     margin-bottom: 16px;
+  }
+
+  &__image-wrapper--reverse {
+    margin: 20px 0 0 0;
   }
 
   &__image {
