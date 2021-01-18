@@ -4,10 +4,12 @@ import { sharedData } from '../../data/pages';
 import { ReactComponent as ValidatorImage } from '../../assets/svg/active-validators.svg';
 import { ReactComponent as CouncilMemberImage } from '../../assets/svg/council-member.svg';
 import { ReactComponent as StorageProviderImage } from '../../assets/svg/platform-content-files.svg';
+import { ReactComponent as StorageLeadImage } from '../../assets/svg/platform-content-files.svg';
 import { ReactComponent as MembershipScreenerImage } from '../../assets/svg/membership-screener.svg';
 import { ReactComponent as MembershipCuratorImage } from '../../assets/svg/membership-curator.svg';
 import { ReactComponent as ContentCuratorImage } from '../../assets/svg/content-curator.svg';
 import { ReactComponent as ContentCreatorImage } from '../../assets/svg/content-creator.svg';
+import { ReactComponent as ContentLeadImage } from '../../assets/svg/content-curator.svg';
 import { ReactComponent as BandwidthProviderImage } from '../../assets/svg/bandwidth-provider.svg';
 import { ReactComponent as DiscoveryProviderImage } from '../../assets/svg/discovery-provider.svg';
 import { ReactComponent as LiveStreamingProviderImage } from '../../assets/svg/live-streaming-provider.svg';
@@ -41,7 +43,7 @@ const rolesData = {
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/validators',
       questionLink: `mailto:${sharedData.defaultEmail}`,
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=26a32a8d8d',
     },
     {
       id: 'council-member',
@@ -65,7 +67,7 @@ const rolesData = {
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/council-members',
       questionLink: `mailto:${sharedData.defaultEmail}`,
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=51a3da04f8',
     },
     {
       id: 'storage-provider',
@@ -85,9 +87,29 @@ const rolesData = {
         'Access to highly performant and reliable IT infrastructure with high storage capacity',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
+      tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead',
+      questionLink: `mailto:${sharedData.defaultEmail}`,
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460',
+    },
+    {
+      id: 'storage-lead',
+      image: StorageLeadImage,
+      title: 'Storage Lead',
+      overview: `The Storage Lead is hired directly by the Council through the proposals system and
+      is dedicated to the hiring, firing and wider management of Storage Providers on the network.`,
+      responsibilites: [
+        `The Storage Lead is responsible for ensuring that Storage Providers are performing adequately.
+        Each one must hold a complete and up-to-date copy of the content directory and ensure uptime in
+        order to effectively serve content consumers.`,
+      ],
+      requirements: [
+        'Experienced with how to setup and maintain high performance IT infrastructure',
+        'Ability to effectively manage and coordinate the actions of the Storage Providers',
+        'Hold sufficient amount of the native platform token to put at stake',
+      ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers',
       questionLink: `mailto:${sharedData.defaultEmail}`,
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460',
     },
     {
       id: 'content-curator',
@@ -116,7 +138,7 @@ const rolesData = {
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-curators',
       questionLink: 'mailto:hello@jsgenesis.com',
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93',
     },
     {
       id: 'content-creator',
@@ -134,7 +156,29 @@ const rolesData = {
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-creators',
       questionLink: 'mailto:hello@jsgenesis.com',
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=0ea466b90d',
+    },
+    {
+      id: 'content-lead',
+      image: ContentLeadImage,
+      title: 'Content Lead',
+      overview: `The Council has the power to appoint a Content Curator Lead for the network who can hire further
+      Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing
+      with the council, the Lead can also decide to fire curators who are not performing their jobs adequately.`,
+      responsibilites: [
+        `Monitor the publishing of new content into the content directory,
+        and respond to reports about contested publications`,
+        'Adjudicate possible dispute processes resulting from reports from users',
+        'Update information on content to be accurate',
+        'Manage and coordinate the actions of the Content Working Group'
+      ],
+      requirements: [
+        'Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants',
+        'Hold sufficient amount of the native platform token to put at stake',
+      ],
+      tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead',
+      questionLink: 'mailto:hello@jsgenesis.com',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93',
     },
   ],
   upcoming: [
@@ -166,7 +210,7 @@ const rolesData = {
         'Familiarity with how online platforms are attacked through botnets, IP anonymization, automated agents, etc.',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2a9bd4a3ed',
     },
     {
       id: 'membership-curator',
@@ -195,7 +239,7 @@ const rolesData = {
         'A deep understanding of the Joystream platform structure, function and attack vectors',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=bd10fbb23f',
     },
     {
       id: 'bandwidth-provider',
@@ -217,7 +261,7 @@ const rolesData = {
         'Located within certain bounds to designated geographic areas, in order to limit latency',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2d978eeb0c',
     },
     {
       id: 'discovery-provider',
@@ -243,7 +287,7 @@ const rolesData = {
         'Able to formulate, test and suggest new ranking heuristics for use by discovery provider nodes',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=766d15796d',
     },
     {
       id: 'live-streaming-provider',
@@ -262,7 +306,7 @@ const rolesData = {
         'Located within certain bounds to designated geographic areas, in order to limit latency',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=4ea03faa7a',
     },
     {
       id: 'builder',
@@ -300,7 +344,7 @@ const rolesData = {
         'Have specific skills required for contributing in the given way',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276',
     },
     {
       id: 'communication-moderator',
@@ -323,7 +367,7 @@ const rolesData = {
         'Clear written communicator, ideally with good command of more than one language',
         'Hold sufficient amount of the native platform token to put at stake',
       ],
-      formAction: '',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=46a98ea4be',
     },
   ],
 };

@@ -37,7 +37,7 @@ const contentTypes = {
   most: number => <>At most, {numberWrapper(number)} users occupied this role</>,
 };
 
-const RoleCard = ({ image: Image, title, count, type, className, hasLabel, ...props }) => {
+const RoleCard = ({ image: Image, title, count, type, className, hasLabel, oldTestnet, ...props }) => {
   const classes = cn('RoleCard', className, {
     'RoleCard--labeled': hasLabel,
     'RoleCard--small': !count,
@@ -47,7 +47,7 @@ const RoleCard = ({ image: Image, title, count, type, className, hasLabel, ...pr
       <Image className="RoleCard__image" />
       <div className="RoleCard__content">
         <p className="RoleCard__title">{title}</p>
-        {count && (
+        {(!oldTestnet && count) && (
           <p className="RoleCard__info">
             <PeopleIcon className="RoleCard__icon" />
             {contentTypes[type](count)}

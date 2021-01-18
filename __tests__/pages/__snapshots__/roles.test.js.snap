@@ -37,7 +37,7 @@ exports[`RolesPage page renders correctly 1`] = `
         Object {
           "active": Array [
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=26a32a8d8d",
               "id": "validator",
               "image": "icon-component-mock",
               "overview": "The Joystream platform state lives on a blockchain consensus system.
@@ -64,7 +64,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/validators",
             },
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=51a3da04f8",
               "id": "council-member",
               "image": "icon-component-mock",
               "overview": "At the heart of the governance process on the platform is the proposal system,
@@ -88,7 +88,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/council-members",
             },
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460",
               "id": "storage-provider",
               "image": "icon-component-mock",
               "overview": "There are critical platform assets that do not live on the blockchain,
@@ -107,10 +107,30 @@ exports[`RolesPage page renders correctly 1`] = `
         inbound uploads from end users",
               ],
               "title": "Storage Provider",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead",
+            },
+            Object {
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460",
+              "id": "storage-lead",
+              "image": "icon-component-mock",
+              "overview": "The Storage Lead is hired directly by the Council through the proposals system and
+      is dedicated to the hiring, firing and wider management of Storage Providers on the network.",
+              "questionLink": "mailto:hello@jsgenesis.com",
+              "requirements": Array [
+                "Experienced with how to setup and maintain high performance IT infrastructure",
+                "Ability to effectively manage and coordinate the actions of the Storage Providers",
+                "Hold sufficient amount of the native platform token to put at stake",
+              ],
+              "responsibilites": Array [
+                "The Storage Lead is responsible for ensuring that Storage Providers are performing adequately.
+        Each one must hold a complete and up-to-date copy of the content directory and ensure uptime in
+        order to effectively serve content consumers.",
+              ],
+              "title": "Storage Lead",
               "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers",
             },
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93",
               "id": "content-curator",
               "image": "icon-component-mock",
               "overview": "All of the media content published on the platform lives in an on-chain content directory.
@@ -146,7 +166,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-curators",
             },
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=0ea466b90d",
               "id": "content-creator",
               "image": "icon-component-mock",
               "overview": "As a video platform, one of the most important platform assets is the content published
@@ -165,10 +185,32 @@ exports[`RolesPage page renders correctly 1`] = `
               "title": "Content Creator",
               "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-creators",
             },
+            Object {
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93",
+              "id": "content-lead",
+              "image": "icon-component-mock",
+              "overview": "The Council has the power to appoint a Content Curator Lead for the network who can hire further
+      Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing
+      with the council, the Lead can also decide to fire curators who are not performing their jobs adequately.",
+              "questionLink": "mailto:hello@jsgenesis.com",
+              "requirements": Array [
+                "Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
+                "Hold sufficient amount of the native platform token to put at stake",
+              ],
+              "responsibilites": Array [
+                "Monitor the publishing of new content into the content directory,
+        and respond to reports about contested publications",
+                "Adjudicate possible dispute processes resulting from reports from users",
+                "Update information on content to be accurate",
+                "Manage and coordinate the actions of the Content Working Group",
+              ],
+              "title": "Content Lead",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead",
+            },
           ],
           "upcoming": Array [
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2a9bd4a3ed",
               "id": "membership-screener",
               "image": "icon-component-mock",
               "overview": "A membership is an integrated representation of identifying information
@@ -212,7 +254,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "title": "Membership Screener",
             },
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=bd10fbb23f",
               "id": "membership-curator",
               "image": "icon-component-mock",
               "overview": <React.Fragment>
@@ -260,7 +302,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "title": "Membership Curator",
             },
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2d978eeb0c",
               "id": "bandwidth-provider",
               "image": "icon-component-mock",
               "overview": "There are critical platform assets that do not live on the blockchain, such as images
@@ -281,7 +323,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "title": "Bandwidth Provider",
             },
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=766d15796d",
               "id": "discovery-provider",
               "image": "icon-component-mock",
               "overview": "All of the content on the platform is in a designated content directory, and effectively navigating
@@ -314,7 +356,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "title": "Discovery Provider",
             },
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=4ea03faa7a",
               "id": "live-streaming-provider",
               "image": "icon-component-mock",
               "overview": "The platform supports live video, allowing publisher to distribute content as it is created.
@@ -332,7 +374,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "title": "Live Streaming Provider",
             },
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276",
               "id": "builder",
               "image": "icon-component-mock",
               "overview": <React.Fragment>
@@ -375,7 +417,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "title": "Builder",
             },
             Object {
-              "formAction": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=46a98ea4be",
               "id": "communication-moderator",
               "image": "icon-component-mock",
               "overview": "
@@ -414,7 +456,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=26a32a8d8d"
           id="validator"
           image="icon-component-mock"
           overview="The Joystream platform state lives on a blockchain consensus system.
@@ -455,7 +497,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=51a3da04f8"
           id="council-member"
           image="icon-component-mock"
           overview="At the heart of the governance process on the platform is the proposal system,
@@ -493,7 +535,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460"
           id="storage-provider"
           image="icon-component-mock"
           overview="There are critical platform assets that do not live on the blockchain,
@@ -516,6 +558,40 @@ exports[`RolesPage page renders correctly 1`] = `
             ]
           }
           title="Storage Provider"
+          tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead"
+          type="active"
+        />
+      </InView>
+      <InView
+        as="div"
+        key="Storage Lead"
+        onChange={[Function]}
+        threshold={0.2}
+        triggerOnce={false}
+      >
+        <RoleOverview
+          className=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460"
+          id="storage-lead"
+          image="icon-component-mock"
+          overview="The Storage Lead is hired directly by the Council through the proposals system and
+      is dedicated to the hiring, firing and wider management of Storage Providers on the network."
+          questionLink="mailto:hello@jsgenesis.com"
+          requirements={
+            Array [
+              "Experienced with how to setup and maintain high performance IT infrastructure",
+              "Ability to effectively manage and coordinate the actions of the Storage Providers",
+              "Hold sufficient amount of the native platform token to put at stake",
+            ]
+          }
+          responsibilites={
+            Array [
+              "The Storage Lead is responsible for ensuring that Storage Providers are performing adequately.
+        Each one must hold a complete and up-to-date copy of the content directory and ensure uptime in
+        order to effectively serve content consumers.",
+            ]
+          }
+          title="Storage Lead"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers"
           type="active"
         />
@@ -529,7 +605,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93"
           id="content-curator"
           image="icon-component-mock"
           overview="All of the media content published on the platform lives in an on-chain content directory.
@@ -579,7 +655,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=0ea466b90d"
           id="content-creator"
           image="icon-component-mock"
           overview="As a video platform, one of the most important platform assets is the content published
@@ -606,6 +682,42 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        key="Content Lead"
+        onChange={[Function]}
+        threshold={0.2}
+        triggerOnce={false}
+      >
+        <RoleOverview
+          className=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93"
+          id="content-lead"
+          image="icon-component-mock"
+          overview="The Council has the power to appoint a Content Curator Lead for the network who can hire further
+      Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing
+      with the council, the Lead can also decide to fire curators who are not performing their jobs adequately."
+          questionLink="mailto:hello@jsgenesis.com"
+          requirements={
+            Array [
+              "Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
+              "Hold sufficient amount of the native platform token to put at stake",
+            ]
+          }
+          responsibilites={
+            Array [
+              "Monitor the publishing of new content into the content directory,
+        and respond to reports about contested publications",
+              "Adjudicate possible dispute processes resulting from reports from users",
+              "Update information on content to be accurate",
+              "Manage and coordinate the actions of the Content Working Group",
+            ]
+          }
+          title="Content Lead"
+          tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead"
+          type="active"
+        />
+      </InView>
+      <InView
+        as="div"
         key="Membership Screener"
         onChange={[Function]}
         threshold={0.2}
@@ -613,7 +725,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2a9bd4a3ed"
           id="membership-screener"
           image="icon-component-mock"
           overview="A membership is an integrated representation of identifying information
@@ -671,7 +783,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=bd10fbb23f"
           id="membership-curator"
           image="icon-component-mock"
           overview={
@@ -735,7 +847,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2d978eeb0c"
           id="bandwidth-provider"
           image="icon-component-mock"
           overview="There are critical platform assets that do not live on the blockchain, such as images
@@ -770,7 +882,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=766d15796d"
           id="discovery-provider"
           image="icon-component-mock"
           overview="All of the content on the platform is in a designated content directory, and effectively navigating
@@ -817,7 +929,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=4ea03faa7a"
           id="live-streaming-provider"
           image="icon-component-mock"
           overview="The platform supports live video, allowing publisher to distribute content as it is created.
@@ -849,7 +961,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276"
           id="builder"
           image="icon-component-mock"
           overview={
@@ -908,7 +1020,7 @@ exports[`RolesPage page renders correctly 1`] = `
       >
         <RoleOverview
           className=""
-          formAction=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=46a98ea4be"
           id="communication-moderator"
           image="icon-component-mock"
           overview="
