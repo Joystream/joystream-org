@@ -110,7 +110,7 @@ const ScoringPeriod = ({ formerDate, latterDate }) => {
         <div className="FoundingMembersPage__period__buttons">
           <ArrowButton
             className="FoundingMembersPage__period__summary-button"
-            link="https://www.google.com"
+            link="/founding-members/form"
             text="Submit summary"
           />
           <ArrowButton
@@ -121,6 +121,41 @@ const ScoringPeriod = ({ formerDate, latterDate }) => {
         </div>
       </div>
     </section>
+  );
+};
+
+export const ScoringPeriodCounter = ({ className, formerDate, latterDate }) => {
+  const now = new Date();
+
+  // Calculate percentage of time passed between former date and now.
+
+  const timeDifferenceBetweenDates = Math.abs(latterDate - formerDate) / (1000 * 60 * 60 * 24);
+  const timeDifferenceUntilNow = Math.abs(now - formerDate) / (1000 * 60 * 60 * 24);
+  const percent = timeDifferenceUntilNow / timeDifferenceBetweenDates;
+
+  return (
+    <div className={`FoundingMembersPage__period__counter ${className ?? ''}`}>
+      <p className="FoundingMembersPage__period__counter__subtitle">{percent <= 1 ? 'ENDS' : 'ENDED ON'}</p>
+      <FoundingMembersCounter latterDate={latterDate} />
+      {percent <= 1 ? (
+        <div className="FoundingMembersPage__period__percentage">
+          <div className="FoundingMembersPage__period__percentage__line FoundingMembersPage__period__percentage__line--secondary">
+            <div
+              style={{ width: `${percent * 100}%` }}
+              className="FoundingMembersPage__period__percentage__filled"
+            ></div>
+          </div>
+          <div className="FoundingMembersPage__period__percentage__dates">
+            <p>
+              {formerDate.getDate()} {formerDate.toLocaleString('default', { month: 'long' })}
+            </p>
+            <p>
+              {latterDate.getDate()} {latterDate.toLocaleString('default', { month: 'long' })}
+            </p>
+          </div>
+        </div>
+      ) : null}
+    </div>
   );
 };
 

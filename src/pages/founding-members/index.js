@@ -20,18 +20,32 @@ import { referrerData, scoreData, fullData } from '../../data/pages/founding-mem
 // Setting the dates for the counter
 
 const formerDate = new Date(2020, 11, 1);
-const latterDate = new Date(2021, 0, 20);
+const latterDate = new Date(2021, 2, 20);
 const now = new Date();
 
-export const ArrowButton = ({ link, text, className }) => {
-  return (
-    <Button style={{ padding: 0 }} className={`${className}`} href={link}>
-      <div className="ArrowButton">
-        <span className="ArrowButton__text"> {text} </span>
-        <Arrow className="ArrowButton__arrow" />
-      </div>
-    </Button>
+export const ArrowButton = ({ link, text, className, onClick }) => {
+  const children = (
+    <div className="ArrowButton">
+      <span className="ArrowButton__text"> {text} </span>
+      <Arrow className="ArrowButton__arrow" />
+    </div>
   );
+
+  if (link) {
+    return (
+      <Button style={{ padding: 0 }} className={`${className}`} href={link}>
+        {children}
+      </Button>
+    );
+  } else {
+    return (
+      <Button style={{ padding: 0 }} className={`${className}`} onClick={onClick}>
+        {children}
+      </Button>
+    );
+  }
+
+  return null;
 };
 
 const FoundingMembersPage = () => {
