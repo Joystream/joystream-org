@@ -78,6 +78,10 @@
         width: 100%;
         height: 8px;
         background-color: #4038ff;
+
+        &--secondary {
+          background-color: $c_han-purple;
+        }
       }
 
       &__filled {
