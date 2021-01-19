@@ -110,7 +110,7 @@ const ScoringPeriod = ({ formerDate, latterDate }) => {
         <div className="FoundingMembersPage__period__buttons">
           <ArrowButton
             className="FoundingMembersPage__period__summary-button"
-            link="https://www.google.com"
+            link="/founding-members/form"
             text="Submit summary"
           />
           <ArrowButton
