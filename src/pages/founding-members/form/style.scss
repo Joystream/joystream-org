@@ -344,6 +344,47 @@
         text-decoration: underline;
       }
     }
+
+    &__profile {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      &__picture {
+        display: grid;
+        max-width: 64px;
+        max-height: 64px;
+        min-width: 64px;
+        min-height: 64px;
+        background-color: #eff2f6;
+        border-radius: 50%;
+        place-items: center;
+      }
+
+      &__data {
+        flex: 1;
+        margin-left: 16px;
+        padding: 8px 0;
+        overflow-x: hidden;
+      }
+
+      &__membership {
+        width: 100%;
+        font-family: $font-secondary;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -.20000000298023224px;
+        color: $c_black;
+        text-overflow: ellipsis;
+      }
+
+      &__joy-amount {
+        font-family: $font-secondary;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -.4000000059604645px;
+      }
+    }
   }
 
   &__counter {
