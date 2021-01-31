@@ -1,46 +1,19 @@
 import { sharedData } from '../../data/pages';
 
 const links = [
-  {
-    label: 'Product',
-    links: [
-      {
-        href: 'https://play.joystream.org/',
-        label: 'Atlas',
-      },
-      {
-        href: 'https://testnet.joystream.org/',
-        label: 'Pioneer',
-      },
-    ],
-  },
+  { to: '/founding-members', label: 'Founding Members' },
   { to: '/manifesto', label: 'Manifesto' },
   { to: '/roles', label: 'Roles' },
+  { to: '/testnet', label: 'Incentives' },
+  { href: sharedData.links.repository, label: 'Repository' },
   {
-    label: 'Founding Members',
-    links: [
-      {
-        to: '/founding-members',
-        label: 'Overview',
-      },
-      {
-        to: '/founding-members/leaderboards',
-        label: 'Direct scoring ranking',
-      },
-      {
-        to: '/founding-members/leaderboards',
-        label: 'Referral scoring ranking',
-      },
-      {
-        to: '/founding-members/form',
-        label: 'Scoring Period Form',
-      },
-    ],
+    href: sharedData.links.whitepaper,
+    label: 'Whitepaper',
   },
-  { href: sharedData.links.repository, label: 'Community' },
+  { href: sharedData.links.blog, label: 'Blog' },
   {
     href: sharedData.links.openings,
-    label: 'Start earning',
+    label: 'We are hiring!',
     isButton: true,
   },
 ];

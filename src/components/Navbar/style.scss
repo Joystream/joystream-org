@@ -33,10 +33,6 @@
     padding-right: 0;
     padding-left: 32px;
     background-color: inherit;
-
-    &--active {
-      background-color: $c_blue-ribbon;
-    }
   }
 
   &__logo {
@@ -44,21 +40,17 @@
     width: 150px;
     height: $navbar-height;
     color: $c_blue-ribbon;
-
-    &--active {
-      color: $c_white;
-    }
   }
 
   &__links {
     position: absolute;
-    bottom: 2px;
+    bottom: 0;
     left: 0;
     z-index: -1;
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: $c_blue-ribbon;
+    background-color: $c_black;
     transform: translateY(0);
     transition: transform 400ms ease 0s;
 
@@ -68,144 +60,50 @@
   }
 
   &__link {
-    position: relative;
     display: inline-block;
-    padding: 20px 20px 20px 36px;
+    padding: 20px 20px 20px 32px;
     font-family: $font-primary;
     font-size: 18px;
     line-height: 20px;
-    color: $c_white;
-
-    &__expand-icon {
-      position: absolute;
-      right: 42px;
-      margin-left: 8px;
-
-      &--active {
-        right: 22px;
-        transform: rotate(180deg);
-      }
-    }
-
-    &__link-icon {
-      position: absolute;
-      right: 16px;
-      color: #b4bbff;
-    }
+    color: $c_heather;
 
     &:hover,
     &--active {
       color: $c_white;
-
-      &__expand-icon {
-        color: white;
-      }
     }
 
     &--button {
-      width: 94%;
-      margin: 20px auto;
       color: $c_white;
-      background-color: $c_black;
+      background-color: $c_blue-ribbon;
       backface-visibility: hidden;
 
       &:hover {
-        background-color: $c_black;
+        background-color: $c_han_purple;
       }
     }
-  }
-
-  &__arrow-icon {
-    position: absolute;
-    right: 30px;
-    transform: rotate(-90deg);
   }
 
   &__trigger {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
-    margin: 8px 8px 0 0;
-    color: white;
+    width: $navbar-height;
+    height: $navbar-height;
     cursor: pointer;
     background-color: $c_blue-ribbon;
+
+    &--active {
+      background-color: $c_silver;
+    }
 
     &::before {
       font-size: 20px;
       color: $c_white;
       content: '\2630';
     }
-
-    &--active {
-      background-color: $c_black;
-
-      &::before {
-        font-size: 25px;
-        content: '\008E';
-      }
-    }
-
-    &__close-icon {
-      width: 11px;
-      height: 11px;
-      color: white;
-    }
-  }
-
-  &__link-wrapper {
-    cursor: pointer;
-
-    &--active {
-      margin: 6px 20px 0 18px;
-      background-color: #2f2ff4;
-
-      & > p {
-        padding: 14px 0 0 18px !important;
-      }
-    }
-
-    p:nth-child(1) {
-      display: block;
-    }
-  }
-
-  &__dropdown {
-    display: none;
-    width: 100%;
-
-    &--active {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
-
-    div:nth-of-type(1) {
-      padding-top: 28px;
-    }
-
-    div:last-child {
-      padding-bottom: 14px;
-    }
-  }
-
-  &__dropdown-item {
-    padding: 14px 0 14px 32px;
-    font-family: $font-primary;
-    font-size: 18px;
-    line-height: 20px;
-    letter-spacing: 0;
-  }
-
-  &__dropdown-link {
-    display: block;
-    color: $c_white;
   }
 
   @media #{$screen-lg} {
-    background-color: $c_black;
-
     &--light {
       #{$r} {
         &__link {
@@ -231,16 +129,7 @@
     }
 
     &__container {
-      height: 100%;
       padding: 0 32px;
-
-      &--active {
-        background-color: $c_black;
-      }
-    }
-
-    &__logo--active {
-      color: $c_blue-ribbon;
     }
 
     &__links {
@@ -253,86 +142,24 @@
       flex-direction: row;
       width: auto;
       background-color: transparent;
-      background-color: $c_black;
       transform: translateY(0);
     }
 
     &__link {
       padding: 20px 0;
-      color: $c_grayc-chateau;
 
       &:not(:last-child) {
         margin-right: 25px;
       }
 
       &--button {
-        display: flex;
-        align-items: center;
-        width: 220px;
-        height: 60px;
-        padding: 34px 20px;
-        color: $c_white;
-        background-color: $c_blue-ribbon;
-
-        &:hover {
-          background-color: $c_blue-ribbon;
-        }
+        height: 100%;
+        padding: 34px 40px;
       }
-
-      &__expand-icon {
-        position: relative;
-        right: unset;
-        margin: auto 0 auto 7px;
-      }
-
-      &__link-icon {
-        display: none;
-      }
-    }
-
-    &__arrow-icon {
-      margin-left: 40px;
-      transform: rotate(-90deg);
     }
 
     &__trigger {
       display: none;
-    }
-
-    &__link-wrapper {
-      position: relative;
-      margin: 0;
-      cursor: pointer;
-
-      &--active {
-        background-color: black;
-
-        & > p {
-          padding: 0 !important;
-        }
-      }
-    }
-
-    &__dropdown {
-      position: absolute;
-      top: 55px;
-      left: 0;
-      display: none;
-      flex-direction: column;
-      width: max-content;
-      background-color: $c_white;
-
-      &--active {
-        display: flex;
-      }
-    }
-
-    &__dropdown-item {
-      padding: 18px 20px !important;
-    }
-
-    &__dropdown-link {
-      color: $c_black;
     }
   }
 }

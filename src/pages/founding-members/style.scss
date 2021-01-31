@@ -118,7 +118,7 @@
     }
 
     &__text {
-      width: 605px;
+      width: 980px;
       margin-top: 8px;
       font-family: $font-secondary;
       font-size: 14px;
@@ -176,6 +176,14 @@
     &__hero-wrapper {
       padding-bottom: 180px;
     }
+
+    &__disclaimer {
+      padding: 40px 20px;
+
+      &__text {
+        width: 100%;
+      }
+    }
   }
 
   @media #{$screen-max-sm} {
@@ -229,14 +237,6 @@
       &__visual {
         width: 310px;
         height: 217px;
-      }
-    }
-
-    &__disclaimer {
-      padding: 40px 20px;
-
-      &__text {
-        width: 100%;
       }
     }
   }

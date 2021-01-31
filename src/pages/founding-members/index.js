@@ -44,12 +44,10 @@ export const ArrowButton = ({ link, text, className, onClick }) => {
       </Button>
     );
   }
-
-  return null;
 };
 
 const FoundingMembersPage = () => {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <BaseLayout secondary>
@@ -57,7 +55,6 @@ const FoundingMembersPage = () => {
         title="Founding Members"
         description="Information and data regarding the new Founding Members Program of the Joystream platform."
       />{' '}
-      {/* To be changed */}
       <div className="FoundingMembersPage__hero-wrapper">
         <div className="FoundingMembersPage__hero">
           <div className="FoundingMembersPage__hero__content">
@@ -113,8 +110,26 @@ const FoundingMembersPage = () => {
       <div className="FoundingMembersPage__disclaimer">
         <h2 className="FoundingMembersPage__disclaimer__title">Disclaimer</h2>
         <p className="FoundingMembersPage__disclaimer__text">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-          velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          This disclaimer applies to the webpage accessible at{' '}
+          <a style={{ color: 'white' }} href="https://www.joystream.org/token/">
+            www.joystream.org/token
+          </a>{' '}
+          as well as all other webpages, digital services or applications published by Jsgenesis (the “Company”). The
+          disclaimer also applies to any material published by Company in any other format in connection with the JOY
+          token (the “Token”). Publications made by Company and all information contained within them are not directed
+          at or intended for use by any person resident or located in any jurisdiction where (1) the distribution of
+          such information is contrary to the laws of such jurisdiction; or (2) such distribution is prohibited without
+          obtaining the necessary licenses or authorizations by the relevant branch, subsidiary or affiliate office of
+          Company and such licenses or authorizations have not been obtained. Company does not provide investment, legal
+          or tax advice and nothing herein should be construed as being financial, legal, tax or other advice. Unless
+          specifically stated otherwise, all price information is indicative only. No representation or warranty, either
+          express or implied, is provided in relation to the accuracy, completeness or reliability of the materials, nor
+          are they a complete statement of the securities, markets or developments referred to herein. The materials
+          should not be regarded by recipients as a substitute for the exercise of their own judgment. All information
+          and materials published, distributed or otherwise made available by Company in relation to Token are provided
+          for informational purposes, for your non-commercial, personal use only. No information or materials published
+          by Company constitutes a solicitation, an offer, or a recommendation to buy or sell any investment
+          instruments, to effect any transactions, or to conclude any legal act of any kind whatsoever.
         </p>
       </div>
     </BaseLayout>

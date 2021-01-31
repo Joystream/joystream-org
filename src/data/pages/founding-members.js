@@ -232,3 +232,5 @@ ZLae0VoRnU2EPG1Uh/W34+hXM46Zdk8xZt1Zl5Gkdk/1lb69Mj3RuPM9P0pFjS3N
 cqtfSrRMTi4uP5xa8b19Asnu0fkSAXnchOfW4M4GICuvgeo=
 =sbij
 -----END PGP PUBLIC KEY BLOCK-----`;
+
+export const JoystreamWSProvider = 'wss://rome-rpc-endpoint.joystream.org:9944/';

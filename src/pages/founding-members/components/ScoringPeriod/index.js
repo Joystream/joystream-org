@@ -115,7 +115,7 @@ const ScoringPeriod = ({ formerDate, latterDate }) => {
           />
           <ArrowButton
             className="FoundingMembersPage__period__announcement-button"
-            link="https://www.google.com"
+            link="https://github.com/Joystream/founding-member/blob/master/scoring-periods/1.md"
             text={width > 920 ? 'Period announcement' : 'Announcement'}
           />
         </div>
