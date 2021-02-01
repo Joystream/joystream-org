@@ -4,99 +4,87 @@
 			"description": "For the governance process to function properly, all proposals must be processed effectively, and in a reasonable time frame to avoiding blocking new proposals coming in.",
 			"reward": "0",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "17.01.2021 ~12:00 UTC - #1670401",
+			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
 			"successEvents": [
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h).",
 				"No malicious or unreasonable proposals are approved."
 			],
 			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards, and a new Council Election will be started immediately.",
-			"gradeDate": "01.02.2021 - 18:00 UTC",
-			"number": 9.1
+			"gradeDate": "16.02.2021 - 18:00 UTC",
+			"number": 10.1
 		},
 		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. For each Term the Council must produce a report of 'events' and 'Tokenomics' to allow users to make informed votes. This must be submitted as a PR to the Community Repo.",
 			"reward": "0",
 			"measurementPeriod": "16 days",
-			"startDate": "17.01.2021 ~12:00 UTC - #1670401",
+			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
 			"successEvents": [
-				"The Third Council on Babylon (#1670401-#1872001) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
+				"The Third Council on Babylon (#1872001-#2073601) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
 			],
 			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards.",
-			"gradeDate": "01.02.2021 - 18:00 UTC",
-			"number": 9.2
+			"gradeDate": "16.02.2021 - 18:00 UTC",
+			"number": 10.2
 		},
 		{
 			"title": "Appoint New Council Secretary",
 			"description": "The Council must appoint one of their own as the Council Secretary, responsible for adding Council Reports and representing the Council in the Community Repo (with some enhanced repository maintenance privileges).",
 			"reward": "50",
 			"measurementPeriod": "5 days",
-			"startDate": "17.01.2021 ~12:00 UTC - #1670401",
+			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
 			"successEvents": [
 				"The Council informally appoints a Council Secretary through a spending proposal and pays them an appropriate rate for their responsibilities.",
 				"The spending proposal must provide a link to the Council Secretary's GitHub account so we can provide them 'triage' permissions on the community repo."
 			],
 			"annihilation": "No Council Secretary is appointed.",
-			"gradeDate": "01.02.2021 - 18:00 UTC",
-			"number": 9.3
+			"gradeDate": "16.02.2021 - 18:00 UTC",
+			"number": 10.3
+		},
+		{
+			"title": "Increase the Opportunities on the Platform",
+			"description": "Due to a new incentives program we are in the process of rolling out, we want to open up for more participation on the platform. As a consequence, the platforms budget will be increased to USD 1000/council term.",
+			"reward": "250",
+			"measurementPeriod": "14 days",
+			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
+			"successEvents": [
+				"Increase the number of validator slots to 80 from approx #1771201. Expect to further increase this number in the future.",
+				"Based on the results from Bounty #6, and further discussion, request changes to related parameters.",
+				"Increase the number of spots on the Council to 12, and change the other parameters where appropriate. Request a new recurring reward scheme based on this.",
+				"The workload for the Curator group will go up with the new scheme (as new bounties will be rolled out). Ensure the group is both properly manned, and trained for this development.",
+				"Set up a new budget for the platform, revising both the number of positions for each role, and their rewards."
+			],
+			"annihilation": "NA",
+			"gradeDate": "16.02.2021 - 18:00 UTC",
+			"number": 10.4
 		},
 		{
 			"title": "Block Production",
 			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer.",
 			"reward": "50",
-			"startDate": "17.01.2021 ~12:00 UTC - #1670401",
+			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
 			"measurementPeriod": "14 days (Full Council Term)",
 			"successEvents": [
-				"The difference between the timestamp of blocks #1670401 and #1872001 must be less than 1229760000 (avg 6.1s/block).",
+				"The difference between the timestamp of blocks #1872001 and #2073601 must be less than 1229760000 (avg 6.1s/block).",
 				"The total Validator+Nominator stake averages between 20% and 30% of total issuance."
 			],
-			"annihilation": "The difference between the timestamp of blocks #1670401 and #1872001 is over 1260000000 (avg 6.25s/block), or the total Validator+Nominator stake averages under 10% of total issuance.",
-			"gradeDate": "01.02.2021 - 18:00 UTC",
-			"number": 9.4
-		},
-		{
-			"title": "Managing the Working Groups",
-			"description": "In addition to the regular tasks, the runtime upgrade will require extra work in terms of management. In particular as the Curator Working Group module will be changed.",
-			"reward": "50",
-			"measurementPeriod": "7 days",
-			"startDate": "17.01.2021 ~12:00 UTC - #1670401",
-			"successEvents": [
-				"New budgets are set for each group, taking the 'Recurring Replenishment', platform inflation and the costs and platform needs for each role into account."
-			],
-			"annihilation": "NA",
-			"gradeDate": "01.02.2021 - 18:00 UTC",
-			"number": 9.5
-		},
-		{
-			"title": "Joystream Sprocket",
-			"description": "Start the Joystream Sprocket based on issue #1966 in the 'joystream' repo. At least $200 of funding will be made available initially by Jsgenesis.",
-			"reward": "100",
-			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "17.01.2021 ~12:00 UTC - #1670401",
-			"successEvents": [
-				"A complete plan for starting the first Joystream Sprocket is created.",
-				"A list of achievable wants and needs (technical or other) to start it up is submitted. Some of this may be a new bounty (see KPI 8.7-2)."
-			],
-			"annihilation": "NA",
-			"gradeDate": "01.02.2021 - 18:00 UTC",
-			"number": 9.6
+			"annihilation": "The difference between the timestamp of blocks #1872001 and #2073601 is over 1260000000 (avg 6.25s/block), or the total Validator+Nominator stake averages under 10% of total issuance.",
+			"gradeDate": "16.02.2021 - 18:00 UTC",
+			"number": 10.5
 		},
 		{
 			"title": "Managing Community Bounties",
 			"description": "Managing Community Bounties will be a growing part of the Council's workload. Establishing good workflows for this will be iterative and situational.",
-			"reward": "300",
+			"reward": "200",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "17.01.2021 ~12:00 UTC - #1670401",
+			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
 			"successEvents": [
-				"Community Bounty #5 - 'Joystream Telegram Sticker pack', in line with the approved scheme outlined in proposal #69, has recieved at least one approved entry.",
-				"Based on KPI 8.6-2, create the bounty/bounties needed.",
-				"Create one (complete) new bounty, based Community feedback and wishes, and present the full 'issue' text as a PR.",
-				"Community Bounty #5 - 'Increase Validator Set Research', is submitted within the Council Term.",
-				"All new bounties gets a thread, and followed up in the Forum"
+				"#5 - 'Joystream Telegram Sticker pack': Submit a report of the current status, covering both the results and the cost, and present a plan going forward.",
+				"As new bounties will be rolled out in the term, perform the Councils tasks as required.",
+				"For the bounties that requires 'Admins', create budgets and hire/assign members for the tasks."
 			],
 			"annihilation": "Unlike standard `annihilations`, any rewards paid for a Bounty that exceeds what Jsgenesis pays will be deducted from the Council's KPI rewards.",
-			"gradeDate": "01.02.2021 - 18:00 UTC",
-			"number": 9.7
+			"gradeDate": "16.02.2021 - 18:00 UTC",
+			"number": 10.6
 		}
 	],
 	"Bounties": [{
