@@ -45,7 +45,7 @@ const List = ({ data }) => (
   <div className="FoundingMembersPage__list-wrapper">
     <div className="FoundingMembersPage__list">
       <h2 className="FoundingMembersPage__list__title">
-        List of current founding members <span>{data?.length}</span>
+        Current founding members <span>{data?.length}</span>
       </h2>
       <CardCarousel>
         {data?.map((founderData, index) => (

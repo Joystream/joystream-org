@@ -27,7 +27,7 @@ const Json = ({
       <div className="flex-row margin-bottom-XS">
         <h3 className="FoundingMembersFormPage__form__subtitle">Exported account with key</h3>
         <button className="FoundingMembersFormPage__form__link" onClick={() => setIsModalOpen(true)}>
-          How should i do it?
+          How to export your key?
         </button>
         <Modal
           isOpen={isModalOpen}
@@ -37,17 +37,11 @@ const Json = ({
         >
           <div className="FoundingMembersFormPage__form__modal__container">
             <p className="margin-bottom-M">How to export your account with key:</p>
-            <p className="margin-bottom-M">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
+              In the <a href="https://testnet.joystream.org/" target='_blank'>Pioneer application</a> click the <em>My Keys</em> tab and
+              then click the ellipsis (three dots) button on the Key which you would like to use. Then click{' '}
+              <em>Create a backup file for this account</em>. Enter your password (if applicable) and the JSON will be
+              downloaded.
             </p>
           </div>
         </Modal>

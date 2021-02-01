@@ -119,7 +119,7 @@ const Metrics = ({ tableOneData, tableTwoData }) => (
       <ArrowButton
         className="FoundingMembersPage__leaderboards__button"
         link="https://www.google.com"
-        text="Learn more about the rules"
+        text="Read the full program rules"
       />
     </div>
   </>

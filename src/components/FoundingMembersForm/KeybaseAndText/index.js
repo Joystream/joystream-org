@@ -83,18 +83,11 @@ const KeybaseAndText = ({
           overlayClassName="FoundingMembersFormPage__form__modal__overlay"
         >
           <div className="FoundingMembersFormPage__form__modal__container">
-            <p className="margin-bottom-M">How to export your account with key:</p>
-            <p className="margin-bottom-M">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
+            <p className="margin-bottom-M">How to prepare it:</p>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
+              Your activity summary should describe in as much detail as possible your recent contributions to the
+              success of the platform. Try to separate out each contribution into a separate paragraph or bullet point
+              for ease of processing.
             </p>
           </div>
         </Modal>

@@ -58,7 +58,7 @@ const FoundingMembersPage = () => {
       <div className="FoundingMembersPage__hero-wrapper">
         <div className="FoundingMembersPage__hero">
           <div className="FoundingMembersPage__hero__content">
-            <h1 className="FoundingMembersPage__hero__title">Founding members program has just launched</h1>
+            <h1 className="FoundingMembersPage__hero__title">Joystream Founding Member Program</h1>
             <p className="FoundingMembersPage__hero__paragraph">
               Become a Founding member and have a real impact on the development of our platform.
             </p>
@@ -92,11 +92,13 @@ const FoundingMembersPage = () => {
         <div className="FoundingMembersPage__cta">
           <div className="FoundingMembersPage__cta__content">
             <h2 className="FoundingMembersPage__cta__title">
-              Become a founding <br /> member
+              Discuss the program
             </h2>
             <p className="FoundingMembersPage__cta__text">
-              Join our Telegram where they can get their first free testnet tokens and learn what the best opportunities
-              are at the moment.
+              Begin your founding member journey by joining our Telegram group and requesting your first testnet tokens.
+            </p>
+            <p className="FoundingMembersPage__cta__text">
+              Here you can also ask question about many aspects of the program and find out the areas where you can contribute right away.
             </p>
             <ArrowButton
               className="FoundingMembersPage__cta__button"
