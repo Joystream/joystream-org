@@ -57,14 +57,25 @@ const Json = ({
       />
       {!jsonFile.name ? (
         <div
-          onDragEnter={() => setIsFileHovering(true)}
-          onDragLeave={() => setIsFileHovering(false)}
+          onDragOver={(e) => {
+            e.preventDefault();
+          }}
+          onDrop={e => {
+            e.preventDefault();
+            handleFileSelection(e, 'application/json');
+            setIsFileHovering(false);
+          }}
           className={cn('FoundingMembersFormPage__form__filedrop', {
             'FoundingMembersFormPage__form__filedrop--active': isFileHovering,
           })}
         >
           {!fileStatus.loading && !fileStatus.loaded && (
-            <label htmlFor="file" className="FoundingMembersFormPage__form__filedrop__label">
+            <label
+            onDragEnter={() => setIsFileHovering(true)}
+            onDragLeave={() => setIsFileHovering(false)}
+            htmlFor="file"
+            className="FoundingMembersFormPage__form__filedrop__label"
+            >
               <p className="FoundingMembersFormPage__form__filedrop__text">
                 Drop you file here or <span className="FoundingMembersFormPage__form__link">browse files</span>
               </p>{' '}

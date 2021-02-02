@@ -202,7 +202,8 @@ const FoundingMembersForm = () => {
   };
 
   const handleFileSelection = (event, type) => {
-    const file = event.target.files[0];
+
+    const file = event.dataTransfer ? event.dataTransfer.files[0] : event.target.files[0];
 
     const isJson = file?.type === 'application/json' && type === 'application/json';
     const isText = file?.type === 'text/plain' && type === 'text';
