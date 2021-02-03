@@ -117,7 +117,7 @@ const FoundingMembersForm = () => {
     loading: false,
     loaded: false,
     error: false,
-    errorMessage: ''
+    errorMessage: '',
   });
   const [fileLoadedAmount, setFileLoadedAmount] = useState(0);
 
@@ -203,7 +203,6 @@ const FoundingMembersForm = () => {
   };
 
   const handleFileSelection = (event, type) => {
-
     const file = event.dataTransfer ? event.dataTransfer.files[0] : event.target.files[0];
 
     const isJson = file?.type === 'application/json' && type === 'application/json';
@@ -214,7 +213,7 @@ const FoundingMembersForm = () => {
         loading: false,
         loaded: false,
         error: true,
-        errorMessage: 'Wrong file format! Please try again or check our tips how to export it.'
+        errorMessage: 'Wrong file format! Please try again or check our tips how to export it.',
       });
       if (type === 'application/json') {
         setJsonFile({
@@ -234,7 +233,7 @@ const FoundingMembersForm = () => {
       loading: true,
       loaded: false,
       error: false,
-      errorMessage: ''
+      errorMessage: '',
     });
 
     const fileReader = new FileReader();
@@ -265,13 +264,21 @@ const FoundingMembersForm = () => {
         loading: false,
         loaded: true,
         error: false,
-        errorMessage: ''
+        errorMessage: '',
       });
 
       if (isJson) {
-        const { address, encoded, encoding, meta } = JSON.parse(e.target.result);
+        let isFileValid, doesUserCorrespond;
 
-        if (address && encoded && encoding && meta && address === profile.controller_account.toString()) {
+        try {
+          const { address, encoded, encoding, meta } = JSON.parse(e.target.result);
+          isFileValid = address && encoded && encoding && meta;
+          doesUserCorrespond = address === profile.controller_account.toString();
+        }catch(e){
+          console.log(e);
+        }
+
+        if (isFileValid && doesUserCorrespond) {
           setJsonFile(prev => ({
             ...prev,
             data: e.target.result,
@@ -281,7 +288,10 @@ const FoundingMembersForm = () => {
             loading: false,
             loaded: false,
             error: true,
-            errorMessage: 'Json file doesn\'t correspond to account given! Try another json.'
+            errorMessage:
+              isFileValid && !doesUserCorrespond
+                ? `Json file doesn't correspond to account given!`
+                : 'Json file has incomplete/incorrect components. Try exporting your account again!',
           });
           setJsonFile({
             name: file.name,
@@ -311,7 +321,7 @@ const FoundingMembersForm = () => {
     user.decodePkcs8(password);
 
     const hash = blake2AsHex(textFile.data.replace(/\n|\r/g, ''), 256);
-    
+
     const signature = user.sign(hexToU8a(hash));
 
     const { data: encrypted } = await openpgp.encrypt({
