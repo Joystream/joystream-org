@@ -119,7 +119,7 @@ const Json = ({
       )}
       {fileStatus.error && (
         <p className="FoundingMembersFormPage__form__error-message">
-          Wrong file format! Please try again or check our tips <a href="#0">how to export it</a>
+          {fileStatus.errorMessage}
         </p>
       )}
       <ArrowButton

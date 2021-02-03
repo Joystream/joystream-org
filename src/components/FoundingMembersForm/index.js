@@ -117,6 +117,7 @@ const FoundingMembersForm = () => {
     loading: false,
     loaded: false,
     error: false,
+    errorMessage: ''
   });
   const [fileLoadedAmount, setFileLoadedAmount] = useState(0);
 
@@ -213,6 +214,7 @@ const FoundingMembersForm = () => {
         loading: false,
         loaded: false,
         error: true,
+        errorMessage: 'Wrong file format! Please try again or check our tips how to export it.'
       });
       if (type === 'application/json') {
         setJsonFile({
@@ -232,6 +234,7 @@ const FoundingMembersForm = () => {
       loading: true,
       loaded: false,
       error: false,
+      errorMessage: ''
     });
 
     const fileReader = new FileReader();
@@ -262,6 +265,7 @@ const FoundingMembersForm = () => {
         loading: false,
         loaded: true,
         error: false,
+        errorMessage: ''
       });
 
       if (isJson) {
@@ -277,6 +281,7 @@ const FoundingMembersForm = () => {
             loading: false,
             loaded: false,
             error: true,
+            errorMessage: 'Json file doesn\'t correspond to account given! Try another json.'
           });
           setJsonFile({
             name: file.name,
@@ -299,7 +304,7 @@ const FoundingMembersForm = () => {
   const encryptData = async () => {
     const parsedJson = JSON.parse(jsonFile.data);
 
-    const keyring = new Keyring({ type: 'sr25519' });
+    const keyring = new Keyring({ type: parsedJson.encoding.content[1] });
     keyring.addFromJson(parsedJson);
 
     const user = keyring.getPair(parsedJson.address);

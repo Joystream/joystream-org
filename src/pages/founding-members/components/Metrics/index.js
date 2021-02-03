@@ -118,7 +118,7 @@ const Metrics = ({ tableOneData, tableTwoData }) => (
       </div>
       <ArrowButton
         className="FoundingMembersPage__leaderboards__button"
-        link="https://www.google.com"
+        link="https://github.com/Joystream/founding-member/blob/master/rules.md"
         text="Read the full program rules"
       />
     </div>
