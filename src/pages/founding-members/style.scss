@@ -57,6 +57,16 @@
     }
   }
 
+  &__list-wrapper {
+    &--current {
+      padding: 490px 0 120px 0;
+    }
+
+    &--new {
+      padding: 240px 0 80px 0;
+    }
+  }
+
   &__cta-wrapper {
     padding: 75px 3%;
     background-color: #4038ff;
@@ -150,6 +160,16 @@
       }
     }
 
+    &__list-wrapper {
+      &--current {
+        padding: 850px 0 70px 0;
+      }
+
+      &--new {
+        padding: 330px 0 80px 0;
+      }
+    }
+
     &__cta {
       grid-template-columns: initial;
       grid-template-rows: 1fr 1fr;
@@ -238,6 +258,12 @@
         width: 310px;
         height: 217px;
       }
+    }
+  }
+
+  @media (max-width: 510px) {
+    &__list-wrapper--current {
+      padding-top: 1050px;
     }
   }
 }

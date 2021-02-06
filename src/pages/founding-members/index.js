@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BaseLayout from '../../components/_layouts/Base';
 import SiteMetadata from '../../components/SiteMetadata';
 import FoundingMembersVisual from '../../assets/svg/hero-founding-members.svg';
@@ -6,22 +6,14 @@ import FoundingMembersVisualAlt from '../../assets/svg/hero-founding-members-alt
 import FoundingMembersCTA from '../../assets/svg/hero-founding-members-cta.svg';
 import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
 import Button from '../../components/Button';
-import PeriodHighlights from './components/PeriodHighlights/';
 import Benefits from './components/Benefits';
 import List from './components/List';
 import Metrics from './components/Metrics';
 import ScoringPeriod from './components/ScoringPeriod';
 import useWindowDimensions from '../../utils/useWindowDimensions';
+import useAxios from '../../utils/useAxios';
 
 import './style.scss';
-
-import { referrerData, scoreData, fullData } from '../../data/pages/founding-members';
-
-// Setting the dates for the counter
-
-const formerDate = new Date(2020, 11, 1);
-const latterDate = new Date(2021, 2, 20);
-const now = new Date();
 
 export const ArrowButton = ({ link, text, className, onClick }) => {
   const children = (
@@ -48,6 +40,28 @@ export const ArrowButton = ({ link, text, className, onClick }) => {
 
 const FoundingMembersPage = () => {
   const { width } = useWindowDimensions();
+
+  const [response, loading, error] = useAxios(
+    'https://raw.githubusercontent.com/bwhm/founding-members/test-schema/data/scoring-example.json'
+  );
+  const [formerDate, setFormerDate] = useState();
+  const [latterDate, setLatterData] = useState();
+  const [newFoundingMembers, setNewFoundingMembers] = useState([]);
+
+  useEffect(() => {
+    if (response) {
+      setFormerDate(new Date(response?.scoringPeriodsFull?.currentScoringPeriod?.started));
+      setLatterData(new Date(response?.scoringPeriodsFull?.currentScoringPeriod?.ends));
+
+      const currentScoringPeriodId = response?.scoringPeriodsFull?.currentScoringPeriod?.scoringPeriodId;
+
+      const newFoundingMembers = response?.currentFoundingMembers.filter(
+        member => member?.inducted?.inductedScoringPeriodId >= currentScoringPeriodId - 1
+      );
+
+      setNewFoundingMembers(newFoundingMembers);
+    }
+  }, [response]);
 
   return (
     <BaseLayout secondary>
@@ -82,23 +96,40 @@ const FoundingMembersPage = () => {
           </div>
         </div>
 
-        <ScoringPeriod formerDate={formerDate} latterDate={latterDate} />
+        <ScoringPeriod
+          formerDate={formerDate}
+          latterDate={latterDate}
+          scoringPeriodId={response?.scoringPeriodsFull?.currentScoringPeriod?.scoringPeriodId}
+        />
       </div>
-      <PeriodHighlights secondary={now > latterDate} tableOneData={referrerData} tableTwoData={scoreData} />
-      <Benefits />
-      <List data={fullData} />
-      <Metrics tableOneData={fullData} tableTwoData={fullData} />
+      {newFoundingMembers?.length ? (
+        <List
+          className="FoundingMembersPage__list-wrapper--new"
+          type="new"
+          data={newFoundingMembers}
+        />
+      ) : null}
+      <Benefits newMembers={newFoundingMembers?.length}/>
+      <List
+        className="FoundingMembersPage__list-wrapper--current"
+        type="current"
+        data={response?.currentFoundingMembers}
+      />
+      <Metrics 
+        foundingMembers={response?.currentFoundingMembers} 
+        nonFoundingMembers={response?.totalScoresFull?.totalScores}
+        sizeOfFirstTokenPool={response?.poolStats?.currentPoolSize}
+      />
       <div className="FoundingMembersPage__cta-wrapper">
         <div className="FoundingMembersPage__cta">
           <div className="FoundingMembersPage__cta__content">
-            <h2 className="FoundingMembersPage__cta__title">
-              Discuss the program
-            </h2>
+            <h2 className="FoundingMembersPage__cta__title">Discuss the program</h2>
             <p className="FoundingMembersPage__cta__text">
               Begin your founding member journey by joining our Telegram group and requesting your first testnet tokens.
             </p>
             <p className="FoundingMembersPage__cta__text">
-              Here you can also ask question about many aspects of the program and find out the areas where you can contribute right away.
+              Here you can also ask question about many aspects of the program and find out the areas where you can
+              contribute right away.
             </p>
             <ArrowButton
               className="FoundingMembersPage__cta__button"

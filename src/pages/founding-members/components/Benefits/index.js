@@ -14,8 +14,8 @@ const BenefitsItem = ({ imageSrc, text, title }) => (
   </div>
 );
 
-const Benefits = () => (
-  <div className="FoundingMembersPage__benefits">
+const Benefits = ({ newMembers }) => (
+  <div className={`FoundingMembersPage__benefits ${!newMembers ? 'FoundingMembersPage__benefits--secondary' : ''}`}>
     <div className="FoundingMembersPage__benefits__explanation">
       <h2 className="FoundingMembersPage__benefits__explanation__title">
         What is a founding <br /> member program <br /> and why it exists?

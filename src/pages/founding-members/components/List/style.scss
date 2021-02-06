@@ -2,7 +2,6 @@
 
 .FoundingMembersPage {
   &__list-wrapper {
-    padding: 490px 0 120px 0;
     background-color: #f2f5f9;
   }
 
@@ -25,6 +24,10 @@
   }
 
   &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     &__main {
       display: flex;
 
@@ -80,46 +83,6 @@
         color: #4038ff;
       }
     }
-
-    &__referrer {
-      display: flex;
-      margin-top: 9px;
-
-      &__title {
-        font-family: $font-secondary;
-        font-size: 10px;
-        line-height: 14px;
-        letter-spacing: -.4000000059604645px;
-      }
-
-      &__icon {
-        width: 32px;
-        height: 32px;
-        background-color: #dfe4ea;
-        border-radius: 50%;
-      }
-
-      &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 8px;
-      }
-
-      &__name {
-        font-family: $font-primary;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0;
-      }
-
-      &__handle {
-        font-family: $font-secondary;
-        font-size: 10px;
-        line-height: 14px;
-        letter-spacing: -.4000000059604645px;
-      }
-    }
   }
 
   @media (max-width: 1300px) {
@@ -133,24 +96,12 @@
     }
   }
 
-  @media #{$screen-max-md} {
-    &__list-wrapper {
-      padding: 850px 0 70px 0;
-    }
-  }
-
   @media #{$screen-max-sm} {
     &__list {
       &__title {
         font-size: 32px;
         line-height: 40px;
       }
-    }
-  }
-
-  @media (max-width: 510px) {
-    &__list-wrapper {
-      padding-top: 1050px;
     }
   }
 }

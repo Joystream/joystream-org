@@ -4,12 +4,12 @@ export const referrerData = [
   {
     main: {
       name: 'Jerome',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: null,
     },
     referrer: {
       name: 'Alex',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: null,
     },
   },
@@ -21,7 +21,7 @@ export const referrerData = [
     },
     referrer: {
       name: 'Alex',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: null,
     },
   },
@@ -33,7 +33,7 @@ export const referrerData = [
     },
     referrer: {
       name: 'Alex',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: null,
     },
   },
@@ -45,7 +45,7 @@ export const referrerData = [
     },
     referrer: {
       name: 'Alex',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: null,
     },
   },
@@ -57,7 +57,7 @@ export const referrerData = [
     },
     referrer: {
       name: 'Alex',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: null,
     },
   },
@@ -110,12 +110,12 @@ export const fullData = [
   {
     main: {
       name: 'Jerome',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: Avatar,
     },
     referrer: {
       name: 'Alex',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: Avatar,
     },
     score: 12,
@@ -129,7 +129,7 @@ export const fullData = [
     },
     referrer: {
       name: 'Alex',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: Avatar,
     },
     score: 12,
@@ -143,7 +143,7 @@ export const fullData = [
     },
     referrer: {
       name: 'Alex',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: Avatar,
     },
     score: 12,
@@ -157,7 +157,7 @@ export const fullData = [
     },
     referrer: {
       name: 'Alex',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: Avatar,
     },
     score: 12,
@@ -171,7 +171,7 @@ export const fullData = [
     },
     referrer: {
       name: 'Alex',
-      handle: 'Membership handle',
+      handle: 'member',
       icon: Avatar,
     },
     score: 12,

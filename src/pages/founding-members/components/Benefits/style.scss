@@ -29,6 +29,10 @@
     padding: 120px 0 520px 0;
     background-color: white;
 
+    &--secondary {
+      padding-top: 240px;
+    }
+
     &__explanation {
       display: flex;
       flex-direction: row;
@@ -96,6 +100,10 @@
     &__benefits {
       padding: 120px 30px 520px 30px;
 
+      &--secondary {
+        padding-top: 240px;
+      }
+
       &__container {
         grid-template-columns: repeat(auto-fill, 335px);
       }
@@ -130,6 +138,10 @@
     &__benefits {
       padding: 80px 30px 140px 30px;
 
+      &--secondary {
+        padding-top: 340px;
+      }
+
       &__explanation {
         &__text {
           margin-left: 30px;
@@ -141,6 +153,10 @@
   @media #{$screen-max-sm} {
     &__benefits {
       padding: 80px 20px;
+
+      &--secondary {
+        padding-top: 340px;
+      }
 
       &__explanation {
         flex-direction: column;

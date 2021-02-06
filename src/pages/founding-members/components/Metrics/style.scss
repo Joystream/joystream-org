@@ -95,6 +95,14 @@
 
     &__header {
       height: 40px;
+
+      &--founding {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+
+      &--nonfounding {
+        grid-template-columns: 1.5fr 1fr;
+      }
     }
 
     &__body {
@@ -104,11 +112,34 @@
     &__row {
       height: 64px;
       background-color: white;
+
+      &--founding {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+
+      &--nonfounding {
+        grid-template-columns: 1.5fr 1fr;
+      }
     }
 
     &__main {
+      position: relative;
       display: flex;
       align-items: center;
+
+      &__checkmark {
+        position: absolute;
+        top: 30px;
+        left: 26px;
+        display: grid;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        color: white;
+        background-color: $c_blue-ribbon;
+        border-radius: 50%;
+        place-items: center;
+      }
 
       &__placeholder {
         width: 40px;
@@ -124,60 +155,12 @@
       }
 
       &__name {
-        font-family: $font-primary;
+        font-family: $font-secondary;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0;
-      }
-
-      &__handle {
-        font-family: $font-secondary;
-        font-size: 11px;
-        line-height: 16px;
-        letter-spacing: -.4000000059604645px;
         color: #4038ff;
       }
-    }
-
-    &__referrer {
-      display: none;
-      align-items: center;
-
-      &__placeholder {
-        width: 24px;
-        height: 24px;
-        background-color: #dfe4ea;
-        border-radius: 50%;
-      }
-
-      &__data {
-        display: flex;
-        flex-direction: column;
-        margin-left: 8px;
-      }
-
-      &__name {
-        font-family: $font-secondary;
-        font-size: 12px;
-        line-height: 16px;
-        letter-spacing: -.4000000059604645px;
-      }
-
-      &__handle {
-        font-family: $font-secondary;
-        font-size: 10px;
-        line-height: 16px;
-        letter-spacing: -.4000000059604645px;
-      }
-    }
-
-    &__referrer-name {
-      margin: auto 0;
-      font-family: $font-secondary;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: -.4000000059604645px;
-      text-align: center;
     }
 
     &__score {
@@ -248,63 +231,26 @@
         grid-template-columns: 1fr;
       }
     }
-    /* stylelint-disable */
-    &__leaderboard-left {
-      .FoundingMembersPage {
-        &__leaderboard {
-          &__referrer-name,
-          &__score {
+
+    &__leaderboard {
+      &__header--founding {
+        grid-template-columns: 2.5fr 1fr;
+
+        & > p:nth-of-type(2) {
+          display: none;
+        }
+      }
+
+      &__row {
+        &--founding {
+          grid-template-columns: 2.5fr 1fr;
+
+          & > div:nth-of-type(2) {
             display: none;
           }
-
-          &__header {
-            grid-template-columns: 1fr 1fr !important;
-
-            p:nth-of-type(3) {
-              display: none;
-            }
-
-            p:nth-of-type(2) {
-              text-align: right !important;
-            }
-          }
-
-          &__row {
-            grid-template-columns: 1fr 1fr !important;
-
-            & > div:nth-of-type(2) {
-              display: flex;
-              justify-content: flex-end;
-            }
-          }
         }
       }
     }
-
-    &__leaderboards {
-      & > div:nth-of-type(2) {
-        .FoundingMembersPage {
-          &__row {
-            grid-template-columns: 1fr 1fr !important;
-
-            & > p {
-              display: none;
-            }
-          }
-
-          &__leaderboard {
-            &__header {
-              grid-template-columns: 1fr 1fr !important;
-
-              p:nth-of-type(2) {
-                display: none;
-              }
-            }
-          }
-        }
-      }
-    }
-    /* stylelint-enable */
   }
 
   @media (max-width: 620px) {
@@ -333,6 +279,13 @@
 
     &__leaderboard {
       width: 335px;
+
+      &__main__checkmark {
+        left: 29px;
+        width: 17px;
+        height: 17px;
+        padding: 4px;
+      }
 
       &__button {
         width: 335px;
