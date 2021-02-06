@@ -12,6 +12,7 @@ import Metrics from './components/Metrics';
 import ScoringPeriod from './components/ScoringPeriod';
 import useWindowDimensions from '../../utils/useWindowDimensions';
 import useAxios from '../../utils/useAxios';
+import { foundingMembersJson } from '../../data/pages/founding-members';
 
 import './style.scss';
 
@@ -41,12 +42,11 @@ export const ArrowButton = ({ link, text, className, onClick }) => {
 const FoundingMembersPage = () => {
   const { width } = useWindowDimensions();
 
-  const [response, loading, error] = useAxios(
-    'https://raw.githubusercontent.com/bwhm/founding-members/test-schema/data/scoring-example.json'
-  );
+  const [response, loading, error] = useAxios(foundingMembersJson);
   const [formerDate, setFormerDate] = useState();
   const [latterDate, setLatterData] = useState();
   const [newFoundingMembers, setNewFoundingMembers] = useState([]);
+  const [partialTokenAllocation, setPartialTokenAllocation] = useState();
 
   useEffect(() => {
     if (response) {
@@ -60,6 +60,16 @@ const FoundingMembersPage = () => {
       );
 
       setNewFoundingMembers(newFoundingMembers);
+    }
+  }, [response]);
+
+  useEffect(() => {
+    if (response) {
+      const partialTokenAllocation =
+        (response?.poolStats?.currentPoolSize - response?.poolStats?.allocatedFromPool) /
+        response?.currentFoundingMembers?.reduce((prev, curr) => prev + curr?.totalScore, 0);
+
+      setPartialTokenAllocation(partialTokenAllocation);
     }
   }, [response]);
 
@@ -103,22 +113,20 @@ const FoundingMembersPage = () => {
         />
       </div>
       {newFoundingMembers?.length ? (
-        <List
-          className="FoundingMembersPage__list-wrapper--new"
-          type="new"
-          data={newFoundingMembers}
-        />
+        <List className="FoundingMembersPage__list-wrapper--new" type="new" data={newFoundingMembers} partialTokenAllocation={partialTokenAllocation}/>
       ) : null}
-      <Benefits newMembers={newFoundingMembers?.length}/>
+      <Benefits newMembers={newFoundingMembers?.length} />
       <List
         className="FoundingMembersPage__list-wrapper--current"
         type="current"
         data={response?.currentFoundingMembers}
+        partialTokenAllocation={partialTokenAllocation}
       />
-      <Metrics 
-        foundingMembers={response?.currentFoundingMembers} 
+      <Metrics
+        foundingMembers={response?.currentFoundingMembers}
         nonFoundingMembers={response?.totalScoresFull?.totalScores}
         sizeOfFirstTokenPool={response?.poolStats?.currentPoolSize}
+        partialTokenAllocation={partialTokenAllocation}
       />
       <div className="FoundingMembersPage__cta-wrapper">
         <div className="FoundingMembersPage__cta">

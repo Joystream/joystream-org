@@ -83,7 +83,7 @@ const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle
         </>
       )}
       <ArrowButton
-        className={cn('FoundingMembersFormPage__form__button', {
+        className={cn('FoundingMembersFormPage__form__button margin-bottom-S', {
           'FoundingMembersFormPage__form__button--inactive': !textInput,
         })}
         text="Next"
@@ -102,6 +102,7 @@ const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle
           }
         }}
       />
+      <a target='_blank' href='https://github.com/Joystream/founding-members#submission-guidelines'>How it works.</a>
     </>
   );
 };

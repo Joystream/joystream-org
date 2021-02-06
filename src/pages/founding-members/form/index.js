@@ -3,15 +3,14 @@ import BaseLayout from '../../../components/_layouts/Base';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import { ScoringPeriodCounter } from '../components/ScoringPeriod';
 import useAxios from '../../../utils/useAxios';
+import { foundingMembersJson } from '../../../data/pages/founding-members';
 
 import FoundingMembersForm from '../../../components/FoundingMembersForm';
 
 import './style.scss';
 
 const FoundingMembersFormPage = () => {
-  const [response, loading, error] = useAxios(
-    'https://raw.githubusercontent.com/bwhm/founding-members/test-schema/data/scoring-example.json'
-  );
+  const [response, loading, error] = useAxios(foundingMembersJson);
   const [formerDate, setFormerDate] = useState();
   const [latterDate, setLatterData] = useState();
 
@@ -47,7 +46,8 @@ const FoundingMembersFormPage = () => {
             <div className="FoundingMembersFormPage__counter__header">
               <h2 className="FoundingMembersFormPage__counter__header__title">Current scoring period</h2>
               <h3 className="FoundingMembersFormPage__counter__header__subtitle">
-                Current period number <span>#{response?.scoringPeriodsFull?.currentScoringPeriod?.scoringPeriodId}</span>
+                Current period number{' '}
+                <span>#{response?.scoringPeriodsFull?.currentScoringPeriod?.scoringPeriodId}</span>
               </h3>
             </div>
             <ScoringPeriodCounter

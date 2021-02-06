@@ -3,8 +3,10 @@ import CardCarousel from '../../../../components/CardCarousel';
 
 import './style.scss';
 
-const Card = ({ founderData }) => {
+const Card = ({ founderData, partialTokenAllocation }) => {
   const [imageHasError, setImageHasError] = useState(false);
+
+  const tokensAllocated = founderData?.extraAllocation + (founderData?.totalScore * partialTokenAllocation);
 
   return (
     <div className="FoundingMembersPage__card">
@@ -32,14 +34,14 @@ const Card = ({ founderData }) => {
         </div>
         <div className="FoundingMembersPage__card__score">
           <p className="FoundingMembersPage__card__score__title">Tokens allocated</p>
-          <p className="FoundingMembersPage__card__score__stat">{founderData?.extraAllocation}</p>
+          <p className="FoundingMembersPage__card__score__stat">{tokensAllocated ? `${tokensAllocated.toFixed(2)}%` : '-'}</p>
         </div>
       </div>
     </div>
   );
 };
 
-const List = ({ className, data, type }) => (
+const List = ({ className, data, type, partialTokenAllocation }) => (
   <div className={`${className} FoundingMembersPage__list-wrapper`}>
     <div className="FoundingMembersPage__list">
       <h2 className="FoundingMembersPage__list__title">
@@ -48,7 +50,7 @@ const List = ({ className, data, type }) => (
       {console.log(data)}
       <CardCarousel>
         {data?.map((founderData, index) => (
-          <Card founderData={founderData} key={index} />
+          <Card founderData={founderData} key={index} partialTokenAllocation={partialTokenAllocation}/>
         ))}
       </CardCarousel>
     </div>

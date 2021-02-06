@@ -5,8 +5,10 @@ import { ReactComponent as Achieved } from '../../../../assets/svg/achieved.svg'
 
 import './style.scss';
 
-const MetricsRowData = ({ data, founding }) => {
+const MetricsRowData = ({ data, founding, partialTokenAllocation }) => {
   const [imageHasError, setImageHasError] = useState(false);
+
+  const tokensAllocated = data?.extraAllocation + (data?.totalScore * partialTokenAllocation);
 
   return (
     <>
@@ -36,7 +38,7 @@ const MetricsRowData = ({ data, founding }) => {
       </div>
       {founding && (
         <div style={{ justifySelf: 'center' }} className="FoundingMembersPage__leaderboard__score">
-          <p>{data?.extraAllocation}</p>
+          <p>{tokensAllocated ? `${tokensAllocated.toFixed(2)}%` : '-'}</p>
         </div>
       )}
       <div className="FoundingMembersPage__leaderboard__score">
@@ -45,7 +47,8 @@ const MetricsRowData = ({ data, founding }) => {
     </>
   );
 };
-const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool }) => (
+
+const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, partialTokenAllocation }) => (
   <>
     <div className="FoundingMembersPage__metrics">
       <h2 className="FoundingMembersPage__metrics__title">Key metrics for the program</h2>
@@ -66,7 +69,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool }) 
           <p className="FoundingMembersPage__metrics__stat">
             {nonFoundingMembers && nonFoundingMembers.filter(member => member.totalDirectScore > 0).length}
           </p>
-          <p className="FoundingMembersPage__metrics__text">number of non-founding members with 0&gt; direct score</p>
+          <p className="FoundingMembersPage__metrics__text">number of non-founding members points</p>
         </div>
       </div>
     </div>
@@ -87,7 +90,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool }) 
                   key={index}
                   className="FoundingMembersPage__leaderboard__row FoundingMembersPage__leaderboard__row--founding"
                 >
-                  <MetricsRowData key={index} data={foundingMember} founding />
+                  <MetricsRowData key={index} data={foundingMember} partialTokenAllocation={partialTokenAllocation} founding />
                 </Table.Row>
               ))}
             </Table.Body>
@@ -95,7 +98,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool }) 
           <ArrowButton
             className="FoundingMembersPage__leaderboard__button"
             link="/founding-members/leaderboards"
-            text="Show all direct score rankings"
+            text="All Founding Member total scores"
           />
         </div>
       </div>
@@ -120,7 +123,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool }) 
         <ArrowButton
           className="FoundingMembersPage__leaderboard__button"
           link="/founding-members/leaderboards"
-          text="Show all referral score rankings"
+          text="All Non-Founding Member total scores"
         />
       </div>
       <ArrowButton

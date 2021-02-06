@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BaseLayout from '../../../components/_layouts/Base';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import cn from 'classnames';
 import Table from '../../../components/Table';
 import useAxios from '../../../utils/useAxios';
 import { ReactComponent as Achieved } from '../../../assets/svg/achieved.svg';
+import { foundingMembersJson } from '../../../data/pages/founding-members';
 
 import './style.scss';
 
-const PeriodHighlightFounding = ({ userData }) => {
+const PeriodHighlightFounding = ({ userData, partialTokenAllocation }) => {
   const {
     inducted,
     extraAllocation,
@@ -21,7 +22,9 @@ const PeriodHighlightFounding = ({ userData }) => {
 
   const [imageHasError, setImageHasError] = useState(false);
   const userDate = new Date(inducted.inductedDate);
-  const formattedDate = `${userDate.getDate()}/${userDate.getMonth() + 1}`
+  const formattedDate = `${userDate.getDate()}/${userDate.getMonth() + 1}`;
+
+  const tokensAllocated = extraAllocation + (totalScore * partialTokenAllocation);
 
   return (
     <>
@@ -58,7 +61,7 @@ const PeriodHighlightFounding = ({ userData }) => {
         <p>{totalScore}</p>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
-        <p>{extraAllocation}</p>
+        <p>{tokensAllocated ? `${tokensAllocated.toFixed(2)}%` : '-'}</p>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
         <p>{formattedDate}</p>
@@ -107,9 +110,18 @@ const PeriodHighlightNonFounding = ({ userData }) => {
 
 const Leaderboards = () => {
   const [isFounding, setIsFounding] = useState(true);
-  const [response, loading, error] = useAxios(
-    'https://raw.githubusercontent.com/bwhm/founding-members/test-schema/data/scoring-example.json'
-  );
+  const [response, loading, error] = useAxios(foundingMembersJson);
+  const [partialTokenAllocation, setPartialTokenAllocation] = useState();
+
+  useEffect(() => {
+    if (response) {
+      const partialTokenAllocation =
+        (response?.poolStats?.currentPoolSize - response?.poolStats?.allocatedFromPool) /
+        response?.currentFoundingMembers?.reduce((prev, curr) => prev + curr?.totalScore, 0);
+
+      setPartialTokenAllocation(partialTokenAllocation);
+    }
+  }, [response]);
 
   const renderBody = () => {
     if (isFounding) {
@@ -118,7 +130,7 @@ const Leaderboards = () => {
           key={index}
           className="FoundingMembersLeaderboards__table__row FoundingMembersLeaderboards__table__row--founding"
         >
-          <PeriodHighlightFounding key={index} userData={foundingMember} />
+          <PeriodHighlightFounding key={index} userData={foundingMember} partialTokenAllocation={partialTokenAllocation}/>
         </Table.Row>
       ));
     } else {
