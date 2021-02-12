@@ -84,7 +84,8 @@ const FoundingMembersPage = () => {
           <div className="FoundingMembersPage__hero__content">
             <h1 className="FoundingMembersPage__hero__title">Joystream Founding Member Program</h1>
             <p className="FoundingMembersPage__hero__paragraph">
-              Become a Founding member and have a real impact on the development of our platform.
+              Founding Members are highly effective project contributors awarded JOY tokens in the mainnet genesis
+              block.
             </p>
             <ArrowButton
               className="FoundingMembersPage__hero__button"
@@ -113,7 +114,12 @@ const FoundingMembersPage = () => {
         />
       </div>
       {newFoundingMembers?.length ? (
-        <List className="FoundingMembersPage__list-wrapper--new" type="new" data={newFoundingMembers} partialTokenAllocation={partialTokenAllocation}/>
+        <List
+          className="FoundingMembersPage__list-wrapper--new"
+          type="new"
+          data={newFoundingMembers}
+          partialTokenAllocation={partialTokenAllocation}
+        />
       ) : null}
       <Benefits newMembers={newFoundingMembers?.length} />
       <List

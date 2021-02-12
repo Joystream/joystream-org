@@ -7,7 +7,7 @@ import { blake2AsHex } from '@polkadot/util-crypto';
 import { Keyring } from '@polkadot/keyring';
 import { u8aToHex, hexToU8a } from '@polkadot/util';
 import * as openpgp from 'openpgp';
-import { publicKey } from '../../data/pages/founding-members';
+import { publicKey, TermsAndConditionsText } from '../../data/pages/founding-members';
 import Membership from './Membership';
 import Json from './Json';
 import KeybaseAndText from './KeybaseAndText';
@@ -36,16 +36,7 @@ const TermsAndConditions = ({ termsRead, setCurrentProgress, setTermsRead }) => 
     <>
       <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Read and accept terms and conditions</h3>
       <div ref={termsAndConditions} className="FoundingMembersFormPage__form__text-wrapper">
-        <p className="margin-bottom-M">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-          velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit
-          aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt
-          nostrud amet.
-        </p>
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-          velit mollit. Exercitation veniam consequat sunt nostrud amet.
-        </p>
+        <TermsAndConditionsText />
       </div>
       <ArrowButton
         className={cn('FoundingMembersFormPage__form__button', {
@@ -192,10 +183,11 @@ const FoundingMembersForm = () => {
         <div className="FoundingMembersFormPage__form__submitted">
           <Achieved className="FoundingMembersFormPage__form__submitted__tick margin-bottom-L" />
           <h3 className="FoundingMembersFormPage__form__submitted__title margin-bottom-XS">
-            Thanks for submitting your summary
+            Thank you for submitting your summary, we have received it successfully.
           </h3>
           <p className="FoundingMembersFormPage__form__submitted__text">
-            Here we should place some short information about next steps in the process.
+            We will process the information contained within it shortly and award leaderboard points for qualifying
+            contributions.
           </p>
         </div>
       );
@@ -274,7 +266,7 @@ const FoundingMembersForm = () => {
           const { address, encoded, encoding, meta } = JSON.parse(e.target.result);
           isFileValid = address && encoded && encoding && meta;
           doesUserCorrespond = address === profile.controller_account.toString();
-        }catch(e){
+        } catch (e) {
           console.log(e);
         }
 
