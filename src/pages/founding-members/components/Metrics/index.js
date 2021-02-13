@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import Table from '../../../../components/Table';
 import { ArrowButton } from '../../index';
 import { ReactComponent as Achieved } from '../../../../assets/svg/achieved.svg';
+import calculateTokensAllocated from '../../../../utils/calculateTokensAllocated';
 
 import './style.scss';
 
 const MetricsRowData = ({ data, founding, partialTokenAllocation }) => {
   const [imageHasError, setImageHasError] = useState(false);
-
-  const tokensAllocated = data?.extraAllocation + (data?.totalScore * partialTokenAllocation);
 
   return (
     <>
@@ -38,7 +37,9 @@ const MetricsRowData = ({ data, founding, partialTokenAllocation }) => {
       </div>
       {founding && (
         <div style={{ justifySelf: 'center' }} className="FoundingMembersPage__leaderboard__score">
-          <p>{tokensAllocated ? `${tokensAllocated.toFixed(2)}%` : '-'}</p>
+          <p>
+            {calculateTokensAllocated(data?.extraAllocation, data?.totalScore, partialTokenAllocation)}
+          </p>
         </div>
       )}
       <div className="FoundingMembersPage__leaderboard__score">
@@ -81,7 +82,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, pa
           <Table className="FoundingMembersPage__leaderboard">
             <Table.Header className="FoundingMembersPage__leaderboard__header FoundingMembersPage__leaderboard__header--founding">
               <Table.HeaderItem></Table.HeaderItem>
-              <Table.HeaderItem textAlign="center">Tokens allocated</Table.HeaderItem>
+              <Table.HeaderItem textAlign="center">Tokens allocated / projected</Table.HeaderItem>
               <Table.HeaderItem textAlign="right">Total score</Table.HeaderItem>
             </Table.Header>
             <Table.Body className="FoundingMembersPage__leaderboard__body">
@@ -90,7 +91,12 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, pa
                   key={index}
                   className="FoundingMembersPage__leaderboard__row FoundingMembersPage__leaderboard__row--founding"
                 >
-                  <MetricsRowData key={index} data={foundingMember} partialTokenAllocation={partialTokenAllocation} founding />
+                  <MetricsRowData
+                    key={index}
+                    data={foundingMember}
+                    partialTokenAllocation={partialTokenAllocation}
+                    founding
+                  />
                 </Table.Row>
               ))}
             </Table.Body>

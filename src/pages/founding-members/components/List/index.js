@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import CardCarousel from '../../../../components/CardCarousel';
+import calculateTokensAllocated from '../../../../utils/calculateTokensAllocated';
 
 import './style.scss';
 
 const Card = ({ founderData, partialTokenAllocation }) => {
   const [imageHasError, setImageHasError] = useState(false);
-
-  const tokensAllocated = founderData?.extraAllocation + (founderData?.totalScore * partialTokenAllocation);
 
   return (
     <div className="FoundingMembersPage__card">
@@ -33,8 +32,10 @@ const Card = ({ founderData, partialTokenAllocation }) => {
           <p className="FoundingMembersPage__card__score__stat">{founderData?.totalScore}</p>
         </div>
         <div className="FoundingMembersPage__card__score">
-          <p className="FoundingMembersPage__card__score__title">Tokens allocated</p>
-          <p className="FoundingMembersPage__card__score__stat">{tokensAllocated ? `${tokensAllocated.toFixed(2)}%` : '-'}</p>
+          <p className="FoundingMembersPage__card__score__title">Tokens allocated / projected</p>
+          <p className="FoundingMembersPage__card__score__stat">
+            {calculateTokensAllocated(founderData?.extraAllocation, founderData?.totalScore, partialTokenAllocation)}
+          </p>
         </div>
       </div>
     </div>
@@ -47,10 +48,9 @@ const List = ({ className, data, type, partialTokenAllocation }) => (
       <h2 className="FoundingMembersPage__list__title">
         {type === 'current' ? 'Current' : 'New'} founding members <span>{data?.length}</span>
       </h2>
-      {console.log(data)}
       <CardCarousel>
         {data?.map((founderData, index) => (
-          <Card founderData={founderData} key={index} partialTokenAllocation={partialTokenAllocation}/>
+          <Card founderData={founderData} key={index} partialTokenAllocation={partialTokenAllocation} />
         ))}
       </CardCarousel>
     </div>

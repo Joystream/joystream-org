@@ -61,10 +61,9 @@
     }
 
     &__scores {
-      display: grid;
+      display: flex;
       justify-content: space-between;
       margin: 11px 0 19px 0;
-      grid-template-columns: repeat(2, 110px);
     }
 
     &__score {

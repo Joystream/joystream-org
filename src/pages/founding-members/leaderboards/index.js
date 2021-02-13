@@ -4,6 +4,7 @@ import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.sv
 import cn from 'classnames';
 import Table from '../../../components/Table';
 import useAxios from '../../../utils/useAxios';
+import calculateTokensAllocated from '../../../utils/calculateTokensAllocated';
 import { ReactComponent as Achieved } from '../../../assets/svg/achieved.svg';
 import { foundingMembersJson } from '../../../data/pages/founding-members';
 
@@ -22,9 +23,12 @@ const PeriodHighlightFounding = ({ userData, partialTokenAllocation }) => {
 
   const [imageHasError, setImageHasError] = useState(false);
   const userDate = new Date(inducted.inductedDate);
-  const formattedDate = `${userDate.getDate()}/${userDate.getMonth() + 1}`;
+  const formattedDate = `${userDate.getDate()}.${userDate.getMonth() + 1}.${userDate
+    .getFullYear()
+    .toString()
+    .substr(-2)}`;
 
-  const tokensAllocated = extraAllocation + (totalScore * partialTokenAllocation);
+  console.log(userData, partialTokenAllocation);
 
   return (
     <>
@@ -61,7 +65,7 @@ const PeriodHighlightFounding = ({ userData, partialTokenAllocation }) => {
         <p>{totalScore}</p>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
-        <p>{tokensAllocated ? `${tokensAllocated.toFixed(2)}%` : '-'}</p>
+        <p>{calculateTokensAllocated(extraAllocation, totalScore, partialTokenAllocation)}</p>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
         <p>{formattedDate}</p>
@@ -115,9 +119,13 @@ const Leaderboards = () => {
 
   useEffect(() => {
     if (response) {
-      const partialTokenAllocation =
-        (response?.poolStats?.currentPoolSize - response?.poolStats?.allocatedFromPool) /
-        response?.currentFoundingMembers?.reduce((prev, curr) => prev + curr?.totalScore, 0);
+      let partialTokenAllocation = 0;
+      const totalScoreSum = response?.currentFoundingMembers?.reduce((prev, curr) => prev + curr?.totalScore, 0);
+
+      if (totalScoreSum) {
+        partialTokenAllocation =
+          (response?.poolStats?.currentPoolSize - response?.poolStats?.allocatedFromPool) / totalScoreSum;
+      }
 
       setPartialTokenAllocation(partialTokenAllocation);
     }
@@ -125,23 +133,31 @@ const Leaderboards = () => {
 
   const renderBody = () => {
     if (isFounding) {
-      return response?.currentFoundingMembers?.map((foundingMember, index) => (
-        <Table.Row
-          key={index}
-          className="FoundingMembersLeaderboards__table__row FoundingMembersLeaderboards__table__row--founding"
-        >
-          <PeriodHighlightFounding key={index} userData={foundingMember} partialTokenAllocation={partialTokenAllocation}/>
-        </Table.Row>
-      ));
+      return response?.currentFoundingMembers
+        ?.sort((prev, next) => next.totalScore - prev.totalScore)
+        ?.map((foundingMember, index) => (
+          <Table.Row
+            key={index}
+            className="FoundingMembersLeaderboards__table__row FoundingMembersLeaderboards__table__row--founding"
+          >
+            <PeriodHighlightFounding
+              key={index}
+              userData={foundingMember}
+              partialTokenAllocation={partialTokenAllocation}
+            />
+          </Table.Row>
+        ));
     } else {
-      return response?.totalScoresFull?.totalScores?.map((foundingMember, index) => (
-        <Table.Row
-          key={index}
-          className="FoundingMembersLeaderboards__table__row FoundingMembersLeaderboards__table__row--nonfounding"
-        >
-          <PeriodHighlightNonFounding key={index} userData={foundingMember} />
-        </Table.Row>
-      ));
+      return response?.totalScoresFull?.totalScores
+        ?.sort((prev, next) => next.totalScore - prev.totalScore)
+        ?.map((foundingMember, index) => (
+          <Table.Row
+            key={index}
+            className="FoundingMembersLeaderboards__table__row FoundingMembersLeaderboards__table__row--nonfounding"
+          >
+            <PeriodHighlightNonFounding key={index} userData={foundingMember} />
+          </Table.Row>
+        ));
     }
   };
 
@@ -193,7 +209,7 @@ const Leaderboards = () => {
             <p className="FoundingMembersLeaderboards__table__header__item">Total Score</p>
             {isFounding && (
               <>
-                <p className="FoundingMembersLeaderboards__table__header__item">Tokens Allocated</p>
+                <p className="FoundingMembersLeaderboards__table__header__item">Tokens Allocated / Projected</p>
                 <p className="FoundingMembersLeaderboards__table__header__item">Inducted</p>
               </>
             )}

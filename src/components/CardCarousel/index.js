@@ -20,7 +20,7 @@ const CardCarousel = ({ children }) => {
     handleResize();
 
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [children]);
 
   const scrollBy = amount => {
     listRef.current.scrollBy({

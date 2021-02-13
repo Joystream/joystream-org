@@ -237,7 +237,7 @@ cqtfSrRMTi4uP5xa8b19Asnu0fkSAXnchOfW4M4GICuvgeo=
 export const JoystreamWSProvider = 'wss://rome-rpc-endpoint.joystream.org:9944/';
 
 export const foundingMembersJson =
-  'https://raw.githubusercontent.com/bwhm/founding-members/test-schema/data/scoring-example.json';
+  'https://raw.githubusercontent.com/Joystream/founding-members/main/data/fm-info.json';
 
 export const TermsAndConditionsText = () => (
   <>

@@ -102,7 +102,7 @@ const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle
           }
         }}
       />
-      <a target='_blank' href='https://github.com/Joystream/founding-members#submission-guidelines'>How it works.</a>
+      <a target='_blank' href='https://github.com/Joystream/founding-members#submission-guidance'>How it works.</a>
     </>
   );
 };

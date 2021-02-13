@@ -65,9 +65,13 @@ const FoundingMembersPage = () => {
 
   useEffect(() => {
     if (response) {
-      const partialTokenAllocation =
-        (response?.poolStats?.currentPoolSize - response?.poolStats?.allocatedFromPool) /
-        response?.currentFoundingMembers?.reduce((prev, curr) => prev + curr?.totalScore, 0);
+      let partialTokenAllocation = 0;
+      const totalScoreSum = response?.currentFoundingMembers?.reduce((prev, curr) => prev + curr?.totalScore, 0);
+
+      if (totalScoreSum) {
+        partialTokenAllocation =
+          (response?.poolStats?.currentPoolSize - response?.poolStats?.allocatedFromPool) / totalScoreSum;
+      }
 
       setPartialTokenAllocation(partialTokenAllocation);
     }
