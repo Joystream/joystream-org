@@ -56,7 +56,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, pa
       <div className="FoundingMembersPage__metrics__list">
         <div>
           <p className="FoundingMembersPage__metrics__stat">{sizeOfFirstTokenPool && `${sizeOfFirstTokenPool}%`}</p>
-          <p className="FoundingMembersPage__metrics__text">size of first token pool</p>
+          <p className="FoundingMembersPage__metrics__text">size of initial token pool</p>
         </div>
         {/* <div>
           <p className="FoundingMembersPage__metrics__stat">71%</p>
@@ -70,7 +70,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, pa
           <p className="FoundingMembersPage__metrics__stat">
             {nonFoundingMembers && nonFoundingMembers.filter(member => member.totalDirectScore > 0).length}
           </p>
-          <p className="FoundingMembersPage__metrics__text">number of non-founding members points</p>
+          <p className="FoundingMembersPage__metrics__text">number of founding member candidates</p>
         </div>
       </div>
     </div>
@@ -104,7 +104,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, pa
           <ArrowButton
             className="FoundingMembersPage__leaderboard__button"
             link="/founding-members/leaderboards"
-            text="All Founding Member total scores"
+            text="All Founding Member Scores"
           />
         </div>
       </div>
@@ -129,7 +129,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, pa
         <ArrowButton
           className="FoundingMembersPage__leaderboard__button"
           link="/founding-members/leaderboards"
-          text="All Non-Founding Member total scores"
+          text="All Regular Member Scores"
         />
       </div>
       <ArrowButton
