@@ -19,6 +19,7 @@ exports[`ManifestoPage page renders correctly 1`] = `
     image="icon-mock"
     indent={true}
     noOverflow={true}
+    reverse={false}
     theme="blue"
     title="The Joystream Manifesto"
   >

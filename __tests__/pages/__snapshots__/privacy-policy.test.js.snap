@@ -17,6 +17,7 @@ exports[`PrivacyPolicyPage page renders correctly 1`] = `
     image={null}
     indent={false}
     noOverflow={false}
+    reverse={false}
     theme="black"
     title="Privacy Policy and Cookies"
   >

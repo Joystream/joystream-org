@@ -24,6 +24,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
     image="icon-mock"
     indent={true}
     noOverflow={false}
+    reverse={false}
     theme="black"
     title="Acropolis Network"
   >

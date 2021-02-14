@@ -1,0 +1,106 @@
+@import '../../../../styles/main';
+
+.FoundingMembersPage {
+  &__list-wrapper {
+    background-color: #f2f5f9;
+  }
+
+  &__list {
+    width: 1242px;
+    margin: 0 auto;
+
+    &__title {
+      margin: 0 0 40px 0;
+      font-family: $font-primary;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0;
+
+      span {
+        margin-left: 12px;
+        color: #81858d;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__main {
+      display: flex;
+
+      &__icon {
+        width: 64px;
+        height: 64px;
+        background-color: #dfe4ea;
+        border-radius: 50%;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 12px;
+      }
+
+      &__name {
+        font-family: $font-primary;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0;
+      }
+
+      &__handle {
+        font-family: $font-secondary;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -.4000000059604645px;
+      }
+    }
+
+    &__scores {
+      display: flex;
+      justify-content: space-between;
+      margin: 11px 0 19px 0;
+    }
+
+    &__score {
+      &__title {
+        font-family: $font-secondary;
+        font-size: 10px;
+        line-height: 14px;
+        letter-spacing: -.4000000059604645px;
+      }
+
+      &__stat {
+        font-family: $font-primary;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: #4038ff;
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__list {
+      width: 100%;
+      margin: 0;
+
+      &__title {
+        padding-left: 40px;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__list {
+      &__title {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+  }
+}

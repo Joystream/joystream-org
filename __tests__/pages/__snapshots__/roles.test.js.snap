@@ -17,6 +17,7 @@ exports[`RolesPage page renders correctly 1`] = `
     image="icon-mock"
     indent={false}
     noOverflow={false}
+    reverse={false}
     theme="black"
     title="Choose your preferred role"
   >
@@ -449,6 +450,7 @@ exports[`RolesPage page renders correctly 1`] = `
     >
       <InView
         as="div"
+        initialInView={false}
         key="Validator"
         onChange={[Function]}
         threshold={0.2}
@@ -490,6 +492,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Council Member"
         onChange={[Function]}
         threshold={0.2}
@@ -528,6 +531,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Storage Provider"
         onChange={[Function]}
         threshold={0.2}
@@ -564,6 +568,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Storage Lead"
         onChange={[Function]}
         threshold={0.2}
@@ -598,6 +603,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Content Curator"
         onChange={[Function]}
         threshold={0.2}
@@ -648,6 +654,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Content Creator"
         onChange={[Function]}
         threshold={0.2}
@@ -682,6 +689,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Content Lead"
         onChange={[Function]}
         threshold={0.2}
@@ -718,6 +726,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Membership Screener"
         onChange={[Function]}
         threshold={0.2}
@@ -776,6 +785,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Membership Curator"
         onChange={[Function]}
         threshold={0.2}
@@ -840,6 +850,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Bandwidth Provider"
         onChange={[Function]}
         threshold={0.2}
@@ -875,6 +886,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Discovery Provider"
         onChange={[Function]}
         threshold={0.2}
@@ -922,6 +934,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Live Streaming Provider"
         onChange={[Function]}
         threshold={0.2}
@@ -954,6 +967,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Builder"
         onChange={[Function]}
         threshold={0.2}
@@ -1013,6 +1027,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Communication Moderator"
         onChange={[Function]}
         threshold={0.2}
