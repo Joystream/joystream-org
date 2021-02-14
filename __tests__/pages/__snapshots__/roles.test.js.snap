@@ -568,6 +568,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Storage Lead"
         onChange={[Function]}
         threshold={0.2}
@@ -725,6 +726,7 @@ exports[`RolesPage page renders correctly 1`] = `
       </InView>
       <InView
         as="div"
+        initialInView={false}
         key="Membership Screener"
         onChange={[Function]}
         threshold={0.2}
