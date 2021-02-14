@@ -33,13 +33,12 @@
   }
 
   &__header {
-    @extend %smallContainer;
+    @extend %container;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 40px;
-    padding: 0;
 
     &__title {
       font-family: $font-primary;
@@ -52,7 +51,7 @@
 
   &__score-toggle {
     display: grid;
-    width: 324px;
+    width: 454px;
     height: 52px;
     padding: 2px;
     cursor: pointer;
@@ -78,32 +77,63 @@
   }
 
   &__table {
-    width: 840px;
-    margin: -44px auto 0;
+    @extend %container;
+
+    margin-top: -44px;
 
     &__header {
       height: 44px;
-      padding: 0 40px;
-      grid-template-columns: 1.5fr 1fr 1fr;
+      padding: 0 0 0 30px;
+
+      &--founding {
+        grid-template-columns: 1.8fr .8fr .8fr .8fr 1.4fr 1fr;
+      }
+
+      &--nonfounding {
+        grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      }
 
       &__item {
         font-family: $font-secondary;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: -.4000000059604645px;
+        text-align: center;
       }
     }
 
     &__row {
       height: 80px;
-      padding: 0 40px;
+      padding: 0 0 0 30px;
       background-color: white;
-      grid-template-columns: 1.5fr 1fr 1fr;
+
+      &--founding {
+        grid-template-columns: 1.8fr .8fr .8fr .8fr 1.4fr 1fr;
+      }
+
+      &--nonfounding {
+        grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      }
     }
 
     &__main {
+      position: relative;
       display: flex;
       align-items: center;
+
+      &__checkmark {
+        position: absolute;
+        top: 40px;
+        left: 32px;
+        display: grid;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        color: white;
+        background-color: $c_blue-ribbon;
+        border-radius: 50%;
+        place-items: center;
+      }
 
       &__placeholder {
         width: 48px;
@@ -119,10 +149,11 @@
       }
 
       &__name {
-        font-family: $font-primary;
+        font-family: $font-secondary;
         font-size: 18px;
         line-height: 24px;
         letter-spacing: 0;
+        color: #4038ff;
       }
 
       &__handle {
@@ -130,7 +161,6 @@
         font-size: 14px;
         line-height: 20px;
         letter-spacing: -.4000000059604645px;
-        color: #4038ff;
       }
     }
 
@@ -169,14 +199,14 @@
     &__score {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
 
       p {
         font-family: $font-primary;
         font-size: 20px;
         line-height: 28px;
         letter-spacing: 0;
-        text-align: right;
+        text-align: center;
       }
     }
   }
@@ -185,33 +215,66 @@
     &__back {
       display: none;
     }
+
+    &__table {
+      width: 100%;
+      padding: 0 32px;
+    }
   }
 
   @media #{$screen-max-md} {
     &__header {
-      width: 85%;
+      align-items: unset;
+      flex-direction: column;
+      margin-left: 32px;
+      padding: 0;
+
+      &__title {
+        margin-bottom: 18px;
+      }
     }
 
     &__table {
-      width: 85%;
+      &__header--founding {
+        grid-template-columns: 1.6fr .8fr .8fr .8fr 1.5fr;
+
+        p:nth-of-type(6) {
+          display: none;
+        }
+      }
+
+      &__row--founding {
+        grid-template-columns: 1.6fr .8fr .8fr .8fr 1.5fr;
+
+        div:nth-of-type(6) {
+          display: none;
+        }
+      }
     }
   }
 
   @media #{$screen-max-sm} {
     &__header {
-      align-items: unset;
-      flex-direction: column;
-      width: 90%;
+      margin-left: 20px;
 
       &__title {
-        margin-bottom: 18px;
         font-size: 32px;
         line-height: 40px;
       }
     }
 
+    &__score-toggle {
+      width: 355px;
+      height: 42px;
+
+      &__item__text {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
     &__table {
-      width: 90%;
+      padding: 0 20px;
 
       &__score p {
         font-size: 14px;
@@ -219,29 +282,62 @@
       }
 
       &__header {
-        padding: 0 20px;
-        grid-template-columns: 1.5fr 1fr;
-
-        p:nth-of-type(2) {
-          display: none;
-        }
+        padding: 0 16px;
 
         &__item {
-          font-size: 14px;
-          line-height: 20px;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+
+      &__header--founding {
+        grid-template-columns: 1.5fr 1fr 1fr;
+
+        p:nth-of-type(3),
+        p:nth-of-type(4),
+        p:nth-of-type(6) {
+          display: none;
+        }
+      }
+
+      &__header--nonfounding {
+        grid-template-columns: 1.5fr 1fr 1fr;
+
+        p:nth-of-type(3) {
+          display: none;
         }
       }
 
       &__row {
-        padding: 0 20px;
-        grid-template-columns: 1.5fr 1fr;
+        padding: 0 16px;
+      }
 
-        div:nth-of-type(2) {
+      &__row--founding {
+        grid-template-columns: 1.5fr 1fr 1fr;
+
+        div:nth-of-type(3),
+        div:nth-of-type(4),
+        div:nth-of-type(6) {
+          display: none;
+        }
+      }
+
+      &__row--nonfounding {
+        grid-template-columns: 1.5fr 1fr 1fr;
+
+        div:nth-of-type(3) {
           display: none;
         }
       }
 
       &__main {
+        &__checkmark {
+          left: 27px;
+          width: 18px;
+          height: 18px;
+          padding: 4px;
+        }
+
         &__placeholder {
           width: 40px;
           height: 40px;

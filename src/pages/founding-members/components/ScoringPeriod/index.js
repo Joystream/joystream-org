@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowButton } from '../../index';
 import useWindowDimensions from '../../../../utils/useWindowDimensions';
 import Countdown from 'react-countdown-now';
@@ -65,29 +65,35 @@ const FoundingMembersCounter = ({ latterDate }) => {
   );
 };
 
-const ScoringPeriod = ({ formerDate, latterDate }) => {
-  const now = new Date();
+const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId }) => {
 
-  // Calculate percentage of time passed between former date and now.
-
-  const timeDifferenceBetweenDates = Math.abs(latterDate - formerDate) / (1000 * 60 * 60 * 24);
-  const timeDifferenceUntilNow = Math.abs(now - formerDate) / (1000 * 60 * 60 * 24);
-  const percent = timeDifferenceUntilNow / timeDifferenceBetweenDates;
-
+  const [percent, setPercent] = useState(0);
   const { width } = useWindowDimensions();
+
+  useEffect(() => {
+    // Calculate percentage of time passed between former date and now.
+    if(formerDate && latterDate){
+      const now = new Date();
+      const timeDifferenceBetweenDates = Math.abs(latterDate - formerDate) / (1000 * 60 * 60 * 24);
+      const timeDifferenceUntilNow = Math.abs(now - formerDate) / (1000 * 60 * 60 * 24);
+      const percent = timeDifferenceUntilNow / timeDifferenceBetweenDates;
+
+      setPercent(percent);
+    }
+  },[formerDate,latterDate]);
 
   return (
     <section className="FoundingMembersPage__period" style={{ display: percent <= 1 ? 'block' : 'none' }}>
       <div className="FoundingMembersPage__period__header">
         <h2 className="FoundingMembersPage__period__title">Current scoring period</h2>
         <p className="FoundingMembersPage__period__subtitle">
-          <span>Current period number</span> #1
+          <span>Current period number</span> {scoringPeriodId && `#${scoringPeriodId}`}
         </p>
       </div>
       <div className="FoundingMembersPage__period__content">
         <div className="FoundingMembersPage__period__counter">
           <p className="FoundingMembersPage__period__counter__subtitle">{percent <= 1 ? 'ENDS' : 'ENDED ON'}</p>
-          <FoundingMembersCounter latterDate={latterDate} />
+          {latterDate && <FoundingMembersCounter latterDate={latterDate} />}
           {percent <= 1 ? (
             <div className="FoundingMembersPage__period__percentage">
               <div className="FoundingMembersPage__period__percentage__line">
@@ -98,10 +104,10 @@ const ScoringPeriod = ({ formerDate, latterDate }) => {
               </div>
               <div className="FoundingMembersPage__period__percentage__dates">
                 <p>
-                  {formerDate.getDate()} {formerDate.toLocaleString('default', { month: 'long' })}
+                  {formerDate?.getDate()} {formerDate?.toLocaleString('default', { month: 'long' })}
                 </p>
                 <p>
-                  {latterDate.getDate()} {latterDate.toLocaleString('default', { month: 'long' })}
+                  {latterDate?.getDate()} {latterDate?.toLocaleString('default', { month: 'long' })}
                 </p>
               </div>
             </div>
@@ -115,7 +121,7 @@ const ScoringPeriod = ({ formerDate, latterDate }) => {
           />
           <ArrowButton
             className="FoundingMembersPage__period__announcement-button"
-            link="https://www.google.com"
+            link="https://github.com/Joystream/founding-members/blob/main/scoring-periods/1.md"
             text={width > 920 ? 'Period announcement' : 'Announcement'}
           />
         </div>
@@ -125,18 +131,25 @@ const ScoringPeriod = ({ formerDate, latterDate }) => {
 };
 
 export const ScoringPeriodCounter = ({ className, formerDate, latterDate }) => {
-  const now = new Date();
+  
+  const [percent, setPercent] = useState(0);
 
-  // Calculate percentage of time passed between former date and now.
+  useEffect(() => {
+    // Calculate percentage of time passed between former date and now.
+    if(formerDate && latterDate){
+      const now = new Date();
+      const timeDifferenceBetweenDates = Math.abs(latterDate - formerDate) / (1000 * 60 * 60 * 24);
+      const timeDifferenceUntilNow = Math.abs(now - formerDate) / (1000 * 60 * 60 * 24);
+      const percent = timeDifferenceUntilNow / timeDifferenceBetweenDates;
 
-  const timeDifferenceBetweenDates = Math.abs(latterDate - formerDate) / (1000 * 60 * 60 * 24);
-  const timeDifferenceUntilNow = Math.abs(now - formerDate) / (1000 * 60 * 60 * 24);
-  const percent = timeDifferenceUntilNow / timeDifferenceBetweenDates;
+      setPercent(percent);
+    }
+  },[formerDate,latterDate]);
 
   return (
     <div className={`FoundingMembersPage__period__counter ${className ?? ''}`}>
       <p className="FoundingMembersPage__period__counter__subtitle">{percent <= 1 ? 'ENDS' : 'ENDED ON'}</p>
-      <FoundingMembersCounter latterDate={latterDate} />
+      {latterDate && <FoundingMembersCounter latterDate={latterDate} />}
       {percent <= 1 ? (
         <div className="FoundingMembersPage__period__percentage">
           <div className="FoundingMembersPage__period__percentage__line FoundingMembersPage__period__percentage__line--secondary">
@@ -147,10 +160,10 @@ export const ScoringPeriodCounter = ({ className, formerDate, latterDate }) => {
           </div>
           <div className="FoundingMembersPage__period__percentage__dates">
             <p>
-              {formerDate.getDate()} {formerDate.toLocaleString('default', { month: 'long' })}
+              {formerDate?.getDate()} {formerDate?.toLocaleString('default', { month: 'long' })}
             </p>
             <p>
-              {latterDate.getDate()} {latterDate.toLocaleString('default', { month: 'long' })}
+              {latterDate?.getDate()} {latterDate?.toLocaleString('default', { month: 'long' })}
             </p>
           </div>
         </div>

@@ -15,7 +15,7 @@ const NumberStep = ({ number, text, otherText }) => (
 
 const TakePart = () => (
   <div className="FoundingMembersPage__take-part">
-    <h2 className="FoundingMembersPage__take-part__title">How to become a part of it</h2>
+    <h2 className="FoundingMembersPage__take-part__title">How to participate in the program</h2>
     <div className="FoundingMembersPage__take-part__number-steps">
       <div className="line"></div>
       <NumberStep
@@ -25,20 +25,22 @@ const TakePart = () => (
       />
       <NumberStep
         number="2"
-        text="Help launch Joystream."
-        otherText="Contribute to the development of the platform, by doing things such as:"
+        text="Make contributions to the project."
+        otherText="Make contributions to the project."
       />
       <ul>
-        <li>training others</li>
-        <li>writing impactful blog posts</li>
-        <li>creating and publishing new content</li>
-        <li>creating proposals that pass and have a positive impact</li>
-        <li>serving effectively on the council, for example as measured by the KPI system</li>
-        <li>finding bugs or errors</li>
+        <li>training other participants</li>
+        <li>writing blog posts and documentation</li>
+        <li>creating and publishing new video content</li>
+        <li>participating in platform roles on the testnet</li>
+        <li>finding and reporting bugs and errors</li>
+        <li>completing official bounties</li>
+        <li>creative and design work</li>
       </ul>
-      <NumberStep number="3" text="Tell us what you have done" otherText="Submit a summary of your activities" />
-      <NumberStep number="4" text="Become a founding member!" otherText="Become a founding member!" />
-      <ArrowButton link="#0" text="Join now" className="FoundingMembersPage__take-part__join-button" />
+      <NumberStep number="3" text="Regularly report your activity." otherText="Regularly report your activity." />
+      <NumberStep number="4" text="Earn leaderboard points." otherText="Earn leaderboard points." />
+      <NumberStep number="5" text="Become a founding member!" otherText="Become a founding member!" />
+      <ArrowButton link="https://t.me/JoyStreamOfficial" text="Join Telegram" className="FoundingMembersPage__take-part__join-button" />
       <p className="FoundingMembersPage__take-part__excluded-text">Countries that are excluded from that program: </p>
       <img src={UnitedStatesCircle} className="FoundingMembersPage__take-part__us-flag" alt='us flag icon'/>
     </div>

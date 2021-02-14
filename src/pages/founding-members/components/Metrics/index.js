@@ -1,70 +1,76 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Table from '../../../../components/Table';
-import Button from '../../../../components/Button';
 import { ArrowButton } from '../../index';
+import { ReactComponent as Achieved } from '../../../../assets/svg/achieved.svg';
+import calculateTokensAllocated from '../../../../utils/calculateTokensAllocated';
 
 import './style.scss';
 
-const MetricsRowData = ({ data }) => {
-  const { main, referrer, score } = data;
+const MetricsRowData = ({ data, founding, partialTokenAllocation }) => {
+  const [imageHasError, setImageHasError] = useState(false);
 
   return (
     <>
-      {main && (
-        <div className="FoundingMembersPage__leaderboard__main">
-          {main.icon ? (
-            <img className="FoundingMembersPage__leaderboard__main__placeholder" src={main.icon} alt='icon of founding member' />
-          ) : (
-            <div className="FoundingMembersPage__leaderboard__main__placeholder"></div>
-          )}
-          <div className="FoundingMembersPage__leaderboard__main__data">
-            <p className="FoundingMembersPage__leaderboard__main__name">{main.name}</p>
-            <p className="FoundingMembersPage__leaderboard__main__handle">{main.handle}</p>
-          </div>
+      <div className="FoundingMembersPage__leaderboard__main">
+        {!imageHasError && data?.inducted?.avatar ? (
+          <>
+            <img
+              className="FoundingMembersPage__leaderboard__main__placeholder"
+              src={data?.inducted?.avatar}
+              alt="icon of founding member"
+              onError={() => {
+                setImageHasError(true);
+              }}
+            />
+            {founding && (
+              <div className="FoundingMembersPage__leaderboard__main__checkmark">
+                <Achieved />
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="FoundingMembersPage__leaderboard__main__placeholder"></div>
+        )}
+        <div className="FoundingMembersPage__leaderboard__main__data">
+          <p className="FoundingMembersPage__leaderboard__main__name">@{data?.memberHandle}</p>
+        </div>
+      </div>
+      {founding && (
+        <div style={{ justifySelf: 'center' }} className="FoundingMembersPage__leaderboard__score">
+          <p>
+            {calculateTokensAllocated(data?.extraAllocation, data?.totalScore, partialTokenAllocation)}
+          </p>
         </div>
       )}
-      {referrer && <p className="FoundingMembersPage__leaderboard__referrer-name">{referrer.name}</p>}
-      {referrer && (
-        <div className="FoundingMembersPage__leaderboard__referrer">
-          {referrer.icon ? (
-            <img className="FoundingMembersPage__leaderboard__referrer__placeholder" src={referrer.icon} alt='icon of founding member'/>
-          ) : (
-            <div className="FoundingMembersPage__leaderboard__referrer__placeholder"></div>
-          )}
-          <div className="FoundingMembersPage__leaderboard__referrer__data">
-            <p className="FoundingMembersPage__leaderboard__referrer__name">{referrer.name}</p>
-            <p className="FoundingMembersPage__leaderboard__referrer__handle">{referrer.handle}</p>
-          </div>
-        </div>
-      )}
-      {score && (
-        <div className="FoundingMembersPage__leaderboard__score">
-          <p>{score}</p>
-        </div>
-      )}
+      <div className="FoundingMembersPage__leaderboard__score">
+        <p>{data?.totalScore}</p>
+      </div>
     </>
   );
 };
-const Metrics = ({ tableOneData, tableTwoData }) => (
+
+const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, partialTokenAllocation }) => (
   <>
     <div className="FoundingMembersPage__metrics">
       <h2 className="FoundingMembersPage__metrics__title">Key metrics for the program</h2>
       <div className="FoundingMembersPage__metrics__list">
         <div>
-          <p className="FoundingMembersPage__metrics__stat">64%</p>
-          <p className="FoundingMembersPage__metrics__text">size of first token pool</p>
+          <p className="FoundingMembersPage__metrics__stat">{sizeOfFirstTokenPool && `${sizeOfFirstTokenPool}%`}</p>
+          <p className="FoundingMembersPage__metrics__text">size of initial token pool</p>
         </div>
-        <div>
+        {/* <div>
           <p className="FoundingMembersPage__metrics__stat">71%</p>
           <p className="FoundingMembersPage__metrics__text">size of second token pool</p>
-        </div>
+        </div> */}
         <div>
-          <p className="FoundingMembersPage__metrics__stat">6</p>
+          <p className="FoundingMembersPage__metrics__stat">{foundingMembers?.length}</p>
           <p className="FoundingMembersPage__metrics__text">number of founding members</p>
         </div>
         <div>
-          <p className="FoundingMembersPage__metrics__stat">12</p>
-          <p className="FoundingMembersPage__metrics__text">number of non-founding members with 0&gt; direct score</p>
+          <p className="FoundingMembersPage__metrics__stat">
+            {nonFoundingMembers && nonFoundingMembers.filter(member => member.totalDirectScore > 0).length}
+          </p>
+          <p className="FoundingMembersPage__metrics__text">number of founding member candidates</p>
         </div>
       </div>
     </div>
@@ -72,17 +78,25 @@ const Metrics = ({ tableOneData, tableTwoData }) => (
       <div className="FoundingMembersPage__leaderboard-left">
         <h3 className="FoundingMembersPage__leaderboards__title">Leaderboards</h3>
         <div className="FoundingMembersPage__leaderboard-wrapper">
-          <h4 className="FoundingMembersPage__leaderboard__title">Overall direct score</h4>
-          <Table className="FoundingMembersPage__leaderboard" gridLayout="1.5fr 1fr 1fr">
-            <Table.Header className="FoundingMembersPage__leaderboard__header">
-              <Table.HeaderItem>Name</Table.HeaderItem>
-              <Table.HeaderItem textAlign="center">Referrer</Table.HeaderItem>
-              <Table.HeaderItem textAlign="right">Direct score</Table.HeaderItem>
+          <h4 className="FoundingMembersPage__leaderboard__title">Founding Members</h4>
+          <Table className="FoundingMembersPage__leaderboard">
+            <Table.Header className="FoundingMembersPage__leaderboard__header FoundingMembersPage__leaderboard__header--founding">
+              <Table.HeaderItem></Table.HeaderItem>
+              <Table.HeaderItem textAlign="center">Tokens allocated / projected</Table.HeaderItem>
+              <Table.HeaderItem textAlign="right">Total score</Table.HeaderItem>
             </Table.Header>
             <Table.Body className="FoundingMembersPage__leaderboard__body">
-              {tableOneData?.map((foundingMember, index) => (
-                <Table.Row key={index} className="FoundingMembersPage__leaderboard__row">
-                  <MetricsRowData key={index} data={foundingMember} />
+              {foundingMembers?.map((foundingMember, index) => (
+                <Table.Row
+                  key={index}
+                  className="FoundingMembersPage__leaderboard__row FoundingMembersPage__leaderboard__row--founding"
+                >
+                  <MetricsRowData
+                    key={index}
+                    data={foundingMember}
+                    partialTokenAllocation={partialTokenAllocation}
+                    founding
+                  />
                 </Table.Row>
               ))}
             </Table.Body>
@@ -90,21 +104,23 @@ const Metrics = ({ tableOneData, tableTwoData }) => (
           <ArrowButton
             className="FoundingMembersPage__leaderboard__button"
             link="/founding-members/leaderboards"
-            text="Show all direct score rankings"
+            text="All Founding Member Scores"
           />
         </div>
       </div>
       <div className="FoundingMembersPage__leaderboard-wrapper">
-        <h4 className="FoundingMembersPage__leaderboard__title">Overall referral score</h4>
-        <Table className="FoundingMembersPage__leaderboard" gridLayout="1.5fr 1fr 1fr">
-          <Table.Header className="FoundingMembersPage__leaderboard__header">
-            <Table.HeaderItem>Name</Table.HeaderItem>
-            <Table.HeaderItem textAlign="center">Referrer</Table.HeaderItem>
-            <Table.HeaderItem textAlign="right">Direct score</Table.HeaderItem>
+        <h4 className="FoundingMembersPage__leaderboard__title">Non-Founding Members</h4>
+        <Table className="FoundingMembersPage__leaderboard">
+          <Table.Header className="FoundingMembersPage__leaderboard__header FoundingMembersPage__leaderboard__header--nonfounding">
+            <Table.HeaderItem></Table.HeaderItem>
+            <Table.HeaderItem textAlign="right">Total score</Table.HeaderItem>
           </Table.Header>
           <Table.Body className="FoundingMembersPage__leaderboard__body">
-            {tableOneData?.map((foundingMember, index) => (
-              <Table.Row key={index} className="FoundingMembersPage__leaderboard__row">
+            {nonFoundingMembers?.map((foundingMember, index) => (
+              <Table.Row
+                key={index}
+                className="FoundingMembersPage__leaderboard__row FoundingMembersPage__leaderboard__row--nonfounding"
+              >
                 <MetricsRowData key={index} data={foundingMember} />
               </Table.Row>
             ))}
@@ -113,13 +129,13 @@ const Metrics = ({ tableOneData, tableTwoData }) => (
         <ArrowButton
           className="FoundingMembersPage__leaderboard__button"
           link="/founding-members/leaderboards"
-          text="Show all referral score rankings"
+          text="All Regular Member Scores"
         />
       </div>
       <ArrowButton
         className="FoundingMembersPage__leaderboards__button"
-        link="https://www.google.com"
-        text="Learn more about the rules"
+        link="https://github.com/Joystream/founding-member/blob/master/rules.md"
+        text="Read the full program rules"
       />
     </div>
   </>

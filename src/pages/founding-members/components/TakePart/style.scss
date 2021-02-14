@@ -45,7 +45,7 @@
         position: absolute;
         top: 32px;
         left: 19px;
-        height: 300px;
+        height: 380px;
         border-left: 4px dotted #81858d;
       }
     }
@@ -54,8 +54,9 @@
       margin-top: 8px;
     }
 
-    &__number-steps div:nth-of-type(5) {
-      margin-top: 24px;
+    &__number-steps div:nth-of-type(5),
+    &__number-steps div:nth-of-type(6) {
+      margin-top: 12px;
     }
 
     &__join-button {

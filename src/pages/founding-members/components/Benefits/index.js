@@ -8,35 +8,37 @@ import './style.scss';
 
 const BenefitsItem = ({ imageSrc, text, title }) => (
   <div className="FoundingMembersPage__benefit">
-    <img src={imageSrc} alt='benefit-item'/>
-    <h3 className='FoundingMembersPage__benefit__title'>{title}</h3>
+    <img src={imageSrc} alt="benefit-item" />
+    <h3 className="FoundingMembersPage__benefit__title">{title}</h3>
     <p>{text}</p>
   </div>
 );
 
-const Benefits = () => (
-  <div className="FoundingMembersPage__benefits">
+const Benefits = ({ newMembers }) => (
+  <div className={`FoundingMembersPage__benefits ${!newMembers ? 'FoundingMembersPage__benefits--secondary' : ''}`}>
     <div className="FoundingMembersPage__benefits__explanation">
       <h2 className="FoundingMembersPage__benefits__explanation__title">
-        What is a founding <br /> member program <br /> and why it exists?
+        What is the Founding <br /> Member Program <br /> and why does it exist?
       </h2>
       <div className="FoundingMembersPage__benefits__explanation__text">
         <p>
-          One of the prerequisites for successfully launching the Joystream system is that a sufficiently large,
-          effective and motivated community of users is ready to occupy all the different roles required to run, evolve
-          and grow the platform. The purpose of the founding member program is to serve this end.
+          While Jsgenesis is the team currently building the technology behind the Joystream project, we will not be
+          around forever, and we are instead entrusting the future operation of the Joystream DAO to our community
+          members.
         </p>
-        <p className='FoundingMembersPage__benefits__explanation__quote'>
+        {/* <p className='FoundingMembersPage__benefits__explanation__quote'>
           "A founding member does have the freedom to opt out of any of these as desired."
-        </p>
+        </p> */}
         <p>
-          <span>A founding member does have the freedom to opt out of any of these as desired. </span> A new official community member
-          status, called founding member, will be made available.
+          The Founding Member Program formally allocates JOY tokens among some of our highest quality community members
+          in recognition of their contributions to the project and ensures that a sufficiently large, effective and
+          motivated community of users is ready to occupy all the different roles required to run, evolve and grow the
+          platform on mainnet.
         </p>
       </div>
     </div>
     <h2 className="FoundingMembersPage__benefits__title">Benefits</h2>
-    <h2 className='FoundingMembersPage__benefits__alternate-title'>Benefits of becoming a founding member</h2>
+    <h2 className="FoundingMembersPage__benefits__alternate-title">Benefits of becoming a founding member</h2>
 
     <div className="FoundingMembersPage__benefits__container">
       <BenefitsItem
@@ -48,16 +50,16 @@ const Benefits = () => (
       />
       <BenefitsItem
         imageSrc={MembershipStatus}
-        title={'Membership status'}
+        title={'Membership Status'}
         text={
-          'special status membership in genesis block, which will have a visually distinguished presentation in Pioneer and other products'
+          'special status membership assigned in genesis block, which will have a visually distinguished presentation in Pioneer and other products'
         }
       />
       <BenefitsItem
         imageSrc={HandcraftedAvatar}
-        title={'Handcrafted avatar'}
+        title={'Handcrafted Avatar'}
         text={
-          'receive a handcrafted premium membership avatar and be honoured on official Joystream website and social media leading up to mainnet'
+          'receive a handcrafted premium membership avatar and be honoured on the official project website and social media leading up to mainnet'
         }
       />
     </div>

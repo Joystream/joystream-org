@@ -1,3 +1,7 @@
+[build]
+
+  environment = { NODE_VERSION = "12.18.0", YARN_VERSION = "1.22.0"}
+
 [[redirects]]
   from = "https://joystream.co"
   to = "https://joystream.org"
