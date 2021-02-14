@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../Button';
 import Link from '../Link';
+import Input from '../Input';
 
 import { joystreamLinks, githubLinks, usefulLinks, socialMedias } from './data';
 
@@ -25,8 +26,35 @@ const FooterSection = ({ title, links }) => {
 };
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
   return (
     <footer className="Footer">
+      <div className="Footer__form-wrapper">
+        <h2 className="Footer__form__title">Stay up to date</h2>
+        <p className="Footer__form__subtitle">Don't worry about spam! Keep track of all important updates</p>
+        <form
+          method="post"
+          action="http://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
+          name="mc-embedded-subscribe-form"
+          target="_blank"
+          noValidate
+          className="Footer__form"
+        >
+          <Input
+            className="Footer__form__input"
+            placeholder="Email Address..."
+            type="email"
+            name="EMAIL"
+            required
+            onChange={e => setEmail(e.target.value)}
+            value={email}
+          />
+          <Button className="Footer__form__button" type="submit" name="subscribe">
+            Join the newsletter
+          </Button>
+        </form>
+      </div>
       <h2 className="Footer__header">Get notified</h2>
       <Button
         href="http://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
@@ -47,6 +75,7 @@ const Footer = () => {
             {socialMedias.map(({ icon: Icon, name, href }) => (
               <a href={href} className="Footer__social-link" key={name}>
                 <Icon className="Footer__social-icon" />
+                <p className="Footer__social-name">{name}</p>
               </a>
             ))}
           </div>

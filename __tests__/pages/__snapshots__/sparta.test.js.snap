@@ -24,6 +24,7 @@ exports[`SpartaPage page renders correctly 1`] = `
     image="icon-mock"
     indent={true}
     noOverflow={false}
+    reverse={false}
     theme="black"
     title="Sparta Network"
   >
