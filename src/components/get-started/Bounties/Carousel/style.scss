@@ -39,14 +39,16 @@
     }
 
     &__card {
+      position: relative;
       width: 394px;
       height: 200px;
-      padding: 20px;
+      padding: 15px;
       background-color: white;
-      transition: transform .5s, box-shadow .5s, border .5s;
+      transition: transform .5s, box-shadow .5s, outline .2s;
 
       &:hover {
-        border: 2px solid #000;
+        outline: 2px solid #000;
+        outline-offset: -2px;
         box-shadow: 8px 8px 0 -2px rgba(0, 0, 0, 1);
       }
     }
@@ -93,18 +95,32 @@
     }
 
     &__title {
-      height: 64px;
-      margin: 12px 0 20px 0;
+      height: 30px;
+      margin: 0 0 0 0;
       font-family: $font-primary;
       font-size: 24px;
       line-height: 32px;
       letter-spacing: 0;
+      color: black;
+    }
+
+    &__text {
+      margin: 4px 0 8px 0;
+      font-family: $font-secondary;
+      font-size: 14px;
+      line-height: 16px;
+      color: black;
     }
 
     &__bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      width: 100%;
+      padding: 0 15px 15px 15px;
     }
 
     &__card-filters {
