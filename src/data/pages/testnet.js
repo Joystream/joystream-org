@@ -40,7 +40,7 @@ export default {
                 effectively increasing the exchange rate (all else being equal).
               </p>
               <p>
-                Last replenishment: <i>$600 on January 31st</i>
+                Last replenishment: <i>$600 on January 15th</i>
               </p>
             </blockquote>
           </>
