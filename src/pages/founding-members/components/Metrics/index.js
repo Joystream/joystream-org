@@ -134,7 +134,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, pa
       </div>
       <ArrowButton
         className="FoundingMembersPage__leaderboards__button"
-        link="https://github.com/Joystream/founding-member/blob/master/rules.md"
+        link="https://github.com/Joystream/founding-members/blob/main/RULES.md"
         text="Read the full program rules"
       />
     </div>
