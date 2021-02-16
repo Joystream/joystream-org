@@ -6,10 +6,6 @@ const links = [
   { to: '/roles', label: 'Roles' },
   { to: '/testnet', label: 'Incentives' },
   { href: sharedData.links.repository, label: 'Repository' },
-  {
-    href: sharedData.links.whitepaper,
-    label: 'Whitepaper',
-  },
   { href: sharedData.links.blog, label: 'Blog' },
   {
     href: sharedData.links.openings,
