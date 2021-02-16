@@ -1,187 +1,80 @@
 {
-	"KPIs": [{
+	"KPIs":
+  [
+    {
 			"title": "Proposal Clearance",
 			"description": "For the governance process to function properly, all proposals must be processed effectively, and in a reasonable time frame to avoiding blocking new proposals coming in.",
 			"reward": "0",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
+			"startDate": "16.02.2021 ~03:30 UTC - #2073601",
 			"successEvents": [
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h).",
 				"No malicious or unreasonable proposals are approved."
 			],
 			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards, and a new Council Election will be started immediately.",
-			"gradeDate": "16.02.2021 - 18:00 UTC",
-			"number": 10.1
+			"gradeDate": "06.03.2021 - 18:00 UTC",
+			"number": 11.1
 		},
 		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. For each Term the Council must produce a report of 'events' and 'Tokenomics' to allow users to make informed votes. This must be submitted as a PR to the Community Repo.",
 			"reward": "0",
 			"measurementPeriod": "16 days",
-			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
+			"startDate": "16.02.2021 ~03:30 UTC - #2073601",
 			"successEvents": [
-				"The Third Council on Babylon (#1872001-#2073601) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
+				"The Council on Babylon (#2073601-#2275201) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
 			],
 			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards.",
-			"gradeDate": "16.02.2021 - 18:00 UTC",
-			"number": 10.2
+			"gradeDate": "06.03.2021 - 18:00 UTC",
+			"number": 11.2
 		},
 		{
 			"title": "Appoint New Council Secretary",
 			"description": "The Council must appoint one of their own as the Council Secretary, responsible for adding Council Reports and representing the Council in the Community Repo (with some enhanced repository maintenance privileges).",
 			"reward": "50",
 			"measurementPeriod": "5 days",
-			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
+			"startDate": "16.02.2021 ~03:30 UTC - #2073601",
 			"successEvents": [
 				"The Council informally appoints a Council Secretary through a spending proposal and pays them an appropriate rate for their responsibilities.",
 				"The spending proposal must provide a link to the Council Secretary's GitHub account so we can provide them 'triage' permissions on the community repo."
 			],
 			"annihilation": "No Council Secretary is appointed.",
-			"gradeDate": "16.02.2021 - 18:00 UTC",
-			"number": 10.3
+			"gradeDate": "06.03.2021 - 18:00 UTC",
+			"number": 11.3
 		},
 		{
-			"title": "Increase the Opportunities on the Platform",
-			"description": "Due to a new incentives program we are in the process of rolling out, we want to open up for more participation on the platform. As a consequence, the platforms budget will be increased to USD 1000/council term.",
+			"title": "Research Max Validator Change",
+			"description": "After the validator set was increased last week, there was some unexpected behaviour. Produce a report answering the following questions:",
 			"reward": "250",
 			"measurementPeriod": "14 days",
-			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
+			"startDate": "16.02.2021 ~03:30 UTC - #2073601",
 			"successEvents": [
-				"Increase the number of validator slots to 80 from approx #1771201. Expect to further increase this number in the future.",
-				"Based on the results from Bounty #6, and further discussion, request changes to related parameters.",
-				"Increase the number of spots on the Council to 12, and change the other parameters where appropriate. Request a new recurring reward scheme based on this.",
-				"The workload for the Curator group will go up with the new scheme (as new bounties will be rolled out). Ensure the group is both properly manned, and trained for this development.",
-				"Set up a new budget for the platform, revising both the number of positions for each role, and their rewards."
+				"After the proposal was executed (#1937365), how quickly did the new validators show up?",
+        "Was there any clear patterns for the new validators?",
+				"Did the number of network nodes increase 'proportionally'? (Might be hard to figure out, unless you've configured your node to accept >80 peers.)",
+        "What happened to the rewards in tJOY and USD terms?",
+        "Was there a spike in tokens staked, or were they just shifted?",
+        "What happened to the average block time, and blocks per era and session/epoch?",
+        "Anything else that was noteworthy?"
 			],
 			"annihilation": "NA",
-			"gradeDate": "16.02.2021 - 18:00 UTC",
-			"number": 10.4
-		},
-		{
-			"title": "Block Production",
-			"description": "In order to have a reliable network, a KPI focusing on block production and validator stability is required. Timestamp of each block can be found using the block explorer.",
-			"reward": "50",
-			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
-			"measurementPeriod": "14 days (Full Council Term)",
-			"successEvents": [
-				"The difference between the timestamp of blocks #1872001 and #2073601 must be less than 1229760000 (avg 6.1s/block).",
-				"The total Validator+Nominator stake averages between 20% and 30% of total issuance."
-			],
-			"annihilation": "The difference between the timestamp of blocks #1872001 and #2073601 is over 1260000000 (avg 6.25s/block), or the total Validator+Nominator stake averages under 10% of total issuance.",
-			"gradeDate": "16.02.2021 - 18:00 UTC",
-			"number": 10.5
+			"gradeDate": "06.03.2021 - 18:00 UTC",
+			"number": 11.4
 		},
 		{
 			"title": "Managing Community Bounties",
 			"description": "Managing Community Bounties will be a growing part of the Council's workload. Establishing good workflows for this will be iterative and situational.",
-			"reward": "200",
+			"reward": "300",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "31.01.2021 ~23:00 UTC - #1872001",
+			"startDate": "16.02.2021 ~03:30 UTC - #2073601",
 			"successEvents": [
-				"#5 - 'Joystream Telegram Sticker pack': Submit a report of the current status, covering both the results and the cost, and present a plan going forward.",
-				"As new bounties will be rolled out in the term, perform the Councils tasks as required.",
-				"For the bounties that requires 'Admins', create budgets and hire/assign members for the tasks."
+				"Update/fix/maintain the Community Repo's new `bounties-overview` files (json, table issue)",
+				"Follow the instructions for each bounty, create the forum posts, follow up and, if required, create budgets, request funding and hire/assign members as managers.",
+        "Submit a weekly bounty report, outlining the status and progress for each bounty."
 			],
 			"annihilation": "Unlike standard `annihilations`, any rewards paid for a Bounty that exceeds what Jsgenesis pays will be deducted from the Council's KPI rewards.",
-			"gradeDate": "16.02.2021 - 18:00 UTC",
-			"number": 10.6
-		}
-	],
-	"Bounties": [{
-			"title": "Update Telegram Bot",
-			"description": "As the old bot is not compatible with the new '@joystream-types', it needs to fixed as soon as possible. Full details can be found <a href='https://github.com/Joystream/community-repo/issues/23'>here</a>. Note that the bounty has been updated.",
-			"reward": "300 (max)",
-			"published": "22.09.2020",
-			"successEvents": [
-				"The existing bot is upgraded to function with the new types - 150",
-				"The bot is re-written in typescript - 75",
-				"The 'bug' associated with the finalization of Proposals are fixed - 75"
-			],
-			"annihilation": "The bot contains malicious code.",
-			"conditions": [
-				"The source code is licensed under GPLv3",
-				"As soon as the Council approves the (final) spending proposal, a PR with all the source code is made to the Community Repo.",
-				"This includes complete, step by step, instructions for deploying the bot."
-			],
-			"reviewPeriod": "72 hours from the time the Council submits the Bounty to Jsgenesis.",
-			"id": 1,
-			"status": "<a href='https://github.com/Joystream/community-repo/pull/36'>Closed/Completed</a>",
-			"deadline": "NA"
-		},
-		{
-			"title": "Research and Testing of 'polkadot-js extension'",
-			"description": "After the upgrade, we have enabled the <a href='https://github.com/polkadot-js/extension'>polkadot-js extension</a> as part of Pioneer. Full details can be found <a href='https://github.com/Joystream/community-repo/issues/32'>here</a>.",
-			"reward": "200",
-			"published": "11.10.2020",
-			"successEvents": [
-				"OS and Browser tests performed",
-				"Cross device tests performed",
-				"Functionality tests performed"
-			],
-			"annihilation": "The report contains incorrect information",
-			"conditions": [
-				"A report with the results is submitted as a PR to the Community Repo."
-			],
-			"reviewPeriod": "72 hours from the time the Council submits the Bounty to Jsgenesis.",
-			"id": 2,
-			"status": "Submitted"
-		},
-		{
-			"title": "Improve Telegram Bot(s)",
-			"description": "The bot still needs improvement, see issue <a href='https://github.com/Joystream/community-repo/issues/51'>51</a> in the Community Repo for details.",
-			"reward": "225",
-			"published": "05.12.2020",
-			"successEvents": [
-				"Validators/Block Production - $75",
-				"Storage Providers - $100",
-				"Proposals - $50"
-			],
-			"annihilation": "If the Council submits a bot containing malicious code for review by Jsgenesis, the Council will be deducted the total amount requested for the Bounty.",
-			"conditions": [
-				"The source code is licensed under GPLv3",
-				"The bot builds on <a href='https://github.com/Joystream/community-repo/pull/36'>existing code</a>, in typescript",
-				"As soon as the Council approves the (final) spending proposal, a PR with all the source code is made to this Repo.",
-				"This includes complete, step by step, instructions for deploying the bot."
-			],
-			"reviewPeriod": "7 days from the time the Council submits the Bounty to Jsgenesis.",
-			"id": 3,
-			"status": "Submitted"
-		},
-		{
-			"title": "Joystream Telegram Sticker pack",
-			"description": "Create a Joystream branded sticker pack for Telegram. See issue <a href='https://github.com/Joystream/community-repo/issues/52'>52</a> in the Community Repo for details.",
-			"reward": "400",
-			"published": "05.12.2020",
-			"successEvents": [
-				"Provide details on how to create a sticker pack on Telegram - $100",
-				"Produce a sticker pack with at least 10 Joystream branded/related stickers - $300 (max)"
-			],
-			"annihilation": "Stickers contain artwork that violates any licenses or copyrights.",
-			"conditions": [
-				"Artwork is made available in the Community Repo",
-				"Must be in good taste, and related to the project.",
-				"Grading for success event 2 will be highly subjective."
-			],
-			"reviewPeriod": "7 days from the time the Council submits the Bounty to Jsgenesis.",
-			"id": 5,
-			"status": "Open"
-		},
-		{
-			"title": "Increase Validator Set Research",
-			"description": "Research the costs and parameter changes associated with increasing the Validator count substantially. See issue <a href='https://github.com/Joystream/community-repo/issues/71'>71</a> in the Community Repo for details.",
-			"reward": "200",
-			"published": "17.01.2021",
-			"successEvents": [
-				"Produce a report estimating the costs, for the validators themselves and other tJOY holders, associated with a larger validator set.",
-				"The report includes a table with the proposed parameters for a set of potential 'Max Validator Count' values."
-			],
-			"annihilation": "NA.",
-			"conditions": [
-				"The report is issued as a PR to the Community Repo"
-			],
-			"reviewPeriod": "7 days from the time the Council submits the Bounty to Jsgenesis.",
-			"id": 6,
-			"status": "Open"
+			"gradeDate": "06.03.2021 - 18:00 UTC",
+			"number": 11.5
 		}
 	]
 }
