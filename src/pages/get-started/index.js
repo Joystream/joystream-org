@@ -14,7 +14,7 @@ const GetStarted = () => {
     <BaseLayout>
       <SiteMetadata
         title="Getting Started"
-        description="Get involved in the creation and management of ..." //needs updating
+        description="Learn how to contribute and participate in the Joystream project"
       />
 
       <GetStartedHero />

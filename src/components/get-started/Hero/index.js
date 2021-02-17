@@ -9,13 +9,13 @@ const GetStartedHero = () => (
   <div className="GetStarted__hero-wrapper">
     <div className="GetStarted__hero">
       <div className="GetStarted__hero__content">
-        <h1 className="GetStarted__hero__title">Get involved and see concrete opportunities</h1>
+        <h1 className="GetStarted__hero__title">How to Contribute and Participate</h1>
         <p className="GetStarted__hero__subtitle">
-          Let’s create together a video platform controlled, owned, and operated by its users.
+          Read more about the current ways you can add value to the project and earn rewards for doing so.
         </p>
         <a href="#opportunities">
           <div className="GetStarted__hero__button">
-            <p className="GetStarted__hero__button-text">See opportunities</p>
+            <p className="GetStarted__hero__button-text">View opportunities</p>
             <Arrow className="GetStarted__hero__button-arrow" />
           </div>
         </a>

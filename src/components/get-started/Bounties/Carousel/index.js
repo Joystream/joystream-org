@@ -35,10 +35,10 @@ const BountiesCard = ({ title, amount, categories, date, id, link, description }
         <div className="GetStarted__bounties-carousel__bottom">
           <div className="GetStarted__bounties-carousel__card-filters">
             {categories?.map(category => (
-                <div key={title + category} className="GetStarted__bounties-carousel__card-filter">
-                  {category}
-                </div>
-              ))}
+              <div key={title + category} className="GetStarted__bounties-carousel__card-filter">
+                {category}
+              </div>
+            ))}
           </div>
           <Arrow className="GetStarted__bounties-carousel__arrow" />
         </div>
@@ -65,24 +65,24 @@ const BountiesCarousel = () => {
 
   useEffect(() => {
     if (data && !loading) {
-    const tempCategoryValues = {
-      All: 0,
-      Coding: 0,
-      Design: 0,
-      Marketing: 0,
-      Research: 0,
-      Content: 0,
-    };
+      const tempCategoryValues = {
+        All: 0,
+        Coding: 0,
+        Design: 0,
+        Marketing: 0,
+        Research: 0,
+        Content: 0,
+      };
 
-    data.activeBounties.forEach(bounty => {
-      bounty.tags.forEach(category => {
-        tempCategoryValues[category]++;
+      data.activeBounties.forEach(bounty => {
+        bounty.tags.forEach(category => {
+          tempCategoryValues[category]++;
+        });
+        tempCategoryValues['All']++;
       });
-      tempCategoryValues['All']++;
-    });
 
-    setCategoryValues(tempCategoryValues);
-    setBounties(data?.activeBounties);
+      setCategoryValues(tempCategoryValues);
+      setBounties(data?.activeBounties);
     }
   }, [data]);
 

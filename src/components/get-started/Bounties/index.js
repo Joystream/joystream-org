@@ -68,9 +68,9 @@ const GetStartedBounties = () => (
       <div className="GetStarted__bounties__explanation__content">
         <h3 className="GetStarted__bounties__explanation__title">Roles</h3>
         <p className="GetStarted__bounties__explanation__text">
-          Getting into one of the formal roles on the currently active testnet. The set of such roles changes from one
-          network to the next, and currently (on the Babylon Network) there are 5 such roles: Content Creator, Curator,
-          Curator Lead, Validator, Council Member, Storage Lead, Storage Provider.
+          Our current testnet also allows you to participate in some of the platform roles which will be available on
+          mainnet. Participation in these roles is rewarded in tJOY (our testnet token) which is backed by fiat reserves
+          at Jsgenesis and redeemable for bitcoin cash.
         </p>
       </div>
     </div>
