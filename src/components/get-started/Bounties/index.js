@@ -69,7 +69,10 @@ const GetStartedBounties = () => (
         <h3 className="GetStarted__bounties__explanation__title">Roles</h3>
         <p className="GetStarted__bounties__explanation__text">
           Our current testnet also allows you to participate in some of the platform roles which will be available on
-          mainnet. Participation in these roles is rewarded in tJOY (our testnet token) which is backed by fiat reserves
+          mainnet.
+          <br/>
+          <br/>
+          Participation in these roles is rewarded in tJOY (our testnet token) which is backed by fiat reserves
           at Jsgenesis and redeemable for bitcoin cash.
         </p>
       </div>
