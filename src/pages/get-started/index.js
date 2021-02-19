@@ -14,7 +14,7 @@ const GetStarted = () => {
     <BaseLayout>
       <SiteMetadata
         title="Getting Started"
-        description="Learn how to contribute and participate in the Joystream project"
+        description="Learn how to contribute and participate to the Joystream project"
       />
 
       <GetStartedHero />
@@ -23,17 +23,6 @@ const GetStarted = () => {
 
       <GetStartedBounties />
 
-      <div className="GetStarted__cta-wrapper">
-        <div className="GetStarted__cta">
-          <h2 className="GetStarted__cta__text">Join telegram and change the online video industry with us</h2>
-          <a target="_blank" href="https://t.me/JoyStreamOfficial">
-            <div className="GetStarted__cta__button">
-              <p className="GetStarted__cta__button-text">Open telegram</p>
-              <Arrow className="GetStarted__cta__button-arrow" />
-            </div>
-          </a>
-        </div>
-      </div>
     </BaseLayout>
   );
 };

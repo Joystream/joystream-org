@@ -3,6 +3,7 @@ import cn from 'classnames';
 import { ReactComponent as Arrow } from '../../../../assets/svg/arrow-down-small.svg';
 import List from '../../../../components/CardCarousel';
 import useAxios from '../../../../utils/useAxios';
+import { bountiesLink } from '../../../../data/pages/get-started';
 
 import './style.scss';
 
@@ -48,9 +49,7 @@ const BountiesCard = ({ title, amount, categories, date, id, link, description }
 };
 
 const BountiesCarousel = () => {
-  const [data, loading, error] = useAxios(
-    'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties-overview/bounties-status.json'
-  );
+  const [data, loading, error] = useAxios(bountiesLink);
 
   const [filterState, setFilterState] = useState('All');
   const [categoryValues, setCategoryValues] = useState({

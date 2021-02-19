@@ -2,7 +2,7 @@
 
 .GetStarted {
   &__bounties {
-    padding: 150px 0;
+    padding: 150px 0 100px 0;
     background-color: #f2f5f9;
 
     &__title {
@@ -67,6 +67,7 @@
     }
 
     &__role-card {
+      position: relative;
       min-width: 606px;
       min-height: 328px;
       padding: 36px 24px;
@@ -93,28 +94,12 @@
         color: $c_blue-ribbon;
       }
 
-      &__info-wrapper {
-        display: grid;
-        margin-top: 10px;
-        grid-template-columns: 1fr 1fr;
-      }
-
       &__subtitle {
         font-family: $font-secondary;
         font-size: 12px;
         line-height: 16px;
         letter-spacing: -.4000000059604645px;
         color: #5c6475;
-      }
-
-      &__data {
-        margin-top: 4px;
-        font-family: $font-secondary;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 28px;
-        letter-spacing: 0;
-        color: $c_blue-ribbon;
       }
 
       &__overview {
@@ -131,9 +116,12 @@
       }
 
       &__link {
+        position: absolute;
+        bottom: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 558px;
         margin-top: 25px;
         padding: 10px 0;
         border: 2px solid $c_blue-ribbon;
@@ -228,8 +216,16 @@
         min-height: 268px;
 
         &__main {
+          justify-content: center;
+          width: 100%;
           grid-template-columns: unset;
-          grid-template-rows: 65px auto;
+          grid-template-rows: 100px auto;
+        }
+
+        &__role-name {
+          font-size: 20px;
+          line-height: 28px;
+          text-align: center;
         }
 
         &__image {
@@ -241,28 +237,17 @@
           padding: 0;
         }
 
-        &__role-name {
-          font-size: 20px;
-          line-height: 28px;
-        }
-
-        &__info-wrapper {
-          margin-top: 4px;
-          grid-template-columns: auto auto;
-        }
-
         &__subtitle {
           font-size: 10px;
           line-height: 16px;
         }
 
-        &__data {
-          font-size: 18px;
-          line-height: 24px;
-        }
-
         &__overview {
           display: none;
+        }
+
+        &__link {
+          width: 287px;
         }
       }
     }
