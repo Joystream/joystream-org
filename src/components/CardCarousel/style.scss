@@ -3,14 +3,15 @@
 .CardCarousel {
   &__cards {
     display: flex;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    overflow: hidden;
 
     & > div {
-      min-width: 288px;
-      min-height: 245px;
+      // min-width: 288px;
+      // min-height: 245px;
       margin-right: 20px;
-      padding: 24px;
-      background-color: white;
+      // padding: 24px;
+      // background-color: white;
     }
   }
 
@@ -57,7 +58,7 @@
 
   @media (max-width: 1300px) {
     &__cards {
-      padding-left: 40px;
+      // padding-left: 40px;
     }
   }
 

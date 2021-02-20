@@ -1,0 +1,145 @@
+@import '../../../styles/main';
+
+.GetStarted {
+  &__hero-wrapper {
+    padding: 57px 0 80px;
+    background-color: black;
+  }
+
+  &__hero {
+    @extend %container;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 56px;
+      line-height: 64px;
+      letter-spacing: 0;
+      color: white;
+    }
+
+    &__subtitle {
+      margin-top: 20px;
+      font-family: $font-secondary;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: $c_grayc-chateau;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 264px;
+      height: 80px;
+      margin-top: 32px;
+      padding: 0 30px;
+      background-color: $c_blue-ribbon;
+    }
+
+    &__button-text {
+      font-family: $font-primary;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: white;
+    }
+
+    &__button-arrow {
+      margin-left: 17px;
+      color: white;
+      transform: scale(.9);
+    }
+
+    &__image-alt {
+      display: none;
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__hero {
+      padding: 0 50px;
+      grid-template-columns: 1fr 1.5fr;
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__hero {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &__content {
+        width: 90%;
+      }
+
+      &__image {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__hero {
+      &__title {
+        font-size: 42px;
+        line-height: 50px;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      &__button {
+        height: 60px;
+      }
+
+      &__button-arrow {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__hero {
+      padding: 0;
+
+      &__title {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__content {
+        width: 335px;
+      }
+
+      &__button {
+        width: 335px;
+      }
+
+      &__image {
+        display: none;
+      }
+
+      &__image-alt {
+        display: block;
+        margin-top: 40px;
+      }
+    }
+  }
+}
