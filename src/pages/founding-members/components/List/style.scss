@@ -27,6 +27,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 288px;
+    min-height: 245px;
+    padding: 24px;
+    background-color: white;
 
     &__main {
       display: flex;
