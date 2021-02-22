@@ -85,6 +85,8 @@ const BountiesCarousel = () => {
     }
   }, [data]);
 
+  console.log(bounties);
+
   return (
     <div className="GetStarted__bounties-carousel-wrapper">
       <div className="GetStarted__bounties-carousel__filters">
