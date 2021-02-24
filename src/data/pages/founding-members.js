@@ -264,7 +264,7 @@ export const TermsAndConditionsText = () => (
     <h4 className="margin-bottom-S">Communication</h4>
     <p className="margin-bottom-XS">
       We will publish further public updates about the program through our regular communication channels, including our
-      Official Telegram Channel, the Joystream Newsletter, the official GitHub repo for the program
+      Official Discord Channel, the Joystream Newsletter, the official GitHub repo for the program
       (github.com/joystream/founding-members) and on our website (www.joystream.org), and blog (blog.joystream.org).
     </p>
     <p className="margin-bottom-M">

@@ -17,7 +17,7 @@ const GetStartedHowTo = () => (
           <div className="GetStarted__howto__number-step">4</div>
         </div>
         <div className="GetStarted__howto__text-steps">
-          <div className="GetStarted__howto__text-step">Join our Telegram channel</div>
+          <div className="GetStarted__howto__text-step">Join our Discord</div>
           <div className="GetStarted__howto__text-step">Receive free testnet tokens</div>
           <div className="GetStarted__howto__text-step">Create membership on-chain</div>
           <div className="GetStarted__howto__text-step">Pick one of the opportunities below</div>

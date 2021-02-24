@@ -20,8 +20,8 @@ const TakePart = () => (
       <div className="line"></div>
       <NumberStep
         number="1"
-        text="Introduce yourself on Telegram."
-        otherText="Introduce yourself in our Telegram channel."
+        text="Introduce yourself on Discord."
+        otherText="Introduce yourself in our Discord."
       />
       <NumberStep
         number="2"
@@ -40,7 +40,7 @@ const TakePart = () => (
       <NumberStep number="3" text="Regularly report your activity." otherText="Regularly report your activity." />
       <NumberStep number="4" text="Earn leaderboard points." otherText="Earn leaderboard points." />
       <NumberStep number="5" text="Become a founding member!" otherText="Become a founding member!" />
-      <ArrowButton link="https://t.me/JoyStreamOfficial" text="Join Telegram" className="FoundingMembersPage__take-part__join-button" />
+      <ArrowButton link="https://discord.gg/DE9UN3YpRP" text="Join Discord" className="FoundingMembersPage__take-part__join-button" />
       <p className="FoundingMembersPage__take-part__excluded-text">Countries that are excluded from that program: </p>
       <img src={UnitedStatesCircle} className="FoundingMembersPage__take-part__us-flag" alt='us flag icon'/>
     </div>

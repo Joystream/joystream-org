@@ -7,7 +7,7 @@ import HydraHero from '../../assets/svg/hydra-hero.svg';
 import { ReactComponent as Snippet } from '../../assets/svg/snippet.svg';
 
 // Icons
-import { ReactComponent as TelegramIcon } from '../../assets/svg/telegram.svg';
+import { ReactComponent as DiscordIcon } from '../../assets/svg/discord.svg';
 import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
 import { ReactComponent as PlaygroundIcon } from '../../assets/svg/kusama.svg';
 import { ReactComponent as DocumentIcon } from '../../assets/svg/document.svg';
@@ -196,10 +196,10 @@ export default {
         },
       },
       {
-        name: 'Telegram Channel',
-        icon: TelegramIcon,
+        name: 'Discord',
+        icon: DiscordIcon,
         link: {
-          to: 'https://t.me/HydraDevs',
+          to: 'https://discord.gg/DE9UN3YpRP',
           as: 'Go to the Channel',
         },
       },

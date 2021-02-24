@@ -18,6 +18,7 @@ export const sharedData = {
     telegramLink: 'https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA',
     redditLink: 'https://www.reddit.com/r/JoyStream/',
     twitterLink: 'https://twitter.com/JoystreamApp',
+    discordLink: 'https://discord.gg/DE9UN3YpRP'
   },
   links: {
     blog: 'https://blog.joystream.org/',
