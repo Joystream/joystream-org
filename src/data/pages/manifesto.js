@@ -111,10 +111,7 @@ export default {
           </p>
           <blockquote>
             We understand there to be two fundamental ways that participants can hold institutions of any kind
-            accountable:{' '}
-            <a href="/" rel="noopener" target="_blank">
-              Voice and exit, in the tradition of Hirschman A. O. [4].
-            </a>
+            accountable: Voice and exit, in the tradition of Hirschman A. O. [4].
           </blockquote>
         </>
       ),
@@ -185,8 +182,8 @@ export default {
     <>
       This plan still has room for more people, so get involved by sending an{' '}
       <a href={`mailto:${sharedData.defaultEmail}`}>email</a> or joining us on{' '}
-      <a href={sharedData.social.telegramLink} target="_blank" rel="noopener noreferrer">
-        Telegram
+      <a href={sharedData.social.discordLink} target="_blank" rel="noopener noreferrer">
+        Discord
       </a>{' '}
       or{' '}
       <a href={sharedData.social.redditLink} target="_blank" rel="noopener noreferrer">

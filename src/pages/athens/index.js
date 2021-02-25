@@ -76,9 +76,6 @@ const AthensPage = ({ content }) => {
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper title="Network Statistics" subtitle="As they were at the end of the network.">
-          <Analytics content={mapStatusDataToAnalytics(content)} items={analytics} />
-        </TitleWrapper>
 
         <TitleWrapper title="Critical Documents">
           <ColumnsLayout className="ColumnsLayout--documents">

@@ -93,8 +93,8 @@ const FoundingMembersPage = () => {
             </p>
             <ArrowButton
               className="FoundingMembersPage__hero__button"
-              link="https://t.me/JoyStreamOfficial"
-              text="Join our Telegram"
+              link="https://discord.gg/DE9UN3YpRP"
+              text="Join our Discord"
             />
           </div>
           <div className="FoundingMembersPage__hero__image-wrapper">
@@ -143,7 +143,7 @@ const FoundingMembersPage = () => {
           <div className="FoundingMembersPage__cta__content">
             <h2 className="FoundingMembersPage__cta__title">Discuss the program</h2>
             <p className="FoundingMembersPage__cta__text">
-              Begin your founding member journey by joining our Telegram group and requesting your first testnet tokens.
+              Begin your founding member journey by joining our Discord group and requesting your first testnet tokens.
             </p>
             <p className="FoundingMembersPage__cta__text">
               Here you can also ask question about many aspects of the program and find out the areas where you can
@@ -151,8 +151,8 @@ const FoundingMembersPage = () => {
             </p>
             <ArrowButton
               className="FoundingMembersPage__cta__button"
-              link="https://t.me/JoyStreamOfficial"
-              text={width <= 768 ? 'Join now' : 'Join our Telegram'}
+              link="https://discord.gg/DE9UN3YpRP"
+              text={width <= 768 ? 'Join now' : 'Join our Discord'}
             />
           </div>
           <img className="FoundingMembersPage__cta__visual" src={FoundingMembersCTA} alt="founding members visual" />

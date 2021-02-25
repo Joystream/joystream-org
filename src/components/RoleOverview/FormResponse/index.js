@@ -36,7 +36,7 @@ const FormResponse = ({ error, onClose }) => {
         </p>
 
         <p className="FormResponse__text">
-          If you want to interact with us, or other people interested in this role, go to Telegram.
+          If you want to interact with us, or other people interested in this role, go to Discord.
         </p>
 
         <p className="FormResponse__text">
