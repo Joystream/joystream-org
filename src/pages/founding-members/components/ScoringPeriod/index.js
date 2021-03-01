@@ -66,13 +66,12 @@ const FoundingMembersCounter = ({ latterDate }) => {
 };
 
 const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId }) => {
-
   const [percent, setPercent] = useState(0);
   const { width } = useWindowDimensions();
 
   useEffect(() => {
     // Calculate percentage of time passed between former date and now.
-    if(formerDate && latterDate){
+    if (formerDate && latterDate) {
       const now = new Date();
       const timeDifferenceBetweenDates = Math.abs(latterDate - formerDate) / (1000 * 60 * 60 * 24);
       const timeDifferenceUntilNow = Math.abs(now - formerDate) / (1000 * 60 * 60 * 24);
@@ -80,7 +79,7 @@ const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId }) => {
 
       setPercent(percent);
     }
-  },[formerDate,latterDate]);
+  }, [formerDate, latterDate]);
 
   return (
     <section className="FoundingMembersPage__period" style={{ display: percent <= 1 ? 'block' : 'none' }}>
@@ -121,7 +120,11 @@ const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId }) => {
           />
           <ArrowButton
             className="FoundingMembersPage__period__announcement-button"
-            link="https://github.com/Joystream/founding-members/blob/main/scoring-periods/1.md"
+            link={
+              scoringPeriodId
+                ? `https://github.com/Joystream/founding-members/blob/main/scoring-periods/${scoringPeriodId}.md`
+                : '#0'
+            }
             text={width > 920 ? 'Period announcement' : 'Announcement'}
           />
         </div>
@@ -131,12 +134,11 @@ const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId }) => {
 };
 
 export const ScoringPeriodCounter = ({ className, formerDate, latterDate }) => {
-  
   const [percent, setPercent] = useState(0);
 
   useEffect(() => {
     // Calculate percentage of time passed between former date and now.
-    if(formerDate && latterDate){
+    if (formerDate && latterDate) {
       const now = new Date();
       const timeDifferenceBetweenDates = Math.abs(latterDate - formerDate) / (1000 * 60 * 60 * 24);
       const timeDifferenceUntilNow = Math.abs(now - formerDate) / (1000 * 60 * 60 * 24);
@@ -144,7 +146,7 @@ export const ScoringPeriodCounter = ({ className, formerDate, latterDate }) => {
 
       setPercent(percent);
     }
-  },[formerDate,latterDate]);
+  }, [formerDate, latterDate]);
 
   return (
     <div className={`FoundingMembersPage__period__counter ${className ?? ''}`}>
