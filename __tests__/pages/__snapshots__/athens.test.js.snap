@@ -76,50 +76,6 @@ exports[`AthensPage page renders correctly 1`] = `
   >
     <TitleWrapper
       className=""
-      subtitle="As they were at the end of the network."
-      title="Network Statistics"
-    >
-      <Analytics
-        className=""
-        content={
-          Object {
-            "blockHeight": "1110k",
-            "councilStage": "Announcing",
-            "forumPosts": 11,
-            "mediaFiles": 9,
-            "membershipsMembers": 164,
-            "rolesProviders": 10,
-            "validatorsCount": 20,
-          }
-        }
-        items={
-          Array [
-            Object {
-              "image": "icon-component-mock",
-              "title": "Participation Payout",
-              "value": "$1576",
-            },
-            Object {
-              "image": "icon-component-mock",
-              "key": "validatorsCount",
-              "title": "Active Validators",
-            },
-            Object {
-              "image": "icon-component-mock",
-              "key": "mediaFiles",
-              "title": "Platform Content Files",
-            },
-            Object {
-              "image": "icon-component-mock",
-              "key": "blockHeight",
-              "title": "Block Height",
-            },
-          ]
-        }
-      />
-    </TitleWrapper>
-    <TitleWrapper
-      className=""
       subtitle=""
       title="Critical Documents"
     >

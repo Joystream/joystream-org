@@ -102,15 +102,7 @@ exports[`ManifestoPage page renders correctly 1`] = `
           Second is the question of how to create and sustain accountability in such a platform when it actually reaches scale.
         </p>
         <blockquote>
-          We understand there to be two fundamental ways that participants can hold institutions of any kind accountable:
-           
-          <a
-            href="/"
-            rel="noopener"
-            target="_blank"
-          >
-            Voice and exit, in the tradition of Hirschman A. O. [4].
-          </a>
+          We understand there to be two fundamental ways that participants can hold institutions of any kind accountable: Voice and exit, in the tradition of Hirschman A. O. [4].
         </blockquote>
       </ImageSection>
       <ImageSection
@@ -165,11 +157,11 @@ exports[`ManifestoPage page renders correctly 1`] = `
        or joining us on
        
       <a
-        href="https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA"
+        href="https://discord.gg/DE9UN3YpRP"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Telegram
+        Discord
       </a>
        
       or
