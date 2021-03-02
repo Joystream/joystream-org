@@ -27,19 +27,15 @@ const links = [
       },
       {
         to: '/founding-members/leaderboards',
-        label: 'Direct score ranking',
-      },
-      {
-        to: '/founding-members/leaderboards',
-        label: 'Referral score ranking',
+        label: 'Leaderboards',
       },
       {
         to: '/founding-members/form',
-        label: 'Scoring period form',
+        label: 'Scoring form',
       },
     ],
   },
-  { href: sharedData.links.blog, label: 'Community' },
+  { href: sharedData.social.discordLink, label: 'Community' },
   {
     to: '/get-started',
     label: 'Start earning',
