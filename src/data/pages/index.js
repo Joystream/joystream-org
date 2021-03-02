@@ -1,16 +1,27 @@
 import React from 'react';
-import { ReactComponent as validatorsImage } from '../../assets/svg/active-validators.svg';
-import { ReactComponent as storageImage } from '../../assets/svg/platform-content-files.svg';
-import { ReactComponent as memberImage } from '../../assets/svg/council-member.svg';
+
+// role images
+import { ReactComponent as StorageProviderImage } from '../../assets/svg/active-storage-providers.svg';
+import { ReactComponent as ValidatorImage } from '../../assets/svg/active-validators.svg';
+import { ReactComponent as CouncilMemberImage } from '../../assets/svg/council-member.svg';
+import { ReactComponent as StorageLeadImage } from '../../assets/svg/platform-content-files.svg';
+import { ReactComponent as ContentCuratorImage } from '../../assets/svg/content-curator.svg';
+import { ReactComponent as ContentCreatorImage } from '../../assets/svg/content-creator.svg';
+import { ReactComponent as ContentLeadImage } from '../../assets/svg/content-curator.svg';
 import { ReactComponent as screenerImage } from '../../assets/svg/membership-screener.svg';
 import { ReactComponent as membershipCuratorImage } from '../../assets/svg/membership-curator.svg';
-import { ReactComponent as contentCuratorImage } from '../../assets/svg/content-curator.svg';
-import { ReactComponent as contentCreatorImage } from '../../assets/svg/content-creator.svg';
 import { ReactComponent as bandwidthProviderImage } from '../../assets/svg/bandwidth-provider.svg';
 import { ReactComponent as discoveryProviderImage } from '../../assets/svg/discovery-provider.svg';
 import { ReactComponent as liveStreamingProviderImage } from '../../assets/svg/live-streaming-provider.svg';
 import { ReactComponent as builderImage } from '../../assets/svg/builder.svg';
 import { ReactComponent as communicationModeratorImage } from '../../assets/svg/communication-moderator.svg';
+
+// testnet images
+
+import Babylon from '../../assets/svg/babylon-logo.svg';
+import Alexandria from '../../assets/svg/alexandria-logo.svg';
+import Constantinople from '../../assets/svg/constantinople-building.svg';
+import Rome from '../../assets/svg/rome-building.svg';
 
 export const sharedData = {
   defaultEmail: 'hello@jsgenesis.com',
@@ -38,35 +49,35 @@ export const sharedData = {
 export const roles = {
   active: [
     {
-      image: contentCreatorImage,
+      image: ContentCreatorImage,
       title: 'Content Creator',
       key: 'contentCreatorsCount',
       to: '/roles#content-creator',
       hasLabel: false,
     },
     {
-      image: contentCuratorImage,
+      image: ContentCuratorImage,
       title: 'Content Curator',
       key: 'contentCuratorsCount',
       to: '/roles#content-curator',
       hasLabel: false,
     },
     {
-      image: validatorsImage,
+      image: ValidatorImage,
       title: 'Validator',
       to: '/roles#validator',
       key: 'validatorsCount',
       hasLabel: false,
     },
     {
-      image: memberImage,
+      image: CouncilMemberImage,
       title: 'Council Member',
       to: '/roles#council-member',
       key: 'councilMembersCount',
       hasLabel: false,
     },
     {
-      image: storageImage,
+      image: StorageProviderImage,
       title: 'Storage Provider',
       to: '/roles#storage-provider',
       key: 'storageProviders',
@@ -107,3 +118,121 @@ export const roles = {
     },
   ],
 };
+
+export const roleCardData = {
+    validator: {
+        image: ValidatorImage,
+        title: "Validator"
+    },
+    council: {
+        image: CouncilMemberImage,
+        title: "Council"
+    },
+    storageProvider: {
+        image: StorageProviderImage,
+        title: "Storage Provider"
+    },
+    storageLead: {
+        image: StorageLeadImage,
+        title: "Storage Lead"
+    },
+    contentCurator: {
+        image: ContentCuratorImage,
+        title: "Content Curator"
+    },
+    contentCreator: {
+        image: ContentCreatorImage,
+        title: "Content Creator"
+    },
+    contentLead: {
+        image: ContentLeadImage,
+        title: "Content Lead"
+    }
+}
+
+export const bountiesLink = 'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties-overview/bounties-status.json';
+
+export const testnetData = [
+  {
+    Image: Constantinople,
+    number: 8,
+    name: 'Cartagine',
+    date: '12.08.2000',
+    state: 'Future',
+    overviewText: 'Cartagine is our eighth testnet, introducing a variety of important technical improvements.',
+    link: null,
+  },
+  {
+    Image: Babylon,
+    number: 7,
+    name: 'Babylon',
+    date: '12.08.2000',
+    state: 'Current',
+    overviewText: 'Babylon is our seventh testnet, introducing a variety of important technical improvements.',
+    link: '/babylon',
+  },
+  {
+    Image: Alexandria,
+    number: 6,
+    name: 'Alexandria',
+    date: '12.08.2000',
+    state: 'Past',
+    overviewText: 'Alexandria is our sixth testnet, introducing a variety of important technical improvements.',
+    link: '/alexandria',
+  },
+  {
+    Image: Constantinople,
+    number: 5,
+    name: 'Constantinople',
+    date: '12.08.2000',
+    state: 'Past',
+    overviewText: 'Constantinople is our fifth testnet, introducing a variety of important technical improvements.',
+    link: '/constantinople',
+  },
+  {
+    Image: Rome,
+    number: 4,
+    name: 'Rome',
+    date: '12.08.2000',
+    state: 'Past',
+    overviewText: 'Rome is our fourth testnet, introducing a variety of important technical improvements.',
+    link: '/rome',
+  },
+
+  {
+    Image: Babylon,
+    number: 3,
+    name: 'Babylon',
+    date: '12.08.2000',
+    state: 'Current',
+    overviewText: 'Babylon is our seventh testnet, introducing a variety of important technical improvements.',
+    link: '/babylon',
+  },
+  {
+    Image: Alexandria,
+    number: 2,
+    name: 'Alexandria',
+    date: '12.08.2000',
+    state: 'Past',
+    overviewText: 'Alexandria is our sixth testnet, introducing a variety of important technical improvements.',
+    link: '/alexandria',
+  },
+  {
+    Image: Constantinople,
+    number: 1,
+    name: 'Constantinople',
+    date: '12.08.2000',
+    state: 'Past',
+    overviewText: 'Constantinople is our fifth testnet, introducing a variety of important technical improvements.',
+    link: '/constantinople',
+  },
+  {
+    Image: Rome,
+    number: 0,
+    name: 'Rome',
+    date: '12.08.2000',
+    state: 'Past',
+    overviewText: 'Rome is our fourth testnet, introducing a variety of important technical improvements.',
+    link: '/rome',
+  }
+]
