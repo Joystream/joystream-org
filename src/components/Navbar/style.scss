@@ -10,6 +10,10 @@
   background-color: $c_black;
   transition: top 400ms ease 0s;
 
+  &--hidden {
+    top: -$navbar-height;
+  }
+
   &--light {
     background-color: $c_blue-ribbon;
 
@@ -18,10 +22,6 @@
         color: $c_white;
       }
     }
-  }
-
-  &--hidden {
-    top: -$navbar-height;
   }
 
   &__container {
@@ -43,123 +43,240 @@
   }
 
   &__links {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+    position: relative;
+    z-index: unset;
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
     background-color: $c_black;
-    transform: translateY(0);
-    transition: transform 400ms ease 0s;
+  }
 
-    &--open {
-      transform: translateY(100%);
+  &__link-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    padding: 0;
+    color: #a7aeb7;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: white;
     }
   }
 
   &__link {
-    display: inline-block;
-    padding: 20px 20px 20px 32px;
     font-family: $font-primary;
     font-size: 18px;
     line-height: 20px;
-    color: $c_heather;
+    letter-spacing: 0;
+    color: inherit;
+  }
 
-    &:hover,
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
+    height: 60px;
+    margin: 0 32px 0 24px;
+    padding: 18px 20px;
+    background: $c_blue-ribbon;
+  }
+
+  &__button-text {
+    font-family: $font-primary;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: white;
+  }
+
+  &__button-arrow {
+    color: white;
+    transform: rotate(-90deg);
+  }
+
+  &__expand-icon {
+    margin-left: 7px;
+    color: inherit;
+    transition: transform .3s;
+
     &--active {
-      color: $c_white;
+      transform: rotate(180deg);
     }
+  }
 
-    &--button {
-      color: $c_white;
-      background-color: $c_blue-ribbon;
-      backface-visibility: hidden;
+  &__dropdown {
+    position: absolute;
+    top: $navbar-height;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: $c_white;
+    transform: translateY(-100%);
+    transition: transform 400ms ease 0s;
 
-      &:hover {
-        background-color: $c_han_purple;
-      }
+    &--active {
+      transform: translateY(0%);
     }
+  }
+
+  &__dropdown-item {
+    padding: 16px 24px;
+
+    &__text {
+      font-family: $font-secondary;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 0;
+      color: black;
+    }
+  }
+
+  &__link-icon {
+    display: none;
   }
 
   &__trigger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: $navbar-height;
-    height: $navbar-height;
-    cursor: pointer;
-    background-color: $c_blue-ribbon;
-
-    &--active {
-      background-color: $c_silver;
-    }
-
-    &::before {
-      font-size: 20px;
-      color: $c_white;
-      content: '\2630';
-    }
+    display: none;
   }
 
-  @media #{$screen-lg} {
-    &--light {
-      #{$r} {
-        &__link {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: $navbar-height;
-          color: $c_white;
+  @media #{$screen-max-lg} {
+    background-color: $c_black;
 
-          &--active::after {
-            position: absolute;
-            bottom: 0;
-            left: 10%;
-            display: block;
-            width: 80%;
-            height: 4px;
-            background-color: $c_white;
-            content: '';
-          }
-        }
-      }
+    &--open {
+      background-color: $c_blue-ribbon;
     }
 
-    &__container {
-      padding: 0 32px;
+    &__logo--open {
+      color: white;
     }
 
     &__links {
-      position: relative;
-      top: 0;
-      z-index: 0;
-      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
       display: flex;
-      align-items: center;
-      flex-direction: row;
-      width: auto;
-      background-color: transparent;
+      align-items: unset;
+      flex-direction: column;
+      width: 100%;
+      background-color: $c_blue-ribbon;
       transform: translateY(0);
+      transition: transform 400ms ease 0s;
+
+      &--open {
+        transform: translateY(100%);
+      }
+    }
+
+    &__link-wrapper {
+      display: flex;
+      align-items: unset;
+      flex-direction: column;
+      margin: 0;
+      padding: 20px 20px 20px 36px;
+      color: $c_heather;
+      cursor: pointer;
+
+      &--active {
+        margin: 0 20px;
+        padding: 20px 20px 0 16px;
+        background-color: #2f2ff4;
+      }
+
+      &:hover {
+        color: $c_white;
+      }
     }
 
     &__link {
-      padding: 20px 0;
+      font-family: $font-primary;
+      font-size: 18px;
+      line-height: 20px;
+      color: $c_white;
+    }
 
-      &:not(:last-child) {
-        margin-right: 25px;
-      }
+    &__button {
+      width: 100%;
+      margin: 20px 36px;
+      background-color: $c_black;
+    }
 
-      &--button {
-        height: 100%;
-        padding: 34px 40px;
+    &__button-text {
+      font-family: $font-primary;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: white;
+    }
+
+    &__button-arrow {
+      color: white;
+      transform: rotate(-90deg);
+    }
+
+    &__expand-icon {
+      position: absolute;
+      right: 42px;
+      color: white;
+    }
+
+    &__dropdown {
+      position: unset;
+      z-index: unset;
+      display: none;
+      margin-top: 10px;
+      background-color: #2f2ff4;
+      transform: unset;
+
+      &--active {
+        display: flex;
       }
     }
 
+    &__dropdown-item {
+      &__text {
+        font-family: $font-primary;
+        color: white;
+      }
+    }
+
+    &__link-icon {
+      position: absolute;
+      top: 16px;
+      right: 0;
+      display: block;
+      color: white;
+    }
+
     &__trigger {
-      display: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      margin: 8px 8px 0 0;
+      cursor: pointer;
+      background-color: $c_blue-ribbon;
+
+      &::before {
+        font-size: 20px;
+        color: $c_white;
+        content: '\2630';
+      }
+
+      &--active {
+        background-color: $c_black;
+
+        &::before {
+          font-size: 25px;
+          content: '\008E';
+        }
+      }
     }
   }
 }
