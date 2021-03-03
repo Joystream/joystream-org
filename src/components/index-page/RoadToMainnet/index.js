@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'gatsby';
 import cn from 'classnames';
 
@@ -34,69 +34,88 @@ const RoadMain = ({ Image, state, date, name, overviewText, link }) => (
   </div>
 );
 
-const RoadOverviewItem = ({ testnetNumber, Image, name, date, state, active, moveToCard, index }) => (
-  <div
-    role="presentation"
-    onClick={() => moveToCard(index)}
-    className={cn('IndexPage__road-overview__item', {
-      'IndexPage__road-overview__item--active': active,
-    })}
-  >
-    <div className="IndexPage__road-overview__item__image-wrapper">
-      <div className="IndexPage__road-overview__item__testnet-number">{testnetNumber}</div>
-      <img alt="tesnet visual" src={Image} className="IndexPage__road-overview__item__image" />
-    </div>
-    <div className="IndexPage__road-overview__item__content">
-      <h4
-        className={cn('IndexPage__road-overview__item__title', {
-          'IndexPage__road-overview__item__title--active': active,
-        })}
-      >
-        {name} testnet
-      </h4>
-      <p
-        className={cn('IndexPage__road-overview__item__date', {
-          'IndexPage__road-overview__item__date--active': active,
-        })}
-      >
-        Will be live on <span className={active ? 'IndexPage__road-overview__item__date--active' : ''}>{date}</span>
-      </p>
-      <div
-        className={cn('IndexPage__road-overview__item__state', {
-          'IndexPage__road-overview__item__state--active': active,
-        })}
-      >
-        {state} testnet
+const RoadOverviewItem = ({ testnetNumber, Image, name, date, state, active, moveToCard, index, overviewItemRef }) => {
+  return (
+    <div
+      ref={overviewItemRef}
+      role="presentation"
+      onClick={() => moveToCard(index)}
+      className={cn('IndexPage__road-overview__item', {
+        'IndexPage__road-overview__item--active': active,
+      })}
+    >
+      <div className="IndexPage__road-overview__item__image-wrapper">
+        <div className="IndexPage__road-overview__item__testnet-number">{testnetNumber}</div>
+        <img alt="tesnet visual" src={Image} className="IndexPage__road-overview__item__image" />
+      </div>
+      <div className="IndexPage__road-overview__item__content">
+        <h4
+          className={cn('IndexPage__road-overview__item__title', {
+            'IndexPage__road-overview__item__title--active': active,
+          })}
+        >
+          {name} testnet
+        </h4>
+        <p
+          className={cn('IndexPage__road-overview__item__date', {
+            'IndexPage__road-overview__item__date--active': active,
+          })}
+        >
+          Will be live on{' '}
+          <span
+            className={
+              active ? 'IndexPage__road-overview__item__date--active' : 'IndexPage__road-overview__item__date--alt'
+            }
+          >
+            {date}
+          </span>
+        </p>
+        <div
+          className={cn('IndexPage__road-overview__item__state', {
+            'IndexPage__road-overview__item__state--active': active,
+          })}
+        >
+          {state} testnet
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const CARD_LENGTH_WITH_MARGIN = 422;
+const CARD_LENGTH = 392;
 
 const RoadToMainnet = () => {
   const overviewRef = useRef();
+  const activeOverviewItemRef = useRef();
   const [currentTestnet, setCurrentTestnet] = useState(1);
 
   const moveRight = () => {
     if (testnetData.length - 1 !== currentTestnet) {
       setCurrentTestnet(prev => prev + 1);
-      overviewRef.current.scrollBy({
-        left: CARD_LENGTH_WITH_MARGIN,
-        behavior: 'smooth',
-      });
     }
   };
 
   const moveLeft = () => {
     if (currentTestnet !== 0) {
       setCurrentTestnet(prev => prev - 1);
+    }
+  };
+
+  useEffect(() => {
+    let itemPosition = currentTestnet * CARD_LENGTH_WITH_MARGIN;
+    const widthOfContainer = overviewRef?.current?.offsetWidth;
+    const containerOffsetLeft = overviewRef?.current?.scrollLeft;
+
+    if (widthOfContainer != null && containerOffsetLeft != null) {
+      const offsetRelativeToContainer = itemPosition - containerOffsetLeft;
+
       overviewRef.current.scrollBy({
-        left: -CARD_LENGTH_WITH_MARGIN,
+        left: offsetRelativeToContainer - (widthOfContainer / 2 - CARD_LENGTH / 2),
         behavior: 'smooth',
       });
     }
-  };
+  }, [currentTestnet]);
 
   const moveToCard = cardToMoveTo => setCurrentTestnet(cardToMoveTo);
 
@@ -132,6 +151,7 @@ const RoadToMainnet = () => {
               active={index === currentTestnet}
               moveToCard={moveToCard}
               index={index}
+              overviewItemRef={index === currentTestnet ? activeOverviewItemRef : null}
             />
           ))}
         </div>
