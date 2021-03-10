@@ -7,13 +7,10 @@ import SiteMetadata from '../components/SiteMetadata';
 import Hero from '../components/index-page/Hero';
 import WhatWeDo from '../components/index-page/WhatWeDo';
 import WhyYouShouldJoin from '../components/index-page/WhyYouShouldJoin';
-import HowToStart from '../components/index-page/HowToStart';
 import ExploreJoystream from '../components/index-page/ExploreJoystream';
 import EarnTokens from '../components/index-page/EarnTokens';
 import BecomeFoundingMember from '../components/index-page/BecomeFoundingMember';
 import RoadToMainnet from '../components/index-page/RoadToMainnet';
-
-import { roleCardData } from '../data/pages';
 
 import './style.scss';
 
@@ -32,8 +29,6 @@ const IndexPage = () => {
       <WhatWeDo />
 
       <WhyYouShouldJoin />
-
-      <HowToStart roleCardData={roleCardData} />
 
       <ExploreJoystream />
 

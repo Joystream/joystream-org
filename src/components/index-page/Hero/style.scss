@@ -77,14 +77,10 @@
 
     &__metrics {
       display: grid;
-      overflow-x: scroll;
+      overflow-x: hidden;
       column-gap: 30px;
       grid-template-columns: repeat(4, 280px);
       grid-template-rows: 132px;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
 
       &__title {
         margin-bottom: 24px;
@@ -98,6 +94,7 @@
 
     &__metric {
       padding: 18px 24px;
+      background-color: #111316;
 
       &__title {
         margin-bottom: 10px;

@@ -17,7 +17,7 @@ const RoadMain = ({ Image, state, date, name, overviewText, link }) => (
       <div className="IndexPage__road-main__info-wrapper">
         <div className="IndexPage__road-main__state">{state} testnet</div>
         <p className="IndexPage__road-main__date">
-          Released on <span>{date}</span>
+          {state === 'Future' ? 'Will be live on' : 'Released on'} <span>{date}</span>
         </p>
       </div>
       <h3 className="IndexPage__road-main__title">{name} testnet</h3>
@@ -61,7 +61,7 @@ const RoadOverviewItem = ({ testnetNumber, Image, name, date, state, active, mov
             'IndexPage__road-overview__item__date--active': active,
           })}
         >
-          Will be live on{' '}
+          {state === 'Future' ? 'Will be live on ' : 'Released on '}
           <span
             className={
               active ? 'IndexPage__road-overview__item__date--active' : 'IndexPage__road-overview__item__date--alt'
@@ -118,6 +118,8 @@ const RoadToMainnet = () => {
   }, [currentTestnet]);
 
   const moveToCard = cardToMoveTo => setCurrentTestnet(cardToMoveTo);
+
+  console.log(testnetData);
 
   return (
     <div className="IndexPage__road-wrapper">

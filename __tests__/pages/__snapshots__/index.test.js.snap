@@ -14,40 +14,6 @@ exports[`IndexPage page renders correctly 1`] = `
   />
   <WhatWeDo />
   <WhyYouShouldJoin />
-  <HowToStart
-    roleCardData={
-      Object {
-        "contentCreator": Object {
-          "image": "icon-component-mock",
-          "title": "Content Creator",
-        },
-        "contentCurator": Object {
-          "image": "icon-component-mock",
-          "title": "Content Curator",
-        },
-        "contentLead": Object {
-          "image": "icon-component-mock",
-          "title": "Content Lead",
-        },
-        "council": Object {
-          "image": "icon-component-mock",
-          "title": "Council",
-        },
-        "storageLead": Object {
-          "image": "icon-component-mock",
-          "title": "Storage Lead",
-        },
-        "storageProvider": Object {
-          "image": "icon-component-mock",
-          "title": "Storage Provider",
-        },
-        "validator": Object {
-          "image": "icon-component-mock",
-          "title": "Validator",
-        },
-      }
-    }
-  />
   <ExploreJoystream />
   <RoadToMainnet />
   <BecomeFoundingMember />

@@ -21,7 +21,7 @@ const JoinInfoReason = ({ Icon, title, text }) => (
 const WhyYouShouldJoin = () => (
   <div className="IndexPage__join-info-wrapper">
     <div className="IndexPage__join-info">
-      <h2 className="IndexPage__join-info__title">Why you should join our testnets</h2>
+      <h2 className="IndexPage__join-info__title">Why join our testnets</h2>
       <div className="IndexPage__join-info__reasons">
         <JoinInfoReason Icon={Tokens} title="Tokens" text="Earn tokens distributed on mainnet launch 2021" />
         <JoinInfoReason Icon={Money} title="Money" text="Earn money for your participation" />
