@@ -33,11 +33,11 @@ const PeriodHighlightFounding = ({ userData, partialTokenAllocation }) => {
   return (
     <>
       <div className="FoundingMembersLeaderboards__table__main">
-        {!imageHasError && inducted.avatar ? (
+        {!imageHasError && inducted?.avatar ? (
           <>
             <img
               className="FoundingMembersLeaderboards__table__main__placeholder"
-              src={inducted.avatar}
+              src={inducted?.avatar}
               alt="icon of founding member"
               onError={e => {
                 setImageHasError(true);
@@ -82,10 +82,10 @@ const PeriodHighlightNonFounding = ({ userData }) => {
   return (
     <>
       <div className="FoundingMembersLeaderboards__table__main">
-        {!imageHasError && inducted.avatar ? (
+        {!imageHasError && inducted?.avatar ? (
           <img
             className="FoundingMembersLeaderboards__table__main__placeholder"
-            src={inducted.avatar}
+            src={inducted?.avatar}
             alt="icon of founding member"
             onError={e => {
               setImageHasError(true);
