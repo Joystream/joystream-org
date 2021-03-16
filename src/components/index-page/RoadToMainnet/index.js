@@ -88,7 +88,7 @@ const CARD_LENGTH = 392;
 const RoadToMainnet = () => {
   const overviewRef = useRef();
   const activeOverviewItemRef = useRef();
-  const [currentTestnet, setCurrentTestnet] = useState(1);
+  const [currentTestnet, setCurrentTestnet] = useState(0);
 
   const moveRight = () => {
     if (testnetData.length - 1 !== currentTestnet) {
