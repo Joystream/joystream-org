@@ -1,0 +1,145 @@
+@import '../../../styles/main';
+
+.IndexPage {
+  &__explore-wrapper {
+    padding: 150px 0;
+    background-color: $c_black;
+  }
+
+  &__explore {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: 0;
+      color: $c_white;
+      text-align: center;
+    }
+
+    &__subtitle {
+      margin-top: 16px;
+      font-family: $font-secondary;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: $c_grayc-chateau;
+      text-align: center;
+    }
+
+    &__explanation {
+      @extend %container;
+
+      display: grid;
+      margin-top: 120px;
+      column-gap: 136px;
+      grid-template-columns: 1.2fr 1fr;
+
+      &--reverse {
+        grid-template-columns: 1fr 1.2fr;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &__title {
+        font-family: $font-primary;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: 0;
+        color: $c_white;
+      }
+
+      &__text {
+        margin-top: 12px;
+        font-family: $font-secondary;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_grayc-chateau;
+      }
+
+      &__link {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 32px;
+        cursor: pointer;
+      }
+
+      &__link-text {
+        font-family: $font-primary;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_blue-ribbon;
+      }
+
+      &__link-arrow {
+        margin-left: 13px;
+        color: $c_blue-ribbon;
+        transform: rotate(-90deg) scale(.85);
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__explore {
+      &__explanation {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 80%;
+        margin-top: 64px;
+
+        &--reverse {
+          flex-direction: column;
+        }
+
+        &__content {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__explore {
+      &__title {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      &__subtitle {
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__explanation {
+        &__title {
+          font-size: 40px;
+          line-height: 48px;
+        }
+
+        &__text {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__explore {
+      &__explanation {
+        width: 335px;
+      }
+    }
+  }
+}
