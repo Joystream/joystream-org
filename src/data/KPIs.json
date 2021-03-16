@@ -1,80 +1,104 @@
 {
-	"KPIs":
-  [
-    {
+	"KPIs": [{
 			"title": "Proposal Clearance",
-			"description": "For the governance process to function properly, all proposals must be processed effectively, and in a reasonable time frame to avoiding blocking new proposals coming in.",
+			"description": "For the governance process to function properly, all proposals must be processed effectively, and in a reasonable time frame to avoid blocking new proposals coming in.",
 			"reward": "0",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "16.02.2021 ~03:30 UTC - #2073601",
+			"startDate": "03.03.2021 ~08:15 UTC - #2275201",
 			"successEvents": [
 				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h).",
 				"No malicious or unreasonable proposals are approved."
 			],
 			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards, and a new Council Election will be started immediately.",
-			"gradeDate": "06.03.2021 - 18:00 UTC",
-			"number": 11.1
+			"gradeDate": "21.03.2021 - 18:00 UTC",
+			"number": 12.1
 		},
 		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. For each Term the Council must produce a report of 'events' and 'Tokenomics' to allow users to make informed votes. This must be submitted as a PR to the Community Repo.",
 			"reward": "0",
 			"measurementPeriod": "16 days",
-			"startDate": "16.02.2021 ~03:30 UTC - #2073601",
+			"startDate": "03.03.2021 ~08:15 UTC - #2275201",
 			"successEvents": [
-				"The Council on Babylon (#2073601-#2275201) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
+				"The Council on Babylon (#2275201-#2476801) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
 			],
 			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards.",
-			"gradeDate": "06.03.2021 - 18:00 UTC",
-			"number": 11.2
+			"gradeDate": "21.03.2021 - 18:00 UTC",
+			"number": 12.2
 		},
 		{
 			"title": "Appoint New Council Secretary",
 			"description": "The Council must appoint one of their own as the Council Secretary, responsible for adding Council Reports and representing the Council in the Community Repo (with some enhanced repository maintenance privileges).",
-			"reward": "50",
+			"reward": "150",
 			"measurementPeriod": "5 days",
-			"startDate": "16.02.2021 ~03:30 UTC - #2073601",
+			"startDate": "03.03.2021 ~08:15 UTC - #2275201",
 			"successEvents": [
 				"The Council informally appoints a Council Secretary through a spending proposal and pays them an appropriate rate for their responsibilities.",
+				"The Council Secretary will also be responsible for managing the Bounties, even if they choose to 'hire' someone else for as the Bounty Manager for some/all individual bounties",
 				"The spending proposal must provide a link to the Council Secretary's GitHub account so we can provide them 'triage' permissions on the community repo."
 			],
 			"annihilation": "No Council Secretary is appointed.",
-			"gradeDate": "06.03.2021 - 18:00 UTC",
-			"number": 11.3
+			"gradeDate": "21.03.2021 - 18:00 UTC",
+			"number": 12.3
 		},
 		{
-			"title": "Research Max Validator Change",
-			"description": "After the validator set was increased last week, there was some unexpected behaviour. Produce a report answering the following questions:",
-			"reward": "250",
-			"measurementPeriod": "14 days",
-			"startDate": "16.02.2021 ~03:30 UTC - #2073601",
+			"title": "Founding Member Program Feedback",
+			"description": "With the first Scoring Period of the Founding Member, we need to get some feedback from the Community. Some questions can be found in issue 113 of the Community Repo.",
+			"reward": "200",
+			"measurementPeriod": "10 days",
+			"startDate": "03.03.2021 ~08:15 UTC - #2275201",
 			"successEvents": [
-				"After the proposal was executed (#1937365), how quickly did the new validators show up?",
-        "Was there any clear patterns for the new validators?",
-				"Did the number of network nodes increase 'proportionally'? (Might be hard to figure out, unless you've configured your node to accept >80 peers.)",
-        "What happened to the rewards in tJOY and USD terms?",
-        "Was there a spike in tokens staked, or were they just shifted?",
-        "What happened to the average block time, and blocks per era and session/epoch?",
-        "Anything else that was noteworthy?"
+				"Make a questionnaire, and get feedback from at least 100 platform users (less will simply mean partial credit).",
+				"Parse the feedback, and present the key findings in a PR to Community Repo."
 			],
-			"annihilation": "NA",
-			"gradeDate": "06.03.2021 - 18:00 UTC",
-			"number": 11.4
+			"annihilation": "Spoofing replies and results.",
+			"gradeDate": "21.03.2021 - 18:00 UTC",
+			"number": 12.4
+		},
+		{
+			"title": "Managing the Working Groups",
+			"description": "With the inflow of new users, both the Storage and the Content Curator Working Groups are seeing an increased workload. Are they performing their tasks?",
+			"reward": "150",
+			"measurementPeriod": "5 days",
+			"startDate": "03.03.2021 ~08:15 UTC - #2275201",
+			"successEvents": [
+				"Revise the workload for the groups, and if required, set new budgets for the Working Groups.",
+				"Create high level, yet specific, list of tasks for the Working Groups.",
+				"Publish a report on the state of both Working Groups, as it stands at the start of the Term."
+			],
+			"annihilation": "No task list is presented.",
+			"gradeDate": "21.03.2021 - 18:00 UTC",
+			"number": 12.5
+		},
+		{
+			"title": "Follow up the Working Groups",
+			"description": "Follow up the Working Group performance with regards to their tasks.",
+			"reward": "100",
+			"measurementPeriod": "3 days",
+			"startDate": "16.03.2021 ~#2448001",
+			"successEvents": [
+				"Publish a report on the state of both Working Groups, as it stands at the end of the Term.",
+				"Include some notes for the next Council, regarding the budgets and whether new/more/fewer workers are needed."
+			],
+			"annihilation": "No report is made",
+			"gradeDate": "21.03.2021 - 18:00 UTC",
+			"number": 12.6
 		},
 		{
 			"title": "Managing Community Bounties",
-			"description": "Managing Community Bounties will be a growing part of the Council's workload. Establishing good workflows for this will be iterative and situational.",
+			"description": "Managing Community Bounties will be a growing part of the Council's workload. The Council may choose to delegate most of the work to the Council Secretary and/or Bounty Managers. In spite of this, the Council is responsible for ensuring their 'employees' are performing the tasks",
 			"reward": "300",
 			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "16.02.2021 ~03:30 UTC - #2073601",
+			"startDate": "03.03.2021 ~08:15 UTC - #2275201",
 			"successEvents": [
+				"Familiarize themselves, then follow the new and improved guidelines for the Council role in Bounty Management (helpdesk)",
 				"Update/fix/maintain the Community Repo's new `bounties-overview` files (json, table issue)",
-				"Follow the instructions for each bounty, create the forum posts, follow up and, if required, create budgets, request funding and hire/assign members as managers.",
-        "Submit a weekly bounty report, outlining the status and progress for each bounty."
+				"Follow the instructions for each bounty, create the forum posts, follow up and, if required, create budgets, request funding and hire/assign Bounty Managers.",
+				"Submit a weekly bounty report, outlining the status and progress for each bounty."
 			],
 			"annihilation": "Unlike standard `annihilations`, any rewards paid for a Bounty that exceeds what Jsgenesis pays will be deducted from the Council's KPI rewards.",
-			"gradeDate": "06.03.2021 - 18:00 UTC",
-			"number": 11.5
+			"gradeDate": "21.03.2021 - 18:00 UTC",
+			"number": 12.7
 		}
 	]
 }
