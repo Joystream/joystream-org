@@ -157,15 +157,6 @@ export const bountiesLink = 'https://raw.githubusercontent.com/Joystream/communi
 
 export const testnetData = [
   {
-    Image: Constantinople,
-    number: 8,
-    name: 'Sumer',
-    date: '12.08.2000',
-    state: 'Future',
-    overviewText: 'Sumer will be our ninth testnet, introducing a variety of important technical improvements.',
-    link: null,
-  },
-  {
     Image: Babylon,
     number: 7,
     name: 'Babylon',
@@ -227,14 +218,5 @@ export const testnetData = [
     state: 'Past',
     overviewText: 'Sparta is our second testnet, introducing a variety of important technical improvements.',
     link: '/sparta',
-  },
-  {
-    Image: null,
-    number: 0,
-    name: 'Mesopotamia',
-    date: '21.12.2018',
-    state: 'Past',
-    overviewText: 'Mesopotamia is our first testnet, introducing a variety of important technical improvements.',
-    link: null
   }
 ]
