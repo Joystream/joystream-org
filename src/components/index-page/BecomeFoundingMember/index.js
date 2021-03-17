@@ -15,7 +15,10 @@ const BecomeFoundingMember = () => {
           <h2 className="IndexPage__fm-cta__title IndexPage__fm-cta__title--alt">
             Become a Founding member and have a real impact on the development of our platform.
           </h2>
-          <a href="https://github.com/Joystream/whitepaper/blob/master/paper.pdf">
+          <a
+            className="IndexPage__fm-cta__link-wrapper"
+            href="https://github.com/Joystream/whitepaper/blob/master/paper.pdf"
+          >
             <div className="IndexPage__fm-cta__link">
               Become a founding member
               <Arrow className="IndexPage__fm-cta__link-arrow" />

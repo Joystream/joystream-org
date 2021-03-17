@@ -23,7 +23,7 @@ const RoadMain = ({ Image, state, date, name, overviewText, link }) => (
       <h3 className="IndexPage__road-main__title">{name} testnet</h3>
       <p className="IndexPage__road-main__text">{overviewText}</p>
       {link ? (
-        <Link to={link}>
+        <Link className="IndexPage__road-main__link-wrapper" to={link}>
           <div className="IndexPage__road-main__link">
             <p>Explore {name}</p>
             <Arrow className="IndexPage__road-main__link-arrow" />

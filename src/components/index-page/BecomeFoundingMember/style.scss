@@ -44,10 +44,14 @@
       }
     }
 
-    &__link {
-      display: flex;
-      align-items: center;
+    &__link-wrapper {
+      width: fit-content;
       margin-top: 32px;
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
       font-family: $font-primary;
       font-size: 20px;
       line-height: 28px;
@@ -85,7 +89,7 @@
         line-height: 48px;
       }
 
-      &__link {
+      &__link-wrapper {
         margin-top: 20px;
       }
     }
@@ -94,10 +98,6 @@
       background: url('../../../assets/background/fm-avatars-bg-left-alt.svg'), url('../../../assets/background/fm-avatars-bg-right-alt.svg');
       background-position: left bottom, right top;
       background-repeat: no-repeat;
-
-      &__content {
-        // width: 100%;
-      }
 
       &__title {
         display: none;

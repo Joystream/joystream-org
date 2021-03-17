@@ -65,10 +65,14 @@
         color: $c_grayc-chateau;
       }
 
+      &__link-wrapper {
+        width: fit-content;
+        margin-top: 32px;
+      }
+
       &__link {
         display: inline-flex;
         align-items: center;
-        margin-top: 32px;
         cursor: pointer;
       }
 
