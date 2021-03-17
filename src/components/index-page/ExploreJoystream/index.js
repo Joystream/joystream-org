@@ -14,7 +14,9 @@ const ExploreJoystream = () => (
       </h3>
 
       <div className="IndexPage__explore__explanation">
-        <img src={AtlasVisual} alt="overview visual of atlas" />
+        <a href="https://play.joystream.org/">
+          <img src={AtlasVisual} alt="overview visual of atlas" />
+        </a>
         <div className="IndexPage__explore__explanation__content">
           <h3 className="IndexPage__explore__explanation__title">Atlas</h3>
           <p className="IndexPage__explore__explanation__text">
@@ -44,7 +46,9 @@ const ExploreJoystream = () => (
             </div>
           </a>
         </div>
-        <img src={PioneerVisual} alt="overview visual of pioneer" />
+        <a href="https://testnet.joystream.org/">
+          <img src={PioneerVisual} alt="overview visual of pioneer" />
+        </a>
       </div>
     </div>
   </div>
