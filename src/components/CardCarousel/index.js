@@ -3,9 +3,9 @@ import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
 
 import './style.scss';
 
-const SCROLL_AMOUNT = 300;
+const DEFAULT_SCROLL_AMOUNT = 300;
 
-const CardCarousel = ({ children }) => {
+const CardCarousel = ({ children, scrollAmount = DEFAULT_SCROLL_AMOUNT }) => {
   const listRef = useRef();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [maxScrollLeft, setMaxScrollLeft] = useState(undefined);
@@ -57,8 +57,8 @@ const CardCarousel = ({ children }) => {
       </div>
       {maxScrollLeft > 0 ? (
         <div className="CardCarousel__control">
-          <div role='presentation' onClick={() => scrollBy(-SCROLL_AMOUNT)} className="CardCarousel__control__arrow-wrapper">
-            <Arrow onClick={() => scrollBy(-SCROLL_AMOUNT)} className="CardCarousel__control__arrow-left" />
+          <div role='presentation' onClick={() => scrollBy(-scrollAmount)} className="CardCarousel__control__arrow-wrapper">
+            <Arrow onClick={() => scrollBy(-scrollAmount)} className="CardCarousel__control__arrow-left" />
           </div>
           <div className="CardCarousel__control__tracker">
             <div
@@ -66,8 +66,8 @@ const CardCarousel = ({ children }) => {
               className="CardCarousel__control__tracker__position"
             ></div>
           </div>
-          <div role='presentation' onClick={() => scrollBy(SCROLL_AMOUNT)} className="CardCarousel__control__arrow-wrapper">
-            <Arrow onClick={() => scrollBy(SCROLL_AMOUNT)} className="CardCarousel__control__arrow-right" />
+          <div role='presentation' onClick={() => scrollBy(scrollAmount)} className="CardCarousel__control__arrow-wrapper">
+            <Arrow onClick={() => scrollBy(scrollAmount)} className="CardCarousel__control__arrow-right" />
           </div>
         </div>
       ) : null}

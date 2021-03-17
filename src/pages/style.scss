@@ -1,54 +1,18 @@
 @import '../styles/main.scss';
 
 .IndexPage {
-  &__roles-button {
-    align-self: center;
-    margin-top: 64px;
-  }
-
-  &__hero-paragraph {
-    padding-bottom: 60px;
-  }
-
-  &__hero-group {
+  &__link {
     display: flex;
-    flex-direction: column;
+    margin: 12px 0 0 20px;
   }
 
-  &__hero-button {
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
+  &__link-arrow {
+    margin-left: 13px;
+    color: $c_blue-ribbon;
+    transform: rotate(-90deg);
   }
 
-  @media #{$screen-sm} {
-    &__hero-group {
-      flex-direction: row;
-    }
-
-    &__hero-button {
-      flex-grow: 1;
-
-      &:not(:last-child) {
-        margin-right: 16px;
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  @media #{$screen-md} {
-    &__hero-group {
-      justify-content: center;
-    }
-
-    &__hero-button {
-      flex-grow: 0;
-    }
-  }
-
-  @media #{$screen-lg} {
-    &__hero-group {
-      justify-content: flex-start;
-    }
+  &__link-text {
+    color: $c_blue-ribbon;
   }
 }

@@ -1,6 +1,6 @@
 @import '../../../styles/main';
 
-.GetStarted {
+.IndexPage {
   &__hero-wrapper {
     padding: 57px 0 80px;
     background-color: black;
@@ -10,7 +10,8 @@
     @extend %container;
 
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    column-gap: 50px;
+    grid-template-columns: 1fr 1.3fr;
 
     &__content {
       display: flex;
@@ -20,8 +21,8 @@
 
     &__title {
       font-family: $font-primary;
-      font-size: 56px;
-      line-height: 64px;
+      font-size: 72px;
+      line-height: 80px;
       letter-spacing: 0;
       color: white;
     }
@@ -61,11 +62,60 @@
     &__button-arrow {
       margin-left: 17px;
       color: white;
-      transform: scale(.9);
+      transform: scale(.9) rotate(-90deg);
+    }
+
+    &__image {
+      margin: auto 0;
     }
 
     &__image-alt {
       display: none;
+    }
+
+    &__metrics-wrapper {
+      @extend %container;
+
+      margin-top: 50px;
+    }
+
+    &__metrics {
+      display: grid;
+      overflow-x: hidden;
+      column-gap: 30px;
+      grid-template-columns: repeat(4, 280px);
+      grid-template-rows: 132px;
+
+      &__title {
+        margin-bottom: 24px;
+        font-family: $font-primary;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0;
+        color: $c_white;
+      }
+    }
+
+    &__metric {
+      padding: 18px 24px;
+      background-color: #111316;
+
+      &__title {
+        margin-bottom: 10px;
+        font-family: $font-secondary;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: $c_grayc-chateau;
+      }
+
+      &__value {
+        font-family: $font-primary;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: 0;
+        color: $c_white;
+      }
     }
   }
 
@@ -83,11 +133,29 @@
       flex-direction: column;
 
       &__content {
-        width: 90%;
+        align-items: center;
+        width: 85%;
+      }
+
+      &__title {
+        text-align: center;
+
+        & > br {
+          display: none;
+        }
+      }
+
+      &__subtitle {
+        text-align: center;
       }
 
       &__image {
+        width: 85%;
         margin-top: 40px;
+      }
+
+      &__metrics-wrapper {
+        padding-left: 20px;
       }
     }
   }
@@ -97,6 +165,10 @@
       &__title {
         font-size: 42px;
         line-height: 50px;
+
+        & > br {
+          display: block;
+        }
       }
 
       &__subtitle {
@@ -106,10 +178,6 @@
 
       &__button {
         height: 60px;
-      }
-
-      &__button-arrow {
-        transform: rotate(-90deg);
       }
     }
   }
@@ -121,14 +189,17 @@
       &__title {
         font-size: 32px;
         line-height: 40px;
+        text-align: left;
       }
 
       &__subtitle {
         font-size: 16px;
         line-height: 24px;
+        text-align: left;
       }
 
       &__content {
+        align-items: unset;
         width: 335px;
       }
 
@@ -142,6 +213,7 @@
 
       &__image-alt {
         display: block;
+        max-width: 375px;
         margin-top: 40px;
       }
     }

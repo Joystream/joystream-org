@@ -1,0 +1,331 @@
+@import '../../../styles/main';
+
+.IndexPage {
+  &__road-wrapper {
+    padding: 150px 0;
+    background-color: $c_catskill-white;
+
+    & > * {
+      user-select: none;
+    }
+  }
+
+  &__road {
+    @extend %container;
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: 0;
+    }
+  }
+
+  &__road-main-wrapper {
+    display: grid;
+    margin: 64px 0 80px 0;
+    grid-template-columns: 60px auto 60px;
+    grid-template-rows: 300px;
+  }
+
+  &__road-main {
+    display: grid;
+    padding: 0 46px;
+    column-gap: 64px;
+    grid-template-columns: 500px auto;
+
+    &__arrow-wrapper {
+      display: grid;
+      width: 60px;
+      height: 60px;
+      margin: auto 0;
+      cursor: pointer;
+      border: 2px solid $c_blue-ribbon;
+      place-items: center;
+    }
+
+    &__arrow {
+      color: $c_blue-ribbon;
+      transform: rotate(90deg);
+
+      &--reverse {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &__image-wrapper {
+      display: grid;
+      background-image: url('../../../assets/background/road-to-mainnet-image.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: 4px solid $c_white;
+      place-items: center;
+    }
+
+    &__image {
+      max-width: 215px;
+      max-height: 232px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__info-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__state {
+      padding: 4px 6px;
+      font-family: $font-secondary;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -.4000000059604645px;
+      background: #dee3e9;
+    }
+
+    &__date {
+      font-family: $font-secondary;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -.4000000059604645px;
+      color: $c_oslo-gray;
+
+      span {
+        margin-left: 4px;
+        color: $c_black;
+      }
+    }
+
+    &__title {
+      margin-top: 24px;
+      font-family: $font-primary;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0;
+    }
+
+    &__text {
+      margin-top: 8px;
+      font-family: $font-secondary;
+      line-height: 28px;
+      color: #5c6475;
+    }
+
+    &__link-wrapper {
+      width: fit-content;
+      margin-top: 24px;
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      line-height: 28px;
+
+      & > * {
+        color: $c_blue-ribbon;
+      }
+    }
+
+    &__link-arrow {
+      margin-left: 13px;
+      transform: rotate(-90deg) scale(.85);
+    }
+  }
+
+  &__road-overview {
+    display: flex;
+    overflow-x: hidden;
+
+    &__item {
+      display: grid;
+      height: 148px;
+      min-width: 392px;
+      min-height: 148px;
+      margin-right: 30px;
+      padding: 14px;
+      background-color: $c_white;
+      column-gap: 24px;
+      grid-template-columns: 120px auto;
+
+      &--active {
+        background-color: $c_blue-ribbon;
+      }
+
+      &__image-wrapper {
+        position: relative;
+        display: grid;
+        height: 120px;
+        padding: 8px;
+        background-color: $c_black;
+        place-items: center;
+      }
+
+      &__testnet-number {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        display: grid;
+        width: 20px;
+        height: 20px;
+        font-family: $font-secondary;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: .4000000059604645px;
+        color: $c_white;
+        background-color: $c_ebony-clay;
+        place-items: center;
+      }
+
+      &__image {
+        height: 100%;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &__title {
+        font-family: $font-primary;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0;
+
+        &--active {
+          color: $c_white;
+        }
+      }
+
+      &__date {
+        margin-top: 4px;
+        font-family: $font-secondary;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0;
+        color: #81858d;
+
+        &--alt {
+          color: $c_black;
+        }
+
+        &--active {
+          color: $c_white;
+        }
+      }
+
+      &__state {
+        display: grid;
+        width: fit-content;
+        margin-top: 16px;
+        padding: 4px 6px;
+        font-family: $font-secondary;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -.4000000059604645px;
+        background: #dee3e9;
+        place-items: center;
+
+        &--active {
+          color: $c_blue-ribbon;
+          background-color: $c_white;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__road-main-wrapper {
+      grid-template-columns: auto;
+    }
+
+    &__road-main {
+      padding: 0;
+      column-gap: 32px;
+
+      &__title {
+        font-size: 34px;
+        line-height: 42px;
+      }
+
+      &__text {
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      &__arrow-wrapper {
+        display: none;
+      }
+    }
+
+    &__road-overview {
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__road-wrapper {
+      padding: 105px 0 90px 0;
+    }
+
+    &__road {
+      &__title {
+        width: 500px;
+        margin: 0 auto;
+      }
+    }
+
+    &__road-main-wrapper {
+      margin-bottom: 40px;
+      grid-template-rows: auto;
+    }
+
+    &__road-main {
+      justify-content: center;
+      grid-template-columns: 500px;
+      grid-template-rows: 300px auto;
+
+      &__content {
+        padding-top: 32px;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__road {
+      &__title {
+        width: 335px;
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    &__road-main {
+      grid-template-columns: 335px;
+
+      &__title {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      &__text {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      &__arrow-wrapper {
+        display: none;
+      }
+    }
+  }
+}
