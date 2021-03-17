@@ -2,8 +2,9 @@ import React from 'react';
 import GetStartedBountiesImage from '../../../assets/svg/get-started-bounties.svg';
 import GetStartedRoles from '../../../assets/svg/get-started-roles.svg';
 import { ReactComponent as LinkImage } from '../../../assets/svg/link.svg';
-import List from '../../../components/CardCarousel';
+import CardCarousel from '../../../components/CardCarousel';
 import BountiesCarousel from './Carousel';
+import useWindowDimensions from '../../../utils/useWindowDimensions';
 
 import { roleCardData } from '../../../data/pages/get-started';
 
@@ -32,6 +33,9 @@ const BountiesRoleCard = ({ RoleImage, title, link, text }) => {
   );
 };
 
+const CARD_SIZE_WITH_MARGIN = 626;
+const SMALL_CARD_SIZE_WITH_MARGIN = 355;
+
 const GetStartedBounties = () => {
   const {
     validator,
@@ -42,11 +46,12 @@ const GetStartedBounties = () => {
     contentCreator,
     contentLead,
   } = roleCardData;
+  const { width } = useWindowDimensions();
 
   return (
     <div className="GetStarted__bounties">
       <h2 id="opportunities" className="GetStarted__bounties__title">
-        See available opportunities
+        Opportunities
       </h2>
       <div className="GetStarted__bounties__explanation">
         <div className="GetStarted__bounties__explanation__content">
@@ -79,7 +84,7 @@ const GetStartedBounties = () => {
         <h3 className="GetStarted__bounties__roles-carousel__title">
           Active roles on the current testnet <span>(7)</span>
         </h3>
-        <List>
+        <CardCarousel scrollAmount={(width && width > 768) ? CARD_SIZE_WITH_MARGIN : SMALL_CARD_SIZE_WITH_MARGIN}>
           <BountiesRoleCard
             RoleImage={validator.image}
             title={validator.title}
@@ -117,7 +122,7 @@ const GetStartedBounties = () => {
             text={contentLead.text}
             link={contentLead.link}
           />
-        </List>
+        </CardCarousel>
       </div>
     </div>
   );
