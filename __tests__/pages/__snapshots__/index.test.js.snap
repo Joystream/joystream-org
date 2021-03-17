@@ -12,11 +12,11 @@ exports[`IndexPage page renders correctly 1`] = `
   <Hero
     statusData={null}
   />
+  <BecomeFoundingMember />
   <WhatWeDo />
   <WhyYouShouldJoin />
   <ExploreJoystream />
   <RoadToMainnet />
-  <BecomeFoundingMember />
   <EarnTokens />
 </BaseLayout>
 `;
