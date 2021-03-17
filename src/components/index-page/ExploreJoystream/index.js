@@ -21,7 +21,7 @@ const ExploreJoystream = () => (
             Atlas is the flagship content consumer and publishing app for Joystream. Watch videos, follow creators and
             discover new featured content, or create a channel and build your audience.
           </p>
-          <a href="https://play.joystream.org/">
+          <a className="IndexPage__explore__explanation__link-wrapper" href="https://play.joystream.org/">
             <div className="IndexPage__explore__explanation__link">
               <p className="IndexPage__explore__explanation__link-text">Try out Atlas</p>
               <Arrow className="IndexPage__explore__explanation__link-arrow" />
@@ -37,7 +37,7 @@ const ExploreJoystream = () => (
             Pioneer is the place to participate in community governance and operation. Vote on elections, submit
             proposals to fund your project or get enter a paid role to power the platform.
           </p>
-          <a href="https://testnet.joystream.org/">
+          <a className="IndexPage__explore__explanation__link-wrapper" href="https://testnet.joystream.org/">
             <div className="IndexPage__explore__explanation__link">
               <p className="IndexPage__explore__explanation__link-text">Try out Pioneer</p>
               <Arrow className="IndexPage__explore__explanation__link-arrow" />

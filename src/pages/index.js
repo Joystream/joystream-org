@@ -26,6 +26,8 @@ const IndexPage = () => {
 
       <Hero statusData={statusData} />
 
+      <BecomeFoundingMember />
+
       <WhatWeDo />
 
       <WhyYouShouldJoin />
@@ -33,8 +35,6 @@ const IndexPage = () => {
       <ExploreJoystream />
 
       <RoadToMainnet />
-
-      <BecomeFoundingMember />
 
       <EarnTokens />
     </BaseLayout>

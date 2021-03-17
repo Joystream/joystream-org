@@ -66,6 +66,10 @@
       margin: 80px auto 0;
       padding: 18px 23px 18px 20px;
       background-color: $c_blue-ribbon;
+
+      &:hover {
+        background-color: $c_han_purple;
+      }
     }
 
     &__button-text {

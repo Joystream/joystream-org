@@ -116,10 +116,14 @@
       color: #5c6475;
     }
 
-    &__link {
-      display: flex;
-      align-items: center;
+    &__link-wrapper {
+      width: fit-content;
       margin-top: 24px;
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
       line-height: 28px;
 
       & > * {

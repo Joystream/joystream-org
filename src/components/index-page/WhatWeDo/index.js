@@ -16,7 +16,10 @@ const WhatWeDo = () => {
           <h2 className="IndexPage__manifesto-cta__title">
             We call for an arrangement where media platforms are accountable to the people they impact
           </h2>
-          <a href="https://github.com/Joystream/whitepaper/blob/master/paper.pdf">
+          <a
+            className="IndexPage__manifesto-cta__link-wrapper"
+            href="https://github.com/Joystream/whitepaper/blob/master/paper.pdf"
+          >
             <div className="IndexPage__manifesto-cta__link">
               Read our manifesto
               <Arrow className="IndexPage__manifesto-cta__link-arrow" />

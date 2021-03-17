@@ -38,10 +38,14 @@
       letter-spacing: 0;
     }
 
-    &__link {
-      display: flex;
-      align-items: center;
+    &__link-wrapper {
+      width: fit-content;
       margin-top: 32px;
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
       font-family: $font-primary;
       font-size: 20px;
       line-height: 28px;
@@ -65,11 +69,7 @@
       }
 
       &__title {
-        margin-top: 20px;
-      }
-
-      &__link {
-        margin-top: 20px;
+        margin: 20px 0;
       }
     }
 
