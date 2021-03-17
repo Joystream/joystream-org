@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
 import { ReactComponent as Arrow } from '../../../../assets/svg/arrow-down-small.svg';
-import List from '../../../../components/CardCarousel';
+import CardCarousel from '../../../../components/CardCarousel';
 import useAxios from '../../../../utils/useAxios';
 import { bountiesLink } from '../../../../data/pages/get-started';
 
@@ -19,8 +19,6 @@ const parseDate = dateString => {
 };
 
 const BountiesCard = ({ title, amount, categories, date, id, link, description }) => {
-  const parsedDate = date ? new Date(date) : null;
-
   return (
     <a target="_blank" href={link ? link : '#'}>
       <div className="GetStarted__bounties-carousel__card">
@@ -36,7 +34,13 @@ const BountiesCard = ({ title, amount, categories, date, id, link, description }
         <div className="GetStarted__bounties-carousel__bottom">
           <div className="GetStarted__bounties-carousel__card-filters">
             {categories?.map(category => (
-              <div key={title + category} className="GetStarted__bounties-carousel__card-filter">
+              <div
+                key={title + category}
+                className={`
+                  GetStarted__bounties-carousel__card-filter
+                  GetStarted__bounties-carousel__card-filter--${category.toLowerCase()}
+                `}
+              >
                 {category}
               </div>
             ))}
@@ -47,6 +51,8 @@ const BountiesCard = ({ title, amount, categories, date, id, link, description }
     </a>
   );
 };
+
+const CARD_SIZE_WITH_MARGIN = 424;
 
 const BountiesCarousel = () => {
   const [data, loading, error] = useAxios(bountiesLink);
@@ -85,8 +91,6 @@ const BountiesCarousel = () => {
     }
   }, [data]);
 
-  console.log(bounties);
-
   return (
     <div className="GetStarted__bounties-carousel-wrapper">
       <div className="GetStarted__bounties-carousel__filters">
@@ -104,6 +108,7 @@ const BountiesCarousel = () => {
           })}
           onClick={() => setFilterState('Coding')}
         >
+          <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--coding"></div>
           Coding ({categoryValues.Coding})
         </button>
         <button
@@ -112,6 +117,7 @@ const BountiesCarousel = () => {
           })}
           onClick={() => setFilterState('Design')}
         >
+          <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--design"></div>
           Design ({categoryValues.Design})
         </button>
         <button
@@ -120,6 +126,7 @@ const BountiesCarousel = () => {
           })}
           onClick={() => setFilterState('Marketing')}
         >
+          <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--marketing"></div>
           Marketing ({categoryValues.Marketing})
         </button>
         <button
@@ -128,6 +135,7 @@ const BountiesCarousel = () => {
           })}
           onClick={() => setFilterState('Research')}
         >
+          <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--research"></div>
           Research ({categoryValues.Research})
         </button>
         <button
@@ -136,10 +144,11 @@ const BountiesCarousel = () => {
           })}
           onClick={() => setFilterState('Content')}
         >
+          <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--content"></div>
           Content creation ({categoryValues.Content})
         </button>
       </div>
-      <List>
+      <CardCarousel scrollAmount={CARD_SIZE_WITH_MARGIN}>
         <div className="GetStarted__bounties-carousel">
           {bounties?.map((bounty, idx) => {
             if (filterState === 'All') {
@@ -177,7 +186,7 @@ const BountiesCarousel = () => {
             }
           })}
         </div>
-      </List>
+      </CardCarousel>
     </div>
   );
 };

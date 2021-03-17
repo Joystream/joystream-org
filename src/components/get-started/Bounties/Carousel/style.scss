@@ -17,9 +17,19 @@
     grid-template-columns: 394px;
     grid-template-rows: 1fr 1fr;
 
+    &__filters {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     &__filter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
       margin-right: 12px;
-      padding: 12px 20px;
+      margin-bottom: 12px;
+      padding: 0 20px;
       font-family: $font-primary;
       font-size: 16px;
       line-height: 24px;
@@ -35,6 +45,33 @@
 
       &:hover {
         border: 2px solid #81858d;
+      }
+    }
+
+    &__filter-circle {
+      min-width: 10px;
+      min-height: 10px;
+      margin: 5px 8px 0 0;
+      border-radius: 50%;
+
+      &--coding {
+        background-color: #ffe538;
+      }
+
+      &--design {
+        background-color: #00efe1;
+      }
+
+      &--marketing {
+        background-color: #d09dff;
+      }
+
+      &--research {
+        background-color: #00d0a7;
+      }
+
+      &--content {
+        background-color: #f2994a;
       }
     }
 
@@ -134,6 +171,26 @@
       padding: 6px 8px;
       color: black;
       background-color: #f2f5f9;
+
+      &--coding {
+        background-color: #ffe538;
+      }
+
+      &--design {
+        background-color: #00efe1;
+      }
+
+      &--marketing {
+        background-color: #d09dff;
+      }
+
+      &--research {
+        background-color: #00d0a7;
+      }
+
+      &--content {
+        background-color: #f2994a;
+      }
     }
 
     &__arrow {
@@ -143,20 +200,9 @@
     }
   }
 
-  @media #{$screen-max-md} {
+  @media (max-width: 1010px) {
     &__bounties-carousel-wrapper {
       padding-left: 40px;
-    }
-
-    &__bounties-carousel {
-      &__filters {
-        max-width: 550px;
-
-        button:nth-of-type(5),
-        button:nth-of-type(6) {
-          margin-top: 12px;
-        }
-      }
     }
   }
 
