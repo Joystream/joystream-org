@@ -148,8 +148,8 @@ const Leaderboards = () => {
           </Table.Row>
         ));
     } else {
-      return response?.totalScoresFull?.totalScores
-        ?.sort((prev, next) => next.totalScore - prev.totalScore)
+      return response?.scores?.totalScores
+        ?.filter(({ inducted }) => !inducted)
         ?.map((foundingMember, index) => (
           <Table.Row
             key={index}

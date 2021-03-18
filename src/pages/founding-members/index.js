@@ -134,7 +134,7 @@ const FoundingMembersPage = () => {
       />
       <Metrics
         foundingMembers={response?.currentFoundingMembers}
-        nonFoundingMembers={response?.totalScoresFull?.totalScores}
+        nonFoundingMembers={response?.scores?.totalScores?.filter(({inducted}) => !inducted)}
         sizeOfFirstTokenPool={response?.poolStats?.currentPoolSize}
         partialTokenAllocation={partialTokenAllocation}
       />
