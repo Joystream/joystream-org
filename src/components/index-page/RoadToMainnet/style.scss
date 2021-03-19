@@ -140,6 +140,7 @@
   &__road-overview {
     display: flex;
     overflow-x: hidden;
+    overflow-y: hidden;
 
     &__item {
       display: grid;
@@ -158,11 +159,12 @@
 
       &__image-wrapper {
         position: relative;
-        display: grid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 120px;
         padding: 8px;
         background-color: $c_black;
-        place-items: center;
       }
 
       &__testnet-number {

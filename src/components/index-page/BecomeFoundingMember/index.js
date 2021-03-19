@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
+import { Link } from 'gatsby';
 
 import './style.scss';
 
@@ -15,15 +16,15 @@ const BecomeFoundingMember = () => {
           <h2 className="IndexPage__fm-cta__title IndexPage__fm-cta__title--alt">
             Become a Founding member and have a real impact on the development of our platform.
           </h2>
-          <a
+          <Link
             className="IndexPage__fm-cta__link-wrapper"
-            href="https://github.com/Joystream/whitepaper/blob/master/paper.pdf"
+            to='/founding-members'
           >
             <div className="IndexPage__fm-cta__link">
               Become a founding member
               <Arrow className="IndexPage__fm-cta__link-arrow" />
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

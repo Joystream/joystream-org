@@ -16,7 +16,7 @@ import { foundingMembersJson } from '../../data/pages/founding-members';
 
 import './style.scss';
 
-export const ArrowButton = ({ link, text, className, onClick }) => {
+export const ArrowButton = ({ link, text, className, onClick, state, to }) => {
   const children = (
     <div className="ArrowButton">
       <span className="ArrowButton__text"> {text} </span>
@@ -27,6 +27,12 @@ export const ArrowButton = ({ link, text, className, onClick }) => {
   if (link) {
     return (
       <Button style={{ padding: 0 }} className={`${className}`} href={link}>
+        {children}
+      </Button>
+    );
+  } else if (to) {
+    return (
+      <Button style={{ padding: 0 }} className={`${className}`} to={to} state={state}>
         {children}
       </Button>
     );
@@ -134,7 +140,7 @@ const FoundingMembersPage = () => {
       />
       <Metrics
         foundingMembers={response?.currentFoundingMembers}
-        nonFoundingMembers={response?.scores?.totalScores?.filter(({inducted}) => !inducted)}
+        nonFoundingMembers={response?.scores?.totalScores?.filter(({ inducted }) => !inducted)}
         sizeOfFirstTokenPool={response?.poolStats?.currentPoolSize}
         partialTokenAllocation={partialTokenAllocation}
       />

@@ -25,13 +25,17 @@
       color: $c_white;
     }
 
+    &__button-container {
+      width: fit-content;
+      margin-top: 32px;
+    }
+
     &__button {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: space-between;
       width: 250px;
       height: 80px;
-      margin-top: 32px;
       padding: 28px;
       background-color: $c_black;
     }

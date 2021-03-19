@@ -3,6 +3,7 @@ import Table from '../../../../components/Table';
 import { ArrowButton } from '../../index';
 import { ReactComponent as Achieved } from '../../../../assets/svg/achieved.svg';
 import calculateTokensAllocated from '../../../../utils/calculateTokensAllocated';
+import { Link } from 'gatsby';
 
 import './style.scss';
 
@@ -128,8 +129,9 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, pa
         </Table>
         <ArrowButton
           className="FoundingMembersPage__leaderboard__button"
-          link="/founding-members/leaderboards"
+          to="/founding-members/leaderboards"
           text="All Regular Member Scores"
+          state={{ isFoundingMember: false }}
         />
       </div>
       <ArrowButton
