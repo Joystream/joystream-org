@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroImage from '../../../assets/svg/hero-builder.svg';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
+import { Link } from 'gatsby';
 
 import './style.scss';
 
@@ -41,12 +42,12 @@ const Hero = ({ statusData }) => {
           <p className="IndexPage__hero__subtitle">
             Let’s create together a video platform controlled, owned, and operated by its users.
           </p>
-          <a href="#opportunities" className="IndexPage__hero__button-container">
+          <Link to="/get-started" className="IndexPage__hero__button-container">
             <div className="IndexPage__hero__button">
               <p className="IndexPage__hero__button-text">Start earning</p>
               <Arrow className="IndexPage__hero__button-arrow" />
             </div>
-          </a>
+          </Link>
         </div>
         <img src={HeroImage} className="IndexPage__hero__image" alt="getting started hero" />
         <img src={HeroImage} className="IndexPage__hero__image-alt" alt="alternate getting started hero" />
