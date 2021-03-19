@@ -31,7 +31,7 @@ const WhyYouShouldJoin = () => (
           text="Build the reputation and skill to earn money on mainnet"
         />
       </div>
-      <Link to="/get-started">
+      <Link to="/get-started" className="IndexPage__join-info__button-container">
         <div className="IndexPage__join-info__button">
           <p className="IndexPage__join-info__button-text">Start earning</p>
           <Arrow className="IndexPage__join-info__button-arrow" />

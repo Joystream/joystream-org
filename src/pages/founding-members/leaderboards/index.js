@@ -28,8 +28,6 @@ const PeriodHighlightFounding = ({ userData, partialTokenAllocation }) => {
     .toString()
     .substr(-2)}`;
 
-  console.log(userData, partialTokenAllocation);
-
   return (
     <>
       <div className="FoundingMembersLeaderboards__table__main">
@@ -112,8 +110,8 @@ const PeriodHighlightNonFounding = ({ userData }) => {
   );
 };
 
-const Leaderboards = () => {
-  const [isFounding, setIsFounding] = useState(true);
+const Leaderboards = ({ location }) => {
+  const [isFounding, setIsFounding] = useState(location?.state?.isFoundingMember !== false);
   const [response, loading, error] = useAxios(foundingMembersJson);
   const [partialTokenAllocation, setPartialTokenAllocation] = useState();
 
