@@ -36,13 +36,17 @@
       color: $c_grayc-chateau;
     }
 
+    &__button-container {
+      width: fit-content;
+      margin-top: 32px;
+    }
+
     &__button {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 264px;
       height: 80px;
-      margin-top: 32px;
       padding: 0 30px;
       background-color: $c_blue-ribbon;
 
@@ -100,6 +104,18 @@
       padding: 18px 24px;
       background-color: #111316;
 
+      &--placeholder {
+        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-metric;
+      }
+
+      &__title-placeholder {
+        width: 100px;
+        height: 16px;
+        margin-bottom: 20px;
+        background-color: #1f252e;
+        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-metric-text;
+      }
+
       &__title {
         margin-bottom: 10px;
         font-family: $font-secondary;
@@ -107,6 +123,14 @@
         line-height: 24px;
         letter-spacing: 0;
         color: $c_grayc-chateau;
+        animation: animate-metric-text .5s linear;
+      }
+
+      &__value-placeholder {
+        width: 200px;
+        height: 48px;
+        background-color: #1f252e;
+        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-metric-text;
       }
 
       &__value {
@@ -115,6 +139,7 @@
         line-height: 56px;
         letter-spacing: 0;
         color: $c_white;
+        animation: animate-metric-text .5s linear;
       }
     }
   }
@@ -217,5 +242,43 @@
         margin-top: 40px;
       }
     }
+  }
+}
+
+@keyframes loading-metric {
+  0% {
+    background-color: rgba(17, 19, 22, 1);
+  }
+
+  50% {
+    background-color: rgba(17, 19, 22, .5);
+  }
+
+  100% {
+    background-color: rgba(17, 19, 22, 1);
+  }
+}
+
+@keyframes loading-metric-text {
+  0% {
+    background-color: rgb(31, 37, 46);
+  }
+
+  50% {
+    background-color: rgba(31, 37, 46, .5);
+  }
+
+  100% {
+    background-color: rgb(31, 37, 46);
+  }
+}
+
+@keyframes animate-metric-text {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

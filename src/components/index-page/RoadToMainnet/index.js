@@ -119,8 +119,6 @@ const RoadToMainnet = () => {
 
   const moveToCard = cardToMoveTo => setCurrentTestnet(cardToMoveTo);
 
-  console.log(testnetData);
-
   return (
     <div className="IndexPage__road-wrapper">
       <div className="IndexPage__road">

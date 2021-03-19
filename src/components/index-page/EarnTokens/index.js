@@ -11,7 +11,7 @@ const EarnTokens = () => (
     <div className="IndexPage__earntokens">
       <div className="IndexPage__earntokens__content">
         <h2 className="IndexPage__earntokens__title">Earn mainnet tokens, cash and influence.</h2>
-        <Link to="/get-started">
+        <Link to="/get-started" className="IndexPage__earntokens__button-container">
           <div className="IndexPage__earntokens__button">
             <p className="IndexPage__earntokens__button-text">Start earning</p>
             <p className="IndexPage__earntokens__button-text IndexPage__earntokens__button-text--alt">

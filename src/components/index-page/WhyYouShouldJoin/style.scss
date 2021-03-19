@@ -8,6 +8,9 @@
   &__join-info {
     @extend %container;
 
+    display: flex;
+    flex-direction: column;
+
     &__title {
       font-family: $font-primary;
       font-size: 48px;
@@ -57,13 +60,17 @@
       }
     }
 
+    &__button-container {
+      width: fit-content;
+      margin: 80px auto 0;
+    }
+
     &__button {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: space-between;
       width: 264px;
       height: 80px;
-      margin: 80px auto 0;
       padding: 18px 23px 18px 20px;
       background-color: $c_blue-ribbon;
 
