@@ -1,0 +1,232 @@
+@import '../../../styles/main';
+
+.TokensPage {
+  &__header {
+    padding: 56px 0 80px 0;
+    background-color: $c_black;
+  }
+
+  &__hero {
+    @extend %container;
+
+    display: grid;
+    column-gap: 34px;
+    grid-template-columns: 1fr 1.5fr;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 72px;
+      line-height: 80px;
+      letter-spacing: 0;
+      color: $c_white;
+    }
+
+    &__text {
+      margin-top: 12px;
+      font-family: $font-secondary;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: $c_grayc_chateau;
+    }
+
+    &__link {
+      width: 264px;
+      height: 80px;
+      margin-top: 32px;
+    }
+
+    &__image {
+      &--alt {
+        display: none;
+      }
+    }
+  }
+
+  &__tokenstats-wrapper {
+    @extend %container;
+
+    margin-top: 40px;
+  }
+
+  &__tokenstats-title {
+    font-family: $font-primary;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0;
+    color: $c_white;
+  }
+
+  &__tokenstats {
+    display: grid;
+    margin-top: 24px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    column-gap: 30px;
+    grid-template-columns: repeat(3, 380px);
+    grid-template-rows: 132px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__item {
+      padding: 18px 24px 24px 24px;
+      background-color: #111316;
+
+      &--placeholder {
+        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading;
+      }
+
+      &__title-placeholder {
+        width: 140px;
+        height: 16px;
+        margin-bottom: 20px;
+        background-color: #1f252e;
+        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-metric-text;
+      }
+
+      &__title {
+        font-family: $font-secondary;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: $c_grayc_chateau;
+        animation: animate-tokenstats-text .5s linear;
+      }
+
+      &__value-placeholder {
+        width: 284px;
+        height: 48px;
+        background-color: #1f252e;
+        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-metric-text;
+      }
+
+      &__value {
+        font-family: $font-primary;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: 0;
+        color: $c_white;
+        animation: animate-tokenstats-text .5s linear;
+      }
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__hero {
+      &__title {
+        font-size: 60px;
+        line-height: 68px;
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__header {
+      padding-top: 64px;
+    }
+
+    &__hero {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 85%;
+
+      &__content {
+        align-items: center;
+      }
+
+      &__title {
+        text-align: center;
+      }
+
+      &__text {
+        text-align: center;
+      }
+
+      &__image {
+        width: 85%;
+        margin-top: 40px;
+      }
+    }
+
+    &__tokenstats-wrapper {
+      padding-left: 20px;
+    }
+
+    &__tokenstats {
+      &__value {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__hero {
+      &__link {
+        width: 335px;
+        height: 60px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__hero {
+      width: 335px;
+
+      &__title {
+        font-size: 40px;
+        line-height: 48px;
+        text-align: left;
+      }
+
+      &__text {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+      }
+
+      &__image {
+        display: none;
+        width: auto;
+
+        &--alt {
+          display: block;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate-tokenstats-text {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
