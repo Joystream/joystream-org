@@ -1,0 +1,26 @@
+@import '../../styles/main';
+
+.ArrowLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 28px 33px 28px;
+  background-color: $c_blue-ribbon;
+
+  &--dark {
+    background-color: $c_black;
+  }
+
+  &__text {
+    font-family: $font-primary;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: $c_white;
+  }
+
+  &__arrow {
+    color: $c_white;
+    transform: rotate(-90deg) scale(.85);
+  }
+}
