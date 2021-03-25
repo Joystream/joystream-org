@@ -2,6 +2,7 @@ import React from 'react';
 import ArrowLink from '../../../components/ArrowLink';
 import Tokens from '../../../assets/svg/coin-minter-hero.svg';
 import TokensAlt from '../../../assets/svg/coin-minter-hero-alt.svg';
+import parseBalance from '../../../utils/parseBalance';
 
 import './style.scss';
 
@@ -39,8 +40,8 @@ const TokenHero = ({ statusServerData }) => {
           {/* {statusServerData ? (
             <>
               <TokenStatsItem title="Exchange Rate" value={`$${statusServerData.price.toFixed(7)}`} />
-              <TokenStatsItem title="Exchange Rate" value={`$${statusServerData.price.toFixed(7)}`} />
-              <TokenStatsItem title="Exchange Rate" value={`$${statusServerData.price.toFixed(7)}`} />
+              <TokenStatsItem title="Backing Value" value={`$${statusServerData.dollarPool.size.toFixed(2)}`} />
+              <TokenStatsItem title="Supply" value={`$${parseBalance(statusServerData.totalIssuance)}`} />
             </>
           ) : (
             <>
@@ -50,8 +51,8 @@ const TokenHero = ({ statusServerData }) => {
             </>
           )} */}
           <TokenStatsItem title="Exchange Rate" value="$0.0000422" />
-          <TokenStatsItem title="Exchange Rate" value="$0.0000422" />
-          <TokenStatsItem title="Exchange Rate" value="$0.0000422" />
+          <TokenStatsItem title="Backing Value" value="$7815.95" />
+          <TokenStatsItem title="Supply" value={parseBalance("458292156")} />
         </div>
       </div>
     </div>
