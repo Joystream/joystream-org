@@ -1,6 +1,7 @@
 import { sharedData } from '../../data/pages';
 
 const links = [
+  { to: '/token', label: 'Testnet Token' },
   {
     label: 'navbar.product',
     isDropdown: true,
