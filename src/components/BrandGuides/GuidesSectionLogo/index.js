@@ -37,7 +37,7 @@ export default () => {
         </Text>
 
         <Button
-          href="https://raw.githubusercontent.com/Joystream/design/master/logo"
+          href="https://github.com/Joystream/design/tree/master/logo"
           download
         >
           <img src={downloadImg} alt="" />
