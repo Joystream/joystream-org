@@ -32,7 +32,7 @@ const IndexPage = () => {
 
       <WhyYouShouldJoin />
 
-      <ExploreJoystream />
+      {/* <ExploreJoystream /> */}
 
       <RoadToMainnet />
 

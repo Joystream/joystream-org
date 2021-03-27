@@ -52,7 +52,7 @@ const Hero = ({ statusData }) => {
         <img src={HeroImage} className="IndexPage__hero__image" alt="getting started hero" />
         <img src={HeroImage} className="IndexPage__hero__image-alt" alt="alternate getting started hero" />
       </div>
-      <div className="IndexPage__hero__metrics-wrapper">
+      {/* <div className="IndexPage__hero__metrics-wrapper">
         <h2 className="IndexPage__hero__metrics__title">Testnet Metrics</h2>
         <div className="IndexPage__hero__metrics">
           {statusData ? (
@@ -71,7 +71,7 @@ const Hero = ({ statusData }) => {
             </>
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

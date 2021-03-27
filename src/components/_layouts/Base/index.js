@@ -4,6 +4,7 @@ import { node } from 'prop-types';
 import Navbar from '../../Navbar';
 import Footer from '../../Footer';
 import CookiesNotice from '../../CookiesNotice';
+import Banner from '../../Banner';
 import { ScrollProvider } from '../../_enhancers/ScrollContext';
 
 const propTypes = {
@@ -19,6 +20,7 @@ const BaseLayout = ({ children }) => {
     <ScrollProvider>
       <div>
         <Navbar />
+        <Banner error />
         {children}
         <CookiesNotice />
         <Footer />
