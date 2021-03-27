@@ -13,9 +13,9 @@ const WhatWeDo = () => {
         <Fist className="IndexPage__manifesto-cta__icon" />
         <FistAlt className="IndexPage__manifesto-cta__icon-alt" />
         <div className="IndexPage__manifesto-cta__content">
-          <h4 className="IndexPage__manifesto-cta__subtitle">What we do</h4>
+          <h4 className="IndexPage__manifesto-cta__subtitle">Our motivation for building the Joystream protocol</h4>
           <h2 className="IndexPage__manifesto-cta__title">
-            We call for an arrangement where media platforms are accountable to the people they impact
+            We call for an arrangement where media platforms are accountable to the people they impact.
           </h2>
           <Link
             className="IndexPage__manifesto-cta__link-wrapper"
