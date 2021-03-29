@@ -35,7 +35,7 @@ const Footer = () => {
         <p className="Footer__form__subtitle">Don't worry about spam! Keep track of all important updates</p>
         <form
           method="post"
-          action="http://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
+          action="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
           name="mc-embedded-subscribe-form"
           target="_blank"
           noValidate
@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
       <h2 className="Footer__header">Get notified</h2>
       <Button
-        href="http://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
+        href="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
         secondary
         className="Footer__button"
       >
