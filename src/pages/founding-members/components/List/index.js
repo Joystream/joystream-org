@@ -42,13 +42,15 @@ const Card = ({ founderData, partialTokenAllocation }) => {
   );
 };
 
+const CARD_WIDTH_WITH_MARGIN = 288 + 20;
+
 const List = ({ className, data, type, partialTokenAllocation }) => (
   <div className={`${className} FoundingMembersPage__list-wrapper`}>
     <div className="FoundingMembersPage__list">
       <h2 className="FoundingMembersPage__list__title">
         {type === 'current' ? 'Current' : 'New'} founding members <span>{data?.length}</span>
       </h2>
-      <CardCarousel>
+      <CardCarousel scrollAmount={CARD_WIDTH_WITH_MARGIN}>
         {data?.map((founderData, index) => (
           <Card founderData={founderData} key={index} partialTokenAllocation={partialTokenAllocation} />
         ))}

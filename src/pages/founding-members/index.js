@@ -51,7 +51,7 @@ const FoundingMembersPage = () => {
   const [response, loading, error] = useAxios(foundingMembersJson);
   const [formerDate, setFormerDate] = useState();
   const [latterDate, setLatterData] = useState();
-  const [newFoundingMembers, setNewFoundingMembers] = useState([]);
+  const [latestFoundingMembers, setLatestFoundingMembers] = useState([]);
   const [partialTokenAllocation, setPartialTokenAllocation] = useState();
 
   useEffect(() => {
@@ -59,13 +59,22 @@ const FoundingMembersPage = () => {
       setFormerDate(new Date(response?.scoringPeriodsFull?.currentScoringPeriod?.started));
       setLatterData(new Date(response?.scoringPeriodsFull?.currentScoringPeriod?.ends));
 
-      const currentScoringPeriodId = response?.scoringPeriodsFull?.currentScoringPeriod?.scoringPeriodId;
+      let scoringPeriodIdFromLatestFMInduction = 0;
 
-      const newFoundingMembers = response?.currentFoundingMembers.filter(
-        member => member?.inducted?.inductedScoringPeriodId >= currentScoringPeriodId - 1
+      for (let idx = 0; idx < response?.currentFoundingMembers?.length; ++idx) {
+        if (
+          response?.currentFoundingMembers[idx]?.inducted?.inductedScoringPeriodId >
+          scoringPeriodIdFromLatestFMInduction
+        ) {
+          scoringPeriodIdFromLatestFMInduction = response?.currentFoundingMembers;
+        }
+      }
+
+      const latestFoundingMembers = response?.currentFoundingMembers.filter(
+        member => member?.inducted?.inductedScoringPeriodId === scoringPeriodIdFromLatestFMInduction
       );
 
-      setNewFoundingMembers(newFoundingMembers);
+      setLatestFoundingMembers(latestFoundingMembers);
     }
   }, [response]);
 
@@ -123,15 +132,13 @@ const FoundingMembersPage = () => {
           scoringPeriodId={response?.scoringPeriodsFull?.currentScoringPeriod?.scoringPeriodId}
         />
       </div>
-      {newFoundingMembers?.length ? (
-        <List
-          className="FoundingMembersPage__list-wrapper--new"
-          type="new"
-          data={newFoundingMembers}
-          partialTokenAllocation={partialTokenAllocation}
-        />
-      ) : null}
-      <Benefits newMembers={newFoundingMembers?.length} />
+      <List
+        className="FoundingMembersPage__list-wrapper--new"
+        type="new"
+        data={latestFoundingMembers}
+        partialTokenAllocation={partialTokenAllocation}
+      />
+      <Benefits newMembers={latestFoundingMembers?.length} />
       <List
         className="FoundingMembersPage__list-wrapper--current"
         type="current"

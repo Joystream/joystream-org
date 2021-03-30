@@ -28,7 +28,7 @@
     flex-direction: column;
     justify-content: center;
     min-width: 288px;
-    min-height: 245px;
+    min-height: 161px;
     padding: 24px;
     background-color: white;
 
@@ -67,7 +67,7 @@
     &__scores {
       display: flex;
       justify-content: space-between;
-      margin: 11px 0 19px 0;
+      margin: 11px 0 0 0;
     }
 
     &__score {
