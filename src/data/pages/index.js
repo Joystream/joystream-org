@@ -25,6 +25,7 @@ import Rome from '../../assets/svg/rome-building.svg';
 import Sparta from '../../assets/svg/sparta-helmet.svg';
 import Athens from '../../assets/svg/athens-owl.svg';
 import Acropolis from '../../assets/svg/acropolis-building.svg';
+import Antioch from '../../assets/svg/antioch-logo.svg';
 
 export const sharedData = {
   defaultEmail: 'hello@jsgenesis.com',
@@ -156,6 +157,15 @@ export const roleCardData = {
 export const bountiesLink = 'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties-overview/bounties-status.json';
 
 export const testnetData = [
+  {
+    Image: Antioch,
+    number: 8,
+    name: 'Antioch',
+    date: '05.04.2021',
+    state: 'Future',
+    overviewText: 'Antioch is our ninth testnet, patching a chain split bug which broke the Babylon network',
+    link: '/antioch'
+  },
   {
     Image: Babylon,
     number: 7,
