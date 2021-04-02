@@ -15,7 +15,6 @@ exports[`IndexPage page renders correctly 1`] = `
   <BecomeFoundingMember />
   <WhatWeDo />
   <WhyYouShouldJoin />
-  <ExploreJoystream />
   <RoadToMainnet />
   <EarnTokens />
 </BaseLayout>
