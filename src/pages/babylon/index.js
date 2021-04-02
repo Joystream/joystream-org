@@ -28,9 +28,17 @@ import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import babylonLogo from '../../assets/svg/babylon-logo.svg';
 
 import { roles, sharedData } from '../../data/pages';
-import { goalsData, launchDate } from '../../data/pages/babylon';
+import { goalsData } from '../../data/pages/babylon';
 
 import './style.scss';
+
+const heroMarkdownContent = `
+  On Friday the 29th of March, the Sparta network went down due to a 
+  [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) 
+  that we had not pulled down before release. 
+  
+  More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/).
+`;
 
 const BabylonPage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
@@ -50,7 +58,7 @@ const BabylonPage = ({ content }) => {
           The Babylon release offers improvements which greatly enhance
           the video publishing and consumption experience.
         </p>
-        <HeroCard date={launchDate} />
+        <HeroCard error content={heroMarkdownContent} />
 
         <TestnetModal
           title="Tower of Babel"

@@ -19,8 +19,8 @@ const BaseLayout = ({ children }) => {
   return (
     <ScrollProvider>
       <div>
-        <Navbar />
         <Banner error />
+        <Navbar />
         {children}
         <CookiesNotice />
         <Footer />
