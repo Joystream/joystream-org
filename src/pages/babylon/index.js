@@ -32,6 +32,14 @@ import { goalsData, launchDate } from '../../data/pages/babylon';
 
 import './style.scss';
 
+const heroMarkdownContent = `
+  On Friday the 29th of March, the Sparta network went down due to a 
+  [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) 
+  that we had not pulled down before release. 
+  
+  More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/).
+`;
+
 const BabylonPage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
 
@@ -50,7 +58,7 @@ const BabylonPage = ({ content }) => {
           The Babylon release offers improvements which greatly enhance
           the video publishing and consumption experience.
         </p>
-        <HeroCard date={launchDate} />
+        <HeroCard date={launchDate}/>
 
         <TestnetModal
           title="Tower of Babel"
@@ -112,7 +120,7 @@ const BabylonPage = ({ content }) => {
       <LayoutWrapper dark>
         <TitleWrapper title="Incentivized Roles for the Babylon Network">
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} />
+            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet/>
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
