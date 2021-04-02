@@ -40,7 +40,7 @@ const Hero = ({ statusData }) => {
             The video <br /> platform DAO
           </h1>
           <p className="IndexPage__hero__subtitle">
-            Let’s create together a video platform controlled, owned, and operated by its users.
+            Together, we are building a video platform controlled, owned, and operated by its users.
           </p>
           <Link to="/get-started" className="IndexPage__hero__button-container">
             <div className="IndexPage__hero__button">
