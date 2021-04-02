@@ -162,7 +162,7 @@ export const testnetData = [
     number: 8,
     name: 'Antioch',
     date: '05.04.2021',
-    state: 'Current',
+    state: 'Future',
     overviewText: 'Antioch is our ninth testnet, patching a chain split bug which broke the Babylon network',
     link: '/antioch'
   },
@@ -171,7 +171,7 @@ export const testnetData = [
     number: 7,
     name: 'Babylon',
     date: '21.12.2020',
-    state: 'Past',
+    state: 'Current',
     overviewText: 'Babylon is our eighth testnet, introducing a variety of important technical improvements.',
     link: '/babylon',
   },
