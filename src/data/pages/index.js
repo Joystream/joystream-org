@@ -161,7 +161,7 @@ export const testnetData = [
     Image: Antioch,
     number: 8,
     name: 'Antioch',
-    date: '05.04.2021',
+    date: '07.04.2021',
     state: 'Future',
     overviewText: 'Antioch is our ninth testnet, patching a chain split bug which broke the Babylon network',
     link: '/antioch'
