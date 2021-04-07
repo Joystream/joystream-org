@@ -28,7 +28,7 @@ import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import babylonLogo from '../../assets/svg/babylon-logo.svg';
 
 import { roles, sharedData } from '../../data/pages';
-import { goalsData, launchDate } from '../../data/pages/babylon';
+import { goalsData } from '../../data/pages/babylon';
 
 import './style.scss';
 
@@ -58,7 +58,11 @@ const BabylonPage = ({ content }) => {
           The Babylon release offers improvements which greatly enhance
           the video publishing and consumption experience.
         </p>
-        <HeroCard date={launchDate}/>
+        <HeroCard
+        info
+        date='2021/04/07 07:00'
+        counterTitle={<>REPLACED BY ANTIOCH ON</>}
+        />
 
         <TestnetModal
           title="Tower of Babel"
