@@ -1,90 +1,57 @@
 {
 	"KPIs": [{
-			"title": "Proposal Clearance",
-			"description": "For the governance process to function properly, all proposals must be processed effectively, and in a reasonable time frame to avoid blocking new proposals coming in.",
-			"reward": "0",
-			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "17.03.2021 ~23:00 UTC - #2476801",
-			"successEvents": [
-				"At no point will the number of active proposal stay at 5 for longer than 14,400 blocks (~24h).",
-				"No malicious or unreasonable proposals are approved."
-			],
-			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards, and a new Council Election will be started immediately.",
-			"gradeDate": "04.04.2021 - 18:00 UTC",
-			"number": 13.1
-		},
-		{
 			"title": "Council Reporting",
 			"description": "There needs to be some level of accountability and transparency for the Council. For each Term the Council must produce a report of 'events' and 'Tokenomics' to allow users to make informed votes. This must be submitted as a PR to the Community Repo.",
-			"reward": "0",
-			"measurementPeriod": "16 days",
-			"startDate": "17.03.2021 ~23:00 UTC - #2476801",
+			"reward": "100",
+			"measurementPeriod": "8 days",
+			"startDate": "07.04.2021 - #0",
 			"successEvents": [
-				"The Council on Babylon (#2476801-#2678401) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
+				"The Council on Antioch (#0-#86400) produces a report based on the 'Council Reporting Template' and the 'Tokenomics' script"
 			],
-			"annihilation": "Unlike other 'annihilations', failure for this KPI will result in the loss of ALL KPI rewards.",
-			"gradeDate": "04.04.2021 - 18:00 UTC",
-			"number": 13.2
+			"annihilation": "NA",
+			"gradeDate": "17.04.2021 - 12:00 UTC",
+			"number": 0.1
 		},
 		{
 			"title": "Appoint New Council Secretary",
 			"description": "The Council must appoint one of their own as the Council Secretary, responsible for adding Council Reports and representing the Council in the Community Repo (with some enhanced repository maintenance privileges).",
-			"reward": "150",
-			"measurementPeriod": "5 days",
-			"startDate": "17.03.2021 ~23:00 UTC - #2476801",
+			"reward": "100",
+			"measurementPeriod": "3 days",
+			"startDate": "07.04.2021 - #0",
 			"successEvents": [
-				"The Council informally appoints a Council Secretary through a spending proposal and pays them an appropriate rate for their responsibilities.",
-				"The Council Secretary will also be responsible for managing the Bounties, even if they choose to 'hire' someone else for as the Bounty Manager for some/all individual bounties",
-				"The spending proposal must provide a link to the Council Secretary's GitHub account so we can provide them 'triage' permissions on the community repo."
+				"The Council informally appoints a Council Secretary through a text proposal and pays them an appropriate rate for their responsibilities.",
+				"The text proposal must provide a link to the Council Secretary's GitHub account so we can provide them 'triage' permissions on the community repo."
 			],
 			"annihilation": "No Council Secretary is appointed.",
-			"gradeDate": "04.04.2021 - 18:00 UTC",
-			"number": 13.3
+			"gradeDate": "17.04.2021 - 12:00 UTC",
+			"number": 0.2
 		},
 		{
-			"title": "Founding Member Program - Further Feedback",
-			"description": "After a 'difficult' launch, and lots of feedback (both in the questionnaire, and other forms), it seems the program needs improvements. Jsgenesis will make a proposal with our ideas for improvements (22.03.2021).",
-			"reward": "150",
+			"title": "Hire New Leads",
+			"description": "New temporary leads will be set by `sudo` at launch, in order to initialize the Content Directory and deploy a single Storage Provider. These must be hired and replaced.",
+			"reward": "0",
 			"measurementPeriod": "5 days",
-			"startDate": "22.03.2021 - #2347201",
+			"startDate": "07.04.2021 - #0",
 			"successEvents": [
-				"Review the proposal, and gather feedback from the community in a similar way as the questionnaire (KPI 12.4)"
+				"Hire a new Content Curator Lead",
+				"Hire a new Storage Provider Lead"
 			],
-			"annihilation": "Spoofing replies and results.",
-			"gradeDate": "04.04.2021 - 18:00 UTC",
-			"number": 13.4
+			"annihilation": "No Leads are hired.",
+			"gradeDate": "17.04.2021 - 12:00 UTC",
+			"number": 0.3
 		},
 		{
-			"title": "Follow up the Working Groups",
-			"description": "With the new scope of work having been implemented in the previous term, and the inflow of new users, the pressure on the working groups increases.",
-			"reward": "200",
-			"measurementPeriod": "5 days",
-			"startDate": "17.03.2021 ~23:00 UTC - #2476801",
+			"title": "Community Bounties Status",
+			"description": "Due to the chain split, Community Bounties were not followed up by Jsgenesis.",
+			"reward": "100",
+			"measurementPeriod": "6 days",
+			"startDate": "07.04.2021 - #0",
 			"successEvents": [
-				"Produce a brief report on whether the Curators are managing their new workflow.",
-				"Regardless of the outcome of said report, consider the need for more Curators, and whether more tools must be developed to perform their duties."
+				"Produce a report outlining the current status and progress for each bounty."
 			],
-			"annihilation": "No task list is presented.",
-			"gradeDate": "04.04.2021 - 18:00 UTC",
-			"number": 13.5
-		},
-		{
-			"title": "Managing Community Bounties",
-			"description": "Managing Community Bounties will be a growing part of the Council's workload. The Council may choose to delegate most of the work to the Council Secretary and/or Bounty Managers. In spite of this, the Council is responsible for ensuring their 'employees' are performing the tasks",
-			"reward": "500",
-			"measurementPeriod": "14 days (Full Council Term)",
-			"startDate": "17.03.2021 ~23:00 UTC - #2476801",
-			"successEvents": [
-				"Familiarize themselves, then follow the new and improved guidelines for the Council role in Bounty Management (helpdesk)",
-				"Update/fix/maintain the Community Repo's new `bounties-overview` files (json, table issue)",
-				"Follow the instructions for each bounty, create the forum posts, follow up and, if required, create budgets, request funding and hire/assign Bounty Managers.",
-				"Submit a weekly bounty report, outlining the status and progress for each bounty.",
-				"Create a list of proposed bounties to easy the (ongoing) transation from Telegram to Discord",
-				"Create a list of proposed bounties to improve the Founding Member Program (eg. tasks, submitting scores, rules, etc.)"
-			],
-			"annihilation": "Unlike standard `annihilations`, any rewards paid for a Bounty that exceeds what Jsgenesis pays will be deducted from the Council's KPI rewards.",
-			"gradeDate": "04.04.2021 - 18:00 UTC",
-			"number": 13.6
+			"annihilation": "NA",
+			"gradeDate": "17.04.2021 - 12:00 UTC",
+			"number": 0.4
 		}
 	]
 }

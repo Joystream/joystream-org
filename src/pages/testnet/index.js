@@ -54,7 +54,7 @@ function TestnetPage() {
                 <div className="KPIs__Explainer__Replenishment__Card__Icon">$1000</div>
                 <div className="KPIs__Explainer__Replenishment__Card__Slash">/</div>
                 <div className="KPIs__Explainer__Replenishment__Card__Days">
-                  <span>14</span>
+                  <span>7</span>
                   <h2 className="KPIs__Explainer__Replenishment__Card__Days__Text">days</h2>
                 </div>
               </div>
