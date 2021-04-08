@@ -9,6 +9,8 @@ import { ReactComponent as Logo } from '../../assets/svg/logo-white.svg';
 import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
 import { ReactComponent as Expand } from '../../assets/svg/expand.svg';
 import { ReactComponent as LinkIcon } from '../../assets/svg/link.svg';
+import { ReactComponent as NavClose } from '../../assets/svg/navbar-close.svg';
+import { ReactComponent as NavHamburger } from '../../assets/svg/navbar-hamburger.svg';
 
 import useWindowDimensions from '../../utils/useWindowDimensions';
 
@@ -102,7 +104,7 @@ const Navbar = ({ light, links }) => {
             }
 
             let children = (
-              <div className={`Navbar__link-wrapper`}>
+              <div className="Navbar__link-wrapper">
                 <p className="Navbar__link">{label}</p>
               </div>
             );
@@ -130,7 +132,9 @@ const Navbar = ({ light, links }) => {
           })}
           onClick={() => setIsOpen(!isOpen)}
           role="presentation"
-        />
+        >
+          {isOpen ? <NavClose className="Navbar__trigger__icon" /> : <NavHamburger className="Navbar__trigger__icon" />}
+        </div>
       </div>
     </nav>
   );
