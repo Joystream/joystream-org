@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.1.0",
   "dependencies": {
-    "@joystream/types": "^0.14.0",
-    "@polkadot/api": "1.26.1",
+    "@joystream/types": "^0.15.0",
+    "@polkadot/api": "4.2.1",
     "@storybook/addon-backgrounds": "^5.1.9",
     "@storybook/addon-centered": "^5.1.9",
     "@storybook/addon-info": "^5.1.9",
