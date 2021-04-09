@@ -271,19 +271,18 @@
       cursor: pointer;
       background-color: $c_blue-ribbon;
 
-      &::before {
-        font-size: 20px;
-        color: $c_white;
-        content: '\2630';
-      }
-
       &--active {
         background-color: $c_black;
+      }
 
-        &::before {
-          font-size: 25px;
-          content: '\008E';
+      &__icon {
+        @keyframes grow {
+          0% { clip-path: circle(10%); }
+          100% { clip-path: circle(100%); }
         }
+
+        animation: grow;
+        animation-duration: $duration;
       }
     }
   }
