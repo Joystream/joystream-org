@@ -31,20 +31,16 @@ const formatBlockHeight = blockheight => {
   return `${Math.floor(blockheight / 1000)}k`;
 };
 
-const Hero = ({ statusData }) => {
+const Hero = ({ statusData, t }) => {
   return (
     <div className="IndexPage__hero-wrapper">
       <div className="IndexPage__hero">
         <div className="IndexPage__hero__content">
-          <h1 className="IndexPage__hero__title">
-            The video <br /> platform DAO
-          </h1>
-          <p className="IndexPage__hero__subtitle">
-            Together, we are building a video platform controlled, owned, and operated by its users.
-          </p>
+          <h1 className="IndexPage__hero__title">{t('landing.hero.title')}</h1>
+          <p className="IndexPage__hero__subtitle">{t('landing.hero.subtitle')}</p>
           <Link to="/get-started" className="IndexPage__hero__button-container">
             <div className="IndexPage__hero__button">
-              <p className="IndexPage__hero__button-text">Start earning</p>
+              <p className="IndexPage__hero__button-text">{t('button.getStarted.text')}</p>
               <Arrow className="IndexPage__hero__button-arrow" />
             </div>
           </Link>
@@ -53,21 +49,30 @@ const Hero = ({ statusData }) => {
         <img src={HeroImage} className="IndexPage__hero__image-alt" alt="alternate getting started hero" />
       </div>
       <div className="IndexPage__hero__metrics-wrapper">
-        <h2 className="IndexPage__hero__metrics__title">Testnet Metrics</h2>
+        <h2 className="IndexPage__hero__metrics__title">{t('landing.hero.metrics.mainTitle')}</h2>
         <div className="IndexPage__hero__metrics">
           {statusData ? (
             <>
-              <TestnetMetric title="Participation Payout" metric="$24029" />
-              <TestnetMetric title="Active Validators" metric={statusData?.validators?.count ?? '-'} />
-              <TestnetMetric title="Block Height" metric={formatBlockHeight(statusData?.finalizedBlockHeight)} />
-              <TestnetMetric title="Memberships" metric={statusData?.memberships?.platform_members ?? '-'} />
+              <TestnetMetric title={t('landing.hero.metrics.titles.participationPayout')} metric="$24029" />
+              <TestnetMetric
+                title={t('landing.hero.metrics.titles.activeValidators')}
+                metric={statusData?.validators?.count ?? '-'}
+              />
+              <TestnetMetric
+                title={t('landing.hero.metrics.titles.blockHeight')}
+                metric={formatBlockHeight(statusData?.finalizedBlockHeight)}
+              />
+              <TestnetMetric
+                title={t('landing.hero.metrics.titles.memberships')}
+                metric={statusData?.memberships?.platform_members ?? '-'}
+              />
             </>
           ) : (
             <>
-              <TestnetMetricPlaceholder/>
-              <TestnetMetricPlaceholder/>
-              <TestnetMetricPlaceholder/>
-              <TestnetMetricPlaceholder/>
+              <TestnetMetricPlaceholder />
+              <TestnetMetricPlaceholder />
+              <TestnetMetricPlaceholder />
+              <TestnetMetricPlaceholder />
             </>
           )}
         </div>

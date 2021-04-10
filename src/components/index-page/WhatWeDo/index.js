@@ -6,23 +6,18 @@ import { Link } from 'gatsby';
 
 import './style.scss';
 
-const WhatWeDo = () => {
+const WhatWeDo = ({ t }) => {
   return (
     <div className="IndexPage__manifesto-cta-wrapper">
       <div className="IndexPage__manifesto-cta">
         <Fist className="IndexPage__manifesto-cta__icon" />
         <FistAlt className="IndexPage__manifesto-cta__icon-alt" />
         <div className="IndexPage__manifesto-cta__content">
-          <h4 className="IndexPage__manifesto-cta__subtitle">Our motivation for building the Joystream protocol</h4>
-          <h2 className="IndexPage__manifesto-cta__title">
-            We call for an arrangement where media platforms are accountable to the people they impact.
-          </h2>
-          <Link
-            className="IndexPage__manifesto-cta__link-wrapper"
-            to="/manifesto"
-          >
+          <h4 className="IndexPage__manifesto-cta__subtitle">{t('landing.whatWeDo.subtitle')}</h4>
+          <h2 className="IndexPage__manifesto-cta__title">{t('landing.whatWeDo.title')}</h2>
+          <Link className="IndexPage__manifesto-cta__link-wrapper" to="/manifesto">
             <div className="IndexPage__manifesto-cta__link">
-              Read our manifesto
+              {t('landing.whatWeDo.link')}
               <Arrow className="IndexPage__manifesto-cta__link-arrow" />
             </div>
           </Link>

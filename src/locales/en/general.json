@@ -1,0 +1,8 @@
+{
+    "button" : {
+        "getStarted" : {
+            "text" : "Start earning",
+            "altText" : "Join & start earning"
+        }
+    }
+}

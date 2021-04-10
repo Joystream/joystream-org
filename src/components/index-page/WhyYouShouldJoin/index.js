@@ -18,22 +18,30 @@ const JoinInfoReason = ({ Icon, title, text }) => (
   </div>
 );
 
-const WhyYouShouldJoin = () => (
+const WhyYouShouldJoin = ({ t }) => (
   <div className="IndexPage__join-info-wrapper">
     <div className="IndexPage__join-info">
-      <h2 className="IndexPage__join-info__title">Why join our testnets?</h2>
+      <h2 className="IndexPage__join-info__title">{t('landing.whyYouShouldJoin.title')}</h2>
       <div className="IndexPage__join-info__reasons">
-        <JoinInfoReason Icon={Tokens} title="Tokens" text="Earn tokens distributed on mainnet, launching 2021" />
-        <JoinInfoReason Icon={Money} title="Cash" text="Get rewarded with real money for your participation" />
+        <JoinInfoReason
+          Icon={Tokens}
+          title={t('landing.whyYouShouldJoin.reasons.tokens.title')}
+          text={t('landing.whyYouShouldJoin.reasons.tokens.text')}
+        />
+        <JoinInfoReason
+          Icon={Money}
+          title={t('landing.whyYouShouldJoin.reasons.cash.title')}
+          text={t('landing.whyYouShouldJoin.reasons.cash.text')}
+        />
         <JoinInfoReason
           Icon={Reputation}
-          title="Reputation & Skill"
-          text="Gain the knowledge required to participate on mainnet"
+          title={t('landing.whyYouShouldJoin.reasons.reputationAndSkill.title')}
+          text={t('landing.whyYouShouldJoin.reasons.reputationAndSkill.text')}
         />
       </div>
       <Link to="/get-started" className="IndexPage__join-info__button-container">
         <div className="IndexPage__join-info__button">
-          <p className="IndexPage__join-info__button-text">Start earning</p>
+          <p className="IndexPage__join-info__button-text">{t("button.getStarted.text")}</p>
           <Arrow className="IndexPage__join-info__button-arrow" />
         </div>
       </Link>

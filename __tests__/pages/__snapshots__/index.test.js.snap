@@ -3,20 +3,33 @@
 exports[`IndexPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Joystream is a video platform controlled, owned, and operated by its users."
+    description="siteMetadata.description"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: The video platform DAO"
+    title="siteMetadata.title"
   />
   <Hero
     statusData={null}
+    t={[Function]}
   />
-  <BecomeFoundingMember />
-  <WhatWeDo />
-  <WhyYouShouldJoin />
-  <ExploreJoystream />
-  <RoadToMainnet />
-  <EarnTokens />
+  <BecomeFoundingMember
+    t={[Function]}
+  />
+  <WhatWeDo
+    t={[Function]}
+  />
+  <WhyYouShouldJoin
+    t={[Function]}
+  />
+  <ExploreJoystream
+    t={[Function]}
+  />
+  <RoadToMainnet
+    t={[Function]}
+  />
+  <EarnTokens
+    t={[Function]}
+  />
 </BaseLayout>
 `;
