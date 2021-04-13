@@ -63,9 +63,6 @@ const PeriodHighlightFounding = ({ userData, partialTokenAllocation }) => {
         <p>{totalScore}</p>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
-        <p>{calculateTokensAllocated(extraAllocation, totalScore, partialTokenAllocation)}</p>
-      </div>
-      <div className="FoundingMembersLeaderboards__table__score">
         <p>{formattedDate}</p>
       </div>
     </>
@@ -207,7 +204,6 @@ const Leaderboards = ({ location }) => {
             <p className="FoundingMembersLeaderboards__table__header__item">Total Score</p>
             {isFounding && (
               <>
-                <p className="FoundingMembersLeaderboards__table__header__item">Tokens Allocated / Projected</p>
                 <p className="FoundingMembersLeaderboards__table__header__item">Inducted</p>
               </>
             )}

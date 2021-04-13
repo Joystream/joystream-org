@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import CardCarousel from '../../../../components/CardCarousel';
-import calculateTokensAllocated from '../../../../utils/calculateTokensAllocated';
+import formatDate from '../../../../utils/formatDate';
 
 import './style.scss';
 
-const Card = ({ founderData, partialTokenAllocation }) => {
+const Card = ({ founderData }) => {
   const [imageHasError, setImageHasError] = useState(false);
 
   return (
@@ -32,9 +32,9 @@ const Card = ({ founderData, partialTokenAllocation }) => {
           <p className="FoundingMembersPage__card__score__stat">{founderData?.totalScore}</p>
         </div>
         <div className="FoundingMembersPage__card__score">
-          <p className="FoundingMembersPage__card__score__title">Tokens allocated / projected</p>
+          <p className="FoundingMembersPage__card__score__title">Induction Date</p>
           <p className="FoundingMembersPage__card__score__stat">
-            {calculateTokensAllocated(founderData?.extraAllocation, founderData?.totalScore, partialTokenAllocation)}
+            {founderData?.inducted?.inductedDate ? formatDate(founderData?.inducted?.inductedDate) : '-'}
           </p>
         </div>
       </div>
@@ -42,17 +42,17 @@ const Card = ({ founderData, partialTokenAllocation }) => {
   );
 };
 
-const List = ({ className, data, type, partialTokenAllocation }) => (
+const List = ({ className, data, type }) => (
   <div className={`${className} FoundingMembersPage__list-wrapper`}>
     <div className="FoundingMembersPage__list">
       <h2 className="FoundingMembersPage__list__title">
         {type === 'current' ? 'Current' : 'New'} founding members <span>{data?.length}</span>
       </h2>
-      <CardCarousel>
+      <div className="FoundingMembersPage__cards">
         {data?.map((founderData, index) => (
-          <Card founderData={founderData} key={index} partialTokenAllocation={partialTokenAllocation} />
+          <Card founderData={founderData} key={index} />
         ))}
-      </CardCarousel>
+      </div>
     </div>
   </div>
 );
