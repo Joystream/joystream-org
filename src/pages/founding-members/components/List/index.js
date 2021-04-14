@@ -46,7 +46,7 @@ const List = ({ className, data, type }) => (
   <div className={`${className} FoundingMembersPage__list-wrapper`}>
     <div className="FoundingMembersPage__list">
       <h2 className="FoundingMembersPage__list__title">
-        {type === 'current' ? 'Current' : 'New'} founding members <span>{data?.length}</span>
+        {type === 'current' ? 'Current' : 'New'} founding members<span>{data?.length}</span>
       </h2>
       <div className="FoundingMembersPage__cards">
         {data?.map((founderData, index) => (
