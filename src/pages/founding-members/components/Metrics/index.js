@@ -74,19 +74,21 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, pa
               <Table.HeaderItem textAlign="right">Total score</Table.HeaderItem>
             </Table.Header>
             <Table.Body className="FoundingMembersPage__leaderboard__body">
-              {foundingMembers?.map((foundingMember, index) => (
-                <Table.Row
-                  key={index}
-                  className="FoundingMembersPage__leaderboard__row FoundingMembersPage__leaderboard__row--founding"
-                >
-                  <MetricsRowData
+              {foundingMembers
+                ?.sort((prev, next) => next.totalScore - prev.totalScore)
+                ?.map((foundingMember, index) => (
+                  <Table.Row
                     key={index}
-                    data={foundingMember}
-                    partialTokenAllocation={partialTokenAllocation}
-                    founding
-                  />
-                </Table.Row>
-              ))}
+                    className="FoundingMembersPage__leaderboard__row FoundingMembersPage__leaderboard__row--founding"
+                  >
+                    <MetricsRowData
+                      key={index}
+                      data={foundingMember}
+                      partialTokenAllocation={partialTokenAllocation}
+                      founding
+                    />
+                  </Table.Row>
+                ))}
             </Table.Body>
           </Table>
           <ArrowButton
