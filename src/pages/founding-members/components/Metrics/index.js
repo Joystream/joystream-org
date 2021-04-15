@@ -86,7 +86,7 @@ const MetricsRowNonFoundingData = ({ data, Api }) => {
   );
 };
 
-const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, partialTokenAllocation }) => {
+const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool }) => {
   const [Api, setApi] = useState();
 
   useEffect(() => {

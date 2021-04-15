@@ -12,10 +12,9 @@ import { JoystreamWSProvider } from '../../../data/pages/founding-members';
 
 import './style.scss';
 
-const PeriodHighlightFounding = ({ userData, partialTokenAllocation }) => {
+const PeriodHighlightFounding = ({ userData }) => {
   const {
     inducted,
-    extraAllocation,
     memberHandle,
     memberId,
     totalDirectScore,
@@ -124,7 +123,6 @@ const PeriodHighlightNonFounding = ({ userData, Api }) => {
 const Leaderboards = ({ location }) => {
   const [isFounding, setIsFounding] = useState(location?.state?.isFoundingMember !== false);
   const [response, loading, error] = useAxios(foundingMembersJson);
-  const [partialTokenAllocation, setPartialTokenAllocation] = useState();
   const [Api, setApi] = useState();
 
   useEffect(() => {
@@ -136,20 +134,6 @@ const Leaderboards = ({ location }) => {
     }
     setUpApi();
   }, []);
-
-  useEffect(() => {
-    if (response) {
-      let partialTokenAllocation = 0;
-      const totalScoreSum = response?.currentFoundingMembers?.reduce((prev, curr) => prev + curr?.totalScore, 0);
-
-      if (totalScoreSum) {
-        partialTokenAllocation =
-          (response?.poolStats?.currentPoolSize - response?.poolStats?.allocatedFromPool) / totalScoreSum;
-      }
-
-      setPartialTokenAllocation(partialTokenAllocation);
-    }
-  }, [response]);
 
   const renderBody = () => {
     if (isFounding) {
@@ -163,7 +147,6 @@ const Leaderboards = ({ location }) => {
             <PeriodHighlightFounding
               key={index}
               userData={foundingMember}
-              partialTokenAllocation={partialTokenAllocation}
             />
           </Table.Row>
         ));
