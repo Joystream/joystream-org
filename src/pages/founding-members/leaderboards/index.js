@@ -4,9 +4,11 @@ import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.sv
 import cn from 'classnames';
 import Table from '../../../components/Table';
 import useAxios from '../../../utils/useAxios';
-import calculateTokensAllocated from '../../../utils/calculateTokensAllocated';
 import { ReactComponent as Achieved } from '../../../assets/svg/achieved.svg';
 import { foundingMembersJson } from '../../../data/pages/founding-members';
+import { ApiPromise, WsProvider } from '@polkadot/api';
+import { types } from '@joystream/types';
+import { JoystreamWSProvider } from '../../../data/pages/founding-members';
 
 import './style.scss';
 
@@ -36,7 +38,7 @@ const PeriodHighlightFounding = ({ userData, partialTokenAllocation }) => {
             <img
               className="FoundingMembersLeaderboards__table__main__placeholder"
               src={inducted?.avatar}
-              alt="icon of founding member"
+              alt=""
               onError={e => {
                 setImageHasError(true);
               }}
@@ -69,23 +71,35 @@ const PeriodHighlightFounding = ({ userData, partialTokenAllocation }) => {
   );
 };
 
-const PeriodHighlightNonFounding = ({ userData }) => {
-  const { inducted, memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore } = userData;
+const PeriodHighlightNonFounding = ({ userData, Api }) => {
+  const { memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore } = userData;
+  const [imageIsReady, setImageIsReady] = useState(false);
+  const [image, setImage] = useState();
 
-  const [imageHasError, setImageHasError] = useState(false);
+  useEffect(() => {
+    async function getImage() {
+      if (memberId && Api) {
+        setImage((await Api.query.members.membershipById(memberId)).avatar_uri);
+      }
+    }
+    getImage();
+  }, [Api]);
+
+  useEffect(() => {
+    if (image) {
+      const img = new Image();
+      img.addEventListener('load', () => {
+        setImageIsReady(true);
+      });
+      img.src = image;
+    }
+  }, [image]);
 
   return (
     <>
       <div className="FoundingMembersLeaderboards__table__main">
-        {!imageHasError && inducted?.avatar ? (
-          <img
-            className="FoundingMembersLeaderboards__table__main__placeholder"
-            src={inducted?.avatar}
-            alt="icon of founding member"
-            onError={e => {
-              setImageHasError(true);
-            }}
-          />
+        {imageIsReady ? (
+          <img className="FoundingMembersLeaderboards__table__main__placeholder" src={image} alt="" />
         ) : (
           <div className="FoundingMembersLeaderboards__table__main__placeholder"></div>
         )}
@@ -111,6 +125,17 @@ const Leaderboards = ({ location }) => {
   const [isFounding, setIsFounding] = useState(location?.state?.isFoundingMember !== false);
   const [response, loading, error] = useAxios(foundingMembersJson);
   const [partialTokenAllocation, setPartialTokenAllocation] = useState();
+  const [Api, setApi] = useState();
+
+  useEffect(() => {
+    async function setUpApi() {
+      const provider = new WsProvider(JoystreamWSProvider);
+      const api = await ApiPromise.create({ provider, types });
+      await api.isReady;
+      setApi(api);
+    }
+    setUpApi();
+  }, []);
 
   useEffect(() => {
     if (response) {
@@ -150,7 +175,7 @@ const Leaderboards = ({ location }) => {
             key={index}
             className="FoundingMembersLeaderboards__table__row FoundingMembersLeaderboards__table__row--nonfounding"
           >
-            <PeriodHighlightNonFounding key={index} userData={foundingMember} />
+            <PeriodHighlightNonFounding key={index} userData={foundingMember} Api={Api} />
           </Table.Row>
         ));
     }
