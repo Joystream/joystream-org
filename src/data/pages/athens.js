@@ -51,34 +51,25 @@ const analytics = [
 
 const goals = [
   {
-    title: 'Enable media on the platform',
-    text:
-      'As a "user governed media platform", allowing users to upload and consume and content was a major goal for us.',
+    title: 'athens.testnetGoals.goals.media.title',
+    text: 'athens.testnetGoals.goals.media.text',
   },
   {
-    title: 'Introduce platform memberships',
-    text:
-      /* eslint-disable-next-line */
-      'Although we are building an open blockchain in the sense that users are free to send tokens as they like, the Joystream experience is about having the platform users own, operate and govern the platform. We are agnostic on exactly what parts of the platform will be reserved for members, some actions will require and extra level of screening and accountability.',
-  },
+    title: 'athens.testnetGoals.goals.memberships.title',
+    text: 'athens.testnetGoals.goals.memberships.text'
+    },
   {
-    title: 'Build and release the storage node',
-    text:
-      /* eslint-disable-next-line */
-      'Although a storage node was built and used to host and distribute the platform content, it had some bugs making it unable to sync between clients and required a hardcoded liaison.',
+    title: 'athens.testnetGoals.goals.storageNode.title',
+    text: 'athens.testnetGoals.goals.storageNode.text',
     state: 'postponed',
   },
   {
-    title: 'Upgrade the runtime through a Council vote',
-    text: (
-      <>
-        The intention was for Jsgenesis to create a proposal for a{' '}
-        <Link href="https://blog.joystream.org/upgrades/">runtime upgrade</Link> and have the Council vote on it. If the
-        Council reached quorum, the consensus rules of the system would automatically get upgraded in flight.
-        Unfortunately, the <Link href="https://blog.joystream.org/sparta-sacked/">Sparta network crashed</Link> before
-        we reached this stage, and had to start Athens as a new chain with a new genesis block.
-      </>
-    ),
+    title: 'athens.testnetGoals.goals.runtimeUpgrade.title',
+    text: {
+      isModular: true,
+      key: 'athens.testnetGoals.goals.runtimeUpgrade.text',
+      components: [<Link href="https://blog.joystream.org/upgrades/">runtime upgrade</Link> ,<Link href="https://blog.joystream.org/sparta-sacked/">Sparta network crashed</Link>]
+    },
     state: 'postponed',
   },
 ];

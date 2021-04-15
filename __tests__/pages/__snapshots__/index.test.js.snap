@@ -3,11 +3,11 @@
 exports[`IndexPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="siteMetadata.description"
+    description="landing.siteMetadata.description"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="siteMetadata.title"
+    title="landing.siteMetadata.title"
   />
   <Hero
     statusData={null}

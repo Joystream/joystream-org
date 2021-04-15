@@ -14,7 +14,7 @@ const BecomeFoundingMember = ({ t }) => {
             {t("landing.becomeFM.title")}
           </h2>
           <h2 className="IndexPage__fm-cta__title IndexPage__fm-cta__title--alt">
-            {t("landing.becomeFM.altTitle")}
+            {t("landing.becomeFM.alternateTitle")}
           </h2>
           <Link
             className="IndexPage__fm-cta__link-wrapper"

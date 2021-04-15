@@ -1,0 +1,42 @@
+{
+    "sparta" : {
+        "siteMetadata" : {
+            "title" : "Joystream: The video platform DAO",
+            "description" : "Explore the Sparta testnet"
+        },
+        "hero" : {
+            "title" : "Sparta Network",
+            "text" : "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
+            "chipText" : "What is this?"
+        },
+        "heroCard" : {
+            "title" : "NETWORK DOWN",
+            "markdown" : "\n ### FAILURE IDENTIFIED\n\n  On Friday the 29th of March, the Sparta network went down due to a [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) that we had not pulled down before release.\n\n  More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/)."
+        },
+        "modal" : {
+            "title" : "Helmet of Sparta",
+            "text" : "<0>The Spartan army helmet</0> represents what Sparta is most known for today, their military might. For it's time, it was also known for its advanced governance system."
+        },
+        "testnetGoals" : {
+            "title" : "Testnet Goals",
+            "subtitle" : "The goals below are a simplified representation of the Key Results listed in our release OKR.",
+            "goals" : {
+                "blockchain" : {
+                    "title" : "Build and release a blockchain with a working Council",
+                    "text" : "As a \"user governed media platform\", allowing users to elect <0>Council Members</0> to represent their interest in day-to-day operations was a major goal for us."
+                },
+                "bugs" : {
+                    "title" : "Keep the quantity of more or less critical bugs at an acceptable level",
+                    "text" : "As demonstrated by the fact that the network crashed, we did not reach our goals in this case."
+                }
+            }
+        },
+        "roles" : {
+            "title" : "Roles available on the Sparta testnet"
+        },
+        "map" : {
+            "title" : "The city of Sparta",
+            "text" : "<0>Sparta was a prominent city-state in Ancient Greece.</0> In addition to its military might, it was also unique both for its time and compared to its greek rivals due its defined social system and constitution. <1/><2/> We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law, however draconian by modern standard."
+        }
+    }
+}

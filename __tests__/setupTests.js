@@ -6,6 +6,7 @@ import * as jest from 'jest';
 // "You will need to pass in an i18next instance by using initReactI18next"
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({ t: key => key }),
+  Trans: ({ children }) => children,
 }));
 
 configure({ adapter: new Adapter() });

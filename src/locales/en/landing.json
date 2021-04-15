@@ -1,5 +1,9 @@
 {
     "landing" : {
+        "siteMetadata" : {
+            "title" : "Joystream: The video platform DAO",
+            "description" : "Joystream is a video platform controlled, owned, and operated by its users."
+        },
         "hero" : {
             "title" : "The video platform DAO",
             "subtitle" : "Together, we are building a video platform controlled, owned, and operated by its users.",
@@ -16,7 +20,7 @@
         "becomeFM" : {
             "subtitle" : "Our brand new and unparalleled community token distribution scheme",
             "title" : "Become a Founding Member to earn mainnet tokens and influence the development of the platform.",
-            "altTitle" : "Become a Founding member and have a tangible impact on the development of our platform.",
+            "alternateTitle" : "Become a Founding member and have a tangible impact on the development of our platform.",
             "link" : "Learn more about our generous program"
         },
         "whatWeDo" : {
@@ -46,11 +50,13 @@
             "subtitle" : "Two fast evolving apps for consuming content and governance activities.",
             "atlas" : {
                 "text" : "Atlas is the flagship content consumer and publishing app for Joystream. Watch videos, follow creators and discover new featured content, or create a channel and build your audience.",
-                "link" : "Try out Atlas"
+                "link" : "Try out Atlas",
+                "imageAlt" : "overview visual of Atlas"
             },
             "pioneer" : {
                 "text" : "Pioneer is the place to participate in community governance and operation. Vote on elections, submit proposals to fund your project or get enter a paid role to power the platform.",
-                "link" : "Try out Pioneer"
+                "link" : "Try out Pioneer",
+                "imageAlt" : "overview visual of Pioneer"
             }
         },
         "roadToMainnet" : {

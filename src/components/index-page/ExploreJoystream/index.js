@@ -13,7 +13,7 @@ const ExploreJoystream = ({ t }) => (
 
       <div className="IndexPage__explore__explanation">
         <a href="https://play.joystream.org/">
-          <img src={AtlasVisual} alt="overview visual of atlas" />
+          <img src={AtlasVisual} alt={t("landing.exploreJoystream.atlas.imageAlt")} />
         </a>
         <div className="IndexPage__explore__explanation__content">
           <h3 className="IndexPage__explore__explanation__title">Atlas</h3>
@@ -39,7 +39,7 @@ const ExploreJoystream = ({ t }) => (
           </a>
         </div>
         <a href="https://testnet.joystream.org/">
-          <img src={PioneerVisual} alt="overview visual of pioneer" />
+          <img src={PioneerVisual} alt={t("landing.exploreJoystream.pioneer.imageAlt")}  />
         </a>
       </div>
     </div>

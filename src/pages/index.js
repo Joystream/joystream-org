@@ -25,8 +25,8 @@ const IndexPage = () => {
     <BaseLayout>
       <SiteMetadata
         lang={language}
-        title={t("siteMetadata.title")}
-        description={t("siteMetadata.description")}
+        title={t("landing.siteMetadata.title")}
+        description={t("landing.siteMetadata.description")}
       />
 
       <Hero t={t} statusData={statusData} />

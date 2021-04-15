@@ -4,5 +4,10 @@
             "text" : "Start earning",
             "altText" : "Join & start earning"
         }
+    },
+    "roles" : {
+        "validator" : "Validator",
+        "councilMember" : "Council Member",
+        "storageProvider" : "Storage Provider"
     }
 }

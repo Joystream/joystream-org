@@ -3,11 +3,11 @@
 exports[`SpartaPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Explore the Sparta testnet"
+    description="sparta.siteMetadata.description"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: The video platform DAO"
+    title="sparta.siteMetadata.title"
   />
   <Hero
     animationEnd={500}
@@ -18,7 +18,7 @@ exports[`SpartaPage page renders correctly 1`] = `
         icon="icon-component-mock"
         onClick={[Function]}
       >
-        What is this?
+        sparta.hero.chipText
       </Chip>
     }
     image="icon-mock"
@@ -26,23 +26,15 @@ exports[`SpartaPage page renders correctly 1`] = `
     noOverflow={false}
     reverse={false}
     theme="black"
-    title="Sparta Network"
+    title="sparta.hero.title"
   >
     <p
       className="SpartaPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.
+      sparta.hero.text
     </p>
     <HeroCard
-      content="
-  ### FAILURE IDENTIFIED
-
-  On Friday the 29th of March, the Sparta network went down due to a 
-  [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) 
-  that we had not pulled down before release. 
-  
-  More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/).
-"
+      content="sparta.heroCard.markdown"
       counterTitle=""
       date={null}
       error={true}
@@ -53,13 +45,19 @@ exports[`SpartaPage page renders correctly 1`] = `
       closeModal={[Function]}
       image="icon-mock"
       isOpen={false}
-      title="Helmet of Sparta"
+      title="sparta.modal.title"
     >
       <p>
-        <strong>
-          The Spartan army helmet
-        </strong>
-         represents what Sparta is most known for today, their military might. For it's time, it was also known for its advanced governance system.
+        <Trans
+          components={
+            Array [
+              <strong>
+                The spartan army helmet
+              </strong>,
+            ]
+          }
+          i18nKey="sparta.modal.text"
+        />
       </p>
     </TestnetModal>
   </Hero>
@@ -72,33 +70,35 @@ exports[`SpartaPage page renders correctly 1`] = `
       className=""
       subtitle={
         <React.Fragment>
-          The goals below are a simplified representation of the Key Results listed in our release OKR.
+          sparta.testnetGoals.subtitle
         </React.Fragment>
       }
-      title="Testnet Goals"
+      title="sparta.testnetGoals.title"
     >
       <GoalList
         data={
           Array [
             Object {
-              "text": <React.Fragment>
-                As a "user governed media platform", allowing users to elect
-                 
-                <Link
-                  className=""
-                  highlighted={false}
-                  to="/roles#council-member"
-                >
-                  Council Members
-                </Link>
-                 to represent their interest in day-to-day operations was a major goal for us.
-              </React.Fragment>,
-              "title": "Build and release a blockchain with a working Council",
+              "text": <Trans
+                components={
+                  Array [
+                    <Link
+                      className=""
+                      highlighted={false}
+                      to="/roles#council-member"
+                    >
+                      Council Members
+                    </Link>,
+                  ]
+                }
+                i18nKey="sparta.testnetGoals.goals.blockchain.text"
+              />,
+              "title": "sparta.testnetGoals.goals.blockchain.title",
             },
             Object {
               "state": "postponed",
-              "text": "As demonstrated by the fact that the network crashed, we did not reach our goals in this case.",
-              "title": "Keep the quantity of more or less critical bugs at an acceptable level",
+              "text": "sparta.testnetGoals.goals.bugs.text",
+              "title": "sparta.testnetGoals.goals.bugs.title",
             },
           ]
         }
@@ -113,7 +113,7 @@ exports[`SpartaPage page renders correctly 1`] = `
     <TitleWrapper
       className=""
       subtitle=""
-      title="Roles available on the Sparta testnet"
+      title="sparta.roles.title"
     >
       <ColumnsLayout
         className=""
@@ -137,7 +137,7 @@ exports[`SpartaPage page renders correctly 1`] = `
                 "hasLabel": true,
                 "image": "icon-component-mock",
                 "key": "validatorsCount",
-                "title": "Validator",
+                "title": "roles.validator",
                 "to": "/roles#validator",
                 "type": "most",
               },
@@ -145,7 +145,7 @@ exports[`SpartaPage page renders correctly 1`] = `
                 "hasLabel": true,
                 "image": "icon-component-mock",
                 "key": "councilMembersCount",
-                "title": "Council Member",
+                "title": "roles.councilMember",
                 "to": "/roles#council-member",
                 "type": "most",
               },
@@ -158,16 +158,21 @@ exports[`SpartaPage page renders correctly 1`] = `
   <MapInfo
     className=""
     location="sparta"
-    title="The city of Sparta"
+    title="sparta.map.title"
   >
     <p>
-      <strong>
-        Sparta was a prominent city-state in Ancient Greece.
-      </strong>
-       In addition to its military might, it was also unique both for its time and compared to its greek rivals due its defined social system and constitution.
-      <br />
-      <br />
-      We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law, however draconian by modern standard.
+      <Trans
+        components={
+          Array [
+            <strong>
+              Sparta was a prominent city-state in Ancient Greece.
+            </strong>,
+            <br />,
+            <br />,
+          ]
+        }
+        i18nKey="sparta.map.text"
+      />
     </p>
   </MapInfo>
 </BaseLayout>
