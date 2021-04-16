@@ -8,6 +8,8 @@
     "roles" : {
         "validator" : "Validator",
         "councilMember" : "Council Member",
-        "storageProvider" : "Storage Provider"
+        "storageProvider" : "Storage Provider",
+        "contentCreator" : "Content Creator",
+        "contentCurator" : "Content Curator"
     }
 }

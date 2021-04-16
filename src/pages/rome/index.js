@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { pagePropTypes } from '../../propTypes';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 
 import getApiPath from '../../utils/getApiPath';
 import mapStatusDataToRoles from '../../utils/mapStatusDataToRoles';
+import translateGoals from '../../utils/translateGoals';
+import convertToCamelCase from '../../utils/convertToCamelCase';
 
 import withApi from '../../components/_enhancers/withApi';
 
@@ -34,95 +38,102 @@ import './style.scss';
 
 const RomePage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   return (
     <BaseLayout>
-      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Rome Testnet" />
+      <SiteMetadata
+        lang={language}
+        title={t('rome.siteMetadata.title')}
+        description={t('rome.siteMetadata.description')}
+      />
 
       <Hero
         image={romeImage}
-        title="Rome Network"
+        title={t('rome.hero.title')}
         indent
-        chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
+        chip={<Chip onClick={() => setModalClosed(true)}>{t('rome.hero.chipText')}</Chip>}
         animationStartValue={0}
       >
-        <p className="RomePage__hero-paragraph">{sharedData.rolesDescription}</p>
-        <HeroCard
-          info
-          date="2020/05/20 15:00"
-          counterTitle={
-            <>
-              REPLACED BY CONSTANTINOPLE ON
-            </>
-          }
-        />
+        <p className="RomePage__hero-paragraph">{t('rome.hero.text')}</p>
+        <HeroCard info date="2020/05/20 15:00" counterTitle={<>{t('rome.heroCard.title')}</>} />
 
         <TestnetModal
-          title="Rome"
+          title={t('rome.modal.title')}
           image={RomeBuildingImg}
           closeModal={() => setModalClosed(false)}
           isOpen={isModalOpen}
         >
           <p>
-            <strong>The Roman empire left many landmarks.</strong> Their architecture and engineering skills was
-            unparalleled during their might. The concept of aqueducts was not devised by the Romans, but their beauty
-            and extent is.
+            <Trans i18nKey="rome.modal.text" components={[<strong>The Roman empire left many landmarks.</strong>]} />
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper title="Critical Documents">
+        <TitleWrapper title={t('rome.criticalDocuments.title')}>
           <ColumnsLayout>
-            <Pane
-              image={SpecImg}
-              disabled title="Full Specifications"
-            >
-              No specifications were published for Rome.
+            <Pane image={SpecImg} disabled title={t('rome.criticalDocuments.fullSpecifications.title')}>
+              {t('rome.criticalDocuments.fullSpecifications.text')}
             </Pane>
             <Pane
               image={ReleaseImg}
               href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome"
-              title="Release Plan"
+              title={t('rome.criticalDocuments.releasePlan.title')}
               target="_blank"
             >
-              Read the release plan as it was made during the planning stage, and learn more about how the development
-              evolved.
+              {t('rome.criticalDocuments.releasePlan.text')}
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
 
         <TitleWrapper
-          title="Testnet Goals"
+          title={t('rome.testnetGoals.title')}
           subtitle={
             <>
-              The goals below are a simplified representation of the Key Results listed in our Release{' '}
-              <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome#release-okrs">OKR</Link>
+              <Trans
+                i18nKey="rome.testnetGoals.subtitle"
+                components={[
+                  <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome#release-okrs">
+                    OKR
+                  </Link>,
+                ]}
+              />
             </>
           }
         >
-          <GoalList data={goalsData} />
+          <GoalList data={translateGoals(goalsData, t)} />
         </TitleWrapper>
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title="Incentivized Roles for the Rome Network">
+        <TitleWrapper title={t('rome.roles.title')}>
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet />
+            <RoleList
+              roles={roles.active.map(({ title, ...rest }) => ({
+                title: t(`roles.${convertToCamelCase(title)}`),
+                ...rest,
+              }))}
+              content={mapStatusDataToRoles(content)}
+              oldTestnet
+            />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title="Rome" location="rome">
+      <MapInfo title={t('rome.map.title')} location="rome">
         <p>
-          <strong>Rome was the capital of the great Roman Empire during its peak.</strong> As with previous testnet
-          names, the Roman Empire and Rome was another important step in the rise of democracy, the rule of law, and
-          modern governance structures.
-          <br />
-          <br />
-          <Link href="https://testnet.joystream.org/">
-            <PersonIcon /> Explore current testnet
-          </Link>
+          <Trans
+            i18nKey="rome.map.text"
+            components={[
+              <strong>Rome was the capital of the great Roman Empire during its peak.</strong>,
+              <br />,
+              <br />,
+              <PersonIcon />,
+              <Link href="https://testnet.joystream.org/">Explore current testnet</Link>,
+            ]}
+          />
         </p>
       </MapInfo>
     </BaseLayout>
@@ -133,3 +144,17 @@ RomePage.propTypes = pagePropTypes;
 
 export { RomePage };
 export default withApi(RomePage, getApiPath('STATUS'));
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
