@@ -7,7 +7,7 @@ exports[`IndexPage page renders correctly 1`] = `
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="landing.siteMetadata.title"
+    title="siteMetadata.title"
   />
   <Hero
     statusData={null}

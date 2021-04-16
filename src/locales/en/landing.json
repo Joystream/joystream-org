@@ -1,7 +1,6 @@
 {
     "landing" : {
         "siteMetadata" : {
-            "title" : "Joystream: The video platform DAO",
             "description" : "Joystream is a video platform controlled, owned, and operated by its users."
         },
         "hero" : {

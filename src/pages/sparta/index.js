@@ -39,7 +39,7 @@ const SpartaPage = ({ content }) => {
     <BaseLayout>
       <SiteMetadata
         lang={language}
-        title={t('sparta.siteMetadata.title')}
+        title={t('siteMetadata.title')}
         description={t('sparta.siteMetadata.description')}
       />
 

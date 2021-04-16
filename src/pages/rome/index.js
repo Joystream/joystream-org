@@ -45,7 +45,7 @@ const RomePage = ({ content }) => {
     <BaseLayout>
       <SiteMetadata
         lang={language}
-        title={t('rome.siteMetadata.title')}
+        title={t('siteMetadata.title')}
         description={t('rome.siteMetadata.description')}
       />
 

@@ -7,7 +7,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="acropolis.siteMetadata.title"
+    title="siteMetadata.title"
   />
   <Hero
     animationEnd={500}

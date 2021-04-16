@@ -47,7 +47,7 @@ const AcropolisPage = ({ content }) => {
     <BaseLayout>
       <SiteMetadata
         lang={language}
-        title={t('acropolis.siteMetadata.title')}
+        title={t('siteMetadata.title')}
         description={t('acropolis.siteMetadata.description')}
       />
 

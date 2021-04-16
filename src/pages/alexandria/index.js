@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { pagePropTypes } from '../../propTypes';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 
 import getApiPath from '../../utils/getApiPath';
 import mapStatusDataToRoles from '../../utils/mapStatusDataToRoles';
+import translateGoals from '../../utils/translateGoals';
+import convertToCamelCase from '../../utils/convertToCamelCase';
 
 import withApi from '../../components/_enhancers/withApi';
 
@@ -34,104 +38,91 @@ import './style.scss';
 
 const AlexandriaPage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   return (
     <BaseLayout>
-      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Alexandria Testnet" />
+      <SiteMetadata
+        lang={language}
+        title={t('siteMetadata.title')}
+        description={t('alexandria.siteMetadata.description')}
+      />
 
       <Hero
         image={alexandriaImage}
-        title="Alexandria Network"
+        title={t('alexandria.hero.title')}
         indent
-        chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
+        chip={<Chip onClick={() => setModalClosed(true)}>{t('alexandria.hero.chipText')}</Chip>}
         animationStartValue={0}
       >
-        <p className="AlexandriaPage__hero-paragraph">
-          The Alexandria release focuses on important technical updates
-          which will facilitate more efficient future development.</p>
-        <HeroCard
-          info
-          date="2020/12/21 15:00"
-          counterTitle={
-            <>
-              REPLACED BY BABYLON ON
-            </>
-          }
-          />
+        <p className="AlexandriaPage__hero-paragraph">{t('alexandria.hero.text')}</p>
+        <HeroCard info date="2020/12/21 15:00" counterTitle={<>{t('alexandria.heroCard.title')}</>} />
 
         <TestnetModal
-          title="Alexandria"
+          title={t('alexandria.modal.title')}
           image={alexandriaLogo}
           closeModal={() => setModalClosed(false)}
           isOpen={isModalOpen}
         >
           <p>
-            There are two sphinxes at the Pompey's Pillar site in Alexandria, Egypt. The sphinxes
-            and associated column are one of Alexandria's most important ancient monuments.
-            <br />
-            <br />
-            The Alexandria sphinxes should not be confused with the more well-known Great Sphinx located
-            at Giza, just under 200 kilometers south-east of Alexandria.
+            <Trans i18nKey="alexandria.modal.text" components={[<br />, <br />]} />
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper title="Critical Documents">
+        <TitleWrapper title={t('alexandria.criticalDocuments.title')}>
           <ColumnsLayout>
             <Pane
               image={SpecImg}
               href="https://github.com/Joystream/joystream/issues/986"
-              title="Release Plan"
+              title={t('alexandria.criticalDocuments.releasePlan.title')}
               target="_blank"
-          >
-              Read the release plan as it was made during the planning stage, and learn more about how the development
-              evolved.
+            >
+              {t('alexandria.criticalDocuments.releasePlan.text')}
             </Pane>
-            <Pane image={BlogImg}
-              title="Announcement Blog Post"
+            <Pane
+              image={BlogImg}
+              title={t('alexandria.criticalDocuments.blogPost.title')}
               href="https://blog.joystream.org/announcing-alexandria/"
               target="_blank"
             >
-              Read a brief primer on the Alexandria testnet and its objectives.
+              {t('alexandria.criticalDocuments.blogPost.text')}
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
 
         <TitleWrapper
-          title="Testnet Goals"
-          subtitle={
-            <>
-              The goals listed below are a simplified representation of our main objectives for the Alexandria testnet.
-            </>
-          }
+          title={t('alexandria.testnetGoals.title')}
+          subtitle={<>{t('alexandria.testnetGoals.subtitle')}</>}
         >
-          <GoalList data={goalsData} />
+          <GoalList data={translateGoals(goalsData, t)} />
         </TitleWrapper>
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title="Incentivized Roles for the Alexandria Network">
+        <TitleWrapper title={t('alexandria.roles.title')}>
           <ColumnsLayout>
             <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title="Alexandria" location="alexandria">
+      <MapInfo title={t('alexandria.map.title')} location="alexandria">
         <p>
-          <strong>Alexandria was founded in approximately 331 BC by Alexander the Great.</strong> The city was best known
-          for the Lighthouse of Alexandria, one of the Seven Wonders of the Ancient World, as well as its colossal Great Library.
-          <br />
-          <br />
-          Alexandria was the intellectual and cultural center of the ancient Mediterranean world for much of the
-          Hellenistic age and late antiquity. It was at one time the largest city in the ancient world before being
-          eventually overtaken by Rome.
-          <br />
-          <br />
-          <Link href="https://blog.joystream.org/announcing-alexandria/">
-            <PersonIcon /> Read the blog post
-          </Link>
+          <Trans
+            i18nKey="alexandria.map.text"
+            components={[
+              <strong>Alexandria was founded in approximately 331 BC by Alexander the Great.</strong>,
+              <br />,
+              <br />,
+              <br />,
+              <br />,
+              <PersonIcon />,
+              <Link href="https://blog.joystream.org/announcing-alexandria/">Read the blog post</Link>,
+            ]}
+          />
         </p>
       </MapInfo>
     </BaseLayout>
@@ -142,3 +133,17 @@ AlexandriaPage.propTypes = pagePropTypes;
 
 export { AlexandriaPage };
 export default withApi(AlexandriaPage, getApiPath('STATUS'));
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

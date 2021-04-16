@@ -43,7 +43,7 @@ const AthensPage = ({ content }) => {
     <BaseLayout>
       <SiteMetadata
         lang={language}
-        title={t('athens.siteMetadata.title')}
+        title={t('siteMetadata.title')}
         description={t('athens.siteMetadata.description')}
       />
 

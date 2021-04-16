@@ -11,5 +11,8 @@
         "storageProvider" : "Storage Provider",
         "contentCreator" : "Content Creator",
         "contentCurator" : "Content Curator"
+    },
+    "siteMetadata" : {
+        "title" : "Joystream: The video platform DAO"
     }
 }
