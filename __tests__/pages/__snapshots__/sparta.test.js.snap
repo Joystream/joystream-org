@@ -51,9 +51,7 @@ exports[`SpartaPage page renders correctly 1`] = `
         <Trans
           components={
             Array [
-              <strong>
-                The spartan army helmet
-              </strong>,
+              <strong />,
             ]
           }
           i18nKey="sparta.modal.text"
@@ -164,10 +162,7 @@ exports[`SpartaPage page renders correctly 1`] = `
       <Trans
         components={
           Array [
-            <strong>
-              Sparta was a prominent city-state in Ancient Greece.
-            </strong>,
-            <br />,
+            <strong />,
             <br />,
           ]
         }

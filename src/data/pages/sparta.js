@@ -45,7 +45,7 @@ const goals = [
     text: {
       isModular: true,
       key: 'sparta.testnetGoals.goals.blockchain.text',
-      components: [<Link to="/roles#council-member" />],
+      components: [<Link to="/roles#council-member">Council Members</Link>],
     },
   },
   {

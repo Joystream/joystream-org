@@ -69,8 +69,8 @@ const goals = [
       isModular: true,
       key: 'athens.testnetGoals.goals.runtimeUpgrade.text',
       components: [
-        <Link href="https://blog.joystream.org/upgrades/" />,
-        <Link href="https://blog.joystream.org/sparta-sacked/" />,
+        <Link href="https://blog.joystream.org/upgrades/">runtime upgrade</Link>,
+        <Link href="https://blog.joystream.org/sparta-sacked/">Sparta network crashed</Link>,
       ],
     },
     state: 'postponed',

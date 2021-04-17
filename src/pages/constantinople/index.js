@@ -122,7 +122,7 @@ const ConstantinoplePage = ({ content }) => {
               <strong />,
               <br />,
               <PersonIcon />,
-              <Link href="https://blog.joystream.org/announcing-constantinople/" />,
+              <Link href="https://blog.joystream.org/announcing-constantinople/">Read the blog post</Link>,
             ]}
           />
         </p>

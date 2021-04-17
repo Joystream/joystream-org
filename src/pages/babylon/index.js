@@ -121,7 +121,7 @@ const BabylonPage = ({ content }) => {
               <strong />,
               <br />,
               <PersonIcon />,
-              <Link href="https://blog.joystream.org/announcing-babylon/" />,
+              <Link href="https://blog.joystream.org/announcing-babylon/">Read the blog post</Link>,
             ]}
           />
         </p>

@@ -99,7 +99,7 @@ const AntiochPage = ({ content }) => {
               <strong />,
               <br />,
               <PersonIcon />,
-              <Link href="https://blog.joystream.org/announcing-antioch/"/>
+              <Link href="https://blog.joystream.org/announcing-antioch/">Read the blog post</Link>
             ]}
           />
         </p>

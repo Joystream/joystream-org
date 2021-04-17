@@ -71,7 +71,6 @@ const AcropolisPage = ({ content }) => {
       </Hero>
 
       <LayoutWrapper>
-
         <TitleWrapper title={t('acropolis.criticalDocuments.title')}>
           <ColumnsLayout>
             <Pane
@@ -99,7 +98,9 @@ const AcropolisPage = ({ content }) => {
             <Trans
               i18nKey="acropolis.testnetGoals.subtitle"
               components={[
-                <Link href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs" />,
+                <Link href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs">
+                  OKR
+                </Link>,
               ]}
             />
           }
@@ -127,12 +128,7 @@ const AcropolisPage = ({ content }) => {
         <p>
           <Trans
             i18nKey="acropolis.map.text"
-            components={[
-              <strong/>,
-              <br />,
-              <PersonIcon />,
-              <Link to="/athens"/>,
-            ]}
+            components={[<strong />, <br />, <PersonIcon />, <Link to="/athens">Explore previous testnet</Link>]}
           />
         </p>
       </MapInfo>

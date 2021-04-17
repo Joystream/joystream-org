@@ -124,7 +124,7 @@ const AlexandriaPage = ({ content }) => {
               <strong/>,
               <br />,
               <PersonIcon />,
-              <Link href="https://blog.joystream.org/announcing-alexandria/"/>,
+              <Link href="https://blog.joystream.org/announcing-alexandria/">Read the blog post</Link>,
             ]}
           />
         </p>

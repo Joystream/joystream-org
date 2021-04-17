@@ -58,7 +58,9 @@ const AthensPage = ({ content }) => {
         <HeroCard
           info
           date="2019/06/24 17:50"
-          counterTitle={<Trans i18nKey="athens.heroCard.text" components={[<br />, <Link to="/acropolis" />]} />}
+          counterTitle={
+            <Trans i18nKey="athens.heroCard.text" components={[<br />, <Link to="/acropolis">ACROPOLIS</Link>]} />
+          }
         />
 
         <TestnetModal
@@ -97,7 +99,9 @@ const AthensPage = ({ content }) => {
               <Trans
                 i18nKey="athens.testnetGoals.subtitle"
                 components={[
-                  <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens#okrs" />,
+                  <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens#okrs">
+                    OKR
+                  </Link>,
                 ]}
               />
             </>
@@ -126,12 +130,7 @@ const AthensPage = ({ content }) => {
         <p>
           <Trans
             i18nKey="athens.map.text"
-            components={[
-              <strong/>,
-              <br />,
-              <PersonIcon />,
-              <Link to="/sparta"/>,
-            ]}
+            components={[<strong />, <br />, <PersonIcon />, <Link to="/sparta">Explore previous testnet</Link>]}
           />
         </p>
       </MapInfo>

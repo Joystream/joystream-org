@@ -91,7 +91,9 @@ const RomePage = ({ content }) => {
               <Trans
                 i18nKey="rome.testnetGoals.subtitle"
                 components={[
-                  <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome#release-okrs" />,
+                  <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome#release-okrs">
+                    OKR
+                  </Link>,
                 ]}
               />
             </>
@@ -120,7 +122,12 @@ const RomePage = ({ content }) => {
         <p>
           <Trans
             i18nKey="rome.map.text"
-            components={[<strong />, <br />, <PersonIcon />, <Link href="https://testnet.joystream.org/" />]}
+            components={[
+              <strong />,
+              <br />,
+              <PersonIcon />,
+              <Link href="https://testnet.joystream.org/">Explore current testnet</Link>,
+            ]}
           />
         </p>
       </MapInfo>

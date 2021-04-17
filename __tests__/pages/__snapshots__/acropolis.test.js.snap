@@ -55,9 +55,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
         <Trans
           components={
             Array [
-              <strong>
-                Known for its great architecture, Acropolis'
-              </strong>,
+              <strong />,
             ]
           }
           i18nKey="acropolis.modal.text"
@@ -211,12 +209,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
       <Trans
         components={
           Array [
-            <strong>
-              The Acropolis is a citadel on a hill in the heart of Athens.
-            </strong>,
-            <br />,
-            <br />,
-            <br />,
+            <strong />,
             <br />,
             <icon-component-mock />,
             <Link

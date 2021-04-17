@@ -67,9 +67,7 @@ exports[`AthensPage page renders correctly 1`] = `
         <Trans
           components={
             Array [
-              <strong>
-                In Greek mythology, a little owl (Athene noctua)
-              </strong>,
+              <strong />,
             ]
           }
           i18nKey="athens.modal.text"
@@ -247,12 +245,7 @@ exports[`AthensPage page renders correctly 1`] = `
       <Trans
         components={
           Array [
-            <strong>
-              Athens is the capital of Greece.
-            </strong>,
-            <br />,
-            <br />,
-            <br />,
+            <strong />,
             <br />,
             <icon-component-mock />,
             <Link

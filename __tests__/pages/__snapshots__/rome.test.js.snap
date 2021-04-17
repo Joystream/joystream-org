@@ -55,9 +55,7 @@ exports[`RomePage page renders correctly 1`] = `
         <Trans
           components={
             Array [
-              <strong>
-                The Roman empire left many landmarks.
-              </strong>,
+              <strong />,
             ]
           }
           i18nKey="rome.modal.text"
@@ -224,10 +222,7 @@ exports[`RomePage page renders correctly 1`] = `
       <Trans
         components={
           Array [
-            <strong>
-              Rome was the capital of the great Roman Empire during its peak.
-            </strong>,
-            <br />,
+            <strong />,
             <br />,
             <icon-component-mock />,
             <Link
