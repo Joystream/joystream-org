@@ -13,7 +13,7 @@
         },
         "modal" : {
             "title" : "Alexandria",
-            "text" : "There are two sphinxes at the Pompey's Pillar site in Alexandria, Egypt. The sphinxes and associated column are one of Alexandria's most important ancient monuments. <0/><1/> The Alexandria sphinxes should not be confused with the more well-known Great Sphinx located at Giza, just under 200 kilometers south-east of Alexandria."
+            "text" : "There are two sphinxes at the Pompey's Pillar site in Alexandria, Egypt. The sphinxes and associated column are one of Alexandria's most important ancient monuments. <0/><0/> The Alexandria sphinxes should not be confused with the more well-known Great Sphinx located at Giza, just under 200 kilometers south-east of Alexandria."
         },
         "criticalDocuments" : {
             "title" : "Critical Documents",
@@ -49,7 +49,7 @@
         },
         "map" : {
             "title" : "Alexandria",
-            "text" : "<0>Alexandria was founded in approximately 331 BC by Alexander the Great.</0> The city was best known for the Lighthouse of Alexandria, one of the Seven Wonders of the Ancient World, as well as its colossal Great Library.<1/><2/> Alexandria was the intellectual and cultural center of the ancient Mediterranean world for much of the Hellenistic age and late antiquity. It was at one time the largest city in the ancient world before being eventually overtaken by Rome.<3/><4/><5/><6>Read the blog post</6>"
+            "text" : "<0>Alexandria was founded in approximately 331 BC by Alexander the Great.</0> The city was best known for the Lighthouse of Alexandria, one of the Seven Wonders of the Ancient World, as well as its colossal Great Library.<1/><1/> Alexandria was the intellectual and cultural center of the ancient Mediterranean world for much of the Hellenistic age and late antiquity. It was at one time the largest city in the ancient world before being eventually overtaken by Rome.<1/><1/><2/><3>Read the blog post</3>"
         }
     }
 }

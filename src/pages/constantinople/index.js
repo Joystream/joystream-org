@@ -31,8 +31,8 @@ import { ReactComponent as BlogImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import constantinopleBuildingImg from '../../assets/svg/constantinople-building.svg';
 
-import { roles, sharedData } from '../../data/pages';
-import { goalsData, launchDate } from '../../data/pages/constantinople';
+import { roles } from '../../data/pages';
+import { goalsData } from '../../data/pages/constantinople';
 
 import './style.scss';
 
@@ -114,18 +114,15 @@ const ConstantinoplePage = ({ content }) => {
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title="Constantinople" location="constantinople">
+      <MapInfo title={t("constantinople.map.title")} location="constantinople">
         <p>
           <Trans
             i18nKey="constantinople.map.text"
             components={[
-              <strong>
-                Constantinople was the capital city of the Eastern Roman Empire during the fourth century.{' '}
-              </strong>,
-              <br />,
+              <strong />,
               <br />,
               <PersonIcon />,
-              <Link href="https://blog.joystream.org/announcing-constantinople/">Read the blog post</Link>,
+              <Link href="https://blog.joystream.org/announcing-constantinople/" />,
             ]}
           />
         </p>

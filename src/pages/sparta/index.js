@@ -59,7 +59,7 @@ const SpartaPage = ({ content }) => {
           isOpen={isModalOpen}
         >
           <p>
-            <Trans i18nKey="sparta.modal.text" components={[<strong>The spartan army helmet</strong>]} />
+            <Trans i18nKey="sparta.modal.text" components={[<strong/>]} />
           </p>
         </TestnetModal>
       </Hero>
@@ -89,7 +89,7 @@ const SpartaPage = ({ content }) => {
         <p>
           <Trans
             i18nKey="sparta.map.text"
-            components={[<strong>Sparta was a prominent city-state in Ancient Greece.</strong>, <br />, <br />]}
+            components={[<strong/>, <br />]}
           />
         </p>
       </MapInfo>

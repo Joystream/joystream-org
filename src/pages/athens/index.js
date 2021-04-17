@@ -58,9 +58,7 @@ const AthensPage = ({ content }) => {
         <HeroCard
           info
           date="2019/06/24 17:50"
-          counterTitle={
-            <Trans i18nKey="athens.heroCard.text" components={[<br />, <Link to="/acropolis">ACROPOLIS</Link>]} />
-          }
+          counterTitle={<Trans i18nKey="athens.heroCard.text" components={[<br />, <Link to="/acropolis" />]} />}
         />
 
         <TestnetModal
@@ -70,10 +68,7 @@ const AthensPage = ({ content }) => {
           isOpen={isModalOpen}
         >
           <p>
-            <Trans
-              i18nKey="athens.modal.text"
-              components={[<strong>In Greek mythology, a little owl (Athene noctua)</strong>]}
-            />
+            <Trans i18nKey="athens.modal.text" components={[<strong />]} />
           </p>
         </TestnetModal>
       </Hero>
@@ -102,9 +97,7 @@ const AthensPage = ({ content }) => {
               <Trans
                 i18nKey="athens.testnetGoals.subtitle"
                 components={[
-                  <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens#okrs">
-                    OKR
-                  </Link>,
+                  <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens#okrs" />,
                 ]}
               />
             </>
@@ -134,15 +127,10 @@ const AthensPage = ({ content }) => {
           <Trans
             i18nKey="athens.map.text"
             components={[
-              <strong>Athens is the capital of Greece.</strong>,
-              <br />,
-              <br />,
-              <br />,
+              <strong/>,
               <br />,
               <PersonIcon />,
-              <Link to="/sparta">
-                Explore previous testnet
-              </Link>
+              <Link to="/sparta"/>,
             ]}
           />
         </p>

@@ -31,8 +31,8 @@ import { ReactComponent as BlogImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import alexandriaLogo from '../../assets/svg/alexandria-logo.svg';
 
-import { roles, sharedData } from '../../data/pages';
-import { goalsData, launchDate } from '../../data/pages/alexandria';
+import { roles } from '../../data/pages';
+import { goalsData } from '../../data/pages/alexandria';
 
 import './style.scss';
 
@@ -66,7 +66,7 @@ const AlexandriaPage = ({ content }) => {
           isOpen={isModalOpen}
         >
           <p>
-            <Trans i18nKey="alexandria.modal.text" components={[<br />, <br />]} />
+            <Trans i18nKey="alexandria.modal.text" components={[<br />]} />
           </p>
         </TestnetModal>
       </Hero>
@@ -104,7 +104,14 @@ const AlexandriaPage = ({ content }) => {
       <LayoutWrapper dark>
         <TitleWrapper title={t('alexandria.roles.title')}>
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet />
+            <RoleList
+              roles={roles.active.map(({ title, ...rest }) => ({
+                title: t(`roles.${convertToCamelCase(title)}`),
+                ...rest,
+              }))}
+              content={mapStatusDataToRoles(content)}
+              oldTestnet
+            />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
@@ -114,13 +121,10 @@ const AlexandriaPage = ({ content }) => {
           <Trans
             i18nKey="alexandria.map.text"
             components={[
-              <strong>Alexandria was founded in approximately 331 BC by Alexander the Great.</strong>,
-              <br />,
-              <br />,
-              <br />,
+              <strong/>,
               <br />,
               <PersonIcon />,
-              <Link href="https://blog.joystream.org/announcing-alexandria/">Read the blog post</Link>,
+              <Link href="https://blog.joystream.org/announcing-alexandria/"/>,
             ]}
           />
         </p>

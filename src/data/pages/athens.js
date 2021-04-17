@@ -56,8 +56,8 @@ const goals = [
   },
   {
     title: 'athens.testnetGoals.goals.memberships.title',
-    text: 'athens.testnetGoals.goals.memberships.text'
-    },
+    text: 'athens.testnetGoals.goals.memberships.text',
+  },
   {
     title: 'athens.testnetGoals.goals.storageNode.title',
     text: 'athens.testnetGoals.goals.storageNode.text',
@@ -68,7 +68,10 @@ const goals = [
     text: {
       isModular: true,
       key: 'athens.testnetGoals.goals.runtimeUpgrade.text',
-      components: [<Link href="https://blog.joystream.org/upgrades/">runtime upgrade</Link> ,<Link href="https://blog.joystream.org/sparta-sacked/">Sparta network crashed</Link>]
+      components: [
+        <Link href="https://blog.joystream.org/upgrades/" />,
+        <Link href="https://blog.joystream.org/sparta-sacked/" />,
+      ],
     },
     state: 'postponed',
   },

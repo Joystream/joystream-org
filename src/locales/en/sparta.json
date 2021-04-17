@@ -35,7 +35,7 @@
         },
         "map" : {
             "title" : "The city of Sparta",
-            "text" : "<0>Sparta was a prominent city-state in Ancient Greece.</0> In addition to its military might, it was also unique both for its time and compared to its greek rivals due its defined social system and constitution. <1/><2/> We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law, however draconian by modern standard."
+            "text" : "<0>Sparta was a prominent city-state in Ancient Greece.</0> In addition to its military might, it was also unique both for its time and compared to its greek rivals due its defined social system and constitution. <1/><1/> We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law, however draconian by modern standard."
         }
     }
 }

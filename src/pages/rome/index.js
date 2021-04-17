@@ -31,8 +31,8 @@ import { ReactComponent as ReleaseImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import RomeBuildingImg from '../../assets/svg/rome-building.svg';
 
-import { roles, sharedData } from '../../data/pages';
-import { goalsData, launchDate } from '../../data/pages/rome';
+import { roles } from '../../data/pages';
+import { goalsData } from '../../data/pages/rome';
 
 import './style.scss';
 
@@ -43,11 +43,7 @@ const RomePage = ({ content }) => {
 
   return (
     <BaseLayout>
-      <SiteMetadata
-        lang={language}
-        title={t('siteMetadata.title')}
-        description={t('rome.siteMetadata.description')}
-      />
+      <SiteMetadata lang={language} title={t('siteMetadata.title')} description={t('rome.siteMetadata.description')} />
 
       <Hero
         image={romeImage}
@@ -66,7 +62,7 @@ const RomePage = ({ content }) => {
           isOpen={isModalOpen}
         >
           <p>
-            <Trans i18nKey="rome.modal.text" components={[<strong>The Roman empire left many landmarks.</strong>]} />
+            <Trans i18nKey="rome.modal.text" components={[<strong />]} />
           </p>
         </TestnetModal>
       </Hero>
@@ -95,9 +91,7 @@ const RomePage = ({ content }) => {
               <Trans
                 i18nKey="rome.testnetGoals.subtitle"
                 components={[
-                  <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome#release-okrs">
-                    OKR
-                  </Link>,
+                  <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome#release-okrs" />,
                 ]}
               />
             </>
@@ -126,13 +120,7 @@ const RomePage = ({ content }) => {
         <p>
           <Trans
             i18nKey="rome.map.text"
-            components={[
-              <strong>Rome was the capital of the great Roman Empire during its peak.</strong>,
-              <br />,
-              <br />,
-              <PersonIcon />,
-              <Link href="https://testnet.joystream.org/">Explore current testnet</Link>,
-            ]}
+            components={[<strong />, <br />, <PersonIcon />, <Link href="https://testnet.joystream.org/" />]}
           />
         </p>
       </MapInfo>

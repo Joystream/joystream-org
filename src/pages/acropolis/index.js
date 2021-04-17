@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 
 import getApiPath from '../../utils/getApiPath';
-import mapStatusDataToAnalytics from '../../utils/mapStatusDataToAnalytics';
 import mapStatusDataToRoles from '../../utils/mapStatusDataToRoles';
 import translateGoals from '../../utils/translateGoals';
 import convertToCamelCase from '../../utils/convertToCamelCase';
@@ -13,7 +12,6 @@ import withApi from '../../components/_enhancers/withApi';
 
 import BaseLayout from '../../components/_layouts/Base';
 import HeroCard from '../../components/HeroCard';
-import Analytics from '../../components/Analytics';
 import TitleWrapper from '../../components/TitleWrapper';
 import RoleList from '../../components/RoleList';
 import ColumnsLayout from '../../components/ColumnsLayout';
@@ -34,7 +32,6 @@ import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AcropolisImg from '../../assets/svg/acropolis-building.svg';
 
 import { roles, goals } from '../../data/pages/acropolis';
-import { sharedData } from '../../data/pages';
 
 import './style.scss';
 
@@ -58,7 +55,7 @@ const AcropolisPage = ({ content }) => {
         chip={<Chip onClick={() => setModalClosed(true)}>{t('acropolis.hero.chipText')}</Chip>}
         animationStartValue={0}
       >
-        <p className="AcropolisPage__hero-paragraph">{t("acropolis.hero.text")}</p>
+        <p className="AcropolisPage__hero-paragraph">{t('acropolis.hero.text')}</p>
         <HeroCard info date="2020/03/17 15:42" counterTitle={<>{t('acropolis.heroCard.title')}</>} />
 
         <TestnetModal
@@ -68,22 +65,12 @@ const AcropolisPage = ({ content }) => {
           isOpen={isModalOpen}
         >
           <p>
-            <Trans
-              i18nKey="acropolis.modal.text"
-              components={[<strong>Known for its great architecture, Acropolis'</strong>]}
-            />
+            <Trans i18nKey="acropolis.modal.text" components={[<strong />]} />
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-        {/*
-
-        <TitleWrapper title="Network Statistics">
-          <Analytics content={mapStatusDataToAnalytics(content)} />
-        </TitleWrapper>
-
-        */}
 
         <TitleWrapper title={t('acropolis.criticalDocuments.title')}>
           <ColumnsLayout>
@@ -112,9 +99,7 @@ const AcropolisPage = ({ content }) => {
             <Trans
               i18nKey="acropolis.testnetGoals.subtitle"
               components={[
-                <Link href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs">
-                  OKR
-                </Link>,
+                <Link href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs" />,
               ]}
             />
           }
@@ -143,15 +128,10 @@ const AcropolisPage = ({ content }) => {
           <Trans
             i18nKey="acropolis.map.text"
             components={[
-              <strong>The Acropolis is a citadel on a hill in the heart of Athens.</strong>,
-              <br />,
-              <br />,
-              <br />,
+              <strong/>,
               <br />,
               <PersonIcon />,
-              <Link to="/athens">
-                Explore previous testnet
-              </Link>,
+              <Link to="/athens"/>,
             ]}
           />
         </p>
