@@ -1,6 +1,8 @@
 import React, { useState, createRef, useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import { InView } from 'react-intersection-observer';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 
 import BaseLayout from '../../components/_layouts/Base';
 import LayoutWrapper from '../../components/LayoutWrapper';
@@ -16,8 +18,26 @@ import { rolesData } from '../../data/pages/roles';
 
 import './style.scss';
 
+const translateRolesData = ({ active, ...rest }, t) => {
+  let activeRoles = active.map(({ title, overview, responsibilites, requirements }) => {
+    return {
+      title: t(`${title}`),
+      overview: t(`${overview}`),
+      responsibilities: responsibilites.map(responsibility => t(`${responsibility}`)),
+      requirements: requirements.map(requirement => t(`${requirement}`)),
+    };
+  });
+
+  return {
+    active: activeRoles,
+    ...rest,
+  };
+};
+
 const RolesPage = () => {
   const [elementInViewport, setElementInViewport] = useState('');
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   const elementsRef = useMemo(() => {
     const obj = {};
@@ -34,17 +54,18 @@ const RolesPage = () => {
 
   return (
     <BaseLayout>
-      <SiteMetadata
-        title="Joystream: The video platform DAO"
-        description="Read more about current and future roles on the Joystream platform"
-      />
+      <SiteMetadata lang={language} title={t('siteMetadata.title')} description={t('roles.siteMetadata.description')} />
 
-      <Hero image={rolesImage} title="Choose your preferred role" animationStartValue={0}>
-        <p className="RolesPage__hero-paragraph">Participating in a role on our testnet lets you earn tJOY while influencing the platform's ongoing development.</p>
+      <Hero image={rolesImage} title={t('roles.hero.title')} animationStartValue={0}>
+        <p className="RolesPage__hero-paragraph">{t('roles.hero.text')}</p>
       </Hero>
 
       <LayoutWrapper gradient>
-        <Sidebar onElementChange={scrollToElement} currentElement={elementInViewport} data={rolesData} />
+        <Sidebar
+          onElementChange={scrollToElement}
+          currentElement={elementInViewport}
+          data={translateRolesData(rolesData, t)}
+        />
         <div className="RoleOverview__Wrapper">
           {Object.keys(rolesData).map(key => {
             return rolesData[key].map(role => (
@@ -69,3 +90,17 @@ const RolesPage = () => {
 };
 
 export default RolesPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

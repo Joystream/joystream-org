@@ -3,11 +3,11 @@
 exports[`RolesPage page renders correctly 1`] = `
 <BaseLayout>
   <SiteMetadata
-    description="Read more about current and future roles on the Joystream platform"
+    description="roles.siteMetadata.description"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: The video platform DAO"
+    title="siteMetadata.title"
   />
   <Hero
     animationEnd={500}
@@ -19,12 +19,12 @@ exports[`RolesPage page renders correctly 1`] = `
     noOverflow={false}
     reverse={false}
     theme="black"
-    title="Choose your preferred role"
+    title="roles.hero.title"
   >
     <p
       className="RolesPage__hero-paragraph"
     >
-      Participating in a role on our testnet lets you earn tJOY while influencing the platform's ongoing development.
+      roles.hero.text
     </p>
   </Hero>
   <LayoutWrapper
@@ -38,175 +38,95 @@ exports[`RolesPage page renders correctly 1`] = `
         Object {
           "active": Array [
             Object {
-              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=26a32a8d8d",
-              "id": "validator",
-              "image": "icon-component-mock",
-              "overview": "The Joystream platform state lives on a blockchain consensus system.
-    This consensus system is a variant of classical BFT consensus combined
-    with Proof-of-Stake to determine voting power. A validator is an actor
-    which checks the validity of newly constructed blocks, proposes new blocks
-    and participates in the consensus process for committing new block to the chain.
-    This role has a purpose very similar to the miners in the Bitcoin blockchain.
-    Importantly, anyone can fully check the validity of the blockchain,
-    not just validators, and this is called validation.",
-              "questionLink": "mailto:hello@jsgenesis.com",
+              "overview": "roles.validator.overview",
               "requirements": Array [
-                "Experienced with how to setup and maintain high performance IT infrastructure",
-                "Access to highly performant and reliable IT infrastructure, with high storage,
-    (up & down) bandwidth and processing capacity",
-                "Able to securely store keys",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "roles.validator.requirements.setupAndMaintainInfrastructure",
+                "roles.validator.requirements.accessToPerformantInfrastructure",
+                "roles.validator.requirements.storeKeys",
+                "roles.validator.requirements.stake",
               ],
-              "responsibilites": Array [
-                "Run and maintain screening nodes that are always available and performant",
-                "Help enforce the consensus rules of the network",
+              "responsibilities": Array [
+                "roles.validator.responsibilities.runAndMaintainScreeningNodes",
+                "roles.validator.responsibilities.enforceRules",
               ],
-              "title": "Validator",
-              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/validators",
+              "title": "roles.validator.title",
             },
             Object {
-              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=51a3da04f8",
-              "id": "council-member",
-              "image": "icon-component-mock",
-              "overview": "At the heart of the governance process on the platform is the proposal system,
-        which allows anyone to submit some suggestion for changing the state or
-        policy of the platform in some way. These proposals are processed and voted on by a council,
-        where the participants are referred to as council members. A seat on the council is
-        won through an election process, and lasts for some period of time until a new election.",
-              "questionLink": "mailto:hello@jsgenesis.com",
+              "overview": "",
               "requirements": Array [
-                "Proficiency with basic data analysis and sufficient reputation and standing within
-        the community to earn supporting votes in elections from other platform members",
-                "A deep understanding of the Joystream platform structure, function and resource allocation",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
+                "",
               ],
-              "responsibilites": Array [
-                "Discuss the meaning and merits of incoming proposals, covering a broad range of topics",
-                "Vote on proposals",
-                "Represent the community members and your constituency to make day-to-day operations decisions",
+              "responsibilities": Array [
+                "",
+                "",
+                "",
               ],
-              "title": "Council Member",
-              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/council-members",
+              "title": "",
             },
             Object {
-              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460",
-              "id": "storage-provider",
-              "image": "icon-component-mock",
-              "overview": "There are critical platform assets that do not live on the blockchain,
-        such as images and content media. The integrity of these assets is secured by the chain,
-        but a separate set of storage and distribution nodes enables uploading and downloading of
-        such data. The storage provider is involved this activity, specifically by storing large quantities of data.",
-              "questionLink": "mailto:hello@jsgenesis.com",
+              "overview": "",
               "requirements": Array [
-                "Experienced with how to setup and maintain high performance IT infrastructure",
-                "Access to highly performant and reliable IT infrastructure with high storage capacity",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
+                "",
               ],
-              "responsibilites": Array [
-                "Run and maintain storage nodes that store very large quantities of static data,
-        synchronize with other storage nodes, share data with distributors, and accepts
-        inbound uploads from end users",
+              "responsibilities": Array [
+                "",
               ],
-              "title": "Storage Provider",
-              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead",
+              "title": "",
             },
             Object {
-              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460",
-              "id": "storage-lead",
-              "image": "icon-component-mock",
-              "overview": "The Storage Lead is hired directly by the Council through the proposals system and
-      is dedicated to the hiring, firing and wider management of Storage Providers on the network.",
-              "questionLink": "mailto:hello@jsgenesis.com",
+              "overview": "",
               "requirements": Array [
-                "Experienced with how to setup and maintain high performance IT infrastructure",
-                "Ability to effectively manage and coordinate the actions of the Storage Providers",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
+                "",
               ],
-              "responsibilites": Array [
-                "The Storage Lead is responsible for ensuring that Storage Providers are performing adequately.
-        Each one must hold a complete and up-to-date copy of the content directory and ensure uptime in
-        order to effectively serve content consumers.",
+              "responsibilities": Array [
+                "",
               ],
-              "title": "Storage Lead",
-              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers",
+              "title": "",
             },
             Object {
-              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93",
-              "id": "content-curator",
-              "image": "icon-component-mock",
-              "overview": "All of the media content published on the platform lives in an on-chain content directory.
-         There are a range of different content types, and each type has a schema for a rich
-         description of its structure, function and policies. For the effective use of of content,
-         for example in rendering, discovery and monetization, it is critical to ensure the validity
-         of the published information for all content. In particular, it is also important to resolve
-         possible disputes about ownership and presence of any piece of content on the platform.
-         It is the task of the content curators to do the work involved in processes that address these objectives.",
-              "questionLink": "mailto:hello@jsgenesis.com",
+              "overview": "",
               "requirements": Array [
-                "Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
               ],
-              "responsibilites": Array [
-                "Monitor the publishing of new content into the content directory,
-        and respond to reports about contested publications",
-                "Adjudicate possible dispute processes resulting from reports from users",
-                "Update information on content to be accurate",
-                <React.Fragment>
-                  Collaborate with 
-                  <Link
-                    className=""
-                    highlighted={false}
-                    href="#builder"
-                  >
-                     Builders
-                  </Link>
-                   to improve both tools, and user facing experiences, to improve the integrity of the content directory
-                </React.Fragment>,
+              "responsibilities": Array [
+                "",
+                "",
+                "",
+                "[object Object]",
               ],
-              "title": "Content Curator",
-              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-curators",
+              "title": "",
             },
             Object {
-              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=0ea466b90d",
-              "id": "content-creator",
-              "image": "icon-component-mock",
-              "overview": "As a video platform, one of the most important platform assets is the content published
-        on the platform. Since video is such a flexible media type, which can encompass a wide
-        range of content categories, it is the primary focus. However, the intention is to support
-        a broader range of content types over time. The content creators are those involved in
-         creating, publishing and monetizing content on the platform.",
-              "questionLink": "mailto:hello@jsgenesis.com",
+              "overview": "",
               "requirements": Array [
-                "Have the right to publish existing or new content to the platform",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
               ],
-              "responsibilites": Array [
-                "Publish content and build an audience",
+              "responsibilities": Array [
+                "",
               ],
-              "title": "Content Creator",
-              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-creators",
+              "title": "",
             },
             Object {
-              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93",
-              "id": "content-lead",
-              "image": "icon-component-mock",
-              "overview": "The Council has the power to appoint a Content Curator Lead for the network who can hire further
-      Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing
-      with the council, the Lead can also decide to fire curators who are not performing their jobs adequately.",
-              "questionLink": "mailto:hello@jsgenesis.com",
+              "overview": "",
               "requirements": Array [
-                "Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
               ],
-              "responsibilites": Array [
-                "Monitor the publishing of new content into the content directory,
-        and respond to reports about contested publications",
-                "Adjudicate possible dispute processes resulting from reports from users",
-                "Update information on content to be accurate",
-                "Manage and coordinate the actions of the Content Working Group",
+              "responsibilities": Array [
+                "",
+                "",
+                "",
+                "",
               ],
-              "title": "Content Lead",
-              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead",
+              "title": "",
             },
           ],
           "upcoming": Array [
@@ -214,23 +134,15 @@ exports[`RolesPage page renders correctly 1`] = `
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2a9bd4a3ed",
               "id": "membership-screener",
               "image": "icon-component-mock",
-              "overview": "A membership is an integrated representation of identifying information
-        and associated activities of an actor on the platform. The direct way of
-        establishing membership will be to simply pay a one time fee. However, since its
-        currently challenging for many prospective non-technical end users to obtain, store
-        and use crypto assets, there will be a way for users to get a membership for free,
-        which will not require any tokens in order to use the platform in a limited capacity.
-        The membership screener is the role responsible for granting such
-        memberships, while screening for Sybill attackers and abusers.",
+              "overview": "",
               "requirements": Array [
-                "Experienced with how to setup and maintain high performance IT infrastructure",
-                "Access to highly performant and reliable IT infrastructure,
-        with high storage, (up & down) bandwidth and processing capacity",
-                "Familiarity with how online platforms are attacked through botnets, IP anonymization, automated agents, etc.",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
+                "",
+                "",
               ],
               "responsibilites": Array [
-                "Run and maintain screening nodes that are always available and performant",
+                "",
                 <React.Fragment>
                   Collaborate with 
                   <Link
@@ -250,9 +162,9 @@ exports[`RolesPage page renders correctly 1`] = `
                   </Link>
                    to improve screening mechanisms by discussing screening techniques, sharing traffic information
                 </React.Fragment>,
-                "Be responsive and reactive to changing circumstances",
+                "",
               ],
-              "title": "Membership Screener",
+              "title": "",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=bd10fbb23f",
@@ -271,14 +183,13 @@ exports[`RolesPage page renders correctly 1`] = `
                 . Since this is invariably an imperfect process, there must be some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the membership curators.
               </React.Fragment>,
               "requirements": Array [
-                "Proficient with basic data analysis and scripting",
-                "A deep understanding of the Joystream platform structure, function and attack vectors",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
+                "",
               ],
               "responsibilites": Array [
-                "Monitor platform level activity for abuse and collusion",
-                "Propose changes to status of memberships which are identified,
-        and participate in any dispute process which may follow",
+                "",
+                "",
                 <React.Fragment>
                   Collaborate with 
                   <Link
@@ -300,48 +211,37 @@ exports[`RolesPage page renders correctly 1`] = `
                    to improve tools for identifying such members
                 </React.Fragment>,
               ],
-              "title": "Membership Curator",
+              "title": "",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2d978eeb0c",
               "id": "bandwidth-provider",
               "image": "icon-component-mock",
-              "overview": "There are critical platform assets that do not live on the blockchain, such as images
-      and content media. The integrity of these assets is secured by the chain, but a separate
-      set of storage and distribution nodes enable uploading and downloading of such data.
-      The bandwidth provider is involved this activity,
-        specifically by distributing static data to end users at scale.",
+              "overview": "",
               "requirements": Array [
-                "Experienced with how to setup and maintain high performance IT infrastructure",
-                "Access to highly performant and reliable IT infrastructure, with high storage
-        capacity and a lot of upstream capacity",
-                "Located within certain bounds to designated geographic areas, in order to limit latency",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
+                "",
+                "",
               ],
               "responsibilites": Array [
-                "Run and maintain distributor nodes that deliver large volumes of upstream data to a large number of simultaneous end users",
+                "",
               ],
-              "title": "Bandwidth Provider",
+              "title": "",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=766d15796d",
               "id": "discovery-provider",
               "image": "icon-component-mock",
-              "overview": "All of the content on the platform is in a designated content directory, and effectively navigating
-        this directory requires a full copy of this directory. Moreover, in order to do things like search and
-        context based recommendations one needs to apply some sort of heuristic on top of this directory,
-        which is also some what sensitive abusive attempts to rank higher. The discovery providers play
-        the role of responding to such discovery queries to end users, by combining light client inclusion
-        proofs with local search and ranking policy heuristics.",
+              "overview": "",
               "requirements": Array [
-                "Experienced with how to setup and maintain high performance IT infrastructure",
-                "Access to highly performant and reliable IT infrastructure",
-                "Able to formulate, test and suggest new ranking heuristics for use by discovery provider nodes",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
+                "",
+                "",
               ],
               "responsibilites": Array [
-                "Run and maintain discovery nodes that respond to discovery-related queries by staying in
-        sync with the content directory, and applying local ranking heuristics.",
+                "",
                 <React.Fragment>
                   Collaborate with 
                   <Link
@@ -354,25 +254,23 @@ exports[`RolesPage page renders correctly 1`] = `
                    to improve both tools, and user facing experiences, to improve the discovery experience
                 </React.Fragment>,
               ],
-              "title": "Discovery Provider",
+              "title": "",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=4ea03faa7a",
               "id": "live-streaming-provider",
               "image": "icon-component-mock",
-              "overview": "The platform supports live video, allowing publisher to distribute content as it is created.
-      The live streaming providers are responsible for directly, or indirectly from peer
-      providers, taking a (transcoded) stream from the source publisher, and relaying it to end users.",
+              "overview": "",
               "requirements": Array [
-                "Experienced with how to setup and maintain high performance IT infrastructure",
-                "Access to highly performant and reliable IT infrastructure, with large amount of upstream bandwidth capacity.",
-                "Located within certain bounds to designated geographic areas, in order to limit latency",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
+                "",
+                "",
               ],
               "responsibilites": Array [
-                "Run and maintain live streaming nodes that deliver large volumes of upstream data to a large number of simultaneous end users",
+                "",
               ],
-              "title": "Live Streaming Provider",
+              "title": "",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276",
@@ -408,37 +306,31 @@ exports[`RolesPage page renders correctly 1`] = `
                 All of these contributors are collectively referred to as Builders. Anyone can contribute in the same mode as any of these possible contributor functions, as all the platform source assets are open source and developed in the open. Being a Builder means that one has some scope of responsibility in ongoing efforts, and that one has some predefined reward scheme associated with this responsibility.
               </React.Fragment>,
               "requirements": Array [
-                "A deep understanding of the Joystream platform structure and function",
-                "Have specific skills required for contributing in the given way",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
+                "",
               ],
               "responsibilites": Array [
-                "Collaborate with almost every other kind of platform member to maintain and improve the platform",
+                "",
               ],
-              "title": "Builder",
+              "title": "",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=46a98ea4be",
               "id": "communication-moderator",
               "image": "icon-component-mock",
-              "overview": "
-          The platform will have multiple ways of facilitating easy and secure public, and private,
-           communication and information sharing among members. In particular, there will be both
-            a forum and messaging capability built in to the platform. But in order for these
-            spaces to be effective communication modes, some moderation will be required.
-            Communication moderators are involved with policing this activity.",
+              "overview": "",
               "requirements": Array [
-                "A deep understanding of the Joystream platform structure and function",
-                "Clear written communicator, ideally with good command of more than one language",
-                "Hold sufficient amount of the native platform token to put at stake",
+                "",
+                "",
+                "",
               ],
               "responsibilites": Array [
-                "Monitor and supervise public communication channels for compliance with usage policies
-         as decided through the governance system",
-                "Communicate with end users about any possible violations and sanctions",
-                "Collaborate to come up with new policies as circumstances change",
+                "",
+                "",
+                "",
               ],
-              "title": "Communication Moderator",
+              "title": "",
             },
           ],
         }
@@ -451,7 +343,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key="Validator"
+        key="roles.validator.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -461,31 +353,23 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=26a32a8d8d"
           id="validator"
           image="icon-component-mock"
-          overview="The Joystream platform state lives on a blockchain consensus system.
-    This consensus system is a variant of classical BFT consensus combined
-    with Proof-of-Stake to determine voting power. A validator is an actor
-    which checks the validity of newly constructed blocks, proposes new blocks
-    and participates in the consensus process for committing new block to the chain.
-    This role has a purpose very similar to the miners in the Bitcoin blockchain.
-    Importantly, anyone can fully check the validity of the blockchain,
-    not just validators, and this is called validation."
+          overview="roles.validator.overview"
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "Experienced with how to setup and maintain high performance IT infrastructure",
-              "Access to highly performant and reliable IT infrastructure, with high storage,
-    (up & down) bandwidth and processing capacity",
-              "Able to securely store keys",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "roles.validator.requirements.setupAndMaintainInfrastructure",
+              "roles.validator.requirements.accessToPerformantInfrastructure",
+              "roles.validator.requirements.storeKeys",
+              "roles.validator.requirements.stake",
             ]
           }
           responsibilites={
             Array [
-              "Run and maintain screening nodes that are always available and performant",
-              "Help enforce the consensus rules of the network",
+              "roles.validator.responsibilities.runAndMaintainScreeningNodes",
+              "roles.validator.responsibilities.enforceRules",
             ]
           }
-          title="Validator"
+          title="roles.validator.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/validators"
           type="active"
         />
@@ -493,7 +377,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key="Council Member"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -503,28 +387,23 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=51a3da04f8"
           id="council-member"
           image="icon-component-mock"
-          overview="At the heart of the governance process on the platform is the proposal system,
-        which allows anyone to submit some suggestion for changing the state or
-        policy of the platform in some way. These proposals are processed and voted on by a council,
-        where the participants are referred to as council members. A seat on the council is
-        won through an election process, and lasts for some period of time until a new election."
+          overview=""
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "Proficiency with basic data analysis and sufficient reputation and standing within
-        the community to earn supporting votes in elections from other platform members",
-              "A deep understanding of the Joystream platform structure, function and resource allocation",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Discuss the meaning and merits of incoming proposals, covering a broad range of topics",
-              "Vote on proposals",
-              "Represent the community members and your constituency to make day-to-day operations decisions",
+              "",
+              "",
+              "",
             ]
           }
-          title="Council Member"
+          title=""
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/council-members"
           type="active"
         />
@@ -532,7 +411,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key="Storage Provider"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -542,26 +421,21 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460"
           id="storage-provider"
           image="icon-component-mock"
-          overview="There are critical platform assets that do not live on the blockchain,
-        such as images and content media. The integrity of these assets is secured by the chain,
-        but a separate set of storage and distribution nodes enables uploading and downloading of
-        such data. The storage provider is involved this activity, specifically by storing large quantities of data."
+          overview=""
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "Experienced with how to setup and maintain high performance IT infrastructure",
-              "Access to highly performant and reliable IT infrastructure with high storage capacity",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Run and maintain storage nodes that store very large quantities of static data,
-        synchronize with other storage nodes, share data with distributors, and accepts
-        inbound uploads from end users",
+              "",
             ]
           }
-          title="Storage Provider"
+          title=""
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead"
           type="active"
         />
@@ -569,7 +443,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key="Storage Lead"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -579,24 +453,21 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460"
           id="storage-lead"
           image="icon-component-mock"
-          overview="The Storage Lead is hired directly by the Council through the proposals system and
-      is dedicated to the hiring, firing and wider management of Storage Providers on the network."
+          overview=""
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "Experienced with how to setup and maintain high performance IT infrastructure",
-              "Ability to effectively manage and coordinate the actions of the Storage Providers",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "The Storage Lead is responsible for ensuring that Storage Providers are performing adequately.
-        Each one must hold a complete and up-to-date copy of the content directory and ensure uptime in
-        order to effectively serve content consumers.",
+              "",
             ]
           }
-          title="Storage Lead"
+          title=""
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers"
           type="active"
         />
@@ -604,7 +475,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key="Content Curator"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -614,26 +485,19 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93"
           id="content-curator"
           image="icon-component-mock"
-          overview="All of the media content published on the platform lives in an on-chain content directory.
-         There are a range of different content types, and each type has a schema for a rich
-         description of its structure, function and policies. For the effective use of of content,
-         for example in rendering, discovery and monetization, it is critical to ensure the validity
-         of the published information for all content. In particular, it is also important to resolve
-         possible disputes about ownership and presence of any piece of content on the platform.
-         It is the task of the content curators to do the work involved in processes that address these objectives."
+          overview=""
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Monitor the publishing of new content into the content directory,
-        and respond to reports about contested publications",
-              "Adjudicate possible dispute processes resulting from reports from users",
-              "Update information on content to be accurate",
+              "",
+              "",
+              "",
               <React.Fragment>
                 Collaborate with 
                 <Link
@@ -647,7 +511,7 @@ exports[`RolesPage page renders correctly 1`] = `
               </React.Fragment>,
             ]
           }
-          title="Content Curator"
+          title=""
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-curators"
           type="active"
         />
@@ -655,7 +519,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key="Content Creator"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -665,24 +529,20 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=0ea466b90d"
           id="content-creator"
           image="icon-component-mock"
-          overview="As a video platform, one of the most important platform assets is the content published
-        on the platform. Since video is such a flexible media type, which can encompass a wide
-        range of content categories, it is the primary focus. However, the intention is to support
-        a broader range of content types over time. The content creators are those involved in
-         creating, publishing and monetizing content on the platform."
+          overview=""
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "Have the right to publish existing or new content to the platform",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Publish content and build an audience",
+              "",
             ]
           }
-          title="Content Creator"
+          title=""
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-creators"
           type="active"
         />
@@ -690,7 +550,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key="Content Lead"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -700,26 +560,23 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93"
           id="content-lead"
           image="icon-component-mock"
-          overview="The Council has the power to appoint a Content Curator Lead for the network who can hire further
-      Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing
-      with the council, the Lead can also decide to fire curators who are not performing their jobs adequately."
+          overview=""
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "Fairly adcudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Monitor the publishing of new content into the content directory,
-        and respond to reports about contested publications",
-              "Adjudicate possible dispute processes resulting from reports from users",
-              "Update information on content to be accurate",
-              "Manage and coordinate the actions of the Content Working Group",
+              "",
+              "",
+              "",
+              "",
             ]
           }
-          title="Content Lead"
+          title=""
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead"
           type="active"
         />
@@ -727,7 +584,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key="Membership Screener"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -737,26 +594,18 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2a9bd4a3ed"
           id="membership-screener"
           image="icon-component-mock"
-          overview="A membership is an integrated representation of identifying information
-        and associated activities of an actor on the platform. The direct way of
-        establishing membership will be to simply pay a one time fee. However, since its
-        currently challenging for many prospective non-technical end users to obtain, store
-        and use crypto assets, there will be a way for users to get a membership for free,
-        which will not require any tokens in order to use the platform in a limited capacity.
-        The membership screener is the role responsible for granting such
-        memberships, while screening for Sybill attackers and abusers."
+          overview=""
           requirements={
             Array [
-              "Experienced with how to setup and maintain high performance IT infrastructure",
-              "Access to highly performant and reliable IT infrastructure,
-        with high storage, (up & down) bandwidth and processing capacity",
-              "Familiarity with how online platforms are attacked through botnets, IP anonymization, automated agents, etc.",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Run and maintain screening nodes that are always available and performant",
+              "",
               <React.Fragment>
                 Collaborate with 
                 <Link
@@ -776,17 +625,17 @@ exports[`RolesPage page renders correctly 1`] = `
                 </Link>
                  to improve screening mechanisms by discussing screening techniques, sharing traffic information
               </React.Fragment>,
-              "Be responsive and reactive to changing circumstances",
+              "",
             ]
           }
-          title="Membership Screener"
+          title=""
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key="Membership Curator"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -812,16 +661,15 @@ exports[`RolesPage page renders correctly 1`] = `
           }
           requirements={
             Array [
-              "Proficient with basic data analysis and scripting",
-              "A deep understanding of the Joystream platform structure, function and attack vectors",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Monitor platform level activity for abuse and collusion",
-              "Propose changes to status of memberships which are identified,
-        and participate in any dispute process which may follow",
+              "",
+              "",
               <React.Fragment>
                 Collaborate with 
                 <Link
@@ -844,14 +692,14 @@ exports[`RolesPage page renders correctly 1`] = `
               </React.Fragment>,
             ]
           }
-          title="Membership Curator"
+          title=""
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key="Bandwidth Provider"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -861,33 +709,28 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2d978eeb0c"
           id="bandwidth-provider"
           image="icon-component-mock"
-          overview="There are critical platform assets that do not live on the blockchain, such as images
-      and content media. The integrity of these assets is secured by the chain, but a separate
-      set of storage and distribution nodes enable uploading and downloading of such data.
-      The bandwidth provider is involved this activity,
-        specifically by distributing static data to end users at scale."
+          overview=""
           requirements={
             Array [
-              "Experienced with how to setup and maintain high performance IT infrastructure",
-              "Access to highly performant and reliable IT infrastructure, with high storage
-        capacity and a lot of upstream capacity",
-              "Located within certain bounds to designated geographic areas, in order to limit latency",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Run and maintain distributor nodes that deliver large volumes of upstream data to a large number of simultaneous end users",
+              "",
             ]
           }
-          title="Bandwidth Provider"
+          title=""
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key="Discovery Provider"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -897,24 +740,18 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=766d15796d"
           id="discovery-provider"
           image="icon-component-mock"
-          overview="All of the content on the platform is in a designated content directory, and effectively navigating
-        this directory requires a full copy of this directory. Moreover, in order to do things like search and
-        context based recommendations one needs to apply some sort of heuristic on top of this directory,
-        which is also some what sensitive abusive attempts to rank higher. The discovery providers play
-        the role of responding to such discovery queries to end users, by combining light client inclusion
-        proofs with local search and ranking policy heuristics."
+          overview=""
           requirements={
             Array [
-              "Experienced with how to setup and maintain high performance IT infrastructure",
-              "Access to highly performant and reliable IT infrastructure",
-              "Able to formulate, test and suggest new ranking heuristics for use by discovery provider nodes",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Run and maintain discovery nodes that respond to discovery-related queries by staying in
-        sync with the content directory, and applying local ranking heuristics.",
+              "",
               <React.Fragment>
                 Collaborate with 
                 <Link
@@ -928,14 +765,14 @@ exports[`RolesPage page renders correctly 1`] = `
               </React.Fragment>,
             ]
           }
-          title="Discovery Provider"
+          title=""
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key="Live Streaming Provider"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -945,30 +782,28 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=4ea03faa7a"
           id="live-streaming-provider"
           image="icon-component-mock"
-          overview="The platform supports live video, allowing publisher to distribute content as it is created.
-      The live streaming providers are responsible for directly, or indirectly from peer
-      providers, taking a (transcoded) stream from the source publisher, and relaying it to end users."
+          overview=""
           requirements={
             Array [
-              "Experienced with how to setup and maintain high performance IT infrastructure",
-              "Access to highly performant and reliable IT infrastructure, with large amount of upstream bandwidth capacity.",
-              "Located within certain bounds to designated geographic areas, in order to limit latency",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Run and maintain live streaming nodes that deliver large volumes of upstream data to a large number of simultaneous end users",
+              "",
             ]
           }
-          title="Live Streaming Provider"
+          title=""
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key="Builder"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -1011,24 +846,24 @@ exports[`RolesPage page renders correctly 1`] = `
           }
           requirements={
             Array [
-              "A deep understanding of the Joystream platform structure and function",
-              "Have specific skills required for contributing in the given way",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Collaborate with almost every other kind of platform member to maintain and improve the platform",
+              "",
             ]
           }
-          title="Builder"
+          title=""
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key="Communication Moderator"
+        key=""
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -1038,28 +873,22 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=46a98ea4be"
           id="communication-moderator"
           image="icon-component-mock"
-          overview="
-          The platform will have multiple ways of facilitating easy and secure public, and private,
-           communication and information sharing among members. In particular, there will be both
-            a forum and messaging capability built in to the platform. But in order for these
-            spaces to be effective communication modes, some moderation will be required.
-            Communication moderators are involved with policing this activity."
+          overview=""
           requirements={
             Array [
-              "A deep understanding of the Joystream platform structure and function",
-              "Clear written communicator, ideally with good command of more than one language",
-              "Hold sufficient amount of the native platform token to put at stake",
+              "",
+              "",
+              "",
             ]
           }
           responsibilites={
             Array [
-              "Monitor and supervise public communication channels for compliance with usage policies
-         as decided through the governance system",
-              "Communicate with end users about any possible violations and sanctions",
-              "Collaborate to come up with new policies as circumstances change",
+              "",
+              "",
+              "",
             ]
           }
-          title="Communication Moderator"
+          title=""
           type="upcoming"
         />
       </InView>
