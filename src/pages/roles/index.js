@@ -18,19 +18,47 @@ import { rolesData } from '../../data/pages/roles';
 
 import './style.scss';
 
-const translateRolesData = ({ active, ...rest }, t) => {
-  let activeRoles = active.map(({ title, overview, responsibilites, requirements }) => {
+const translateNavbarData = ({ active, upcoming, ...rest }, t) => {
+  let activeRoles = active.map(({ title, ...activeRest }) => {
     return {
       title: t(`${title}`),
-      overview: t(`${overview}`),
-      responsibilities: responsibilites.map(responsibility => t(`${responsibility}`)),
-      requirements: requirements.map(requirement => t(`${requirement}`)),
+      ...activeRest,
+    };
+  });
+
+  let upcomingRoles = upcoming.map(({ title, ...upcomingRest }) => {
+    return {
+      title: t(`${title}`),
+      ...upcomingRest,
     };
   });
 
   return {
     active: activeRoles,
+    upcoming: upcomingRoles,
     ...rest,
+  };
+};
+
+const translateRolesData = ({ title, overview, responsibilities, requirements, ...role }, t) => {
+  let transOverview;
+
+  if (overview?.isModular) {
+    transOverview = <Trans i18nKey={overview.key} components={overview.components} />;
+  }
+
+  return {
+    title: t(`${title}`),
+    overview: transOverview ?? t(`${overview}`),
+    responsibilities: responsibilities.map(responsibility => {
+      if (responsibility?.isModular) {
+        return <Trans i18nKey={responsibility.key} components={responsibility.components} />;
+      }
+
+      return t(`${responsibility}`);
+    }),
+    requirements: requirements.map(requirement => t(`${requirement}`)),
+    ...role,
   };
 };
 
@@ -64,7 +92,7 @@ const RolesPage = () => {
         <Sidebar
           onElementChange={scrollToElement}
           currentElement={elementInViewport}
-          data={translateRolesData(rolesData, t)}
+          data={translateNavbarData(rolesData, t)}
         />
         <div className="RoleOverview__Wrapper">
           {Object.keys(rolesData).map(key => {
@@ -79,7 +107,7 @@ const RolesPage = () => {
                 }}
                 key={role.title}
               >
-                <RoleOverview {...role} type={key} ref={elementsRef[role.id]} />
+                <RoleOverview {...translateRolesData({ ...role }, t)} type={key} ref={elementsRef[role.id]} />
               </InView>
             ));
           })}

@@ -23,7 +23,7 @@ const rolesData = {
       image: ValidatorImage,
       title: 'roles.validator.title',
       overview: 'roles.validator.overview',
-      responsibilites: [
+      responsibilities: [
         'roles.validator.responsibilities.runAndMaintainScreeningNodes',
         'roles.validator.responsibilities.enforceRules',
       ],
@@ -40,17 +40,17 @@ const rolesData = {
     {
       id: 'council-member',
       image: CouncilMemberImage,
-      title: '',
-      overview: ``,
-      responsibilites: [
-        '',
-        '',
-        '',
+      title: 'roles.councilMember.title',
+      overview: 'roles.councilMember.overview',
+      responsibilities: [
+        'roles.councilMember.responsibilities.discussProposals',
+        'roles.councilMember.responsibilities.vote',
+        'roles.councilMember.responsibilities.representCommunity',
       ],
       requirements: [
-        ``,
-        '',
-        '',
+        'roles.councilMember.requirements.dataAnalysisProficiency',
+        'roles.councilMember.requirements.platformUnderstanding',
+        'roles.councilMember.requirements.stake',
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/council-members',
       questionLink: `mailto:${sharedData.defaultEmail}`,
@@ -59,15 +59,13 @@ const rolesData = {
     {
       id: 'storage-provider',
       image: StorageProviderImage,
-      title: '',
-      overview: ``,
-      responsibilites: [
-        ``,
-      ],
+      title: 'roles.storageProvider.title',
+      overview: 'roles.storageProvider.overview',
+      responsibilities: ['roles.storageProvider.responsibilities.runAndMaintainStorageNodes'],
       requirements: [
-        '',
-        '',
-        '',
+        'roles.storageProvider.requirements.setupAndMaintainInfrastructure',
+        'roles.storageProvider.requirements.accessToPerformantInfrastructure',
+        'roles.storageProvider.requirements.stake',
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead',
       questionLink: `mailto:${sharedData.defaultEmail}`,
@@ -76,15 +74,13 @@ const rolesData = {
     {
       id: 'storage-lead',
       image: StorageLeadImage,
-      title: '',
-      overview: ``,
-      responsibilites: [
-        ``,
-      ],
+      title: 'roles.storageLead.title',
+      overview: 'roles.storageLead.overview',
+      responsibilities: ['roles.storageLead.responsibilities.storageProviderPerformance'],
       requirements: [
-        '',
-        '',
-        '',
+        'roles.storageLead.requirements.setupAndMaintainInfrastructure',
+        'roles.storageLead.requirements.managementAndCoordination',
+        'roles.storageLead.requirements.stake',
       ],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers',
       questionLink: `mailto:${sharedData.defaultEmail}`,
@@ -93,21 +89,19 @@ const rolesData = {
     {
       id: 'content-curator',
       image: ContentCuratorImage,
-      title: '',
-      overview: ``,
-      responsibilites: [
-        ``,
-        '',
-        '',
-        <>
-          Collaborate with <Link href="#builder"> Builders</Link> to improve both tools, and user facing experiences, to
-          improve the integrity of the content directory
-        </>,
+      title: 'roles.contentCurator.title',
+      overview: 'roles.contentCurator.overview',
+      responsibilities: [
+        'roles.contentCurator.responsibilities.monitorContent',
+        'roles.contentCurator.responsibilities.adjudicateDisputes',
+        'roles.contentCurator.responsibilities.updateContentInformation',
+        {
+          isModular: true,
+          key: 'roles.contentCurator.responsibilities.collaborateWithBuilders',
+          components: [<Link href="#builder"> Builders</Link>],
+        },
       ],
-      requirements: [
-        '',
-        '',
-      ],
+      requirements: ['roles.contentCurator.requirements.adjudicateDisputes', 'roles.contentCurator.requirements.stake'],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-curators',
       questionLink: 'mailto:hello@jsgenesis.com',
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93',
@@ -115,13 +109,10 @@ const rolesData = {
     {
       id: 'content-creator',
       image: ContentCreatorImage,
-      title: '',
-      overview: ``,
-      responsibilites: [''],
-      requirements: [
-        '',
-        '',
-      ],
+      title: 'roles.contentCreator.title',
+      overview: 'roles.contentCreator.overview',
+      responsibilities: ['roles.contentCreator.responsibilities.publishContent'],
+      requirements: ['roles.contentCreator.requirements.publishContent', 'roles.contentCreator.requirements.stake'],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-creators',
       questionLink: 'mailto:hello@jsgenesis.com',
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=0ea466b90d',
@@ -129,18 +120,15 @@ const rolesData = {
     {
       id: 'content-lead',
       image: ContentLeadImage,
-      title: '',
-      overview: ``,
-      responsibilites: [
-        ``,
-        '',
-        '',
-        ''
+      title: 'roles.contentLead.title',
+      overview: 'roles.contentLead.overview',
+      responsibilities: [
+        'roles.contentLead.responsibilities.monitorPublishing',
+        'roles.contentLead.responsibilities.adjudicateDisputes',
+        'roles.contentLead.responsibilities.updateInformation',
+        'roles.contentLead.responsibilities.manageAndCoordinate',
       ],
-      requirements: [
-        '',
-        '',
-      ],
+      requirements: ['roles.contentLead.requirements.adjudicateDisputes', 'roles.contentLead.requirements.stake'],
       tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead',
       questionLink: 'mailto:hello@jsgenesis.com',
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93',
@@ -150,157 +138,140 @@ const rolesData = {
     {
       id: 'membership-screener',
       image: MembershipScreenerImage,
-      title: '',
-      overview: ``,
-      responsibilites: [
-        '',
-        <>
-          Collaborate with <Link href="#membership-curator">Membership Curators</Link> and
-          <Link href="#builder"> Builders</Link> to improve screening mechanisms by discussing screening techniques,
-          sharing traffic information
-        </>,
-        '',
+      title: 'roles.membershipScreener.title',
+      overview: 'roles.membershipScreener.overview',
+      responsibilities: [
+        'roles.membershipScreener.responsibilities.runAndMaintainScreeningNodes',
+        {
+          isModular: true,
+          key: 'roles.membershipScreener.responsibilities.collaborate',
+          components: [
+            <Link href="#membership-curator">Membership Curators</Link>,
+            <Link href="#builder"> Builders</Link>,
+          ],
+        },
+        'roles.membershipScreener.responsibilities.beResponsive',
       ],
       requirements: [
-        '',
-        ``,
-        '',
-        '',
+        'roles.membershipScreener.requirements.setupAndMaintainInfrastructure',
+        'roles.membershipScreener.requirements.accessToPerformantInfrastructure',
+        'roles.membershipScreener.requirements.onlinePlatformAttackFamiliarity',
+        'roles.membershipScreener.requirements.stake',
       ],
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2a9bd4a3ed',
     },
     {
       id: 'membership-curator',
       image: MembershipCuratorImage,
-      title: '',
-      overview: (
-        <>
-          A membership is an integrated representation of identifying information and associated activities of an actor
-          on the platform. It is possible to create memberships for free through the screeners, described{' '}
-          <Link href="#membership-screener"> above</Link>. Since this is invariably an imperfect process, there must be
-          some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the
-          membership curators.
-        </>
-      ),
-      responsibilites: [
-        '',
-        ``,
-        <>
-          Collaborate with <Link href="#membership-screener"> Screeners</Link> and{' '}
-          <Link href="#builder"> Builders</Link> to improve tools for identifying such members
-        </>,
+      title: 'roles.membershipCurator.title',
+      overview: {
+        isModular: true,
+        key: 'roles.membershipCurator.overview',
+        components: [<Link href="#membership-screener"> above</Link>],
+      },
+      responsibilities: [
+        'roles.membershipCurator.responsibilities.monitorPlatformActivity',
+        'roles.membershipCurator.responsibilities.proposeChanges',
+        {
+          isModular: true,
+          key: 'roles.membershipCurator.responsibilities.collaborate',
+          components: [<Link href="#membership-screener"> Screeners</Link>, <Link href="#builder"> Builders</Link>],
+        },
       ],
       requirements: [
-        '',
-        '',
-        '',
+        'roles.membershipCurator.requirements.dataAnalysisProficiency',
+        'roles.membershipCurator.requirements.platformUnderstanding',
+        'roles.membershipCurator.requirements.stake',
       ],
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=bd10fbb23f',
     },
     {
       id: 'bandwidth-provider',
       image: BandwidthProviderImage,
-      title: '',
-      overview: ``,
-      responsibilites: [
-        '',
-      ],
+      title: 'roles.bandwidthProvider.title',
+      overview: 'roles.bandwidthProvider.overview',
+      responsibilities: ['roles.bandwidthProvider.responsibilities.runAndMaintainDistributorNodes'],
       requirements: [
-        '',
-        ``,
-        '',
-        '',
+        'roles.bandwidthProvider.requirements.setupAndMaintainInfrastructure',
+        'roles.bandwidthProvider.requirements.accessToPerformantInfrastructure',
+        'roles.bandwidthProvider.requirements.locatedWithinBounds',
+        'roles.bandwidthProvider.requirements.stake',
       ],
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2d978eeb0c',
     },
     {
       id: 'discovery-provider',
       image: DiscoveryProviderImage,
-      title: '',
-      overview: ``,
-      responsibilites: [
-        ``,
-        <>
-          Collaborate with <Link href="#builder">Builders</Link> to improve both tools, and user facing experiences, to
-          improve the discovery experience
-        </>,
+      title: 'roles.discoveryProvider.title',
+      overview: 'roles.discoveryProvider.overview',
+      responsibilities: [
+        'roles.discoveryProvider.responsibilities.runAndMaintainDiscoveryNodes',
+        {
+          isModular: true,
+          key: 'roles.discoveryProvider.responsibilities.collaborate',
+          components: [<Link href="#builder">Builders</Link>]
+        }
       ],
       requirements: [
-        '',
-        '',
-        '',
-        '',
+        'roles.discoveryProvider.requirements.setupAndMaintainInfrastructure',
+        'roles.discoveryProvider.requirements.accessToPerformantInfrastructure',
+        'roles.discoveryProvider.requirements.formulateAndTestHeuristics',
+        'roles.discoveryProvider.requirements.stake',
       ],
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=766d15796d',
     },
     {
       id: 'live-streaming-provider',
       image: LiveStreamingProviderImage,
-      title: '',
-      overview: ``,
-      responsibilites: [
-        '',
-      ],
+      title: 'roles.liveStreamingProvider.title',
+      overview: 'roles.liveStreamingProvider.overview',
+      responsibilities: ['roles.liveStreamingProvider.responsibilities.runAndMaintainLivestreamingNodes'],
       requirements: [
-        '',
-        '',
-        '',
-        '',
+        'roles.liveStreamingProvider.requirements.setupAndMaintainInfrastructure',
+        'roles.liveStreamingProvider.requirements.accessToPerformantInfrastructure',
+        'roles.liveStreamingProvider.requirements.locatedWithinBounds',
+        'roles.liveStreamingProvider.requirements.stake',
       ],
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=4ea03faa7a',
     },
     {
       id: 'builder',
       image: BuilderImage,
-      title: '',
-      overview: (
-        <>
-          The platform runtime, tools, infrastructure software and user facing applications are all meant to evolve over
-          time. A diverse set of contributors are required to facilitate this, including
-          <br />
-          <br />
+      title: 'roles.builder.title',
+      overview: {
+        isModular: true,
+        key: 'roles.builder.overview',
+        components: [
+          <br />,
           <ul className="RoleOverview__dashList">
             <li>
-              <strong>Developers:</strong> Software developers, Data scientists, DevOps and QA
+              <strong />
             </li>
-            <li>
-              <strong>Designers:</strong> Web, Mobile, UX/UI, Branding and Visual Design
-            </li>
-            <li>
-              <strong>Product Managers:</strong> Digital Product Managers, Product Owners and Analysts
-            </li>
-          </ul>
-          <br />
-          All of these contributors are collectively referred to as Builders. Anyone can contribute in the same mode as
-          any of these possible contributor functions, as all the platform source assets are open source and developed
-          in the open. Being a Builder means that one has some scope of responsibility in ongoing efforts, and that one
-          has some predefined reward scheme associated with this responsibility.
-        </>
-      ),
-      responsibilites: [
-        '',
-      ],
+          </ul>,
+        ],
+      },
+      responsibilities: ['roles.builder.responsibilities.collaborate'],
       requirements: [
-        '',
-        '',
-        '',
+        'roles.builder.requirements.platformUnderstanding',
+        'roles.builder.requirements.specificContributingSkills',
+        'roles.builder.requirements.stake',
       ],
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276',
     },
     {
       id: 'communication-moderator',
       image: CommunicationModeratorImage,
-      title: '',
-      overview: ``,
-      responsibilites: [
-        ``,
-        '',
-        '',
+      title: 'roles.communicationModerator.title',
+      overview: 'roles.communicationModerator.overview',
+      responsibilities: [
+        'roles.communicationModerator.responsibilities.monitorCommuncationChannels',
+        'roles.communicationModerator.responsibilities.communicateWithUsers',
+        'roles.communicationModerator.responsibilities.collaborate',
       ],
       requirements: [
-        '',
-        '',
-        '',
+        'roles.communicationModerator.requirements.platformUnderstanding',
+        'roles.communicationModerator.requirements.goodCommunicator',
+        'roles.communicationModerator.requirements.stake',
       ],
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=46a98ea4be',
     },

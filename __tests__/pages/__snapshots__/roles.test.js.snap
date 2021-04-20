@@ -38,7 +38,11 @@ exports[`RolesPage page renders correctly 1`] = `
         Object {
           "active": Array [
             Object {
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=26a32a8d8d",
+              "id": "validator",
+              "image": "icon-component-mock",
               "overview": "roles.validator.overview",
+              "questionLink": "mailto:hello@jsgenesis.com",
               "requirements": Array [
                 "roles.validator.requirements.setupAndMaintainInfrastructure",
                 "roles.validator.requirements.accessToPerformantInfrastructure",
@@ -50,83 +54,126 @@ exports[`RolesPage page renders correctly 1`] = `
                 "roles.validator.responsibilities.enforceRules",
               ],
               "title": "roles.validator.title",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/validators",
             },
             Object {
-              "overview": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=51a3da04f8",
+              "id": "council-member",
+              "image": "icon-component-mock",
+              "overview": "roles.councilMember.overview",
+              "questionLink": "mailto:hello@jsgenesis.com",
               "requirements": Array [
-                "",
-                "",
-                "",
+                "roles.councilMember.requirements.dataAnalysisProficiency",
+                "roles.councilMember.requirements.platformUnderstanding",
+                "roles.councilMember.requirements.stake",
               ],
               "responsibilities": Array [
-                "",
-                "",
-                "",
+                "roles.councilMember.responsibilities.discussProposals",
+                "roles.councilMember.responsibilities.vote",
+                "roles.councilMember.responsibilities.representCommunity",
               ],
-              "title": "",
+              "title": "roles.councilMember.title",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/council-members",
             },
             Object {
-              "overview": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460",
+              "id": "storage-provider",
+              "image": "icon-component-mock",
+              "overview": "roles.storageProvider.overview",
+              "questionLink": "mailto:hello@jsgenesis.com",
               "requirements": Array [
-                "",
-                "",
-                "",
+                "roles.storageProvider.requirements.setupAndMaintainInfrastructure",
+                "roles.storageProvider.requirements.accessToPerformantInfrastructure",
+                "roles.storageProvider.requirements.stake",
               ],
               "responsibilities": Array [
-                "",
+                "roles.storageProvider.responsibilities.runAndMaintainStorageNodes",
               ],
-              "title": "",
+              "title": "roles.storageProvider.title",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead",
             },
             Object {
-              "overview": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460",
+              "id": "storage-lead",
+              "image": "icon-component-mock",
+              "overview": "roles.storageLead.overview",
+              "questionLink": "mailto:hello@jsgenesis.com",
               "requirements": Array [
-                "",
-                "",
-                "",
+                "roles.storageLead.requirements.setupAndMaintainInfrastructure",
+                "roles.storageLead.requirements.managementAndCoordination",
+                "roles.storageLead.requirements.stake",
               ],
               "responsibilities": Array [
-                "",
+                "roles.storageLead.responsibilities.storageProviderPerformance",
               ],
-              "title": "",
+              "title": "roles.storageLead.title",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers",
             },
             Object {
-              "overview": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93",
+              "id": "content-curator",
+              "image": "icon-component-mock",
+              "overview": "roles.contentCurator.overview",
+              "questionLink": "mailto:hello@jsgenesis.com",
               "requirements": Array [
-                "",
-                "",
+                "roles.contentCurator.requirements.adjudicateDisputes",
+                "roles.contentCurator.requirements.stake",
               ],
               "responsibilities": Array [
-                "",
-                "",
-                "",
-                "[object Object]",
+                "roles.contentCurator.responsibilities.monitorContent",
+                "roles.contentCurator.responsibilities.adjudicateDisputes",
+                "roles.contentCurator.responsibilities.updateContentInformation",
+                Object {
+                  "components": Array [
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#builder"
+                    >
+                       Builders
+                    </Link>,
+                  ],
+                  "isModular": true,
+                  "key": "roles.contentCurator.responsibilities.collaborateWithBuilders",
+                },
               ],
-              "title": "",
+              "title": "roles.contentCurator.title",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-curators",
             },
             Object {
-              "overview": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=0ea466b90d",
+              "id": "content-creator",
+              "image": "icon-component-mock",
+              "overview": "roles.contentCreator.overview",
+              "questionLink": "mailto:hello@jsgenesis.com",
               "requirements": Array [
-                "",
-                "",
+                "roles.contentCreator.requirements.publishContent",
+                "roles.contentCreator.requirements.stake",
               ],
               "responsibilities": Array [
-                "",
+                "roles.contentCreator.responsibilities.publishContent",
               ],
-              "title": "",
+              "title": "roles.contentCreator.title",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-creators",
             },
             Object {
-              "overview": "",
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93",
+              "id": "content-lead",
+              "image": "icon-component-mock",
+              "overview": "roles.contentLead.overview",
+              "questionLink": "mailto:hello@jsgenesis.com",
               "requirements": Array [
-                "",
-                "",
+                "roles.contentLead.requirements.adjudicateDisputes",
+                "roles.contentLead.requirements.stake",
               ],
               "responsibilities": Array [
-                "",
-                "",
-                "",
-                "",
+                "roles.contentLead.responsibilities.monitorPublishing",
+                "roles.contentLead.responsibilities.adjudicateDisputes",
+                "roles.contentLead.responsibilities.updateInformation",
+                "roles.contentLead.responsibilities.manageAndCoordinate",
               ],
-              "title": "",
+              "title": "roles.contentLead.title",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead",
             },
           ],
           "upcoming": Array [
@@ -134,203 +181,192 @@ exports[`RolesPage page renders correctly 1`] = `
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2a9bd4a3ed",
               "id": "membership-screener",
               "image": "icon-component-mock",
-              "overview": "",
+              "overview": "roles.membershipScreener.overview",
               "requirements": Array [
-                "",
-                "",
-                "",
-                "",
+                "roles.membershipScreener.requirements.setupAndMaintainInfrastructure",
+                "roles.membershipScreener.requirements.accessToPerformantInfrastructure",
+                "roles.membershipScreener.requirements.onlinePlatformAttackFamiliarity",
+                "roles.membershipScreener.requirements.stake",
               ],
-              "responsibilites": Array [
-                "",
-                <React.Fragment>
-                  Collaborate with 
-                  <Link
-                    className=""
-                    highlighted={false}
-                    href="#membership-curator"
-                  >
-                    Membership Curators
-                  </Link>
-                   and
-                  <Link
-                    className=""
-                    highlighted={false}
-                    href="#builder"
-                  >
-                     Builders
-                  </Link>
-                   to improve screening mechanisms by discussing screening techniques, sharing traffic information
-                </React.Fragment>,
-                "",
+              "responsibilities": Array [
+                "roles.membershipScreener.responsibilities.runAndMaintainScreeningNodes",
+                Object {
+                  "components": Array [
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#membership-curator"
+                    >
+                      Membership Curators
+                    </Link>,
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#builder"
+                    >
+                       Builders
+                    </Link>,
+                  ],
+                  "isModular": true,
+                  "key": "roles.membershipScreener.responsibilities.collaborate",
+                },
+                "roles.membershipScreener.responsibilities.beResponsive",
               ],
-              "title": "",
+              "title": "roles.membershipScreener.title",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=bd10fbb23f",
               "id": "membership-curator",
               "image": "icon-component-mock",
-              "overview": <React.Fragment>
-                A membership is an integrated representation of identifying information and associated activities of an actor on the platform. It is possible to create memberships for free through the screeners, described
-                 
-                <Link
-                  className=""
-                  highlighted={false}
-                  href="#membership-screener"
-                >
-                   above
-                </Link>
-                . Since this is invariably an imperfect process, there must be some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the membership curators.
-              </React.Fragment>,
-              "requirements": Array [
-                "",
-                "",
-                "",
-              ],
-              "responsibilites": Array [
-                "",
-                "",
-                <React.Fragment>
-                  Collaborate with 
+              "overview": Object {
+                "components": Array [
                   <Link
                     className=""
                     highlighted={false}
                     href="#membership-screener"
                   >
-                     Screeners
-                  </Link>
-                   and
-                   
-                  <Link
-                    className=""
-                    highlighted={false}
-                    href="#builder"
-                  >
-                     Builders
-                  </Link>
-                   to improve tools for identifying such members
-                </React.Fragment>,
+                     above
+                  </Link>,
+                ],
+                "isModular": true,
+                "key": "roles.membershipCurator.overview",
+              },
+              "requirements": Array [
+                "roles.membershipCurator.requirements.dataAnalysisProficiency",
+                "roles.membershipCurator.requirements.platformUnderstanding",
+                "roles.membershipCurator.requirements.stake",
               ],
-              "title": "",
+              "responsibilities": Array [
+                "roles.membershipCurator.responsibilities.monitorPlatformActivity",
+                "roles.membershipCurator.responsibilities.proposeChanges",
+                Object {
+                  "components": Array [
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#membership-screener"
+                    >
+                       Screeners
+                    </Link>,
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#builder"
+                    >
+                       Builders
+                    </Link>,
+                  ],
+                  "isModular": true,
+                  "key": "roles.membershipCurator.responsibilities.collaborate",
+                },
+              ],
+              "title": "roles.membershipCurator.title",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2d978eeb0c",
               "id": "bandwidth-provider",
               "image": "icon-component-mock",
-              "overview": "",
+              "overview": "roles.bandwidthProvider.overview",
               "requirements": Array [
-                "",
-                "",
-                "",
-                "",
+                "roles.bandwidthProvider.requirements.setupAndMaintainInfrastructure",
+                "roles.bandwidthProvider.requirements.accessToPerformantInfrastructure",
+                "roles.bandwidthProvider.requirements.locatedWithinBounds",
+                "roles.bandwidthProvider.requirements.stake",
               ],
-              "responsibilites": Array [
-                "",
+              "responsibilities": Array [
+                "roles.bandwidthProvider.responsibilities.runAndMaintainDistributorNodes",
               ],
-              "title": "",
+              "title": "roles.bandwidthProvider.title",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=766d15796d",
               "id": "discovery-provider",
               "image": "icon-component-mock",
-              "overview": "",
+              "overview": "roles.discoveryProvider.overview",
               "requirements": Array [
-                "",
-                "",
-                "",
-                "",
+                "roles.discoveryProvider.requirements.setupAndMaintainInfrastructure",
+                "roles.discoveryProvider.requirements.accessToPerformantInfrastructure",
+                "roles.discoveryProvider.requirements.formulateAndTestHeuristics",
+                "roles.discoveryProvider.requirements.stake",
               ],
-              "responsibilites": Array [
-                "",
-                <React.Fragment>
-                  Collaborate with 
-                  <Link
-                    className=""
-                    highlighted={false}
-                    href="#builder"
-                  >
-                    Builders
-                  </Link>
-                   to improve both tools, and user facing experiences, to improve the discovery experience
-                </React.Fragment>,
+              "responsibilities": Array [
+                "roles.discoveryProvider.responsibilities.runAndMaintainDiscoveryNodes",
+                Object {
+                  "components": Array [
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#builder"
+                    >
+                      Builders
+                    </Link>,
+                  ],
+                  "isModular": true,
+                  "key": "roles.discoveryProvider.responsibilities.collaborate",
+                },
               ],
-              "title": "",
+              "title": "roles.discoveryProvider.title",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=4ea03faa7a",
               "id": "live-streaming-provider",
               "image": "icon-component-mock",
-              "overview": "",
+              "overview": "roles.liveStreamingProvider.overview",
               "requirements": Array [
-                "",
-                "",
-                "",
-                "",
+                "roles.liveStreamingProvider.requirements.setupAndMaintainInfrastructure",
+                "roles.liveStreamingProvider.requirements.accessToPerformantInfrastructure",
+                "roles.liveStreamingProvider.requirements.locatedWithinBounds",
+                "roles.liveStreamingProvider.requirements.stake",
               ],
-              "responsibilites": Array [
-                "",
+              "responsibilities": Array [
+                "roles.liveStreamingProvider.responsibilities.runAndMaintainLivestreamingNodes",
               ],
-              "title": "",
+              "title": "roles.liveStreamingProvider.title",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276",
               "id": "builder",
               "image": "icon-component-mock",
-              "overview": <React.Fragment>
-                The platform runtime, tools, infrastructure software and user facing applications are all meant to evolve over time. A diverse set of contributors are required to facilitate this, including
-                <br />
-                <br />
-                <ul
-                  className="RoleOverview__dashList"
-                >
-                  <li>
-                    <strong>
-                      Developers:
-                    </strong>
-                     Software developers, Data scientists, DevOps and QA
-                  </li>
-                  <li>
-                    <strong>
-                      Designers:
-                    </strong>
-                     Web, Mobile, UX/UI, Branding and Visual Design
-                  </li>
-                  <li>
-                    <strong>
-                      Product Managers:
-                    </strong>
-                     Digital Product Managers, Product Owners and Analysts
-                  </li>
-                </ul>
-                <br />
-                All of these contributors are collectively referred to as Builders. Anyone can contribute in the same mode as any of these possible contributor functions, as all the platform source assets are open source and developed in the open. Being a Builder means that one has some scope of responsibility in ongoing efforts, and that one has some predefined reward scheme associated with this responsibility.
-              </React.Fragment>,
+              "overview": Object {
+                "components": Array [
+                  <br />,
+                  <ul
+                    className="RoleOverview__dashList"
+                  >
+                    <li>
+                      <strong />
+                    </li>
+                  </ul>,
+                ],
+                "isModular": true,
+                "key": "roles.builder.overview",
+              },
               "requirements": Array [
-                "",
-                "",
-                "",
+                "roles.builder.requirements.platformUnderstanding",
+                "roles.builder.requirements.specificContributingSkills",
+                "roles.builder.requirements.stake",
               ],
-              "responsibilites": Array [
-                "",
+              "responsibilities": Array [
+                "roles.builder.responsibilities.collaborate",
               ],
-              "title": "",
+              "title": "roles.builder.title",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=46a98ea4be",
               "id": "communication-moderator",
               "image": "icon-component-mock",
-              "overview": "",
+              "overview": "roles.communicationModerator.overview",
               "requirements": Array [
-                "",
-                "",
-                "",
+                "roles.communicationModerator.requirements.platformUnderstanding",
+                "roles.communicationModerator.requirements.goodCommunicator",
+                "roles.communicationModerator.requirements.stake",
               ],
-              "responsibilites": Array [
-                "",
-                "",
-                "",
+              "responsibilities": Array [
+                "roles.communicationModerator.responsibilities.monitorCommuncationChannels",
+                "roles.communicationModerator.responsibilities.communicateWithUsers",
+                "roles.communicationModerator.responsibilities.collaborate",
               ],
-              "title": "",
+              "title": "roles.communicationModerator.title",
             },
           ],
         }
@@ -363,7 +399,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.validator.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
               "roles.validator.responsibilities.runAndMaintainScreeningNodes",
               "roles.validator.responsibilities.enforceRules",
@@ -377,7 +413,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.councilMember.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -387,23 +423,23 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=51a3da04f8"
           id="council-member"
           image="icon-component-mock"
-          overview=""
+          overview="roles.councilMember.overview"
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "",
-              "",
-              "",
+              "roles.councilMember.requirements.dataAnalysisProficiency",
+              "roles.councilMember.requirements.platformUnderstanding",
+              "roles.councilMember.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
-              "",
-              "",
+              "roles.councilMember.responsibilities.discussProposals",
+              "roles.councilMember.responsibilities.vote",
+              "roles.councilMember.responsibilities.representCommunity",
             ]
           }
-          title=""
+          title="roles.councilMember.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/council-members"
           type="active"
         />
@@ -411,7 +447,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.storageProvider.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -421,21 +457,21 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460"
           id="storage-provider"
           image="icon-component-mock"
-          overview=""
+          overview="roles.storageProvider.overview"
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "",
-              "",
-              "",
+              "roles.storageProvider.requirements.setupAndMaintainInfrastructure",
+              "roles.storageProvider.requirements.accessToPerformantInfrastructure",
+              "roles.storageProvider.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
+              "roles.storageProvider.responsibilities.runAndMaintainStorageNodes",
             ]
           }
-          title=""
+          title="roles.storageProvider.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead"
           type="active"
         />
@@ -443,7 +479,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.storageLead.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -453,21 +489,21 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=7733bde460"
           id="storage-lead"
           image="icon-component-mock"
-          overview=""
+          overview="roles.storageLead.overview"
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "",
-              "",
-              "",
+              "roles.storageLead.requirements.setupAndMaintainInfrastructure",
+              "roles.storageLead.requirements.managementAndCoordination",
+              "roles.storageLead.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
+              "roles.storageLead.responsibilities.storageProviderPerformance",
             ]
           }
-          title=""
+          title="roles.storageLead.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers"
           type="active"
         />
@@ -475,7 +511,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.contentCurator.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -485,33 +521,36 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93"
           id="content-curator"
           image="icon-component-mock"
-          overview=""
+          overview="roles.contentCurator.overview"
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "",
-              "",
+              "roles.contentCurator.requirements.adjudicateDisputes",
+              "roles.contentCurator.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
-              "",
-              "",
-              <React.Fragment>
-                Collaborate with 
-                <Link
-                  className=""
-                  highlighted={false}
-                  href="#builder"
-                >
-                   Builders
-                </Link>
-                 to improve both tools, and user facing experiences, to improve the integrity of the content directory
-              </React.Fragment>,
+              "roles.contentCurator.responsibilities.monitorContent",
+              "roles.contentCurator.responsibilities.adjudicateDisputes",
+              "roles.contentCurator.responsibilities.updateContentInformation",
+              <Trans
+                components={
+                  Array [
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#builder"
+                    >
+                       Builders
+                    </Link>,
+                  ]
+                }
+                i18nKey="roles.contentCurator.responsibilities.collaborateWithBuilders"
+              />,
             ]
           }
-          title=""
+          title="roles.contentCurator.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-curators"
           type="active"
         />
@@ -519,7 +558,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.contentCreator.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -529,20 +568,20 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=0ea466b90d"
           id="content-creator"
           image="icon-component-mock"
-          overview=""
+          overview="roles.contentCreator.overview"
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "",
-              "",
+              "roles.contentCreator.requirements.publishContent",
+              "roles.contentCreator.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
+              "roles.contentCreator.responsibilities.publishContent",
             ]
           }
-          title=""
+          title="roles.contentCreator.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-creators"
           type="active"
         />
@@ -550,7 +589,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.contentLead.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -560,23 +599,23 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93"
           id="content-lead"
           image="icon-component-mock"
-          overview=""
+          overview="roles.contentLead.overview"
           questionLink="mailto:hello@jsgenesis.com"
           requirements={
             Array [
-              "",
-              "",
+              "roles.contentLead.requirements.adjudicateDisputes",
+              "roles.contentLead.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
-              "",
-              "",
-              "",
+              "roles.contentLead.responsibilities.monitorPublishing",
+              "roles.contentLead.responsibilities.adjudicateDisputes",
+              "roles.contentLead.responsibilities.updateInformation",
+              "roles.contentLead.responsibilities.manageAndCoordinate",
             ]
           }
-          title=""
+          title="roles.contentLead.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead"
           type="active"
         />
@@ -584,7 +623,7 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.membershipScreener.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -594,48 +633,50 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2a9bd4a3ed"
           id="membership-screener"
           image="icon-component-mock"
-          overview=""
+          overview="roles.membershipScreener.overview"
           requirements={
             Array [
-              "",
-              "",
-              "",
-              "",
+              "roles.membershipScreener.requirements.setupAndMaintainInfrastructure",
+              "roles.membershipScreener.requirements.accessToPerformantInfrastructure",
+              "roles.membershipScreener.requirements.onlinePlatformAttackFamiliarity",
+              "roles.membershipScreener.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
-              <React.Fragment>
-                Collaborate with 
-                <Link
-                  className=""
-                  highlighted={false}
-                  href="#membership-curator"
-                >
-                  Membership Curators
-                </Link>
-                 and
-                <Link
-                  className=""
-                  highlighted={false}
-                  href="#builder"
-                >
-                   Builders
-                </Link>
-                 to improve screening mechanisms by discussing screening techniques, sharing traffic information
-              </React.Fragment>,
-              "",
+              "roles.membershipScreener.responsibilities.runAndMaintainScreeningNodes",
+              <Trans
+                components={
+                  Array [
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#membership-curator"
+                    >
+                      Membership Curators
+                    </Link>,
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#builder"
+                    >
+                       Builders
+                    </Link>,
+                  ]
+                }
+                i18nKey="roles.membershipScreener.responsibilities.collaborate"
+              />,
+              "roles.membershipScreener.responsibilities.beResponsive",
             ]
           }
-          title=""
+          title="roles.membershipScreener.title"
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.membershipCurator.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -646,60 +687,63 @@ exports[`RolesPage page renders correctly 1`] = `
           id="membership-curator"
           image="icon-component-mock"
           overview={
-            <React.Fragment>
-              A membership is an integrated representation of identifying information and associated activities of an actor on the platform. It is possible to create memberships for free through the screeners, described
-               
-              <Link
-                className=""
-                highlighted={false}
-                href="#membership-screener"
-              >
-                 above
-              </Link>
-              . Since this is invariably an imperfect process, there must be some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the membership curators.
-            </React.Fragment>
+            <Trans
+              components={
+                Array [
+                  <Link
+                    className=""
+                    highlighted={false}
+                    href="#membership-screener"
+                  >
+                     above
+                  </Link>,
+                ]
+              }
+              i18nKey="roles.membershipCurator.overview"
+            />
           }
           requirements={
             Array [
-              "",
-              "",
-              "",
+              "roles.membershipCurator.requirements.dataAnalysisProficiency",
+              "roles.membershipCurator.requirements.platformUnderstanding",
+              "roles.membershipCurator.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
-              "",
-              <React.Fragment>
-                Collaborate with 
-                <Link
-                  className=""
-                  highlighted={false}
-                  href="#membership-screener"
-                >
-                   Screeners
-                </Link>
-                 and
-                 
-                <Link
-                  className=""
-                  highlighted={false}
-                  href="#builder"
-                >
-                   Builders
-                </Link>
-                 to improve tools for identifying such members
-              </React.Fragment>,
+              "roles.membershipCurator.responsibilities.monitorPlatformActivity",
+              "roles.membershipCurator.responsibilities.proposeChanges",
+              <Trans
+                components={
+                  Array [
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#membership-screener"
+                    >
+                       Screeners
+                    </Link>,
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#builder"
+                    >
+                       Builders
+                    </Link>,
+                  ]
+                }
+                i18nKey="roles.membershipCurator.responsibilities.collaborate"
+              />,
             ]
           }
-          title=""
+          title="roles.membershipCurator.title"
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.bandwidthProvider.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -709,28 +753,28 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=2d978eeb0c"
           id="bandwidth-provider"
           image="icon-component-mock"
-          overview=""
+          overview="roles.bandwidthProvider.overview"
           requirements={
             Array [
-              "",
-              "",
-              "",
-              "",
+              "roles.bandwidthProvider.requirements.setupAndMaintainInfrastructure",
+              "roles.bandwidthProvider.requirements.accessToPerformantInfrastructure",
+              "roles.bandwidthProvider.requirements.locatedWithinBounds",
+              "roles.bandwidthProvider.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
+              "roles.bandwidthProvider.responsibilities.runAndMaintainDistributorNodes",
             ]
           }
-          title=""
+          title="roles.bandwidthProvider.title"
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.discoveryProvider.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -740,39 +784,42 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=766d15796d"
           id="discovery-provider"
           image="icon-component-mock"
-          overview=""
+          overview="roles.discoveryProvider.overview"
           requirements={
             Array [
-              "",
-              "",
-              "",
-              "",
+              "roles.discoveryProvider.requirements.setupAndMaintainInfrastructure",
+              "roles.discoveryProvider.requirements.accessToPerformantInfrastructure",
+              "roles.discoveryProvider.requirements.formulateAndTestHeuristics",
+              "roles.discoveryProvider.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
-              <React.Fragment>
-                Collaborate with 
-                <Link
-                  className=""
-                  highlighted={false}
-                  href="#builder"
-                >
-                  Builders
-                </Link>
-                 to improve both tools, and user facing experiences, to improve the discovery experience
-              </React.Fragment>,
+              "roles.discoveryProvider.responsibilities.runAndMaintainDiscoveryNodes",
+              <Trans
+                components={
+                  Array [
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="#builder"
+                    >
+                      Builders
+                    </Link>,
+                  ]
+                }
+                i18nKey="roles.discoveryProvider.responsibilities.collaborate"
+              />,
             ]
           }
-          title=""
+          title="roles.discoveryProvider.title"
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.liveStreamingProvider.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -782,28 +829,28 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=4ea03faa7a"
           id="live-streaming-provider"
           image="icon-component-mock"
-          overview=""
+          overview="roles.liveStreamingProvider.overview"
           requirements={
             Array [
-              "",
-              "",
-              "",
-              "",
+              "roles.liveStreamingProvider.requirements.setupAndMaintainInfrastructure",
+              "roles.liveStreamingProvider.requirements.accessToPerformantInfrastructure",
+              "roles.liveStreamingProvider.requirements.locatedWithinBounds",
+              "roles.liveStreamingProvider.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
+              "roles.liveStreamingProvider.responsibilities.runAndMaintainLivestreamingNodes",
             ]
           }
-          title=""
+          title="roles.liveStreamingProvider.title"
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.builder.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -814,56 +861,42 @@ exports[`RolesPage page renders correctly 1`] = `
           id="builder"
           image="icon-component-mock"
           overview={
-            <React.Fragment>
-              The platform runtime, tools, infrastructure software and user facing applications are all meant to evolve over time. A diverse set of contributors are required to facilitate this, including
-              <br />
-              <br />
-              <ul
-                className="RoleOverview__dashList"
-              >
-                <li>
-                  <strong>
-                    Developers:
-                  </strong>
-                   Software developers, Data scientists, DevOps and QA
-                </li>
-                <li>
-                  <strong>
-                    Designers:
-                  </strong>
-                   Web, Mobile, UX/UI, Branding and Visual Design
-                </li>
-                <li>
-                  <strong>
-                    Product Managers:
-                  </strong>
-                   Digital Product Managers, Product Owners and Analysts
-                </li>
-              </ul>
-              <br />
-              All of these contributors are collectively referred to as Builders. Anyone can contribute in the same mode as any of these possible contributor functions, as all the platform source assets are open source and developed in the open. Being a Builder means that one has some scope of responsibility in ongoing efforts, and that one has some predefined reward scheme associated with this responsibility.
-            </React.Fragment>
+            <Trans
+              components={
+                Array [
+                  <br />,
+                  <ul
+                    className="RoleOverview__dashList"
+                  >
+                    <li>
+                      <strong />
+                    </li>
+                  </ul>,
+                ]
+              }
+              i18nKey="roles.builder.overview"
+            />
           }
           requirements={
             Array [
-              "",
-              "",
-              "",
+              "roles.builder.requirements.platformUnderstanding",
+              "roles.builder.requirements.specificContributingSkills",
+              "roles.builder.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
+              "roles.builder.responsibilities.collaborate",
             ]
           }
-          title=""
+          title="roles.builder.title"
           type="upcoming"
         />
       </InView>
       <InView
         as="div"
         initialInView={false}
-        key=""
+        key="roles.communicationModerator.title"
         onChange={[Function]}
         threshold={0.2}
         triggerOnce={false}
@@ -873,22 +906,22 @@ exports[`RolesPage page renders correctly 1`] = `
           formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=46a98ea4be"
           id="communication-moderator"
           image="icon-component-mock"
-          overview=""
+          overview="roles.communicationModerator.overview"
           requirements={
             Array [
-              "",
-              "",
-              "",
+              "roles.communicationModerator.requirements.platformUnderstanding",
+              "roles.communicationModerator.requirements.goodCommunicator",
+              "roles.communicationModerator.requirements.stake",
             ]
           }
-          responsibilites={
+          responsibilities={
             Array [
-              "",
-              "",
-              "",
+              "roles.communicationModerator.responsibilities.monitorCommuncationChannels",
+              "roles.communicationModerator.responsibilities.communicateWithUsers",
+              "roles.communicationModerator.responsibilities.collaborate",
             ]
           }
-          title=""
+          title="roles.communicationModerator.title"
           type="upcoming"
         />
       </InView>
