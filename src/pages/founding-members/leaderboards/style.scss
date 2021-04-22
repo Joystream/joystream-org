@@ -86,7 +86,7 @@
       padding: 0 0 0 30px;
 
       &--founding {
-        grid-template-columns: 1.8fr .8fr .8fr .8fr 1.4fr 1fr;
+        grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr;
       }
 
       &--nonfounding {
@@ -108,7 +108,7 @@
       background-color: white;
 
       &--founding {
-        grid-template-columns: 1.8fr .8fr .8fr .8fr 1.4fr 1fr;
+        grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr;
       }
 
       &--nonfounding {
@@ -236,7 +236,7 @@
 
     &__table {
       &__header--founding {
-        grid-template-columns: 1.6fr .8fr .8fr .8fr 1.5fr;
+        grid-template-columns: 1.6fr .8fr .8fr .8fr .8fr;
 
         p:nth-of-type(6) {
           display: none;
@@ -244,7 +244,7 @@
       }
 
       &__row--founding {
-        grid-template-columns: 1.6fr .8fr .8fr .8fr 1.5fr;
+        grid-template-columns: 1.6fr .8fr .8fr .8fr .8fr;
 
         div:nth-of-type(6) {
           display: none;

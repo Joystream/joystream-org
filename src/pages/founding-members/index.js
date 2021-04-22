@@ -52,7 +52,6 @@ const FoundingMembersPage = () => {
   const [formerDate, setFormerDate] = useState();
   const [latterDate, setLatterData] = useState();
   const [newFoundingMembers, setNewFoundingMembers] = useState([]);
-  const [partialTokenAllocation, setPartialTokenAllocation] = useState();
 
   useEffect(() => {
     if (response) {
@@ -66,20 +65,6 @@ const FoundingMembersPage = () => {
       );
 
       setNewFoundingMembers(newFoundingMembers);
-    }
-  }, [response]);
-
-  useEffect(() => {
-    if (response) {
-      let partialTokenAllocation = 0;
-      const totalScoreSum = response?.currentFoundingMembers?.reduce((prev, curr) => prev + curr?.totalScore, 0);
-
-      if (totalScoreSum) {
-        partialTokenAllocation =
-          (response?.poolStats?.currentPoolSize - response?.poolStats?.allocatedFromPool) / totalScoreSum;
-      }
-
-      setPartialTokenAllocation(partialTokenAllocation);
     }
   }, [response]);
 
@@ -128,7 +113,6 @@ const FoundingMembersPage = () => {
           className="FoundingMembersPage__list-wrapper--new"
           type="new"
           data={newFoundingMembers}
-          partialTokenAllocation={partialTokenAllocation}
         />
       ) : null}
       <Benefits newMembers={newFoundingMembers?.length} />
@@ -136,13 +120,11 @@ const FoundingMembersPage = () => {
         className="FoundingMembersPage__list-wrapper--current"
         type="current"
         data={response?.currentFoundingMembers}
-        partialTokenAllocation={partialTokenAllocation}
       />
       <Metrics
         foundingMembers={response?.currentFoundingMembers}
         nonFoundingMembers={response?.scores?.totalScores?.filter(({ inducted }) => !inducted)}
         sizeOfFirstTokenPool={response?.poolStats?.currentPoolSize}
-        partialTokenAllocation={partialTokenAllocation}
       />
       <div className="FoundingMembersPage__cta-wrapper">
         <div className="FoundingMembersPage__cta">
