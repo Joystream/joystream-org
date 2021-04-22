@@ -5,6 +5,7 @@ import cn from 'classnames';
 import Table from '../../../components/Table';
 import useAxios from '../../../utils/useAxios';
 import { ReactComponent as Achieved } from '../../../assets/svg/achieved.svg';
+import NonFMAvatarPlaceholder from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
 import { foundingMembersJson } from '../../../data/pages/founding-members';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { types } from '@joystream/types';
@@ -100,7 +101,7 @@ const PeriodHighlightNonFounding = ({ userData, Api }) => {
         {imageIsReady ? (
           <img className="FoundingMembersLeaderboards__table__main__placeholder" src={image} alt="" />
         ) : (
-          <div className="FoundingMembersLeaderboards__table__main__placeholder"></div>
+          <img className="FoundingMembersLeaderboards__table__main__placeholder" src={NonFMAvatarPlaceholder} alt="" />
         )}
         <div className="FoundingMembersLeaderboards__table__main__data">
           <p className="FoundingMembersLeaderboards__table__main__name">@{memberHandle}</p>
