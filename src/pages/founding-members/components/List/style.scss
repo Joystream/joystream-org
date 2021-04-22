@@ -6,11 +6,11 @@
   }
 
   &__list {
-    width: 1242px;
-    margin: 0 auto;
+    @extend %container;
+
+    padding: 0 10px 0 10px;
 
     &__title {
-      margin: 0 0 40px 0;
       font-family: $font-primary;
       font-size: 40px;
       line-height: 48px;
@@ -23,12 +23,19 @@
     }
   }
 
+  &__cards {
+    display: grid;
+    width: 100%;
+    margin-top: 40px;
+    overflow: hidden;
+    gap: 15px;
+    grid-template-columns: repeat(4, 288px);
+  }
+
   &__card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 288px;
-    min-height: 245px;
     padding: 24px;
     background-color: white;
 
@@ -67,7 +74,7 @@
     &__scores {
       display: flex;
       justify-content: space-between;
-      margin: 11px 0 19px 0;
+      margin: 11px 0 0 0;
     }
 
     &__score {
@@ -90,12 +97,21 @@
 
   @media (max-width: 1300px) {
     &__list {
-      width: 100%;
-      margin: 0;
-
       &__title {
-        padding-left: 40px;
+        padding: 0 40px 0 40px;
       }
+    }
+
+    &__cards {
+      justify-content: unset;
+      padding: 0 40px 0 40px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -105,6 +121,12 @@
         font-size: 32px;
         line-height: 40px;
       }
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__cards {
+      grid-template-columns: 1fr;
     }
   }
 }
