@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import AssetsSection from '../../../components/BrandAssets/AssetsSection';
 import AssetTile from '../../../components/BrandAssets/AssetTile';
 import BrandLayoutWrapper from '../../../components/BrandLayoutWrapper';
@@ -8,6 +10,7 @@ import BrandLayout from '../../../components/_layouts/Brand';
 import fullAssets from '../../../data/pages/brand/assets-full';
 import padNumber from '../../../utils/padNumber';
 import scrollToIdElement from '../../../utils/scrollToIdElement';
+import convertToCamelCase from '../../../utils/convertToCamelCase';
 import typographyImg from '../../../assets/images/typography-overview.png';
 import './index.scss';
 
@@ -88,6 +91,8 @@ const sections = [
 
 const GuidesPage = () => {
   const [openSection, setOpenSection] = useState(sections[0].id);
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   const toggleSection = id => {
     setOpenSection(openSection === id ? undefined : id);
@@ -99,11 +104,19 @@ const GuidesPage = () => {
 
   return (
     <BrandLayout>
-      <SiteMetadata title="Joystream Brand Guide" />
+      <SiteMetadata lang={language} title={t("brand.siteMetadata.title")} />
 
       <BrandLayoutWrapper className="AssetsPage">
         <SidebarProvider>
-          <BrandSidebar data={sections} light onSectionClick={id => toggleSection(id)} activeSectionId={openSection} />
+          <BrandSidebar
+            data={sections.map(({ title, ...rest }) => ({
+              title: t(`brand.assets.${convertToCamelCase(title)}`),
+              ...rest,
+            }))}
+            light
+            onSectionClick={id => toggleSection(id)}
+            activeSectionId={openSection}
+          />
 
           <div className="AssetsPage__wrapper">
             {sections.map(
@@ -116,7 +129,11 @@ const GuidesPage = () => {
                     key={id}
                     id={id}
                     prefix={padNumber(index + 1)}
-                    title={displayTitle || title}
+                    title={
+                      displayTitle
+                        ? t(`brand.assets.displayTitle.${convertToCamelCase(displayTitle)}`)
+                        : t(`brand.assets.${convertToCamelCase(title)}`)
+                    }
                     downloadHref={downloadHref}
                     isOpen={openSection === id}
                     filesCount={filesCount || 0}
@@ -142,3 +159,17 @@ const GuidesPage = () => {
 };
 
 export default GuidesPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

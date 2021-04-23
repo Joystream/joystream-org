@@ -46,65 +46,50 @@ const ShowcaseRow = ({ image, title }) => {
   );
 };
 
-export default () => {
+export default ({ t }) => {
   const section = guidesData.sidebar[2];
   const subSection = section.subSections;
 
   return (
-    <Section title={section.title} id={section.id}>
+    <Section title={t('brand.guides.general.iconography')} id={section.id}>
       <SubSection id={subSection[0].id}>
-        <SubTitle>
-          Icons can be divided into two groups with different purposes. Descriptive icons are a substitute for
-          illustrations and system icons are a purely functional part of the interface.
-        </SubTitle>
+        <SubTitle>{t('brand.guides.iconsOverview.text')}</SubTitle>
         <div className="Iconography__icon-types">
           <div className="Iconography__icon-type">
             <div className="Iconography__icon-descriptive">
               <DiscoverySvg />
             </div>
-            <h4 className="Iconography__icon-text">01. Descriptive</h4>
+            <h4 className="Iconography__icon-text">{t('brand.guides.iconsOverview.typeDescriptive')}</h4>
           </div>
           <div className="Iconography__icon-type">
             <div className="Iconography__icon-system">
               <BellSvg />
             </div>
-            <h4 className="Iconography__icon-text">02. System</h4>
+            <h4 className="Iconography__icon-text">{t('brand.guides.iconsOverview.typeSystem')}</h4>
           </div>
         </div>
       </SubSection>
 
-      <SubSection title="01. Descriptive Icons" id={subSection[1].id}>
-        <Text>
-          Joystream iconography is a custom, comprehensive icon style that helps in explaining certain complex topics in a
-          simple, digestable manner.
-        </Text>
+      <SubSection title={t('brand.guides.descriptiveIcons.title')} id={subSection[1].id}>
+        <Text>{t('brand.guides.descriptiveIcons.comprehensiveStyle')}</Text>
 
-        <Text>
-          They are not always very direct and often carry a symbolic meaning but they help to emphasize
-          important elements.
-        </Text>
+        <Text>{t('brand.guides.descriptiveIcons.symbolic')}</Text>
 
         <img className="Iconography__descriptive-icons--mobile" src={descriptiveIconsMobile} alt="" />
         <img className="Iconography__descriptive-icons--desktop" src={descriptiveIconsDesktop} alt="" />
 
-        <SubTitle small>Construction</SubTitle>
+        <SubTitle small>{t('brand.guides.general.construction')}</SubTitle>
 
-        <BrandListItem bulletText="01.">
-          <Text>
-            Characteristic features of the descriptive icons include paralell striped fills. They are a translation of logo
-            stripes and represent shadows.
-          </Text>
-          <Text>Lines have an angle of 45° they should have 2px girth and 8px space between them at 100% scale.</Text>
+        <BrandListItem bulletText={t('orderedNumbers.one')}>
+          <Text>{t('brand.guides.descriptiveIcons.characteristicFeatures')}</Text>
+          <Text>{t('brand.guides.descriptiveIcons.angle')}</Text>
         </BrandListItem>
 
-        <BrandListItem bulletText="02.">
-          <Text>
-            Icons are drawn using outlines of 12px width at 100% scale, they have square linecaps and can have various
-            sizes depending on the composition.
-          </Text>
+        <BrandListItem bulletText={t('orderedNumbers.two')}>
+          <Text>{t('brand.guides.descriptiveIcons.outlines')}</Text>
         </BrandListItem>
 
-        <div className="Iconography__description">Icons at 100% scale should fit into a box of 800x500px.</div>
+        <div className="Iconography__description">{t('brand.guides.descriptiveIcons.fit')}</div>
 
         <img src={descriptiveBoxImg} className="Iconography__descriptive-box" alt="" />
 
@@ -113,50 +98,42 @@ export default () => {
           size="large"
           withSpacing
           slides={[
-            <IconSlide description="Discovery Provider">
+            <IconSlide description={t('rolesData.discoveryProvider')}>
               <DiscoverySvg />
             </IconSlide>,
-            <IconSlide description="Content Curator">
+            <IconSlide description={t('rolesData.contentCurator')}>
               <ContentSvg />
             </IconSlide>,
-            <IconSlide description="Bandwidth Provider">
+            <IconSlide description={t('rolesData.bandwidthProvider')}>
               <BandwidthSvg />
             </IconSlide>,
           ]}
         />
       </SubSection>
 
-      <SubSection title="02. System Icons" id={subSection[2].id}>
-        <Text>
-          System icons in their basic style combine two colors: black and Joystream Blue. Their purpose is to represent
-          certain actions on the website or platform. They are readable even in small sizes down to 18x18px.
-        </Text>
+      <SubSection title={t('brand.guides.systemIcons.title')} id={subSection[2].id}>
+        <Text>{t('brand.guides.systemIcons.basicStyle')}</Text>
 
         <div className="Iconography__system-icon-container">
-          <SubTitle small>Construction</SubTitle>
+          <SubTitle small>{t('brand.guides.general.construction')}</SubTitle>
 
           <div className="Iconography__system-icon">
             <img src={constructionIcon} alt="" className="Iconography__system-icon-image" />
             <div>
-              <Text>System Icons are drawn using 2px strokes with square linecaps on a 24px grid frame.</Text>
-              <Text>
-                Where possible, icons should have subtle blue accents representing no greater than 40% of the whole.
-              </Text>
+              <Text>{t('brand.guides.systemIcons.strokes')}</Text>
+              <Text>{t('brand.guides.systemIcons.subtleAccents')}</Text>
             </div>
           </div>
         </div>
 
-        <SubTitle small>Types of system icons</SubTitle>
-        <Text>
-          We distinguish four types of system icons and they should be used preferably in their basic style but can be
-          used interchangeably where neccessary.
-        </Text>
+        <SubTitle small>{t('brand.guides.systemIcons.types')}</SubTitle>
+        <Text>{t('brand.guides.systemIcons.fourTypes.text')}</Text>
 
         <div className="Iconography__showcase">
-          <ShowcaseRow title="Basic style" image={iconsBasic} />
-          <ShowcaseRow title="Blue outlines" image={iconsBlueOutlines} />
-          <ShowcaseRow title="White outlines" image={iconsWhiteOutlines} />
-          <ShowcaseRow title="Full style" image={iconsFull} />
+          <ShowcaseRow title={t('brand.guides.systemIcons.fourTypes.basic')} image={iconsBasic} />
+          <ShowcaseRow title={t('brand.guides.systemIcons.fourTypes.blue')} image={iconsBlueOutlines} />
+          <ShowcaseRow title={t('brand.guides.systemIcons.fourTypes.white')} image={iconsWhiteOutlines} />
+          <ShowcaseRow title={t('brand.guides.systemIcons.fourTypes.full')} image={iconsFull} />
         </div>
       </SubSection>
     </Section>

@@ -5,14 +5,29 @@
             "altText" : "Join & start earning"
         }
     },
-    "roles" : {
+    "rolesData" : {
         "validator" : "Validator",
         "councilMember" : "Council Member",
         "storageProvider" : "Storage Provider",
         "contentCreator" : "Content Creator",
-        "contentCurator" : "Content Curator"
+        "contentCurator" : "Content Curator",
+        "discoveryProvider" : "Discovery Provider",
+        "bandwidthProvider" : "Bandwidth Provider"
     },
     "siteMetadata" : {
         "title" : "Joystream: The video platform DAO"
+    },
+    "colors" : {
+        "joystreamBlue" : "Joystream Blue",
+        "white" : "White",
+        "joystreamGrey" : "Joystream Grey",
+        "black" : "Black"
+    },
+    "CMYK" : "CMYK",
+    "RGB" : "RGB",
+    "HEX" : "HEX",
+    "orderedNumbers" : {
+        "one" : "01.",
+        "two" : "02."
     }
 }

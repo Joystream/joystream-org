@@ -5,27 +5,18 @@ import guidesData from '../../../data/pages/brand/guides';
 import { Section, SubSection, SubTitle } from '../GuidesSection';
 import './style.scss';
 
-export default () => {
+export default ({ t }) => {
   const section = guidesData.sidebar[7];
 
   return (
-    <Section title={section.title} id={section.id} style={{ overflow: 'hidden' }}>
+    <Section title={t('brand.guides.general.motion')} id={section.id} style={{ overflow: 'hidden' }}>
       <SubSection buttonToTop>
-        <SubTitle>
-          Joystream is an experimental and exciting platform and its motion should be too.
-        </SubTitle>
-        <SubTitle>
-          General rules for motion can be described with a few simple principles: smooth transitions, dynamic but fluid
-          motion and good amount of easing at the keyframes. This combination should provide a consistent and flexible
-          animation style to cover most of the use cases.
-        </SubTitle>
+        <SubTitle>{t('brand.guides.motion.subtitle')}</SubTitle>
+        <SubTitle>{t('brand.guides.motion.rules')}</SubTitle>
 
         <div className="Motion__warning">
           <WarningSvg className="Motion__warning-icon" />
-          <div className="Motion__warning-text">
-            Guides should be by no means limiting, they should only serve the purpose of providing consistency for
-            animations.
-          </div>
+          <div className="Motion__warning-text">{t('brand.guides.motion.notLimiting')}</div>
         </div>
 
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}

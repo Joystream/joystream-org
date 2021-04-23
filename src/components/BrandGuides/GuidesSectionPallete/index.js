@@ -98,53 +98,48 @@ const ColorArray = ({ hex, className }) => {
   );
 };
 
-export default () => {
+export default ({ t }) => {
   const section = guidesData.sidebar[1];
   const subSection = section.subSections;
 
   return (
-    <Section title={section.title} id={section.id}>
+    <Section title={t('brand.guides.general.colorPalettes')} id={section.id}>
       <SubSection id={subSection[0].id}>
-        <SubTitle>
-          Our brand colors combine three primary colors: black, white and blue. They define the mood and present
-          brand values including:
-        </SubTitle>
+        <SubTitle>{t('brand.guides.colorOverview.combine')}</SubTitle>
 
-        <Text>Stability, Trust, Freedom, Responsibility, Loyalty, Wisdom, Confidence and Intelligence</Text>
+        <Text>{t('brand.guides.colorOverview.example')}</Text>
       </SubSection>
 
-      <SubSection title="01. Primary Colors" id={subSection[1].id}>
-        <Text>
-          Our primarly used colors are black and Joystream blue, a distinctive color that helps to put focus and draw
-          attention. The color white can be deployed in order to calm, provide clarity and offer improved readability.
-        </Text>
-        <Text>
-          One additional color to combine with the three primary colors is blue tinted grey, its purpose is comparable to
-          that of white but it also gives a good amount of contrast to the existing white elements where necessary.
-        </Text>
-        <ColorTile name="Joystream Blue" hex="#4038FF" cmyk={[87, 73, 0, 0]} rgb={[64, 56, 255]} />
-        <ColorTile noMargin textColor="#000" name="White" hex="#FFFFFF" cmyk={[0, 0, 0, 0]} rgb={[255, 255, 255]} />
+      <SubSection title={t('brand.guides.primaryColors.title')} id={subSection[1].id}>
+        <Text>{t('brand.guides.primaryColors.blackAndBlue')}</Text>
+        <Text>{t('brand.guides.primaryColors.blueGrey')}</Text>
+        <ColorTile name={t('colors.joystreamBlue')} hex="#4038FF" cmyk={[87, 73, 0, 0]} rgb={[64, 56, 255]} />
+        <ColorTile
+          noMargin
+          textColor="#000"
+          name={t('colors.white')}
+          hex="#FFFFFF"
+          cmyk={[0, 0, 0, 0]}
+          rgb={[255, 255, 255]}
+        />
         <ColorTile
           small
-          name="Joystream Grey"
+          name={t('colors.joystreamGrey')}
           textColor="#A7AEB7"
           hex="#E8EDF6"
           cmyk={[11, 5, 2, 0]}
           rgb={[232, 237, 246]}
         />
-        <ColorTile withBorder name="Black" hex="#000000" cmyk={[30, 30, 30, 100]} rgb={[0, 0, 0]} />
+        <ColorTile withBorder name={t('colors.black')} hex="#000000" cmyk={[30, 30, 30, 100]} rgb={[0, 0, 0]} />
       </SubSection>
 
-      <SubSection title="02. Supportive Color Palette" id={subSection[2].id}>
-        <Text>
-          Our supportive palette serves the purpose of convenience and usability. This pallete provides a comprehensive range of
-          different shades of primary colors and can be utilised in many different ways depending on requirements.
-        </Text>
+      <SubSection title={t('brand.guides.supportiveColors.title')} id={subSection[2].id}>
+        <Text>{t('brand.guides.supportiveColors.purpose')}</Text>
         <div className="GuidesSectionPallete__boxes">
           <ColorBoxContainer className="GuidesSectionPallete__box-blue">
             <ColorBox hex="#261EE4" />
             <ColorBox hex="#2F2FF4" />
-            <ColorBox name="Joystream Blue" hex="#4038FF" size={2} />
+            <ColorBox name={t('colors.joystreamBlue')} hex="#4038FF" size={2} />
             <ColorBox hex="#5252FF" />
             <ColorBox hex="#6C6CFF" />
           </ColorBoxContainer>
@@ -165,11 +160,8 @@ export default () => {
         </div>
       </SubSection>
 
-      <SubSection title="03. Secondary Color Palette" id={subSection[3].id}>
-        <Text>
-          These are further colous that can represent certain states of the network, they can stand for an error, success,
-          warning and more.
-        </Text>
+      <SubSection title={t('brand.guides.secondaryColors.title')} id={subSection[3].id}>
+        <Text>{t('brand.guides.secondaryColors.states')}</Text>
 
         <div className="GuidesSectionPallete__color-array-container">
           <ColorArray hex="#FF3861" className="GuidesSectionPallete__color-array" />

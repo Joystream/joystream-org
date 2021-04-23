@@ -22,32 +22,19 @@ const GradientBar = ({ startColor, endColor }) => {
   );
 };
 
-export default () => {
+export default ({ t }) => {
   const section = guidesData.sidebar[6];
 
   return (
-    <Section title={section.title} id={section.id}>
+    <Section title={t('brand.guides.general.photography')} id={section.id}>
       <SubSection>
-        <SubTitle>
-          Photographs should be relevant to the topic they are describing but they shouldn’t be limited only to
-          technology. Joystream is much more than just technology; it is unifying, fresh and joyful. Imagery should
-          convey this mood to users.
-        </SubTitle>
+        <SubTitle>{t('brand.guides.photography.overview')}</SubTitle>
       </SubSection>
       <SubSection>
-        <SubTitle small>How to use photography</SubTitle>
-        <Text>
-          Since Joystream is a unique and experimental project it provides a wide variety of the topics which might be 
-          associated with it in terms of photography.
-          It is highly technical especially now when we are in the community building phase, so good deal of the
-          photographs will be tech related.
-        </Text>
+        <SubTitle small>{t('brand.guides.photography.howToUse')}</SubTitle>
+        <Text>{t('brand.guides.photography.variety')}</Text>
 
-        <Text>
-          One way to make sure the photographs are consistent is to use them in dual tones deriving from branding
-          colors. For that purpose we can use a handy tool to consistently change images to dual tones as described
-          below.
-        </Text>
+        <Text>{t('brand.guides.photography.consistency')}</Text>
 
         <div className="Photography__col">
           <div className="Photography__row">
@@ -61,10 +48,7 @@ export default () => {
           </div>
         </div>
 
-        <Text>
-          The link below allows you to create consistent duotones with any photography after inputing the proper two
-          Joystream colours.
-        </Text>
+        <Text>{t('brand.guides.photography.consistentDuotones')}</Text>
         <a
           href="https://duotone.shapefactory.co/"
           target="_blank"
@@ -74,14 +58,9 @@ export default () => {
           https://duotone.shapefactory.co/
         </a>
 
-        <Text>
-          The mood that photos convey is extremely important. It should by all means give a feel of building trust,
-          community and joy. Photographs should show good amount of diversity as it is meant to be for an extremely wide
-          variety of users. They don’t have to be used in dual tones but it is best if they are not "screaming" with
-          colours.
-        </Text>
+        <Text>{t('brand.guides.photography.mood')}</Text>
 
-        <SubTitle small>Photography in use - examples</SubTitle>
+        <SubTitle small>{t('brand.guides.photography.inUse')}</SubTitle>
         <Slider size="small" withSpacing slides={[slide1, slide2, slide3]} />
       </SubSection>
     </Section>

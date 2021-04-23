@@ -75,7 +75,7 @@ const SpartaPage = ({ content }) => {
           <ColumnsLayout>
             <RoleList
               roles={roles.active.map(({ title, ...rest }) => ({
-                title: t(`roles.${convertToCamelCase(title)}`),
+                title: t(`rolesData.${convertToCamelCase(title)}`),
                 ...rest,
               }))}
               content={mapStatusDataToRoles(content)}

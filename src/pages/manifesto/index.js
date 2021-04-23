@@ -1,4 +1,6 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import Hero from '../../components/Hero';
 import LayoutWrapper from '../../components/LayoutWrapper';
 import SiteMetadata from '../../components/SiteMetadata';
@@ -13,14 +15,20 @@ import './style.scss';
 
 const ManifestoPage = () => {
   const { sections, groupSections } = pageData;
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   return (
     <BaseLayout className="ManifestoPage">
-      <SiteMetadata title="Joystream: The video platform DAO" description="Read the Joystream Manifesto" />
+      <SiteMetadata
+        lang={language}
+        title={t('siteMetadata.title')}
+        description={t('manifesto.siteMetadata.description')}
+      />
 
       <Hero
         image={fistImage}
-        title={pageData.header}
+        title={t('manifesto.hero.title')}
         animationStartValue={10}
         animationEndValue={120}
         animationEnd="100vh"
@@ -28,45 +36,72 @@ const ManifestoPage = () => {
         theme="blue"
         noOverflow
       >
-        <p className="AcropolisPage__hero-paragraph">{pageData.subtitle}</p>
+        <p className="AcropolisPage__hero-paragraph">{t('manifesto.hero.text')}</p>
       </Hero>
 
       <LayoutWrapper>
-        <ImageSection title={sections.problem.title} image={sections.problem.image} imageOffset={50}>
-          {sections.problem.text}
+        <ImageSection title={t('manifesto.problem.title')} image={sections.problem.image} imageOffset={50}>
+          <p>{t('manifesto.problem.text.artAsTool')}</p>
+          <p>{t('manifesto.problem.text.mediaAsPrimaryMedium')}</p>
+          <blockquote>{t('manifesto.problem.text.unaccountableInstitutions')}</blockquote>
+          <p>{t('manifesto.problem.text.filteredOnTheirTerms')}</p>
+          <blockquote>{t('manifesto.problem.text.inflexible')}</blockquote>
         </ImageSection>
 
-        <ImageSection title={sections.goal.title} image={sections.goal.image}>
-          {sections.goal.text}
+        <ImageSection title={t('manifesto.goal.title')} image={sections.goal.image}>
+          <p>{t('manifesto.goal.text.arrangement')}</p>
+          <blockquote>{t('manifesto.goal.text.accountability')}</blockquote>
         </ImageSection>
 
-        <ImageSection title={sections.thesis.title} image={sections.thesis.image}>
-          {sections.thesis.text}
+        <ImageSection title={t('manifesto.thesis.title')} image={sections.thesis.image}>
+          <p>{t('manifesto.thesis.text.coreThesis')}</p>
         </ImageSection>
 
         <div className="ManifestoPage__grouped-sections">
-          <ImageSection title={groupSections.wedge.title} image={groupSections.wedge.image} grouped imageOffset={200}>
-            {groupSections.wedge.text}
+          <ImageSection title={t('manifesto.wedge.title')} image={groupSections.wedge.image} grouped imageOffset={200}>
+            <p>{t('manifesto.wedge.text.alternative')}</p>
+            <blockquote>{t('manifesto.wedge.text.blockchainTokens')}</blockquote>
+            <p>{t('manifesto.wedge.text.initialHurdle')}</p>
           </ImageSection>
 
-          <ImageSection title={groupSections.accountability.title} image={groupSections.accountability.image} grouped>
-            {groupSections.accountability.text}
+          <ImageSection title={t('manifesto.accountability.title')} image={groupSections.accountability.image} grouped>
+            <p>{t('manifesto.accountability.text.createAndSustain')}</p>
+            <blockquote>{t('manifesto.accountability.text.twoWays')}</blockquote>
           </ImageSection>
 
-          <ImageSection title={groupSections.voice.title} image={groupSections.voice.image} grouped imageOffset={200}>
-            {groupSections.voice.text}
+          <ImageSection title={t('manifesto.voice.title')} image={groupSections.voice.image} grouped imageOffset={200}>
+            <p>{t('manifesto.voice.text.improveWithin')}</p>
+            <p>{t('manifesto.voice.text.infrastructure')}</p>
+            <blockquote>{t('manifesto.voice.text.control')}</blockquote>
+            <p>{t('manifesto.voice.text.signWithCrypto')}</p>
           </ImageSection>
 
-          <ImageSection title={groupSections.exit.title} image={groupSections.exit.image} grouped imageOffset={200}>
-            {groupSections.exit.text}
+          <ImageSection title={t('manifesto.exit.title')} image={groupSections.exit.image} grouped imageOffset={200}>
+            <p>{t('manifesto.exit.text.exit')}</p>
+            <p>{t('manifesto.exit.text.loweredCosts')}</p>
+            <blockquote>{t('manifesto.exit.text.competition')}</blockquote>
+            <p>{t('manifesto.exit.text.reusability')}</p>
           </ImageSection>
         </div>
 
-        <h3 className="ManifestoPage__cta">{pageData.callToAction}</h3>
+        <h3 className="ManifestoPage__cta">
+          <Trans
+            i18nKey="manifesto.ctaText"
+            components={[
+              <a href={`mailto:${sharedData.defaultEmail}`}>email</a>,
+              <a href={sharedData.social.discordLink} target="_blank" rel="noopener noreferrer">
+                Discord
+              </a>,
+              <a href={sharedData.social.redditLink} target="_blank" rel="noopener noreferrer">
+                Reddit
+              </a>,
+            ]}
+          />
+        </h3>
 
         <section className="ManifestoPage__references">
-          <h2 className="ManifestoPage__references-title">{pageData.references.header}</h2>
-          {pageData.references.text}
+          <h2 className="ManifestoPage__references-title">{t('manifesto.references.title')}</h2>
+          <Trans i18nKey="manifesto.references.text" components={[<p />]} />
         </section>
       </LayoutWrapper>
     </BaseLayout>
@@ -75,3 +110,17 @@ const ManifestoPage = () => {
 
 export { ManifestoPage };
 export default ManifestoPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
