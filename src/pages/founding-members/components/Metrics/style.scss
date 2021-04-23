@@ -97,7 +97,7 @@
       height: 40px;
 
       &--founding {
-        grid-template-columns: 1.4fr 1.2fr .9fr;
+        grid-template-columns: 1.5fr 1fr;
       }
 
       &--nonfounding {
@@ -114,7 +114,7 @@
       background-color: white;
 
       &--founding {
-        grid-template-columns: 1.4fr 1.2fr .9fr;
+        grid-template-columns: 1.5fr 1fr;
       }
 
       &--nonfounding {
@@ -235,19 +235,11 @@
     &__leaderboard {
       &__header--founding {
         grid-template-columns: 2.5fr 1fr;
-
-        & > p:nth-of-type(2) {
-          display: none;
-        }
       }
 
       &__row {
         &--founding {
           grid-template-columns: 2.5fr 1fr;
-
-          & > div:nth-of-type(2) {
-            display: none;
-          }
         }
       }
     }
