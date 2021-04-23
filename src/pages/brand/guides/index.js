@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import GuidesSectionLogo from '../../../components/BrandGuides/GuidesSectionLogo';
 import GuidesSectionIllustrations from '../../../components/BrandGuides/GuidesSectionIllustrations';
 import GuidesSectionPallete from '../../../components/BrandGuides/GuidesSectionPallete';
