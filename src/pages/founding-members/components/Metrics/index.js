@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Table from '../../../../components/Table';
 import { ArrowButton } from '../../index';
 import { ReactComponent as Achieved } from '../../../../assets/svg/achieved.svg';
+import NonFMAvatarPlaceholder from '../../../../assets/svg/non-FM-leaderboard-placeholder.svg';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { types } from '@joystream/types';
 import { JoystreamWSProvider } from '../../../../data/pages/founding-members';
@@ -73,7 +74,7 @@ const MetricsRowNonFoundingData = ({ data, Api }) => {
             <img className="FoundingMembersPage__leaderboard__main__placeholder" src={image} alt="" />
           </>
         ) : (
-          <div className="FoundingMembersPage__leaderboard__main__placeholder"></div>
+          <img className="FoundingMembersPage__leaderboard__main__placeholder" src={NonFMAvatarPlaceholder} alt="" />
         )}
         <div className="FoundingMembersPage__leaderboard__main__data">
           <p className="FoundingMembersPage__leaderboard__main__name">@{data?.memberHandle}</p>
