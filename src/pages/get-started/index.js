@@ -1,7 +1,8 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../../components/_layouts/Base';
 import SiteMetadata from '../../components/SiteMetadata';
-import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
 
 import GetStartedHero from '../../components/get-started/Hero';
 import GetStartedHowTo from '../../components/get-started/HowTo';
@@ -10,21 +11,39 @@ import GetStartedBounties from '../../components/get-started/Bounties';
 import './style.scss';
 
 const GetStarted = () => {
+  const { t } = useTranslation();
+  const { language } = useI18next();
+
   return (
     <BaseLayout>
       <SiteMetadata
-        title="Getting Started"
-        description="Learn how to contribute and participate to the Joystream project"
+        lang={language}
+        title={t("getStarted.siteMetadata.title")}
+        description={t("getStarted.siteMetadata.description")}
       />
 
-      <GetStartedHero />
+      <GetStartedHero t={t} />
 
-      <GetStartedHowTo />
+      <GetStartedHowTo t={t} />
 
-      <GetStartedBounties />
+      <GetStartedBounties t={t} />
 
     </BaseLayout>
   );
 };
 
 export default GetStarted;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

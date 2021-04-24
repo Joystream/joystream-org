@@ -54,7 +54,7 @@ const BountiesCard = ({ title, amount, categories, date, id, link, description }
 
 const CARD_SIZE_WITH_MARGIN = 424;
 
-const BountiesCarousel = () => {
+const BountiesCarousel = ({ t }) => {
   const [data, loading, error] = useAxios(bountiesLink);
 
   const [filterState, setFilterState] = useState('All');
@@ -100,7 +100,7 @@ const BountiesCarousel = () => {
           })}
           onClick={() => setFilterState('All')}
         >
-          All ({categoryValues.All})
+          {t('getStarted.opportunities.bountiesCarousel.all')} ({categoryValues.All})
         </button>
         <button
           className={cn('GetStarted__bounties-carousel__filter', {
@@ -109,7 +109,7 @@ const BountiesCarousel = () => {
           onClick={() => setFilterState('Coding')}
         >
           <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--coding"></div>
-          Coding ({categoryValues.Coding})
+          {t('getStarted.opportunities.bountiesCarousel.coding')} ({categoryValues.Coding})
         </button>
         <button
           className={cn('GetStarted__bounties-carousel__filter', {
@@ -118,7 +118,7 @@ const BountiesCarousel = () => {
           onClick={() => setFilterState('Design')}
         >
           <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--design"></div>
-          Design ({categoryValues.Design})
+          {t('getStarted.opportunities.bountiesCarousel.design')} ({categoryValues.Design})
         </button>
         <button
           className={cn('GetStarted__bounties-carousel__filter', {
@@ -127,7 +127,7 @@ const BountiesCarousel = () => {
           onClick={() => setFilterState('Marketing')}
         >
           <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--marketing"></div>
-          Marketing ({categoryValues.Marketing})
+          {t('getStarted.opportunities.bountiesCarousel.marketing')} ({categoryValues.Marketing})
         </button>
         <button
           className={cn('GetStarted__bounties-carousel__filter', {
@@ -136,7 +136,7 @@ const BountiesCarousel = () => {
           onClick={() => setFilterState('Research')}
         >
           <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--research"></div>
-          Research ({categoryValues.Research})
+          {t('getStarted.opportunities.bountiesCarousel.research')} ({categoryValues.Research})
         </button>
         <button
           className={cn('GetStarted__bounties-carousel__filter', {
@@ -145,7 +145,7 @@ const BountiesCarousel = () => {
           onClick={() => setFilterState('Content')}
         >
           <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--content"></div>
-          Content creation ({categoryValues.Content})
+          {t('getStarted.opportunities.bountiesCarousel.contentCreation')} ({categoryValues.Content})
         </button>
       </div>
       <CardCarousel scrollAmount={CARD_SIZE_WITH_MARGIN}>

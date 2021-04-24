@@ -1,6 +1,6 @@
 import React, { createRef, useMemo } from 'react';
 import { graphql } from 'gatsby';
-import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import ReactDOM from 'react-dom';
 import StorySectionDescription from '../../../components/BrandStory/StorySectionDescription';
 import StorySectionExplanation from '../../../components/BrandStory/StorySectionExplanation';
@@ -67,6 +67,7 @@ const StoryPage = () => {
 };
 
 export default StoryPage;
+
 export const query = graphql`
   query($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {

@@ -7,6 +7,7 @@
     },
     "rolesData" : {
         "validator" : "Validator",
+        "council" : "Council",
         "councilMember" : "Council Member",
         "storageProvider" : "Storage Provider",
         "contentCreator" : "Content Creator",
@@ -29,5 +30,14 @@
     "orderedNumbers" : {
         "one" : "01.",
         "two" : "02."
+    },
+    "numbers" : {
+        "one" : "1",
+        "two" : "2",
+        "three" : "3",
+        "four" : "4",
+        "five" : "5",
+        "six" : "6",
+        "seven" : "7"
     }
 }
