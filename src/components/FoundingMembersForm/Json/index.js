@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import cn from 'classnames';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import { ReactComponent as CloseIcon } from '../../../assets/svg/postponed.svg';
 import { ReactComponent as Upload } from '../../../assets/svg/upload.svg';
 import { ReactComponent as Achieved } from '../../../assets/svg/achieved.svg';
@@ -18,6 +19,7 @@ const Json = ({
   setCurrentProgress,
   setFileLoadedAmount,
   fileLoadedAmount,
+  t,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFileHovering, setIsFileHovering] = useState(false);
@@ -25,9 +27,9 @@ const Json = ({
   return (
     <>
       <div className="flex-row margin-bottom-XS">
-        <h3 className="FoundingMembersFormPage__form__subtitle">Exported account with key</h3>
+        <h3 className="FoundingMembersFormPage__form__subtitle">{t('foundingMembers.form.json.exportedAccount')}</h3>
         <button className="FoundingMembersFormPage__form__link" onClick={() => setIsModalOpen(true)}>
-          How to export your key?
+          {t('foundingMembers.form.json.howToExport.link')}
         </button>
         <Modal
           isOpen={isModalOpen}
@@ -36,17 +38,19 @@ const Json = ({
           overlayClassName="FoundingMembersFormPage__form__modal__overlay"
         >
           <div className="FoundingMembersFormPage__form__modal__container">
-            <p className="margin-bottom-M">How to export your account with key:</p>
+            <p className="margin-bottom-M">{t('foundingMembers.form.json.howToExport.title')}</p>
             <p>
-              In the <a href="https://testnet.joystream.org/" target='_blank'>Pioneer application</a> click the <em>My Keys</em> tab and
-              then click the ellipsis (three dots) button on the Key which you would like to use. Then click{' '}
-              <em>Create a backup file for this account</em>. Enter your password (if applicable) and the JSON will be
-              downloaded.
+              <Trans
+                i18nKey="foundingMembers.form.json.howToExport.text"
+                components={[<a href="https://testnet.joystream.org/" target="_blank">How to export your account with key:</a>, <em />]}
+              />
             </p>
           </div>
         </Modal>
       </div>
-      <p className="FoundingMembersFormPage__form__subtitle-small margin-bottom-S">Accepted file format: .json</p>
+      <p className="FoundingMembersFormPage__form__subtitle-small margin-bottom-S">
+        {t('foundingMembers.form.json.fileFormat')}
+      </p>
       <input
         ref={jsonFileInput}
         onChange={e => handleFileSelection(e, 'application/json')}
@@ -57,7 +61,7 @@ const Json = ({
       />
       {!jsonFile.name ? (
         <div
-          onDragOver={(e) => {
+          onDragOver={e => {
             e.preventDefault();
           }}
           onDrop={e => {
@@ -71,16 +75,19 @@ const Json = ({
         >
           {!fileStatus.loading && !fileStatus.loaded && (
             <label
-            onDragEnter={() => setIsFileHovering(true)}
-            onDragLeave={() => setIsFileHovering(false)}
-            htmlFor="file"
-            className="FoundingMembersFormPage__form__filedrop__label"
+              onDragEnter={() => setIsFileHovering(true)}
+              onDragLeave={() => setIsFileHovering(false)}
+              htmlFor="file"
+              className="FoundingMembersFormPage__form__filedrop__label"
             >
               <p className="FoundingMembersFormPage__form__filedrop__text">
-                Drop you file here or <span className="FoundingMembersFormPage__form__link">browse files</span>
-              </p>{' '}
+                <Trans
+                  i18nKey="foundingMembers.form.dropFile"
+                  components={[<span className="FoundingMembersFormPage__form__link" />]}
+                />
+              </p>
               <div className="FoundingMembersFormPage__form__filedrop--mobile">
-                <p className="FoundingMembersFormPage__form__filedrop__text">Upload file</p>
+                <p className="FoundingMembersFormPage__form__filedrop__text">{t('foundingMembers.form.uploadFile')}</p>
                 <Upload className="FoundingMembersFormPage__form__filedrop__upload-icon" />
               </div>
             </label>
@@ -117,16 +124,12 @@ const Json = ({
           />
         </div>
       )}
-      {fileStatus.error && (
-        <p className="FoundingMembersFormPage__form__error-message">
-          {fileStatus.errorMessage}
-        </p>
-      )}
+      {fileStatus.error && <p className="FoundingMembersFormPage__form__error-message">{fileStatus.errorMessage}</p>}
       <ArrowButton
         className={cn('FoundingMembersFormPage__form__button', {
           'FoundingMembersFormPage__form__button--inactive': !jsonFile.data,
         })}
-        text="Next"
+        text={t('foundingMembers.general.next')}
         onClick={e => {
           if (jsonFile.data) {
             setCurrentProgress(3);

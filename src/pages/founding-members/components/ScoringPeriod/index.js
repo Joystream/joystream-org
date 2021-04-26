@@ -24,7 +24,7 @@ const formatDate = ({ days, hours, minutes }) => {
   }
 };
 
-const FoundingMembersCounter = ({ latterDate }) => {
+const FoundingMembersCounter = ({ latterDate, t }) => {
   const renderSegment = (label, number) => {
     if (number !== 0) {
       return (
@@ -48,14 +48,14 @@ const FoundingMembersCounter = ({ latterDate }) => {
           <div className="FoundingMembersPage__counter">
             {weeks ? (
               <>
-                {renderSegment('WEEKS', weeks)}
-                {renderSegment('DAYS', days)}
+                {renderSegment(t('foundingMembers.scoringPeriod.weeks'), weeks)}
+                {renderSegment(t('foundingMembers.scoringPeriod.days'), days)}
               </>
             ) : (
               <>
-                {renderSegment('DAYS', days)}
-                {renderSegment('HOURS', hours)}
-                {renderSegment('MINUTES', minutes)}
+                {renderSegment(t('foundingMembers.scoringPeriod.days'), days)}
+                {renderSegment(t('foundingMembers.scoringPeriod.hours'), hours)}
+                {renderSegment(t('foundingMembers.scoringPeriod.minutes'), minutes)}
               </>
             )}
           </div>
@@ -133,7 +133,7 @@ const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId }) => {
   );
 };
 
-export const ScoringPeriodCounter = ({ className, formerDate, latterDate }) => {
+export const ScoringPeriodCounter = ({ className, formerDate, latterDate, t }) => {
   const [percent, setPercent] = useState(0);
 
   useEffect(() => {
@@ -150,8 +150,10 @@ export const ScoringPeriodCounter = ({ className, formerDate, latterDate }) => {
 
   return (
     <div className={`FoundingMembersPage__period__counter ${className ?? ''}`}>
-      <p className="FoundingMembersPage__period__counter__subtitle">{percent <= 1 ? 'ENDS' : 'ENDED ON'}</p>
-      {latterDate && <FoundingMembersCounter latterDate={latterDate} />}
+      <p className="FoundingMembersPage__period__counter__subtitle">
+        {percent <= 1 ? t('foundingMembers.scoringPeriod.ends') : t('foundingMembers.scoringPeriod.ends')}
+      </p>
+      {latterDate && <FoundingMembersCounter latterDate={latterDate} t={t}/>}
       {percent <= 1 ? (
         <div className="FoundingMembersPage__period__percentage">
           <div className="FoundingMembersPage__period__percentage__line FoundingMembersPage__period__percentage__line--secondary">

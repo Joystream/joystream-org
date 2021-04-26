@@ -1,27 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import BaseLayout from '../../../components/_layouts/Base';
-import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import cn from 'classnames';
+import { graphql } from 'gatsby';
+import { types } from '@joystream/types';
+import { ApiPromise, WsProvider } from '@polkadot/api';
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
+
 import Table from '../../../components/Table';
-import useAxios from '../../../utils/useAxios';
+import SiteMetadata from '../../../components/SiteMetadata';
+import BaseLayout from '../../../components/_layouts/Base';
+
+import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import { ReactComponent as Achieved } from '../../../assets/svg/achieved.svg';
 import NonFMAvatarPlaceholder from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
-import { foundingMembersJson } from '../../../data/pages/founding-members';
-import { ApiPromise, WsProvider } from '@polkadot/api';
-import { types } from '@joystream/types';
-import { JoystreamWSProvider } from '../../../data/pages/founding-members';
 
+import { JoystreamWSProvider } from '../../../data/pages/founding-members';
+import { foundingMembersJson } from '../../../data/pages/founding-members';
+
+import useAxios from '../../../utils/useAxios';
 import './style.scss';
 
-const PeriodHighlightFounding = ({ userData }) => {
-  const {
-    inducted,
-    memberHandle,
-    memberId,
-    totalDirectScore,
-    totalReferralScore,
-    totalScore,
-  } = userData;
+const PeriodHighlightFounding = ({ userData, t }) => {
+  const { inducted, memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore } = userData;
 
   const [imageHasError, setImageHasError] = useState(false);
   const userDate = new Date(inducted.inductedDate);
@@ -52,7 +51,9 @@ const PeriodHighlightFounding = ({ userData }) => {
         )}
         <div className="FoundingMembersLeaderboards__table__main__data">
           <p className="FoundingMembersLeaderboards__table__main__name">@{memberHandle}</p>
-          <p className="FoundingMembersLeaderboards__table__main__handle">Member: #{memberId}</p>
+          <p className="FoundingMembersLeaderboards__table__main__handle">
+            {t('foundingMembers.general.member')}: #{memberId}
+          </p>
         </div>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
@@ -71,7 +72,7 @@ const PeriodHighlightFounding = ({ userData }) => {
   );
 };
 
-const PeriodHighlightNonFounding = ({ userData, Api }) => {
+const PeriodHighlightNonFounding = ({ userData, Api, t }) => {
   const { memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore } = userData;
   const [imageIsReady, setImageIsReady] = useState(false);
   const [image, setImage] = useState();
@@ -105,7 +106,9 @@ const PeriodHighlightNonFounding = ({ userData, Api }) => {
         )}
         <div className="FoundingMembersLeaderboards__table__main__data">
           <p className="FoundingMembersLeaderboards__table__main__name">@{memberHandle}</p>
-          <p className="FoundingMembersLeaderboards__table__main__handle">Member: #{memberId}</p>
+          <p className="FoundingMembersLeaderboards__table__main__handle">
+            {t('foundingMembers.general.member')}: #{memberId}
+          </p>
         </div>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
@@ -125,6 +128,8 @@ const Leaderboards = ({ location }) => {
   const [isFounding, setIsFounding] = useState(location?.state?.isFoundingMember !== false);
   const [response, loading, error] = useAxios(foundingMembersJson);
   const [Api, setApi] = useState();
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   useEffect(() => {
     async function setUpApi() {
@@ -145,10 +150,7 @@ const Leaderboards = ({ location }) => {
             key={index}
             className="FoundingMembersLeaderboards__table__row FoundingMembersLeaderboards__table__row--founding"
           >
-            <PeriodHighlightFounding
-              key={index}
-              userData={foundingMember}
-            />
+            <PeriodHighlightFounding key={index} userData={foundingMember} t={t} />
           </Table.Row>
         ));
     } else {
@@ -159,7 +161,7 @@ const Leaderboards = ({ location }) => {
             key={index}
             className="FoundingMembersLeaderboards__table__row FoundingMembersLeaderboards__table__row--nonfounding"
           >
-            <PeriodHighlightNonFounding key={index} userData={foundingMember} Api={Api} />
+            <PeriodHighlightNonFounding key={index} userData={foundingMember} Api={Api} t={t} />
           </Table.Row>
         ));
     }
@@ -167,16 +169,17 @@ const Leaderboards = ({ location }) => {
 
   return (
     <BaseLayout>
+      <SiteMetadata lang={language} title={t('foundingMembers.leaderboards.siteMetadata.title')} />
       <div className="FoundingMembersLeaderboards">
         <div className="FoundingMembersLeaderboards__header-wrapper">
           <div className="FoundingMembersLeaderboards__back">
             <Arrow className="FoundingMembersLeaderboards__back__arrow" />
             <a href="/founding-members" className="FoundingMembersLeaderboards__back__text">
-              Back to Program page
+              {t('foundingMembers.general.backButton')}
             </a>
           </div>
           <div className="FoundingMembersLeaderboards__header">
-            <h1 className="FoundingMembersLeaderboards__header__title">Leaderboard</h1>
+            <h1 className="FoundingMembersLeaderboards__header__title">{t('foundingMembers.leaderboards.title')}</h1>
             <div className="FoundingMembersLeaderboards__score-toggle">
               <div
                 role="presentation"
@@ -185,7 +188,9 @@ const Leaderboards = ({ location }) => {
                 })}
                 onClick={() => setIsFounding(true)}
               >
-                <p className="FoundingMembersLeaderboards__score-toggle__item__text">Founding Members</p>
+                <p className="FoundingMembersLeaderboards__score-toggle__item__text">
+                  {t('foundingMembers.general.foundingMembers')}
+                </p>
               </div>
               <div
                 role="presentation"
@@ -194,7 +199,9 @@ const Leaderboards = ({ location }) => {
                 })}
                 onClick={() => setIsFounding(false)}
               >
-                <p className="FoundingMembersLeaderboards__score-toggle__item__text">Non-Founding Members</p>
+                <p className="FoundingMembersLeaderboards__score-toggle__item__text">
+                  {t('foundingMembers.general.nonFoundingMembers')}
+                </p>
               </div>
             </div>
           </div>
@@ -208,12 +215,20 @@ const Leaderboards = ({ location }) => {
             })}
           >
             <p className="FoundingMembersLeaderboards__table__header__item"></p>
-            <p className="FoundingMembersLeaderboards__table__header__item">Direct Score</p>
-            <p className="FoundingMembersLeaderboards__table__header__item">Referral Score</p>
-            <p className="FoundingMembersLeaderboards__table__header__item">Total Score</p>
+            <p className="FoundingMembersLeaderboards__table__header__item">
+              {t('foundingMembers.general.directScore')}
+            </p>
+            <p className="FoundingMembersLeaderboards__table__header__item">
+              {t('foundingMembers.general.referralScore')}
+            </p>
+            <p className="FoundingMembersLeaderboards__table__header__item">
+              {t('foundingMembers.general.totalScore')}
+            </p>
             {isFounding && (
               <>
-                <p className="FoundingMembersLeaderboards__table__header__item">Inducted</p>
+                <p className="FoundingMembersLeaderboards__table__header__item">
+                  {t('foundingMembers.general.inducted')}
+                </p>
               </>
             )}
           </Table.Header>
@@ -225,3 +240,17 @@ const Leaderboards = ({ location }) => {
 };
 
 export default Leaderboards;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
