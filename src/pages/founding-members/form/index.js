@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../../../components/_layouts/Base';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
-import { ScoringPeriodCounter } from '../components/ScoringPeriod';
+import { ScoringPeriodCounter } from '../../../components/founding-members/ScoringPeriod';
 import useAxios from '../../../utils/useAxios';
 import { foundingMembersJson } from '../../../data/pages/founding-members';
 

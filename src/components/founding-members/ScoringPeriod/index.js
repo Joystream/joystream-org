@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowButton } from '../../index';
-import useWindowDimensions from '../../../../utils/useWindowDimensions';
+import { ArrowButton } from '../../../pages/founding-members/index';
+import useWindowDimensions from '../../../utils/useWindowDimensions';
 import Countdown from 'react-countdown-now';
 
 import './style.scss';
@@ -65,7 +65,7 @@ const FoundingMembersCounter = ({ latterDate, t }) => {
   );
 };
 
-const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId }) => {
+const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId, t }) => {
   const [percent, setPercent] = useState(0);
   const { width } = useWindowDimensions();
 
@@ -84,15 +84,17 @@ const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId }) => {
   return (
     <section className="FoundingMembersPage__period" style={{ display: percent <= 1 ? 'block' : 'none' }}>
       <div className="FoundingMembersPage__period__header">
-        <h2 className="FoundingMembersPage__period__title">Current scoring period</h2>
+        <h2 className="FoundingMembersPage__period__title">{t('foundingMembers.scoringPeriod.title')}</h2>
         <p className="FoundingMembersPage__period__subtitle">
-          <span>Current period number</span> {scoringPeriodId && `#${scoringPeriodId}`}
+          <span>{t('foundingMembers.scoringPeriod.currentNumber')}</span> {scoringPeriodId && `#${scoringPeriodId}`}
         </p>
       </div>
       <div className="FoundingMembersPage__period__content">
         <div className="FoundingMembersPage__period__counter">
-          <p className="FoundingMembersPage__period__counter__subtitle">{percent <= 1 ? 'ENDS' : 'ENDED ON'}</p>
-          {latterDate && <FoundingMembersCounter latterDate={latterDate} />}
+          <p className="FoundingMembersPage__period__counter__subtitle">
+            {percent <= 1 ? t('foundingMembers.scoringPeriod.ends') : t('foundingMembers.scoringPeriod.endedOn')}
+          </p>
+          {latterDate && <FoundingMembersCounter t={t} latterDate={latterDate} />}
           {percent <= 1 ? (
             <div className="FoundingMembersPage__period__percentage">
               <div className="FoundingMembersPage__period__percentage__line">
@@ -116,7 +118,7 @@ const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId }) => {
           <ArrowButton
             className="FoundingMembersPage__period__summary-button"
             link="/founding-members/form"
-            text="Submit summary"
+            text={t('foundingMembers.scoringPeriod.submitSummary')}
           />
           <ArrowButton
             className="FoundingMembersPage__period__announcement-button"
@@ -125,7 +127,11 @@ const ScoringPeriod = ({ formerDate, latterDate, scoringPeriodId }) => {
                 ? `https://github.com/Joystream/founding-members/blob/main/scoring-periods/${scoringPeriodId}.md`
                 : '#0'
             }
-            text={width > 920 ? 'Period announcement' : 'Announcement'}
+            text={
+              width > 920
+                ? t('foundingMembers.scoringPeriod.periodAnnouncement')
+                : t('foundingMembers.scoringPeriod.announcement')
+            }
           />
         </div>
       </div>
@@ -151,9 +157,9 @@ export const ScoringPeriodCounter = ({ className, formerDate, latterDate, t }) =
   return (
     <div className={`FoundingMembersPage__period__counter ${className ?? ''}`}>
       <p className="FoundingMembersPage__period__counter__subtitle">
-        {percent <= 1 ? t('foundingMembers.scoringPeriod.ends') : t('foundingMembers.scoringPeriod.ends')}
+        {percent <= 1 ? t('foundingMembers.scoringPeriod.ends') : t('foundingMembers.scoringPeriod.endedOn')}
       </p>
-      {latterDate && <FoundingMembersCounter latterDate={latterDate} t={t}/>}
+      {latterDate && <FoundingMembersCounter latterDate={latterDate} t={t} />}
       {percent <= 1 ? (
         <div className="FoundingMembersPage__period__percentage">
           <div className="FoundingMembersPage__period__percentage__line FoundingMembersPage__period__percentage__line--secondary">

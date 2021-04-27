@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import CardCarousel from '../../../../components/CardCarousel';
-import formatDate from '../../../../utils/formatDate';
+import formatDate from '../../../utils/formatDate';
 
 import './style.scss';
 
-const Card = ({ founderData }) => {
+const Card = ({ founderData, t }) => {
   const [imageHasError, setImageHasError] = useState(false);
 
   return (
@@ -14,7 +13,7 @@ const Card = ({ founderData }) => {
           <img
             className="FoundingMembersPage__card__main__icon"
             src={founderData?.inducted?.avatar}
-            alt="icon of founding member"
+            alt={t('foundingMembers.landing.list.iconAlt')}
             onError={() => {
               setImageHasError(true);
             }}
@@ -28,11 +27,11 @@ const Card = ({ founderData }) => {
       </div>
       <div className="FoundingMembersPage__card__scores">
         <div className="FoundingMembersPage__card__score">
-          <p className="FoundingMembersPage__card__score__title">Total score</p>
+          <p className="FoundingMembersPage__card__score__title">{t('foundingMembers.general.totalScore')}</p>
           <p className="FoundingMembersPage__card__score__stat">{founderData?.totalScore}</p>
         </div>
         <div className="FoundingMembersPage__card__score">
-          <p className="FoundingMembersPage__card__score__title">Induction Date</p>
+          <p className="FoundingMembersPage__card__score__title">{t('foundingMembers.general.inductionDate')}</p>
           <p className="FoundingMembersPage__card__score__stat">
             {founderData?.inducted?.inductedDate ? formatDate(founderData?.inducted?.inductedDate) : '-'}
           </p>
@@ -42,15 +41,18 @@ const Card = ({ founderData }) => {
   );
 };
 
-const List = ({ className, data, type }) => (
+const List = ({ className, data, type, t }) => (
   <div className={`${className} FoundingMembersPage__list-wrapper`}>
     <div className="FoundingMembersPage__list">
       <h2 className="FoundingMembersPage__list__title">
-        {type === 'current' ? 'Current' : 'New'} founding members<span>{data?.length}</span>
+        {type === 'current'
+          ? t('foundingMembers.landing.list.currentMembers')
+          : t('foundingMembers.landing.list.newMembers')}
+        <span>{data?.length}</span>
       </h2>
       <div className="FoundingMembersPage__cards">
         {data?.map((founderData, index) => (
-          <Card founderData={founderData} key={index} />
+          <Card founderData={founderData} key={index} t={t}/>
         ))}
       </div>
     </div>

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../../components/_layouts/Base';
 import SiteMetadata from '../../components/SiteMetadata';
 import FoundingMembersVisual from '../../assets/svg/hero-founding-members.svg';
@@ -6,10 +8,10 @@ import FoundingMembersVisualAlt from '../../assets/svg/hero-founding-members-alt
 import FoundingMembersCTA from '../../assets/svg/hero-founding-members-cta.svg';
 import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
 import Button from '../../components/Button';
-import Benefits from './components/Benefits';
-import List from './components/List';
-import Metrics from './components/Metrics';
-import ScoringPeriod from './components/ScoringPeriod';
+import Benefits from '../../components/founding-members/Benefits';
+import List from '../../components/founding-members/List';
+import Metrics from '../../components/founding-members/Metrics';
+import ScoringPeriod from '../../components/founding-members/ScoringPeriod';
 import useWindowDimensions from '../../utils/useWindowDimensions';
 import useAxios from '../../utils/useAxios';
 import { foundingMembersJson } from '../../data/pages/founding-members';
@@ -47,6 +49,8 @@ export const ArrowButton = ({ link, text, className, onClick, state, to }) => {
 
 const FoundingMembersPage = () => {
   const { width } = useWindowDimensions();
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   const [response, loading, error] = useAxios(foundingMembersJson);
   const [formerDate, setFormerDate] = useState();
@@ -71,33 +75,31 @@ const FoundingMembersPage = () => {
   return (
     <BaseLayout secondary>
       <SiteMetadata
-        title="Founding Members"
-        description="Information and data regarding the new Founding Members Program of the Joystream platform."
+        lang={language}
+        title={t('foundingMembers.landing.siteMetadata.title')}
+        description={t('foundingMembers.landing.siteMetadata.description')}
       />{' '}
       <div className="FoundingMembersPage__hero-wrapper">
         <div className="FoundingMembersPage__hero">
           <div className="FoundingMembersPage__hero__content">
-            <h1 className="FoundingMembersPage__hero__title">Joystream Founding Member Program</h1>
-            <p className="FoundingMembersPage__hero__paragraph">
-              Founding Members are highly effective project contributors awarded JOY tokens in the mainnet genesis
-              block.
-            </p>
+            <h1 className="FoundingMembersPage__hero__title">{t('foundingMembers.landing.hero.title')}</h1>
+            <p className="FoundingMembersPage__hero__paragraph">{t('foundingMembers.landing.hero.text')}</p>
             <ArrowButton
               className="FoundingMembersPage__hero__button"
               link="https://discord.gg/DE9UN3YpRP"
-              text="Join our Discord"
+              text={t('foundingMembers.general.joinOurDiscord')}
             />
           </div>
           <div className="FoundingMembersPage__hero__image-wrapper">
             <img
               className="FoundingMembersPage__hero__image"
               src={FoundingMembersVisual}
-              alt="founding members visual"
+              alt={t('foundingMembers.landing.hero.imageAlt')}
             />
             <img
               className="FoundingMembersPage__hero__image FoundingMembersPage__hero__image--secondary"
               src={FoundingMembersVisualAlt}
-              alt="founding members alternate visual"
+              alt={t('foundingMembers.landing.hero.imageAlt')}
             />
           </div>
         </div>
@@ -106,69 +108,57 @@ const FoundingMembersPage = () => {
           formerDate={formerDate}
           latterDate={latterDate}
           scoringPeriodId={response?.scoringPeriodsFull?.currentScoringPeriod?.scoringPeriodId}
+          t={t}
         />
       </div>
       {newFoundingMembers?.length ? (
-        <List
-          className="FoundingMembersPage__list-wrapper--new"
-          type="new"
-          data={newFoundingMembers}
-        />
+        <List className="FoundingMembersPage__list-wrapper--new" type="new" data={newFoundingMembers} t={t} />
       ) : null}
-      <Benefits newMembers={newFoundingMembers?.length} />
+      <Benefits newMembers={newFoundingMembers?.length} t={t} />
       <List
         className="FoundingMembersPage__list-wrapper--current"
         type="current"
         data={response?.currentFoundingMembers}
+        t={t}
       />
       <Metrics
         foundingMembers={response?.currentFoundingMembers}
         nonFoundingMembers={response?.scores?.totalScores?.filter(({ inducted }) => !inducted)}
         sizeOfFirstTokenPool={response?.poolStats?.currentPoolSize}
+        t={t}
       />
       <div className="FoundingMembersPage__cta-wrapper">
         <div className="FoundingMembersPage__cta">
           <div className="FoundingMembersPage__cta__content">
-            <h2 className="FoundingMembersPage__cta__title">Discuss the program</h2>
-            <p className="FoundingMembersPage__cta__text">
-              Begin your founding member journey by joining our Discord group and requesting your first testnet tokens.
-            </p>
-            <p className="FoundingMembersPage__cta__text">
-              Here you can also ask question about many aspects of the program and find out the areas where you can
-              contribute right away.
-            </p>
+            <h2 className="FoundingMembersPage__cta__title">{t('foundingMembers.landing.cta.title')}</h2>
+            <p className="FoundingMembersPage__cta__text">{t('foundingMembers.landing.cta.joinDiscord')}</p>
+            <p className="FoundingMembersPage__cta__text">{t('foundingMembers.landing.cta.askQuestions')}</p>
             <ArrowButton
               className="FoundingMembersPage__cta__button"
               link="https://discord.gg/DE9UN3YpRP"
-              text={width <= 768 ? 'Join now' : 'Join our Discord'}
+              text={
+                width <= 768 ? t('foundingMembers.landing.cta.joinNow') : t('foundingMembers.general.joinOurDiscord')
+              }
             />
           </div>
-          <img className="FoundingMembersPage__cta__visual" src={FoundingMembersCTA} alt="founding members visual" />
+          <img
+            className="FoundingMembersPage__cta__visual"
+            src={FoundingMembersCTA}
+            alt={t('foundingMembers.landing.cta.imageAlt')}
+          />
         </div>
       </div>
       <div className="FoundingMembersPage__disclaimer">
-        <h2 className="FoundingMembersPage__disclaimer__title">Disclaimer</h2>
+        <h2 className="FoundingMembersPage__disclaimer__title">{t('foundingMembers.landing.disclaimer.title')}</h2>
         <p className="FoundingMembersPage__disclaimer__text">
-          This disclaimer applies to the webpage accessible at{' '}
-          <a style={{ color: 'white' }} href="https://www.joystream.org/token/">
-            www.joystream.org/token
-          </a>{' '}
-          as well as all other webpages, digital services or applications published by Jsgenesis (the “Company”). The
-          disclaimer also applies to any material published by Company in any other format in connection with the JOY
-          token (the “Token”). Publications made by Company and all information contained within them are not directed
-          at or intended for use by any person resident or located in any jurisdiction where (1) the distribution of
-          such information is contrary to the laws of such jurisdiction; or (2) such distribution is prohibited without
-          obtaining the necessary licenses or authorizations by the relevant branch, subsidiary or affiliate office of
-          Company and such licenses or authorizations have not been obtained. Company does not provide investment, legal
-          or tax advice and nothing herein should be construed as being financial, legal, tax or other advice. Unless
-          specifically stated otherwise, all price information is indicative only. No representation or warranty, either
-          express or implied, is provided in relation to the accuracy, completeness or reliability of the materials, nor
-          are they a complete statement of the securities, markets or developments referred to herein. The materials
-          should not be regarded by recipients as a substitute for the exercise of their own judgment. All information
-          and materials published, distributed or otherwise made available by Company in relation to Token are provided
-          for informational purposes, for your non-commercial, personal use only. No information or materials published
-          by Company constitutes a solicitation, an offer, or a recommendation to buy or sell any investment
-          instruments, to effect any transactions, or to conclude any legal act of any kind whatsoever.
+          <Trans
+            i18nKey="foundingMembers.landing.disclaimer.text"
+            components={[
+              <a style={{ color: 'white' }} href="https://www.joystream.org/token/">
+                www.joystream.org/token
+              </a>,
+            ]}
+          />
         </p>
       </div>
     </BaseLayout>
@@ -176,3 +166,17 @@ const FoundingMembersPage = () => {
 };
 
 export default FoundingMembersPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
