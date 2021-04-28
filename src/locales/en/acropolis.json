@@ -53,7 +53,7 @@
         },
         "map" : {
             "title" : "Acropolis of Athens",
-            "text" : "<0>The Acropolis is a citadel on a hill in the heart of Athens.</0> It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list \"World Heritage Sites\".<1/><1/> We chose the name as we had to scale back our ambitions for the next testnet after some issues with the release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not intended for Athens. <1/><1/> <2/> <3>Explore previous testnet</3>"
+            "text" : "<0>The Acropolis is a citadel on a hill in the heart of Athens.</0> It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list \"World Heritage Sites\".<1/><1/> We chose the name as we had to scale back our ambitions for the next testnet after some issues with the release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not intended for Athens. <1/><1/> <2><0/> Explore previous testnet</2>"
         }
     }
 }

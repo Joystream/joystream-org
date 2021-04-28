@@ -53,7 +53,7 @@
         },
         "map" : {
             "title" : "The city of Athens",
-            "text" : "<0>Athens is the capital of Greece.</0> It was also at the heart of Ancient Greece, a powerful civilisation and empire. The city is still dominated by 5th-century BC landmarks, including the Acropolis, a hilltop citadel topped with ancient buildings like the colonnaded Parthenon temple. <1/><1/> We chose the name Athens as, like our previous testnets, Mesopotamia and Sparta, the ancient Athens' historical significance in the development towards modern democracy and the rule of law. <1/><1/> <2/> <3>Explore previous testnet</3>"
+            "text" : "<0>Athens is the capital of Greece.</0> It was also at the heart of Ancient Greece, a powerful civilisation and empire. The city is still dominated by 5th-century BC landmarks, including the Acropolis, a hilltop citadel topped with ancient buildings like the colonnaded Parthenon temple. <1/><1/> We chose the name Athens as, like our previous testnets, Mesopotamia and Sparta, the ancient Athens' historical significance in the development towards modern democracy and the rule of law. <1/><1/> <2> <0/> Explore previous testnet</2>"
         }
     }
 }

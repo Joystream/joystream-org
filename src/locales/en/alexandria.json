@@ -49,7 +49,7 @@
         },
         "map" : {
             "title" : "Alexandria",
-            "text" : "<0>Alexandria was founded in approximately 331 BC by Alexander the Great.</0> The city was best known for the Lighthouse of Alexandria, one of the Seven Wonders of the Ancient World, as well as its colossal Great Library.<1/><1/> Alexandria was the intellectual and cultural center of the ancient Mediterranean world for much of the Hellenistic age and late antiquity. It was at one time the largest city in the ancient world before being eventually overtaken by Rome.<1/><1/><2/><3>Read the blog post</3>"
+            "text" : "<0>Alexandria was founded in approximately 331 BC by Alexander the Great.</0> The city was best known for the Lighthouse of Alexandria, one of the Seven Wonders of the Ancient World, as well as its colossal Great Library.<1/><1/> Alexandria was the intellectual and cultural center of the ancient Mediterranean world for much of the Hellenistic age and late antiquity. It was at one time the largest city in the ancient world before being eventually overtaken by Rome.<1/><1/><2><0/> Read the blog post</2>"
         }
     }
 }

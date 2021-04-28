@@ -50,7 +50,7 @@ const SpartaPage = ({ content }) => {
         chip={<Chip onClick={() => setModalOpen(true)}>{t('sparta.hero.chipText')}</Chip>}
       >
         <p className="SpartaPage__hero-paragraph">{t('sparta.hero.text')}</p>
-        <HeroCard error content={t('sparta.heroCard.markdown')} />
+        <HeroCard error content={t('sparta.heroCard.markdown')} t={t}/>
 
         <TestnetModal
           title={t("sparta.modal.title")}
@@ -79,6 +79,7 @@ const SpartaPage = ({ content }) => {
                 ...rest,
               }))}
               content={mapStatusDataToRoles(content)}
+              t={t}
               oldTestnet
             />
           </ColumnsLayout>

@@ -57,7 +57,7 @@ const BabylonPage = ({ content }) => {
         animationStartValue={0}
       >
         <p className="BabylonPage__hero-paragraph">{t('babylon.hero.text')}</p>
-        <HeroCard info date="2021/04/07 07:00" counterTitle={<>{t('babylon.heroCard.title')}</>} />
+        <HeroCard info date="2021/04/07 07:00" counterTitle={<>{t('babylon.heroCard.title')}</>} t={t} />
 
         <TestnetModal
           title={t('babylon.modal.title')}
@@ -107,6 +107,7 @@ const BabylonPage = ({ content }) => {
                 ...rest,
               }))}
               content={mapStatusDataToRoles(content)}
+              t={t}
               oldTestnet
             />
           </ColumnsLayout>
@@ -120,8 +121,10 @@ const BabylonPage = ({ content }) => {
             components={[
               <strong />,
               <br />,
-              <PersonIcon />,
-              <Link href="https://blog.joystream.org/announcing-babylon/">Read the blog post</Link>,
+              <Link href="https://blog.joystream.org/announcing-babylon/">
+                <PersonIcon />
+                Read the blog post
+              </Link>,
             ]}
           />
         </p>

@@ -53,7 +53,7 @@
         },
         "map" : {
             "title" : "Rome",
-            "text" : "<0>Rome was the capital of the great Roman Empire during its peak.</0> As with previous testnet names, the Roman Empire and Rome was another important step in the rise of democracy, the rule of law, and modern governance structures.<1/><1/><2/><3>Explore current testnet</3>"
+            "text" : "<0>Rome was the capital of the great Roman Empire during its peak.</0> As with previous testnet names, the Roman Empire and Rome was another important step in the rise of democracy, the rule of law, and modern governance structures.<1/><1/><2><0/> Explore current testnet</2>"
         }
     }
 }

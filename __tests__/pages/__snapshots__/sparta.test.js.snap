@@ -39,6 +39,7 @@ exports[`SpartaPage page renders correctly 1`] = `
       date={null}
       error={true}
       info={false}
+      t={[Function]}
     />
     <TestnetModal
       className=""
@@ -149,6 +150,7 @@ exports[`SpartaPage page renders correctly 1`] = `
               },
             ]
           }
+          t={[Function]}
         />
       </ColumnsLayout>
     </TitleWrapper>

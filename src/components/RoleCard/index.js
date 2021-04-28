@@ -37,20 +37,21 @@ const contentTypes = {
   most: number => <>At most, {numberWrapper(number)} users occupied this role</>,
 };
 
-const RoleCard = ({ image: Image, title, count, type, className, hasLabel, oldTestnet, ...props }) => {
+const RoleCard = ({ image: Image, title, count, type, className, hasLabel, oldTestnet, t, ...props }) => {
   const classes = cn('RoleCard', className, {
     'RoleCard--labeled': hasLabel,
     'RoleCard--small': !count,
   });
   return (
     <Link className={classes} {...props}>
+      {hasLabel && <div className="RoleCard__label">{t('roleCard.new')}</div>}
       <Image className="RoleCard__image" />
       <div className="RoleCard__content">
         <p className="RoleCard__title">{title}</p>
-        {(!oldTestnet && count) && (
+        {!oldTestnet && count && (
           <p className="RoleCard__info">
             <PeopleIcon className="RoleCard__icon" />
-            {contentTypes[type](count)}
+            {t(`roleCard.${type}`, { numberOfUsers: count })}
           </p>
         )}
       </div>

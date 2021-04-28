@@ -53,7 +53,7 @@ const RomePage = ({ content }) => {
         animationStartValue={0}
       >
         <p className="RomePage__hero-paragraph">{t('rome.hero.text')}</p>
-        <HeroCard info date="2020/05/20 15:00" counterTitle={<>{t('rome.heroCard.title')}</>} />
+        <HeroCard info date="2020/05/20 15:00" counterTitle={<>{t('rome.heroCard.title')}</>} t={t} />
 
         <TestnetModal
           title={t('rome.modal.title')}
@@ -112,6 +112,7 @@ const RomePage = ({ content }) => {
                 ...rest,
               }))}
               content={mapStatusDataToRoles(content)}
+              t={t}
               oldTestnet
             />
           </ColumnsLayout>
@@ -125,8 +126,10 @@ const RomePage = ({ content }) => {
             components={[
               <strong />,
               <br />,
-              <PersonIcon />,
-              <Link href="https://testnet.joystream.org/">Explore current testnet</Link>,
+              <Link href="https://testnet.joystream.org/">
+                <PersonIcon />
+                Explore current testnet
+              </Link>,
             ]}
           />
         </p>

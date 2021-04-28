@@ -61,6 +61,7 @@ const AthensPage = ({ content }) => {
           counterTitle={
             <Trans i18nKey="athens.heroCard.text" components={[<br />, <Link to="/acropolis">ACROPOLIS</Link>]} />
           }
+          t={t}
         />
 
         <TestnetModal
@@ -120,6 +121,7 @@ const AthensPage = ({ content }) => {
                 ...rest,
               }))}
               content={mapStatusDataToRoles(content)}
+              t={t}
               oldTestnet
             />
           </ColumnsLayout>
@@ -130,7 +132,14 @@ const AthensPage = ({ content }) => {
         <p>
           <Trans
             i18nKey="athens.map.text"
-            components={[<strong />, <br />, <PersonIcon />, <Link to="/sparta">Explore previous testnet</Link>]}
+            components={[
+              <strong />,
+              <br />,
+              <Link to="/sparta">
+                <PersonIcon />
+                Explore previous testnet
+              </Link>,
+            ]}
           />
         </p>
       </MapInfo>

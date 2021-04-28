@@ -43,6 +43,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
       date="2020/03/17 15:42"
       error={false}
       info={true}
+      t={[Function]}
     />
     <TestnetModal
       className=""
@@ -196,6 +197,7 @@ exports[`AcropolisPage page renders correctly 1`] = `
               },
             ]
           }
+          t={[Function]}
         />
       </ColumnsLayout>
     </TitleWrapper>
@@ -211,12 +213,12 @@ exports[`AcropolisPage page renders correctly 1`] = `
           Array [
             <strong />,
             <br />,
-            <icon-component-mock />,
             <Link
               className=""
               highlighted={false}
               to="/athens"
             >
+              <icon-component-mock />
               Explore previous testnet
             </Link>,
           ]

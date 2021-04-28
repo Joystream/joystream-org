@@ -56,7 +56,7 @@ const AcropolisPage = ({ content }) => {
         animationStartValue={0}
       >
         <p className="AcropolisPage__hero-paragraph">{t('acropolis.hero.text')}</p>
-        <HeroCard info date="2020/03/17 15:42" counterTitle={<>{t('acropolis.heroCard.title')}</>} />
+        <HeroCard info date="2020/03/17 15:42" counterTitle={<>{t('acropolis.heroCard.title')}</>} t={t} />
 
         <TestnetModal
           title={t('acropolis.modal.title')}
@@ -118,6 +118,7 @@ const AcropolisPage = ({ content }) => {
                 ...rest,
               }))}
               content={mapStatusDataToRoles(content)}
+              t={t}
               oldTestnet
             />
           </ColumnsLayout>
@@ -128,7 +129,7 @@ const AcropolisPage = ({ content }) => {
         <p>
           <Trans
             i18nKey="acropolis.map.text"
-            components={[<strong />, <br />, <PersonIcon />, <Link to="/athens">Explore previous testnet</Link>]}
+            components={[<strong />, <br />, <Link to="/athens"><PersonIcon />Explore previous testnet</Link>]}
           />
         </p>
       </MapInfo>

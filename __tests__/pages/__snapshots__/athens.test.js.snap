@@ -55,6 +55,7 @@ exports[`AthensPage page renders correctly 1`] = `
       date="2019/06/24 17:50"
       error={false}
       info={true}
+      t={[Function]}
     />
     <TestnetModal
       className=""
@@ -232,6 +233,7 @@ exports[`AthensPage page renders correctly 1`] = `
               },
             ]
           }
+          t={[Function]}
         />
       </ColumnsLayout>
     </TitleWrapper>
@@ -247,12 +249,12 @@ exports[`AthensPage page renders correctly 1`] = `
           Array [
             <strong />,
             <br />,
-            <icon-component-mock />,
             <Link
               className=""
               highlighted={false}
               to="/sparta"
             >
+              <icon-component-mock />
               Explore previous testnet
             </Link>,
           ]

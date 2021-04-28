@@ -57,7 +57,7 @@ const ConstantinoplePage = ({ content }) => {
         animationStartValue={0}
       >
         <p className="ConstantinoplePage__hero-paragraph">{t('constantinople.hero.text')}</p>
-        <HeroCard info date="2020/09/21 09:00" counterTitle={<>{t('constantinople.heroCard.title')}</>} />
+        <HeroCard info date="2020/09/21 09:00" counterTitle={<>{t('constantinople.heroCard.title')}</>} t={t} />
 
         <TestnetModal
           title={t('constantinople.modal.title')}
@@ -108,21 +108,24 @@ const ConstantinoplePage = ({ content }) => {
                 ...rest,
               }))}
               content={mapStatusDataToRoles(content)}
+              t={t}
               oldTestnet
             />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title={t("constantinople.map.title")} location="constantinople">
+      <MapInfo title={t('constantinople.map.title')} location="constantinople">
         <p>
           <Trans
             i18nKey="constantinople.map.text"
             components={[
               <strong />,
               <br />,
-              <PersonIcon />,
-              <Link href="https://blog.joystream.org/announcing-constantinople/">Read the blog post</Link>,
+              <Link href="https://blog.joystream.org/announcing-constantinople/">
+                <PersonIcon />
+                Read the blog post
+              </Link>,
             ]}
           />
         </p>

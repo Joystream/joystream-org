@@ -39,5 +39,24 @@
         "five" : "5",
         "six" : "6",
         "seven" : "7"
+    },
+    "roleCard" : {
+        "migration" : "At migration, {{numberOfUsers}} (max) had this role",
+        "current" : "{{numberOfUsers}} run this role on Antioch",
+        "most" : "At most, {{numberOfUsers}} users occupied this role",
+        "new" : "NEW"
+    },
+    "heroCard" : {
+        "active" : "Network announced",
+        "error" : "Network down",
+        "info" : "Network replaced",
+        "finished" : "Network live"
+    },
+    "dateCounter" : {
+        "day" : "day",
+        "month" : "month",
+        "year" : "year",
+        "timeToLaunch" : "Time to launch",
+        "launchedOn" : "Launched on"
     }
 }

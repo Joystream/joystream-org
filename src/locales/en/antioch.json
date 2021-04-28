@@ -33,7 +33,7 @@
         },
         "map" : {
             "title" : "Antioch",
-            "text" : "<0>Antioch was an ancient Greek city on the eastern side of the Orontes River.</0> The city's position benefited its occupants greatly, particularly on account of such features as the spice trade, the Silk Road, and the Royal Road.<1/><1/>At its height it rivaled Alexandria as the chief city of the Near East. Many also consider the city to be \"the cradle of Christianity\".<1/><1/><2/><3>Read the blog post</3>"
+            "text" : "<0>Antioch was an ancient Greek city on the eastern side of the Orontes River.</0> The city's position benefited its occupants greatly, particularly on account of such features as the spice trade, the Silk Road, and the Royal Road.<1/><1/>At its height it rivaled Alexandria as the chief city of the Near East. Many also consider the city to be \"the cradle of Christianity\".<1/><1/><2><0/> Read the blog post</2>"
         }
     }
 }

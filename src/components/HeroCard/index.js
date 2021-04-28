@@ -67,10 +67,12 @@ class HeroCard extends React.Component {
     const { currentStatus } = this.state;
     const Icon = status[currentStatus].icon || Calendar;
 
+    const { t } = this.props;
+
     return (
       <>
         <Icon className="Card__icon" />
-        {status[currentStatus].title}
+        {t(`heroCard.${currentStatus}`)}
       </>
     );
   };
@@ -93,6 +95,7 @@ class HeroCard extends React.Component {
         date={date}
         large
         light
+        t={this.props.t}
         {...(!isDatePast && { onTimeout: () => this.setStatus(info ? 'info' : 'finished') })}
         title={counterTitle}
       />

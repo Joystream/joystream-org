@@ -43,6 +43,7 @@ exports[`RomePage page renders correctly 1`] = `
       date="2020/05/20 15:00"
       error={false}
       info={true}
+      t={[Function]}
     />
     <TestnetModal
       className=""
@@ -209,6 +210,7 @@ exports[`RomePage page renders correctly 1`] = `
               },
             ]
           }
+          t={[Function]}
         />
       </ColumnsLayout>
     </TitleWrapper>
@@ -224,12 +226,12 @@ exports[`RomePage page renders correctly 1`] = `
           Array [
             <strong />,
             <br />,
-            <icon-component-mock />,
             <Link
               className=""
               highlighted={false}
               href="https://testnet.joystream.org/"
             >
+              <icon-component-mock />
               Explore current testnet
             </Link>,
           ]

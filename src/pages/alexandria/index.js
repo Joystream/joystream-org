@@ -57,7 +57,7 @@ const AlexandriaPage = ({ content }) => {
         animationStartValue={0}
       >
         <p className="AlexandriaPage__hero-paragraph">{t('alexandria.hero.text')}</p>
-        <HeroCard info date="2020/12/21 15:00" counterTitle={<>{t('alexandria.heroCard.title')}</>} />
+        <HeroCard info date="2020/12/21 15:00" counterTitle={<>{t('alexandria.heroCard.title')}</>} t={t} />
 
         <TestnetModal
           title={t('alexandria.modal.title')}
@@ -110,6 +110,7 @@ const AlexandriaPage = ({ content }) => {
                 ...rest,
               }))}
               content={mapStatusDataToRoles(content)}
+              t={t}
               oldTestnet
             />
           </ColumnsLayout>
@@ -121,10 +122,9 @@ const AlexandriaPage = ({ content }) => {
           <Trans
             i18nKey="alexandria.map.text"
             components={[
-              <strong/>,
+              <strong />,
               <br />,
-              <PersonIcon />,
-              <Link href="https://blog.joystream.org/announcing-alexandria/">Read the blog post</Link>,
+              <Link href="https://blog.joystream.org/announcing-alexandria/"><PersonIcon />Read the blog post</Link>,
             ]}
           />
         </p>

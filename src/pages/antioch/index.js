@@ -47,7 +47,7 @@ const AntiochPage = ({ content }) => {
 
       <Hero image={antiochImage} title={t('antioch.hero.title')} indent animationStartValue={0}>
         <p className="AntiochPage__hero-paragraph">{t('antioch.hero.text')}</p>
-        <HeroCard date={launchDate} />
+        <HeroCard date={launchDate} t={t} />
       </Hero>
 
       <LayoutWrapper>
@@ -86,6 +86,7 @@ const AntiochPage = ({ content }) => {
                 ...rest,
               }))}
               content={mapStatusDataToRoles(content)}
+              t={t}
             />
           </ColumnsLayout>
         </TitleWrapper>
@@ -98,8 +99,10 @@ const AntiochPage = ({ content }) => {
             components={[
               <strong />,
               <br />,
-              <PersonIcon />,
-              <Link href="https://blog.joystream.org/announcing-antioch/">Read the blog post</Link>
+              <Link href="https://blog.joystream.org/announcing-antioch/">
+                <PersonIcon />
+                Read the blog post
+              </Link>,
             ]}
           />
         </p>
