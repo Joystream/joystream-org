@@ -17,12 +17,12 @@ export default ({ t }) => {
 
   return (
     <Section title={t('brand.guides.general.patterns')} id={section.id}>
-      <SubSection>
+      <SubSection t={t}>
         <SubTitle>{t('brand.guides.patterns.translation')}</SubTitle>
 
         <SubTitle>{t('brand.guides.patterns.supportTool')}</SubTitle>
       </SubSection>
-      <SubSection>
+      <SubSection t={t}>
         <SubTitle small>{t('brand.guides.general.construction')}</SubTitle>
         <Text>{t('brand.guides.patterns.sixPieces')}</Text>
 
@@ -40,7 +40,7 @@ export default ({ t }) => {
         </div>
       </SubSection>
 
-      <SubSection>
+      <SubSection t={t}>
         <SubTitle small>{t('brand.guides.patterns.howToUse')}</SubTitle>
         <Text>{t('brand.guides.patterns.oneOfFive')}</Text>
 
@@ -51,7 +51,7 @@ export default ({ t }) => {
         <img src={patternsDensity} alt="" className="Patterns__density" />
       </SubSection>
 
-      <SubSection>
+      <SubSection t={t}>
         <SubTitle small>{t('brand.guides.patterns.inUse')}</SubTitle>
         <Slider slides={[slide1, slide2, slide3]} size="small" withSpacing />
       </SubSection>

@@ -27,10 +27,10 @@ export default ({ t }) => {
 
   return (
     <Section title={t('brand.guides.general.photography')} id={section.id}>
-      <SubSection>
+      <SubSection t={t}>
         <SubTitle>{t('brand.guides.photography.overview')}</SubTitle>
       </SubSection>
-      <SubSection>
+      <SubSection t={t}>
         <SubTitle small>{t('brand.guides.photography.howToUse')}</SubTitle>
         <Text>{t('brand.guides.photography.variety')}</Text>
 

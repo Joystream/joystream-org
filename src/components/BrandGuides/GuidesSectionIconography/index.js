@@ -52,7 +52,7 @@ export default ({ t }) => {
 
   return (
     <Section title={t('brand.guides.general.iconography')} id={section.id}>
-      <SubSection id={subSection[0].id}>
+      <SubSection t={t} id={subSection[0].id}>
         <SubTitle>{t('brand.guides.iconsOverview.text')}</SubTitle>
         <div className="Iconography__icon-types">
           <div className="Iconography__icon-type">
@@ -70,7 +70,7 @@ export default ({ t }) => {
         </div>
       </SubSection>
 
-      <SubSection title={t('brand.guides.descriptiveIcons.title')} id={subSection[1].id}>
+      <SubSection t={t} title={t('brand.guides.descriptiveIcons.title')} id={subSection[1].id}>
         <Text>{t('brand.guides.descriptiveIcons.comprehensiveStyle')}</Text>
 
         <Text>{t('brand.guides.descriptiveIcons.symbolic')}</Text>
@@ -111,7 +111,7 @@ export default ({ t }) => {
         />
       </SubSection>
 
-      <SubSection title={t('brand.guides.systemIcons.title')} id={subSection[2].id}>
+      <SubSection t={t} title={t('brand.guides.systemIcons.title')} id={subSection[2].id}>
         <Text>{t('brand.guides.systemIcons.basicStyle')}</Text>
 
         <div className="Iconography__system-icon-container">

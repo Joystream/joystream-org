@@ -5,6 +5,7 @@ import cn from 'classnames';
 import { SidebarContext } from '../../../components/BrandSidebar';
 import ActionButton from '../../../components/ActionButton';
 import { InView } from 'react-intersection-observer';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import './style.scss';
 
@@ -35,7 +36,7 @@ Section.propTypes = {
   buttonToTop: bool,
 };
 
-export const SubSection = React.memo(({ children, title, className, buttonToTop, ...props }) => {
+export const SubSection = React.memo(({ children, title, className, buttonToTop, t, ...props }) => {
   const { setCurrentSubElement } = useContext(SidebarContext);
   const buttonRef = createRef();
 
@@ -63,7 +64,7 @@ export const SubSection = React.memo(({ children, title, className, buttonToTop,
               }
             }}
           >
-            {buttonToTop ? 'Back' : 'More'}
+            {buttonToTop ? t('brand.guides.general.back') : t('brand.guides.general.more')}
           </ActionButton>
         </div>
       </div>

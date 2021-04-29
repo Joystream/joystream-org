@@ -22,7 +22,7 @@ const GuidesPage = () => {
   const { language } = useI18next();
 
   return (
-    <BrandLayout>
+    <BrandLayout t={t}>
       <SiteMetadata lang={language} title={t('brand.siteMetadata.title')} />
 
       <BrandLayoutWrapper className="GuidesPage">

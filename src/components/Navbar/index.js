@@ -18,7 +18,7 @@ import { links as defaultLinks } from './data';
 
 import './style.scss';
 
-const Dropdown = ({ label, links, isScrollUp }) => {
+const Dropdown = ({ label, links, isScrollUp, t }) => {
   const [isActive, setIsActive] = useState(false);
   const [firstRender, setFirstRender] = useState(true);
   const [yOffset, setYOffset] = useState();
@@ -49,7 +49,7 @@ const Dropdown = ({ label, links, isScrollUp }) => {
         onClick={() => setIsActive(prev => !prev)}
         role="presentation"
       >
-        <p className="Navbar__link">{label}</p>
+        <p className="Navbar__link">{t(label)}</p>
         <Expand
           className={cn('Navbar__expand-icon', {
             'Navbar__expand-icon--active': isActive && (firstRender || isScrollUp || width <= 1200),
@@ -63,7 +63,7 @@ const Dropdown = ({ label, links, isScrollUp }) => {
           {links.map(({ label, href, to }) => (
             <Link key={label} href={href} to={to}>
               <div className="Navbar__dropdown-item">
-                <p className="Navbar__dropdown-item__text">{label}</p>
+                <p className="Navbar__dropdown-item__text">{t(label)}</p>
                 {href ? <LinkIcon className="Navbar__link-icon" /> : null}
               </div>
             </Link>
@@ -84,7 +84,7 @@ const defaultProps = {
   links: defaultLinks,
 };
 
-const Navbar = ({ light, links }) => {
+const Navbar = ({ light, links, t }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const context = useContext(ScrollContext);
@@ -100,19 +100,19 @@ const Navbar = ({ light, links }) => {
         <div className={`Navbar__links ${isOpen ? 'Navbar__links--open' : ''}`}>
           {links.map(({ label, isButton, isDropdown, links, href, to }) => {
             if (isDropdown) {
-              return <Dropdown key={label} label={label} links={links} isScrollUp={isScrollUp} />;
+              return <Dropdown key={label} t={t} label={t(label)} links={links} isScrollUp={isScrollUp} />;
             }
 
             let children = (
               <div className="Navbar__link-wrapper">
-                <p className="Navbar__link">{label}</p>
+                <p className="Navbar__link">{t(label)}</p>
               </div>
             );
 
             if (isButton) {
               children = (
                 <div className="Navbar__button">
-                  <p className="Navbar__button-text">{label}</p>
+                  <p className="Navbar__button-text">{t(label)}</p>
                   <Arrow className="Navbar__button-arrow" />
                 </div>
               );

@@ -21,7 +21,7 @@ export default ({ t }) => {
 
   return (
     <Section title={t('brand.guides.general.typography')} id={section.id}>
-      <SubSection>
+      <SubSection t={t}>
         <SubTitle>{t('brand.guides.typography.overview')}</SubTitle>
 
         <div className="Typography__font Typography__font--grotesk">

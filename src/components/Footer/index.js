@@ -25,14 +25,14 @@ const FooterSection = ({ title, links }) => {
   );
 };
 
-const Footer = () => {
+const Footer = ({ t }) => {
   const [email, setEmail] = useState('');
 
   return (
     <footer className="Footer">
       <div className="Footer__form-wrapper">
-        <h2 className="Footer__form__title">Stay up to date</h2>
-        <p className="Footer__form__subtitle">Don't worry about spam! Keep track of all important updates</p>
+        <h2 className="Footer__form__title">{t('footer.title')}</h2>
+        <p className="Footer__form__subtitle">{t('footer.subtitle')}</p>
         <form
           method="post"
           action="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
@@ -43,7 +43,7 @@ const Footer = () => {
         >
           <Input
             className="Footer__form__input"
-            placeholder="Email Address..."
+            placeholder={t('footer.inputPlaceholder')}
             type="email"
             name="EMAIL"
             required
@@ -51,31 +51,40 @@ const Footer = () => {
             value={email}
           />
           <Button className="Footer__form__button" type="submit" name="subscribe">
-            Join the newsletter
+            {t('footer.joinNewsletter')}
           </Button>
         </form>
       </div>
-      <h2 className="Footer__header">Get notified</h2>
+      <h2 className="Footer__header">{t('footer.alternateTitle')}</h2>
       <Button
         href="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
         secondary
         className="Footer__button"
       >
-        Join the newsletter
+        {t('footer.joinNewsletter')}
       </Button>
       <div className="Footer__layout">
-        <FooterSection title="Joystream" links={joystreamLinks} />
-        <FooterSection title="GitHub" links={githubLinks} />
-        <FooterSection title="Useful links" links={usefulLinks} />
+        <FooterSection
+          title={t('joystream')}
+          links={joystreamLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
+        />
+        <FooterSection
+          title={t('socials.github')}
+          links={githubLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
+        />
+        <FooterSection
+          title={t('footer.usefulLinks.title')}
+          links={usefulLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
+        />
 
         <div className="Footer__section">
-          <h6 className="Footer__section-title">Follow us</h6>
+          <h6 className="Footer__section-title">{t('footer.followUs')}</h6>
 
           <div className="Footer__socials">
             {socialMedias.map(({ icon: Icon, name, href }) => (
               <a href={href} className="Footer__social-link" key={name}>
                 <Icon className="Footer__social-icon" />
-                <p className="Footer__social-name">{name}</p>
+                <p className="Footer__social-name">{t(name)}</p>
               </a>
             ))}
           </div>

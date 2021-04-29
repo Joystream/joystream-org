@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RolesPage page renders correctly 1`] = `
-<BaseLayout>
+<BaseLayout
+  t={[Function]}
+>
   <SiteMetadata
     description="roles.siteMetadata.description"
     image="test-file-stub"
@@ -372,6 +374,7 @@ exports[`RolesPage page renders correctly 1`] = `
         }
       }
       onElementChange={[Function]}
+      t={[Function]}
     />
     <div
       className="RoleOverview__Wrapper"

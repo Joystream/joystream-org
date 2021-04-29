@@ -32,7 +32,7 @@ const StoryPage = () => {
   };
 
   return (
-    <BrandLayout>
+    <BrandLayout t={t}>
       <SiteMetadata lang={language} title={t('siteMetadata.title')} />
 
       <div className="Story__multi-section">

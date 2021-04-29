@@ -168,7 +168,7 @@ const Leaderboards = ({ location }) => {
   };
 
   return (
-    <BaseLayout>
+    <BaseLayout t={t}>
       <SiteMetadata lang={language} title={t('foundingMembers.leaderboards.siteMetadata.title')} />
       <div className="FoundingMembersLeaderboards">
         <div className="FoundingMembersLeaderboards__header-wrapper">

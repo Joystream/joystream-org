@@ -10,7 +10,7 @@ export default ({ t }) => {
 
   return (
     <Section title={t('brand.guides.general.motion')} id={section.id} style={{ overflow: 'hidden' }}>
-      <SubSection buttonToTop>
+      <SubSection t={t} buttonToTop>
         <SubTitle>{t('brand.guides.motion.subtitle')}</SubTitle>
         <SubTitle>{t('brand.guides.motion.rules')}</SubTitle>
 

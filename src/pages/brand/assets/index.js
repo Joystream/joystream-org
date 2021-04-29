@@ -19,9 +19,9 @@ const FONT_DOWNLOAD_URL = 'https://www.fontsquirrel.com/fonts/download/inter';
 
 const getPackageLink = path => encodeURI(ASSETS_LINK + '/ZIPPED files' + path);
 
-const themedAssetRenderer = asset => {
+const themedAssetRenderer = (asset, t) => {
   return (
-    <AssetTile key={asset.sha} darkTheme={asset.name.includes('white')} src={asset.download_url + '?sanitize=true'} />
+    <AssetTile key={asset.sha} darkTheme={asset.name.includes('white')} src={asset.download_url + '?sanitize=true'} t={t}/>
   );
 };
 
@@ -64,8 +64,8 @@ const sections = [
     downloadHref: FONT_DOWNLOAD_URL,
     filesCount: 19,
     assets: [typographyImg],
-    renderAsset: assetPath => {
-      return <AssetTile large downloadHref={FONT_DOWNLOAD_URL} src={assetPath} />;
+    renderAsset: (assetPath, t) => {
+      return <AssetTile large downloadHref={FONT_DOWNLOAD_URL} src={assetPath} t={t}/>;
     },
     id: 'typography',
   },
@@ -103,7 +103,7 @@ const GuidesPage = () => {
   }, [openSection]);
 
   return (
-    <BrandLayout>
+    <BrandLayout t={t}>
       <SiteMetadata lang={language} title={t("brand.siteMetadata.title")} />
 
       <BrandLayoutWrapper className="AssetsPage">
@@ -138,13 +138,14 @@ const GuidesPage = () => {
                     isOpen={openSection === id}
                     filesCount={filesCount || 0}
                     toggleOpen={() => toggleSection(id)}
+                    t={t}
                   >
                     {assets &&
                       assets.map(asset => {
                         return renderAsset ? (
-                          renderAsset(asset)
+                          renderAsset(asset, t)
                         ) : (
-                          <AssetTile key={asset.sha} src={asset.download_url + '?sanitize=true'} {...assetTileProps} />
+                          <AssetTile key={asset.sha} src={asset.download_url + '?sanitize=true'} {...assetTileProps} t={t}/>
                         );
                       })}
                   </AssetsSection>

@@ -15,16 +15,16 @@ const defaultProps = {
 };
 
 const brandLinks = [
-  { to: '/brand/story', label: 'Brand Story' },
-  { to: '/brand/guides', label: 'Brand Guides' },
-  { to: '/brand/assets', label: 'Download Assets' },
+  { to: '/brand/story', label: 'navbar.brandStory' },
+  { to: '/brand/guides', label: 'navbar.brandGuides' },
+  { to: '/brand/assets', label: 'navbar.downloadAssets' },
 ];
 
-const BrandLayout = ({ children }) => {
+const BrandLayout = ({ children, t }) => {
   return (
     <ScrollProvider>
       <div>
-        <Navbar light links={brandLinks} />
+        <Navbar t={t} light links={brandLinks} />
         {children}
         <CookiesNotice />
         <FooterCompact />

@@ -26,7 +26,7 @@ export default ({ t }) => {
 
   return (
     <Section title={t('brand.guides.general.logo')} id={section.id} className="GuidesSectionLogo">
-      <SubSection id={subSection[0].id}>
+      <SubSection t={t} id={subSection[0].id}>
         <SubTitle>{t('brand.guides.logo.experimentation')}</SubTitle>
         <Image src={logoDevelopmentImg} alt="" />
         <Text>{t('brand.guides.logo.conceptIterations')}</Text>
@@ -37,7 +37,7 @@ export default ({ t }) => {
         </Button>
       </SubSection>
 
-      <SubSection title={t('brand.guides.logomarkConstruction.title')} id={subSection[1].id}>
+      <SubSection t={t} title={t('brand.guides.logomarkConstruction.title')} id={subSection[1].id}>
         <Text>{t('brand.guides.logomarkConstruction.simplePrinciples')}</Text>
         <Image src={logoConstructionImg} alt="" />
         <Text>{t('brand.guides.logomarkConstruction.combination')}</Text>
@@ -49,7 +49,7 @@ export default ({ t }) => {
         />
       </SubSection>
 
-      <SubSection title={t('brand.guides.logoConstruction.title')} id={subSection[2].id}>
+      <SubSection t={t} title={t('brand.guides.logoConstruction.title')} id={subSection[2].id}>
         <Text>{t('brand.guides.logoConstruction.combination')}</Text>
 
         <BlueSection bottom>
@@ -65,7 +65,7 @@ export default ({ t }) => {
         </BlueSection>
       </SubSection>
 
-      <SubSection title={t('brand.guides.logoUseCases.title')} id={subSection[3].id}>
+      <SubSection t={t} title={t('brand.guides.logoUseCases.title')} id={subSection[3].id}>
         <Text>{t('brand.guides.logoUseCases.originalForm')}</Text>
 
         <Slider slides={logoSlides} className="GuidesSectionLogo__slider" />
@@ -96,7 +96,7 @@ export default ({ t }) => {
         </div>
       </SubSection>
 
-      <SubSection title={t('brand.guides.logoSocialIcons.title')} id={subSection[4].id}>
+      <SubSection t={t} title={t('brand.guides.logoSocialIcons.title')} id={subSection[4].id}>
         <Text>{t('brand.guides.logoSocialIcons.icon')}</Text>
         <div className="SocialIcons__row">
           <div className="SocialIcons__icon SocialIcons__icon--blue SocialIcons__icon--bg-white">
@@ -114,7 +114,7 @@ export default ({ t }) => {
         </div>
       </SubSection>
 
-      <SubSection title={t('brand.guides.logoForbiddenUses.title')} id={subSection[5].id}>
+      <SubSection t={t} title={t('brand.guides.logoForbiddenUses.title')} id={subSection[5].id}>
         <Text>{t('brand.guides.logoForbiddenUses.rules')}</Text>
 
         <Slider size="large" withSpacing slides={forbiddenLogoSlides} />

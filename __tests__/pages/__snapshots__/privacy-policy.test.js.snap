@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PrivacyPolicyPage page renders correctly 1`] = `
-<BaseLayout>
+<BaseLayout
+  t={[Function]}
+>
   <SiteMetadata
     description="privacyPolicy.siteMetadata.description"
     image="test-file-stub"

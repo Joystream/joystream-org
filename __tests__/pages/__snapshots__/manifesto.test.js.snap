@@ -3,6 +3,7 @@
 exports[`ManifestoPage page renders correctly 1`] = `
 <BaseLayout
   className="ManifestoPage"
+  t={[Function]}
 >
   <SiteMetadata
     description="manifesto.siteMetadata.description"

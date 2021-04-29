@@ -2,43 +2,43 @@ import { sharedData } from '../../data/pages';
 
 const links = [
   {
-    label: 'Product',
+    label: 'navbar.product',
     isDropdown: true,
     links: [
       {
         href: 'https://play.joystream.org/',
-        label: 'Atlas',
+        label: 'navbar.atlas',
       },
       {
         href: 'https://testnet.joystream.org/',
-        label: 'Pioneer',
+        label: 'navbar.pioneer',
       },
     ],
   },
-  { to: '/manifesto', label: 'Manifesto' },
-  { to: '/roles', label: 'Roles' },
+  { to: '/manifesto', label: 'pages.manifesto' },
+  { to: '/roles', label: 'pages.roles' },
   {
-    label: 'Founding Members',
+    label: 'pages.foundingMembers',
     isDropdown: true,
     links: [
       {
         to: '/founding-members',
-        label: 'Overview',
+        label: 'pages.overview',
       },
       {
         to: '/founding-members/leaderboards',
-        label: 'Leaderboards',
+        label: 'pages.leaderboards',
       },
       {
         to: '/founding-members/form',
-        label: 'Scoring form',
+        label: 'pages.scoringForm',
       },
     ],
   },
-  { href: sharedData.social.discordLink, label: 'Community' },
+  { href: sharedData.social.discordLink, label: 'navbar.community' },
   {
     to: '/get-started',
-    label: 'Start earning',
+    label: 'button.getStarted.text',
     isButton: true,
   },
 ];

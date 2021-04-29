@@ -104,13 +104,13 @@ export default ({ t }) => {
 
   return (
     <Section title={t('brand.guides.general.colorPalettes')} id={section.id}>
-      <SubSection id={subSection[0].id}>
+      <SubSection t={t} id={subSection[0].id}>
         <SubTitle>{t('brand.guides.colorOverview.combine')}</SubTitle>
 
         <Text>{t('brand.guides.colorOverview.example')}</Text>
       </SubSection>
 
-      <SubSection title={t('brand.guides.primaryColors.title')} id={subSection[1].id}>
+      <SubSection t={t} title={t('brand.guides.primaryColors.title')} id={subSection[1].id}>
         <Text>{t('brand.guides.primaryColors.blackAndBlue')}</Text>
         <Text>{t('brand.guides.primaryColors.blueGrey')}</Text>
         <ColorTile name={t('colors.joystreamBlue')} hex="#4038FF" cmyk={[87, 73, 0, 0]} rgb={[64, 56, 255]} />
@@ -133,7 +133,7 @@ export default ({ t }) => {
         <ColorTile withBorder name={t('colors.black')} hex="#000000" cmyk={[30, 30, 30, 100]} rgb={[0, 0, 0]} />
       </SubSection>
 
-      <SubSection title={t('brand.guides.supportiveColors.title')} id={subSection[2].id}>
+      <SubSection t={t} title={t('brand.guides.supportiveColors.title')} id={subSection[2].id}>
         <Text>{t('brand.guides.supportiveColors.purpose')}</Text>
         <div className="GuidesSectionPallete__boxes">
           <ColorBoxContainer className="GuidesSectionPallete__box-blue">
@@ -160,7 +160,7 @@ export default ({ t }) => {
         </div>
       </SubSection>
 
-      <SubSection title={t('brand.guides.secondaryColors.title')} id={subSection[3].id}>
+      <SubSection t={t} title={t('brand.guides.secondaryColors.title')} id={subSection[3].id}>
         <Text>{t('brand.guides.secondaryColors.states')}</Text>
 
         <div className="GuidesSectionPallete__color-array-container">

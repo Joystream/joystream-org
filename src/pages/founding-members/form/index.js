@@ -27,7 +27,7 @@ const FoundingMembersFormPage = () => {
   }, [response]);
 
   return (
-    <BaseLayout>
+    <BaseLayout t={t}>
       <SiteMetadata lang={language} title={t('foundingMembers.form.siteMetadata.title')} />
       <div className="FoundingMembersFormPage">
         <div className="FoundingMembersFormPage__header">

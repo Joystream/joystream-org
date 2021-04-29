@@ -1,9 +1,11 @@
 {
+    "joystream" : "Joystream",
     "button" : {
         "getStarted" : {
             "text" : "Start earning",
             "altText" : "Join & start earning"
-        }
+        },
+        "download" : "Download"
     },
     "rolesData" : {
         "validator" : "Validator",
@@ -58,5 +60,52 @@
         "year" : "year",
         "timeToLaunch" : "Time to launch",
         "launchedOn" : "Launched on"
+    },
+    "sidebar" : {
+        "activeRoles" : "Active roles",
+        "upcomingRoles" : "Upcoming roles",
+        "viewAllRoles" : "View all Roles"
+    },
+    "navbar" : {
+        "product" : "Product",
+        "atlas" : "Atlas",
+        "pioneer" : "Pioneer",
+        "community" : "Community",
+        "brandStory" : "Brand Story",
+        "brandGuides" : "Brand Guides",
+        "downloadAssets" : "Download Assets"
+    },
+    "footer" : {
+        "title" : "Stay up to date",
+        "alternateTitle" : "Get notified",
+        "subtitle" : "Don't worry about spam! Keep track of all important updates",
+        "inputPlaceholder" : "Email Address...",
+        "joinNewsletter" : "Join the newsletter",
+        "github" : {
+            "whitepaper" : "Whitepaper",
+            "repository" : "Repository"
+        },
+        "usefulLinks" : {
+            "title" : "Useful links",
+            "hiring" : "We are hiring!",
+            "brandGuidance" : "Brand guidance"
+        },
+        "followUs" : "Follow us"
+    },
+    "pages" : {
+        "blog" : "Blog",
+        "manifesto" :"Manifesto",
+        "roles" : "Roles",
+        "token" : "Token",
+        "hydra" : "Hydra",
+        "foundingMembers" : "Founding Members",
+        "leaderboards" : "Leaderboards",
+        "scoringForm" : "Scoring form",
+        "overview" : "Overview"
+    },
+    "socials" : {
+        "twitter" : "Twitter",
+        "github" : "GitHub",
+        "discord" : "Discord"
     }
 }

@@ -73,7 +73,7 @@ const FoundingMembersPage = () => {
   }, [response]);
 
   return (
-    <BaseLayout secondary>
+    <BaseLayout t={t}>
       <SiteMetadata
         lang={language}
         title={t('foundingMembers.landing.siteMetadata.title')}

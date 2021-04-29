@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IndexPage page renders correctly 1`] = `
-<BaseLayout>
+<BaseLayout
+  t={[Function]}
+>
   <SiteMetadata
     description="landing.siteMetadata.description"
     image="test-file-stub"

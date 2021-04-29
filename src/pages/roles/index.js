@@ -81,7 +81,7 @@ const RolesPage = () => {
   };
 
   return (
-    <BaseLayout>
+    <BaseLayout t={t}>
       <SiteMetadata lang={language} title={t('siteMetadata.title')} description={t('roles.siteMetadata.description')} />
 
       <Hero image={rolesImage} title={t('roles.hero.title')} animationStartValue={0}>
@@ -93,6 +93,7 @@ const RolesPage = () => {
           onElementChange={scrollToElement}
           currentElement={elementInViewport}
           data={translateNavbarData(rolesData, t)}
+          t={t}
         />
         <div className="RoleOverview__Wrapper">
           {Object.keys(rolesData).map(key => {

@@ -1,4 +1,6 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { ReactComponent as DocumentIcon } from '../../assets/svg/document.svg';
 import { ReactComponent as TimeIsMoneyIcon } from '../../assets/svg/money-time.svg';
@@ -18,8 +20,11 @@ import './style.scss';
 import CommunityBounties from './CommunityBounties';
 
 function TestnetPage() {
+  const { t } = useTranslation();
+  const { language } = useI18next();
+  
   return (
-    <BaseLayout className="TokensPage">
+    <BaseLayout t={t} className="TokensPage">
       <SiteMetadata title="Joystream: The video platform DAO" description="Tokens" />
 
       <Hero
@@ -96,3 +101,17 @@ function TestnetPage() {
 }
 
 export default TestnetPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

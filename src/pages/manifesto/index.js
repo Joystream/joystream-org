@@ -19,7 +19,7 @@ const ManifestoPage = () => {
   const { language } = useI18next();
 
   return (
-    <BaseLayout className="ManifestoPage">
+    <BaseLayout t={t} className="ManifestoPage">
       <SiteMetadata
         lang={language}
         title={t('siteMetadata.title')}

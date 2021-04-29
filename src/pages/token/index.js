@@ -1,4 +1,6 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import buildingShapesImage from '../../assets/images/building-shapes.png';
 import exchangeShapesImage from '../../assets/images/exchange-shapes.png';
 import vaultShapesImage from '../../assets/images/vault-shapes.png';
@@ -26,9 +28,12 @@ const LegendItem = ({ color, percentage, description }) => {
 };
 
 const TokensPage = () => {
+  const { t } = useTranslation();
+  const { language } = useI18next();
+
   return (
-    <BaseLayout className="TokensPage">
-      <SiteMetadata title="Joystream: The video platform DAO" description="Tokens" />
+    <BaseLayout t={t} className="TokensPage">
+      <SiteMetadata lang={language} title={t('siteMetadata.title')} description={t('pages.token')} />
 
       <Hero
         image={tokensImage}
@@ -147,3 +152,17 @@ const TokensPage = () => {
 
 export { TokensPage };
 export default TokensPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

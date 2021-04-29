@@ -13,7 +13,8 @@
             "blogPostCovers" : "Blog Post Covers",
             "displayTitle" : {
                 "logoPack" : "Logo Pack"
-            }
+            },
+            "files" : "files"
         },
         "guides" : {
             "general" : {
@@ -35,7 +36,9 @@
                 "patterns" : "Patterns",
                 "typography" : "Typography",
                 "photography" : "Photography",
-                "motion" : "Motion"
+                "motion" : "Motion",
+                "back" : "Back",
+                "more" : "More"
             },
             "logo" : {
                 "experimentation" : "Our brand should promote a feeling of experimentation, excitement and building something ethical and dynamic.",

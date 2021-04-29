@@ -95,7 +95,7 @@ export default ({ t }) => {
 
   return (
     <Section title={t('brand.guides.general.illustrations')} id={section.id}>
-      <SubSection>
+      <SubSection t={t}>
         <SubTitle>{t('brand.guides.illustrations.overview')}</SubTitle>
         <SubTitle>{t('brand.guides.illustrations.complex')}</SubTitle>
 
@@ -110,13 +110,13 @@ export default ({ t }) => {
           })}
         />
       </SubSection>
-      <SubSection title={t('brand.guides.general.construction')}>
+      <SubSection t={t} title={t('brand.guides.general.construction')}>
         <Text>{t('brand.guides.illustrations.patterns')}</Text>
 
         <ImageReveal />
       </SubSection>
 
-      <SubSection>
+      <SubSection t={t}>
         <SubTitle small>{t('brand.guides.general.construction')}</SubTitle>
         <Text>{t('brand.guides.illustrations.distinctive')}</Text>
 

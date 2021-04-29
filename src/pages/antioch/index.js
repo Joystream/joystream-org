@@ -38,7 +38,7 @@ const AntiochPage = ({ content }) => {
   const { language } = useI18next();
 
   return (
-    <BaseLayout>
+    <BaseLayout t={t}>
       <SiteMetadata
         lang={language}
         title={t('siteMetadata.title')}

@@ -42,7 +42,7 @@ const RomePage = ({ content }) => {
   const { language } = useI18next();
 
   return (
-    <BaseLayout>
+    <BaseLayout t={t}>
       <SiteMetadata lang={language} title={t('siteMetadata.title')} description={t('rome.siteMetadata.description')} />
 
       <Hero
