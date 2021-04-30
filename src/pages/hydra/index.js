@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
-import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 
 import LayoutWrapper from '../../components/LayoutWrapper';
 import Hero from '../../components/Hero';

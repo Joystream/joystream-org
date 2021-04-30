@@ -5,7 +5,9 @@
             "text" : "Start earning",
             "altText" : "Join & start earning"
         },
-        "download" : "Download"
+        "download" : "Download",
+        "close" : "Close",
+        "accept" : "Accept"
     },
     "rolesData" : {
         "validator" : "Validator",
@@ -107,5 +109,9 @@
         "twitter" : "Twitter",
         "github" : "GitHub",
         "discord" : "Discord"
+    },
+    "cookiesNotice" : {
+        "text" : "This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.",
+        "findOutMore" : "Find out more ›"
     }
 }

@@ -26,7 +26,7 @@ const BrandLayout = ({ children, t }) => {
       <div>
         <Navbar t={t} light links={brandLinks} />
         {children}
-        <CookiesNotice />
+        <CookiesNotice t={t}/>
         <FooterCompact />
       </div>
     </ScrollProvider>

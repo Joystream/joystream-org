@@ -20,7 +20,7 @@ const BaseLayout = ({ children, t }) => {
       <div>
         <Navbar t={t}/>
         {children}
-        <CookiesNotice />
+        <CookiesNotice t={t}/>
         <Footer t={t}/>
       </div>
     </ScrollProvider>
