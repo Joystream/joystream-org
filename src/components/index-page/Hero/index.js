@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import HeroImage from '../../../assets/svg/hero-builder.svg';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import { Link } from 'gatsby';
@@ -37,7 +38,9 @@ const Hero = ({ statusData, t }) => {
       <div className="IndexPage__hero">
         <div className="IndexPage__hero__content">
           <h1 className="IndexPage__hero__title">{t('landing.hero.title')}</h1>
-          <p className="IndexPage__hero__subtitle">{t('landing.hero.subtitle')}</p>
+          <p className="IndexPage__hero__subtitle">
+            <Trans i18nKey="landing.hero.subtitle" components={[<br />]} />
+          </p>
           <Link to="/get-started" className="IndexPage__hero__button-container">
             <div className="IndexPage__hero__button">
               <p className="IndexPage__hero__button-text">{t('button.getStarted.text')}</p>
@@ -53,7 +56,10 @@ const Hero = ({ statusData, t }) => {
         <div className="IndexPage__hero__metrics">
           {statusData ? (
             <>
-              <TestnetMetric title={t('landing.hero.metrics.titles.participationPayout')} metric="$24029" />
+              <TestnetMetric
+                title={t('landing.hero.metrics.titles.participationPayout')}
+                metric={statusData?.totalUSDPaid ? Math.floor(statusData?.totalUSDPaid) : '-'}
+              />
               <TestnetMetric
                 title={t('landing.hero.metrics.titles.activeValidators')}
                 metric={statusData?.validators?.count ?? '-'}
