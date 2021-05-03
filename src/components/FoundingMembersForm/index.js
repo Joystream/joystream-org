@@ -7,14 +7,15 @@ import { blake2AsHex } from '@polkadot/util-crypto';
 import { Keyring } from '@polkadot/keyring';
 import { u8aToHex, hexToU8a } from '@polkadot/util';
 import * as openpgp from 'openpgp';
-import { publicKey, TermsAndConditionsText } from '../../data/pages/founding-members';
+import { Trans } from 'gatsby-plugin-react-i18next';
+import { publicKey } from '../../data/pages/founding-members';
 import Membership from './Membership';
 import Json from './Json';
 import KeybaseAndText from './KeybaseAndText';
 
 import './style.scss';
 
-const TermsAndConditions = ({ termsRead, setCurrentProgress, setTermsRead }) => {
+const TermsAndConditions = ({ termsRead, setCurrentProgress, setTermsRead, t }) => {
   const termsAndConditions = useRef();
 
   useEffect(() => {
@@ -34,15 +35,26 @@ const TermsAndConditions = ({ termsRead, setCurrentProgress, setTermsRead }) => 
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Read and accept terms and conditions</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        {t('foundingMembers.form.termsAndConditions.title')}
+      </h3>
       <div ref={termsAndConditions} className="FoundingMembersFormPage__form__text-wrapper">
-        <TermsAndConditionsText />
+        <Trans
+          i18nKey="foundingMembers.form.termsAndConditions.text"
+          components={[
+            <h4 className="margin-bottom-S">title</h4>,
+            <p className="margin-bottom-XS" />,
+            <p className="margin-bottom-M">
+              <em />
+            </p>,
+          ]}
+        />
       </div>
       <ArrowButton
         className={cn('FoundingMembersFormPage__form__button', {
           'FoundingMembersFormPage__form__button--inactive': !termsRead,
         })}
-        text="Next"
+        text={t('foundingMembers.general.next')}
         onClick={() => {
           if (termsRead) {
             setCurrentProgress(5);
@@ -81,8 +93,6 @@ const sendData = async encrypted => {
       .join('&');
   }
 
-  console.log({ encrypted });
-
   try {
     await fetch('/', {
       method: 'POST',
@@ -97,7 +107,7 @@ const sendData = async encrypted => {
   }
 };
 
-const FoundingMembersForm = () => {
+const FoundingMembersForm = ({ t }) => {
   //refs
   const jsonFileInput = useRef();
   const textFileInput = useRef();
@@ -140,6 +150,7 @@ const FoundingMembersForm = () => {
           setMembershipHandle={setMembershipHandle}
           setCurrentProgress={setCurrentProgress}
           width={width}
+          t={t}
         />
       );
     } else if (currentProgress === 2) {
@@ -154,6 +165,7 @@ const FoundingMembersForm = () => {
           setCurrentProgress={setCurrentProgress}
           setFileLoadedAmount={setFileLoadedAmount}
           fileLoadedAmount={fileLoadedAmount}
+          t={t}
         />
       );
     } else if (currentProgress === 3) {
@@ -172,23 +184,26 @@ const FoundingMembersForm = () => {
           password={password}
           setPassword={setPassword}
           jsonFile={jsonFile}
+          t={t}
         />
       );
     } else if (currentProgress === 4) {
       return (
-        <TermsAndConditions termsRead={termsRead} setCurrentProgress={setCurrentProgress} setTermsRead={setTermsRead} />
+        <TermsAndConditions
+          termsRead={termsRead}
+          setCurrentProgress={setCurrentProgress}
+          setTermsRead={setTermsRead}
+          t={t}
+        />
       );
     } else {
       return (
         <div className="FoundingMembersFormPage__form__submitted">
           <Achieved className="FoundingMembersFormPage__form__submitted__tick margin-bottom-L" />
           <h3 className="FoundingMembersFormPage__form__submitted__title margin-bottom-XS">
-            Thank you for submitting your summary, we have received it successfully.
+            {t('foundingMembers.form.success.title')}
           </h3>
-          <p className="FoundingMembersFormPage__form__submitted__text">
-            We will process the information contained within it shortly and award leaderboard points for qualifying
-            contributions.
-          </p>
+          <p className="FoundingMembersFormPage__form__submitted__text">{t('foundingMembers.form.success.text')}</p>
         </div>
       );
     }
@@ -205,7 +220,7 @@ const FoundingMembersForm = () => {
         loading: false,
         loaded: false,
         error: true,
-        errorMessage: 'Wrong file format! Please try again or check our tips how to export it.',
+        errorMessage: t('foundingMembers.form.error.fileFormat'),
       });
       if (type === 'application/json') {
         setJsonFile({
@@ -282,8 +297,8 @@ const FoundingMembersForm = () => {
             error: true,
             errorMessage:
               isFileValid && !doesUserCorrespond
-                ? `Json file doesn't correspond to account given!`
-                : 'Json file has incomplete/incorrect components. Try exporting your account again!',
+                ? t('foundingMembers.form.error.jsonWrongAccount')
+                : t('foundingMembers.form.error.faultyJson'),
           });
           setJsonFile({
             name: file.name,
@@ -348,12 +363,16 @@ const FoundingMembersForm = () => {
     <div className="FoundingMembersFormPage__form">
       {currentProgress < 5 && (
         <div className="FoundingMembersFormPage__form__progress">
-          {renderProgressItem('Account info', 1, currentProgress)}
-          {renderProgressItem('Key file', 2, currentProgress)}
-          {renderProgressItem('Summary', 3, currentProgress)}
-          {width > 1200
-            ? renderProgressItem('Accept terms & conditions', 4, currentProgress)
-            : renderProgressItem('Terms & cond.', 4, currentProgress)}
+          {renderProgressItem(t('foundingMembers.form.progressItem.accountInfo'), 1, currentProgress)}
+          {renderProgressItem(t('foundingMembers.form.progressItem.keyFile'), 2, currentProgress)}
+          {renderProgressItem(t('foundingMembers.form.progressItem.summary'), 3, currentProgress)}
+          {renderProgressItem(
+            width > 1200
+              ? t('foundingMembers.form.progressItem.acceptTerms')
+              : t('foundingMembers.form.progressItem.acceptTermsShort'),
+            4,
+            currentProgress
+          )}
         </div>
       )}
       <div className="FoundingMembersFormPage__form__body">

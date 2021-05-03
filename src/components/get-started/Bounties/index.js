@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import GetStartedBountiesImage from '../../../assets/svg/get-started-bounties.svg';
 import GetStartedRoles from '../../../assets/svg/get-started-roles.svg';
 import { ReactComponent as LinkImage } from '../../../assets/svg/link.svg';
@@ -10,7 +11,7 @@ import { roleCardData } from '../../../data/pages/get-started';
 
 import './style.scss';
 
-const BountiesRoleCard = ({ RoleImage, title, link, text }) => {
+const BountiesRoleCard = ({ RoleImage, title, link, text, t }) => {
   return (
     <div className="GetStarted__bounties__role-card">
       <div className="GetStarted__bounties__role-card__main">
@@ -18,14 +19,14 @@ const BountiesRoleCard = ({ RoleImage, title, link, text }) => {
         <div className="GetStarted__bounties__role-card__content">
           <h4 className="GetStarted__bounties__role-card__role-name">{title}</h4>
           <div className="GetStarted__bounties__role-card__overview">
-            <h4 className="GetStarted__bounties__role-card__subtitle">Overview</h4>
+            <h4 className="GetStarted__bounties__role-card__subtitle">{t('getStarted.roleCard.overview')}</h4>
             <p className="GetStarted__bounties__role-card__text"> {text}</p>
           </div>
         </div>
       </div>
       <a href={link ?? '#0'} target="_blank">
         <div className="GetStarted__bounties__role-card__link">
-          <p className="GetStarted__bounties__role-card__link-text">Check details on Github</p>
+          <p className="GetStarted__bounties__role-card__link-text">{t('getStarted.roleCard.buttonText')}</p>
           <LinkImage className="GetStarted__bounties__role-card__link-image" />
         </div>
       </a>
@@ -36,7 +37,7 @@ const BountiesRoleCard = ({ RoleImage, title, link, text }) => {
 const CARD_SIZE_WITH_MARGIN = 626;
 const SMALL_CARD_SIZE_WITH_MARGIN = 355;
 
-const GetStartedBounties = () => {
+const GetStartedBounties = ({ t }) => {
   const {
     validator,
     council,
@@ -51,76 +52,80 @@ const GetStartedBounties = () => {
   return (
     <div className="GetStarted__bounties">
       <h2 id="opportunities" className="GetStarted__bounties__title">
-        Opportunities
+        {t('getStarted.opportunities.title')}
       </h2>
       <div className="GetStarted__bounties__explanation">
         <div className="GetStarted__bounties__explanation__content">
-          <h3 className="GetStarted__bounties__explanation__title">Bounties</h3>
-          <p className="GetStarted__bounties__explanation__text">
-            Bounties are long running tasks which anyone can attempt to tackle in a exchange for some reward. They are
-            created either by Jsgenesis, or by the Council.{' '}
-          </p>
+          <h3 className="GetStarted__bounties__explanation__title">{t('getStarted.opportunities.bounties.title')}</h3>
+          <p className="GetStarted__bounties__explanation__text">{t('getStarted.opportunities.bounties.text')}</p>
         </div>
-        <img src={GetStartedBountiesImage} alt="money pouch" />
+        <img src={GetStartedBountiesImage} alt={t('getStarted.opportunities.bounties.imageAlt')} />
       </div>
 
-      <BountiesCarousel />
+      <BountiesCarousel t={t}/>
 
       <div className="GetStarted__bounties__explanation GetStarted__bounties__explanation--reverse">
-        <img src={GetStartedRoles} alt="money pouch" />
+        <img src={GetStartedRoles} alt={t('getStarted.opportunities.roles.imageAlt')} />
         <div className="GetStarted__bounties__explanation__content">
-          <h3 className="GetStarted__bounties__explanation__title">Roles</h3>
+          <h3 className="GetStarted__bounties__explanation__title">{t('getStarted.opportunities.roles.title')}</h3>
           <p className="GetStarted__bounties__explanation__text">
-            Our current testnet also allows you to participate in some of the platform roles which will be available on
-            mainnet.
-            <br />
-            <br />
-            Participation in these roles is rewarded in tJOY (our testnet token) which is backed by fiat reserves at
-            Jsgenesis and redeemable for bitcoin cash.
+            <Trans i18nKey="getStarted.opportunities.roles.text" components={[<br />]} />
           </p>
         </div>
       </div>
       <div className="GetStarted__bounties__roles-carousel">
         <h3 className="GetStarted__bounties__roles-carousel__title">
-          Active roles on the current testnet <span>(7)</span>
+          {t('getStarted.activeRoles.title')} <span>({t('numbers.seven')})</span>
         </h3>
-        <CardCarousel scrollAmount={(width && width > 768) ? CARD_SIZE_WITH_MARGIN : SMALL_CARD_SIZE_WITH_MARGIN}>
+        <CardCarousel scrollAmount={width && width > 768 ? CARD_SIZE_WITH_MARGIN : SMALL_CARD_SIZE_WITH_MARGIN}>
           <BountiesRoleCard
             RoleImage={validator.image}
-            title={validator.title}
-            text={validator.text}
+            title={t('rolesData.validator')}
+            text={t('getStarted.activeRoles.validatorText')}
             link={validator.link}
+            t={t}
           />
-          <BountiesRoleCard RoleImage={council.image} title={council.title} text={council.text} link={council.link} />
+          <BountiesRoleCard
+            RoleImage={council.image}
+            title={t('rolesData.council')}
+            text={t('getStarted.activeRoles.councilMemberText')}
+            link={council.link}
+            t={t}
+          />
           <BountiesRoleCard
             RoleImage={storageProvider.image}
-            title={storageProvider.title}
-            text={storageProvider.text}
+            title={t('rolesData.storageProvider')}
+            text={t('getStarted.activeRoles.storageProviderText')}
             link={storageProvider.link}
+            t={t}
           />
           <BountiesRoleCard
             RoleImage={storageLead.image}
-            title={storageLead.title}
-            text={storageLead.text}
+            title={t('rolesData.storageLead')}
+            text={t('getStarted.activeRoles.storageLeadText')}
             link={storageLead.link}
+            t={t}
           />
           <BountiesRoleCard
             RoleImage={contentCurator.image}
-            title={contentCurator.title}
-            text={contentCurator.text}
+            title={t("rolesData.contentCurator")}
+            text={t('getStarted.activeRoles.contentCuratorText')}
             link={contentCurator.link}
+            t={t}
           />
           <BountiesRoleCard
             RoleImage={contentCreator.image}
-            title={contentCreator.title}
-            text={contentCreator.text}
+            title={t("rolesData.contentCreator")}
+            text={t('getStarted.activeRoles.contentCreatorText')}
             link={contentCreator.link}
+            t={t}
           />
           <BountiesRoleCard
             RoleImage={contentLead.image}
-            title={contentLead.title}
-            text={contentLead.text}
+            title={t("rolesData.contentLead")}
+            text={t('getStarted.activeRoles.contentLeadText')}
             link={contentLead.link}
+            t={t}
           />
         </CardCarousel>
       </div>

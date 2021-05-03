@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 
 describe('CookiesNotice component', () => {
   it('handle accept action', () => {
-    const wrapper = mount(<CookiesNotice />);
+    const wrapper = mount(<CookiesNotice t={e=>e} />);
     expect(wrapper.state().visible).toBe(true);
     wrapper.find('button').simulate('click');
     expect(wrapper.state().visible).toBe(false);

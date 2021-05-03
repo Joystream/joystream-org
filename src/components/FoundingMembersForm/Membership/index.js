@@ -22,7 +22,7 @@ async function getMember(api, membershipHandle, setProfile) {
   });
 }
 
-const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle, width, setCurrentProgress }) => {
+const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle, width, setCurrentProgress, t }) => {
   const [textInput, setTextInput] = useState('');
   const [Api, setApi] = useState();
 
@@ -45,22 +45,24 @@ const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle
   return (
     <>
       <h3 className="FoundingMembersFormPage__form__subtitle FoundingMembersFormPage__form__input-title-mobile  margin-bottom-XS">
-        Membership handle
+        {t('foundingMembers.form.membership.membershipHandle')}
       </h3>
       <input
         className={cn('FoundingMembersFormPage__form__input', {
           'margin-bottom-M': profile,
         })}
-        placeholder="e.g. joedoe"
+        placeholder={t('foundingMembers.general.inputPlaceholder')}
         value={textInput}
         onChange={e => setTextInput(e.target.value)}
       />
       {profile === null && (
-        <p className="FoundingMembersFormPage__form__error-message">No such account exists. Try again!</p>
+        <p className="FoundingMembersFormPage__form__error-message">{t('foundingMembers.form.error.noSuchAccount')}</p>
       )}
       {profile && (
         <>
-          <p className="FoundingMembersFormPage__form__subtitle-small margin-bottom-XS">Account</p>
+          <p className="FoundingMembersFormPage__form__subtitle-small margin-bottom-XS">
+            {t('foundingMembers.general.account')}
+          </p>
           <div className="FoundingMembersFormPage__form__profile">
             {profile.avatar_uri.isEmpty ? (
               <div className="FoundingMembersFormPage__form__profile__picture"></div>
@@ -68,7 +70,7 @@ const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle
               <img
                 className="FoundingMembersFormPage__form__profile__picture"
                 src={profile.avatar_uri.toString()}
-                alt="founding member avatar"
+                alt={t('foundingMembers.form.membership.avatarAlt')}
               />
             )}
             <div className="FoundingMembersFormPage__form__profile__data">
@@ -86,7 +88,7 @@ const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle
         className={cn('FoundingMembersFormPage__form__button margin-bottom-S', {
           'FoundingMembersFormPage__form__button--inactive': !textInput,
         })}
-        text="Next"
+        text={t('foundingMembers.general.next')}
         onClick={e => {
           if (profile?.handle.toString() !== textInput) {
             setMembershipHandle(textInput);
@@ -102,7 +104,9 @@ const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle
           }
         }}
       />
-      <a target='_blank' href='https://github.com/Joystream/founding-members#submission-guidance'>How it works.</a>
+      <a target="_blank" href="https://github.com/Joystream/founding-members#submission-guidance">
+        {t('foundingMembers.general.howItWorks')}
+      </a>
     </>
   );
 };

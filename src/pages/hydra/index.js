@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 
 import LayoutWrapper from '../../components/LayoutWrapper';
 import Hero from '../../components/Hero';
@@ -14,60 +16,68 @@ import content from '../../data/pages/hydra';
 import { Snippet, Video, Features } from '../../components/HydraPage';
 
 function HydraPage() {
+  const { t } = useTranslation();
+  const { language } = useI18next();
+
   return (
-    <BaseLayout>
-      <SiteMetadata title="Hydra - A Substrate query node framework" description="Inspired by The Graph, it gives a smooth way to provide powerful GraphQL queries to app developers over your Substrate blockchain state and history." />
+    <BaseLayout t={t}>
+      <SiteMetadata
+        lang={language}
+        title={t('hydra.siteMetadata.title')}
+        description={t('hydra.siteMetadata.description')}
+      />
       <div className="Hydra__Hero">
         <Hero
           image={content.Hero.image}
-          title={content.Hero.title}
+          title={t('hydra.hero.title')}
           animationStartValue={0}
           animationEndValue={60}
           animationEnd="100vh"
           noOverflow
         >
-          {content.Hero.text}
+          <p className="Hero__Paragraph">{t('hydra.hero.text')}</p>
         </Hero>
       </div>
 
       <LayoutWrapper className="ValueProp">
-        <TitleWrapper title={content.ValueProp.title} subtitle={content.ValueProp.subtitle} />
+        <TitleWrapper title={t('hydra.value.title')} subtitle={t('hydra.value.subtitle')} />
         <div className="ValueProp__Container">
-          {content.ValueProp.sections.map((section, idx) => (
-            <ImageSection key={section.title} title={section.title} image={section.image}>
-              {section.text}
+          {content.ValueProp.sections.map(section => (
+            <ImageSection key={t(`${section.key}.title`)} image={section.image}>
+              <h1>{t(`${section.key}.title`)}</h1>
+              <p>{t(`${section.key}.text`)}</p>
             </ImageSection>
           ))}
         </div>
       </LayoutWrapper>
       <LayoutWrapper className="Snippet">
-        <TitleWrapper title={content.Snippet.title} subtitle={content.Snippet.subtitle} />
+        <TitleWrapper title={t("hydra.snippet.title")} subtitle={t("hydra.snippet.subtitle")} />
         <Snippet />
       </LayoutWrapper>
       <LayoutWrapper className="Features">
-        <TitleWrapper title={content.Features.title} subtitle={content.Features.subtitle} />
-        <Features features={content.Features.features} />
+        <TitleWrapper title={t("hydra.features.title")}/>
+        <Features features={content.Features.features} t={t}/>
       </LayoutWrapper>
       <LayoutWrapper className="Video">
-        <TitleWrapper title={content.Video.title} />
+        <TitleWrapper title={t("hydra.videoTitle")} />
         <Video src={content.Video.video.src} />
       </LayoutWrapper>
       <LayoutWrapper className="GetStarted">
-        <TitleWrapper title={content.GetStarted.title} subtitle={content.GetStarted.subtitle} />
+        <TitleWrapper title={t("hydra.getStarted.title")} subtitle={<p>{t("hydra.getStarted.subtitle")}</p>} />
         <div className="GetStarted__Container">
           {content.GetStarted.links.map(link => (
-            <Link to={link.link.to}>
+            <Link key={t(`${link.name}`)} to={link.link.to}>
               <div className="GetStarted__Card">
                 <div
                   className={`GetStarted__Card__Icon${
-                    link.name === 'Documentation' ? ' GetStarted__Card__IconDoc' : ''
+                    t(`${link.name}`) === 'Documentation' ? ' GetStarted__Card__IconDoc' : ''
                   }`}
                 >
                   {link.icon()}
                 </div>
                 <div className="GetStarted__Card__Text">
-                  <h1>{link.name}</h1>
-                  <a href={link.link.to}>{link.link.as}</a>
+                  <h1>{t(`${link.name}`)}</h1>
+                  <a href={link.link.to}>{t(`${link.link.as}`)}</a>
                 </div>
               </div>
             </Link>
@@ -79,3 +89,17 @@ function HydraPage() {
 }
 
 export default HydraPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

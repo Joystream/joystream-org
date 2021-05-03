@@ -15,26 +15,6 @@
   border-radius: $border-radius-small;
   transition: background-color $duration;
 
-  &--labeled {
-    &::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      width: 140px;
-      height: 140px;
-      padding: 10px;
-      font-size: 18px;
-      color: $c_white;
-      background-color: $c_blue-ribbon;
-      content: 'NEW';
-      transform: rotate(-45deg) translate(-50%, -50%);
-      transform-origin: top left;
-    }
-  }
-
   &--small {
     flex-direction: row;
     padding: 10px;
@@ -61,6 +41,23 @@
     #{$_r}__image {
       color: $c_white;
     }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+    font-size: 18px;
+    color: $c_white;
+    background-color: $c_blue-ribbon;
+    transform: rotate(-45deg) translate(-50%, -50%);
+    transform-origin: top left;
   }
 
   &__image {

@@ -55,16 +55,16 @@ class CookiesNotice extends React.Component {
         <div className="CookiesNotice">
           <div className="CookiesNotice__container">
             <div className="CookiesNotice__content">
-              <p>This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.</p>
+              <p>{this.props.t('cookiesNotice.text')}</p>
               <p>
                 <Link to="/privacy-policy" className="CookiesNotice__link">
-                  Find out more ›
+                  {this.props.t('cookiesNotice.findOutMore')}
                 </Link>
               </p>
             </div>
 
             <Button large className="CookiesNotice__accept" onClick={this.onAccept} secondary>
-              Accept
+              {this.props.t('button.accept')}
             </Button>
           </div>
         </div>

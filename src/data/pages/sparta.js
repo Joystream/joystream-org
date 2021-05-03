@@ -41,18 +41,16 @@ const analytics = [
 
 const goals = [
   {
-    title: 'Build and release a blockchain with a working Council',
-    text: (
-      <>
-        As a "user governed media platform", allowing users to elect{' '}
-        <Link to="/roles#council-member">Council Members</Link> to represent their interest in day-to-day operations was
-        a major goal for us.
-      </>
-    ),
+    title: 'sparta.testnetGoals.goals.blockchain.title',
+    text: {
+      isModular: true,
+      key: 'sparta.testnetGoals.goals.blockchain.text',
+      components: [<Link to="/roles#council-member">Council Members</Link>],
+    },
   },
   {
-    title: 'Keep the quantity of more or less critical bugs at an acceptable level',
-    text: 'As demonstrated by the fact that the network crashed, we did not reach our goals in this case.',
+    title: 'sparta.testnetGoals.goals.bugs.title',
+    text: 'sparta.testnetGoals.goals.bugs.text',
     state: 'postponed',
   },
 ];

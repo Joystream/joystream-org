@@ -4,6 +4,7 @@ import { ReactComponent as CloseIcon } from '../../../assets/svg/postponed.svg';
 import { ReactComponent as Upload } from '../../../assets/svg/upload.svg';
 import { ReactComponent as Achieved } from '../../../assets/svg/achieved.svg';
 import cn from 'classnames';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import { ArrowButton } from '../../../pages/founding-members';
 import { Keyring } from '@polkadot/keyring';
 
@@ -21,6 +22,7 @@ const KeybaseAndText = ({
   password,
   setPassword,
   jsonFile,
+  t,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [textInput, setTextInput] = useState('');
@@ -42,7 +44,11 @@ const KeybaseAndText = ({
     } catch (e) {
       setIsPasswordLoading(false);
       setIsPasswordValid(false);
-      setPasswordError(!passwordInput ? 'Please enter your password!' : 'Password is incorrect, please try again!');
+      setPasswordError(
+        !passwordInput
+          ? t('foundingMembers.form.keybaseAndText.pleaseEnterPassword')
+          : t('foundingMembers.form.error.incorrectPassword')
+      );
       return;
     }
     setIsPasswordLoading(false);
@@ -61,19 +67,21 @@ const KeybaseAndText = ({
   return (
     <>
       <h3 className="FoundingMembersFormPage__form__subtitle FoundingMembersFormPage__form__input-title-mobile  margin-bottom-XS">
-        Keybase handle
+        {t('foundingMembers.form.keybaseAndText.keybaseHandle')}
       </h3>
       <input
         value={textInput}
         onChange={e => setTextInput(e.target.value)}
-        placeholder="e.g. joedoe"
+        placeholder={t('foundingMembers.general.inputPlaceholder')}
         className="FoundingMembersFormPage__form__input margin-bottom-M"
       />
       <div className="flex-row margin-bottom-XS">
-        <h3 className="FoundingMembersFormPage__form__subtitle">Document with the summary</h3>
+        <h3 className="FoundingMembersFormPage__form__subtitle">
+          {t('foundingMembers.form.keybaseAndText.documentWithSummary')}
+        </h3>
         {width > 450 ? (
           <button className="FoundingMembersFormPage__form__link" onClick={() => setIsModalOpen(true)}>
-            How should I prepare it?
+            {t('foundingMembers.form.keybaseAndText.howToPrepare.link')}
           </button>
         ) : null}
         <Modal
@@ -83,19 +91,17 @@ const KeybaseAndText = ({
           overlayClassName="FoundingMembersFormPage__form__modal__overlay"
         >
           <div className="FoundingMembersFormPage__form__modal__container">
-            <p className="margin-bottom-M">How to prepare it:</p>
-            <p>
-              Your activity summary should describe in as much detail as possible your recent contributions to the
-              success of the platform. Try to separate out each contribution into a separate paragraph or bullet point
-              for ease of processing.
-            </p>
+            <p className="margin-bottom-M">{t('foundingMembers.form.keybaseAndText.howToPrepare.title')}</p>
+            <p>{t('foundingMembers.form.keybaseAndText.howToPrepare.text')}</p>
           </div>
         </Modal>
       </div>
-      <p className="FoundingMembersFormPage__form__subtitle-small margin-bottom-XS">Accepted file format: .txt</p>
+      <p className="FoundingMembersFormPage__form__subtitle-small margin-bottom-XS">
+        {t('foundingMembers.form.keybaseAndText.fileFormat')}
+      </p>
       {width < 450 ? (
         <a className="FoundingMembersFormPage__form__link margin-bottom-S" href="#0">
-          How should I do it?
+          {t('foundingMembers.form.keybaseAndText.howToPrepare.alternateLink')}
         </a>
       ) : null}
       <input
@@ -108,7 +114,7 @@ const KeybaseAndText = ({
       />
       {!textFile.name ? (
         <div
-          onDragOver={(e) => {
+          onDragOver={e => {
             e.preventDefault();
           }}
           onDrop={e => {
@@ -129,10 +135,13 @@ const KeybaseAndText = ({
               className="FoundingMembersFormPage__form__filedrop__label"
             >
               <p className="FoundingMembersFormPage__form__filedrop__text">
-                Drop you file here or <span className="FoundingMembersFormPage__form__link">browse files</span>
-              </p>{' '}
+                <Trans
+                  i18nKey="foundingMembers.form.dropFile"
+                  components={[<span className="FoundingMembersFormPage__form__link" />]}
+                />
+              </p>
               <div className="FoundingMembersFormPage__form__filedrop--mobile">
-                <p className="FoundingMembersFormPage__form__filedrop__text">Upload file</p>
+                <p className="FoundingMembersFormPage__form__filedrop__text">{t('foundingMembers.form.uploadFile')}</p>
                 <Upload className="FoundingMembersFormPage__form__filedrop__upload-icon" />
               </div>
             </label>
@@ -173,14 +182,12 @@ const KeybaseAndText = ({
           />
         </div>
       )}
-      {fileStatus.error && (
-        <p className="FoundingMembersFormPage__form__error-message">
-          {fileStatus.errorMessage}
-        </p>
-      )}
+      {fileStatus.error && <p className="FoundingMembersFormPage__form__error-message">{fileStatus.errorMessage}</p>}
       {isPasswordValid === false && (
         <>
-          <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Password</h3>
+          <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+            {t('foundingMembers.form.keybaseAndText.password')}
+          </h3>
           <input
             type="password"
             className="FoundingMembersFormPage__form__input"
@@ -194,7 +201,7 @@ const KeybaseAndText = ({
         className={cn('FoundingMembersFormPage__form__button', {
           'FoundingMembersFormPage__form__button--inactive': !textInput || !textFile.data || isPasswordLoading,
         })}
-        text="Next"
+        text={t('foundingMembers.general.next')}
         onClick={e => {
           if (textFile.data && textInput && !isPasswordLoading) {
             setIsPasswordLoading(true);

@@ -16,17 +16,13 @@ const TypographyBlockRow = ({ title, description, children, className }) => {
   );
 };
 
-export default () => {
+export default ({ t }) => {
   const section = guidesData.sidebar[5];
 
   return (
-    <Section title={section.title} id={section.id}>
-      <SubSection>
-        <SubTitle>
-          Our typefaces are simple, comprehensive and modern. This is a reflection of our brand and our voice. We chose
-          the appropriate typeface weights from PX Grotesk (regular, bold) and Inter family for specific touchpoints and
-          to create clear hierarchies of information and messages.
-        </SubTitle>
+    <Section title={t('brand.guides.general.typography')} id={section.id}>
+      <SubSection t={t}>
+        <SubTitle>{t('brand.guides.typography.overview')}</SubTitle>
 
         <div className="Typography__font Typography__font--grotesk">
           <div className="Typography__font-title">PX Grotesk</div>
@@ -46,17 +42,10 @@ export default () => {
           </div>
         </div>
 
-        <Text>
-          If either two typefaces are impossible to use please choose Arial Regular. This may be required across PC
-          operating systems or electronic internal documents or in diferent offices worldwide. Don’t use Arial for any
-          print materials.
-        </Text>
+        <Text>{t('brand.guides.typography.backup')}</Text>
 
         <BlueSection className="TypographyBlock">
-          <Text className="TypographyBlock__text">
-            The following is a sample of an ideal font stack using PX Grotesk for headlines and larger pull quote text
-            and Inter UI for paragraph and call-to-action text.
-          </Text>
+          <Text className="TypographyBlock__text">{t('brand.guides.typography.sample')}</Text>
 
           <TypographyBlockRow
             title="H1"
@@ -125,8 +114,8 @@ export default () => {
               people who want to engage in platform governance and work. This refers to people who enjoy building,
               fostering and participating in nascent communities. They are driven by a sense of purpose, and also the
               motivation to get in early on something that can become big and important. These people are often highly
-              social, enjoy working in groups with common purpose, are self directed, digital natives and often outsiders in
-              the offine world.
+              social, enjoy working in groups with common purpose, are self directed, digital natives and often
+              outsiders in the offine world.
             </Text>
           </TypographyBlockRow>
         </BlueSection>

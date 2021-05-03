@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import SiteMetadata from '../../../components/SiteMetadata';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../../../components/_layouts/Base';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
-import { ScoringPeriodCounter } from '../components/ScoringPeriod';
+import { ScoringPeriodCounter } from '../../../components/founding-members/ScoringPeriod';
 import useAxios from '../../../utils/useAxios';
 import { foundingMembersJson } from '../../../data/pages/founding-members';
 
@@ -13,6 +16,8 @@ const FoundingMembersFormPage = () => {
   const [response, loading, error] = useAxios(foundingMembersJson);
   const [formerDate, setFormerDate] = useState();
   const [latterDate, setLatterData] = useState();
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   useEffect(() => {
     if (response?.scoringPeriodsFull?.currentScoringPeriod) {
@@ -22,31 +27,35 @@ const FoundingMembersFormPage = () => {
   }, [response]);
 
   return (
-    <BaseLayout>
+    <BaseLayout t={t}>
+      <SiteMetadata lang={language} title={t('foundingMembers.form.siteMetadata.title')} />
       <div className="FoundingMembersFormPage">
         <div className="FoundingMembersFormPage__header">
           <div className="FoundingMembersFormPage__back">
             <a href="/founding-members" className="FoundingMembersFormPage__back__text">
               <Arrow className="FoundingMembersFormPage__back__arrow" />
-              <span>Back to Program page</span>
+              <span>{t('foundingMembers.general.backButton')}</span>
             </a>
           </div>
           <div className="FoundingMembersFormPage__header__title-wrapper">
-            <h1 className="FoundingMembersFormPage__header__title">Submit activity summary</h1>
+            <h1 className="FoundingMembersFormPage__header__title">{t('foundingMembers.form.title')}</h1>
             <p className="FoundingMembersFormPage__header__title-date">
-              Before: {latterDate?.getDate()} {latterDate?.toLocaleString('default', { month: 'long' })}
+              {t('foundingMembers.general.before')}: {latterDate?.getDate()}{' '}
+              {latterDate?.toLocaleString('default', { month: 'long' })}
             </p>
           </div>
         </div>
 
         <div className="FoundingMembersFormPage__body">
-          <FoundingMembersForm />
+          <FoundingMembersForm t={t}/>
 
           <div className="FoundingMembersFormPage__counter">
             <div className="FoundingMembersFormPage__counter__header">
-              <h2 className="FoundingMembersFormPage__counter__header__title">Current scoring period</h2>
+              <h2 className="FoundingMembersFormPage__counter__header__title">
+                {t('foundingMembers.scoringPeriod.title')}
+              </h2>
               <h3 className="FoundingMembersFormPage__counter__header__subtitle">
-                Current period number{' '}
+                {t('foundingMembers.scoringPeriod.currentNumber')}{' '}
                 <span>#{response?.scoringPeriodsFull?.currentScoringPeriod?.scoringPeriodId}</span>
               </h3>
             </div>
@@ -54,6 +63,7 @@ const FoundingMembersFormPage = () => {
               className="FoundingMembersFormPage__counter__body"
               formerDate={formerDate}
               latterDate={latterDate}
+              t={t}
             />
           </div>
         </div>
@@ -63,3 +73,17 @@ const FoundingMembersFormPage = () => {
 };
 
 export default FoundingMembersFormPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

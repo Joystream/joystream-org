@@ -6,16 +6,16 @@ import { ReactComponent as BuilderAlt } from '../../../assets/svg/builder-cta-al
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import './style.scss';
 
-const EarnTokens = () => (
+const EarnTokens = ({ t }) => (
   <div className="IndexPage__earntokens-wrapper">
     <div className="IndexPage__earntokens">
       <div className="IndexPage__earntokens__content">
-        <h2 className="IndexPage__earntokens__title">Earn mainnet tokens, cash and influence.</h2>
+        <h2 className="IndexPage__earntokens__title">{t('landing.earnTokens.title')}</h2>
         <Link to="/get-started" className="IndexPage__earntokens__button-container">
           <div className="IndexPage__earntokens__button">
-            <p className="IndexPage__earntokens__button-text">Start earning</p>
+            <p className="IndexPage__earntokens__button-text">{t('button.getStarted.text')}</p>
             <p className="IndexPage__earntokens__button-text IndexPage__earntokens__button-text--alt">
-              Join & start earning
+              {t('button.getStarted.altText')}
             </p>
             <Arrow className="IndexPage__earntokens__button-arrow" />
           </div>

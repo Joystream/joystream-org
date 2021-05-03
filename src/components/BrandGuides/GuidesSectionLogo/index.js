@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import schematicsDark from '../../../assets/images/logo-construction-schematics-dark.png';
 import schematicsWhite from '../../../assets/images/logo-construction-schematics-white.png';
 import logoDevelopmentImg from '../../../assets/images/logo-development.png';
@@ -19,82 +20,59 @@ import importAll from '../../../utils/importAll';
 const forbiddenLogoSlides = importAll(require.context('../../../assets/images/slides/logo-forbidden', false, /\.png$/));
 const logoSlides = importAll(require.context('../../../assets/images/slides/logo', false, /\.png$/));
 
-export default () => {
+export default ({ t }) => {
   const section = guidesData.sidebar[0];
   const subSection = section.subSections;
 
   return (
-    <Section title={section.title} id={section.id} className="GuidesSectionLogo">
-      <SubSection id={subSection[0].id}>
-        <SubTitle>
-          Our brand should promote a feeling of experimentation, excitement and building something ethical and
-          dynamic.
-        </SubTitle>
+    <Section title={t('brand.guides.general.logo')} id={section.id} className="GuidesSectionLogo">
+      <SubSection t={t} id={subSection[0].id}>
+        <SubTitle>{t('brand.guides.logo.experimentation')}</SubTitle>
         <Image src={logoDevelopmentImg} alt="" />
-        <Text>
-          Before we agreed on a final logo concept we went through multiple iterations of various concepts. We explored
-          various ideas in depth before settling on the final logo concept.
-        </Text>
+        <Text>{t('brand.guides.logo.conceptIterations')}</Text>
 
-        <Button
-          href="https://github.com/Joystream/design/tree/master/logo"
-          download
-        >
+        <Button href="https://github.com/Joystream/design/tree/master/logo" download>
           <img src={downloadImg} alt="" />
-          Download Logo
+          {t('brand.button.text.downloadLogo')}
         </Button>
       </SubSection>
 
-      <SubSection title="01. Logomark Construction" id={subSection[1].id}>
-        <Text>
-          In the end we came up with a logomark that combines several simple principles which translate well to the voice
-          of the brand.
-        </Text>
+      <SubSection t={t} title={t('brand.guides.logomarkConstruction.title')} id={subSection[1].id}>
+        <Text>{t('brand.guides.logomarkConstruction.simplePrinciples')}</Text>
         <Image src={logoConstructionImg} alt="" />
-        <Text>
-          Our logomark is a combination of the letter J (to represent the name Joystream) and three parallel stripes that are
-          a representation of streaming data and the flow of information and technology.
-        </Text>
+        <Text>{t('brand.guides.logomarkConstruction.combination')}</Text>
         <Image
           className="GuidesSectionLogo__exclusion-img"
-          description="Logomark's exclusion zone is equal to the blue square height (marked as 5a in the diagram)."
+          description={t('brand.guides.logomarkConstruction.image.logomarkDescription')}
           src={logoExclusionImg}
           alt=""
         />
       </SubSection>
 
-      <SubSection title="02. Logo Construction" id={subSection[2].id}>
-        <Text>
-          The Joystream logo is a combination of the logomark and dedicated typography that was designed to be the best link
-          between the logomark and what Joystream stands for. It is firm and technical but shows plasticity and sense of a
-          structure.
-        </Text>
+      <SubSection t={t} title={t('brand.guides.logoConstruction.title')} id={subSection[2].id}>
+        <Text>{t('brand.guides.logoConstruction.combination')}</Text>
 
         <BlueSection bottom>
-          <DetailText>Horizontal Lockup</DetailText>
+          <DetailText>{t('brand.guides.logoConstruction.horizontalLockup')}</DetailText>
           <div className="GuidesSectionLogo__construction-white-bg">
             <Image src={schematicsDark} alt="" />
           </div>
         </BlueSection>
 
         <BlueSection>
-          <DetailText>Vertical Lockup</DetailText>
+          <DetailText>{t('brand.guides.logoConstruction.verticalLockup')}</DetailText>
           <Image src={schematicsWhite} alt="" className="GuidesSectionLogo__schematics-white" />
         </BlueSection>
       </SubSection>
 
-      <SubSection title="03. Logo Use Cases" id={subSection[3].id}>
-        <Text>
-          The Joystream logo is primarly used in its original form on white backgrounds but it can also be used in its
-          complimentary forms if necessary. Examples show such use cases below.
-        </Text>
+      <SubSection t={t} title={t('brand.guides.logoUseCases.title')} id={subSection[3].id}>
+        <Text>{t('brand.guides.logoUseCases.originalForm')}</Text>
 
         <Slider slides={logoSlides} className="GuidesSectionLogo__slider" />
 
-        <SubTitle small>The smallest safe use</SubTitle>
+        <SubTitle small>{t('brand.guides.logoUseCases.safeUse')}</SubTitle>
         <Text>
-          In order to ensure the best visual presentation of the logo, it is best offered in sizes between{' '}
-          <strong>200 and 500+px</strong> width on digital devices.
+          <Trans i18nKey='brand.guides.logoUseCases.visualPresentation' components={[<strong/>]}/>
         </Text>
 
         <div className="GuidesSectionLogo__safe-use SafeUse">
@@ -104,9 +82,7 @@ export default () => {
               <Logo className="SafeUse__logo SafeUse__logo--md" />
               <Logo className="SafeUse__logo SafeUse__logo--sm" />
             </div>
-            <div className="SafeUse__description">
-              The Joystream logo should never be narrower than 100px in digital or 20mm in print horisontal lockup.
-            </div>
+            <div className="SafeUse__description">{t('brand.guides.logoUseCases.horizontalNarrow')}</div>
           </div>
 
           <div className="SafeUse__col">
@@ -115,18 +91,13 @@ export default () => {
               <LargeLogo className="SafeUse__large-logo SafeUse__large-logo--md" />
               <LargeLogo className="SafeUse__large-logo SafeUse__large-logo--sm" />
             </div>
-            <div className="SafeUse__description">
-              Vertical lockup should never be narrower than 70px in digital or 15mm in print.
-            </div>
+            <div className="SafeUse__description">{t('brand.guides.logoUseCases.verticalNarrow')}</div>
           </div>
         </div>
       </SubSection>
 
-      <SubSection title="04. Social Icons" id={subSection[4].id}>
-        <Text>
-          In cases when the Joystream brand has already been established we can simply use the icon on its own. While
-          the icon can exist without the wordmark, the wordmark should never exist without the icon.
-        </Text>
+      <SubSection t={t} title={t('brand.guides.logoSocialIcons.title')} id={subSection[4].id}>
+        <Text>{t('brand.guides.logoSocialIcons.icon')}</Text>
         <div className="SocialIcons__row">
           <div className="SocialIcons__icon SocialIcons__icon--blue SocialIcons__icon--bg-white">
             <LogoMark />
@@ -143,11 +114,8 @@ export default () => {
         </div>
       </SubSection>
 
-      <SubSection title="05. Forbidden uses of the logo" id={subSection[5].id}>
-        <Text>
-          The logotype and the icon must follow certain rules and there are general cases of use that should be avoided
-          at all costs! In order to preserve the brand voice remember to avoid examples such as the following:
-        </Text>
+      <SubSection t={t} title={t('brand.guides.logoForbiddenUses.title')} id={subSection[5].id}>
+        <Text>{t('brand.guides.logoForbiddenUses.rules')}</Text>
 
         <Slider size="large" withSpacing slides={forbiddenLogoSlides} />
       </SubSection>

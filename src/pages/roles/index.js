@@ -1,6 +1,8 @@
 import React, { useState, createRef, useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import { InView } from 'react-intersection-observer';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 
 import BaseLayout from '../../components/_layouts/Base';
 import LayoutWrapper from '../../components/LayoutWrapper';
@@ -16,8 +18,54 @@ import { rolesData } from '../../data/pages/roles';
 
 import './style.scss';
 
+const translateNavbarData = ({ active, upcoming, ...rest }, t) => {
+  let activeRoles = active.map(({ title, ...activeRest }) => {
+    return {
+      title: t(`${title}`),
+      ...activeRest,
+    };
+  });
+
+  let upcomingRoles = upcoming.map(({ title, ...upcomingRest }) => {
+    return {
+      title: t(`${title}`),
+      ...upcomingRest,
+    };
+  });
+
+  return {
+    active: activeRoles,
+    upcoming: upcomingRoles,
+    ...rest,
+  };
+};
+
+const translateRolesData = ({ title, overview, responsibilities, requirements, ...role }, t) => {
+  let transOverview;
+
+  if (overview?.isModular) {
+    transOverview = <Trans i18nKey={overview.key} components={overview.components} />;
+  }
+
+  return {
+    title: t(`${title}`),
+    overview: transOverview ?? t(`${overview}`),
+    responsibilities: responsibilities.map(responsibility => {
+      if (responsibility?.isModular) {
+        return <Trans i18nKey={responsibility.key} components={responsibility.components} />;
+      }
+
+      return t(`${responsibility}`);
+    }),
+    requirements: requirements.map(requirement => t(`${requirement}`)),
+    ...role,
+  };
+};
+
 const RolesPage = () => {
   const [elementInViewport, setElementInViewport] = useState('');
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   const elementsRef = useMemo(() => {
     const obj = {};
@@ -33,18 +81,20 @@ const RolesPage = () => {
   };
 
   return (
-    <BaseLayout>
-      <SiteMetadata
-        title="Joystream: The video platform DAO"
-        description="Read more about current and future roles on the Joystream platform"
-      />
+    <BaseLayout t={t}>
+      <SiteMetadata lang={language} title={t('siteMetadata.title')} description={t('roles.siteMetadata.description')} />
 
-      <Hero image={rolesImage} title="Choose your preferred role" animationStartValue={0}>
-        <p className="RolesPage__hero-paragraph">Participating in a role on our testnet lets you earn tJOY while influencing the platform's ongoing development.</p>
+      <Hero image={rolesImage} title={t('roles.hero.title')} animationStartValue={0}>
+        <p className="RolesPage__hero-paragraph">{t('roles.hero.text')}</p>
       </Hero>
 
       <LayoutWrapper gradient>
-        <Sidebar onElementChange={scrollToElement} currentElement={elementInViewport} data={rolesData} />
+        <Sidebar
+          onElementChange={scrollToElement}
+          currentElement={elementInViewport}
+          data={translateNavbarData(rolesData, t)}
+          t={t}
+        />
         <div className="RoleOverview__Wrapper">
           {Object.keys(rolesData).map(key => {
             return rolesData[key].map(role => (
@@ -58,7 +108,7 @@ const RolesPage = () => {
                 }}
                 key={role.title}
               >
-                <RoleOverview {...role} type={key} ref={elementsRef[role.id]} />
+                <RoleOverview {...translateRolesData({ ...role }, t)} type={key} ref={elementsRef[role.id]} />
               </InView>
             ));
           })}
@@ -69,3 +119,17 @@ const RolesPage = () => {
 };
 
 export default RolesPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { pagePropTypes } from '../../propTypes';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 
 import getApiPath from '../../utils/getApiPath';
 import mapStatusDataToRoles from '../../utils/mapStatusDataToRoles';
+import translateGoals from '../../utils/translateGoals';
+import convertToCamelCase from '../../utils/convertToCamelCase';
 
 import withApi from '../../components/_enhancers/withApi';
 
@@ -27,106 +31,103 @@ import { ReactComponent as BlogImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import constantinopleBuildingImg from '../../assets/svg/constantinople-building.svg';
 
-import { roles, sharedData } from '../../data/pages';
-import { goalsData, launchDate } from '../../data/pages/constantinople';
+import { roles } from '../../data/pages';
+import { goalsData } from '../../data/pages/constantinople';
 
 import './style.scss';
 
 const ConstantinoplePage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   return (
-    <BaseLayout>
-      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Constantinople Testnet" />
+    <BaseLayout t={t}>
+      <SiteMetadata
+        lang={language}
+        title={t('siteMetadata.title')}
+        description={t('constantinople.siteMetadata.description')}
+      />
 
       <Hero
         image={constantinopleImage}
-        title="Constantinople Network"
+        title={t('constantinople.hero.title')}
         indent
-        chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
+        chip={<Chip onClick={() => setModalClosed(true)}>{t('constantinople.hero.chipText')}</Chip>}
         animationStartValue={0}
       >
-        <p className="ConstantinoplePage__hero-paragraph">
-          The Constantinople testnet introduces an improved proposals system
-          and fiat-backed token model for participant compensation.</p>
-        <HeroCard
-          info
-          date="2020/09/21 09:00"
-          counterTitle={
-            <>
-              REPLACED BY ALEXANDRIA ON
-            </>
-          }
-          />
+        <p className="ConstantinoplePage__hero-paragraph">{t('constantinople.hero.text')}</p>
+        <HeroCard info date="2020/09/21 09:00" counterTitle={<>{t('constantinople.heroCard.title')}</>} t={t} />
 
         <TestnetModal
-          title="Constantinople"
+          title={t('constantinople.modal.title')}
           image={constantinopleBuildingImg}
           closeModal={() => setModalClosed(false)}
           isOpen={isModalOpen}
         >
-          <p>
-            The Column of Constantine, also known as the Burnt Stone or the Burnt Pillar,
-            is a Roman monumental column constructed on the orders of the Roman emperor
-            Constantine the Great in 330 AD. It commemorates the declaration of Byzantium
-            as the new capital city of the Roman Empire.
-          </p>
+          <p>{t('constantinople.modal.text')}</p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper title="Critical Documents">
+        <TitleWrapper title={t('constantinople.criticalDocuments.title')}>
           <ColumnsLayout>
             <Pane
               image={SpecImg}
               href="https://github.com/Joystream/joystream-landing/tree/master/testnets/constantinople"
-              title="Release Plan"
+              title={t('constantinople.criticalDocuments.releasePlan.title')}
               target="_blank"
-          >
-              Read the release plan as it was made during the planning stage, and learn more about how the development
-              evolved.
+            >
+              {t('constantinople.criticalDocuments.releasePlan.text')}
             </Pane>
-            <Pane image={BlogImg}
-              title="Announcement Blog Post"
+            <Pane
+              image={BlogImg}
+              title={t('constantinople.criticalDocuments.blogPost.title')}
               href="https://blog.joystream.org/announcing-constantinople/"
               target="_blank"
             >
-              Read a brief primer on the Constantinople testnet and its objectives.
+              {t('constantinople.criticalDocuments.blogPost.text')}
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
 
         <TitleWrapper
-          title="Testnet Goals"
-          subtitle={
-            <>
-              The goals listed below are a simplified representation of our main objectives for the Constantinople testnet.
-            </>
-          }
+          title={t('constantinople.testnetGoals.title')}
+          subtitle={<>{t('constantinople.testnetGoals.subtitle')}</>}
         >
-          <GoalList data={goalsData} />
+          <GoalList data={translateGoals(goalsData, t)} />
         </TitleWrapper>
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title="Incentivized Roles for the Constantinople Network">
+        <TitleWrapper title={t('constantinople.roles.title')}>
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet />
+            <RoleList
+              roles={roles.active.map(({ title, ...rest }) => ({
+                title: t(`rolesData.${convertToCamelCase(title)}`),
+                ...rest,
+              }))}
+              content={mapStatusDataToRoles(content)}
+              t={t}
+              oldTestnet
+            />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title="Constantinople" location="constantinople">
+      <MapInfo title={t('constantinople.map.title')} location="constantinople">
         <p>
-          <strong>Constantinople was the capital city of the Eastern Roman Empire during the fourth century. </strong>
-          It was famed for its massive and complex defences as well as its architectural masterpieces
-          and opulent aristocratic palaces. As was the case with the city, we hope our Constantinople
-          testnet will be a worthy successor to Rome.
-          <br />
-          <br />
-          <Link href="https://blog.joystream.org/announcing-constantinople/">
-            <PersonIcon /> Read the blog post
-          </Link>
+          <Trans
+            i18nKey="constantinople.map.text"
+            components={[
+              <strong />,
+              <br />,
+              <Link href="https://blog.joystream.org/announcing-constantinople/">
+                <PersonIcon />
+                Read the blog post
+              </Link>,
+            ]}
+          />
         </p>
       </MapInfo>
     </BaseLayout>
@@ -137,3 +138,17 @@ ConstantinoplePage.propTypes = pagePropTypes;
 
 export { ConstantinoplePage };
 export default withApi(ConstantinoplePage, getApiPath('STATUS'));
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

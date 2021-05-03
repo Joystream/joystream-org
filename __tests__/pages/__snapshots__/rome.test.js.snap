@@ -1,13 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RomePage page renders correctly 1`] = `
-<BaseLayout>
+<BaseLayout
+  t={[Function]}
+>
   <SiteMetadata
-    description="Explore the Rome Testnet"
+    description="rome.siteMetadata.description"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: The video platform DAO"
+    title="siteMetadata.title"
   />
   <Hero
     animationEnd={500}
@@ -18,7 +20,7 @@ exports[`RomePage page renders correctly 1`] = `
         icon="icon-component-mock"
         onClick={[Function]}
       >
-        What is this?
+        rome.hero.chipText
       </Chip>
     }
     image="icon-mock"
@@ -26,36 +28,41 @@ exports[`RomePage page renders correctly 1`] = `
     noOverflow={false}
     reverse={false}
     theme="black"
-    title="Rome Network"
+    title="rome.hero.title"
   >
     <p
       className="RomePage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.
+      rome.hero.text
     </p>
     <HeroCard
       content={null}
       counterTitle={
         <React.Fragment>
-          REPLACED BY CONSTANTINOPLE ON
+          rome.heroCard.title
         </React.Fragment>
       }
       date="2020/05/20 15:00"
       error={false}
       info={true}
+      t={[Function]}
     />
     <TestnetModal
       className=""
       closeModal={[Function]}
       image="icon-mock"
       isOpen={false}
-      title="Rome"
+      title="rome.modal.title"
     >
       <p>
-        <strong>
-          The Roman empire left many landmarks.
-        </strong>
-         Their architecture and engineering skills was unparalleled during their might. The concept of aqueducts was not devised by the Romans, but their beauty and extent is.
+        <Trans
+          components={
+            Array [
+              <strong />,
+            ]
+          }
+          i18nKey="rome.modal.text"
+        />
       </p>
     </TestnetModal>
   </Hero>
@@ -67,7 +74,7 @@ exports[`RomePage page renders correctly 1`] = `
     <TitleWrapper
       className=""
       subtitle=""
-      title="Critical Documents"
+      title="rome.criticalDocuments.title"
     >
       <ColumnsLayout
         className=""
@@ -78,9 +85,9 @@ exports[`RomePage page renders correctly 1`] = `
           className=""
           disabled={true}
           image="icon-component-mock"
-          title="Full Specifications"
+          title="rome.criticalDocuments.fullSpecifications.title"
         >
-          No specifications were published for Rome.
+          rome.criticalDocuments.fullSpecifications.text
         </Pane>
         <Pane
           className=""
@@ -88,9 +95,9 @@ exports[`RomePage page renders correctly 1`] = `
           href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome"
           image="icon-component-mock"
           target="_blank"
-          title="Release Plan"
+          title="rome.criticalDocuments.releasePlan.title"
         >
-          Read the release plan as it was made during the planning stage, and learn more about how the development evolved.
+          rome.criticalDocuments.releasePlan.text
         </Pane>
       </ColumnsLayout>
     </TitleWrapper>
@@ -98,46 +105,42 @@ exports[`RomePage page renders correctly 1`] = `
       className=""
       subtitle={
         <React.Fragment>
-          The goals below are a simplified representation of the Key Results listed in our Release
-           
-          <Link
-            className=""
-            highlighted={false}
-            href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome#release-okrs"
-          >
-            OKR
-          </Link>
+          <Trans
+            components={
+              Array [
+                <Link
+                  className=""
+                  highlighted={false}
+                  href="https://github.com/Joystream/joystream-landing/tree/master/testnets/rome#release-okrs"
+                >
+                  OKR
+                </Link>,
+              ]
+            }
+            i18nKey="rome.testnetGoals.subtitle"
+          />
         </React.Fragment>
       }
-      title="Testnet Goals"
+      title="rome.testnetGoals.title"
     >
       <GoalList
         data={
           Array [
             Object {
-              "text": "The Rome testnet is built around the introduction of a new content
-      directory, that can be added to, modified and improved without requiring
-      runtime upgrades. All key results and goals are derived from this.",
-              "title": "Build a dynamic, flexible and user friendly content directory",
+              "text": "rome.testnetGoals.goals.contentDirectory.text",
+              "title": "rome.testnetGoals.goals.contentDirectory.title",
             },
             Object {
-              "text": "Rome introduces a Content Directory system that is both built to last,
-      yet still meant to be continuously improved on. We will pay for Content Creators
-      to upload a variety of content and we hope to learn a lot from the results.",
-              "title": "Populate the content directory with a variety of content",
+              "text": "rome.testnetGoals.goals.content.text",
+              "title": "rome.testnetGoals.goals.content.title",
             },
             Object {
-              "text": "With a new Content Directory, and incentives to upload content,
-      we need monitoring. The Content Curators will require staking, and
-      will be paid in both testnet tokens and Monero.",
-              "title": "Introduce the new Content Curator role",
+              "text": "rome.testnetGoals.goals.contentCurator.text",
+              "title": "rome.testnetGoals.goals.contentCurator.title",
             },
             Object {
-              "text": "Without Content Creators, there won't be any content. Granted,
-      adding another level on top of the membership requirement may seem
-      like a hurdle, but it will allow users to upload with multiple
-      profiles.",
-              "title": "Add Content Creator profiles",
+              "text": "rome.testnetGoals.goals.contentCreator.text",
+              "title": "rome.testnetGoals.goals.contentCreator.title",
             },
           ]
         }
@@ -152,7 +155,7 @@ exports[`RomePage page renders correctly 1`] = `
     <TitleWrapper
       className=""
       subtitle=""
-      title="Incentivized Roles for the Rome Network"
+      title="rome.roles.title"
     >
       <ColumnsLayout
         className=""
@@ -176,39 +179,40 @@ exports[`RomePage page renders correctly 1`] = `
                 "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "contentCreatorsCount",
-                "title": "Content Creator",
+                "title": "rolesData.contentCreator",
                 "to": "/roles#content-creator",
               },
               Object {
                 "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "contentCuratorsCount",
-                "title": "Content Curator",
+                "title": "rolesData.contentCurator",
                 "to": "/roles#content-curator",
               },
               Object {
                 "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "validatorsCount",
-                "title": "Validator",
+                "title": "rolesData.validator",
                 "to": "/roles#validator",
               },
               Object {
                 "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "councilMembersCount",
-                "title": "Council Member",
+                "title": "rolesData.councilMember",
                 "to": "/roles#council-member",
               },
               Object {
                 "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "storageProviders",
-                "title": "Storage Provider",
+                "title": "rolesData.storageProvider",
                 "to": "/roles#storage-provider",
               },
             ]
           }
+          t={[Function]}
         />
       </ColumnsLayout>
     </TitleWrapper>
@@ -216,23 +220,26 @@ exports[`RomePage page renders correctly 1`] = `
   <MapInfo
     className=""
     location="rome"
-    title="Rome"
+    title="rome.map.title"
   >
     <p>
-      <strong>
-        Rome was the capital of the great Roman Empire during its peak.
-      </strong>
-       As with previous testnet names, the Roman Empire and Rome was another important step in the rise of democracy, the rule of law, and modern governance structures.
-      <br />
-      <br />
-      <Link
-        className=""
-        highlighted={false}
-        href="https://testnet.joystream.org/"
-      >
-        <icon-component-mock />
-         Explore current testnet
-      </Link>
+      <Trans
+        components={
+          Array [
+            <strong />,
+            <br />,
+            <Link
+              className=""
+              highlighted={false}
+              href="https://testnet.joystream.org/"
+            >
+              <icon-component-mock />
+              Explore current testnet
+            </Link>,
+          ]
+        }
+        i18nKey="rome.map.text"
+      />
     </p>
   </MapInfo>
 </BaseLayout>

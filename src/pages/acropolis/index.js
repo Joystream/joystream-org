@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { pagePropTypes } from '../../propTypes';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 
 import getApiPath from '../../utils/getApiPath';
-import mapStatusDataToAnalytics from '../../utils/mapStatusDataToAnalytics';
 import mapStatusDataToRoles from '../../utils/mapStatusDataToRoles';
+import translateGoals from '../../utils/translateGoals';
+import convertToCamelCase from '../../utils/convertToCamelCase';
 
 import withApi from '../../components/_enhancers/withApi';
 
 import BaseLayout from '../../components/_layouts/Base';
 import HeroCard from '../../components/HeroCard';
-import Analytics from '../../components/Analytics';
 import TitleWrapper from '../../components/TitleWrapper';
 import RoleList from '../../components/RoleList';
 import ColumnsLayout from '../../components/ColumnsLayout';
@@ -30,118 +32,105 @@ import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AcropolisImg from '../../assets/svg/acropolis-building.svg';
 
 import { roles, goals } from '../../data/pages/acropolis';
-import { sharedData } from '../../data/pages';
 
 import './style.scss';
 
 const AcropolisPage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   return (
-    <BaseLayout>
-      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Acropolis Testnet" />
+    <BaseLayout t={t}>
+      <SiteMetadata
+        lang={language}
+        title={t('siteMetadata.title')}
+        description={t('acropolis.siteMetadata.description')}
+      />
 
       <Hero
         image={acropolisImage}
-        title="Acropolis Network"
+        title={t('acropolis.hero.title')}
         indent
-        chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
+        chip={<Chip onClick={() => setModalClosed(true)}>{t('acropolis.hero.chipText')}</Chip>}
         animationStartValue={0}
       >
-        <p className="AcropolisPage__hero-paragraph">{sharedData.rolesDescription}</p>
-        <HeroCard
-          info
-          date="2020/03/17 15:42"
-          counterTitle={
-            <>
-              REPLACED BY ROME ON
-            </>
-          }
-        />
+        <p className="AcropolisPage__hero-paragraph">{t('acropolis.hero.text')}</p>
+        <HeroCard info date="2020/03/17 15:42" counterTitle={<>{t('acropolis.heroCard.title')}</>} t={t} />
 
         <TestnetModal
-          title="The Acropolis of Athens"
+          title={t('acropolis.modal.title')}
           image={AcropolisImg}
           closeModal={() => setModalClosed(false)}
           isOpen={isModalOpen}
         >
           <p>
-            <strong>Known for its great architecture, Acropolis'</strong> perhaps most famous building is the Parthenon.
-            It was built to celebrate their victory over Persian invaders, and is today seen as a symbol for democracy
-            and western civilization.
+            <Trans i18nKey="acropolis.modal.text" components={[<strong />]} />
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-
-        {/*
-
-        <TitleWrapper title="Network Statistics">
-          <Analytics content={mapStatusDataToAnalytics(content)} />
-        </TitleWrapper>
-
-        */}
-
-        <TitleWrapper title="Critical Documents">
+        <TitleWrapper title={t('acropolis.criticalDocuments.title')}>
           <ColumnsLayout>
             <Pane
               image={SpecImg}
               href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis/specification"
-              title="Full Specifications"
+              title={t('acropolis.criticalDocuments.fullSpecifications.title')}
               target="_blank"
             >
-              Read the specs of the newly implemented features of Acropolis.
+              {t('acropolis.criticalDocuments.fullSpecifications.text')}
             </Pane>
             <Pane
               image={ReleaseImg}
               href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis"
-              title="Release Plan"
+              title={t('acropolis.criticalDocuments.releasePlan.title')}
               target="_blank"
             >
-              Read the release plan as it was made during the planning stage, and learn more about how the development
-              evolved.
+              {t('acropolis.criticalDocuments.releasePlan.text')}
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
 
         <TitleWrapper
-          title="Testnet Goals"
+          title={t('acropolis.testnetGoals.title')}
           subtitle={
-            <>
-              The goals below are a simplified representation of the Key Results listed in our Release{' '}
-              <Link href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs">OKR</Link>
-            </>
+            <Trans
+              i18nKey="acropolis.testnetGoals.subtitle"
+              components={[
+                <Link href="https://github.com/Joystream/joystream/tree/master/testnets/acropolis#release-okrs">
+                  OKR
+                </Link>,
+              ]}
+            />
           }
         >
-          <GoalList data={goals} />
+          <GoalList data={translateGoals(goals, t)} />
         </TitleWrapper>
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title="Roles available on this testnet">
+        <TitleWrapper title={t('acropolis.roles.title')}>
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet/>
+            <RoleList
+              roles={roles.active.map(({ title, ...rest }) => ({
+                title: t(`rolesData.${convertToCamelCase(title)}`),
+                ...rest,
+              }))}
+              content={mapStatusDataToRoles(content)}
+              t={t}
+              oldTestnet
+            />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title="Acropolis of Athens" location="acropolis">
+      <MapInfo title={t('acropolis.map.title')} location="acropolis">
         <p>
-          <strong>The Acropolis is a citadel on a hill in the heart of Athens.</strong> It was also at the heart of
-          Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings,
-          architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs
-          list "World Heritage Sites".
-          <br />
-          <br />
-          We chose the name as we had to scale back our ambitions for the next testnet after some issues with the
-          release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not
-          intended for Athens.
-          <br />
-          <br />
-          <Link to="/athens">
-            <PersonIcon /> Explore previous testnet
-          </Link>
+          <Trans
+            i18nKey="acropolis.map.text"
+            components={[<strong />, <br />, <Link to="/athens"><PersonIcon />Explore previous testnet</Link>]}
+          />
         </p>
       </MapInfo>
     </BaseLayout>
@@ -152,3 +141,17 @@ AcropolisPage.propTypes = pagePropTypes;
 
 export { AcropolisPage };
 export default withApi(AcropolisPage, getApiPath('STATUS'));
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
