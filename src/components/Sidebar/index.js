@@ -17,7 +17,7 @@ const propTypes = {
   data: object.isRequired,
 };
 
-const Sidebar = ({ data, onElementChange, currentElement }) => {
+const Sidebar = ({ data, onElementChange, currentElement, t }) => {
   const [isOpen, setIsOpen] = useState(false);
   const context = useContext(ScrollContext);
   const { isScrollUp } = context;
@@ -42,7 +42,7 @@ const Sidebar = ({ data, onElementChange, currentElement }) => {
         role="presentation"
       >
         <MoreRolesIcon className="Sidebar__trigger-icon" />
-        View all Roles
+        {t('sidebar.viewAllRoles')}
       </div>
       <div
         className={cn('Sidebar__wrapper', {
@@ -56,7 +56,7 @@ const Sidebar = ({ data, onElementChange, currentElement }) => {
         >
           {Object.keys(data).map(key => {
             const Icon = key === 'active' ? TickImage : UpcomingImage;
-            const title = key === 'active' ? 'Active roles' : 'Upcoming roles';
+            const title = key === 'active' ? t('sidebar.activeRoles') : t('sidebar.upcomingRoles');
 
             return (
               <div className="Sidebar__group" key={title}>

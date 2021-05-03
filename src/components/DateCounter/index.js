@@ -5,6 +5,7 @@ import Countdown from 'react-countdown-now';
 
 import padNumber from '../../utils/padNumber';
 import pluralString from '../../utils/pluralString';
+import convertToCamelCase from '../../utils/convertToCamelCase';
 
 import './style.scss';
 
@@ -24,7 +25,7 @@ const defaultProps = {
   title: null,
 };
 
-const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large, onTimeout, title, className }) => {
+const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large, onTimeout, title, className, t }) => {
   let defaultTitle = 'Time to launch';
   let defaultSeparator = ':';
   let timeToDisplay = [];
@@ -66,14 +67,14 @@ const renderer = ({ total, days, hours, minutes, seconds }, { date, light, large
         'DateCounter--large': large,
       })}
     >
-      <div className="DateCounter__title">{title || defaultTitle}</div>
+      <div className="DateCounter__title">{title || t(`dateCounter.${convertToCamelCase(defaultTitle)}`)}</div>
       <div className="DateCounter__container">
         {timeToDisplay.map((time, i) => {
           return (
             <React.Fragment key={time.label}>
               <div className="DateCounter__segment">
                 <span className="DateCounter__value">{padNumber(time.value)}</span>
-                <span className="DateCounter__label">{time.label}</span>
+                <span className="DateCounter__label">{t(`dateCounter.${time.label}`)}</span>
               </div>
               {i + 1 !== timeToDisplay.length && (
                 <span className="DateCounter__value, DateCounter__separator">{defaultSeparator}</span>

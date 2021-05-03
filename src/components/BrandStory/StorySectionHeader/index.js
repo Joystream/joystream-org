@@ -1,27 +1,27 @@
 import React from 'react';
 import { func } from 'prop-types';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import { ReactComponent as Logo } from '../../../assets/svg/logo-mark.svg';
 import ActionButton from '../../ActionButton';
 import BrandLayoutWrapper from '../../BrandLayoutWrapper';
 import Button from '../../Button';
-import data from '../../../data/pages/brand/story';
 import './index.scss';
 
 const propTypes = {
   onActionClick: func,
 };
 
-const StorySectionHeader = React.forwardRef(({ onActionClick }, ref) => {
+const StorySectionHeader = React.forwardRef(({ onActionClick, t }, ref) => {
   return (
     <BrandLayoutWrapper className="StorySectionHeader" ref={ref}>
       <div className="StorySectionHeader__container">
         <div className="StorySectionHeader__content">
-          <h2 className="StorySectionHeader__title">{data.header.title}</h2>
+          <h2 className="StorySectionHeader__title">{t('brand.story.header.title')}</h2>
           <div className="StorySectionHeader__description">
-            <p>{data.header.description}</p>
+            <p><Trans i18nKey='brand.story.header.description' components={[<strong />]} /></p>
           </div>
           <Button to="/manifesto" className="StorySectionHeader__button" large>
-            {data.header.buttonText}
+            {t('brand.story.header.buttonText')}
           </Button>
         </div>
         <div className="StorySectionHeader__image-wrapper">

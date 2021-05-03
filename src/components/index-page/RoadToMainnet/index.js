@@ -8,24 +8,24 @@ import { testnetData } from '../../../data/pages';
 
 import './style.scss';
 
-const RoadMain = ({ Image, state, date, name, overviewText, link }) => (
+const RoadMain = ({ Image, state, date, name, link, t }) => (
   <div className="IndexPage__road-main">
     <div className="IndexPage__road-main__image-wrapper">
       {Image && <img alt="testnet visual" src={Image} className="IndexPage__road-main__image" />}
     </div>
     <div className="IndexPage__road-main__content">
       <div className="IndexPage__road-main__info-wrapper">
-        <div className="IndexPage__road-main__state">{state} testnet</div>
+        <div className="IndexPage__road-main__state">{t(`landing.roadToMainnet.testnetState.${state}`)}</div>
         <p className="IndexPage__road-main__date">
-          {state === 'Future' ? 'Will be live on' : 'Released on'} <span>{date}</span>
+          {t(`landing.roadToMainnet.released.${state}`)} <span>{date}</span>
         </p>
       </div>
-      <h3 className="IndexPage__road-main__title">{name} testnet</h3>
-      <p className="IndexPage__road-main__text">{overviewText}</p>
+      <h3 className="IndexPage__road-main__title">{t(`landing.roadToMainnet.testnets.${name}.title`)}</h3>
+      <p className="IndexPage__road-main__text">{t(`landing.roadToMainnet.testnets.${name}.text`)}</p>
       {link ? (
         <Link className="IndexPage__road-main__link-wrapper" to={link}>
           <div className="IndexPage__road-main__link">
-            <p>Explore {name}</p>
+            <p>{t(`landing.roadToMainnet.testnets.${name}.explore`)}</p>
             <Arrow className="IndexPage__road-main__link-arrow" />
           </div>
         </Link>
@@ -34,7 +34,18 @@ const RoadMain = ({ Image, state, date, name, overviewText, link }) => (
   </div>
 );
 
-const RoadOverviewItem = ({ testnetNumber, Image, name, date, state, active, moveToCard, index, overviewItemRef }) => {
+const RoadOverviewItem = ({
+  testnetNumber,
+  Image,
+  name,
+  date,
+  state,
+  active,
+  moveToCard,
+  index,
+  overviewItemRef,
+  t,
+}) => {
   return (
     <div
       ref={overviewItemRef}
@@ -54,14 +65,14 @@ const RoadOverviewItem = ({ testnetNumber, Image, name, date, state, active, mov
             'IndexPage__road-overview__item__title--active': active,
           })}
         >
-          {name} testnet
+          {t(`landing.roadToMainnet.testnets.${name}.title`)}
         </h4>
         <p
           className={cn('IndexPage__road-overview__item__date', {
             'IndexPage__road-overview__item__date--active': active,
           })}
         >
-          {state === 'Future' ? 'Will be live on ' : 'Released on '}
+          {t(`landing.roadToMainnet.released.${state}`)}
           <span
             className={
               active ? 'IndexPage__road-overview__item__date--active' : 'IndexPage__road-overview__item__date--alt'
@@ -75,7 +86,7 @@ const RoadOverviewItem = ({ testnetNumber, Image, name, date, state, active, mov
             'IndexPage__road-overview__item__state--active': active,
           })}
         >
-          {state} testnet
+          {t(`landing.roadToMainnet.testnetState.${state}`)}
         </div>
       </div>
     </div>
@@ -85,7 +96,7 @@ const RoadOverviewItem = ({ testnetNumber, Image, name, date, state, active, mov
 const CARD_LENGTH_WITH_MARGIN = 422;
 const CARD_LENGTH = 392;
 
-const RoadToMainnet = () => {
+const RoadToMainnet = ({ t }) => {
   const overviewRef = useRef();
   const activeOverviewItemRef = useRef();
   const [currentTestnet, setCurrentTestnet] = useState(0);
@@ -134,6 +145,7 @@ const RoadToMainnet = () => {
             name={testnetData[currentTestnet].name}
             overviewText={testnetData[currentTestnet].overviewText}
             link={testnetData[currentTestnet].link}
+            t={t}
           />
           <div onClick={() => moveRight()} role="presentation" className="IndexPage__road-main__arrow-wrapper">
             <Arrow className="IndexPage__road-main__arrow IndexPage__road-main__arrow--reverse" />
@@ -152,6 +164,7 @@ const RoadToMainnet = () => {
               moveToCard={moveToCard}
               index={index}
               overviewItemRef={index === currentTestnet ? activeOverviewItemRef : null}
+              t={t}
             />
           ))}
         </div>

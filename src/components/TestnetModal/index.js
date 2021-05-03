@@ -1,6 +1,7 @@
 import React from 'react';
 import { string, node, func, bool, oneOfType, object } from 'prop-types';
 import cn from 'classnames';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Button from '../Button';
 import ModalWrapper from '../ModalWrapper';
 
@@ -22,6 +23,7 @@ const defaultProps = {
 
 const TestnetModal = ({ title, children, image, closeModal, className, isOpen }) => {
   const classes = cn(className, 'TestnetModal');
+  const { t } = useTranslation();
 
   return (
     <ModalWrapper isOpen={isOpen} closeModal={closeModal}>
@@ -35,7 +37,7 @@ const TestnetModal = ({ title, children, image, closeModal, className, isOpen })
           <h2 className="TestnetModal__title">{title}</h2>
           {children}
           <Button onClick={closeModal} className="TestnetModal__button">
-            Close
+            {t('button.close')}
           </Button>
         </div>
       </div>

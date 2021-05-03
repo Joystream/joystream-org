@@ -1,13 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AthensPage page renders correctly 1`] = `
-<BaseLayout>
+<BaseLayout
+  t={[Function]}
+>
   <SiteMetadata
-    description="Explore the Athens Testnet"
+    description="athens.siteMetadata.description"
     image="test-file-stub"
     lang="en"
     meta={Array []}
-    title="Joystream: The video platform DAO"
+    title="siteMetadata.title"
   />
   <Hero
     animationEnd={500}
@@ -18,7 +20,7 @@ exports[`AthensPage page renders correctly 1`] = `
         icon="icon-component-mock"
         onClick={[Function]}
       >
-        What is this?
+        athens.hero.chipText
       </Chip>
     }
     image="icon-mock"
@@ -26,46 +28,53 @@ exports[`AthensPage page renders correctly 1`] = `
     noOverflow={false}
     reverse={false}
     theme="black"
-    title="Athens Network"
+    title="athens.hero.title"
   >
     <p
       className="AthensPage__hero-paragraph"
     >
-      Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.
+      athens.hero.text
     </p>
     <HeroCard
       content={null}
       counterTitle={
-        <React.Fragment>
-          AFTER LAUNCHING 17 / 04 / 19
-          <br />
-          THE NETWORK WAS UPGRADED TO 
-          <Link
-            className=""
-            highlighted={false}
-            to="/acropolis"
-          >
-            ACROPOLIS
-          </Link>
-           ON
-        </React.Fragment>
+        <Trans
+          components={
+            Array [
+              <br />,
+              <Link
+                className=""
+                highlighted={false}
+                to="/acropolis"
+              >
+                ACROPOLIS
+              </Link>,
+            ]
+          }
+          i18nKey="athens.heroCard.text"
+        />
       }
       date="2019/06/24 17:50"
       error={false}
       info={true}
+      t={[Function]}
     />
     <TestnetModal
       className=""
       closeModal={[Function]}
       image="icon-mock"
       isOpen={false}
-      title="Owl of Athena"
+      title="athens.modal.title"
     >
       <p>
-        <strong>
-          In Greek mythology, a little owl (Athene noctua)
-        </strong>
-         traditionally represents or accompanies Athena, the virgin goddess of wisdom. Because of such association, the bird — often referred to as the "owl of Athena" — has been used as a symbol of knowledge, wisdom, perspicacity and erudition throughout the Western world.
+        <Trans
+          components={
+            Array [
+              <strong />,
+            ]
+          }
+          i18nKey="athens.modal.text"
+        />
       </p>
     </TestnetModal>
   </Hero>
@@ -77,7 +86,7 @@ exports[`AthensPage page renders correctly 1`] = `
     <TitleWrapper
       className=""
       subtitle=""
-      title="Critical Documents"
+      title="athens.criticalDocuments.title"
     >
       <ColumnsLayout
         className="ColumnsLayout--documents"
@@ -88,9 +97,9 @@ exports[`AthensPage page renders correctly 1`] = `
           className=""
           disabled={true}
           image="icon-component-mock"
-          title="Full Specifications"
+          title="athens.criticalDocuments.fullSpecifications.title"
         >
-          No specifications was published for Athens.
+          athens.criticalDocuments.fullSpecifications.text
         </Pane>
         <Pane
           className=""
@@ -98,9 +107,9 @@ exports[`AthensPage page renders correctly 1`] = `
           href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens"
           image="icon-component-mock"
           target="_blank"
-          title="Release Plan"
+          title="athens.criticalDocuments.releasePlan.title"
         >
-          Read the release plan as it was made during the planning stage, and learn more about how the development evolved.
+          athens.criticalDocuments.releasePlan.text
         </Pane>
       </ColumnsLayout>
     </TitleWrapper>
@@ -108,15 +117,20 @@ exports[`AthensPage page renders correctly 1`] = `
       className=""
       subtitle={
         <React.Fragment>
-          The goals below are a simplified representation of the Key Results listed in our Release
-           
-          <Link
-            className=""
-            highlighted={false}
-            href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens#okrs"
-          >
-            OKR
-          </Link>
+          <Trans
+            components={
+              Array [
+                <Link
+                  className=""
+                  highlighted={false}
+                  href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens#okrs"
+                >
+                  OKR
+                </Link>,
+              ]
+            }
+            i18nKey="athens.testnetGoals.subtitle"
+          />
         </React.Fragment>
       }
       title="Testnet Goals"
@@ -125,41 +139,42 @@ exports[`AthensPage page renders correctly 1`] = `
         data={
           Array [
             Object {
-              "text": "As a \\"user governed media platform\\", allowing users to upload and consume and content was a major goal for us.",
-              "title": "Enable media on the platform",
+              "text": "athens.testnetGoals.goals.media.text",
+              "title": "athens.testnetGoals.goals.media.title",
             },
             Object {
-              "text": "Although we are building an open blockchain in the sense that users are free to send tokens as they like, the Joystream experience is about having the platform users own, operate and govern the platform. We are agnostic on exactly what parts of the platform will be reserved for members, some actions will require and extra level of screening and accountability.",
-              "title": "Introduce platform memberships",
-            },
-            Object {
-              "state": "postponed",
-              "text": "Although a storage node was built and used to host and distribute the platform content, it had some bugs making it unable to sync between clients and required a hardcoded liaison.",
-              "title": "Build and release the storage node",
+              "text": "athens.testnetGoals.goals.memberships.text",
+              "title": "athens.testnetGoals.goals.memberships.title",
             },
             Object {
               "state": "postponed",
-              "text": <React.Fragment>
-                The intention was for Jsgenesis to create a proposal for a
-                 
-                <Link
-                  className=""
-                  highlighted={false}
-                  href="https://blog.joystream.org/upgrades/"
-                >
-                  runtime upgrade
-                </Link>
-                 and have the Council vote on it. If the Council reached quorum, the consensus rules of the system would automatically get upgraded in flight. Unfortunately, the 
-                <Link
-                  className=""
-                  highlighted={false}
-                  href="https://blog.joystream.org/sparta-sacked/"
-                >
-                  Sparta network crashed
-                </Link>
-                 before we reached this stage, and had to start Athens as a new chain with a new genesis block.
-              </React.Fragment>,
-              "title": "Upgrade the runtime through a Council vote",
+              "text": "athens.testnetGoals.goals.storageNode.text",
+              "title": "athens.testnetGoals.goals.storageNode.title",
+            },
+            Object {
+              "state": "postponed",
+              "text": <Trans
+                components={
+                  Array [
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="https://blog.joystream.org/upgrades/"
+                    >
+                      runtime upgrade
+                    </Link>,
+                    <Link
+                      className=""
+                      highlighted={false}
+                      href="https://blog.joystream.org/sparta-sacked/"
+                    >
+                      Sparta network crashed
+                    </Link>,
+                  ]
+                }
+                i18nKey="athens.testnetGoals.goals.runtimeUpgrade.text"
+              />,
+              "title": "athens.testnetGoals.goals.runtimeUpgrade.title",
             },
           ]
         }
@@ -174,7 +189,7 @@ exports[`AthensPage page renders correctly 1`] = `
     <TitleWrapper
       className=""
       subtitle=""
-      title="Roles available on the current testnet"
+      title="athens.roles.title"
     >
       <ColumnsLayout
         className=""
@@ -198,7 +213,7 @@ exports[`AthensPage page renders correctly 1`] = `
                 "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "validatorsCount",
-                "title": "Validator",
+                "title": "rolesData.validator",
                 "to": "/roles#validator",
                 "type": "migration",
               },
@@ -206,7 +221,7 @@ exports[`AthensPage page renders correctly 1`] = `
                 "hasLabel": false,
                 "image": "icon-component-mock",
                 "key": "councilMembersCount",
-                "title": "Council Member",
+                "title": "rolesData.councilMember",
                 "to": "/roles#council-member",
                 "type": "migration",
               },
@@ -214,12 +229,13 @@ exports[`AthensPage page renders correctly 1`] = `
                 "hasLabel": true,
                 "image": "icon-component-mock",
                 "key": "storageProviders",
-                "title": "Storage Provider",
+                "title": "rolesData.storageProvider",
                 "to": "/roles#storage-provider",
                 "type": "migration",
               },
             ]
           }
+          t={[Function]}
         />
       </ColumnsLayout>
     </TitleWrapper>
@@ -227,26 +243,26 @@ exports[`AthensPage page renders correctly 1`] = `
   <MapInfo
     className=""
     location="acropolis"
-    title="The city of Athens"
+    title="athens.map.title"
   >
     <p>
-      <strong>
-        Athens is the capital of Greece.
-      </strong>
-       IIt was also at the heart of Ancient Greece, a powerful civilisation and empire. The city is still dominated by 5th-century BC landmarks, including the Acropolis, a hilltop citadel topped with ancient buildings like the colonnaded Parthenon temple.
-      <br />
-      <br />
-      We chose the name Athens as, like our previous testnets, Mesopotamia and Sparta, the ancient Athens' historical significance in the development towards modern democracy and the rule of law.
-      <br />
-      <br />
-      <Link
-        className=""
-        highlighted={false}
-        to="/sparta"
-      >
-        <icon-component-mock />
-         Explore previous testnet
-      </Link>
+      <Trans
+        components={
+          Array [
+            <strong />,
+            <br />,
+            <Link
+              className=""
+              highlighted={false}
+              to="/sparta"
+            >
+              <icon-component-mock />
+              Explore previous testnet
+            </Link>,
+          ]
+        }
+        i18nKey="athens.map.text"
+      />
     </p>
   </MapInfo>
 </BaseLayout>

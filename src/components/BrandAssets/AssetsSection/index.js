@@ -5,7 +5,7 @@ import eyeImg from '../../../assets/svg/eye.svg';
 import { string, oneOfType, func, number, bool } from 'prop-types';
 import './style.scss';
 
-const AssetsSection = ({ prefix, title, downloadHref, filesCount, children, isOpen, toggleOpen, id }) => {
+const AssetsSection = ({ prefix, title, downloadHref, filesCount, children, isOpen, toggleOpen, id, t }) => {
   return (
     <section className="AssetsSection" id={id}>
       <div className="AssetsSection__header">
@@ -21,7 +21,7 @@ const AssetsSection = ({ prefix, title, downloadHref, filesCount, children, isOp
 
         <div className="AssetsSection__controls">
           <div className="AssetsSection__files-info">
-            <span className="AssetsSection__files-count">{filesCount || children.length}</span> files
+            <span className="AssetsSection__files-count">{filesCount || children.length}</span> {t('brand.assets.files')}
           </div>
           {children && (
             <button className="AssetsSection__toggle" onClick={toggleOpen}>

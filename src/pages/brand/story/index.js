@@ -1,4 +1,6 @@
 import React, { createRef, useMemo } from 'react';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import ReactDOM from 'react-dom';
 import StorySectionDescription from '../../../components/BrandStory/StorySectionDescription';
 import StorySectionExplanation from '../../../components/BrandStory/StorySectionExplanation';
@@ -10,6 +12,9 @@ import SiteMetadata from '../../../components/SiteMetadata';
 import './index.scss';
 
 const StoryPage = () => {
+  const { t } = useTranslation();
+  const { language } = useI18next();
+
   const elementsRef = useMemo(
     () => ({
       'section-header': createRef(),
@@ -27,29 +32,33 @@ const StoryPage = () => {
   };
 
   return (
-    <BrandLayout>
-      <SiteMetadata title="Joystream: The video platform DAO" />
+    <BrandLayout t={t}>
+      <SiteMetadata lang={language} title={t('siteMetadata.title')} />
 
       <div className="Story__multi-section">
         <StorySectionHeader
+          t={t}
           ref={elementsRef['section-header']}
           onActionClick={() => scrollToElement('section-website')}
         />
 
         <StorySectionWebsite
+          t={t}
           ref={elementsRef['section-website']}
           onActionClick={() => scrollToElement('section-website-desc')}
         />
 
-        <StorySectionDescription ref={elementsRef['section-website-desc']} />
+        <StorySectionDescription t={t} ref={elementsRef['section-website-desc']} />
       </div>
 
       <StorySectionLogo
+        t={t}
         ref={elementsRef['section-logo']}
         onActionClick={() => scrollToElement('section-brand-explanation')}
       />
 
       <StorySectionExplanation
+        t={t}
         ref={elementsRef['section-brand-explanation']}
         onActionClick={() => scrollToElement('section-header')}
       />
@@ -58,3 +67,17 @@ const StoryPage = () => {
 };
 
 export default StoryPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

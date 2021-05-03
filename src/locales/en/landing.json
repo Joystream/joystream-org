@@ -1,0 +1,120 @@
+{
+    "landing" : {
+        "siteMetadata" : {
+            "description" : "Joystream is a video platform controlled, owned, and operated by its users."
+        },
+        "hero" : {
+            "title" : "The video platform DAO",
+            "subtitle" : "Together, we are building a video platform controlled, owned, and operated by its users.",
+            "metrics" : {
+                "mainTitle" : "Testnet Metrics",
+                "titles" : {
+                    "participationPayout" : "Participation Payout",
+                    "activeValidators" : "Active Validators",
+                    "blockHeight" : "Block Height",
+                    "memberships" : "Memberships"
+                }
+            }
+        },
+        "becomeFM" : {
+            "subtitle" : "Our brand new and unparalleled community token distribution scheme",
+            "title" : "Become a Founding Member to earn mainnet tokens and influence the development of the platform.",
+            "alternateTitle" : "Become a Founding member and have a tangible impact on the development of our platform.",
+            "link" : "Learn more about our generous program"
+        },
+        "whatWeDo" : {
+            "subtitle" : "Our motivation for building the Joystream protocol",
+            "title" : "We call for an arrangement where media platforms are accountable to the people they impact.",
+            "link" : "Read our manifesto"
+        },
+        "whyYouShouldJoin" : {
+            "title" : "Why join our testnets?",
+            "reasons" : {
+                "tokens" : {
+                    "title" : "Tokens",
+                    "text" : "Earn tokens distributed on mainnet, launching 2021"
+                },
+                "cash" : {
+                    "title" : "Cash",
+                    "text" : "Get rewarded with real money for your participation"
+                },
+                "reputationAndSkill" : {
+                    "title" : "Reputation & Skill",
+                    "text" : "Gain the knowledge required to participate on mainnet"
+                }
+            }
+        },
+        "exploreJoystream" : {
+            "title" : "Explore Joystream Now",
+            "subtitle" : "Two fast evolving apps for consuming content and governance activities.",
+            "atlas" : {
+                "text" : "Atlas is the flagship content consumer and publishing app for Joystream. Watch videos, follow creators and discover new featured content, or create a channel and build your audience.",
+                "link" : "Try out Atlas",
+                "imageAlt" : "overview visual of Atlas"
+            },
+            "pioneer" : {
+                "text" : "Pioneer is the place to participate in community governance and operation. Vote on elections, submit proposals to fund your project or get enter a paid role to power the platform.",
+                "link" : "Try out Pioneer",
+                "imageAlt" : "overview visual of Pioneer"
+            }
+        },
+        "roadToMainnet" : {
+            "title" : "Road to mainnet",
+            "testnetState" : {
+                "Current" : "Current testnet",
+                "Past" : "Past testnet",
+                "Future" : "Future testnet"
+            },
+            "released" : {
+                "Current" : "Released on ",
+                "Past" : "Released on ",
+                "Future" : "Will be live on "
+            },
+            "testnets" : {
+                "Sparta" : {
+                    "title" : "Sparta testnet",
+                    "text" : "Sparta is our second testnet, introducing a variety of important technical improvements.",
+                    "explore" : "Explore Sparta"
+                },
+                "Athens" : {
+                    "title" : "Athens testnet",
+                    "text" : "Athens is our third testnet, introducing a variety of important technical improvements.",
+                    "explore" : "Explore Athens"
+                },
+                "Acropolis" : {
+                    "title" : "Acropolis testnet",
+                    "text" : "Acropolis is our fourth testnet, introducing a variety of important technical improvements.",
+                    "explore" : "Explore Acropolis"
+                },
+                "Rome" : {
+                    "title" : "Rome testnet",
+                    "text" : "Rome is our second fifth, introducing a variety of important technical improvements.",
+                    "explore" : "Explore Rome"
+                },
+                "Constantinople" : {
+                    "title" : "Constantinople testnet",
+                    "text" : "Constantinople is our sixth testnet, introducing a variety of important technical improvements.",
+                    "explore" : "Explore Constantinople"
+                },
+                "Alexandria" : {
+                    "title" : "Alexandria testnet",
+                    "text" : "Alexandria is our second seventh, introducing a variety of important technical improvements.",
+                    "explore" : "Explore Alexandria"
+                },
+                "Babylon" : {
+                    "title" : "Babylon testnet",
+                    "text" : "Babylon is our second eighth, introducing a variety of important technical improvements.",
+                    "explore" : "Explore Babylon"
+                },
+                "Antioch" : {
+                    "title" : "Antioch testnet",
+                    "text" : "Antioch is our ninth testnet, patching a chain split bug which broke the Babylon network",
+                    "explore" : "Explore Antioch"
+                }
+            }
+        },
+        "earnTokens" : {
+            "title" : "Earn mainnet tokens, cash and influence."
+        }
+    }
+}

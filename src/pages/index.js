@@ -1,5 +1,7 @@
 import React from 'react';
 import useAxios from '../utils/useAxios';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../components/_layouts/Base';
 import SiteMetadata from '../components/SiteMetadata';
 
@@ -16,30 +18,47 @@ import './style.scss';
 
 const IndexPage = () => {
   const [statusData, loading, error] = useAxios();
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   return (
-    <BaseLayout>
+    <BaseLayout t={t}>
       <SiteMetadata
-        title="Joystream: The video platform DAO"
-        description="Joystream is a video platform controlled, owned, and operated by its users."
+        lang={language}
+        title={t("siteMetadata.title")}
+        description={t("landing.siteMetadata.description")}
       />
 
-      <Hero statusData={statusData} />
+      <Hero t={t} statusData={statusData} />
 
-      <BecomeFoundingMember />
+      <BecomeFoundingMember t={t}/>
 
-      <WhatWeDo />
+      <WhatWeDo t={t}/>
 
-      <WhyYouShouldJoin />
+      <WhyYouShouldJoin t={t}/>
 
-      <ExploreJoystream />
+      <ExploreJoystream t={t}/>
 
-      <RoadToMainnet />
+      <RoadToMainnet t={t}/>
 
-      <EarnTokens />
+      <EarnTokens t={t}/>
     </BaseLayout>
   );
 };
 
 export { IndexPage };
 export default IndexPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { pagePropTypes } from '../../propTypes';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 
 import getApiPath from '../../utils/getApiPath';
-import mapStatusDataToAnalytics from '../../utils/mapStatusDataToAnalytics';
 import mapStatusDataToRoles from '../../utils/mapStatusDataToRoles';
+import translateGoals from '../../utils/translateGoals';
+import convertToCamelCase from '../../utils/convertToCamelCase';
 
 import withApi from '../../components/_enhancers/withApi';
 
 import BaseLayout from '../../components/_layouts/Base';
 import HeroCard from '../../components/HeroCard';
-import Analytics from '../../components/Analytics';
 import TitleWrapper from '../../components/TitleWrapper';
 import RoleList from '../../components/RoleList';
 import ColumnsLayout from '../../components/ColumnsLayout';
@@ -28,68 +30,65 @@ import { ReactComponent as SpecImg } from '../../assets/svg/forum-posts.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 import AthensOwlImg from '../../assets/svg/athens-owl.svg';
 
-import { analytics, roles, goals } from '../../data/pages/athens';
-import { sharedData } from '../../data/pages';
+import { roles, goals } from '../../data/pages/athens';
 
 import './style.scss';
 
 const AthensPage = ({ content }) => {
   const [isModalOpen, setModalClosed] = useState(false);
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   return (
-    <BaseLayout>
-      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Athens Testnet" />
+    <BaseLayout t={t}>
+      <SiteMetadata
+        lang={language}
+        title={t('siteMetadata.title')}
+        description={t('athens.siteMetadata.description')}
+      />
 
       <Hero
         image={athensImage}
-        title="Athens Network"
+        title={t('athens.hero.title')}
         indent
-        chip={<Chip onClick={() => setModalClosed(true)}>What is this?</Chip>}
+        chip={<Chip onClick={() => setModalClosed(true)}>{t('athens.hero.chipText')}</Chip>}
         animationStartValue={0}
       >
-        <p className="AthensPage__hero-paragraph">{sharedData.rolesDescription}</p>
+        <p className="AthensPage__hero-paragraph">{t('athens.hero.text')}</p>
         <HeroCard
           info
           date="2019/06/24 17:50"
           counterTitle={
-            <>
-              AFTER LAUNCHING 17 / 04 / 19
-              <br />
-              THE NETWORK WAS UPGRADED TO <Link to="/acropolis">ACROPOLIS</Link> ON
-            </>
+            <Trans i18nKey="athens.heroCard.text" components={[<br />, <Link to="/acropolis">ACROPOLIS</Link>]} />
           }
+          t={t}
         />
 
         <TestnetModal
-          title="Owl of Athena"
+          title={t('athens.modal.title')}
           image={AthensOwlImg}
           closeModal={() => setModalClosed(false)}
           isOpen={isModalOpen}
         >
           <p>
-            <strong>In Greek mythology, a little owl (Athene noctua)</strong> traditionally represents or accompanies
-            Athena, the virgin goddess of wisdom. Because of such association, the bird — often referred to as the "owl
-            of Athena" — has been used as a symbol of knowledge, wisdom, perspicacity and erudition throughout the
-            Western world.
+            <Trans i18nKey="athens.modal.text" components={[<strong />]} />
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-
-        <TitleWrapper title="Critical Documents">
+        <TitleWrapper title={t('athens.criticalDocuments.title')}>
           <ColumnsLayout className="ColumnsLayout--documents">
-            <Pane image={SpecImg} title="Full Specifications" disabled>
-              No specifications was published for Athens.
+            <Pane image={SpecImg} title={t('athens.criticalDocuments.fullSpecifications.title')} disabled>
+              {t('athens.criticalDocuments.fullSpecifications.text')}
             </Pane>
             <Pane
               image={SpecImg}
               href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens"
-              title="Release Plan"
+              title={t('athens.criticalDocuments.releasePlan.title')}
               target="_blank"
             >
-              Read the release plan as it was made during the planning stage, and learn more about how the development
-              evolved.
+              {t('athens.criticalDocuments.releasePlan.text')}
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
@@ -98,37 +97,50 @@ const AthensPage = ({ content }) => {
           title="Testnet Goals"
           subtitle={
             <>
-              The goals below are a simplified representation of the Key Results listed in our Release{' '}
-              <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens#okrs">OKR</Link>
+              <Trans
+                i18nKey="athens.testnetGoals.subtitle"
+                components={[
+                  <Link href="https://github.com/Joystream/joystream-landing/tree/master/testnets/athens#okrs">
+                    OKR
+                  </Link>,
+                ]}
+              />
             </>
           }
         >
-          <GoalList data={goals} />
+          <GoalList data={translateGoals(goals, t)} />
         </TitleWrapper>
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title="Roles available on the current testnet">
+        <TitleWrapper title={t('athens.roles.title')}>
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet />
+            <RoleList
+              roles={roles.active.map(({ title, ...rest }) => ({
+                title: t(`rolesData.${convertToCamelCase(title)}`),
+                ...rest,
+              }))}
+              content={mapStatusDataToRoles(content)}
+              t={t}
+              oldTestnet
+            />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title="The city of Athens" location="acropolis">
+      <MapInfo title={t('athens.map.title')} location="acropolis">
         <p>
-          <strong>Athens is the capital of Greece.</strong> IIt was also at the heart of Ancient Greece, a powerful
-          civilisation and empire. The city is still dominated by 5th-century BC landmarks, including the Acropolis, a
-          hilltop citadel topped with ancient buildings like the colonnaded Parthenon temple.
-          <br />
-          <br />
-          We chose the name Athens as, like our previous testnets, Mesopotamia and Sparta, the ancient Athens'
-          historical significance in the development towards modern democracy and the rule of law.
-          <br />
-          <br />
-          <Link to="/sparta">
-            <PersonIcon /> Explore previous testnet
-          </Link>
+          <Trans
+            i18nKey="athens.map.text"
+            components={[
+              <strong />,
+              <br />,
+              <Link to="/sparta">
+                <PersonIcon />
+                Explore previous testnet
+              </Link>,
+            ]}
+          />
         </p>
       </MapInfo>
     </BaseLayout>
@@ -139,3 +151,17 @@ AthensPage.propTypes = pagePropTypes;
 
 export { AthensPage };
 export default withApi(AthensPage, getApiPath('STATUS'));
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

@@ -10,8 +10,8 @@ const mockFunction = jest.fn();
 
 describe('DateCounter component', () => {
   it('renders "Launched on" title when countdown is finished', () => {
-    const counter = mount(<Counter date="2019/06/25 16:26" onTimeout={mockFunction} />);
-    expect(counter.text().includes('Launched on')).toBe(true);
+    const counter = mount(<Counter date="2019/06/25 16:26" onTimeout={mockFunction} t={key => key}/>);
+    expect(counter.text().includes('dateCounter.launchedOn')).toBe(true);
     expect(counter.text().includes('/')).toBe(true);
     expect(counter.text().includes(':')).toBe(false);
     expect(counter.props().onTimeout).toHaveBeenCalled();
@@ -20,8 +20,8 @@ describe('DateCounter component', () => {
   it('renders "Time to launch" title when countdown is unfinished', () => {
     const unfinishedDate = new Date();
     unfinishedDate.setSeconds(unfinishedDate.getSeconds() + 5000);
-    const counter = render(<Counter date={unfinishedDate} />);
-    expect(counter.text().includes('Time to launch')).toBe(true);
+    const counter = render(<Counter date={unfinishedDate} t={key => key} />);
+    expect(counter.text().includes('dateCounter.timeToLaunch')).toBe(true);
     expect(counter.text().includes(':')).toBe(true);
     expect(counter.text().includes('/')).toBe(false);
   });
@@ -29,17 +29,17 @@ describe('DateCounter component', () => {
   it('changes title when countdown is finished', () => {
     const unfinishedDate = new Date();
     unfinishedDate.setSeconds(unfinishedDate.getSeconds() + 1);
-    const counter = render(<Counter date={unfinishedDate} />);
-    expect(counter.text().includes('Time to launch')).toBe(true);
+    const counter = render(<Counter date={unfinishedDate} t={key => key} />);
+    expect(counter.text().includes('dateCounter.timeToLaunch')).toBe(true);
     setTimeout(() => {
-      expect(counter.text().includes('Launched on')).toBe(true);
+      expect(counter.text().includes('dateCounter.launchedOn')).toBe(true);
     }, 1000);
   });
 
   it('renders text "week" when it is more than 1 week to finish', () => {
     const unfinishedDate = new Date();
     unfinishedDate.setMonth(unfinishedDate.getMonth() + 1);
-    const counter = render(<Counter date={unfinishedDate} />);
+    const counter = render(<Counter date={unfinishedDate} t={key => key} />);
     expect(counter.text().includes('week')).toBe(true);
     expect(counter.text().includes('minute')).toBe(false);
   });
@@ -47,7 +47,7 @@ describe('DateCounter component', () => {
   it('renders text "day" when it is more than 1 day to finish', () => {
     const unfinishedDate = new Date();
     unfinishedDate.setDate(unfinishedDate.getDay() + 2);
-    const counter = render(<Counter date={unfinishedDate} />);
+    const counter = render(<Counter date={unfinishedDate} t={key => key} />);
     expect(counter.text().includes('day')).toBe(true);
     expect(counter.text().includes('second')).toBe(false);
   });
@@ -55,19 +55,19 @@ describe('DateCounter component', () => {
   it('renders text "seconds" when it is less than 1 day to finish', () => {
     const unfinishedDate = new Date();
     unfinishedDate.setMinutes(unfinishedDate.getMinutes() + 60);
-    const counter = render(<Counter date={unfinishedDate} />);
+    const counter = render(<Counter date={unfinishedDate} t={key => key} />);
     expect(counter.text().includes('second')).toBe(true);
     expect(counter.text().includes('day')).toBe(false);
   });
 
   it('adds classes based on props', () => {
-    const counter = render(<Counter date="2019/06/25 16:26" light large />);
+    const counter = render(<Counter date="2019/06/25 16:26" light large t={key => key} />);
     expect(counter.hasClass('DateCounter--light')).toEqual(true);
     expect(counter.hasClass('DateCounter--large')).toEqual(true);
   });
 
   it('renders custom title', () => {
-    const counter = render(<Counter date="2019/06/25 16:26" title="Custom title" />);
+    const counter = render(<Counter date="2019/06/25 16:26" title="Custom title" t={key => key}/>);
     expect(counter.find('.DateCounter__title').text()).toEqual('Custom title');
   });
 });

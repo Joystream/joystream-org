@@ -1,31 +1,22 @@
 const goalsData = [
   {
-    title: 'Build a dynamic, flexible and user friendly content directory',
-    text: `The Rome testnet is built around the introduction of a new content
-      directory, that can be added to, modified and improved without requiring
-      runtime upgrades. All key results and goals are derived from this.`,
+    title: 'rome.testnetGoals.goals.contentDirectory.title',
+    text: 'rome.testnetGoals.goals.contentDirectory.text',
 
   },
   {
-    title: 'Populate the content directory with a variety of content',
-    text: `Rome introduces a Content Directory system that is both built to last,
-      yet still meant to be continuously improved on. We will pay for Content Creators
-      to upload a variety of content and we hope to learn a lot from the results.`,
+    title: 'rome.testnetGoals.goals.content.title',
+    text: 'rome.testnetGoals.goals.content.text',
 
   },
   {
-    title: 'Introduce the new Content Curator role',
-    text: `With a new Content Directory, and incentives to upload content,
-      we need monitoring. The Content Curators will require staking, and
-      will be paid in both testnet tokens and Monero.`,
+    title: 'rome.testnetGoals.goals.contentCurator.title',
+    text: 'rome.testnetGoals.goals.contentCurator.text',
 
   },
   {
-    title: 'Add Content Creator profiles',
-    text: `Without Content Creators, there won't be any content. Granted,
-      adding another level on top of the membership requirement may seem
-      like a hurdle, but it will allow users to upload with multiple
-      profiles.`,
+    title: 'rome.testnetGoals.goals.contentCreator.title',
+    text: 'rome.testnetGoals.goals.contentCreator.text',
     
   },
 ];

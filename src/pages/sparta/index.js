@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { pagePropTypes } from '../../propTypes';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 
 import getApiPath from '../../utils/getApiPath';
-import mapStatusDataToAnalytics from '../../utils/mapStatusDataToAnalytics';
 import mapStatusDataToRoles from '../../utils/mapStatusDataToRoles';
+import translateGoals from '../../utils/translateGoals';
+import convertToCamelCase from '../../utils/convertToCamelCase';
 
 import withApi from '../../components/_enhancers/withApi';
 
 import BaseLayout from '../../components/_layouts/Base';
 import HeroCard from '../../components/HeroCard';
-import Analytics from '../../components/Analytics';
 import TitleWrapper from '../../components/TitleWrapper';
 import RoleList from '../../components/RoleList';
 import ColumnsLayout from '../../components/ColumnsLayout';
@@ -24,77 +26,72 @@ import SiteMetadata from '../../components/SiteMetadata';
 import spartaImage from '../../assets/svg/sparta.svg';
 import SpartaHelmetImg from '../../assets/svg/sparta-helmet.svg';
 
-import { analytics, roles, goals } from '../../data/pages/sparta';
-import { sharedData } from '../../data/pages';
+import { roles, goals } from '../../data/pages/sparta';
 
 import './style.scss';
 
-const heroMarkdownContent = `
-  ### FAILURE IDENTIFIED
-
-  On Friday the 29th of March, the Sparta network went down due to a 
-  [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) 
-  that we had not pulled down before release. 
-  
-  More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/).
-`;
-
 const SpartaPage = ({ content }) => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   return (
-    <BaseLayout>
-      <SiteMetadata title="Joystream: The video platform DAO" description="Explore the Sparta testnet" />
+    <BaseLayout t={t}>
+      <SiteMetadata
+        lang={language}
+        title={t('siteMetadata.title')}
+        description={t('sparta.siteMetadata.description')}
+      />
 
       <Hero
         image={spartaImage}
-        title="Sparta Network"
+        title={t('sparta.hero.title')}
         indent
-        chip={<Chip onClick={() => setModalOpen(true)}>What is this?</Chip>}
+        chip={<Chip onClick={() => setModalOpen(true)}>{t('sparta.hero.chipText')}</Chip>}
       >
-        <p className="SpartaPage__hero-paragraph">{sharedData.rolesDescription}</p>
-        <HeroCard error content={heroMarkdownContent} />
+        <p className="SpartaPage__hero-paragraph">{t('sparta.hero.text')}</p>
+        <HeroCard error content={t('sparta.heroCard.markdown')} t={t}/>
 
         <TestnetModal
-          title="Helmet of Sparta"
+          title={t("sparta.modal.title")}
           image={SpartaHelmetImg}
           closeModal={() => setModalOpen(false)}
           isOpen={isModalOpen}
         >
           <p>
-            <strong>The Spartan army helmet</strong> represents what Sparta is most known for today, their military
-            might. For it's time, it was also known for its advanced governance system.
+            <Trans i18nKey="sparta.modal.text" components={[<strong/>]} />
           </p>
         </TestnetModal>
       </Hero>
 
       <LayoutWrapper>
-
-        <TitleWrapper
-          title="Testnet Goals"
-          subtitle={<>The goals below are a simplified representation of the Key Results listed in our release OKR.</>}
-        >
-          <GoalList data={goals} />
+        <TitleWrapper title={t('sparta.testnetGoals.title')} subtitle={<>{t('sparta.testnetGoals.subtitle')}</>}>
+          <GoalList data={translateGoals(goals, t)} />
         </TitleWrapper>
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title="Roles available on the Sparta testnet">
+        <TitleWrapper title={t('sparta.roles.title')}>
           <ColumnsLayout>
-            <RoleList roles={roles.active} content={mapStatusDataToRoles(content)} oldTestnet />
+            <RoleList
+              roles={roles.active.map(({ title, ...rest }) => ({
+                title: t(`rolesData.${convertToCamelCase(title)}`),
+                ...rest,
+              }))}
+              content={mapStatusDataToRoles(content)}
+              t={t}
+              oldTestnet
+            />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title="The city of Sparta" location="sparta">
+      <MapInfo title={t("sparta.map.title")} location="sparta">
         <p>
-          <strong>Sparta was a prominent city-state in Ancient Greece.</strong> In addition to its military might, it
-          was also unique both for its time and compared to its greek rivals due its defined social system and
-          constitution.
-          <br />
-          <br />
-          We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law,
-          however draconian by modern standard.
+          <Trans
+            i18nKey="sparta.map.text"
+            components={[<strong/>, <br />]}
+          />
         </p>
       </MapInfo>
     </BaseLayout>
@@ -105,3 +102,17 @@ SpartaPage.propTypes = pagePropTypes;
 
 export { SpartaPage };
 export default withApi(SpartaPage, getApiPath('STATUS'));
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

@@ -1,0 +1,51 @@
+{
+    "constantinople" : {
+        "siteMetadata" : {
+            "description" : "Explore the Constantinople testnet"
+        },
+        "hero" : {
+            "title" : "Constantinople Network",
+            "text" : "The Constantinople testnet introduces an improved proposals system and fiat-backed token model for participant compensation.",
+            "chipText" : "What is this?"
+        },
+        "heroCard" : {
+            "title" : "REPLACED BY ALEXANDRIA ON"
+        },
+        "modal" : {
+            "title" : "Constantinople",
+            "text" : "The Column of Constantine, also known as the Burnt Stone or the Burnt Pillar, is a Roman monumental column constructed on the orders of the Roman emperor Constantine the Great in 330 AD. It commemorates the declaration of Byzantium as the new capital city of the Roman Empire."
+        },
+        "criticalDocuments" : {
+            "title" : "Critical Documents",
+            "releasePlan" : {
+                "title" : "Release Plan",
+                "text" : "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+            },
+            "blogPost" : {
+                "title" : "Announcement Blog Post",
+                "text" : "Read a brief primer on the Constantinople testnet and its objectives."
+            }
+        },
+        "testnetGoals" : {
+            "title" : "Testnet Goals",
+            "subtitle" : "The goals listed below are a simplified representation of our main objectives for the Constantinople testnet.",
+            "goals" : {
+                "proposalSystem" : {
+                    "title" : "Launch a new proposal system",
+                    "text" : "The constantinople testnet is built around the introduction of a proposal system that strengthens the governance structure of the platform, shifting the day to day responsibility of monitoring the network and allocating resources to voters and the council."
+                },
+                "tokenModel" : {
+                    "title" : "Introduce a fiat-backed token model",
+                    "text" : "Constantinople introduces a new incentive structure, with a fiat (USD) pool backing the testnet tokens, setting up a more realistic economic system for the platform."
+                }
+            }
+        },
+        "roles" : {
+            "title" : "Incentivized Roles for the Constantinople Network"
+        },
+        "map" : {
+            "title" : "Constantinople",
+            "text" : "<0>Constantinople was the capital city of the Eastern Roman Empire during the fourth century.</0> It was famed for its massive and complex defences as well as its architectural masterpieces and opulent aristocratic palaces. As was the case with the city, we hope our Constantinople testnet will be a worthy successor to Rome.<1/><1/><2><0/> Read the blog post</2>"
+        }
+    }
+}

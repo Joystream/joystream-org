@@ -7,14 +7,13 @@ import { ReactComponent as Logotype } from '../../../assets/svg/logo-white.svg';
 import ColumnsLayout from '../../../components/ColumnsLayout';
 import ActionButton from '../../ActionButton';
 import BrandLayoutWrapper from '../../BrandLayoutWrapper';
-import data from '../../../data/pages/brand/story';
 import './index.scss';
 
 const propTypes = {
   onActionClick: func,
 };
 
-const StorySectionLogo = React.forwardRef(({ onActionClick }, ref) => {
+const StorySectionLogo = React.forwardRef(({ onActionClick, t }, ref) => {
   return (
     <BrandLayoutWrapper blue className="StorySectionLogo" ref={ref}>
       <div className="StorySectionLogo__logos-container">
@@ -26,7 +25,7 @@ const StorySectionLogo = React.forwardRef(({ onActionClick }, ref) => {
       </div>
 
       <div className="StorySectionLogo__header">
-        <h2 className="StorySectionLogo__title">{data.logo.title}</h2>
+        <h2 className="StorySectionLogo__title">{t('brand.story.logo.title')}</h2>
 
         <div className="StorySectionLogo__sketch-img">
           <img src={sketchImg} alt="" />
@@ -35,10 +34,16 @@ const StorySectionLogo = React.forwardRef(({ onActionClick }, ref) => {
 
       <ColumnsLayout className="StorySectionLogo__text">
         <div>
-          <div className="StorySectionLogo__text-col">{data.logo.leftCol}</div>
+          <div className="StorySectionLogo__text-col">
+            <p>{t('brand.story.logo.uniqueness')}</p>
+            <p>{t('brand.story.logo.requirements')}</p>
+          </div>
         </div>
         <div>
-          <div className="StorySectionLogo__text-col">{data.logo.rightCol}</div>
+          <div className="StorySectionLogo__text-col">
+            <p>{t('brand.story.logo.branding')}</p>
+            <p>{t('brand.story.logo.challenge')}</p>
+          </div>
         </div>
       </ColumnsLayout>
 

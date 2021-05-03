@@ -22,7 +22,7 @@ const propTypes = {
   image: oneOfType([node, func]).isRequired,
   title: string.isRequired,
   overview: oneOfType([string, node]).isRequired,
-  responsibilites: arrayOf(oneOfType([string, node])).isRequired,
+  responsibilities: arrayOf(oneOfType([string, node])).isRequired,
   requirements: arrayOf(oneOfType([string, node])).isRequired,
   tutorialLink: (props, propName, componentName) => {
     if (props.type === 'active' && !props[propName]) {
@@ -224,7 +224,7 @@ class RoleOverview extends React.Component {
       type,
       title,
       overview,
-      responsibilites,
+      responsibilities,
       requirements,
       className,
       tutorialLink,
@@ -259,7 +259,7 @@ class RoleOverview extends React.Component {
             <div className="RoleOverview__list RoleOverview__resposibilities">
               <p className="RoleOverview__heading--small">Responsibilities</p>
               <ul className="RoleOverview__details">
-                {responsibilites.map((responsibility, i) => (
+                {responsibilities.map((responsibility, i) => (
                   <li key={i}>{responsibility} </li>
                 ))}
               </ul>
