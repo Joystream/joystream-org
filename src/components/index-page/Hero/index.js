@@ -58,7 +58,7 @@ const Hero = ({ statusData, t }) => {
             <>
               <TestnetMetric
                 title={t('landing.hero.metrics.titles.participationPayout')}
-                metric={statusData?.totalUSDPaid ? Math.floor(statusData?.totalUSDPaid) : '-'}
+                metric={statusData?.totalUSDPaid ? `$${Math.floor(statusData?.totalUSDPaid)}` : '-'}
               />
               <TestnetMetric
                 title={t('landing.hero.metrics.titles.activeValidators')}
