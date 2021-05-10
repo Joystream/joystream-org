@@ -32,6 +32,8 @@ const formatBlockHeight = blockheight => {
   return `${Math.floor(blockheight / 1000)}k`;
 };
 
+const OLD_PAYOUTS = 28554;
+
 const Hero = ({ statusData, t }) => {
   return (
     <div className="IndexPage__hero-wrapper">
@@ -58,7 +60,7 @@ const Hero = ({ statusData, t }) => {
             <>
               <TestnetMetric
                 title={t('landing.hero.metrics.titles.participationPayout')}
-                metric={statusData?.totalUSDPaid ? `$${Math.floor(statusData?.totalUSDPaid)}` : '-'}
+                metric={statusData?.totalUSDPaid ? `$${Math.floor(statusData?.totalUSDPaid + OLD_PAYOUTS)}` : '-'}
               />
               <TestnetMetric
                 title={t('landing.hero.metrics.titles.activeValidators')}
