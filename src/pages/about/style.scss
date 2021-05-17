@@ -1,0 +1,92 @@
+@import '../../styles/main';
+
+.AboutPage {
+  &__investors {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 128px 0;
+    background-color: $c_athens-gray;
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: 0;
+    }
+
+    &__subtitle {
+      max-width: 606px;
+      margin-top: 24px;
+      font-family: $font-secondary;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: $c_slate-gray;
+      text-align: center;
+    }
+
+    &__list {
+      display: grid;
+      justify-content: space-between;
+      max-width: 818px;
+      margin-top: 56px;
+      grid-template-columns: repeat(auto-fill, 182px);
+    }
+
+    &__icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__investors {
+      padding: 64px 20px;
+
+      &__title {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+      }
+
+      &__list {
+        gap: 15px;
+        grid-template-columns: repeat(2, 157px);
+        grid-template-rows: 64px 64px;
+      }
+
+      &__icon-wrapper {
+        border: 1px solid #dae2eb;
+      }
+
+      &__icon {
+        &--bitmain {
+          width: 97px;
+          height: 12px;
+        }
+
+        &--boostVC {
+          width: 83px;
+          height: 17px;
+        }
+
+        &--digital-currency {
+          width: 60px;
+          height: 42px;
+        }
+
+        &--startup-lab {
+          width: 76px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

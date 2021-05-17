@@ -1,0 +1,251 @@
+@import '../../../styles/main';
+
+.AboutPage {
+  &__positions-wrapper {
+    padding: 128px 0;
+    background-color: $c_mystic;
+  }
+
+  &__positions {
+    @extend %container;
+
+    position: relative;
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: 0;
+    }
+
+    &__jobs {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      display: none;
+      font-family: $font-secondary;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0;
+      color: $c_wood-smoke;
+    }
+
+    &__subtitle {
+      display: flex;
+      align-items: center;
+      margin-top: 4px;
+
+      span {
+        margin-right: 10px;
+        font-family: $font-secondary;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_slate-gray;
+      }
+    }
+
+    &__list {
+      margin-top: 24px;
+    }
+  }
+
+  &__position {
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    width: 100%;
+    height: 85px;
+    margin-top: 16px;
+    padding: 0 32px 0 100px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: $c_white;
+    transition: transform .2s;
+    grid-template-columns: 250px 1fr 150px;
+    grid-template-rows: 1fr;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .12);
+    }
+
+    &__icon-wrapper {
+      position: absolute;
+      bottom: -15px;
+      left: -30px;
+      width: 115px;
+      height: 115px;
+      overflow: hidden;
+      background-color: $c_loblolly;
+      border-radius: 50%;
+    }
+
+    &:hover &__icon-wrapper {
+      background-color: $c_mauve;
+    }
+
+    &__icon {
+      position: absolute;
+
+      &--frontend {
+        bottom: -5px;
+        left: -10px;
+        transform: scale(.85);
+      }
+
+      &--blockchain {
+        bottom: -25px;
+        left: 0;
+        transform: scale(.7);
+      }
+
+      &--design {
+        bottom: -16px;
+        left: -4px;
+        transform: scale(.8);
+      }
+    }
+
+    &__role {
+      margin: auto 0;
+      font-family: $font-primary;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: 0;
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 5px;
+      font-family: $font-secondary;
+
+      & > p {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0;
+        color: $c_slate-gray;
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    &__salary {
+      margin: auto 0 auto auto;
+      font-family: $font-primary;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: $c_blue-ribbon;
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__positions {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 790px) {
+    &__positions-wrapper {
+      padding: 64px 0;
+    }
+
+    &__positions {
+      &__title {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &__jobs {
+        display: block;
+      }
+
+      &__subtitle {
+        span {
+          margin-right: -5px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      &__jsgenesis {
+        transform: scale(.7);
+      }
+    }
+
+    &__position {
+      display: flex;
+      flex-direction: column;
+      justify-content: unset;
+      height: 108px;
+
+      &__icon-wrapper {
+        bottom: -21px;
+        left: -70px;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+      }
+
+      &__icon {
+        &--frontend {
+          bottom: -10px;
+          left: 10px;
+          transform: scale(.7);
+        }
+
+        &--blockchain {
+          bottom: -28px;
+          left: 15px;
+          transform: scale(.6);
+        }
+
+        &--design {
+          bottom: -16px;
+          left: 14px;
+          transform: scale(.65);
+        }
+      }
+
+      &__role {
+        margin: 16px 0 0 0;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &__info {
+        justify-content: unset;
+        order: 1;
+        margin-top: 20px;
+        padding: 0;
+
+        & > p {
+          margin-top: 0;
+          font-size: 12px;
+          line-height: 14px;
+
+          span {
+            display: inline-block;
+            margin: 0 8px;
+          }
+        }
+      }
+
+      &__salary {
+        margin: unset;
+        margin-top: 4px;
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
+}
