@@ -14,12 +14,10 @@ const EmployeeIcon = ({ Icon, name, wrapperRef, jobTitle, color, windowWidth }) 
   const [iconWrapperPosition, setIconWrapperPosition] = useState({});
 
   useEffect(() => {
-    if (hoveredWrapper || hoveredIcon && wrapperRef && iconRef) {
+    if ((hoveredWrapper || hoveredIcon) && wrapperRef && iconRef) {
       const iconOffsetLeft = iconRef?.current?.offsetLeft;
       const iconOffsetTop = iconRef?.current?.offsetTop;
       const wrapperWidth = wrapperRef?.current?.clientWidth;
-
-      console.log(iconOffsetLeft > wrapperWidth / 2);
 
       if (iconOffsetLeft > wrapperWidth / 2) {
         setIconWrapperPosition({
@@ -52,10 +50,13 @@ const EmployeeIcon = ({ Icon, name, wrapperRef, jobTitle, color, windowWidth }) 
       </div>
       <div ref={iconRef} style={{ zIndex: hoveredIcon || hoveredWrapper ? 1 : 0 }}>
         <Icon
+          tabIndex="0"
           onMouseEnter={() => setHoveredIcon(true)}
+          onClick={() => setHoveredIcon(true)}
           onMouseLeave={() => setHoveredIcon(false)}
+          onBlur={() => setHoveredIcon(false)}
           className="AboutPage__list__icon"
-          style={hoveredIcon ||  hoveredWrapper ? color : {}}
+          style={hoveredIcon || hoveredWrapper ? color : {}}
         />
       </div>
     </>

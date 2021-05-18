@@ -6,9 +6,9 @@ import DesktopEmployeeSection from './DesktopEmployee/Section';
 
 import Jsgenesis from '../../../assets/svg/jsgenesis-black.svg';
 
-import './style.scss';
-
 import employees from '../employee-data';
+
+import './style.scss';
 
 const List = ({ title, subtitle }) => {
   const [filterState, setFilterState] = useState('all');
@@ -33,13 +33,11 @@ const List = ({ title, subtitle }) => {
     }
   );
   const { t } = useTranslation();
-
-  //mobile
   const [renderMobile, setRenderMobile] = useState(false);
 
   useEffect(() => {
     function handleResize() {
-      if(typeof window !== 'undefined'){
+      if (typeof window !== 'undefined') {
         let mq = window.matchMedia('(max-width: 600px)');
 
         setRenderMobile(mq.matches ? true : false);
@@ -58,14 +56,10 @@ const List = ({ title, subtitle }) => {
       <div className="AboutPage__list">
         <div className="AboutPage__list__content">
           <h2 className="AboutPage__list__title">{title}</h2>
-          <img src={Jsgenesis} className="AboutPage__list__logo" alt={t('about.general.jsgenesisAlt')}/>
-          <h3 className="AboutPage__list__subtitle">
-            {subtitle}
-          </h3>
-          
-
+          <img src={Jsgenesis} className="AboutPage__list__logo" alt="" />
+          <h3 className="AboutPage__list__subtitle">{subtitle}</h3>
           {!renderMobile ? (
-            <DesktopEmployeeSection 
+            <DesktopEmployeeSection
               filterState={filterState}
               setFilterState={setFilterState}
               categoryValues={categoryValues}

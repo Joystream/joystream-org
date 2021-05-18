@@ -28,7 +28,7 @@ const AboutPage = () => {
       />
 
       <Hero title={<Trans i18nKey="about.hero.title" components={[<br />]} />} subtitle={t('about.hero.subtitle')} />
-      <List title={t('about.ourTeam.title')} subtitle={t('about.ourTeam.subtitle')}/>
+      <List title={t('about.ourTeam.title')} subtitle={t('about.ourTeam.subtitle')} />
 
       <div className="AboutPage__investors">
         <h2 className="AboutPage__investors__title">{t('about.investors.title')}</h2>

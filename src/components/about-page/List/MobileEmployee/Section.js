@@ -18,8 +18,7 @@ const MobileIconSection = ({ Icon, name, color, jobTitle }) => {
 
 const MobileEmployeeSection = ({ filterState, setFilterState, categoryValues, t }) => {
   const [mobileAmountRendered, setMobileAmountRendered] = useState(6);
-  const allFilteredEmployees = employees
-  .reduce((previous, { Icon, type, name, jobTitle, color }, index) => {
+  const allFilteredEmployees = employees.reduce((previous, { Icon, type, name, jobTitle, color }, index) => {
     if (filterState === 'all' || type.includes(filterState)) {
       return [
         ...previous,
@@ -47,20 +46,24 @@ const MobileEmployeeSection = ({ filterState, setFilterState, categoryValues, t 
         }}
         className="AboutPage__list__select"
       >
-        <option value="all">{t('about.general.roles.allMembers')} ({categoryValues.all})</option>
+        <option value="all">
+          {t('about.general.roles.allMembers')} ({categoryValues.all})
+        </option>
         {filters.map(filter => (
           <option key={filter.name} value={filter.name}>
             {t(`about.general.roles.${filter.name}`)} ({categoryValues[filter.name]})
           </option>
         ))}
       </select>
-      <div className="AboutPage__list__mobile-sections">
-        {allFilteredEmployees.slice(0, mobileAmountRendered)}
-      </div>
+      <div className="AboutPage__list__mobile-sections">{allFilteredEmployees.slice(0, mobileAmountRendered)}</div>
       {mobileAmountRendered < allFilteredEmployees.length ? (
-        <p role='presentation' onClick={() => setMobileAmountRendered(prev => prev + 6)} className="AboutPage__list__load-more">
+        <p
+          role="presentation"
+          onClick={() => setMobileAmountRendered(prev => prev + 6)}
+          className="AboutPage__list__load-more"
+        >
           {t('about.ourTeam.moreMembers')}
-          <ArrowDown className="AboutPage__list__load-more__arrow"/>
+          <ArrowDown className="AboutPage__list__load-more__arrow" />
         </p>
       ) : null}
     </>

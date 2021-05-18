@@ -106,8 +106,8 @@
     &__icon {
       color: $c_loblolly;
 
-      &--active {
-        z-index: 5;
+      &:focus {
+        outline: none;
       }
     }
 

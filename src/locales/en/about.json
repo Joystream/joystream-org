@@ -1,7 +1,6 @@
 {
     "about" : {
         "general" : {
-            "jsgenesisAlt" : "jsgenesis logo",
             "roles" : {
                 "blockchain" : "Blockchain Engineer",
                 "frontEnd" : "Front-End Engineer",

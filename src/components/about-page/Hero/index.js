@@ -4,6 +4,7 @@ import EmptyIcon from '../../../assets/svg/empty-avatar.svg';
 import Jsgenesis from '../../../assets/svg/jsgenesis.svg';
 
 import employees from '../employee-data';
+
 import shuffleArray from '../../../utils/shuffleArray';
 
 import './style.scss';

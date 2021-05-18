@@ -39,7 +39,7 @@ const Positions = () => {
         <h3 className="AboutPage__positions__jobs">{t('about.positions.available')}</h3>
         <div className="AboutPage__positions__subtitle">
           <span>{t('about.positions.join')}</span>{' '}
-          <img src={Jsgenesis} className="AboutPage__positions__jsgenesis" alt={t('about.general.jsgenesisAlt')} />
+          <img src={Jsgenesis} className="AboutPage__positions__jsgenesis" alt='' />
         </div>
         <div className="AboutPage__positions__list">
           <Position
