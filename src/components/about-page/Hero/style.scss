@@ -35,7 +35,7 @@
       max-width: 598px;
       margin-top: 16px;
       font-family: $font-secondary;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 400;
       line-height: 28px;
       letter-spacing: 0;
@@ -83,7 +83,7 @@
       &__empty-icon4 {
         position: absolute;
         top: 64px;
-        left: 275px;
+        left: 235px;
         width: 44px;
         height: 44px;
       }
@@ -91,7 +91,7 @@
       &__empty-icon5 {
         position: absolute;
         top: 140px;
-        left: 150px;
+        left: 110px;
         width: 25px;
         height: 25px;
       }
@@ -107,7 +107,7 @@
       &__employee-icon2 {
         position: absolute;
         top: 245px;
-        left: 130px;
+        left: 90px;
         color: #ff3861;
         transform: scale(.83);
       }
@@ -115,7 +115,7 @@
       &__employee-icon3 {
         position: absolute;
         bottom: 70px;
-        left: 90px;
+        left: 50px;
         color: #f2994a;
         transform: scale(1.815);
       }
@@ -177,6 +177,14 @@
 
       &__content {
         align-items: center;
+      }
+
+      &__title {
+        font-size: 60px;
+      }
+
+      &__subtitle {
+        max-width: 654px;
       }
 
       &__background {

@@ -41,6 +41,23 @@
       align-items: center;
       justify-content: center;
     }
+
+    &__icon {
+      &--bitmain {
+        width: 134px;
+        height: 17px;
+      }
+
+      &--digital-currency {
+        width: 68px;
+        height: 47px;
+      }
+
+      &--startup-lab {
+        width: 84px;
+        height: 33px;
+      }
+    }
   }
 
   @media #{$screen-max-sm} {

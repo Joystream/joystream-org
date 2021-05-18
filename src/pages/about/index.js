@@ -32,7 +32,6 @@ const AboutPage = () => {
 
       <div className="AboutPage__investors">
         <h2 className="AboutPage__investors__title">{t('about.investors.title')}</h2>
-        <h3 className="AboutPage__investors__subtitle">{t('about.investors.subtitle')}</h3>
         <div className="AboutPage__investors__list">
           <div className="AboutPage__investors__icon-wrapper">
             <img

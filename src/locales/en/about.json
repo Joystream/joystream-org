@@ -20,8 +20,8 @@
             "description" : "We don't just offer great compensation and flexibility, but the perfect mission, team and timing for you to build something that changes everything."
         },
         "hero" : {
-            "title" : "Jsgenesis team <0 /> is building Joystream",
-            "subtitle" : "Joystream (The video platform DAO) is an open-sourced blockchain project that will be truly user-governed."
+            "title" : "We are building Joystream to set it free",
+            "subtitle" : "Jsgenesis is the core team building Joystream the platform and open-source blockchain."
         },
         "ourTeam" : {
             "title" : "Our team",
@@ -29,8 +29,7 @@
             "moreMembers" : "Load more team members"
         },
         "investors" : {
-            "title" : "Our investors",
-            "subtitle" : "Joystream is backed by the world’s greatest investors behind companies like Stripe, Airbnb, Dropbox, Netflix, and Slack."
+            "title" : "Our investors"
         },
         "positions" : {
             "title" : "Open positions",
