@@ -1,22 +1,28 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
+
 import SiteMetadata from '../../components/SiteMetadata';
 import BaseLayout from '../../components/_layouts/Base';
-import { sharedData } from '../../data/pages';
 import Hero from '../../components/token-page/Hero';
 import TokenInformation from '../../components/token-page/TokenInformation';
 import PendingCashouts from '../../components/token-page/PendingCashouts';
 import ArrowLink from '../../components/ArrowLink';
+
+import { sharedData } from '../../data/pages';
+
 import useAxios from '../../utils/useAxios';
 
 import './style.scss';
 
 const TokensPage = () => {
-
   const [statusServerData, loading, error] = useAxios();
+  const { t } = useTranslation();
+  const { language } = useI18next();
 
   return (
-    <BaseLayout className="TokensPage">
-      <SiteMetadata title="Joystream: The video platform DAO" description="Tokens" />
+    <BaseLayout className="TokensPage" t={t}>
+      <SiteMetadata lang={language} title="Joystream: The video platform DAO" description="Tokens" />
 
       <Hero statusServerData={statusServerData}/>
 
@@ -37,16 +43,16 @@ const TokensPage = () => {
 export { TokensPage };
 export default TokensPage;
 
-// export const query = graphql`
-//   query($language: String!) {
-//     locales: allLocale(filter: { language: { eq: $language } }) {
-//       edges {
-//         node {
-//           ns
-//           data
-//           language
-//         }
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
