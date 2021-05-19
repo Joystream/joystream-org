@@ -1,0 +1,229 @@
+@import '../../../styles/main';
+
+.AboutPage {
+  &__list-wrapper {
+    padding: 120px 0;
+    background-color: $c_mystic;
+  }
+
+  &__list {
+    @extend %container;
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: 0;
+      color: $c_wood-smoke;
+    }
+
+    &__logo {
+      margin-top: 8px;
+    }
+
+    &__subtitle {
+      max-width: 606px;
+      margin-top: 28px;
+      font-family: $font-secondary;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: $c_slate-gray;
+    }
+
+    &__filters {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 48px;
+      gap: 10px;
+    }
+
+    &__filter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0 20px;
+      font-family: $font-primary;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0;
+      cursor: pointer;
+      border: 2px solid #b5c1c9;
+
+      &--active {
+        color: white;
+        background-color: $c_blue-ribbon;
+        border: none;
+      }
+    }
+
+    &__icons {
+      position: relative;
+      display: grid;
+      padding-top: 32px;
+      gap: 30px;
+      grid-auto-rows: 76px;
+      grid-template-columns: repeat(auto-fill, 76px);
+    }
+
+    &__icon-wrapper {
+      position: absolute;
+      display: none;
+      justify-content: center;
+      width: 309px;
+      height: 92px;
+      transition: visibility 1s;
+
+      &--active {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: $c_white;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .12);
+        animation-duration: .5s;
+        animation-name: icon-wrapper-fade-in;
+      }
+
+      &__name {
+        font-family: $font-primary;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0;
+        color: $c_wood-smoke;
+      }
+
+      &__job-title {
+        font-family: $font-secondary;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0;
+      }
+    }
+
+    &__icon {
+      color: $c_loblolly;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__select {
+      width: 335px;
+      height: 48px;
+      margin-top: 40px;
+      padding: 0 16px 0 20px;
+      font-family: $font-secondary;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0;
+      background: url('../../../assets/svg/expand.svg') 95% no-repeat;
+      background-color: transparent;
+      background-size: 4%;
+      border: 1px solid $c_wood-smoke;
+      appearance: none;
+
+      &__arrow {
+        position: absolute;
+      }
+    }
+
+    &__mobile-section {
+      display: grid;
+      margin: 12px 0;
+      grid-template-columns: 70px auto;
+      grid-template-rows: 70px;
+
+      &__icon {
+        margin: auto;
+        color: $c_loblolly;
+        transform: scale(.9);
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+      }
+
+      &__name {
+        font-family: $font-primary;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: $c_wood-smoke;
+      }
+
+      &__job-title {
+        font-family: $font-secondary;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_slate-gray;
+      }
+    }
+
+    &__load-more {
+      display: flex;
+      align-items: center;
+      margin: 40px 0 0 40px;
+      color: $c_blue-ribbon;
+      cursor: pointer;
+
+      &__arrow {
+        margin: 0 0 0 20px;
+        transform: scale(.75);
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__list-wrapper {
+      padding: 64px 0;
+    }
+
+    &__list {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__list-wrapper {
+      padding: 64px 0;
+    }
+
+    &__list {
+      // padding: 0 20px;
+
+      &__title {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      &__subtitle {
+        margin-top: 16px;
+      }
+
+      &__logo {
+        width: 69px;
+        height: 12px;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+@keyframes icon-wrapper-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

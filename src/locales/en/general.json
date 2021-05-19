@@ -75,7 +75,8 @@
         "community" : "Community",
         "brandStory" : "Brand Story",
         "brandGuides" : "Brand Guides",
-        "downloadAssets" : "Download Assets"
+        "downloadAssets" : "Download Assets",
+        "about" : "About"
     },
     "footer" : {
         "title" : "Stay up to date",

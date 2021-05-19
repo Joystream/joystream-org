@@ -12,10 +12,6 @@ const joystreamLinks = [
 ];
 
 const githubLinks = [
-  {
-    href: sharedData.links.whitepaper,
-    label: 'footer.github.whitepaper',
-  },
   { href: sharedData.links.repository, label: 'footer.github.repository' },
 ];
 
