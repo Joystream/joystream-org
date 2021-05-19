@@ -10,6 +10,7 @@ import PendingCashouts from '../../components/token-page/PendingCashouts';
 import ArrowLink from '../../components/ArrowLink';
 
 import { sharedData } from '../../data/pages';
+import tokenQuestions from '../../data/pages/token';
 
 import useAxios from '../../utils/useAxios';
 
@@ -22,18 +23,28 @@ const TokensPage = () => {
 
   return (
     <BaseLayout className="TokensPage" t={t}>
-      <SiteMetadata lang={language} title="Joystream: The video platform DAO" description="Tokens" />
+      <SiteMetadata
+        lang={language}
+        title={t('token.siteMetadata.title')}
+        description={t('token.siteMetadata.description')}
+      />
 
-      <Hero statusServerData={statusServerData}/>
+      <Hero statusServerData={statusServerData} />
 
-      <TokenInformation />
+      <TokenInformation
+        title={t('token.faq.title')}
+        tokenQuestions={tokenQuestions.map(({ title, text }) => ({
+          title: t(title),
+          text: text?.isModular ? <Trans i18nKey={text?.key} components={text?.components} /> : t(text),
+        }))}
+      />
 
-      <PendingCashouts cashouts={statusServerData?.exchanges}/>
-      
+      <PendingCashouts cashouts={statusServerData?.exchanges} />
+
       <div className="TokensPage__cta-wrapper">
         <div className="TokensPage__cta">
-          <h2 className="TokensPage__cta__title">Join our Discord and change the online video industry</h2>
-          <ArrowLink className='TokensPage__cta__link' text="Open Discord" href={sharedData.social.discordLink} dark />
+          <h2 className="TokensPage__cta__title">{t('token.cta.title')}</h2>
+          <ArrowLink className="TokensPage__cta__link" text={t('button.openDiscord')} href={sharedData.social.discordLink} dark />
         </div>
       </div>
     </BaseLayout>
