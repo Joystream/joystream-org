@@ -15,8 +15,8 @@ const TokensPage = () => {
   const [statusServerData, loading, error] = useAxios();
 
   return (
-    <BaseLayout t={t} className="TokensPage">
-      <SiteMetadata lang={language} title={t('siteMetadata.title')} description={t('pages.token')} />
+    <BaseLayout className="TokensPage">
+      <SiteMetadata title="Joystream: The video platform DAO" description="Tokens" />
 
       <Hero statusServerData={statusServerData}/>
 
