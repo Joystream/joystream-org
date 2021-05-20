@@ -58,12 +58,14 @@
 
       &__text {
         display: none;
+        width: fit-content;
         margin-top: 24px;
         font-family: $font-secondary;
         font-size: 20px;
         line-height: 32px;
         letter-spacing: 0;
         color: #656565;
+        cursor: auto;
 
         &--active {
           display: block;

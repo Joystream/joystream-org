@@ -14,7 +14,6 @@ const TokenInformationSection = ({ title, text }) => {
       className={cn('TokensPage__tokeninfo__item', {
         'TokensPage__tokeninfo__item--active': active,
       })}
-      onClick={() => setActive(prev => !prev)}
     >
       <div className="TokensPage__tokeninfo__item__content">
         <h3 className="TokensPage__tokeninfo__item__title">{title}</h3>
@@ -27,6 +26,9 @@ const TokenInformationSection = ({ title, text }) => {
         </p>
       </div>
       <Close
+        onClick={() => {
+          setActive(prev => !prev);
+        }}
         className={cn('TokensPage__tokeninfo__item__icon', {
           'TokensPage__tokeninfo__item__icon--active': active,
         })}
