@@ -33,7 +33,7 @@ export const sharedData = {
     telegramLink: 'https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA',
     redditLink: 'https://www.reddit.com/r/JoyStream/',
     twitterLink: 'https://twitter.com/JoystreamApp',
-    discordLink: 'https://discord.gg/DE9UN3YpRP'
+    discordLink: 'https://discord.gg/DE9UN3YpRP',
   },
   links: {
     blog: 'https://blog.joystream.org/',
@@ -44,8 +44,8 @@ export const sharedData = {
   },
   rolesDescription: (
     <>
-      Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money
-      in the process.
+      Explore available roles and pick the one that suits you best. Influence the platform's development and earn real
+      money in the process.
     </>
   ),
 };
@@ -87,6 +87,7 @@ export const roles = {
       key: 'storageProviders',
       hasLabel: false,
     },
+    { image: builderImage, title: 'Builder', to: '/roles#builder', key: 'builders', hasLabel: false },
   ],
   future: [
     {
@@ -114,7 +115,6 @@ export const roles = {
       title: 'Live Streaming Provider',
       to: '/roles#live-streaming-provider',
     },
-    { image: builderImage, title: 'Builder', to: '/roles#builder' },
     {
       image: communicationModeratorImage,
       title: 'Communication Moderator',
@@ -124,37 +124,38 @@ export const roles = {
 };
 
 export const roleCardData = {
-    validator: {
-        image: ValidatorImage,
-        title: "Validator"
-    },
-    council: {
-        image: CouncilMemberImage,
-        title: "Council"
-    },
-    storageProvider: {
-        image: StorageProviderImage,
-        title: "Storage Provider"
-    },
-    storageLead: {
-        image: StorageLeadImage,
-        title: "Storage Lead"
-    },
-    contentCurator: {
-        image: ContentCuratorImage,
-        title: "Content Curator"
-    },
-    contentCreator: {
-        image: ContentCreatorImage,
-        title: "Content Creator"
-    },
-    contentLead: {
-        image: ContentLeadImage,
-        title: "Content Lead"
-    }
-}
+  validator: {
+    image: ValidatorImage,
+    title: 'Validator',
+  },
+  council: {
+    image: CouncilMemberImage,
+    title: 'Council',
+  },
+  storageProvider: {
+    image: StorageProviderImage,
+    title: 'Storage Provider',
+  },
+  storageLead: {
+    image: StorageLeadImage,
+    title: 'Storage Lead',
+  },
+  contentCurator: {
+    image: ContentCuratorImage,
+    title: 'Content Curator',
+  },
+  contentCreator: {
+    image: ContentCreatorImage,
+    title: 'Content Creator',
+  },
+  contentLead: {
+    image: ContentLeadImage,
+    title: 'Content Lead',
+  },
+};
 
-export const bountiesLink = 'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties-overview/bounties-status.json';
+export const bountiesLink =
+  'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties-overview/bounties-status.json';
 
 export const testnetData = [
   {
@@ -164,7 +165,7 @@ export const testnetData = [
     date: '07.04.2021',
     state: 'Current',
     overviewText: 'Antioch is our ninth testnet, patching a chain split bug which broke the Babylon network',
-    link: '/antioch'
+    link: '/antioch',
   },
   {
     Image: Babylon,
@@ -228,5 +229,5 @@ export const testnetData = [
     state: 'Past',
     overviewText: 'Sparta is our second testnet, introducing a variety of important technical improvements.',
     link: '/sparta',
-  }
-]
+  },
+];

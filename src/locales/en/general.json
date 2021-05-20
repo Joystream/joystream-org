@@ -17,7 +17,8 @@
         "contentCreator" : "Content Creator",
         "contentCurator" : "Content Curator",
         "discoveryProvider" : "Discovery Provider",
-        "bandwidthProvider" : "Bandwidth Provider"
+        "bandwidthProvider" : "Bandwidth Provider",
+        "builder" : "Builder"
     },
     "siteMetadata" : {
         "title" : "Joystream: The video platform DAO"
@@ -61,7 +62,10 @@
         "month" : "month",
         "year" : "year",
         "timeToLaunch" : "Time to launch",
-        "launchedOn" : "Launched on"
+        "launchedOn" : "Launched on",
+        "days" : "days",
+        "hours" : "hours",
+        "minutes" : "minutes"
     },
     "sidebar" : {
         "activeRoles" : "Active roles",

@@ -133,6 +133,32 @@ const rolesData = {
       questionLink: 'mailto:hello@jsgenesis.com',
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=3877efbe93',
     },
+    {
+      id: 'builder',
+      image: BuilderImage,
+      title: 'roles.builder.title',
+      overview: {
+        isModular: true,
+        key: 'roles.builder.overview',
+        components: [
+          <br />,
+          <ul className="RoleOverview__dashList">
+            <li>
+              <strong />
+            </li>
+          </ul>,
+        ],
+      },
+      responsibilities: ['roles.builder.responsibilities.collaborate'],
+      requirements: [
+        'roles.builder.requirements.platformUnderstanding',
+        'roles.builder.requirements.specificContributingSkills',
+        'roles.builder.requirements.stake',
+      ],
+      tutorialLink: 'https://github.com/Joystream/helpdesk/tree/master/roles/builders',
+      questionLink: 'mailto:hello@jsgenesis.com',
+      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276',
+    },
   ],
   upcoming: [
     {
@@ -233,30 +259,6 @@ const rolesData = {
         'roles.liveStreamingProvider.requirements.stake',
       ],
       formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=4ea03faa7a',
-    },
-    {
-      id: 'builder',
-      image: BuilderImage,
-      title: 'roles.builder.title',
-      overview: {
-        isModular: true,
-        key: 'roles.builder.overview',
-        components: [
-          <br />,
-          <ul className="RoleOverview__dashList">
-            <li>
-              <strong />
-            </li>
-          </ul>,
-        ],
-      },
-      responsibilities: ['roles.builder.responsibilities.collaborate'],
-      requirements: [
-        'roles.builder.requirements.platformUnderstanding',
-        'roles.builder.requirements.specificContributingSkills',
-        'roles.builder.requirements.stake',
-      ],
-      formAction: 'https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276',
     },
     {
       id: 'communication-moderator',

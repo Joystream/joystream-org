@@ -23,17 +23,15 @@ import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
 import SiteMetadata from '../../components/SiteMetadata';
 
-import antiochImage from '../../assets/svg/antioch.svg';
+import sumerImage from '../../assets/svg/sumer.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 import { ReactComponent as BlogImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 
 import { roles } from '../../data/pages';
-import { goalsData, launchDate } from '../../data/pages/antioch';
+import { goalsData, launchDate } from '../../data/pages/sumer';
 
-import './style.scss';
-
-const AntiochPage = ({ content }) => {
+const SumerPage = ({ content }) => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
@@ -42,43 +40,45 @@ const AntiochPage = ({ content }) => {
       <SiteMetadata
         lang={language}
         title={t('siteMetadata.title')}
-        description={t('antioch.siteMetadata.description')}
+        description={t('sumer.siteMetadata.description')}
       />
 
-      <Hero image={antiochImage} title={t('antioch.hero.title')} indent animationStartValue={0}>
-        <p className="AntiochPage__hero-paragraph">{t('antioch.hero.text')}</p>
+      <Hero image={sumerImage} title={t('sumer.hero.title')} indent animationStartValue={0}>
+        <p>{t('sumer.hero.text')}</p>
+        <br />
+        <br />
         <HeroCard date={launchDate} t={t} />
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper title={t('antioch.criticalDocuments.title')}>
+        <TitleWrapper title={t('sumer.criticalDocuments.title')}>
           <ColumnsLayout>
             <Pane
               image={SpecImg}
-              href="https://github.com/Joystream/joystream/issues/2285"
-              title={t('antioch.criticalDocuments.releasePlan.title')}
+              href="https://github.com/Joystream/joystream/issues/2045"
+              title={t('sumer.criticalDocuments.releasePlan.title')}
               target="_blank"
             >
-              {t('antioch.criticalDocuments.releasePlan.text')}
+              {t('sumer.criticalDocuments.releasePlan.text')}
             </Pane>
             <Pane
               image={BlogImg}
-              title={t('antioch.criticalDocuments.blogPost.title')}
-              href="https://blog.joystream.org/announcing-antioch/"
+              title={t('sumer.criticalDocuments.blogPost.title')}
+              href="https://blog.joystream.org/sumer-announced/"
               target="_blank"
             >
-              {t('antioch.criticalDocuments.blogPost.text')}
+              {t('sumer.criticalDocuments.blogPost.text')}
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
 
-        <TitleWrapper title={t('antioch.testnetGoals.title')} subtitle={<>{t('antioch.testnetGoals.subtitle')}</>}>
+        <TitleWrapper title={t('sumer.testnetGoals.title')} subtitle={<>{t('sumer.testnetGoals.subtitle')}</>}>
           <GoalList data={translateGoals(goalsData, t)} />
         </TitleWrapper>
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title={t('antioch.roles.title')}>
+        <TitleWrapper title={t('sumer.roles.title')}>
           <ColumnsLayout>
             <RoleList
               roles={roles.active.map(({ title, ...rest }) => ({
@@ -87,20 +87,19 @@ const AntiochPage = ({ content }) => {
               }))}
               content={mapStatusDataToRoles(content)}
               t={t}
-              oldTestnet
             />
           </ColumnsLayout>
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title={t('antioch.map.title')} location="antioch">
+      <MapInfo title={t('sumer.map.title')} location="sumer">
         <p>
           <Trans
-            i18nKey="antioch.map.text"
+            i18nKey="sumer.map.text"
             components={[
               <strong />,
               <br />,
-              <Link href="https://blog.joystream.org/announcing-antioch/">
+              <Link href="https://blog.joystream.org/sumer-announced/">
                 <PersonIcon />
                 Read the blog post
               </Link>,
@@ -112,10 +111,10 @@ const AntiochPage = ({ content }) => {
   );
 };
 
-AntiochPage.propTypes = pagePropTypes;
+SumerPage.propTypes = pagePropTypes;
 
-export { AntiochPage };
-export default withApi(AntiochPage, getApiPath('STATUS'));
+export { SumerPage };
+export default withApi(SumerPage, getApiPath('STATUS'));
 
 export const query = graphql`
   query($language: String!) {

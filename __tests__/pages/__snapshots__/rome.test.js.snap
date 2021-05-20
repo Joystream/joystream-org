@@ -210,6 +210,13 @@ exports[`RomePage page renders correctly 1`] = `
                 "title": "rolesData.storageProvider",
                 "to": "/roles#storage-provider",
               },
+              Object {
+                "hasLabel": false,
+                "image": "icon-component-mock",
+                "key": "builders",
+                "title": "rolesData.builder",
+                "to": "/roles#builder",
+              },
             ]
           }
           t={[Function]}
