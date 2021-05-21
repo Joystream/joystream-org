@@ -41,7 +41,7 @@ const TokenHero = ({ statusServerData }) => {
       <div className="TokensPage__tokenstats-wrapper">
         <h2 className="TokensPage__tokenstats-title">{t('token.hero.tokenStats.title')}</h2>
         <div className="TokensPage__tokenstats">
-          {/* {statusServerData ? (
+          {statusServerData ? (
             <>
               <TokenStatsItem title={t('token.hero.tokenStats.exchangeRate')} value={`$${statusServerData.price.toFixed(7)}`} />
               <TokenStatsItem title={t('token.hero.tokenStats.backingValue')} value={`$${statusServerData.dollarPool.size.toFixed(2)}`} />
@@ -53,10 +53,7 @@ const TokenHero = ({ statusServerData }) => {
               <TokenStatsItemPlaceholder />
               <TokenStatsItemPlaceholder />
             </>
-          )} */}
-          <TokenStatsItem title={t('token.hero.tokenStats.exchangeRate')} value="$0.0000422" />
-          <TokenStatsItem title={t('token.hero.tokenStats.backingValue')} value="$7815.95" />
-          <TokenStatsItem title={t('token.hero.tokenStats.supply')} value={parseBalance('458292156')} />
+          )}
         </div>
       </div>
     </div>
