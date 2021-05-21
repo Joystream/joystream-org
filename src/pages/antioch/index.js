@@ -47,7 +47,7 @@ const AntiochPage = ({ content }) => {
 
       <Hero image={antiochImage} title={t('antioch.hero.title')} indent animationStartValue={0}>
         <p className="AntiochPage__hero-paragraph">{t('antioch.hero.text')}</p>
-        <HeroCard date={launchDate} t={t} />
+        <HeroCard info date='2021/05/26 07:00' counterTitle={<>{t('antioch.heroCard.title')}</>} t={t} />
       </Hero>
 
       <LayoutWrapper>
