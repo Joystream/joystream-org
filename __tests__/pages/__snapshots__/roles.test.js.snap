@@ -177,6 +177,36 @@ exports[`RolesPage page renders correctly 1`] = `
               "title": "roles.contentLead.title",
               "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead",
             },
+            Object {
+              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276",
+              "id": "builder",
+              "image": "icon-component-mock",
+              "overview": Object {
+                "components": Array [
+                  <br />,
+                  <ul
+                    className="RoleOverview__dashList"
+                  >
+                    <li>
+                      <strong />
+                    </li>
+                  </ul>,
+                ],
+                "isModular": true,
+                "key": "roles.builder.overview",
+              },
+              "questionLink": "mailto:hello@jsgenesis.com",
+              "requirements": Array [
+                "roles.builder.requirements.platformUnderstanding",
+                "roles.builder.requirements.specificContributingSkills",
+                "roles.builder.requirements.stake",
+              ],
+              "responsibilities": Array [
+                "roles.builder.responsibilities.collaborate",
+              ],
+              "title": "roles.builder.title",
+              "tutorialLink": "https://github.com/Joystream/helpdesk/tree/master/roles/builders",
+            },
           ],
           "upcoming": Array [
             Object {
@@ -324,34 +354,6 @@ exports[`RolesPage page renders correctly 1`] = `
                 "roles.liveStreamingProvider.responsibilities.runAndMaintainLivestreamingNodes",
               ],
               "title": "roles.liveStreamingProvider.title",
-            },
-            Object {
-              "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276",
-              "id": "builder",
-              "image": "icon-component-mock",
-              "overview": Object {
-                "components": Array [
-                  <br />,
-                  <ul
-                    className="RoleOverview__dashList"
-                  >
-                    <li>
-                      <strong />
-                    </li>
-                  </ul>,
-                ],
-                "isModular": true,
-                "key": "roles.builder.overview",
-              },
-              "requirements": Array [
-                "roles.builder.requirements.platformUnderstanding",
-                "roles.builder.requirements.specificContributingSkills",
-                "roles.builder.requirements.stake",
-              ],
-              "responsibilities": Array [
-                "roles.builder.responsibilities.collaborate",
-              ],
-              "title": "roles.builder.title",
             },
             Object {
               "formAction": "https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=46a98ea4be",
@@ -626,6 +628,54 @@ exports[`RolesPage page renders correctly 1`] = `
       <InView
         as="div"
         initialInView={false}
+        key="roles.builder.title"
+        onChange={[Function]}
+        threshold={0.2}
+        triggerOnce={false}
+      >
+        <RoleOverview
+          className=""
+          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276"
+          id="builder"
+          image="icon-component-mock"
+          overview={
+            <Trans
+              components={
+                Array [
+                  <br />,
+                  <ul
+                    className="RoleOverview__dashList"
+                  >
+                    <li>
+                      <strong />
+                    </li>
+                  </ul>,
+                ]
+              }
+              i18nKey="roles.builder.overview"
+            />
+          }
+          questionLink="mailto:hello@jsgenesis.com"
+          requirements={
+            Array [
+              "roles.builder.requirements.platformUnderstanding",
+              "roles.builder.requirements.specificContributingSkills",
+              "roles.builder.requirements.stake",
+            ]
+          }
+          responsibilities={
+            Array [
+              "roles.builder.responsibilities.collaborate",
+            ]
+          }
+          title="roles.builder.title"
+          tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/builders"
+          type="active"
+        />
+      </InView>
+      <InView
+        as="div"
+        initialInView={false}
         key="roles.membershipScreener.title"
         onChange={[Function]}
         threshold={0.2}
@@ -847,52 +897,6 @@ exports[`RolesPage page renders correctly 1`] = `
             ]
           }
           title="roles.liveStreamingProvider.title"
-          type="upcoming"
-        />
-      </InView>
-      <InView
-        as="div"
-        initialInView={false}
-        key="roles.builder.title"
-        onChange={[Function]}
-        threshold={0.2}
-        triggerOnce={false}
-      >
-        <RoleOverview
-          className=""
-          formAction="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=6868b87276"
-          id="builder"
-          image="icon-component-mock"
-          overview={
-            <Trans
-              components={
-                Array [
-                  <br />,
-                  <ul
-                    className="RoleOverview__dashList"
-                  >
-                    <li>
-                      <strong />
-                    </li>
-                  </ul>,
-                ]
-              }
-              i18nKey="roles.builder.overview"
-            />
-          }
-          requirements={
-            Array [
-              "roles.builder.requirements.platformUnderstanding",
-              "roles.builder.requirements.specificContributingSkills",
-              "roles.builder.requirements.stake",
-            ]
-          }
-          responsibilities={
-            Array [
-              "roles.builder.responsibilities.collaborate",
-            ]
-          }
-          title="roles.builder.title"
           type="upcoming"
         />
       </InView>

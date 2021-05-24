@@ -110,6 +110,11 @@
                     "title" : "Antioch testnet",
                     "text" : "Antioch is our ninth testnet, patching a chain split bug which broke the Babylon network",
                     "explore" : "Explore Antioch"
+                },
+                "Sumer" : {
+                    "title" : "Sumer testnet",
+                    "text" : "Sumer is our tenth testnet, facilitating easy content uploads via our playback app.",
+                    "explore" : "Explore Sumer"
                 }
             }
         },

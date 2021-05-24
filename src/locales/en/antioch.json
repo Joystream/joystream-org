@@ -7,6 +7,9 @@
             "title" : "Antioch Network",
             "text" : "The Antioch release seeks to patch a chain split bug which unfortunately sabotaged the previous testnet."
         },
+        "heroCard" : {
+            "title" : "REPLACED BY SUMER ON"
+        },
         "criticalDocuments" : {
             "title" : "Critical Documents",
             "releasePlan" : {
