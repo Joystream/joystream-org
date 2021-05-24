@@ -164,7 +164,7 @@ export const testnetData = [
     number: 9,
     name: 'Sumer',
     date: '26.05.2021',
-    state: 'Current',
+    state: 'Future',
     link: '/sumer',
   },
   {
@@ -172,7 +172,7 @@ export const testnetData = [
     number: 8,
     name: 'Antioch',
     date: '07.04.2021',
-    state: 'Past',
+    state: 'Current',
     link: '/antioch',
   },
   {

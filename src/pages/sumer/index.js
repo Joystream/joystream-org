@@ -28,7 +28,7 @@ import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 import { ReactComponent as BlogImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 
-import { roles } from '../../data/pages';
+import { roles } from '../../data/pages/sumer';
 import { goalsData, launchDate } from '../../data/pages/sumer';
 
 const SumerPage = ({ content }) => {
@@ -87,6 +87,7 @@ const SumerPage = ({ content }) => {
               }))}
               content={mapStatusDataToRoles(content)}
               t={t}
+              oldTestnet
             />
           </ColumnsLayout>
         </TitleWrapper>
