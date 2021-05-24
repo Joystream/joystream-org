@@ -58,14 +58,22 @@
         "finished" : "Network live"
     },
     "dateCounter" : {
+        "week" : "week",
+        "weeks" : "weeks",
         "day" : "day",
-        "month" : "month",
-        "year" : "year",
-        "timeToLaunch" : "Time to launch",
-        "launchedOn" : "Launched on",
         "days" : "days",
+        "hour" : "hour",
         "hours" : "hours",
-        "minutes" : "minutes"
+        "minute" : "minute",
+        "minutes" : "minutes",
+        "second" : "second",
+        "seconds" : "seconds",
+        "month" : "month",
+        "months" : "months",
+        "year" : "year",
+        "years" : "years",
+        "timeToLaunch" : "Time to launch",
+        "launchedOn" : "Launched on"
     },
     "sidebar" : {
         "activeRoles" : "Active roles",
