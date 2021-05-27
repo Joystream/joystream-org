@@ -163,8 +163,8 @@ export const testnetData = [
     Image: Sumer,
     number: 9,
     name: 'Sumer',
-    date: '26.05.2021',
-    state: 'Future',
+    date: '27.05.2021',
+    state: 'Current',
     link: '/sumer',
   },
   {
@@ -172,7 +172,7 @@ export const testnetData = [
     number: 8,
     name: 'Antioch',
     date: '07.04.2021',
-    state: 'Current',
+    state: 'Past',
     link: '/antioch',
   },
   {
