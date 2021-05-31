@@ -9,7 +9,8 @@
         "close" : "Close",
         "accept" : "Accept",
         "openDiscord" : "Open Discord",
-        "learnMore" : "Learn More"
+        "learnMore" : "Learn More",
+        "gettingStarted" : "Getting Started"
     },
     "rolesData" : {
         "validator" : "Validator",

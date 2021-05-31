@@ -33,7 +33,7 @@ const TokenHero = ({ statusServerData }) => {
         <div className="TokensPage__hero__content">
           <h2 className="TokensPage__hero__title">{t('token.hero.title')}</h2>
           <p className="TokensPage__hero__text">{t('token.hero.text')}</p>
-          <ArrowLink className="TokensPage__hero__link" to="/get-started" text={t('button.learnMore')} />
+          <ArrowLink className="TokensPage__hero__link" to="/get-started" text={t('button.gettingStarted')} />
         </div>
         <img className="TokensPage__hero__image" alt="" src={Tokens} />
         <img className="TokensPage__hero__image TokensPage__hero__image--alt" alt="" src={TokensAlt} />

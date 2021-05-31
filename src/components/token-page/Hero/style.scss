@@ -66,8 +66,7 @@
   &__tokenstats {
     display: grid;
     margin-top: 24px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
     column-gap: 30px;
     grid-template-columns: repeat(3, 380px);
     grid-template-rows: 132px;
