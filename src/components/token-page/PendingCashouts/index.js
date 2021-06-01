@@ -53,7 +53,7 @@ const PendingCashouts = ({ cashouts }) => {
 
   useEffect(() => {
     if (cashouts) {
-      setPendingCashouts(cashouts.filter(cashout => cashout.status === 'PENDING'));
+      setPendingCashouts(cashouts.filter(cashout => cashout?.status === 'PENDING'));
     }
   }, [cashouts]);
 
