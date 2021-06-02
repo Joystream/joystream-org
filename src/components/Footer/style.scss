@@ -11,15 +11,8 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
 
-  &__header {
-    margin-bottom: 50px;
-    font-size: 32px;
-    font-weight: 400;
-    color: $c_white;
-  }
-
   &__form-wrapper {
-    display: none;
+    display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
@@ -47,6 +40,7 @@
       line-height: 20px;
       letter-spacing: -.4000000059604645px;
       color: #a7aeb7;
+      text-align: center;
     }
 
     &__input {
@@ -59,11 +53,6 @@
       margin: 0 10px;
       padding: 0;
     }
-  }
-
-  &__button {
-    width: 100%;
-    margin-bottom: 60px;
   }
 
   &__layout {
@@ -104,8 +93,8 @@
   }
 
   &__socials {
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
   }
 
   &__social-link {
@@ -117,7 +106,17 @@
   }
 
   &__social-name {
-    display: none;
+    display: block;
+    margin-left: 12px;
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -.4000000059604645px;
+    color: #a7aeb7;
+
+    &:hover {
+      color: $c_white;
+    }
   }
 
   &__social-icon {
@@ -136,22 +135,6 @@
     background-repeat: repeat-x;
     background-size: auto 30px;
 
-    &__header {
-      display: none;
-      margin-bottom: 80px;
-      font-size: 40px;
-    }
-
-    &__form-wrapper {
-      display: flex;
-    }
-
-    &__button {
-      display: none;
-      width: auto;
-      margin-bottom: 120px;
-    }
-
     &__layout {
       width: 100%;
     }
@@ -169,18 +152,22 @@
     &__section-title {
       margin-bottom: 24px;
     }
+  }
 
-    &__social-name {
-      display: block;
-      margin-left: 12px;
-      font-family: $font-secondary;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: -.4000000059604645px;
-      color: #a7aeb7;
+  @media (max-width: 550px) {
+    padding-top: 80px;
 
-      &:hover {
-        color: $c_white;
+    &__form {
+      flex-direction: column;
+      margin-bottom: 80px;
+
+      &__input {
+        width: auto;
+      }
+
+      &__button {
+        width: auto;
+        margin-top: 12px;
       }
     }
   }
