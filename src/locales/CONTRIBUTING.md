@@ -4,11 +4,19 @@ Firstly, we'd like to thank you for your interest in contributing to our interna
 
 *Even if you don't plan on adding any changes yourself, you are more than welcome to check out any active Pull Requests and join the discussion by recommending a different translation or giving any insight towards making the translations better.*
 
+## Table of Contents
+
+- [File Structure and Translation Process](#file-structure-and-translation-process)
+- Contribution Process
+  - [Option 1 (making the changes on your local machine and pushing the changes to GitHub)](#option-1)
+  - [Option 2 (making the changes on GitHub's UI)](#option-2)
+  - [Option 3 (download file locally and send changes through Discord)](#option-3)
+
 ## File Structure and Translation Process 
 
 The translations are written in .json files and here is an example excerpt from one of them: `(/en/sumer.json)`
 
-```json
+```js
 {
   "sumer": {
     "siteMetadata": {
@@ -23,14 +31,14 @@ The translations are written in .json files and here is an example excerpt from 
 }
 ```
 To translate this file, you would need to:
-- Find a file from `/src/locales/en` that has not yet been translated to your language [**check if there aren't any active PR's addressing the file as well**]
+- Find a file from `/src/locales/en` that has not yet been translated to your language (**check if there aren't any active PR's addressing the file as well**)
 - Find the folder in `/src/locales` of the language you want to translate to
 - Copy the file from `/en` to that folder (e.g. `/bs`) without changing the name of the file itself
-- Finally, translate the text [**only change the values without changing any of the keys**]
+- Finally, translate the text (**only change the values without changing any of the keys**)
 
 After that is done, you will will then have something like this: `(/bs/sumer.json)`
 
-```json
+```js
 {
   "sumer": {
     "siteMetadata": {
@@ -47,7 +55,7 @@ After that is done, you will will then have something like this: `(/bs/sumer.jso
 
 ## Contribution process
 
-#### Option 1:
+### Option 1:
 For the users who are more familiar with the process of making code contributions on platforms like GitHub, you can follow these steps:
 
 1. Fork the `joystream-org` repository and clone your fork
@@ -57,7 +65,7 @@ For the users who are more familiar with the process of making code contribution
 5. In the description reference the issue pertaining to the translation and finish PR creation
 
 
-#### Option 2:
+### Option 2:
 If you're not as familiar with git and the whole process of making contributions on GitHub, don't worry! Here is a detailed explanation to make sure that you can also contribute to our project:
 
 **Step 1:** Fork the joystream-org repository to your own account.
@@ -97,5 +105,5 @@ If you're not as familiar with git and the whole process of making contributions
 ![part 1](../assets/images/i18n-readme/part-12-13-14-15-branch-dev-pr-title-description-create.png)
 
 
-#### Option 3:
-There is also a third option where you can download the json file, translate the necessary text as explained above in the [File Structure and Translation Process](#file-structure-and-translation-process) and send the translated text to me (DzideX#9084) on Discord. You will then be correctly attributed for having translated the file in the PR that will be made.
+### Option 3:
+If you're not at all familiar with git and how it works but still would love to contribute to the internationalization project, don't worry! In this last option you can download the json file and translate the necessary text as explained above in the [File Structure and Translation Process](#file-structure-and-translation-process) and send the translated text to DzideX#9084 on Discord. You will then be correctly attributed for having translated the file in the PR that will be made. Be sure to send your Testnet profile username if you wish to be awarded founding members points as well!
