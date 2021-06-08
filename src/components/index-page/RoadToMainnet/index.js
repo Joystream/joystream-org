@@ -10,9 +10,11 @@ import './style.scss';
 
 const RoadMain = ({ Image, state, date, name, link, t }) => (
   <div className="IndexPage__road-main">
-    <div className="IndexPage__road-main__image-wrapper">
-      {Image && <img alt="testnet visual" src={Image} className="IndexPage__road-main__image" />}
-    </div>
+    <Link to={link}>
+      <div className="IndexPage__road-main__image-wrapper">
+        {Image && <img alt="testnet visual" src={Image} className="IndexPage__road-main__image" />}
+      </div>
+    </Link>
     <div className="IndexPage__road-main__content">
       <div className="IndexPage__road-main__info-wrapper">
         <div className="IndexPage__road-main__state">{t(`landing.roadToMainnet.testnetState.${state}`)}</div>
