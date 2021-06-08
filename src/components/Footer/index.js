@@ -55,14 +55,6 @@ const Footer = ({ t }) => {
           </Button>
         </form>
       </div>
-      <h2 className="Footer__header">{t('footer.alternateTitle')}</h2>
-      <Button
-        href="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
-        secondary
-        className="Footer__button"
-      >
-        {t('footer.joinNewsletter')}
-      </Button>
       <div className="Footer__layout">
         <FooterSection
           title={t('joystream')}
