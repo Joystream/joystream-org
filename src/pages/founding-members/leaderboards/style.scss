@@ -76,6 +76,24 @@
     }
   }
 
+  &__scoring-cutoff-date {
+    @extend %container;
+
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    height: 20px;
+
+    &__text {
+      position: absolute;
+      bottom: -30px;
+      font-family: $font-secondary;
+      font-size: 14px;
+      color: white;
+    }
+  }
+
   &__table {
     @extend %container;
 
@@ -231,6 +249,15 @@
 
       &__title {
         margin-bottom: 18px;
+      }
+    }
+
+    &__scoring-cutoff-date {
+      margin-right: 32px;
+      padding: 0;
+
+      &__text {
+        font-size: 12px;
       }
     }
 
