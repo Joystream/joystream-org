@@ -15,8 +15,6 @@ const links = [
       },
     ],
   },
-  { to: '/manifesto', label: 'pages.manifesto' },
-  { to: '/roles', label: 'pages.roles' },
   {
     label: 'pages.foundingMembers',
     isDropdown: true,
