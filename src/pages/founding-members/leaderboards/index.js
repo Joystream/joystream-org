@@ -19,15 +19,18 @@ import { foundingMembersJson } from '../../../data/pages/founding-members';
 import useAxios from '../../../utils/useAxios';
 import './style.scss';
 
+const formatDate = date =>
+  `${date.getDate()}.${date.getMonth() + 1}.${date
+    .getFullYear()
+    .toString()
+    .substr(-2)}`;
+
 const PeriodHighlightFounding = ({ userData, t }) => {
   const { inducted, memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore } = userData;
 
   const [imageHasError, setImageHasError] = useState(false);
   const userDate = new Date(inducted.inductedDate);
-  const formattedDate = `${userDate.getDate()}.${userDate.getMonth() + 1}.${userDate
-    .getFullYear()
-    .toString()
-    .substr(-2)}`;
+  const formattedDate = formatDate(userDate);
 
   return (
     <>
@@ -205,6 +208,13 @@ const Leaderboards = ({ location }) => {
               </div>
             </div>
           </div>
+          {response?.scores?.cutoff ? (
+            <div className="FoundingMembersLeaderboards__scoring-cutoff-date">
+              <p className="FoundingMembersLeaderboards__scoring-cutoff-date__text">
+                From data processed before: {formatDate(new Date(response?.scores?.cutoff))}
+              </p>
+            </div>
+          ) : null}
         </div>
 
         <Table className="FoundingMembersLeaderboards__table">
