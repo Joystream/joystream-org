@@ -97,7 +97,7 @@ const employees = [
     Icon: Ben,
     type: ['growth'],
     name: 'Ben H. Crowther',
-    jobTitle: 'Growth',
+    jobTitle: 'about.general.roles.growth',
     color: '#00efe1',
   },
   {
