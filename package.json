@@ -38,7 +38,7 @@
     "intersection-observer": "^0.7.0",
     "jest": "^24.8.0",
     "jsdom": "^15.1.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^6.0.0",
     "openpgp": "^4.10.10",
     "pre-commit": "^1.2.2",
     "prismjs": "^1.21.0",
