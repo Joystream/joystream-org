@@ -34,7 +34,7 @@ The translations are written in .json files and here is an example excerpt from 
 To translate this file, you would need to:
 - Find the folder in `/src/locales` that corresponds to the language you want to translate to
 - Find a file in that folder (ex. `/src/locales/bs`) that has not yet been translated to that language (**check if there aren't any active PR's addressing the file as well**)
-- The translations in that file will be in english. You can now translate those values to the language corresponding to the locale (**only change the values without changing any of the keys**)
+- The translations in that file will be in English. You can now translate those values to the language corresponding to the locale (**only change the values without changing any of the keys**)
 
 After that is done, you will will then have something like this: `(/bs/sumer.json)`
 
@@ -80,7 +80,7 @@ If you're not as familiar with git and the whole process of making contributions
 
 ![step three: pull latest changes if necessary](../assets/images/i18n-readme/step-three.png)
 
-**Step 4:** Find the file you wish to translate (that still hasn't been translated) and create a branch that explains exactly what you wish to do. In this example we've used `sumer-translation-ru` to signify that we are translating the sumer testnet file into russian. You don't have to use this exact naming convention but make sure that it is clear what changes you've made!
+**Step 4:** Find the file you wish to translate (that still hasn't been translated) and create a branch that explains exactly what you wish to do. In this example we've used `sumer-translation-ru` to signify that we are translating the sumer testnet file into Russian. You don't have to use this exact naming convention but make sure that it is clear what changes you've made!
 
 ![step four: create a branch with an explanatory name](../assets/images/i18n-readme/step-four.png)
 
@@ -106,7 +106,7 @@ If you're not as familiar with git and the whole process of making contributions
 
 
 ### Option 3:
-If you're not at all familiar with git and how it works but still would love to contribute to the internationalization project, don't worry! In this last option you can download the json file and translate the necessary text as explained above in the [File Structure and Translation Process](#file-structure-and-translation-process) and send the translated text to DzideX#9084 on Discord. You will then be correctly attributed for having translated the file in the PR that will be made. Be sure to send your Testnet profile username if you wish to be awarded founding members points as well!
+If you're not at all familiar with git and how it works but still would love to contribute to the internationalization project, don't worry! In this last option you can download the json file and translate the necessary text as explained above in the [File Structure and Translation Process](#file-structure-and-translation-process) and send the translated text to DzideX#9084 on Discord. You will then be correctly attributed for having translated the file in the PR that will be made. Be sure to send your testnet membership handle if you wish to be awarded founding members points as well!
 
 ## Seeing the changes
 
