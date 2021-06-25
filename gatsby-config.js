@@ -59,9 +59,9 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`en`],
+        languages: [`en`, `ru`],
         defaultLanguage: `en`,
-        siteUrl: `https://example.com/`,
+        siteUrl: `https://www.joystream.org/`,
         i18nextOptions: {
           interpolation: {
             escapeValue: false // not needed for react as it escapes by default
@@ -71,7 +71,7 @@ module.exports = {
         pages: [
           {
             matchPath: '/',
-            languages: ['en']
+            languages: ['en','ru']
           }
         ]
       }
