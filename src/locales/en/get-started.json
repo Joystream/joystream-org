@@ -30,7 +30,8 @@
         "design": "Design",
         "marketing": "Marketing",
         "research": "Research",
-        "contentCreation": "Content Creation"
+        "contentCreation": "Content Creation",
+        "translation" : "Translation"
       },
       "roles": {
         "title": "Roles",
