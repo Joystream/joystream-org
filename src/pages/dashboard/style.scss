@@ -1,0 +1,73 @@
+@import '../../styles/main';
+
+.DashboardPage {
+  &__content-wrapper {
+    background-color: black;
+  }
+
+  &__content {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0 15px 0;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: $font-primary;
+    font-size: 36px;
+    color: white;
+  }
+
+  &__subtitle {
+    align-self: flex-start;
+    margin-bottom: 8px;
+    margin-left: 2.5%;
+    font-family: $font-secondary;
+    font-size: 25px;
+    color: white;
+  }
+
+  &__linechart-container {
+    position: relative;
+    width: 95%;
+    height: 300px;
+  }
+
+  &__linechart {
+    &__loader {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      margin: auto;
+    }
+
+    &__tooltip {
+      padding: 15px;
+      background-color: white;
+
+      &__label {
+        margin-bottom: 10px;
+        font-family: $font-primary;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      &__value {
+        font-family: $font-secondary;
+
+        span {
+          font-weight: bold;
+          color: #6c6cff;
+        }
+      }
+    }
+  }
+}
