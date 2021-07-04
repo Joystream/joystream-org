@@ -65,6 +65,7 @@ const BountiesCarousel = ({ t }) => {
     Marketing: 0,
     Research: 0,
     Content: 0,
+    Translation: 0
   });
   const [bounties, setBounties] = useState();
 
@@ -77,6 +78,7 @@ const BountiesCarousel = ({ t }) => {
         Marketing: 0,
         Research: 0,
         Content: 0,
+        Translation: 0
       };
 
       data.activeBounties.forEach(bounty => {
@@ -146,6 +148,15 @@ const BountiesCarousel = ({ t }) => {
         >
           <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--content"></div>
           {t('getStarted.opportunities.bountiesCarousel.contentCreation')} ({categoryValues.Content})
+        </button>
+        <button
+          className={cn('GetStarted__bounties-carousel__filter', {
+            'GetStarted__bounties-carousel__filter--active': filterState === 'Translation',
+          })}
+          onClick={() => setFilterState('Translation')}
+        >
+          <div className="GetStarted__bounties-carousel__filter-circle GetStarted__bounties-carousel__filter-circle--translation"></div>
+          {t('getStarted.opportunities.bountiesCarousel.translation')} ({categoryValues.Translation})
         </button>
       </div>
       <CardCarousel scrollAmount={CARD_SIZE_WITH_MARGIN}>
