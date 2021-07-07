@@ -59,7 +59,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`en`, `ru`],
+        languages: [`en`, `ru`, 'zh', 'es', 'fr'],
         defaultLanguage: `en`,
         siteUrl: `https://www.joystream.org/`,
         i18nextOptions: {
@@ -71,7 +71,7 @@ module.exports = {
         pages: [
           {
             matchPath: '/',
-            languages: ['en','ru']
+            languages: ['en','ru', 'zh', 'es', 'fr']
           }
         ]
       }

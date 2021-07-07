@@ -1,0 +1,135 @@
+{
+  "joystream": "Joystream",
+  "button": {
+    "getStarted": {
+      "text": "Start earning",
+      "altText": "Join & start earning"
+    },
+    "download": "Download",
+    "close": "Close",
+    "accept": "Accept",
+    "openDiscord": "Open Discord",
+    "learnMore": "Learn More",
+    "gettingStarted": "Getting Started"
+  },
+  "rolesData": {
+    "validator": "Validator",
+    "council": "Council",
+    "councilMember": "Council Member",
+    "storageProvider": "Storage Provider",
+    "contentCreator": "Content Creator",
+    "contentCurator": "Content Curator",
+    "discoveryProvider": "Discovery Provider",
+    "bandwidthProvider": "Bandwidth Provider",
+    "builder": "Builder",
+    "storageLead" : "Storage Lead",
+    "contentLead" : "Content Lead"
+  },
+  "siteMetadata": {
+    "title": "Joystream: The video platform DAO"
+  },
+  "colors": {
+    "joystreamBlue": "Joystream Blue",
+    "white": "White",
+    "joystreamGrey": "Joystream Grey",
+    "black": "Black"
+  },
+  "CMYK": "CMYK",
+  "RGB": "RGB",
+  "HEX": "HEX",
+  "orderedNumbers": {
+    "one": "01.",
+    "two": "02."
+  },
+  "numbers": {
+    "one": "1",
+    "two": "2",
+    "three": "3",
+    "four": "4",
+    "five": "5",
+    "six": "6",
+    "seven": "7"
+  },
+  "roleCard": {
+    "migration": "At migration, {{numberOfUsers}} (max) had this role",
+    "current": "{{numberOfUsers}} run this role on Antioch",
+    "most": "At most, {{numberOfUsers}} users occupied this role",
+    "new": "NEW"
+  },
+  "heroCard": {
+    "active": "Network announced",
+    "error": "Network down",
+    "info": "Network replaced",
+    "finished": "Network live"
+  },
+  "dateCounter": {
+    "week": "week",
+    "weeks": "weeks",
+    "day": "day",
+    "days": "days",
+    "hour": "hour",
+    "hours": "hours",
+    "minute": "minute",
+    "minutes": "minutes",
+    "second": "second",
+    "seconds": "seconds",
+    "month": "month",
+    "months": "months",
+    "year": "year",
+    "years": "years",
+    "timeToLaunch": "Time to launch",
+    "launchedOn": "Launched on"
+  },
+  "sidebar": {
+    "activeRoles": "Active roles",
+    "upcomingRoles": "Upcoming roles",
+    "viewAllRoles": "View all Roles"
+  },
+  "navbar": {
+    "product": "Product",
+    "atlas": "Atlas",
+    "pioneer": "Pioneer",
+    "community": "Community",
+    "brandStory": "Brand Story",
+    "brandGuides": "Brand Guides",
+    "downloadAssets": "Download Assets",
+    "about": "About"
+  },
+  "footer": {
+    "title": "Stay up to date",
+    "alternateTitle": "Get notified",
+    "subtitle": "Don't worry about spam! Keep track of all important updates",
+    "inputPlaceholder": "Email Address...",
+    "joinNewsletter": "Join the newsletter",
+    "github": {
+      "whitepaper": "Whitepaper",
+      "repository": "Repository"
+    },
+    "usefulLinks": {
+      "title": "Useful links",
+      "hiring": "We are hiring!",
+      "brandGuidance": "Brand guidance"
+    },
+    "followUs": "Follow us"
+  },
+  "pages": {
+    "blog": "Blog",
+    "manifesto": "Manifesto",
+    "roles": "Roles",
+    "token": "Token",
+    "hydra": "Hydra",
+    "foundingMembers": "Founding Members",
+    "leaderboards": "Leaderboards",
+    "scoringForm": "Scoring form",
+    "overview": "Overview"
+  },
+  "socials": {
+    "twitter": "Twitter",
+    "github": "GitHub",
+    "discord": "Discord"
+  },
+  "cookiesNotice": {
+    "text": "This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.",
+    "findOutMore": "Find out more ›"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "hydra": {
+    "siteMetadata": {
+      "title": "Hydra - A Substrate query node framework",
+      "description": "Inspired by The Graph, it gives a smooth way to provide powerful GraphQL queries to app developers over your Substrate blockchain state and history."
+    },
+    "hero": {
+      "title": "Hydra - A Substrate query node framework",
+      "text": "Inspired by The Graph, it gives a smooth way to provide powerful GraphQL queries to app developers over your Substrate blockchain state and history."
+    },
+    "value": {
+      "title": "We make it simple",
+      "subtitle": "Building great apps talking directly to a Substrate full node is impossible, and simply trying is slow and hard.",
+      "values": {
+        "slowFetching": {
+          "title": "Slow Fetching",
+          "text": "Doing multiple read operations across multiple block heights is often required, and the pure latency of fetching the data is very bad. Some reads may depend on the result of prior ones, which results in sequential reads, which is even slower."
+        },
+        "slowProcessing": {
+          "title": "Slow Processing",
+          "text": "The client has to do all the work of filtering, sorting, paginating or otherwise computing on the resulting data, and this takes time, resulting in a slow client experience and CPU load on the user device."
+        },
+        "complexClient": {
+          "title": "Complex Client",
+          "text": "The fetching and processing logic is reproduced in all apps, and adds to the complexity of application development."
+        },
+        "noSearch": {
+          "title": "No Search",
+          "text": "Your chain may have transactional or state commitments to free-text data, but doing real full-text search client-side is not an option."
+        },
+        "overFetching": {
+          "title": "Over-Fetching",
+          "text": "You cannot select the data you want, you have to read full state objects as they are, wasting both connection and full node capacity."
+        },
+        "costlyNodes": {
+          "title": "Costly Archival Nodes",
+          "text": "User requests which involve multiple read operations. To fetch a consistent dataset, you will often have to read at some specific block height, as always reading at the tip can break atomicity. This means such read requests will depend on the full node being archival. As your user base scales, that will become a very costly infrastructure."
+        }
+      }
+    },
+    "snippet": {
+      "title": "Powerful queries in GraphQL",
+      "subtitle": "Provide application developers a powerful GraphQL API for your blockchain state and history"
+    },
+    "features": {
+      "title": "Hydra Features",
+      "values": {
+        "fullTextSearch": {
+          "title": "Full-text Search",
+          "text": "Decorate any number of String fields in the input schema with @fulltext(query: \"myquery\") to seach across different fields and entities."
+        },
+        "filtering": {
+          "title": "Filtering",
+          "text": "Any entity field can be used for OpenCRUD filtering"
+        },
+        "pagination": {
+          "title": "Pagination",
+          "text": "Each GraphQL query supports pagination out-of-the-box"
+        },
+        "ordering": {
+          "title": "Ordering",
+          "text": "Order by any primitive field"
+        },
+        "polymorphism": {
+          "title": "Polymorphism",
+          "text": "Native support of GraphQL interfaces and type inline fragments"
+        },
+        "algebraicTypes": {
+          "title": "Algebraic Types",
+          "text": "Construct rich and queriable algebraic types with @variant directive"
+        }
+      }
+    },
+    "videoTitle": "Play a video tutorial",
+    "getStarted": {
+      "title": "Get started with Hydra now!",
+      "subtitle": "Use the following links to connect with us and find out even more.",
+      "links": {
+        "documentation": {
+          "name": "Documentation",
+          "link": "Documentation"
+        },
+        "githubRepository": {
+          "name": "Github Repository",
+          "link": "Github repo"
+        },
+        "kusamaPlayground": {
+          "name": "Kusama Playground",
+          "link": "Go to the Playground"
+        },
+        "discord": {
+          "name": "Discord",
+          "link": "Go to the Channel"
+        }
+      }
+    }
+  }
+}
