@@ -93,15 +93,15 @@ If you're not as familiar with git and the whole process of making contributions
 
 ![step one: fork joystream-org repo](../assets/images/i18n-readme/step-one.png)
 
-**Step 2:** Go to your fork and switch over to the development branch.
+**Step 2:** Go to your fork and switch over to the translation branch.
 
-![step two: go to your fork and switch branch to development](../assets/images/i18n-readme/step-two.png)
+![step two: go to your fork and switch branch to translation](../assets/images/i18n-readme/step-two.png)
 
 **Step 3:** If your branch is behind, make sure to pull the latest changes.
 
 ![step three: pull latest changes if necessary](../assets/images/i18n-readme/step-three.png)
 
-**Step 4:** Find the file you wish to translate (that still hasn't been translated) and create a branch that explains exactly what you wish to do. In this example we've used `sumer-translation-ru` to signify that we are translating the sumer testnet file into Russian. You don't have to use this exact naming convention but make sure that it is clear what changes you've made!
+**Step 4:** Find the file you wish to translate (that still hasn't been translated) and create a branch that explains exactly what you are doing. In this example we've used `i18n-russian-language` to signify that we are translating the joystream-org to Russian.
 
 ![step four: create a branch with an explanatory name](../assets/images/i18n-readme/step-four.png)
 
@@ -121,9 +121,9 @@ If you're not as familiar with git and the whole process of making contributions
 
 ![step eight: go back to fork and click compare and pull request](../assets/images/i18n-readme/step-eight.png)
 
-**Step 9:** In this final step, make sure to change the branch to development and then fill out all the necessary PR metadata. Your title and description should meaningfully explain your changes (you can use the example below to get a better idea of what to do). Please don't forget to reference the issue that tracks the translations you're making and also add the `internationalization` label. And finally, after all this hard work you can press *Create pull request*. Thank you! 🎉
+**Step 9:** In this final step, make sure to change the branch to translation and then fill out all the necessary PR metadata. Your title and description should meaningfully explain your changes (you can use the example below to get a better idea of what to do). Please don't forget to also add the `internationalization` label. And finally, after all this hard work you can press *Create pull request*. Thank you! 🎉
 
-![step nine: change branch to dev, explain what you did, reference necessary issue, add internationalization label and create pull request](../assets/images/i18n-readme/step-nine.png)
+![step nine: change branch to translation, explain what you did, add internationalization label and create pull request](../assets/images/i18n-readme/step-nine.png)
 
 **Step 10:** You can now continue adding translations to the same PR until you're done with the scope of the tasks explained in the Bounty.
 
