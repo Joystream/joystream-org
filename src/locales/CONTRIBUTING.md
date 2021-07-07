@@ -32,7 +32,7 @@ The translations are written in .json files and here is an example excerpt from 
 ```
 To translate this file, you would need to:
 - Find the folder in `/src/locales` that corresponds to the language you want to translate to
-- Find a file in that folder (ex. `/src/locales/bs`) that has not yet been translated to that language (**check if there aren't any active PR's addressing the file as well**)
+- Find a file in that folder (ex. `/src/locales/bs`) that has not yet been translated to that language
 - The translations in that file will be in English. You can now translate those values to the language corresponding to the locale (**only change the values without changing any of the keys**)
 
 After that is done, you will will then have something like this: `(src/locales/bs/sumer.json)`
@@ -63,7 +63,7 @@ For the users who are more familiar with the process of making code contribution
 git clone https://github.com/${your-github-username}/joystream-org.git
 ```
 
-2. Create a branch (use descriptive names, e.g. `sumer-translation-ru`) and pull changes from the upstream `translation` branch
+2. Create a branch (use descriptive names, e.g. `i18n-russian-language`) and pull changes from the upstream `translation` branch
 
 ```
 git checkout -b <branch_name>
