@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import parseBalance from '../../../utils/parseBalance/index';
 import cn from 'classnames';
-import { ArrowButton } from '../../../pages/founding-members';
-import { ApiPromise, WsProvider } from '@polkadot/api';
-import { types } from '@joystream/types';
-import { JoystreamWSProvider } from '../../../data/pages/founding-members';
+
+import { ArrowButton } from '../../pages/founding-members';
+import SummaryJson from './SummaryJson';
+
+import parseBalance from '../../utils/parseBalance/index';
 
 async function getMember(api, membershipHandle, setProfile) {
   const id = await api.query.members.memberIdByHandle(membershipHandle);
@@ -22,25 +22,44 @@ async function getMember(api, membershipHandle, setProfile) {
   });
 }
 
-const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle, width, setCurrentProgress, t }) => {
+const Membership = ({
+  Api,
+  foundingMembersData,
+  profile,
+  setProfile,
+  membershipHandle,
+  setMembershipHandle,
+  width,
+  setCurrentProgress,
+  t,
+}) => {
   const [textInput, setTextInput] = useState('');
-  const [Api, setApi] = useState();
+  const [shouldStartSummaryProcess, setShouldStartSummaryProcess] = useState(false);
+  const [jsonSummary, setJsonSummary] = useState();
 
   useEffect(() => {
-    async function setUpApi() {
-      const provider = new WsProvider(JoystreamWSProvider);
-      const api = await ApiPromise.create({ provider, types });
-      await api.isReady;
-      setApi(api);
-    }
-    setUpApi();
-  }, []);
-
-  useEffect(() => {
-    if (membershipHandle) {
+    if (membershipHandle && Api) {
       getMember(Api, membershipHandle, setProfile);
     }
-  }, [membershipHandle]);
+  }, [Api, membershipHandle, setProfile]);
+
+  const startNextStep = () => {
+    setCurrentProgress(2);
+    setTextInput('');
+  };
+
+  if (shouldStartSummaryProcess) {
+    return (
+      <SummaryJson
+        Api={Api}
+        foundingMembersData={foundingMembersData}
+        setJsonSummary={setJsonSummary}
+        startNextStep={startNextStep}
+        profile={profile}
+        t={t}
+      />
+    );
+  }
 
   return (
     <>
@@ -94,8 +113,7 @@ const Membership = ({ profile, setProfile, membershipHandle, setMembershipHandle
             setMembershipHandle(textInput);
           } else {
             if (profile) {
-              setCurrentProgress(2);
-              setTextInput('');
+              setShouldStartSummaryProcess(true);
             }
 
             if (textInput) {

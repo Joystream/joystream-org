@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
-import { ReactComponent as CloseIcon } from '../../../assets/svg/postponed.svg';
-import { ReactComponent as Upload } from '../../../assets/svg/upload.svg';
-import { ReactComponent as Achieved } from '../../../assets/svg/achieved.svg';
+import { ReactComponent as CloseIcon } from '../../assets/svg/postponed.svg';
+import { ReactComponent as Upload } from '../../assets/svg/upload.svg';
+import { ReactComponent as Achieved } from '../../assets/svg/achieved.svg';
 import cn from 'classnames';
 import { Trans } from 'gatsby-plugin-react-i18next';
-import { ArrowButton } from '../../../pages/founding-members';
+import { ArrowButton } from '../../pages/founding-members';
 import { Keyring } from '@polkadot/keyring';
 
 const KeybaseAndText = ({
@@ -19,7 +19,6 @@ const KeybaseAndText = ({
   setFileStatus,
   setKeybaseHandle,
   setCurrentProgress,
-  password,
   setPassword,
   jsonFile,
   t,
@@ -62,7 +61,7 @@ const KeybaseAndText = ({
     if (isPasswordLoading) {
       handlePassword();
     }
-  }, [isPasswordLoading]);
+  }, [handlePassword, isPasswordLoading]);
 
   return (
     <>
