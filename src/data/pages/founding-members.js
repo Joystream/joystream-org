@@ -56,3 +56,13 @@ export const JoystreamWSProvider = 'wss://rome-rpc-endpoint.joystream.org:9944/'
 
 export const foundingMembersJson =
   'https://raw.githubusercontent.com/Joystream/founding-members/main/data/fm-info.json';
+
+export const SUMMARY_TYPES = [
+  'Validator',
+  'Node Operator',
+  'Council Member',
+  'Roles',
+  'Content Bountes',
+  'Other Bountes',
+  'Other',
+];

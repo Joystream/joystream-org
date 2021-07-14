@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import cn from 'classnames';
 import { Trans } from 'gatsby-plugin-react-i18next';
-import { ReactComponent as CloseIcon } from '../../../assets/svg/postponed.svg';
-import { ReactComponent as Upload } from '../../../assets/svg/upload.svg';
-import { ReactComponent as Achieved } from '../../../assets/svg/achieved.svg';
-import { ArrowButton } from '../../../pages/founding-members';
+import { ReactComponent as CloseIcon } from '../../assets/svg/postponed.svg';
+import { ReactComponent as Upload } from '../../assets/svg/upload.svg';
+import { ReactComponent as Achieved } from '../../assets/svg/achieved.svg';
+import { ArrowButton } from '../../pages/founding-members';
 
 Modal.setAppElement('body');
 
-const Json = ({
+const AccountJson = ({
   jsonFileInput,
   handleFileSelection,
   jsonFile,
@@ -142,4 +142,4 @@ const Json = ({
   );
 };
 
-export default Json;
+export default AccountJson;

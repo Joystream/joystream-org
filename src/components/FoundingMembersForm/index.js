@@ -1,69 +1,21 @@
 import React, { useEffect, useState, useRef } from 'react';
 import cn from 'classnames';
-import { ArrowButton } from '../../pages/founding-members';
-import { ReactComponent as Achieved } from '../../assets/svg/achieved.svg';
-import useWindowDimensions from '../../utils/useWindowDimensions';
-import { blake2AsHex } from '@polkadot/util-crypto';
-import { Keyring } from '@polkadot/keyring';
-import { u8aToHex, hexToU8a } from '@polkadot/util';
-import * as openpgp from 'openpgp';
-import { Trans } from 'gatsby-plugin-react-i18next';
-import { publicKey } from '../../data/pages/founding-members';
+import { ApiPromise, WsProvider } from '@polkadot/api';
+import { types } from '@joystream/types';
+import { JoystreamWSProvider } from '../../data/pages/founding-members';
+
 import Membership from './Membership';
-import Json from './Json';
+import AccountJson from './AccountJson';
 import KeybaseAndText from './KeybaseAndText';
+import TermsAndConditions from './TermsAndConditions';
+
+import { ReactComponent as Achieved } from '../../assets/svg/achieved.svg';
+
+import useWindowDimensions from '../../utils/useWindowDimensions';
+import sendFormData from './utils/sendFormData';
+import encryptData from './utils/encryptData';
 
 import './style.scss';
-
-const TermsAndConditions = ({ termsRead, setCurrentProgress, setTermsRead, t }) => {
-  const termsAndConditions = useRef();
-
-  useEffect(() => {
-    function handleScroll() {
-      setTermsRead(
-        termsAndConditions.current.scrollTop >=
-          termsAndConditions.current.scrollHeight - termsAndConditions.current.offsetHeight
-      );
-    }
-
-    if (termsAndConditions?.current) {
-      handleScroll();
-      termsAndConditions.current.addEventListener('scroll', handleScroll);
-      return () => termsAndConditions.current.removeEventListener('scroll', handleScroll);
-    }
-  }, []);
-
-  return (
-    <>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
-        {t('foundingMembers.form.termsAndConditions.title')}
-      </h3>
-      <div ref={termsAndConditions} className="FoundingMembersFormPage__form__text-wrapper">
-        <Trans
-          i18nKey="foundingMembers.form.termsAndConditions.text"
-          components={[
-            <h4 className="margin-bottom-S">title</h4>,
-            <p className="margin-bottom-XS" />,
-            <p className="margin-bottom-M">
-              <em />
-            </p>,
-          ]}
-        />
-      </div>
-      <ArrowButton
-        className={cn('FoundingMembersFormPage__form__button', {
-          'FoundingMembersFormPage__form__button--inactive': !termsRead,
-        })}
-        text={t('foundingMembers.general.next')}
-        onClick={() => {
-          if (termsRead) {
-            setCurrentProgress(5);
-          }
-        }}
-      />
-    </>
-  );
-};
 
 const renderProgressItem = (text, progressId, currentProgress) => {
   return (
@@ -86,28 +38,9 @@ const renderProgressItem = (text, progressId, currentProgress) => {
   );
 };
 
-const sendData = async encrypted => {
-  function encode(data) {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
-  }
+const FoundingMembersForm = ({ t, foundingMembersData }) => {
+  const [Api, setApi] = useState();
 
-  try {
-    await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': 'founding-members',
-        data: encrypted,
-      }),
-    });
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-const FoundingMembersForm = ({ t }) => {
   //refs
   const jsonFileInput = useRef();
   const textFileInput = useRef();
@@ -144,6 +77,8 @@ const FoundingMembersForm = ({ t }) => {
     if (currentProgress === 1) {
       return (
         <Membership
+          Api={Api}
+          foundingMembersData={foundingMembersData}
           profile={profile}
           setProfile={setProfile}
           membershipHandle={membershipHandle}
@@ -155,7 +90,7 @@ const FoundingMembersForm = ({ t }) => {
       );
     } else if (currentProgress === 2) {
       return (
-        <Json
+        <AccountJson
           jsonFileInput={jsonFileInput}
           handleFileSelection={handleFileSelection}
           jsonFile={jsonFile}
@@ -181,7 +116,6 @@ const FoundingMembersForm = ({ t }) => {
           setFileStatus={setFileStatus}
           setKeybaseHandle={setKeybaseHandle}
           setCurrentProgress={setCurrentProgress}
-          password={password}
           setPassword={setPassword}
           jsonFile={jsonFile}
           t={t}
@@ -318,44 +252,25 @@ const FoundingMembersForm = ({ t }) => {
     };
   };
 
-  const encryptData = async () => {
-    const parsedJson = JSON.parse(jsonFile.data);
-
-    const keyring = new Keyring({ type: parsedJson.encoding.content[1] });
-    keyring.addFromJson(parsedJson);
-
-    const user = keyring.getPair(parsedJson.address);
-    user.decodePkcs8(password);
-
-    const hash = blake2AsHex(textFile.data.replace(/\n|\r/g, ''), 256);
-
-    const signature = user.sign(hexToU8a(hash));
-
-    const { data: encrypted } = await openpgp.encrypt({
-      message: openpgp.message.fromText(
-        JSON.stringify({
-          membershipHandle,
-          rootAccount: profile.controller_account.toString(),
-          keybaseHandle,
-          textFile,
-          signature: u8aToHex(signature).toString(),
-        })
-      ),
-      publicKeys: (await openpgp.key.readArmored(publicKey)).keys,
-    });
-
-    setEncrypted(encrypted);
-  };
+  useEffect(() => {
+    async function setUpApi() {
+      const provider = new WsProvider(JoystreamWSProvider);
+      const api = await ApiPromise.create({ provider, types });
+      await api.isReady;
+      setApi(api);
+    }
+    setUpApi();
+  }, []);
 
   useEffect(() => {
     if (currentProgress === 5) {
-      encryptData();
+      setEncrypted(encryptData(jsonFile.data, membershipHandle, password, textFile, profile, keybaseHandle));
     }
-  }, [currentProgress]);
+  }, [currentProgress, jsonFile.data, keybaseHandle, membershipHandle, password, profile, textFile]);
 
   useEffect(() => {
     if (encrypted) {
-      sendData(encrypted);
+      sendFormData(encrypted);
     }
   }, [encrypted]);
 

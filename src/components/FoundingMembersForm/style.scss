@@ -91,7 +91,7 @@
     &__input {
       width: 100%;
       height: 60px;
-      padding-left: 18px;
+      padding: 0 18px;
       font-family: $font-secondary;
       font-size: 20px;
       line-height: 28px;
@@ -358,6 +358,29 @@
         line-height: 20px;
         letter-spacing: -.4000000059604645px;
       }
+    }
+
+    &__select {
+      width: 100%;
+      height: 48px;
+      padding: 0 16px;
+      font-family: $font-secondary;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0;
+      cursor: pointer;
+      background: url('../../assets/svg/expand.svg') 96% no-repeat;
+      background-color: transparent;
+      background-size: 15px;
+      border: 1px solid $c_wood-smoke;
+      appearance: none;
+    }
+
+    &__code-text {
+      font-family: $font-secondary;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: -.30000001192092896px;
     }
   }
 
