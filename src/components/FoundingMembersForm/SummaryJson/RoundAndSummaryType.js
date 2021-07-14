@@ -33,12 +33,12 @@ const RoundAndSummaryType = ({ foundingMembersData, setSetupData, shouldSetup, t
   const [scoringRound, setScoringRound] = useState();
   const [summaryType, setSummaryType] = useState();
 
-  useEffect(() => {
-    if (foundingMembersData) {
-      // GET FOUNDING MEMBERS DATA HERE [VALID SCORING ROUNDS AND BLOCKS]
-      setPossibleScoringRounds(validScoringRounds);
-    }
-  }, [foundingMembersData]);
+  // useEffect(() => {
+  //   if (foundingMembersData) {
+  //     // GET FOUNDING MEMBERS DATA HERE [VALID SCORING ROUNDS AND BLOCKS]
+  //     setPossibleScoringRounds(validScoringRounds);
+  //   }
+  // }, [foundingMembersData]);
 
   return (
     <>
@@ -55,7 +55,7 @@ const RoundAndSummaryType = ({ foundingMembersData, setSetupData, shouldSetup, t
         className="FoundingMembersFormPage__form__select margin-bottom-M"
       >
         <option hidden disabled value="">Select an option..</option>
-        {possibleScoringRounds?.map(round => (
+        {validScoringRounds.map(round => (
           <option key={round.scoringPeriodId} value={round.scoringPeriodId}>
             {formatDate(round.started)} - {formatDate(round.ends)} ({round.blocks})
           </option>
