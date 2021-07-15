@@ -30,8 +30,8 @@ const validScoringRounds = [
 
 const RoundAndSummaryType = ({ foundingMembersData, setSetupData, shouldSetup, t }) => {
   const [possibleScoringRounds, setPossibleScoringRounds] = useState();
-  const [scoringRound, setScoringRound] = useState();
-  const [summaryType, setSummaryType] = useState();
+  const [scoringRound, setScoringRound] = useState("");
+  const [summaryType, setSummaryType] = useState("");
 
   // useEffect(() => {
   //   if (foundingMembersData) {
@@ -45,13 +45,12 @@ const RoundAndSummaryType = ({ foundingMembersData, setSetupData, shouldSetup, t
       <h3 className="FoundingMembersFormPage__form__subtitle FoundingMembersFormPage__form__input-title-mobile  margin-bottom-XS">
         Scoring Round
       </h3>
+      {/* eslint-disable-next-line */}
       <select
-        defaultValue=""
         value={scoringRound}
         onChange={e => {
           setScoringRound(e.target.value);
         }}
-        onBlur=""
         className="FoundingMembersFormPage__form__select margin-bottom-M"
       >
         <option hidden disabled value="">Select an option..</option>
@@ -64,13 +63,12 @@ const RoundAndSummaryType = ({ foundingMembersData, setSetupData, shouldSetup, t
       <h3 className="FoundingMembersFormPage__form__subtitle FoundingMembersFormPage__form__input-title-mobile  margin-bottom-XS">
         Summary Type
       </h3>
+      {/* eslint-disable-next-line */}
       <select
-        defaultValue=""
         value={summaryType}
         onChange={e => {
           setSummaryType(e.target.value);
         }}
-        onBlur=""
         className="FoundingMembersFormPage__form__select"
       >
         <option hidden disabled value="">Select an option..</option>

@@ -62,7 +62,7 @@ export const SUMMARY_TYPES = [
   'Node Operator',
   'Council Member',
   'Roles',
-  'Content Bountes',
-  'Other Bountes',
+  'Content Bounties',
+  'Bounties',
   'Other',
 ];

@@ -5,6 +5,10 @@ import NodeOperator from './NodeOperator';
 import AddNewOrSubmit from './AddNewOrSubmit';
 import Validator from './Validator';
 import CouncilMember from './CouncilMember';
+import Roles from './Roles';
+import Content from './Content';
+import Bounties from './Bounties';
+import Other from './Other';
 
 const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, profile, t }) => {
   const shouldSetup = useRef(true);
@@ -34,6 +38,22 @@ const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, 
 
     if(summaryType === 'Council Member') {
       return <CouncilMember setJsonData={setJsonData} setupData={setupData} t={t} />;
+    }
+
+    if(summaryType === 'Roles') {
+      return <Roles setJsonData={setJsonData} setupData={setupData} t={t} />;
+    }
+
+    if(summaryType === 'Content Bounties') {
+      return <Content setJsonData={setJsonData} setupData={setupData} t={t} />;
+    }
+
+    if(summaryType === 'Bounties') {
+      return <Bounties setJsonData={setJsonData} setupData={setupData} t={t} />;
+    }
+
+    if(summaryType === 'Other') {
+      return <Other setJsonData={setJsonData} setupData={setupData} t={t} />;
     }
   }
 

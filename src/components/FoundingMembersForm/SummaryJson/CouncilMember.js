@@ -1,8 +1,35 @@
 import React, { useState } from 'react';
+import cn from 'classnames';
 
-const CouncilMember = () => {
+import Socials from './Socials';
+import { ArrowButton } from '../../../pages/founding-members';
+
+const CouncilMember = ({ setJsonData, setupData, t }) => {
   const [councilTerms, setCouncilTerms] = useState('');
   const [earnedAmount, setEarnedAmount] = useState(0);
+  const [proposalIDs, setProposalIDs] = useState('');
+  const [socials, setSocials] = useState();
+  const [extraInformation, setExtraInformation] = useState('');
+
+  const handleSubmit = () => {
+    if (councilTerms && (earnedAmount || earnedAmount === 0) && proposalIDs) {
+      let council = {
+        term: councilTerms,
+        reward: earnedAmount,
+        proposalIDs: proposalIDs,
+      };
+
+      if (socials) {
+        council.links = socials;
+      }
+
+      if (extraInformation) {
+        council.other = extraInformation;
+      }
+
+      setJsonData(prev => [...prev, { ...setupData, council }]);
+    }
+  };
 
   return (
     <>
@@ -24,6 +51,32 @@ const CouncilMember = () => {
         min={0}
         value={earnedAmount}
         onChange={e => setEarnedAmount(e.target.value)}
+      />
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Proposal IDs</h3>
+      <input
+        className="FoundingMembersFormPage__form__input margin-bottom-M"
+        placeholder="Proposal IDs.."
+        value={proposalIDs}
+        onChange={e => setProposalIDs(e.target.value)}
+      />
+      <Socials setSocials={setSocials} />
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Extra information</h3>
+      <input
+        className="FoundingMembersFormPage__form__input margin-bottom-M"
+        placeholder="Anything else you'd like to add.."
+        value={extraInformation}
+        onChange={e => setExtraInformation(e.target.value)}
+      />
+      <ArrowButton
+        className={cn('FoundingMembersFormPage__form__button', {
+          'FoundingMembersFormPage__form__button--inactive': !(
+            councilTerms &&
+            (earnedAmount || earnedAmount === 0) &&
+            proposalIDs
+          ),
+        })}
+        text={t('foundingMembers.general.next')}
+        onClick={handleSubmit}
       />
     </>
   );
