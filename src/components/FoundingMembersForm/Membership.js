@@ -31,11 +31,11 @@ const Membership = ({
   setMembershipHandle,
   width,
   setCurrentProgress,
+  setJsonSummary,
   t,
 }) => {
   const [textInput, setTextInput] = useState('');
   const [shouldStartSummaryProcess, setShouldStartSummaryProcess] = useState(false);
-  const [jsonSummary, setJsonSummary] = useState();
 
   useEffect(() => {
     if (membershipHandle && Api) {

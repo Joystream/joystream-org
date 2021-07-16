@@ -70,6 +70,33 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
   const [password, setPassword] = useState();
   const [encrypted, setEncrypted] = useState('');
   const [profile, setProfile] = useState();
+  const [jsonSummary, setJsonSummary] = useState();
+
+  useEffect(() => {
+    async function setUpApi() {
+      const provider = new WsProvider(JoystreamWSProvider);
+      const api = await ApiPromise.create({ provider, types });
+      await api.isReady;
+      setApi(api);
+    }
+    setUpApi();
+  }, []);
+
+  useEffect(() => {
+    if (currentProgress === 5) {
+      setEncrypted(encryptData(jsonFile.data, membershipHandle, password, textFile, profile, keybaseHandle));
+    }
+  }, [currentProgress, jsonFile.data, keybaseHandle, membershipHandle, password, profile, textFile]);
+
+  useEffect(() => {
+    if (encrypted) {
+      sendFormData(encrypted);
+    }
+  }, [encrypted]);
+
+  if(jsonSummary) {
+    console.log(jsonSummary);
+  }
 
   const { width } = useWindowDimensions();
 
@@ -84,6 +111,7 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
           membershipHandle={membershipHandle}
           setMembershipHandle={setMembershipHandle}
           setCurrentProgress={setCurrentProgress}
+          setJsonSummary={setJsonSummary}
           width={width}
           t={t}
         />
@@ -251,28 +279,6 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
       setFileLoadedAmount(1);
     };
   };
-
-  useEffect(() => {
-    async function setUpApi() {
-      const provider = new WsProvider(JoystreamWSProvider);
-      const api = await ApiPromise.create({ provider, types });
-      await api.isReady;
-      setApi(api);
-    }
-    setUpApi();
-  }, []);
-
-  useEffect(() => {
-    if (currentProgress === 5) {
-      setEncrypted(encryptData(jsonFile.data, membershipHandle, password, textFile, profile, keybaseHandle));
-    }
-  }, [currentProgress, jsonFile.data, keybaseHandle, membershipHandle, password, profile, textFile]);
-
-  useEffect(() => {
-    if (encrypted) {
-      sendFormData(encrypted);
-    }
-  }, [encrypted]);
 
   return (
     <div className="FoundingMembersFormPage__form">

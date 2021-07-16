@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import cn from 'classnames';
 
 import { ArrowButton } from '../../../pages/founding-members';
 
@@ -17,7 +18,9 @@ const NodeOperator = ({ setJsonData, setupData, t }) => {
         onChange={e => setNodeName(e.target.value)}
       />
       <ArrowButton
-        className="FoundingMembersFormPage__form__button"
+        className={cn('FoundingMembersFormPage__form__button', {
+          'FoundingMembersFormPage__form__button--inactive': !(nodeName),
+        })}
         text={t('foundingMembers.general.next')}
         onClick={e => {
           if(nodeName){

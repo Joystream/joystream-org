@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import cn from 'classnames';
 
 import Socials from './Socials';
+import TextArea from './TextArea';
 import { ArrowButton } from '../../../pages/founding-members';
 
 const CouncilMember = ({ setJsonData, setupData, t }) => {
@@ -61,11 +62,9 @@ const CouncilMember = ({ setJsonData, setupData, t }) => {
       />
       <Socials setSocials={setSocials} />
       <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Extra information</h3>
-      <input
-        className="FoundingMembersFormPage__form__input margin-bottom-M"
-        placeholder="Anything else you'd like to add.."
-        value={extraInformation}
-        onChange={e => setExtraInformation(e.target.value)}
+      <TextArea
+        className="FoundingMembersFormPage__form__text-area margin-bottom-M"
+        setValue={setExtraInformation}
       />
       <ArrowButton
         className={cn('FoundingMembersFormPage__form__button', {

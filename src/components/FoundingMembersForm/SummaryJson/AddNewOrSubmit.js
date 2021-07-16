@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../Button';
 
-const AddNewOrSubmit = ({ startNextStep, shouldSetup, setSetupData, t }) => {
+const AddNewOrSubmit = ({ setShouldMoveToNextStep, shouldSetup, setSetupData, t }) => {
   return (
     <>
       <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-M">
@@ -17,7 +17,7 @@ const AddNewOrSubmit = ({ startNextStep, shouldSetup, setSetupData, t }) => {
         >
           Add more data
         </Button>
-        <Button onClick={() => startNextStep()}>Submit data</Button>
+        <Button onClick={() => setShouldMoveToNextStep(true)}>Submit data</Button>
       </div>
     </>
   );

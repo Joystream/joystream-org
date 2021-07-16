@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 import RoundAndSummaryType from './RoundAndSummaryType';
 import NodeOperator from './NodeOperator';
@@ -15,6 +15,14 @@ const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, 
 
   const [setupData, setSetupData] = useState();
   const [jsonData, setJsonData] = useState([]);
+  const [shouldMoveToNextStep, setShouldMoveToNextStep] = useState(false);
+
+  useEffect(() => {
+    if(jsonData.length !== 0 && shouldMoveToNextStep) {
+      setJsonSummary(jsonData);
+      startNextStep();
+    }
+  },[jsonData, shouldMoveToNextStep]);
 
   if (setupData && !shouldSetup.current) {
     shouldSetup.current = true;
@@ -58,7 +66,7 @@ const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, 
   }
 
   if (setupData && shouldSetup.current) {
-    return <AddNewOrSubmit startNextStep={startNextStep} shouldSetup={shouldSetup} setSetupData={setSetupData} t={t} />;
+    return <AddNewOrSubmit setShouldMoveToNextStep={setShouldMoveToNextStep} shouldSetup={shouldSetup} setSetupData={setSetupData} t={t} />;
   }
 
   console.log(jsonData);

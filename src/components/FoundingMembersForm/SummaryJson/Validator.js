@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import cn from 'classnames';
 
 import Button from '../../Button';
 import { ArrowButton } from '../../../pages/founding-members';
@@ -29,6 +30,7 @@ const StashKeyQuery = ({ profileAddress, setStashAddress, t }) => {
         Stash address:
       </h3>
       <input
+        maxLength={75}
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Your stash address.."
         value={newStashAddress}
@@ -48,12 +50,23 @@ const StashKeyQuery = ({ profileAddress, setStashAddress, t }) => {
             onChange={e => setSignedMessage(e.target.value)}
           />
           <ArrowButton
-            className="FoundingMembersFormPage__form__button"
+            className={cn('FoundingMembersFormPage__form__button', {
+              'FoundingMembersFormPage__form__button--inactive': !(signedMessage),
+            })}
             text={t('foundingMembers.general.next')}
             onClick={e => {
-              if (signedMessage && verifySignature(profileAddress, newStashAddress, signedMessage)) {
-                console.log('happened');
-                setStashAddress(newStashAddress);
+              if (signedMessage) {
+                let isSignatureValid;
+
+                try {
+                  isSignatureValid = verifySignature(profileAddress, newStashAddress, signedMessage)
+                }catch (err) {
+                  console.log(err);
+                }
+
+                if(isSignatureValid){
+                  setStashAddress(newStashAddress);
+                }
               }
             }}
           />
