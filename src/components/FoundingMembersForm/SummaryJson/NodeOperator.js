@@ -8,7 +8,7 @@ const NodeOperator = ({ setJsonData, setupData, t }) => {
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle FoundingMembersFormPage__form__input-title-mobile  margin-bottom-XS">
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
         Node Operator
       </h3>
       <input

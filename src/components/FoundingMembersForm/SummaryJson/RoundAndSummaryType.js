@@ -42,7 +42,7 @@ const RoundAndSummaryType = ({ foundingMembersData, setSetupData, shouldSetup, t
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle FoundingMembersFormPage__form__input-title-mobile  margin-bottom-XS">
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
         Scoring Round
       </h3>
       {/* eslint-disable-next-line */}
@@ -60,7 +60,7 @@ const RoundAndSummaryType = ({ foundingMembersData, setSetupData, shouldSetup, t
           </option>
         ))}
       </select>
-      <h3 className="FoundingMembersFormPage__form__subtitle FoundingMembersFormPage__form__input-title-mobile  margin-bottom-XS">
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
         Summary Type
       </h3>
       {/* eslint-disable-next-line */}

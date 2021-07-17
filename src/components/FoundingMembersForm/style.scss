@@ -363,7 +363,7 @@
     &__select {
       width: 100%;
       height: 48px;
-      padding: 0 16px;
+      padding: 0 32px 0 16px;
       font-family: $font-secondary;
       font-size: 16px;
       line-height: 28px;
@@ -478,9 +478,9 @@
   @media #{$screen-max-sm} {
     &__form {
       &__input-title-mobile {
-        position: absolute;
-        top: 8px;
-        left: 30px;
+        z-index: 1;
+        width: max-content;
+        margin: 0 0 -10px 5px !important;
         padding: 0 5px;
         color: #7b8a95;
         background-color: white;
@@ -529,6 +529,11 @@
 
       &__button {
         margin-top: 20px;
+      }
+
+      &__code-text {
+        font-size: 10px;
+        line-height: 12px;
       }
     }
   }
