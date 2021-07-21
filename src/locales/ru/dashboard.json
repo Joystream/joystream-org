@@ -1,17 +1,17 @@
 {
     "dashboard" : {
         "siteMetadata" : {
-            "title" : "Live Dashboard",
-            "description" : "Data compiled from current Pioneer and Atlas instances and visualized through charts."
+            "title" : "Live доска",
+            "description" : "Данные, собранные с текущих экземпляров Pioneer и Atlas, представленные в виде графиков."
         },
-        "title" : "Joystream Dashboard",
+        "title" : "Доска Joystream",
         "subtitles" : {
-            "videos" : "Videos",
-            "channels" : "Channels",
-            "users" : "Users",
-            "posts" : "Posts",
-            "threads" : "Threads"
+            "videos" : "Видео",
+            "channels" : "Каналы",
+            "users" : "Пользователи",
+            "posts" : "Сообщения",
+            "threads" : "Темы"
         },
-        "amount" : "Amount"
+        "amount" : "Количество"
     }
 }

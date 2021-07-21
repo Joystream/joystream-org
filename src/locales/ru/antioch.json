@@ -1,42 +1,42 @@
 {
   "antioch": {
     "siteMetadata": {
-      "description": "Explore the Antioch testnet"
+      "description": "Изучаем тестнет Antioch"
     },
     "hero": {
-      "title": "Antioch Network",
-      "text": "The Antioch release seeks to patch a chain split bug which unfortunately sabotaged the previous testnet."
+      "title": "Сеть Antioch",
+      "text": "Релиз Antioch направлен на исправление ошибки разделения цепочки, которая, к сожалению, вызвала саботаж в работе предыдущего тестнета."
     },
     "heroCard": {
-      "title": "REPLACED BY SUMER ON"
+      "title": "ЗАМЕЩЕН SUMER "
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Важная документация",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Релиз план",
+        "text": "Читай релиз план в том виде, каким он был создан во время планирования и узнавай, как проходила разработка."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Antioch testnet and its objectives."
+        "title": "Объявление",
+        "text": "Читай краткое руководство по тестнету Antioch и его целям."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Antioch testnet.",
+      "title": "Цели Тестнета",
+      "subtitle": "Цели, изложенные ниже, являются упрощенным перечнем основных результатов в тестнете Antioch.",
       "goals": {
         "substrateVersion": {
-          "title": "Upgrade Substrate Version",
-          "text": "<0>To patch the chain split issue encountered on Babylon we need to update the version of Substrate our network is built on from <1>v2-rc4</1> to <1>v2.0.1</1></0>"
+          "title": "Обновление Substrate",
+          "text": "<0>Чтобы исправить проблему разделения цепочки, возникшую в тестнете Babylon, необходимо обновить версию Substrate, на которой построена наша сеть с <1>v2-rc4</1> до <1>v2.0.1</1></0>"
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Antioch Network"
+      "title": "Спонсируемые роли в сети Antioch"
     },
     "map": {
-      "title": "Antioch",
-      "text": "<0>Antioch was an ancient Greek city on the eastern side of the Orontes River.</0> The city's position benefited its occupants greatly, particularly on account of such features as the spice trade, the Silk Road, and the Royal Road.<1/><1/>At its height it rivaled Alexandria as the chief city of the Near East. Many also consider the city to be \"the cradle of Christianity\".<1/><1/><2><0/> Read the blog post</2>"
+      "title": "Антиохия",
+      "text": "<0>Антиохия - древнегреческий город, существовавший на восточном берегу реки Оронт.</0> Положение города очень играло на руку жителям, принимая во внимание возможность торговать пряностями на Шелковом и Королевском путях.<1/><1/>На пике своего развития он соперничал с Александрией в качестве главного города Ближнего Востока. Многие также считают этот город \"колыбелью христианства\".<1/><1/><2><0/> Читать сообщение в блоге</2>"
     }
   }
 }

@@ -1,41 +1,41 @@
 {
   "sparta": {
     "siteMetadata": {
-      "description": "Explore the Sparta testnet"
+      "description": "Изучаем тестнет Sparta"
     },
     "hero": {
-      "title": "Sparta Network",
-      "text": "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
-      "chipText": "What is this?"
+      "title": "Сеть Sparta",
+      "text": "Изучай доступные варианты участия и выбирай те, которые тебе больше всего подходят. Влияй на развитие платформы и зарабатывай при этом реальные деньги.",
+      "chipText": "Что это?"
     },
     "heroCard": {
-      "title": "NETWORK DOWN",
-      "markdown": "\n ### FAILURE IDENTIFIED\n\n  On Friday the 29th of March, the Sparta network went down due to a [known bug in substrate](https://github.com/paritytech/substrate/pull/2130) that we had not pulled down before release.\n\n  More details can be found in this [blog post](https://blog.joystream.org/sparta-sacked/)."
+      "title": "ОТКАЗ СЕТИ",
+      "markdown": "\n ### ОБНАРУЖЕНА ПРОБЛЕМА\n\n  В пятницу, 29 марта, сеть Sparta вышла из строя из-за [известной ошибки в Substrate](https://github.com/paritytech/substrate/pull/2130) которую мы не учли перед выпуском.\n\n  Подробная информация [сообщение в блоге](https://blog.joystream.org/sparta-sacked/)."
     },
     "modal": {
-      "title": "Helmet of Sparta",
-      "text": "<0>The Spartan army helmet</0> represents what Sparta is most known for today, their military might. For it's time, it was also known for its advanced governance system."
+      "title": "Шлем Спарты",
+      "text": "<0>Шлем армии Старты</0>олицетворяет то, чем наиболее известна сегодня Спарта, их военную мощь. Для своего времени они также были известны своей передовой системой управления."
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals below are a simplified representation of the Key Results listed in our release OKR.",
+      "title": "Цели тестнета",
+      "subtitle": "Приведенные ниже цели представляют собой упрощенное представление ключевых результатов, перечисленных в нашем релизе OKR.",
       "goals": {
         "blockchain": {
-          "title": "Build and release a blockchain with a working Council",
-          "text": "As a \"user governed media platform\", allowing users to elect <0>Council Members</0> to represent their interest in day-to-day operations was a major goal for us."
+          "title": "Построение и выпуск блокчейн с рабочим советом",
+          "text": "В качестве \"медиа-платформы, управляемой пользователями\", наша главная цель - предоставить пользователям возможности избирать <0>членов Совета</0> для представления их интересов в повседневных операциях."
         },
         "bugs": {
-          "title": "Keep the quantity of more or less critical bugs at an acceptable level",
-          "text": "As demonstrated by the fact that the network crashed, we did not reach our goals in this case."
+          "title": "Поддержка критических ошибок на, относительно, приемлемом уровне",
+          "text": "Как показывает факт, что наша сеть вышла из строя, мы не достигли нашей цели."
         }
       }
     },
     "roles": {
-      "title": "Roles available on the Sparta testnet"
+      "title": "Спонсируемые роли в сети Sparta"
     },
     "map": {
-      "title": "The city of Sparta",
-      "text": "<0>Sparta was a prominent city-state in Ancient Greece.</0> In addition to its military might, it was also unique both for its time and compared to its greek rivals due its defined social system and constitution. <1/><1/> We chose the name Sparta due to it's historical significance in the path towards democracy and rule of law, however draconian by modern standard."
+      "title": "Город Sparta",
+      "text": "<0>Спарта была крупным городом-государством в Древней Греции.</0> Помимо своей военной мощи, он был уникален как для своего времени, и превосходил своих греческих соперников благодаря своей уникальной социальной системе и конституции. <1/><1/> Мы выбрали название \"Спарта\" из-за его исторического значения на пути к демократии и верховенству закона, каким бы суровым по современным меркам он ни был."
     }
   }
 }

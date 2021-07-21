@@ -2,37 +2,37 @@
   "joystream": "Joystream",
   "button": {
     "getStarted": {
-      "text": "Start earning",
-      "altText": "Join & start earning"
+      "text": "Начни зарабатывать",
+      "altText": "Присоединяйся и зарабатывай"
     },
-    "download": "Download",
-    "close": "Close",
-    "accept": "Accept",
-    "openDiscord": "Open Discord",
-    "learnMore": "Learn More",
-    "gettingStarted": "Getting Started"
+    "download": "Скачать",
+    "close": "Закрыть",
+    "accept": "Подтвердить",
+    "openDiscord": "Открыть Discord",
+    "learnMore": "Подробнее",
+    "gettingStarted": "Начать"
   },
   "rolesData": {
-    "validator": "Validator",
-    "council": "Council",
-    "councilMember": "Council Member",
-    "storageProvider": "Storage Provider",
-    "contentCreator": "Content Creator",
-    "contentCurator": "Content Curator",
-    "discoveryProvider": "Discovery Provider",
-    "bandwidthProvider": "Bandwidth Provider",
-    "builder": "Builder",
-    "storageLead" : "Storage Lead",
-    "contentLead" : "Content Lead"
+    "validator": "Валидатор",
+    "council": "Совет",
+    "councilMember": "Член Совета",
+    "storageProvider": "Провайдер Хранилища",
+    "contentCreator": "Создатель Контента",
+    "contentCurator": "Контент Куратор",
+    "discoveryProvider": "Дискавери Провайдер",
+    "bandwidthProvider": "Провайдер пропускной способности",
+    "builder": "Строитель",
+    "storageLead" : "Главный Хранитель",
+    "contentLead" : "Главный По Контенту"
   },
   "siteMetadata": {
-    "title": "Joystream: The video platform DAO"
+    "title": "Joystream: видео платформа DAO"
   },
   "colors": {
     "joystreamBlue": "Joystream Blue",
-    "white": "White",
+    "white": "Белый",
     "joystreamGrey": "Joystream Grey",
-    "black": "Black"
+    "black": "Черный"
   },
   "CMYK": "CMYK",
   "RGB": "RGB",
@@ -51,77 +51,77 @@
     "seven": "7"
   },
   "roleCard": {
-    "migration": "At migration, {{numberOfUsers}} (max) had this role",
-    "current": "{{numberOfUsers}} run this role on Antioch",
-    "most": "At most, {{numberOfUsers}} users occupied this role",
+    "migration": "Во время миграции, {{numberOfUsers}} (max) имели эту роль",
+    "current": "{{numberOfUsers}} выполняли эту роль в Antioch",
+    "most": "Максимум, {{numberOfUsers}} пользователей исполняли эту роль",
     "new": "NEW"
   },
   "heroCard": {
-    "active": "Network announced",
-    "error": "Network down",
-    "info": "Network replaced",
-    "finished": "Network live"
+    "active": "Сеть анонсирована",
+    "error": "Сеть отключена",
+    "info": "Сеть заменена",
+    "finished": "Сеть активна"
   },
   "dateCounter": {
-    "week": "week",
-    "weeks": "weeks",
-    "day": "day",
-    "days": "days",
-    "hour": "hour",
-    "hours": "hours",
-    "minute": "minute",
-    "minutes": "minutes",
-    "second": "second",
-    "seconds": "seconds",
-    "month": "month",
-    "months": "months",
-    "year": "year",
-    "years": "years",
-    "timeToLaunch": "Time to launch",
-    "launchedOn": "Launched on"
+    "week": "неделя",
+    "weeks": "недель",
+    "day": "день",
+    "days": "дней",
+    "hour": "час",
+    "hours": "часов",
+    "minute": "минута",
+    "minutes": "минут",
+    "second": "секунда",
+    "seconds": "секунд",
+    "month": "месяц",
+    "months": "месяцев",
+    "year": "год",
+    "years": "лет",
+    "timeToLaunch": "Время до запуска",
+    "launchedOn": "Запущен"
   },
   "sidebar": {
-    "activeRoles": "Active roles",
-    "upcomingRoles": "Upcoming roles",
-    "viewAllRoles": "View all Roles"
+    "activeRoles": "Активные роли",
+    "upcomingRoles": "Будущие роли",
+    "viewAllRoles": "Просмотр всех ролей"
   },
   "navbar": {
-    "product": "Product",
+    "product": "Продукт",
     "atlas": "Atlas",
     "pioneer": "Pioneer",
-    "community": "Community",
-    "brandStory": "Brand Story",
-    "brandGuides": "Brand Guides",
-    "downloadAssets": "Download Assets",
-    "about": "About"
+    "community": "Сообщество",
+    "brandStory": "История Бренда",
+    "brandGuides": "Бренд путеводитель",
+    "downloadAssets": "Скачать Ресурсы",
+    "about": "О Нас"
   },
   "footer": {
-    "title": "Stay up to date",
-    "alternateTitle": "Get notified",
-    "subtitle": "Don't worry about spam! Keep track of all important updates",
-    "inputPlaceholder": "Email Address...",
-    "joinNewsletter": "Join the newsletter",
+    "title": "Следи за новостями",
+    "alternateTitle": "Получай оповещения",
+    "subtitle": "Не беспокойся о спаме! Получай важные уведомления об обновлениях",
+    "inputPlaceholder": "Email адрес...",
+    "joinNewsletter": "Подписка на рассылку",
     "github": {
-      "whitepaper": "Whitepaper",
-      "repository": "Repository"
+      "whitepaper": "Рассылка",
+      "repository": "Репозиторий"
     },
     "usefulLinks": {
-      "title": "Useful links",
-      "hiring": "We are hiring!",
-      "brandGuidance": "Brand guidance"
+      "title": "Полезные ссылки",
+      "hiring": "Открытые вакансии!",
+      "brandGuidance": "Бренд путеводитель"
     },
-    "followUs": "Follow us"
+    "followUs": "Следи за нами"
   },
   "pages": {
-    "blog": "Blog",
-    "manifesto": "Manifesto",
-    "roles": "Roles",
-    "token": "Token",
+    "blog": "Блог",
+    "manifesto": "Манифест",
+    "roles": "Роли",
+    "token": "Токены",
     "hydra": "Hydra",
-    "foundingMembers": "Founding Members",
-    "leaderboards": "Leaderboards",
-    "scoringForm": "Scoring form",
-    "overview": "Overview"
+    "foundingMembers": "Основатели",
+    "leaderboards": "Лидеры",
+    "scoringForm": "Таблица подсчета очков",
+    "overview": "Обзор"
   },
   "socials": {
     "twitter": "Twitter",
@@ -129,7 +129,7 @@
     "discord": "Discord"
   },
   "cookiesNotice": {
-    "text": "This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.",
-    "findOutMore": "Find out more ›"
+    "text": "Этот сайт использует файлы cookie. Продолжая просматривать сайт, вы соглашаетесь на использование файлов cookie.",
+    "findOutMore": "Узнать больше ›"
   }
 }

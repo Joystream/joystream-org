@@ -1,56 +1,56 @@
 {
   "getStarted": {
     "siteMetadata": {
-      "title": "Getting Started",
-      "description": "Learn how to contribute and participate to the Joystream project"
+      "title": "Введение",
+      "description": "Узнайте, как внести свой вклад и участвовать в проекте Joystream"
     },
     "hero": {
-      "title": "How to Contribute and Participate",
-      "subtitle": "Read more about the current ways you can add value to the project and earn rewards for doing so.",
-      "buttonText": "View opportunities",
-      "imageAlt": "getting started hero"
+      "title": "Как вносить вклад и участвовать",
+      "subtitle": "Узнай больше о способах помочь проекту и, в то же время, получить за это вознаграждение.",
+      "buttonText": "Обзор возможностей",
+      "imageAlt": "Начни, герой"
     },
     "howToStart": {
-      "title": "How to start",
-      "discord": "Join our Discord",
-      "tokens": "Receive free testnet tokens",
-      "membership": "Create membership on-chain",
-      "opportunities": "Pick one of the opportunities below"
+      "title": "Как начать",
+      "discord": "Присоединяйся Discord",
+      "tokens": "Получи бесплатные токены тестнета",
+      "membership": "Присоединяйтесь к членству в сети",
+      "opportunities": "Выберите одну из возможностей ниже"
     },
     "opportunities": {
-      "title": "Opportunities",
+      "title": "Возможности",
       "bounties": {
-        "title": "Bounties",
-        "text": "Bounties are long running tasks which anyone can attempt to tackle in a exchange for some reward. They are created either by Jsgenesis, or by the Council.",
-        "imageAlt": "money pouch"
+        "title": "Гранты",
+        "text": "Награды - это задачи на длительное время, которые любой может попытаться выполнить в обмен на вознаграждение. Они созданы либо Jsgenesis, либо Советом.",
+        "imageAlt": "Денежный кошелек"
       },
       "bountiesCarousel": {
-        "all": "All",
-        "coding": "Coding",
-        "design": "Design",
-        "marketing": "Marketing",
-        "research": "Research",
-        "contentCreation": "Content Creation"
+        "all": "Все",
+        "coding": "Код",
+        "design": "Дизайн",
+        "marketing": "Маркетинг",
+        "research": "Исследования",
+        "contentCreation": "Создание Контента"
       },
       "roles": {
-        "title": "Roles",
-        "text": "Our current testnet also allows you to participate in some of the platform roles which will be available on mainnet.<0/><0/>Participation in these roles is rewarded in tJOY (our testnet token) which is backed by fiat reserves at Jsgenesis and redeemable for bitcoin cash.",
-        "imageAlt": "masks"
+        "title": "Роли",
+        "text": "Наш текущий тестнет позволяет вам участвовать в некоторых ролях платформы, которые будут доступны в основной сети.<0/><0/>Участие в этих ролях вознаграждается tJOY (наш токен тестовой сети), который поддерживается фиатными резервами в Jsgenesis и может быть обменен на биткойны (bitcoin).",
+        "imageAlt": "маски"
       }
     },
     "activeRoles": {
-      "title": "Active roles on the current testnet",
-      "validatorText": "A Validator is an actor which checks the validity of newly constructed blocks, proposes new blocks and participates in the consensus process for committing new block to the chain. Validators are typically paid a fixed amount for each block produced. This role has a purpose very similar to that of the miners in the Bitcoin blockchain.",
-      "councilMemberText": "Council Members are elected by stakeholders in the system to act in the long-term interest of the platform. They are responsible for allocating resources, and hiring working group leads to run the platform's day-to-day operations. This is done through the proposal system, allowing any user to submit suggestions for changing the platform in some way.",
-      "storageProviderText": "There are critical platform assets that do not live on the blockchain, such as content media. The integrity of these assets is secured by the chain, but a separate set of storage and distribution nodes enable uploading and downloading of such data. The Storage Provider is involved this activity, specifically by storing large quantities of data.",
-      "storageLeadText": "The Storage Lead is hired directly by the Council through the proposals system and is dedicated to the hiring, firing and wider management of Storage Providers on the network.",
-      "contentCuratorText": "Content Curators are responsible for monitoring the publishing of new content into the content directory, and responding to reports about contested publications. They must also update information on content to ensure it is accurate, with correct metadata. Collaborating with Builders to improve tools and user-facing experiences is another significant part of the role.",
-      "contentCreatorText": "Content Creators are those platform participants who have decided to contribute their own original (or third-party licensed) content to the platform. There are no direct incentives for this informal role at this time, though effective contributors are very likely to be rewarded through the Founding Member Program.",
-      "contentLeadText": "The Council has the power to appoint a Content Curator Lead for the network who can hire further Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing with the council, the Lead can also decide to fire curators who are not performing their jobs adequately."
+      "title": "Активные роли в текущем тестнете",
+      "validatorText": "Валидатор - это субъект, который проверяет достоверность создаваемых блоков, предлагает новые блоки и участвует в процессе согласования для фиксации нового блока в цепочке. Валидаторам обычно выплачивается фиксированная сумма за каждый произведенный блок. Эта роль имеет цель, очень похожую на цель майнеров в блокчейне Биткойн (Bitcoin).",
+      "councilMemberText": "Члены совета избираются заинтересованными сторонами в системе, чтобы действовать в долгосрочных интересах платформы. Они несут ответственность за распределение ресурсов, а рабочая группа по найму руководит повседневными операциями в рамках платформы. Это делается посредством системы предложений, позволяющей любому пользователю подавать предложения по изменению платформы тем или иным образом.",
+      "storageProviderText": "Есть важные активы платформы, которые не живут в блокчейне, такие как информационные носители. Целостность этих активов обеспечивается цепью, но отдельный набор узлов хранения и распределения позволяет загружать и скачивать такие данные. Поставщик хранилища участвует в этой деятельности, в частности, путем хранения больших объемов данных.",
+      "storageLeadText": "Руководитель службы хранения нанимается непосредственно Советом через систему предложений и занимается наймом, увольнением и расширенным управлением поставщиками хранилищ в сети.",
+      "contentCuratorText": "Кураторы контента несут ответственность за мониторинг публикаций нового контента в каталог и реагируют на сообщения о спорных публикациях. Они также должны обновлять информацию о содержании контента, чтобы обеспечить точность и правильность метаданных. Еще одна важная часть роли - сотрудничество со Строителями для улучшения инструментов для работы и взаимодействия с пользователями.",
+      "contentCreatorText": "Создатели контента - это те участники платформы, которые решили разместить на платформе свой оригинальный (или чужой, но лицензированный) контент. В настоящее время нет прямых стимулов для этой неформальной роли, хотя эффективные участники, скорее всего, будут вознаграждены через Программу для членов-учредителей.",
+      "contentLeadText": "Совет имеет право назначить Главного Куратора Контента сети, который может нанять дополнительных кураторов контента. Главный Куратор Контента также определяет приоритеты для курирования. При необходимости, после обсуждения с советом, руководитель может также принять решение об увольнении кураторов, которые не выполняют свою работу надлежащим образом."
     },
     "roleCard": {
-      "overview": "Overview",
-      "buttonText": "Check details on GitHub"
+      "overview": "Обзор",
+      "buttonText": "Детали на GitHub"
     }
   }
 }

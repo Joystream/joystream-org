@@ -1,59 +1,59 @@
 {
   "acropolis": {
     "siteMetadata": {
-      "description": "Explore the Acropolis testnet"
+      "description": "Изучаем тестнет Acropolis"
     },
     "hero": {
-      "title": "Acropolis Network",
-      "text": "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
-      "chipText": "What is this?"
+      "title": "Сеть Acropolis",
+      "text": "Изучай доступные варианты участия и выбирай те, которые тебе больше всего подходят. Влияй на развитие платформы и зарабатывай при этом реальные деньги.",
+      "chipText": "Что это?"
     },
     "heroCard": {
-      "title": "REPLACED BY ROME ON"
+      "title": "ЗАМЕЩЕН ROME"
     },
     "modal": {
-      "title": "The Acropolis of Athens",
-      "text": "<0>Known for its great architecture, Acropolis'</0> perhaps most famous building is the Parthenon. It was built to celebrate their victory over Persian invaders, and is today seen as a symbol for democracy and western civilization."
+      "title": "Афинский Акрополис",
+      "text": "<0>Известный своей великолепной архитектурой, Акрополь</0> возможно, является самым знаменитым строением Парфенона. Он был построен в честь победы над персидскими завоевателями, и сегодня является символом демократии и западной цивилизации."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Важная документация",
       "fullSpecifications": {
-        "title": "Full Specifications",
-        "text": "Read the specs of the newly implemented features of Acropolis."
+        "title": "Полная спецификация",
+        "text": "Читай спецификацию новых возможностей Acropolis."
       },
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Релиз план",
+        "text": "Читай релиз план в том виде, каким он был создан во время планирования и узнавай, как проходила разработка."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals below are a simplified representation of the Key Results listed in our Release <0>OKR</0>",
+      "title": "Цели тестнета",
+      "subtitle": "Цели, изложенные ниже, являются упрощенным перечнем основных результатов в нашем релизе <0>OKR</0>",
       "goals": {
         "forum": {
-          "title": "Build and release an on-chain forum",
-          "text": "The final platform will have built in multiple ways of facilitating easy and secure public, and private, communication and information sharing among members. The forum is the first step allowing the platform members to communicate, share ideas and discuss."
+          "title": "Построение и выпуск чейн-форума",
+          "text": "Финальная платформа будет содержать множество средств для упрощения безопасного общения, включая публичное, личное, а также возможность делиться информацией между членами платформы. Форум будет первым шагом, позволяя членам платформы общаться, делиться идеями и вести обсуждения."
         },
         "storageNode": {
-          "title": "Rebuild and release the storage node",
-          "text": "Where the old storage node had some bugs making it unable to sync between clients and required a hardcoded liaison, the new storage node is working as intended with no hierarchy or privileges."
+          "title": "Перестроение и выпуск узла хранения",
+          "text": "В то время, как старый узел хранения имел некоторые баги, которые делали синхронизацию между клиентами не стабильной, имел жестко прописанные связи, новый узел хранения работает как нужно, без иерархий или особых привилегий."
         },
         "storageProviders": {
-          "title": "Ensure high uptime of storage providers",
-          "text": "Both content creators and consumers user experience depends on various metrics, but perhaps the most important is that the storage node they connect to responds to their request. Whether or not this goal is achieved depends on both the reliability of the software, a good reporting system and corrective actions from multiple parties."
+          "title": "Гарантия высокого аптайма провайдеров хранения",
+          "text": "На общее впечатления от работы с платформой как создателей контента, так и его потребителей, влияют множество параметров, и самым важным, является то, как узел хранения отвечает на запросы. Будет ли достигнута эта цель, зависит как от надежности программного обеспечения, хорошей системы оповещения и отчетности, а также слаженных действий по корректировке с нескольких сторон."
         },
         "tranches": {
-          "title": "Build the storage node with \"tranches\"",
-          "text": "Although the content directory is currently small, at some point it's not feasible to expect all storage providers to have full replication of all the content. Tranches would allow storage providers to select a subset of the content directory, suitable to their capabilities."
+          "title": "Построение узла хранения на \"траншах\"",
+          "text": "Несмотря на то, что папка с контентом, на данном этапе, мала, в какой-то момент станет нереальным ожидать, что у всех поставщиков хранения будет находиться полная копия всего контента. Транши позволят поставщикам услуг хранения выбрать тот набор папок с данными, который соответствует их возможностям."
         }
       }
     },
     "roles": {
-      "title": "Roles available on the Acropolis testnet"
+      "title": "Спонсируемые роли в тестнете Acropolis"
     },
     "map": {
-      "title": "Acropolis of Athens",
-      "text": "<0>The Acropolis is a citadel on a hill in the heart of Athens.</0> It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list \"World Heritage Sites\".<1/><1/> We chose the name as we had to scale back our ambitions for the next testnet after some issues with the release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not intended for Athens. <1/><1/> <2><0/> Explore previous testnet</2>"
+      "title": "Афинский Акрополис",
+      "text": "<0> Акрополь - это цитадель на холме в самом сердце Афин. </0> Он также находился в самом сердце Древней Греции, могущественной цивилизации и империи. Акрополь знаменит своими старинными зданиями, архитектурой, историческим значением, а также является одной из главных туристических достопримечательностей Афин. Он находится в списке UNESCO \"Объекты всемирного наследия \". <1/> <1/> Мы выбрали название, так как нам пришлось уменьшить наши амбиции в отношении следующего тестнета после некоторых проблем с выпуском Athens. Таким образом, Acropolis можно считать дополнительным выпуском, несмотря на то, что в него включены некоторые новые функции, не предназначенные для Афин. <1/><1/> <2><0/> Изучить предыдущий тестнет</2> "
     }
   }
 }

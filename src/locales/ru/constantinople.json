@@ -1,51 +1,51 @@
 {
   "constantinople": {
     "siteMetadata": {
-      "description": "Explore the Constantinople testnet"
+      "description": "Изучаем тестнет Constantinople"
     },
     "hero": {
-      "title": "Constantinople Network",
-      "text": "The Constantinople testnet introduces an improved proposals system and fiat-backed token model for participant compensation.",
-      "chipText": "What is this?"
+      "title": "Сеть Constantinople",
+      "text": "Тестнет Constantinople представляет улучшенную систему внесения предложений, а также модель токенов, поддерживаемых фиатными средствами, для выплат участникам.",
+      "chipText": "Что это?"
     },
     "heroCard": {
-      "title": "REPLACED BY ALEXANDRIA ON"
+      "title": "ЗАМЕЩЕН ALEXANDRIA "
     },
     "modal": {
-      "title": "Constantinople",
-      "text": "The Column of Constantine, also known as the Burnt Stone or the Burnt Pillar, is a Roman monumental column constructed on the orders of the Roman emperor Constantine the Great in 330 AD. It commemorates the declaration of Byzantium as the new capital city of the Roman Empire."
+      "title": "Константинополь",
+      "text": "Колонна Константина, также известная как Сожженный камень или Сожженный столб, представляет собой римскую монументальную колонну, построенную по приказу римского императора Константина Великого в 330 году н.э. Возведена в честь провозглашения Византии новой столицей Римской империи."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Важная документация",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Релиз план",
+        "text": "Читай релиз план в том виде, каким он был создан во время планирования и узнавай, как проходила разработка."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Constantinople testnet and its objectives."
+        "title": "Объявление в Блоге",
+        "text": "Читай краткое руководство по тестнету Constantinople и его целям."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Constantinople testnet.",
+      "title": "Цели Тестнета",
+      "subtitle": "Цели, изложенные ниже, являются упрощенным перечнем основных результатов в тестнете Constantinople.",
       "goals": {
         "proposalSystem": {
-          "title": "Launch a new proposal system",
-          "text": "The constantinople testnet is built around the introduction of a proposal system that strengthens the governance structure of the platform, shifting the day to day responsibility of monitoring the network and allocating resources to voters and the council."
+          "title": "Запуск новой системы предложений",
+          "text": "Тестнет Constantinople построен на внедрении системы предложений, которая укрепляет структуру управления платформой, перекладывая повседневную ответственность за мониторинг сети и выделение ресурсов избирателям и совету."
         },
         "tokenModel": {
-          "title": "Introduce a fiat-backed token model",
-          "text": "Constantinople introduces a new incentive structure, with a fiat (USD) pool backing the testnet tokens, setting up a more realistic economic system for the platform."
+          "title": "Внедрение модели токенов, обеспеченных фиатом",
+          "text": "Constantinople вводит новую структуру стимулов, с пулом фиатных денег (USD), поддерживающим токены тестнета, что создает более реалистичную экономическую систему платформы."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Constantinople Network"
+      "title": "Спонсируемые роли в сети Constantinople"
     },
     "map": {
-      "title": "Constantinople",
-      "text": "<0>Constantinople was the capital city of the Eastern Roman Empire during the fourth century.</0> It was famed for its massive and complex defences as well as its architectural masterpieces and opulent aristocratic palaces. As was the case with the city, we hope our Constantinople testnet will be a worthy successor to Rome.<1/><1/><2><0/> Read the blog post</2>"
+      "title": "Константинополь",
+      "text": "<0>Константинополь был столицей Восточной Римской империи в 4-м веке н.э.</0> Он славился своей массивной и сложной системой обороны, а также своими архитектурными шедеврами и роскошными дворцами аристократии. Как и в случае с городом, мы надеемся, что наша тестовая сеть Константинополя станет достойным преемником Рима (Rome).<1/><1/><2><0/> Читать сообщение в болге</2>"
     }
   }
 }
