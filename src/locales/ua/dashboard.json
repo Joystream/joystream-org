@@ -1,0 +1,17 @@
+{
+    "dashboard" : {
+        "siteMetadata" : {
+            "title" : "Live дошка",
+            "description" : "Дані, зібрані з поточних застосунків Pioneer і Atlas, представлені у вигляді графіків."
+        },
+        "title" : "Дошка Joystream",
+        "subtitles" : {
+            "videos" : "Відео",
+            "channels" : "Канали",
+            "users" : "Користувачі",
+            "posts" : "Повідомлення",
+            "threads" : "Теми"
+        },
+        "amount" : "Кількість"
+    }
+}

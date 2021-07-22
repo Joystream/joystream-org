@@ -1,0 +1,135 @@
+{
+  "joystream": "Joystream",
+  "button": {
+    "getStarted": {
+      "text": "Почни заробляти",
+      "altText": "Приєднуйся та заробляй"
+    },
+    "download": "Завантажити",
+    "close": "Закрити",
+    "accept": "Підтвердити",
+    "openDiscord": "Відкрити Discord",
+    "learnMore": "Докладніше",
+    "gettingStarted": "Почати"
+  },
+  "rolesData": {
+    "validator": "Валідатор",
+    "council": "Рада",
+    "councilMember": "Член Ради",
+    "storageProvider": "Провайдер Сховища",
+    "contentCreator": "Творець Контенту",
+    "contentCurator": "Контент Куратор",
+    "discoveryProvider": "Діскавері Провайдер",
+    "bandwidthProvider": "Провайдер пропускної здатності",
+    "builder": "Будівельник",
+    "storageLead" : "Головний Хранитель",
+    "contentLead" : "Головний з Контенту"
+  },
+  "siteMetadata": {
+    "title": "Joystream: відео платформаDAO"
+  },
+  "colors": {
+    "joystreamBlue": "Joystream Blue",
+    "white": "Білий",
+    "joystreamGrey": "Joystream Gray",
+    "black": "Чорний"
+  },
+  "CMYK": "CMYK",
+  "RGB": "RGB",
+  "HEX": "HEX",
+  "orderedNumbers": {
+    "one": "01.",
+    "two": "02."
+  },
+  "numbers": {
+    "one": "1",
+    "two": "2",
+    "three": "3",
+    "four": "4",
+    "five": "5",
+    "six": "6",
+    "seven": "7"
+  },
+  "roleCard": {
+    "migration": "Під час міграції, {{numberOfUsers}} (max) мали цю роль",
+    "current": "{{numberOfUsers}} виконували цю роль у Antioch",
+    "most": "Максимум, {{numberOfUsers}} користувачів виконували цю роль",
+    "new": "NEW"
+  },
+  "heroCard": {
+    "active": "Мережа анонсована",
+    "error": "Мережа вимкнена",
+    "info": "Мережа замінена",
+    "finished": "Мережа активна"
+  },
+  "dateCounter": {
+    "week": "тиждень",
+    "weeks": "тижнів",
+    "day": "день",
+    "days": "днів",
+    "hour": "година",
+    "hours": "годин",
+    "minute": "хвилина",
+    "minutes": "хвилин",
+    "second": "секунда",
+    "seconds": "секунд",
+    "month": "місяць",
+    "months": "місяців",
+    "year": "рік",
+    "years": "років",
+    "timeToLaunch": "Час до запуску",
+    "launchedOn": "Запущено"
+  },
+  "sidebar": {
+    "activeRoles": "Активні ролі",
+    "upcomingRoles": "Майбутні ролі",
+    "viewAllRoles": "Перегляд всіх ролей"
+  },
+  "navbar": {
+    "product": "Продукт",
+    "atlas": "Atlas",
+    "pioneer": "Pioneer",
+    "community": "Спільнота",
+    "brandStory": "Історія Бренду",
+    "brandGuides": "Бренд путівник",
+    "downloadAssets": "Завантажити ресурси",
+    "about": "Про Нас"
+  },
+  "footer": {
+    "title": "Слідкуй за новинами",
+    "alternateTitle": "Отримуй сповіщення",
+    "subtitle": "Не турбуйся про спам! Отримуй важливі повідомлення про оновлення",
+    "inputPlaceholder": "Email адреса...",
+    "joinNewsletter": "Підписка на розсилку",
+    "github": {
+      "whitepaper": "Розсилка",
+      "repository": "Репозиторій"
+    },
+    "usefulLinks": {
+      "title": "Корисні посилання",
+      "hiring": "Відкриті вакансії!",
+      "brandGuidance": "Бренд путівник"
+    },
+    "followUs": "Стеж за нами"
+  },
+  "pages": {
+    "blog": "Блог",
+    "manifesto": "Маніфест",
+    "roles": "Ролі",
+    "token": "Токени",
+    "hydra": "Hydra",
+    "foundingMembers": "Засновники",
+    "leaderboards": "лідери",
+    "scoringForm": "Таблиця підрахунку очок",
+    "overview": "Огляд"
+  },
+  "socials": {
+    "twitter": "Twitter",
+    "github": "GitHub",
+    "discord": "Discord"
+  },
+  "cookiesNotice": {
+    "text": "Цей сайт використовує файли cookie. Продовжуючи переглядати сайт, ви погоджуєтеся на використання файлів cookie.",
+    "findOutMore": "Дізнатись більше ›"
+  }
+}
