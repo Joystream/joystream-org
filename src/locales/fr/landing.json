@@ -108,18 +108,18 @@
         },
         "Antioch": {
           "title": "Antioch testnet",
-          "text": "Antioch is our ninth testnet, patching a chain split bug which broke the Babylon network",
-          "explore": "Explore Antioch"
+          "text": "Antioch est notre neuvième testnet, correction d'un bug de fractionnement de chaîne qui cassait le réseau Babylon.",
+          "explore": "Explorez Antioch"
         },
         "Sumer": {
           "title": "Sumer testnet",
-          "text": "Sumer is our tenth testnet, facilitating easy content uploads via our playback app.",
-          "explore": "Explore Sumer"
+          "text": "Sumer est notre dixième testnet, faciliter le téléchargement de la contenu plus façile via notre application de lecture",
+          "explore": "Explorez Sumer"
         }
       }
     },
     "earnTokens": {
-      "title": "Earn mainnet tokens, cash and influence."
+      "title": "Gagnez les mainnet tokens, liquide et l'influence."
     }
   }
 }
