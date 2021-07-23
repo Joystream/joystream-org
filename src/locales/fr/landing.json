@@ -1,29 +1,29 @@
 {
   "landing": {
     "siteMetadata": {
-      "description": "Joystream is a video platform controlled, owned, and operated by its users."
+      "description": "Joystream est une plateforme vidéo possédée, controlée, et opérée par ses utilisateurs"
     },
     "hero": {
-      "title": "The video platform DAO",
-      "subtitle": "Joystream is a video platform controlled,<0/> owned, and operated by its users",
+      "title": "La plateforme vidéo DAO",
+      "subtitle": "Joystream est une plateforme vidéo possédée, controlée, <ol> et opérée par ses utilisateurs",
       "metrics": {
-        "mainTitle": "Testnet Metrics",
+        "mainTitle": "Metriques Testnet",
         "titles": {
-          "participationPayout": "Participation Payout",
-          "activeValidators": "Active Validators",
-          "blockHeight": "Block Height",
-          "memberships": "Memberships"
+          "participationPayout": "Paiements de participation",
+          "activeValidators": "Les validitéurs actives",
+          "blockHeight": "L'altitude bloqué",
+          "memberships": "Affiliés"
         }
       }
     },
     "becomeFM": {
-      "subtitle": "Our brand new and unparalleled community token distribution scheme",
-      "title": "Become a Founding Member to earn mainnet tokens and influence the development of the platform.",
-      "alternateTitle": "Become a Founding member and have a tangible impact on the development of our platform.",
-      "link": "Learn more about our generous program"
+      "subtitle": "Notre neuf plan de token répartition comune sans égal",
+      "title": "Devenez un membre fondateur à gagner les tokens Mainnet en inluer le développement de la plateforme.",
+      "alternateTitle": "Devenez un membre fondateur por avoir un impact tangible sur le développement de la plateforme.",
+      "link": "Apprenez plus de notre programme genereuse"
     },
     "whatWeDo": {
-      "subtitle": "Our motivation for building the Joystream protocol",
+      "subtitle": "Notre motivation pour édifier le protocole de la Joystream",
       "title": "We call for an arrangement where media platforms are accountable to the people they impact.",
       "link": "Read our manifesto"
     },
