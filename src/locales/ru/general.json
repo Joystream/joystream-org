@@ -8,7 +8,7 @@
     "download": "Скачать",
     "close": "Закрыть",
     "accept": "Подтвердить",
-    "openDiscord": "Открыть Discord",
+    "openDiscord": "Открыть в Discord",
     "learnMore": "Подробнее",
     "gettingStarted": "Начать"
   },
@@ -21,7 +21,7 @@
     "contentCurator": "Контент Куратор",
     "discoveryProvider": "Дискавери Провайдер",
     "bandwidthProvider": "Провайдер пропускной способности",
-    "builder": "Строитель",
+    "builder": "Разработчик",
     "storageLead" : "Главный Хранитель",
     "contentLead" : "Главный По Контенту"
   },
@@ -91,7 +91,7 @@
     "pioneer": "Pioneer",
     "community": "Сообщество",
     "brandStory": "История Бренда",
-    "brandGuides": "Бренд путеводитель",
+    "brandGuides": "Правила использования айдентики",
     "downloadAssets": "Скачать Ресурсы",
     "about": "О Нас"
   },
@@ -108,7 +108,7 @@
     "usefulLinks": {
       "title": "Полезные ссылки",
       "hiring": "Открытые вакансии!",
-      "brandGuidance": "Бренд путеводитель"
+      "brandGuidance": "Правила использования айдентики"
     },
     "followUs": "Следи за нами"
   },
@@ -120,7 +120,7 @@
     "hydra": "Hydra",
     "foundingMembers": "Основатели",
     "leaderboards": "Лидеры",
-    "scoringForm": "Таблица подсчета очков",
+    "scoringForm": "Отправить мой отчет",
     "overview": "Обзор"
   },
   "socials": {

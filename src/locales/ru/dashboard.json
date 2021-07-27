@@ -1,10 +1,10 @@
 {
     "dashboard" : {
         "siteMetadata" : {
-            "title" : "Live доска",
-            "description" : "Данные, собранные с текущих экземпляров Pioneer и Atlas, представленные в виде графиков."
+            "title" : "Live панель приборов",
+            "description" : "Данные, собранные с серверов Pioneer и Atlas, представленные в виде графиков."
         },
-        "title" : "Доска Joystream",
+        "title" : "Панель приборов Joystream",
         "subtitles" : {
             "videos" : "Видео",
             "channels" : "Каналы",
