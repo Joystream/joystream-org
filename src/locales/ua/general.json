@@ -2,37 +2,37 @@
   "joystream": "Joystream",
   "button": {
     "getStarted": {
-      "text": "Start earning",
-      "altText": "Join & start earning"
+      "text": "Почни заробляти",
+      "altText": "Приєднуйся та заробляй"
     },
-    "download": "Download",
-    "close": "Close",
-    "accept": "Accept",
-    "openDiscord": "Open Discord",
-    "learnMore": "Learn More",
-    "gettingStarted": "Getting Started"
+    "download": "Завантажити",
+    "close": "Закрити",
+    "accept": "Підтвердити",
+    "openDiscord": "Відкрити Discord",
+    "learnMore": "Докладніше",
+    "gettingStarted": "Почати"
   },
   "rolesData": {
-    "validator": "Validator",
-    "council": "Council",
-    "councilMember": "Council Member",
-    "storageProvider": "Storage Provider",
-    "contentCreator": "Content Creator",
-    "contentCurator": "Content Curator",
-    "discoveryProvider": "Discovery Provider",
-    "bandwidthProvider": "Bandwidth Provider",
-    "builder": "Builder",
-    "storageLead" : "Storage Lead",
-    "contentLead" : "Content Lead"
+    "validator": "Валідатор",
+    "council": "Рада",
+    "councilMember": "Член Ради",
+    "storageProvider": "Провайдер Сховища",
+    "contentCreator": "Творець Контенту",
+    "contentCurator": "Контент Куратор",
+    "discoveryProvider": "Діскавері Провайдер",
+    "bandwidthProvider": "Провайдер пропускної здатності",
+    "builder": "Будівельник",
+    "storageLead" : "Головний Хранитель",
+    "contentLead" : "Головний з Контенту"
   },
   "siteMetadata": {
-    "title": "Joystream: The video platform DAO"
+    "title": "Joystream: відео платформаDAO"
   },
   "colors": {
     "joystreamBlue": "Joystream Blue",
-    "white": "White",
-    "joystreamGrey": "Joystream Grey",
-    "black": "Black"
+    "white": "Білий",
+    "joystreamGrey": "Joystream Gray",
+    "black": "Чорний"
   },
   "CMYK": "CMYK",
   "RGB": "RGB",
@@ -51,77 +51,77 @@
     "seven": "7"
   },
   "roleCard": {
-    "migration": "At migration, {{numberOfUsers}} (max) had this role",
-    "current": "{{numberOfUsers}} run this role on Antioch",
-    "most": "At most, {{numberOfUsers}} users occupied this role",
+    "migration": "Під час міграції, {{numberOfUsers}} (max) мали цю роль",
+    "current": "{{numberOfUsers}} виконували цю роль у Antioch",
+    "most": "Максимум, {{numberOfUsers}} користувачів виконували цю роль",
     "new": "NEW"
   },
   "heroCard": {
-    "active": "Network announced",
-    "error": "Network down",
-    "info": "Network replaced",
-    "finished": "Network live"
+    "active": "Мережа анонсована",
+    "error": "Мережа вимкнена",
+    "info": "Мережа замінена",
+    "finished": "Мережа активна"
   },
   "dateCounter": {
-    "week": "week",
-    "weeks": "weeks",
-    "day": "day",
-    "days": "days",
-    "hour": "hour",
-    "hours": "hours",
-    "minute": "minute",
-    "minutes": "minutes",
-    "second": "second",
-    "seconds": "seconds",
-    "month": "month",
-    "months": "months",
-    "year": "year",
-    "years": "years",
-    "timeToLaunch": "Time to launch",
-    "launchedOn": "Launched on"
+    "week": "тиждень",
+    "weeks": "тижнів",
+    "day": "день",
+    "days": "днів",
+    "hour": "година",
+    "hours": "годин",
+    "minute": "хвилина",
+    "minutes": "хвилин",
+    "second": "секунда",
+    "seconds": "секунд",
+    "month": "місяць",
+    "months": "місяців",
+    "year": "рік",
+    "years": "років",
+    "timeToLaunch": "Час до запуску",
+    "launchedOn": "Запущено"
   },
   "sidebar": {
-    "activeRoles": "Active roles",
-    "upcomingRoles": "Upcoming roles",
-    "viewAllRoles": "View all Roles"
+    "activeRoles": "Активні ролі",
+    "upcomingRoles": "Майбутні ролі",
+    "viewAllRoles": "Перегляд всіх ролей"
   },
   "navbar": {
-    "product": "Product",
+    "product": "Продукт",
     "atlas": "Atlas",
     "pioneer": "Pioneer",
-    "community": "Community",
-    "brandStory": "Brand Story",
-    "brandGuides": "Brand Guides",
-    "downloadAssets": "Download Assets",
-    "about": "About"
+    "community": "Спільнота",
+    "brandStory": "Історія Бренду",
+    "brandGuides": "Бренд путівник",
+    "downloadAssets": "Завантажити ресурси",
+    "about": "Про Нас"
   },
   "footer": {
-    "title": "Stay up to date",
-    "alternateTitle": "Get notified",
-    "subtitle": "Don't worry about spam! Keep track of all important updates",
-    "inputPlaceholder": "Email Address...",
-    "joinNewsletter": "Join the newsletter",
+    "title": "Слідкуй за новинами",
+    "alternateTitle": "Отримуй сповіщення",
+    "subtitle": "Не турбуйся про спам! Отримуй важливі повідомлення про оновлення",
+    "inputPlaceholder": "Email адреса...",
+    "joinNewsletter": "Підписка на розсилку",
     "github": {
-      "whitepaper": "Whitepaper",
-      "repository": "Repository"
+      "whitepaper": "Розсилка",
+      "repository": "Репозиторій"
     },
     "usefulLinks": {
-      "title": "Useful links",
-      "hiring": "We are hiring!",
-      "brandGuidance": "Brand guidance"
+      "title": "Корисні посилання",
+      "hiring": "Відкриті вакансії!",
+      "brandGuidance": "Бренд путівник"
     },
-    "followUs": "Follow us"
+    "followUs": "Стеж за нами"
   },
   "pages": {
-    "blog": "Blog",
-    "manifesto": "Manifesto",
-    "roles": "Roles",
-    "token": "Token",
+    "blog": "Блог",
+    "manifesto": "Маніфест",
+    "roles": "Ролі",
+    "token": "Токени",
     "hydra": "Hydra",
-    "foundingMembers": "Founding Members",
-    "leaderboards": "Leaderboards",
-    "scoringForm": "Scoring form",
-    "overview": "Overview"
+    "foundingMembers": "Засновники",
+    "leaderboards": "лідери",
+    "scoringForm": "Таблиця підрахунку очок",
+    "overview": "Огляд"
   },
   "socials": {
     "twitter": "Twitter",
@@ -129,7 +129,7 @@
     "discord": "Discord"
   },
   "cookiesNotice": {
-    "text": "This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.",
-    "findOutMore": "Find out more ›"
+    "text": "Цей сайт використовує файли cookie. Продовжуючи переглядати сайт, ви погоджуєтеся на використання файлів cookie.",
+    "findOutMore": "Дізнатись більше ›"
   }
 }

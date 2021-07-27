@@ -1,171 +1,171 @@
 {
   "foundingMembers": {
     "general": {
-      "foundingMembers": "Founding Members",
-      "nonFoundingMembers": "Non-Founding Members",
-      "directScore": "Direct Score",
-      "referralScore": "Referral Score",
-      "totalScore": "Total Score",
-      "inducted": "Inducted",
-      "member": "Member",
-      "backButton": "Back to Program page",
-      "before": "Before",
-      "account": "Account",
-      "next": "Next",
-      "howItWorks": "How it works.",
-      "inputPlaceholder": "e.g. joedoe",
-      "inductionDate": "Induction Date",
-      "joinOurDiscord": "Join our Discord"
+      "foundingMembers": "Члени-Засновники",
+      "nonFoundingMembers": "Члени, які не є засновниками",
+      "directScore": "Пямий рахунок",
+      "referralScore": "Реферальний рахунок",
+      "totalScore": "Загальний рахунок",
+      "inducted": "Залучено",
+      "member": "Член",
+      "backButton": "До сторінки Програми",
+      "before": "До",
+      "account": "Акаунт",
+      "next": "Далі",
+      "howItWorks": "Як це працює.",
+      "inputPlaceholder": "наприклад joedoe",
+      "inductionDate": "Дата приєднання",
+      "joinOurDiscord": "Приєднатись до Discord"
     },
     "scoringPeriod": {
-      "title": "Current scoring period",
-      "currentNumber": "Current period number",
-      "ends": "ENDS",
-      "endedOn": "ENDED ON",
-      "weeks": "WEEKS",
-      "days": "DAYS",
-      "hours": "HOURS",
-      "minutes": "MINUTES",
-      "submitSummary": "Submit Summary",
-      "periodAnnouncement": "Period Announcement",
-      "announcement": "Announcement"
+      "title": "Поточний звітний період",
+      "currentNumber": "Номер поточного періоду",
+      "ends": "ЗАВЕРШУЄТЬСЯ",
+      "endedOn": "ЗАВЕРШЕНИЙ",
+      "weeks": "ТИЖДНІВ",
+      "days": "ДНІВ",
+      "hours": "ГОДИН",
+      "minutes": "ХВИЛИН",
+      "submitSummary": "Відправити звіт",
+      "periodAnnouncement": "Оголошення періоду",
+      "announcement": "Оголошення"
     },
     "landing": {
       "siteMetadata": {
-        "title": "Founding Members",
-        "description": "Information and data regarding the new Founding Members Program of the Joystream platform."
+        "title": "Члени-Засновники",
+        "description": "Інформація та дані щодо нової програми засновників платформи Joystream."
       },
       "hero": {
-        "title": "Joystream Founding Member Program",
-        "text": "Founding Members are highly effective project contributors awarded JOY tokens in the mainnet genesis block.",
-        "imageAlt": "founding members visual"
+        "title": "Програма засновників Joystream",
+        "text": "Учасники-засновники є високоефективними учасниками проекту, що нагороджуються токенами JOY у генезисному блоці mainnet.",
+        "imageAlt": "зображення засновників"
       },
       "list": {
-        "currentMembers": "Current founding members",
-        "newMembers": "New founding members",
-        "iconAlt": "icon of founding member"
+        "currentMembers": "Поточні члени-засновники",
+        "newMembers": "Нові члени-засновники",
+        "iconAlt": "зобрадення членів-засновників"
       },
       "benefits": {
-        "title": "What is the Founding <0/> Member Program <0/> and why does it exist?",
-        "currentlyBuilding": "While Jsgenesis is the team currently building the technology behind the Joystream project, we will not be around forever, and we are instead entrusting the future operation of the Joystream DAO to our community members.",
-        "foundingMembers": "The Founding Member Program formally allocates JOY tokens among some of our highest quality community members in recognition of their contributions to the project and ensures that a sufficiently large, effective and motivated community of users is ready to occupy all the different roles required to run, evolve and grow the platform on mainnet.",
-        "benefits": "Benefits",
-        "benefitsAlternate": "Benefits of becoming a founding member",
+        "title": "Що представляє собою <0/> Програма Засновників <0/> та навіщо існує?",
+        "currentlyBuilding": "Незважаючи на те, що Jsgenesis - це команда, яка в даний час розробляє технологію, що стоїть за проектом Joystream, ми не будемо існувати завжди, і натомість довіримо майбутню роботу Joystream DAO своїм членам спільноти.",
+        "foundingMembers": "Програма членів-засновників офіційно розподіляє токени JOY серед деяких наших найефективніших членів спільноти на знак визнання їхніх внесків у проект та гарантує, що достатньо велика, ефективна та мотивована спільнота користувачів готова обіймати всі різні ролі, необхідні для запуску, розвитку і розвивати платформу в мережі.",
+        "benefits": "Переваги",
+        "benefitsAlternate": "Переваги бути Членом-Засновником",
         "payout": {
-          "title": "Tokens",
-          "text": "allocated tokens in the genesis block of the Joystream mainnet as a result of high quality participation and recruiting other participants"
+          "title": "Токени",
+          "text": "токени в генезисному блоці мейннету Joystream за якісну участь в проекті та залучення інших учасників"
         },
         "membership": {
-          "title": "Membership Status",
-          "text": "special status membership assigned in genesis block, which will have a visually distinguished presentation in Pioneer and other products"
+          "title": "Статус членства",
+          "text": "особливий статус членства, відображений у блоці генезису, який візуально відокремлює вас в Pioneer та інших програмних продуктах"
         },
         "avatar": {
-          "title": "Handcrafted Avatar",
-          "text": "receive a handcrafted premium membership avatar and be honoured on the official project website and social media leading up to mainnet"
+          "title": "Аватар ручної роботи",
+          "text": "аватар ручної роботи преміум-членства, та бути вшанованим на офіційному веб-сайті проекту та в соціальних мережах"
         },
-        "itemImageAlt": "benefit item"
+        "itemImageAlt": "зображення переваги"
       },
       "takePart": {
-        "title": "How to participate in the program",
+        "title": "Як взяти участь в програмі",
         "introduceYourself": {
-          "text": "Introduce yourself on Discord.",
-          "altText": "Introduce yourself in our Discord."
+          "text": "Представити себе в Discord.",
+          "altText": "Представити себе в Discord."
         },
         "contribute": {
-          "text": "Make contributions to the project.",
-          "contributions": "<0><0>training other participants</0><0>writing blog posts and documentation</0><0>creating and publishing new video content</0><0>participating in platform roles on the testnet</0><0>finding and reporting bugs and errors</0><0>completing official bounties</0><0>creative and design work</0></0>"
+          "text": "Зробити внесок у проект.",
+          "contributions": "<0><0> навчання інших учасників </0><0> написання дописів у блозі та документації </0><0> створення та публікація нового відеоконтенту </0><0> участь у ролях платформи в тестнетах </0><0> пошук та повідомлення про помилки та баги </0><0> виконання грантів </0><0> творчі та дизайнерські роботи </0></0>"
         },
-        "report": "Regularly report your activity.",
-        "earnPoints": "Earn leaderboard points.",
-        "becomeFM": "Become a founding member!",
-        "buttonText": "Join Discord",
-        "excluded": "Countries that are excluded from that program: ",
-        "usFlagAlt": "us flag icon",
-        "tokensAlt": "two tokens"
+        "report": "Регулярно звітувати про активність.",
+        "earnPoints": "Заробляти бали лідерства.",
+        "becomeFM": "Стати членом-засновником!",
+        "buttonText": "Приєднатись в Discord",
+        "excluded": "Країни, які не включені до програми: ",
+        "usFlagAlt": "зображення американського прапору",
+        "tokensAlt": "Два токени"
       },
       "keyMetrics": {
-        "title": "Key metrics for the program",
-        "initialTokenPool": "size of initial token pool",
-        "numberOfFM": "number of founding members",
-        "numberOfCandidates": "number of founding member candidates",
-        "leaderboards": "Leaderboards",
-        "foundingMembersButton": "All Founding Member Scores",
-        "regularMembersButton": "All Regular Member Scores",
-        "fullProgramRules": "Read the full program rules"
+        "title": "Основні показники програми",
+        "initialTokenPool": "розмір початкового пулу токенів",
+        "numberOfFM": "кількість членів-засновників",
+        "numberOfCandidates": "кількість кандидатів в члени-засновники",
+        "leaderboards": "Дошка лідерів",
+        "foundingMembersButton": "Бали членів-засновників",
+        "regularMembersButton": "Бали звичайних учасників",
+        "fullProgramRules": "Читати повні правила програми"
       },
       "cta": {
-        "title": "Discuss the program",
-        "joinDiscord": "Begin your founding member journey by joining our Discord group and requesting your first testnet tokens.",
-        "askQuestions": "Here you can also ask question about many aspects of the program and find out the areas where you can contribute right away.",
-        "joinNow": "Join now",
-        "imageAlt": "founding members visual"
+        "title": "Обговорення програми",
+        "joinDiscord": "Розпочни свій шлях до статусу члена-засновника, приєднавшись до нашої групи Discord та подавши запит на перші токени тестнету.",
+        "askQuestions": "Тут ви також можете задати питання щодо багатьох аспектів програми та дізнатись, в яких сферах ви можете внести свій внесок.",
+        "joinNow": "Приєднатись зараз",
+        "imageAlt": "зображення членів-засновників"
       },
       "disclaimer": {
-        "title": "Disclaimer",
-        "text": "This disclaimer applies to the webpage accessible at <0>www.joystream.org/token</0> as well as all other webpages, digital services or applications published by Jsgenesis (the “Company”). The disclaimer also applies to any material published by Company in any other format in connection with the JOY token (the “Token”). Publications made by Company and all information contained within them are not directed at or intended for use by any person resident or located in any jurisdiction where (1) the distribution of such information is contrary to the laws of such jurisdiction; or (2) such distribution is prohibited without obtaining the necessary licenses or authorizations by the relevant branch, subsidiary or affiliate office of Company and such licenses or authorizations have not been obtained. Company does not provide investment, legal or tax advice and nothing herein should be construed as being financial, legal, tax or other advice. Unless specifically stated otherwise, all price information is indicative only. No representation or warranty, either express or implied, is provided in relation to the accuracy, completeness or reliability of the materials, nor are they a complete statement of the securities, markets or developments referred to herein. The materials should not be regarded by recipients as a substitute for the exercise of their own judgment. All information and materials published, distributed or otherwise made available by Company in relation to Token are provided for informational purposes, for your non-commercial, personal use only. No information or materials published by Company constitutes a solicitation, an offer, or a recommendation to buy or sell any investment instruments, to effect any transactions, or to conclude any legal act of any kind whatsoever."
+        "title": "Відмова від відповідальності",
+        "text": "Це застереження стосується веб-сторінки, доступної за адресою <0> www.joystream.org/token </0>, а також усіх інших веб-сторінок, цифрових служб або додатків, опублікованих Jsgenesis (\"Компанія\"). Застереження також поширюється на будь-який матеріал, опублікований Компанією в будь-якому іншому форматі у зв'язку з токеном JOY (\"Токен\"). Публікації, зроблені Компанією, та вся інформація, що міститься в них, не спрямовані або призначені для використання будь-якою особою, яка проживає або знаходиться в будь-якій юрисдикції, де (1) розповсюдження такої інформації суперечить законодавству юрисдикції; або (2) таке розповсюдження заборонено без отримання необхідних ліцензій або дозволів відповідним відділенням, дочірнім або афілійованим представництвом Компанії, і такі ліцензії або дозволи не отримані. Компанія не надає інвестиційних, юридичних чи податкових консультацій, і жодне з цих положень не повинно трактуватися як фінансова, юридична, податкова чи інша консультація. Якщо не вказано інше, вся інформація про ціни є лише орієнтовною. Жодна гарантія, явна або прихована, не надаються щодо точності, повноти або надійності матеріалів, а також не є повною заявою про цінні папери, ринки або розвиток, про які йдеться тут. Одержувачі не повинні розглядати матеріали як замінник здійснення власного судження. Вся інформація та матеріали, опубліковані, розповсюджені або надані Компанією будь-яким іншим чином стосовно токенів, надаються в інформаційних цілях, лише для особистого некомерційного використання. Жодна інформація чи матеріали, опубліковані Компанією, не являють собою прохання, пропозицію чи рекомендацію купувати чи продавати будь-які інвестиційні інструменти, здійснювати будь-які операції або укладати будь-які юридичні акти будь-якого типу."
       }
     },
     "leaderboards": {
       "siteMetadata": {
-        "title": "Founding Members Leaderboards"
+        "title": "Дошка лідерів Членів-Засновників"
       },
-      "title": "Leaderboard"
+      "title": "Дошка лідерів"
     },
     "form": {
       "siteMetadata": {
-        "title": "Founding Members Form"
+        "title": "Форма для Членів-Засновників"
       },
-      "title": "Submit activity summary",
+      "title": "Резюме підсумку діяльності",
       "progressItem": {
-        "accountInfo": "Account info",
-        "keyFile": "Key file",
-        "summary": "Summary",
-        "acceptTerms": "Accept terms & conditions",
-        "acceptTermsShort": "Terms & cond."
+        "accountInfo": "Інформація акаунту",
+        "keyFile": "Файл ключів",
+        "summary": "Резюме",
+        "acceptTerms": "Прияняти угоду да положення",
+        "acceptTermsShort": "Угода і положення"
       },
       "membership": {
-        "membershipHandle": "Membership handle",
-        "avatarAlt": "founding member avatar"
+        "membershipHandle": "Дескриптор членства",
+        "avatarAlt": "Аватар членів засновників"
       },
       "json": {
-        "exportedAccount": "Exported account with key",
+        "exportedAccount": "Акаунт, експортований з ключем",
         "howToExport": {
-          "link": "How to export your key?",
-          "title": "How to export your account with key:",
-          "text": "In the <0>Pioneer application</0> click the <1>My Keys</1> tab and then click the ellipsis (three dots) button on the Key which you would like to use. Then click <1>Create a backup file for this account</1>. Enter your password (if applicable) and the JSON will be downloaded."
+          "link": "Як експортувати ключ?",
+          "title": "Як експортувати акаунт з ключем:",
+          "text": "У <0> програмі Pioneer </0> клацніть вкладку <1> Мої ключі </1>, а потім натисніть три крапки на Ключі, який ви хочете використовувати. Потім натисніть <1> Створити файл резервної копії для цього облікового запису </1>. Введіть свій пароль (якщо потрібно), і JSON файл буде завантажено."
         },
-        "fileFormat": "Accepted file format: .json"
+        "fileFormat": "Доступні формати: .json"
       },
       "keybaseAndText": {
-        "keybaseHandle": "Keybase handle",
-        "documentWithSummary": "Document with the summary",
+        "keybaseHandle": "Дескриптор ключа",
+        "documentWithSummary": "Документ з резюме",
         "howToPrepare": {
-          "link": "How should I prepare it?",
-          "alternateLink": "How should I do it?",
-          "title": "How to prepare it:",
-          "text": "Your activity summary should describe in as much detail as possible your recent contributions to the success of the platform. Try to separate out each contribution into a separate paragraph or bullet point for ease of processing."
+          "link": "Як підготувати?",
+          "alternateLink": "Як це зробити?",
+          "title": "Як підготувати:",
+          "text": "Підсумок вашої діяльності повинен якомога детальніше описувати ваш нещодавній внесок у успіх платформи. Спробуйте виділити кожен внесок в окремий абзац або маркувати окремо для зручності обробки."
         },
-        "fileFormat": "Accepted file format: .txt",
-        "password": "Password",
-        "pleaseEnterPassword": "Please enter your password!"
+        "fileFormat": "Формати, що приймаються: .txt",
+        "password": "Пароль",
+        "pleaseEnterPassword": "Потрібно ввести пароль!"
       },
       "termsAndConditions": {
-        "title": "Read and accept terms and conditions",
-        "text": "<0>Term</0><1>The Joystream Founding Member Program was formally launched during February 2021. The program will stop accepting new submissions (activity summaries) and awarding further leaderboard points approximately one month in advance of the mainnet launch, on the snapshot date, yet to be confirmed.</1><2><0>Our current target for mainnet launch is during Q4 2021, though this is subject to change.</0></2><0>Eligibility</0><1>The program is open to everyone over the age of 18 who are not U.S. persons. </1><1>To be formally admitted to the program you will be contacted and screened by a Jsgenesis representative once your community contributions have met our internally determined threshold for admission.</1><2>The formal admission of new Founding Members to the program will take place at the end of scoring periods (the dates of which are published on our website). Each scoring period currently lasts two weeks.</2><0>Communication</0><1>We will publish further public updates about the program through our regular communication channels, including our Official Discord Channel, the Joystream Newsletter, the official GitHub repo for the program (github.com/joystream/founding-members) and on our website (www.joystream.org), and blog (blog.joystream.org).</1><2>Any private or sensitive information about your participation in the program will be communicated via Keybase or some other previously agreed contact method.</2><0>Token Allocation Formula</0><1>Once officially awarded with Founding Member status, you will be automatically assigned 0.02% of the mainnet genesis token supply. The rest of your token allocation will be calculated based on your proportional share of leaderboard points among all Founding Members.</1><2>Since the current program provides a token pool of 15%, this 15% will be made up of claims of the default 0.02% by each participant, and the remaining allocation not already claimed under this rule will be distributed proportionally based on the relative share of total leaderboard points for each Founding Member.</2><0>Reward Policy</0><1>Points have no intrinsic value and when assigned to users with the Founding Member status they only represent a partial claim on an as yet undetermined quantity of mainnet JOY tokens. In the case of bad faith activity (see below), leaderboard/founding member points can be voided at any time.</1><2>Participants should also be aware that tokens allocated for mainnet may include some vesting period or \"locks\", that restricts what they can be used for some period of time.</2><0>Eviction Policy</0><2>Any platform member who participates in fraudulent or bad faith activity is liable to be expelled from the leaderboards and Founding Member program, with all associated token claims voided.</2><0>Account and Key Security</0><1>Your leaderboard/founding member points are yours alone and are non-transferrable. You must keep your account and any private keys associated with your membership of the Founding Member program safe and engage in sensible digital security practices.</1><1>Keys with associated Founding Member token claims must not be transferred to anyone else under any circumstances. Where this occurs, points or token claims may be voided (see above).</1><2>Tokens can only be allocated to addresses under your control. You may be required to sign a message proving you own the private keys to any addresses you provide.</2><0>Activity Reporting</0><1>You cannot claim for the same activity on more than one occasion (i.e. across more than one summary) in order to be awarded the same points twice. If this does occur it is liable to be deemed bad faith and may result in your eviction from the program.</1><1>All activity must be reported within 30 days of taking place. Contributions recorded outside of this window will not qualify for rewards. For this reason it is very important to submit regular summaries.</1><1>Once you have submitted your activity up to and including a certain date, you can no longer submit activity from before this date.</1><2>When reporting contributions, the correct format for summary submissions should be observed.</2><0>Updates To These Rules</0><1>Jsgenesis reserves the right to update the rules of the program at any time, for any reason.</1><1>If serious flaws in the structure of the program are discovered, Jsgenesis reserves the right to announce that after a future scoring period, the \"season\" is concluded, and a new scheme will apply to following seasons, thus resetting \"scores\". In such an event, a \"slice\" of the pool, set by Jsgenesis discretion, will be allocated in accordance with existing rules. The remainder will be transferred to new \"seasons\".</1><1>Jsgenesis reserves the right not to honour any aspect of this agreement due to legal considerations.</1>"
+        "title": "Прочитати та прийняти умови та положення",
+        "text": "<0> Термін</0> <1> Програма Членів-Засновників Joystream була офіційно запущена в лютому 2021 року. Програма припинить приймати нові подання (зведення про діяльність) та надавати додаткові бали лідерів приблизно за місяць до запуску основної мережі, дата ще не підтверджена. </1> <2> <0> Поточний прогнозований час запуску мережі - 4 квартал 2021 року, хоча план може бути змінено. </0> </2> <0> Право на участь </0> <1> Програма доступна для всіх учасників старше 18 років, які не є громадянами США. </1> <1> Для офіційного допуску до програми з вами зв’яжеться представник Jsgenesis після того, як ваші внески в діяльність спільноти досягнуть нашого внутрішньо визначеного порогу для прийому. </1> <2> Офіційний прийом нового засновника Учасники програми відбуватимуться в кінці періодів підрахунку балів (дати яких опубліковані на нашому веб-сайті). На даний момент кожен такий період триває два тижні. </2> <0> Комунікація </0> <1> Ми публікуватимемо подальші публічні оновлення про програму через наші звичайні канали спілкування, включаючи наш офіційний канал Discord, інформаційний бюлетень Joystream, офіційний Репозиторій GitHub (github.com/joystream/founding-members) та на нашому веб-сайті (www.joystream.org) і в блозі (blog.joystream.org). </1> <2> Будь-яка приватна або конфіденційна інформація про вашу участь у програмі буде повідомлена за допомогою Keybase або будь-якого іншого узгодженого раніше методу контакту. </2> <0> Формула розподілу токенів </0> <1> Після офіційного присвоєння статусу члена-засновника вам автоматично буде призначено 0,02 % від пропозиції генезису основної мережі. Решта розподілу токенів буде розрахована на основі вашої пропорційної частки балів таблиці лідерів серед усіх членів-засновників. </1> <2> Оскільки поточна програма передбачає пул токенів 15%, ці 15% скрадатимуться з 0,02% за замовчуванням для кожного учасника, а решта розподілу, буде розподілена пропорційно на основі відносної частки загальної кількості балів лідерів для кожного члена-засновника. </2> <0> Політика призначення винагороди </0> <1> Бали не мають внутрішнього значення, і коли вони призначаються користувачам із статусом Засновника, вони представляють лише часткову претензію на ще невизначену кількість токенів JOY основної мережі. У разі недобросовісної діяльності (див. Нижче), бали членів-засновників можуть бути скасовані в будь-який час. </1> <2> Учасники також повинні знати, що тоекни, виділені для основної мережі, можуть включати певну затримку отримання або \"лок\", що обмежує можливість користування ними певного періоду часу. </2> <0> Політика скасування </0><2> Будь-який учасник платформи, який бере участь у шахрайській чи недобросовісній діяльності, може бути виключений з таблиці лідерів та програми членів-засновників, з усіма пов'язаними балами-заявками на токени. </2> <0> Безпека облікового запису та ключів </0> <1> Ваші бали лідерів / членів-засновників належать лише вам і не підлягають передачі. Ви повинні зберігати свій обліковий запис та будь-які приватні ключі, пов’язані з вашим членством у програмі, у безпеці та застосовувати методи цифрової безпеки. </1> <1> Ключі не повинні передаватися комусь іншому під будь обставини. Там, де це відбувається, бали або заявки на токени можуть бути анульовані (див. Вище). </1> <2> Токени можуть бути призначені лише для адресу, які знаходяться під вашим контролем. Можливо, вам доведеться підписати повідомлення, яке підтверджує, що ви є власником приватних ключів, на будь-яку адресу, яку ви надаєте. </2> <0> Звітування про діяльність </0> <1> Ви не можете звітувати про одну і ту ж діяльність більше одного разу (тобто у кількох зведеннях), щоб двічі набирати однакові бали. Якщо це трапиться, це може бути визнано недобросовісним і може призвести до вашого виселення з програми. </1> <1> Про всі дії потрібно повідомити протягом 30 днів після їх проведення. Внески, записані поза цим вікном, не можуть претендувати на винагороду. З цієї причини дуже важливо подавати регулярні зведення. </1> <1> Після того, як ви подали звіт про свою діяльність до певної дати, ви більше не можете подавати діяльність до цієї дати. </1> <2 > Повідомляючи про внески, слід дотримуватися правильного формату поданих резюме. </2> <0> Оновлення цих правил </0> <1> Jsgenesis залишає за собою право оновлювати правила програми в будь-який час з будь-якої причини. </1> <1> Якщо будуть виявлені серйозні недоліки в структурі програми, Jsgenesis залишає за собою право повідомити, що після майбутнього періоду підрахунку балів завершується «сезон», і нова схема застосовуватиметься в наступних сезонах, таким чином скидаючи \"бали\". У такому випадку \"зріз\" пулу, встановлений на розсуд Jsgenesis, буде виділено відповідно до існуючих правил. Решта буде перенесена на нові \"сезони\". </1> <1> Jsgenesis залишає за собою право не дотримуватись жодного аспекту цієї угоди з юридичних міркувань. </1>"
       },
       "success": {
-        "title": "Thank you for submitting your summary, we have received it successfully.",
-        "text": "We will process the information contained within it shortly and award leaderboard points for qualifying contributions."
+        "title": "Дякуємо за подання Вашого резюме, ми його успішно отримали.",
+        "text": "Невдовзі ми обробимо інформацію, що міститься в ній, і присудимо бали за кваліфікаційні внески."
       },
       "error": {
-        "noSuchAccount": "No such account exists. Try again!",
-        "incorrectPassword": "Password is incorrect, please try again!",
-        "fileFormat": "Wrong file format! Please try again or check our tips how to export it.",
-        "jsonWrongAccount": "Json file doesn't correspond to account given!",
-        "faultyJson": "Json file has incomplete/incorrect components. Try exporting your account again!"
+        "noSuchAccount": "Такого акаунту не існує!",
+        "incorrectPassword": "Пароль не є дійсним!",
+        "fileFormat": "Недійсний формат файлу! Спробуйте повторити, або використайте нашу інструкцію.",
+        "jsonWrongAccount": "Файл Json не відповідає вказаному обліковому запису!",
+        "faultyJson": "Файл Json містить неповні або неправильні компоненти. Спробуйте експортувати свій акаунт ще раз!"
       },
-      "dropFile": "Drop you file here or <0>browse files</0>",
-      "uploadFile": "Upload file"
+      "dropFile": "Скопіювати файл сюди або <0>вибрати в провіднику</0>",
+      "uploadFile": "Завантажити файл"
     }
   }
 }

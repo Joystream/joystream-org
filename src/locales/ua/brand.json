@@ -1,197 +1,197 @@
 {
   "brand": {
     "siteMetadata": {
-      "title": "Joystream Brand Guide"
+      "title": "Керівництво по бренду Joystream"
     },
     "assets": {
-      "logo": "Logo",
-      "logoIcons": "Logo Icons",
-      "descriptiveIcons": "Descriptive Icons",
-      "illustrations": "Illustrations",
-      "systemIcons": "System Icons",
-      "typography": "Typography",
-      "blogPostCovers": "Blog Post Covers",
+      "logo": "Лого",
+      "logoIcons": "Зображення Лого",
+      "descriptiveIcons": "Описові зображення",
+      "illustrations": "Ілюстрації",
+      "systemIcons": "Системні зображення",
+      "typography": "Типографія",
+      "blogPostCovers": "Шапки повідомлень в блозі",
       "displayTitle": {
-        "logoPack": "Logo Pack"
+        "logoPack": "Пакет ілюстрацій"
       },
-      "files": "files"
+      "files": "Файли"
     },
     "guides": {
       "general": {
-        "logo": "Logo",
-        "overview": "Overview",
-        "logomark": "Logomark",
-        "construction": "Construction",
-        "useCases": "Use Cases",
-        "socialIcons": "Social Icons",
-        "forbiddenUses": "Forbidden Uses",
-        "colorPalettes": "Color Palettes",
-        "primaryColors": "Primary Colors",
-        "supportivePallet": "Supportive Pallet",
-        "secondaryPallet": "Secondary Pallet",
-        "iconography": "Iconography",
-        "descriptiveIcons": "Descriptive Icons",
-        "systemIcons": "System Icons",
-        "illustrations": "Illustrations",
-        "patterns": "Patterns",
-        "typography": "Typography",
-        "photography": "Photography",
-        "motion": "Motion",
-        "back": "Back",
-        "more": "More"
+        "logo": "Лого",
+        "overview": "Огляд",
+        "logomark": "Логотип",
+        "construction": "Розробка",
+        "useCases": "Сценарії використання",
+        "socialIcons": "Картинки соц.мереж",
+        "forbiddenUses": "Заборонене використання",
+        "colorPalettes": "Палітра кольорів",
+        "primaryColors": "Основні кольори",
+        "supportivePallet": "Допоміжна палітра",
+        "secondaryPallet": "Другорядна палітра",
+        "iconography": "Іконографіка",
+        "descriptiveIcons": "Описові зображення",
+        "systemIcons": "Системні зображення",
+        "illustrations": "Ілюстрації",
+        "patterns": "Візерунки",
+        "typography": "Друкарня",
+        "photography": "Фотографія",
+        "motion": "Анімація",
+        "back": "Назад",
+        "more": "Більше"
       },
       "logo": {
-        "experimentation": "Our brand should promote a feeling of experimentation, excitement and building something ethical and dynamic.",
-        "conceptIterations": "Before we agreed on a final logo concept we went through multiple iterations of various concepts. We explored various ideas in depth before settling on the final logo concept."
+        "experimentation": "Наш бренд повинен сприяти експериментування, піднесенню та створенню чогось етичного і динамічного.",
+        "conceptIterations": "Перш ніж ми погодили остаточну концепцію логотипу, ми пройшли кілька ітерацій різних концепцій. Ми ретельно вивчили різні ідеї, перш ніж зупинитися на остаточної концепції логотипу."
       },
       "logomarkConstruction": {
-        "title": "01. Logomark Construction",
-        "simplePrinciples": "In the end we came up with a logomark that combines several simple principles which translate well to the voice of the brand.",
-        "combination": "Our logomark is a combination of the letter J (to represent the name Joystream) and three parallel stripes that are a representation of streaming data and the flow of information and technology.",
+        "title": "01. Створення логотипу",
+        "simplePrinciples": "Зрештою, ми придумали логотип, який поєднує в собі кілька простих принципів, які добре відображаються в посиланні бренду.",
+        "combination": "Наш логотип представляє собою комбінацію букви J (що означає назву Joystream) і трьох паралельних смуг, які представляють потоки даних і потік інформації і технологій.",
         "image": {
-          "logomarkDescription": "Logomark's exclusion zone is equal to the blue square height (marked as 5a in the diagram)."
+          "logomarkDescription": "Зона закінчення логотипу дорівнює висоті синього квадрата (позначена на схемі цифрою 5а)."
         }
       },
       "logoConstruction": {
-        "title": "02. Logo Construction",
-        "combination": "The Joystream logo is a combination of the logomark and dedicated typography that was designed to be the best link between the logomark and what Joystream stands for. It is firm and technical but shows plasticity and sense of a structure.",
-        "horizontalLockup": "Horizontal Lockup",
-        "verticalLockup": "Vertical Lockup"
+        "title": "02. Створення лого",
+        "combination": "Лого Joystream це комбінація логотипу та спеціальної типографіки, яка була розроблена, щоб бути кращим сполучною ланкою між логотипом і тим, що означає Joystream. Він виконаний в строгому технічному стилі, але також демонструє пластичність і відчуття структури.",
+        "horizontalLockup": "Горизонтальний Макет",
+        "verticalLockup": "Вертикальний Макет"
       },
       "logoUseCases": {
-        "title": "03. Logo Use Cases",
-        "originalForm": "The Joystream logo is primarly used in its original form on white backgrounds but it can also be used in its complimentary forms if necessary. Examples show such use cases below.",
-        "safeUse": "The smallest safe use",
-        "visualPresentation": "In order to ensure the best visual presentation of the logo, it is best offered in sizes between <0>200 and 500+px</0> width on digital devices.",
-        "horizontalNarrow": "The Joystream logo should never be narrower than 100px in digital or 20mm in print horisontal lockup.",
-        "verticalNarrow": "Vertical lockup should never be narrower than 70px in digital or 15mm in print."
+        "title": "03. Використання Лого",
+        "originalForm": "Логотип Joystream в основному використовується у вихідній формі на білому тлі, але при необхідності його також можна використовувати в додаткових видах. Приклади нижче показують такі варіанти використання.",
+        "safeUse": "Найбезпечніше використання",
+        "visualPresentation": "Щоб забезпечити найкраще візуальне представлення логотипу, його краще використовувати в розмірах від <0> 200 до 500+ px </ 0> в ширину.",
+        "horizontalNarrow": "Логотип Joystream ніколи не повинен бути менше 100 пікселів в цифровому форматі або 20 мм при друку по горизонталі.",
+        "verticalNarrow": "Вертикальне відображення лого не повинно бути менше 70 пікселів в цифровому або 15 мм в друкованому варіанті."
       },
       "logoSocialIcons": {
-        "title": "04. Social Icons",
-        "icon": "In cases when the Joystream brand has already been established we can simply use the icon on its own. While the icon can exist without the wordmark, the wordmark should never exist without the icon."
+        "title": "04. Картинки соц.мереж",
+        "icon": "У випадках з брендом Joystream, ми можемо використовувати значок самостійно. Хоча значок може існувати без словесного знаку, словесний знак ніколи не повинен розміщуватися без значка."
       },
       "logoForbiddenUses": {
-        "title": "05. Forbidden uses of the logo",
-        "rules": "The logotype and the icon must follow certain rules and there are general cases of use that should be avoided at all costs! In order to preserve the brand voice remember to avoid examples such as the following:"
+        "title": "05. Заборонене використання логотипу",
+        "rules": "Логотип і значок повинні відповідати певним правилам, і є загальні випадки використання, яких слід уникати за будь-яку ціну! Щоб зберегти репутацію бренду, не забувайте уникати наступних прикладів використання:"
       },
       "colorOverview": {
-        "combine": "Our brand colors combine three primary colors: black, white and blue. They define the mood and present brand values including:",
-        "example": "Stability, Trust, Freedom, Responsibility, Loyalty, Wisdom, Confidence and Intelligence"
+        "combine": "Кольори нашого бренду поєднують в собі три основних кольори: чорний, білий і синій. Вони визначають настрій і представляють цінності бренду, включаючи:",
+        "example": "Стабільність, довіру, свободу, відповідальність, вірність, мудрість, упевненість і інтелект "
       },
       "primaryColors": {
-        "title": "01. Primary Colors",
-        "blackAndBlue": "Our primarly used colors are black and Joystream blue, a distinctive color that helps to put focus and draw attention. The color white can be deployed in order to calm, provide clarity and offer improved readability.",
-        "blueGrey": "One additional color to combine with the three primary colors is blue tinted grey, its purpose is comparable to that of white but it also gives a good amount of contrast to the existing white elements where necessary."
+        "title": "01. Основні кольори",
+        "blackAndBlue": "Наші переважно використовувані кольори - це чорний, а також Joystream Blue. Це характерний колір, який допомагає зосередити увагу і залучити його. Білий колір може бути використаний для заспокоєння, забезпечення чіткості і поліпшення читаності.",
+        "blueGrey": "Ще один додатковий колір, який можна комбінувати з трьома основними кольорами, - це сірий з синім відтінком, його призначення можна порівняти з білим, але він також дає хороший контраст з існуючими білими елементами там, де це необхідно."
       },
       "supportiveColors": {
-        "title": "02. Supportive Color Palette",
-        "purpose": "Our supportive palette serves the purpose of convenience and usability. This pallete provides a comprehensive range of different shades of primary colors and can be utilised in many different ways depending on requirements."
+        "title": "02. Допоміжна палітра кольорів",
+        "purpose": "Наша допоміжна палітра служить для зручності та зручності використання. Ця палітра надає широкий спектр різних відтінків основних кольорів і може використовуватися по-різному в залежності від вимог в конкретних ситуаціях."
       },
       "secondaryColors": {
-        "title": "03. Secondary Color Palette",
-        "states": "These are further colours that can represent certain states of the network, they can stand for an error, success, warning and more."
+        "title": "03. Другорядна палітра кольорів",
+        "states": "Це додаткові кольори, які можуть представляти певні стани мережі, вони можуть позначати помилку, успіх, попередження та багато іншого."
       },
       "iconsOverview": {
-        "text": "Icons can be divided into two groups with different purposes. Descriptive icons are a substitute for illustrations and system icons are a purely functional part of the interface.",
-        "typeDescriptive": "01. Descriptive",
-        "typeSystem": "02. System"
+        "text": "Значки можна розділити на дві групи з різним призначенням. Описові значки замінюють ілюстрації, а системні значки є чисто функціональною частиною інтерфейсу.",
+        "typeDescriptive": "01. Описові",
+        "typeSystem": "02. Системні"
       },
       "descriptiveIcons": {
-        "title": "01. Descriptive Icons",
-        "comprehensiveStyle": "Joystream iconography is a custom, comprehensive icon style that helps in explaining certain complex topics in a simple, digestable manner.",
-        "symbolic": "They are not always very direct and often carry a symbolic meaning but they help to emphasize important elements.",
-        "characteristicFeatures": "Characteristic features of the descriptive icons include paralell striped fills. They are a translation of logo stripes and represent shadows.",
-        "angle": "Lines have an angle of 45° they should have 2px girth and 8px space between them at 100% scale.",
-        "outlines": "Icons are drawn using outlines of 12px width at 100% scale, they have square linecaps and can have various sizes depending on the composition.",
-        "fit": "Icons at 100% scale should fit into a box of 800x500px."
+        "title": "01. Описові значки",
+        "comprehensiveStyle": "Система значків Joystream - це всеосяжний стиль значків який налаштовується та допомагає пояснювати певні складні теми простим і зрозумілим чином.",
+        "symbolic": "Вони не завжди дуже прямі і часто несуть символічне значення, але допомагають виділити важливі елементи.",
+        "characteristicFeatures": "Характерні особливості описових значків включають паралельні смугасті заливки. Вони є поданням смуг логотипу у вигляді тіней.",
+        "angle": "Лінії мають кут 45 °, вони повинні мати ширину в 2px і відстань між ними 8px в масштабі 100%.",
+        "outlines": "Значки створюються з використанням контурів шириною 12px в масштабі 100%, вони мають квадратні контури і можуть мати різні розміри залежно від композиції.",
+        "fit": "Іконки в масштабі 100% повинні вміщуватись в рамку розміром 800x500 пікселів."
       },
       "systemIcons": {
-        "title": "02. System Icons",
-        "basicStyle": "System icons in their basic style combine two colors: black and Joystream Blue. Their purpose is to represent certain actions on the website or platform. They are readable even in small sizes down to 18x18px.",
-        "strokes": "System Icons are drawn using 2px strokes with square linecaps on a 24px grid frame.",
-        "subtleAccents": "Where possible, icons should have subtle blue accents representing no greater than 40% of the whole.",
-        "types": "Types of system icons",
+        "title": "02. Системні значки",
+        "basicStyle": "Системні значки в своєму базовому стилі поєднують в собі два кольори: чорний і синій Joystream Blue. Їх мета - представити певні дії на веб-сайті або платформі. Вони читаються навіть в невеликих розмірах до 18x18 пікселів.",
+        "strokes": "Системні значки малюються з використанням штрихів шириною 2px з квадратними кінчиками ліній в рамці c сіткою в 24px.",
+        "subtleAccents": "За можливості, значки повинні мати тонкі сині вставки, які становлять не більше 40% всієї площі.",
+        "types": "Типи системних значків",
         "fourTypes": {
-          "text": "We distinguish four types of system icons and they should be used preferably in their basic style but can be used interchangeably where neccessary.",
-          "basic": "Basic style",
-          "blue": "Blue outlines",
-          "white": "White outlines",
-          "full": "Full style"
+          "text": "Ми розрізняємо чотири типи системних значків, і їх слід використовувати переважно в їх основному стилі, але при необхідності вони можуть використовуватися як взаємозамінні.",
+          "basic": "Базовий стиль",
+          "blue": "Сині обриси",
+          "white": "Білі обриси",
+          "full": "Повний стиль"
         }
       },
       "illustrations": {
-        "overview": "Joystream Illustrations are symbolic representation of important concepts within the Joystream project. These might include a a new testnet, a particular role on the network or any other equally significant subject.",
-        "complex": "They can be quite visualy complex despite using only three colors and no gradients.",
-        "patterns": "Illustrations will often be combined with patterns and in the case of putting them on a blue background, the outline of the illustration can be changed to Joystream Blue in order to create a good color balance between patterns and the background.",
-        "distinctive": "Illustrations should be simple enough to be distinctive even in smaller resolutions down to 300x300px.",
-        "adequateDetail": "The amount of detail should be adequate to what the illustration represents, in most cases they should be deployed at sizes no smaller than 500x500px."
+        "overview": "Ілюстрації Joystream представляють собою символічне представлення важливих концепцій проекту Joystream. Це може бути нова тестова мережа, певна роль в мережі або будь-який інший не менш важливий об'єкт.",
+        "complex": "Вони можуть бути досить складними з візуальної точки зору, незважаючи на використання тільки трьох кольорів і без градієнтів.",
+        "patterns": "Ілюстрації часто поєднуються з візерунками, і в разі розміщення їх на синьому тлі, контур ілюстрації можна змінити на Joystream Blue, щоб створити хороший колірний баланс між візерунками і фоном.",
+        "distinctive": "Ілюстрації повинні бути досить простими, щоб їх можна було розрізнити навіть при зменшенні розширення до 300x300 пікселів.",
+        "adequateDetail": "Кількість деталей повинно відповідати тому, що має бути представлено ілюстрацією, і в більшості випадків вони повинні використовуватися в розмірах не менше 500x500 пікселів."
       },
       "patterns": {
-        "translation": "Patterns are close translation of the logomark (J) into variants of geometrical shapes representing the flow of information, technology and Joystream's experimental brand personality.",
-        "supportTool": "They were introduced as a support tool to make certain elements stand-out, to build mood and as an inherent element of the visual identity of the brand.",
-        "sixPieces": "Patterns visually consist of six different pieces that can be rotated by 90 degrees in any direction and should always have the dimensions of a perfect square.",
-        "oneCommonVertex": "They should also have at least one common vertex when they touch. They do not always have to touch and when they don’t, space between pieces should always be equal to its’ width/height or the value multiplied.",
-        "howToUse": "How to use patterns",
-        "oneOfFive": "Patterns can use one of five different colors depending on what background is used beneath and what their main purpose is in a given situation.",
-        "density": "Depending on the situation these can be used more or less densely.",
-        "inUse": "Patterns in use - examples"
+        "translation": "Візерунки - це близький переклад логотипу (J) в різні варіанти геометричних форм, що представляють потік інформації, технології та експериментальну індивідуальність бренду Joystream.",
+        "supportTool": "Вони були введені як допоміжний інструмент, щоб виділити певні елементи, створити емоційну складову і стати невід'ємними елементами візуальної ідентичності бренду.",
+        "sixPieces": "Візерунки візуально складаються з шести різних частин, які можна повертати на 90 градусів в будь-якому напрямку, і вони завжди повинні мати розміри ідеального квадрата.",
+        "oneCommonVertex": "У них також повинна бути хоча б одна загальна вершина при торканні. Однак, вони не завжди повинні торкатися один одного, і коли не стикаються, відстань між частинами завжди має дорівнювати їх ширині/висоті або кратному значенняю.",
+        "howToUse": "Як використовувати візерунки",
+        "oneOfFive": "У візерунках може використовуватися один з п'яти різних кольорів в залежності від того, який фон використовується під ним, а також яке основне призначення в даній ситуації.",
+        "density": "Залежно від ситуації їх можна використовувати з більшою або меншою щільністю.",
+        "inUse": "Живі приклади візерунків"
       },
       "typography": {
-        "overview": "Our typefaces are simple, comprehensive and modern. This is a reflection of our brand and our voice. We chose the appropriate typeface weights from PX Grotesk (regular, bold) and Inter family for specific touchpoints and to create clear hierarchies of information and messages.",
-        "backup": "If either two typefaces are impossible to use please choose Arial Regular. This may be required across PC operating systems or electronic internal documents or in diferent offices worldwide. Don’t use Arial for any print materials.",
-        "sample": "The following is a sample of an ideal font stack using PX Grotesk for headlines and larger pull quote text and Inter UI for paragraph and call-to-action text."
+        "overview": "Наші шрифти прості, зрозумілі і сучасні. Це відображення нашого бренду і нашого голосу. Ми вибрали підходящі накреслення шрифту з сімейства PX Grotesk (звичайний, напівжирний) і Inter для конкретних спільних позицій і створення чітких ієрархій інформації та повідомлень.",
+        "backup": "Якщо неможливо використовувати будь-які з двох шрифтів, виберіть Arial Regular. Це може знадобитися для операційних систем ПК, електронних внутрішніх документів або в офісах по всьому світу. Не використовуйте Arial для будь-яких друкованих матеріалів.",
+        "sample": "Нижче наведено зразок ідеального стека шрифтів з використанням PX Grotesk для заголовків і більшого тексту цитат і Inter UI для абзаців і тексту заклику до дії."
       },
       "photography": {
-        "overview": "Photographs should be relevant to the topic they are describing but they shouldn’t be limited only to technology. Joystream is much more than just technology; it is unifying, fresh and joyful. Imagery should convey this mood to users.",
-        "howToUse": "How to use photography",
-        "variety": "Since Joystream is a unique and experimental project it provides a wide variety of the topics which might be  associated with it in terms of photography. It is highly technical especially now when we are in the community building phase, so good deal of the photographs will be tech related.",
-        "consistency": "One way to make sure the photographs are consistent is to use them in dual tones deriving from branding colors. For that purpose we can use a handy tool to consistently change images to dual tones as described below.",
-        "consistentDuotones": "The link below allows you to create consistent duotones with any photography after inputing the proper two Joystream colours.",
-        "mood": "The mood that photos convey is extremely important. It should by all means give a feel of building trust, community and joy. Photographs should show good amount of diversity as it is meant to be for an extremely wide variety of users. They don’t have to be used in dual tones but it is best if they are not \"screaming\" with colours.",
-        "inUse": "Photography in use - examples"
+        "overview": "Фотографії повинні відповідати темі, яку вони описують, але не повинні обмежуватися тільки технологіями. Joystream - це набагато більше, ніж просто технологія; він об'єднує, освіжає і дарує радість. Зображення повинні передавати цей настрій користувачам.",
+        "howToUse": "Як використовувати фотографію",
+        "variety": "Оскільки Joystream - унікальний експериментальний проект, він пропонує широкий спектр тем, які можуть бути пов'язані з ним з точки зору фотографії. Важлива технологічна складова фотографій, особливо зараз, коли ми перебуваємо на етапі побудови спільноти, тому більша частина фотографій стосуватиметься технологій.",
+        "consistency": "Один із способів забезпечити однаковість фотографій - використовувати їх в двох тонах, заснованих на фірмових кольорах. Для цієї мети ми можемо використовувати зручний інструмент для послідовної зміни зображень на двоколірні, як описано нижче.",
+        "consistentDuotones": "Посилання нижче дозволяє створювати узгоджені двоколірні шаблони для будь-якої фотографії після введення двох поточних кольорів Joystream.",
+        "mood": "Дуже важливий настрій, який передають фотографії. Це неодмінно повинно викликати почуття довіри, спільності і радості. Фотографії повинні бути різноманітними, оскільки призначені для дуже широкого кола користувачів. Їх не обов'язково використовувати в двох тонах, але краще, якщо вони не будуть кричущими з точки зору кольорової палітри.",
+        "inUse": "Приклади використаних фотографій"
       },
       "motion": {
-        "subtitle": "Joystream is an experimental and exciting platform and its motion should be too.",
-        "rules": "General rules for motion can be described with a few simple principles: smooth transitions, dynamic but fluid motion and good amount of easing at the keyframes. This combination should provide a consistent and flexible animation style to cover most of the use cases.",
-        "notLimiting": "Guides should be by no means limiting, they should only serve the purpose of providing consistency for animations."
+        "subtitle": "Joystream - експериментальна і захоплююча платформа, і її рух має бути таким же.",
+        "rules": "Загальні правила анімацій можна описати кількома простими принципами: плавні переходи, динамічний, але плавний рух і загальна плавність в ключових кадрах. Ця комбінація повинна забезпечувати послідовний і гнучкий стиль анімації, що охоплює більшість випадків використання.",
+        "notLimiting": "Керівництва ні в якому разі не повинні  обмежувати, вони повинні служити тільки цілі забезпечення однаковості анімації."
       }
     },
     "story": {
       "header": {
-        "title": "Joystream Brand Story",
-        "description": "Joystream offers a modern, experimental solution to the problem of accountable governance in digital media. <0>Our objective is to build a user-governed video platform with a strong sense of community and freedom.</0>",
-        "buttonText": "Manifesto"
+        "title": "Історія бренду Joystream",
+        "description": "Joystream пропонує сучасне експериментальне вирішення проблеми звітного управління в цифрових медіа. <0> Наша мета - створити керовану користувачами відеоплатформу з сильним почуттям спільності і свободи.</0>",
+        "buttonText": "Маніфест"
       },
       "website": {
-        "title": "The Website",
-        "linkText": "Visit the Website"
+        "title": "Сайт",
+        "linkText": "Перейти на сайт"
       },
       "description": {
-        "header": "Our brand identity consists of few key visual elements: our logo, typeface, illustrations, patterns, colour palette and iconography.",
-        "meaningfulRole": "Each of these elements has a meaningful role in brand identity as established in the guidelines. But combining all of these components builds much more than just a visual experience.",
-        "powerfulTool": "Joystream branding is a powerful tool for communication with all of its users throughout their whole experience.",
-        "experimental": "Fundamentally, our effort is an experimental one; we do not have all the answers, and we want to be honest about that in our communication.",
-        "empowering": "We are not promising cheaper, faster or nicer, like one typically would when selling a consumer widget or service. Instead we have hope that we can build something more empowering and accountable through our process of experimentation.",
-        "governance": "Lastly, at the core of our vision is governance, so what we are building is never finished; we are only constructing the first piece. It is a dynamic effort we hope communities will carry forward in amazing ways, we are just providing the first set of tools.",
-        "footer": "For the reasons outlined above, our brand should carry this feeling of experimentation, excitement and building something ethical and dynamic."
+        "header": "Наш фірмовий стиль складається з декількох ключових візуальних елементів: нашого логотипу, шрифту, ілюстрацій, візерунків, кольорової палітри та іконографікі.",
+        "meaningfulRole": "Кожен з цих елементів відіграє значиму роль у створенні ідентичності бренду, як встановлено в інструкціях. Але об'єднання всіх цих компонентів створює набагато більше, ніж просто візуальне відчуття.",
+        "powerfulTool": "Брендинг Joystream - це потужний інструмент для спілкування з усіма користувачами протягом усього їхнього досвіду.",
+        "experimental": "По суті, наші зусилля є експериментальними; у нас немає відповідей на всі питання, і ми хочемо бути чесними в своєму спілкуванні зі світом.",
+        "empowering": "Ми не обіцяємо дешевше, швидше або краще, як це зазвичай буває під час продажу споживчого віджета або послуги. Замість цього у нас є надія, що ми зможемо створити щось більш надихаюче і контрольоване за допомогою нашого процесу експериментів.",
+        "governance": "Нарешті, в основі нашого бачення лежить управління, тому те, що ми будуємо, ніколи не буде закінчено; ми будуємо тільки першу частину. Ми сподіваємося, що це поштовх, який буде просуватися спільнотою далі, а ми просто надаємо перший набір інструментів.",
+        "footer": "З причин, викладених вище, наш бренд повинен нести це почуття експериментів, азарту і створення чогось динамічного і, в той же час, етичного."
       },
       "logo": {
-        "title": "We want to free the media, inspire people and connect them using platform",
-        "uniqueness": "Creating the Joystream brand proved to be challenging due to its uniqueness and the fact that it is continually evolving.",
-        "requirements": "Not only did we have to take into account a very wide and diverse user base but also we had to create a brand that will be futureproof and flexible enough to cover both the existing and upcoming requirements of the project.",
-        "branding": "Joystream branding itself is quite metaphoric and symbolic, often referring to symbolism of ancient cities, culture, arts and philosophies.",
-        "challenge": "The challenge was to combine it with very modern and complex technologies."
+        "title": "Ми хочемо звільнити ЗМІ, надихнути людей і об'єднати їх за допомогою платформи.",
+        "uniqueness": "Створення бренду Joystream виявилося складним завданням через його унікальності та необхідності постійного розвитку.",
+        "requirements": "Ми не тільки повинні були прийняти до уваги дуже широку і різноманітну базу користувачів, але також нам потрібно було створити бренд, який буде надійним в майбутньому і досить гнучким, щоб задовольнити як існуючі, так і майбутні вимоги проекту.",
+        "branding": "Сам бренд Joystream носить метафоричний і символічний характер, часто посилаючись на символіку древніх міст, культури, мистецтва і філософії.",
+        "challenge": "Завдання полягало в тому, щоб поєднати це з дуже сучасними і складними технологіями."
       },
       "explanation": {
-        "title": "Explaining the Brand",
-        "balance": "Our new branding is about finding good balance between a very simplistic tone of communication with the symbolism and complexity of modern world problems and technologies.",
-        "patterns": "Our branding uses mosaic, geometrical patterns and shapes combined with explicit colours and symbolic  illustrations.",
-        "style": "We also deploy descriptive icons in combination with simple glyph style system icons and an experimental  illustration style."
+        "title": "Роз'яснення до бренду",
+        "balance": "Наш новий брендинг спрямований на пошук хорошого балансу між дуже спрощеним тоном спілкування і символікою, і складністю сучасних світових проблем і технологій.",
+        "patterns": "В нашому бренді використовуються мозаїка, геометричні візерунки та форми в поєднанні з яскравими квітами і символічними ілюстраціями.",
+        "style": "Ми також застосовуємо описові значки в поєднанні з простими системними значками в стилі гліфів та експериментальним стилем ілюстрацій."
       }
     },
     "button": {
       "text": {
-        "downloadLogo": "Download Logo"
+        "downloadLogo": "Завантажити лого"
       }
     }
   }
