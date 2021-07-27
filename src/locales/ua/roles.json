@@ -1,196 +1,196 @@
 {
   "roles": {
     "siteMetadata": {
-      "description": "Інформація про поточні та майбутні ролі на платформі Joystream."
+      "description": "Read more about current and future roles on the Joystream platform"
     },
     "hero": {
-      "title": "Вибір бажаної ролі",
-      "text": "Участь в тестнеті дозволяє заробляти tJOY, впливаючи на поточний розвиток платформи"
+      "title": "Choose your preferred role",
+      "text": "Participating in a role on our testnet lets you earn tJOY while influencing the platform's ongoing development."
     },
     "validator": {
-      "title": "Валідатор",
-      "overview": "Платформа Joystream існує в системі консенсусу блокчейна. Ця система консенсусу є варіантом класичного консенсусу BFT в поєднанні з Proof-of-Stake для визначення кількості голосів. Валідатор - це суб'єкт, який перевіряє достовірність новостворених блоків, пропонує нові блоки і бере участь в процесі узгодження для фіксації нового блоку в ланцюжку. Ця роль має на меті, дуже схожу на Майнер в блокчейні біткоїнів (Bitcoin). Важливо відзначити, що будь-хто може повністю перевірити дійсність блокчейна, а не тільки валідатори, і це називається валідацією.",
+      "title": "Validator",
+      "overview": "The Joystream platform state lives on a blockchain consensus system. This consensus system is a variant of classical BFT consensus combined with Proof-of-Stake to determine voting power. A validator is an actor which checks the validity of newly constructed blocks, proposes new blocks and participates in the consensus process for committing new block to the chain. This role has a purpose very similar to the miners in the Bitcoin blockchain. Importantly, anyone can fully check the validity of the blockchain, not just validators, and this is called validation.",
       "responsibilities": {
-        "runAndMaintainScreeningNodes": "Запуск і обслуговування Ноди з постійною доступністю і працездатністю",
-        "enforceRules": "Допомога в дотриманні правил консенсусу в мережі"
+        "runAndMaintainScreeningNodes": "Run and maintain screening nodes that are always available and performant",
+        "enforceRules": "Help enforce the consensus rules of the network"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Мати досвід налаштування та обслуговування високопродуктивної ІТ-інфраструктури.",
-        "accessToPerformantInfrastructure": "Доступ до високопродуктивної і надійної ІТ-інфраструктури з великим об'ємом сховища, пропускною спроможністю (в обидві сторони) і продуктивністю обробки",
-        "storeKeys": "Можливість надійного зберігання ключів",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
+        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure, with high storage, (up & down) bandwidth and processing capacity",
+        "storeKeys": "Able to securely store keys",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "councilMember": {
-      "title": "Член Ради",
-      "overview": "В основі процесу управління платформою лежить система пропозицій, яка дозволяє будь-якій людині вносити пропозиції щодо зміни стану або політики платформи тим чи іншим чином. Ці пропозиції обробляються і ставляться на голосування радою, учасники якого називаються членами ради. Місце в раді є виборним і надається до нових виборів.",
+      "title": "Council Member",
+      "overview": "At the heart of the governance process on the platform is the proposal system, which allows anyone to submit some suggestion for changing the state or policy of the platform in some way. These proposals are processed and voted on by a council, where the participants are referred to as council members. A seat on the council is won through an election process, and lasts for some period of time until a new election.",
       "responsibilities": {
-        "discussProposals": "Обговорення суті і значимості запропонованих пропозицій, які можуть охоплювати широке коло тем.",
-        "vote": "Голосування за пропозиції",
-        "representCommunity": "Представляти членів спільноти і своїх виборців, в прийнятті повсякденних операційних рішень."
+        "discussProposals": "Discuss the meaning and merits of incoming proposals, covering a broad range of topics",
+        "vote": "Vote on proposals",
+        "representCommunity": "Represent the community members and your constituency to make day-to-day operations decisions"
       },
       "requirements": {
-        "dataAnalysisProficiency": "Володіння базовим аналізом даних і достатня репутація і положення в суспільстві, щоб заробляти голоси підтримки на виборах від інших учасників платформи.",
-        "platformUnderstanding": "Глибоке розуміння платформи Joystream, її структури, функцій і розподілу ресурсів.",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "dataAnalysisProficiency": "Proficiency with basic data analysis and sufficient reputation and standing within the community to earn supporting votes in elections from other platform members",
+        "platformUnderstanding": "A deep understanding of the Joystream platform structure, function and resource allocation",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "storageProvider": {
-      "title": "Постачальник сховища",
-      "overview": "Існують критично важливі активи платформи, які не перебувають в ланцюгу блоків, наприклад зображення та мультимедійний контент. Цілісність цих активів забезпечується ланцюгом, але окремий набір вузлів зберігання і розподілу дозволяє вивантажувати і завантажувати такі дані. Постачальник сховища бере участь в цій діяльності, зокрема, шляхом зберігання великих обсягів даних.",
+      "title": "Storage Provider",
+      "overview": "There are critical platform assets that do not live on the blockchain, such as images and content media. The integrity of these assets is secured by the chain, but a separate set of storage and distribution nodes enables uploading and downloading of such data. The storage provider is involved this activity, specifically by storing large quantities of data.",
       "responsibilities": {
-        "runAndMaintainStorageNodes": "Запуск і обслуговування вузлів зберігання, які зберігають дуже великі обсяги статичних даних, синхронізуються з іншими вузлами зберігання, обмінюються даними з дистриб'юторами і приймають вхідні завантаження від кінцевих користувачів."
+        "runAndMaintainStorageNodes": "Run and maintain storage nodes that store very large quantities of static data, synchronize with other storage nodes, share data with distributors, and accepts inbound uploads from end users"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Мати досвід налаштування та обслуговування високопродуктивної ІТ-інфраструктури.",
-        "accessToPerformantInfrastructure": "Доступ до високопродуктивної і надійної ІТ-інфраструктури з великим об'ємом сховища",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
+        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure with high storage capacity",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "storageLead": {
-      "title": "Головний хранитель",
-      "overview": "Головний хранитель наймається безпосередньо Радою через систему пропозицій і займається наймом, звільненням і більш широким управлінням постачальниками сховища в мережі.",
+      "title": "Storage Lead",
+      "overview": "The Storage Lead is hired directly by the Council through the proposals system and is dedicated to the hiring, firing and wider management of Storage Providers on the network.",
       "responsibilities": {
-        "storageProviderPerformance": "Головний хранитель несе відповідальність за забезпечення належної роботи постачальників послуг зберігання. Кожен з них повинен містити повну і актуальну копію каталогу контенту і забезпечувати безперебійну роботу, щоб ефективно обслуговувати споживачів контенту."
+        "storageProviderPerformance": "The Storage Lead is responsible for ensuring that Storage Providers are performing adequately. Each one must hold a complete and up-to-date copy of the content directory and ensure uptime in order to effectively serve content consumers."
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Мати досвід налаштування та обслуговування високопродуктивної ІТ-інфраструктури.",
-        "managementAndCoordination": "Здатність ефективно управляти і координувати дії постачальників сховища",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
+        "managementAndCoordination": "Ability to effectively manage and coordinate the actions of the Storage Providers",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "contentCurator": {
-      "title": "Контент Куратор",
-      "overview": "Весь медіа-контент, що публікується на платформі, знаходиться в каталозі контенту в мережі. Існує ряд різних типів контенту, і кожен тип має схему для докладного опису його структури, функцій і політик. Для ефективного використання контенту, наприклад, при відображенні, виявленні та монетизації, критично важливо забезпечити достовірність опублікованої інформації для всього контенту. Зокрема, також важливо вирішувати можливі суперечки про право власності та наявності будь-якого фрагмента контенту на платформі. Завдання кураторів контенту - виконувати роботу, пов'язану з процесами, спрямованими на досягнення цих цілей.",
+      "title": "Content Curator",
+      "overview": "All of the media content published on the platform lives in an on-chain content directory. There are a range of different content types, and each type has a schema for a rich description of its structure, function and policies. For the effective use of of content, for example in rendering, discovery and monetization, it is critical to ensure the validity of the published information for all content. In particular, it is also important to resolve possible disputes about ownership and presence of any piece of content on the platform. It is the task of the content curators to do the work involved in processes that address these objectives.",
       "responsibilities": {
-        "monitorContent": "Моніторинг публікацій нового контенту в каталозі і відповіді на повідомлення про спірні публікації.",
-        "adjudicateDisputes": "Розгляд можливих процесів вирішення суперечок на підставі звітів користувачів.",
-        "updateContentInformation": "Оновлення інформації про вміст, щоб вона відповідала дійсності",
-        "collaborateWithBuilders": "Співпрацювати з <0> Будівельниками </0> для поліпшення як інструментів, так і взаємодії з користувачем, щоб поліпшити цілісність каталогу даних."
+        "monitorContent": "Monitor the publishing of new content into the content directory, and respond to reports about contested publications",
+        "adjudicateDisputes": "Adjudicate possible dispute processes resulting from reports from users",
+        "updateContentInformation": "Update information on content to be accurate",
+        "collaborateWithBuilders": "Collaborate with <0> Builders</0> to improve both tools, and user facing experiences, to improve the integrity of the content directory"
       },
       "requirements": {
-        "adjudicateDisputes": "Справедливе рішення суперечок і чітке і прозоре спілкування з зацікавленими сторонами та учасниками.",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "adjudicateDisputes": "Fairly adjudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "contentCreator": {
-      "title": "Творець Контенту",
-      "overview": "Як відеоплатфора, одним з найбільш важливих активів платформи є контент, що публікується на платформі. Оскільки відео є таким гнучким типом мультимедіа, який може охоплювати широкий спектр категорій контенту, йому приділяється основна увага. Однак мета полягає в тому, щоб з часом підтримувати більш широкий діапазон типів контенту. Творці контенту - це ті, хто бере участь у створенні, публікації і монетизації контенту на платформі.",
+      "title": "Content Creator",
+      "overview": "As a video platform, one of the most important platform assets is the content published on the platform. Since video is such a flexible media type, which can encompass a wide range of content categories, it is the primary focus. However, the intention is to support a broader range of content types over time. The content creators are those involved in creating, publishing and monetizing content on the platform.",
       "responsibilities": {
-        "publishContent": "Публікувати контент і залучати аудиторію"
+        "publishContent": "Publish content and build an audience"
       },
       "requirements": {
-        "publishContent": "Мати право публікувати існуючий або новий контент на платформі.",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "publishContent": "Have the right to publish existing or new content to the platform",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "contentLead": {
-      "title": "Головний з Контенту",
-      "overview": "Рада має право призначити Головного з Контенту для мережі, який, в свою чергу, може найняти додаткових Контент Кураторів. Головний по Контенту також визначає пріоритети для курирування. При необхідності, після обговорення з радою, керівник може також прийняти рішення про звільнення кураторів, які не виконують свою роботу належним чином.",
+      "title": "Content Lead",
+      "overview": "The Council has the power to appoint a Content Curator Lead for the network who can hire further Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing with the council, the Lead can also decide to fire curators who are not performing their jobs adequately.",
       "responsibilities": {
-        "monitorPublishing": "Моніторинг публікацій нового контенту в каталозі і відповіді на повідомлення про спірні публікаціях.",
-        "adjudicateDisputes": "Розгляд можливих процесів вирішення суперечок на підставі звітів користувачів.",
-        "updateInformation": "Оновлення інформації про вміст, щоб вона відповідала дійсності",
-        "manageAndCoordinate": "Керувати і організовувати дії робочої групи в області контенту"
+        "monitorPublishing": "Monitor the publishing of new content into the content directory, and respond to reports about contested publications",
+        "adjudicateDisputes": "Adjudicate possible dispute processes resulting from reports from users",
+        "updateInformation": "Update information on content to be accurate",
+        "manageAndCoordinate": "Manage and coordinate the actions of the Content Working Group"
       },
       "requirements": {
-        "adjudicateDisputes": "Справедливе рішення суперечок і чітке і прозоре спілкування з зацікавленими сторонами та учасниками.",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "adjudicateDisputes": "Fairly adjudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "membershipScreener": {
-      "title": "Інспектор членства",
-      "overview": "Членство - це інтегроване уявлення ідентифікуючої інформації та пов'язаних з нею дій суб'єкта на платформі. Прямим способом встановлення членства буде сплата одноразового внеску. Однак, оскільки в даний час багатьом потенційним нетехнічних кінцевим користувачам складно отримувати, зберігати і використовувати кріптоактиви, у користувачів буде можливість отримати членство безкоштовно, без будь-яких токенів для використання платформи в обмеженій кількості. Перевірка членства - це роль, яка відповідає за надання такого членства при перевірці користувача на порушення авторських прав і зловмисне використання платформи.",
+      "title": "Membership Screener",
+      "overview": "A membership is an integrated representation of identifying information and associated activities of an actor on the platform. The direct way of establishing membership will be to simply pay a one time fee. However, since its currently challenging for many prospective non-technical end users to obtain, store and use crypto assets, there will be a way for users to get a membership for free, which will not require any tokens in order to use the platform in a limited capacity. The membership screener is the role responsible for granting such memberships, while screening for Sybill attackers and abusers.",
       "responsibilities": {
-        "runAndMaintainScreeningNodes": "Запуск і підтримка нод моніторингу, які завжди доступні і ефективні.",
-        "collaborate": "Співпрацювати з <0>Кураторами Членства</0> та <1>Будівельниками</1>,щоб покращувати механізми перевірки, обговорюючи методи перевірки, обмінюючись інформацією про трафік.",
-        "beResponsive": "Бути чуйним і реагувати на мінливі обставини"
+        "runAndMaintainScreeningNodes": "Run and maintain screening nodes that are always available and performant",
+        "collaborate": "Collaborate with <0>Membership Curators</0> and <1>Builders</1> to improve screening mechanisms by discussing screening techniques, sharing traffic information",
+        "beResponsive": "Be responsive and reactive to changing circumstances"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Мати досвід налаштування та обслуговування високопродуктивної ІТ-інфраструктури.",
-        "accessToPerformantInfrastructure": "Доступ до високопродуктивної і надійної ІТ-інфраструктури з великим об'ємом сховища, пропускною спроможністю (в обидві сторони) і продуктивністю обробки",
-        "onlinePlatformAttackFamiliarity": "Знання про те, як онлайн-платформи атакуються за допомогою ботнетів, анонімізації IP-адрес, автоматичних сервісів і т.д.",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
+        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure, with high storage, (up & down) bandwidth and processing capacity",
+        "onlinePlatformAttackFamiliarity": "Familiarity with how online platforms are attacked through botnets, IP anonymization, automated agents, etc.",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "membershipCurator": {
-      "title": "Куратор Членства",
-      "overview": "Членство - це інтегроване уявлення ідентифікуючої інформації та пов'язаних з нею дій суб'єкта на платформі. Можна вступати в членство безкоштовно через перевірку, описану <0> вище </ 0>. Оскільки це за визначенням недосконалий процес, повинні бути якісь кошти, за допомогою яких можна було б відключити або ховати недобросовісні дії, а також підроблені облікові записи. Це завдання кураторів членства.",
+      "title": "Membership Curator",
+      "overview": "A membership is an integrated representation of identifying information and associated activities of an actor on the platform. It is possible to create memberships for free through the screeners, described <0> above</0>. Since this is invariably an imperfect process, there must be some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the membership curators.",
       "responsibilities": {
-        "monitorPlatformActivity": "Відстежувати активність на рівні платформи на предмет зловживань і змов",
-        "proposeChanges": "Пропонувати зміни в статусі членства і брати участь в будь-якому процесі суперечки, який може послідувати за цим.",
-        "collaborate": "Співпрацювати з <0> Інспекторами</0> та <1> Будівельниками </1>, щоб поліпшити інструменти для ідентифікації таких учасників."
+        "monitorPlatformActivity": "Monitor platform level activity for abuse and collusion",
+        "proposeChanges": "Propose changes to status of memberships which are identified, and participate in any dispute process which may follow",
+        "collaborate": "Collaborate with <0> Screeners</0> and <1> Builders</1> to improve tools for identifying such members"
       },
       "requirements": {
-        "dataAnalysisProficiency": "Володіння базовим аналізом даних і написанням сценаріїв",
-        "platformUnderstanding": "Глибоке розуміння структури, функцій платформи, а також можливих напрямків атак на Joystream.",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "dataAnalysisProficiency": "Proficient with basic data analysis and scripting",
+        "platformUnderstanding": "A deep understanding of the Joystream platform structure, function and attack vectors",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "bandwidthProvider": {
-      "title": "Постачальник смуги пропускання",
-      "overview": "Існують критично важливі активи платформи, які не перебувають в ланцюгу блоків, наприклад зображення та мультимедійний контент. Цілісність цих активів забезпечується ланцюгом, але окремий набір вузлів зберігання і розподілу дозволяє завантажувати і викачувати такі дані. Постачальник смуги пропускання бере участь в цій діяльності, зокрема, шляхом масштабного розподілу статичних даних кінцевим користувачам.",
+      "title": "Bandwidth Provider",
+      "overview": "There are critical platform assets that do not live on the blockchain, such as images and content media. The integrity of these assets is secured by the chain, but a separate set of storage and distribution nodes enable uploading and downloading of such data. The bandwidth provider is involved this activity, specifically by distributing static data to end users at scale.",
       "responsibilities": {
-        "runAndMaintainDistributorNodes": "Запуск і обслуговування розподільчих вузлів, які доставляють великі обсяги вихідних даних великій кількості кінцевих користувачів одночасно."
+        "runAndMaintainDistributorNodes": "Run and maintain distributor nodes that deliver large volumes of upstream data to a large number of simultaneous end users"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Мати досвід налаштування та обслуговування високопродуктивної ІТ-інфраструктури.",
-        "accessToPerformantInfrastructure": "Доступ до високопродуктивної і надійної ІТ-інфраструктури з великим об'ємом сховища, пропускною спроможністю на віддачу",
-        "locatedWithinBounds": "Розташовуватися в межах певних географічних областей, щоб знизити мережеву затримку.",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
+        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure, with high storage capacity and a lot of upstream capacity",
+        "locatedWithinBounds": "Located within certain bounds to designated geographic areas, in order to limit latency",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "discoveryProvider": {
-      "title": "Постачальник Пошуку",
-      "overview": "Весь контент на платформі знаходиться в певному каталозі контенту, і для ефективної навігації з цього каталогу потрібна повна копія цього каталогу. Більш того, щоб виконувати такі дії, як пошук і рекомендації на основі контексту, необхідно застосувати якусь евристику поверх цього каталогу, що також є досить чутливими при підвищенні обсягів. Постачальники Пошуку грають роль відповідачів на запити про пошук кінцевих користувачів, комбінуючи швидкі відповіді на запити з локальним пошуком і евристикою політики ранжирування.",
+      "title": "Discovery Provider",
+      "overview": "All of the content on the platform is in a designated content directory, and effectively navigating this directory requires a full copy of this directory. Moreover, in order to do things like search and context based recommendations one needs to apply some sort of heuristic on top of this directory, which is also some what sensitive abusive attempts to rank higher. The discovery providers play the role of responding to such discovery queries to end users, by combining light client inclusion proofs with local search and ranking policy heuristics.",
       "responsibilities": {
-        "runAndMaintainDiscoveryNodes": "Запуск і обслуговування вузлів пошуку, які відповідають на запити, пов'язані з виявленням даних, синхронізуючись з каталогом контенту і застосовуючи евристику локального ранжирування.",
-        "collaborate": "Співпрацювати з <0>Будівельниками</0> в поліпшенні інструментів, підвищення зручності користувачів і поліпшення пошуку."
+        "runAndMaintainDiscoveryNodes": "Run and maintain discovery nodes that respond to discovery-related queries by staying in sync with the content directory, and applying local ranking heuristics.",
+        "collaborate": "Collaborate with <0>Builders</0> to improve both tools, and user facing experiences, to improve the discovery experience"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Мати досвід налаштування та обслуговування високопродуктивної ІТ-інфраструктури.",
-        "accessToPerformantInfrastructure": "Доступ до високопродуктивної і надійної ІТ-інфраструктури.",
-        "formulateAndTestHeuristics": "Можливість формулювати, тестувати і пропонувати нові евристики ранжирування для використання вузлами провайдера",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
+        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure",
+        "formulateAndTestHeuristics": "Able to formulate, test and suggest new ranking heuristics for use by discovery provider nodes",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "liveStreamingProvider": {
-      "title": "Постачальник Прямих Трансляцій",
-      "overview": "Платформа підтримує трансляцію відео в реальному часі, дозволяючи видавцям поширювати контент в міру його створення. Постачальники потокової передачі в реальному часі несуть відповідальність пряме або непряме отримання даних від тимчасових постачальників транскодованного потоку від вихідного видавця і його подальшу ретрансляцію кінцевим користувачам.",
+      "title": "Live Streaming Provider",
+      "overview": "The platform supports live video, allowing publisher to distribute content as it is created. The live streaming providers are responsible for directly, or indirectly from peer providers, taking a (transcoded) stream from the source publisher, and relaying it to end users.",
       "responsibilities": {
-        "runAndMaintainLivestreamingNodes": "Запуск і обслуговування вузлів потокової передачі в реальному часі, які доставляють великі обсяги вихідних даних великої кількості одночасних кінцевих користувачів"
+        "runAndMaintainLivestreamingNodes": "Run and maintain live streaming nodes that deliver large volumes of upstream data to a large number of simultaneous end users"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Мати досвід налаштування та обслуговування високопродуктивної ІТ-інфраструктури.",
-        "accessToPerformantInfrastructure": "Доступ до високопродуктивної і надійної ІТ-інфраструктури с широким пропускним каналом на віддачу",
-        "locatedWithinBounds": "Розташовуватися в межах певних географічних областей, щоб знизити мережеву затримку.",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
+        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure, with large amount of upstream bandwidth capacity.",
+        "locatedWithinBounds": "Located within certain bounds to designated geographic areas, in order to limit latency",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "builder": {
-      "title": "Будівельник",
-      "overview": "Середовище виконання, інструменти, програмне забезпечення інфраструктури і призначені для користувача програми - все це повинно розвиватися з плином часу. Для цього потрібно різноманітний набір учасників, в тому числі <0/><0/> <1> <0><0>Розробники:</0> розробники програмного забезпечення, фахівці з обробки даних, DevOps і QA</0><0><0>Дизайнери: </0> сайтів, мобільних пристроїв, UX / UI, брендингу та іншого візуального дизайну </ 0> <0> <0> Менеджери по продуктам: </ 0> менеджери по цифровим продуктам, власники продуктів і аналітики </ 0> </ 0> < 0 /> Всі ці учасники разом іменуються Будівничими. Будь-хто може внести свій вклад в цьому амплуа, оскільки всі вихідні ресурси платформи є відкритими і розробляються у відкритому вигляді. Бути Будівельником означає, що у людини є певний багаж відповідальності, і що у нього є заздалегідь визначена схема винагороди, пов'язана з цією діяльністю. ",
+      "title": "Builder",
+      "overview": "The platform runtime, tools, infrastructure software and user facing applications are all meant to evolve over time. A diverse set of contributors are required to facilitate this, including <0/><0/> <1> <0><0>Developers:</0> Software developers, Data scientists, DevOps and QA </0><0><0>Designers:</0> Web, Mobile, UX/UI, Branding and Visual Design </0> <0><0>Product Managers:</0> Digital Product Managers, Product Owners and Analysts </0> </0> <0 /> All of these contributors are collectively referred to as Builders. Anyone can contribute in the same mode as any of these possible contributor functions, as all the platform source assets are open source and developed in the open. Being a Builder means that one has some scope of responsibility in ongoing efforts, and that one has some predefined reward scheme associated with this responsibility.",
       "responsibilities": {
-        "collaborate": "Співпрацювати практично з усіма учасниками платформи, щоб підтримувати і покращувати платформу."
+        "collaborate": "Collaborate with almost every other kind of platform member to maintain and improve the platform"
       },
       "requirements": {
-        "platformUnderstanding": "Глибоке розуміння структури і функцій платформи Joystream.",
-        "specificContributingSkills": "Наявність конкретних навичок, необхідних для того, щоб вносити свій вклад в даному напрямку.",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "platformUnderstanding": "A deep understanding of the Joystream platform structure and function",
+        "specificContributingSkills": "Have specific skills required for contributing in the given way",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     },
     "communicationModerator": {
-      "title": "Модератор Спілкування",
-      "overview": "Платформа буде мати кілька способів забезпечення простого і безпечного загальнодоступного і приватного спілкування, а також обміну інформацією між учасниками. Зокрема, в платформу будуть вбудовані як форум, так і можливість обміну повідомленнями. Але для того, щоб ці простори стали ефективними способами спілкування, буде потрібно деяка модерація. Модератори Спілкування контролюють цю діяльність.",
+      "title": "Communication Moderator",
+      "overview": "The platform will have multiple ways of facilitating easy and secure public, and private, communication and information sharing among members. In particular, there will be both a forum and messaging capability built in to the platform. But in order for these spaces to be effective communication modes, some moderation will be required. Communication moderators are involved with policing this activity.",
       "responsibilities": {
-        "monitorCommuncationChannels": "Стежити і контролювати загальнодоступні канали зв'язку на предмет відповідності політикам використання, прийнятим в системі управління.",
-        "communicateWithUsers": "Повідомляти кінцевим користувачам про можливі порушення і санкції",
-        "collaborate": "Співпрацювати, щоб при зміні обставин розробляти нові політики"
+        "monitorCommuncationChannels": "Monitor and supervise public communication channels for compliance with usage policies as decided through the governance system",
+        "communicateWithUsers": "Communicate with end users about any possible violations and sanctions",
+        "collaborate": "Collaborate to come up with new policies as circumstances change"
       },
       "requirements": {
-        "platformUnderstanding": "Глибоке розуміння структури і функцій платформи Joystream.",
-        "goodCommunicator": "Відмінні навички письмового спілкування, в ідеалі з хорошим володінням більш ніж однією мовою",
-        "stake": "Мати достатню кількість токенів платформи, щоб поставити їх на стейкінг (stake)"
+        "platformUnderstanding": "A deep understanding of the Joystream platform structure and function",
+        "goodCommunicator": "Clear written communicator, ideally with good command of more than one language",
+        "stake": "Hold sufficient amount of the native platform token to put at stake"
       }
     }
   }

@@ -2,45 +2,45 @@
   "about": {
     "general": {
       "roles": {
-        "blockchain": "Blockchain розробник",
-        "frontEnd": "Front-End розробник",
-        "design": "Дизайнер",
-        "growth": "Розвиток",
-        "core": "Ядро",
+        "blockchain": "Blockchain Engineer",
+        "frontEnd": "Front-End Engineer",
+        "design": "Designer",
+        "growth": "Growth",
+        "core": "Core",
         "ceo": "CEO",
         "cto": "CTO",
-        "cooAndGrowth": "COO та розвиток",
-        "all": "Всі",
-        "allMembers": "Всі члени"
+        "cooAndGrowth": "COO & Growth",
+        "all": "All",
+        "allMembers": "All members"
       }
     },
     "siteMetadata": {
-      "title": "Про нас",
-      "description": "Ми пропонуємо не лише велику заробітну плату та гнучкість, а ще й чітку місію, команду та терміни для того, щоб створити щось, що змінює все."
+      "title": "About us",
+      "description": "We don't just offer great compensation and flexibility, but the perfect mission, team and timing for you to build something that changes everything."
     },
     "hero": {
-      "title": "Ми створюємо Joystream щоб зробити його безкоштовним",
-      "subtitle": "Команда Jsgenesis є ядром, що розробляє Joystream - платформу на блокчейн з відкритим кодом."
+      "title": "We are building Joystream to set it free",
+      "subtitle": "Jsgenesis is the core team building Joystream the platform and open-source blockchain."
     },
     "ourTeam": {
-      "title": "Наша команда",
-      "subtitle": "Ми з різних країн, проте маємо спільну пристрасть до відкритого вихідниого коду, технології блокчейн, розподілених систем, приватності та створення нового інтернету, заснованого на принципах відкритої звітності та можливості виділення fork-ів.",
-      "moreMembers": "Більше учасників"
+      "title": "Our team",
+      "subtitle": "We come from different continents, but share a passion for open source, blockchain technology, distributed systems, privacy and building a new internet based on accountable and forkable institutions.",
+      "moreMembers": "Load more team members"
     },
     "investors": {
-      "title": "Наші інвестори"
+      "title": "Our investors"
     },
     "positions": {
-      "title": "Відкриті вакансії",
-      "available": "3 вакансії доступні",
-      "join": "Приєднатися",
+      "title": "Open positions",
+      "available": "3 jobs available",
+      "join": "Join",
       "roles": {
-        "frontEnd": "Front-End розробник",
-        "blockchain": "Blockchain розробник",
-        "designer": "Провідний UI/UX дизайнер"
+        "frontEnd": "Front-end Developer",
+        "blockchain": "Blockchain Developer",
+        "designer": "UI/UX Design Lead"
       },
-      "location": "Осло, Європа, Віддалена робота",
-      "employmentType": "Повна зайнятість",
+      "location": "Oslo, Europe, Remote",
+      "employmentType": "Full time",
       "salary": {
         "frontEnd": "$80K-$130K",
         "blockchain": "$100K-$140K",

@@ -1,55 +1,55 @@
 {
   "babylon": {
     "siteMetadata": {
-      "description": "Вивчаємо тестнет Babylon"
+      "description": "Explore the Babylon testnet"
     },
     "hero": {
-      "title": "Мережа Babylon",
-      "text": "Реліз Babylon вносить поліпшення, які значно розширюють можливості публікації і перегляду відео.",
-      "chipText": "Що це?"
+      "title": "Babylon Network",
+      "text": "The Babylon release offers improvements which greatly enhance the video publishing and consumption experience.",
+      "chipText": "What is this?"
     },
     "heroCard": {
-      "title": "ЗАМІЩЕНО ANTIOCH "
+      "title": "REPLACED BY ANTIOCH ON"
     },
     "modal": {
-      "title": "Вавілонська вежа",
-      "text": "Історія Вавилонської вежі - це міф, покликаний пояснити, чому народи світу говорять на різних мовах.<0/><0/>Відповідно до цієї історії, єдина людська раса в наступних поколіннях після Великого Потопу, говорить однією мовою і мігруючи на схід, приходить до краю вавилонського. Там вони збиралися побудувати місто з вежею, досить високою, щоб досягти небес.<0/><0/> Бог же, побачивши місто і вежу, плутає мови всіх людей так, щоб вони більше не могли розуміти один одного, і розкидає їх по всьому світу."
+      "title": "Tower of Babel",
+      "text": "The Tower of Babel story is an origin myth meant to explain why the world's peoples speak different languages.<0/><0/>According to the story, a united human race in the generations following the Great Flood, speaking a single language and migrating eastward, comes to the land of Shinar. There they agree to build a city and a tower tall enough to reach heaven.<0/><0/> God, observing their city and tower, confounds their speech so that they can no longer understand each other, and scatters them around the world."
     },
     "criticalDocuments": {
-      "title": "Важлива документація",
+      "title": "Critical Documents",
       "releasePlan": {
-        "title": "Реліз план",
-        "text": "Читай реліз план в тому вигляді, якому він був створений під час планування та дізнавайся, як відбувалась розробка."
+        "title": "Release Plan",
+        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
       },
       "blogPost": {
-        "title": "Оголошення в блозі",
-        "text": "Читай інструкцію до тестнету Babylon та його цілей."
+        "title": "Announcement Blog Post",
+        "text": "Read a brief primer on the Babylon testnet and its objectives."
       }
     },
     "testnetGoals": {
-      "title": "Цілі тестнету",
-      "subtitle": "Цілі, викладені нижче - є спрощеним переліком основних результатів тестнету Babylon.",
+      "title": "Testnet Goals",
+      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Babylon testnet.",
       "goals": {
         "atlas": {
-          "title": "Запуск Atlas 0.1",
-          "text": "Це буде першою версією нашого клієнта для споживачів контенту, мета якого - бути значно ефективнішим, ніж поточна версія Pioneer media."
+          "title": "Launch Atlas 0.1",
+          "text": "This will be the initial release of our content consumption client, aiming to be considerably more effective than the current Pioneer media experience."
         },
         "contentDirectory": {
-          "title": "Публікація нового каталогу контенту та робочої групи",
-          "text": "Ми змінюємо каталог контенту, для того щоб врахувати нову модель даних для вмісту, підтримувану новими схемами. Ми також внесемо деякі пов'язані поліпшення в робочу групу Content Curator."
+          "title": "Deploy a new content directory and corresponding working group",
+          "text": "We will be modifying the content directory to allow for a new data model for content, supported by new schemas. We will also make some associated improvements to the Content Curator Working Group."
         },
         "hydraNode": {
-          "title": "Розгортання першого автономного вузла Joystream Hydra, підтримуючого каталог вмісту",
-          "text": "Для підтримки нового каталогу контенту потрібно подальша робота над нашою структурою Hydra."
+          "title": "Deploy first self-hosted Joystream Hydra node only supporting content directory",
+          "text": "Further work on our Hydra framework is required in order to support the new content directory."
         }
       }
     },
     "roles": {
-      "title": "Спонсоровані ролі в мережі Babylon"
+      "title": "Incentivized Roles for the Babylon Network"
     },
     "map": {
-      "title": "Вавилон",
-      "text": "<0>Вавилон був столицею Вавилонії, царства в стародавній Месопотамії, майже 4000 років тому.</0> Він був побудований уздовж обох берегів річки Євфрат з крутими насипами, щоб стримувати сезонні повені. <1/><1/> Місто має велике історичне і культурне значення. Висячі сади Вавилону були одним з семи чудес стародавнього світу, Вавилон також вважався місцем розташування Вавилонської вежі.<1/><1/><2><0/> Читати повідомлення у блозі</2>"
+      "title": "Babylon",
+      "text": "<0>Babylon was the capital city of Babylonia, a kingdom in ancient Mesopotamia, almost 4000 years ago.</0> It was built along the left and right banks of the Euphrates river with steep embankments to contain the river's seasonal floods. <1/><1/> The city is considered to be of great historical and cultural importance. The Hanging Gardens of Babylon were one of the Seven Wonders of the Ancient World and Babylon was also purported to be the site of the Tower of Babel.<1/><1/><2><0/> Read the blog post</2>"
     }
   }
 }

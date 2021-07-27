@@ -1,55 +1,55 @@
 {
   "alexandria": {
     "siteMetadata": {
-      "description": "Вивчаємо тестнет Alexandria"
+      "description": "Explore the Alexandria testnet"
     },
     "hero": {
-      "title": "Мережа Alexandria",
-      "text": "Випуск Alexandria сфокусований на важливих технічних оновленнях, які спростять майбутню розробку та зроблять її більш ефективною.",
-      "chipText": "Що це?"
+      "title": "Alexandria Network",
+      "text": "The Alexandria release focuses on important technical updates which will facilitate more efficient future development.",
+      "chipText": "What is this?"
     },
     "heroCard": {
-      "title": "ЗАМІЩЕНО BABYLON "
+      "title": "REPLACED BY BABYLON ON"
     },
     "modal": {
-      "title": "Олександрія",
-      "text": "В Египті, на місці Стовпа Помпея в Олександрії, знаходяться 2 сфінкси. Сфінкси та пов'язана з ними колона - одна із найважливіших стародавніх пам’яток  Олександрії.<0/><0/> Олександрійських сфінксів не варто плутати з більш відомим Великим Сфінкосм, який знаходиться в Гізі, трохи менше ніж 280 кілометрів на південний схід від Олександрії."
+      "title": "Alexandria",
+      "text": "There are two sphinxes at the Pompey's Pillar site in Alexandria, Egypt. The sphinxes and associated column are one of Alexandria's most important ancient monuments. <0/><0/> The Alexandria sphinxes should not be confused with the more well-known Great Sphinx located at Giza, just under 200 kilometers south-east of Alexandria."
     },
     "criticalDocuments": {
-      "title": "Важлива документація",
+      "title": "Critical Documents",
       "releasePlan": {
-        "title": "Реліз план",
-        "text": "Читай реліз план в тому вигляді, якому він був створений під час планування та дізнавайся, як відбувалась розробка."
+        "title": "Release Plan",
+        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
       },
       "blogPost": {
-        "title": "Оголошення",
-        "text": "Читай інструкцію до тестнету Alexandria та його цілей."
+        "title": "Announcement Blog Post",
+        "text": "Read a brief primer on the Alexandria testnet and its objectives."
       }
     },
     "testnetGoals": {
-      "title": "Цілі тестнету",
-      "subtitle": "Цілі, що зазначені нижче, є спрощеним варіантом основних результатів у тестнеті Alexandria.",
+      "title": "Testnet Goals",
+      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Alexandria testnet.",
       "goals": {
         "membershipModule": {
-          "title": "Приведення до ладу модуля членства",
-          "text": "Вирішення технічних проблем в модулі членства та забезпечення можливості переходу до концепції використання члена системи в якості єдиного корінного ідентифікатора в майбутніх випусках."
+          "title": "Cleaning up the membership module",
+          "text": "Tackling technical debt in the membership module and making it possible to transition to using memberships as the only core actor identifier in the system in future releases."
         },
         "substrateVersion": {
-          "title": "Перехід до Substrate v2.0.0 RC4",
-          "text": "Ми переходимо на нову версію Substrate, для того щоб залишатись на хвилі широкого спектру поліпшень, не дозволяючи нашій зростаючій базі коду відставати від сучасних тенденцій."
+          "title": "Start using Substrate v2.0.0 RC4",
+          "text": "We are transitioning to a new version of Substrate in order to stay up to date with a broad range of enhancements, and to limit how far behind we allow our growing codebase to become."
         },
         "networkTesting": {
-          "title": "Розширене тестування мережі",
-          "text": "Подальше вдосконалення нашої інфраструктури тестування мережі, щоб стати на крок ближче до повноцінних наскрізних збірок, які забезпечують скорочення циклу розробки та роблять процес більш захищеним."
+          "title": "Enhancing our network testing",
+          "text": "Further maturing our network testing infrastructure to get one step closer to true end-to-end builds that secure an increasingly shorter development cycle."
         }
       }
     },
     "roles": {
-      "title": "Спонсоровані ролі в мережі Alexandria"
+      "title": "Incentivized Roles for the Alexandria Network"
     },
     "map": {
-      "title": "Олександрія",
-      "text": "<0>Олександрію було засновано приблизно у 331 р. до н.е. Олександром Македонським.</0> Місто було відоме насамперед Олександрійським маяком, одним з  семи чудес стародавнього світу, а також Великою бібліотекою.<1/><1/> Олександрія була інтелектуальним та культурним центром стародавнього Середземномор'я протягом більшої частини елліністичної епохи  та пізньої античності. Колись це було найбагатше місто стародавнього світу, доки не було захоплене римлянами.<1/><1/><2><0/> Читати повідомлення в блозі</2>"
+      "title": "Alexandria",
+      "text": "<0>Alexandria was founded in approximately 331 BC by Alexander the Great.</0> The city was best known for the Lighthouse of Alexandria, one of the Seven Wonders of the Ancient World, as well as its colossal Great Library.<1/><1/> Alexandria was the intellectual and cultural center of the ancient Mediterranean world for much of the Hellenistic age and late antiquity. It was at one time the largest city in the ancient world before being eventually overtaken by Rome.<1/><1/><2><0/> Read the blog post</2>"
     }
   }
 }

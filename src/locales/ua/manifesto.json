@@ -1,72 +1,72 @@
 {
   "manifesto": {
     "siteMetadata": {
-      "description": "Читай Маніфест Joystream"
+      "description": "Read the Joystream Manifesto"
     },
     "hero": {
-      "title": "Маніфест Joystream",
-      "text": "У нашому Маніфесті викладені як проблеми, які, з нашої точки зору, пов'язані з платформами цифрових медіа в їх нинішній формі, так і пропоноване нами рішення цих проблем."
+      "title": "The Joystream Manifesto",
+      "text": "Our Manifesto sets out both the problems we believe are associated with digital media platforms in their current form as well as our proposed solution to these concerns."
     },
     "problem": {
-      "title": "Проблема",
+      "title": "Problem",
       "text": {
-        "artAsTool": "Ми вважаємо, що мистецтво, будь то література, музика, фільми, ігри або вистави, є важливим інструментом, за допомогою якого суспільства встановлюють загальне розуміння того, що є загальним знанням серед усіх членів. Ці вирази визначають цінності, і ці розповіді, в кінцевому підсумку, формують культуру, віру і навіть державну політику. Тому дуже важливо, як вони фінансуються, поширюються і оплачуються.",
-        "mediaAsPrimaryMedium": "Цифрові медіа стали основним засобом поширення таких \"оповідань\", а цифрові медіа-платформи стали ключовими центрами, що формують їх активність.",
-        "unaccountableInstitutions": "На жаль, через ефекти пов'язані з логікою роботи мережі, а також за характером економічного масштабування, державних регуляцій і політичних інтересів сьогодні у нас залишилося всього кілька великих гравців, які встановлюють умови того, як все відбувається. Вони майже повністю підзвітні нормальним ринковим і політичним механізмам.",
-        "filteredOnTheirTerms": "В результаті цього наші висловлювання, історії, і взаємодії управляються і фільтруються на їх умовах. Це продовжує породжувати цілий набір проблем, будь то",
-        "inflexible": "негнучка монетизація, цензура спірних висловлювань, несправедливий поділ прибутку з творцями і аудиторією, низький рівень інновацій платформ або відсутність довіри з боку сторонніх розробників."
+        "artAsTool": "We believe that art, be it as literature, music, film, games or performance, is a critical tool through which societies establish a shared understanding of what is common knowledge among all members. These expressions define values and narratives that end up shaping culture, faith and even public policy. It therefore matters deeply how it is financed, distributed and paid for.",
+        "mediaAsPrimaryMedium": "Digital media has become the primary medium through which such expression is distributed, and digital media platforms have become the key institutions organizing this activity.",
+        "unaccountableInstitutions": "Unfortunately, due to network effects, economies of scale, regulations and political interests, we are today left with handful of massive institutions which set the terms for how this happens. They are almost entirely unaccountable to normal market and political mechanisms.",
+        "filteredOnTheirTerms": "As a result, our stories, expressions and interactions are managed and filtered on their terms. This continues to generate an ever changing set of problems, be it",
+        "inflexible": "inflexible monetization, censorship of controversial speech, inequitable sharing of gains with creators and audience, low platform innovation or lack of credibility with third party developers."
       }
     },
     "goal": {
-      "title": "Ціль",
+      "title": "Goal",
       "text": {
-        "arrangement": "Ми закликаємо до домовленості, в якій медіа-платформи будуть нести відповідальність перед людьми, на яких вони впливають, які, в першу чергу, є їх користувачами, будь то споживачі, креативщики, сторонні розробники або співробітники.",
-        "accountability": "Саме відсутність такої відповідальності є фундаментальним джерелом будь-якої конкретної проблеми в будь-який конкретний момент."
+        "arrangement": "We call for an arrangement where media platforms are accountable to the people they impact, which are primarily their users, be it as consumers, creatives, third party developer or workers.",
+        "accountability": "It is the absence of such accountability which is the fundamental source of any particular problem at any particular time."
       }
     },
     "thesis": {
-      "title": "Основна теза",
+      "title": "Thesis",
       "text": {
-        "coreThesis": "Наша основна теза полягає в тому, що для досягнення цієї мети необхідно вирішити дві основні проблеми, і що правильним засобом для цього є відповідне застосування сучасних технологій розподілених систем, включаючи блокчейни, смарт-контракти та маркери."
+        "coreThesis": "Our core thesis is that there are two basic challenges which must be addressed to achieve this goal, and that an appropriate application of contemporary distributed systems technology, including blockchains, smart contracts and tokens, is the right means to do so."
       }
     },
     "wedge": {
-      "title": "Основні Труднощі",
+      "title": "The Wedge",
       "text": {
-        "alternative": "Найперше, це питання про те, як створити альтернативу з нуля, беручи до уваги зовнішні фактори, які роблять будь-яку нову платформу практично марною, незалежно від будь-яких притаманних їй характеристик. Процес такого створення, якщо подивитися на історію, був в основному чимось подібним до мистецтва, де успіх навряд-чи можна повторити, виконуючи аналогічні кроки.",
-        "blockchainTokens": "Ми вважаємо, що токени блокчейна, зароблені і випущені раннім учасникам, показали свою надзвичайно ефективну мобілізаційну ефективність, згуртована й мотивуючи динамічне інтернаціональне співтовариство.",
-        "initialHurdle": "Ця схема вже неодноразово допомагала  співтовариствам, що зароджуються - таким як біткойнов (Bitcoin), подолати початкове перешкода мережі. І незважаючи на те, що немає впевненості в тому, що цього буде достатньо, ми вважаємо цей механізм багатообіцяючим в довгостроковій перспективі."
+        "alternative": "First is the question of how to create an alternative from scratch in the face of platform externalities which make any new platform nearly useless, regardless of any of its inherent characteristics. The process of doing this sort of bootstrapping has historically been mostly an art, where success has rarely been reproducible.",
+        "blockchainTokens": "We believe that blockchain tokens, earned by and issued to early participants, have been shown to be extremely effective at mobilizing, integrating and motivating an international and dynamic community.",
+        "initialHurdle": "This has now repeatedly allowed nascent communities, like the Bitcoin community, to overcome the initial network effect hurdle [1, 2, 3]. There is no certainty that this will be sufficient, but we believe this mechanism is as promising as anything which is likely to have a chance in a long time."
       }
     },
     "accountability": {
-      "title": "Звітність в Масштабі",
+      "title": "Accountability at scale",
       "text": {
-        "createAndSustain": "Другим є питання про те, як створити і підтримувати звітність в такій платформі, коли вона  досягає дійсно великих масштабів.",
-        "twoWays": "Ми розуміємо, що існує два основних способи, якими учасники можуть притягати до відповідальності структури будь-якого роду: голос і вихід, згідно Хиршманна А.О. [4]."
+        "createAndSustain": "Second is the question of how to create and sustain accountability in such a platform when it actually reaches scale.",
+        "twoWays": "We understand there to be two fundamental ways that participants can hold institutions of any kind accountable: Voice and exit, in the tradition of Hirschman A. O. [4]."
       }
     },
     "voice": {
-      "title": "Голос",
+      "title": "Voice",
       "text": {
-        "improveWithin": "Голос - це спроба поліпшити або реформувати функціонування структуру зсередини. Ефективність цього залежить від деякої здатності як ділитися надійною інформацією з іншими членами, так і мати певний вплив на процеси внутрішнього управління. Поточні медіа-платформи не пропонують користувачам ефективних способів зробити це.",
-        "infrastructure": "Ми вважаємо, що блокчейни забезпечують організаційну і економічну інфраструктуру, яка може вирішити обидві проблеми. Публічна, піддається перевірці і незмінна історія економічних і адміністративних записів надає користувачам гарну основу для розуміння поточного і минулого стану платформи. Це дозволяє будь-кому робити неспростовні твердження про відповідні факти і обставини.",
-        "control": "Крім того, токени блокчейна дозволяють нам використовувати платформу і керувати нею повністю, надаючи користувачам автоматичне місце за столом для обговорення рішень на рівні платформи.",
-        "signWithCrypto": "Все, що потрібно для створення, реалізації або передачі здібності - брати участь в такій діяльності - це можливість підписувати повідомлення ідентифікованими криптографічними ключами. Абсолютно надійне укладання контрактів дає широкому, динамічному і необмеженому колу користувачів засоби управління платформою. Це може служити широкому колу цілей, таких як реалізація проектів, регулювання участі в різних офіційно визначених ролях або навіть оновлення самих правил платформи. Саме така інтеграція надійних контрактів в економічні рейки забезпечує організаційну інфраструктуру, яка більше відповідає нашим цілям всеосяжного контролю, ніж звичайна інфраструктура, заснована на довірчому управлінні."
+        "improveWithin": "Voice is the approach of attempting to improve or reform the functioning of an institution from within. The effectiveness of this depends on some capacity to both share reliable information with other members, and have some impact on internal governance processes. Current media platforms provide users no effective way of doing either.",
+        "infrastructure": "We believe that blockchains provide an organizational and economic infrastructure which can address both problems. The public, verifiable and immutable history of economic and administrative records, provides an excellent basis for users to understand the current and past state of the platform. This allows anyone to make incontestable claims about relevant facts and circumstances.",
+        "control": "Further, blockchain tokens allow us to make use and control of a platform inseparable, giving users an automatic seat at the table in deliberating over platform level decisions.",
+        "signWithCrypto": "All that is required to establish, exercise or transfer the capacity to participate in such activity, is the ability to sign messages with identifiable cryptographic keys. Perfectly reliable contracting gives a large, dynamic and unrestricted set of users the means of governing the platform. This can serve a wide range of purposes, such as undertaking projects, regulating participation in different formally specified roles, or even updating the institutional rules themselves. This integration of reliable contracting into the economic rails provides an organizational infrastructure much more in line with our objectives of inclusive control than the normal jurisdictional trust based infrastructure."
       }
     },
     "exit": {
-      "title": "Вихід",
+      "title": "Exit",
       "text": {
-        "exit": "Вихід - це підхід, при якому участь в структурі повністю припиняється на користь приєднання або створення альтернативи. Ефективність цього залежить від витрат на догляд, а також від приєднання або створення альтернативи, при цьому всі вони низькі в порівнянні з обмеженнями, які переносяться в існуючій структурі. В даний час це не так.",
-        "loweredCosts": "Створюючи платформи на основі безкоштовного програмного забезпечення з відкритим вихідним кодом, відкритих протоколів і відкритих даних - як у випадку з системами Blockchain, можна значно знизити ці витрати. Оскільки користувачі контролюють свої власні дані, ідентифікаційні дані та активи, їм набагато простіше приєднуватися до нових платформ і навіть брати з собою своїх колег.",
-        "competition": "Відкриті протоколи та структури даних створюють достаток інтерфейсів з множинними адресами, де користувачам може навіть не знадобитися перемикатися між платформами, а замість цього буде можливість використовувати кілька платформ одночасно, що стимулює конкуренцію на рівні платформ. [5].",
-        "reusability": "Більш того, використання відкритого вихідного коду означає, що весь програмний капітал платформи можна легко повторно використовувати, а оскільки все організаційний капітал також є доступними для широкого загалу, цілі екосистеми можуть бути розгалужені для створення нових альтернативних платформ зі зміненими політиками і цілями."
+        "exit": "Exit is the approach of entirely ending participation in an institution in favor of either joining or creating an alternative. The effectiveness of this depends on costs of leaving, and either joining or creating an alternative, all being low compared to the deprivation in the existing institution. This is currently not the case.",
+        "loweredCosts": "By building platforms based on free & open source software, open protocols and open data — as is the case with Blockchain systems, one dramatically lowers these costs. Since users control their own data, identity and assets, they have a much easier time joining new platforms, and even taking their peers with them.",
+        "competition": "Open protocols and data will make multi homing interfaces abundant, where users may not even need to switch, but instead use multiple platforms simultaneously, which encourages platform level competition [5].",
+        "reusability": "Even more dramatically, reliance on open source means that all the software capital of a platform can easily be reused, and since the entire organizational state is also public, entire ecosystems can be forked to create new alternative platforms with modified policies and objectives."
       }
     },
-    "ctaText": "У цій задумці ще є місце для більшої кількості людей, тому є можливість взяти участь, відправивши <0>email</0> приєднатись в <1>Discord</1> або <2>Reddit</2>.",
+    "ctaText": "This plan still has room for more people, so get involved by sending an <0>email</0> or joining us on <1>Discord</1> or <2>Reddit</2>.",
     "references": {
-      "title": "Посилання",
-      "text": "<0>[1] Ерсам, Ф. Токени блокчейна і світанок децентралізованої бізнес-моделі. Medium. 1 серпня, 2016.</0><0>[2] Срінівасан Б.С. Думки про токени. Medium. 27 травня, 2017.</0><0>[3] Діксон, К. Кріпто-токени: прорив в проектуванні відкритих мереж. Medium. 1 червня, 2017.</0><0>[4] Хіршман, Альберт О. Вихід, голос і лояльність: реакція на занепад фірм, організацій та держав. №25. Видавництво Гарвардського університету, 1970.</0><0>[5] Роше, Жан-Шарль і Жан Тіроль. «Конкуренція платформ на двосторонніх ринках». Журнал європейської економічної асоціації 1.4 (2003): 990–1029.</0>"
+      "title": "References",
+      "text": "<0>[1] Ersam, F. Blockchain Tokens and the dawn of the Decentralized Business Model. Medium. Aug 1, 2016.</0><0>[2] Srinivasan, B. S. Thoughts on Tokens. Medium. May 27, 2017.</0><0>[3] Dixon, C. Crypto Tokens: A Breakthrough in Open Network Design. Medium. June 1, 2017.</0><0>[4] Hirschman, Albert O. Exit, voice, and loyalty: Responses to decline in firms, organizations, and states. Vol. 25. Harvard university press, 1970.</0><0>[5] Rochet, Jean‐Charles, and Jean Tirole. “Platform competition in two‐sided markets.” Journal of the european economic association 1.4 (2003): 990–1029.</0>"
     }
   }
 }

@@ -1,96 +1,96 @@
 {
   "hydra": {
     "siteMetadata": {
-      "title": "Hydra - фреймворк для запитів Substrate",
-      "description": "Будучи натхненним Graph, він дає зручний спосіб надати розробникам додатків потужний інструмент для запитів GraphQL про стан і історії вашого ланцюга блоків Substrate."
+      "title": "Hydra - A Substrate query node framework",
+      "description": "Inspired by The Graph, it gives a smooth way to provide powerful GraphQL queries to app developers over your Substrate blockchain state and history."
     },
     "hero": {
-      "title": "Hydra - фреймворк для запитів Substrate",
-      "text": "Будучи натхненним Graph, він дає зручний спосіб надати розробникам додатків потужний інструмент для запитів GraphQL про стан і історії вашого ланцюга блоків Substrate."
+      "title": "Hydra - A Substrate query node framework",
+      "text": "Inspired by The Graph, it gives a smooth way to provide powerful GraphQL queries to app developers over your Substrate blockchain state and history."
     },
     "value": {
-      "title": "Ми спрощуємо речі",
-      "subtitle": "Створення солідних додатків, які взаємодіють безпосередньо з вузлом Substrate практично неможливо, а спроби зробити це - дуже складні та повільні.",
+      "title": "We make it simple",
+      "subtitle": "Building great apps talking directly to a Substrate full node is impossible, and simply trying is slow and hard.",
       "values": {
         "slowFetching": {
-          "title": "Повільне Завантаження",
-          "text": "Непоодинокі випадки, коли необхідно виконувати операції читання між блоками різної висоти. І чиста затримка отримання даних дуже висока. Деякі операції читання можуть залежати від результатів попередніх операцій, що виливається в послідовне читання, яке виконується ще повільніше."
+          "title": "Slow Fetching",
+          "text": "Doing multiple read operations across multiple block heights is often required, and the pure latency of fetching the data is very bad. Some reads may depend on the result of prior ones, which results in sequential reads, which is even slower."
         },
         "slowProcessing": {
-          "title": "Повільна Обробка",
-          "text": "Клієнт зобов'язаний виконувати всю роботу по фільтрації, сортуванню, розбиттю на сторінки або іншим чином виконувати обробку отриманих даних, а це вимагає часу, що призводить до повільної взаємодії з клієнтом і завантаженні ЦП на призначеному для користувача пристрої."
+          "title": "Slow Processing",
+          "text": "The client has to do all the work of filtering, sorting, paginating or otherwise computing on the resulting data, and this takes time, resulting in a slow client experience and CPU load on the user device."
         },
         "complexClient": {
-          "title": "Складність Клієнтського Коду",
-          "text": "Логіка вибірки і обробки повторюється у всіх додатках, що ускладнює розробку."
+          "title": "Complex Client",
+          "text": "The fetching and processing logic is reproduced in all apps, and adds to the complexity of application development."
         },
         "noSearch": {
-          "title": "Немає Пошуку",
-          "text": "Ваша мережа може підтримувати транзакції або стани, що містять текстові дані, але виконання повнотекстового пошуку клієнтської стороною є маловірогідним."
+          "title": "No Search",
+          "text": "Your chain may have transactional or state commitments to free-text data, but doing real full-text search client-side is not an option."
         },
         "overFetching": {
-          "title": "Надлишкове Навантаження",
-          "text": "Ви не можете просто вибрати потрібні дані, ви зобов'язані прочитувати всі стани об'єктів, витрачаючи даремно як своє мережеве з'єднання, так і ємність на стороні вузла."
+          "title": "Over-Fetching",
+          "text": "You cannot select the data you want, you have to read full state objects as they are, wasting both connection and full node capacity."
         },
         "costlyNodes": {
-          "title": "Дорогі Архівні вузли",
-          "text": "Призначені для користувача запити можуть включати кілька операцій читання. Щоб отримати узгоджений результат, можуть знадобитися читання на різних висотах блоків. Так як завжди читання останніх блоків може порушити атомарність, ці операції можуть зажадати архівування всього вузла. У міру збільшення вашої користувальницької бази такі операції стають дуже дорогими."
+          "title": "Costly Archival Nodes",
+          "text": "User requests which involve multiple read operations. To fetch a consistent dataset, you will often have to read at some specific block height, as always reading at the tip can break atomicity. This means such read requests will depend on the full node being archival. As your user base scales, that will become a very costly infrastructure."
         }
       }
     },
     "snippet": {
-      "title": "Дорогі запити в GraphQL",
-      "subtitle": "Надайте розробникам додатків потужний GraphQL API для читання стану та історії ваших ланцюгів блоків."
+      "title": "Powerful queries in GraphQL",
+      "subtitle": "Provide application developers a powerful GraphQL API for your blockchain state and history"
     },
     "features": {
-      "title": "Можливості Hydra",
+      "title": "Hydra Features",
       "values": {
         "fullTextSearch": {
-          "title": "Повнотекстовий Пошук",
-          "text": "Використовуйте будь-яку кількість строкових полів, декорованих за допомогою @fulltext (query: \"myquery\") для пошуку по різних полях і об'єктах."
+          "title": "Full-text Search",
+          "text": "Decorate any number of String fields in the input schema with @fulltext(query: \"myquery\") to seach across different fields and entities."
         },
         "filtering": {
-          "title": "Фільтрація",
-          "text": "Будь-який запис можна використовувати в OpenCRUD фільтрації."
+          "title": "Filtering",
+          "text": "Any entity field can be used for OpenCRUD filtering"
         },
         "pagination": {
-          "title": "Розбивка на Сторінки",
-          "text": "Кожен запит GraphQL підтримує розбивку на сторінки за замовчуванням."
+          "title": "Pagination",
+          "text": "Each GraphQL query supports pagination out-of-the-box"
         },
         "ordering": {
-          "title": "Сортування",
-          "text": "Сортування по будь-якому полю з примітивним типом даних."
+          "title": "Ordering",
+          "text": "Order by any primitive field"
         },
         "polymorphism": {
-          "title": "Поліморфізм",
-          "text": "Початкова підтримка інтерфейсів GraphQL, а також вбудованих фрагметів запитів."
+          "title": "Polymorphism",
+          "text": "Native support of GraphQL interfaces and type inline fragments"
         },
         "algebraicTypes": {
-          "title": "Алгебраїчні Типи",
-          "text": "Створюйте алгебраїчні типи даних, які потім можуть брати участь в запитах, за допомогою директиви @variant"
+          "title": "Algebraic Types",
+          "text": "Construct rich and queriable algebraic types with @variant directive"
         }
       }
     },
-    "videoTitle": "Програти відео інструкцію",
+    "videoTitle": "Play a video tutorial",
     "getStarted": {
-      "title": "Введення в Hydra!",
-      "subtitle": "Скористайтеся наступними посиланнями, щоб зв'язатися з нами і дізнатися ще більше.",
+      "title": "Get started with Hydra now!",
+      "subtitle": "Use the following links to connect with us and find out even more.",
       "links": {
         "documentation": {
-          "name": "Документація",
-          "link": "Документація"
+          "name": "Documentation",
+          "link": "Documentation"
         },
         "githubRepository": {
-          "name": "Репозиторій Github",
-          "link": "Репозиторій Github"
+          "name": "Github Repository",
+          "link": "Github repo"
         },
         "kusamaPlayground": {
-          "name": "Пісочниця Kusama",
-          "link": "У пісочниці"
+          "name": "Kusama Playground",
+          "link": "Go to the Playground"
         },
         "discord": {
           "name": "Discord",
-          "link": "Перейти до каналу"
+          "link": "Go to the Channel"
         }
       }
     }

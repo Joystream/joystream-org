@@ -1,58 +1,58 @@
-  {
+{
   "privacyPolicy": {
     "siteMetadata": {
-      "description": "Joystream політика конфіденційності і використання cookie"
+      "description": "Joystream Privacy and Cookie Policy"
     },
     "hero": {
-      "title": "Privacy політика конфіденційності і використання cookie",
-      "text": "<0><0>Jsgenesis поважають вашу приватність.</0><1/><1/>Ця Політика Конфіденційності (\"Політика Конфіденційності\") та політика використання cookie (\"Політика Cookie\") пояснює як Jsgenesis AS (\"Jsgenesis\", \"Компанія\", \"Ми\", \"Нас\", \"Наш\") збирає і використовує дані таі інформацію коли ви (\"Користувач\") використовуйте будь-який з продуктів Joystream, розроблених в рамках GitHub організації <3>Joystream</3>. Ці продукти (разом звані \"Програмне забезпечення\") включають, але не обмежуються усіма сторінками домену <6>joystream.org</6> (\"Вебсайт\"), <10>Joyful нода</10> (\"Повна нода\"), <14>Нода зберігання Colossus</14> (\"Нода Зберіггання\"), користувацький інтерфейс Pioneer, або <18>розміщується самостійно</18> або <22>розміщується у нас</22>  (\"Додаток\").</0>"
+      "title": "Privacy Policy and Cookies",
+      "text": "<0><0>Jsgenesis values your privacy.</0><1/><1/>This Privacy Policy (\"Privacy Policy\") and Cookie Policy (\"Cookie Policy\") explains how Jsgenesis AS (\"Jsgenesis\", \"Company\", \"We\", \"Us\", \"Our\") collect and use data and information when you (\"User) use on or any of the Joystream products, developed in the GitHub organization <3>Joystream</3>. These products (collectively \"Software\") include, but are not limited to, all pages under the <6>joystream.org</6> domain (\"Website\"), the <10>Joyful node</10> (\"Full Node\"), the <14>Colossus Storage Node</14> (\"Storage node\"), and the Pioneer User Interface, either <18>self hosted</18> or <22>hosted by Us</22>  (\"App\").</0>"
     },
     "terms": {
-      "title": "До Політики конфіденційності та Політики використання файлів cookie відносяться такі умови:",
-      "blockchain": "Термін <0>\"Блокчейн\" (\"Blockchain\")</0> відноситься до блокчейнів, що зібрані Повним вузлом.",
-      "content": "Термін <0>\"Контент\"</0> відноситься до мультимедійних файлів, доступних через наше Програмне забезпечення.",
-      "keys": "Термін <0>\"Ключі\"</0> відноситься до приватної/загальнодоступної криптографічної пари ключів, яку користувачі можуть створювати для запису (і дешифрування даних) в ланцюгу блоків.",
-      "membership": "Термін <0>\"Членство\"</0> відноситься до прив'язки ваших ключів до загальнодоступного профілю, дозволяючи користувачам отримувати доступ до Контенту і взаємодіяти з ланцюгом блоків.",
-      "memo": "Термін <0>\"Мемо\"</0> відноситься до текстового поля з увімкненою опцією маркдауна, в який користувачі можуть вводити дані, прив'язані до своїх ключів."
+      "title": "Relevant to the Privacy Policy and Cookie Policy are the following terms:",
+      "blockchain": "The term <0>\"Blockchain\"</0> refers to the blockchain(s) assembled by the Full Node.",
+      "content": "The term <0>\"Content\"</0> refers to media files accessible through our Software.",
+      "keys": "The term <0>\"Keys\"</0> refers to a private/public cryptographic keypair, that Users can generate in order to write (and decrypt data) on the Blockchain.",
+      "membership": "The term <0>\"Membership\"</0> refers to tying your Keys to a public profile, allowing users to access Content and interact with the Blockchain.",
+      "memo": "The term <0>\"Memo\"</0> refers to a markdown enabled text field, where users can input data tied to their Keys."
     },
     "privacyPolicyItems": {
-      "title": "Політика Конфіденційності",
-      "subtitle": "Останнє оновлення 17-го квітня 2019",
+      "title": "Privacy Policy",
+      "subtitle": "Last updated on the 17th of April 2019",
       "agreement": {
-        "title": "1. Згода з Політикою",
-        "content": "Використовуючи будь-яке Наше Програмне забезпечення, Користувач приймає цю Політику конфіденційності. Якщо ви дієте від імені іншої компанії або роботодавця, ви повинні мати повноваження діяти від їх імені. Політика конфіденційності не поширюється ні на один з наших інформаційних бюлетенів, де Користувачі пов'язані <0>політикою конфіденційності</0> з <1>Mailchimp</1> <2/><2/>Політика конфіденційності не застосовується до будь-яких інших сторонніх служб, включаючи, крім іншого, додатки, веб-сайти, інструменти або програмне забезпечення, навіть якщо вони доступні за посиланнями або посібниками в нашому програмному забезпеченні."
+        "title": "1. Agreement to the Policy",
+        "content": "By using any of Our Software, the User are accepting this Privacy Policy. If you are acting on behalf of another company or an employer, you must have the rights to act on their behalf. The Privacy Policy is not extended to any of our newsletters, where Users are bound by the <0>privacy policy</0> of <1>Mailchimp</1><2/><2/>The Privacy Policy does not apply to any other third party services including, but not limited to, applications, websites, tools or software, even if accessible through links or guides in our Software."
       },
       "changes": {
-        "title": "2. Зміни в Політику",
-        "content": "Дійсна Політика конфіденційності може бути змінена на власний розсуд Компанії. Якщо будуть внесені якісь істотні зміни, Користувач буде повідомлений у використовуваному Сервісі. Зверніть увагу, що додавання нових продуктів для включення в термін «Програмне забезпечення», наприклад новий продукт, з яким стикається Користувач, замінює Додаток або новий інструмент для завантаження Контенту, що не вважається істотним, оскільки він не вплине на користувачів, якщо вони не приймуть новий продукт. Зміна назв програмного забезпечення, термінології, використовуваної в цій Політиці конфіденційності, і зміна місця розташування посилань також є прикладами несуттєвих змін."
+        "title": "2. Changes to Policy",
+        "content": "This Privacy Policy may be changed at the sole discretion of Company. If any material changes are made, the User will be notified in the Service that is used. Note that adding new products to be included in the term Software, e.g. a new User facing product replacing the App or a new tool for uploading Content, is not considered material as it will not affect Users unless they adopt the new product. Changing software names, terminology used in this Privacy Policy, and changing link locations are also examples of non-material changes."
       },
       "informationCollected": {
-        "title": "3. Збір Інформації",
-        "content": "Всі дані, що записуються в блокчейн, неявно збираються не тільки Компанією, а й будь-яким, у якого локально запущений Повний вузол і доступ до них здійснюється через Додаток або сторонні інструменти. Це включає, але не обмежується, хешами контенту, профілями членства, полями Memo і будь-якими іншими способами, якими користувач може записувати дані в ланцюгу блоків. ‍ <0/> <0/> При використанні внутрішньої <1>faucet</1> Веб-сайту, Компанія буде записувати IP-адреса при кожному новуму запиті токенів. Ці дані будуть видалятися кожні 14 днів."
+        "title": "3. Information Collected",
+        "content": "All data written to the Blockchain, is implicitly collected not only by Company, but also anyone else in the world that is running the Full Node locally, or accessed via the App or a third party. This includes, but is not limited to, Content hashes, Membership profile, Memo field, and any other way a User can record data on the Blockchain. ‍<0/><0/> When using the <1>faucet</1> subpage of the Website, Company will record the IP address behind every new request for tokens. This data will be deleted every 14 days."
       },
       "googleAnalytics": {
         "title": "",
-        "content": "Компанія використовує <0>Google Analytics</0>, з анонімізацією IP-адрес для збору статистики на веб-сайті та в версії Програми, розміщеної у Нас. Всі параметри обміну даними які налаштовуються відключені для підвищення конфіденційності користувачів. ‍<1/> <1/><2> Компанія не продаватиме ваші дані в рекламних або інших цілях.</2>"
+        "content": "Company uses <0>Google Analytics</0>, with IP anonymization, to collect statistics on Website and the version of App hosted by us. All customisable data sharing settings are turned off to improve the privacy of Users. ‍<1 />‍<1 /> <2>Company will not sell your data for advertising, or other purposes.</2>"
       }
     },
     "cookiePolicyItems": {
-      "title": "Політика Cookie",
-      "subtitle": "Останнє оновлення 17-е квітня 2019",
+      "title": "Cookies Policy",
+      "subtitle": "Last updated on the 17th of April 2019",
       "whatAreCookies": {
-        "title": "1. Що таке Cookies?",
-        "content": "Файли cookie - це невеликі фрагменти тексту, що відправляються вашим браузером з веб-сайту, який ви відвідуєте. Файли cookie зберігаються у вашому веб-браузері і дозволяє Сервісу або третій особі дізнаватися вас і спростити ваш наступний візит, і зробити Сервіс кориснішим для вас. ‍ <0 /> ‍ <0 /> Файли cookie можуть бути постійними або сеансовими."
+        "title": "1. What are Cookies?",
+        "content": "Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognise you and make your next visit easier and the Service more useful to you. ‍<0 />‍<0 /> Cookies can be persistent or session cookies."
       },
       "howWeUseCookies": {
-        "title": "2. Як ми використовуємо Cookies",
-        "content": "Ми використовуємо файли cookie для наступних цілей нашого Сервісу: <0 /><0 /><1><0> Надання аналітики </0> <0> Налаштування магазину </0> <0> Постійне локальне сховище ключів та членства.</0></1>"
+        "title": "2. How we use Cookies",
+        "content": "We use cookies for the following purposes our Service: <0 /><0 /><1><0>Provide Analytics</0><0>Store preferences</0><0>Persistant local storage of Keys and Membership.</0></1>"
       },
       "thirdPartyCookies": {
-        "title": "3. Cookies сторонніх джерел",
-        "content": "На додаток до наших власних файлів cookie ми також використовуємо різні сторонні файли cookie, щоб збирати статистику використання Сервісу, показувати рекламу в сервісі і через Сервіс і т.д. До них належать: <0 /><0 /><1><0><0> Google Analytics </0></0><0><0> Mailchimp </0> (тільки при підписці на будь-який з наших інформаційних бюлетенів) </0><0><0>Godaddy</0></0></1><0 /> Будь ласка, див. пункт 3 Політики конфіденційності для отримання додаткової інформації про використання цих постачальників."
+        "title": "3. Third-party Cookies",
+        "content": "In addition to our own cookies, we also use various third-party cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on. They include:<0/><0/><1><0><0>Google Analytics</0></0><0><0>Mailchimp</0> (Only when signing up for any of our newsletters)</0><0><0>Godaddy</0></0></1><0 />Please see Item 3. of the Privacy Policy for more information on the extent of these providers."
       },
       "regardingYourCookies": {
-        "title": "Відносно ваших Cookies",
-        "content": "Якщо ви хочете видалити файли cookie або дати вказівку своєму веб-браузеру видалити або відмовлятися від файлів cookie, відвідайте сторінки довідки свого веб-браузера.<0 />‍<0 /> Однак вам слід взяти до уваги, що якщо ви видалите файли cookie або відмовитеся приймати їх, ви не зможете використовувати всі функції, які ми пропонуємо, ви не зможете зберегти свої переваги, а деякі з наших сторінок можуть відображатися некоректно."
+        "title": "Regarding Your Cookies",
+        "content": "If you would like to delete cookies or instruct your web browser to delete or refuse cookies, please visit the help pages of your web browser.<0 />‍<0 /> Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly."
       }
     }
   }
