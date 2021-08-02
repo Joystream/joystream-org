@@ -1,47 +1,47 @@
 {
   "sumer": {
     "siteMetadata": {
-      "description": "Explore the Sumer testnet"
+      "description": "Изучаем тестнет Sumer"
     },
     "hero": {
-      "title": "Sumer Network",
-      "text": "Among other changes, the Sumer testnet release offers major improvements to content uploads through our playback app."
+      "title": "Сеть Sumer",
+      "text": "Кроме прочих изменений, выпуск тестнета Sumer вносит серьезные улучшения в процессе загрузки контента через наше приложение для воспроизведения."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Важная документация",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Релиз план",
+        "text": "Прочтите релиз план в том виде, в котором он был создан во время планирования, и узнайте, как проходила разработка."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Sumer testnet and its objectives."
+        "title": "Объявление в блоге",
+        "text": "Ознакомьтесь с кратким руководством по тестнету Sumer и его целям."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Sumer testnet.",
+      "title": "Цели Тестнета",
+      "subtitle": "Изложенные ниже пункты являются упрощенным представлением основных целей тестнета Sumer.",
       "goals": {
         "contentPublishing": {
-          "title": "Enable content publishing from playback interface",
-          "text": "Sumer introduces the ability to create and manage channels and videos in the Joystream Player, replacing the cumbersome and technically challenging CLI-dependent process required on the Antioch testnet."
+          "title": "Добавить возможность публикации контента из интерфейса для воспроизведения.",
+          "text": "Предоставление в Sumer возможности создания и управления видео и каналами из Joystream Player, замещая аналогичный функционал в тестнете Antioch, который был неудобным, технически сложным и требовал работы в командной строке."
         },
         "deployingNewContentDirectory": {
-          "title": "Deploying the new content directory",
-          "text": "As part of Sumer we will be introducing a simple native runtime module. This is because technical complexities and tradeoffs associated with the previous iterations of the content directory were not acceptable."
+          "title": "Публикация нового каталога контента",
+          "text": "Представление простого системного компонента по управлению контентом в Sumer, так как далее мириться с техническими сложностями и компромиссами, как было в прошлых версиях каталога, стало невозможным."
         },
         "enableBuilderRole": {
-          "title": "Enable builder/platform operations role",
-          "text": "We are introducing a new working group focused on platform operations. Originally, we had also planned to enable the new \"Gateway\" role, though this is no longer in the scope of the Sumer release."
+          "title": "Внедрение роли разработчика платформы",
+          "text": "Введение новой рабочей группы, специализирующейся на функциональных улучшениях платформы. Изначально мы также планировали включение новой роли \"Шлюз\", но это не вошло в релиз Sumer."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Sumer Network"
+      "title": "Поощряемые роли в сети Sumer"
     },
     "map": {
-      "title": "Sumer",
-      "text": "<0>Sumer is the earliest known civilization in the historical region of southern Mesopotamia</0>, emerging during the Chalcolithic and early Bronze Ages between the sixth and fifth millennium BC.<1/><1/>Living along the valleys of the Tigris and Euphrates, Sumerian farmers grew an abundance of grain and other crops, the surplus from which enabled them to form urban settlements. The region is thought to be where the earliest forms of writing emerged.<1/><1/><2><0/> Read the blog post</2>"
+      "title": "Шумеры",
+      "text": "<0>Шумеры являются самой ранней известной цивилизацией в историческом регионе южной Месопотамии</0>, возникшие в эпоху энеолита и ранней бронзы между шестым и пятым тысячелетиями до н.э.<1/><1/>Проживая в долинах Тигра и Евфрата, шумерские земледельцы выращивали множество зерновых и других культур, излишки которых позволяли им создавать городские поселения. Считается, что именно в этом регионе возникли самые ранние формы письменности.<1/><1/><2><0/> Читать в блоге</2>"
     }
   }
 }
