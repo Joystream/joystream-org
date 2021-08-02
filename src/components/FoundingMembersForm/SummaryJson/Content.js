@@ -4,7 +4,7 @@ import cn from 'classnames';
 import Socials from './Socials';
 import { ArrowButton } from '../../../pages/founding-members';
 
-const Content = ({ setJsonData, setupData, t }) => {
+const Content = ({ setJsonData, summaryType, t }) => {
   const [bountyID, setBountyID] = useState("");
   const [proposalIDs, setProposalIDs] = useState("");
   const [socials, setSocials] = useState();
@@ -24,7 +24,7 @@ const Content = ({ setJsonData, setupData, t }) => {
         contentBounties.links = socials;
       }
 
-      setJsonData(prev => [...prev, { ... setupData, contentBounties }]);
+      setJsonData(prev => [...prev, { summaryType, contentBounties }]);
     }
   };
 

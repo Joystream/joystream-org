@@ -7,7 +7,7 @@ import { ArrowButton } from '../../../pages/founding-members';
 
 const ROLES = ['Storage', 'Curator', 'Operations'];
 
-const Roles = ({ setJsonData, setupData, t }) => {
+const Roles = ({ setJsonData, summaryType, t }) => {
   const [pickedRole, setPickedRole] = useState("");
   const [workerID, setWorkerID] = useState("");
   const [startBlock, setStartBlock] = useState("");
@@ -35,7 +35,7 @@ const Roles = ({ setJsonData, setupData, t }) => {
     }
 
     if (pickedRole && workerID && startBlock && endBlock) {
-      setJsonData(prev => [...prev, { ...setupData, roles }])
+      setJsonData(prev => [...prev, { summaryType, roles }])
     }
   };
 

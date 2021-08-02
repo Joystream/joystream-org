@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import { ArrowButton } from '../../../pages/founding-members';
 
-const NodeOperator = ({ setJsonData, setupData, t }) => {
+const NodeOperator = ({ setJsonData, summaryType, t }) => {
   const [nodeName, setNodeName] = useState('');
 
   return (
@@ -24,7 +24,7 @@ const NodeOperator = ({ setJsonData, setupData, t }) => {
         text={t('foundingMembers.general.next')}
         onClick={e => {
           if(nodeName){
-            setJsonData(prev => [...prev, { ...setupData, nodeName }]);
+            setJsonData(prev => [...prev, { summaryType, nodeName }]);
           }
         }}
       />

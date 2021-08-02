@@ -376,6 +376,12 @@
       appearance: none;
     }
 
+    &__option {
+      &:hover {
+        background-color: blue;
+      }
+    }
+
     &__code-text {
       padding: 10px;
       font-family: monospace, sans-serif;

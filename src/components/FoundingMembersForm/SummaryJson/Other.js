@@ -5,13 +5,13 @@ import Socials from './Socials';
 import TextArea from './TextArea';
 import { ArrowButton } from '../../../pages/founding-members';
 
-const Other = ({ setJsonData, setupData, t }) => {
+const Other = ({ setJsonData, summaryType, t }) => {
   const [action, setAction] = useState("");
   const [links, setLinks] = useState("");
 
   const handleSubmit = () => {
     if (action && links) {
-      setJsonData(prev => [...prev, { ... setupData, other : {
+      setJsonData(prev => [...prev, { summaryType, other : {
         action,
         links
       } }]);

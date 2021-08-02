@@ -13,27 +13,27 @@ import Other from './Other';
 const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, profile, t }) => {
   const shouldSetup = useRef(true);
 
-  const [setupData, setSetupData] = useState();
-  const [jsonData, setJsonData] = useState([]);
+  // const [setupData, setSetupData] = useState();
+  const [summaryType, setSummaryType] = useState();
+  const [scoringRound, setScoringRound] = useState();
+  const [jsonData, setJsonData] = useState({});
   const [shouldMoveToNextStep, setShouldMoveToNextStep] = useState(false);
 
-  useEffect(() => {
-    if(jsonData.length !== 0 && shouldMoveToNextStep) {
-      setJsonSummary(jsonData);
-      startNextStep();
-    }
-  },[jsonData, shouldMoveToNextStep]);
+  // useEffect(() => {
+  //   if(jsonData.length !== 0 && shouldMoveToNextStep) {
+  //     setJsonSummary(jsonData);
+  //     startNextStep();
+  //   }
+  // },[jsonData, shouldMoveToNextStep]);
 
-  if (setupData && !shouldSetup.current) {
+  if (summaryType && scoringRound && !shouldSetup.current) {
     shouldSetup.current = true;
-
-    const { scoringRound, summaryType } = setupData;
 
     if (summaryType === 'Validator') {
       return (
         <Validator
           setJsonData={setJsonData}
-          setupData={setupData}
+          summaryType={summaryType}
           profileAddress={profile.root_account.toString()}
           t={t}
         />
@@ -41,41 +41,45 @@ const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, 
     }
 
     if (summaryType === 'Node Operator') {
-      return <NodeOperator setJsonData={setJsonData} setupData={setupData} t={t} />;
+      return <NodeOperator setJsonData={setJsonData} summaryType={summaryType} t={t} />;
     }
 
     if(summaryType === 'Council Member') {
-      return <CouncilMember setJsonData={setJsonData} setupData={setupData} t={t} />;
+      return <CouncilMember setJsonData={setJsonData} summaryType={summaryType} t={t} />;
     }
 
     if(summaryType === 'Roles') {
-      return <Roles setJsonData={setJsonData} setupData={setupData} t={t} />;
+      return <Roles setJsonData={setJsonData} summaryType={summaryType} t={t} />;
     }
 
     if(summaryType === 'Content Bounties') {
-      return <Content setJsonData={setJsonData} setupData={setupData} t={t} />;
+      return <Content setJsonData={setJsonData} summaryType={summaryType} t={t} />;
     }
 
     if(summaryType === 'Bounties') {
-      return <Bounties setJsonData={setJsonData} setupData={setupData} t={t} />;
+      return <Bounties setJsonData={setJsonData} summaryType={summaryType} t={t} />;
     }
 
     if(summaryType === 'Other') {
-      return <Other setJsonData={setJsonData} setupData={setupData} t={t} />;
+      return <Other setJsonData={setJsonData} summaryType={summaryType} t={t} />;
     }
   }
 
-  if (setupData && shouldSetup.current) {
-    return <AddNewOrSubmit setShouldMoveToNextStep={setShouldMoveToNextStep} shouldSetup={shouldSetup} setSetupData={setSetupData} t={t} />;
+  if (summaryType && scoringRound && shouldSetup.current && jsonData?.length !== 0) {
+    return <AddNewOrSubmit setShouldMoveToNextStep={setShouldMoveToNextStep} shouldSetup={shouldSetup} setSummaryType={setSummaryType} t={t} />;
   }
 
   console.log(jsonData);
+  console.log(typeof scoringRound)
 
   return (
     <RoundAndSummaryType
       foundingMembersData={foundingMembersData}
-      setSetupData={setSetupData}
+      setSummaryType={setSummaryType}
+      scoringRound={scoringRound}
+      setScoringRound={setScoringRound}
       shouldSetup={shouldSetup}
+      jsonData={jsonData}
       t={t}
     />
   );

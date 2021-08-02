@@ -5,7 +5,7 @@ import Socials from './Socials';
 import TextArea from './TextArea';
 import { ArrowButton } from '../../../pages/founding-members';
 
-const CouncilMember = ({ setJsonData, setupData, t }) => {
+const CouncilMember = ({ setJsonData, summaryType, t }) => {
   const [councilTerms, setCouncilTerms] = useState('');
   const [earnedAmount, setEarnedAmount] = useState(0);
   const [proposalIDs, setProposalIDs] = useState('');
@@ -28,7 +28,7 @@ const CouncilMember = ({ setJsonData, setupData, t }) => {
         council.other = extraInformation;
       }
 
-      setJsonData(prev => [...prev, { ...setupData, council }]);
+      setJsonData(prev => [...prev, { summaryType, council }]);
     }
   };
 

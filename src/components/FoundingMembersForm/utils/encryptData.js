@@ -5,8 +5,8 @@ import * as openpgp from 'openpgp';
 
 import { publicKey } from '../../../data/pages/founding-members';
 
-const encryptData = async (jsonFile, membershipHandle, password, textFile, profile, keybaseHandle) => {
-  const parsedJson = JSON.parse(jsonFile);
+const encryptData = async (membershipHandle, profile, dataJson, membershipJson, keybaseHandle, textFile, password) => {
+  const parsedJson = JSON.parse(membershipJson);
 
   const keyring = new Keyring({ type: parsedJson.encoding.content[1] });
   keyring.addFromJson(parsedJson);
@@ -26,6 +26,7 @@ const encryptData = async (jsonFile, membershipHandle, password, textFile, profi
         keybaseHandle,
         textFile,
         signature: u8aToHex(signature).toString(),
+        dataJson
       })
     ),
     publicKeys: (await openpgp.key.readArmored(publicKey)).keys,

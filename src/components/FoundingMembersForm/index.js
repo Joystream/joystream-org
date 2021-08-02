@@ -72,6 +72,8 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
   const [profile, setProfile] = useState();
   const [jsonSummary, setJsonSummary] = useState();
 
+  const { width } = useWindowDimensions();
+
   useEffect(() => {
     async function setUpApi() {
       const provider = new WsProvider(JoystreamWSProvider);
@@ -84,7 +86,7 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
 
   useEffect(() => {
     if (currentProgress === 5) {
-      setEncrypted(encryptData(jsonFile.data, membershipHandle, password, textFile, profile, keybaseHandle));
+      setEncrypted(encryptData(membershipHandle, profile, jsonSummary, jsonFile.data, keybaseHandle, textFile, password));
     }
   }, [currentProgress, jsonFile.data, keybaseHandle, membershipHandle, password, profile, textFile]);
 
@@ -97,8 +99,6 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
   if(jsonSummary) {
     console.log(jsonSummary);
   }
-
-  const { width } = useWindowDimensions();
 
   const renderFormBody = () => {
     if (currentProgress === 1) {
