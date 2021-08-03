@@ -6,41 +6,35 @@ import TextArea from './TextArea';
 import { ArrowButton } from '../../../pages/founding-members';
 
 const Other = ({ setJsonData, summaryType, t }) => {
-  const [action, setAction] = useState("");
-  const [links, setLinks] = useState("");
+  const [action, setAction] = useState('');
+  const [socials, setSocials] = useState('');
 
   const handleSubmit = () => {
-    if (action && links) {
-      setJsonData(prev => [...prev, { summaryType, other : {
-        action,
-        links
-      } }]);
+    if (action && socials) {
+      setJsonData(prev => ({
+        ...prev,
+        other: {
+          action,
+          socials,
+        },
+      }));
     }
-  }
+  };
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Action information</h3>
-      <TextArea
-        className="FoundingMembersFormPage__form__text-area margin-bottom-M"
-        setValue={setAction}
-      />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Relevant links</h3>
-      <input
-        className="FoundingMembersFormPage__form__input margin-bottom-M"
-        placeholder="Links.."
-        value={links}
-        onChange={e => setLinks(e.target.value)}
-      />
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Explain in short what you did</h3>
+      <TextArea className="FoundingMembersFormPage__form__text-area margin-bottom-M" setValue={setAction} />
+      <Socials setSocials={setSocials} />
       <ArrowButton
         className={cn('FoundingMembersFormPage__form__button', {
-          'FoundingMembersFormPage__form__button--inactive': !(action && links),
+          'FoundingMembersFormPage__form__button--inactive': !(action && socials),
         })}
         text={t('foundingMembers.general.next')}
         onClick={handleSubmit}
       />
     </>
-  )
+  );
 };
 
 export default Other;

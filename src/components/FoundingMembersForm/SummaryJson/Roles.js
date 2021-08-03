@@ -7,15 +7,15 @@ import { ArrowButton } from '../../../pages/founding-members';
 
 const ROLES = ['Storage', 'Curator', 'Operations'];
 
-const Roles = ({ setJsonData, summaryType, t }) => {
-  const [pickedRole, setPickedRole] = useState("");
-  const [workerID, setWorkerID] = useState("");
-  const [startBlock, setStartBlock] = useState("");
-  const [endBlock, setEndBlock] = useState("");
+const Roles = ({ setJsonData, summaryType, scoringRoundStarted, scoringRoundEnds, t }) => {
+  const [pickedRole, setPickedRole] = useState('');
+  const [workerID, setWorkerID] = useState('');
+  const [startBlock, setStartBlock] = useState(scoringRoundStarted ?? '');
+  const [endBlock, setEndBlock] = useState(scoringRoundEnds ?? '');
   const [isLead, setIsLead] = useState(false);
-  const [proposalIDs, setProposalIDs] = useState("");
+  const [proposalIDs, setProposalIDs] = useState('');
   const [socials, setSocials] = useState();
-  const [extraInformation, setExtraInformation] = useState("");
+  const [extraInformation, setExtraInformation] = useState('');
 
   const handleSubmit = () => {
     let roles = {
@@ -23,27 +23,29 @@ const Roles = ({ setJsonData, summaryType, t }) => {
       workerID,
       startBlock,
       endBlock,
-      lead: isLead
+      lead: isLead,
     };
 
-    if(socials) {
+    if (proposalIDs) {
+      roles.proposalIDs = proposalIDs;
+    }
+
+    if (socials) {
       roles.links = socials;
     }
 
-    if(extraInformation) {
+    if (extraInformation) {
       roles.other = extraInformation;
     }
 
     if (pickedRole && workerID && startBlock && endBlock) {
-      setJsonData(prev => [...prev, { summaryType, roles }])
+      setJsonData(prev => ({ ...prev, roles }));
     }
   };
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
-        Working Group
-      </h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Working Group</h3>
       {/* eslint-disable-next-line */}
       <select
         value={pickedRole}
@@ -84,7 +86,9 @@ const Roles = ({ setJsonData, summaryType, t }) => {
       />
       <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Lead?</h3>
       <input className="margin-bottom-M" type="checkbox" defaultChecked={isLead} onChange={e => setIsLead(!isLead)} />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Proposal IDs</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Comma-separated list of any relevant Proposal IDs
+      </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Proposal IDs.."
@@ -92,11 +96,8 @@ const Roles = ({ setJsonData, summaryType, t }) => {
         onChange={e => setProposalIDs(e.target.value)}
       />
       <Socials setSocials={setSocials} />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Extra information</h3>
-      <TextArea
-        className="FoundingMembersFormPage__form__text-area margin-bottom-M"
-        setValue={setExtraInformation}
-      />
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Any additional information?</h3>
+      <TextArea className="FoundingMembersFormPage__form__text-area margin-bottom-M" setValue={setExtraInformation} />
       <ArrowButton
         className={cn('FoundingMembersFormPage__form__button', {
           'FoundingMembersFormPage__form__button--inactive': !(pickedRole && workerID && startBlock && endBlock),

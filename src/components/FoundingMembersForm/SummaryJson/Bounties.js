@@ -38,7 +38,7 @@ const Bounties = ({ setJsonData, summaryType, t }) => {
         value={bountyID}
         onChange={e => setBountyID(e.target.value)}
       />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Proposal IDs</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Comma-separated list of the relevant Proposal IDs</h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Proposal IDs.."
@@ -46,14 +46,14 @@ const Bounties = ({ setJsonData, summaryType, t }) => {
         onChange={e => setProposalIDs(e.target.value)}
       />
       <Socials setSocials={setSocials} />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Total rewards</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Total ($) reward for the Bounty</h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Total rewards earned during the term.."
         value={totalRewards}
         onChange={e => setTotalRewards(e.target.value)}
       />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Extra information</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Any additional information?</h3>
       <TextArea
         className="FoundingMembersFormPage__form__text-area margin-bottom-M"
         setValue={setExtraInformation}

@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import cn from 'classnames';
 
 import Socials from './Socials';
+import TextArea from './TextArea';
 import { ArrowButton } from '../../../pages/founding-members';
 
 const Content = ({ setJsonData, summaryType, t }) => {
-  const [bountyID, setBountyID] = useState("");
-  const [proposalIDs, setProposalIDs] = useState("");
+  const [bountyID, setBountyID] = useState('');
+  const [proposalIDs, setProposalIDs] = useState('');
   const [socials, setSocials] = useState();
-  const [videoLinks, setVideoLinks] = useState("");
-  const [totalRewards, setTotalRewards] = useState("");
+  const [videoLinks, setVideoLinks] = useState('');
+  const [totalRewards, setTotalRewards] = useState('');
+  const [extraInformation, setExtraInformation] = useState('');
 
   const handleSubmit = () => {
     if (bountyID && proposalIDs && videoLinks && totalRewards) {
@@ -17,14 +19,18 @@ const Content = ({ setJsonData, summaryType, t }) => {
         bountyID,
         proposalIDs,
         videoIDs: videoLinks,
-        totalRewards
+        totalRewards,
       };
 
-      if(socials) {
+      if (socials) {
         contentBounties.links = socials;
       }
 
-      setJsonData(prev => [...prev, { summaryType, contentBounties }]);
+      if (extraInformation) {
+        contentBounties.other = extraInformation;
+      }
+
+      setJsonData(prev => ({ ...prev, contentBounties }));
     }
   };
 
@@ -37,7 +43,9 @@ const Content = ({ setJsonData, summaryType, t }) => {
         value={bountyID}
         onChange={e => setBountyID(e.target.value)}
       />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Proposal IDs</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Comma-separated list of the relevant Proposal IDs
+      </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Proposal IDs.."
@@ -45,20 +53,24 @@ const Content = ({ setJsonData, summaryType, t }) => {
         onChange={e => setProposalIDs(e.target.value)}
       />
       <Socials setSocials={setSocials} />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Video links</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Comma-separated list of all the qualifying Video IDs
+      </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Links to qualifying videos.."
         value={videoLinks}
         onChange={e => setVideoLinks(e.target.value)}
       />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Total rewards</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Total ($) reward for the Bounty</h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Total rewards earned during the term.."
         value={totalRewards}
         onChange={e => setTotalRewards(e.target.value)}
       />
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Any additional information?</h3>
+      <TextArea className="FoundingMembersFormPage__form__text-area margin-bottom-M" setValue={setExtraInformation} />
       <ArrowButton
         className={cn('FoundingMembersFormPage__form__button', {
           'FoundingMembersFormPage__form__button--inactive': !(bountyID && proposalIDs && videoLinks && totalRewards),
