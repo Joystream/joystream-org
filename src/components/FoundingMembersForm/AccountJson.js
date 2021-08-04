@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import cn from 'classnames';
 import { Trans } from 'gatsby-plugin-react-i18next';
+import { Keyring } from '@polkadot/keyring';
+
 import { ReactComponent as CloseIcon } from '../../assets/svg/postponed.svg';
 import { ReactComponent as Upload } from '../../assets/svg/upload.svg';
 import { ReactComponent as Achieved } from '../../assets/svg/achieved.svg';
@@ -16,13 +18,52 @@ const AccountJson = ({
   fileStatus,
   setJsonFile,
   setFileStatus,
-  setCurrentProgress,
+  startNextStep,
   setFileLoadedAmount,
   fileLoadedAmount,
+  setPassword,
   t,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFileHovering, setIsFileHovering] = useState(false);
+  const [passwordInput, setPasswordInput] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+  const [isPasswordValid, setIsPasswordValid] = useState();
+  const [isPasswordLoading, setIsPasswordLoading] = useState(false);
+
+  const checkPasswordAndSubmit = () => {
+    const keyring = new Keyring({ type: 'sr25519' });
+    const parsedJson = JSON.parse(jsonFile.data);
+    keyring.addFromJson(parsedJson);
+
+    const user = keyring.getPair(parsedJson.address);
+
+    try {
+      user.decodePkcs8(passwordInput);
+    } catch (e) {
+      setIsPasswordLoading(false);
+      setIsPasswordValid(false);
+      setPasswordError(
+        !passwordInput
+          ? t('foundingMembers.form.keybaseAndText.pleaseEnterPassword')
+          : t('foundingMembers.form.error.incorrectPassword')
+      );
+      return;
+    }
+    setFileStatus({ loading: false, loaded: false, error: false });
+    setFileLoadedAmount(0);
+    setIsPasswordLoading(false);
+    setPasswordError('');
+    setIsPasswordValid(true);
+    setPassword(passwordInput);
+    startNextStep();
+  };
+
+  useEffect(() => {
+    if (isPasswordLoading) {
+      checkPasswordAndSubmit();
+    }
+  }, [checkPasswordAndSubmit, isPasswordLoading]);
 
   return (
     <>
@@ -42,7 +83,12 @@ const AccountJson = ({
             <p>
               <Trans
                 i18nKey="foundingMembers.form.json.howToExport.text"
-                components={[<a href="https://testnet.joystream.org/" target="_blank">How to export your account with key:</a>, <em />]}
+                components={[
+                  <a href="https://testnet.joystream.org/" target="_blank">
+                    How to export your account with key:
+                  </a>,
+                  <em />,
+                ]}
               />
             </p>
           </div>
@@ -71,6 +117,7 @@ const AccountJson = ({
           }}
           className={cn('FoundingMembersFormPage__form__filedrop', {
             'FoundingMembersFormPage__form__filedrop--active': isFileHovering,
+            'margin-bottom-M': isPasswordValid === false,
           })}
         >
           {!fileStatus.loading && !fileStatus.loaded && (
@@ -102,7 +149,11 @@ const AccountJson = ({
           )}
         </div>
       ) : (
-        <div className="FoundingMembersFormPage__form__confirmation">
+        <div
+          className={cn('FoundingMembersFormPage__form__confirmation', {
+            'margin-bottom-M': isPasswordValid === false && !fileStatus.error,
+          })}
+        >
           <p className="FoundingMembersFormPage__form__filedrop__text">
             {jsonFile.name.substring(0, 20)}
             {jsonFile.name.length > 20 && '...'}
@@ -124,7 +175,29 @@ const AccountJson = ({
           />
         </div>
       )}
-      {fileStatus.error && <p className="FoundingMembersFormPage__form__error-message">{fileStatus.errorMessage}</p>}
+      {fileStatus.error && (
+        <p
+          className={cn('FoundingMembersFormPage__form__error-message', {
+            'margin-bottom-M': isPasswordValid === false,
+          })}
+        >
+          {fileStatus.errorMessage}
+        </p>
+      )}
+      {isPasswordValid === false && (
+        <>
+          <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+            {t('foundingMembers.form.keybaseAndText.password')}
+          </h3>
+          <input
+            type="password"
+            className="FoundingMembersFormPage__form__input"
+            onChange={e => setPasswordInput(e.target.value)}
+            value={passwordInput}
+          />
+          {passwordError && <p className="FoundingMembersFormPage__form__error-message">{passwordError}</p>}
+        </>
+      )}
       <ArrowButton
         className={cn('FoundingMembersFormPage__form__button', {
           'FoundingMembersFormPage__form__button--inactive': !jsonFile.data,
@@ -132,9 +205,7 @@ const AccountJson = ({
         text={t('foundingMembers.general.next')}
         onClick={e => {
           if (jsonFile.data) {
-            setCurrentProgress(3);
-            setFileStatus({ loading: false, loaded: false, error: false });
-            setFileLoadedAmount(0);
+            setIsPasswordLoading(true);
           }
         }}
       />

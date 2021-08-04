@@ -18,6 +18,15 @@ const encryptData = async (membershipHandle, profile, dataJson, membershipJson, 
 
   const signature = user.sign(hexToU8a(hash));
 
+  console.log(JSON.stringify({
+    membershipHandle,
+    rootAccount: profile.controller_account.toString(),
+    keybaseHandle,
+    textFile,
+    signature: u8aToHex(signature).toString(),
+    dataJson
+  }))
+
   const { data: encrypted } = await openpgp.encrypt({
     message: openpgp.message.fromText(
       JSON.stringify({

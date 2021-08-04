@@ -6,7 +6,7 @@ import { JoystreamWSProvider } from '../../data/pages/founding-members';
 
 import Membership from './Membership';
 import AccountJson from './AccountJson';
-import KeybaseAndText from './KeybaseAndText';
+import SummaryJson from './SummaryJson';
 import TermsAndConditions from './TermsAndConditions';
 
 import { ReactComponent as Achieved } from '../../assets/svg/achieved.svg';
@@ -86,7 +86,9 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
 
   useEffect(() => {
     if (currentProgress === 5) {
-      setEncrypted(encryptData(membershipHandle, profile, jsonSummary, jsonFile.data, keybaseHandle, textFile, password));
+      setEncrypted(
+        encryptData(membershipHandle, profile, jsonSummary, jsonFile.data, keybaseHandle, textFile, password)
+      );
     }
   }, [currentProgress, jsonFile.data, keybaseHandle, membershipHandle, password, profile, textFile]);
 
@@ -96,7 +98,7 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
     }
   }, [encrypted]);
 
-  if(jsonSummary) {
+  if (jsonSummary) {
     console.log(jsonSummary);
   }
 
@@ -110,13 +112,24 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
           setProfile={setProfile}
           membershipHandle={membershipHandle}
           setMembershipHandle={setMembershipHandle}
-          setCurrentProgress={setCurrentProgress}
+          startNextStep={() => setCurrentProgress(2)}
           setJsonSummary={setJsonSummary}
           width={width}
           t={t}
         />
       );
     } else if (currentProgress === 2) {
+      return (
+        <SummaryJson
+          Api={Api}
+          foundingMembersData={foundingMembersData}
+          setJsonSummary={setJsonSummary}
+          startNextStep={() => setCurrentProgress(3)}
+          profile={profile}
+          t={t}
+        />
+      );
+    } else if (currentProgress === 3) {
       return (
         <AccountJson
           jsonFileInput={jsonFileInput}
@@ -125,27 +138,10 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
           fileStatus={fileStatus}
           setJsonFile={setJsonFile}
           setFileStatus={setFileStatus}
-          setCurrentProgress={setCurrentProgress}
+          startNextStep={() => setCurrentProgress(4)}
           setFileLoadedAmount={setFileLoadedAmount}
           fileLoadedAmount={fileLoadedAmount}
-          t={t}
-        />
-      );
-    } else if (currentProgress === 3) {
-      return (
-        <KeybaseAndText
-          width={width}
-          textFileInput={textFileInput}
-          handleFileSelection={handleFileSelection}
-          textFile={textFile}
-          fileStatus={fileStatus}
-          fileLoadedAmount={fileLoadedAmount}
-          setTextFile={setTextFile}
-          setFileStatus={setFileStatus}
-          setKeybaseHandle={setKeybaseHandle}
-          setCurrentProgress={setCurrentProgress}
           setPassword={setPassword}
-          jsonFile={jsonFile}
           t={t}
         />
       );
@@ -153,7 +149,7 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
       return (
         <TermsAndConditions
           termsRead={termsRead}
-          setCurrentProgress={setCurrentProgress}
+          startNextStep={() => setCurrentProgress(5)}
           setTermsRead={setTermsRead}
           t={t}
         />
@@ -285,8 +281,8 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
       {currentProgress < 5 && (
         <div className="FoundingMembersFormPage__form__progress">
           {renderProgressItem(t('foundingMembers.form.progressItem.accountInfo'), 1, currentProgress)}
-          {renderProgressItem(t('foundingMembers.form.progressItem.keyFile'), 2, currentProgress)}
-          {renderProgressItem(t('foundingMembers.form.progressItem.summary'), 3, currentProgress)}
+          {renderProgressItem("Data", 2, currentProgress)}
+          {renderProgressItem(t('foundingMembers.form.progressItem.keyFile'), 3, currentProgress)}
           {renderProgressItem(
             width > 1200
               ? t('foundingMembers.form.progressItem.acceptTerms')

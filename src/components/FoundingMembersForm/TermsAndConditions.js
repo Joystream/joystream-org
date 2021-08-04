@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import { ArrowButton } from '../../pages/founding-members';
 
-const TermsAndConditions = ({ termsRead, setCurrentProgress, setTermsRead, t }) => {
+const TermsAndConditions = ({ termsRead, startNextStep, setTermsRead, t }) => {
   const termsAndConditions = useRef();
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const TermsAndConditions = ({ termsRead, setCurrentProgress, setTermsRead, t }) 
         text={t('foundingMembers.general.next')}
         onClick={() => {
           if (termsRead) {
-            setCurrentProgress(5);
+            startNextStep();
           }
         }}
       />

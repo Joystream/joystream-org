@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
 
 import { ArrowButton } from '../../pages/founding-members';
-import SummaryJson from './SummaryJson';
 
 import parseBalance from '../../utils/parseBalance/index';
 
@@ -24,42 +23,21 @@ async function getMember(api, membershipHandle, setProfile) {
 
 const Membership = ({
   Api,
-  foundingMembersData,
   profile,
   setProfile,
   membershipHandle,
   setMembershipHandle,
   width,
-  setCurrentProgress,
-  setJsonSummary,
+  startNextStep,
   t,
 }) => {
   const [textInput, setTextInput] = useState('');
-  const [shouldStartSummaryProcess, setShouldStartSummaryProcess] = useState(false);
 
   useEffect(() => {
     if (membershipHandle && Api) {
       getMember(Api, membershipHandle, setProfile);
     }
   }, [Api, membershipHandle, setProfile]);
-
-  const startNextStep = () => {
-    setCurrentProgress(2);
-    setTextInput('');
-  };
-
-  if (shouldStartSummaryProcess) {
-    return (
-      <SummaryJson
-        Api={Api}
-        foundingMembersData={foundingMembersData}
-        setJsonSummary={setJsonSummary}
-        startNextStep={startNextStep}
-        profile={profile}
-        t={t}
-      />
-    );
-  }
 
   return (
     <>
@@ -113,7 +91,8 @@ const Membership = ({
             setMembershipHandle(textInput);
           } else {
             if (profile) {
-              setShouldStartSummaryProcess(true);
+              startNextStep();
+              setTextInput('');
             }
 
             if (textInput) {
