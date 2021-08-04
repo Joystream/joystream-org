@@ -10,15 +10,32 @@ import Content from './Content';
 import Bounties from './Bounties';
 import Other from './Other';
 
+// this data needs to be fetched from the fm data json
+const COUNCIL_TERMS = [
+  {
+    blockRange: '1693148 − 1793948',
+    from: '2021-07-26T09:00:00+02:00',
+    to: '2021-08-02T09:00:00+02:00',
+    id: 14,
+  },
+  {
+    blockRange: '1592348 − 1693148',
+    from: '2021-07-19T09:00:00+02:00',
+    to: '2021-07-26T09:00:00+02:00',
+    id: 13,
+  },
+];
+
 const VALID_SCORING_ROUNDS = [
   {
     scoringPeriodId: 12,
     started: '2021-07-19T09:00:00+02:00',
     ends: '2021-08-02T08:59:59+02:00',
     blocks: {
-      from: 1592349 ,
-      to: 1793949
-    }
+      from: 1592349,
+      to: 1793949,
+    },
+    councilTerms: COUNCIL_TERMS,
   },
   {
     scoringPeriodId: 11,
@@ -26,9 +43,10 @@ const VALID_SCORING_ROUNDS = [
     ends: '2021-07-19T08:59:59+02:00',
     blocks: '1390749 - 1592349',
     blocks: {
-      from: 1390749 ,
-      to: 1592349
-    }
+      from: 1390749,
+      to: 1592349,
+    },
+    councilTerms: COUNCIL_TERMS,
   },
   {
     scoringPeriodId: 10,
@@ -36,9 +54,10 @@ const VALID_SCORING_ROUNDS = [
     ends: '2021-07-05T08:59:59+02:00',
     blocks: '1189149 - 1390749',
     blocks: {
-      from: 1189149 ,
-      to: 1390749
-    }
+      from: 1189149,
+      to: 1390749,
+    },
+    councilTerms: COUNCIL_TERMS,
   },
   {
     scoringPeriodId: 9,
@@ -46,9 +65,10 @@ const VALID_SCORING_ROUNDS = [
     ends: '2021-06-21T08:59:59+02:00',
     blocks: '987549 - 1189149',
     blocks: {
-      from: 987549 ,
-      to: 1189149
-    }
+      from: 987549,
+      to: 1189149,
+    },
+    councilTerms: COUNCIL_TERMS,
   },
 ];
 
@@ -61,15 +81,18 @@ const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, 
   const [jsonData, setJsonData] = useState({});
   const [shouldMoveToNextStep, setShouldMoveToNextStep] = useState(false);
 
-  // useEffect(() => {
-  //   if(jsonData.length !== 0 && shouldMoveToNextStep) {
-  //     setJsonSummary(jsonData);
-  //     startNextStep();
-  //   }
-  // },[jsonData, shouldMoveToNextStep]);
+  useEffect(() => {
+    if(Object.keys(jsonData).length !== 0 && shouldMoveToNextStep) {
+      setJsonSummary(jsonData);
+      startNextStep();
+    }
+  },[jsonData, shouldMoveToNextStep]);
 
   if (summaryType && scoringRound && !shouldSetup.current) {
     shouldSetup.current = true;
+    const chosenScoringRound = VALID_SCORING_ROUNDS.filter(
+      round => round.scoringPeriodId.toString() === scoringRound
+    )[0];
 
     if (summaryType === 'Validator') {
       return (
@@ -87,14 +110,19 @@ const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, 
     }
 
     if (summaryType === 'Council Member') {
-      return <CouncilMember setJsonData={setJsonData} summaryType={summaryType} t={t} />;
+      console.log(chosenScoringRound);
+
+      return (
+        <CouncilMember
+          setJsonData={setJsonData}
+          summaryType={summaryType}
+          councilTermsInPeriod={chosenScoringRound.councilTerms}
+          t={t}
+        />
+      );
     }
 
     if (summaryType === 'Roles') {
-      const chosenScoringRound = VALID_SCORING_ROUNDS.filter(
-        round => round.scoringPeriodId.toString() === scoringRound
-      )[0];
-
       return (
         <Roles
           setJsonData={setJsonData}

@@ -79,19 +79,6 @@ const RoundAndSummaryType = ({
       {jsonData && Object.keys(jsonData).length !== 0 ? (
         <code className="FoundingMembersFormPage__form__code-text">{JSON.stringify(jsonData, null, 2)}</code>
       ) : null}
-      {/* <ArrowButton
-        className={cn('FoundingMembersFormPage__form__button margin-bottom-S', {
-          'FoundingMembersFormPage__form__button--inactive': !(tempScoringRound && tempSummaryType),
-        })}
-        text={t('foundingMembers.general.next')}
-        onClick={e => {
-          if (tempScoringRound && tempSummaryType) {
-            setScoringRound(tempScoringRound);
-            setSummaryType(tempSummaryType);
-            shouldSetup.current = false;
-          }
-        }}
-      /> */}
     </>
   );
 };

@@ -36,7 +36,9 @@ const Content = ({ setJsonData, summaryType, t }) => {
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Bounty ID</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Bounty ID <span style={{ color: '#FF3861FF' }}>*</span>
+      </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Bounty ID.."
@@ -44,7 +46,7 @@ const Content = ({ setJsonData, summaryType, t }) => {
         onChange={e => setBountyID(e.target.value)}
       />
       <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
-        Comma-separated list of the relevant Proposal IDs
+        Comma-separated list of the relevant Proposal IDs <span style={{ color: '#FF3861FF' }}>*</span>
       </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
@@ -54,7 +56,7 @@ const Content = ({ setJsonData, summaryType, t }) => {
       />
       <Socials setSocials={setSocials} />
       <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
-        Comma-separated list of all the qualifying Video IDs
+        Comma-separated list of all the qualifying Video IDs <span style={{ color: '#FF3861FF' }}>*</span>
       </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
@@ -62,7 +64,9 @@ const Content = ({ setJsonData, summaryType, t }) => {
         value={videoLinks}
         onChange={e => setVideoLinks(e.target.value)}
       />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Total ($) reward for the Bounty</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Total ($) reward for the Bounty <span style={{ color: '#FF3861FF' }}>*</span>
+      </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Total rewards earned during the term.."

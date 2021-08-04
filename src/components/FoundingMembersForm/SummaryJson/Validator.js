@@ -32,7 +32,9 @@ const StashKeyQuery = ({ profileAddress, setStashAddress, t }) => {
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Stash address:</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Stash address <span style={{ color: '#FF3861FF' }}>*</span>
+      </h3>
       <input
         maxLength={75}
         className="FoundingMembersFormPage__form__input margin-bottom-M"
@@ -42,11 +44,13 @@ const StashKeyQuery = ({ profileAddress, setStashAddress, t }) => {
       />
       {newStashAddress && (
         <>
-          <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Copy this message and sign it: </h3>
+          <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Copy this message and sign it</h3>
           <code className="FoundingMembersFormPage__form__code-text margin-bottom-M">
             Member {profileAddress} owns {newStashAddress}
           </code>
-          <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Signed message </h3>
+          <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+            Signed message <span style={{ color: '#FF3861FF' }}>*</span>
+          </h3>
           <input
             className="FoundingMembersFormPage__form__input margin-bottom-M"
             placeholder="The signed message.."

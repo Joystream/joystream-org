@@ -23,9 +23,9 @@ const Other = ({ setJsonData, summaryType, t }) => {
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Explain in short what you did</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Explain in short what you did <span style={{ color: "#FF3861FF" }}>*</span></h3>
       <TextArea className="FoundingMembersFormPage__form__text-area margin-bottom-M" setValue={setAction} />
-      <Socials setSocials={setSocials} />
+      <Socials setSocials={setSocials} required />
       <ArrowButton
         className={cn('FoundingMembersFormPage__form__button', {
           'FoundingMembersFormPage__form__button--inactive': !(action && socials),

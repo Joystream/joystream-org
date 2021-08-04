@@ -45,7 +45,9 @@ const Roles = ({ setJsonData, summaryType, scoringRoundStarted, scoringRoundEnds
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Working Group</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Working Group <span style={{ color: '#FF3861FF' }}>*</span>
+      </h3>
       {/* eslint-disable-next-line */}
       <select
         value={pickedRole}
@@ -63,21 +65,27 @@ const Roles = ({ setJsonData, summaryType, scoringRoundStarted, scoringRoundEnds
           </option>
         ))}
       </select>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Worker ID</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Worker ID <span style={{ color: '#FF3861FF' }}>*</span>
+      </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Worker ID.."
         value={workerID}
         onChange={e => setWorkerID(e.target.value)}
       />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Start block</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Start block <span style={{ color: '#FF3861FF' }}>*</span>
+      </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Start block.."
         value={startBlock}
         onChange={e => setStartBlock(e.target.value)}
       />
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">End block</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        End block <span style={{ color: '#FF3861FF' }}>*</span>
+      </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="End block.."

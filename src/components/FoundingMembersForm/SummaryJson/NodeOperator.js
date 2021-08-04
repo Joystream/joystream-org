@@ -8,7 +8,9 @@ const NodeOperator = ({ setJsonData, summaryType, t }) => {
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Node Operator</h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Node Operator <span style={{ color: '#FF3861FF' }}>*</span>
+      </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="The name of your node.."
