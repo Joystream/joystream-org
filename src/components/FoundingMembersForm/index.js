@@ -43,7 +43,6 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
 
   //refs
   const jsonFileInput = useRef();
-  const textFileInput = useRef();
 
   //temporary data
   const [currentProgress, setCurrentProgress] = useState(1);
@@ -87,10 +86,10 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
   useEffect(() => {
     if (currentProgress === 5) {
       setEncrypted(
-        encryptData(membershipHandle, profile, jsonSummary, jsonFile.data, keybaseHandle, textFile, password)
+        encryptData(membershipHandle, profile, jsonSummary, jsonFile.data, keybaseHandle, password)
       );
     }
-  }, [currentProgress, jsonFile.data, keybaseHandle, membershipHandle, password, profile, textFile]);
+  }, [currentProgress, jsonFile.data, keybaseHandle, membershipHandle, password, profile]);
 
   useEffect(() => {
     if (encrypted) {
@@ -142,6 +141,7 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
           setFileLoadedAmount={setFileLoadedAmount}
           fileLoadedAmount={fileLoadedAmount}
           setPassword={setPassword}
+          setKeybaseHandle={setKeybaseHandle}
           t={t}
         />
       );

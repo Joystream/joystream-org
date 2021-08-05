@@ -5,7 +5,7 @@ import * as openpgp from 'openpgp';
 
 import { publicKey } from '../../../data/pages/founding-members';
 
-const encryptData = async (membershipHandle, profile, dataJson, membershipJson, keybaseHandle, textFile, password) => {
+const encryptData = async (membershipHandle, profile, dataJson, membershipJson, keybaseHandle, password) => {
   const parsedJson = JSON.parse(membershipJson);
 
   const keyring = new Keyring({ type: parsedJson.encoding.content[1] });
@@ -14,15 +14,16 @@ const encryptData = async (membershipHandle, profile, dataJson, membershipJson, 
   const user = keyring.getPair(parsedJson.address);
   user.decodePkcs8(password);
 
-  const hash = blake2AsHex(textFile.data.replace(/\n|\r/g, ''), 256);
+  const hash = blake2AsHex(JSON.stringify(dataJson), 256);
 
   const signature = user.sign(hexToU8a(hash));
 
+  // TO BE REMOVED
   console.log(JSON.stringify({
+    memberId: profile.memberId,
     membershipHandle,
-    rootAccount: profile.controller_account.toString(),
+    membershipControllerKey: profile.controller_account.toString(),
     keybaseHandle,
-    textFile,
     signature: u8aToHex(signature).toString(),
     dataJson
   }))
@@ -33,7 +34,6 @@ const encryptData = async (membershipHandle, profile, dataJson, membershipJson, 
         membershipHandle,
         rootAccount: profile.controller_account.toString(),
         keybaseHandle,
-        textFile,
         signature: u8aToHex(signature).toString(),
         dataJson
       })

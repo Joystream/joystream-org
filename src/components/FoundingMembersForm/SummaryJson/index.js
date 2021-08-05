@@ -153,6 +153,7 @@ const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, 
         setShouldMoveToNextStep={setShouldMoveToNextStep}
         shouldSetup={shouldSetup}
         setSummaryType={setSummaryType}
+        jsonData={jsonData}
         t={t}
       />
     );

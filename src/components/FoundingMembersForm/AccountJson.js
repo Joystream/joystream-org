@@ -22,10 +22,12 @@ const AccountJson = ({
   setFileLoadedAmount,
   fileLoadedAmount,
   setPassword,
+  setKeybaseHandle,
   t,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFileHovering, setIsFileHovering] = useState(false);
+  const [keybaseInput, setKeybaseInput] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [isPasswordValid, setIsPasswordValid] = useState();
@@ -56,6 +58,7 @@ const AccountJson = ({
     setPasswordError('');
     setIsPasswordValid(true);
     setPassword(passwordInput);
+    setKeybaseHandle(keybaseInput);
     startNextStep();
   };
 
@@ -67,6 +70,15 @@ const AccountJson = ({
 
   return (
     <>
+      <h3 className="FoundingMembersFormPage__form__subtitle FoundingMembersFormPage__form__input-title-mobile  margin-bottom-XS">
+        {t('foundingMembers.form.keybaseAndText.keybaseHandle')}
+      </h3>
+      <input
+        value={keybaseInput}
+        onChange={e => setKeybaseInput(e.target.value)}
+        placeholder={t('foundingMembers.general.inputPlaceholder')}
+        className="FoundingMembersFormPage__form__input margin-bottom-M"
+      />
       <div className="flex-row margin-bottom-XS">
         <h3 className="FoundingMembersFormPage__form__subtitle">{t('foundingMembers.form.json.exportedAccount')}</h3>
         <button className="FoundingMembersFormPage__form__link" onClick={() => setIsModalOpen(true)}>
@@ -200,11 +212,11 @@ const AccountJson = ({
       )}
       <ArrowButton
         className={cn('FoundingMembersFormPage__form__button', {
-          'FoundingMembersFormPage__form__button--inactive': !jsonFile.data,
+          'FoundingMembersFormPage__form__button--inactive': !(jsonFile.data && keybaseInput),
         })}
         text={t('foundingMembers.general.next')}
         onClick={e => {
-          if (jsonFile.data) {
+          if (jsonFile.data && keybaseInput) {
             setIsPasswordLoading(true);
           }
         }}

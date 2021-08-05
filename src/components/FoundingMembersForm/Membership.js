@@ -18,6 +18,7 @@ async function getMember(api, membershipHandle, setProfile) {
   setProfile({
     ...membership,
     free: tokenAmount.data.free.toString(),
+    memberId: id.toNumber()
   });
 }
 

@@ -13,7 +13,6 @@ const RoundAndSummaryType = ({
   scoringRound,
   setScoringRound,
   shouldSetup,
-  jsonData,
   t,
 }) => {
   const [possibleScoringRounds, setPossibleScoringRounds] = useState();
@@ -76,9 +75,6 @@ const RoundAndSummaryType = ({
           </option>
         ))}
       </select>
-      {jsonData && Object.keys(jsonData).length !== 0 ? (
-        <code className="FoundingMembersFormPage__form__code-text">{JSON.stringify(jsonData, null, 2)}</code>
-      ) : null}
     </>
   );
 };
