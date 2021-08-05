@@ -18,7 +18,7 @@ const Bounties = ({ setJsonData, summaryType, t }) => {
         bountyID,
         proposalIDs,
         links: socials,
-        totalRewards,
+        reward: totalRewards,
       };
 
       if (extraInformation) {

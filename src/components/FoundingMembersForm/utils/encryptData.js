@@ -25,7 +25,7 @@ const encryptData = async (membershipHandle, profile, dataJson, membershipJson, 
     membershipControllerKey: profile.controller_account.toString(),
     keybaseHandle,
     signature: u8aToHex(signature).toString(),
-    dataJson
+    scoringPeriods: dataJson
   }))
 
   const { data: encrypted } = await openpgp.encrypt({
@@ -35,7 +35,7 @@ const encryptData = async (membershipHandle, profile, dataJson, membershipJson, 
         rootAccount: profile.controller_account.toString(),
         keybaseHandle,
         signature: u8aToHex(signature).toString(),
-        dataJson
+        scoringPeriods: dataJson
       })
     ),
     publicKeys: (await openpgp.key.readArmored(publicKey)).keys,

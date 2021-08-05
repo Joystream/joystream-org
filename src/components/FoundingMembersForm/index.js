@@ -7,6 +7,7 @@ import { JoystreamWSProvider } from '../../data/pages/founding-members';
 import Membership from './Membership';
 import AccountJson from './AccountJson';
 import SummaryJson from './SummaryJson';
+import Summary from './Summary';
 import TermsAndConditions from './TermsAndConditions';
 
 import { ReactComponent as Achieved } from '../../assets/svg/achieved.svg';
@@ -69,7 +70,7 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
   const [password, setPassword] = useState();
   const [encrypted, setEncrypted] = useState('');
   const [profile, setProfile] = useState();
-  const [jsonSummary, setJsonSummary] = useState();
+  const [jsonSummary, setJsonSummary] = useState([]);
 
   const { width } = useWindowDimensions();
 
@@ -122,6 +123,7 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
         <SummaryJson
           Api={Api}
           foundingMembersData={foundingMembersData}
+          jsonSummary={jsonSummary}
           setJsonSummary={setJsonSummary}
           startNextStep={() => setCurrentProgress(3)}
           profile={profile}
@@ -130,6 +132,15 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
       );
     } else if (currentProgress === 3) {
       return (
+        <Summary
+          addMoreData={() => setCurrentProgress(2)}
+          startNextStep={() => setCurrentProgress(4)}
+          jsonSummary={jsonSummary}
+          t={t}
+        />
+      );
+    } else if (currentProgress === 4) {
+      return (
         <AccountJson
           jsonFileInput={jsonFileInput}
           handleFileSelection={handleFileSelection}
@@ -137,7 +148,7 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
           fileStatus={fileStatus}
           setJsonFile={setJsonFile}
           setFileStatus={setFileStatus}
-          startNextStep={() => setCurrentProgress(4)}
+          startNextStep={() => setCurrentProgress(5)}
           setFileLoadedAmount={setFileLoadedAmount}
           fileLoadedAmount={fileLoadedAmount}
           setPassword={setPassword}
@@ -145,11 +156,11 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
           t={t}
         />
       );
-    } else if (currentProgress === 4) {
+    } else if (currentProgress === 5) {
       return (
         <TermsAndConditions
           termsRead={termsRead}
-          startNextStep={() => setCurrentProgress(5)}
+          startNextStep={() => setCurrentProgress(6)}
           setTermsRead={setTermsRead}
           t={t}
         />
@@ -282,12 +293,13 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
         <div className="FoundingMembersFormPage__form__progress">
           {renderProgressItem(t('foundingMembers.form.progressItem.accountInfo'), 1, currentProgress)}
           {renderProgressItem("Data", 2, currentProgress)}
-          {renderProgressItem(t('foundingMembers.form.progressItem.keyFile'), 3, currentProgress)}
+          {renderProgressItem("Summary", 3, currentProgress)}
+          {renderProgressItem(t('foundingMembers.form.progressItem.keyFile'), 4, currentProgress)}
           {renderProgressItem(
             width > 1200
               ? t('foundingMembers.form.progressItem.acceptTerms')
               : t('foundingMembers.form.progressItem.acceptTermsShort'),
-            4,
+            5,
             currentProgress
           )}
         </div>

@@ -24,7 +24,7 @@ const NodeOperator = ({ setJsonData, summaryType, t }) => {
         text={t('foundingMembers.general.next')}
         onClick={e => {
           if (nodeName) {
-            setJsonData(prev => ({ ...prev, nodeName }));
+            setJsonData(prev => ({ ...prev, nodeOperator: { nodeName } }));
           }
         }}
       />

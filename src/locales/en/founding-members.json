@@ -117,10 +117,10 @@
       },
       "title": "Submit activity summary",
       "progressItem": {
-        "accountInfo": "Account info",
+        "accountInfo": "Account",
         "keyFile": "Key file",
         "summary": "Summary",
-        "acceptTerms": "Accept terms & conditions",
+        "acceptTerms": "Terms & conditions",
         "acceptTermsShort": "Terms & cond."
       },
       "membership": {

@@ -15,7 +15,7 @@ const Other = ({ setJsonData, summaryType, t }) => {
         ...prev,
         other: {
           action,
-          socials,
+          links: socials,
         },
       }));
     }

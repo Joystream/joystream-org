@@ -72,21 +72,33 @@ const VALID_SCORING_ROUNDS = [
   },
 ];
 
-const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, profile, t }) => {
+const SummaryJson = ({ Api, foundingMembersData, jsonSummary, setJsonSummary, startNextStep, profile, t }) => {
   const shouldSetup = useRef(true);
 
   // const [setupData, setSetupData] = useState();
   const [summaryType, setSummaryType] = useState();
   const [scoringRound, setScoringRound] = useState();
-  const [jsonData, setJsonData] = useState({});
+  const [jsonData, setJsonData] = useState([]);
   const [shouldMoveToNextStep, setShouldMoveToNextStep] = useState(false);
 
   useEffect(() => {
-    if(Object.keys(jsonData).length !== 0 && shouldMoveToNextStep) {
-      setJsonSummary(jsonData);
+    if (Object.keys(jsonData).length !== 0 && shouldMoveToNextStep) {
+      const chosenScoringRound = VALID_SCORING_ROUNDS.filter(
+        round => round.scoringPeriodId.toString() === scoringRound
+      )[0];
+
+      setJsonSummary([
+        ...jsonSummary.filter(summary => summary.scoringPeriodId !== chosenScoringRound.scoringPeriodId),
+        {
+          scoringPeriodId: chosenScoringRound.scoringPeriodId,
+          startBlocks: chosenScoringRound.blocks.from,
+          endBlock: chosenScoringRound.blocks.to,
+          data: jsonData,
+        },
+      ]);
       startNextStep();
     }
-  },[jsonData, shouldMoveToNextStep]);
+  }, [jsonData, shouldMoveToNextStep]);
 
   if (summaryType && scoringRound && !shouldSetup.current) {
     shouldSetup.current = true;
@@ -110,10 +122,9 @@ const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, 
     }
 
     if (summaryType === 'Council Member') {
-      console.log(chosenScoringRound);
-
       return (
         <CouncilMember
+          jsonData={jsonData}
           setJsonData={setJsonData}
           summaryType={summaryType}
           councilTermsInPeriod={chosenScoringRound.councilTerms}
@@ -153,7 +164,6 @@ const SummaryJson = ({ Api, foundingMembersData, setJsonSummary, startNextStep, 
         setShouldMoveToNextStep={setShouldMoveToNextStep}
         shouldSetup={shouldSetup}
         setSummaryType={setSummaryType}
-        jsonData={jsonData}
         t={t}
       />
     );

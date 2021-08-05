@@ -7,7 +7,7 @@ import { ArrowButton } from '../../../pages/founding-members';
 
 import formatDate from '../../../utils/formatDate';
 
-const CouncilMember = ({ setJsonData, summaryType, councilTermsInPeriod, t }) => {
+const CouncilMember = ({ jsonData, setJsonData, summaryType, councilTermsInPeriod, t }) => {
   const [councilTerm, setCouncilTerm] = useState('');
   const [proposalIDs, setProposalIDs] = useState('');
   const [socials, setSocials] = useState();

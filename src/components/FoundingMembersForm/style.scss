@@ -11,7 +11,7 @@
       align-items: center;
       justify-content: space-around;
       height: 80px;
-      padding: 0 64px;
+      padding: 0 32px;
       color: $c_ebony-clay;
       border-bottom: 1px solid #dee3e9;
     }
@@ -33,7 +33,7 @@
       display: grid;
       width: 28px;
       height: 28px;
-      margin-right: 10px;
+      margin-right: 7px;
       font-family: $font-secondary;
       font-size: 12px;
       line-height: 16px;
@@ -384,6 +384,7 @@
 
     &__code-text {
       padding: 10px;
+      overflow: hidden;
       font-family: monospace, sans-serif;
       font-size: 12px;
       line-height: 18px;
