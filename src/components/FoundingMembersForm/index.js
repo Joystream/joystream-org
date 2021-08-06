@@ -12,7 +12,6 @@ import TermsAndConditions from './TermsAndConditions';
 
 import { ReactComponent as Achieved } from '../../assets/svg/achieved.svg';
 
-import useWindowDimensions from '../../utils/useWindowDimensions';
 import sendFormData from './utils/sendFormData';
 import encryptData from './utils/encryptData';
 
@@ -72,8 +71,6 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
   const [profile, setProfile] = useState();
   const [jsonSummary, setJsonSummary] = useState([]);
 
-  const { width } = useWindowDimensions();
-
   useEffect(() => {
     async function setUpApi() {
       const provider = new WsProvider(JoystreamWSProvider);
@@ -114,7 +111,6 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
           setMembershipHandle={setMembershipHandle}
           startNextStep={() => setCurrentProgress(2)}
           setJsonSummary={setJsonSummary}
-          width={width}
           t={t}
         />
       );
@@ -295,13 +291,7 @@ const FoundingMembersForm = ({ t, foundingMembersData }) => {
           {renderProgressItem("Data", 2, currentProgress)}
           {renderProgressItem("Summary", 3, currentProgress)}
           {renderProgressItem(t('foundingMembers.form.progressItem.keyFile'), 4, currentProgress)}
-          {renderProgressItem(
-            width > 1200
-              ? t('foundingMembers.form.progressItem.acceptTerms')
-              : t('foundingMembers.form.progressItem.acceptTermsShort'),
-            5,
-            currentProgress
-          )}
+          {renderProgressItem(t('foundingMembers.form.progressItem.acceptTerms'), 5, currentProgress)}
         </div>
       )}
       <div className="FoundingMembersFormPage__form__body">

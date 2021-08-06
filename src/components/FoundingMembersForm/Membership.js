@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { ArrowButton } from '../../pages/founding-members';
 
 import parseBalance from '../../utils/parseBalance/index';
+import useWindowDimensions from '../../utils/useWindowDimensions';
 
 async function getMember(api, membershipHandle, setProfile) {
   const id = await api.query.members.memberIdByHandle(membershipHandle);
@@ -28,11 +29,11 @@ const Membership = ({
   setProfile,
   membershipHandle,
   setMembershipHandle,
-  width,
   startNextStep,
   t,
 }) => {
   const [textInput, setTextInput] = useState('');
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     if (membershipHandle && Api) {
