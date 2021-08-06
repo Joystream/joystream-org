@@ -78,7 +78,7 @@ const SummaryJson = ({ Api, foundingMembersData, jsonSummary, setJsonSummary, st
   // const [setupData, setSetupData] = useState();
   const [summaryType, setSummaryType] = useState();
   const [scoringRound, setScoringRound] = useState();
-  const [jsonData, setJsonData] = useState([]);
+  const [jsonData, setJsonData] = useState({});
   const [shouldMoveToNextStep, setShouldMoveToNextStep] = useState(false);
 
   useEffect(() => {
@@ -161,6 +161,7 @@ const SummaryJson = ({ Api, foundingMembersData, jsonSummary, setJsonSummary, st
   if (summaryType && scoringRound && shouldSetup.current && jsonData?.length !== 0) {
     return (
       <AddNewOrSubmit
+        jsonData={jsonData}
         setShouldMoveToNextStep={setShouldMoveToNextStep}
         shouldSetup={shouldSetup}
         setSummaryType={setSummaryType}

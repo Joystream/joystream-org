@@ -29,23 +29,21 @@ const CouncilMember = ({ jsonData, setJsonData, summaryType, councilTermsInPerio
         council.other = extraInformation;
       }
 
-      setJsonData(prev => {
-        if (prev?.council) {
-          return {
-            ...prev,
-            council: {
-              ...prev.council,
-              [councilTerm]: council,
-            },
-          };
-        }
+      let previousCouncilData = [];
 
-        return {
-          ...prev,
-          council: {
-            [councilTerm]: council,
+      if(jsonData?.council){
+        previousCouncilData = jsonData.council.filter(({ term }) => term !== councilTerm);
+      }
+
+      setJsonData({
+        ...jsonData,
+        council: [
+          ...previousCouncilData,
+          {
+            term: councilTerm,
+            ...council,
           },
-        };
+        ],
       });
     }
   };
@@ -53,7 +51,7 @@ const CouncilMember = ({ jsonData, setJsonData, summaryType, councilTermsInPerio
   return (
     <>
       <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
-        Which council terms were you a part of? <span style={{ color: "#FF3861FF" }}>*</span>
+        Which council terms were you a part of? <span style={{ color: '#FF3861FF' }}>*</span>
       </h3>
       {/* eslint-disable-next-line */}
       <select
