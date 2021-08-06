@@ -7,7 +7,7 @@ import { ArrowButton } from '../../../pages/founding-members';
 
 const ROLES = ['Storage', 'Curator', 'Operations'];
 
-const Roles = ({ setJsonData, summaryType, scoringRoundStarted, scoringRoundEnds, t }) => {
+const Roles = ({ jsonData, setJsonData, summaryType, scoringRoundStarted, scoringRoundEnds, t }) => {
   const [pickedRole, setPickedRole] = useState('');
   const [workerID, setWorkerID] = useState('');
   const [startBlock, setStartBlock] = useState(scoringRoundStarted ?? '');
@@ -18,28 +18,34 @@ const Roles = ({ setJsonData, summaryType, scoringRoundStarted, scoringRoundEnds
   const [extraInformation, setExtraInformation] = useState('');
 
   const handleSubmit = () => {
-    let roles = {
-      role: pickedRole,
-      workerID,
-      startBlock,
-      endBlock,
-      lead: isLead,
-    };
-
-    if (proposalIDs) {
-      roles.proposalIDs = proposalIDs;
-    }
-
-    if (socials) {
-      roles.links = socials;
-    }
-
-    if (extraInformation) {
-      roles.other = extraInformation;
-    }
-
     if (pickedRole && workerID && startBlock && endBlock) {
-      setJsonData(prev => ({ ...prev, roles }));
+      let role = {
+        role: pickedRole,
+        workerID,
+        startBlock,
+        endBlock,
+        lead: isLead,
+      };
+
+      if (proposalIDs) {
+        role.proposalIDs = proposalIDs;
+      }
+
+      if (socials) {
+        role.links = socials;
+      }
+
+      if (extraInformation) {
+        role.other = extraInformation;
+      }
+
+      let previousRoleData = [];
+
+      if (jsonData?.roles) {
+        previousRoleData = jsonData.roles.filter(previousRole => previousRole.role !== pickedRole);
+      }
+
+      setJsonData({ ...jsonData, roles: [...previousRoleData, role] });
     }
   };
 

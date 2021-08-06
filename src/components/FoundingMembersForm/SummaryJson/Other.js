@@ -5,7 +5,7 @@ import Socials from './Socials';
 import TextArea from './TextArea';
 import { ArrowButton } from '../../../pages/founding-members';
 
-const Other = ({ setJsonData, summaryType, t }) => {
+const Other = ({ jsonData, setJsonData, summaryType, t }) => {
   const [action, setAction] = useState('');
   const [socials, setSocials] = useState('');
 
@@ -13,17 +13,22 @@ const Other = ({ setJsonData, summaryType, t }) => {
     if (action && socials) {
       setJsonData(prev => ({
         ...prev,
-        other: {
-          action,
-          links: socials,
-        },
+        other: [
+          ...(prev?.other ? prev.other : []),
+          {
+            action,
+            links: socials,
+          },
+        ],
       }));
     }
   };
 
   return (
     <>
-      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Explain in short what you did <span style={{ color: "#FF3861FF" }}>*</span></h3>
+      <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
+        Explain in short what you did <span style={{ color: '#FF3861FF' }}>*</span>
+      </h3>
       <TextArea className="FoundingMembersFormPage__form__text-area margin-bottom-M" setValue={setAction} />
       <Socials setSocials={setSocials} required />
       <ArrowButton

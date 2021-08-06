@@ -5,7 +5,7 @@ import Socials from './Socials';
 import TextArea from './TextArea';
 import { ArrowButton } from '../../../pages/founding-members';
 
-const Content = ({ setJsonData, summaryType, t }) => {
+const Content = ({ jsonData, setJsonData, summaryType, t }) => {
   const [bountyID, setBountyID] = useState('');
   const [proposalIDs, setProposalIDs] = useState('');
   const [socials, setSocials] = useState();
@@ -15,7 +15,7 @@ const Content = ({ setJsonData, summaryType, t }) => {
 
   const handleSubmit = () => {
     if (bountyID && proposalIDs && videoLinks && totalRewards) {
-      let contentBounties = {
+      let contentBounty = {
         bountyID,
         proposalIDs,
         videoIDs: videoLinks,
@@ -23,14 +23,20 @@ const Content = ({ setJsonData, summaryType, t }) => {
       };
 
       if (socials) {
-        contentBounties.links = socials;
+        contentBounty.links = socials;
       }
 
       if (extraInformation) {
-        contentBounties.other = extraInformation;
+        contentBounty.other = extraInformation;
       }
 
-      setJsonData(prev => ({ ...prev, contentBounties }));
+      let previousBounties = [];
+
+      if (jsonData?.contentBounties) {
+        previousBounties = jsonData.contentBounties.filter(previousBounty => previousBounty.bountyID !== bountyID);
+      }
+
+      setJsonData({ ...jsonData, contentBounties: [...previousBounties, contentBounty] });
     }
   };
 

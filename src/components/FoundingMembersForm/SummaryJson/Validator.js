@@ -25,7 +25,7 @@ const KeyQuery = ({ setIsStashAndControllerSame }) => {
   );
 };
 
-const StashKeyQuery = ({ profileAddress, setStashAddress, t }) => {
+const StashKeyQuery = ({ profileAddress, setStashData, t }) => {
   const [newStashAddress, setNewStashAddress] = useState('');
   const [signedMessage, setSignedMessage] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -98,7 +98,11 @@ const StashKeyQuery = ({ profileAddress, setStashAddress, t }) => {
                 }
 
                 if (isSignatureValid) {
-                  setStashAddress(newStashAddress);
+                  setStashData({
+                    stash: newStashAddress,
+                    signed: `Member ${profileAddress} owns ${newStashAddress}`,
+                    signature: signedMessage,
+                  });
                 }
               }
             }}
@@ -111,21 +115,21 @@ const StashKeyQuery = ({ profileAddress, setStashAddress, t }) => {
 
 const Validator = ({ setJsonData, summaryType, profileAddress, t }) => {
   const [isStashAndControllerSame, setIsStashAndControllerSame] = useState();
-  const [stashAddress, setStashAddress] = useState();
+  const [stashData, setStashData] = useState();
 
   // This can be moved inside of the components and buttons
   useEffect(() => {
-    if (stashAddress) {
-      setJsonData(prev => ({ ...prev, validator: { stashAddress } }));
+    if (stashData) {
+      setJsonData(prev => ({ ...prev, validator: stashData }));
     }
 
     if (isStashAndControllerSame) {
-      setJsonData(prev => ({ ...prev, validator: { stashAddress: profileAddress } }));
+      setJsonData(prev => ({ ...prev, validator: { stash: profileAddress } }));
     }
-  }, [isStashAndControllerSame, profileAddress, setJsonData, summaryType, stashAddress]);
+  }, [isStashAndControllerSame, profileAddress, setJsonData, summaryType, stashData]);
 
   if (isStashAndControllerSame === false) {
-    return <StashKeyQuery profileAddress={profileAddress} setStashAddress={setStashAddress} t={t} />;
+    return <StashKeyQuery profileAddress={profileAddress} setStashData={setStashData} t={t} />;
   }
 
   return <KeyQuery setIsStashAndControllerSame={setIsStashAndControllerSame} />;

@@ -136,6 +136,7 @@ const SummaryJson = ({ Api, foundingMembersData, jsonSummary, setJsonSummary, st
     if (summaryType === 'Roles') {
       return (
         <Roles
+          jsonData={jsonData}
           setJsonData={setJsonData}
           summaryType={summaryType}
           scoringRoundStarted={chosenScoringRound.blocks.from}
@@ -146,15 +147,15 @@ const SummaryJson = ({ Api, foundingMembersData, jsonSummary, setJsonSummary, st
     }
 
     if (summaryType === 'Content Bounties') {
-      return <Content setJsonData={setJsonData} summaryType={summaryType} t={t} />;
+      return <Content jsonData={jsonData} setJsonData={setJsonData} summaryType={summaryType} t={t} />;
     }
 
     if (summaryType === 'Bounties') {
-      return <Bounties setJsonData={setJsonData} summaryType={summaryType} t={t} />;
+      return <Bounties jsonData={jsonData} setJsonData={setJsonData} summaryType={summaryType} t={t} />;
     }
 
     if (summaryType === 'Other') {
-      return <Other setJsonData={setJsonData} summaryType={summaryType} t={t} />;
+      return <Other jsonData={jsonData} setJsonData={setJsonData} summaryType={summaryType} t={t} />;
     }
   }
 
