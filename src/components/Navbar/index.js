@@ -97,14 +97,21 @@ const Navbar = ({ light, links, t }) => {
           <Logo className={cn('Navbar__logo', { 'Navbar__logo--open': isOpen })} />
         </Link>
 
-        <div className={`Navbar__links ${isOpen ? 'Navbar__links--open' : ''}`}>
+        <div
+          className={cn('Navbar__links', {
+            'Navbar__links--open': isOpen,
+            'Navbar__links--light' : light
+          })}
+        >
           {links.map(({ label, isButton, isDropdown, links, href, to }) => {
             if (isDropdown) {
               return <Dropdown key={label} t={t} label={t(label)} links={links} isScrollUp={isScrollUp} />;
             }
 
             let children = (
-              <div className="Navbar__link-wrapper">
+              <div className={cn("Navbar__link-wrapper", {
+                "Navbar__link-wrapper--light" : light
+              })}>
                 <p className="Navbar__link">{t(label)}</p>
               </div>
             );
