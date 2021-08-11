@@ -49,10 +49,13 @@
     }
 
     &__image {
-      width: 100%;
+      width: 704px;
+      height: 579px;
 
       &--secondary {
         display: none;
+        width: 335px;
+        height: 280px;
       }
     }
   }
