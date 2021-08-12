@@ -70,11 +70,15 @@
     }
 
     &__image {
+      width: 650px;
+      height: 450px;
       margin: auto 0;
     }
 
     &__image-alt {
       display: none;
+      width: 375px;
+      height: 259.8px;
     }
 
     &__metrics-wrapper {

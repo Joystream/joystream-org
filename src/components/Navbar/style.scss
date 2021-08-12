@@ -50,6 +50,10 @@
     flex-direction: row;
     width: auto;
     background-color: $c_black;
+
+    &--light {
+      background-color: $c_blue-ribbon;
+    }
   }
 
   &__link-wrapper {
@@ -60,6 +64,10 @@
     color: #a7aeb7;
     cursor: pointer;
     user-select: none;
+
+    &--light {
+      color: white;
+    }
 
     &:hover {
       color: white;
