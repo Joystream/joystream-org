@@ -13,7 +13,7 @@ const KeyQuery = ({ setIsStashAndControllerSame }) => {
       <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-M">
         Is your Validator stash key the same as your membership controller?
       </h3>
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
+      <div style={{ display: 'flex', flexDirection: 'row' }} className="margin-bottom-S">
         <Button style={{ marginRight: '5px', width: '100%' }} onClick={() => setIsStashAndControllerSame(true)}>
           Yes
         </Button>
@@ -21,6 +21,9 @@ const KeyQuery = ({ setIsStashAndControllerSame }) => {
           No
         </Button>
       </div>
+      <h3 className="FoundingMembersFormPage__form__subtitle-small" style={{ color: '#7b8a95' }}>
+        * Adding more data will cause current data to be overridden.
+      </h3>
     </>
   );
 };
@@ -28,6 +31,7 @@ const KeyQuery = ({ setIsStashAndControllerSame }) => {
 const StashKeyQuery = ({ profileAddress, setStashData, t }) => {
   const [newStashAddress, setNewStashAddress] = useState('');
   const [signedMessage, setSignedMessage] = useState('');
+  const [signatureError, setSignatureError] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -36,7 +40,7 @@ const StashKeyQuery = ({ profileAddress, setStashData, t }) => {
         Stash address <span style={{ color: '#FF3861FF' }}>*</span>
       </h3>
       <input
-        maxLength={75}
+        maxLength={48}
         className="FoundingMembersFormPage__form__input margin-bottom-M"
         placeholder="Your stash address.."
         value={newStashAddress}
@@ -52,11 +56,22 @@ const StashKeyQuery = ({ profileAddress, setStashData, t }) => {
             Signed message <span style={{ color: '#FF3861FF' }}>*</span>
           </h3>
           <input
-            className="FoundingMembersFormPage__form__input margin-bottom-M"
+            className={cn('FoundingMembersFormPage__form__input', {
+              'margin-bottom-M': !signatureError,
+            })}
             placeholder="The signed message.."
             value={signedMessage}
             onChange={e => setSignedMessage(e.target.value)}
           />
+          {signatureError && (
+            <p
+              className={cn('FoundingMembersFormPage__form__error-message', {
+                'margin-bottom-M': true,
+              })}
+            >
+              {signatureError}
+            </p>
+          )}
           <button
             style={{ textAlign: 'left' }}
             className="FoundingMembersFormPage__form__link"
@@ -103,6 +118,8 @@ const StashKeyQuery = ({ profileAddress, setStashData, t }) => {
                     signed: `Member ${profileAddress} owns ${newStashAddress}`,
                     signature: signedMessage,
                   });
+                } else {
+                  setSignatureError("Incorrect signature. Make sure you've followed the steps correctly!");
                 }
               }
             }}

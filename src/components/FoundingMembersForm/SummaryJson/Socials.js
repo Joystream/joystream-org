@@ -7,22 +7,14 @@ const Socials = ({ setSocials, required }) => {
     setSocials(contacts ? contacts : null);
   }, [contacts]);
 
-  const renderMessage = () => {
-    if (required) {
-      return <> Provide relevant links from the forum, github or discord <span style={{ color: "#FF3861FF" }}>*</span> </>
-    }
-
-    return <>Optionally, provide relevant links from the forum, github or discord</>;
-  }
-
   return (
     <>
       <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">
-        {renderMessage()}
+        Provide relevant links from the forum, github or discord{' '}
+        {required && <span style={{ color: '#FF3861FF' }}>*</span>}
       </h3>
       <input
         className="FoundingMembersFormPage__form__input margin-bottom-M"
-        placeholder="Contact information.."
         value={contacts}
         onChange={e => {
           setContacts(e.target.value);

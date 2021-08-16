@@ -113,12 +113,15 @@ const Roles = ({ jsonData, setJsonData, summaryType, scoringRoundStarted, scorin
       <h3 className="FoundingMembersFormPage__form__subtitle margin-bottom-XS">Any additional information?</h3>
       <TextArea className="FoundingMembersFormPage__form__text-area margin-bottom-M" setValue={setExtraInformation} />
       <ArrowButton
-        className={cn('FoundingMembersFormPage__form__button', {
+        className={cn('FoundingMembersFormPage__form__button margin-bottom-S', {
           'FoundingMembersFormPage__form__button--inactive': !(pickedRole && workerID && startBlock && endBlock),
         })}
         text={t('foundingMembers.general.next')}
         onClick={handleSubmit}
       />
+      <h3 className="FoundingMembersFormPage__form__subtitle-small" style={{ color: '#7b8a95' }}>
+        * Only change the values for start block and end block in case you were hired or fired during the scoring period.
+      </h3>
     </>
   );
 };
