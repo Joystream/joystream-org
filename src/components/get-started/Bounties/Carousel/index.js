@@ -21,7 +21,7 @@ const parseDate = dateString => {
 
 const BountiesCard = ({ title, amount, categories, date, id, link, description, t }) => {
   return (
-    <a target="_blank" href={link ? link : '#'}>
+    <a className="GetStarted__bounties-carousel__card-wrapper-link" target="_blank" href={link ? link : '#'}>
       <div className="GetStarted__bounties-carousel__card">
         <div className="GetStarted__bounties-carousel__top">
           <p className="GetStarted__bounties-carousel__amount">${amount}</p>
@@ -53,7 +53,7 @@ const BountiesCard = ({ title, amount, categories, date, id, link, description, 
   );
 };
 
-const CARD_SIZE_WITH_MARGIN = 424;
+const CARD_SIZE_WITH_MARGIN = 405;
 
 const BountiesCarousel = ({ t }) => {
   const [data, loading, error] = useAxios(bountiesLink);
@@ -66,9 +66,11 @@ const BountiesCarousel = ({ t }) => {
     Marketing: 0,
     Research: 0,
     Content: 0,
-    Translation: 0
+    Translation: 0,
   });
   const [bounties, setBounties] = useState();
+
+  console.log(bounties);
 
   useEffect(() => {
     if (data && !loading) {
@@ -79,7 +81,7 @@ const BountiesCarousel = ({ t }) => {
         Marketing: 0,
         Research: 0,
         Content: 0,
-        Translation: 0
+        Translation: 0,
       };
 
       data.activeBounties.forEach(bounty => {
@@ -162,43 +164,45 @@ const BountiesCarousel = ({ t }) => {
       </div>
       <CardCarousel scrollAmount={CARD_SIZE_WITH_MARGIN}>
         <div className="GetStarted__bounties-carousel">
-          {bounties?.map((bounty, idx) => {
-            if (filterState === 'All') {
-              return (
-                <BountiesCard
-                  key={bounty?.title + idx}
-                  title={bounty?.title}
-                  amount={bounty?.reward}
-                  categories={bounty?.tags}
-                  date={bounty?.openedDate}
-                  id={bounty?.id}
-                  link={bounty?.links[0]}
-                  description={bounty?.description}
-                  t={t}
-                />
-              );
-            } else {
-              const categories = bounty?.tags;
+          {bounties
+            ? bounties
+                .sort((a, b) => new Date(b.openedDate) - new Date(a.openedDate))
+                .map((bounty, idx) => {
+                  if (filterState === 'All') {
+                    return (
+                      <BountiesCard
+                        key={bounty?.title + idx}
+                        title={bounty?.title}
+                        amount={bounty?.reward}
+                        categories={bounty?.tags}
+                        date={bounty?.openedDate}
+                        id={bounty?.id}
+                        link={bounty?.links[0]}
+                        description={bounty?.description}
+                      />
+                    );
+                  } else {
+                    const categories = bounty?.tags;
 
-              if (categories && categories.includes(filterState)) {
-                return (
-                  <BountiesCard
-                    key={bounty?.title + idx}
-                    title={bounty?.title}
-                    amount={bounty?.reward}
-                    categories={bounty?.tags}
-                    date={bounty?.openedDate}
-                    id={bounty?.id}
-                    link={bounty?.links[0]}
-                    description={bounty?.description}
-                    t={t}
-                  />
-                );
-              }
+                    if (categories && categories.includes(filterState)) {
+                      return (
+                        <BountiesCard
+                          key={bounty?.title + idx}
+                          title={bounty?.title}
+                          amount={bounty?.reward}
+                          categories={bounty?.tags}
+                          date={bounty?.openedDate}
+                          id={bounty?.id}
+                          link={bounty?.links[0]}
+                          description={bounty?.description}
+                        />
+                      );
+                    }
 
-              return null;
-            }
-          })}
+                    return null;
+                  }
+                })
+            : null}
         </div>
       </CardCarousel>
     </div>
