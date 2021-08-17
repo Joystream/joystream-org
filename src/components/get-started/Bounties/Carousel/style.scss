@@ -12,10 +12,10 @@
     width: 100%;
     margin-top: 40px;
     padding: 0 10px 10px 0;
-    gap: 30px;
+    gap: 25px;
     grid-auto-flow: column;
-    grid-template-columns: 394px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 380px;
+    grid-template-rows: 1fr 1fr 1fr;
 
     &__filters {
       display: flex;
@@ -79,9 +79,13 @@
       }
     }
 
+    &__card-wrapper-link {
+      width: 380px;
+    }
+
     &__card {
       position: relative;
-      width: 394px;
+      width: 380px;
       height: 200px;
       padding: 15px;
       background-color: white;
