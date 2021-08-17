@@ -69,8 +69,6 @@ const BountiesCarousel = ({ t }) => {
   });
   const [bounties, setBounties] = useState();
 
-  console.log(bounties);
-
   useEffect(() => {
     if (data && !loading) {
       const tempCategoryValues = {
@@ -164,44 +162,42 @@ const BountiesCarousel = ({ t }) => {
       <CardCarousel scrollAmount={CARD_SIZE_WITH_MARGIN}>
         <div className="GetStarted__bounties-carousel">
           {bounties
-            ? bounties
-                .sort((a, b) => new Date(b.openedDate) - new Date(a.openedDate))
-                .map((bounty, idx) => {
-                  if (filterState === 'All') {
-                    return (
-                      <BountiesCard
-                        key={bounty?.title + idx}
-                        title={bounty?.title}
-                        amount={bounty?.reward}
-                        categories={bounty?.tags}
-                        date={bounty?.openedDate}
-                        id={bounty?.id}
-                        link={bounty?.links[0]}
-                        description={bounty?.description}
-                      />
-                    );
-                  } else {
-                    const categories = bounty?.tags;
+            ?.sort((a, b) => new Date(b.openedDate) - new Date(a.openedDate))
+            .map((bounty, idx) => {
+              if (filterState === 'All') {
+                return (
+                  <BountiesCard
+                    key={bounty?.title + idx}
+                    title={bounty?.title}
+                    amount={bounty?.reward}
+                    categories={bounty?.tags}
+                    date={bounty?.openedDate}
+                    id={bounty?.id}
+                    link={bounty?.links[0]}
+                    description={bounty?.description}
+                  />
+                );
+              } else {
+                const categories = bounty?.tags;
 
-                    if (categories && categories.includes(filterState)) {
-                      return (
-                        <BountiesCard
-                          key={bounty?.title + idx}
-                          title={bounty?.title}
-                          amount={bounty?.reward}
-                          categories={bounty?.tags}
-                          date={bounty?.openedDate}
-                          id={bounty?.id}
-                          link={bounty?.links[0]}
-                          description={bounty?.description}
-                        />
-                      );
-                    }
+                if (categories && categories.includes(filterState)) {
+                  return (
+                    <BountiesCard
+                      key={bounty?.title + idx}
+                      title={bounty?.title}
+                      amount={bounty?.reward}
+                      categories={bounty?.tags}
+                      date={bounty?.openedDate}
+                      id={bounty?.id}
+                      link={bounty?.links[0]}
+                      description={bounty?.description}
+                    />
+                  );
+                }
 
-                    return null;
-                  }
-                })
-            : null}
+                return null;
+              }
+            })}
         </div>
       </CardCarousel>
     </div>
