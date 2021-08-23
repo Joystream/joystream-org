@@ -25,7 +25,7 @@
           "text": "The fetching and processing logic is reproduced in all apps, and adds to the complexity of application development."
         },
         "noSearch": {
-          "title": "No Search",
+          "title": "Sin búsqueda",
           "text": "Your chain may have transactional or state commitments to free-text data, but doing real full-text search client-side is not an option."
         },
         "overFetching": {

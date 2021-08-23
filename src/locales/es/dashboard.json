@@ -1,17 +1,17 @@
 {
     "dashboard" : {
         "siteMetadata" : {
-            "title" : "Live Dashboard",
+            "title" : "Panel de control en vivo",
             "description" : "Data compiled from current Pioneer and Atlas instances and visualized through charts."
         },
-        "title" : "Joystream Dashboard",
+        "title" : "Panel de Joystream",
         "subtitles" : {
             "videos" : "Videos",
-            "channels" : "Channels",
-            "users" : "Users",
+            "channels" : "Canales",
+            "users" : "Usuarios",
             "posts" : "Posts",
-            "threads" : "Threads"
+            "threads" : "Hilos"
         },
-        "amount" : "Amount"
+        "amount" : "Monto"
     }
 }

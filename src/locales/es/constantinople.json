@@ -1,34 +1,34 @@
 {
   "constantinople": {
     "siteMetadata": {
-      "description": "Explore the Constantinople testnet"
+      "description": "Explora la testnet de Constantinople"
     },
     "hero": {
-      "title": "Constantinople Network",
+      "title": "Red de Constantinople",
       "text": "The Constantinople testnet introduces an improved proposals system and fiat-backed token model for participant compensation.",
       "chipText": "What is this?"
     },
     "heroCard": {
-      "title": "REPLACED BY ALEXANDRIA ON"
+      "title": "REEMPLAZADO POR ALEXANDRIA EN"
     },
     "modal": {
       "title": "Constantinople",
       "text": "The Column of Constantine, also known as the Burnt Stone or the Burnt Pillar, is a Roman monumental column constructed on the orders of the Roman emperor Constantine the Great in 330 AD. It commemorates the declaration of Byzantium as the new capital city of the Roman Empire."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Documentos críticos",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Plan de lanzamiento",
+        "text": " Lea el plan de lanzamiento tal como se hizo durante la etapa de planificación y aprenda más sobre cómo evolucionó el desarrollo."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Constantinople testnet and its objectives."
+        "title": "Blog de Anuncio",
+        "text": "Lea una breve introducción a la testnet de Constantinople y sus objetivos."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Constantinople testnet.",
+      "title": "Objetivos de la tesnet",
+      "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Constantinople.",
       "goals": {
         "proposalSystem": {
           "title": "Launch a new proposal system",
@@ -41,7 +41,7 @@
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Constantinople Network"
+      "title": "Funciones incentivadas para la red de Constantinople"
     },
     "map": {
       "title": "Constantinople",

@@ -1,55 +1,55 @@
 {
   "babylon": {
     "siteMetadata": {
-      "description": "Explore the Babylon testnet"
+      "description": "Explora la testnet de Babylon"
     },
     "hero": {
-      "title": "Babylon Network",
-      "text": "The Babylon release offers improvements which greatly enhance the video publishing and consumption experience.",
-      "chipText": "What is this?"
+      "title": "Red de Babylon",
+      "text": "La versión de Babylon ofrece mejoras que aumentan enormemente la experiencia de publicación y consumo de videos.",
+      "chipText": "¿Qué es esto?"
     },
     "heroCard": {
-      "title": "REPLACED BY ANTIOCH ON"
+      "title": "REEMPLAZADO POR ANTIOCH EN"
     },
     "modal": {
-      "title": "Tower of Babel",
-      "text": "The Tower of Babel story is an origin myth meant to explain why the world's peoples speak different languages.<0/><0/>According to the story, a united human race in the generations following the Great Flood, speaking a single language and migrating eastward, comes to the land of Shinar. There they agree to build a city and a tower tall enough to reach heaven.<0/><0/> God, observing their city and tower, confounds their speech so that they can no longer understand each other, and scatters them around the world."
+      "title": "Torre de Babel",
+      "text": "La historia de la Torre de Babel es el origen de un mito destinado a explicar por qué los pueblos del mundo hablan diferentes idiomas.<0/><0/>Según la historia, una raza humana unida en las generaciones posteriores al Gran Diluvio, hablando un solo idioma y emigrando hacia el este, llega a la tierra de Shinar. Allí acuerdan construir una ciudad y una torre lo suficientemente alta como para llegar al cielo.<0/><0/> Dios, al observar su ciudad y torre, confunde su discurso  para que ya no puedan entenderse, y los esparce por todo el mundo."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Documentos críticos",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Plan de lanzamiento",
+        "text": "Lea el plan de lanzamiento tal como se hizo durante la etapa de planificación y aprenda más sobre cómo evolucionó el desarrollo."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Babylon testnet and its objectives."
+        "title": "Blog de Anuncio",
+        "text": "Lea una breve introducción a la testnet de Babylon y sus objetivos."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Babylon testnet.",
+      "title": "Objetivos de la testnet",
+      "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Babylon.",
       "goals": {
         "atlas": {
-          "title": "Launch Atlas 0.1",
-          "text": "This will be the initial release of our content consumption client, aiming to be considerably more effective than the current Pioneer media experience."
+          "title": "Lanzar Atlas 0.1",
+          "text": "Esta será la versión inicial de nuestro cliente consumidor de contenido, con el objetivo de ser considerablemente más eficaz que la actual experiencia mediática de Pioneer."
         },
         "contentDirectory": {
-          "title": "Deploy a new content directory and corresponding working group",
-          "text": "We will be modifying the content directory to allow for a new data model for content, supported by new schemas. We will also make some associated improvements to the Content Curator Working Group."
+          "title": "Implementar un nuevo directorio de contenido y un grupo de trabajo correspondiente",
+          "text": "Modificaremos el directorio de contenido para permitir un nuevo modelo de datos respaldado por nuevos esquemas. También realizaremos algunas mejoras asociadas al Grupo de Trabajo del Curador de Contenido."
         },
         "hydraNode": {
-          "title": "Deploy first self-hosted Joystream Hydra node only supporting content directory",
-          "text": "Further work on our Hydra framework is required in order to support the new content directory."
+          "title": "Se desarrolla el primer Joystream Hydra node son soporte al directorio de contenido ",
+          "text": "Es necesario seguir trabajando en nuestro framework Hydra para admitir el nuevo directorio de contenido."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Babylon Network"
+      "title": "Funciones incentivadas para la red de Babylon"
     },
     "map": {
-      "title": "Babylon",
-      "text": "<0>Babylon was the capital city of Babylonia, a kingdom in ancient Mesopotamia, almost 4000 years ago.</0> It was built along the left and right banks of the Euphrates river with steep embankments to contain the river's seasonal floods. <1/><1/> The city is considered to be of great historical and cultural importance. The Hanging Gardens of Babylon were one of the Seven Wonders of the Ancient World and Babylon was also purported to be the site of the Tower of Babel.<1/><1/><2><0/> Read the blog post</2>"
+      "title": "Babilonia",
+      "text": "<0>Babilonia fue la ciudad capital del Imperio Babilónico, un reino en la antigua Mesopotamia hace casi 4000 años.</0> Fue construida a lo largo de las orillas izquierda y derecha del río Éufrates con terraplenes empinados para contener las inundaciones estacionales del río. <1/><1/> La ciudad se considera de gran importancia histórica y cultural. Los Jardines Colgantes de Babilonia fueron una de las Siete Maravillas del Mundo Antiguo y Babilonia también fue supuestamente el sitio de la Torre de Babel.<1/><1/><2><0/> Lea la entrada del blog</2>"
     }
   }
 }

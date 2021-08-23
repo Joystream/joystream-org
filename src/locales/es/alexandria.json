@@ -1,51 +1,51 @@
 {
   "alexandria": {
     "siteMetadata": {
-      "description": "Explore the Alexandria testnet"
+      "description": "Explora la testnet de Alexandria"
     },
     "hero": {
-      "title": "Alexandria Network",
+      "title": "Red de Alexandria",
       "text": "The Alexandria release focuses on important technical updates which will facilitate more efficient future development.",
-      "chipText": "What is this?"
+      "chipText": "¿Qué es esto?"
     },
     "heroCard": {
-      "title": "REPLACED BY BABYLON ON"
+      "title": "REEMPLAZADO POR BABYLON EN"
     },
     "modal": {
       "title": "Alexandria",
       "text": "There are two sphinxes at the Pompey's Pillar site in Alexandria, Egypt. The sphinxes and associated column are one of Alexandria's most important ancient monuments. <0/><0/> The Alexandria sphinxes should not be confused with the more well-known Great Sphinx located at Giza, just under 200 kilometers south-east of Alexandria."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Documentos críticos",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Plan de lanzamiento",
+        "text": "Lea el plan de lanzamiento tal como se hizo durante la etapa de planificación y aprenda más sobre cómo evolucionó el desarrollo."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Alexandria testnet and its objectives."
+        "title": "Blog de Anuncio",
+        "text": "Lea una breve introducción a la testnet de Alexandria y sus objetivos."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Alexandria testnet.",
+      "title": "Objetivos de la testnet",
+      "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Alexandria.",
       "goals": {
         "membershipModule": {
-          "title": "Cleaning up the membership module",
+          "title": "Limpiar el módulo de membresía",
           "text": "Tackling technical debt in the membership module and making it possible to transition to using memberships as the only core actor identifier in the system in future releases."
         },
         "substrateVersion": {
-          "title": "Start using Substrate v2.0.0 RC4",
+          "title": "Comience a usar Substrate v2.0.0 RC4",
           "text": "We are transitioning to a new version of Substrate in order to stay up to date with a broad range of enhancements, and to limit how far behind we allow our growing codebase to become."
         },
         "networkTesting": {
-          "title": "Enhancing our network testing",
+          "title": "Mejora de nuestras pruebas de red",
           "text": "Further maturing our network testing infrastructure to get one step closer to true end-to-end builds that secure an increasingly shorter development cycle."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Alexandria Network"
+      "title": "Funciones incentivadas para la red de Alexandria"
     },
     "map": {
       "title": "Alexandria",

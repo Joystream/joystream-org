@@ -1,10 +1,10 @@
 {
   "privacyPolicy": {
     "siteMetadata": {
-      "description": "Joystream Privacy and Cookie Policy"
+      "description": "Política de privacidad y cookies de Joystream"
     },
     "hero": {
-      "title": "Privacy Policy and Cookies",
+      "title": "Política de privacidad y cookies",
       "text": "<0><0>Jsgenesis values your privacy.</0><1/><1/>This Privacy Policy (\"Privacy Policy\") and Cookie Policy (\"Cookie Policy\") explains how Jsgenesis AS (\"Jsgenesis\", \"Company\", \"We\", \"Us\", \"Our\") collect and use data and information when you (\"User) use on or any of the Joystream products, developed in the GitHub organization <3>Joystream</3>. These products (collectively \"Software\") include, but are not limited to, all pages under the <6>joystream.org</6> domain (\"Website\"), the <10>Joyful node</10> (\"Full Node\"), the <14>Colossus Storage Node</14> (\"Storage node\"), and the Pioneer User Interface, either <18>self hosted</18> or <22>hosted by Us</22>  (\"App\").</0>"
     },
     "terms": {
@@ -36,22 +36,22 @@
       }
     },
     "cookiePolicyItems": {
-      "title": "Cookies Policy",
+      "title": "Políticas de cookies",
       "subtitle": "Last updated on the 17th of April 2019",
       "whatAreCookies": {
-        "title": "1. What are Cookies?",
+        "title": "1. ¿Qué son las cookies?",
         "content": "Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognise you and make your next visit easier and the Service more useful to you. ‍<0 />‍<0 /> Cookies can be persistent or session cookies."
       },
       "howWeUseCookies": {
-        "title": "2. How we use Cookies",
+        "title": "2. Cómo usamos las cookies",
         "content": "We use cookies for the following purposes our Service: <0 /><0 /><1><0>Provide Analytics</0><0>Store preferences</0><0>Persistant local storage of Keys and Membership.</0></1>"
       },
       "thirdPartyCookies": {
-        "title": "3. Third-party Cookies",
+        "title": "3. Cookies de terceros",
         "content": "In addition to our own cookies, we also use various third-party cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on. They include:<0/><0/><1><0><0>Google Analytics</0></0><0><0>Mailchimp</0> (Only when signing up for any of our newsletters)</0><0><0>Godaddy</0></0></1><0 />Please see Item 3. of the Privacy Policy for more information on the extent of these providers."
       },
       "regardingYourCookies": {
-        "title": "Regarding Your Cookies",
+        "title": "Acerca de sus cookies",
         "content": "If you would like to delete cookies or instruct your web browser to delete or refuse cookies, please visit the help pages of your web browser.<0 />‍<0 /> Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly."
       }
     }

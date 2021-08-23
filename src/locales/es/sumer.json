@@ -1,26 +1,26 @@
 {
   "sumer": {
     "siteMetadata": {
-      "description": "Explore the Sumer testnet"
+      "description": "Explora la testnet de Sumer"
     },
     "hero": {
-      "title": "Sumer Network",
+      "title": "Red de Sumer",
       "text": "Among other changes, the Sumer testnet release offers major improvements to content uploads through our playback app."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Documentos Críticos",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Plan de lanzamiento",
+        "text": "Lea el plan de lanzamiento tal como se hizo durante la etapa de planificación y aprenda más sobre cómo evolucionó el desarrollo."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
+        "title": "Blog de Anuncio",
         "text": "Read a brief primer on the Sumer testnet and its objectives."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Sumer testnet.",
+      "title": "Objetivos de la testnet",
+      "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Sumer.",
       "goals": {
         "contentPublishing": {
           "title": "Enable content publishing from playback interface",

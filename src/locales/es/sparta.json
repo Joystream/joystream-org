@@ -1,10 +1,10 @@
 {
   "sparta": {
     "siteMetadata": {
-      "description": "Explore the Sparta testnet"
+      "description": "Explora la testnet de Sparta"
     },
     "hero": {
-      "title": "Sparta Network",
+      "title": "Red de Sparta",
       "text": "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
       "chipText": "What is this?"
     },
@@ -17,7 +17,7 @@
       "text": "<0>The Spartan army helmet</0> represents what Sparta is most known for today, their military might. For it's time, it was also known for its advanced governance system."
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
+      "title": "Objetivos de la testnet",
       "subtitle": "The goals below are a simplified representation of the Key Results listed in our release OKR.",
       "goals": {
         "blockchain": {

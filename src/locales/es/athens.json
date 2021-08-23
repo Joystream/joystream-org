@@ -1,10 +1,10 @@
 {
   "athens": {
     "siteMetadata": {
-      "description": "Explore the Athens testnet"
+      "description": "Explore la testnet de Athens"
     },
     "hero": {
-      "title": "Athens Network",
+      "title": "Red de Athens",
       "text": "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
       "chipText": "What is this?"
     },
@@ -16,18 +16,18 @@
       "text": "<0>In Greek mythology, a little owl (Athene noctua)</0> traditionally represents or accompanies Athena, the virgin goddess of wisdom. Because of such association, the bird — often referred to as the \"owl of Athena\" — has been used as a symbol of knowledge, wisdom, perspicacity and erudition throughout the Western world."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Documentos Críticos",
       "fullSpecifications": {
         "title": "Full Specifications",
         "text": "No specifications was published for Athens."
       },
       "releasePlan": {
-        "title": "Release Plan",
+        "title": "Plan de lanzamiento",
         "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
+      "title": "Objetivos de la testnet",
       "subtitle": "The goals below are a simplified representation of the Key Results listed in our Release <0>OKR</0>",
       "goals": {
         "media": {
@@ -49,10 +49,10 @@
       }
     },
     "roles": {
-      "title": "Roles available on the Athens testnet"
+      "title": "Funciones incentivadas para la red de Athens"
     },
     "map": {
-      "title": "The city of Athens",
+      "title": "La ciudad de Atenas",
       "text": "<0>Athens is the capital of Greece.</0> It was also at the heart of Ancient Greece, a powerful civilisation and empire. The city is still dominated by 5th-century BC landmarks, including the Acropolis, a hilltop citadel topped with ancient buildings like the colonnaded Parthenon temple. <1/><1/> We chose the name Athens as, like our previous testnets, Mesopotamia and Sparta, the ancient Athens' historical significance in the development towards modern democracy and the rule of law. <1/><1/> <2> <0/> Explore previous testnet</2>"
     }
   }

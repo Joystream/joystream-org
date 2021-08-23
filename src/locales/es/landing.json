@@ -72,7 +72,7 @@
       },
       "testnets": {
         "Sparta": {
-          "title": "Sparta testnet",
+          "title": "Testnet de Sparta",
           "text": "Sparta is our second testnet, introducing a variety of important technical improvements.",
           "explore": "Explore Sparta"
         },

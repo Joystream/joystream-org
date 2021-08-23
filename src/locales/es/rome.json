@@ -1,33 +1,33 @@
 {
   "rome": {
     "siteMetadata": {
-      "description": "Explore the Rome testnet"
+      "description": "Explora la testnet de Rome"
     },
     "hero": {
-      "title": "Rome Network",
+      "title": "Red de Rome",
       "text": "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
       "chipText": "What is this?"
     },
     "heroCard": {
-      "title": "REPLACED BY CONSTANTINOPLE ON"
+      "title": "REEMPLAZADO POR CONSTANTINOPLE EN"
     },
     "modal": {
       "title": "Rome",
       "text": "<0>The Roman empire left many landmarks.</0> Their architecture and engineering skills was unparalleled during their might. The concept of aqueducts was not devised by the Romans, but their beauty and extent is."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Documentos críticos",
       "fullSpecifications": {
         "title": "Full Specifications",
         "text": "No specifications were published for Rome."
       },
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Plan de lanzamiento",
+        "text": "Lea el plan de lanzamiento tal como se hizo durante la etapa de planificación y aprenda más sobre cómo evolucionó el desarrollo."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
+      "title": "Objetivos de la testnet",
       "subtitle": "The goals below are a simplified representation of the Key Results listed in our Release <0>OKR</0>",
       "goals": {
         "contentDirectory": {
@@ -49,7 +49,7 @@
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Rome Network"
+      "title": "Funciones incentivadas para la red de Rome"
     },
     "map": {
       "title": "Rome",

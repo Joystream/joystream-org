@@ -2,45 +2,45 @@
   "about": {
     "general": {
       "roles": {
-        "blockchain": "Blockchain Engineer",
-        "frontEnd": "Front-End Engineer",
-        "design": "Designer",
-        "growth": "Growth",
-        "core": "Core",
+        "blockchain": "Ingeniero Blockchain",
+        "frontEnd": "Ingeniero Front-End",
+        "design": "Diseñador(a)",
+        "growth": "Encargado del crecimiento de la comunidad",
+        "core": "Principal",
         "ceo": "CEO",
         "cto": "CTO",
-        "cooAndGrowth": "COO & Growth",
-        "all": "All",
-        "allMembers": "All members"
+        "cooAndGrowth": "Director de operaciones encargado del crecimiento de la comunidad",
+        "all": "Todos",
+        "allMembers": "Todos los miembros"
       }
     },
     "siteMetadata": {
-      "title": "About us",
-      "description": "We don't just offer great compensation and flexibility, but the perfect mission, team and timing for you to build something that changes everything."
+      "title": "Sobre nosotros",
+      "description": "No solo ofrecemos una gran compensación y flexibilidad, sino la misión, el equipo y el tiempo perfecto para que construyas algo que lo cambie todo."
     },
     "hero": {
-      "title": "We are building Joystream to set it free",
-      "subtitle": "Jsgenesis is the core team building Joystream the platform and open-source blockchain."
+      "title": "Estamos construyendo Joystream para liberarlo",
+      "subtitle": "Jsgenesis es el equipo central que construye Joystream, la plataforma y la blockchain de código abierto."
     },
     "ourTeam": {
-      "title": "Our team",
-      "subtitle": "We come from different continents, but share a passion for open source, blockchain technology, distributed systems, privacy and building a new internet based on accountable and forkable institutions.",
-      "moreMembers": "Load more team members"
+      "title": "Nuestro equipo",
+      "subtitle": "Venimos de diferentes continentes, pero compartimos la pasión por el código abierto, la tecnología blockchain, los sistemas distribuidos, la privacidad y la construcción de una nueva Internet basada en instituciones responsables y bifurcables.",
+      "moreMembers": "Cargar mas miembros del equipo"
     },
     "investors": {
-      "title": "Our investors"
+      "title": "Nuestros inversionistas"
     },
     "positions": {
-      "title": "Open positions",
-      "available": "3 jobs available",
-      "join": "Join",
+      "title": "Posiciones abiertas",
+      "available": "3 trabajos disponibles",
+      "join": "Unirse",
       "roles": {
-        "frontEnd": "Front-end Developer",
-        "blockchain": "Blockchain Developer",
-        "designer": "UI/UX Design Lead"
+        "frontEnd": "Desarrollador Front-end",
+        "blockchain": "Desarrollador Blockchain",
+        "designer": "Jefe de Diseño UI/UX"
       },
-      "location": "Oslo, Europe, Remote",
-      "employmentType": "Full time",
+      "location": "Oslo, Europa, Remoto",
+      "employmentType": "Tiempo completo",
       "salary": {
         "frontEnd": "$80K-$130K",
         "blockchain": "$100K-$140K",

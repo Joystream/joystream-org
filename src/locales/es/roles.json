@@ -8,7 +8,7 @@
       "text": "Participating in a role on our testnet lets you earn tJOY while influencing the platform's ongoing development."
     },
     "validator": {
-      "title": "Validator",
+      "title": "Validador",
       "overview": "The Joystream platform state lives on a blockchain consensus system. This consensus system is a variant of classical BFT consensus combined with Proof-of-Stake to determine voting power. A validator is an actor which checks the validity of newly constructed blocks, proposes new blocks and participates in the consensus process for committing new block to the chain. This role has a purpose very similar to the miners in the Bitcoin blockchain. Importantly, anyone can fully check the validity of the blockchain, not just validators, and this is called validation.",
       "responsibilities": {
         "runAndMaintainScreeningNodes": "Run and maintain screening nodes that are always available and performant",
