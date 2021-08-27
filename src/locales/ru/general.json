@@ -16,14 +16,14 @@
     "validator": "Валидатор",
     "council": "Совет",
     "councilMember": "Член Совета",
-    "storageProvider": "Провайдер хранения",
+    "storageProvider": "Провайдер хранилищ",
     "contentCreator": "Создатель контента",
-    "contentCurator": "Контент куратор",
+    "contentCurator": "Куратор контента",
     "discoveryProvider": "Провайдер обнаружения",
     "bandwidthProvider": "Провайдер пропускной способности",
     "builder": "Разработчик",
-    "storageLead" : "Главный хранитель",
-    "contentLead" : "Главный редактор"
+    "storageLead" : "Главный провайдер хранилищ",
+    "contentLead" : "Главный куратор контента"
   },
   "siteMetadata": {
     "title": "Joystream: видеоплатформа DAO"
@@ -51,13 +51,13 @@
     "seven": "7"
   },
   "roleCard": {
-    "migration": "{{numberOfUsers}} (макс.) обладали этой ролью во время миграции.",
-    "current": "{{numberOfUsers}} выполняли эту роль в Antioch",
+    "migration": "{{numberOfUsers}} (макс.) обладали этой ролью во время миграции",
+    "current": "{{numberOfUsers}} исполняют эту роль в Antioch",
     "most": "Максимум {{numberOfUsers}} пользователей исполняли эту роль",
     "new": "NEW"
   },
   "heroCard": {
-    "active": "Анонсирована сеть",
+    "active": "Сеть анонсирована",
     "error": "Сеть не активна",
     "info": "Сеть заменена",
     "finished": "Сеть активна"
@@ -83,7 +83,7 @@
   "sidebar": {
     "activeRoles": "Активные роли",
     "upcomingRoles": "Будущие роли",
-    "viewAllRoles": "Просмотр всех ролей"
+    "viewAllRoles": "Посмотреть все роли"
   },
   "navbar": {
     "product": "Продукт",
@@ -93,16 +93,16 @@
     "brandStory": "История бренда",
     "brandGuides": "Правила использования айдентики",
     "downloadAssets": "Скачать ресурсы",
-    "about": "Про нас"
+    "about": "О нас"
   },
   "footer": {
     "title": "Следите за новостями",
     "alternateTitle": "Получайте оповещения",
-    "subtitle": "Не беспокойтесь о спаме! Получайте только важные уведомления об изменениях.",
-    "inputPlaceholder": "Email адрес...",
-    "joinNewsletter": "Подписка на рассылку",
+    "subtitle": "Не беспокойтесь о спаме! Оставайтесь в курсе всех важных новостей.",
+    "inputPlaceholder": "Email-адрес...",
+    "joinNewsletter": "Подписаться на рассылку",
     "github": {
-      "whitepaper": "Рассылка",
+      "whitepaper": "White paper",
       "repository": "Репозиторий"
     },
     "usefulLinks": {
@@ -110,7 +110,7 @@
       "hiring": "Открыты вакансии!",
       "brandGuidance": "Правила использования айдентики"
     },
-    "followUs": "Следи за новостями"
+    "followUs": "Следите за новостями"
   },
   "pages": {
     "blog": "Блог",
@@ -118,9 +118,9 @@
     "roles": "Роли",
     "token": "Токен",
     "hydra": "Hydra",
-    "foundingMembers": "Члены основатели",
-    "leaderboards": "Лидеры",
-    "scoringForm": "Отправка отчета",
+    "foundingMembers": "Члены-основатели",
+    "leaderboards": "Таблицы лидеров",
+    "scoringForm": "Форма отправки отчета",
     "overview": "Обзор"
   },
   "socials": {
