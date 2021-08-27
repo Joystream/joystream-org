@@ -2,45 +2,45 @@
   "about": {
     "general": {
       "roles": {
-        "blockchain": "Blockchain Engineer",
-        "frontEnd": "Front-End Engineer",
-        "design": "Designer",
-        "growth": "Growth",
-        "core": "Core",
+        "blockchain": "Блокчейн разработчик",
+        "frontEnd": "Фронтенд разработчик",
+        "design": "Дизайнер",
+        "growth": "Стратегия развития",
+        "core": "Ядро",
         "ceo": "CEO",
         "cto": "CTO",
-        "cooAndGrowth": "COO & Growth",
-        "all": "All",
-        "allMembers": "All members"
+        "cooAndGrowth": "COO & стратегия",
+        "all": "Все",
+        "allMembers": "Все члены"
       }
     },
     "siteMetadata": {
-      "title": "About us",
-      "description": "We don't just offer great compensation and flexibility, but the perfect mission, team and timing for you to build something that changes everything."
+      "title": "Про нас",
+      "description": "Мы не только предлагаем отличную заработную плату и гибкие условия, но и четкую миссию, коллектив и время для создание чего-то, что изменило бы мир."
     },
     "hero": {
-      "title": "We are building Joystream to set it free",
-      "subtitle": "Jsgenesis is the core team building Joystream the platform and open-source blockchain."
+      "title": "Мы создаем Joystream чтобы отпустить его на свободу",
+      "subtitle": "Команда Jsgenesis является ядром, которое разрабатывает Joystream - платформу на блокчейне с открытым исходным кодом."
     },
     "ourTeam": {
-      "title": "Our team",
-      "subtitle": "We come from different continents, but share a passion for open source, blockchain technology, distributed systems, privacy and building a new internet based on accountable and forkable institutions.",
-      "moreMembers": "Load more team members"
+      "title": "Наша команда",
+      "subtitle": "Несмотря на то что мы из разных стран, все мы разделяем страсть к проектам с открытым исходным кодом, технологии блокченйн, распределенным системам, уважению к приватности, а также идеи построения нового интернета, основанного на принципах открытой отчетности и возможности создания форков.",
+      "moreMembers": "Загрузить больше"
     },
     "investors": {
-      "title": "Our investors"
+      "title": "Наши инвесторы"
     },
     "positions": {
-      "title": "Open positions",
-      "available": "3 jobs available",
-      "join": "Join",
+      "title": "Открытые вакансии",
+      "available": "Открыто 3 вакансии",
+      "join": "Присоединиться",
       "roles": {
-        "frontEnd": "Front-end Developer",
-        "blockchain": "Blockchain Developer",
-        "designer": "UI/UX Design Lead"
+        "frontEnd": "Фронтенд разработчик",
+        "blockchain": "Блокчейн разработчик",
+        "designer": "Ведущий UI/UX дизайнер"
       },
-      "location": "Oslo, Europe, Remote",
-      "employmentType": "Full time",
+      "location": "Осло, Европа, Удаленная работа",
+      "employmentType": "Полная занятость",
       "salary": {
         "frontEnd": "$80K-$130K",
         "blockchain": "$100K-$140K",
