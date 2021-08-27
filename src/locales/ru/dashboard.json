@@ -1,10 +1,10 @@
 {
     "dashboard" : {
         "siteMetadata" : {
-            "title" : "Графики в реальном времени",
+            "title" : "Панель мониторинга",
             "description" : "Данные приложений Pioneer и Atlas в виде графиков."
         },
-        "title" : "Графики Joystream",
+        "title" : "Панель мониторинга Joystream",
         "subtitles" : {
             "videos" : "Видео",
             "channels" : "Каналы",
