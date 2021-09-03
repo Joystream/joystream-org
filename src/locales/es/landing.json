@@ -68,7 +68,7 @@
       "released": {
         "Current": "Publicado el",
         "Past": "Publicado el ",
-        "Future": "Estará en vivo el "
+        "Future": "Estará en vivo el"
       },
       "testnets": {
         "Sparta": {
@@ -93,17 +93,17 @@
         },
         "Constantinople": {
           "title": "Constantinople testnet",
-          "text": "Constantinoplees nuestra sexta red de prueba, que introduce una serie de importantes mejoras técnicas.",
+          "text": "Constantinople es nuestra sexta red de prueba, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Constantinople"
         },
         "Alexandria": {
-          "title": "Alexandria testnet",
-          "text": "Alexandria is our second seventh, introducing a variety of important technical improvements.",
+          "title": "Testnet de Alexandria",
+          "text": "Alexandria es nuestra segunda séptima, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Alexandria"
         },
         "Babylon": {
           "title": "Babylon testnet",
-          "text": "Babylon is our second eighth, introducing a variety of important technical improvements.",
+          "text": "Babylon es nuestro segundo octavo, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Babylon"
         },
         "Antioch": {

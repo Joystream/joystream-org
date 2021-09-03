@@ -13,7 +13,7 @@
     },
     "modal": {
       "title": "Alexandria",
-      "text": "Hay dos esfinges en el sitio del Pilar de Pompeyo en Alejandía, Egípto. Las esfinges y las columnas asociadas son uno de los monumentos más antiguos e importantes de Alejandria. <0/><0/> La esfinge de alejandria no debe confundirse con la Gran Essfinge ubicada en Giza, a poco menos de 200km al suroeste de Alejandra."
+      "text": "Hay dos esfinges en el sitio del Pilar de Pompeyo en Alejandría, Egípto. Las esfinges y las columnas asociadas son uno de los monumentos más antiguos e importantes de Alejandria. <0/><0/> La esfinge de alejandria no debe confundirse con la Gran Essfinge ubicada en Giza, a poco menos de 200km al suroeste de Alejandra."
     },
     "criticalDocuments": {
       "title": "Documentos críticos",
@@ -31,16 +31,16 @@
       "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Alexandria.",
       "goals": {
         "membershipModule": {
-          "title": "Limpiar el módulo de membresía",
-          "text": "Tackling technical debt in the membership module and making it possible to transition to using memberships as the only core actor identifier in the system in future releases."
+          "title": "Limpiando el módulo de membresía",
+          "text": "Abordar la deuda técnica en el módulo de membresía y hacer posible la transición al uso de membresías como el único identificador principal en el sistema en versiones futuras."
         },
         "substrateVersion": {
           "title": "Comience a usar Substrate v2.0.0 RC4",
-          "text": "We are transitioning to a new version of Substrate in order to stay up to date with a broad range of enhancements, and to limit how far behind we allow our growing codebase to become."
+          "text": "Estamos haciendo la transición a una nueva versión de Substrate para mantenernos actualizados con una amplia gama de mejoras y limitar qué tan atrás permitimos que se vuelva nuestra base de código en crecimiento."
         },
         "networkTesting": {
           "title": "Mejora de nuestras pruebas de red",
-          "text": "Further maturing our network testing infrastructure to get one step closer to true end-to-end builds that secure an increasingly shorter development cycle."
+          "text": "Madurar aún más nuestra infraestructura de pruebas de red para acercarnos un paso más a verdaderas compilaciones de extremo a extremo que aseguran un ciclo de desarrollo cada vez más corto."
         }
       }
     },

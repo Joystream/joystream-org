@@ -26,7 +26,7 @@
       "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Antioch.",
       "goals": {
         "substrateVersion": {
-          "title": "Actualizar laa versión Substrate",
+          "title": "Actualizar la versión Substrate",
           "text": "<0>Para solucionar el problema de división de la cadena que se encuentra en Babylon, necesitamos actualizar la versión de Substrate en la que se basa nuestra red de <1>v2-rc4</1> a <1>v2.0.1</1></0>"
         }
       }
