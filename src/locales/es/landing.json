@@ -1,99 +1,99 @@
 {
   "landing": {
     "siteMetadata": {
-      "description": "Joystream is a video platform controlled, owned, and operated by its users."
+      "description": "Joystream es una plataforma de vídeo controlada y operada por sus usuarios."
     },
     "hero": {
-      "title": "The video platform DAO",
-      "subtitle": "Joystream is a video platform controlled,<0/> owned, and operated by its users",
+      "title": "La plataforma de vídeo DAO",
+      "subtitle": "oystream es una plataforma de vídeo controlada,<0/> de propiedad, y operativa por los usuarios",
       "metrics": {
-        "mainTitle": "Testnet Metrics",
+        "mainTitle": "Métricas para la red de prueba",
         "titles": {
-          "participationPayout": "Participation Payout",
-          "activeValidators": "Active Validators",
-          "blockHeight": "Block Height",
-          "memberships": "Memberships"
+          "participationPayout": "Pago por participación",
+          "activeValidators": "Validadores actios",
+          "blockHeight": "Nivel del bloque",
+          "memberships": "Membresía"
         }
       }
     },
     "becomeFM": {
-      "subtitle": "Our brand new and unparalleled community token distribution scheme",
-      "title": "Become a Founding Member to earn mainnet tokens and influence the development of the platform.",
-      "alternateTitle": "Become a Founding member and have a tangible impact on the development of our platform.",
-      "link": "Learn more about our generous program"
+      "subtitle": "Nuestro nuevo e incomparable sistema de distribución de fichas comunitarias",
+      "title": "Conviértase en miembro fundador para ganar tokens de la red principal e influir en el desarrollo de la plataforma.",
+      "alternateTitle": "Conviértase en miembro fundador y tenga un impacto tangible en el desarrollo de nuestra plataforma.",
+      "link": "Más información sobre nuestro generoso programa"
     },
     "whatWeDo": {
-      "subtitle": "Our motivation for building the Joystream protocol",
-      "title": "We call for an arrangement where media platforms are accountable to the people they impact.",
-      "link": "Read our manifesto"
+      "subtitle": "Nuestra motivación para construir el protocolo Joystream",
+      "title": "Solicitamos un sistema en el que las plataformas de los medios de comunicación rindan cuentas a las personas a las que afectan.",
+      "link": "Lea nuestro manifiesto"
     },
     "whyYouShouldJoin": {
-      "title": "Why join our testnets?",
+      "title": "¿Por qué unirse a nuestras redes de prueba?",
       "reasons": {
         "tokens": {
           "title": "Tokens",
-          "text": "Earn tokens distributed on mainnet, launching 2021"
+          "text": "Gane tokens distribuidos en la red principal, lanzamiento en 2021"
         },
         "cash": {
-          "title": "Cash",
-          "text": "Get rewarded with real money for your participation"
+          "title": "Dinero",
+          "text": "Obtenga recompensas de dinero real por su participación"
         },
         "reputationAndSkill": {
-          "title": "Reputation & Skill",
-          "text": "Gain the knowledge required to participate on mainnet"
+          "title": "Reputación y habilidades",
+          "text": "Adquirir los conocimientos necesarios para participar en la red principal"
         }
       }
     },
     "exploreJoystream": {
-      "title": "Explore Joystream Now",
-      "subtitle": "Two fast evolving apps for consuming content and governance activities.",
+      "title": "Explore Joystream Ahora",
+      "subtitle": "Dos aplicaciones en rápida evolución para el consumo de contenidos y actividades de gobierno.",
       "atlas": {
-        "text": "Atlas is the flagship content consumer and publishing app for Joystream. Watch videos, follow creators and discover new featured content, or create a channel and build your audience.",
-        "link": "Try out Atlas",
-        "imageAlt": "overview visual of Atlas"
+        "text": "Atlas es la principal aplicación de consumo y publicación de contenidos de Joystream. Mira vídeos, sigue a los creadores y descubre nuevos contenidos destacados, o crea un canal y construye tu audiencia.",
+        "link": "Prueba Atlas",
+        "imageAlt": "visión general de Atlas"
       },
       "pioneer": {
-        "text": "Pioneer is the place to participate in community governance and operation. Vote on elections, submit proposals to fund your project or get enter a paid role to power the platform.",
-        "link": "Try out Pioneer",
-        "imageAlt": "overview visual of Pioneer"
+        "text": "Pioneer es el lugar para participar en la gobernanza y el funcionamiento de la comunidad. Puedes votar en las elecciones, presentar propuestas para financiar tu proyecto o entrar en un rol remunerado para impulsar la plataforma.",
+        "link": "Prueba Pioneer",
+        "imageAlt": "visión general de Pioneer"
       }
     },
     "roadToMainnet": {
-      "title": "Road to mainnet",
+      "title": "Rumbo a la red principal",
       "testnetState": {
-        "Current": "Current testnet",
-        "Past": "Past testnet",
-        "Future": "Future testnet"
+        "Current": "Red de prueba atual",
+        "Past": "Red de prueba pasada",
+        "Future": "Red de prueba futura"
       },
       "released": {
-        "Current": "Released on ",
-        "Past": "Released on ",
-        "Future": "Will be live on "
+        "Current": "Publicado el",
+        "Past": "Publicado el ",
+        "Future": "Estará en vivo el "
       },
       "testnets": {
         "Sparta": {
           "title": "Testnet de Sparta",
-          "text": "Sparta is our second testnet, introducing a variety of important technical improvements.",
+          "text": "Sparta es nuestra segunda red de pruebas, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Sparta"
         },
         "Athens": {
           "title": "Athens testnet",
-          "text": "Athens is our third testnet, introducing a variety of important technical improvements.",
+          "text": "Atenas es nuestra tercera red de pruebas, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Athens"
         },
         "Acropolis": {
           "title": "Acropolis testnet",
-          "text": "Acropolis is our fourth testnet, introducing a variety of important technical improvements.",
+          "text": "Acrópolis es nuestra cuarta red de pruebas, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Acropolis"
         },
         "Rome": {
           "title": "Rome testnet",
-          "text": "Rome is our second fifth, introducing a variety of important technical improvements.",
+          "text": "Roma es nuestra quinta red de prueba, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Rome"
         },
         "Constantinople": {
           "title": "Constantinople testnet",
-          "text": "Constantinople is our sixth testnet, introducing a variety of important technical improvements.",
+          "text": "Constantinoplees nuestra sexta red de prueba, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Constantinople"
         },
         "Alexandria": {
@@ -108,18 +108,18 @@
         },
         "Antioch": {
           "title": "Antioch testnet",
-          "text": "Antioch is our ninth testnet, patching a chain split bug which broke the Babylon network",
+          "text": "Antioch es nuestra novena red de pruebas, que parchea un error de división de la cadena que rompió la red de Babylon",
           "explore": "Explore Antioch"
         },
         "Sumer": {
           "title": "Sumer testnet",
-          "text": "Sumer is our tenth testnet, facilitating easy content uploads via our playback app.",
+          "text": "Sumer es nuestra décima red de pruebas, que facilita la carga de contenidos a través de nuestra aplicación de reproducción.",
           "explore": "Explore Sumer"
         }
       }
     },
     "earnTokens": {
-      "title": "Earn mainnet tokens, cash and influence."
+      "title": "Gana tokens de la red principal, dinero e influencia."
     }
   }
 }

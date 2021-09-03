@@ -2,7 +2,7 @@
     "dashboard" : {
         "siteMetadata" : {
             "title" : "Panel de control en vivo",
-            "description" : "Data compiled from current Pioneer and Atlas instances and visualized through charts."
+            "description" : "Datos recopilados de las instancias actuales de Pioneer y Atlas y visualizados mediante gráficos."
         },
         "title" : "Panel de Joystream",
         "subtitles" : {
@@ -10,7 +10,7 @@
             "channels" : "Canales",
             "users" : "Usuarios",
             "posts" : "Posts",
-            "threads" : "Hilos"
+            "threads" : "Temas"
         },
         "amount" : "Monto"
     }

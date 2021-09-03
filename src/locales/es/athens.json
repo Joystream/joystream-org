@@ -5,46 +5,46 @@
     },
     "hero": {
       "title": "Red de Athens",
-      "text": "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
-      "chipText": "What is this?"
+      "text": "Explore los roles disponibles y elija el que más le convenga.Influya en el desarrollo de la plataforma y gane dinero real en el proceso..",
+      "chipText": "¿Que es esto?"
     },
     "heroCard": {
-      "text": "AFTER LAUNCHING 17 / 04 / 19 <0/> THE NETWORK WAS UPGRADED TO <1>ACROPOLIS</1> ON"
+      "text": "DESPUÉS DEL LANZAMIETO DEL 17 / 04 / 19 <0/> LA RED SE ACTUALIZÓ A <1>ACROPOLIS</1> EL"
     },
     "modal": {
       "title": "Owl of Athena",
-      "text": "<0>In Greek mythology, a little owl (Athene noctua)</0> traditionally represents or accompanies Athena, the virgin goddess of wisdom. Because of such association, the bird — often referred to as the \"owl of Athena\" — has been used as a symbol of knowledge, wisdom, perspicacity and erudition throughout the Western world."
+      "text": "<0>En la mitología griega, un pequeño búho (Athene noctua)</0> tradicionalmente representa o acompaña a Athenea, la diosa virgen de la sabidría. Debido a tal asociación, el pájaro — a menudo denominado \"búho de Atenea\" — se ha utilizado como símbolo de conocimiento, sabiduría, perspicacia y erudición en todo el mundo occidental."
     },
     "criticalDocuments": {
       "title": "Documentos Críticos",
       "fullSpecifications": {
-        "title": "Full Specifications",
-        "text": "No specifications was published for Athens."
+        "title": "Especificaciones completas",
+        "text": "No se publicaron especificaciones para Athenea."
       },
       "releasePlan": {
         "title": "Plan de lanzamiento",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "text": "Lea el plan de lanzamiento tal como se hizo durante la etapa de planificación y obtenga más información sobre cómo evolucionó el desarrollo."
       }
     },
     "testnetGoals": {
       "title": "Objetivos de la testnet",
-      "subtitle": "The goals below are a simplified representation of the Key Results listed in our Release <0>OKR</0>",
+      "subtitle": "Los siguientes objetivos son una representación simplificada de los resultados clave enumerados en nuestro comunicado. <0>OKR</0>",
       "goals": {
         "media": {
-          "title": "Enable media on the platform",
-          "text": "As a \"user governed media platform\", allowing users to upload and consume and content was a major goal for us."
+          "title": "Habilite contenido en la plataforma",
+          "text": "Como una \"plataforma de contenido gobernada por el usuario\", permitir que los usuarios carguen y consuman contenido era un objetivo importante para nosotros."
         },
         "memberships": {
-          "title": "Introduce platform memberships",
-          "text": "Although we are building an open blockchain in the sense that users are free to send tokens as they like, the Joystream experience is about having the platform users own, operate and govern the platform. We are agnostic on exactly what parts of the platform will be reserved for members, some actions will require and extra level of screening and accountability."
+          "title": "Introducir plataforma de membresía",
+          "text": "Aunque estamos construyendo una cadena de bloques abierta en el sentido de que los usuarios son libres de enviar tokens como quieran, la experiencia Joystream se trata de que los usuarios de la plataforma sean dueños, operen y gobiernen la plataforma. Somos agnósticos en cuanto a que parte de la plataforma se reservarán para los miembros, algunas acciones requerirán un nivel adicional de selección y responsabilidad."
         },
         "storageNode": {
-          "title": "Build and release the storage node",
-          "text": "Although a storage node was built and used to host and distribute the platform content, it had some bugs making it unable to sync between clients and required a hardcoded liaison."
+          "title": "Construya y libere el nodo de almacenamiento",
+          "text": "Aunque se creó y usó un nodo de almacenamiento para alojar y distribuir el contenido de la plataforma, tenía algunos errores que impedían la sincronización entre clientes y requería un enlace codificado."
         },
         "runtimeUpgrade": {
-          "title": "Upgrade the runtime through a Council vote",
-          "text": "The intention was for Jsgenesis to create a proposal for a <0>runtime upgrade</0> and have the Council vote on it. If the Council reached quorum, the consensus rules of the system would automatically get upgraded in flight. Unfortunately, the <1>Sparta network crashed</1> before we reached this stage, and had to start Athens as a new chain with a new genesis block."
+          "title": "Actualice el tiempo de ejecución a través de una votación del Consejo",
+          "text": "La intención era que Jsgenesis creara una propuesta para una <0>actualización del tiempo de ejecución</0> y que el Consejo la votara. Si el Consejo alcanzaba el quórum, las reglas de consenso del sistema se actualizarían automáticamente en tiempo de ejecución. Desafortunadamente, la <1>red Sparta se estrelló</1> antes de llegar a esta fase, y tuvo que empezar Athens  como una nueva cadena con un nuevo bloque génesis."
         }
       }
     },
@@ -53,7 +53,7 @@
     },
     "map": {
       "title": "La ciudad de Atenas",
-      "text": "<0>Athens is the capital of Greece.</0> It was also at the heart of Ancient Greece, a powerful civilisation and empire. The city is still dominated by 5th-century BC landmarks, including the Acropolis, a hilltop citadel topped with ancient buildings like the colonnaded Parthenon temple. <1/><1/> We chose the name Athens as, like our previous testnets, Mesopotamia and Sparta, the ancient Athens' historical significance in the development towards modern democracy and the rule of law. <1/><1/> <2> <0/> Explore previous testnet</2>"
+      "text": "<0>Atenas es la capital de Grecia.</0> También fue el corazón de la antigua Grecia, una poderosa civilización e imperio. La ciudad sigue dominada por los monumentos del siglo V a.C, como la Acrópolis, una ciudadela en la cima de una colina coronada por edificios antiguos como el templo de las columnas de Partenón. <1/><1/>Elegimos el nombre de Atenas porque, al igual que nuestras redes de prueba anteriores, Mesopotamia y Esparta, la importancia histórica de la antigua Atenas en el desarrollo hacia la democracia moderna y el estado de derecho. <1/><1/> <2> <0/> Expore la red de prueba anterior</2>"
     }
   }
 }

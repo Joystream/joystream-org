@@ -5,15 +5,15 @@
     },
     "hero": {
       "title": "Red de Constantinople",
-      "text": "The Constantinople testnet introduces an improved proposals system and fiat-backed token model for participant compensation.",
-      "chipText": "What is this?"
+      "text": "La red de pruebas de Constantinople introduce un sistema de propuestas mejorado y un modelo de tokens respaldados por fiat para la compensación de los participantes.",
+      "chipText": "¿Que es eso?"
     },
     "heroCard": {
-      "title": "REEMPLAZADO POR ALEXANDRIA EN"
+      "title": "REEMPLAZADO POR ALEXANDRIA EL"
     },
     "modal": {
       "title": "Constantinople",
-      "text": "The Column of Constantine, also known as the Burnt Stone or the Burnt Pillar, is a Roman monumental column constructed on the orders of the Roman emperor Constantine the Great in 330 AD. It commemorates the declaration of Byzantium as the new capital city of the Roman Empire."
+      "text": "La Columna de Constantino, también conocida como la Piedra Quemada o el Pilar Quemado, es una columna monumental romana construida por orden del emperador romano Constantino el Grande en el año 330 d.C. Conmemora la declaración de Bizancio como nueva capital del Imperio Romano."
     },
     "criticalDocuments": {
       "title": "Documentos críticos",
@@ -31,12 +31,12 @@
       "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Constantinople.",
       "goals": {
         "proposalSystem": {
-          "title": "Launch a new proposal system",
-          "text": "The constantinople testnet is built around the introduction of a proposal system that strengthens the governance structure of the platform, shifting the day to day responsibility of monitoring the network and allocating resources to voters and the council."
+          "title": "Lanzar un nuevo sistema de propuestas",
+          "text": "La red de pruebas de Constantinopla se construye en torno a la introducción de un sistema de propuestas que refuerza la estructura de gobierno de la plataforma, desplazando la responsabilidad diaria de supervisar la red y asignar recursos a los votantes y al consejo."
         },
         "tokenModel": {
-          "title": "Introduce a fiat-backed token model",
-          "text": "Constantinople introduces a new incentive structure, with a fiat (USD) pool backing the testnet tokens, setting up a more realistic economic system for the platform."
+          "title": "Introducir un modelo de tokens respaldados por fiat",
+          "text": "Constantinopla introduce una nueva estructura de incentivos, con un fondo fiduciario (USD) que respalda los tokens de testnet, estableciendo un sistema económico más realista para la plataforma."
         }
       }
     },
@@ -45,7 +45,7 @@
     },
     "map": {
       "title": "Constantinople",
-      "text": "<0>Constantinople was the capital city of the Eastern Roman Empire during the fourth century.</0> It was famed for its massive and complex defences as well as its architectural masterpieces and opulent aristocratic palaces. As was the case with the city, we hope our Constantinople testnet will be a worthy successor to Rome.<1/><1/><2><0/> Read the blog post</2>"
+      "text": "<0>Constantinopla fue la capital del Imperio Romano de Oriente durante el siglo IV.</0> Era famosa por sus enormes y complejas defensas, así como por sus obras maestras arquitectónicas y sus palacios aristocráticos opulentos. Al igual que la ciudad, esperamos que nuestro testnet de Constantinopla sea un digno sucesor de Roma.<1/><1/><2><0/> Lea el artículo subido</2>"
     }
   }
 }

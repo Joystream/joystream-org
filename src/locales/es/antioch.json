@@ -5,13 +5,13 @@
     },
     "hero": {
       "title": "Red de Antioch",
-      "text": "The Antioch release seeks to patch a chain split bug which unfortunately sabotaged the previous testnet."
+      "text": "La versión de Antioch busca corregir un error de división de la cadena que, lamentablemente, saboteó la red de prueba anterior."
     },
     "heroCard": {
       "title": "REEMPLAZADO POR SUMER EN"
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Documentos críticos",
       "releasePlan": {
         "title": "Plan de lanzamiento",
         "text": "Lea el plan de lanzamiento tal como se hizo durante la etapa de planificación y aprenda más sobre cómo evolucionó el desarrollo."
@@ -26,8 +26,8 @@
       "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Antioch.",
       "goals": {
         "substrateVersion": {
-          "title": "Upgrade Substrate Version",
-          "text": "<0>To patch the chain split issue encountered on Babylon we need to update the version of Substrate our network is built on from <1>v2-rc4</1> to <1>v2.0.1</1></0>"
+          "title": "Actualizar laa versión Substrate",
+          "text": "<0>Para solucionar el problema de división de la cadena que se encuentra en Babylon, necesitamos actualizar la versión de Substrate en la que se basa nuestra red de <1>v2-rc4</1> a <1>v2.0.1</1></0>"
         }
       }
     },
@@ -36,7 +36,7 @@
     },
     "map": {
       "title": "Antioch",
-      "text": "<0>Antioch was an ancient Greek city on the eastern side of the Orontes River.</0> The city's position benefited its occupants greatly, particularly on account of such features as the spice trade, the Silk Road, and the Royal Road.<1/><1/>At its height it rivaled Alexandria as the chief city of the Near East. Many also consider the city to be \"the cradle of Christianity\".<1/><1/><2><0/> Read the blog post</2>"
+      "text": "<0>Antioquía era una antigua ciudad griega en el lado oriental del río Orontes.</0> La posición de la ciudad benefició enormemente a sus ocupantes, sobre todo a casua de tales caracteristicas como el comerio de especias, la Ruta de la Seda y la Ruta Real.<1/><1/>En su apogeo, rivalizó con Alejandría como la ciudad principal del Cercano Oriente. Muchos también consideran que la ciudad es \"la cuna del cristianismo\".<1/><1/><2><0/> Lea el artículo subido</2>"
     }
   }
 }

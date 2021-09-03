@@ -5,21 +5,21 @@
     },
     "hero": {
       "title": "Red de Rome",
-      "text": "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
-      "chipText": "What is this?"
+      "text": "Explora las funciones disponibles y elige la que más te convenga. Influya en el desarrollo de la plataforma y gana dinero real en el proceso.",
+      "chipText": "¿Que es?"
     },
     "heroCard": {
       "title": "REEMPLAZADO POR CONSTANTINOPLE EN"
     },
     "modal": {
       "title": "Rome",
-      "text": "<0>The Roman empire left many landmarks.</0> Their architecture and engineering skills was unparalleled during their might. The concept of aqueducts was not devised by the Romans, but their beauty and extent is."
+      "text": "<0>El imperio romano dejó muchos lugares emblemáticos.</0> Su arquitectura y sus habilidades de ingeniería no tenían parangón durante su poderío. El concepto de acueducto no fue ideado por los romanos, pero sí su belleza y extensión."
     },
     "criticalDocuments": {
       "title": "Documentos críticos",
       "fullSpecifications": {
-        "title": "Full Specifications",
-        "text": "No specifications were published for Rome."
+        "title": "Especificaciones completas",
+        "text": "No se ha publicado ningún dato sobre Roma."
       },
       "releasePlan": {
         "title": "Plan de lanzamiento",
@@ -28,23 +28,23 @@
     },
     "testnetGoals": {
       "title": "Objetivos de la testnet",
-      "subtitle": "The goals below are a simplified representation of the Key Results listed in our Release <0>OKR</0>",
+      "subtitle": "Los objetivos que figuran a continuación son una representación simplificada de los resultados clave que figuran en nuestro comunicado <0>OKR</0>",
       "goals": {
         "contentDirectory": {
-          "title": "Build a dynamic, flexible and user friendly content directory",
-          "text": "The Rome testnet is built around the introduction of a new content directory, that can be added to, modified and improved without requiring runtime upgrades. All key results and goals are derived from this."
+          "title": "Construir un directorio de contenidos dinámico, flexible y fácil de usar",
+          "text": "La red de pruebas de Roma se construye en torno a la introducción de un directorio de contenidos nuevo, que puede añadirse, modificarse y mejorarse sin requerir actualizaciones en tiempo de ejecución. Todos los resultados y objetivos clave se derivan de esto."
         },
         "content": {
-          "title": "Populate the content directory with a variety of content",
-          "text": "Rome introduces a Content Directory system that is both built to last, yet still meant to be continuously improved on. We will pay for Content Creators to upload a variety of content and we hope to learn a lot from the results."
+          "title": "Llenar el directorio de contenidos con una variedad de contenidos",
+          "text": "Roma introduce un sistema de directorio de contenidos que está construido para durar, pero que está pensado para ser mejorado continuamente. Pagaremos para que los creadores de contenidos suban una variedad de contenidos y esperamos aprender mucho de los resultados."
         },
         "contentCurator": {
-          "title": "Introduce the new Content Curator role",
-          "text": "With a new Content Directory, and incentives to upload content, we need monitoring. The Content Curators will require staking, and will be paid in both testnet tokens and Monero."
+          "title": "Introducir el nuevo rol de Curador de Contenidos",
+          "text": "Con un nuevo Directorio de Contenidos, y los incentivos para subir contenidos, necesitamos un seguimiento. Los Curadores de Contenido requerirán estacas, y serán pagados tanto en tokens de testnet como en Monero."
         },
         "contentCreator": {
-          "title": "Add Content Creator profiles",
-          "text": "Without Content Creators, there won't be any content. Granted, adding another level on top of the membership requirement may seem like a hurdle, but it will allow users to upload with multiple profiles."
+          "title": "Añadir perfiles de creadores de contenidos",
+          "text": "Sin creadores de contenidos, no habrá contenido. Es cierto que añadir otro nivel además del requisito de afiliación puede parecer un obstáculo, pero permitirá a los usuarios subir con varios perfiles."
         }
       }
     },
@@ -53,7 +53,7 @@
     },
     "map": {
       "title": "Rome",
-      "text": "<0>Rome was the capital of the great Roman Empire during its peak.</0> As with previous testnet names, the Roman Empire and Rome was another important step in the rise of democracy, the rule of law, and modern governance structures.<1/><1/><2><0/> Explore current testnet</2>"
+      "text": "<0>Roma fue la capital del gran Imperio Romano durante su apogeo.</0> Al igual que los nombres de testnet anteriores, el Imperio Romano y Roma fue otro paso importante en el surgimiento de la democracia, el estado de derecho y las estructuras de gobierno modernas.<1/><1/><2><0/> Explora testnet actual</2>"
     }
   }
 }

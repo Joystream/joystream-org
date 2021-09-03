@@ -5,7 +5,7 @@
     },
     "hero": {
       "title": "Red de Sumer",
-      "text": "Among other changes, the Sumer testnet release offers major improvements to content uploads through our playback app."
+      "text": "Entre otros cambios, la versión de prueba de Sumer ofrece importantes mejoras en la carga de contenidos a través de nuestra aplicación de reproducción."
     },
     "criticalDocuments": {
       "title": "Documentos Críticos",
@@ -15,7 +15,7 @@
       },
       "blogPost": {
         "title": "Blog de Anuncio",
-        "text": "Read a brief primer on the Sumer testnet and its objectives."
+        "text": "Lea una breve reseña sobre la red de pruebas Sumer y sus objetivos."
       }
     },
     "testnetGoals": {
@@ -23,25 +23,25 @@
       "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Sumer.",
       "goals": {
         "contentPublishing": {
-          "title": "Enable content publishing from playback interface",
-          "text": "Sumer introduces the ability to create and manage channels and videos in the Joystream Player, replacing the cumbersome and technically challenging CLI-dependent process required on the Antioch testnet."
+          "title": "Habilitar la publicación de contenidos desde la interfaz de reproducción",
+          "text": "Sumer introduce la posibilidad de crear y gestionar canales y vídeos en el Joystream Player, sustituyendo el proceso engorroso y técnicamente difícil dependiente de la CLI que se requiere en la red de pruebas de Antioch."
         },
         "deployingNewContentDirectory": {
-          "title": "Deploying the new content directory",
-          "text": "As part of Sumer we will be introducing a simple native runtime module. This is because technical complexities and tradeoffs associated with the previous iterations of the content directory were not acceptable."
+          "title": "Despliegue del nuevo directorio de contenidos",
+          "text": "Como parte de Sumer, introduciremos un sencillo módulo de ejecución nativo. Esto se debe a que las complejidades técnicas y las compensaciones asociadas a las iteraciones anteriores del directorio de contenidos no eran aceptables."
         },
         "enableBuilderRole": {
-          "title": "Enable builder/platform operations role",
-          "text": "We are introducing a new working group focused on platform operations. Originally, we had also planned to enable the new \"Gateway\" role, though this is no longer in the scope of the Sumer release."
+          "title": "Habilitar el rol de constructor/operador de plataformas",
+          "text":"Estamos introduciendo un nuevo grupo de trabajo centrado en las operaciones de la plataforma. Originalmente, también habíamos planeado habilitar el nuevo rol de \"Gateway\", aunque esto ya no está en el alcance de la versión de Sumer."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Sumer Network"
+      "title": "Roles incentivados para la Red Sumer"
     },
     "map": {
       "title": "Sumer",
-      "text": "<0>Sumer is the earliest known civilization in the historical region of southern Mesopotamia</0>, emerging during the Chalcolithic and early Bronze Ages between the sixth and fifth millennium BC.<1/><1/>Living along the valleys of the Tigris and Euphrates, Sumerian farmers grew an abundance of grain and other crops, the surplus from which enabled them to form urban settlements. The region is thought to be where the earliest forms of writing emerged.<1/><1/><2><0/> Read the blog post</2>"
+      "text": "<0>Sumer es la primera civilización conocida de la región histórica del sur de Mesopotamia</0>, que surgió durante el Calcolítico y los primeros años de la Edad de Bronce, entre el sexto y el quinto milenio a.C.<1/><1/>Los agricultores sumerios, que vivían a lo largo de los valles del Tigris y el Éufrates, cultivaban abundantes cereales y otros productos, cuyos excedentes les permitían formar asentamientos urbanos. Se cree que en esta región surgieron las primeras formas de escritura.<1/><1/><2><0/>Lee la entrada del blog</2>"
     }
   }
 }

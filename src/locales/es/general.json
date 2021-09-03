@@ -2,37 +2,37 @@
   "joystream": "Joystream",
   "button": {
     "getStarted": {
-      "text": "Start earning",
-      "altText": "Join & start earning"
+      "text": "Empieza a ganar",
+      "altText": "Únase y empieza a ganar"
     },
     "download": "Descargar",
-    "close": "Close",
-    "accept": "Accept",
-    "openDiscord": "Open Discord",
-    "learnMore": "Learn More",
-    "gettingStarted": "Getting Started"
+    "close": "Cerrar",
+    "accept": "Aceptar",
+    "openDiscord": "Abrir Discord",
+    "learnMore": "Leer más",
+    "gettingStarted": "Como empezar"
   },
   "rolesData": {
     "validator": "Validator",
-    "council": "Council",
-    "councilMember": "Council Member",
-    "storageProvider": "Storage Provider",
-    "contentCreator": "Content Creator",
-    "contentCurator": "Content Curator",
-    "discoveryProvider": "Discovery Provider",
-    "bandwidthProvider": "Bandwidth Provider",
-    "builder": "Builder",
-    "storageLead" : "Storage Lead",
-    "contentLead" : "Content Lead"
+    "council": "Consejo",
+    "councilMember": "Miembro del Consejo",
+    "storageProvider": "Proveedor de almacenamientor",
+    "contentCreator": "Creador de contenido",
+    "contentCurator": "Curador de contenido",
+    "discoveryProvider": "Proveedor de servicios de descubrimiento",
+    "bandwidthProvider": "Proveedor de Servicios",
+    "builder": "Constructor",
+    "storageLead" : "Jefe de almacenamiento",
+    "contentLead" : "esponsable de creación de contenido"
   },
   "siteMetadata": {
-    "title": "Joystream: The video platform DAO"
+    "title": "Joystream: La plataforma de video DAO"
   },
   "colors": {
-    "joystreamBlue": "Joystream Blue",
-    "white": "White",
-    "joystreamGrey": "Joystream Grey",
-    "black": "Black"
+    "joystreamBlue": "Azul Joystream ",
+    "white": "Blanco",
+    "joystreamGrey": "Gris Joystream",
+    "black": "Negro"
   },
   "CMYK": "CMYK",
   "RGB": "RGB",
@@ -51,66 +51,66 @@
     "seven": "7"
   },
   "roleCard": {
-    "migration": "At migration, {{numberOfUsers}} (max) had this role",
+    "migration": "En la migración, {{numberOfUsers}} (max) had this role",
     "current": "{{numberOfUsers}} run this role on Antioch",
     "most": "At most, {{numberOfUsers}} users occupied this role",
-    "new": "NEW"
+    "new": "NUEVO"
   },
   "heroCard": {
-    "active": "Network announced",
-    "error": "Network down",
-    "info": "Network replaced",
-    "finished": "Network live"
+    "active": "Red anunciada",
+    "error": "Red caída",
+    "info": "Red sustituída",
+    "finished": "Red en vivo"
   },
   "dateCounter": {
-    "week": "week",
-    "weeks": "weeks",
-    "day": "day",
-    "days": "days",
-    "hour": "hour",
-    "hours": "hours",
-    "minute": "minute",
-    "minutes": "minutes",
-    "second": "second",
-    "seconds": "seconds",
-    "month": "month",
-    "months": "months",
-    "year": "year",
-    "years": "years",
-    "timeToLaunch": "Time to launch",
-    "launchedOn": "Launched on"
+    "week": "semana",
+    "weeks": "semanas",
+    "day": "día",
+    "days": "dias",
+    "hour": "hora",
+    "hours": "horas",
+    "minute": "minuto",
+    "minutes": "minutos",
+    "second": "segundo",
+    "seconds": "segundos",
+    "month": "mes",
+    "months": "meses",
+    "year": "año",
+    "years": "años",
+    "timeToLaunch": "Hora del lanzamiento",
+    "launchedOn": "Lanzamiento el"
   },
   "sidebar": {
-    "activeRoles": "Active roles",
-    "upcomingRoles": "Upcoming roles",
-    "viewAllRoles": "View all Roles"
+    "activeRoles": "Funciones activadas",
+    "upcomingRoles": "Próximas funciones",
+    "viewAllRoles": "Ver todas las funciones"
   },
   "navbar": {
-    "product": "Product",
+    "product": "Producto",
     "atlas": "Atlas",
     "pioneer": "Pioneer",
-    "community": "Community",
-    "brandStory": "Brand Story",
-    "brandGuides": "Brand Guides",
-    "downloadAssets": "Download Assets",
-    "about": "About"
+    "community": "Comunidad",
+    "brandStory": "Historia de la marca",
+    "brandGuides": "Guías de la marca",
+    "downloadAssets": "Descargar activos",
+    "about": "Acerca de"
   },
   "footer": {
-    "title": "Stay up to date",
-    "alternateTitle": "Get notified",
-    "subtitle": "Don't worry about spam! Keep track of all important updates",
-    "inputPlaceholder": "Email Address...",
-    "joinNewsletter": "Join the newsletter",
+    "title": "Manténgase al día",
+    "alternateTitle": "Reciba notificaciones",
+    "subtitle": "¡No te preocupes por el spam! Manténgase al tanto de todas las actualizaciones importantes",
+    "inputPlaceholder": "Correo electronico...",
+    "joinNewsletter": "Únase al boletín de noticias",
     "github": {
       "whitepaper": "Whitepaper",
-      "repository": "Repository"
+      "repository": "Registro"
     },
     "usefulLinks": {
-      "title": "Useful links",
-      "hiring": "We are hiring!",
-      "brandGuidance": "Brand guidance"
+      "title": "Enlaces útiles",
+      "hiring": "¡Estamos contrtando!",
+      "brandGuidance": "Orientación de la marca"
     },
-    "followUs": "Follow us"
+    "followUs": "Síguenos"
   },
   "pages": {
     "blog": "Blog",
@@ -118,10 +118,10 @@
     "roles": "Roles",
     "token": "Token",
     "hydra": "Hydra",
-    "foundingMembers": "Founding Members",
-    "leaderboards": "Leaderboards",
-    "scoringForm": "Scoring form",
-    "overview": "Overview"
+    "foundingMembers": "Miembros fundadores",
+    "leaderboards": "Tabla de clasificación",
+    "scoringForm": "ormulario de puntuación",
+    "overview": "Visión general"
   },
   "socials": {
     "twitter": "Twitter",
@@ -129,7 +129,7 @@
     "discord": "Discord"
   },
   "cookiesNotice": {
-    "text": "This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.",
-    "findOutMore": "Find out more ›"
+    "text": "Este sitio utiliza cookies. Al continuar navegando por el sitio, usted acepta el uso que hacemos de las cookies.",
+    "findOutMore": "Más información ›"
   }
 }
