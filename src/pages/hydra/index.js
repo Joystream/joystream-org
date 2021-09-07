@@ -59,8 +59,8 @@ function HydraPage() {
         <Features features={content.Features.features} t={t}/>
       </LayoutWrapper>
       <LayoutWrapper className="Video">
-        <TitleWrapper title={t("hydra.videoTitle")} />
-        <Video src={content.Video.video.src} />
+        <TitleWrapper title={t("hydra.video.title")} />
+        <Video src={content.Video.video.src} subtitle={t("hydra.video.subtitle")} />
       </LayoutWrapper>
       <LayoutWrapper className="GetStarted">
         <TitleWrapper title={t("hydra.getStarted.title")} subtitle={<p>{t("hydra.getStarted.subtitle")}</p>} />

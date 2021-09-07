@@ -94,7 +94,7 @@ const AthensPage = ({ content }) => {
         </TitleWrapper>
 
         <TitleWrapper
-          title="Testnet Goals"
+          title={t('athens.testnetGoals.title')}
           subtitle={
             <>
               <Trans
