@@ -176,6 +176,7 @@ const BountiesCarousel = ({ t }) => {
                     id={bounty?.id}
                     link={bounty?.links[0]}
                     description={bounty?.description}
+                    t={t}
                   />
                 );
               } else {
