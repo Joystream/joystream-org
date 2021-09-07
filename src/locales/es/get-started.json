@@ -31,7 +31,9 @@
         "marketing": "Marketing",
         "research": "Research",
         "contentCreation": "Content Creation",
-        "newcomers": "Newcomers"
+        "newcomers": "Newcomers",
+        "content": "Content",
+        "documentation": "Documentation"
       },
       "roles": {
         "title": "Roles",
