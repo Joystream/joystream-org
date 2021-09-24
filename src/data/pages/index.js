@@ -156,7 +156,7 @@ export const roleCardData = {
 };
 
 export const bountiesLink =
-  'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties-overview/bounties-status.json';
+  'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties/overview/bounties-status.json';
 
 export const testnetData = [
   {
