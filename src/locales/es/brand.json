@@ -10,7 +10,7 @@
       "illustrations": "Ilustraciones",
       "systemIcons": "Iconos del Sistema",
       "typography": "Tipografía",
-      "blogPostCovers": "ortadas de los Blogs",
+      "blogPostCovers": "Portadas de los Blogs",
       "displayTitle": {
         "logoPack": "Logo Pack"
       },
@@ -19,21 +19,21 @@
     "guides": {
       "general": {
         "logo": "Logo",
-        "overview": "Vista General",
+        "overview": "Resumen",
         "logomark": "Logomark",
         "construction": "Construcción",
         "useCases": "Casos de uso",
         "socialIcons": "Social Icons",
         "forbiddenUses": "Usos prohibidos",
         "colorPalettes": "Paleta de colores",
-        "primaryColors": "Colores primarios",
-        "supportivePallet": "Paleta de colores de apoyo",
-        "secondaryPallet": "Paleta de colores secundarios",
+        "primaryColors": "Colores Primarios",
+        "supportivePallet": "Paleta de apoyo",
+        "secondaryPallet": "Paleta secundaria",
         "iconography": "Iconografía",
-        "descriptiveIcons": "Iconos descriptivo",
-        "systemIcons": "Iconos del sistema",
-        "illustrations": "Ilusytraciones",
-        "patterns": "Patrones",
+        "descriptiveIcons": "Iconos Descriptivos",
+        "systemIcons": "Iconos del Sistema",
+        "illustrations": "Ilustraciones",
+        "patterns": "Modelos",
         "typography": "Tipografía",
         "photography": "Fotografía",
         "motion": "Movimiento",
@@ -61,9 +61,9 @@
       "logoUseCases": {
         "title": "03. Casos de uso del logo",
         "originalForm": "El logotipo de Joystream se utiliza principalmente en su forma original sobre fondos blancos, pero también puede utilizarse en sus formas complementarias si es necesario. A continuación se muestran ejemplos de estos casos de uso.",
-        "safeUse": "El uso del logo pequeño",
-        "visualPresentation": "Para garantizar la mejor presentación visual del logotipo, lo mejor es ofrecerlo en tamaños entre <0>200 y 500+px</0> de ancho en dispositivos digitales.",
-        "horizontalNarrow": "El logotipo de Joystream nunca debe ser más estrecho que 100px en digital o 20mm en impresión horisontal.",
+        "safeUse": "El uso seguro más pequeño",
+        "visualPresentation": "Para garantizar la mejor presentación visual del logotipo, se ofrece mejor en tamaños entre <0>200 y 500+px</0> de ancho en dispositivos digitales.",
+        "horizontalNarrow": "El logotipo de Joystream nunca debe ser más estrecho que 100px en digital o 20mm en el bloqueo horizontal de la impresión.",
         "verticalNarrow": "El bloqueo vertical nunca debe ser inferior a 70px en digital o 15mm en impresión."
       },
       "logoSocialIcons": {
@@ -88,7 +88,7 @@
         "purpose": "Nuestra paleta de apoyo está al servicio de la comodidad y la facilidad de uso. Esta paleta ofrece una amplia gama de diferentes tonos de colores primarios y se puede utilizar de muchas maneras diferentes en función de las necesidades."
       },
       "secondaryColors": {
-        "title": "03. Paleta de colores secundarios",
+        "title": "03. Paleta de colores Secundaria",
         "states": "Estos son otros colores que pueden representar ciertos estados de la red, pueden representar un error, un éxito, una advertencia y más."
       },
       "iconsOverview": {
@@ -122,15 +122,15 @@
       "illustrations": {
         "overview": "Las ilustraciones de Joystream son una representación simbólica de conceptos importantes dentro del proyecto Joystream. Pueden incluir una nueva red de pruebas, un papel particular en la red o cualquier otro tema igualmente significativo.",
         "complex": "Pueden ser bastante complejos desde el punto de vista visual a pesar de utilizar solo tres colores y sin degradado.",
-        "patterns": "Las ilustraciones se combinan a menudo con patrones y en el caso de ponerlas sobre un fondo azul, el contorno de la ilustración puede cambiarse a azul Joystream para crear un buen equilibrio de color entre los patrones y el fondo.",
+        "patterns": "Las ilustraciones se combinan a menudo con modelos y en el caso de ponerlas sobre un fondo azul, el contorno de la ilustración puede cambiarse a azul Joystream para crear un buen equilibrio de color entre los patrones y el fondo.",
         "distinctive": "Las ilustraciones deben ser lo suficientemente simples como para ser distintivas incluso en resoluciones menores de hasta 300x300px.",
         "adequateDetail": "La cantidad de detalles debe ser adecuada a lo que la ilustración representa, en la mayoría de los casos deben desplegarse a tamaños no inferiores a 500x500px."
       },
       "patterns": {
-        "translation": "Los patrones son una estrecha traducción de la logomarca (J) en variantes de formas geométricas que representan el flujo de información, la tecnología y la personalidad experimental de la marca Joystream.",
+        "translation": "Los modelos son una estrecha traducción de la logomark (J) en variantes de formas geométricas que representan el flujo de información, la tecnología y la personalidad experimental de la marca Joystream.",
         "supportTool": "Se introdujeron como herramienta de apoyo para resaltar ciertos elementos, para crear ambiente y como elemento inherente a la identidad visual de la marca.",
-        "sixPieces": "Los patrones consisten visualmente en seis piezas diferentes que pueden girarse 90 grados en cualquier dirección pero siempre deben tener siempre las dimensiones de un cuadrado perfecto.",
-        "oneCommonVertex": "TTambién deben tener al menos un vértice común cuando se tocan. No siempre tienen que tocarse y cuando no lo hacen, el espacio entre las piezas debe ser siempre igual a su anchura/altura o al valor multiplicado.",
+        "sixPieces": "Los modelos consisten visualmente en seis piezas diferentes que pueden girarse 90 grados en cualquier dirección pero siempre deben tener siempre las dimensiones de un cuadrado perfecto",
+        "oneCommonVertex": "También deben tener al menos un vértice común cuando se tocan. No siempre tienen que tocarse y cuando no lo hacen, el espacio entre las piezas debe ser siempre igual a su anchura/altura o al valor multiplicado.",
         "howToUse": "Como utlizar los diferentes modelos",
         "oneOfFive": "Los modelos pueden utilizar uno de los cinco colores diferentes, dependiendo del fondo que se utilice debajo y de cuál sea su propósito principal en una situación determinada.",
         "density": "Dependiendo de la situación, pueden utilizarse con mayor o menor densidad.",
@@ -167,7 +167,7 @@
         "linkText": "Visite el sitio Web"
       },
       "description": {
-        "header": "Nuestra identidad de marca consta de unos pocos elementos visuales clave: nuestro logotipo, tipo de letra, ilustraciones, diseños, paleta de colores e iconografía.",
+        "header": "Nuestra identidad de marca consta de unos pocos elementos visuales clave: nuestro logotipo, tipo de letra, ilustraciones, modelos, paleta de colores e iconografía.",
         "meaningfulRole": "Cada uno de estos elementos tiene un papel significativo en la identidad de la marca, tal como se establece en las directrices. Pero la combinación de todos estos componentes construye mucho más que una experiencia visual.",
         "powerfulTool": "La marca Joystream es una poderosa herramienta de comunicación en la que tenemos en cuenta nuestros usuarios ",
         "experimental": "Fundamentalmente, nuestro esfuerzo es experimental; no tenemos todas las respuestas, y queremos ser honestos al respecto en nuestra comunicación.",
@@ -185,7 +185,7 @@
       "explanation": {
         "title": "Explicación de la marca",
         "balance": "Nuestra nueva marca consiste en encontrar un buen equilibrio entre un tono de comunicación muy sencillo con el simbolismo y la complejidad de los problemas y tecnologías del mundo moderno.",
-        "patterns": "Nuestra marca utiliza mosaicos, patrones y formas geométricas combinadas con colores explícitos e ilustraciones simbólicas.",
+        "patterns": "Nuestra marca utiliza mosaicos, modelos y formas geométricas combinadas con colores explícitos e ilustraciones simbólicas.",
         "style": "También desplegamos iconos descriptivos en combinación con iconos de sistema de estilo glífico simple y un estilo de ilustración experimental."
       }
     },

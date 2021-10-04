@@ -4,30 +4,30 @@
       "foundingMembers": "Miembros fundadoress",
       "nonFoundingMembers": "Miembros no fundadores",
       "directScore": "Puntuación directa",
-      "referralScore": "Puntos de referido",
-      "totalScore": "Puntos totales",
-      "inducted": "Incorporo",
+      "referralScore": "Puntuación de referidos",
+      "totalScore": "Puntuación total",
+      "inducted": "Incorporado",
       "member": "Miembro",
-      "backButton": "Vuelta a la página",
+      "backButton": "Vuelta a la página de programa",
       "before": "Antes",
       "account": "Cuenta",
-      "next": "Sigueinte",
-      "howItWorks": "Como funciona.",
+      "next": "Siguiente",
+      "howItWorks": "Cómo funciona.",
       "inputPlaceholder": "e.g. joedoe",
       "inductionDate": "Fecha de incorporación",
       "joinOurDiscord": "Únete a nuestro Discord"
     },
     "scoringPeriod": {
-      "title": "Periodo de puntación",
-      "currentNumber": "Número de periodo",
-      "ends": "ACABA",
-      "endedOn": "ACABA EL",
+      "title": "Periodo de puntación actual",
+      "currentNumber": "Número de periodo actual",
+      "ends": "ACABA EN",
+      "endedOn": "ACABADO  EL",
       "weeks": "SEMANAS",
       "days": "DIAS",
       "hours": "HORAS",
       "minutes": "MINUTOS",
       "submitSummary": "Enviar resumen",
-      "periodAnnouncement": "Anuncio el periodo",
+      "periodAnnouncement": "Anuncio de periodo",
       "announcement": "Anuncio"
     },
     "landing": {
@@ -46,14 +46,14 @@
         "iconAlt": "icono de miembro fundador"
       },
       "benefits": {
-        "title": "Que es el <0/> programa de miembros <0/> y por qué existe?",
+        "title": "¿Qué es el <0/> Programa de Miembros <0/> y por qué existe?",
         "currentlyBuilding": "Aunque Jsgenesis es el equipo que actualmente está construyendo la tecnología detrás del proyecto Joystream, no estaremos para siempre, y en cambio estamos confiando el futuro funcionamiento del DAO de Joystream a los miembros de nuestra comunidad.",
         "foundingMembers": "El Programa de Miembros Fundadores asigna formalmente tokens JOY entre algunos de nuestros miembros de la comunidad de mayor nivel en reconocimiento a sus contribuciones al proyecto y asegura que una comunidad de usuarios suficientemente grande, efectiva y motivada esté lista para ocupar todos los diferentes roles requeridos para ejecutar, evolucionar y hacer crecer la plataforma en mainnet.",
         "benefits": "Beneficios",
         "benefitsAlternate": "Beneficios de convertirte en miembro fundador ",
         "payout": {
           "title": "Tokens",
-          "text": "asignados en el bloque de génesis de la red principal de Joystream como resultado de una participación de alta calidad y del reclutamiento de otros participantes"
+          "text": " Tokens asignados en el bloque génesis de la red principal de Joystream como resultado de una participación de alta calidad y del reclutamiento de otros participantes"
         },
         "membership": {
           "title": "Estado de membresía",
@@ -68,16 +68,16 @@
       "takePart": {
         "title": "Como participar en el programa",
         "introduceYourself": {
-          "text": "Presentate en Discord.",
+          "text": "Preséntate en Discord.",
           "altText": "Preséntate en nuestro Discord"
         },
         "contribute": {
-          "text": "Contribuye al proyecto",
-          "contributions": "<0><0>eseñando a otros participantes</0><0>escribir blogs y documentos</0><0>crear y publicar contenido</0><0>participar en las funciones de la plataforma en la red de pruebas</0><0>encontrar e informar de fallos y errores</0><0>completar las tareas oficiales</0><0>trabajo creativo y de calidad</0></0>"
+          "text": "Realiza contribuciones al proyecto",
+          "contributions": "<0><0>enseñando a otros participantes</0><0>escribiendo blogs y documentos</0><0>creando y publicando contenido</0><0>participando en las funciones de la plataforma en la red de pruebas</0><0>encontrando e informando fallos y errores</0><0>completando las tareas oficiales</0><0>trabajo creativo y de calidad</0></0>"
         },
-        "report": "Inforar regularmente de tus actividades.",
-        "earnPoints": "Gana puntos en la tabla de cllasificación.",
-        "becomeFM": "Hagase socio fundador!",
+        "report": "Informa regularmente de tus actividades.",
+        "earnPoints": "Gana puntos en la tabla de clasificación",
+        "becomeFM": "Conviértete en socio fundador!",
         "buttonText": "Únase al Discord",
         "excluded": "Países que están excluidos de este programa: ",
         "usFlagAlt": "Icono de la bandera de Estados Unidos",
@@ -88,17 +88,17 @@
         "initialTokenPool": "tamaño de la circulación inicial de tokens",
         "numberOfFM": "número de miembros fundadores",
         "numberOfCandidates": "número de candidatos a miembros fundadores",
-        "leaderboards": "Tabla de clasificación",
-        "foundingMembersButton": "Todo los puntos de los miembros fundadores",
+        "leaderboards": "Tablas de clasificación",
+        "foundingMembersButton": "Todas la puntuaciones de los miembros fundadores",
         "regularMembersButton": "Todas las puntuaciones de los miembros regulares",
         "fullProgramRules": "Lea las normas completas del programa"
       },
       "cta": {
         "title": "Comente el programa",
-        "joinDiscord": "Comienza tu andadura como miembro fundador uniéndote a nuestro grupo de Discord y solicitando tus primeros tokens de testnet.",
+        "joinDiscord": "Comienza tu viaje como miembro fundador uniéndote a nuestro grupo de Discord y solicitando tus primeros tokens de la testnet.",
         "askQuestions": "Aquí también puedes preguntar sobre muchos aspectos del programa y descubrir las áreas en las que puedes contribuir de inmediato.",
         "joinNow": "Únase ahora",
-        "imageAlt": "membros fundadores"
+        "imageAlt": "miembros fundadores visual"
       },
       "disclaimer": {
         "title": "Aviso legal",
@@ -117,27 +117,27 @@
       },
       "title": "Enviar el resumen de la actividad",
       "progressItem": {
-        "accountInfo": "Informacón de a cuenta",
+        "accountInfo": "Informacón de la cuenta",
         "keyFile": "Fichero de claves",
         "summary": "Resumen",
         "acceptTerms": "Aceptar lostérminos y condiciones",
         "acceptTermsShort": "Términos y cond."
       },
       "membership": {
-        "membershipHandle": "Nombre del miembro",
-        "avatarAlt": "avtar del miembro fundador"
+        "membershipHandle": "Mango de membresía",
+        "avatarAlt": "avatar del miembro fundador"
       },
       "json": {
-        "exportedAccount": "cuenta exportada con clave",
+        "exportedAccount": "avatar del miembro fundador",
         "howToExport": {
-          "link": "¿Como exportar tu llave?",
-          "title": "Como exportar su cuenta con llave:",
-          "text": "En la <0>Pioneer aplicación</0> haga click en <1>Mis claves</1> y, a continuación, haga clic en la elipsis (tres puntos)en la tecla que desee utilizar. Después haga click en  <1>Crear un archivo de copia de seguridad para esta cuenta</1>. Introduzca su contraseña (si corresponde) y se descargará el JSON."
+          "link": "¿Como exportar tu clave?",
+          "title": "Como exportar tu cuenta con clave:",
+          "text": "En la <0> aplicación Pioneer</0> haga click en <1>Mis claves</1> y, a continuación, haga clic en la elipsis (tres puntos )en la tecla que desee utilizar. Después haga click en  <1>Crear un archivo de copia de seguridad para esta cuenta</1>. Introduzca su contraseña (si corresponde) y se descargará el JSON."
         },
         "fileFormat": "Formato de archivo aceptado: .json"
       },
       "keybaseAndText": {
-        "keybaseHandle": "Nombre de la base de la llave",
+        "keybaseHandle": "Mango de la base de la clave",
         "documentWithSummary": "Documento con el resumen",
         "howToPrepare": {
           "link": "Cómo debería prepararlo?",
@@ -158,13 +158,13 @@
         "text": "En breve procesaremos la información contenida en él y concederemos los puntos de la clasificación para las contribuciones que cumplan los requisitos."
       },
       "error": {
-        "noSuchAccount": "No existe tal cuenta. Inténtalo de nuevo!",
+        "noSuchAccount": "Esta cuenta no existe. Inténtalo de nuevo!",
         "incorrectPassword": "Contraseña incorrecta. Por favor, inténtelo de nuevo!",
         "fileFormat": "Formato de archivo incorrecto. Por favor, inténtelo de nuevo o consulte nuestros consejos sobre cómo exportarlo.",
-        "jsonWrongAccount": "El archivo Json no corresponde a la cuenta dada!",
-        "faultyJson": "El archivo Json tiene componentes incompletos/incorrectos. Intente exportar su cuenta de nuevo!"
+        "jsonWrongAccount": "El archivo json no corresponde a la cuenta dada!",
+        "faultyJson": "El archivo json tiene componentes incompletos/incorrectos. Intente exportar su cuenta de nuevo!"
       },
-      "dropFile": "Envíe su archivo aquí o <0>busque archivo</0>",
+      "dropFile": "Arrastre su archivo aquí o <0>busque un archivo</0>",
       "uploadFile": "Subir archivo"
     }
   }

@@ -4,12 +4,12 @@
       "roles": {
         "blockchain": "Ingeniero Blockchain",
         "frontEnd": "Ingeniero Front-End",
-        "design": "Diseñador(a)",
-        "growth": "Encargado del crecimiento de la comunidad",
+        "design": "Diseñador",
+        "growth": "Crecimiento",
         "core": "Principal",
         "ceo": "CEO",
         "cto": "CTO",
-        "cooAndGrowth": "Director de operaciones encargado del crecimiento de la comunidad",
+        "cooAndGrowth": "COO & Crecimiento",
         "all": "Todos",
         "allMembers": "Todos los miembros"
       }
@@ -24,15 +24,15 @@
     },
     "ourTeam": {
       "title": "Nuestro equipo",
-      "subtitle": "Venimos de diferentes continentes, pero compartimos la pasión por el código abierto, la tecnología blockchain, los sistemas distribuidos, la privacidad y la construcción de una nueva Internet basada en instituciones responsables y bifurcables.",
-      "moreMembers": "Cargar mas miembros del equipo"
+      "subtitle": "Procedemos de diferentes continentes, pero compartimos la pasión por el código abierto, la tecnología blockchain, los sistemas distribuidos, la privacidad y la construcción de un nuevo Internet basado en instituciones responsables y bifurcables.",
+      "moreMembers": "Cargar más miembros del equipo"
     },
     "investors": {
-      "title": "Nuestros inversionistas"
+      "title": "Nuestros inversores"
     },
     "positions": {
       "title": "Posiciones abiertas",
-      "available": "3 trabajos disponibles",
+      "available": "3 vacantes disponibles",
       "join": "Unirse",
       "roles": {
         "frontEnd": "Desarrollador Front-end",

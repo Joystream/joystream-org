@@ -1,10 +1,10 @@
 {
   "acropolis": {
     "siteMetadata": {
-      "description": "Explora la testnet de Acrópolis"
+      "description": "Explora la testnet Acrópolis"
     },
     "hero": {
-      "title": "Red de Acrópolis",
+      "title": "Red Acrópolis",
       "text": "Explora los roles disponibles y escoge el que mejor se adapte a ti. Influye en el desarrollo de la plataforma y gana dinero real en el proceso.",
       "chipText": "¿Qué es esto?"
     },
@@ -31,7 +31,7 @@
       "subtitle": "Los objetivos a continuación son una representación simple de los resultados claves listados en nuestro lanzamiento <0>OKR</0>",
       "goals": {
         "forum": {
-          "title": "Cree y publique un foro en cadena",
+          "title": "Cree y publique un foro on-chain",
           "text": "La plataforma final será creada con múltiples formas para facilitar el intercambio de información y una comunicación tanto pública como privada fácil y segura entre los miembros. El foro es el primer paso que permite a los miembros de la plataforma comunicarse, compartir ideas y debatir."
         },
         "storageNode": {
@@ -44,16 +44,16 @@
         },
         "tranches": {
           "title": "Construya el nodo de almacenamiento con \"tramos\"",
-          "text": "Aunque el directorio de contenido es actualmente pequeño, en algún momento no es factible esperar que todos los proveedores de almacenamiento tengan una replicación completa de todo el contenido. Los tramos permitirían a los proveedores de almacenamiento seleccionar un subconjunto del directorio de contenido, adecuado a sus capacidades."
+          "text": "Aunque el directorio de contenido es actualmente pequeño, en algún momento no es factible esperar que todos los proveedores de almacenamiento tengan una replicación completa de todo el contenido. Los tramos permitirían a los proveedores de almacenamiento seleccionar un subconjunto del directorio de contenido, adecuado a sus capacidades."    
         }
       }
     },
     "roles": {
-      "title": "Funciones disponibles en la testnet de Acrópolis"
+      "title": "Roles disponibles en la testnet Acrópolis"
     },
     "map": {
       "title": "Acrópolis de Atenas",
-      "text": "<0>La Acrópolis es una ciudadela en una colina en el corazón de Atenas.</0> También estaba en el corazón de la Antigua Grecia, una poderosa civilización e imperio. La Acrópolis es famosa por sus edificios antiguos, arquitectura, importancia histórica y es una de las principales atracciones turísticas de Atenas. Está en la lista de la UNESCO \"Sitios del Patrimonio Mundial\".<1/><1/> Elegimos el nombre porque tuvimos que reducir nuestras ambiciones para la siguiente red de pruebas, después de algunos problemas con el lanzamiento de Atenas. Por lo tanto, Acropolis puede considerarse un sub-lanzamiento, a pesar de incluir algunas características nuevas que no están pensadas para Atenas. <1/><1/> <2><0/> Explora la red de Pruebas anterior</2>"
+      "text": "<0>Acrópolis es una ciudadela en una colina en el corazón de Atenas.</0> También estaba en el corazón de la Antigua Grecia, una poderosa civilización e imperio. La Acrópolis es famosa por sus edificios antiguos, arquitectura, importancia histórica y es una de las principales atracciones turísticas de Atenas. Está en la lista de la UNESCO \"Sitios del Patrimonio Mundial\".<1/><1/> Elegimos el nombre porque tuvimos que reducir nuestras ambiciones para la siguiente red de pruebas, después de algunos problemas con el lanzamiento de Atenas. Por lo tanto, Acrópolis puede considerarse un sub-lanzamiento, a pesar de incluir algunas características nuevas que no están pensadas para Atenas. <1/><1/> <2><0/> Explora la testnet anterior</2>"
     }
   }
 }

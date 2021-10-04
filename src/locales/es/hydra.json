@@ -1,16 +1,16 @@
 {
   "hydra": {
     "siteMetadata": {
-      "title": "Hydra - Un marco para nodos de solicitud del substrato",
+      "title": "Hydra - Un framework de nodos de consulta, de Substrate",
       "description": "Inspirado en The Graph, ofrece una forma sencilla de proporcionar potentes consultas GraphQL a los desarrolladores de aplicaciones sobre el estado y el historial de su blockchain Substrate."
     },
     "hero": {
-      "title": "Hydra - Un marco para nodos de solicitud del substrato",
+      "title": "Hydra - Un framework de nodos de consulta, de Substrate",
       "text": "Inspirado en The Graph, ofrece una forma sencilla de proporcionar potentes consultas GraphQL a los desarrolladores de aplicaciones sobre el estado y el historial de su blockchain Substrate."
     },
     "value": {
       "title": "Lo hacemos sencillo",
-      "subtitle": "Construir grandes aplicaciones hablando directamente con un nodo completo de Substrate es imposible, y simplemente intentarlo es lento y difícil.",
+      "subtitle": "Construir grandes aplicaciones hablando directamente con un nodo completo de Substrate es imposible, y intentarlo simplemente es lento y difícil.",
       "values": {
         "slowFetching": {
           "title": "Búsqueda lenta",
@@ -26,7 +26,7 @@
         },
         "noSearch": {
           "title": "Sin búsqueda",
-          "text": "Your chain may have transactional or state commitments to free-text data, but doing real full-text search client-side is not an option."
+          "text": "Su cadena puede tener compromisos transaccionales o de estado con datos de texto libre, pero hacer una verdadera búsqueda de texto completo en el lado del cliente no es una opción."
         },
         "overFetching": {
           "title": "Sobrecarga",
@@ -50,8 +50,8 @@
           "text": "Defina cualquier número de campos de cadena en el esquema de entrada con @fulltext(query: \"myquery\") para buscar en diferentes campos y entidades."
         },
         "filtering": {
-          "title": "Procesamiento",
-          "text": "Cualquier campo de entidad puede utilizarse para el procesamiento de OpenCRUD"
+          "title": "Filtrado",
+          "text": "Cualquier campo de entidad puede utilizarse para el filtrado OpenCRUD"
         },
         "pagination": {
           "title": "Paginación",
@@ -73,8 +73,8 @@
     },
     "videoTitle": "Reproducir videotutorial",
     "getStarted": {
-      "title": "Comience a utilizar Hydra ahora!",
-      "subtitle": "Utilice los siguientes enlaces para conectarse con nosotros y obtener más información.",
+      "title": "¡Empieza a utilizar Hydra ahora!",
+      "subtitle": "Utiliza los siguientes enlaces para conectarse con nosotros y obtener más información.",
       "links": {
         "documentation": {
           "name": "Documentación",
@@ -86,7 +86,7 @@
         },
         "kusamaPlayground": {
           "name": "Kusama Playground",
-          "link": "Ir a la zona de juegos"
+          "link": "Ir al patio de juegos"
         },
         "discord": {
           "name": "Discord",

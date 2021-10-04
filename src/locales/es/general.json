@@ -3,14 +3,14 @@
   "button": {
     "getStarted": {
       "text": "Empieza a ganar",
-      "altText": "Únase y empieza a ganar"
+      "altText": "Únete y empieza a ganar"
     },
     "download": "Descargar",
     "close": "Cerrar",
     "accept": "Aceptar",
     "openDiscord": "Abrir Discord",
-    "learnMore": "Leer más",
-    "gettingStarted": "Como empezar"
+    "learnMore": "Aprender más",
+    "gettingStarted": "Cómo empezar"
   },
   "rolesData": {
     "validator": "Validator",
@@ -20,10 +20,10 @@
     "contentCreator": "Creador de contenido",
     "contentCurator": "Curador de contenido",
     "discoveryProvider": "Proveedor de servicios de descubrimiento",
-    "bandwidthProvider": "Proveedor de Servicios",
+    "bandwidthProvider": "Proveedor de Ancho de Banda",
     "builder": "Constructor",
-    "storageLead" : "Jefe de almacenamiento",
-    "contentLead" : "esponsable de creación de contenido"
+    "storageLead" : "Responsable de almacenamiento",
+    "contentLead" : "Responsable de contenido"
   },
   "siteMetadata": {
     "title": "Joystream: La plataforma de video DAO"
@@ -51,7 +51,7 @@
     "seven": "7"
   },
   "roleCard": {
-    "migration": "En la migración, {{numberOfUsers}} (max) had this role",
+    "migration": "En la migración, {{numberOfUsers}} (max) tuvieron este rol",
     "current": "{{numberOfUsers}} run this role on Antioch",
     "most": "At most, {{numberOfUsers}} users occupied this role",
     "new": "NUEVO"
@@ -59,8 +59,8 @@
   "heroCard": {
     "active": "Red anunciada",
     "error": "Red caída",
-    "info": "Red sustituída",
-    "finished": "Red en vivo"
+    "info": "Red sustituida",
+    "finished": "Red activa"
   },
   "dateCounter": {
     "week": "semana",
@@ -77,13 +77,13 @@
     "months": "meses",
     "year": "año",
     "years": "años",
-    "timeToLaunch": "Hora del lanzamiento",
-    "launchedOn": "Lanzamiento el"
+    "timeToLaunch": "Tiempo para el lanzamiento",
+    "launchedOn": "Lanzado el"
   },
   "sidebar": {
-    "activeRoles": "Funciones activadas",
-    "upcomingRoles": "Próximas funciones",
-    "viewAllRoles": "Ver todas las funciones"
+    "activeRoles": "Roles activos",
+    "upcomingRoles": "Próximos roles",
+    "viewAllRoles": "Ver todos los roles"
   },
   "navbar": {
     "product": "Producto",
@@ -92,22 +92,22 @@
     "community": "Comunidad",
     "brandStory": "Historia de la marca",
     "brandGuides": "Guías de la marca",
-    "downloadAssets": "Descargar activos",
+    "downloadAssets": "Descargar medios",
     "about": "Acerca de"
   },
   "footer": {
-    "title": "Manténgase al día",
-    "alternateTitle": "Reciba notificaciones",
-    "subtitle": "¡No te preocupes por el spam! Manténgase al tanto de todas las actualizaciones importantes",
-    "inputPlaceholder": "Correo electronico...",
-    "joinNewsletter": "Únase al boletín de noticias",
+    "title": "Mantente al día",
+    "alternateTitle": "Será notificado",
+    "subtitle": "¡No te preocupes por el spam! Mantente al tanto de todas las actualizaciones importantes!",
+    "inputPlaceholder": "Correo electrónico...",
+    "joinNewsletter": "Únete al boletín de noticias",
     "github": {
       "whitepaper": "Whitepaper",
-      "repository": "Registro"
+      "repository": "Respositorio"
     },
     "usefulLinks": {
       "title": "Enlaces útiles",
-      "hiring": "¡Estamos contrtando!",
+      "hiring": "¡Estamos contratando!",
       "brandGuidance": "Orientación de la marca"
     },
     "followUs": "Síguenos"
@@ -120,7 +120,7 @@
     "hydra": "Hydra",
     "foundingMembers": "Miembros fundadores",
     "leaderboards": "Tabla de clasificación",
-    "scoringForm": "ormulario de puntuación",
+    "scoringForm": "Formulario de puntuación",
     "overview": "Visión general"
   },
   "socials": {

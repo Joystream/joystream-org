@@ -1,11 +1,11 @@
 {
   "antioch": {
     "siteMetadata": {
-      "description": "Explora la testnet de Antioch"
+      "description": "Explora la testnet Antioch"
     },
     "hero": {
-      "title": "Red de Antioch",
-      "text": "La versión de Antioch busca corregir un error de división de la cadena que, lamentablemente, saboteó la red de prueba anterior."
+      "title": "Red Antioch",
+      "text": "El lanzamiento de Antioch busca corregir un bug de división de la cadena que, lamentablemente, saboteó la red de prueba anterior."
     },
     "heroCard": {
       "title": "REEMPLAZADO POR SUMER EN"
@@ -17,26 +17,26 @@
         "text": "Lea el plan de lanzamiento tal como se hizo durante la etapa de planificación y aprenda más sobre cómo evolucionó el desarrollo."
       },
       "blogPost": {
-        "title": "Blog de Anuncio",
-        "text": "Lea una breve introducción a la testnet de Antioch y sus objetivos."
+        "title": "Blog de Anuncios",
+        "text": "Lea una breve introducción a la testnet Antioch y sus objetivos."
       }
     },
     "testnetGoals": {
       "title": "Objetivos de la testnet",
-      "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Antioch.",
+      "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet Antioch.",
       "goals": {
         "substrateVersion": {
-          "title": "Actualizar la versión Substrate",
-          "text": "<0>Para solucionar el problema de división de la cadena que se encuentra en Babylon, necesitamos actualizar la versión de Substrate en la que se basa nuestra red de <1>v2-rc4</1> a <1>v2.0.1</1></0>"
+          "title": "Actualizar la versión de Substrate",
+          "text": "<0>Para solventar el problema de división de cadena que se encuentra en Babylon, necesitamos actualizar la versión de Substrate en la que se basa nuestra red de <1>v2-rc4</1> a <1>v2.0.1</1></0>"
         }
       }
     },
     "roles": {
-      "title": "Funciones incentivadas para la red de Antioch"
+      "title": "Roles incentivados para la red Antioch"   
     },
     "map": {
       "title": "Antioch",
-      "text": "<0>Antioquía era una antigua ciudad griega en el lado oriental del río Orontes.</0> La posición de la ciudad benefició enormemente a sus ocupantes, sobre todo a casua de tales caracteristicas como el comerio de especias, la Ruta de la Seda y la Ruta Real.<1/><1/>En su apogeo, rivalizó con Alejandría como la ciudad principal del Cercano Oriente. Muchos también consideran que la ciudad es \"la cuna del cristianismo\".<1/><1/><2><0/> Lea el artículo subido</2>"
+      "text": "<0>Antioquía era una antigua ciudad griega en el lado oriental del río Orontes.</0> La posición de la ciudad benefició enormemente a sus ocupantes, sobre todo a casua de tales caracteristicas como el comerio de especias, la Ruta de la Seda y la Ruta Real.<1/><1/>En su apogeo, rivalizó con Alejandría como la ciudad principal del Cercano Oriente. Muchos también consideran que la ciudad es \"la cuna del cristianismo\".<1/><1/><2><0/>  Leer el artículo del blog</2>"
     }
   }
 }

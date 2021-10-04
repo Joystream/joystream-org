@@ -1,25 +1,25 @@
 {
   "athens": {
     "siteMetadata": {
-      "description": "Explore la testnet de Athens"
+      "description": "Explora la testnet Athens"
     },
     "hero": {
-      "title": "Red de Athens",
-      "text": "Explore los roles disponibles y elija el que más le convenga.Influya en el desarrollo de la plataforma y gane dinero real en el proceso..",
+      "title": "Red Athens",
+      "text": "Explora los roles disponibles y elija el que más le convenga. Influya en el desarrollo de la plataforma y gane dinero real en el proceso.",
       "chipText": "¿Que es esto?"
     },
     "heroCard": {
       "text": "DESPUÉS DEL LANZAMIETO DEL 17 / 04 / 19 <0/> LA RED SE ACTUALIZÓ A <1>ACROPOLIS</1> EL"
     },
     "modal": {
-      "title": "Owl of Athena",
-      "text": "<0>En la mitología griega, un pequeño búho (Athene noctua)</0> tradicionalmente representa o acompaña a Athenea, la diosa virgen de la sabidría. Debido a tal asociación, el pájaro — a menudo denominado \"búho de Atenea\" — se ha utilizado como símbolo de conocimiento, sabiduría, perspicacia y erudición en todo el mundo occidental."
+      "title": "Owl of Athena",   
+      "text": "<0>En la mitología griega, un pequeño búho (Athene noctua)</0> tradicionalmente representa o acompaña a Athenea, la diosa virgen de la sabiduría. Debido a tal asociación, el pájaro — a menudo denominado \"búho de Atenea\" — se ha utilizado como símbolo de conocimiento, sabiduría, perspicacia y erudición en todo el mundo occidental."
     },
     "criticalDocuments": {
       "title": "Documentos Críticos",
       "fullSpecifications": {
         "title": "Especificaciones completas",
-        "text": "No se publicaron especificaciones para Athenea."
+        "text": "No se publicaron especificaciones para Athens."
       },
       "releasePlan": {
         "title": "Plan de lanzamiento",
@@ -31,8 +31,8 @@
       "subtitle": "Los siguientes objetivos son una representación simplificada de los resultados clave enumerados en nuestro comunicado. <0>OKR</0>",
       "goals": {
         "media": {
-          "title": "Habilite contenido en la plataforma",
-          "text": "Como una \"plataforma de contenido gobernada por el usuario\", permitir que los usuarios carguen y consuman contenido era un objetivo importante para nosotros."
+          "title": "Habilite contenido en la plataforma", 
+          "text": "Como una \"plataforma de contenido gobernada por el usuario\", permitiendo a los usuarios que carguen y consuman contenido era un objetivo importante para nosotros"
         },
         "memberships": {
           "title": "Introducir plataforma de membresía",
@@ -44,16 +44,16 @@
         },
         "runtimeUpgrade": {
           "title": "Actualice el tiempo de ejecución a través de una votación del Consejo",
-          "text": "La intención era que Jsgenesis creara una propuesta para una <0>actualización del tiempo de ejecución</0> y que el Consejo la votara. Si el Consejo alcanzaba el quórum, las reglas de consenso del sistema se actualizarían automáticamente en tiempo de ejecución. Desafortunadamente, la <1>red Sparta se estrelló</1> antes de llegar a esta fase, y tuvo que empezar Athens  como una nueva cadena con un nuevo bloque génesis."
+          "text": "La intención era que Jsgenesis creara una propuesta para una <0>actualización del runtime</0> y que el Consejo la votara. Si el Consejo alcanzaba el quórum, las reglas de consenso del sistema se actualizarían automáticamente en tiempo de ejecución. Desafortunadamente, la <1>red Sparta se estrelló</1> antes de llegar a esta fase, y tuvo que empezar Athens como una nueva cadena con un nuevo bloque génesis."
         }
       }
     },
     "roles": {
-      "title": "Funciones incentivadas para la red de Athens"
+      "title": "Roles incentivados para la testnet Athens"
     },
     "map": {
       "title": "La ciudad de Atenas",
-      "text": "<0>Atenas es la capital de Grecia.</0> También fue el corazón de la antigua Grecia, una poderosa civilización e imperio. La ciudad sigue dominada por los monumentos del siglo V a.C, como la Acrópolis, una ciudadela en la cima de una colina coronada por edificios antiguos como el templo de las columnas de Partenón. <1/><1/>Elegimos el nombre de Atenas porque, al igual que nuestras redes de prueba anteriores, Mesopotamia y Esparta, la importancia histórica de la antigua Atenas en el desarrollo hacia la democracia moderna y el estado de derecho. <1/><1/> <2> <0/> Expore la red de prueba anterior</2>"
+      "text": "<0>Atenas es la capital de Grecia.</0> También fue el corazón de la antigua Grecia, una poderosa civilización e imperio. La ciudad sigue dominada por los monumentos del siglo V a.C, como la Acrópolis, una ciudadela en la cima de una colina coronada por edificios antiguos como el templo del Partenón con sus columnas. <1/><1/>Elegimos el nombre de Atenas porque, al igual que nuestras redes de prueba anteriores, Mesopotamia y Esparta, la importancia histórica de la antigua Atenas en el desarrollo hacia la democracia moderna y el estado de derecho. <1/><1/> <2> <0/> Expora la testnet anterior</2>"
     }
   }
 }
