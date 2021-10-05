@@ -30,7 +30,10 @@
         "design": "Design",
         "marketing": "Marketing",
         "research": "Research",
-        "contentCreation": "Content Creation"
+        "contentCreation": "Content Creation",
+        "newcomers": "Newcomers",
+        "content": "Content",
+        "documentation": "Documentation"
       },
       "roles": {
         "title": "Roles",

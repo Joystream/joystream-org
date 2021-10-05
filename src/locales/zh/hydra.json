@@ -71,7 +71,10 @@
         }
       }
     },
-    "videoTitle": "Play a video tutorial",
+    "video" : {
+      "title" : "Play a video tutorial",
+      "subtitle" : "Release the Hydra"
+    },
     "getStarted": {
       "title": "Get started with Hydra now!",
       "subtitle": "Use the following links to connect with us and find out even more.",
