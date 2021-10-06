@@ -1,11 +1,11 @@
 {
-  "sumer": {
+  "giza": {
     "siteMetadata": {
-      "description": "Explore the Sumer testnet"
+      "description": "Explore the Giza testnet"
     },
     "hero": {
-      "title": "Sumer Network",
-      "text": "Among other changes, the Sumer testnet release offers major improvements to content uploads through our playback app."
+      "title": "Giza Network",
+      "text": "Alongside other planned enhancements, the Giza release introduces the first iteration of the Storage and Distribution System we will use on mainnet."
     },
     "criticalDocuments": {
       "title": "Critical Documents",
@@ -15,33 +15,33 @@
       },
       "blogPost": {
         "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Sumer testnet and its objectives."
+        "text": "Read a brief primer on the Giza testnet and its objectives."
       }
     },
     "testnetGoals": {
       "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Sumer testnet.",
+      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Giza testnet.",
       "goals": {
-        "contentPublishing": {
-          "title": "Enable content publishing from playback interface",
-          "text": "Sumer introduces the ability to create and manage channels and videos in the Joystream Player, replacing the cumbersome and technically challenging CLI-dependent process required on the Antioch testnet."
+        "goal1": {
+          "title": "Launching V2 of the Storage and Distribution System",
+          "text": "This will include introducing distinct roles for data storage and distribution, as well as a storage system with redundancy and only partial replication of media on nodes, alongside other modifications outlined in the specification."
         },
-        "deployingNewContentDirectory": {
-          "title": "Deploying the new content directory",
-          "text": "As part of Sumer we will be introducing a simple native runtime module. This is because technical complexities and tradeoffs associated with the previous iterations of the content directory were not acceptable."
+        "goal2": {
+          "title": "Content Directory Enhancements",
+          "text": "Within this release, improvements to the content directory system will focus on facilitating some planned community initiatives, cleaning up technical debt, and offering integration with the new storage system."
         },
-        "enableBuilderRole": {
-          "title": "Enable builder/platform operations role",
-          "text": "We are introducing a new working group focused on platform operations. Originally, we had also planned to enable the new \"Gateway\" role, though this is no longer in the scope of the Sumer release."
+        "goal3": {
+          "title": "New Operations Working Groups",
+          "text": "We've seen excellent results from the Operations Working Group enabled on the Sumer testnet. Now, in order to facilitate work on a few different orthogonal areas, or even to just scale up efforts within the same vertical, we are going to add two more new generic Operations Working Groups for Giza."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Sumer Network"
+      "title": "Incentivized Roles for the Giza Network"
     },
     "map": {
-      "title": "Sumer",
-      "text": "<0>Sumer is the earliest known civilization in the historical region of southern Mesopotamia</0>, emerging during the Chalcolithic and early Bronze Ages between the sixth and fifth millennium BC.<1/><1/>Living along the valleys of the Tigris and Euphrates, Sumerian farmers grew an abundance of grain and other crops, the surplus from which enabled them to form urban settlements. The region is thought to be where the earliest forms of writing emerged.<1/><1/><2><0/> Read the blog post</2>"
+      "title": "Giza",
+      "text": "<0>The area in what is now Giza served as the necropolis of several pharaohs who ruled ancient Egypt, during the 2nd millennium BC.</0> Three ancient tombs, constructed in the form of giant pyramids, make up the stunning and globally famed Giza pyramid complex.<1/><1/>These pyramids have served as emblems of Ancient Egypt in the Western imagination for hundreds of years. They were first \"popularised\" in Ancient Greece, when the Great Pyramid was listed by Antipater of Sidon as one of the Seven Wonders of the World.<1/><1/><2><0/> Read the blog post</2>"
     }
   }
 }
