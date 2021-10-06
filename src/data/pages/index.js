@@ -27,6 +27,7 @@ import Athens from '../../assets/svg/athens-owl.svg';
 import Acropolis from '../../assets/svg/acropolis-building.svg';
 import Antioch from '../../assets/svg/antioch-logo.svg';
 import Sumer from '../../assets/svg/sumer-logo.svg';
+import Giza from '../../assets/svg/giza-logo.svg';
 
 export const sharedData = {
   defaultEmail: 'hello@jsgenesis.com',
@@ -159,6 +160,14 @@ export const bountiesLink =
   'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties/overview/bounties-status.json';
 
 export const testnetData = [
+  {
+    Image: Giza,
+    number: 10,
+    name: 'Giza',
+    date: '01.11.2021',
+    state: 'Future',
+    link: '/giza',
+  },
   {
     Image: Sumer,
     number: 9,
