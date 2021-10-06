@@ -50,18 +50,18 @@ const roles = {
 
 const goalsData = [
   {
-    title: 'giza.testnetGoals.goals.goal1.title',
-    text: 'giza.testnetGoals.goals.goal1.text',
+    title: 'giza.testnetGoals.goals.launchStorageAndDistribution.title',
+    text: 'giza.testnetGoals.goals.launchStorageAndDistribution.text',
     state: 'achieved',
   },
   {
-    title: 'giza.testnetGoals.goals.goal2.title',
-    text: 'giza.testnetGoals.goals.goal2.text',
+    title: 'giza.testnetGoals.goals.contentDirectoryEnhancements.title',
+    text: 'giza.testnetGoals.goals.contentDirectoryEnhancements.text',
     state: 'achieved',
   },
   {
-    title: 'giza.testnetGoals.goals.goal3.title',
-    text: 'giza.testnetGoals.goals.goal3.text',
+    title: 'giza.testnetGoals.goals.contentDirectoryEnhancements.title',
+    text: 'giza.testnetGoals.goals.contentDirectoryEnhancements.text',
     state: 'achieved',
   },
 ];

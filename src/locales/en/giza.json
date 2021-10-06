@@ -22,15 +22,15 @@
       "title": "Testnet Goals",
       "subtitle": "The goals listed below are a simplified representation of our main objectives for the Giza testnet.",
       "goals": {
-        "goal1": {
+        "launchStorageAndDistribution": {
           "title": "Launching V2 of the Storage and Distribution System",
           "text": "This will include introducing distinct roles for data storage and distribution, as well as a storage system with redundancy and only partial replication of media on nodes, alongside other modifications outlined in the specification."
         },
-        "goal2": {
+        "contentDirectoryEnhancements": {
           "title": "Content Directory Enhancements",
           "text": "Within this release, improvements to the content directory system will focus on facilitating some planned community initiatives, cleaning up technical debt, and offering integration with the new storage system."
         },
-        "goal3": {
+        "newOperationsWorkingGroups": {
           "title": "New Operations Working Groups",
           "text": "We've seen excellent results from the Operations Working Group enabled on the Sumer testnet. Now, in order to facilitate work on a few different orthogonal areas, or even to just scale up efforts within the same vertical, we are going to add two more new generic Operations Working Groups for Giza."
         }
