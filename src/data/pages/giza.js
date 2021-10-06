@@ -60,8 +60,8 @@ const goalsData = [
     state: 'achieved',
   },
   {
-    title: 'giza.testnetGoals.goals.contentDirectoryEnhancements.title',
-    text: 'giza.testnetGoals.goals.contentDirectoryEnhancements.text',
+    title: 'giza.testnetGoals.goals.newOperationsWorkingGroups.title',
+    text: 'giza.testnetGoals.goals.newOperationsWorkingGroups.text',
     state: 'achieved',
   },
 ];
