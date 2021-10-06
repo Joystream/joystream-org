@@ -64,7 +64,7 @@ const GizaPage = ({ content }) => {
             <Pane
               image={BlogImg}
               title={t('giza.criticalDocuments.blogPost.title')}
-              href="https://blog.joystream.org/giza-announced/"
+              href="https://blog.joystream.org/announcing-giza/"
               target="_blank"
             >
               {t('giza.criticalDocuments.blogPost.text')}
