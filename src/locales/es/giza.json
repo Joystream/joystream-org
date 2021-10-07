@@ -1,0 +1,47 @@
+{
+    "giza": {
+      "siteMetadata": {
+        "description": "Explora la testnet Giza"
+      },
+      "hero": {
+        "title": "Giza Network",
+        "text": "Además de otras mejoras previstas, la versión de Giza introduce la primera versión del sistema de almacenamiento y distribución que utilizaremos en la red principal."
+      },
+      "criticalDocuments": {
+        "title": "Documentos críticos",
+        "releasePlan": {
+          "title": "Plan de lanzamiento",
+          "text": "Lea el plan de lanzamiento tal y como se hizo durante la fase de planificación, y conozca mejor la evolución del desarrollo."
+        },
+        "blogPost": {
+          "title": "Anuncio de publicaciones de blogs",
+          "text": "Lea una breve explicación sobre la red de pruebas de Giza y sus objetivos."
+        }
+      },
+      "testnetGoals": {
+        "title": "Objetivos de la Testnet",
+        "subtitle": "Las metas enumeradas a continuación son una representación simplificada de nuestros principales objetivos para la red de pruebas Giza.",
+        "goals": {
+          "launchStorageAndDistribution": {
+            "title": "Lanzamiento de la V2 del sistema de almacenamiento y distribución",
+            "text": "Esto incluirá la introducción de funciones distintas para el almacenamiento y la distribución de datos, así como un sistema de almacenamiento con redundancia y una replicación sólo parcial de los medios en los nodos, junto con otras modificaciones señaladas en el reglamento de condiciones."
+          },
+          "contentDirectoryEnhancements": {
+            "title": "Mejoras en el directorio de comunicación",
+            "text": "En esta versión, las mejoras del sistema de contenido del directorio se centrarán en facilitar algunas iniciativas comunitarias planificadas, limpiar la deuda técnica y ofrecer la integración con el nuevo sistema de almacenamiento."
+          },
+          "newOperationsWorkingGroups": {
+            "title": "Nuevos grupos de trabajo de operaciones",
+            "text": "Hemos visto excelentes resultados del Grupo de Trabajo de Operaciones habilitado en la red de pruebas de Sumer. Ahora, para facilitar el trabajo en diferentes áreas ortogonales, o incluso para ampliar los esfuerzos dentro de la misma vertical, vamos a añadir dos nuevos grupos de trabajo de operaciones genéricos para Giza."
+          }
+        }
+      },
+      "roles": {
+        "title": "Funciones incentivadas para la Red Giza"
+      },
+      "map": {
+        "title": "Giza",
+        "text": "<0>La zona de lo que hoy se conoce como Giza fue la necrópolis de varios faraones que gobernaron el antiguo Egipto durante el segundo milenio a.C.</0> Tres antiguas tumbas, construidas en forma de pirámides gigantes, conforman el impresionante y mundialmente famoso complejo de pirámides de Giza.<1/><1/>Estas pirámides han servido como emblema del antiguo Egipto en la imaginación occidental durante cientos de años. Se \"popularizaron\" por primera vez en la antigua Grecia, cuando la Gran Pirámide fue catalogada por Antípatro de Sidón como una de las Siete Maravillas del Mundo.<1/><1/><2><0/>Lee la entrada del blog</2>r"
+      }
+    }
+  }

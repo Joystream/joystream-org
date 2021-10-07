@@ -1,0 +1,47 @@
+{
+    "giza": {
+      "siteMetadata": {
+        "description": "Explore the Giza testnet"
+      },
+      "hero": {
+        "title": "Giza Network",
+        "text": "Alongside other planned enhancements, the Giza release introduces the first iteration of the Storage and Distribution System we will use on mainnet."
+      },
+      "criticalDocuments": {
+        "title": "Critical Documents",
+        "releasePlan": {
+          "title": "Release Plan",
+          "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        },
+        "blogPost": {
+          "title": "Announcement Blog Post",
+          "text": "Read a brief primer on the Giza testnet and its objectives."
+        }
+      },
+      "testnetGoals": {
+        "title": "Testnet Goals",
+        "subtitle": "The goals listed below are a simplified representation of our main objectives for the Giza testnet.",
+        "goals": {
+          "launchStorageAndDistribution": {
+            "title": "Launching V2 of the Storage and Distribution System",
+            "text": "This will include introducing distinct roles for data storage and distribution, as well as a storage system with redundancy and only partial replication of media on nodes, alongside other modifications outlined in the specification."
+          },
+          "contentDirectoryEnhancements": {
+            "title": "Content Directory Enhancements",
+            "text": "Within this release, improvements to the content directory system will focus on facilitating some planned community initiatives, cleaning up technical debt, and offering integration with the new storage system."
+          },
+          "newOperationsWorkingGroups": {
+            "title": "New Operations Working Groups",
+            "text": "We've seen excellent results from the Operations Working Group enabled on the Sumer testnet. Now, in order to facilitate work on a few different orthogonal areas, or even to just scale up efforts within the same vertical, we are going to add two more new generic Operations Working Groups for Giza."
+          }
+        }
+      },
+      "roles": {
+        "title": "Incentivized Roles for the Giza Network"
+      },
+      "map": {
+        "title": "Giza",
+        "text": "<0>The area in what is now Giza served as the necropolis of several pharaohs who ruled ancient Egypt, during the 2nd millennium BC.</0> Three ancient tombs, constructed in the form of giant pyramids, make up the stunning and globally famed Giza pyramid complex.<1/><1/>These pyramids have served as emblems of Ancient Egypt in the Western imagination for hundreds of years. They were first \"popularised\" in Ancient Greece, when the Great Pyramid was listed by Antipater of Sidon as one of the Seven Wonders of the World.<1/><1/><2><0/> Read the blog post</2>"
+      }
+    }
+  }
