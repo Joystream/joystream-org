@@ -15,7 +15,8 @@
       "howItWorks": "How it works.",
       "inputPlaceholder": "e.g. joedoe",
       "inductionDate": "Induction Date",
-      "joinOurDiscord": "Join our Discord"
+      "joinOurDiscord": "Join our Discord",
+      "earnMorePoints": "Earn more points?"
     },
     "scoringPeriod": {
       "title": "Current scoring period",

@@ -203,7 +203,16 @@ const FoundingMembersForm = ({ t }) => {
           <h3 className="FoundingMembersFormPage__form__submitted__title margin-bottom-XS">
             {t('foundingMembers.form.success.title')}
           </h3>
-          <p className="FoundingMembersFormPage__form__submitted__text">{t('foundingMembers.form.success.text')}</p>
+          <p className="FoundingMembersFormPage__form__submitted__text">
+            {t('foundingMembers.form.success.text')}
+          </p>
+          <ArrowButton
+            className="FoundingMembersFormPage__form__button"
+            text={t('foundingMembers.general.earnMorePoints')}
+            link="https://4m7n05q7xlr.typeform.com/to/wZwTaH9R"
+            target="_blank"
+            style={{ maxWidth: "320px" }}
+          />
         </div>
       );
     }

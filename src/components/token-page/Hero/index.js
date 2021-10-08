@@ -45,7 +45,7 @@ const TokenHero = ({ statusServerData }) => {
             <>
               <TokenStatsItem title={t('token.hero.tokenStats.exchangeRate')} value={`$${statusServerData.price.toFixed(7)}`} />
               <TokenStatsItem title={t('token.hero.tokenStats.backingValue')} value={`$${statusServerData.dollarPool.size.toFixed(2)}`} />
-              <TokenStatsItem title={t('token.hero.tokenStats.supply')} value={`$${parseBalance(statusServerData.totalIssuance)}`} />
+              <TokenStatsItem title={t('token.hero.tokenStats.supply')} value={`${parseBalance(statusServerData.totalIssuance)}`} />
             </>
           ) : (
             <>

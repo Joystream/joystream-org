@@ -33,7 +33,8 @@
         "contentCreation": "Content Creation",
         "newcomers": "Newcomers",
         "content": "Content",
-        "documentation": "Documentation"
+        "documentation": "Documentation",
+        "translation" : "Translation"
       },
       "roles": {
         "title": "Roles",
