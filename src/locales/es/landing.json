@@ -1,30 +1,30 @@
 {
   "landing": {
     "siteMetadata": {
-      "description": "Joystream es una plataforma de vídeo controlada y operada por sus usuarios."
+      "description": "Joystream es una plataforma de vídeo controlada, poseída y operada por sus usuarios."
     },
     "hero": {
       "title": "La plataforma de vídeo DAO",
-      "subtitle": "oystream es una plataforma de vídeo controlada,<0/> de propiedad, y operativa por los usuarios",
+      "subtitle": "Joystream es una plataforma de vídeo controlada,<0/> poseída, y operada por sus usuarios",
       "metrics": {
-        "mainTitle": "Métricas para la red de prueba",
+        "mainTitle": "Métricas de la testnet",
         "titles": {
           "participationPayout": "Pago por participación",
           "activeValidators": "Validadores actios",
-          "blockHeight": "Nivel del bloque",
-          "memberships": "Membresía"
+          "blockHeight": "Altura del bloque",
+          "memberships": "Membresías"
         }
       }
     },
     "becomeFM": {
-      "subtitle": "Nuestro nuevo e incomparable sistema de distribución de fichas comunitarias",
-      "title": "Conviértase en miembro fundador para ganar tokens de la red principal e influir en el desarrollo de la plataforma.",
-      "alternateTitle": "Conviértase en miembro fundador y tenga un impacto tangible en el desarrollo de nuestra plataforma.",
+      "subtitle": "Nuestro nuevo e incomparable sistema de distribución de community tokens",
+      "title": "Conviértete en miembro fundador para ganar tokens de la red principal e influir en el desarrollo de la plataforma.",
+      "alternateTitle": "Conviértete en miembro fundador y ten un impacto tangible en el desarrollo de nuestra plataforma.",
       "link": "Más información sobre nuestro generoso programa"
     },
     "whatWeDo": {
       "subtitle": "Nuestra motivación para construir el protocolo Joystream",
-      "title": "Solicitamos un sistema en el que las plataformas de los medios de comunicación rindan cuentas a las personas a las que afectan.",
+      "title": "Pedimos un acuerdo en el que las plataformas de medios rindan cuentas a las personas a las que afectan.",
       "link": "Lea nuestro manifiesto"
     },
     "whyYouShouldJoin": {
@@ -40,15 +40,15 @@
         },
         "reputationAndSkill": {
           "title": "Reputación y habilidades",
-          "text": "Adquirir los conocimientos necesarios para participar en la red principal"
+          "text": "Adquiere los conocimientos necesarios para participar en la red principal"
         }
       }
     },
     "exploreJoystream": {
-      "title": "Explore Joystream Ahora",
-      "subtitle": "Dos aplicaciones en rápida evolución para el consumo de contenidos y actividades de gobierno.",
+      "title": "Explora Joystream Ahora",
+      "subtitle": "Dos aplicaciones en rápida evolución para el consumo de contenidos y actividades de gobernanza.",
       "atlas": {
-        "text": "Atlas es la principal aplicación de consumo y publicación de contenidos de Joystream. Mira vídeos, sigue a los creadores y descubre nuevos contenidos destacados, o crea un canal y construye tu audiencia.",
+        "text": "Atlas es la aplicación insignia de consumo y publicación de contenidos de Joystream. Mira vídeos, sigue a los creadores y descubre nuevos contenidos destacados, o crea un canal y construye tu audiencia.",
         "link": "Prueba Atlas",
         "imageAlt": "visión general de Atlas"
       },
@@ -59,20 +59,20 @@
       }
     },
     "roadToMainnet": {
-      "title": "Rumbo a la red principal",
+      "title": "Rumbo a la mainnet",
       "testnetState": {
-        "Current": "Red de prueba atual",
-        "Past": "Red de prueba pasada",
-        "Future": "Red de prueba futura"
+        "Current": "Testnet actual",
+        "Past": "Testnet anterior",
+        "Future": "Próxima testnet"
       },
       "released": {
-        "Current": "Publicado el",
-        "Past": "Publicado el ",
-        "Future": "Estará en vivo el"
+        "Current": "Lanzada el",
+        "Past": "Lanzado el ",
+        "Future": "Estará activa el"
       },
       "testnets": {
         "Sparta": {
-          "title": "Testnet de Sparta",
+          "title": "Testnet Sparta",
           "text": "Sparta es nuestra segunda red de pruebas, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Sparta"
         },
@@ -88,7 +88,7 @@
         },
         "Rome": {
           "title": "Rome testnet",
-          "text": "Roma es nuestra quinta red de prueba, que introduce una serie de importantes mejoras técnicas.",
+          "text": "Roma es nuestra quinta red de pruebas, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Rome"
         },
         "Constantinople": {
@@ -97,7 +97,7 @@
           "explore": "Explore Constantinople"
         },
         "Alexandria": {
-          "title": "Testnet de Alexandria",
+          "title": "Testnet Alexandria",
           "text": "Alexandria es nuestra segunda séptima, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Alexandria"
         },

@@ -4,7 +4,7 @@
       "description": "Lea el Manifiesto de Joystream"
     },
     "hero": {
-      "title": "El manifiesto de Joystream",
+      "title": "El Manifiesto de Joystream",
       "text": "Nuestro Manifiesto expone tanto los problemas que, en nuestra opinión, están asociados a las plataformas de medios digitales en su forma actual, como la solución que proponemos para estos problemas."
     },
     "problem": {
@@ -20,7 +20,7 @@
     "goal": {
       "title": "Objetivo",
       "text": {
-        "arrangement": "Pedimos un régimen en el que las plataformas de medios de comunicación sean responsables ante las personas a las que afectan, que son principalmente sus usuarios, ya sea como consumidores, creativos, desarrolladores de terceros o trabajadores.",
+        "arrangement": "Pedimos un régimen en el que las plataformas de medios de comunicación sean responsables ante las personas a las que afectan, que son principalmente sus usuarios, ya sea como consumidores, creativos, terceros desarrolladores o trabajadores.",
         "accountability": "La ausencia de esa responsabilidad es la fuente fundamental de cualquier problema concreto en un momento determinado."
       }
     },
@@ -31,7 +31,7 @@
       }
     },
     "wedge": {
-      "title": "La Wedge",
+      "title": "La Cuña",
       "text": {
         "alternative": "En primer lugar está la cuestión de cómo crear una alternativa desde cero ante las particularidades de la plataforma, que hacen que cualquier nueva plataforma sea casi inútil, independientemente de sus características inherentes. El proceso de hacer este tipo de bootstrapping ha sido históricamente sobre todo un arte, donde el éxito rara vez ha sido reproducible.",
         "blockchainTokens": "Creemos que los tokens de blockchain, ganados por los primeros participantes y emitidos por ellos, han demostrado ser extremadamente eficaces para movilizar, integrar y motivar a una comunidad internacional y dinámica.",
@@ -46,9 +46,9 @@
       }
     },
     "voice": {
-      "title": "La palabra",
+      "title": "Voz",
       "text": {
-        "improveWithin": "La palabra es el método para tratar de mejorar o reformar el funcionamiento de una institución desde dentro. Su eficacia depende de la capacidad de compartir información fiable con otros miembros y de influir en los procesos de gobernanza interna. Las plataformas mediáticas actuales no ofrecen a los usuarios ninguna de las dos cosas.",
+        "improveWithin": "La voz es el método para tratar de mejorar o reformar el funcionamiento de una institución desde dentro. Su eficacia depende de la capacidad de compartir información fiable con otros miembros y de influir en los procesos de gobernanza interna. Las plataformas de medios actuales no ofrecen a los usuarios ninguna de las dos cosas.",
         "infrastructure": "Creemos que las cadenas de bloques proporcionan una infraestructura organizativa y económica que puede resolver ambos problemas. La historia pública, verificable e inmutable de los registros económicos y administrativos, proporciona una base excelente para que los usuarios comprendan el estado actual y pasado de la plataforma. Esto permite a cualquiera hacer afirmaciones incontestables sobre hechos y circunstancias relevantes.",
         "control": "Además, los tokens de la cadena de bloques nos permiten hacer inseparables el uso y el control de una plataforma, dando a los usuarios un asiento automático en la mesa para deliberar sobre las decisiones a nivel de plataforma.",
         "signWithCrypto": "Todo lo que se requiere para establecer, ejercer o transferir la capacidad de participar en dicha actividad, es la capacidad de firmar mensajes con claves criptográficas identificables. Una contratación perfectamente fiable proporciona a un conjunto amplio, dinámico y sin restricciones de usuarios los medios para gobernar la plataforma. Esto puede servir para una amplia gama de propósitos, como emprender proyectos, regular la participación en diferentes roles formalmente especificados, o incluso actualizar las propias reglas institucionales. Esta integración de la contratación fiable en los raíles económicos proporciona una infraestructura organizativa mucho más acorde con nuestros objetivos de control inclusivo que la infraestructura normal basada en la confianza jurisdiccional."

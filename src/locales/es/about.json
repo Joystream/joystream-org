@@ -9,7 +9,7 @@
         "core": "Principal",
         "ceo": "CEO",
         "cto": "CTO",
-        "cooAndGrowth": "COO & Crecimiento",
+        "cooAndGrowth": "COO y Crecimiento",
         "all": "Todos",
         "allMembers": "Todos los miembros"
       }
@@ -24,15 +24,15 @@
     },
     "ourTeam": {
       "title": "Nuestro equipo",
-      "subtitle": "Procedemos de diferentes continentes, pero compartimos la pasión por el código abierto, la tecnología blockchain, los sistemas distribuidos, la privacidad y la construcción de un nuevo Internet basado en instituciones responsables y bifurcables.",
-      "moreMembers": "Cargar más miembros del equipo"
+      "subtitle": "Venimos de diferentes continentes, pero compartimos la pasión por el código abierto, la tecnología blockchain, los sistemas distribuidos, la privacidad y la construcción de una nueva Internet basada en instituciones responsables y bifurcables.",
+      "moreMembers": "Cargar mas miembros del equipo"
     },
     "investors": {
-      "title": "Nuestros inversores"
+      "title": "Nuestros inversionistas"
     },
     "positions": {
       "title": "Posiciones abiertas",
-      "available": "3 vacantes disponibles",
+      "available": "3 trabajos disponibles",
       "join": "Unirse",
       "roles": {
         "frontEnd": "Desarrollador Front-end",

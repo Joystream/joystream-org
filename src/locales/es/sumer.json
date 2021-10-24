@@ -4,8 +4,8 @@
       "description": "Explora la testnet de Sumer"
     },
     "hero": {
-      "title": "Red de Sumer",
-      "text": "Entre otros cambios, la versión de prueba de Sumer ofrece importantes mejoras en la carga de contenidos a través de nuestra aplicación de reproducción."
+      "title": "Red Sumer",
+      "text": "Entre otros cambios, el lanzamiento de la red de pruebas Sumer ofrece importantes mejoras en la carga de contenidos a través de nuestra aplicación de reproducción."
     },
     "criticalDocuments": {
       "title": "Documentos Críticos",
@@ -14,13 +14,13 @@
         "text": "Lea el plan de lanzamiento tal como se hizo durante la etapa de planificación y aprenda más sobre cómo evolucionó el desarrollo."
       },
       "blogPost": {
-        "title": "Blog de Anuncio",
+        "title": "Blog de Anuncios",
         "text": "Lea una breve reseña sobre la red de pruebas Sumer y sus objetivos."
       }
     },
     "testnetGoals": {
       "title": "Objetivos de la testnet",
-      "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet de Sumer.",
+      "subtitle": "Las metas que se enumeran a continuación son una representación simplificada de nuestros principales objetivos para la testnet Sumer.",
       "goals": {
         "contentPublishing": {
           "title": "Habilitar la publicación de contenidos desde la interfaz de reproducción",
@@ -41,7 +41,7 @@
     },
     "map": {
       "title": "Sumer",
-      "text": "<0>Sumer es la primera civilización conocida de la región histórica del sur de Mesopotamia</0>, que surgió durante el Calcolítico y los primeros años de la Edad de Bronce, entre el sexto y el quinto milenio a.C.<1/><1/>Los agricultores sumerios, que vivían a lo largo de los valles del Tigris y el Éufrates, cultivaban abundantes cereales y otros productos, cuyos excedentes les permitían formar asentamientos urbanos. Se cree que en esta región surgieron las primeras formas de escritura.<1/><1/><2><0/>Lee la entrada del blog</2>"
+      "text": "<0>Sumeria es la primera civilización conocida de la región histórica del sur de Mesopotamia</0>, que surgió durante el Calcolítico y los primeros años de la Edad de Bronce, entre el sexto y el quinto milenio a.C.<1/><1/>Los agricultores sumerios, que vivían a lo largo de los valles del Tigris y el Éufrates, cultivaban abundantes cereales y otros productos, cuyos excedentes les permitían formar asentamientos urbanos. Se cree que en esta región surgieron las primeras formas de escritura.<1/><1/><2><0/>Leer la entrada del blog</2>"
     }
   }
 }
