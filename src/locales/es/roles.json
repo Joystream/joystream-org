@@ -1,11 +1,11 @@
 {
   "roles": {
     "siteMetadata": {
-      "description": "Más información sobre las funciones actuales y futuras de la plataforma Joystream"
+      "description": "Leer más acerca de las funciones actuales y futuras de la plataforma Joystream"
     },
     "hero": {
-      "title": "Elija su función preferida",
-      "text": "Participar en una función de nuestra red de pruebas te permite ganar tJOY mientras influyes en el desarrollo continuo de la plataforma."
+      "title": "Elija su rol preferido",
+      "text": "Participar en un rol de nuestra testnet te permite ganar tJOY mientras influyes en el desarrollo continuo de la plataforma."
     },
     "validator": {
       "title": "Validador",
@@ -17,13 +17,13 @@
       "requirements": {
         "setupAndMaintainInfrastructure": "Experiencia en la configuración y el mantenimiento de infraestructuras informáticas de alto rendimiento",
         "accessToPerformantInfrastructure": "Acceso a una infraestructura informática de alto rendimiento y fiabilidad, con gran capacidad de almacenamiento, ancho de banda (ascendente y descendente) y procesamiento",
-        "storeKeys": "Capacidad para almacenar de forma segura las llaves",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "storeKeys": "Capacidad para almacenar de forma segura las claves",
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerlo en stake"
       }
     },
     "councilMember": {
       "title": "Miembro del Consejo",
-      "overview": "En el centro del proceso de gobernanza de la plataforma está el sistema de propuestas, que permite a cualquier persona presentar alguna sugerencia para cambiar el estado o la política de la plataforma de alguna manera. Estas propuestas son procesadas y votadas por un consejo, en el que los participantes se denominan miembros del consejo. Un puesto en el consejo se gana a través de un proceso de elección, y dura algún tiempo hasta una nueva elección.",
+      "overview": "En el corazón del proceso de gobernanza en la plataforma está el sistema de propuestas, que permite a cualquier persona presentar alguna sugerencia para cambiar el estado o la política de la plataforma de alguna manera. Estas propuestas son procesadas y votadas por un consejo, en el que los participantes se denominan miembros del consejo. Un puesto en el consejo se gana a través de un proceso de elección, y dura algún tiempo hasta una nueva elección.",
       "responsibilities": {
         "discussProposals": "Discutir el contenido y los méritos de las propuestas entrantes, abarcando una amplia gama de temas",
         "vote": "Votación de las propuestas",
@@ -44,23 +44,23 @@
       "requirements": {
         "setupAndMaintainInfrastructure": "Experiencia en la configuración y el mantenimiento de infraestructuras informáticas de alto rendimiento",
         "accessToPerformantInfrastructure": "Acceso a una infraestructura informática de alto rendimiento y fiabilidad con gran capacidad de almacenamiento",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerlo en stake"
       }
     },
     "storageLead": {
-      "title": "Jefe de almacén",
+      "title": "Jefe de almacenamiento",
       "overview": "El Jefe de Almacenamiento es contratado directamente por el Consejo a través del sistema de propuestas y se dedica a la contratación, despido y gestión más amplia de los Proveedores de Almacenamiento en la red.",
       "responsibilities": {
-        "storageProviderPerformance": "El jefe de almacenamiento es responsable de garantizar que los proveedores de almacenamiento funcionen adecuadamente. Cada uno de ellos debe mantener una copia completa y actualizada del directorio de contenidos y garantizar el tiempo de actividad para poder servir eficazmente a los consumidores de contenidos."
+        "storageProviderPerformance": "El Jefe de Almacenamiento es responsable de garantizar que los proveedores de almacenamiento funcionen adecuadamente. Cada uno de ellos debe mantener una copia completa y actualizada del directorio de contenidos y garantizar el tiempo de actividad para poder servir eficazmente a los consumidores de contenidos."
       },
       "requirements": {
         "setupAndMaintainInfrastructure": "Experiencia en la configuración y el mantenimiento de infraestructuras informáticas de alto rendimiento",
         "managementAndCoordination": "Capacidad para gestionar y coordinar eficazmente las acciones de los Proveedores de Almacenamiento",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     },
     "contentCurator": {
-      "title": "Curador de contenidos",
+      "title": "Curador de contenido",
       "overview": "Todo el contenido multimedia publicado en la plataforma vive en un directorio de contenidos en la cadena. Hay una serie de tipos de contenido diferentes, y cada tipo tiene un esquema para una rica descripción de su estructura, función y políticas. Para el uso eficaz de los contenidos, por ejemplo en la representación, el descubrimiento y la monetización, es fundamental garantizar la validez de la información publicada para todos los contenidos. En particular, también es importante resolver las posibles disputas sobre la propiedad y la presencia de cualquier contenido en la plataforma. Es tarea de los curadores de contenidos realizar el trabajo que conllevan los procesos que abordan estos objetivos.",
       "responsibilities": {
         "monitorContent": "Supervisar la publicación de nuevos contenidos en el directorio de contenidos y responder a los informes sobre publicaciones impugnadas",
@@ -70,18 +70,18 @@
       },
       "requirements": {
         "adjudicateDisputes": "Resolver los conflictos de forma justa y establecer una comunicación clara y transparente con las partes involucradas y los actores.",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     },
     "contentCreator": {
       "title": "Content Creator",
-      "overview": "Todo el contenido multimedia publicado en la plataforma vive en un directorio de contenidos en la cadena. Hay una serie de tipos de contenido diferentes, y cada tipo tiene un esquema para una rica descripción de su estructura, función y políticas. Para el uso eficaz de los contenidos, por ejemplo en la representación, el descubrimiento y la monetización, es fundamental garantizar la validez de la información publicada para todos los contenidos. En particular, también es importante resolver las posibles disputas sobre la propiedad y la presencia de cualquier contenido en la plataforma. Es tarea de los curadores de contenidos realizar el trabajo que conllevan los procesos que abordan estos objetivos.",
+      "overview": "Como plataforma de vídeo, uno de los activos más importantes de la plataforma es el contenido publicado en ella. Hay una serie de tipos de contenido diferentes, y cada tipo tiene un esquema para una rica descripción de su estructura, función y políticas. Para el uso eficaz de los contenidos, por ejemplo en la representación, el descubrimiento y la monetización, es fundamental garantizar la validez de la información publicada para todos los contenidos. En particular, también es importante resolver las posibles disputas sobre la propiedad y la presencia de cualquier contenido en la plataforma. Es tarea de los curadores de contenidos realizar el trabajo que conllevan los procesos que abordan estos objetivos.",
       "responsibilities": {
-        "publishContent": "Publicar contenidos y crear una audiencia"
+        "publishContent": "Publicar contenido y crear una audiencia"
       },
       "requirements": {
         "publishContent": "Tener derecho a publicar contenidos ya existentes o nuevos en la plataforma",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     },
     "contentLead": {
@@ -95,7 +95,7 @@
       },
       "requirements": {
         "adjudicateDisputes": "Resolver los conflictos de forma justa y comunicarse de forma clara y transparente con las partes responsable y los participantes",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     },
     "membershipScreener": {
@@ -103,32 +103,32 @@
       "overview": "La membresía es una representación integrada de la información de identificación y las actividades asociadas de un actor en la plataforma. La forma directa de establecer la membresía será simplemente pagando una cuota única. Sin embargo, dado que actualmente es un reto para muchos posibles usuarios finales no técnicos obtener, almacenar y utilizar criptoactivos, habrá una forma de que los usuarios obtengan una membresía de forma gratuita, que no requerirá ningún token para poder utilizar la plataforma de forma limitada. El membership screener es el papel responsable de conceder dichas membresías, a la vez que filtra a los atacantes y abusadores de Sybill.",
       "responsibilities": {
         "runAndMaintainScreeningNodes": "Ejecutar y mantener nodos de cribado que estén siempre disponibles y tengan un buen rendimiento",
-        "collaborate": "Colaborar con los <0>Conservadores de Afiliación</0> y los <1>Constructores</1> para mejorar los mecanismos de selección discutiendo las técnicas de selección, compartiendo la información de tránsito.",
-        "beResponsive": "Ser receptivo y reaccionar ante las circunstancias cambiantes"
+        "collaborate": "Colaborar con los <0>Curadores de membresía</0> y los <1>Constructores</1> para mejorar los mecanismos de selección discutiendo las técnicas de selección, compartiendo la información de tránsito.",
+        "beResponsive": "Ser receptivo y reactivo a las circunstancias cambiantes"
       },
       "requirements": {
         "setupAndMaintainInfrastructure": "Experiencia en la configuración y el mantenimiento de infraestructuras informáticas de alto rendimiento",
         "accessToPerformantInfrastructure": "Acceso a una infraestructura informática de alto rendimiento y fiabilidad, con gran capacidad de almacenamiento, ancho de banda (ascendente y descendente) y procesamiento",
         "onlinePlatformAttackFamiliarity": "Conocimiento de cómo se atacan las plataformas en línea a través de botnets, anonimización de IP, agentes automatizados, etc.",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     },
     "membershipCurator": {
-      "title": "Curador de miembros",
-      "overview": "Una membresía es una representación integrada de información de identificación y actividades asociadas de un actor en la plataforma. Es posible crear membresías de forma gratuita a través de los filtros, descritos <0> más arriba</0>. Dado que esto es invariablemente un proceso imperfecto, debe haber algún medio por el cual la mala conducta y las cuentas falsas puedan ser desactivadas o eliminadas. Esta es la tarea de los conservadores de afiliaciones.",
+      "title": "Curador de Membresía",
+      "overview": "Una membresía es una representación integrada de información de identificación y actividades asociadas de un actor en la plataforma. Es posible crear membresías de forma gratuita a través de las cribas, descritas <0> más arriba</0>. Dado que esto es invariablemente un proceso imperfecto, debe haber algún medio por el cual la mala conducta y las cuentas falsas puedan ser desactivadas o eliminadas. Esta es la tarea de los curadores de membresía.",
       "responsibilities": {
         "monitorPlatformActivity": "Supervisar la actividad a nivel de plataforma para detectar abusos y colusiones",
         "proposeChanges": "Proponer cambios en el estado de las membresías que se identifiquen, y participar en cualquier proceso de disputa que pueda surgir.",
-        "collaborate": "Colaborar con <0> Screeners</0> y <1> Builders</1> paramejorar las herramientas para identificar a estos miembros"
+        "collaborate": "Colaborar con <0> Screeners</0> y <1> Constructores</1> para mejorar las herramientas para identificar a estos miembros"
       },
       "requirements": {
         "dataAnalysisProficiency": "Dominio del análisis básico de datos y de las secuencias de comandos",
         "platformUnderstanding": "Un profundo conocimiento de la estructura, el funcionamiento y los vectores de ataque de la plataforma Joystream",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     },
     "bandwidthProvider": {
-      "title": "Bandwidth Proveedor",
+      "title": "Proveedor de Ancho de Banda",
       "overview": "Hay activos críticos de la plataforma que no viven en la cadena de bloques, como las imágenes y los contenidos multimedia. La integridad de estos activos está asegurada por la cadena, pero un conjunto separado de nodos de almacenamiento y distribución permite cargar y descargar dichos datos. El proveedor de ancho de banda participa en esta actividad, concretamente distribuyendo datos estáticos a los usuarios finales a escala.",
       "responsibilities": {
         "runAndMaintainDistributorNodes": "Gestionar y mantener los nodos distribuidores que entregan grandes volúmenes de datos ascendentes a un gran número de usuarios finales simultáneos"
@@ -137,21 +137,21 @@
         "setupAndMaintainInfrastructure": "Experiencia en la configuración y el mantenimiento de infraestructuras informáticas de alto rendimiento",
         "accessToPerformantInfrastructure": "Acceso a una infraestructura informática de gran rendimiento y fiabilidad, con gran capacidad de almacenamiento y mucha capacidad de subida",
         "locatedWithinBounds": "Ubicados dentro de ciertos límites a zonas geográficas designadas, con el fin de limitar la latencia",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     },
     "discoveryProvider": {
-      "title": "Proveedor de servicios de información",
+      "title": "Proveedor de descubrimiento",
       "overview": "Todo el contenido de la plataforma está en un directorio de material señalado, y para navegar eficazmente por este directorio se necesita una copia completa del mismo. Además, para hacer cosas como la búsqueda y las recomendaciones basadas en el contexto hay que aplicar algún tipo de heurística sobre este directorio, que también es algo sensible a los intentos de clasificación. Los proveedores de descubrimiento desempeñan el papel de responder a estas consultas de descubrimiento a los usuarios finales, combinando las pruebas de inclusión de clientes ligeros con la búsqueda local y la heurística de la política de clasificación.",
       "responsibilities": {
         "runAndMaintainDiscoveryNodes": "Ejecutar y mantener los nodos de descubrimiento que responden a las consultas relacionadas con el descubrimiento, manteniéndose sincronizados con el directorio de contenidos y aplicando la heurística de clasificación local.",
-        "collaborate": "Colaborar con <0>Builders</0> para mejorar tanto las herramientas, como las experiencias de cara al usuario, para mejorar la experiencia de descubrimiento"
+        "collaborate": "Colaborar con <0>Constructores</0> para mejorar tanto las herramientas, como las experiencias de cara al usuario, para mejorar la experiencia de descubrimiento"
       },
       "requirements": {
         "setupAndMaintainInfrastructure": "Experiencia en la configuración y el mantenimiento de infraestructuras informáticas de alto rendimiento",
         "accessToPerformantInfrastructure": "Acceso a una infraestructura informática de gran rendimiento y fiabilidad",
         "formulateAndTestHeuristics": "Capaz de formular, probar y sugerir nuevas heurísticas de clasificación para su uso por parte de los nodos proveedores de descubrimientos",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     },
     "liveStreamingProvider": {
@@ -164,19 +164,19 @@
         "setupAndMaintainInfrastructure": "Experiencia en la configuración y el mantenimiento de infraestructuras informáticas de alto rendimiento",
         "accessToPerformantInfrastructure": "Acceso a una infraestructura informática de gran rendimiento y fiabilidad, con gran capacidad de ancho de banda ascendente.",
         "locatedWithinBounds": "Ubicados dentro de ciertos límites a zonas geográficas designadas, con el fin de limitar la latencia",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     },
     "builder": {
       "title": "Constructores",
-      "overview": "El tiempo de ejecución de la plataforma, las herramientas, el software de infraestructura y las aplicaciones orientadas al usuario deben evolucionar con el tiempo. Se requiere un conjunto diverso de colaboradores para facilitar esto, incluyendo <0/><0/> <1> <0><0>Desarrolladores:</0> Desarrolladores de software, científicos de datos, DevOps y QA </0><0><0>Diseñadores:</0> Web, móvil, UX/UI, branding y diseño visual </0> <0><0>Gestores de producto:</0> Gestores de productos digitales, propietarios de productos y analistas </0> <0 /> Todos estos colaboradores se denominan colectivamente Builders. Cualquiera puede contribuir en el mismo modo que cualquiera de estas posibles funciones de contribuyente, ya que todos los activos de origen de la plataforma son de código abierto y desarrollados en abierto. Ser un Constructor significa que uno tiene cierto alcance de responsabilidad en los esfuerzos en curso, y que uno tiene algún esquema de recompensa predefinido asociado a esta responsabilidad.",
+      "overview": "El tiempo de ejecución de la plataforma, las herramientas, el software de infraestructura y las aplicaciones orientadas al usuario deben evolucionar con el tiempo. Se requiere un conjunto diverso de colaboradores para facilitar esto, incluyendo <0/><0/> <1> <0><0>Desarrolladores:</0> Desarrolladores de software, Científicos de datos, DevOps y QA </0><0><0>Diseñadores:</0> Web, Móvil, UX/UI, Branding y Diseño visual </0> <0><0>Gestores de producto:</0> Gestores de productos digitales, propietarios de productos y analistas </0> <0 /> Todos estos colaboradores se denominan colectivamente Builders. Cualquiera puede contribuir en el mismo modo que cualquiera de estas posibles funciones de contribuyente, ya que todos los activos de origen de la plataforma son de código abierto y desarrollados en abierto. Ser un Constructor significa que uno tiene cierto alcance de responsabilidad en los esfuerzos en curso, y que uno tiene algún esquema de recompensa predefinido asociado a esta responsabilidad.",
       "responsibilities": {
         "collaborate": "Colaborar con la mayoría de los miembros de la plataforma para mantener y mejorar la plataforma"
       },
       "requirements": {
         "platformUnderstanding": "Un profundo conocimiento de la estructura y el funcionamiento de la plataforma Joystream",
         "specificContributingSkills": "Tener las habilidades específicas requeridas para contribuir en la forma dada",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     },
     "communicationModerator": {
@@ -190,7 +190,7 @@
       "requirements": {
         "platformUnderstanding": "Un profundo conocimiento de la estructura y el funcionamiento de la plataforma Joystream",
         "goodCommunicator": "Comunicación escrita clara, idealmente con buen dominio de más de un idioma",
-        "stake": "Poseer una cantidad suficiente de la token de la plataforma nativa para ponerla en stake"
+        "stake": "Poseer una cantidad suficiente del token de la plataforma nativa para ponerla en stake"
       }
     }
   }

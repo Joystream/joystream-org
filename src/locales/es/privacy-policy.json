@@ -1,15 +1,15 @@
 {
   "privacyPolicy": {
     "siteMetadata": {
-      "description": "Privacidad de Joystream y cookies"
+      "description": "Política de Privacidad y cookies de Joystream"
     },
     "hero": {
       "title": "Política de privacidad y cookies",
-      "text": "<0><0>Jsgenesis valora la privacidad.</0><1/><1/>Política de privacidad (\"Política de privacidad\") y cookies (\"Política de cookies\") explica cómo Jsgenesis AS (\"Jsgenesis\", \"Company\", \"Nosotros\", \"Nuestra\", \"Nuestro\") recoge y utiliza datos e información cuando tu (\"Usuario) usas cualquiera de los productos de Joystream, desarrollados en la organización GitHub <3>Joystream</3>. Estos productos (conjuntamente \"Software\") incluídos, pero no limtados a, todas las páginas bajo el <6>joystream.org</6> dominio (\"Website\"), el <10>Joyful node</10> (\"Full Node\"), el <14>Colossus Storage Node</14> (\"Storage node\"), y la interfaz de usuario de Pioneer, ya sea <18>self hosted</18> o <22>hosted by Us</22>  (\"App\").</0>"
+      "text": "<0><0>Jsgenesis valora la privacidad.</0><1/><1/>Esta Política de privacidad (\"Política de privacidad\") y Política de Cookies (\"Política de Cookies\") explica cómo Jsgenesis CÓMO (\"Jsgenesis\", \"Company\", \"Nosotros\", \"Nuestro\") recoge y utiliza datos e información cuando tu (\"Usuario) usas cualquiera de los productos de Joystream, desarrollados en la organización GitHub <3>Joystream</3>. Estos productos (conjuntamente \"Software\") incluidos, pero no limitados a, todas las páginas bajo el dominio <6>joystream.org</6> (\"Website\"), el <10>Joyful node</10> (\"Full Node\"), el <14>Colossus Storage Node</14> (\"Storage node\"), y la interfaz de usuario de Pioneer, ya sea <18>self hosted</18> o <22>hosteado por nosotros</22>  (\"App\").</0>"
     },
     "terms": {
       "title": "Son relevantes para la Política de Privacidad y la Política de Cookies los siguientes términos:",
-      "blockchain": "El término <0>\"Blockchain\"</0> rse refiere a la(s) cadena(s) de bloques reunida(s) por el Nodo Completo.",
+      "blockchain": "El término <0>\"Blockchain\"</0> se refiere a la(s) cadena(s) de bloques reunida(s) por el Nodo Completo.",
       "content": "El término <0>\"Contenido\"</0> se refiere a los archivos multimedia accesibles a través de nuestro Software.",
       "keys": "El término <0>\"Claves\"</0> se refiere a un par de claves criptográficas privadas/públicas, que los usuarios pueden generar para escribir (y descifrar datos) en la Blockchain.",
       "membership": "El término <0>\"Membresía\"</0> se refiere a la vinculación de sus Claves a un perfil público, permitiendo a los usuarios acceder al Contenido e interactuar con la Blockchain.",
@@ -19,7 +19,7 @@
       "title": "Política de Privacidad",
       "subtitle": "Última actualización el 17 de abril de 2019",
       "agreement": {
-        "title": "1. Acuerdo respecto a la política",
+        "title": "1. Acuerdo con la política",
         "content": "Al utilizar cualquiera de nuestros programas, el usuario acepta esta política de privacidad. Si actúa en representación de otra empresa o de un empleador, debe tener los derechos para actuar en su nombre. La Política de Privacidad no se extiende a ninguno de nuestros boletines informativos, en los que los Usuarios están sujetos a la <0>política de privacidad</0> de <1>Mailchimp</1><2/><2/>La Política de Privacidad no se aplica a ningún otro servicio de terceros, incluyendo, entre otros, aplicaciones, sitios web, herramientas o software, incluso si son accesibles a través de enlaces o guías en nuestro Software."
       },
       "changes": {
@@ -36,15 +36,15 @@
       }
     },
     "cookiePolicyItems": {
-      "title": "Políticas de cookies",
+      "title": "Política de cookies",
       "subtitle": "Última actualización el 17 de abril de 2019",
       "whatAreCookies": {
         "title": "1. ¿Qué son las cookies?",
-        "content": "Las cookies son pequeños fragmentos de texto enviados de la web que usted está visitando a su navegador. Un archivo cookie se almacena en su navegador y permite al Servicio o a un tercero reconocerla y hacer que su próxima visita sea más fácil y el Servicio le resulte más útil. <0 /><0 /> Las cookies pueden ser persistentes o de sesión."
+        "content": "Las cookies son pequeños fragmentos de texto enviados por su navegador por un sitio web que usted visita. Un archivo cookie se almacena en su navegador y permite al Servicio o a un tercero reconocerla y hacer que su próxima visita sea más fácil y el Servicio le resulte más útil. <0 /><0 /> Las cookies pueden ser persistentes o de sesión."
       },
       "howWeUseCookies": {
         "title": "2. Cómo usamos las cookies",
-        "content": "Utilizamos cookies para los siguientes fines de nuestro Servicio: <0 /><0 /><1><0>Proporcionar análisis</0><0>Almacenar las preferencias</0><0>Almacenar localmente las claves y la membresía.</0></1>"
+        "content": "Utilizamos cookies para los siguientes fines de nuestro Servicio: <0 /><0 /><1><0>Proporcionar análisis</0><0>Almacenar las preferencias</0><0>Almacenar localmente las claves y la membresía de manera persistente.</0></1>"
       },
       "thirdPartyCookies": {
         "title": "3. Cookies de terceros",

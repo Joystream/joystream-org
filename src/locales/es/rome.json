@@ -1,12 +1,12 @@
 {
   "rome": {
     "siteMetadata": {
-      "description": "Explora la testnet de Rome"
+      "description": "Explora la testnet Rome"
     },
     "hero": {
-      "title": "Red de Rome",
-      "text": "Explora las funciones disponibles y elige la que más te convenga. Influya en el desarrollo de la plataforma y gana dinero real en el proceso.",
-      "chipText": "¿Que es?"
+      "title": "Red Rome",
+      "text": "Explora los roles disponibles y elige el que más te convenga. Influye en el desarrollo de la plataforma y gana dinero real en el proceso.",
+      "chipText": "¿Qué es?"
     },
     "heroCard": {
       "title": "REEMPLAZADO POR CONSTANTINOPLE EN"
@@ -19,7 +19,7 @@
       "title": "Documentos críticos",
       "fullSpecifications": {
         "title": "Especificaciones completas",
-        "text": "No se ha publicado ningún dato sobre Roma."
+        "text": "No se han publicado especificaciones para Rome."
       },
       "releasePlan": {
         "title": "Plan de lanzamiento",
@@ -27,33 +27,33 @@
       }
     },
     "testnetGoals": {
-      "title": "Objetivos de la testnet",
-      "subtitle": "Los objetivos que figuran a continuación son una representación simplificada de los resultados clave que figuran en nuestro comunicado <0>OKR</0>",
+      "title": "Objetivos de la Testnet",
+      "subtitle": "Los objetivos que figuran a continuación son una representación simplificada de los Resultados Clave enumerados en nuestro Lanzamiento <0>OKR</0>",
       "goals": {
         "contentDirectory": {
           "title": "Construir un directorio de contenidos dinámico, flexible y fácil de usar",
-          "text": "La red de pruebas de Roma se construye en torno a la introducción de un directorio de contenidos nuevo, que puede añadirse, modificarse y mejorarse sin requerir actualizaciones en tiempo de ejecución. Todos los resultados y objetivos clave se derivan de esto."
+          "text": "La red de pruebas Rome se construye en torno a la introducción de un directorio de contenidos nuevo, que puede añadirse, modificarse y mejorarse sin requerir actualizaciones en tiempo de ejecución. Todos los resultados y objetivos clave se derivan de esto."
         },
         "content": {
-          "title": "Llenar el directorio de contenidos con una variedad de contenidos",
-          "text": "Roma introduce un sistema de directorio de contenidos que está construido para durar, pero que está pensado para ser mejorado continuamente. Pagaremos para que los creadores de contenidos suban una variedad de contenidos y esperamos aprender mucho de los resultados."
+          "title": "Rellenar el directorio de contenidos con una variedad de contenidos",
+          "text": "Rome introduce un sistema de Directorio de Contenidos que está construido para durar, pero que está pensado para ser mejorado continuamente. Pagaremos para que los creadores de contenidos suban una variedad de contenidos y esperamos aprender mucho de los resultados."
         },
         "contentCurator": {
-          "title": "Introducir el nuevo rol de Curador de Contenidos",
-          "text": "Con un nuevo Directorio de Contenidos, y los incentivos para subir contenidos, necesitamos un seguimiento. Los Curadores de Contenido requerirán estacas, y serán pagados tanto en tokens de testnet como en Monero."
+          "title": "Presentar el nuevo rol de Curador de Contenidos",
+          "text": "Con un nuevo Directorio de Contenidos, y los incentivos para subir contenidos, necesitamos un seguimiento. Los Curadores de Contenido requerirán staking, y serán pagados tanto en tokens de testnet como en Monero."
         },
         "contentCreator": {
-          "title": "Añadir perfiles de creadores de contenidos",
-          "text": "Sin creadores de contenidos, no habrá contenido. Es cierto que añadir otro nivel además del requisito de afiliación puede parecer un obstáculo, pero permitirá a los usuarios subir con varios perfiles."
+          "title": "Añadir perfiles de Creadores de Contenido",
+          "text": "Sin creadores de contenido, no habrá contenido. Es cierto que añadir otro nivel además del requisito de afiliación puede parecer un obstáculo, pero permitirá a los usuarios subir con varios perfiles."
         }
       }
     },
     "roles": {
-      "title": "Funciones incentivadas para la red de Rome"
+      "title": "Roles incentivados para la red Rome"
     },
     "map": {
       "title": "Rome",
-      "text": "<0>Roma fue la capital del gran Imperio Romano durante su apogeo.</0> Al igual que los nombres de testnet anteriores, el Imperio Romano y Roma fue otro paso importante en el surgimiento de la democracia, el estado de derecho y las estructuras de gobierno modernas.<1/><1/><2><0/> Explora testnet actual</2>"
+      "text": "<0>Roma fue la capital del gran Imperio Romano durante su apogeo.</0> Al igual que los nombres de testnet anteriores, el Imperio Romano y Roma fue otro paso importante en el surgimiento de la democracia, el estado de derecho y las estructuras de gobierno modernas.<1/><1/><2><0/> Explora la testnet actual</2>"
     }
   }
 }
