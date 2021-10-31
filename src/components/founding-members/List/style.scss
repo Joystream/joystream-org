@@ -47,6 +47,10 @@
         height: 64px;
         background-color: #dfe4ea;
         border-radius: 50%;
+
+        &--loading {
+          animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-fm-icon;
+        }
       }
 
       &__content {
@@ -128,5 +132,19 @@
     &__cards {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+@keyframes loading-fm-icon {
+  0% {
+    background-color: rgba(223, 228, 234, 1);
+  }
+
+  50% {
+    background-color: rgba(223, 228, 234, .5);
+  }
+
+  100% {
+    background-color: rgba(223, 228, 234, 1);
   }
 }

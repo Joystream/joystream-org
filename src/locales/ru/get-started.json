@@ -31,6 +31,10 @@
         "marketing": "Маркетинг",
         "research": "Исследования",
         "contentCreation": "Создание контента"
+        "newcomers": "Новички",
+        "content": "Контент",
+        "documentation": "Документация",
+        "translation" : "Перевод"
       },
       "roles": {
         "title": "Роли",

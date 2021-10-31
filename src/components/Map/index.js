@@ -11,6 +11,7 @@ import alexandriaImage from '../../assets/images/alexandria.png';
 import babylonImage from '../../assets/images/babylon.png';
 import antiochImage from '../../assets/images/antioch.png';
 import sumerImage from '../../assets/images/sumer.png';
+import gizaImage from '../../assets/images/giza.png';
 import { ReactComponent as PointerImage } from '../../assets/svg/pointer.svg';
 
 import { mapPropTypes } from '../../propTypes';
@@ -34,7 +35,8 @@ const maps = {
   alexandria: alexandriaImage,
   babylon: babylonImage,
   antioch: antiochImage,
-  sumer: sumerImage
+  sumer: sumerImage,
+  giza: gizaImage,
 };
 
 const Map = ({ location, className, ...props }) => {

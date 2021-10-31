@@ -64,8 +64,15 @@
       transform: scale(.9);
     }
 
+    &__image {
+      width: 720px;
+      height: 498.9px;
+    }
+
     &__image-alt {
       display: none;
+      width: 375px;
+      height: 260px;
     }
   }
 

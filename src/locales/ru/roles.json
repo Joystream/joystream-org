@@ -3,6 +3,21 @@
     "siteMetadata": {
       "description": "Информация о текущих и будущих ролях на платформе Joystream"
     },
+    "general" : {
+      "overview" : "Overview",
+      "responsibilities" : "Responsibilities",
+      "requirements" : "Requirements",
+      "seeATutorial" : "See a tutorial",
+      "askAQuestion" : "Ask a question",
+      "regularUpdates" : "Receive regular updates on the following role:",
+      "alertWhenActive" : "Alert me when the role will be active",
+      "emailAddressPlaceholder" : "Your email address",
+      "receiveEmailsAboutRole" : "I want to receive emails about this role.",
+      "informationTransferred" : "I acknowledge that my information will be transferred to Mailchimp, which has <0>these</0> privacy practices.",
+      "join" : "Join",
+      "subscribe" : "Subscribe",
+      "pleaseWait" : "Please wait.."
+    },
     "hero": {
       "title": "Выбирайте подходящую роль",
       "text": "Участие в ролях тестнета позволяет зарабатывать tJOY, влияя при этом на развитие платформы."

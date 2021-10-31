@@ -3,6 +3,21 @@
     "siteMetadata": {
       "description": "Read more about current and future roles on the Joystream platform"
     },
+    "general" : {
+      "overview" : "Overview",
+      "responsibilities" : "Responsibilities",
+      "requirements" : "Requirements",
+      "seeATutorial" : "See a tutorial",
+      "askAQuestion" : "Ask a question",
+      "regularUpdates" : "Receive regular updates on the following role:",
+      "alertWhenActive" : "Alert me when the role will be active",
+      "emailAddressPlaceholder" : "Your email address",
+      "receiveEmailsAboutRole" : "I want to receive emails about this role.",
+      "informationTransferred" : "I acknowledge that my information will be transferred to Mailchimp, which has <0>these</0> privacy practices.",
+      "join" : "Join",
+      "subscribe" : "Subscribe",
+      "pleaseWait" : "Please wait.."
+    },
     "hero": {
       "title": "Choose your preferred role",
       "text": "Participating in a role on our testnet lets you earn tJOY while influencing the platform's ongoing development."
