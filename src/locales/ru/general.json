@@ -54,7 +54,7 @@
     "migration": "{{numberOfUsers}} (макс.) обладали этой ролью во время миграции",
     "current": "{{numberOfUsers}} исполняют эту роль в Antioch",
     "most": "Максимум {{numberOfUsers}} пользователей исполняли эту роль",
-    "new": "NEW"
+    "new": "Новинка"
   },
   "heroCard": {
     "active": "Сеть анонсирована",
