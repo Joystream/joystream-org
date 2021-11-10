@@ -1,47 +1,47 @@
 {
   "giza": {
     "siteMetadata": {
-      "description": "Explore the Giza testnet"
+      "description": "Изучаем тестнет Giza"
     },
     "hero": {
-      "title": "Giza Network",
-      "text": "Alongside other planned enhancements, the Giza release introduces the first iteration of the Storage and Distribution System we will use on mainnet."
+      "title": "Сеть Giza",
+      "text": "Наряду с другими запланированными улучшениями, в релиз Giza включена первая итерация системы хранения и доставки контента, которая будет использована в основной сети."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Важная документация",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "План релиза",
+        "text": "Прочтите план релиза в том виде, в котором он был составлен на этапе планирования, и сравните с тем, как прошла разработка."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Giza testnet and its objectives."
+        "title": "Анонс в блоге",
+        "text": "Прочтите краткую информацию о тестнете Giza и его целях."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Giza testnet.",
+      "title": "Цели тестнета",
+      "subtitle": "Цели, изложенные ниже, являются упрощенным перечнем основных результатов тестнета Giza.",
       "goals": {
         "launchStorageAndDistribution": {
-          "title": "Launching V2 of the Storage and Distribution System",
-          "text": "This will include introducing distinct roles for data storage and distribution, as well as a storage system with redundancy and only partial replication of media on nodes, alongside other modifications outlined in the specification."
+          "title": "Запуск 2-й версии системы хранения и доставки контента",
+          "text": "Наряду с другими изменениями, описанными в спецификации, предполагается введение отдельных ролей для хранения и распределения данных, а также система хранения с резервированием и частичной репликацией носителей на узлах."
         },
         "contentDirectoryEnhancements": {
-          "title": "Content Directory Enhancements",
-          "text": "Within this release, improvements to the content directory system will focus on facilitating some planned community initiatives, cleaning up technical debt, and offering integration with the new storage system."
+          "title": "Улучшения в каталоге контента",
+          "text": "Улучшения системы каталога контента в этом релизе будут направлены на реализацию некоторых запланированных инициатив сообщества, устранение технических недостатков и интеграцию с новой системой хранения."
         },
         "newOperationsWorkingGroups": {
-          "title": "New Operations Working Groups",
-          "text": "We've seen excellent results from the Operations Working Group enabled on the Sumer testnet. Now, in order to facilitate work on a few different orthogonal areas, or even to just scale up efforts within the same vertical, we are going to add two more new generic Operations Working Groups for Giza."
+          "title": "Новые операционные рабочие группы",
+          "text": "По нашим наблюдениям, введение операционных групп в Sumer дало отличные результаты. Теперь, как для облегчения работы в ортогональных областях, так и для масштабирования усилий в одной плоскости, мы собираемся ввести две общие операционные рабочие группы в Giza."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Giza Network"
+      "title": "Поощряемые роли в сети Giza"
     },
     "map": {
-      "title": "Giza",
-      "text": "<0>The area in what is now Giza served as the necropolis of several pharaohs who ruled ancient Egypt, during the 2nd millennium BC.</0> Three ancient tombs, constructed in the form of giant pyramids, make up the stunning and globally famed Giza pyramid complex.<1/><1/>These pyramids have served as emblems of Ancient Egypt in the Western imagination for hundreds of years. They were first \"popularised\" in Ancient Greece, when the Great Pyramid was listed by Antipater of Sidon as one of the Seven Wonders of the World.<1/><1/><2><0/> Read the blog post</2>"
+      "title": "Гиза",
+      "text": "<0>Район, расположенный на территории нынешней Гизы, служил некрополем нескольких фараонов, правивших Древним Египтом во 2-м тысячелетии до нашей эры.</0> Три древних гробницы, построенных в форме гигантских пирамид, составляют потрясающий и всемирно известный комплекс пирамид Гизы.<1/><1/>Эти пирамиды служили символом Древнего Египта в западном представлении на протяжении сотен лет. Они были впервые \"популяризированы\" в Древней Греции, когда Великая пирамида была внесена Антипатром Сидонским в список семи чудес света.<1/><1/><2><0/> Читать в блоге</2>"
     }
   }
 }
