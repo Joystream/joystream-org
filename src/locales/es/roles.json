@@ -3,6 +3,21 @@
     "siteMetadata": {
       "description": "Leer más acerca de las funciones actuales y futuras de la plataforma Joystream"
     },
+    "general" : {
+      "overview" : "Overview",
+      "responsibilities" : "Responsibilities",
+      "requirements" : "Requirements",
+      "seeATutorial" : "See a tutorial",
+      "askAQuestion" : "Ask a question",
+      "regularUpdates" : "Receive regular updates on the following role:",
+      "alertWhenActive" : "Alert me when the role will be active",
+      "emailAddressPlaceholder" : "Your email address",
+      "receiveEmailsAboutRole" : "I want to receive emails about this role.",
+      "informationTransferred" : "I acknowledge that my information will be transferred to Mailchimp, which has <0>these</0> privacy practices.",
+      "join" : "Join",
+      "subscribe" : "Subscribe",
+      "pleaseWait" : "Please wait.."
+    },
     "hero": {
       "title": "Elija su rol preferido",
       "text": "Participar en un rol de nuestra testnet te permite ganar tJOY mientras influyes en el desarrollo continuo de la plataforma."

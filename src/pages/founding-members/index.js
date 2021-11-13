@@ -18,7 +18,7 @@ import { foundingMembersJson } from '../../data/pages/founding-members';
 
 import './style.scss';
 
-export const ArrowButton = ({ link, text, className, onClick, state, to }) => {
+export const ArrowButton = ({ link, text, className, onClick, state, to, style, ...props }) => {
   const children = (
     <div className="ArrowButton">
       <span className="ArrowButton__text"> {text} </span>
@@ -28,19 +28,19 @@ export const ArrowButton = ({ link, text, className, onClick, state, to }) => {
 
   if (link) {
     return (
-      <Button style={{ padding: 0 }} className={`${className}`} href={link}>
+      <Button style={{ padding: 0, ...style }} className={`${className}`} href={link} {...props}>
         {children}
       </Button>
     );
   } else if (to) {
     return (
-      <Button style={{ padding: 0 }} className={`${className}`} to={to} state={state}>
+      <Button style={{ padding: 0, ...style }} className={`${className}`} to={to} state={state} {...props}>
         {children}
       </Button>
     );
   } else {
     return (
-      <Button style={{ padding: 0 }} className={`${className}`} onClick={onClick}>
+      <Button style={{ padding: 0, ...style }} className={`${className}`} onClick={onClick} {...props}>
         {children}
       </Button>
     );

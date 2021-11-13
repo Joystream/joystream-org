@@ -28,7 +28,9 @@ const StorySectionHeader = React.forwardRef(({ onActionClick, t }, ref) => {
           <Logo className="StorySectionHeader__image" />
         </div>
       </div>
-      <ActionButton className="StorySectionHeader__action" onClick={onActionClick} />
+      <ActionButton className="StorySectionHeader__action" onClick={onActionClick}>
+        {t('brand.guides.general.more')}
+      </ActionButton>
     </BrandLayoutWrapper>
   );
 });

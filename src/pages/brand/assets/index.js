@@ -14,10 +14,10 @@ import convertToCamelCase from '../../../utils/convertToCamelCase';
 import typographyImg from '../../../assets/images/typography-overview.png';
 import './index.scss';
 
-const ASSETS_LINK = 'https://raw.githubusercontent.com/Joystream/design/master/Assets-full';
+const ASSETS_LINK = 'https://raw.githubusercontent.com/Joystream/design/master';
 const FONT_DOWNLOAD_URL = 'https://www.fontsquirrel.com/fonts/download/inter';
 
-const getPackageLink = path => encodeURI(ASSETS_LINK + '/ZIPPED files' + path);
+const getPackageLink = path => encodeURI(ASSETS_LINK + '/zipped-assets' + path);
 
 const themedAssetRenderer = (asset, t) => {
   return (

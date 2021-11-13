@@ -410,6 +410,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.validator.responsibilities.enforceRules",
             ]
           }
+          t={[Function]}
           title="roles.validator.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/validators"
           type="active"
@@ -444,6 +445,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.councilMember.responsibilities.representCommunity",
             ]
           }
+          t={[Function]}
           title="roles.councilMember.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/council-members"
           type="active"
@@ -476,6 +478,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.storageProvider.responsibilities.runAndMaintainStorageNodes",
             ]
           }
+          t={[Function]}
           title="roles.storageProvider.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead"
           type="active"
@@ -508,6 +511,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.storageLead.responsibilities.storageProviderPerformance",
             ]
           }
+          t={[Function]}
           title="roles.storageLead.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers"
           type="active"
@@ -555,6 +559,7 @@ exports[`RolesPage page renders correctly 1`] = `
               />,
             ]
           }
+          t={[Function]}
           title="roles.contentCurator.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-curators"
           type="active"
@@ -586,6 +591,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.contentCreator.responsibilities.publishContent",
             ]
           }
+          t={[Function]}
           title="roles.contentCreator.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-creators"
           type="active"
@@ -620,6 +626,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.contentLead.responsibilities.manageAndCoordinate",
             ]
           }
+          t={[Function]}
           title="roles.contentLead.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead"
           type="active"
@@ -668,6 +675,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.builder.responsibilities.collaborate",
             ]
           }
+          t={[Function]}
           title="roles.builder.title"
           tutorialLink="https://github.com/Joystream/helpdesk/tree/master/roles/builders"
           type="active"
@@ -722,6 +730,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.membershipScreener.responsibilities.beResponsive",
             ]
           }
+          t={[Function]}
           title="roles.membershipScreener.title"
           type="upcoming"
         />
@@ -789,6 +798,7 @@ exports[`RolesPage page renders correctly 1`] = `
               />,
             ]
           }
+          t={[Function]}
           title="roles.membershipCurator.title"
           type="upcoming"
         />
@@ -820,6 +830,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.bandwidthProvider.responsibilities.runAndMaintainDistributorNodes",
             ]
           }
+          t={[Function]}
           title="roles.bandwidthProvider.title"
           type="upcoming"
         />
@@ -865,6 +876,7 @@ exports[`RolesPage page renders correctly 1`] = `
               />,
             ]
           }
+          t={[Function]}
           title="roles.discoveryProvider.title"
           type="upcoming"
         />
@@ -896,6 +908,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.liveStreamingProvider.responsibilities.runAndMaintainLivestreamingNodes",
             ]
           }
+          t={[Function]}
           title="roles.liveStreamingProvider.title"
           type="upcoming"
         />
@@ -928,6 +941,7 @@ exports[`RolesPage page renders correctly 1`] = `
               "roles.communicationModerator.responsibilities.collaborate",
             ]
           }
+          t={[Function]}
           title="roles.communicationModerator.title"
           type="upcoming"
         />

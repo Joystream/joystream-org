@@ -133,7 +133,7 @@ exports[`AthensPage page renders correctly 1`] = `
           />
         </React.Fragment>
       }
-      title="Testnet Goals"
+      title="athens.testnetGoals.title"
     >
       <GoalList
         data={
