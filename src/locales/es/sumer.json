@@ -1,0 +1,47 @@
+{
+  "sumer": {
+    "siteMetadata": {
+      "description": "Explore the Sumer testnet"
+    },
+    "hero": {
+      "title": "Sumer Network",
+      "text": "Among other changes, the Sumer testnet release offers major improvements to content uploads through our playback app."
+    },
+    "criticalDocuments": {
+      "title": "Critical Documents",
+      "releasePlan": {
+        "title": "Release Plan",
+        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+      },
+      "blogPost": {
+        "title": "Announcement Blog Post",
+        "text": "Read a brief primer on the Sumer testnet and its objectives."
+      }
+    },
+    "testnetGoals": {
+      "title": "Testnet Goals",
+      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Sumer testnet.",
+      "goals": {
+        "contentPublishing": {
+          "title": "Enable content publishing from playback interface",
+          "text": "Sumer introduces the ability to create and manage channels and videos in the Joystream Player, replacing the cumbersome and technically challenging CLI-dependent process required on the Antioch testnet."
+        },
+        "deployingNewContentDirectory": {
+          "title": "Deploying the new content directory",
+          "text": "As part of Sumer we will be introducing a simple native runtime module. This is because technical complexities and tradeoffs associated with the previous iterations of the content directory were not acceptable."
+        },
+        "enableBuilderRole": {
+          "title": "Enable builder/platform operations role",
+          "text": "We are introducing a new working group focused on platform operations. Originally, we had also planned to enable the new \"Gateway\" role, though this is no longer in the scope of the Sumer release."
+        }
+      }
+    },
+    "roles": {
+      "title": "Incentivized Roles for the Sumer Network"
+    },
+    "map": {
+      "title": "Sumer",
+      "text": "<0>Sumer is the earliest known civilization in the historical region of southern Mesopotamia</0>, emerging during the Chalcolithic and early Bronze Ages between the sixth and fifth millennium BC.<1/><1/>Living along the valleys of the Tigris and Euphrates, Sumerian farmers grew an abundance of grain and other crops, the surplus from which enabled them to form urban settlements. The region is thought to be where the earliest forms of writing emerged.<1/><1/><2><0/> Read the blog post</2>"
+    }
+  }
+}

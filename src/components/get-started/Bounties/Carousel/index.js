@@ -4,6 +4,7 @@ import { ReactComponent as Arrow } from '../../../../assets/svg/arrow-down-small
 import CardCarousel from '../../../../components/CardCarousel';
 import useAxios from '../../../../utils/useAxios';
 import { bountiesLink } from '../../../../data/pages/get-started';
+import convertToCamelCase from '../../../../utils/convertToCamelCase';
 
 import './style.scss';
 
@@ -18,7 +19,7 @@ const parseDate = dateString => {
   return parsedDate;
 };
 
-const BountiesCard = ({ title, amount, categories, date, id, link, description }) => {
+const BountiesCard = ({ title, amount, categories, date, id, link, description, t }) => {
   return (
     <a className="GetStarted__bounties-carousel__card-wrapper-link" target="_blank" href={link ? link : '#'}>
       <div className="GetStarted__bounties-carousel__card">
@@ -41,7 +42,7 @@ const BountiesCard = ({ title, amount, categories, date, id, link, description }
                   GetStarted__bounties-carousel__card-filter--${category.toLowerCase()}
                 `}
               >
-                {category}
+                {t(`getStarted.opportunities.bountiesCarousel.${convertToCamelCase(category)}`)}
               </div>
             ))}
           </div>
@@ -175,6 +176,7 @@ const BountiesCarousel = ({ t }) => {
                     id={bounty?.id}
                     link={bounty?.links[0]}
                     description={bounty?.description}
+                    t={t}
                   />
                 );
               } else {

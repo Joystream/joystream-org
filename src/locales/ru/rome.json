@@ -1,59 +1,59 @@
 {
   "rome": {
     "siteMetadata": {
-      "description": "Explore the Rome testnet"
+      "description": "Изучаем тестнет Rome"
     },
     "hero": {
-      "title": "Rome Network",
-      "text": "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
-      "chipText": "What is this?"
+      "title": "Сеть Rome",
+      "text": "Изучайте доступные роли и выбирайте наиболее подходящие вам. Влияйте на развитие платформы, зарабатывая при этом реальные деньги.",
+      "chipText": "Что это?"
     },
     "heroCard": {
-      "title": "REPLACED BY CONSTANTINOPLE ON"
+      "title": "ЗАМЕНЕНА НА CONSTANTINOPLE"
     },
     "modal": {
       "title": "Rome",
-      "text": "<0>The Roman empire left many landmarks.</0> Their architecture and engineering skills was unparalleled during their might. The concept of aqueducts was not devised by the Romans, but their beauty and extent is."
+      "text": "<0>Римская империя оставила богатое наследие.</0> Во время ее расцвета архитектурные и инженерные навыки римлян не имели себе равных. Хотя идея акведуков не была изобретена римлянами, их красота и протяженность поражают."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Важная документация",
       "fullSpecifications": {
-        "title": "Full Specifications",
-        "text": "No specifications were published for Rome."
+        "title": "Полные спецификации",
+        "text": "Спецификации тестнета Rome не были опубликованы."
       },
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "План релиза",
+        "text": "Прочтите план релиза в том виде, в котором он был составлен на этапе планирования, и сравните с тем, как прошла разработка."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals below are a simplified representation of the Key Results listed in our Release <0>OKR</0>",
+      "title": "Цели тестнета",
+      "subtitle": "Указанные ниже цели дают общее представление о ключевых результатах, перечисленных в нашем релизе <0>OKR</0>.",
       "goals": {
         "contentDirectory": {
-          "title": "Build a dynamic, flexible and user friendly content directory",
-          "text": "The Rome testnet is built around the introduction of a new content directory, that can be added to, modified and improved without requiring runtime upgrades. All key results and goals are derived from this."
+          "title": "Создание динамичного, гибкого и удобного каталога содержимого",
+          "text": "Краеугольным камнем тестнета Rome является введение нового каталога контента, который можно расширять, изменять и улучшать без необходимости обновления среды выполнения. Им и обусловлены все основные цели и результаты."
         },
         "content": {
-          "title": "Populate the content directory with a variety of content",
-          "text": "Rome introduces a Content Directory system that is both built to last, yet still meant to be continuously improved on. We will pay for Content Creators to upload a variety of content and we hope to learn a lot from the results."
+          "title": "Заполнение каталога различным контентом",
+          "text": "Мы выпускаем в Rome новую систему каталога контента, которая, с одной стороны, рассчитана на длительный срок службы, а с другой - на постоянные улучшения. Мы будем оплачивать загрузку различного содержимого создателям контента, надеясь, что результаты нас многому научат."
         },
         "contentCurator": {
-          "title": "Introduce the new Content Curator role",
-          "text": "With a new Content Directory, and incentives to upload content, we need monitoring. The Content Curators will require staking, and will be paid in both testnet tokens and Monero."
+          "title": "Введение новой роли куратора контента",
+          "text": "С введением нового каталога контента и поощрений за публикации нам необходим мониторинг. Чтобы стать куратором контента, необходимо будет выполнить процедуру стейкинга. Кураторы будут получать оплату как в токенах тестнета, так и в Monero."
         },
         "contentCreator": {
-          "title": "Add Content Creator profiles",
-          "text": "Without Content Creators, there won't be any content. Granted, adding another level on top of the membership requirement may seem like a hurdle, but it will allow users to upload with multiple profiles."
+          "title": "Добавление профилей создателей контента",
+          "text": "Без создателей контента не было бы никакого контента. Разумеется, добавление дополнительной роли поверх членства может создать определенный барьер, но это позволит пользователям загружать контент, используя разные профили."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Rome Network"
+      "title": "Поощряемые роли в сети Rome"
     },
     "map": {
-      "title": "Rome",
-      "text": "<0>Rome was the capital of the great Roman Empire during its peak.</0> As with previous testnet names, the Roman Empire and Rome was another important step in the rise of democracy, the rule of law, and modern governance structures.<1/><1/><2><0/> Explore current testnet</2>"
+      "title": "Рим",
+      "text": "<0>Рим был столицей великой Римской империи в период ее расцвета.</0> Подобно названиям предыдущих тестнетов, Римская империя и Рим были еще одним важным шагом в развитии демократии, верховенства закона и современных структур управления.<1/><1/><2><0/> Информация о тестнете</2>"
     }
   }
 }

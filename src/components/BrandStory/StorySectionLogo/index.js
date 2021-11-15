@@ -47,7 +47,9 @@ const StorySectionLogo = React.forwardRef(({ onActionClick, t }, ref) => {
         </div>
       </ColumnsLayout>
 
-      <ActionButton className="StorySectionLogo__action" variant="on-blue" onClick={onActionClick} />
+      <ActionButton className="StorySectionLogo__action" variant="on-blue" onClick={onActionClick}>
+        {t('brand.guides.general.more')}
+      </ActionButton>
     </BrandLayoutWrapper>
   );
 });

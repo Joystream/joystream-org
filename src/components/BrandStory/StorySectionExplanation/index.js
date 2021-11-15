@@ -29,7 +29,9 @@ const StorySectionExplanation = React.forwardRef(({ onActionClick, t }, ref) => 
         variant="on-white"
         direction="up"
         onClick={onActionClick}
-      />
+      >
+        {t('brand.guides.general.more')}
+      </ActionButton>
     </BrandLayoutWrapper>
   );
 });
