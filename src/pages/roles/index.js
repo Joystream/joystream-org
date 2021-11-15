@@ -108,7 +108,7 @@ const RolesPage = () => {
                 }}
                 key={role.title}
               >
-                <RoleOverview {...translateRolesData({ ...role }, t)} type={key} ref={elementsRef[role.id]} />
+                <RoleOverview t={t} {...translateRolesData({ ...role }, t)} type={key} ref={elementsRef[role.id]} />
               </InView>
             ));
           })}

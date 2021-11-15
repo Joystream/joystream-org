@@ -1,55 +1,55 @@
 {
   "alexandria": {
     "siteMetadata": {
-      "description": "Explore the Alexandria testnet"
+      "description": "Изучаем тестнет Alexandria"
     },
     "hero": {
-      "title": "Alexandria Network",
-      "text": "The Alexandria release focuses on important technical updates which will facilitate more efficient future development.",
-      "chipText": "What is this?"
+      "title": "Сеть Alexandria",
+      "text": "Релиз Alexandria несет в себе важные технические обновления, которые в дальнейшем упростят разработку и сделают ее более эффективной.",
+      "chipText": "Что это?"
     },
     "heroCard": {
-      "title": "REPLACED BY BABYLON ON"
+      "title": "ЗАМЕНЕНА BABYLON"
     },
     "modal": {
-      "title": "Alexandria",
-      "text": "There are two sphinxes at the Pompey's Pillar site in Alexandria, Egypt. The sphinxes and associated column are one of Alexandria's most important ancient monuments. <0/><0/> The Alexandria sphinxes should not be confused with the more well-known Great Sphinx located at Giza, just under 200 kilometers south-east of Alexandria."
+      "title": "Александрия",
+      "text": "В Египте, у основания столпа Помпея в Александрии, находятся два сфинкса. Сфинксы и связанная с ними колонна являются одними из важнейших древних памятников Александрии. <0/><0/> Не следует путать александрийских сфинксов с более известным Большим Сфинксом, находящимся в Гизе чуть менее чем в 200-х километрах к юго-востоку от Александрии."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Важная документация",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "План релиза",
+        "text": "Прочтите план релиза в том виде, в котором он был составлен на этапе планирования, и сравните с тем, как прошла разработка."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Alexandria testnet and its objectives."
+        "title": "Анонс в блоге",
+        "text": "Прочтите краткую информацию о тестнете Alexandria и его целях."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Alexandria testnet.",
+      "title": "Цели тестнета",
+      "subtitle": "Цели, изложенные ниже, являются упрощенным перечнем основных результатов тестнета Alexandria.",
       "goals": {
         "membershipModule": {
-          "title": "Cleaning up the membership module",
-          "text": "Tackling technical debt in the membership module and making it possible to transition to using memberships as the only core actor identifier in the system in future releases."
+          "title": "Приведение в порядок модуля учетных записей",
+          "text": "Решение технических проблем в модуле учетных записей и обеспечение возможности перехода к концепции использования учетной записи пользователя в качестве единого идентификатора в будущих релизах."
         },
         "substrateVersion": {
-          "title": "Start using Substrate v2.0.0 RC4",
-          "text": "We are transitioning to a new version of Substrate in order to stay up to date with a broad range of enhancements, and to limit how far behind we allow our growing codebase to become."
+          "title": "Переход к Substrate v2.0.0 RC4",
+          "text": "Мы переходим на новую версию Substrate, чтобы иметь возможность использовать большое количество улучшений и не дать нашему растущему продукту отставать от современных тенденций."
         },
         "networkTesting": {
-          "title": "Enhancing our network testing",
-          "text": "Further maturing our network testing infrastructure to get one step closer to true end-to-end builds that secure an increasingly shorter development cycle."
+          "title": "Совершенствование средств тестирования сети",
+          "text": "Дальнейшее совершенствование инфраструктуры тестирования сети, что позволит сократить цикл разработки и приблизит нас к возможности создания сквозных сборок продукта."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Alexandria Network"
+      "title": "Поощряемые роли в сети Alexandria"
     },
     "map": {
-      "title": "Alexandria",
-      "text": "<0>Alexandria was founded in approximately 331 BC by Alexander the Great.</0> The city was best known for the Lighthouse of Alexandria, one of the Seven Wonders of the Ancient World, as well as its colossal Great Library.<1/><1/> Alexandria was the intellectual and cultural center of the ancient Mediterranean world for much of the Hellenistic age and late antiquity. It was at one time the largest city in the ancient world before being eventually overtaken by Rome.<1/><1/><2><0/> Read the blog post</2>"
+      "title": "Александрия",
+      "text": "<0>Александрия была основана примерно в 331 г. до н.э. Александром Македонским.</0> Прежде всего город был известен Александрийским маяком, одним из семи чудес света, а также огромной Великой библиотекой.<1/><1/> На протяжении большей части эллинистической эпохи и поздней античности Александрия была интеллектуальным и культурным центром древнего Средиземноморья. До завоевания Римом это был один из самых крупных городов древнего мира.<1/><1/><2><0/> Читать в блоге</2>"
     }
   }
 }
