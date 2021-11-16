@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as Tokens } from '../../../assets/svg/joy-token.svg';
 import { ReactComponent as Money } from '../../../assets/svg/money-circle.svg';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 import './style.scss';
 

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-react-i18next';
 import cn from 'classnames';
 
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';

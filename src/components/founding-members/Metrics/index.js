@@ -152,7 +152,7 @@ const Metrics = ({ foundingMembers, nonFoundingMembers, sizeOfFirstTokenPool, t 
             </Table>
             <ArrowButton
               className="FoundingMembersPage__leaderboard__button"
-              link="/founding-members/leaderboards"
+              to="/founding-members/leaderboards"
               text={t('foundingMembers.landing.keyMetrics.foundingMembersButton')}
             />
           </div>
