@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import logoTwitter from '../assets/images/logo-twitter.png';
+import { LiveSessionScript } from '../data/siteMetadata';
 
 const propTypes = {
   description: PropTypes.string,
@@ -79,6 +80,12 @@ function SiteMetadata({ description, lang, meta, title, image }) {
           content: imagePath,
         },
       ].concat(meta)}
+      script={[
+        {
+          type: "text/javascript",
+          innerHTML: LiveSessionScript
+        }
+      ]}
     />
   );
 }
