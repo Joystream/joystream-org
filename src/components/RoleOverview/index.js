@@ -2,6 +2,7 @@ import React from 'react';
 import { string, oneOfType, node, oneOf, arrayOf, func } from 'prop-types';
 import cn from 'classnames';
 import axios from 'axios';
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 import Link from '../Link';
 import Button from '../Button';
@@ -15,6 +16,7 @@ import { ReactComponent as EnvelopeIcon } from '../../assets/svg/envelop.svg';
 import { ReactComponent as BookIcon } from '../../assets/svg/book.svg';
 
 import './style.scss';
+import convertToCamelCase from '../../utils/convertToCamelCase';
 
 const propTypes = {
   className: string,
@@ -110,15 +112,15 @@ class RoleOverview extends React.Component {
     });
   };
 
-  renderButtons = () => {
+  renderButtons = t => {
     const { tutorialLink, questionLink } = this.props;
     return (
       <div className="RoleOverview__buttons">
         <Button className="RoleOverview__button" href={tutorialLink}>
-          See a tutorial
+          {t('roles.general.seeATutorial')}
         </Button>
         <Button className="RoleOverview__button" href={questionLink} reversed>
-          Ask a question
+          {t('roles.general.askAQuestion')}
         </Button>
       </div>
     );
@@ -130,14 +132,14 @@ class RoleOverview extends React.Component {
     return <FormResponse error={formError} onClose={this.hideForm} />;
   };
 
-  renderFormTitle = (title) => {
+  renderFormTitle = (title, t) => {
     const { type } = this.props;
 
     if (type === 'active') {
       return (
         <>
           <BookIcon className="RoleOverview__form-icon" />
-          Receive regular updates on the {title} role!
+          {t('roles.general.regularUpdates')} {title}
         </>
       );
     }
@@ -145,7 +147,7 @@ class RoleOverview extends React.Component {
     return (
       <>
         <EnvelopeIcon className="RoleOverview__form-icon" />
-        Alert me when the role will be active
+        {t('roles.general.alertWhenActive')}
       </>
     );
   };
@@ -156,12 +158,12 @@ class RoleOverview extends React.Component {
     });
   };
 
-  renderForm = (title, formAction) => {
+  renderForm = (title, formAction, t) => {
     const { formContentVisibility, inputValue, checkboxValue, loading } = this.state;
     const { type } = this.props;
 
     const btnType = type === 'active' ? 'Join' : 'Subscribe';
-    const btnLabel = loading ? 'Please wait...' : btnType;
+    const btnLabel = loading ? 'Please wait' : btnType;
 
     return (
       <>
@@ -171,15 +173,15 @@ class RoleOverview extends React.Component {
           ref={ref => (this.form = ref)}
           action={formAction}
           name="mc-embedded-subscribe-form"
-          target='_blank'
+          target="_blank"
           noValidate
         >
-          <p className="RoleOverview__form-title">{this.renderFormTitle(title)}</p>
+          <p className="RoleOverview__form-title">{this.renderFormTitle(title, t)}</p>
           <Input
-            placeholder="Your email address"
+            placeholder={t('roles.general.emailAddressPlaceholder')}
             type="email"
             className="RoleOverview__form-input"
-            name='EMAIL'
+            name="EMAIL"
             required
             onFocus={this.showFormContent}
             onChange={this.inputChange}
@@ -202,15 +204,17 @@ class RoleOverview extends React.Component {
                 className="RoleOverview__checkbox"
               />
               <label htmlFor="accept" className="RoleOverview__label">
-                <p className="RoleOverview__form-label">I want to receive emails about this role.</p>
+                <p className="RoleOverview__form-label">{t('roles.general.receiveEmailsAboutRole')}</p>
                 <p className="RoleOverview__form-label RoleOverview__form-label--small">
-                  I acknowledge that my information will be transferred to Mailchimp, which has{' '}
-                  <Link href="https://mailchimp.com/legal/">these</Link> privacy practices.
+                  <Trans
+                    i18nKey="roles.general.informationTransferred"
+                    components={[<Link href="https://mailchimp.com/legal/">these</Link>]}
+                  />
                 </p>
               </label>
             </div>
-            <Button type="submit" name='subscribe' disabled={this.state.isButtonDisabled}>
-              {btnLabel}
+            <Button type="submit" name="subscribe" disabled={this.state.isButtonDisabled}>
+              {t(`roles.general.${convertToCamelCase(btnLabel)}`)}
             </Button>
           </div>
         </form>
@@ -230,6 +234,7 @@ class RoleOverview extends React.Component {
       tutorialLink,
       questionLink,
       formAction,
+      t,
       ...props
     } = this.props;
     const { formVisiblity, formResponseVisiblity } = this.state;
@@ -252,12 +257,12 @@ class RoleOverview extends React.Component {
 
         <div className="RoleOverview__content">
           <div className="RoleOverview__overview">
-            <p className="RoleOverview__heading">Overview</p>
+            <p className="RoleOverview__heading">{t('roles.general.overview')}</p>
             <div className="RoleOverview__details">{overview}</div>
           </div>
           <div className="RoleOverview__lists">
             <div className="RoleOverview__list RoleOverview__resposibilities">
-              <p className="RoleOverview__heading--small">Responsibilities</p>
+              <p className="RoleOverview__heading--small">{t('roles.general.responsibilities')}</p>
               <ul className="RoleOverview__details">
                 {responsibilities.map((responsibility, i) => (
                   <li key={i}>{responsibility} </li>
@@ -265,7 +270,7 @@ class RoleOverview extends React.Component {
               </ul>
             </div>
             <div className="RoleOverview__list RoleOverview__requirements">
-              <p className="RoleOverview__heading--small">Requirements</p>
+              <p className="RoleOverview__heading--small">{t('roles.general.requirements')}</p>
               <ul className="RoleOverview__details">
                 {requirements.map((requirement, j) => (
                   <li key={j}>{requirement} </li>
@@ -274,8 +279,8 @@ class RoleOverview extends React.Component {
             </div>
           </div>
 
-          {type === 'active' && this.renderButtons()}
-          {formVisiblity && this.renderForm(title, formAction)}
+          {type === 'active' && this.renderButtons(t)}
+          {formVisiblity && this.renderForm(title, formAction, t)}
           {formResponseVisiblity && this.renderFormResponse()}
         </div>
       </section>

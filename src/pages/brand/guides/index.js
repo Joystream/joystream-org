@@ -31,8 +31,8 @@ const GuidesPage = () => {
             data={guidesData.sidebar.map(({ title, subSections, ...rest }) => {
               return {
                 title: t(`brand.guides.general.${convertToCamelCase(title)}`),
-                subSections: subSections?.map(({ subSectionTitle, ...subSectionRest }) => ({
-                  title: t(`brand.guides.general.${subSectionTitle}`),
+                subSections: subSections?.map(({ title: subsectionTitle, ...subSectionRest }) => ({
+                  title: t(`brand.guides.general.${convertToCamelCase(subsectionTitle)}`),
                   ...subSectionRest,
                 })),
                 ...rest,

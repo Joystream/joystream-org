@@ -29,7 +29,9 @@ const StorySectionWebsite = React.forwardRef(({ onActionClick, t }, ref) => {
         </div>
       </div>
 
-      <ActionButton className="StorySectionWebsite__action" onClick={onActionClick} />
+      <ActionButton className="StorySectionWebsite__action" onClick={onActionClick}>
+        {t('brand.guides.general.more')}
+      </ActionButton>
     </BrandLayoutWrapper>
   );
 });
