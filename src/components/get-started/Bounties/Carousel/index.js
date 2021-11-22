@@ -20,6 +20,7 @@ const parseDate = dateString => {
 };
 
 const BountiesCard = ({ title, amount, categories, date, id, link, description, t }) => {
+  console.log(t);
   return (
     <a className="GetStarted__bounties-carousel__card-wrapper-link" target="_blank" href={link ? link : '#'}>
       <div className="GetStarted__bounties-carousel__card">
@@ -193,6 +194,7 @@ const BountiesCarousel = ({ t }) => {
                       id={bounty?.id}
                       link={bounty?.links[0]}
                       description={bounty?.description}
+                      t={t}
                     />
                   );
                 }
