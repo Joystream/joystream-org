@@ -7,6 +7,6 @@ export const LiveSessionScript = `
     var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(ls, s);
   }(window, document, 'script', ('https:' == window.location.protocol ? 'https://' : 'http://') + 'cdn.livesession.io/track.js');
 
-  __ls("init", "029d5963.01f6daca", { keystrokes: true, rootHostname : '.joystream.org' });
+  __ls("init", "029d5963.08106298", { keystrokes: true, rootHostname : '.joystream.org' });
   __ls("newPageView");
 `;
