@@ -34,7 +34,7 @@ export const sharedData = {
   social: {
     telegramLink: 'https://t.me/joinchat/CNyeUxHD9H56m3e_44hXIA',
     redditLink: 'https://www.reddit.com/r/JoyStream/',
-    twitterLink: 'https://twitter.com/JoystreamApp',
+    twitterLink: 'https://twitter.com/JoystreamDAO',
     discordLink: 'https://discord.gg/DE9UN3YpRP',
   },
   links: {
