@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as DefaultLink } from 'gatsby';
+import { Link as DefaultLink } from 'gatsby-plugin-react-i18next';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 

@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { graphql } from 'gatsby';
 import { types } from '@joystream/types';
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
+import { useTranslation, useI18next , Link } from 'gatsby-plugin-react-i18next';
 
 import Table from '../../../components/Table';
 import SiteMetadata from '../../../components/SiteMetadata';
@@ -177,9 +177,9 @@ const Leaderboards = ({ location }) => {
         <div className="FoundingMembersLeaderboards__header-wrapper">
           <div className="FoundingMembersLeaderboards__back">
             <Arrow className="FoundingMembersLeaderboards__back__arrow" />
-            <a href="/founding-members" className="FoundingMembersLeaderboards__back__text">
+            <Link to="/founding-members" className="FoundingMembersLeaderboards__back__text">
               {t('foundingMembers.general.backButton')}
-            </a>
+            </Link>
           </div>
           <div className="FoundingMembersLeaderboards__header">
             <h1 className="FoundingMembersLeaderboards__header__title">{t('foundingMembers.leaderboards.title')}</h1>

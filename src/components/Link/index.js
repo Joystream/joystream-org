@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, bool, node } from 'prop-types';
-import { Link as DefaultLink } from 'gatsby';
+import { Link as DefaultLink } from 'gatsby-plugin-react-i18next';
 import cn from 'classnames';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
