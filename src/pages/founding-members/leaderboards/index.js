@@ -26,7 +26,7 @@ const formatDate = date =>
     .substr(-2)}`;
 
 const PeriodHighlightFounding = ({ userData, t }) => {
-  const { inducted, memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore } = userData;
+  const { inducted, memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore, surveyScore } = userData;
 
   const [imageHasError, setImageHasError] = useState(false);
   const userDate = new Date(inducted.inductedDate);
@@ -60,7 +60,7 @@ const PeriodHighlightFounding = ({ userData, t }) => {
         </div>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
-        <p>{totalDirectScore}</p>
+        <p>{totalDirectScore + surveyScore}</p>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
         <p>{totalReferralScore}</p>
@@ -76,7 +76,7 @@ const PeriodHighlightFounding = ({ userData, t }) => {
 };
 
 const PeriodHighlightNonFounding = ({ userData, Api, t }) => {
-  const { memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore } = userData;
+  const { memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore, surveyScore } = userData;
   const [imageIsReady, setImageIsReady] = useState(false);
   const [image, setImage] = useState();
 
@@ -115,7 +115,7 @@ const PeriodHighlightNonFounding = ({ userData, Api, t }) => {
         </div>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
-        <p>{totalDirectScore}</p>
+        <p>{totalDirectScore + surveyScore}</p>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
         <p>{totalReferralScore}</p>
