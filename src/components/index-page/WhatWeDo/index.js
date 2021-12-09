@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactComponent as Fist } from '../../../assets/svg/fist-bg2.svg';
 import { ReactComponent as FistAlt } from '../../../assets/svg/fist-bg2-alt.svg';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 import './style.scss';
 

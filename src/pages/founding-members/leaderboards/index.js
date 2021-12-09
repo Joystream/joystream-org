@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { graphql } from 'gatsby';
 import { types } from '@joystream/types';
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
+import { useTranslation, useI18next , Link } from 'gatsby-plugin-react-i18next';
 
 import Table from '../../../components/Table';
 import SiteMetadata from '../../../components/SiteMetadata';
@@ -26,7 +26,7 @@ const formatDate = date =>
     .substr(-2)}`;
 
 const PeriodHighlightFounding = ({ userData, t }) => {
-  const { inducted, memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore } = userData;
+  const { inducted, memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore, surveyScore } = userData;
 
   const [imageHasError, setImageHasError] = useState(false);
   const userDate = new Date(inducted.inductedDate);
@@ -60,7 +60,7 @@ const PeriodHighlightFounding = ({ userData, t }) => {
         </div>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
-        <p>{totalDirectScore}</p>
+        <p>{totalDirectScore + surveyScore}</p>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
         <p>{totalReferralScore}</p>
@@ -76,7 +76,7 @@ const PeriodHighlightFounding = ({ userData, t }) => {
 };
 
 const PeriodHighlightNonFounding = ({ userData, Api, t }) => {
-  const { memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore } = userData;
+  const { memberHandle, memberId, totalDirectScore, totalReferralScore, totalScore, surveyScore } = userData;
   const [imageIsReady, setImageIsReady] = useState(false);
   const [image, setImage] = useState();
 
@@ -115,7 +115,7 @@ const PeriodHighlightNonFounding = ({ userData, Api, t }) => {
         </div>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
-        <p>{totalDirectScore}</p>
+        <p>{totalDirectScore + surveyScore}</p>
       </div>
       <div className="FoundingMembersLeaderboards__table__score">
         <p>{totalReferralScore}</p>
@@ -177,9 +177,9 @@ const Leaderboards = ({ location }) => {
         <div className="FoundingMembersLeaderboards__header-wrapper">
           <div className="FoundingMembersLeaderboards__back">
             <Arrow className="FoundingMembersLeaderboards__back__arrow" />
-            <a href="/founding-members" className="FoundingMembersLeaderboards__back__text">
+            <Link to="/founding-members" className="FoundingMembersLeaderboards__back__text">
               {t('foundingMembers.general.backButton')}
-            </a>
+            </Link>
           </div>
           <div className="FoundingMembersLeaderboards__header">
             <h1 className="FoundingMembersLeaderboards__header__title">{t('foundingMembers.leaderboards.title')}</h1>
