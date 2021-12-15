@@ -1,0 +1,130 @@
+{
+  "landing": {
+    "siteMetadata": {
+      "description": "Joystream on uudenlainen videopalvelu, joka on täysin sen käyttäjien omistama ja hallinoima."
+    },
+    "hero": {
+      "title": "Videopalvelu DAO",
+      "subtitle": "Joystream on videopalvelu joka on sen käyttäjiensä ohjaama,<0/> omistama, and operoima.",
+      "metrics": {
+        "mainTitle": "Testiverkko mittareita",
+        "titles": {
+          "participationPayout": "Osallistumispalkinto",
+          "activeValidators": "Aktiiviset validaattorit",
+          "blockHeight": "Lohkokorkeus",
+          "memberships": "Jäsenyys"
+        }
+      }
+    },
+    "becomeFM": {
+      "subtitle": "Uusi ja vertaansa vailla oleva yhteisötokenin jakelujärjestelmä",
+      "title": "Ryhdy perustajajäseneksi ansaitaksesi pääverkon tokeneita ja vaikuta alustan kehitykseen",
+      "alternateTitle": "Ryhdy perustajajäseneksi ja vaikuta konkreettisesti alustamme kehitykseen",
+      "link": "Lisätietoja avokätisestä ohjelmastamme"
+    },
+    "whatWeDo": {
+      "subtitle": "Motivaatiomme Joystream-protokollan rakentamiseen",
+      "title": "Vaadimme järjestelyä, jossa media-alustat ovat vastuussa ihmisille, joihin ne vaikuttavat.",
+      "link": "Lue manifestimme"
+    },
+    "whyYouShouldJoin": {
+      "title": "Miksiliittyä testiverkkoon?",
+      "reasons": {
+        "tokens": {
+          "title": "Tokenit",
+          "text": "Ansaitse tokeneita, jotka jaetaan 2022 starttaavassa pääverkossa"
+        },
+        "cash": {
+          "title": "Käteinen raha",
+          "text": "Ansaitse palkkioita oikeassa rahassa osallistumisellasi."
+        },
+        "reputationAndSkill": {
+          "title": "Maine & Taito",
+          "text": "Hanki tiedot, joita tarvitaan osallistuaksesi pääverkkoon"
+        }
+      }
+    },
+    "exploreJoystream": {
+      "title": "Tutustu Joystreamiin nyt",
+      "subtitle": "Kaksi nopeasti kehittyvää sovellusta sisällön kuluttamiseen ja hallintotoimintoihin.",
+      "atlas": {
+        "text": "Atlas on Joystreamin lippulaivasisällön kuluttaja- ja julkaisusovellus. Katso videoita, seuraa sisällöntuottajia ja löydä uutta esiteltyä sisältöä tai luo kanava ja rakenna yleisöäsi.",
+        "link": "Kokeile Atlasta",
+        "imageAlt": "Atlaksen yleiskuvaus"
+      },
+      "pioneer": {
+        "text": "Pioneer on paikka osallistua yhteisön hallintoon ja toimintaan. Äänestä vaaleissa, tee ehdotuksia projektisi rahoittamiseksi tai hanki palkallinen rooli alustan ohjaamiseksi.",
+        "link": "Kokeile Pioneeria",
+        "imageAlt": "Pioneerin yleiskuvaus"
+      }
+    },
+    "roadToMainnet": {
+      "title": "Matka pääverkkoon",
+      "testnetState": {
+        "Current": "Tämänhetkinen testiverkko",
+        "Past": "Entinen testiverkko",
+        "Future": "Tuleva testiverkko"
+      },
+      "released": {
+        "Current": "Julkaistiin ",
+        "Past": "Julkaistiin ",
+        "Future": "Julkaistaan "
+      },
+      "testnets": {
+        "Sparta": {
+          "title": "Sparta testiverkko",
+          "text": "Sparta on toinen testiverkkomme, joka esittelee useita tärkeitä teknisiä parannuksia.",
+          "explore": "Tutustu Spartaan"
+        },
+        "Athens": {
+          "title": "Ateena testiverkko",
+          "text": "Ateena on kolmas testiverkkomme, joka esittelee useita tärkeitä teknisiä parannuksia.",
+          "explore": "Tutustu Ateenaan"
+        },
+        "Acropolis": {
+          "title": "Acropolis testiverkko",
+          "text": "Acropolis on neljäs testiverkkomme, joka esittelee useita tärkeitä teknisiä parannuksia.",
+          "explore": "Tutustu Acropolisikseen"
+        },
+        "Rome": {
+          "title": "Rooma testiverkko",
+          "text": "Rooma on viides testiverkkomme, joka esittelee useita tärkeitä teknisiä parannuksia.",
+          "explore": "Tutustu Roomaan"
+        },
+        "Constantinople": {
+          "title": "Konstantinopoli testiverkko",
+          "text": "Konstantinopoli on kuudes testiverkkomme, joka esittelee useita tärkeitä teknisiä parannuksia.",
+          "explore": "Tutustu Konstantinopoliin"
+        },
+        "Alexandria": {
+          "title": "Alexandria testiverkko",
+          "text": "Alexandria on seitsemäs testiverkkomme, joka esittelee useita tärkeitä teknisiä parannuksia.",
+          "explore": "Tutustu Alexandriaan"
+        },
+        "Babylon": {
+          "title": "Babylon testiverkko",
+          "text": "Babylon on kahdeksas testiverkkomme, joka esittelee useita tärkeitä teknisiä parannuksia.",
+          "explore": "Tutustu Babyloniaan"
+        },
+        "Antioch": {
+          "title": "Antioch testiverkko",
+          "text": "Antioch on yhdeksäs testiverkko, joka korjaa ketjun jakautumisen aiheuttaneen bugin, joka rikkoi Babylon testiverkon.",
+          "explore": "Tutustu Antiochiin"
+        },
+        "Sumer": {
+          "title": "Sumer testiverkko",
+          "text": "Sumer on kymmenes testiverkkomme, joka helpottaa sisällön lataamista toistosovelluksemme kautta.",
+          "explore": "Tutustu Sumeriaan"
+        },
+        "Giza": {
+          "title": "Giza testiverkko",
+          "text": "Giza on yhdestoista testiverkkomme, joka esittelemme tallennus- ja jakelujärjestelmän V2:seen.",
+          "explore": "Tutustu Gizaan"
+        }
+      }
+    },
+    "earnTokens": {
+      "title": "Ansaitse pääverkon tokeneita, rahaa ja vaikutusvaltaa."
+    }
+  }
+}
