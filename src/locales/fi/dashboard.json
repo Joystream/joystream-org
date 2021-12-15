@@ -1,0 +1,17 @@
+{
+    "dashboard" : {
+        "siteMetadata" : {
+            "title" : "Kojelauta(live)",
+            "description" : "Tämänhetkisistä Pioneer ja Atlas instansseista koottu data visualisoitu kaavioina."
+        },
+        "title" : "Joystream kojelauta",
+        "subtitles" : {
+            "videos" : "Videot",
+            "channels" : "Kanavat",
+            "users" : "Käyttäjät",
+            "posts" : "Postaukset",
+            "threads" : "Threadit"
+        },
+        "amount" : "Määrä"
+    }
+}
