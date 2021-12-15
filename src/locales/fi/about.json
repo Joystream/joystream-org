@@ -1,0 +1,51 @@
+{
+  "about": {
+    "general": {
+      "roles": {
+        "blockchain": "Lohkoketjuinsinööri",
+        "frontEnd": "Front-End kehittäjä",
+        "design": "Suunnittelija",
+        "growth": "Growth hakkeri",
+        "core": "Ydintiimi",
+        "ceo": "CEO",
+        "cto": "CTO",
+        "cooAndGrowth": "COO & Growth",
+        "all": "Kaikki",
+        "allMembers": "Kaikki jäsenet"
+      }
+    },
+    "siteMetadata": {
+      "title": "Tietoa meistä",
+      "description": "Emmme tarjoa vain rahaa ja joustavaa työympäristöä, vaan tärkeän tehtävän, tiimin ja ajoituksen, jotta voit olla mukana rakentamassa jotakin, joka muuttaa kaiken."
+    },
+    "hero": {
+      "title": "Rakennamme Joystremia vapauttaaksemme sen",
+      "subtitle": "Jsgenesis on ydintiimi, joka rakentaa Joystream-alustaa ja sen avointa lohkoketjua."
+    },
+    "ourTeam": {
+      "title": "Tiimimme",
+      "subtitle": "Tulemme eri mantereilta, mutta jaamme intohimon avointa ohjelmistoa, lohkoketjuteknologiaa, hajautettuja järjestelmiä, yksityisyyttä ja uudenlaisen internetin rakentamiseen, joka perustuu vastuullisiin ja muokattaviin arvoihin.",
+      "moreMembers": "Lataa lisää tiimijäseniä"
+    },
+    "investors": {
+      "title": "Sijoittajamme"
+    },
+    "positions": {
+      "title": "Avoimet työpaikat",
+      "available": "3 työpaikkaa tarjolla",
+      "join": "Liity",
+      "roles": {
+        "frontEnd": "Frontend kehittäjä",
+        "blockchain": "Lohkoketjukehittäjä",
+        "designer": "Johtava ulkoasusuunnitelija(UI/UX)"
+      },
+      "location": "Oslo, Eurooppa, Etätyö",
+      "employmentType": "Full time",
+      "salary": {
+        "frontEnd": "€70K-€120K",
+        "blockchain": "€90K-€125K",
+        "designer": "€90K-€125K"
+      }
+    }
+  }
+}
