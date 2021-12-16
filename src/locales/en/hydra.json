@@ -1,87 +1,87 @@
 {
-  "hydra": {
+  "Hydra": {
     "siteMetadata": {
-      "title": "Hydra - A Substrate query node framework",
-      "description": "Inspired by The Graph, it gives a smooth way to provide powerful GraphQL queries to app developers over your Substrate blockchain state and history."
+      "title": "Hydra - Ein Substrate query node framework",
+      "description": "Inspiriert von The Graph, bietet es eine einfache Möglichkeit, App-Entwicklern leistungsstarke GraphQL-Abfragen über den Zustand und die Historie der Substrate-Blockchain zur Verfügung zu stellen."
     },
     "hero": {
-      "title": "Hydra - A Substrate query node framework",
-      "text": "Inspired by The Graph, it gives a smooth way to provide powerful GraphQL queries to app developers over your Substrate blockchain state and history."
+      "title": "Hydra - Ein Substrate query node framework",
+      "text": "Inspiriert von The Graph, bietet es eine einfache Möglichkeit, App-Entwicklern leistungsstarke GraphQL-Abfragen über den Zustand und die Historie der Substrate-Blockchain bereitzustellen."
     },
     "value": {
-      "title": "We make it simple",
-      "subtitle": "Building great apps talking directly to a Substrate full node is impossible, and simply trying is slow and hard.",
+      "title": "Wir machen es einfach",
+      "subtitle": "Großartige Anwendungen zu entwickeln, die direkt mit einem Substrate Full Node kommunizieren, ist unmöglich, und es einfach zu versuchen, ist langsam und schwierig.",
       "values": {
         "slowFetching": {
-          "title": "Slow Fetching",
-          "text": "Doing multiple read operations across multiple block heights is often required, and the pure latency of fetching the data is very bad. Some reads may depend on the result of prior ones, which results in sequential reads, which is even slower."
+          "title": "Langsames Abrufen",
+          "text": "Oft sind mehrere Lesevorgänge über mehrere Blockhöhen erforderlich, und die reine Latenzzeit beim Abrufen der Daten ist sehr schlecht. Einige Lesevorgänge können vom Ergebnis früherer Lesevorgänge abhängen, was zu sequenziellen Lesevorgängen führt, die noch langsamer sind."
         },
         "slowProcessing": {
-          "title": "Slow Processing",
-          "text": "The client has to do all the work of filtering, sorting, paginating or otherwise computing on the resulting data, and this takes time, resulting in a slow client experience and CPU load on the user device."
+          "title": "Langsame Verarbeitung",
+          "text": "Der Nutzer muss die gesamte Arbeit des Filterns, Sortierens, Paginierens oder anderweitigen Verarbeitens der resultierenden Daten erledigen, was Zeit in Anspruch nimmt und zu einer langsamen Nutzererfahrung und CPU-Belastung auf dem Nutzergerät führt."
         },
         "complexClient": {
-          "title": "Complex Client",
-          "text": "The fetching and processing logic is reproduced in all apps, and adds to the complexity of application development."
+          "title": "Komplexer Nutzer",
+          "text": "Die Abhol- und Verarbeitungslogik wird in allen Anwendungen reproduziert und erhöht die Komplexität der Anwendungsentwicklung."
         },
         "noSearch": {
-          "title": "No Search",
-          "text": "Your chain may have transactional or state commitments to free-text data, but doing real full-text search client-side is not an option."
+          "title": "Keine Suche",
+          "text": "Ihre Kette kann Transaktions- oder Statusverpflichtungen für Freitextdaten haben, aber eine echte Volltextsuche auf der Nutzerseite ist keine Option."
         },
         "overFetching": {
-          "title": "Over-Fetching",
-          "text": "You cannot select the data you want, you have to read full state objects as they are, wasting both connection and full node capacity."
+          "title": "Über Abruf",
+          "text": "Sie können die gewünschten Daten nicht auswählen, sondern müssen die vollständigen Zustandsobjekte so lesen, wie sie sind, wodurch sowohl die Verbindungs- als auch die gesamte Knotenkapazität verschwendet wird."
         },
         "costlyNodes": {
-          "title": "Costly Archival Nodes",
-          "text": "User requests which involve multiple read operations. To fetch a consistent dataset, you will often have to read at some specific block height, as always reading at the tip can break atomicity. This means such read requests will depend on the full node being archival. As your user base scales, that will become a very costly infrastructure."
+          "title": "Kostspielige Archivierungsknoten",
+          "text": "Benutzeranfragen, die mehrere Lesevorgänge beinhalten. Um einen konsistenten Datensatz abzurufen, müssen Sie oft auf einer bestimmten Blockhöhe lesen, da das Lesen immer an der Spitze die Atomarität aufheben kann. Das bedeutet, dass solche Leseanfragen davon abhängen, dass der gesamte Knoten archiviert ist. Wenn Ihre Benutzerbasis wächst, wird dies zu einer sehr kostspieligen Infrastruktur."
         }
       }
     },
     "snippet": {
-      "title": "Powerful queries in GraphQL",
-      "subtitle": "Provide application developers a powerful GraphQL API for your blockchain state and history"
+      "title": "Leistungsstarke Abfragen in GraphQL",
+      "subtitle": "Bieten Sie Anwendungsentwicklern eine leistungsstarke GraphQL-API für Ihren Blockchain-Status und -Verlauf"
     },
     "features": {
       "title": "Hydra Features",
       "values": {
         "fullTextSearch": {
-          "title": "Full-text Search",
-          "text": "Decorate any number of String fields in the input schema with @fulltext(query: \"myquery\") to seach across different fields and entities."
+          "title": "Volltextsuche",
+          "text": "Dekorieren Sie eine beliebige Anzahl von String-Feldern im Eingabeschema mit @fulltext(query: \"myquery\"), um verschiedene Felder und Entitäten zu durchsuchen."
         },
         "filtering": {
-          "title": "Filtering",
-          "text": "Any entity field can be used for OpenCRUD filtering"
+          "title": "Filterung",
+          "text": "Jedes Entitätsfeld kann für OpenCRUD-Filterung verwendet werden"
         },
         "pagination": {
-          "title": "Pagination",
-          "text": "Each GraphQL query supports pagination out-of-the-box"
+          "title": "Paginierung",
+          "text": "Jede GraphQL-Abfrage unterstützt Paginierung out-of-the-box"
         },
         "ordering": {
-          "title": "Ordering",
-          "text": "Order by any primitive field"
+          "title": "Bestellung",
+          "text": "Ordnung nach einem beliebigen primitiven Feld"
         },
-        "polymorphism": {
-          "title": "Polymorphism",
-          "text": "Native support of GraphQL interfaces and type inline fragments"
+        "Polymorphismus": {
+          "title": "Polymorphismus",
+          "text": "Native Unterstützung von GraphQL-Schnittstellen und Typ-Inline-Fragmenten"
         },
         "algebraicTypes": {
-          "title": "Algebraic Types",
-          "text": "Construct rich and queriable algebraic types with @variant directive"
+          "title": "Algebraische Typen",
+          "text": "Konstruieren Sie reichhaltige und abfragbare algebraische Typen mit der @variant-Direktive"
         }
       }
     },
     "video" : {
-      "title" : "Play a video tutorial",
-      "subtitle" : "Release the Hydra"
+      "title" : "Ein Videotutorial abspielen",
+      "subtitle" : "Befreie die Hydra"
     },
     "getStarted": {
-      "title": "Get started with Hydra now!",
-      "subtitle": "Use the following links to connect with us and find out even more.",
+      "title": "Starten Sie jetzt mit Hydra!",
+      "subtitle": "Nutzen Sie die folgenden Links, um sich mit uns zu verbinden und noch mehr zu erfahren.",
       "links": {
         "documentation": {
-          "name": "Documentation",
-          "link": "Documentation"
+          "name": "Dokumentation",
+          "link": "Dokumentation"
         },
         "githubRepository": {
           "name": "Github Repository",
@@ -89,11 +89,11 @@
         },
         "kusamaPlayground": {
           "name": "Kusama Playground",
-          "link": "Go to the Playground"
+          "link": "Gehe zum Playground"
         },
         "discord": {
           "name": "Discord",
-          "link": "Go to the Channel"
+          "link": "Zum Kanal gehen"
         }
       }
     }
