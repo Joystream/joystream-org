@@ -1,10 +1,10 @@
 {
   "Konstantinopel": {
     "siteMetadata": {
-      "description": "Erkunden Sie das Konstantinopel-Testnetzwerk"
+      "description": "Erkunden Sie das Constantinople testnet"
     },
     "hero": {
-      "title": "Konstantinopel-Netzwerk",
+      "title": "Konstantinopel Network",
       "text": "Das Testnetzwerk Konstantinopel führt ein verbessertes Vorschlagssystem und ein Fiat-gestütztes Token-Modell zur Entschädigung der Teilnehmer ein.",
       "chipText": "Was ist das?"
     },
@@ -27,7 +27,7 @@
       }
     },
     "testnetGoals": {
-      "title": "Testnetzwerk-Ziele",
+      "title": "Ziele des Testnets",
       "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Konstantinopel-Testnetzwerk.",
       "goals": {
         "proposalSystem": {
