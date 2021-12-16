@@ -1,10 +1,10 @@
 {
   "acropolis": {
     "siteMetadata": {
-      "description": "Erkunden Sie das Akropolis Testnetz"
+      "description": "Erkunden Sie das Acropolis testnet"
     },
     "hero": {
-      "title": "Akropolis Netzwerk",
+      "title": "Akropolis network",
       "text": "Erkunden Sie die verfügbaren Rollen und wählen Sie diejenige, die am besten zu Ihnen passt. Beeinflussen Sie die Entwicklung der Plattform und verdienen Sie dabei echtes Geld.",
       "chipText": "Was ist das?"
     },
@@ -27,7 +27,7 @@
       }
     },
     "testnetGoals": {
-      "title": "Testnet Ziele",
+      "title": "Ziele des Testnetzwerks",
       "subtitle": "Die folgenden Ziele sind eine vereinfachte Darstellung der in unserer Pressemitteilung aufgeführten Schlüsselergebnisse <0>OKR</0>",
       "goals": {
         "forum": {
@@ -49,7 +49,7 @@
       }
     },
     "roles": {
-      "title": "Verfügbare Rollen auf dem Akropolis Testnetz"
+      "title": "Verfügbare Rollen auf dem Acropolis testnet"
     },
     "map": {
       "title": "Akropolis von Athen",
