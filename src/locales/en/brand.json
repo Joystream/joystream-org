@@ -83,119 +83,118 @@
         "blackAndBlue": "Unsere primär verwendeten Farben sind Schwarz und Joystream-Blau, eine unverwechselbare Farbe, die dazu beiträgt, den Fokus zu setzen und Aufmerksamkeit zu erregen. Die Farbe Weiß kann eingesetzt werden, um zu beruhigen, Klarheit zu schaffen und eine bessere Lesbarkeit zu bieten.",
         "blueGrey": "Eine zusätzliche Farbe, die mit den drei Grundfarben kombiniert werden kann, ist blau getöntes Grau, dessen Zweck mit dem von Weiß vergleichbar ist, das aber auch einen guten Kontrast zu den vorhandenen weißen Elementen bietet, wo dies erforderlich ist."
       },
-*** Übersetzt mit www.DeepL.com/Translator (kostenlose Version) ***
-
-
-      "supportiveColors": {
-        "title": "02. Supportive Color Palette",
-        "purpose": "Our supportive palette serves the purpose of convenience and usability. This pallete provides a comprehensive range of different shades of primary colors and can be utilised in many different ways depending on requirements."
+ "supportiveColors": {
+        "title": "02. Unterstützende Farbpalette",
+        "purpose": "Unsere unterstützende Palette dient dem Zweck der Bequemlichkeit und Benutzerfreundlichkeit. Diese Palette bietet eine umfassende Auswahl an verschiedenen Schattierungen von Primärfarben und kann je nach Bedarf auf vielfältige Weise eingesetzt werden."
       },
       "secondaryColors": {
-        "title": "03. Secondary Color Palette",
-        "states": "These are further colours that can represent certain states of the network, they can stand for an error, success, warning and more."
+        "title": "03. Sekundäre Farbpalette",
+        "states": "Dies sind weitere Farben, die bestimmte Zustände des Netzwerks darstellen können, sie können für einen Fehler, Erfolg, eine Warnung und mehr stehen."
       },
       "iconsOverview": {
-        "text": "Icons can be divided into two groups with different purposes. Descriptive icons are a substitute for illustrations and system icons are a purely functional part of the interface.",
-        "typeDescriptive": "01. Descriptive",
+        "text": "Icons lassen sich in zwei Gruppen mit unterschiedlichen Zwecken einteilen. Beschreibende Icons sind ein Ersatz für Illustrationen und Systemicons sind ein rein funktionaler Teil der Schnittstelle.",
+        "typeDescriptive": "01. Beschreibend",
         "typeSystem": "02. System"
       },
       "descriptiveIcons": {
-        "title": "01. Descriptive Icons",
-        "comprehensiveStyle": "Joystream iconography is a custom, comprehensive icon style that helps in explaining certain complex topics in a simple, digestable manner.",
-        "symbolic": "They are not always very direct and often carry a symbolic meaning but they help to emphasize important elements.",
-        "characteristicFeatures": "Characteristic features of the descriptive icons include paralell striped fills. They are a translation of logo stripes and represent shadows.",
-        "angle": "Lines have an angle of 45° they should have 2px girth and 8px space between them at 100% scale.",
-        "outlines": "Icons are drawn using outlines of 12px width at 100% scale, they have square linecaps and can have various sizes depending on the composition.",
-        "fit": "Icons at 100% scale should fit into a box of 800x500px."
+        "title": "01. Beschreibende Icons",
+        "comprehensiveStyle": "Die Joystream-Ikonographie ist ein benutzerdefinierter, umfassender Ikonenstil, der dabei hilft, bestimmte komplexe Themen auf einfache, verständliche Weise zu erklären.",
+        "symbolic": "Sie sind nicht immer sehr direkt und haben oft eine symbolische Bedeutung, aber sie helfen, wichtige Elemente zu betonen.",
+        "characteristicFeatures": "Zu den charakteristischen Merkmalen der Beschreibungssymbole gehören paralell gestreifte Füllungen. Sie sind eine Übersetzung der Logo-Streifen und stellen Schatten dar.",
+        "angle": "Linien haben einen Winkel von 45°, sie sollten einen Umfang von 2px und einen Abstand von 8px zwischen ihnen bei einer Skalierung von 100% haben.",
+        "outlines": "Icons werden mit Umrissen von 12px Breite bei 100% Maßstab gezeichnet, sie haben quadratische Linecaps und können je nach Komposition verschiedene Größen haben.",
+        "fit": "Icons im Maßstab 100% sollten in eine Box von 800x500px passen."
       },
       "systemIcons": {
-        "title": "02. System Icons",
-        "basicStyle": "System icons in their basic style combine two colors: black and Joystream Blue. Their purpose is to represent certain actions on the website or platform. They are readable even in small sizes down to 18x18px.",
-        "strokes": "System Icons are drawn using 2px strokes with square linecaps on a 24px grid frame.",
-        "subtleAccents": "Where possible, icons should have subtle blue accents representing no greater than 40% of the whole.",
-        "types": "Types of system icons",
+        "title": "02. System-Symbole",
+        "basicStyle": " Systemsymbole in ihrem Grundstil kombinieren zwei Farben: Schwarz und Joystream Blue. Ihr Zweck ist es, bestimmte Aktionen auf der Website oder Plattform darzustellen. Sie sind auch in kleinen Größen bis zu 18x18px lesbar.",
+        "strokes": "System Icons werden mit 2px Strichen mit quadratischen Linecaps auf einem 24px Rasterrahmen gezeichnet.",
+        "subtleAccents": "Wenn möglich, sollten Icons subtile blaue Akzente haben, die nicht mehr als 40% der Gesamtfläche ausmachen.",
+        "types": "Typen von Systemsymbolen",
         "fourTypes": {
-          "text": "We distinguish four types of system icons and they should be used preferably in their basic style but can be used interchangeably where neccessary.",
-          "basic": "Basic style",
-          "blue": "Blue outlines",
-          "white": "White outlines",
-          "full": "Full style"
+          "text": "Wir unterscheiden vier Arten von Systemsymbolen, die vorzugsweise in ihrer Grundform verwendet werden sollten, aber bei Bedarf auch untereinander ausgetauscht werden können.",
+          "basic": "Grundstil",
+          "blau": "Blaue Umrisse",
+          "weiß": "Weiße Umrisse",
+          "voll": "Voller Stil"
         }
       },
-      "illustrations": {
-        "overview": "Joystream Illustrations are symbolic representation of important concepts within the Joystream project. These might include a a new testnet, a particular role on the network or any other equally significant subject.",
-        "complex": "They can be quite visualy complex despite using only three colors and no gradients.",
-        "patterns": "Illustrations will often be combined with patterns and in the case of putting them on a blue background, the outline of the illustration can be changed to Joystream Blue in order to create a good color balance between patterns and the background.",
-        "distinctive": "Illustrations should be simple enough to be distinctive even in smaller resolutions down to 300x300px.",
-        "adequateDetail": "The amount of detail should be adequate to what the illustration represents, in most cases they should be deployed at sizes no smaller than 500x500px."
+      "Abbildungen": {
+        "overview": "Joystream-Illustrationen sind symbolische Darstellungen von wichtigen Konzepten innerhalb des Joystream-Projekts. Dazu kann ein neues Testnetz, eine bestimmte Rolle im Netz oder ein anderes ebenso wichtiges Thema gehören.",
+        "komplex": "Sie können visuell ziemlich komplex sein, obwohl sie nur drei Farben und keine Farbverläufe verwenden.",
+        "patterns": "Illustrationen werden oft mit Mustern kombiniert, und wenn sie auf einem blauen Hintergrund platziert werden, kann der Umriss der Illustration in Joystream Blue geändert werden, um eine gute Farbbalance zwischen Mustern und Hintergrund zu schaffen.",
+        "distinctive": "Illustrationen sollten einfach genug sein, um auch bei kleineren Auflösungen bis 300x300px unverwechselbar zu sein.",
+        "adequateDetail": "Der Detaillierungsgrad sollte dem Inhalt der Illustration angemessen sein, in den meisten Fällen sollten sie nicht kleiner als 500x500px verwendet werden."
       },
       "patterns": {
-        "translation": "Patterns are close translation of the logomark (J) into variants of geometrical shapes representing the flow of information, technology and Joystream's experimental brand personality.",
-        "supportTool": "They were introduced as a support tool to make certain elements stand-out, to build mood and as an inherent element of the visual identity of the brand.",
-        "sixPieces": "Patterns visually consist of six different pieces that can be rotated by 90 degrees in any direction and should always have the dimensions of a perfect square.",
-        "oneCommonVertex": "They should also have at least one common vertex when they touch. They do not always have to touch and when they don’t, space between pieces should always be equal to its’ width/height or the value multiplied.",
-        "howToUse": "How to use patterns",
-        "oneOfFive": "Patterns can use one of five different colors depending on what background is used beneath and what their main purpose is in a given situation.",
-        "density": "Depending on the situation these can be used more or less densely.",
-        "inUse": "Patterns in use - examples"
+        "translation": "Patterns sind eine enge Übersetzung des Logomarks (J) in Varianten geometrischer Formen, die den Informationsfluss, die Technologie und die experimentelle Markenpersönlichkeit von Joystream darstellen.",
+        "supportTool": "Sie wurden als unterstützendes Werkzeug eingeführt, um bestimmte Elemente hervorzuheben, um Stimmung aufzubauen und als inhärentes Element der visuellen Identität der Marke.",
+        "sixPieces": "Muster bestehen visuell aus sechs verschiedenen Teilen, die um 90 Grad in jede Richtung gedreht werden können und immer die Abmessungen eines perfekten Quadrats haben sollten.",
+        "oneCommonVertex": "Sie sollten auch mindestens einen gemeinsamen Scheitelpunkt haben, wenn sie sich berühren. Sie müssen sich nicht immer berühren, und wenn sie sich nicht berühren, sollte der Abstand zwischen den Teilen immer gleich der Breite/Höhe oder dem multiplizierten Wert sein.",
+        "howToUse": "Wie man Muster verwendet",
+        "oneOfFive": "Muster können eine von fünf verschiedenen Farben verwenden, je nachdem, welcher Hintergrund darunter verwendet wird und was ihr Hauptzweck in einer bestimmten Situation ist.",
+        "density": "Je nach Situation können diese mehr oder weniger dicht verwendet werden.",
+        "inUse": "Verwendete Muster - Beispiele"
       },
-      "typography": {
-        "overview": "Our typefaces are simple, comprehensive and modern. This is a reflection of our brand and our voice. We chose the appropriate typeface weights from PX Grotesk (regular, bold) and Inter family for specific touchpoints and to create clear hierarchies of information and messages.",
-        "backup": "If either two typefaces are impossible to use please choose Arial Regular. This may be required across PC operating systems or electronic internal documents or in diferent offices worldwide. Don’t use Arial for any print materials.",
-        "sample": "The following is a sample of an ideal font stack using PX Grotesk for headlines and larger pull quote text and Inter UI for paragraph and call-to-action text."
+      " typography": {
+        " overview": "Unsere Schriftarten sind einfach, umfassend und modern. Dies spiegelt unsere Marke und unsere Stimme wider. Wir wählten die passenden Schriftschnitte der PX Grotesk (normal, fett) und der Inter-Familie für bestimmte Berührungspunkte und um klare Hierarchien von Informationen und Botschaften zu schaffen.",
+        "backup": "Wenn eine der beiden Schriftarten nicht verwendet werden kann, wählen Sie bitte Arial Regular. Dies kann bei verschiedenen PC-Betriebssystemen oder elektronischen internen Dokumenten oder in verschiedenen Büros weltweit erforderlich sein. Verwenden Sie Arial nicht für Drucksachen.",
+        "sample": "Im Folgenden finden Sie ein Beispiel für einen idealen Font Stack, bei dem PX Grotesk für Überschriften und größere Anreißertexte und Inter UI für Absatz- und Call-to-Action-Text verwendet wird."
       },
       "photography": {
-        "overview": "Photographs should be relevant to the topic they are describing but they shouldn’t be limited only to technology. Joystream is much more than just technology; it is unifying, fresh and joyful. Imagery should convey this mood to users.",
-        "howToUse": "How to use photography",
-        "variety": "Since Joystream is a unique and experimental project it provides a wide variety of the topics which might be  associated with it in terms of photography. It is highly technical especially now when we are in the community building phase, so good deal of the photographs will be tech related.",
-        "consistency": "One way to make sure the photographs are consistent is to use them in dual tones deriving from branding colors. For that purpose we can use a handy tool to consistently change images to dual tones as described below.",
-        "consistentDuotones": "The link below allows you to create consistent duotones with any photography after inputing the proper two Joystream colours.",
-        "mood": "The mood that photos convey is extremely important. It should by all means give a feel of building trust, community and joy. Photographs should show good amount of diversity as it is meant to be for an extremely wide variety of users. They don’t have to be used in dual tones but it is best if they are not \"screaming\" with colours.",
-        "inUse": "Photography in use - examples"
+        "overview": "Fotos sollten für das Thema, das sie beschreiben, relevant sein, aber sie sollten nicht nur auf Technologie beschränkt sein. Joystream ist viel mehr als nur Technologie; es ist vereinheitlichend, frisch und fröhlich. Die Bilder sollten den Nutzern diese Stimmung vermitteln",
+        "howToUse": "Wie man die Fotografie verwendet",
+        "variety": "Da Joystream ein einzigartiges und experimentelles Projekt ist, bietet es eine große Vielfalt an Themen, die mit Fotografie in Verbindung gebracht werden können. Es ist sehr technisch, vor allem jetzt, wo wir uns in der Aufbauphase der Community befinden, daher wird ein großer Teil der Fotos technikbezogen sein.",
+        "consistency'": "Eine Möglichkeit, um sicherzustellen, dass die Fotos einheitlich sind, besteht darin, sie in zwei Farbtönen zu verwenden, die sich von den Farben der Marke ableiten. Zu diesem Zweck können wir ein praktisches Tool verwenden, um die Bilder wie unten beschrieben einheitlich in zwei Farbtöne zu ändern.",
+        "consistentDuotones": "Der unten stehende Link ermöglicht es Ihnen, einheitliche Duotones mit jeder Fotografie zu erstellen, nachdem Sie die richtigen zwei Joystream-Farben eingegeben haben.",
+        "mood": "Die Stimmung, die Fotos vermitteln, ist extrem wichtig. Sie sollten auf jeden Fall ein Gefühl von Vertrauen, Gemeinschaft und Freude vermitteln. Die Fotos sollten ein gutes Maß an Vielfalt zeigen, da sie für eine sehr große Bandbreite von Nutzern gedacht sind. Sie müssen nicht in Zweifarbtönen gehalten sein, aber es ist am besten, wenn sie nicht mit Farben \"schreien\".",
+        "inUse": "Fotografie im Einsatz - Beispiele"
       },
       "motion": {
-        "subtitle": "Joystream is an experimental and exciting platform and its motion should be too.",
-        "rules": "General rules for motion can be described with a few simple principles: smooth transitions, dynamic but fluid motion and good amount of easing at the keyframes. This combination should provide a consistent and flexible animation style to cover most of the use cases.",
-        "notLimiting": "Guides should be by no means limiting, they should only serve the purpose of providing consistency for animations."
+        "subtitle": "Joystream ist eine experimentelle und aufregende Plattform und die Bewegung sollte es auch sein.",
+        "rules": "Allgemeine Regeln für die Bewegung können mit ein paar einfachen Prinzipien beschrieben werden: weiche Übergänge, dynamische, aber flüssige Bewegung und ein gutes Maß an Lockerung bei den Keyframes. Diese Kombination sollte einen konsistenten und flexiblen Animationsstil bieten, der die meisten Anwendungsfälle abdeckt.",
+        "notLimiting": "Guides sollten auf keinen Fall einschränkend sein, sie sollten nur dem Zweck dienen, Konsistenz für Animationen zu schaffen."
       }
     },
     "story": {
       "header": {
         "title": "Joystream Brand Story",
-        "description": "Joystream offers a modern, experimental solution to the problem of accountable governance in digital media. <0>Our objective is to build a user-governed video platform with a strong sense of community and freedom.</0>",
+        "description": "Joystream bietet eine moderne, experimentelle Lösung für das Problem der verantwortlichen Steuerung in digitalen Medien. <0>Unser Ziel ist es, eine nutzergesteuerte Videoplattform mit einem starken Sinn für Gemeinschaft und Freiheit aufzubauen.</0>",
         "buttonText": "Manifesto"
       },
       "website": {
-        "title": "The Website",
-        "linkText": "Visit the Website"
+        "title": "Die Website",
+        "linkText": "Besuchen Sie die Website"
       },
-      "description": {
-        "header": "Our brand identity consists of few key visual elements: our logo, typeface, illustrations, patterns, colour palette and iconography.",
-        "meaningfulRole": "Each of these elements has a meaningful role in brand identity as established in the guidelines. But combining all of these components builds much more than just a visual experience.",
-        "powerfulTool": "Joystream branding is a powerful tool for communication with all of its users throughout their whole experience.",
-        "experimental": "Fundamentally, our effort is an experimental one; we do not have all the answers, and we want to be honest about that in our communication.",
-        "empowering": "We are not promising cheaper, faster or nicer, like one typically would when selling a consumer widget or service. Instead we have hope that we can build something more empowering and accountable through our process of experimentation.",
-        "governance": "Lastly, at the core of our vision is governance, so what we are building is never finished; we are only constructing the first piece. It is a dynamic effort we hope communities will carry forward in amazing ways, we are just providing the first set of tools.",
-        "footer": "For the reasons outlined above, our brand should carry this feeling of experimentation, excitement and building something ethical and dynamic."
+      " description": {
+        "header": "Unsere Markenidentität besteht aus wenigen visuellen Schlüsselelementen: unserem Logo, unserer Schriftart, unseren Illustrationen, Mustern, unserer Farbpalette und unserer Ikonografie.",
+        "meaningfulRole": "Jedes dieser Elemente hat eine bedeutende Rolle in der Markenidentität, wie in den Richtlinien festgelegt. Aber die Kombination all dieser Komponenten schafft viel mehr als nur ein visuelles Erlebnis.",
+        "powerfulTool": "Das Branding von Joystream ist ein leistungsfähiges Werkzeug für die Kommunikation mit all seinen Nutzern während ihrer gesamten Erfahrung.",
+        " experimental": "Grundsätzlich sind unsere Bemühungen experimentell; wir haben nicht alle Antworten, und wir wollen in unserer Kommunikation ehrlich damit umgehen.",
+        " empowering": "Wir versprechen nicht, dass es billiger, schneller oder schöner wird, wie man es normalerweise beim Verkauf eines Widgets oder einer Dienstleistung für Verbraucher tun würde. Stattdessen haben wir die Hoffnung, dass wir durch unseren Experimentierprozess etwas aufbauen können, das mehr Befugnisse und Verantwortung bietet.",
+        " governance ": "Das Herzstück unserer Vision ist die Verwaltung, d. h. das, was wir aufbauen, ist nie fertig; wir bauen nur das erste Stück auf. Es handelt sich um eine dynamische Anstrengung, von der wir hoffen, dass die Gemeinschaften sie auf erstaunliche Weise vorantreiben werden; wir stellen nur die ersten Werkzeuge zur Verfügung.",
+        " footer": "Aus den oben genannten Gründen sollte unsere Marke dieses Gefühl des Experimentierens, der Aufregung und des Aufbaus von etwas Ethischem und Dynamischem transportieren."
       },
       "logo": {
-        "title": "We want to free the media, inspire people and connect them using platform",
-        "uniqueness": "Creating the Joystream brand proved to be challenging due to its uniqueness and the fact that it is continually evolving.",
-        "requirements": "Not only did we have to take into account a very wide and diverse user base but also we had to create a brand that will be futureproof and flexible enough to cover both the existing and upcoming requirements of the project.",
-        "branding": "Joystream branding itself is quite metaphoric and symbolic, often referring to symbolism of ancient cities, culture, arts and philosophies.",
-        "challenge": "The challenge was to combine it with very modern and complex technologies."
+        "title": "Wir wollen die Medien befreien, die Menschen inspirieren und sie über eine Plattform verbinden",
+        " uniqueness": "Die Schaffung der Marke Joystream erwies sich aufgrund ihrer Einzigartigkeit und der Tatsache, dass sie sich ständig weiterentwickelt, als eine Herausforderung.",
+        "requirements": "Wir mussten nicht nur eine sehr breite und vielfältige Nutzerbasis berücksichtigen, sondern auch eine Marke schaffen, die zukunftssicher und flexibel genug ist, um sowohl die bestehenden als auch die zukünftigen Anforderungen des Projekts abzudecken.",
+        " branding": "Das Branding von Joystream selbst ist ziemlich metaphorisch und symbolisch und bezieht sich oft auf die Symbolik alter Städte, Kultur, Kunst und Philosophien.",
+        " challenge": "Die Herausforderung bestand darin, dies mit sehr modernen und komplexen Technologien zu kombinieren."
       },
-      "explanation": {
-        "title": "Explaining the Brand",
-        "balance": "Our new branding is about finding good balance between a very simplistic tone of communication with the symbolism and complexity of modern world problems and technologies.",
-        "patterns": "Our branding uses mosaic, geometrical patterns and shapes combined with explicit colours and symbolic  illustrations.",
-        "style": "We also deploy descriptive icons in combination with simple glyph style system icons and an experimental  illustration style."
+      " explanation": {
+        "title": "Erklärung der Marke",
+        "balance": "Bei unserem neuen Branding geht es darum, eine gute Balance zwischen einem sehr einfachen Kommunikationston und der Symbolik und Komplexität der Probleme und Technologien der modernen Welt zu finden.",
+        "patterns": "Unser Branding verwendet mosaikartige, geometrische Muster und Formen in Kombination mit eindeutigen Farben und symbolischen Illustrationen.",
+        " style": "Wir verwenden auch beschreibende Icons in Kombination mit einfachen System-Icons im Glyphenstil und einem experimentellen Illustrationsstil."
       }
     },
     "button": {
       "text": {
-        "downloadLogo": "Download Logo"
+        "downloadLogo": "Logo herunterladen"
       }
     }
   }
 }
+
+
