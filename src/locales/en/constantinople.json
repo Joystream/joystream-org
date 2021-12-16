@@ -1,51 +1,50 @@
 {
-  "constantinople": {
+  "Konstantinopel": {
     "siteMetadata": {
-      "description": "Explore the Constantinople testnet"
+      "description": "Erkunden Sie das Konstantinopel-Testnetzwerk"
     },
     "hero": {
-      "title": "Constantinople Network",
-      "text": "The Constantinople testnet introduces an improved proposals system and fiat-backed token model for participant compensation.",
-      "chipText": "What is this?"
+      "title": "Konstantinopel-Netzwerk",
+      "text": "Das Testnetzwerk Konstantinopel führt ein verbessertes Vorschlagssystem und ein Fiat-gestütztes Token-Modell zur Entschädigung der Teilnehmer ein.",
+      "chipText": "Was ist das?"
     },
     "heroCard": {
-      "title": "REPLACED BY ALEXANDRIA ON"
+      "title": "ERSETZT DURCH ALEXANDRIA ON"
     },
     "modal": {
-      "title": "Constantinople",
-      "text": "The Column of Constantine, also known as the Burnt Stone or the Burnt Pillar, is a Roman monumental column constructed on the orders of the Roman emperor Constantine the Great in 330 AD. It commemorates the declaration of Byzantium as the new capital city of the Roman Empire."
+      "title": "Konstantinopel",
+      "text": "Die Konstantinssäule, auch bekannt als der Verbrannte Stein oder die Verbrannte Säule, ist eine römische Monumentalsäule, die auf Befehl des römischen Kaisers Konstantin des Großen im Jahr 330 n. Chr. errichtet wurde. Sie erinnert an die Erklärung von Byzanz zur neuen Hauptstadt des Römischen Reiches."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Kritische Dokumente",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Freigabeplan",
+        "text": "Lesen Sie den Freigabeplan, wie er in der Planungsphase erstellt wurde, und erfahren Sie mehr über den Verlauf der Entwicklung."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Constantinople testnet and its objectives."
+        "title": "Ankündigung Blog Post",
+        "text": "Lesen Sie eine kurze Einführung in das  Konstantinopel-Testnetzwerk und seine Ziele."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Constantinople testnet.",
+      "title": "Testnetzwerk-Ziele",
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Konstantinopel-Testnetzwerk.",
       "goals": {
         "proposalSystem": {
-          "title": "Launch a new proposal system",
-          "text": "The constantinople testnet is built around the introduction of a proposal system that strengthens the governance structure of the platform, shifting the day to day responsibility of monitoring the network and allocating resources to voters and the council."
+          "title": "Ein neues Vorschlagssystem einführen",
+          "text": "Das  Konstantinopel-Testnetzwerk ist um die Einführung eines Vorschlagssystems herum aufgebaut, das die Governance-Struktur der Plattform stärkt und die tägliche Verantwortung für die Überwachung des Netzwerks und die Zuweisung von Ressourcen auf die Wähler und den Rat verlagert."
         },
         "tokenModel": {
-          "title": "Introduce a fiat-backed token model",
-          "text": "Constantinople introduces a new incentive structure, with a fiat (USD) pool backing the testnet tokens, setting up a more realistic economic system for the platform."
+          "title": "Ein Fiat-gestütztes Tokenmodell einführen",          "text": "Konstantinopel führt eine neue Anreizstruktur ein, bei der die Testnetzwerk-Tokens durch einen Fiat-Pool (USD) gedeckt sind, wodurch ein realistischeres Wirtschaftssystem für die Plattform geschaffen wird."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Constantinople Network"
+      "title": "Incentivierte Rollen für das Konstantinopel-Netzwerk"
     },
     "map": {
-      "title": "Constantinople",
-      "text": "<0>Constantinople was the capital city of the Eastern Roman Empire during the fourth century.</0> It was famed for its massive and complex defences as well as its architectural masterpieces and opulent aristocratic palaces. As was the case with the city, we hope our Constantinople testnet will be a worthy successor to Rome.<1/><1/><2><0/> Read the blog post</2>"
+      "title": "Konstantinopel",
+      "text": "<0>Konstantinopel war die Hauptstadt des Oströmischen Reiches im vierten Jahrhundert.</0> Sie war berühmt für ihre massiven und komplexen Verteidigungsanlagen sowie ihre architektonischen Meisterwerke und opulenten Adelspaläste. Wie die Stadt, so hoffen wir, dass unser Testnetzwerk Konstantinopel ein würdiger Nachfolger von Rom sein wird.<1/><1/><2><0/> Lesen Sie den Blogbeitrag</2>"
     }
   }
 }
