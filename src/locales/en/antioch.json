@@ -1,10 +1,10 @@
 {
   "antioch": {
     "siteMetadata": {
-      "description": "Erforsche das Antioch-Testnetzwerk"
+      "description": "Erforsche das Antioch testnet"
     },
     "hero": {
-      "Titel": "Antioch-Netzwerk",
+      "Titel": "Antioch Network",
       "text": "Die Antioch-Veröffentlichung versucht, einen Kettenspaltungsfehler zu beheben, der leider das vorherige Testnetz sabotiert hat."
     },
     "heroCard": {
@@ -32,7 +32,7 @@
       }
     },
     "roles": {
-      "title": "Incentivierte Rollen für das Antioch-Netzwerk"
+      "title": "Incentivierte Rollen für das Antioch Network"
     },
     "map": {
       "title": "Antioch",
