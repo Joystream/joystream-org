@@ -1,58 +1,58 @@
 {
   "privacyPolicy": {
     "siteMetadata": {
-      "description": "Joystream Privacy and Cookie Policy"
+      "description": "Joystream Datenschutz- und Cookie-Richtlinie"
     },
     "hero": {
-      "title": "Privacy Policy and Cookies",
-      "text": "<0><0>Jsgenesis values your privacy.</0><1/><1/>This Privacy Policy (\"Privacy Policy\") and Cookie Policy (\"Cookie Policy\") explains how Jsgenesis AS (\"Jsgenesis\", \"Company\", \"We\", \"Us\", \"Our\") collect and use data and information when you (\"User) use on or any of the Joystream products, developed in the GitHub organization <3>Joystream</3>. These products (collectively \"Software\") include, but are not limited to, all pages under the <6>joystream.org</6> domain (\"Website\"), the <10>Joyful node</10> (\"Full Node\"), the <14>Colossus Storage Node</14> (\"Storage node\"), and the Pioneer User Interface, either <18>self hosted</18> or <22>hosted by Us</22>  (\"App\").</0>"
+      "title": "Datenschutzrichtlinie und Cookies",
+      "text": "<0><0>Jsgenesis schätzt Ihre Privatsphäre. </0><1/><1/>Diese Datenschutzrichtlinie (\"Datenschutzrichtlinie\") und Cookie-Richtlinie (\"Cookie-Richtlinie\") erklärt, wie Jsgenesis AS (\"Jsgenesis\", \"Unternehmen\", \"Wir\", \"Uns\", \"Unser\") Daten und Informationen sammelt und verwendet, wenn Sie (\"Nutzer) eines oder mehrere der Joystream-Produkte nutzen, die in der GitHub-Organisation <3>Joystream</3> entwickelt wurden. Diese Produkte (zusammenfassend \"Software\") umfassen, sind aber nicht beschränkt auf alle Seiten unter der <6>joystream. org</6> Domain (\"Website\"), den <10>Joyful Node</10> (\"Full Node\"), den <14>Colossus Storage Node</14> (\"Storage Node\") und die Pioneer-Benutzeroberfläche, entweder <18>selbst gehostet</18> oder <22>von uns gehostet</22> (\"App\").</0>"
     },
     "terms": {
-      "title": "Relevant to the Privacy Policy and Cookie Policy are the following terms:",
-      "blockchain": "The term <0>\"Blockchain\"</0> refers to the blockchain(s) assembled by the Full Node.",
-      "content": "The term <0>\"Content\"</0> refers to media files accessible through our Software.",
-      "keys": "The term <0>\"Keys\"</0> refers to a private/public cryptographic keypair, that Users can generate in order to write (and decrypt data) on the Blockchain.",
-      "membership": "The term <0>\"Membership\"</0> refers to tying your Keys to a public profile, allowing users to access Content and interact with the Blockchain.",
-      "memo": "The term <0>\"Memo\"</0> refers to a markdown enabled text field, where users can input data tied to their Keys."
+      "title": "Für die Datenschutzrichtlinie und die Cookie-Richtlinie sind die folgenden Begriffe relevant:",
+      "blockchain": "Der Begriff <0>\"Blockchain\"</0> bezieht sich auf die vom Full Node zusammengestellte(n) Blockchain(s).",
+      "content": "Der Begriff <0>\"Inhalt\"</0> bezieht sich auf Mediendateien, die über unsere Software zugänglich sind.",
+      "keys": "Der Begriff <0>\"Keys\"</0> bezieht sich auf ein privates/öffentliches kryptografisches Schlüsselpaar, das Nutzer generieren können, um Daten auf der Blockchain zu schreiben (und zu entschlüsseln).",
+      "membership": "Der Begriff <0>\"Mitgliedschaft\"</0> bezieht sich auf die Bindung der Schlüssel an ein öffentliches Profil, das es den Benutzern ermöglicht, auf Inhalte zuzugreifen und mit der Blockchain zu interagieren."
+      "memo": "Der Begriff <0>\"Memo\"</0> bezieht sich auf ein markdown-fähiges Textfeld, in das Benutzer Daten eingeben können, die mit ihren Schlüsseln verknüpft sind."
     },
     "privacyPolicyItems": {
       "title": "Privacy Policy",
-      "subtitle": "Last updated on the 17th of April 2019",
+      "subtitle": "Zuletzt aktualisiert am 17. April 2019",
       "agreement": {
-        "title": "1. Agreement to the Policy",
-        "content": "By using any of Our Software, the User are accepting this Privacy Policy. If you are acting on behalf of another company or an employer, you must have the rights to act on their behalf. The Privacy Policy is not extended to any of our newsletters, where Users are bound by the <0>privacy policy</0> of <1>Mailchimp</1><2/><2/>The Privacy Policy does not apply to any other third party services including, but not limited to, applications, websites, tools or software, even if accessible through links or guides in our Software."
+        "title": "1. Zustimmung zur Richtlinie",
+        "content": "Durch die Nutzung unserer Software akzeptiert der Nutzer diese Datenschutzrichtlinie. Wenn Sie im Namen eines anderen Unternehmens oder eines Arbeitgebers handeln, müssen Sie die Rechte haben, in dessen Namen zu handeln. Die Datenschutzrichtlinie gilt nicht für unsere Newsletter, bei denen die Nutzer an die <0>Datenschutzrichtlinie</0> von <1>Mailchimp</1><2/><2/> gebunden sind. Die Datenschutzrichtlinie gilt nicht für andere Dienste von Dritten, einschließlich, aber nicht beschränkt auf Anwendungen, Websites, Tools oder Software, selbst wenn diese über Links oder Anleitungen in unserer Software zugänglich sind."
       },
       "changes": {
-        "title": "2. Changes to Policy",
-        "content": "This Privacy Policy may be changed at the sole discretion of Company. If any material changes are made, the User will be notified in the Service that is used. Note that adding new products to be included in the term Software, e.g. a new User facing product replacing the App or a new tool for uploading Content, is not considered material as it will not affect Users unless they adopt the new product. Changing software names, terminology used in this Privacy Policy, and changing link locations are also examples of non-material changes."
+        "title": "2. Änderungen der Richtlinie",
+        "content": "Diese Datenschutzrichtlinie kann nach alleinigem Ermessen des Unternehmens geändert werden. Wenn wesentliche Änderungen vorgenommen werden, wird der Nutzer in dem von ihm genutzten Dienst benachrichtigt. Beachten Sie, dass das Hinzufügen neuer Produkte, die unter den Begriff Software fallen, z. B. ein neues Produkt für den Benutzer, das die App ersetzt, oder ein neues Tool zum Hochladen von Inhalten, nicht als wesentlich angesehen wird, da es sich nicht auf die Benutzer auswirkt, es sei denn, sie übernehmen das neue Produkt. Die Änderung von Softwarenamen, der in dieser Datenschutzrichtlinie verwendeten Terminologie und der Änderung von Linkpositionen sind ebenfalls Beispiele für nicht wesentliche Änderungen."
       },
       "informationCollected": {
-        "title": "3. Information Collected",
-        "content": "All data written to the Blockchain, is implicitly collected not only by Company, but also anyone else in the world that is running the Full Node locally, or accessed via the App or a third party. This includes, but is not limited to, Content hashes, Membership profile, Memo field, and any other way a User can record data on the Blockchain. ‍<0/><0/> When using the <1>faucet</1> subpage of the Website, Company will record the IP address behind every new request for tokens. This data will be deleted every 14 days."
+        "title": "3. gesammelte Informationen",
+        "content": "Alle Daten, die in die Blockchain geschrieben werden, werden implizit nicht nur vom Unternehmen gesammelt, sondern auch von jedem anderen auf der Welt, der den Full Node lokal ausführt oder auf den über die App oder eine dritte Partei zugegriffen wird. Dazu gehören unter anderem Inhalts-Hashes, Mitgliedschaftsprofile, Memo-Felder und jede andere Art und Weise, wie ein Nutzer Daten in der Blockchain aufzeichnen kann. <0/><0/> Bei der Nutzung der <1>Faucet</1> Unterseite der Website zeichnet das Unternehmen die IP-Adresse auf, die hinter jeder neuen Anfrage nach Token steht. Diese Daten werden alle 14 Tage gelöscht."
       },
       "googleAnalytics": {
         "title": "",
-        "content": "Company uses <0>Google Analytics</0>, with IP anonymization, to collect statistics on Website and the version of App hosted by us. All customisable data sharing settings are turned off to improve the privacy of Users. ‍<1 />‍<1 /> <2>Company will not sell your data for advertising, or other purposes.</2>"
+        "content": "Das Unternehmen verwendet <0>Google Analytics</0>, mit IP-Anonymisierung, um Statistiken über die Website und die von uns gehostete Version der App zu sammeln. Alle anpassbaren Einstellungen für die gemeinsame Nutzung von Daten sind ausgeschaltet, um die Privatsphäre der Nutzer zu schützen. <1 /><1 /> <2>Das Unternehmen verkauft Ihre Daten nicht für Werbe- oder andere Zwecke.</2>"
       }
     },
     "cookiePolicyItems": {
-      "title": "Cookies Policy",
-      "subtitle": "Last updated on the 17th of April 2019",
+      "title": "Cookie-Richtlinie",
+      "subtitle": "Zuletzt aktualisiert am 17. April 2019",
       "whatAreCookies": {
-        "title": "1. What are Cookies?",
-        "content": "Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognise you and make your next visit easier and the Service more useful to you. ‍<0 />‍<0 /> Cookies can be persistent or session cookies."
+        "title": "1. Was sind Cookies?",
+        "content": "Cookies sind kleine Textdateien, die von einer von Ihnen besuchten Website an Ihren Webbrowser gesendet werden. Eine Cookie-Datei wird in Ihrem Webbrowser gespeichert und ermöglicht es dem Dienst oder einem Dritten, Sie zu erkennen und Ihren nächsten Besuch zu erleichtern und den Dienst für Sie nützlicher zu machen. <0 /><0 /> Cookies können dauerhafte oder Sitzungs-Cookies sein."
       },
       "howWeUseCookies": {
-        "title": "2. How we use Cookies",
-        "content": "We use cookies for the following purposes our Service: <0 /><0 /><1><0>Provide Analytics</0><0>Store preferences</0><0>Persistant local storage of Keys and Membership.</0></1>"
+        "title": "2. Wie wir Cookies verwenden",
+        "content": "Wir verwenden Cookies für die folgenden Zwecke unseren Service: <0 /><0 /><1><0>Analytik bereitstellen</0><0>Einstellungen speichern</0><0>Lokale Speicherung von Schlüsseln und Mitgliedschaften.</0></1>"
       },
       "thirdPartyCookies": {
-        "title": "3. Third-party Cookies",
-        "content": "In addition to our own cookies, we also use various third-party cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on. They include:<0/><0/><1><0><0>Google Analytics</0></0><0><0>Mailchimp</0> (Only when signing up for any of our newsletters)</0><0><0>Godaddy</0></0></1><0 />Please see Item 3. of the Privacy Policy for more information on the extent of these providers."
+        "title": "3. Third-Party-Cookies",
+        "content": "Zusätzlich zu unseren eigenen Cookies verwenden wir auch verschiedene Cookies von Drittanbietern, um Nutzungsstatistiken des Dienstes zu erstellen, Werbung auf und über den Dienst auszuliefern und so weiter. Dazu gehören:<0/><0/><1><0><0>Google Analytics</0></0><0><0>Mailchimp</0> (nur bei der Anmeldung zu einem unserer Newsletter)</0><0><0>Godaddy</0></0></1><0 />Bitte lesen Sie Punkt 3. der Datenschutzerklärung für weitere Informationen zum Umfang dieser Anbieter."
       },
       "regardingYourCookies": {
         "title": "Regarding Your Cookies",
-        "content": "If you would like to delete cookies or instruct your web browser to delete or refuse cookies, please visit the help pages of your web browser.<0 />‍<0 /> Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly."
+        "content": "Wenn Sie Cookies löschen oder Ihren Webbrowser anweisen möchten, Cookies zu löschen oder abzulehnen, besuchen Sie bitte die Hilfeseiten Ihres Webbrowsers.<0 /><0 /> Bitte beachten Sie jedoch, dass Sie, wenn Sie Cookies löschen oder deren Annahme ablehnen, möglicherweise nicht alle von uns angebotenen Funktionen nutzen können, dass Sie möglicherweise Ihre Einstellungen nicht speichern können und dass einige unserer Seiten möglicherweise nicht richtig angezeigt werden."
       }
     }
   }
