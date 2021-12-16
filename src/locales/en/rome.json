@@ -1,59 +1,59 @@
 {
-  "rome": {
+  "Rom": {
     "siteMetadata": {
-      "description": "Explore the Rome testnet"
+      "description": "Erkunden Sie das Rom-Testnetzwerk"
     },
     "hero": {
-      "title": "Rome Network",
-      "text": "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
-      "chipText": "What is this?"
+      "Titel": "Rom-Netzwerk",
+      "text": "Erkunde die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdiene dabei echtes Geld.",
+      "chipText": "Was ist das?"
     },
     "heroCard": {
-      "title": "REPLACED BY CONSTANTINOPLE ON"
+      "title": "ERSETZT DURCH CONSTANTINOPLE ON"
     },
     "modal": {
-      "title": "Rome",
-      "text": "<0>The Roman empire left many landmarks.</0> Their architecture and engineering skills was unparalleled during their might. The concept of aqueducts was not devised by the Romans, but their beauty and extent is."
+      "title": "Rom",
+      "text": "<0>Das Römische Reich hinterließ viele Wahrzeichen.</0> Ihre Architektur und Ingenieurskunst war während ihrer Macht beispiellos. Das Konzept der Aquädukte wurde nicht von den Römern erfunden, wohl aber ihre Schönheit und ihr Ausmaß."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Kritische Dokumente",
       "fullSpecifications": {
-        "title": "Full Specifications",
-        "text": "No specifications were published for Rome."
+        "title": "Vollständige Spezifikationen",
+        "text": "Für Rom wurden keine Spezifikationen veröffentlicht."
       },
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Freigabeplan",
+        "text": "Lesen Sie den Freigabeplan, wie er in der Planungsphase erstellt wurde, und erfahren Sie mehr über den Verlauf der Entwicklung."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals below are a simplified representation of the Key Results listed in our Release <0>OKR</0>",
+      "title": "Ziele des Testnetzwerks",
+      "subtitle": "Die nachstehenden Ziele sind eine vereinfachte Darstellung der in unserem Release <0>OKR</0> aufgeführten Schlüsselergebnisse",
       "goals": {
         "contentDirectory": {
-          "title": "Build a dynamic, flexible and user friendly content directory",
-          "text": "The Rome testnet is built around the introduction of a new content directory, that can be added to, modified and improved without requiring runtime upgrades. All key results and goals are derived from this."
+          "title": "Aufbau eines dynamischen, flexiblen und benutzerfreundlichen Inhaltsverzeichnisses",
+          "text": "Das Rom-Testnetzwerk basiert auf der Einführung eines neuen Inhaltsverzeichnisses, das ohne Laufzeitupgrades ergänzt, geändert und verbessert werden kann. Alle wichtigen Ergebnisse und Ziele sind davon abgeleitet."
         },
-        "content": {
-          "title": "Populate the content directory with a variety of content",
-          "text": "Rome introduces a Content Directory system that is both built to last, yet still meant to be continuously improved on. We will pay for Content Creators to upload a variety of content and we hope to learn a lot from the results."
+        "Inhalt": {
+          "title": "Das Inhaltsverzeichnis mit einer Vielzahl von Inhalten befüllen",
+          "text": "Rom führt ein Inhaltsverzeichnissystem ein, das sowohl auf Dauer angelegt ist, als auch kontinuierlich verbessert werden soll. Wir werden Content Creator dafür bezahlen, dass sie eine Vielzahl von Inhalten hochladen, und wir hoffen, aus den Ergebnissen viel zu lernen."
         },
         "contentCurator": {
-          "title": "Introduce the new Content Curator role",
-          "text": "With a new Content Directory, and incentives to upload content, we need monitoring. The Content Curators will require staking, and will be paid in both testnet tokens and Monero."
+          "title": "Wir stellen die neue Rolle des Inhaltskurators vor",
+          "text": "Mit einem neuen Inhaltsverzeichnis und Anreizen zum Hochladen von Inhalten brauchen wir eine Kontrolle. Die Inhaltskuratoren benötigen einen Einsatz und werden sowohl in Testnetzwerk-Token als auch in Monero bezahlt."
         },
         "contentCreator": {
           "title": "Add Content Creator profiles",
-          "text": "Without Content Creators, there won't be any content. Granted, adding another level on top of the membership requirement may seem like a hurdle, but it will allow users to upload with multiple profiles."
+          "text": "Ohne Content Creator wird es keine Inhalte geben. Zugegeben, das Hinzufügen einer weiteren Ebene zusätzlich zur Mitgliedschaftsanforderung mag wie eine Hürde erscheinen, aber es wird Nutzern ermöglichen, mit mehreren Profilen hochzuladen."
         }
       }
     },
-    "roles": {
-      "title": "Incentivized Roles for the Rome Network"
+    "Rollen": {
+      "title": "Incentivierte Rollen für das Rom-Netzwerk"
     },
     "map": {
-      "title": "Rome",
-      "text": "<0>Rome was the capital of the great Roman Empire during its peak.</0> As with previous testnet names, the Roman Empire and Rome was another important step in the rise of democracy, the rule of law, and modern governance structures.<1/><1/><2><0/> Explore current testnet</2>"
+      "title": "Rom",
+      "text": "<0>Rom war die Hauptstadt des großen Römischen Reiches während seiner Blütezeit.</0> Wie bei früheren Testnetzwerk-Namen war das Römische Reich und Rom ein weiterer wichtiger Schritt im Aufstieg von Demokratie, Rechtsstaatlichkeit und modernen Regierungsstrukturen.<1/><1/><2><0/> Erforsche das aktuelle Testnetzwerk</2>"
     }
   }
 }
