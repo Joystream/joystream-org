@@ -1,38 +1,38 @@
 {
   "joystream": "Joystream",
-  "button": {
+  " button": {
     "getStarted": {
-      "text": "Start earning",
-      "altText": "Join & start earning"
+      "text": "Fang an zu verdienen",
+      "altText": "Mach mit und verdien Geld"
     },
-    "download": "Download",
-    "close": "Close",
-    "accept": "Accept",
-    "openDiscord": "Open Discord",
-    "learnMore": "Learn More",
+    "download": "Herunterladen",
+    "close": "Schließen",
+    "accept": "Akzeptieren",
+    "openDiscord": "Discord öffnen",
+    "learnMore": "Mehr erfahren",
     "gettingStarted": "Getting Started"
   },
   "rolesData": {
     "validator": "Validator",
-    "council": "Council",
-    "councilMember": "Council Member",
-    "storageProvider": "Storage Provider",
-    "contentCreator": "Content Creator",
-    "contentCurator": "Content Curator",
-    "discoveryProvider": "Discovery Provider",
-    "bandwidthProvider": "Bandwidth Provider",
-    "builder": "Builder",
-    "storageLead" : "Storage Lead",
-    "contentLead" : "Content Lead"
+    "council": "Rat",
+    "councilMember": "Ratsmitglied",
+    "storageProvider": "Speicheranbieter",
+    "contentCreator": "Ersteller von Inhalten",
+    "contentCurator": " Inhaltskurator",
+    "discoveryProvider": "discoveryProvider",
+    "bandwidthProvider": "Bandbreitenanbieter",
+    "builder": "Ersteller",
+    "storageLead" : "Speicherplatzleiter",
+    "contentLead" : "Inhaltsleiter"
   },
   "siteMetadata": {
-    "title": "Joystream: The video platform DAO"
+    "title": "Joystream: Die Videoplattform DAO"
   },
   "colors": {
-    "joystreamBlue": "Joystream Blue",
-    "white": "White",
-    "joystreamGrey": "Joystream Grey",
-    "black": "Black"
+    "joystreamBlue": "Joystream Blau",
+    "white": "Weiß",
+    "joystreamGrey": "Joystream Grau",
+    "black": "Schwarz"
   },
   "CMYK": "CMYK",
   "RGB": "RGB",
@@ -41,7 +41,7 @@
     "one": "01.",
     "two": "02."
   },
-  "numbers": {
+  "Zahlen": {
     "one": "1",
     "two": "2",
     "three": "3",
@@ -51,78 +51,79 @@
     "seven": "7"
   },
   "roleCard": {
-    "migration": "At migration, {{numberOfUsers}} (max) had this role",
-    "current": "{{numberOfUsers}} run this role on Antioch",
-    "most": "At most, {{numberOfUsers}} users occupied this role",
-    "new": "NEW"
+    "migration": "Bei der Migration hatten {{numberOfUsers}} (max) diese Rolle",
+    "aktuell": "{{numberOfUsers}} führen diese Rolle auf Antioch aus",
+    "most": "Höchstens {{numberOfUsers}} Benutzer hatten diese Rolle",
+    "new": "NEU"
   },
   "heroCard": {
-    "active": "Network announced",
-    "error": "Network down",
-    "info": "Network replaced",
-    "finished": "Network live"
+    "active":  "Netzwerk angekündigt",
+    "error": "Netzwerk ausgefallen",
+    "info": "Netzwerk ersetzt",
+    "finished": "Netzwerk live"
   },
   "dateCounter": {
-    "week": "week",
-    "weeks": "weeks",
-    "day": "day",
-    "days": "days",
-    "hour": "hour",
-    "hours": "hours",
-    "minute": "minute",
-    "minutes": "minutes",
-    "second": "second",
-    "seconds": "seconds",
-    "month": "month",
-    "months": "months",
-    "year": "year",
-    "years": "years",
-    "timeToLaunch": "Time to launch",
-    "launchedOn": "Launched on"
+    "week": " Woche",
+    "weeks": "wochen",
+    "day": "Tag",
+    "days": "Tage",
+    "hour": "Stunde",
+    "hours": "Stunden",
+    "minute": "Minute",
+    "minutes": "Minuten",
+    "second": "Sekunde",
+    "seconds": "Sekunden",
+    "month": "Monat",
+    "months": "Monate",
+    "year": "Jahr",
+    "years": "Jahre",
+    "timeToLaunch": "Zeit bis zum Start",
+    "launchedOn": "Gestartet am"
   },
   "sidebar": {
-    "activeRoles": "Active roles",
-    "upcomingRoles": "Upcoming roles",
-    "viewAllRoles": "View all Roles"
+    "activeRoles": "Aktive Rollen",
+    "upcomingRoles": "Kommende Rollen",
+    "viewAllRoles": "Alle Rollen ansehen"
   },
   "navbar": {
-    "product": "Product",
+    "product": "Produkt",
     "atlas": "Atlas",
-    "pioneer": "Pioneer",
-    "community": "Community",
-    "brandStory": "Brand Story",
-    "brandGuides": "Brand Guides",
+    "pioneer": "Pionier",
+    "community": "Gemeinschaft",
+    "brandStory": "Markengeschichte",
+    "brandGuides": "Markenleitfäden",
     "downloadAssets": "Download Assets",
-    "about": "About"
+    "about": "Über"
   },
   "footer": {
-    "title": "Stay up to date",
-    "alternateTitle": "Get notified",
-    "subtitle": "Don't worry about spam! Keep track of all important updates",
+    "title": "Bleib auf dem Laufenden",
+    "alternateTitle": "Werde benachrichtigt",
+    "subtitle": "Mach dir keine Sorgen über Spam! Bleiben Sie auf dem Laufenden über alle wichtigen Updates",
     "inputPlaceholder": "Email Address...",
-    "joinNewsletter": "Join the newsletter",
+    "joinNewsletter": "Melden Sie sich für den Newsletter an",
     "github": {
-      "whitepaper": "Whitepaper",
+      "Whitepaper": "Whitepaper",
       "repository": "Repository"
     },
     "usefulLinks": {
-      "title": "Useful links",
-      "hiring": "We are hiring!",
-      "brandGuidance": "Brand guidance",
+      "title": "Nützliche Links",
+      "hiring": "Wir stellen ein!",
+      "brandGuidance": "Markenführung",
       "tokenomics": "Tokenomics"
     },
-    "followUs": "Follow us"
+    "followUs": "Folge uns"
   },
   "pages": {
     "blog": "Blog",
-    "manifesto": "Manifesto",
-    "roles": "Roles",
+    "manifesto": "Manifest",
+    "roles": "Rollen",
     "token": "Token",
     "hydra": "Hydra",
-    "foundingMembers": "Founding Members",
-    "leaderboards": "Leaderboards",
-    "scoringForm": "Scoring form",
-    "overview": "Overview"
+    "foundingMembers": "Gründungsmitglieder",
+    "Leaderboards": "Bestenlisten",
+    "scoringForm": "Wertungsformular",
+    "overview": "Übersicht"
+
   },
   "socials": {
     "twitter": "Twitter",
@@ -130,14 +131,14 @@
     "discord": "Discord"
   },
   "cookiesNotice": {
-    "text": "This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.",
-    "findOutMore": "Find out more ›"
+    "text": "Diese Seite verwendet Cookies. Wenn Sie auf der Seite weitersurfen, erklären Sie sich mit der Verwendung von Cookies einverstanden.",
+    "findOutMore": "Finde mehr heraus '"
   },
   "testnet" : {
     "goalStates": {
-      "achieved" : "achieved",
-      "inProgress" : "in progress",
-      "postponed" : "postponed"
+      "achieved" : "erreicht",
+      "inProgress" : "in Bearbeitung",
+      "postponed" : "aufgeschoben"
     }
   }
 }
