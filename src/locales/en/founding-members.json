@@ -1,172 +1,172 @@
 {
   "foundingMembers": {
     "general": {
-      "foundingMembers": "Founding Members",
-      "nonFoundingMembers": "Non-Founding Members",
-      "directScore": "Direct Score",
-      "referralScore": "Referral Score",
-      "totalScore": "Total Score",
-      "inducted": "Inducted",
-      "member": "Member",
-      "backButton": "Back to Program page",
-      "before": "Before",
-      "account": "Account",
-      "next": "Next",
-      "howItWorks": "How it works.",
-      "inputPlaceholder": "e.g. joedoe",
-      "inductionDate": "Induction Date",
-      "joinOurDiscord": "Join our Discord",
-      "earnMorePoints": "Earn more points?"
+      "foundingMembers": "Gründungsmitglieder",
+      "nonFoundingMembers": "Nicht-Gründungsmitglieder",
+      "directScore": "Direktes Ergebnis",
+      "referralScore": "Empfehlungspunktzahl",
+      "totalScore": "Gesamtpunktzahl",
+      "inducted": "Eingeweiht",
+      "member": "Mitglied",
+      "backButton": "Zurück zur Programmseite",
+      "before": "Vorher",
+      "account": "Konto",
+      "next": "Nächste",
+      "howItWorks": "Wie es funktioniert",
+      "inputPlaceholder": "Platzhalter eingeben",
+      "inductionDate": "Einführungsdatum",
+      "joinOurDiscord": "Unserem Discord beitreten",
+      "earnMorePoints": "Mehr Punkte sammeln?"
     },
     "scoringPeriod": {
-      "title": "Current scoring period",
-      "currentNumber": "Current period number",
-      "ends": "ENDS",
-      "endedOn": "ENDED ON",
-      "weeks": "WEEKS",
-      "days": "DAYS",
-      "hours": "HOURS",
-      "minutes": "MINUTES",
-      "submitSummary": "Submit Summary",
-      "periodAnnouncement": "Period Announcement",
-      "announcement": "Announcement"
+      "title": "Aktueller Wertungszeitraum",
+      "currentNumber": "Nummer des aktuellen Zeitraums",
+      "ends": "Endet",
+      "endedOn": "Endet auf",
+      "weeks": "Wochen,
+      "days": "Tage",
+      "hours": "Stunden",
+      "minutes": "Minuten",
+      "submitSummary": "ZusammenfassungEinreichen",
+      "periodAnnouncement": "Ankündigungszeitraum",
+      "announcement": "Ankündigung"
     },
     "landing": {
       "siteMetadata": {
-        "title": "Founding Members",
-        "description": "Information and data regarding the new Founding Members Program of the Joystream platform."
+        "title": "Gründungsmitglieder",
+        "description": "Informationen und Daten zum neuen Founding Members Programm der Joystream Plattform."
       },
       "hero": {
-        "title": "Joystream Founding Member Program",
-        "text": "Founding Members are highly effective project contributors awarded JOY tokens in the mainnet genesis block.",
-        "imageAlt": "founding members visual"
+        "title": "Joystream Gründungsmitgliederprogramm",
+        "text": "Gründungsmitglieder sind hocheffektive Projektmitarbeiter, die JOY-Token im Mainnet Genesis Block erhalten.",
+        "imageAlt": "Gründungsmitglieder visuell"
       },
       "list": {
-        "currentMembers": "Current founding members",
-        "newMembers": "New founding members",
-        "iconAlt": "icon of founding member"
+        "currentMembers": "Aktuelle Gründungsmitglieder",
+        "neueMitglieder": "Neue Gründungsmitglieder",
+        "iconAlt": "Icon des Gründungsmitglieds"
       },
       "benefits": {
-        "title": "What is the Founding <0/> Member Program <0/> and why does it exist?",
-        "currentlyBuilding": "While Jsgenesis is the team currently building the technology behind the Joystream project, we will not be around forever, and we are instead entrusting the future operation of the Joystream DAO to our community members.",
-        "foundingMembers": "The Founding Member Program formally allocates JOY tokens among some of our highest quality community members in recognition of their contributions to the project and ensures that a sufficiently large, effective and motivated community of users is ready to occupy all the different roles required to run, evolve and grow the platform on mainnet.",
-        "benefits": "Benefits",
-        "benefitsAlternate": "Benefits of becoming a founding member",
+        "title": "Was ist das Gründungs <0/> mitgliederProgram <0/> und warum gibt es es?",
+        "currentlyBuilding": "Während Jsgenesis das Team ist, das derzeit die Technologie hinter dem Joystream-Projekt aufbaut, werden wir nicht ewig da sein, und wir vertrauen stattdessen den zukünftigen Betrieb der Joystream DAO unseren Community-Mitgliedern an.",
+        "foundingMembers": "Das Gründungsmitgliederprogramm vergibt offiziell JOY-Token an einige unserer hochwertigsten Community-Mitglieder in Anerkennung ihrer Beiträge zum Projekt und stellt sicher, dass eine ausreichend große, effektive und motivierte Gemeinschaft von Nutzern bereit ist, alle verschiedenen Rollen zu besetzen, die für den Betrieb, die Weiterentwicklung und das Wachstum der Plattform im Mainnet erforderlich sind.",
+        "benefits": "Vorteile",
+        "benefitsAlternate": "Vorteile, ein Gründungsmitglied zu werden",
         "payout": {
           "title": "Tokens",
-          "text": "allocated tokens in the genesis block of the Joystream mainnet as a result of high quality participation and recruiting other participants"
+          "text": "zugewiesene Token im Genesis-Block des Joystream-Mainnets als Ergebnis einer hochwertigen Teilnahme und der Rekrutierung anderer Teilnehmer"
         },
-        "membership": {
+        "Mitgliedschaft": {
           "title": "Membership Status",
-          "text": "special status membership assigned in genesis block, which will have a visually distinguished presentation in Pioneer and other products"
+          "text": "spezieller Status der Mitgliedschaft, der im Genesis-Block zugewiesen wird und der in Pioneer und anderen Produkten visuell hervorgehoben wird"
         },
         "avatar": {
-          "title": "Handcrafted Avatar",
-          "text": "receive a handcrafted premium membership avatar and be honoured on the official project website and social media leading up to mainnet"
+          "title": "Handgefertigter Avatar",
+          "text": "Sie erhalten einen handgefertigten Avatar für die Premium-Mitgliedschaft und werden auf der offiziellen Projektwebsite und in den sozialen Medien im Vorfeld des Mainnet geehrt."
         },
-        "itemImageAlt": "benefit item"
+        "itemImageAlt": "Vorteilsgegenstand"
       },
       "takePart": {
-        "title": "How to participate in the program",
+        "title": "Wie man am Programm teilnimmt",
         "introduceYourself": {
-          "text": "Introduce yourself on Discord.",
-          "altText": "Introduce yourself in our Discord."
+          "text": "Stell dich auf Discord vor",
+          "altText": "Stell dich in unserem Discord vor."
         },
         "contribute": {
-          "text": "Make contributions to the project.",
-          "contributions": "<0><0>training other participants</0><0>writing blog posts and documentation</0><0>creating and publishing new video content</0><0>participating in platform roles on the testnet</0><0>finding and reporting bugs and errors</0><0>completing official bounties</0><0>creative and design work</0></0>"
+          "text": "Beiträge zum Projekt leisten",
+          "contributions": "<0><0>Schulung anderer Teilnehmer</0><0>Schreiben von Blogbeiträgen und Dokumentationen</0><0>Erstellen und Veröffentlichen neuer Videoinhalte</0><0>Beteiligung an Plattformrollen im Testnetz</0><0>Finden und Melden von Bugs und Fehlern</0><0>Ausfüllen von offiziellen Kopfgeldern</0><0>Kreativ und Designarbeit</0></0>"
         },
-        "report": "Regularly report your activity.",
-        "earnPoints": "Earn leaderboard points.",
-        "becomeFM": "Become a founding member!",
-        "buttonText": "Join Discord",
-        "excluded": "Countries that are excluded from that program: ",
-        "usFlagAlt": "us flag icon",
-        "tokensAlt": "two tokens"
+        "report": "Berichte regelmäßig über deine Aktivitäten.",
+        "earnPoints": "Verdiene Ranglistenpunkte.",
+        "becomeFM": "Werde ein Gründungsmitglied!",
+        "buttonText": "Trete Discord bei",
+        "excluded": "Länder, die von diesem Programm ausgeschlossen sind: ",
+        "usFlagAlt": "us-Flaggen-Symbol",
+        "tokensAlt": "Zwei Tokens"
       },
       "keyMetrics": {
-        "title": "Key metrics for the program",
-        "initialTokenPool": "size of initial token pool",
-        "numberOfFM": "number of founding members",
-        "numberOfCandidates": "number of founding member candidates",
-        "leaderboards": "Leaderboards",
-        "foundingMembersButton": "All Founding Member Scores",
-        "regularMembersButton": "All Regular Member Scores",
-        "fullProgramRules": "Read the full program rules"
+        "title": " Schlüsselkennzahlen für das Programm",
+        "initialTokenPool": "Größe des anfänglichen Tokenpools",
+        "numberOfFM": "Anzahl der Gründungsmitglieder",
+        "numberOfCandidates": "Anzahl der Gründungsmitglieder-Kandidaten",
+        "Leaderboards": "Bestenlisten",
+        "foundingMembersButton": "Alle Gründungsmitgliederergebnisse",
+        "regularMembersButton": "Alle Ergebnisse der regulären Mitglieder",
+        "fullProgramRules": "Lesen Sie die vollständigen Programmregeln"
       },
       "cta": {
-        "title": "Discuss the program",
-        "joinDiscord": "Begin your founding member journey by joining our Discord group and requesting your first testnet tokens.",
-        "askQuestions": "Here you can also ask question about many aspects of the program and find out the areas where you can contribute right away.",
-        "joinNow": "Join now",
-        "imageAlt": "founding members visual"
+        "title": "Besprich das Programm",
+        "joinDiscord": "Beginn deiner Reise als Gründungsmitglied, indem du unserer Discord-Gruppe beitrittst und deine ersten Testnet-Token anforderst.",
+        "askQuestions": "Hier kannst du auch Fragen zu vielen Aspekten des Programms stellen und herausfinden, in welchen Bereichen du sofort einen Beitrag leisten kannst.",
+        "joinNow": "Jetzt mitmachen",
+        "imageAlt": "Gründungsmitglieder visuell"
       },
       "disclaimer": {
-        "title": "Disclaimer",
-        "text": "This disclaimer applies to the webpage accessible at <0>www.joystream.org/token</0> as well as all other webpages, digital services or applications published by Jsgenesis (the “Company”). The disclaimer also applies to any material published by Company in any other format in connection with the JOY token (the “Token”). Publications made by Company and all information contained within them are not directed at or intended for use by any person resident or located in any jurisdiction where (1) the distribution of such information is contrary to the laws of such jurisdiction; or (2) such distribution is prohibited without obtaining the necessary licenses or authorizations by the relevant branch, subsidiary or affiliate office of Company and such licenses or authorizations have not been obtained. Company does not provide investment, legal or tax advice and nothing herein should be construed as being financial, legal, tax or other advice. Unless specifically stated otherwise, all price information is indicative only. No representation or warranty, either express or implied, is provided in relation to the accuracy, completeness or reliability of the materials, nor are they a complete statement of the securities, markets or developments referred to herein. The materials should not be regarded by recipients as a substitute for the exercise of their own judgment. All information and materials published, distributed or otherwise made available by Company in relation to Token are provided for informational purposes, for your non-commercial, personal use only. No information or materials published by Company constitutes a solicitation, an offer, or a recommendation to buy or sell any investment instruments, to effect any transactions, or to conclude any legal act of any kind whatsoever."
+        "title": "Haftungsausschluss",
+        "text": "Dieser Haftungsausschluss gilt für die unter <0>www.joystream.org/token</0> zugängliche Webseite sowie für alle anderen von Jsgenesis (das "Unternehmen") veröffentlichten Webseiten, digitalen Dienste oder Anwendungen. Der Haftungsausschluss gilt auch für jegliches Material, das vom Unternehmen in einem anderen Format in Verbindung mit dem JOY-Token (der "Token") veröffentlicht wird. Die Veröffentlichungen des Unternehmens und alle darin enthaltenen Informationen sind nicht für Personen bestimmt, die in einem Land ansässig sind oder sich dort befinden, in dem (1) die Verbreitung dieser Informationen gegen die Gesetze dieses Landes verstößt oder (2) eine solche Verbreitung ohne die Einholung der erforderlichen Lizenzen oder Genehmigungen durch die jeweilige Niederlassung, Tochtergesellschaft oder Zweigstelle des Unternehmens verboten ist und diese Lizenzen oder Genehmigungen nicht eingeholt wurden. Das Unternehmen bietet keine Anlage-, Rechts- oder Steuerberatung an, und nichts in diesem Dokument darf als finanzielle, rechtliche, steuerliche oder sonstige Beratung ausgelegt werden. Sofern nicht ausdrücklich anders angegeben, sind alle Preisinformationen nur indikativ. Es wird weder eine ausdrückliche noch eine stillschweigende Zusicherung oder Gewährleistung in Bezug auf die Richtigkeit, Vollständigkeit oder Verlässlichkeit der Unterlagen gegeben, noch stellen sie eine vollständige Darstellung der hierin erwähnten Wertpapiere, Märkte oder Entwicklungen dar. Die Materialien sollten von den Empfängern nicht als Ersatz für die Ausübung ihres eigenen Urteilsvermögens angesehen werden. Alle Informationen und Materialien, die von der Gesellschaft in Bezug auf Token veröffentlicht, verteilt oder anderweitig zur Verfügung gestellt werden, dienen ausschließlich zu Informationszwecken und für Ihren nicht-kommerziellen, persönlichen Gebrauch. Die vom Unternehmen veröffentlichten Informationen und Materialien stellen weder eine Aufforderung noch ein Angebot oder eine Empfehlung zum Kauf oder Verkauf von Anlageinstrumenten, zur Durchführung von Transaktionen oder zum Abschluss von Rechtsgeschäften gleich welcher Art dar."
       }
     },
-    "leaderboards": {
+    "Leaderboards": {
       "siteMetadata": {
-        "title": "Founding Members Leaderboards"
+        "title": "Ranglisten der Gründungsmitglieder"
       },
-      "title": "Leaderboard"
+      "title": "Bestenliste"
     },
     "form": {
       "siteMetadata": {
-        "title": "Founding Members Form"
+        "title": "Formular für Gründungsmitglieder"
       },
-      "title": "Submit activity summary",
+      "title": "Aktivitätszusammenfassung einreichen",
       "progressItem": {
-        "accountInfo": "Account info",
-        "keyFile": "Key file",
-        "summary": "Summary",
-        "acceptTerms": "Accept terms & conditions",
+        "accountInfo": "Kontoinformation",
+        "keyFile": "Schlüsseldatei",
+        "summary": "Zusammenfassung",
+        "acceptTerms": "Bedingungen akzeptieren",
         "acceptTermsShort": "Terms & cond."
       },
       "membership": {
-        "membershipHandle": "Membership handle",
-        "avatarAlt": "founding member avatar"
+        "membershipHandle": "Mitgliedschaftskennung
+        "avatarAlt": "Gründungsmitglied Avatar"
       },
       "json": {
-        "exportedAccount": "Exported account with key",
+        "exportedAccount": "Exportiertes Konto mit Schlüssel",
         "howToExport": {
-          "link": "How to export your key?",
-          "title": "How to export your account with key:",
-          "text": "In the <0>Pioneer application</0> click the <1>My Keys</1> tab and then click the ellipsis (three dots) button on the Key which you would like to use. Then click <1>Create a backup file for this account</1>. Enter your password (if applicable) and the JSON will be downloaded."
+          "link": "Wie exportiere ich meinen Schlüssel?",
+          "title": "Wie exportiere ich mein Konto mit Schlüssel:",
+          "text": "Klicken Sie in der <0>Pioneer-Anwendung</0> auf die Registerkarte <1>Meine Schlüssel</1> und klicken Sie dann auf die Ellipsen (drei Punkte) auf dem Schlüssel, den Sie verwenden möchten. Klicken Sie dann auf <1>Sicherungsdatei für dieses Konto erstellen</1>. Geben Sie Ihr Passwort ein (falls zutreffend) und das JSON wird heruntergeladen."
         },
-        "fileFormat": "Accepted file format: .json"
+        "fileFormat": "Akzeptiertes Dateiformat: .json"
       },
       "keybaseAndText": {
-        "keybaseHandle": "Keybase handle",
-        "documentWithSummary": "Document with the summary",
+        "keybaseHandle": "Keybase-Handle",
+        "documentWithSummary": "Dokument mit der Zusammenfassung",
         "howToPrepare": {
-          "link": "How should I prepare it?",
-          "alternateLink": "How should I do it?",
-          "title": "How to prepare it:",
-          "text": "Your activity summary should describe in as much detail as possible your recent contributions to the success of the platform. Try to separate out each contribution into a separate paragraph or bullet point for ease of processing."
+          "link": "Wie soll ich es vorbereiten?",
+          "alternateLink": "Wie soll ich es machen?",
+          "title": "Wie soll ich es vorbereiten:",
+          "text": "Deine Aktivitätszusammenfassung sollte so detailliert wie möglich deine jüngsten Beiträge zum Erfolg der Plattform beschreiben. Versuche jeden Beitrag in einen separaten Absatz oder Aufzählungspunkt zu gliedern, um die Bearbeitung zu erleichtern."
         },
-        "fileFormat": "Accepted file format: .txt",
-        "password": "Password",
-        "pleaseEnterPassword": "Please enter your password!"
-      },
+        "fileFormat": "Akzeptiertes Dateiformat: .txt",
+        "password": "Passwort",
+        "pleaseEnterPassword": "Bitte gib dein Passwort ein!"
+     },
       "termsAndConditions": {
-        "title": "Read and accept terms and conditions",
-        "text": "<0>Term</0><1>The Joystream Founding Member Program was formally launched during February 2021. The program will stop accepting new submissions (activity summaries) and awarding further leaderboard points approximately one month in advance of the mainnet launch, on the snapshot date, yet to be confirmed.</1><2><0>Our current target for mainnet launch is during Q4 2021, though this is subject to change.</0></2><0>Eligibility</0><1>The program is open to everyone over the age of 18 who are not U.S. persons. </1><1>To be formally admitted to the program you will be contacted and screened by a Jsgenesis representative once your community contributions have met our internally determined threshold for admission.</1><2>The formal admission of new Founding Members to the program will take place at the end of scoring periods (the dates of which are published on our website). Each scoring period currently lasts two weeks.</2><0>Communication</0><1>We will publish further public updates about the program through our regular communication channels, including our Official Discord Channel, the Joystream Newsletter, the official GitHub repo for the program (github.com/joystream/founding-members) and on our website (www.joystream.org), and blog (blog.joystream.org).</1><2>Any private or sensitive information about your participation in the program will be communicated via Keybase or some other previously agreed contact method.</2><0>Token Allocation Formula</0><1>Once officially awarded with Founding Member status, you will be automatically assigned 0.02% of the mainnet genesis token supply. The rest of your token allocation will be calculated based on your proportional share of leaderboard points among all Founding Members.</1><2>Since the current program provides a token pool of 15%, this 15% will be made up of claims of the default 0.02% by each participant, and the remaining allocation not already claimed under this rule will be distributed proportionally based on the relative share of total leaderboard points for each Founding Member.</2><0>Reward Policy</0><1>Points have no intrinsic value and when assigned to users with the Founding Member status they only represent a partial claim on an as yet undetermined quantity of mainnet JOY tokens. In the case of bad faith activity (see below), leaderboard/founding member points can be voided at any time.</1><2>Participants should also be aware that tokens allocated for mainnet may include some vesting period or \"locks\", that restricts what they can be used for some period of time.</2><0>Eviction Policy</0><2>Any platform member who participates in fraudulent or bad faith activity is liable to be expelled from the leaderboards and Founding Member program, with all associated token claims voided.</2><0>Account and Key Security</0><1>Your leaderboard/founding member points are yours alone and are non-transferrable. You must keep your account and any private keys associated with your membership of the Founding Member program safe and engage in sensible digital security practices.</1><1>Keys with associated Founding Member token claims must not be transferred to anyone else under any circumstances. Where this occurs, points or token claims may be voided (see above).</1><2>Tokens can only be allocated to addresses under your control. You may be required to sign a message proving you own the private keys to any addresses you provide.</2><0>Activity Reporting</0><1>You cannot claim for the same activity on more than one occasion (i.e. across more than one summary) in order to be awarded the same points twice. If this does occur it is liable to be deemed bad faith and may result in your eviction from the program.</1><1>All activity must be reported within 30 days of taking place. Contributions recorded outside of this window will not qualify for rewards. For this reason it is very important to submit regular summaries.</1><1>Once you have submitted your activity up to and including a certain date, you can no longer submit activity from before this date.</1><2>When reporting contributions, the correct format for summary submissions should be observed.</2><0>Updates To These Rules</0><1>Jsgenesis reserves the right to update the rules of the program at any time, for any reason.</1><1>If serious flaws in the structure of the program are discovered, Jsgenesis reserves the right to announce that after a future scoring period, the \"season\" is concluded, and a new scheme will apply to following seasons, thus resetting \"scores\". In such an event, a \"slice\" of the pool, set by Jsgenesis discretion, will be allocated in accordance with existing rules. The remainder will be transferred to new \"seasons\".</1><1>Jsgenesis reserves the right not to honour any aspect of this agreement due to legal considerations.</1>"
-      },
+        "title": "Lesen und akzeptieren Sie die Bedingungen und Konditionen",
+        "text": "<0>Bedingungen</0><1>Das Joystream-Gründungsmitgliederprogramm wurde im Februar 2021 formell gestartet. Das Programm wird etwa einen Monat vor dem Start des Mainnets aufhören, neue Einreichungen (Aktivitätszusammenfassungen) zu akzeptieren und weitere Ranglistenpunkte zu vergeben. </1><2><0>Unser derzeitiges Ziel für den Start des Mainnets ist das vierte Quartal 2021, dies kann sich jedoch noch ändern.</0></2><0>Berechtigung</0><1>Das Programm steht allen Personen über 18 Jahren offen, die nicht aus den USA stammen. </1><1>Um formell in das Programm aufgenommen zu werden, werden Sie von einem Jsgenesis-Vertreter kontaktiert und geprüft, sobald Ihre Beiträge zur Gemeinschaft unsere intern festgelegte Schwelle für die Aufnahme erreicht haben.</1><2>Die formelle Aufnahme neuer Gründungsmitglieder in das Programm erfolgt am Ende der Bewertungsperioden (deren Termine auf unserer Website veröffentlicht werden). Jeder Bewertungszeitraum dauert derzeit zwei Wochen.</2><0>Kommunikation</0><1>Wir werden weitere öffentliche Updates über das Programm über unsere regulären Kommunikationskanäle veröffentlichen, einschließlich unseres offiziellen Discord-Kanals, des Joystream-Newsletters, des offiziellen GitHub-Repos für das Programm (github.com/joystream/founding-members) sowie auf unserer Website (www.joystream. org) und im Blog (blog.joystream.org).</1><2>Alle privaten oder sensiblen Informationen über Ihre Teilnahme am Programm werden über Keybase oder eine andere vorher vereinbarte Kontaktmethode mitgeteilt.</2><0>Token-Zuteilungsformel</0><1>Wenn Sie offiziell den Status eines Gründungsmitglieds erhalten haben, werden Ihnen automatisch 0,02% des Genesis-Token-Vorrats im Mainnet zugeteilt. Der Rest Ihrer Token-Zuteilung wird auf der Grundlage Ihres Anteils an den Ranglistenpunkten aller Gründungsmitglieder berechnet.</1><2>Da das aktuelle Programm einen Token-Pool von 15 % vorsieht, setzen sich diese 15 % aus den Ansprüchen der standardmäßigen 0. Die verbleibende Zuteilung, die nicht bereits nach dieser Regel beansprucht wurde, wird proportional auf der Grundlage des relativen Anteils an den gesamten Leaderboard-Punkten für jedes Gründungsmitglied verteilt.</2><0>Belohnungspolitik</0><1>Punkte haben keinen inneren Wert, und wenn sie Nutzern mit dem Status eines Gründungsmitglieds zugewiesen werden, stellen sie nur einen Teilanspruch auf eine noch nicht festgelegte Menge an JOY-Tokens im Mainnet dar. Im Falle bösgläubiger Aktivitäten (siehe unten) können die Punkte für die Rangliste/Gründungsmitglieder jederzeit entwertet werden.</1><2>Teilnehmer sollten sich auch darüber im Klaren sein, dass die für das Mainnet zugewiesenen Token eine Sperrfrist enthalten können, die ihre Verwendung für einen bestimmten Zeitraum einschränkt. </2><0>Ausschlusspolitik</0><2>Jedes Mitglied der Plattform, das an betrügerischen oder böswilligen Aktivitäten teilnimmt, kann von den Bestenlisten und dem Gründungsmitgliederprogramm ausgeschlossen werden, wobei alle damit verbundenen Token-Ansprüche ungültig werden.</2><0>Konto- und Schlüsselsicherheit</0><1>Ihre Bestenlisten-/Gründungsmitglieder-Punkte gehören allein Ihnen und sind nicht übertragbar. Sie müssen Ihr Konto und alle privaten Schlüssel, die mit Ihrer Mitgliedschaft im Gründungsmitgliederprogramm verbunden sind, sicher aufbewahren und vernünftige digitale Sicherheitspraktiken anwenden.</1><1>Schlüssel, die mit Ansprüchen auf Gründungsmitglieder-Token verbunden sind, dürfen unter keinen Umständen an andere Personen übertragen werden. Wenn dies geschieht, können Punkte oder Token-Ansprüche ungültig werden (siehe oben).</1><2>Tokens können nur an Adressen vergeben werden, die Sie kontrollieren. Sie können aufgefordert werden, eine Nachricht zu unterschreiben, in der Sie nachweisen, dass Sie die privaten Schlüssel für die von Ihnen angegebenen Adressen besitzen.</2><0>Aktivitätsberichte</0><1>Sie können nicht mehr als einmal (d. h. in mehr als einer Zusammenfassung) dieselbe Aktivität geltend machen, um dieselben Punkte zweimal zu erhalten. Sollte dies dennoch geschehen, wird dies als böswillig angesehen und kann zum Ausschluss aus dem Programm führen.</1><1>Alle Aktivitäten müssen innerhalb von 30 Tagen nach ihrem Auftreten gemeldet werden. Beiträge, die außerhalb dieses Zeitraums gemeldet werden, können nicht belohnt werden. Aus diesem Grund ist es sehr wichtig, regelmäßig Zusammenfassungen einzureichen.</1><1>Wenn Sie Ihre Aktivitäten bis einschließlich eines bestimmten Datums eingereicht haben, können Sie keine Aktivitäten mehr einreichen, die vor diesem Datum liegen.</1><2>Bei der Meldung von Beiträgen ist das korrekte Format für Zusammenfassungen zu beachten. </2><0>Aktualisierungen dieser Regeln</0><1>Jsgenesis behält sich das Recht vor, die Regeln des Programms jederzeit und ohne Angabe von Gründen zu aktualisieren.</1><1>Wenn schwerwiegende Fehler in der Struktur des Programms entdeckt werden, behält sich Jsgenesis das Recht vor, anzukündigen, dass nach einer zukünftigen Wertungsperiode die \"Saison\" beendet ist und ein neues Schema für die folgenden Saisons gelten wird, wodurch die \"Punkte\" zurückgesetzt werden. In einem solchen Fall wird ein von Jsgenesis nach eigenem Ermessen festgelegter Anteil des Pools gemäß den bestehenden Regeln zugewiesen. </1><1>Jsgenesis behält sich das Recht vor, irgendeinen Aspekt dieser Vereinbarung aus rechtlichen Gründen nicht zu erfüllen.</1>"
+    },
       "success": {
-        "title": "Thank you for submitting your summary, we have received it successfully.",
-        "text": "We will process the information contained within it shortly and award leaderboard points for qualifying contributions."
+        "title": "Vielen Dank, dass du deine Zusammenfassung eingereicht hast, wir haben sie erfolgreich erhalten.",
+        "text": "Wir werden die darin enthaltenen Informationen in Kürze verarbeiten und Ranglistenpunkte für qualifizierte Beiträge vergeben."
       },
       "error": {
-        "noSuchAccount": "No such account exists. Try again!",
-        "incorrectPassword": "Password is incorrect, please try again!",
-        "fileFormat": "Wrong file format! Please try again or check our tips how to export it.",
-        "jsonWrongAccount": "Json file doesn't correspond to account given!",
-        "faultyJson": "Json file has incomplete/incorrect components. Try exporting your account again!"
+        "noSuchAccount": "Es existiert kein solches Konto. Versuch's nochmal!",
+        "incorrectPassword": "Das Passwort ist falsch, bitte versuchen Sie es noch einmal!",
+        "fileFormat": "Falsches Dateiformat! Bitte versuchen Sie es noch einmal oder lesen Sie unsere Tipps zum Exportieren.",
+        "jsonWrongAccount": "Json-Datei entspricht nicht dem angegebenen Konto!",
+        "faultyJson": "Json-Datei hat unvollständige/falsche Bestandteile. Versuchen Sie, Ihr Konto erneut zu exportieren!"
       },
-      "dropFile": "Drop you file here or <0>browse files</0>",
-      "uploadFile": "Upload file"
+      "dropFile": "Lege deine Datei hier ab oder <0>durchsuchen Sie Dateien</0>",
+      "uploadFile": "Datei hochladen."
     }
   }
 }
