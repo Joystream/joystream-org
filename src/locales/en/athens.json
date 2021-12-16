@@ -1,10 +1,10 @@
 {
   "Athen": {
     "siteMetadata": {
-      "description": "Entdecke das Athen-Testnetzwerk"
+      "description": "Entdecke das Athens testnet"
     },
     "hero": {
-      "Titel": "Athen-Netzwerk",
+      "Titel": "Athen Network",
       "text": " Entdecke die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdienen dabei echtes Geld.",
       "chipText": "Was ist das?"
     },
@@ -27,7 +27,7 @@
       }
     },
     "testnetGoals": {
-      "title": "Ziele des Testnetzwerks",
+      "title": "Ziele des Testnet",
       "subtitle": "Die nachstehenden Ziele sind eine vereinfachte Darstellung der in unserem Release <0>OKR</0> aufgeführten Schlüsselergebnisse",
       "goals": {
         "media": {
@@ -49,7 +49,7 @@
       }
     },
     "roles": {
-      "title": "Im Athen-Testnetzwerk verfügbare Rollen"
+      "title": "Im Athens testnet verfügbare Rollen"
     },
     "map": {
       "title": "Die Stadt Athen",
