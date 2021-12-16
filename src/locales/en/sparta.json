@@ -1,10 +1,10 @@
 {
   "sparta": {
     "siteMetadata": {
-      "description": "Erforsche das Sparta-Testnetzwerk"
+      "description": "Erforsche das Sparta Testnet"
     },
     "hero": {
-      "Titel": "Sparta-Netzwerk",
+      "Titel": "Sparta Network",
       "text": "Erforsche die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflussen Sie die Entwicklung der Plattform und verdienen Sie dabei echtes Geld.",
       "chipText": "Was ist das?"
     },
@@ -31,7 +31,7 @@
       }
     },
     "Rollen": {
-      "title": "Im Sparta-Testnetzwerk verfügbare Rollen"
+      "title": "Im Sparta Testnet verfügbare Rollen"
     },
     "map": {
       "title": "Die Stadt Sparta",
