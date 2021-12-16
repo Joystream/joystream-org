@@ -1,10 +1,10 @@
 {
   "Gizeh": {
     "siteMetadata": {
-      "description": "Erforsche das Gizeh-Testnetzwerk"
+      "description": "Erforsche das Giza testnet"
     },
     "hero": {
-      "Titel": "Gizeh-Netzwerk",
+      "Titel": "Gizeh Network",
       "text": "Neben anderen geplanten Verbesserungen führt die Gizeh-Version die erste Iteration des Speicher- und Verteilungssystems ein, das wir im Hauptnetz verwenden werden."    },
     "criticalDocuments": {
       "title": "Kritische Dokumente",
@@ -18,7 +18,7 @@
       }
     },
     "testnetGoals": {
-      "title": "Ziele des Testnetzwerks",
+      "title": "Ziele des Testnet",
       "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Gizeh-Testnetzwerk.",
       "goals": {
         "launchStorageAndDistribution": {
@@ -36,7 +36,7 @@
       }
     },
     "Rollen": {
-      "title": "Incentivierte Rollen für das Gizeh-Netzwerk"
+      "title": "Incentivierte Rollen für das Giza network"
     },
     "map": {
       "title": "Gizeh",
