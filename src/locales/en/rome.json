@@ -1,10 +1,10 @@
 {
   "Rom": {
     "siteMetadata": {
-      "description": "Erkunden Sie das Rom-Testnetzwerk"
+      "description": "Erkunden Sie das Rom testnet"
     },
     "hero": {
-      "Titel": "Rom-Netzwerk",
+      "Titel": "Rom Network",
       "text": "Erkunde die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdiene dabei echtes Geld.",
       "chipText": "Was ist das?"
     },
@@ -27,7 +27,7 @@
       }
     },
     "testnetGoals": {
-      "title": "Ziele des Testnetzwerks",
+      "title": "Ziele des Testnet",
       "subtitle": "Die nachstehenden Ziele sind eine vereinfachte Darstellung der in unserem Release <0>OKR</0> aufgeführten Schlüsselergebnisse",
       "goals": {
         "contentDirectory": {
