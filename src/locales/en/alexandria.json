@@ -1,10 +1,10 @@
 {
   "alexandria": {
     "siteMetadata": {
-      "description": "Erforsche das Alexandria Testnetzwerk"
+      "description": "Erforsche das Alexandria testnet"
     },
     "hero": {
-      "title": "Alexandria Netzwerk",
+      "title": "Alexandria Network",
       "text": "Der Alexandria Release konzentriert sich auf wichtige technische Aktualisierungen, die eine effizientere zukünftige Entwicklung ermöglichen werden.",
       "chipText": "Was ist das?"
     },
@@ -27,7 +27,7 @@
       }
     },
     "testnetGoals": {
-      "title": "Testnet-Ziele",
+      "title": "Ziele des Testnets",
       "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Alexandria Testnetzwerk.",
       "goals": {
         "membershipModule": {
@@ -39,13 +39,13 @@
           "text": "Wir stellen auf eine neue Version von Substrate um, um mit einer breiten Palette von Verbesserungen auf dem neuesten Stand zu bleiben und um den Rückstand unserer wachsenden Codebasis zu begrenzen."
         },
         "networkTesting": {
-          "title": "Verbessern unsere Netzwerktests",
+          "title": "Verbessern unserer Netzwerktests",
           "text": "Wir entwickeln unsere Netzwerktestinfrastruktur weiter, um echten End-to-End-Builds einen Schritt näher zu kommen, die einen immer kürzeren Entwicklungszyklus sicherstellen."
         }
       }
     },
     "roles": {
-      "title": "Incentivierte Rollen für das Alexandria Netzwerk"
+      "title": "Incentivierte Rollen für das Alexandria network"
     },
     "map": {
       "title": "Alexandria",
