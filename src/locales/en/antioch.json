@@ -23,7 +23,7 @@
     },
     "testnetGoals": {
       "title": "Testnetzwerk
-      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Antioch-Testnetzwerk
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Antioch-Testnetzwerk"
       "goals": {
         "substrateVersion": {
           "title": "Upgrade der Substratversion",
