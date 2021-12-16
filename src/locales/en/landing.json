@@ -1,130 +1,130 @@
 {
-  "landing": {
+  "Landung": {
     "siteMetadata": {
-      "description": "Joystream is a video platform controlled, owned, and operated by its users."
+      "description": "Joystream ist eine Videoplattform, die von ihren Nutzern kontrolliert, besessen und betrieben wird."
     },
     "hero": {
-      "title": "The video platform DAO",
-      "subtitle": "Joystream is a video platform controlled,<0/> owned, and operated by its users",
+      "title": "Die Videoplattform DAO",
+      "subtitle": "Joystream ist eine Videoplattform, die von ihren Nutzern kontrolliert,<0/>besessen und betrieben wird",
       "metrics": {
         "mainTitle": "Testnet Metrics",
         "titles": {
-          "participationPayout": "Participation Payout",
-          "activeValidators": "Active Validators",
-          "blockHeight": "Block Height",
-          "memberships": "Memberships"
+          "participationPayout": "Beteiligungsauszahlung",
+          "activeValidators": "Aktive Prüfer",
+          "blockHeight": "Blockhöhe",
+          "Mitgliedschaften": "Mitgliedschaften"
         }
       }
     },
     "becomeFM": {
-      "subtitle": "Our brand new and unparalleled community token distribution scheme",
-      "title": "Become a Founding Member to earn mainnet tokens and influence the development of the platform.",
-      "alternateTitle": "Become a Founding member and have a tangible impact on the development of our platform.",
-      "link": "Learn more about our generous program"
+      "subtitle": "Unser brandneues und einzigartiges Community-Token-Vertriebssystem",
+      "title": "Werde Gründungsmitglied, um Mainnet-Token zu verdienen und die Entwicklung der Plattform zu beeinflussen.",
+      "alternateTitle": "Werde Gründungsmitglied und habe einen spürbaren Einfluss auf die Entwicklung unserer Plattform.",
+      "link": "Erfahre mehr über unser großzügiges Programm"
     },
     "whatWeDo": {
-      "subtitle": "Our motivation for building the Joystream protocol",
-      "title": "We call for an arrangement where media platforms are accountable to the people they impact.",
-      "link": "Read our manifesto"
+      "subtitle": "Unsere Motivation für die Entwicklung des Joystream-Protokolls",
+      "title": "Wir fordern eine Regelung, bei der Medienplattformen gegenüber den Menschen, die sie beeinflussen, rechenschaftspflichtig sind.",
+      "link": "Lesen Sie unser Manifest"
     },
     "whyYouShouldJoin": {
-      "title": "Why join our testnets?",
+      "title": "Warum bei unseren Testnetzen mitmachen?",
       "reasons": {
-        "tokens": {
-          "title": "Tokens",
-          "text": "Earn tokens distributed on mainnet, launching 2022"
+        "Token": {
+          "Titel": "Token",
+          "text": "Verdiene Token, die im Mainnet verteilt werden, beginnend ab 2022"
         },
         "cash": {
           "title": "Cash",
-          "text": "Get rewarded with real money for your participation"
+          "text": "Werden Sie mit echtem Geld für Ihre Teilnahme belohnt"
         },
         "reputationAndSkill": {
-          "title": "Reputation & Skill",
-          "text": "Gain the knowledge required to participate on mainnet"
+          "title": "Reputation & Können",
+          "text": "Erwerben Sie das erforderliche Wissen, um am Mainnet teilzunehmen"
         }
       }
     },
     "exploreJoystream": {
-      "title": "Explore Joystream Now",
-      "subtitle": "Two fast evolving apps for consuming content and governance activities.",
+      "title": "Erkunde Joystream jetzt",
+      "subtitle": "Zwei sich schnell entwickelnde Apps für den Konsum von Inhalten und Verwaltungsaktivitäten.",
       "atlas": {
-        "text": "Atlas is the flagship content consumer and publishing app for Joystream. Watch videos, follow creators and discover new featured content, or create a channel and build your audience.",
-        "link": "Try out Atlas",
-        "imageAlt": "overview visual of Atlas"
+        "text": "Atlas ist das Flaggschiff unter den Apps zum Konsumieren und Veröffentlichen von Inhalten bei Joystream. Siehe dir Videos an, folge Autoren und entdecke neue Inhalte, oder erstelle einen Kanal und baue dir dein Publikum auf.",
+        "link": "Probiere Atlas aus",
+        "imageAlt": "Übersichtsbild von Atlas"
       },
       "pioneer": {
-        "text": "Pioneer is the place to participate in community governance and operation. Vote on elections, submit proposals to fund your project or get enter a paid role to power the platform.",
-        "link": "Try out Pioneer",
-        "imageAlt": "overview visual of Pioneer"
+        "text": "Pioneer ist der Ort, an dem du dich an der Verwaltung und dem Betrieb der Gemeinschaft beteiligen kannst. Stimme bei Wahlen ab, reiche Vorschläge zur Finanzierung deines Projekts ein oder übernehme eine bezahlte Rolle, um die Plattform zu betreiben.",
+        "link": "Probiere Pioneer aus",
+        "imageAlt": "Übersichtsbild von Pioneer"
       }
     },
     "roadToMainnet": {
-      "title": "Road to mainnet",
+      "title": "Weg zum Mainnet",
       "testnetState": {
-        "Current": "Current testnet",
-        "Past": "Past testnet",
-        "Future": "Future testnet"
+        "Current": "Aktuelles testnet",
+        "Past": "Vergangenes testnet",
+        "Future": "Zukünftiges testnet"
       },
-      "released": {
-        "Current": "Released on ",
-        "Past": "Released on ",
-        "Future": "Will be live on "
+      "freigegeben": {
+        "Current": "Freigegeben am",
+        "past": "Freigegeben am ",
+        "Future": "Wird live sein am "
       },
       "testnets": {
         "Sparta": {
-          "title": "Sparta testnet",
-          "text": "Sparta is our second testnet, introducing a variety of important technical improvements.",
-          "explore": "Explore Sparta"
+          "title ": "Sparta testnet",
+          "text": "Sparta ist unser zweites testnet, das eine Reihe von wichtigen technischen Verbesserungen einführt.",
+          "explore": "Sparta erforschen"
         },
         "Athens": {
           "title": "Athens testnet",
-          "text": "Athens is our third testnet, introducing a variety of important technical improvements.",
-          "explore": "Explore Athens"
+          "text": "Athens ist unser drittes testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Athen erforschen"
         },
         "Acropolis": {
           "title": "Acropolis testnet",
-          "text": "Acropolis is our fourth testnet, introducing a variety of important technical improvements.",
-          "explore": "Explore Acropolis"
+          "text": "Acropolis ist unser viertes testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Acropolis erforschen"
         },
         "Rome": {
           "title": "Rome testnet",
-          "text": "Rome is our second fifth, introducing a variety of important technical improvements.",
-          "explore": "Explore Rome"
+          "text": "Rome ist unser fifth testnet, der eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Rom erforschen"
         },
         "Constantinople": {
-          "title": "Constantinople testnet",
-          "text": "Constantinople is our sixth testnet, introducing a variety of important technical improvements.",
-          "explore": "Explore Constantinople"
+          "title": "Constantinopletestnet",
+          "text": "Constantinople ist unser sechstes testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Erforsche Constantinople"
         },
         "Alexandria": {
-          "title": "Alexandria testnet",
-          "text": "Alexandria is our second seventh, introducing a variety of important technical improvements.",
-          "explore": "Explore Alexandria"
+          "title ": "Alexandria testnet",
+          "text": "Alexandria ist unser siebtes testnet, das eine Reihe von wichtigen technischen Verbesserungen einführt.",
+          "explore": "Erforsche Alexandria"
         },
         "Babylon": {
-          "title": "Babylon testnet",
-          "text": "Babylon is our second eighth, introducing a variety of important technical improvements.",
-          "explore": "Explore Babylon"
+          "Titel": "Babylon testnet",
+          "text": "Babylon ist unser achtes testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Erforsche Babylon"
         },
         "Antioch": {
-          "title": "Antioch testnet",
-          "text": "Antioch is our ninth testnet, patching a chain split bug which broke the Babylon network",
-          "explore": "Explore Antioch"
+          "title ": "Antioch testnet",
+          "text": "Antioch ist unser neuntes testnet, das einen Kettenspaltungsfehler behebt, der das Babylon-Netzwerk zerstört hat",
+          "explore": "Erforsche Antioch"
         },
         "Sumer": {
           "title": "Sumer testnet",
-          "text": "Sumer is our tenth testnet, facilitating easy content uploads via our playback app.",
-          "explore": "Explore Sumer"
+          "text": "Sumer ist unser zehntes Testnetz, das den einfachen Upload von Inhalten über unsere Playback-App ermöglicht.",
+          "explore": "Sumer erforschen"
         },
         "Giza": {
-          "title": "Giza testnet",
-          "text": "Giza is our eleventh testnet, introducing V2 of the Storage and Distribution System.",
-          "explore": "Explore Giza"
+          "Titel": "Giza testnet",
+          "text": "Giza ist unser elftes testnet, das V2 des Speicher- und Verteilungssystems einführt.",
+          "explore": "Giza erforschen"
         }
       }
     },
     "earnTokens": {
-      "title": "Earn mainnet tokens, cash and influence."
+      "title": "Verdienen Sie Mainnet-Tokens, Bargeld und Einfluss".
     }
   }
 }
