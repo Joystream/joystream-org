@@ -1,10 +1,10 @@
 {
   "babylon": {
     "siteMetadata": {
-      "description": "Erforsche das Babylon-Testnetzwerk"
+      "description": "Erforsche das Babylon testnet"
     },
     "Held": {
-      "Titel": "Babylon-Netzwerk",
+      "Titel": "Babylon Network",
       "text": "Die neue Version von Babylon bietet Verbesserungen, die das Erlebnis der Veröffentlichung und des Konsums von Videos erheblich verbessern.",
       "chipText": "Was ist das?"
     },
@@ -27,7 +27,7 @@
       }
     },
     "testnetGoals": {
-      "Titel": "Ziele des Testnetzwerk",
+      "Titel": "Ziele des Testnets",
       "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Testnetzwerk Babylon.",
       "goals": {
         "atlas": {
