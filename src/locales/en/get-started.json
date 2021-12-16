@@ -1,60 +1,60 @@
 {
   "getStarted": {
     "siteMetadata": {
-      "title": "Getting Started",
-      "description": "Learn how to contribute and participate to the Joystream project"
+      "title": "Erste Schritte",
+      "description": "Erfahren Sie, wie Sie zum Joystream-Projekt beitragen und daran teilnehmen können"
     },
-    "hero": {
-      "title": "How to Contribute and Participate",
-      "subtitle": "Read more about the current ways you can add value to the project and earn rewards for doing so.",
-      "buttonText": "View opportunities",
-      "imageAlt": "getting started hero"
+    "Held": {
+      "title": "Wie man beiträgt und mitmacht",
+      "subtitle": "Lesen Sie mehr über die aktuellen Möglichkeiten, wie Sie einen Beitrag zum Projekt leisten und dafür Belohnungen erhalten können.",
+      "buttonText": "Möglichkeiten anzeigen",
+      "imageAlt": "Erste Schritte zum Helden"
     },
     "howToStart": {
-      "title": "How to start",
-      "discord": "Join our Discord",
-      "tokens": "Receive free testnet tokens",
-      "membership": "Create membership on-chain",
-      "opportunities": "Pick one of the opportunities below"
+      "title": "Wie man anfängt",
+      "discord": "Unserem Discord beitreten",
+      "tokens": "Erhalten Sie kostenlose Testnetzwerk-Tokens",
+      "Mitgliedschaft": "Mitgliedschaft on-chain erstellen",
+      "opportunities": "Wählen Sie eine der unten aufgeführten Möglichkeiten"
     },
     "opportunities": {
-      "title": "Opportunities",
+      "title": "Chancen",
       "bounties": {
-        "title": "Bounties",
-        "text": "Bounties are long running tasks which anyone can attempt to tackle in a exchange for some reward. They are created either by Jsgenesis, or by the Council.",
-        "imageAlt": "money pouch"
+        "title": "Kopfgelder",
+        "text": "Kopfgelder sind langwierige Aufgaben, die jeder versuchen kann, im Austausch für eine Belohnung zu erledigen. Sie werden entweder von Jsgenesis oder vom Rat erstellt.",
+        "imageAlt": "Geldbeutel"
       },
       "bountiesCarousel": {
-        "all": "All",
-        "coding": "Coding",
+        "all": "alle",
+        " coding": "Codierung",
         "design": "Design",
-        "marketing": "Marketing",
-        "research": "Research",
-        "contentCreation": "Content Creation",
-        "newcomers": "Newcomers",
-        "content": "Content",
-        "documentation": "Documentation",
-        "translation" : "Translation"
+        " marketing": "Marketing",
+        " research": "Forschung",
+        "contentCreation": "Inhalt kreieren
+        " newcomers": "Beginner",
+        " content": "Inhalt",
+        " documentation": "Dokumentation",
+        "translation" : "Übersetzung"
       },
-      "roles": {
-        "title": "Roles",
-        "text": "Our current testnet also allows you to participate in some of the platform roles which will be available on mainnet.<0/><0/>Participation in these roles is rewarded in tJOY (our testnet token) which is backed by fiat reserves at Jsgenesis and redeemable for bitcoin cash.",
+      " roles": {
+        "title": "Rollen",
+        "text": "Unser aktuelles Testnetzwerk ermöglicht es Ihnen auch, an einigen der Plattformrollen teilzunehmen, die im Mainnet verfügbar sein werden.<0/><0/>Die Teilnahme an diesen Rollen wird in tJOY (unserem Testnetzwerk-Token) belohnt, der durch Fiat-Reserven bei Jsgenesis gedeckt ist und gegen Bitcoin-Cash eingelöst werden kann."
         "imageAlt": "masks"
       }
     },
     "activeRoles": {
-      "title": "Active roles on the current testnet",
-      "validatorText": "A Validator is an actor which checks the validity of newly constructed blocks, proposes new blocks and participates in the consensus process for committing new block to the chain. Validators are typically paid a fixed amount for each block produced. This role has a purpose very similar to that of the miners in the Bitcoin blockchain.",
-      "councilMemberText": "Council Members are elected by stakeholders in the system to act in the long-term interest of the platform. They are responsible for allocating resources, and hiring working group leads to run the platform's day-to-day operations. This is done through the proposal system, allowing any user to submit suggestions for changing the platform in some way.",
-      "storageProviderText": "There are critical platform assets that do not live on the blockchain, such as content media. The integrity of these assets is secured by the chain, but a separate set of storage and distribution nodes enable uploading and downloading of such data. The Storage Provider is involved this activity, specifically by storing large quantities of data.",
-      "storageLeadText": "The Storage Lead is hired directly by the Council through the proposals system and is dedicated to the hiring, firing and wider management of Storage Providers on the network.",
-      "contentCuratorText": "Content Curators are responsible for monitoring the publishing of new content into the content directory, and responding to reports about contested publications. They must also update information on content to ensure it is accurate, with correct metadata. Collaborating with Builders to improve tools and user-facing experiences is another significant part of the role.",
-      "contentCreatorText": "Content Creators are those platform participants who have decided to contribute their own original (or third-party licensed) content to the platform. There are no direct incentives for this informal role at this time, though effective contributors are very likely to be rewarded through the Founding Member Program.",
-      "contentLeadText": "The Council has the power to appoint a Content Curator Lead for the network who can hire further Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing with the council, the Lead can also decide to fire curators who are not performing their jobs adequately."
+      "title": "Aktive Rollen im aktuellen Testnetzwerk",
+      "validatorText": "Ein Validator ist ein Nutzer, der die Gültigkeit von neu erstellten Blöcken prüft, neue Blöcke vorschlägt und am Konsensprozess für die Übergabe neuer Blöcke an die Kette teilnimmt. Validatoren werden in der Regel für jeden erzeugten Block mit einem festen Betrag bezahlt. Diese Rolle hat einen sehr ähnlichen Zweck wie die der Miner in der Bitcoin-Blockchain.",
+      "councilMemberText": "Ratsmitglieder werden von den Beteiligten des Systems gewählt, um im langfristigen Interesse der Plattform zu handeln. Sie sind verantwortlich für die Zuteilung von Ressourcen und die Einstellung von Arbeitsgruppenleitern, die das Tagesgeschäft der Plattform leiten. Dies geschieht über das Vorschlagssystem, das es jedem Nutzer ermöglicht, Vorschläge für Änderungen an der Plattform einzureichen.",
+      "storageProviderText": "Es gibt kritische Plattform-Assets, die nicht auf der Blockchain gespeichert sind, wie z. B. Medieninhalte. Die Integrität dieser Vermögenswerte wird durch die Blockchain gesichert. Ein separater Satz von Speicher- und Verteilerknoten ermöglicht das Hoch- und Herunterladen solcher Daten. Der Speicherplatzanbieter ist an dieser Aktivität beteiligt, indem er insbesondere große Datenmengen speichert.",
+      "storageLeadText": "Der Speicherplatzverantwortliche wird direkt vom Rat über das Vorschlagssystem eingestellt und ist für die Einstellung, Entlassung und das weitere Management der Speicherplatzanbieter im Netzwerk zuständig.",
+      "contentCuratorText": "Inhaltskuratoren sind dafür verantwortlich, die Veröffentlichung neuer Inhalte im Inhaltsverzeichnis zu überwachen und auf Berichte über beanstandete Veröffentlichungen zu reagieren. Sie müssen auch die Informationen zu den Inhalten aktualisieren, um sicherzustellen, dass diese korrekt sind und die richtigen Metadaten enthalten. Die Zusammenarbeit mit den Erstellern zur Verbesserung der Tools und der Benutzerfreundlichkeit ist ein weiterer wichtiger Teil der Aufgabe.",
+      "contentCreatorText": "Content Creators sind diejenigen Plattformteilnehmer, die sich entschieden haben, ihre eigenen Originalinhalte (oder von Dritten lizenzierte Inhalte) zur Plattform beizusteuern. Zurzeit gibt es keine direkten Anreize für diese informelle Rolle, obwohl effektive Beitragende sehr wahrscheinlich durch das Founding Member Program belohnt werden.",     
+ "contentLeadText": "Der Rat hat die Befugnis, einen Leiter der Inhaltskuratierung für das Netzwerk zu ernennen, der weitere Inhaltskuratoren einstellen kann. Der Leiter entscheidet auch über die Prioritäten der Kuratierung. Falls erforderlich, kann der Leiter nach Rücksprache mit dem Rat auch entscheiden, Kuratoren zu entlassen, die ihre Aufgaben nicht angemessen erfüllen."
     },
     "roleCard": {
-      "overview": "Overview",
-      "buttonText": "Check details on GitHub"
+      "overview": "Übersicht",
+      "buttonText": "Details auf GitHub prüfen"
     }
   }
 }
