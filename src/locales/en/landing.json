@@ -32,7 +32,7 @@
       "reasons": {
         "tokens": {
           "title": "Tokens",
-          "text": "Earn tokens distributed on mainnet, launching 2021"
+          "text": "Earn tokens distributed on mainnet, launching 2022"
         },
         "cash": {
           "title": "Cash",
@@ -118,7 +118,7 @@
         },
         "Giza": {
           "title": "Giza testnet",
-          "text": "Sumer is our eleventh testnet, introducing V2 of the Storage and Distribution System.",
+          "text": "Giza is our eleventh testnet, introducing V2 of the Storage and Distribution System.",
           "explore": "Explore Giza"
         }
       }

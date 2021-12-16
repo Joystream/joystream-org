@@ -1,8 +1,7 @@
 import React from 'react';
-import { Trans } from 'gatsby-plugin-react-i18next';
+import { Trans, Link } from 'gatsby-plugin-react-i18next';
 import HeroImage from '../../../assets/svg/hero-builder.svg';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
-import { Link } from 'gatsby';
 
 import './style.scss';
 

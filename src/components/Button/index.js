@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-react-i18next';
 import PropTypes from 'prop-types';
 import React from 'react';
 import cn from 'classnames';

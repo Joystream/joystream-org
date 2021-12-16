@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SiteMetadata from '../../../components/SiteMetadata';
 import { graphql } from 'gatsby';
-import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
+import { useTranslation, useI18next, Link } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../../../components/_layouts/Base';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import { ScoringPeriodCounter } from '../../../components/founding-members/ScoringPeriod';
@@ -32,10 +32,10 @@ const FoundingMembersFormPage = () => {
       <div className="FoundingMembersFormPage">
         <div className="FoundingMembersFormPage__header">
           <div className="FoundingMembersFormPage__back">
-            <a href="/founding-members" className="FoundingMembersFormPage__back__text">
+            <Link to="/founding-members" className="FoundingMembersFormPage__back__text">
               <Arrow className="FoundingMembersFormPage__back__arrow" />
               <span>{t('foundingMembers.general.backButton')}</span>
-            </a>
+            </Link>
           </div>
           <div className="FoundingMembersFormPage__header__title-wrapper">
             <h1 className="FoundingMembersFormPage__header__title">{t('foundingMembers.form.title')}</h1>
