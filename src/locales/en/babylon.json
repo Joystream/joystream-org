@@ -1,55 +1,58 @@
 {
   "babylon": {
     "siteMetadata": {
-      "description": "Explore the Babylon testnet"
+      "description": "Erforsche das Babylon-Testnetzwerk"
     },
-    "hero": {
-      "title": "Babylon Network",
-      "text": "The Babylon release offers improvements which greatly enhance the video publishing and consumption experience.",
-      "chipText": "What is this?"
+    "Held": {
+      "Titel": "Babylon-Netzwerk",
+      "text": "Die neue Version von Babylon bietet Verbesserungen, die das Erlebnis der Veröffentlichung und des Konsums von Videos erheblich verbessern.",
+      "chipText": "Was ist das?"
     },
     "heroCard": {
-      "title": "REPLACED BY ANTIOCH ON"
+      "title": "ERSETZT DURCH ANTIOCH ON"
     },
     "modal": {
-      "title": "Tower of Babel",
-      "text": "The Tower of Babel story is an origin myth meant to explain why the world's peoples speak different languages.<0/><0/>According to the story, a united human race in the generations following the Great Flood, speaking a single language and migrating eastward, comes to the land of Shinar. There they agree to build a city and a tower tall enough to reach heaven.<0/><0/> God, observing their city and tower, confounds their speech so that they can no longer understand each other, and scatters them around the world."
+      "title": "Turm von Babel",
+      "text": "Die Geschichte vom Turmbau zu Babel ist ein Ursprungsmythos, der erklären soll, warum die Völker der Welt unterschiedliche Sprachen sprechen.<0/><0/> Der Geschichte zufolge kommt eine vereinte menschliche Rasse in den Generationen nach der Sintflut, die eine einzige Sprache spricht und nach Osten wandert, in das Land Schinar. Dort beschließen sie, eine Stadt und einen Turm zu bauen, der hoch genug ist, um den Himmel zu erreichen.<0/><0/> Als Gott ihre Stadt und ihren Turm sieht, verwirrt er ihre Sprache, so dass sie einander nicht mehr verstehen können, und zerstreut sie über die ganze Welt."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Kritische Dokumente",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Freigabeplan",
+        "text": "Lesen Sie den Release-Plan, wie er in der Planungsphase erstellt wurde, und erfahren Sie mehr über den Verlauf der Entwicklung."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Babylon testnet and its objectives."
+        "title": "Ankündigung Blog Post",
+        "text": "Lesen Sie eine kurze Einführung in das Babylon-Testnetzwerk und seine Ziele."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Babylon testnet.",
+      "Titel": "Ziele des Testnetzwerk",
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Testnetzwerk Babylon.",
       "goals": {
         "atlas": {
-          "title": "Launch Atlas 0.1",
-          "text": "This will be the initial release of our content consumption client, aiming to be considerably more effective than the current Pioneer media experience."
+          "title": "Atlas 0.1 starten",
+          "text": "Dies wird die erste Version unseres Programms zum Konsumieren von Inhalten sein, das wesentlich effektiver sein soll als das aktuelle Pioneer-Medienangebot."
         },
         "contentDirectory": {
-          "title": "Deploy a new content directory and corresponding working group",
-          "text": "We will be modifying the content directory to allow for a new data model for content, supported by new schemas. We will also make some associated improvements to the Content Curator Working Group."
+          "title": "Bereitstellen eines neuen Inhaltsverzeichnisses und der entsprechenden Arbeitsgruppe",
+          "text": "Wir werden das Inhaltsverzeichnis modifizieren, um ein neues Datenmodell für Inhalte zu ermöglichen, das von neuen Schemata unterstützt wird. Außerdem werden wir einige damit verbundene Verbesserungen an der Content Curator Arbeitsgruppe vornehmen."
         },
         "hydraNode": {
-          "title": "Deploy first self-hosted Joystream Hydra node only supporting content directory",
-          "text": "Further work on our Hydra framework is required in order to support the new content directory."
+          "title": "Bereitstellung des ersten selbst gehosteten Joystream Hydra-Knotens, der nur das Inhaltsverzeichnis unterstützt",
+          "text": "Weitere Arbeiten an unserem Hydra-Rahmenwerk sind erforderlich, um das neue Inhaltsverzeichnis zu unterstützen."
         }
       }
     },
-    "roles": {
-      "title": "Incentivized Roles for the Babylon Network"
+    "Rollen": {
+      "title": "Anspornende Rollen für das Babylon-Netzwerk"
     },
     "map": {
       "title": "Babylon",
-      "text": "<0>Babylon was the capital city of Babylonia, a kingdom in ancient Mesopotamia, almost 4000 years ago.</0> It was built along the left and right banks of the Euphrates river with steep embankments to contain the river's seasonal floods. <1/><1/> The city is considered to be of great historical and cultural importance. The Hanging Gardens of Babylon were one of the Seven Wonders of the Ancient World and Babylon was also purported to be the site of the Tower of Babel.<1/><1/><2><0/> Read the blog post</2>"
+      "text": "<0>Babylon war vor fast 4000 Jahren die Hauptstadt von Babylonien, einem Königreich im antiken Mesopotamien.</0> Sie wurde am linken und rechten Ufer des Euphrat mit steilen Dämmen erbaut, um die saisonalen Überschwemmungen des Flusses aufzuhalten. <1/><1/> Die Stadt gilt als von großer historischer und kultureller Bedeutung. Die Hängenden Gärten von Babylon waren eines der Sieben Weltwunder der Antike, und Babylon soll auch der Standort des Turms von Babel gewesen sein.<1/><1/><2><0/> Lesen Sie den Blogbeitrag</2>"
     }
   }
 }
+
+
+
