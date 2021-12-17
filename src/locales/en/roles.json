@@ -61,46 +61,45 @@
         "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit hoher Speicherkapazität",
         "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
       }
-*** Übersetzt mit www.DeepL.com/Translator (kostenlose Version) ***
-
-
-    },
+ },
     "storageLead": {
-      "title": "Storage Lead",
-      "overview": "The Storage Lead is hired directly by the Council through the proposals system and is dedicated to the hiring, firing and wider management of Storage Providers on the network.",
+      " title": "Storage Lead",
+      "overview": "Der Speicherplatzverantwortliche wird direkt vom Rat über das Vorschlagssystem eingestellt und ist für die Einstellung, Entlassung und das weitere Management von Speicherplatzanbietern im Netzwerk zuständig.",
       "responsibilities": {
-        "storageProviderPerformance": "The Storage Lead is responsible for ensuring that Storage Providers are performing adequately. Each one must hold a complete and up-to-date copy of the content directory and ensure uptime in order to effectively serve content consumers."
+        "storageProviderPerformance": "Der Speicherplatzverantwortliche ist dafür verantwortlich, dass die Leistung der Speicherplatzanbieter angemessen ist. Jeder von ihnen muss über eine vollständige und aktuelle Kopie des Inhaltsverzeichnisses verfügen und die Betriebszeit sicherstellen, um den Inhaltskonsumenten effektiv bedienen zu können."
       },
-      "requirements": {
-        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
-        "managementAndCoordination": "Ability to effectively manage and coordinate the actions of the Storage Providers",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+      " requirements": {
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "managementAndCoordination": "Fähigkeit zur effektiven Verwaltung und Koordinierung der Maßnahmen der Speicheranbieter",
+        "stake ": "Besitz einer ausreichenden Menge des nativen Plattform Tokens, um diesen einzusetzen"
       }
     },
     "contentCurator": {
-      "title": "Content Curator",
-      "overview": "All of the media content published on the platform lives in an on-chain content directory. There are a range of different content types, and each type has a schema for a rich description of its structure, function and policies. For the effective use of of content, for example in rendering, discovery and monetization, it is critical to ensure the validity of the published information for all content. In particular, it is also important to resolve possible disputes about ownership and presence of any piece of content on the platform. It is the task of the content curators to do the work involved in processes that address these objectives.",
+      "title": "Inhaltskurator",
+      "overview": "Alle auf der Plattform veröffentlichten Medieninhalte befinden sich in einem On-Chain-Inhaltsverzeichnis. Es gibt eine Reihe verschiedener Inhaltstypen, und jeder Typ hat ein Schema für eine umfassende Beschreibung seiner Struktur, Funktion und Richtlinien. Für die effektive Nutzung von Inhalten, z. B. bei der Darstellung, Erkennung und Vermarktung, ist es entscheidend, die Gültigkeit der veröffentlichten Informationen für alle Inhalte sicherzustellen. Insbesondere ist es auch wichtig, mögliche Streitigkeiten über das Eigentum und das Vorhandensein von Inhalten auf der Plattform zu klären. Es ist die Aufgabe der Inhaltskuratoren, die Arbeit zu leisten, die mit Prozessen verbunden ist, die diesen Zielen dienen.",
       "responsibilities": {
-        "monitorContent": "Monitor the publishing of new content into the content directory, and respond to reports about contested publications",
-        "adjudicateDisputes": "Adjudicate possible dispute processes resulting from reports from users",
-        "updateContentInformation": "Update information on content to be accurate",
-        "collaborateWithBuilders": "Collaborate with <0> Builders</0> to improve both tools, and user facing experiences, to improve the integrity of the content directory"
-      },
+        "monitorContent": "Überwache die Veröffentlichung neuer Inhalte im Inhaltsverzeichnis und reagiere auf Berichte über beanstandete Veröffentlichungen",
+        "adjudicateDisputes": "Mögliche Streitfälle, die sich aus Meldungen von Nutzern ergeben, schlichten",
+        "updateContentInformation": "Informationen über Inhalte aktualisieren, damit sie korrekt sind",
+        "collaborateWithBuilders": "Arbeite mit den <0> Erstellern</0> zusammen, um sowohl die Werkzeuge als auch die Benutzererfahrung zu verbessern, um die Integrität des Inhaltsverzeichnisses zu erhöhen"      },
       "requirements": {
-        "adjudicateDisputes": "Fairly adjudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "adjudicateDisputes": "Faire Streitschlichtung und klare und transparente Kommunikation mit Interessengruppen und Teilnehmern",
+        "stake": "Halten Sie eine ausreichende Menge des nativen Plattform-Tokens, um den Einsatz zu leisten"
       }
     },
     "contentCreator": {
-      "title": "Content Creator",
-      "overview": "As a video platform, one of the most important platform assets is the content published on the platform. Since video is such a flexible media type, which can encompass a wide range of content categories, it is the primary focus. However, the intention is to support a broader range of content types over time. The content creators are those involved in creating, publishing and monetizing content on the platform.",
+      "title": "Ersteller von Inhalten",
+      "overview": "Als Videoplattform sind die auf der Plattform veröffentlichten Inhalte eines der wichtigsten Assets der Plattform. Da Video ein so flexibler Medientyp ist, der eine breite Palette von Inhaltskategorien umfassen kann, steht es im Mittelpunkt. Es ist jedoch beabsichtigt, im Laufe der Zeit ein breiteres Spektrum von Inhaltstypen zu unterstützen. Die Ersteller von Inhalten sind diejenigen, die an der Erstellung, Veröffentlichung und Monetarisierung von Inhalten auf der Plattform beteiligt sind",
       "responsibilities": {
-        "publishContent": "Publish content and build an audience"
+        "publishContent": "Inhalte veröffentlichen und ein Publikum aufbauen"
       },
       "requirements": {
-        "publishContent": "Have the right to publish existing or new content to the platform",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "publishContent": "Das Recht haben, bestehende oder neue Inhalte auf der Plattform zu veröffentlichen",
+        "stake": "Ausreichende Menge der nativen Plattformtokens besitzen, um sie zu staken"
       }
+*** Übersetzt mit www.DeepL.com/Translator (kostenlose Version) ***
+
+
     },
     "contentLead": {
       "title": "Content Lead",
