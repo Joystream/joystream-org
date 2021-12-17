@@ -1,66 +1,69 @@
 {
   "roles": {
     "siteMetadata": {
-      "description": "Read more about current and future roles on the Joystream platform"
+      "description": "Lese mehr über aktuelle und zukünftige Rollen auf der Joystream-Plattform"
     },
     "general" : {
-      "overview" : "Overview",
-      "responsibilities" : "Responsibilities",
-      "requirements" : "Requirements",
-      "seeATutorial" : "See a tutorial",
-      "askAQuestion" : "Ask a question",
-      "regularUpdates" : "Receive regular updates on the following role:",
-      "alertWhenActive" : "Alert me when the role will be active",
-      "emailAddressPlaceholder" : "Your email address",
-      "receiveEmailsAboutRole" : "I want to receive emails about this role.",
-      "informationTransferred" : "I acknowledge that my information will be transferred to Mailchimp, which has <0>these</0> privacy practices.",
-      "join" : "Join",
-      "subscribe" : "Subscribe",
-      "pleaseWait" : "Please wait.."
+      "overview" : "Übersicht",
+      "responsibilities" : "Verantwortlichkeiten",
+      "requirements" : "Anforderungen",
+      "seeATutorial" : "Ein Tutorial ansehen",
+      "askAQuestion" : "Stelle eine Frage",
+      "regularUpdates" : "Regelmäßige Updates für die folgende Rolle erhalten:",
+      "alertWhenActive" : "Benachrichtige mich, wenn die Rolle aktiv wird",
+      "emailAddressPlaceholder" : "Ihre E-Mail-Adresse",
+      "receiveEmailsAboutRole" : "Ich möchte E-Mails über diese Rolle erhalten.",
+      "informationTransferred" : "Ich stimme zu, dass meine Daten an Mailchimp übertragen werden, die <0>diese</0> Datenschutzpraktiken haben.",
+      "join" : "Beitreten",
+      "subscribe" : "Abonnieren",
+      "pleaseWait" : "Bitte warten.."
     },
     "hero": {
-      "title": "Choose your preferred role",
-      "text": "Participating in a role on our testnet lets you earn tJOY while influencing the platform's ongoing development."
+      "title": "Wähle deine bevorzugte Rolle",
+      "text": "Durch die Teilnahme an einer Rolle in unserem Testnetz kannst du tJOY verdienen und gleichzeitig die Weiterentwicklung der Plattform beeinflussen."
     },
     "validator": {
       "title": "Validator",
-      "overview": "The Joystream platform state lives on a blockchain consensus system. This consensus system is a variant of classical BFT consensus combined with Proof-of-Stake to determine voting power. A validator is an actor which checks the validity of newly constructed blocks, proposes new blocks and participates in the consensus process for committing new block to the chain. This role has a purpose very similar to the miners in the Bitcoin blockchain. Importantly, anyone can fully check the validity of the blockchain, not just validators, and this is called validation.",
+      "overview": "Der Zustand der Joystream-Plattform basiert auf einem Blockchain-Konsenssystem. Dieses Konsenssystem ist eine Variante des klassischen BFT-Konsens in Kombination mit Proof-of-Stake zur Bestimmung der Stimmkraft. Ein Validator ist ein Nutzer, der die Gültigkeit von neu erstellten Blöcken überprüft, neue Blöcke vorschlägt und am Konsensprozess für die Aufnahme neuer Blöcke in die Kette teilnimmt. Diese Rolle hat einen sehr ähnlichen Zweck wie die Miner in der Bitcoin-Blockchain. Wichtig ist, dass jeder die Gültigkeit der Blockchain vollständig überprüfen kann, nicht nur die Validierer, und dies wird Validierung genannt.",
       "responsibilities": {
-        "runAndMaintainScreeningNodes": "Run and maintain screening nodes that are always available and performant",
-        "enforceRules": "Help enforce the consensus rules of the network"
+        "runAndMaintainScreeningNodes": "Ausführen und Aufrechterhalten von Screening-Knoten, die permanent verfügbar und funktionstüchtig sind",
+        "enforceRules": "Helfen, die Konsensregeln des Netzwerks durchzusetzen"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
-        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure, with high storage, (up & down) bandwidth and processing capacity",
-        "storeKeys": "Able to securely store keys",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit hoher Speicher-, (Up- & Down-) Bandbreite und Verarbeitungskapazität",
+        "storeKeys": "In der Lage, Schlüssel sicher zu speichern",
+        "stake": "Ausreichende Menge des nativen Plattform-Tokens halten, um es einzusetzen"
       }
     },
     "councilMember": {
-      "title": "Council Member",
-      "overview": "At the heart of the governance process on the platform is the proposal system, which allows anyone to submit some suggestion for changing the state or policy of the platform in some way. These proposals are processed and voted on by a council, where the participants are referred to as council members. A seat on the council is won through an election process, and lasts for some period of time until a new election.",
-      "responsibilities": {
-        "discussProposals": "Discuss the meaning and merits of incoming proposals, covering a broad range of topics",
-        "vote": "Vote on proposals",
-        "representCommunity": "Represent the community members and your constituency to make day-to-day operations decisions"
+      "title": "Ratsmitglied",
+      "overview": "Das Herzstück des Verwaltungsprozesses auf der Plattform ist das Vorschlagssystem, das es jedem ermöglicht, einen Vorschlag zur Änderung des Zustands oder der Politik der Plattform einzureichen. Diese Vorschläge werden von einem Rat bearbeitet und zur Abstimmung gestellt, wobei die Teilnehmer als Ratsmitglieder bezeichnet werden. Ein Sitz im Rat wird durch einen Wahlprozess gewonnen und bleibt für eine gewisse Zeit bis zu einer neuen Wahl bestehen.",
+      "Verantwortlichkeiten": {
+        "discussProposals": "Diskutiere die Bedeutung und die Vorzüge eingehender Vorschläge, die ein breites Spektrum von Themen abdecken",
+        "vote": "Über Vorschläge abstimmen",
+        "representCommunity": "Repräsentiere die Community-Mitglieder und Ihren Wahlkreis, um Entscheidungen im Tagesgeschäft zu treffen"
       },
       "requirements": {
-        "dataAnalysisProficiency": "Proficiency with basic data analysis and sufficient reputation and standing within the community to earn supporting votes in elections from other platform members",
-        "platformUnderstanding": "A deep understanding of the Joystream platform structure, function and resource allocation",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "dataAnalysisProficiency": "Beherrschung grundlegender Datenanalysen und ausreichendes Ansehen in der Gemeinschaft, um bei Wahlen unterstützende Stimmen von anderen Plattformmitgliedern zu erhalten",
+        "platformUnderstanding": "Ein tiefes Verständnis der Struktur, Funktion und Ressourcenverteilung der Joystream-Plattform",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
       }
     },
     "storageProvider": {
-      "title": "Storage Provider",
-      "overview": "There are critical platform assets that do not live on the blockchain, such as images and content media. The integrity of these assets is secured by the chain, but a separate set of storage and distribution nodes enables uploading and downloading of such data. The storage provider is involved this activity, specifically by storing large quantities of data.",
-      "responsibilities": {
-        "runAndMaintainStorageNodes": "Run and maintain storage nodes that store very large quantities of static data, synchronize with other storage nodes, share data with distributors, and accepts inbound uploads from end users"
+      "title": "Speicherplatzanbieter",
+      "overview": "Es gibt kritische Platform Assets, die sich nicht auf der Blockchain befinden, wie z.B. Bilder und Content-Medien. Die Integrität dieser Vermögenswerte wird durch die Blockchain gesichert, aber ein separater Satz von Speicher- und Verteilerknoten ermöglicht das Hoch- und Herunterladen solcher Daten. Der Speicheranbieter ist an dieser Aktivität beteiligt, insbesondere durch die Speicherung großer Datenmengen.",
+      "responsibilitie": {
+        "runAndMaintainStorageNodes": "Betreiben und Pflegen von Speicherknoten, die sehr große Mengen statischer Daten speichern, sich mit anderen Speicherknoten synchronisieren, Daten mit Verteilern austauschen und eingehende Uploads von Endnutzern annehmen"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
-        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure with high storage capacity",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit hoher Speicherkapazität",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
       }
+*** Übersetzt mit www.DeepL.com/Translator (kostenlose Version) ***
+
+
     },
     "storageLead": {
       "title": "Storage Lead",
