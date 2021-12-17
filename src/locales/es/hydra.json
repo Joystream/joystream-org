@@ -71,7 +71,10 @@
         }
       }
     },
-    "videoTitle": "Reproducir videotutorial",
+    "video" : {
+      "title" : "Reproducir un videotutorial",
+      "subtitle" : "Liberar a Hydra"
+    },
     "getStarted": {
       "title": "¡Empieza a utilizar Hydra ahora!",
       "subtitle": "Utiliza los siguientes enlaces para conectarse con nosotros y obtener más información.",

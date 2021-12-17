@@ -30,7 +30,11 @@
         "design": "Diseñador",
         "marketing": "Marketing",
         "research": "Investiga",
-        "contentCreation": "Creador de contenido"
+        "contentCreation": "Creador de contenido",
+        "newcomers": "Recién llegados",
+        "content": "Content",
+        "documentation": "Documentación",
+        "translation" : "Traducción"
       },
       "roles": {
         "title": "Roles",
