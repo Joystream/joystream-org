@@ -131,5 +131,12 @@
   "cookiesNotice": {
     "text": "Este sitio utiliza cookies. Al continuar navegando por el sitio, usted acepta el uso que hacemos de las cookies.",
     "findOutMore": "Más información ›"
+ },
+  "testnet" : {
+    "goalStates": {
+      "achieved" : "logrado",
+      "inProgress" : "en progreso",
+      "postponed" : "aplazado"
+    }
   }
 }
