@@ -1,7 +1,7 @@
 {
   "alexandria": {
     "siteMetadata": {
-      "description": "Erforsche das Alexandria testnet"
+      "description": "Erkunde das Alexandria Testnet"
     },
     "hero": {
       "title": "Alexandria Network",
@@ -19,11 +19,11 @@
       "title": "Kritische Dokumente",
       "releasePlan": {
         "title": "Freigabeplan",
-        "text": "Lesen Sie den Release-Plan, wie er in der Planungsphase erstellt wurde, und erfahren Sie mehr über den Verlauf der Entwicklung."
+        "text": "Lese den Release-Plan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
       },
       "blogPost": {
         "title": "Ankündigung Blog Post",
-        "text": "Lesen Sie eine kurze Einführung in das Alexandria Testnetzwerk und seine Ziele."
+        "text": "Lese eine kurze Einführung in das Alexandria Testnet und seine Ziele."
       }
     },
     "testnetGoals": {
@@ -45,7 +45,7 @@
       }
     },
     "roles": {
-      "title": "Incentivierte Rollen für das Alexandria network"
+      "title": "Incentivierte Rollen für das Alexandria Network"
     },
     "map": {
       "title": "Alexandria",
