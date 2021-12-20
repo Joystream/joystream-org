@@ -1,10 +1,10 @@
 {
-  "Rom": {
+  "rome": {
     "siteMetadata": {
-      "description": "Erkunden Sie das Rom testnet"
+      "description": "Erkunden Sie das Rome testnet"
     },
     "hero": {
-      "Titel": "Rom Network",
+      "Titel": "Rome Network",
       "text": "Erkunde die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdiene dabei echtes Geld.",
       "chipText": "Was ist das?"
     },
@@ -12,7 +12,7 @@
       "title": "ERSETZT DURCH CONSTANTINOPLE ON"
     },
     "modal": {
-      "title": "Rom",
+      "title": "Rome",
       "text": "<0>Das Römische Reich hinterließ viele Wahrzeichen.</0> Ihre Architektur und Ingenieurskunst war während ihrer Macht beispiellos. Das Konzept der Aquädukte wurde nicht von den Römern erfunden, wohl aber ihre Schönheit und ihr Ausmaß."
     },
     "criticalDocuments": {
@@ -49,7 +49,7 @@
       }
     },
     "Rollen": {
-      "title": "Incentivierte Rollen für das Rom-Netzwerk"
+      "title": "Incentivierte Rollen für das Rome Network"
     },
     "map": {
       "title": "Rom",
