@@ -105,7 +105,7 @@
         "monitorPublishing": "Überwache die Veröffentlichung neuer Inhalte im Inhaltsverzeichnis und reagiere auf Berichte über beanstandete Veröffentlichungen",
         "adjudicateDisputes": "Mögliche Streitfälle, die sich aus Meldungen von Nutzern ergeben, beurteilen",
         "updateInformation": "Informationen über Inhalte aktualisieren, damit sie korrekt sind",
-        "manageAndCoordinate": "Verwalte und koordiniere die Aktionen der Arbeitsgruppe Inhalte".
+        "manageAndCoordinate": "Verwalte und koordiniere die Aktionen der Arbeitsgruppe Inhalte"
       },
       "requirements": {
         "adjudicateDisputes": "Faire Streitschlichtung und klare und transparente Kommunikation mit Interessengruppen und Teilnehmern",
