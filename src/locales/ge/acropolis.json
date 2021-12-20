@@ -1,11 +1,11 @@
 {
   "acropolis": {
     "siteMetadata": {
-      "description": "Erkunden Sie das Acropolis testnet"
+      "description": "Erkunde das Acropolis testnet"
     },
     "hero": {
-      "title": "Akropolis network",
-      "text": "Erkunden Sie die verfügbaren Rollen und wählen Sie diejenige, die am besten zu Ihnen passt. Beeinflussen Sie die Entwicklung der Plattform und verdienen Sie dabei echtes Geld.",
+      "title": "Acropolis network",
+      "text": "Erkunde die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdiene dabei echtes Geld",
       "chipText": "Was ist das?"
     },
     "heroCard": {
@@ -19,15 +19,15 @@
       "title": "Kritische Dokumente",
       "fullSpecifications": {
         "title": "Volle Spezifikationen",
-        "text": "Lesen Sie die Spezifikationen zu den neu implementierten Funktionen von Akropolis."
+        "text": "Lese die Spezifikationen zu den neu implementierten Funktionen von Acropolis."
       },
       "releasePlan": {
         "title": "Freigabeplan",
-        "text": "Lesen Sie den Freigabeplan, so wie er in der Planungsphase erstellt wurde, und erfahren Sie mehr über die Entwicklung des Projekts."
+        "text": "Lese den Freigabeplan, so wie er in der Planungsphase erstellt wurde, und erfahre mehr über die Entwicklung des Projekts."
       }
     },
     "testnetGoals": {
-      "title": "Ziele des Testnetzwerks",
+      "title": "Ziele des Testnet",
       "subtitle": "Die folgenden Ziele sind eine vereinfachte Darstellung der in unserer Pressemitteilung aufgeführten Schlüsselergebnisse <0>OKR</0>",
       "goals": {
         "forum": {
@@ -43,7 +43,7 @@
           "text": "Die Benutzerfreundlichkeit hängt sowohl für die Ersteller von Inhalten als auch für die Verbraucher von verschiedenen Parametern ab. Der vielleicht wichtigste Parameter ist, dass der Speicherknoten, mit dem Sie sich verbinden, auf ihre Anfrage reagiert. Ob dieses Ziel erreicht wird, hängt sowohl von der Zuverlässigkeit der Software als auch von einem guten Meldesystem und Korrekturmaßnahmen von mehreren Parteien ab."
         },
         "tranches": {
-          "title": "Bauen Sie den Storage Node mit \"tranches\"",
+          "title": "Baue den Storage Node mit \"tranches\"",
           "text": "Auch wenn das Inhaltsverzeichnis derzeit noch klein ist, kann nicht erwartet werden, dass alle Speicheranbieter über eine vollständige Replikation des gesamten Inhalts verfügen. Tranchen würden es Speicheranbietern ermöglichen, eine Teilmenge des Inhaltsverzeichnisses auszuwählen, die ihren Fähigkeiten entspricht."
         }
       }
