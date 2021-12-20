@@ -97,118 +97,118 @@
         "publishContent": "Das Recht haben, bestehende oder neue Inhalte auf der Plattform zu veröffentlichen",
         "stake": "Ausreichende Menge der nativen Plattformtokens besitzen, um sie zu staken"
       }
-*** Übersetzt mit www.DeepL.com/Translator (kostenlose Version) ***
-
-
     },
     "contentLead": {
       "title": "Content Lead",
-      "overview": "The Council has the power to appoint a Content Curator Lead for the network who can hire further Content Curators. The Content Lead also decides on priorities for curation. If necessary, upon discussing with the council, the Lead can also decide to fire curators who are not performing their jobs adequately.",
+      "overview": "Der Rat hat die Befugnis, einen Verantwortlichen für die Inhaltskuratierung für das Netzwerk zu ernennen, der weitere Inhaltskuratoren einstellen kann. Der Inhaltsverantwortliche entscheidet auch über die Prioritäten für die Kuratierung. Falls erforderlich, kann der Verantwortliche nach Rücksprache mit dem Rat auch entscheiden, Kuratoren zu entlassen, die ihre Arbeit nicht angemessen ausführen.",
       "responsibilities": {
-        "monitorPublishing": "Monitor the publishing of new content into the content directory, and respond to reports about contested publications",
-        "adjudicateDisputes": "Adjudicate possible dispute processes resulting from reports from users",
-        "updateInformation": "Update information on content to be accurate",
-        "manageAndCoordinate": "Manage and coordinate the actions of the Content Working Group"
+        "monitorPublishing": "Überwache die Veröffentlichung neuer Inhalte im Inhaltsverzeichnis und reagiere auf Berichte über beanstandete Veröffentlichungen",
+        "adjudicateDisputes": "Mögliche Streitfälle, die sich aus Meldungen von Nutzern ergeben, beurteilen",
+        "updateInformation": "Informationen über Inhalte aktualisieren, damit sie korrekt sind",
+        "manageAndCoordinate": "Verwalte und koordiniere die Aktionen der Arbeitsgruppe Inhalte".
       },
       "requirements": {
-        "adjudicateDisputes": "Fairly adjudicate disputes, and communicate in clear and transparent way with stakeholders and participants",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "adjudicateDisputes": "Faire Streitschlichtung und klare und transparente Kommunikation mit Interessengruppen und Teilnehmern",
+        "stake": "Halte eine ausreichende Menge des nativen Plattform Tokens, um den Einsatz zu leisten"
       }
     },
     "membershipScreener": {
-      "title": "Membership Screener",
-      "overview": "A membership is an integrated representation of identifying information and associated activities of an actor on the platform. The direct way of establishing membership will be to simply pay a one time fee. However, since its currently challenging for many prospective non-technical end users to obtain, store and use crypto assets, there will be a way for users to get a membership for free, which will not require any tokens in order to use the platform in a limited capacity. The membership screener is the role responsible for granting such memberships, while screening for Sybill attackers and abusers.",
+      "title": "Mitgliedschafts-Screener",
+      "overview": "Eine Mitgliedschaft ist eine integrierte Darstellung von identifizierenden Informationen und damit verbundenen Aktivitäten eines Nutzers auf der Plattform. Der direkte Weg, eine Mitgliedschaft zu begründen, ist die Zahlung einer einmaligen Gebühr. Da es jedoch für viele potenzielle nicht-technische Endnutzer schwierig ist, Krypto-Assets zu erwerben, zu speichern und zu nutzen, wird es eine Möglichkeit für Nutzer geben, eine kostenlose Mitgliedschaft zu erwerben, die keine Token erfordert, um die Plattform in begrenztem Umfang zu nutzen. Der Membership Screener ist die Rolle, die für die Gewährung solcher Mitgliedschaften verantwortlich ist und gleichzeitig nach Sybill-Angreifern und -Missbrauchern sucht.",
       "responsibilities": {
-        "runAndMaintainScreeningNodes": "Run and maintain screening nodes that are always available and performant",
-        "collaborate": "Collaborate with <0>Membership Curators</0> and <1>Builders</1> to improve screening mechanisms by discussing screening techniques, sharing traffic information",
-        "beResponsive": "Be responsive and reactive to changing circumstances"
+        "runAndMaintainScreeningNodes": "Ausführen und Aufrechterhalten von Screening-Knoten, die immer verfügbar und leistungsfähig sind",
+        "collaborate": "Mit <0>Mitgliedschaftskuratoren</0> und <1>Erstellern</1> zusammenarbeiten, um die Screening-Mechanismen zu verbessern, indem Screening-Techniken besprochen und Verkehrsinformationen ausgetauscht werden",
+        "beResponsive": "Sei reaktionsfähig und reagiere auf sich ändernde Umstände"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
-        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure, with high storage, (up & down) bandwidth and processing capacity",
-        "onlinePlatformAttackFamiliarity": "Familiarity with how online platforms are attacked through botnets, IP anonymization, automated agents, etc.",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit hoher Speicher-, (Up- & Down-) Bandbreite und Verarbeitungskapazität",
+        "onlinePlatformAttackFamiliarity": "Vertrautheit damit, wie Online-Plattformen durch Botnets, IP-Anonymisierung, automatisierte Agenten usw. angegriffen werden",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken"
       }
     },
     "membershipCurator": {
-      "title": "Membership Curator",
-      "overview": "A membership is an integrated representation of identifying information and associated activities of an actor on the platform. It is possible to create memberships for free through the screeners, described <0> above</0>. Since this is invariably an imperfect process, there must be some means by which bad conduct and fake accounts can be disabled or removed. This is the task of the membership curators.",
-      "responsibilities": {
-        "monitorPlatformActivity": "Monitor platform level activity for abuse and collusion",
-        "proposeChanges": "Propose changes to status of memberships which are identified, and participate in any dispute process which may follow",
-        "collaborate": "Collaborate with <0> Screeners</0> and <1> Builders</1> to improve tools for identifying such members"
+      "title": "Mitgliedschaftskurator",
+      "overview": "Eine Mitgliedschaft ist eine integrierte Darstellung von identifizierenden Informationen und zugehörigen Aktivitäten eines Nutzers auf der Plattform. Es ist möglich, Mitgliedschaften kostenlos über die oben beschriebenen <0> Screener</0> zu erstellen. Da dies immer ein unvollkommener Prozess ist, muss es ein Mittel geben, mit dem schlechtes Verhalten und gefälschte Konten deaktiviert oder entfernt werden können. Dies ist die Aufgabe der Mitgliedschaftskuratoren.",
+      "responsibilities ": {
+        "monitorPlatformActivity": "Überwache die Aktivitäten auf Plattformebene auf Missbrauch und geheime Absprachen",
+        "proposeChanges": "Vorschlagen von Änderungen am Status von Mitgliedschaften, die identifiziert werden, und Beteiligung an einem eventuell folgenden Streitverfahren",
+        "collaborate": "Mit <0> Screeners</0> und <1> Erstellern</1> zusammenarbeiten, um Werkzeuge zur Identifizierung solcher Mitglieder zu verbessern"
       },
       "requirements": {
         "dataAnalysisProficiency": "Proficient with basic data analysis and scripting",
-        "platformUnderstanding": "A deep understanding of the Joystream platform structure, function and attack vectors",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "platformUnderstanding": "Ein tiefes Verständnis der Struktur, Funktion und Angriffsvektoren der Joystream-Plattform",
+        " stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken"
       }
     },
     "bandwidthProvider": {
-      "title": "Bandwidth Provider",
-      "overview": "There are critical platform assets that do not live on the blockchain, such as images and content media. The integrity of these assets is secured by the chain, but a separate set of storage and distribution nodes enable uploading and downloading of such data. The bandwidth provider is involved this activity, specifically by distributing static data to end users at scale.",
+      "title": "Bandbreitenanbieter",
+      "overview": "Es gibt kritische Plattform-Assets, die sich nicht auf der Blockchain befinden, wie z. B. Bilder und Inhaltsmedien. Die Integrität dieser Vermögenswerte wird durch die Kette gesichert, aber eine separate Reihe von Speicher- und Verteilerknoten ermöglicht das Hoch- und Herunterladen solcher Daten. Der Bandbreitenanbieter ist an dieser Aktivität beteiligt, insbesondere durch die Verteilung von statischen Daten an Endnutzer in großem Umfang.",
       "responsibilities": {
-        "runAndMaintainDistributorNodes": "Run and maintain distributor nodes that deliver large volumes of upstream data to a large number of simultaneous end users"
+        "runAndMaintainDistributorNodes": "Betreiben und Warten von Verteilerknoten, die große Mengen von Upstream-Daten an eine große Anzahl von Endnutzern gleichzeitig liefern"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
-        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure, with high storage capacity and a lot of upstream capacity",
-        "locatedWithinBounds": "Located within certain bounds to designated geographic areas, in order to limit latency",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit hoher Speicherkapazität und viel Upstream-Kapazität",
+        "locatedWithinBounds": "Befindet sich innerhalb bestimmter Grenzen zu bestimmten geografischen Gebieten, um die Latenz zu begrenzen",
+        "stake": "Halten Sie eine ausreichende Menge des nativen Plattform-Tokens, um sie zu staken"
       }
     },
     "discoveryProvider": {
-      "title": "Discovery Provider",
-      "overview": "All of the content on the platform is in a designated content directory, and effectively navigating this directory requires a full copy of this directory. Moreover, in order to do things like search and context based recommendations one needs to apply some sort of heuristic on top of this directory, which is also some what sensitive abusive attempts to rank higher. The discovery providers play the role of responding to such discovery queries to end users, by combining light client inclusion proofs with local search and ranking policy heuristics.",
+      "title": " Entdeckungsanbieter",
+      "overview": "Der gesamte Inhalt der Plattform befindet sich in einem bestimmten Inhaltsverzeichnis, und für eine effektive Navigation in diesem Verzeichnis ist eine vollständige Kopie dieses Verzeichnisses erforderlich. Um Dinge wie die Suche und kontextbezogene Empfehlungen durchführen zu können, muss man außerdem eine Art Heuristik auf dieses Verzeichnis anwenden, die auch etwas empfindlich auf missbräuchliche Versuche reagiert, höher zu ranken. Die Discovery-Provider spielen die Rolle, auf solche Discovery-Anfragen von Endnutzern zu antworten, indem sie leichte Client-Inclusion-Proofs mit lokaler Suche und Ranking-Policy-Heuristiken kombinieren.",
       "responsibilities": {
-        "runAndMaintainDiscoveryNodes": "Run and maintain discovery nodes that respond to discovery-related queries by staying in sync with the content directory, and applying local ranking heuristics.",
-        "collaborate": "Collaborate with <0>Builders</0> to improve both tools, and user facing experiences, to improve the discovery experience"
+        "runAndMaintainDiscoveryNodes": "Betreiben und Pflegen von Discovery Nodes, die auf Discovery-bezogene Anfragen antworten, indem sie mit dem Content-Verzeichnis synchronisiert bleiben und lokale Ranking-Heuristiken anwenden.",
+        "collaborate": "Mit <0>Erstellern</0> zusammenarbeiten, um sowohl die Tools als auch die Benutzererfahrung zu verbessern, um das Entdeckungserlebnis zu verbessern"
       },
       "requirements": {
-        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
-        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure",
-        "formulateAndTestHeuristics": "Able to formulate, test and suggest new ranking heuristics for use by discovery provider nodes",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur",
+        "formulateAndTestHeuristics": "In der Lage sein, neue Ranking-Heuristiken für die Verwendung durch Discovery-Provider-Knoten zu formulieren, zu testen und vorzuschlagen",
+        "stake ": "Ausreichende Menge des nativen Plattform-Tokens halten, um sie zu staken"
       }
     },
     "liveStreamingProvider": {
-      "title": "Live Streaming Provider",
-      "overview": "The platform supports live video, allowing publisher to distribute content as it is created. The live streaming providers are responsible for directly, or indirectly from peer providers, taking a (transcoded) stream from the source publisher, and relaying it to end users.",
+      "title": "Live-Streaming-Anbieter",
+      "overview": "Die Plattform unterstützt Live-Video und ermöglicht es den Herausgebern, Inhalte zu verbreiten, während sie erstellt werden. Die Live-Streaming-Anbieter sind dafür verantwortlich, direkt oder indirekt über Peer-Anbieter einen (transkodierten) Stream vom ursprünglichen Herausgeber zu übernehmen und an die Endnutzer weiterzuleiten.",
       "responsibilities": {
-        "runAndMaintainLivestreamingNodes": "Run and maintain live streaming nodes that deliver large volumes of upstream data to a large number of simultaneous end users"
+        "runAndMaintainLivestreamingNodes": "Betreiben und Warten von Live-Streaming-Knoten, die große Mengen an Upstream-Daten an eine große Anzahl gleichzeitiger Endnutzer liefern"
       },
-      "requirements": {
-        "setupAndMaintainInfrastructure": "Experienced with how to setup and maintain high performance IT infrastructure",
-        "accessToPerformantInfrastructure": "Access to highly performant and reliable IT infrastructure, with large amount of upstream bandwidth capacity.",
-        "locatedWithinBounds": "Located within certain bounds to designated geographic areas, in order to limit latency",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+      "Anforderungen": {
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer hochleistungsfähigen IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit großer Upstream-Bandbreitenkapazität",
+        "locatedWithinBounds": "Befindet sich innerhalb bestimmter Grenzen zu bestimmten geografischen Gebieten, um die Latenz zu begrenzen",
+        "stake": "Halten Sie eine ausreichende Menge des nativen Plattform-Tokens, um sie zu staken"
       }
     },
     "builder": {
-      "title": "Builder",
-      "overview": "The platform runtime, tools, infrastructure software and user facing applications are all meant to evolve over time. A diverse set of contributors are required to facilitate this, including <0/><0/> <1> <0><0>Developers:</0> Software developers, Data scientists, DevOps and QA </0><0><0>Designers:</0> Web, Mobile, UX/UI, Branding and Visual Design </0> <0><0>Product Managers:</0> Digital Product Managers, Product Owners and Analysts </0> </0> <0 /> All of these contributors are collectively referred to as Builders. Anyone can contribute in the same mode as any of these possible contributor functions, as all the platform source assets are open source and developed in the open. Being a Builder means that one has some scope of responsibility in ongoing efforts, and that one has some predefined reward scheme associated with this responsibility.",
+      "title": " Ersteller",
+      "overview": "Die Laufzeit der Plattform, die Werkzeuge, die Infrastruktursoftware und die benutzerorientierten Anwendungen sollen sich alle im Laufe der Zeit weiterentwickeln. Um dies zu ermöglichen, ist eine Reihe von Mitarbeitern erforderlich, darunter <0/><0/> <1> <0><0>Entwickler:</0> Softwareentwickler, Datenwissenschaftler, DevOps und QA </0><0><0>Designer:</0> Web, Mobile, UX/UI, Branding und visuelles Design </0> <0><0>Produktmanager:</0> Digitale Produktmanager, Product Owner und Analysten </0> </0> <0 /> Alle diese Mitarbeiter werden gemeinsam als Builder bezeichnet. Jeder kann in der gleichen Art und Weise wie jeder dieser möglichen Beitragszahlerfunktionen beitragen, da alle Quellen der Plattform Open Source sind und offen entwickelt werden. Ein Builder zu sein bedeutet, dass man einen gewissen Verantwortungsbereich in den laufenden Bemühungen hat, und dass man ein vordefiniertes Belohnungssystem hat, das mit dieser Verantwortung verbunden ist.",
       "responsibilities": {
-        "collaborate": "Collaborate with almost every other kind of platform member to maintain and improve the platform"
+        "collaborate": "Mit fast jeder anderen Art von Plattformmitglied zusammenarbeiten, um die Plattform zu pflegen und zu verbessern"
       },
       "requirements": {
-        "platformUnderstanding": "A deep understanding of the Joystream platform structure and function",
-        "specificContributingSkills": "Have specific skills required for contributing in the given way",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "platformUnderstanding": "Ein tiefes Verständnis der Struktur und Funktion der Joystream-Plattform",
+        "specificContributingSkills": "Über spezifische Fähigkeiten verfügen, die für einen Beitrag in der angegebenen Weise erforderlich sind",
+        " stake": "Eine ausreichende Menge des nativen Plattform-Tokens besitzen, um sie zu staken"
       }
-    },
+ },
     "communicationModerator": {
-      "title": "Communication Moderator",
-      "overview": "The platform will have multiple ways of facilitating easy and secure public, and private, communication and information sharing among members. In particular, there will be both a forum and messaging capability built in to the platform. But in order for these spaces to be effective communication modes, some moderation will be required. Communication moderators are involved with policing this activity.",
+      "Titel": " Kommunikationsmoderator",
+      "overview": "Die Plattform wird über mehrere Möglichkeiten verfügen, um eine einfache und sichere öffentliche und private Kommunikation und den Informationsaustausch zwischen den Mitgliedern zu ermöglichen. Insbesondere werden sowohl ein Forum als auch eine Nachrichtenfunktion in die Plattform integriert sein. Damit diese Bereiche jedoch effektiv kommunizieren können, ist eine gewisse Moderation erforderlich. Die Kommunikationsmoderatoren sind für die Überwachung dieser Aktivitäten zuständig",
       "responsibilities": {
-        "monitorCommuncationChannels": "Monitor and supervise public communication channels for compliance with usage policies as decided through the governance system",
-        "communicateWithUsers": "Communicate with end users about any possible violations and sanctions",
-        "collaborate": "Collaborate to come up with new policies as circumstances change"
+        "monitorCommunicationChannels": "Überwache und beaufsichtige öffentliche Kommunikationskanäle auf die Einhaltung der Nutzungsrichtlinien, die durch das Verwaltungssystem festgelegt wurden",
+        "communicateWithUsers": "Mit den Endnutzern über mögliche Verstöße und Sanktionen kommunizieren",
+        "collaborate": "Zusammenarbeiten, um neue Richtlinien zu entwickeln, wenn sich die Umstände ändern"
       },
       "requirements": {
-        "platformUnderstanding": "A deep understanding of the Joystream platform structure and function",
-        "goodCommunicator": "Clear written communicator, ideally with good command of more than one language",
-        "stake": "Hold sufficient amount of the native platform token to put at stake"
+        "platformUnderstanding": "Ein tiefes Verständnis der Struktur und Funktion der Joystream-Plattform",
+        "goodCommunicator": "Klarer schriftlicher Ausdruck, idealerweise mit guten Kenntnissen in mehr als einer Sprache",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken"
       }
     }
   }
 }
+
+
+   
