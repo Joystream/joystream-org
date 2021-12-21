@@ -10,7 +10,7 @@
         "mainTitle": "Métricas de la testnet",
         "titles": {
           "participationPayout": "Pago por participación",
-          "activeValidators": "Validadores actios",
+          "activeValidators": "Validadores activos",
           "blockHeight": "Altura del bloque",
           "memberships": "Membresías"
         }
@@ -24,7 +24,7 @@
     },
     "whatWeDo": {
       "subtitle": "Nuestra motivación para construir el protocolo Joystream",
-      "title": "Pedimos un acuerdo en el que las plataformas de medios rindan cuentas a las personas a las que afectan.",
+      "title": "Pedimos un acuerdo en el que las plataformas de medios rindan cuentas a las personas a las que impactan.",
       "link": "Lea nuestro manifiesto"
     },
     "whyYouShouldJoin": {
@@ -32,7 +32,7 @@
       "reasons": {
         "tokens": {
           "title": "Tokens",
-          "text": "Gane tokens distribuidos en la red principal, lanzamiento en 2021"
+          "text": "Gane tokens distribuidos en la red principal, lanzamiento en 2022"
         },
         "cash": {
           "title": "Dinero",
@@ -103,7 +103,7 @@
         },
         "Babylon": {
           "title": "Babylon testnet",
-          "text": "Babylon es nuestro segundo octavo, que introduce una serie de importantes mejoras técnicas.",
+          "text": "Babylon es nuestra segunda octava, que introduce una serie de importantes mejoras técnicas.",
           "explore": "Explore Babylon"
         },
         "Antioch": {
