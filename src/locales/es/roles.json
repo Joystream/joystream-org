@@ -4,19 +4,19 @@
       "description": "Leer más acerca de las funciones actuales y futuras de la plataforma Joystream"
     },
     "general" : {
-      "overview" : "Overview",
-      "responsibilities" : "Responsibilities",
-      "requirements" : "Requirements",
-      "seeATutorial" : "See a tutorial",
-      "askAQuestion" : "Ask a question",
-      "regularUpdates" : "Receive regular updates on the following role:",
-      "alertWhenActive" : "Alert me when the role will be active",
-      "emailAddressPlaceholder" : "Your email address",
-      "receiveEmailsAboutRole" : "I want to receive emails about this role.",
-      "informationTransferred" : "I acknowledge that my information will be transferred to Mailchimp, which has <0>these</0> privacy practices.",
-      "join" : "Join",
-      "subscribe" : "Subscribe",
-      "pleaseWait" : "Please wait.."
+      "overview" : "Descripción general",
+      "responsibilities" : "Responsabilidades",
+      "requirements" : "Requisitos",
+      "seeATutorial" : "Mirar un tutorial",
+      "askAQuestion" : "Haz una pregunta",
+      "regularUpdates" : "Reciba actualizaciones periódicas sobre el siguiente rol:",
+      "alertWhenActive" : "Alértame cuando el rol esté activo",
+      "emailAddressPlaceholder" : "Tu correo electrónico",
+      "receiveEmailsAboutRole" : "Quiero recibir correos electrónicos sobre este rol.",
+      "informationTransferred" : "Entiendo que mis datos serán transferidos a Mailchimp, que tiene <0>esta</0> política de privacidad.",
+      "join" : "Únete",
+      "subscribe" : "Suscríbete",
+      "pleaseWait" : "Por favor espere.."
     },
     "hero": {
       "title": "Elija su rol preferido",
