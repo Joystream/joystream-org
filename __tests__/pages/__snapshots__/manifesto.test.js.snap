@@ -163,13 +163,6 @@ exports[`ManifestoPage page renders correctly 1`] = `
             >
               Discord
             </a>,
-            <a
-              href="https://www.reddit.com/r/JoyStream/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Reddit
-            </a>,
           ]
         }
         i18nKey="manifesto.ctaText"

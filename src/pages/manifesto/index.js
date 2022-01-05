@@ -92,9 +92,6 @@ const ManifestoPage = () => {
               <a href={sharedData.social.discordLink} target="_blank" rel="noopener noreferrer">
                 Discord
               </a>,
-              <a href={sharedData.social.redditLink} target="_blank" rel="noopener noreferrer">
-                Reddit
-              </a>,
             ]}
           />
         </h3>
