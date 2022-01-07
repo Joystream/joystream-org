@@ -5,25 +5,25 @@
     },
     "hero": {
       "Titel": "Antioch Network",
-      "text": "Die Antioch-Veröffentlichung versucht, einen Kettenspaltungsfehler zu beheben, der leider das vorherige Testnetz sabotiert hat."
+      "text": "Die Antioch-Veröffentlichung versucht, einen Kettenspaltungsfehler zu beheben, der leider das vorherige Testnet sabotiert hat."
     },
     "heroCard": {
       "title": "ERSETZT DURCH SUMER ON"
     },
     "criticalDocuments": {
-      "title": "Kritische Dokumente",
+      "title": "Wichtige Dokumente",
       "releasePlan": {
         "title": "Freigabeplan",
         "text": "Lese den Freigabeplan, wie er in der Planungsphase erstellt wurde und erfahre mehr über den Verlauf der Entwicklung."
       },
       "blogPost": {
-        "title": "Ankündigung Blog Post",
+        "title": "Ankündigungs-Blogpost",
         "text": "Lese eine kurze Einführung in das Antioch Testnet und dessen Ziele."
       }
     },
     "testnetGoals": {
       "title": "Ziele des Testnet"
-      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Antioch-Testnetzwerk"
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Antioch Testnet"
       "goals": {
         "substrateVersion": {
           "title": "Upgrade der Substratversion",
@@ -32,7 +32,7 @@
       }
     },
     "roles": {
-      "title": "Incentivierte Rollen für das Antioch Network"
+      "title": "Inzentivierte Rollen für das Antioch Network"
     },
     "map": {
       "title": "Antioch",
