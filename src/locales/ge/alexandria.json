@@ -5,7 +5,7 @@
     },
     "hero": {
       "title": "Alexandria Network",
-      "text": "Der Alexandria Release konzentriert sich auf wichtige technische Aktualisierungen, die eine effizientere zukünftige Entwicklung ermöglichen werden.",
+      "text": "Der Alexandria Release konzentriert sich auf wichtige technische Updates, die eine effizientere zukünftige Entwicklung ermöglichen werden.",
       "chipText": "Was ist das?"
     },
     "heroCard": {
@@ -13,22 +13,22 @@
     },
     "modal": {
       "title": "Alexandria",
-      "text": "An der Pompeiussäule in Alexandria, Ägypten, befinden sich zwei Sphinxe. Die Sphinxen und die dazugehörige Säule sind eines der wichtigsten antiken Denkmäler Alexandrias. <0/><0/> Die Sphinxen von Alexandria sind nicht zu verwechseln mit der bekannten Großen Sphinx von Gizeh, die knapp 200 Kilometer südöstlich von Alexandria liegt."
+      "text": "An der Pompeiussäule in Alexandria, Ägypten, befinden sich zwei Sphinxe. Die Sphinxe und die dazugehörige Säule sind eines der wichtigsten antiken Denkmäler Alexandrias. <0/><0/> Die Sphinxe von Alexandria sind nicht zu verwechseln mit der bekannten Großen Sphinx von Gizeh, die knapp 200 Kilometer südöstlich von Alexandria liegt."
     },
     "criticalDocuments": {
-      "title": "Kritische Dokumente",
+      "title": "Wichtige Dokumente",
       "releasePlan": {
         "title": "Freigabeplan",
         "text": "Lese den Release-Plan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
       },
       "blogPost": {
-        "title": "Ankündigung Blog Post",
+        "title": "Ankündigungs-Blogpost",
         "text": "Lese eine kurze Einführung in das Alexandria Testnet und seine Ziele."
       }
     },
     "testnetGoals": {
       "title": "Ziele des Testnets",
-      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Alexandria Testnetzwerk.",
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Alexandria Testnet.",
       "goals": {
         "membershipModule": {
           "title": "Aufräumen des Mitgliedschaftsmoduls",
@@ -45,7 +45,7 @@
       }
     },
     "roles": {
-      "title": "Incentivierte Rollen für das Alexandria Network"
+      "title": "Inzentivierte Rollen für das Alexandria Network"
     },
     "map": {
       "title": "Alexandria",
