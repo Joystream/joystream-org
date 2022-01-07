@@ -5,19 +5,19 @@
     },
     "hero": {
       "Titel": "Sparta Network",
-      "text": "Erforsche die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflussen Sie die Entwicklung der Plattform und verdienen Sie dabei echtes Geld.",
+      "text": "Erforsche die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdiene dabei echtes Geld.",
       "chipText": "Was ist das?"
     },
     "heroCard": {
       "Titel": "NETZWERK AUSGEFALLEN",
-      "markdown": "\n ### FEHLER IDENTIFIZIERT\n\n Am Freitag, den 29. März, fiel das Sparta-Netzwerk aufgrund eines [bekannten Fehlers im Substrat](https://github.com/paritytech/substrate/pull/2130) aus, den wir vor der Veröffentlichung nicht behoben hatten.\n\n Weitere Einzelheiten finden Sie in diesem [Blogpost](https://blog.joystream.org/sparta-sacked/)."
+      "markdown": "\n ### FEHLER IDENTIFIZIERT\n\n Am Freitag, den 29. März, fiel das Sparta-Netzwerk aufgrund eines [bekannten Fehlers im Substrat](https://github.com/paritytech/substrate/pull/2130) aus, den wir vor der Veröffentlichung nicht behoben hatten.\n\n Weitere Einzelheiten findest du in diesem [Blogpost](https://blog.joystream.org/sparta-sacked/)."
     },
     "modal": {
       "title": " Helm von Sparta",
       "text": "<0>Der spartanische Armeehelm</0> repräsentiert das, wofür Sparta heute am meisten bekannt ist, seine militärische Macht. Zu seiner Zeit war es aber auch für sein fortschrittliches Regierungssystem bekannt."
     },
     "testnetGoals": {
-      "title": "Ziele des Testnetzwerks",
+      "title": "Ziele des Testnets",
       "subtitle": "Die folgenden Ziele sind eine vereinfachte Darstellung der Schlüsselergebnisse, die in unseren OKR aufgeführt sind.",
       "goals": {
         "blockchain": {
