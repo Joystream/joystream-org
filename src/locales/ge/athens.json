@@ -1,7 +1,7 @@
 {
   "athens": {
     "siteMetadata": {
-      "description": "Entdecke das Athens testnet"
+      "description": "Entdecke das Athens Testnet"
     },
     "hero": {
       "Titel": "Athens Network",
@@ -16,7 +16,7 @@
       "text": "<0>In der griechischen Mythologie stellt eine kleine Eule (Athene noctua)</0> traditionell Athene, die jungfräuliche Göttin der Weisheit, dar oder begleitet sie. Aufgrund dieser Assoziation wurde der Vogel - oft als "Eule der Athene" bezeichnet - in der gesamten westlichen Welt als Symbol für Wissen, Weisheit, Scharfsinn und Gelehrsamkeit verwendet."
     },
     "criticalDocuments": {
-      "title": "Kritische Dokumente",
+      "title": "Wichtige Dokumente",
       "fullSpecifications": {
         "title": "Vollständige Spezifikationen",
         "text": "Für Athens wurden keine Spezifikationen veröffentlicht."
@@ -32,7 +32,7 @@
       "goals": {
         "media": {
           "title": "Medien auf der Plattform aktivieren",
-          "text": "Als \"nutzergesteuerte Medienplattform\", war es ein wichtiges Ziel für uns, den Nutzern das Hochladen und Konsumieren von Inhalten zu ermöglichen."
+          "text": "Als \"nutzergesteuerte Medienplattform\" war es ein wichtiges Ziel für uns, den Nutzern das Hochladen und Konsumieren von Inhalten zu ermöglichen."
         },
         "Mitgliedschaften": {
           "title": "Plattform-Mitgliedschaften einführen",
@@ -49,11 +49,11 @@
       }
     },
     "roles": {
-      "title": "Im Athens testnet verfügbare Rollen"
+      "title": "Im Athens Testnet verfügbare Rollen"
     },
     "map": {
       "title": "Die Stadt Athen",
-      "text": "<0>Athen ist die Hauptstadt Griechenlands.</0> Es war auch das Herz des antiken Griechenlands, einer mächtigen Zivilisation und eines Reiches. Die Stadt wird immer noch von Wahrzeichen aus dem 5. Jahrhundert v. Chr. dominiert, darunter die Akropolis, eine auf einem Hügel gelegene Zitadelle mit antiken Gebäuden wie dem Parthenon-Tempel  <1/><1/> Wir haben den Namen Athen gewählt, weil das antike Athen, wie auch unsere vorherigen Testnetzwerke Mesopotamien und Sparta, eine historische Bedeutung für die Entwicklung hin zu moderner Demokratie und Rechtsstaatlichkeit hat. <1/><1/> <2> <0/> Erforsche das vorherige Testnetzwerk</2>"
+      "text": "<0>Athen ist die Hauptstadt Griechenlands.</0> Es war auch das Herz des antiken Griechenlands, einer mächtigen Zivilisation und eines Reiches. Die Stadt wird immer noch von Wahrzeichen aus dem 5. Jahrhundert v. Chr. dominiert, darunter die Akropolis, eine auf einem Hügel gelegene Zitadelle mit antiken Gebäuden wie dem Parthenon-Tempel.  <1/><1/> Wir haben den Namen Athen gewählt, weil das antike Athen, wie auch unsere vorherigen Testnetzwerke Mesopotamien und Sparta, eine historische Bedeutung für die Entwicklung hin zu moderner Demokratie und Rechtsstaatlichkeit hat. <1/><1/> <2> <0/> Erforsche das vorherige Testnetzwerk</2>"
     }
   }
 }
