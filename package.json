@@ -13,6 +13,7 @@
     "axios": "^0.21.1",
     "babel-jest": "^24.8.0",
     "babel-preset-gatsby": "^0.5.5",
+    "bchaddrjs": "^0.5.2",
     "classnames": "^2.2.6",
     "css-loader": "^3.0.0",
     "eslint-plugin-import": "^2.18.2",
@@ -93,7 +94,7 @@
   "scripts": {
     "lint": "eslint --ignore-path .gitignore . --ext js --ext jsx",
     "lint:fix": "yarn lint --fix",
-    "stylelint": "stylelint \"src/**/*.scss\"",
+    "stylelint": "stylelint \"src/**/*.scss\" --fix",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
