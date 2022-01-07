@@ -1,11 +1,11 @@
 {
   "acropolis": {
     "siteMetadata": {
-      "description": "Erkunde das Acropolis testnet"
+      "description": "Erkunde das Acropolis Testnet"
     },
     "hero": {
-      "title": "Acropolis network",
-      "text": "Erkunde die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdiene dabei echtes Geld",
+      "title": "Acropolis Network",
+      "text": "Schau dir die verfügbaren Rollen an und wähle die, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdiene dabei echtes Geld.",
       "chipText": "Was ist das?"
     },
     "heroCard": {
@@ -13,13 +13,13 @@
     },
     "modal": {
       "title": "Die Akropolis von Athen",
-      "text": "<0>Das vielleicht berühmteste Bauwerk der Akropolis ist der Parthenon, bekannt für seine großartige Architektur. Es wurde gebaut, um den Sieg über die persischen Invasoren zu feiern und gilt heute als Symbol für Demokratie und westliche Zivilisation."
+      "text": "<0>Das vielleicht berühmteste Bauwerk der Akropolis ist der Parthenon, bekannt für seine großartige Architektur. Es wurde gebaut, um den Sieg über die persischen Angreifer zu feiern und gilt heute als Symbol für Demokratie und die westliche Zivilisation."
     },
     "criticalDocuments": {
-      "title": "Kritische Dokumente",
+      "title": "Wichtige Dokumente",
       "fullSpecifications": {
-        "title": "Volle Spezifikationen",
-        "text": "Lese die Spezifikationen zu den neu implementierten Funktionen von Acropolis."
+        "title": "Vollständige Spezifikationen",
+        "text": "Lese die Spezifikationen zu den neu implementierten Acropolis-Funktionen."
       },
       "releasePlan": {
         "title": "Freigabeplan",
@@ -27,12 +27,12 @@
       }
     },
     "testnetGoals": {
-      "title": "Ziele des Testnet",
+      "title": "Ziele des Testnets",
       "subtitle": "Die folgenden Ziele sind eine vereinfachte Darstellung der in unserer Pressemitteilung aufgeführten Schlüsselergebnisse <0>OKR</0>",
       "goals": {
         "forum": {
           "title": "Aufbau und Freigabe eines On-Chain-Forums",
-          "text": "Die endgültige Plattform wird mehrere Möglichkeiten zur Erleichterung einer einfachen und sicheren, öffentlichen und privaten Kommunikation und des Informationsaustauschs zwischen den Mitgliedern enthalten. Das Forum ist der erste Schritt, der es den Mitgliedern der Plattform ermöglicht, zu kommunizieren, Ideen auszutauschen und zu diskutieren."
+          "text": "Die endgültige Plattform wird mehrere Möglichkeiten zur Erleichterung einer einfachen und sicheren öffentlichen und privaten Kommunikation und des Informationsaustauschs zwischen den Mitgliedern enthalten. Das Forum ist der erste Schritt, der es den Mitgliedern der Plattform ermöglicht, zu kommunizieren, Ideen auszutauschen und zu diskutieren."
         },
         "storageNode": {
           "title": "Wiederherstellen und Freigeben des Storage Node",
@@ -40,7 +40,7 @@
         },
         "storageProviders": {
           "title": "Sicherstellung einer hohen Betriebszeit der Speicheranbieter",
-          "text": "Die Benutzerfreundlichkeit hängt sowohl für die Ersteller von Inhalten als auch für die Verbraucher von verschiedenen Parametern ab. Der vielleicht wichtigste Parameter ist, dass der Speicherknoten, mit dem Sie sich verbinden, auf ihre Anfrage reagiert. Ob dieses Ziel erreicht wird, hängt sowohl von der Zuverlässigkeit der Software als auch von einem guten Meldesystem und Korrekturmaßnahmen von mehreren Parteien ab."
+          "text": "Die Benutzerfreundlichkeit hängt sowohl für die Ersteller von Inhalten als auch für die Verbraucher von verschiedenen Parametern ab. Der vielleicht wichtigste Parameter ist, dass der Speicherknoten, mit dem sie sich verbinden, auf ihre Anfrage reagiert. Ob dieses Ziel erreicht wird, hängt sowohl von der Zuverlässigkeit der Software als auch von einem guten Meldesystem und Korrekturmaßnahmen von mehreren Parteien ab."
         },
         "tranches": {
           "title": "Baue den Storage Node mit \"tranches\"",
@@ -49,11 +49,11 @@
       }
     },
     "roles": {
-      "title": "Verfügbare Rollen auf dem Acropolis testnet"
+      "title": "Verfügbare Rollen auf dem Acropolis Testnet"
     },
     "map": {
       "title": "Akropolis von Athen",
-      "text": "<0>Die Akropolis ist eine Zitadelle auf einem Hügel im Herzen von Athen.</0> Sie war auch das Herzstück des antiken Griechenlands, einer mächtigen Zivilisation und eines Reiches. Die Akropolis ist berühmt für ihre antiken Gebäude, ihre Architektur und ihre historische Bedeutung und ist eine der wichtigsten Touristenattraktionen von Athen. Sie steht auf der UNESCO-Liste des Weltkulturerbes.<1/><1/> Wir haben den Namen gewählt, weil wir unsere Ambitionen für das nächste Testnetz nach einigen Problemen mit der Veröffentlichung von Athen zurückschrauben mussten. Daher kann Akropolis als Unterversion betrachtet werden, obwohl es einige neue Funktionen enthält, die nicht für Athen gedacht waren. <1/><1/> <2><0/> Vorheriges Testnetz erforschen</2>"
+      "text": "<0>Die Akropolis ist eine Zitadelle auf einem Hügel im Herzen von Athen.</0> Sie war auch das Herzstück des antiken Griechenlands, einer mächtigen Zivilisation und eines Reiches. Die Akropolis ist berühmt für ihre antiken Gebäude, ihre Architektur und ihre historische Bedeutung und ist eine der wichtigsten Touristenattraktionen von Athen. Sie steht auf der UNESCO Weltkulturerbe-Liste.<1/><1/> Wir haben den Namen gewählt, weil wir unsere Ambitionen für das nächste Testnet nach einigen Problemen mit der Veröffentlichung von Athen zurückschrauben mussten. Daher kann Acropolis als Unterversion betrachtet werden, obwohl es einige neue Funktionen enthält, die nicht für Athen gedacht waren. <1/><1/> <2><0/> Vorheriges Testnet erforschen</2>"
     }
   }
 }
