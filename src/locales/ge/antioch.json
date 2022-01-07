@@ -14,11 +14,11 @@
       "title": "Wichtige Dokumente",
       "releasePlan": {
         "title": "Freigabeplan",
-        "text": "Lese den Freigabeplan, wie er in der Planungsphase erstellt wurde und erfahre mehr über den Verlauf der Entwicklung."
+        "text": "Lies den Freigabeplan, wie er in der Planungsphase erstellt wurde und erfahre mehr über den Verlauf der Entwicklung."
       },
       "blogPost": {
         "title": "Ankündigungs-Blogpost",
-        "text": "Lese eine kurze Einführung in das Antioch Testnet und dessen Ziele."
+        "text": "Lies eine kurze Einführung in das Antioch Testnet und dessen Ziele."
       }
     },
     "testnetGoals": {
@@ -36,7 +36,7 @@
     },
     "map": {
       "title": "Antioch",
-      "text": "<0>Antioch war eine antike griechische Stadt auf der östlichen Seite des Orontes.</0> Die Lage der Stadt kam ihren Bewohnern sehr zugute, vor allem wegen des Gewürzhandels, der Seidenstraße und der Königsstraße.<1/><1/>In ihrer Blütezeit rivalisierte sie mit Alexandria als wichtigste Stadt des Nahen Ostens. Viele betrachten die Stadt auch als \"die Wiege des Christentums\".<1/><1/><2><0/> Lesen Sie den Blogbeitrag</2>"
+      "text": "<0>Antioch war eine antike griechische Stadt auf der östlichen Seite des Orontes.</0> Die Lage der Stadt kam ihren Bewohnern sehr zugute, vor allem wegen des Gewürzhandels, der Seidenstraße und der Königsstraße.<1/><1/>In ihrer Blütezeit rivalisierte sie mit Alexandria als wichtigste Stadt des Nahen Ostens. Viele betrachten die Stadt auch als \"die Wiege des Christentums\".<1/><1/><2><0/> Lies den Blogbeitrag</2>"
     }
   }
 }
