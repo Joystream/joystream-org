@@ -1,7 +1,7 @@
 {
   "babylon": {
     "siteMetadata": {
-      "description": "Erforsche das Babylon testnet"
+      "description": "Erforsche das Babylon Testnet"
     },
     "Held": {
       "Titel": "Babylon Network",
@@ -16,19 +16,19 @@
       "text": "Die Geschichte vom Turmbau zu Babel ist ein Ursprungsmythos, der erklären soll, warum die Völker der Welt unterschiedliche Sprachen sprechen.<0/><0/> Der Geschichte zufolge kommt eine vereinte menschliche Rasse in den Generationen nach der Sintflut, die eine einzige Sprache spricht und nach Osten wandert, in das Land Schinar. Dort beschließen sie, eine Stadt und einen Turm zu bauen, der hoch genug ist, um den Himmel zu erreichen.<0/><0/> Als Gott ihre Stadt und ihren Turm sieht, verwirrt er ihre Sprache, so dass sie einander nicht mehr verstehen können, und zerstreut sie über die ganze Welt."
     },
     "criticalDocuments": {
-      "title": "Kritische Dokumente",
+      "title": "Wichtige Dokumente",
       "releasePlan": {
         "title": "Freigabeplan",
-        "text": "Lesen Sie den Release-Plan, wie er in der Planungsphase erstellt wurde, und erfahren Sie mehr über den Verlauf der Entwicklung."
+        "text": "Lese den Freigabeplan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
       },
       "blogPost": {
-        "title": "Ankündigung Blog Post",
-        "text": "Lesen Sie eine kurze Einführung in das Babylon-Testnetzwerk und seine Ziele."
+        "title": "Ankündigungs-Blogpost",
+        "text": "Lese eine kurze Einführung in das Babylon-Testnetzwerk und seine Ziele."
       }
     },
     "testnetGoals": {
       "Titel": "Ziele des Testnets",
-      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Testnetzwerk Babylon.",
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Testnet Babylon.",
       "goals": {
         "atlas": {
           "title": "Atlas 0.1 starten",
@@ -45,11 +45,11 @@
       }
     },
     "Rollen": {
-      "title": "Anspornende Rollen für das Babylon-Netzwerk"
+      "title": "Inzentivierende Rollen für das Babylon Network"
     },
     "map": {
       "title": "Babylon",
-      "text": "<0>Babylon war vor fast 4000 Jahren die Hauptstadt von Babylonien, einem Königreich im antiken Mesopotamien.</0> Sie wurde am linken und rechten Ufer des Euphrat mit steilen Dämmen erbaut, um die saisonalen Überschwemmungen des Flusses aufzuhalten. <1/><1/> Die Stadt gilt als von großer historischer und kultureller Bedeutung. Die Hängenden Gärten von Babylon waren eines der Sieben Weltwunder der Antike, und Babylon soll auch der Standort des Turms von Babel gewesen sein.<1/><1/><2><0/> Lesen Sie den Blogbeitrag</2>"
+      "text": "<0>Babylon war vor fast 4000 Jahren die Hauptstadt von Babylonien, einem Königreich im antiken Mesopotamien.</0> Sie wurde am linken und rechten Ufer des Euphrat mit steilen Dämmen erbaut, um die saisonalen Überschwemmungen des Flusses aufzuhalten. <1/><1/> Die Stadt gilt als von großer historischer und kultureller Bedeutung. Die Hängenden Gärten von Babylon waren eines der Sieben Weltwunder der Antike, und Babylon soll auch der Standort des Turms von Babel gewesen sein.<1/><1/><2><0/> Lese den Blogbeitrag</2>"
     }
   }
 }
