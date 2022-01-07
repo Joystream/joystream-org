@@ -24,7 +24,7 @@
     },
     "ourTeam": {
       "title": "Unser Team",
-      "subtitle": "Wir kommen von verschiedenen Kontinenten, teilen aber die Leidenschaft für Open Source, Blockchain-Technologie, verteilte Systeme, Datenschutz und den Aufbau eines neuen Internets, das auf rechenschaftspflichtigen und forkable Institutionen basiert.",
+      "subtitle": "Wir kommen von verschiedenen Kontinenten, teilen aber die Leidenschaft für Open Source, Blockchain-Technologie, verteilte Systeme, Datenschutz und den Aufbau eines neuen Internets, das auf rechenschaftspflichtigen und forkbaren Institutionen basiert.",
       "moreMembers": "Lade mehr Teammitglieder"
     },
     "investors": {
@@ -39,7 +39,7 @@
         "blockchain": "Blockchain Developer",
         "designer": "UI/UX Design Lead"
       },
-      "location": "Oslo, Europe, Remote",
+      "location": "Oslo, Europa, Remote",
       "employmentType": "Vollzeit",
       "salary": {
         "frontEnd": "$80K-$130K",
