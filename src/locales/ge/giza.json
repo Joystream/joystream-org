@@ -1,25 +1,25 @@
 {
   "Gizeh": {
     "siteMetadata": {
-      "description": "Erforsche das Giza testnet"
+      "description": "Erforsche das Giza Testnet"
     },
     "hero": {
-      "Titel": "Gizeh Network",
-      "text": "Neben anderen geplanten Verbesserungen führt die Gizeh-Version die erste Iteration des Speicher- und Verteilungssystems ein, das wir im Hauptnetz verwenden werden."    },
+      "Titel": "Giza Network",
+      "text": "Neben anderen geplanten Verbesserungen führt die Giza-Version die erste Iteration des Speicher- und Verteilungssystems ein, das wir im Hauptnetz verwenden werden."    },
     "criticalDocuments": {
-      "title": "Kritische Dokumente",
+      "title": "Wichtige Dokumente",
       "releasePlan": {
         "title": "Freigabeplan",
-        "text": "Lesen Sie den Freigabeplan, wie er in der Planungsphase erstellt wurde und erfahren Sie mehr über den Verlauf der Entwicklung."
+        "text": "Lies den Freigabeplan, wie er in der Planungsphase erstellt wurde und erfahre mehr über den Verlauf der Entwicklung."
       },
       "blogPost": {
-        "title": "Ankündigung Blog Post",
-        "text": "Lesen Sie eine kurze Einführung in das Gizeh-Testnetzwerk und seine Ziele."
+        "title": "Ankündigungs-Blogpost",
+        "text": "Lies eine kurze Einführung in das Giza-Testnet und seine Ziele."
       }
     },
     "testnetGoals": {
-      "title": "Ziele des Testnet",
-      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Gizeh-Testnetzwerk.",
+      "title": "Ziele des Testnets",
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Giza-Testnet.",
       "goals": {
         "launchStorageAndDistribution": {
           "title": "Start von V2 des Speicher- und Verteilungssystems",
@@ -31,16 +31,16 @@
         },
         "newOperationsWorkingGroups": {
           "title": "Neue operative Arbeitsgruppen",
-          "text": "Die operative Arbeitsgruppe, die im Sumer-Testnetzwerk aktiviert wurde, hat hervorragende Ergebnisse erzielt. Um die Arbeit an verschiedenen orthogonalen Bereichen zu erleichtern oder auch nur die Bemühungen innerhalb derselben Vertikale zu verstärken, werden wir nun zwei weitere allgemeine Arbeitsgruppen für Gizeh einrichten."
+          "text": "Die operative Arbeitsgruppe, die im Sumer-Testnet aktiviert wurde, hat hervorragende Ergebnisse erzielt. Um die Arbeit an verschiedenen orthogonalen Bereichen zu erleichtern oder auch nur die Bemühungen innerhalb derselben Vertikale zu verstärken, werden wir nun zwei weitere allgemeine Arbeitsgruppen für Giza einrichten."
         }
       }
     },
     "Rollen": {
-      "title": "Incentivierte Rollen für das Giza network"
+      "title": "Inzentivierte Rollen für das Giza Network"
     },
     "map": {
       "title": "Gizeh",
-      "text": "<0>Das Gebiet des heutigen Gizeh diente im 2. Jahrtausend v. Chr. als Nekropole mehrerer Pharaonen, die das alte Ägypten regierten.</0> Drei antike Gräber, die in Form von riesigen Pyramiden errichtet wurden, bilden den beeindruckenden und weltweit berühmten Pyramidenkomplex von Gizeh.<1/><1/>Diese Pyramiden sind in der westlichen Vorstellung seit Hunderten von Jahren ein Symbol für das alte Ägypten. Sie wurden erstmals im antiken Griechenland "populär" gemacht, als die Große Pyramide von Antipater von Sidon als eines der Sieben Weltwunder aufgeführt wurde.<1/><1/><2><0/> Lesen Sie den Blogbeitrag</2>"
+      "text": "<0>Das Gebiet des heutigen Gizeh diente im 2. Jahrtausend v. Chr. als Nekropole mehrerer Pharaonen, die das alte Ägypten regierten.</0> Drei antike Gräber, die in Form von riesigen Pyramiden errichtet wurden, bilden den beeindruckenden und weltweit berühmten Pyramidenkomplex von Gizeh.<1/><1/>Diese Pyramiden sind in der westlichen Vorstellung seit Hunderten von Jahren ein Symbol für das alte Ägypten. Sie wurden erstmals im antiken Griechenland "populär" gemacht, als die Große Pyramide von Antipater von Sidon als eines der Sieben Weltwunder aufgeführt wurde.<1/><1/><2><0/> Lies den Blogbeitrag</2>"
     }
   }
 }
