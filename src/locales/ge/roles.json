@@ -51,8 +51,8 @@
       }
     },
     "storageProvider": {
-      "title": "Speicherplatzanbieter",
-      "overview": "Es gibt kritische Platform Assets, die sich nicht auf der Blockchain befinden, wie z.B. Bilder und Content-Medien. Die Integrität dieser Vermögenswerte wird durch die Blockchain gesichert, aber ein separater Satz von Speicher- und Verteilerknoten ermöglicht das Hoch- und Herunterladen solcher Daten. Der Speicheranbieter ist an dieser Aktivität beteiligt, insbesondere durch die Speicherung großer Datenmengen.",
+      "title": "Storage Provider",
+      "overview": "Es gibt kritische Platform Assets, die sich nicht auf der Blockchain befinden, wie z.B. Bilder und Content-Medien. Die Integrität dieser Vermögenswerte wird durch die Blockchain gesichert, aber ein separater Satz von Speicher- und Verteilerknoten ermöglicht das Hoch- und Herunterladen solcher Daten. Der Storage Provider ist an dieser Aktivität beteiligt, insbesondere durch die Speicherung großer Datenmengen.",
       "responsibilitie": {
         "runAndMaintainStorageNodes": "Betreiben und Pflegen von Speicherknoten, die sehr große Mengen statischer Daten speichern, sich mit anderen Speicherknoten synchronisieren, Daten mit Verteilern austauschen und eingehende Uploads von Endnutzern annehmen"
       },
