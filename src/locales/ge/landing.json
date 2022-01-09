@@ -25,10 +25,10 @@
     "whatWeDo": {
       "subtitle": "Unsere Motivation für die Entwicklung des Joystream-Protokolls",
       "title": "Wir fordern eine Regelung, bei der Medienplattformen gegenüber den Menschen, die sie beeinflussen, rechenschaftspflichtig sind.",
-      "link": "Lesen Sie unser Manifest"
+      "link": "Lies unser Manifest"
     },
     "whyYouShouldJoin": {
-      "title": "Warum bei unseren Testnetzen mitmachen?",
+      "title": "Warum bei unseren Testnets mitmachen?",
       "reasons": {
         "Token": {
           "Titel": "Token",
@@ -36,11 +36,11 @@
         },
         "cash": {
           "title": "Cash",
-          "text": "Werden Sie mit echtem Geld für Ihre Teilnahme belohnt"
+          "text": "Werde mit echtem Geld für deine Teilnahme belohnt"
         },
         "reputationAndSkill": {
           "title": "Reputation & Können",
-          "text": "Erwerben Sie das erforderliche Wissen, um am Mainnet teilzunehmen"
+          "text": "Erwerbe das erforderliche Wissen, um am Mainnet teilzunehmen"
         }
       }
     },
@@ -61,9 +61,9 @@
     "roadToMainnet": {
       "title": "Weg zum Mainnet",
       "testnetState": {
-        "Current": "Aktuelles testnet",
-        "Past": "Vergangenes testnet",
-        "Future": "Zukünftiges testnet"
+        "Current": "Aktuelles Testnet",
+        "Past": "Vergangenes Testnet",
+        "Future": "Zukünftiges Testnet"
       },
       "freigegeben": {
         "Current": "Freigegeben am",
@@ -72,59 +72,59 @@
       },
       "testnets": {
         "Sparta": {
-          "title ": "Sparta testnet",
-          "text": "Sparta ist unser zweites testnet, das eine Reihe von wichtigen technischen Verbesserungen einführt.",
+          "title ": "Sparta Testnet",
+          "text": "Sparta ist unser zweites Testnet, das eine Reihe von wichtigen technischen Verbesserungen einführt.",
           "explore": "Sparta erforschen"
         },
         "Athens": {
-          "title": "Athens testnet",
-          "text": "Athens ist unser drittes testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "title": "Athens Testnet",
+          "text": "Athens ist unser drittes Testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
           "explore": "Athen erforschen"
         },
         "Acropolis": {
-          "title": "Acropolis testnet",
-          "text": "Acropolis ist unser viertes testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "title": "Acropolis Testnet",
+          "text": "Acropolis ist unser viertes Testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
           "explore": "Acropolis erforschen"
         },
         "Rome": {
-          "title": "Rome testnet",
-          "text": "Rome ist unser fifth testnet, der eine Reihe wichtiger technischer Verbesserungen einführt.",
-          "explore": "Rom erforschen"
+          "title": "Rome Testnet",
+          "text": "Rome ist unser fünftes Testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Rome erforschen"
         },
         "Constantinople": {
-          "title": "Constantinopletestnet",
-          "text": "Constantinople ist unser sechstes testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "title": "Constantinople Testnet",
+          "text": "Constantinople ist unser sechstes Testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
           "explore": "Erforsche Constantinople"
         },
         "Alexandria": {
-          "title ": "Alexandria testnet",
-          "text": "Alexandria ist unser siebtes testnet, das eine Reihe von wichtigen technischen Verbesserungen einführt.",
+          "title ": "Alexandria Testnet",
+          "text": "Alexandria ist unser siebtes Testnet, das eine Reihe von wichtigen technischen Verbesserungen einführt.",
           "explore": "Erforsche Alexandria"
         },
         "Babylon": {
-          "Titel": "Babylon testnet",
-          "text": "Babylon ist unser achtes testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "Titel": "Babylon Testnet",
+          "text": "Babylon ist unser achtes Testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
           "explore": "Erforsche Babylon"
         },
         "Antioch": {
-          "title ": "Antioch testnet",
-          "text": "Antioch ist unser neuntes testnet, das einen Kettenspaltungsfehler behebt, der das Babylon-Netzwerk zerstört hat",
+          "title ": "Antioch Testnet",
+          "text": "Antioch ist unser neuntes Testnet, das einen Kettenspaltungsfehler behebt, der das Babylon-Netzwerk zerstört hat",
           "explore": "Erforsche Antioch"
         },
         "Sumer": {
-          "title": "Sumer testnet",
-          "text": "Sumer ist unser zehntes Testnetz, das den einfachen Upload von Inhalten über unsere Playback-App ermöglicht.",
+          "title": "Sumer Testnet",
+          "text": "Sumer ist unser zehntes Testnet, das den einfachen Upload von Inhalten über unsere Playback-App ermöglicht.",
           "explore": "Sumer erforschen"
         },
         "Giza": {
-          "Titel": "Giza testnet",
-          "text": "Giza ist unser elftes testnet, das V2 des Speicher- und Verteilungssystems einführt.",
+          "Titel": "Giza Testnet",
+          "text": "Giza ist unser elftes Testnet, das V2 des Speicher- und Verteilungssystems einführt.",
           "explore": "Giza erforschen"
         }
       }
     },
     "earnTokens": {
-      "title": "Verdienen Sie Mainnet-Tokens, Bargeld und Einfluss".
+      "title": "Verdien Mainnet-Tokens, Bargeld und Einfluss".
     }
   }
 }
