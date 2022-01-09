@@ -1,11 +1,11 @@
 {
   "Hydra": {
     "siteMetadata": {
-      "title": "Hydra - Ein Substrate query node framework",
+      "title": "Hydra - Ein Substrate Query Node Framework",
       "description": "Inspiriert von The Graph, bietet es eine einfache Möglichkeit, App-Entwicklern leistungsstarke GraphQL-Abfragen über den Zustand und die Historie der Substrate-Blockchain zur Verfügung zu stellen."
     },
     "hero": {
-      "title": "Hydra - Ein Substrate query node framework",
+      "title": "Hydra - Ein Substrate Query Node Framework",
       "text": "Inspiriert von The Graph, bietet es eine einfache Möglichkeit, App-Entwicklern leistungsstarke GraphQL-Abfragen über den Zustand und die Historie der Substrate-Blockchain bereitzustellen."
     },
     "value": {
@@ -26,28 +26,28 @@
         },
         "noSearch": {
           "title": "Keine Suche",
-          "text": "Ihre Kette kann Transaktions- oder Statusverpflichtungen für Freitextdaten haben, aber eine echte Volltextsuche auf der Nutzerseite ist keine Option."
+          "text": "Deine Kette kann Transaktions- oder Statusverpflichtungen für Freitextdaten haben, aber eine echte Volltextsuche auf der Nutzerseite ist keine Option."
         },
         "overFetching": {
           "title": "Über Abruf",
-          "text": "Sie können die gewünschten Daten nicht auswählen, sondern müssen die vollständigen Zustandsobjekte so lesen, wie sie sind, wodurch sowohl die Verbindungs- als auch die gesamte Knotenkapazität verschwendet wird."
+          "text": "Du kannst die gewünschten Daten nicht auswählen, sondern musst die vollständigen Zustandsobjekte so lesen, wie sie sind, wodurch sowohl die Verbindungs- als auch die gesamte Knotenkapazität verschwendet wird."
         },
         "costlyNodes": {
           "title": "Kostspielige Archivierungsknoten",
-          "text": "Benutzeranfragen, die mehrere Lesevorgänge beinhalten. Um einen konsistenten Datensatz abzurufen, müssen Sie oft auf einer bestimmten Blockhöhe lesen, da das Lesen immer an der Spitze die Atomarität aufheben kann. Das bedeutet, dass solche Leseanfragen davon abhängen, dass der gesamte Knoten archiviert ist. Wenn Ihre Benutzerbasis wächst, wird dies zu einer sehr kostspieligen Infrastruktur."
+          "text": "Benutzeranfragen, die mehrere Lesevorgänge beinhalten. Um einen konsistenten Datensatz abzurufen, musst du oft auf einer bestimmten Blockhöhe lesen, da das Lesen immer an der Spitze die Atomarität aufheben kann. Das bedeutet, dass solche Leseanfragen davon abhängen, dass der gesamte Knoten archiviert ist. Wenn deine Benutzerbasis wächst, wird dies zu einer sehr kostspieligen Infrastruktur."
         }
       }
     },
     "snippet": {
       "title": "Leistungsstarke Abfragen in GraphQL",
-      "subtitle": "Bieten Sie Anwendungsentwicklern eine leistungsstarke GraphQL-API für Ihren Blockchain-Status und -Verlauf"
+      "subtitle": "Biete Anwendungsentwicklern eine leistungsstarke GraphQL-API für deinen Blockchain-Status und -Verlauf"
     },
     "features": {
       "title": "Hydra Features",
       "values": {
         "fullTextSearch": {
           "title": "Volltextsuche",
-          "text": "Dekorieren Sie eine beliebige Anzahl von String-Feldern im Eingabeschema mit @fulltext(query: \"myquery\"), um verschiedene Felder und Entitäten zu durchsuchen."
+          "text": "Dekoriere eine beliebige Anzahl von String-Feldern im Eingabeschema mit @fulltext(query: \"myquery\"), um verschiedene Felder und Entitäten zu durchsuchen."
         },
         "filtering": {
           "title": "Filterung",
@@ -67,7 +67,7 @@
         },
         "algebraicTypes": {
           "title": "Algebraische Typen",
-          "text": "Konstruieren Sie reichhaltige und abfragbare algebraische Typen mit der @variant-Direktive"
+          "text": "Konstruiere reichhaltige und abfragbare algebraische Typen mit der @variant-Direktive"
         }
       }
     },
@@ -76,8 +76,8 @@
       "subtitle" : "Befreie die Hydra"
     },
     "getStarted": {
-      "title": "Starten Sie jetzt mit Hydra!",
-      "subtitle": "Nutzen Sie die folgenden Links, um sich mit uns zu verbinden und noch mehr zu erfahren.",
+      "title": "Starte jetzt mit Hydra!",
+      "subtitle": "Nutze die folgenden Links, um dich mit uns zu verbinden und noch mehr zu erfahren.",
       "links": {
         "documentation": {
           "name": "Dokumentation",
