@@ -1,0 +1,200 @@
+{
+  "Marke": {
+    "siteMetadata": {
+      "title": "Joystream Markenhandbuch"
+    },
+    "assets": {
+      "Logo": "Logo",
+      "logoIcons": "Logo-Symbole",
+      "descriptiveIcons": "Beschreibende Symbole",
+      "Illustrations": "Illustrationen",
+      "systemIcons": "System-Symbole",
+      "typography": "Typografie",
+      "blogPostCovers": "Blogpost Cover",
+      "displayTitle": {
+        "logoPack": "Logo Pack"
+      },
+      "files": "Files"
+    },
+    "guides": {
+      "general": {
+        "Logo": "Logo",
+        "Übersicht": "Übersicht",
+        "logomark": "Logomarke",
+        "construction": "Konstruktion",
+        "useCases": "Anwendungsfälle",
+        "socialIcons": "Soziale Symbole",
+        "forbiddenUses": "Verbotene Anwendungen",
+        "colorPalettes": "Farbpaletten",
+        "primaryColors": "Primärfarben",
+        "supportivePallete": "Unterstützungspalette",
+        "SekundärPalette": "Sekundäre Palette",
+        "Ikonographie": "Ikonographie",
+        "descriptiveIcons": "Beschreibende Symbole",
+        "systemIcons": "System-Symbole",
+        "illustrations": "Illustrationen",
+        "patterns": " Muster",
+        "typography": "Typografie",
+        "photography": "Fotografie",
+        "motion": "Bewegung",
+        "back": "Zurück",
+        "more": "Mehr"
+      },
+      "logo": {
+        "experimentation": "Unsere Marke soll ein Gefühl des Experimentierens, der Aufregung und des Aufbaus von etwas ethischem und dynamischem vermitteln.",
+        "conceptIterations": "Bevor wir uns auf ein endgültiges Logokonzept einigten, durchliefen wir mehrere Iterationen verschiedener Konzepte. Wir untersuchten verschiedene Ideen eingehend, bevor wir uns auf das endgültige Logokonzept einigten."
+      },
+      "logomarkConstruction": {
+        "title": "01. Logomark-Konstruktion",
+        "simplePrinciples": "Am Ende haben wir ein Logomark entwickelt, das mehrere einfache Prinzipien kombiniert, die sich gut auf die Stimme der Marke übertragen lassen.",
+        "combination": "Unser Logomark ist eine Kombination aus dem Buchstaben J (um den Namen Joystream zu repräsentieren) und drei parallelen Streifen, die das Streaming von Daten und den Informations- und Technologiefluss darstellen.",
+        "image": {
+          "logomarkDescription": "Die Ausschlusszone von Logomark entspricht der Höhe des blauen Quadrats (im Diagramm als 5a gekennzeichnet)."
+        }
+      },
+      "logoConstruction": {
+        "title": "02. Logo-Konstruktion",
+        "combination": "Das Joystream-Logo ist eine Kombination aus der Bildmarke und einer speziellen Typografie, die so gestaltet wurde, dass sie die beste Verbindung zwischen der Bildmarke und dem, wofür Joystream steht, darstellt. Es ist fest und technisch, zeigt aber Plastizität und Sinn für eine Struktur.",
+        "horizontalLockup": "Horizontale Sperre",
+        "verticalLockup": " Vertikale Sperre"
+      },
+      "logoUseCases": {
+        "title": "03. Logo Anwendungsfälle",
+        "originalForm": "Das Joystream-Logo wird in erster Linie in seiner ursprünglichen Form auf weißem Hintergrund verwendet, kann aber bei Bedarf auch in seinen ergänzenden Formen verwendet werden. Die folgenden Beispiele zeigen solche Anwendungsfälle.",
+        "safeUse": "Die kleinste sichere Verwendung",
+        "visualPresentation": "Um die beste visuelle Darstellung des Logos zu gewährleisten, wird es am besten in Größen zwischen <0>200 und 500+px</0> Breite auf digitalen Geräten bereitgestellt.",
+        "horizontalNarrow": "Das Joystream-Logo sollte nie schmaler als 100px in digitaler oder 20mm in gedruckter horizontaler Darstellung sein.",
+        "verticalNarrow": "Die vertikale Aufhängung sollte nie schmaler als 70px im digitalen oder 15mm im gedruckten Bereich sein."
+      },
+      "logoSocialIcons": {
+        "title": "04. Soziale Symbole",
+        "icon": "In Fällen, in denen die Marke Joystream bereits etabliert ist, können wir das Symbol einfach für sich allein verwenden. Während das Symbol ohne die Wortmarke existieren kann, sollte die Wortmarke niemals ohne das Symbol existieren."
+      },
+      "logoForbiddenUses": {
+        "title": "05. Verbotene Verwendungen des Logos",
+        "rules": "Der Schriftzug und das Symbol müssen bestimmten Regeln folgen und es gibt allgemeine Verwendungsfälle, die unbedingt vermieden werden sollten! Um die Identität der Marke zu bewahren, sollten Sie Beispiele wie die folgenden vermeiden:"
+      },
+      "colorOverview": {
+        "kombinieren": "Unsere Markenfarben kombinieren drei Grundfarben: Schwarz, Weiß und Blau. Sie bestimmen die Stimmung und präsentieren Markenwerte wie:",
+        "example": "Stabilität, Vertrauen, Freiheit, Verantwortung, Loyalität, Weisheit, Zuversicht und Intelligenz"
+      },
+      "primaryColors": {
+        "title": "01. Primärfarben",
+        "blackAndBlue": "Unsere primär verwendeten Farben sind Schwarz und Joystream-Blau, eine unverwechselbare Farbe, die dazu beiträgt, den Fokus zu setzen und Aufmerksamkeit zu erregen. Die Farbe Weiß kann eingesetzt werden, um zu beruhigen, Klarheit zu schaffen und eine bessere Lesbarkeit zu bieten.",
+        "blueGrey": "Eine zusätzliche Farbe, die mit den drei Grundfarben kombiniert werden kann, ist blau getöntes Grau, dessen Zweck mit dem von Weiß vergleichbar ist, das aber auch einen guten Kontrast zu den vorhandenen weißen Elementen bietet, wo dies erforderlich ist."
+      },
+ "supportiveColors": {
+        "title": "02. Unterstützende Farbpalette",
+        "purpose": "Unsere unterstützende Palette dient dem Zweck der Bequemlichkeit und Benutzerfreundlichkeit. Diese Palette bietet eine umfassende Auswahl an verschiedenen Schattierungen von Primärfarben und kann je nach Bedarf auf vielfältige Weise eingesetzt werden."
+      },
+      "secondaryColors": {
+        "title": "03. Sekundäre Farbpalette",
+        "states": "Dies sind weitere Farben, die bestimmte Zustände des Netzwerks darstellen können, sie können für einen Fehler, Erfolg, eine Warnung und mehr stehen."
+      },
+      "iconsOverview": {
+        "text": "Symbole lassen sich in zwei Gruppen mit unterschiedlichen Zwecken einteilen. Beschreibende Symbole sind ein Ersatz für Illustrationen und System-Symbole sind ein rein funktionaler Teil der Schnittstelle.",
+        "typeDescriptive": "01. Beschreibend",
+        "typeSystem": "02. System"
+      },
+      "descriptiveIcons": {
+        "title": "01. Beschreibende Symbole",
+        "comprehensiveStyle": "Die Joystream-Ikonographie ist ein benutzerdefinierter, umfassender Ikonenstil, der dabei hilft, bestimmte komplexe Themen auf einfache, verständliche Weise zu erklären.",
+        "symbolic": "Sie sind nicht immer sehr direkt und haben oft eine symbolische Bedeutung, aber sie helfen, wichtige Elemente zu betonen.",
+        "characteristicFeatures": "Zu den charakteristischen Merkmalen der Beschreibungssymbole gehören paralell gestreifte Füllungen. Sie sind eine Übersetzung der Logo-Streifen und stellen Schatten dar.",
+        "angle": "Linien haben einen Winkel von 45°, sie sollten einen Umfang von 2px und einen Abstand von 8px zwischen ihnen bei einer Skalierung von 100% haben.",
+        "outlines": "Symbole werden mit Umrissen von 12px Breite bei 100% Maßstab gezeichnet, sie haben quadratische Linecaps und können je nach Komposition verschiedene Größen haben.",
+        "fit": "Symbole im Maßstab 100% sollten in eine Box von 800x500px passen."
+      },
+      "systemIcons": {
+        "title": "02. System-Symbole",
+        "basicStyle": " System-Symbole in ihrem Grundstil kombinieren zwei Farben: Schwarz und Joystream Blue. Ihr Zweck ist es, bestimmte Aktionen auf der Website oder Plattform darzustellen. Sie sind auch in kleinen Größen bis zu 18x18px lesbar.",
+        "strokes": "System-Symbole werden mit 2px Strichen mit quadratischen Linecaps auf einem 24px Rasterrahmen gezeichnet.",
+        "subtleAccents": "Wenn möglich, sollten Symbole subtile blaue Akzente haben, die nicht mehr als 40% der Gesamtfläche ausmachen.",
+        "types": "Typen von System-Symbolen",
+        "fourTypes": {
+          "text": "Wir unterscheiden vier Arten von System-Symbolen, die vorzugsweise in ihrer Grundform verwendet werden sollten, aber bei Bedarf auch untereinander ausgetauscht werden können.",
+          "basic": "Grundstil",
+          "blau": "Blaue Umrisse",
+          "weiß": "Weiße Umrisse",
+          "voll": "Voller Stil"
+        }
+      },
+      "Abbildungen": {
+        "overview": "Joystream-Illustrationen sind symbolische Darstellungen von wichtigen Konzepten innerhalb des Joystream-Projekts. Dazu kann ein neues Testnet, eine bestimmte Rolle im Netz oder ein anderes ebenso wichtiges Thema gehören.",
+        "komplex": "Sie können visuell ziemlich komplex sein, obwohl sie nur drei Farben und keine Farbverläufe verwenden.",
+        "patterns": "Illustrationen werden oft mit Mustern kombiniert, und wenn sie auf einem blauen Hintergrund platziert werden, kann der Umriss der Illustration in Joystream Blue geändert werden, um eine gute Farbbalance zwischen Mustern und Hintergrund zu schaffen.",
+        "distinctive": "Illustrationen sollten einfach genug sein, um auch bei kleineren Auflösungen bis 300x300px unverwechselbar zu sein.",
+        "adequateDetail": "Der Detaillierungsgrad sollte dem Inhalt der Illustration angemessen sein, in den meisten Fällen sollten sie nicht kleiner als 500x500px verwendet werden."
+      },
+      "patterns": {
+        "translation": "Patterns sind eine enge Übersetzung des Logomarks (J) in Varianten geometrischer Formen, die den Informationsfluss, die Technologie und die experimentelle Markenpersönlichkeit von Joystream darstellen.",
+        "supportTool": "Sie wurden als unterstützendes Werkzeug eingeführt, um bestimmte Elemente hervorzuheben, um Stimmung aufzubauen und als inhärentes Element der visuellen Identität der Marke.",
+        "sixPieces": "Muster bestehen visuell aus sechs verschiedenen Teilen, die um 90 Grad in jede Richtung gedreht werden können und immer die Abmessungen eines perfekten Quadrats haben sollten.",
+        "oneCommonVertex": "Sie sollten auch mindestens einen gemeinsamen Scheitelpunkt haben, wenn sie sich berühren. Sie müssen sich nicht immer berühren, und wenn sie sich nicht berühren, sollte der Abstand zwischen den Teilen immer gleich der Breite/Höhe oder dem multiplizierten Wert sein.",
+        "howToUse": "Wie man Muster verwendet",
+        "oneOfFive": "Muster können eine von fünf verschiedenen Farben verwenden, je nachdem, welcher Hintergrund darunter verwendet wird und was ihr Hauptzweck in einer bestimmten Situation ist.",
+        "density": "Je nach Situation können diese mehr oder weniger dicht verwendet werden.",
+        "inUse": "Verwendete Muster - Beispiele"
+      },
+      " typography": {
+        " overview": "Unsere Schriftarten sind einfach, umfassend und modern. Dies spiegelt unsere Marke und unsere Stimme wider. Wir wählten die passenden Schriftschnitte der PX Grotesk (normal, fett) und der Inter-Familie für bestimmte Berührungspunkte und um klare Hierarchien von Informationen und Botschaften zu schaffen.",
+        "backup": "Wenn eine der beiden Schriftarten nicht verwendet werden kann, wählen Sie bitte Arial Regular. Dies kann bei verschiedenen PC-Betriebssystemen oder elektronischen internen Dokumenten oder in verschiedenen Büros weltweit erforderlich sein. Verwenden Sie Arial nicht für Drucksachen.",
+        "sample": "Im Folgenden finden Sie ein Beispiel für einen idealen Font Stack, bei dem PX Grotesk für Überschriften und größere Anreißertexte und Inter UI für Absatz- und Call-to-Action-Text verwendet wird."
+      },
+      "photography": {
+        "overview": "Fotos sollten für das Thema, das sie beschreiben, relevant sein, aber sie sollten nicht nur auf Technologie beschränkt sein. Joystream ist viel mehr als nur Technologie; es ist vereinheitlichend, frisch und fröhlich. Die Bilder sollten den Nutzern diese Stimmung vermitteln",
+        "howToUse": "Wie man die Fotografie verwendet",
+        "variety": "Da Joystream ein einzigartiges und experimentelles Projekt ist, bietet es eine große Vielfalt an Themen, die mit Fotografie in Verbindung gebracht werden können. Es ist sehr technisch, vor allem jetzt, wo wir uns in der Aufbauphase der Community befinden, daher wird ein großer Teil der Fotos technikbezogen sein.",
+        "consistency'": "Eine Möglichkeit, um sicherzustellen, dass die Fotos einheitlich sind, besteht darin, sie in zwei Farbtönen zu verwenden, die sich von den Farben der Marke ableiten. Zu diesem Zweck können wir ein praktisches Tool verwenden, um die Bilder wie unten beschrieben einheitlich in zwei Farbtöne zu ändern.",
+        "consistentDuotones": "Der unten stehende Link ermöglicht es Ihnen, einheitliche Duotones mit jeder Fotografie zu erstellen, nachdem Sie die richtigen zwei Joystream-Farben eingegeben haben.",
+        "mood": "Die Stimmung, die Fotos vermitteln, ist extrem wichtig. Sie sollten auf jeden Fall ein Gefühl von Vertrauen, Gemeinschaft und Freude vermitteln. Die Fotos sollten ein gutes Maß an Vielfalt zeigen, da sie für eine sehr große Bandbreite von Nutzern gedacht sind. Sie müssen nicht in Zweifarbtönen gehalten sein, aber es ist am besten, wenn sie nicht mit Farben \"schreien\".",
+        "inUse": "Fotografie im Einsatz - Beispiele"
+      },
+      "motion": {
+        "subtitle": "Joystream ist eine experimentelle und aufregende Plattform und die Bewegung sollte es auch sein.",
+        "rules": "Allgemeine Regeln für die Bewegung können mit ein paar einfachen Prinzipien beschrieben werden: weiche Übergänge, dynamische, aber flüssige Bewegung und ein gutes Maß an Lockerung bei den Keyframes. Diese Kombination sollte einen konsistenten und flexiblen Animationsstil bieten, der die meisten Anwendungsfälle abdeckt.",
+        "notLimiting": "Guides sollten auf keinen Fall einschränkend sein, sie sollten nur dem Zweck dienen, Konsistenz für Animationen zu schaffen."
+      }
+    },
+    "story": {
+      "header": {
+        "title": "Joystream Markengeschichte",
+        "description": "Joystream bietet eine moderne, experimentelle Lösung für das Problem der verantwortlichen Steuerung in digitalen Medien. <0>Unser Ziel ist es, eine nutzergesteuerte Videoplattform mit einem starken Sinn für Gemeinschaft und Freiheit aufzubauen.</0>",
+        "buttonText": "Manifesto"
+      },
+      "website": {
+        "title": "Die Website",
+        "linkText": "Besuchen Sie die Website"
+      },
+      " description": {
+        "header": "Unsere Markenidentität besteht aus wenigen visuellen Schlüsselelementen: unserem Logo, unserer Schriftart, unseren Illustrationen, Mustern, unserer Farbpalette und unserer Ikonografie.",
+        "meaningfulRole": "Jedes dieser Elemente hat eine bedeutende Rolle in der Markenidentität, wie in den Richtlinien festgelegt. Aber die Kombination all dieser Komponenten schafft viel mehr als nur ein visuelles Erlebnis.",
+        "powerfulTool": "Das Branding von Joystream ist ein leistungsfähiges Werkzeug für die Kommunikation mit all seinen Nutzern während ihrer gesamten Erfahrung.",
+        " experimental": "Grundsätzlich sind unsere Bemühungen experimentell; wir haben nicht alle Antworten, und wir wollen in unserer Kommunikation ehrlich damit umgehen.",
+        " empowering": "Wir versprechen nicht, dass es billiger, schneller oder schöner wird, wie man es normalerweise beim Verkauf eines Widgets oder einer Dienstleistung für Verbraucher tun würde. Stattdessen haben wir die Hoffnung, dass wir durch unseren Experimentierprozess etwas aufbauen können, das mehr Befugnisse und Verantwortung bietet.",
+        " governance ": "Das Herzstück unserer Vision ist die Verwaltung, d. h. das, was wir aufbauen, ist nie fertig; wir bauen nur das erste Stück auf. Es handelt sich um eine dynamische Anstrengung, von der wir hoffen, dass die Gemeinschaften sie auf erstaunliche Weise vorantreiben werden; wir stellen nur die ersten Werkzeuge zur Verfügung.",
+        " footer": "Aus den oben genannten Gründen sollte unsere Marke dieses Gefühl des Experimentierens, der Aufregung und des Aufbaus von etwas Ethischem und Dynamischem transportieren."
+      },
+      "logo": {
+        "title": "Wir wollen die Medien befreien, die Menschen inspirieren und sie über eine Plattform verbinden",
+        " uniqueness": "Die Schaffung der Marke Joystream erwies sich aufgrund ihrer Einzigartigkeit und der Tatsache, dass sie sich ständig weiterentwickelt, als eine Herausforderung.",
+        "requirements": "Wir mussten nicht nur eine sehr breite und vielfältige Nutzerbasis berücksichtigen, sondern auch eine Marke schaffen, die zukunftssicher und flexibel genug ist, um sowohl die bestehenden als auch die zukünftigen Anforderungen des Projekts abzudecken.",
+        " branding": "Das Branding von Joystream selbst ist ziemlich metaphorisch und symbolisch und bezieht sich oft auf die Symbolik alter Städte, Kultur, Kunst und Philosophien.",
+        " challenge": "Die Herausforderung bestand darin, dies mit sehr modernen und komplexen Technologien zu kombinieren."
+      },
+      " explanation": {
+        "title": "Erklärung der Marke",
+        "balance": "Bei unserem neuen Branding geht es darum, eine gute Balance zwischen einem sehr einfachen Kommunikationston und der Symbolik und Komplexität der Probleme und Technologien der modernen Welt zu finden.",
+        "patterns": "Unser Branding verwendet mosaikartige, geometrische Muster und Formen in Kombination mit eindeutigen Farben und symbolischen Illustrationen.",
+        " style": "Wir verwenden auch beschreibende Symbole in Kombination mit einfachen System-Symbole im Glyphenstil und einem experimentellen Illustrationsstil."
+      }
+    },
+    "button": {
+      "text": {
+        "downloadLogo": "Logo herunterladen"
+      }
+    }
+  }
+}
+
+

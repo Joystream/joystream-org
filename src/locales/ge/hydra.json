@@ -1,0 +1,101 @@
+{
+  "Hydra": {
+    "siteMetadata": {
+      "title": "Hydra - Ein Substrate Query Node Framework",
+      "description": "Inspiriert von The Graph, bietet es eine einfache Möglichkeit, App-Entwicklern leistungsstarke GraphQL-Abfragen über den Zustand und die Historie der Substrate-Blockchain zur Verfügung zu stellen."
+    },
+    "hero": {
+      "title": "Hydra - Ein Substrate Query Node Framework",
+      "text": "Inspiriert von The Graph, bietet es eine einfache Möglichkeit, App-Entwicklern leistungsstarke GraphQL-Abfragen über den Zustand und die Historie der Substrate-Blockchain bereitzustellen."
+    },
+    "value": {
+      "title": "Wir machen es einfach",
+      "subtitle": "Großartige Anwendungen zu entwickeln, die direkt mit einem Substrate Full Node kommunizieren, ist unmöglich, und es einfach zu versuchen, ist langsam und schwierig.",
+      "values": {
+        "slowFetching": {
+          "title": "Langsames Abrufen",
+          "text": "Oft sind mehrere Lesevorgänge über mehrere Blockhöhen erforderlich, und die reine Latenzzeit beim Abrufen der Daten ist sehr schlecht. Einige Lesevorgänge können vom Ergebnis früherer Lesevorgänge abhängen, was zu sequenziellen Lesevorgängen führt, die noch langsamer sind."
+        },
+        "slowProcessing": {
+          "title": "Langsame Verarbeitung",
+          "text": "Der Nutzer muss die gesamte Arbeit des Filterns, Sortierens, Paginierens oder anderweitigen Verarbeitens der resultierenden Daten erledigen, was Zeit in Anspruch nimmt und zu einer langsamen Nutzererfahrung und CPU-Belastung auf dem Nutzergerät führt."
+        },
+        "complexClient": {
+          "title": "Komplexer Nutzer",
+          "text": "Die Abhol- und Verarbeitungslogik wird in allen Anwendungen reproduziert und erhöht die Komplexität der Anwendungsentwicklung."
+        },
+        "noSearch": {
+          "title": "Keine Suche",
+          "text": "Deine Kette kann Transaktions- oder Statusverpflichtungen für Freitextdaten haben, aber eine echte Volltextsuche auf der Nutzerseite ist keine Option."
+        },
+        "overFetching": {
+          "title": "Über Abruf",
+          "text": "Du kannst die gewünschten Daten nicht auswählen, sondern musst die vollständigen Zustandsobjekte so lesen, wie sie sind, wodurch sowohl die Verbindungs- als auch die gesamte Knotenkapazität verschwendet wird."
+        },
+        "costlyNodes": {
+          "title": "Kostspielige Archivierungsknoten",
+          "text": "Benutzeranfragen, die mehrere Lesevorgänge beinhalten. Um einen konsistenten Datensatz abzurufen, musst du oft auf einer bestimmten Blockhöhe lesen, da das Lesen immer an der Spitze die Atomarität aufheben kann. Das bedeutet, dass solche Leseanfragen davon abhängen, dass der gesamte Knoten archiviert ist. Wenn deine Benutzerbasis wächst, wird dies zu einer sehr kostspieligen Infrastruktur."
+        }
+      }
+    },
+    "snippet": {
+      "title": "Leistungsstarke Abfragen in GraphQL",
+      "subtitle": "Biete Anwendungsentwicklern eine leistungsstarke GraphQL-API für deinen Blockchain-Status und -Verlauf"
+    },
+    "features": {
+      "title": "Hydra Features",
+      "values": {
+        "fullTextSearch": {
+          "title": "Volltextsuche",
+          "text": "Dekoriere eine beliebige Anzahl von String-Feldern im Eingabeschema mit @fulltext(query: \"myquery\"), um verschiedene Felder und Entitäten zu durchsuchen."
+        },
+        "filtering": {
+          "title": "Filterung",
+          "text": "Jedes Entitätsfeld kann für OpenCRUD-Filterung verwendet werden"
+        },
+        "pagination": {
+          "title": "Paginierung",
+          "text": "Jede GraphQL-Abfrage unterstützt Paginierung out-of-the-box"
+        },
+        "ordering": {
+          "title": "Bestellung",
+          "text": "Ordnung nach einem beliebigen primitiven Feld"
+        },
+        "Polymorphismus": {
+          "title": "Polymorphismus",
+          "text": "Native Unterstützung von GraphQL-Schnittstellen und Typ-Inline-Fragmenten"
+        },
+        "algebraicTypes": {
+          "title": "Algebraische Typen",
+          "text": "Konstruiere reichhaltige und abfragbare algebraische Typen mit der @variant-Direktive"
+        }
+      }
+    },
+    "video" : {
+      "title" : "Ein Videotutorial abspielen",
+      "subtitle" : "Befreie die Hydra"
+    },
+    "getStarted": {
+      "title": "Starte jetzt mit Hydra!",
+      "subtitle": "Nutze die folgenden Links, um dich mit uns zu verbinden und noch mehr zu erfahren.",
+      "links": {
+        "documentation": {
+          "name": "Dokumentation",
+          "link": "Dokumentation"
+        },
+        "githubRepository": {
+          "name": "Github Repository",
+          "link": "Github repo"
+        },
+        "kusamaPlayground": {
+          "name": "Kusama Playground",
+          "link": "Gehe zum Playground"
+        },
+        "discord": {
+          "name": "Discord",
+          "link": "Zum Kanal gehen"
+        }
+      }
+    }
+  }
+}

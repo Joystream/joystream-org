@@ -1,0 +1,130 @@
+{
+  "Landung": {
+    "siteMetadata": {
+      "description": "Joystream ist eine Videoplattform, die von ihren Nutzern kontrolliert, besessen und betrieben wird."
+    },
+    "hero": {
+      "title": "Die Videoplattform DAO",
+      "subtitle": "Joystream ist eine Videoplattform, die von ihren Nutzern kontrolliert,<0/>besessen und betrieben wird",
+      "metrics": {
+        "mainTitle": "Testnet Metrics",
+        "titles": {
+          "participationPayout": "Beteiligungsauszahlung",
+          "activeValidators": "Aktive Prüfer",
+          "blockHeight": "Blockhöhe",
+          "Mitgliedschaften": "Mitgliedschaften"
+        }
+      }
+    },
+    "becomeFM": {
+      "subtitle": "Unser brandneues und einzigartiges Community-Token-Vertriebssystem",
+      "title": "Werde Gründungsmitglied, um Mainnet-Token zu verdienen und die Entwicklung der Plattform zu beeinflussen.",
+      "alternateTitle": "Werde Gründungsmitglied und habe einen spürbaren Einfluss auf die Entwicklung unserer Plattform.",
+      "link": "Erfahre mehr über unser großzügiges Programm"
+    },
+    "whatWeDo": {
+      "subtitle": "Unsere Motivation für die Entwicklung des Joystream-Protokolls",
+      "title": "Wir fordern eine Regelung, bei der Medienplattformen gegenüber den Menschen, die sie beeinflussen, rechenschaftspflichtig sind.",
+      "link": "Lies unser Manifest"
+    },
+    "whyYouShouldJoin": {
+      "title": "Warum bei unseren Testnets mitmachen?",
+      "reasons": {
+        "Token": {
+          "Titel": "Token",
+          "text": "Verdiene Token, die im Mainnet verteilt werden, beginnend ab 2022"
+        },
+        "cash": {
+          "title": "Cash",
+          "text": "Werde mit echtem Geld für deine Teilnahme belohnt"
+        },
+        "reputationAndSkill": {
+          "title": "Reputation & Können",
+          "text": "Erwerbe das erforderliche Wissen, um am Mainnet teilzunehmen"
+        }
+      }
+    },
+    "exploreJoystream": {
+      "title": "Erkunde Joystream jetzt",
+      "subtitle": "Zwei sich schnell entwickelnde Apps für den Konsum von Inhalten und Verwaltungsaktivitäten.",
+      "atlas": {
+        "text": "Atlas ist das Flaggschiff unter den Apps zum Konsumieren und Veröffentlichen von Inhalten bei Joystream. Siehe dir Videos an, folge Autoren und entdecke neue Inhalte, oder erstelle einen Kanal und baue dir dein Publikum auf.",
+        "link": "Probiere Atlas aus",
+        "imageAlt": "Übersichtsbild von Atlas"
+      },
+      "pioneer": {
+        "text": "Pioneer ist der Ort, an dem du dich an der Verwaltung und dem Betrieb der Gemeinschaft beteiligen kannst. Stimme bei Wahlen ab, reiche Vorschläge zur Finanzierung deines Projekts ein oder übernehme eine bezahlte Rolle, um die Plattform zu betreiben.",
+        "link": "Probiere Pioneer aus",
+        "imageAlt": "Übersichtsbild von Pioneer"
+      }
+    },
+    "roadToMainnet": {
+      "title": "Weg zum Mainnet",
+      "testnetState": {
+        "Current": "Aktuelles Testnet",
+        "Past": "Vergangenes Testnet",
+        "Future": "Zukünftiges Testnet"
+      },
+      "freigegeben": {
+        "Current": "Freigegeben am",
+        "past": "Freigegeben am ",
+        "Future": "Wird live sein am "
+      },
+      "testnets": {
+        "Sparta": {
+          "title ": "Sparta Testnet",
+          "text": "Sparta ist unser zweites Testnet, das eine Reihe von wichtigen technischen Verbesserungen einführt.",
+          "explore": "Sparta erforschen"
+        },
+        "Athens": {
+          "title": "Athens Testnet",
+          "text": "Athens ist unser drittes Testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Athen erforschen"
+        },
+        "Acropolis": {
+          "title": "Acropolis Testnet",
+          "text": "Acropolis ist unser viertes Testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Acropolis erforschen"
+        },
+        "Rome": {
+          "title": "Rome Testnet",
+          "text": "Rome ist unser fünftes Testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Rome erforschen"
+        },
+        "Constantinople": {
+          "title": "Constantinople Testnet",
+          "text": "Constantinople ist unser sechstes Testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Erforsche Constantinople"
+        },
+        "Alexandria": {
+          "title ": "Alexandria Testnet",
+          "text": "Alexandria ist unser siebtes Testnet, das eine Reihe von wichtigen technischen Verbesserungen einführt.",
+          "explore": "Erforsche Alexandria"
+        },
+        "Babylon": {
+          "Titel": "Babylon Testnet",
+          "text": "Babylon ist unser achtes Testnet, das eine Reihe wichtiger technischer Verbesserungen einführt.",
+          "explore": "Erforsche Babylon"
+        },
+        "Antioch": {
+          "title ": "Antioch Testnet",
+          "text": "Antioch ist unser neuntes Testnet, das einen Kettenspaltungsfehler behebt, der das Babylon-Netzwerk zerstört hat",
+          "explore": "Erforsche Antioch"
+        },
+        "Sumer": {
+          "title": "Sumer Testnet",
+          "text": "Sumer ist unser zehntes Testnet, das den einfachen Upload von Inhalten über unsere Playback-App ermöglicht.",
+          "explore": "Sumer erforschen"
+        },
+        "Giza": {
+          "Titel": "Giza Testnet",
+          "text": "Giza ist unser elftes Testnet, das V2 des Speicher- und Verteilungssystems einführt.",
+          "explore": "Giza erforschen"
+        }
+      }
+    },
+    "earnTokens": {
+      "title": "Verdien Mainnet-Tokens, Bargeld und Einfluss".
+    }
+  }
+}

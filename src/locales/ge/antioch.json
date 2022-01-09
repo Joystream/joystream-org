@@ -1,0 +1,42 @@
+{
+  "antioch": {
+    "siteMetadata": {
+      "description": "Erforsche das Antioch Testnet"
+    },
+    "hero": {
+      "Titel": "Antioch Network",
+      "text": "Die Antioch-Veröffentlichung versucht, einen Kettenspaltungsfehler zu beheben, der leider das vorherige Testnet sabotiert hat."
+    },
+    "heroCard": {
+      "title": "ERSETZT DURCH SUMER ON"
+    },
+    "criticalDocuments": {
+      "title": "Wichtige Dokumente",
+      "releasePlan": {
+        "title": "Freigabeplan",
+        "text": "Lies den Freigabeplan, wie er in der Planungsphase erstellt wurde und erfahre mehr über den Verlauf der Entwicklung."
+      },
+      "blogPost": {
+        "title": "Ankündigungs-Blogpost",
+        "text": "Lies eine kurze Einführung in das Antioch Testnet und dessen Ziele."
+      }
+    },
+    "testnetGoals": {
+      "title": "Ziele des Testnet"
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Antioch Testnet"
+      "goals": {
+        "substrateVersion": {
+          "title": "Upgrade der Substratversion",
+          "text": "<0>Um das Kettenspaltungsproblem zu beheben, das auf Babylon aufgetreten ist, müssen wir die Version von Substrate, auf der unser Netzwerk aufgebaut ist, von <1>v2-rc4</1> auf <1>v2.0.1</1></0> aktualisieren"
+        }
+      }
+    },
+    "roles": {
+      "title": "Inzentivierte Rollen für das Antioch Network"
+    },
+    "map": {
+      "title": "Antioch",
+      "text": "<0>Antioch war eine antike griechische Stadt auf der östlichen Seite des Orontes.</0> Die Lage der Stadt kam ihren Bewohnern sehr zugute, vor allem wegen des Gewürzhandels, der Seidenstraße und der Königsstraße.<1/><1/>In ihrer Blütezeit rivalisierte sie mit Alexandria als wichtigste Stadt des Nahen Ostens. Viele betrachten die Stadt auch als \"die Wiege des Christentums\".<1/><1/><2><0/> Lies den Blogbeitrag</2>"
+    }
+  }
+}
