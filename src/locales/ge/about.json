@@ -1,0 +1,51 @@
+{
+  "about": {
+    "general": {
+      "roles": {
+        "blockchain": "Blockchain Engineer",
+        "frontEnd": "Front-End Engineer",
+        "design": "Designer",
+        "growth": "Wachstum",
+        "core": "Core",
+        "ceo": "CEO",
+        "cto": "CTO",
+        "cooAndGrowth": "COO & Wachstum",
+        "all": "Alle",
+        "allMembers": "Alle Mitglieder"
+      }
+    },
+    "siteMetadata": {
+      "title": "Über uns",
+      "description": "Wir bieten nicht nur eine großartige Vergütung und Flexibilität, sondern auch den perfekten Auftrag, das perfekte Team und den perfekten Zeitpunkt für dich um etwas aufzubauen, das alles verändert."
+    },
+    "hero": {
+      "title": "Wir bauen Joystream, um es zu befreien",
+      "subtitle": "Jsgenesis ist das Kernteam, das die Plattform Joystream und die Open-Source-Blockchain entwickelt."
+    },
+    "ourTeam": {
+      "title": "Unser Team",
+      "subtitle": "Wir kommen von verschiedenen Kontinenten, teilen aber die Leidenschaft für Open Source, Blockchain-Technologie, verteilte Systeme, Datenschutz und den Aufbau eines neuen Internets, das auf rechenschaftspflichtigen und forkbaren Institutionen basiert.",
+      "moreMembers": "Lade mehr Teammitglieder"
+    },
+    "investors": {
+      "title": "Unsere Investoren"
+    },
+    "positions": {
+      "title": "Offene Positionen",
+      "available": "3 Jobs verfügbar",
+      "join": "Beitreten",
+      "roles": {
+        "frontEnd": "Front-end Developer",
+        "blockchain": "Blockchain Developer",
+        "designer": "UI/UX Design Lead"
+      },
+      "location": "Oslo, Europa, Remote",
+      "employmentType": "Vollzeit",
+      "salary": {
+        "frontEnd": "$80K-$130K",
+        "blockchain": "$100K-$140K",
+        "designer": "$100K-$140K"
+      }
+    }
+  }
+}

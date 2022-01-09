@@ -1,0 +1,41 @@
+{
+  "sparta": {
+    "siteMetadata": {
+      "description": "Erforsche das Sparta Testnet"
+    },
+    "hero": {
+      "Titel": "Sparta Network",
+      "text": "Erforsche die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdiene dabei echtes Geld.",
+      "chipText": "Was ist das?"
+    },
+    "heroCard": {
+      "Titel": "NETZWERK AUSGEFALLEN",
+      "markdown": "\n ### FEHLER IDENTIFIZIERT\n\n Am Freitag, den 29. März, fiel das Sparta-Netzwerk aufgrund eines [bekannten Fehlers im Substrat](https://github.com/paritytech/substrate/pull/2130) aus, den wir vor der Veröffentlichung nicht behoben hatten.\n\n Weitere Einzelheiten findest du in diesem [Blogpost](https://blog.joystream.org/sparta-sacked/)."
+    },
+    "modal": {
+      "title": " Helm von Sparta",
+      "text": "<0>Der spartanische Armeehelm</0> repräsentiert das, wofür Sparta heute am meisten bekannt ist, seine militärische Macht. Zu seiner Zeit war es aber auch für sein fortschrittliches Regierungssystem bekannt."
+    },
+    "testnetGoals": {
+      "title": "Ziele des Testnets",
+      "subtitle": "Die folgenden Ziele sind eine vereinfachte Darstellung der Schlüsselergebnisse, die in unseren OKR aufgeführt sind.",
+      "goals": {
+        "blockchain": {
+          "title": "Aufbau und Freigabe einer Blockchain mit einem funktionierenden Rat",
+          "text": "Als \"nutzergesteuerte Medienplattform\" war es ein wichtiges Ziel für uns, den Nutzern die Möglichkeit zu geben, <0>Ratsmitglieder</0> zu wählen, die ihre Interessen im Tagesgeschäft vertreten."
+        },
+        "bugs": {
+          "title": "Die Anzahl der mehr oder weniger kritischen Bugs auf einem akzeptablen Niveau halten",
+          "text": "Wie die Tatsache zeigt, dass das Netzwerk abgestürzt ist, haben wir in diesem Fall unsere Ziele nicht erreicht."
+        }
+      }
+    },
+    "Rollen": {
+      "title": "Im Sparta Testnet verfügbare Rollen"
+    },
+    "map": {
+      "title": "Die Stadt Sparta",
+      "text": "<0>Sparta war ein bedeutender Stadtstaat im antiken Griechenland.</0> Neben seiner militärischen Stärke war er auch durch sein ausgeprägtes Sozialsystem und seine Verfassung einzigartig für seine Zeit und im Vergleich zu seinen griechischen Rivalen. <1/><1/> Wir haben den Namen Sparta wegen seiner historischen Bedeutung auf dem Weg zu Demokratie und Rechtsstaatlichkeit gewählt, auch wenn er nach modernen Maßstäben drakonisch ist."
+    }
+  }
+}

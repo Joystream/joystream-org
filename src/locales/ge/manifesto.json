@@ -1,0 +1,72 @@
+{
+  "manifesto": {
+    "siteMetadata": {
+      "description": "Lies das Joystream-Manifest"
+    },
+    "hero": {
+      "title": "Das Joystream-Manifest",
+      "text": "Unser Manifest legt sowohl die Probleme dar, die unserer Meinung nach mit digitalen Medienplattformen in ihrer derzeitigen Form verbunden sind, als auch unseren Lösungsvorschlag für diese Bedenken."
+    },
+    "problem": {
+      "title": "Problem",
+      "text": {
+        "artAsTool": "Wir glauben, dass Kunst, sei es in Form von Literatur, Musik, Film, Spielen oder Performance, ein entscheidendes Instrument ist, mit dem Gesellschaften ein gemeinsames Verständnis dessen schaffen, was allen Mitgliedern bekannt ist. Diese Ausdrucksformen definieren Werte und Erzählungen, die letztendlich die Kultur, den Glauben und sogar die öffentliche Politik prägen. Daher ist es von großer Bedeutung, wie sie finanziert, verbreitet und bezahlt werden",
+        "mediaAsPrimaryMedium": "Digitale Medien sind zum Hauptmedium geworden, über das solche Äußerungen verbreitet werden, und digitale Medienplattformen sind zu den wichtigsten Institutionen geworden, die diese Aktivitäten organisieren.",
+        "unaccountableInstitutions": "Aufgrund von Netzwerkeffekten, Skaleneffekten, Vorschriften und politischen Interessen gibt es heute leider nur noch eine Handvoll massiver Institutionen, die die Bedingungen dafür festlegen, wie dies geschieht. Sie sind den normalen Markt- und politischen Mechanismen fast vollständig entzogen.",
+        "filteredOnTheirTerms": "Infolgedessen werden unsere Geschichten, Äußerungen und Interaktionen nach deren Bedingungen verwaltet und gefiltert. Dies führt zu einer sich ständig verändernden Reihe von Problemen, sei es",
+        "unflexibel": "unflexible Monetarisierung, Zensur kontroverser Äußerungen, ungleiche Aufteilung der Gewinne mit Urhebern und Publikum, geringe Plattforminnovation oder mangelnde Glaubwürdigkeit bei Drittentwicklern."
+      }
+    },
+    "goal": {
+      "title": "Ziel",
+      "text": {
+        "arrangement": "Wir fordern eine Regelung, bei der Medienplattformen den Menschen gegenüber rechenschaftspflichtig sind, auf die sie einwirken, d.h. in erster Linie ihren Nutzern, sei es als Konsumenten, Kreative, Drittentwickler oder Arbeitnehmer.",
+        "Rechenschaftspflicht": "Es ist das Fehlen einer solchen Rechenschaftspflicht, das die grundlegende Quelle eines bestimmten Problems zu einem bestimmten Zeitpunkt ist."
+      }
+    },
+    "thesis": {
+      "title": " These",
+      "text": {
+        "coreThesis": "Unsere Kernthese ist, dass es zwei grundlegende Herausforderungen gibt, die angegangen werden müssen, um dieses Ziel zu erreichen, und dass eine angemessene Anwendung der zeitgenössischen Technologie für verteilte Systeme, einschließlich Blockchains, Smart Contracts und Tokens, das richtige Mittel ist, um dies zu erreichen."
+      }
+    },
+    "wedge": {
+      "title": "Der Keil",
+      "text": {
+        "alternative": "Zunächst stellt sich die Frage, wie man angesichts der externen Effekte einer Plattform, die jede neue Plattform unabhängig von ihren inhärenten Merkmalen nahezu nutzlos machen, eine Alternative aus dem Nichts schaffen kann. Der Prozess dieser Art von Bootstrapping war in der Vergangenheit meist eine Kunst, deren Erfolg selten reproduzierbar war.",
+        "blockchainTokens": "Wir glauben, dass Blockchain-Tokens, die von frühen Teilnehmern verdient und an diese ausgegeben werden, sich als äußerst effektiv bei der Mobilisierung, Integration und Motivation einer internationalen und dynamischen Gemeinschaft erwiesen haben.",
+        "initialHurdle": "Dies hat es neu entstehenden Gemeinschaften, wie der Bitcoin-Gemeinschaft, wiederholt ermöglicht, die anfängliche Hürde des Netzwerkeffekts zu überwinden [1, 2, 3]. Es gibt keine Gewissheit, dass dies ausreichen wird, aber wir glauben, dass dieser Mechanismus so vielversprechend ist wie nichts anderes, das seit langem eine Chance haben wird."
+      }
+    },
+    "Rechenschaftspflicht": {
+      "title": "Rechenschaftspflicht in großem Maßstab",
+      "text": {
+        "createAndSustain": "Zweitens stellt sich die Frage, wie die Rechenschaftspflicht in einer solchen Plattform geschaffen und aufrechterhalten werden kann, wenn sie tatsächlich eine Größenordnung erreicht.",
+        "twoWays": "Nach unserem Verständnis gibt es zwei grundlegende Möglichkeiten für die Teilnehmer, Institutionen jeglicher Art zur Rechenschaft zu ziehen: Stimme und Ausgang, in der Tradition von Hirschman A. O. [4]."
+      }
+    },
+    "voice ": {
+      "title": "Stimme",
+      "text": {
+        "improveWithin": "Voice ist der Ansatz, mit dem versucht wird, die Funktionsweise einer Institution von innen heraus zu verbessern oder zu reformieren. Die Wirksamkeit dieses Ansatzes hängt von der Fähigkeit ab, verlässliche Informationen mit anderen Mitgliedern zu teilen und einen gewissen Einfluss auf die internen Governance-Prozesse zu nehmen. Die derzeitigen Medienplattformen bieten den Nutzern keine effektive Möglichkeit, beides zu tun",
+        "Infrastruktur": "Wir glauben, dass Blockchains eine organisatorische und wirtschaftliche Infrastruktur bieten, die beide Probleme lösen kann. Die öffentliche, überprüfbare und unveränderliche Geschichte der wirtschaftlichen und administrativen Aufzeichnungen bietet eine hervorragende Grundlage für die Nutzer, um den aktuellen und vergangenen Zustand der Plattform zu verstehen. Dies ermöglicht es jedem, unanfechtbare Behauptungen über relevante Fakten und Umstände aufzustellen.",
+        "Kontrolle": "Darüber hinaus ermöglichen es Blockchain-Token, die Nutzung und Kontrolle einer Plattform untrennbar miteinander zu verbinden, so dass die Nutzer automatisch einen Sitz am Tisch haben, wenn es um Entscheidungen auf Plattformebene geht."
+        "signWithCrypto": "Alles, was erforderlich ist, um die Fähigkeit zur Teilnahme an einer solchen Aktivität herzustellen, auszuüben oder zu übertragen, ist die Fähigkeit, Nachrichten mit identifizierbaren kryptografischen Schlüsseln zu signieren. Ein absolut zuverlässiges Contracting gibt einer großen, dynamischen und uneingeschränkten Gruppe von Nutzern die Möglichkeit, die Plattform zu steuern. Dies kann einer Vielzahl von Zwecken dienen, z. B. der Durchführung von Projekten, der Regelung der Teilnahme an verschiedenen, formal festgelegten Rollen oder sogar der Aktualisierung der institutionellen Regeln selbst. Diese Integration zuverlässiger Vertragsabschlüsse in die wirtschaftlichen Schienen bietet eine organisatorische Infrastruktur, die unseren Zielen einer integrativen Kontrolle sehr viel besser entspricht als die normale, auf Rechtsprechung basierende Infrastruktur."
+      }
+    },
+    "exit": {
+      "title": "Exit",
+      "text": {
+        "exit": "Exit ist der Ansatz, die Teilnahme an einer Institution vollständig zu beenden, um entweder beizutreten oder eine Alternative zu schaffen. Die Effektivität dieses Ansatzes hängt davon ab, ob die Kosten für den Austritt, den Beitritt oder die Schaffung einer Alternative im Vergleich zu den Entbehrungen in der bestehenden Einrichtung gering sind. Dies ist derzeit nicht der Fall.",
+        "loweredCosts": "Durch den Aufbau von Plattformen, die auf freier und quelloffener Software, offenen Protokollen und offenen Daten basieren - wie es bei Blockchain-Systemen der Fall ist -, werden diese Kosten drastisch gesenkt. Da die Nutzer die Kontrolle über ihre eigenen Daten, ihre Identität und ihr Vermögen haben, fällt es ihnen viel leichter, sich neuen Plattformen anzuschließen und sogar ihre Mitstreiter mitzunehmen.",
+        "competition": "Offene Protokolle und Daten werden dazu führen, dass es eine Vielzahl von Multi-Homing-Schnittstellen gibt, bei denen die Nutzer möglicherweise nicht einmal wechseln müssen, sondern stattdessen mehrere Plattformen gleichzeitig nutzen, was den Wettbewerb auf Plattformebene fördert [5].",
+        "reusability": "Noch dramatischer ist, dass die Abhängigkeit von Open Source bedeutet, dass das gesamte Software-Kapital einer Plattform leicht wiederverwendet werden kann, und da der gesamte organisatorische Zustand ebenfalls öffentlich ist, können ganze Ökosysteme gegabelt werden, um neue alternative Plattformen mit veränderten Richtlinien und Zielen zu schaffen."
+      }
+    },
+    "ctaText": "Dieser Plan hat noch Platz für mehr Leute, also beteilige dich, indem du eine <0>E-Mail</0> schickst oder uns auf <1>Discord</1> beitrittst.",
+    "references": {
+      "title": "references",
+      "text": "<0>[1] Ersam, F. Blockchain Tokens and the dawn of the Decentralized Business Model. Medium. Aug 1, 2016.</0><0>[2] Srinivasan, B. S. Thoughts on Tokens. Medium. May 27, 2017.</0><0>[3] Dixon, C. Crypto Tokens: A Breakthrough in Open Network Design. Medium. June 1, 2017.</0><0>[4] Hirschman, Albert O. Exit, voice, and loyalty: Reaktionen auf den Niedergang in Unternehmen, Organisationen und Staaten. Vol. 25. Harvard University Press, 1970.</0><0>[5] Rochet, Jean-Charles, und Jean Tirole. "Platform competition in two-sided markets". Journal of the european economic association 1.4 (2003): 990-1029.</0>"
+    }
+  }
+}

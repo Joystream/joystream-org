@@ -1,0 +1,59 @@
+{
+  "privacyPolicy": {
+    "siteMetadata": {
+      "description": "Joystream Datenschutz- und Cookie-Richtlinie"
+    },
+    "hero": {
+      "title": "Datenschutzrichtlinie und Cookies",
+      "text": "<0><0>Jsgenesis schätzt Ihre Privatsphäre. </0><1/><1/>Diese Datenschutzrichtlinie (\"Datenschutzrichtlinie\") und Cookie-Richtlinie (\"Cookie-Richtlinie\") erklärt, wie Jsgenesis AS (\"Jsgenesis\", \"Unternehmen\", \"Wir\", \"Uns\", \"Unser\") Daten und Informationen sammelt und verwendet, wenn Sie (\"Nutzer) eines oder mehrere der Joystream-Produkte nutzen, die in der GitHub-Organisation <3>Joystream</3> entwickelt wurden. Diese Produkte (zusammenfassend \"Software\") umfassen, sind aber nicht beschränkt auf alle Seiten unter der <6>joystream. org</6> Domain (\"Website\"), den <10>Joyful Node</10> (\"Full Node\"), den <14>Colossus Storage Node</14> (\"Storage Node\") und die Pioneer-Benutzeroberfläche, entweder <18>selbst gehostet</18> oder <22>von uns gehostet</22> (\"App\").</0>"
+    },
+    "terms": {
+      "title": "Für die Datenschutzrichtlinie und die Cookie-Richtlinie sind die folgenden Begriffe relevant:",
+      "blockchain": "Der Begriff <0>\"Blockchain\"</0> bezieht sich auf die vom Full Node zusammengestellte(n) Blockchain(s).",
+      "content": "Der Begriff <0>\"Inhalt\"</0> bezieht sich auf Mediendateien, die über unsere Software zugänglich sind.",
+      "keys": "Der Begriff <0>\"Keys\"</0> bezieht sich auf ein privates/öffentliches kryptografisches Schlüsselpaar, das Nutzer generieren können, um Daten auf der Blockchain zu schreiben (und zu entschlüsseln).",
+      "membership": "Der Begriff <0>\"Mitgliedschaft\"</0> bezieht sich auf die Bindung der Schlüssel an ein öffentliches Profil, das es den Benutzern ermöglicht, auf Inhalte zuzugreifen und mit der Blockchain zu interagieren."
+      "memo": "Der Begriff <0>\"Memo\"</0> bezieht sich auf ein markdown-fähiges Textfeld, in das Benutzer Daten eingeben können, die mit ihren Schlüsseln verknüpft sind."
+    },
+    "privacyPolicyItems": {
+      "title": "Privacy Policy",
+      "subtitle": "Zuletzt aktualisiert am 17. April 2019",
+      "agreement": {
+        "title": "1. Zustimmung zur Richtlinie",
+        "content": "Durch die Nutzung unserer Software akzeptiert der Nutzer diese Datenschutzrichtlinie. Wenn Sie im Namen eines anderen Unternehmens oder eines Arbeitgebers handeln, müssen Sie die Rechte haben, in dessen Namen zu handeln. Die Datenschutzrichtlinie gilt nicht für unsere Newsletter, bei denen die Nutzer an die <0>Datenschutzrichtlinie</0> von <1>Mailchimp</1><2/><2/> gebunden sind. Die Datenschutzrichtlinie gilt nicht für andere Dienste von Dritten, einschließlich, aber nicht beschränkt auf Anwendungen, Websites, Tools oder Software, selbst wenn diese über Links oder Anleitungen in unserer Software zugänglich sind."
+      },
+      "changes": {
+        "title": "2. Änderungen der Richtlinie",
+        "content": "Diese Datenschutzrichtlinie kann nach alleinigem Ermessen des Unternehmens geändert werden. Wenn wesentliche Änderungen vorgenommen werden, wird der Nutzer in dem von ihm genutzten Dienst benachrichtigt. Beachten Sie, dass das Hinzufügen neuer Produkte, die unter den Begriff Software fallen, z. B. ein neues Produkt für den Benutzer, das die App ersetzt, oder ein neues Tool zum Hochladen von Inhalten, nicht als wesentlich angesehen wird, da es sich nicht auf die Benutzer auswirkt, es sei denn, sie übernehmen das neue Produkt. Die Änderung von Softwarenamen, der in dieser Datenschutzrichtlinie verwendeten Terminologie und der Änderung von Linkpositionen sind ebenfalls Beispiele für nicht wesentliche Änderungen."
+      },
+      "informationCollected": {
+        "title": "3. gesammelte Informationen",
+        "content": "Alle Daten, die in die Blockchain geschrieben werden, werden implizit nicht nur vom Unternehmen gesammelt, sondern auch von jedem anderen auf der Welt, der den Full Node lokal ausführt oder auf den über die App oder eine dritte Partei zugegriffen wird. Dazu gehören unter anderem Inhalts-Hashes, Mitgliedschaftsprofile, Memo-Felder und jede andere Art und Weise, wie ein Nutzer Daten in der Blockchain aufzeichnen kann. <0/><0/> Bei der Nutzung der <1>Faucet</1> Unterseite der Website zeichnet das Unternehmen die IP-Adresse auf, die hinter jeder neuen Anfrage nach Token steht. Diese Daten werden alle 14 Tage gelöscht."
+      },
+      "googleAnalytics": {
+        "title": "",
+        "content": "Das Unternehmen verwendet <0>Google Analytics</0>, mit IP-Anonymisierung, um Statistiken über die Website und die von uns gehostete Version der App zu sammeln. Alle anpassbaren Einstellungen für die gemeinsame Nutzung von Daten sind ausgeschaltet, um die Privatsphäre der Nutzer zu schützen. <1 /><1 /> <2>Das Unternehmen verkauft Ihre Daten nicht für Werbe- oder andere Zwecke.</2>"
+      }
+    },
+    "cookiePolicyItems": {
+      "title": "Cookie-Richtlinie",
+      "subtitle": "Zuletzt aktualisiert am 17. April 2019",
+      "whatAreCookies": {
+        "title": "1. Was sind Cookies?",
+        "content": "Cookies sind kleine Textdateien, die von einer von Ihnen besuchten Website an Ihren Webbrowser gesendet werden. Eine Cookie-Datei wird in Ihrem Webbrowser gespeichert und ermöglicht es dem Dienst oder einem Dritten, Sie zu erkennen und Ihren nächsten Besuch zu erleichtern und den Dienst für Sie nützlicher zu machen. <0 /><0 /> Cookies können dauerhafte oder Sitzungs-Cookies sein."
+      },
+      "howWeUseCookies": {
+        "title": "2. Wie wir Cookies verwenden",
+        "content": "Wir verwenden Cookies für die folgenden Zwecke unseren Service: <0 /><0 /><1><0>Analytik bereitstellen</0><0>Einstellungen speichern</0><0>Lokale Speicherung von Schlüsseln und Mitgliedschaften.</0></1>"
+      },
+      "thirdPartyCookies": {
+        "title": "3. Third-Party-Cookies",
+        "content": "Zusätzlich zu unseren eigenen Cookies verwenden wir auch verschiedene Cookies von Drittanbietern, um Nutzungsstatistiken des Dienstes zu erstellen, Werbung auf und über den Dienst auszuliefern und so weiter. Dazu gehören:<0/><0/><1><0><0>Google Analytics</0></0><0><0>Mailchimp</0> (nur bei der Anmeldung zu einem unserer Newsletter)</0><0><0>Godaddy</0></0></1><0 />Bitte lesen Sie Punkt 3. der Datenschutzerklärung für weitere Informationen zum Umfang dieser Anbieter."
+      },
+      "regardingYourCookies": {
+        "title": "Regarding Your Cookies",
+        "content": "Wenn Sie Cookies löschen oder Ihren Webbrowser anweisen möchten, Cookies zu löschen oder abzulehnen, besuchen Sie bitte die Hilfeseiten Ihres Webbrowsers.<0 /><0 /> Bitte beachten Sie jedoch, dass Sie, wenn Sie Cookies löschen oder deren Annahme ablehnen, möglicherweise nicht alle von uns angebotenen Funktionen nutzen können, dass Sie möglicherweise Ihre Einstellungen nicht speichern können und dass einige unserer Seiten möglicherweise nicht richtig angezeigt werden."
+      }
+    }
+  }
+}

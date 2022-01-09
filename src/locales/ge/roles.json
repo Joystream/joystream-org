@@ -1,0 +1,214 @@
+{
+  "roles": {
+    "siteMetadata": {
+      "description": "Lies mehr über aktuelle und zukünftige Rollen auf der Joystream-Plattform"
+    },
+    "general" : {
+      "overview" : "Übersicht",
+      "responsibilities" : "Verantwortlichkeiten",
+      "requirements" : "Anforderungen",
+      "seeATutorial" : "Ein Tutorial ansehen",
+      "askAQuestion" : "Stelle eine Frage",
+      "regularUpdates" : "Regelmäßige Updates für die folgende Rolle erhalten:",
+      "alertWhenActive" : "Benachrichtige mich, wenn die Rolle aktiv wird.",
+      "emailAddressPlaceholder" : "Deine E-Mail-Adresse",
+      "receiveEmailsAboutRole" : "Ich möchte E-Mails zu dieser Rolle erhalten.",
+      "informationTransferred" : "Ich stimme zu, dass meine Daten an Mailchimp übertragen werden, die <0>diese</0> Datenschutzpraktiken haben.",
+      "join" : "Beitreten",
+      "subscribe" : "Abonnieren",
+      "pleaseWait" : "Bitte warten..."
+    },
+    "hero": {
+      "title": "Wähle deine bevorzugte Rolle",
+      "text": "Durch die Teilnahme an einer Rolle in unserem Testnet kannst du tJOY verdienen und gleichzeitig die Weiterentwicklung der Plattform beeinflussen."
+    },
+    "validator": {
+      "title": "Validator",
+      "overview": "Der Zustand der Joystream-Plattform basiert auf einem Blockchain-Konsenssystem. Dieses Konsenssystem ist eine Variante des klassischen BFT-Konsens in Kombination mit Proof-of-Stake zur Bestimmung der Stimmkraft. Ein Validator ist ein Nutzer, der die Gültigkeit von neu erstellten Blöcken überprüft, neue Blöcke vorschlägt und am Konsensprozess für die Aufnahme neuer Blöcke in die Kette teilnimmt. Diese Rolle hat einen sehr ähnlichen Zweck wie die Miner in der Bitcoin-Blockchain. Wichtig ist, dass jeder die Gültigkeit der Blockchain vollständig überprüfen kann, nicht nur die Validierer, und dies wird Validierung genannt.",
+      "responsibilities": {
+        "runAndMaintainScreeningNodes": "Ausführen und Aufrechterhalten von Screening-Knoten, die permanent verfügbar und funktionstüchtig sind",
+        "enforceRules": "Helfen, die Konsensregeln des Netzwerks durchzusetzen"
+      },
+      "requirements": {
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit hoher Speicher-, (Up- & Down-) Bandbreite und Verarbeitungskapazität",
+        "storeKeys": "In der Lage, Schlüssel sicher zu speichern",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "councilMember": {
+      "title": "Ratsmitglied",
+      "overview": "Das Herzstück des Verwaltungsprozesses auf der Plattform ist das Vorschlagssystem, das es jedem ermöglicht, einen Vorschlag zur Änderung des Zustands oder der Politik der Plattform einzureichen. Diese Vorschläge werden von einem Rat bearbeitet und zur Abstimmung gestellt, wobei die Teilnehmer als Ratsmitglieder bezeichnet werden. Ein Sitz im Rat wird durch einen Wahlprozess gewonnen und bleibt für eine gewisse Zeit bis zu einer neuen Wahl bestehen.",
+      "Verantwortlichkeiten": {
+        "discussProposals": "Diskutiere die Bedeutung und die Vorzüge eingehender Vorschläge, die ein breites Spektrum von Themen abdecken",
+        "vote": "Über Vorschläge abstimmen",
+        "representCommunity": "Repräsentiere die Community-Mitglieder und ihren Wahlkreis, um Entscheidungen im Tagesgeschäft zu treffen"
+      },
+      "requirements": {
+        "dataAnalysisProficiency": "Beherrschung grundlegender Datenanalysen und ausreichendes Ansehen in der Gemeinschaft, um bei Wahlen unterstützende Stimmen von anderen Plattformmitgliedern zu erhalten",
+        "platformUnderstanding": "Ein tiefes Verständnis der Struktur, Funktion und Ressourcenverteilung der Joystream-Plattform",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "storageProvider": {
+      "title": "Storage Provider",
+      "overview": "Es gibt kritische Platform Assets, die sich nicht auf der Blockchain befinden, wie z.B. Bilder und Content-Medien. Die Integrität dieser Vermögenswerte wird durch die Blockchain gesichert, aber ein separater Satz von Speicher- und Verteilerknoten ermöglicht das Hoch- und Herunterladen solcher Daten. Der Storage Provider ist an dieser Aktivität beteiligt, insbesondere durch die Speicherung großer Datenmengen.",
+      "responsibilitie": {
+        "runAndMaintainStorageNodes": "Betreiben und Pflegen von Speicherknoten, die sehr große Mengen statischer Daten speichern, sich mit anderen Speicherknoten synchronisieren, Daten mit Verteilern austauschen und eingehende Uploads von Endnutzern annehmen"
+      },
+      "requirements": {
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit hoher Speicherkapazität",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+ },
+    "storageLead": {
+      " title": "Storage Lead",
+      "overview": "Der Storage Lead wird direkt vom Rat über das Vorschlagssystem eingestellt und ist für die Einstellung, Entlassung und das weitere Management von Speicherplatzanbietern im Netzwerk zuständig.",
+      "responsibilities": {
+        "storageProviderPerformance": "Der Storage Lead ist dafür verantwortlich, dass die Leistung der Speicherplatzanbieter angemessen ist. Jeder von ihnen muss über eine vollständige und aktuelle Kopie des Inhaltsverzeichnisses verfügen und die Betriebszeit sicherstellen, um den Inhaltskonsumenten effektiv bedienen zu können."
+      },
+      " requirements": {
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "managementAndCoordination": "Fähigkeit zur effektiven Verwaltung und Koordinierung der Maßnahmen der Speicheranbieter",
+        "stake ": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "contentCurator": {
+      "title": "Content Curator",
+      "overview": "Alle auf der Plattform veröffentlichten Medieninhalte befinden sich in einem On-Chain-Inhaltsverzeichnis. Es gibt eine Reihe verschiedener Inhaltstypen, und jeder Typ hat ein Schema für eine umfassende Beschreibung seiner Struktur, Funktion und Richtlinien. Für die effektive Nutzung von Inhalten, z. B. bei der Darstellung, Erkennung und Vermarktung, ist es entscheidend, die Gültigkeit der veröffentlichten Informationen für alle Inhalte sicherzustellen. Insbesondere ist es auch wichtig, mögliche Streitigkeiten über das Eigentum und das Vorhandensein von Inhalten auf der Plattform zu klären. Es ist die Aufgabe der Content Curators, die Arbeit zu leisten, die mit Prozessen verbunden ist, die diesen Zielen dienen.",
+      "responsibilities": {
+        "monitorContent": "Überwache die Veröffentlichung neuer Inhalte im Inhaltsverzeichnis und reagiere auf Berichte über beanstandete Veröffentlichungen",
+        "adjudicateDisputes": "Mögliche Streitfälle, die sich aus Meldungen von Nutzern ergeben, schlichten",
+        "updateContentInformation": "Informationen über Inhalte aktualisieren, damit sie korrekt sind",
+        "collaborateWithBuilders": "Arbeite mit den <0> Buildern</0> zusammen, um sowohl die Werkzeuge als auch die Benutzererfahrung zu verbessern, um die Integrität des Inhaltsverzeichnisses zu erhöhen"      },
+      "requirements": {
+        "adjudicateDisputes": "Faire Streitschlichtung und klare und transparente Kommunikation mit Interessengruppen und Teilnehmern",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "contentCreator": {
+      "title": "Content Creator",
+      "overview": "Als Videoplattform sind die auf der Plattform veröffentlichten Inhalte eines der wichtigsten Assets der Plattform. Da Video ein so flexibler Medientyp ist, der eine breite Palette von Inhaltskategorien umfassen kann, steht es im Mittelpunkt. Es ist jedoch beabsichtigt, im Laufe der Zeit ein breiteres Spektrum von Inhaltstypen zu unterstützen. Die Builder von Inhalten sind diejenigen, die an der Erstellung, Veröffentlichung und Monetarisierung von Inhalten auf der Plattform beteiligt sind",
+      "responsibilities": {
+        "publishContent": "Inhalte veröffentlichen und ein Publikum aufbauen"
+      },
+      "requirements": {
+        "publishContent": "Das Recht haben, bestehende oder neue Inhalte auf der Plattform zu veröffentlichen",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "contentLead": {
+      "title": "Content Lead",
+      "overview": "Der Rat hat die Befugnis, einen Verantwortlichen für die Inhaltskuratierung für das Netzwerk zu ernennen, der weitere Inhaltskuratoren einstellen kann. Der Inhaltsverantwortliche entscheidet auch über die Prioritäten für die Kuratierung. Falls erforderlich, kann der Verantwortliche nach Rücksprache mit dem Rat auch entscheiden, Kuratoren zu entlassen, die ihre Arbeit nicht angemessen ausführen.",
+      "responsibilities": {
+        "monitorPublishing": "Überwache die Veröffentlichung neuer Inhalte im Inhaltsverzeichnis und reagiere auf Berichte über beanstandete Veröffentlichungen",
+        "adjudicateDisputes": "Mögliche Streitfälle, die sich aus Meldungen von Nutzern ergeben, beurteilen",
+        "updateInformation": "Informationen über Inhalte aktualisieren, damit sie korrekt sind",
+        "manageAndCoordinate": "Verwalte und koordiniere die Aktionen der Arbeitsgruppe Inhalte"
+      },
+      "requirements": {
+        "adjudicateDisputes": "Faire Streitschlichtung und klare und transparente Kommunikation mit Interessengruppen und Teilnehmern",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "membershipScreener": {
+      "title": "Membership-Screener",
+      "overview": "Eine Mitgliedschaft ist eine integrierte Darstellung von identifizierenden Informationen und damit verbundenen Aktivitäten eines Nutzers auf der Plattform. Der direkte Weg, eine Mitgliedschaft zu begründen, ist die Zahlung einer einmaligen Gebühr. Da es jedoch für viele potenzielle nicht-technische Endnutzer schwierig ist, Krypto-Assets zu erwerben, zu speichern und zu nutzen, wird es eine Möglichkeit für Nutzer geben, eine kostenlose Mitgliedschaft zu erwerben, die keine Token erfordert, um die Plattform in begrenztem Umfang zu nutzen. Der Membership Screener ist die Rolle, die für die Gewährung solcher Mitgliedschaften verantwortlich ist und gleichzeitig nach Sybill-Angreifern und -Missbrauchern sucht.",
+      "responsibilities": {
+        "runAndMaintainScreeningNodes": "Ausführen und Aufrechterhalten von Screening-Knoten, die immer verfügbar und leistungsfähig sind",
+        "collaborate": "Mit <0>Membership Curators</0> und <1>Buildern</1> zusammenarbeiten, um die Screening-Mechanismen zu verbessern, indem Screening-Techniken besprochen und Verkehrsinformationen ausgetauscht werden",
+        "beResponsive": "Sei reaktionsfähig und reagiere auf sich ändernde Umstände"
+      },
+      "requirements": {
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit hoher Speicher-, (Up- & Down-) Bandbreite und Verarbeitungskapazität",
+        "onlinePlatformAttackFamiliarity": "Vertrautheit damit, wie Online-Plattformen durch Botnets, IP-Anonymisierung, automatisierte Agenten usw. angegriffen werden",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "membershipCurator": {
+      "title": "Membership Curator",
+      "overview": "Eine Mitgliedschaft ist eine integrierte Darstellung von identifizierenden Informationen und zugehörigen Aktivitäten eines Nutzers auf der Plattform. Es ist möglich, Mitgliedschaften kostenlos über die oben beschriebenen <0> Screener</0> zu erstellen. Da dies immer ein unvollkommener Prozess ist, muss es ein Mittel geben, mit dem schlechtes Verhalten und gefälschte Konten deaktiviert oder entfernt werden können. Dies ist die Aufgabe der Membership Curators.",
+      "responsibilities ": {
+        "monitorPlatformActivity": "Überwache die Aktivitäten auf Plattformebene auf Missbrauch und geheime Absprachen",
+        "proposeChanges": "Vorschlagen von Änderungen am Status von Mitgliedschaften, die identifiziert werden, und Beteiligung an einem eventuell folgenden Streitverfahren",
+        "collaborate": "Mit <0> Screeners</0> und <1> Buildern</1> zusammenarbeiten, um Werkzeuge zur Identifizierung solcher Mitglieder zu verbessern"
+      },
+      "requirements": {
+        "dataAnalysisProficiency": "Beherrschung der grundlegenden Datenanalyse und Skripterstellung",
+        "platformUnderstanding": "Ein tiefes Verständnis der Struktur, Funktion und Angriffsvektoren der Joystream-Plattform",
+        " stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "bandwidthProvider": {
+      "title": "Bandwidth Provider",
+      "overview": "Es gibt kritische Plattform-Assets, die sich nicht auf der Blockchain befinden, wie z. B. Bilder und Inhaltsmedien. Die Integrität dieser Vermögenswerte wird durch die Kette gesichert, aber eine separate Reihe von Speicher- und Verteilerknoten ermöglicht das Hoch- und Herunterladen solcher Daten. Der Bandwidth Provider ist an dieser Aktivität beteiligt, insbesondere durch die Verteilung von statischen Daten an Endnutzer in großem Umfang.",
+      "responsibilities": {
+        "runAndMaintainDistributorNodes": "Betreiben und Warten von Verteilerknoten, die große Mengen von Upstream-Daten an eine große Anzahl von Endnutzern gleichzeitig liefern"
+      },
+      "requirements": {
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit hoher Speicherkapazität und viel Upstream-Kapazität",
+        "locatedWithinBounds": "Befindet sich innerhalb bestimmter Grenzen zu bestimmten geografischen Gebieten, um die Latenz zu begrenzen",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "discoveryProvider": {
+      "title": "Discovery Provider",
+      "overview": "Der gesamte Inhalt der Plattform befindet sich in einem bestimmten Inhaltsverzeichnis, und für eine effektive Navigation in diesem Verzeichnis ist eine vollständige Kopie dieses Verzeichnisses erforderlich. Um Dinge wie die Suche und kontextbezogene Empfehlungen durchführen zu können, muss man außerdem eine Art Heuristik auf dieses Verzeichnis anwenden, die auch etwas empfindlich auf missbräuchliche Versuche reagiert, höher zu ranken. Die Discovery Provider spielen die Rolle, auf solche Discovery-Anfragen von Endnutzern zu antworten, indem sie leichte Client-Inclusion-Proofs mit lokaler Suche und Ranking-Policy-Heuristiken kombinieren.",
+      "responsibilities": {
+        "runAndMaintainDiscoveryNodes": "Betreiben und Pflegen von Discovery Nodes, die auf Discovery-bezogene Anfragen antworten, indem sie mit dem Content-Verzeichnis synchronisiert bleiben und lokale Ranking-Heuristiken anwenden.",
+        "collaborate": "Mit <0>Buildern</0> zusammenarbeiten, um sowohl die Tools als auch die Benutzererfahrung zu verbessern, um das Entdeckungserlebnis zu verbessern"
+      },
+      "requirements": {
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer leistungsstarken IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur",
+        "formulateAndTestHeuristics": "In der Lage sein, neue Ranking-Heuristiken für die Verwendung durch Discovery-Provider-Knoten zu formulieren, zu testen und vorzuschlagen",
+        "stake ": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "liveStreamingProvider": {
+      "title": "Live-Streaming Provider",
+      "overview": "Die Plattform unterstützt Live-Video und ermöglicht es den Herausgebern, Inhalte zu verbreiten, während sie erstellt werden. Die Live-Streaming Provider sind dafür verantwortlich, direkt oder indirekt über Peer-Anbieter einen (transkodierten) Stream vom ursprünglichen Herausgeber zu übernehmen und an die Endnutzer weiterzuleiten.",
+      "responsibilities": {
+        "runAndMaintainLivestreamingNodes": "Betreiben und Warten von Live-Streaming-Knoten, die große Mengen an Upstream-Daten an eine große Anzahl gleichzeitiger Endnutzer liefern"
+      },
+      "Anforderungen": {
+        "setupAndMaintainInfrastructure": "Erfahrung mit der Einrichtung und Wartung einer hochleistungsfähigen IT-Infrastruktur",
+        "accessToPerformantInfrastructure": "Zugang zu einer hochleistungsfähigen und zuverlässigen IT-Infrastruktur mit großer Upstream-Bandbreitenkapazität",
+        "locatedWithinBounds": "Befindet sich innerhalb bestimmter Grenzen zu bestimmten geografischen Gebieten, um die Latenz zu begrenzen",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    },
+    "builder": {
+      "title": " Builder",
+      "overview": "Die Laufzeit der Plattform, die Werkzeuge, die Infrastruktursoftware und die benutzerorientierten Anwendungen sollen sich alle im Laufe der Zeit weiterentwickeln. Um dies zu ermöglichen, ist eine Reihe von Mitarbeitern erforderlich, darunter <0/><0/> <1> <0><0>Entwickler:</0> Softwareentwickler, Datenwissenschaftler, DevOps und QA </0><0><0>Designer:</0> Web, Mobile, UX/UI, Branding und visuelles Design </0> <0><0>Produktmanager:</0> Digitale Produktmanager, Product Owner und Analysten </0> </0> <0 /> Alle diese Mitarbeiter werden gemeinsam als Builder bezeichnet. Jeder kann in der gleichen Art und Weise zu jeder dieser möglichen Beitragszahlerfunktionen beitragen, da alle Quellen der Plattform Open Source sind und offen entwickelt werden. Ein Builder zu sein bedeutet, dass man einen gewissen Verantwortungsbereich in den laufenden Bemühungen hat, und dass man ein vordefiniertes Belohnungssystem hat, das mit dieser Verantwortung verbunden ist.",
+      "responsibilities": {
+        "collaborate": "Mit fast jeder anderen Art von Plattformmitglied zusammenarbeiten, um die Plattform zu pflegen und zu verbessern"
+      },
+      "requirements": {
+        "platformUnderstanding": "Ein tiefes Verständnis der Struktur und Funktion der Joystream-Plattform",
+        "specificContributingSkills": "Über spezifische Fähigkeiten verfügen, die für einen Beitrag in der angegebenen Weise erforderlich sind",
+        " stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+ },
+    "communicationModerator": {
+      "Titel": "Communication Moderator",
+      "overview": "Die Plattform wird über mehrere Möglichkeiten verfügen, um eine einfache und sichere öffentliche und private Kommunikation und den Informationsaustausch zwischen den Mitgliedern zu ermöglichen. Insbesondere werden sowohl ein Forum als auch eine Nachrichtenfunktion in die Plattform integriert sein. Damit diese Bereiche jedoch effektiv kommunizieren können, ist eine gewisse Moderation erforderlich. Die Communication Moderators sind für die Überwachung dieser Aktivitäten zuständig",
+      "responsibilities": {
+        "monitorCommunicationChannels": "Überwache und beaufsichtige öffentliche Kommunikationskanäle auf die Einhaltung der Nutzungsrichtlinien, die durch das Verwaltungssystem festgelegt wurden",
+        "communicateWithUsers": "Mit den Endnutzern über mögliche Verstöße und Sanktionen kommunizieren",
+        "collaborate": "Zusammenarbeiten, um neue Richtlinien zu entwickeln, wenn sich die Umstände ändern"
+      },
+      "requirements": {
+        "platformUnderstanding": "Ein tiefes Verständnis der Struktur und Funktion der Joystream-Plattform",
+        "goodCommunicator": "Klarer schriftlicher Ausdruck, idealerweise mit guten Kenntnissen in mehr als einer Sprache",
+        "stake": "Besitz einer ausreichenden Menge des nativen Plattform-Tokens, um sie zu staken."
+      }
+    }
+  }
+}
+
+
+   

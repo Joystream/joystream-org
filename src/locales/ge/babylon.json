@@ -1,0 +1,58 @@
+{
+  "babylon": {
+    "siteMetadata": {
+      "description": "Erforsche das Babylon Testnet"
+    },
+    "Held": {
+      "Titel": "Babylon Network",
+      "text": "Die neue Version von Babylon bietet Verbesserungen, die das Erlebnis der Veröffentlichung und des Konsums von Videos erheblich verbessern.",
+      "chipText": "Was ist das?"
+    },
+    "heroCard": {
+      "title": "ERSETZT DURCH ANTIOCH ON"
+    },
+    "modal": {
+      "title": "Turm von Babel",
+      "text": "Die Geschichte vom Turmbau zu Babel ist ein Ursprungsmythos, der erklären soll, warum die Völker der Welt unterschiedliche Sprachen sprechen.<0/><0/> Der Geschichte zufolge kommt eine vereinte menschliche Rasse in den Generationen nach der Sintflut, die eine einzige Sprache spricht und nach Osten wandert, in das Land Schinar. Dort beschließen sie, eine Stadt und einen Turm zu bauen, der hoch genug ist, um den Himmel zu erreichen.<0/><0/> Als Gott ihre Stadt und ihren Turm sieht, verwirrt er ihre Sprache, so dass sie einander nicht mehr verstehen können, und zerstreut sie über die ganze Welt."
+    },
+    "criticalDocuments": {
+      "title": "Wichtige Dokumente",
+      "releasePlan": {
+        "title": "Freigabeplan",
+        "text": "Lies den Freigabeplan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
+      },
+      "blogPost": {
+        "title": "Ankündigungs-Blogpost",
+        "text": "Lies eine kurze Einführung in das Babylon-Testnetzwerk und seine Ziele."
+      }
+    },
+    "testnetGoals": {
+      "Titel": "Ziele des Testnets",
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Testnet Babylon.",
+      "goals": {
+        "atlas": {
+          "title": "Atlas 0.1 starten",
+          "text": "Dies wird die erste Version unseres Programms zum Konsumieren von Inhalten sein, das wesentlich effektiver sein soll als das aktuelle Pioneer-Medienangebot."
+        },
+        "contentDirectory": {
+          "title": "Bereitstellen eines neuen Inhaltsverzeichnisses und der entsprechenden Arbeitsgruppe",
+          "text": "Wir werden das Inhaltsverzeichnis modifizieren, um ein neues Datenmodell für Inhalte zu ermöglichen, das von neuen Schemata unterstützt wird. Außerdem werden wir einige damit verbundene Verbesserungen an der Content Curator Arbeitsgruppe vornehmen."
+        },
+        "hydraNode": {
+          "title": "Bereitstellung des ersten selbst gehosteten Joystream Hydra-Knotens, der nur das Inhaltsverzeichnis unterstützt",
+          "text": "Weitere Arbeiten an unserem Hydra-Rahmenwerk sind erforderlich, um das neue Inhaltsverzeichnis zu unterstützen."
+        }
+      }
+    },
+    "Rollen": {
+      "title": "Inzentivierende Rollen für das Babylon Network"
+    },
+    "map": {
+      "title": "Babylon",
+      "text": "<0>Babylon war vor fast 4000 Jahren die Hauptstadt von Babylonien, einem Königreich im antiken Mesopotamien.</0> Sie wurde am linken und rechten Ufer des Euphrat mit steilen Dämmen erbaut, um die saisonalen Überschwemmungen des Flusses aufzuhalten. <1/><1/> Die Stadt gilt als von großer historischer und kultureller Bedeutung. Die Hängenden Gärten von Babylon waren eines der Sieben Weltwunder der Antike, und Babylon soll auch der Standort des Turms von Babel gewesen sein.<1/><1/><2><0/> Lies den Blogbeitrag</2>"
+    }
+  }
+}
+
+
+

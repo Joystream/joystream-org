@@ -1,0 +1,55 @@
+{
+  "alexandria": {
+    "siteMetadata": {
+      "description": "Erkunde das Alexandria Testnet"
+    },
+    "hero": {
+      "title": "Alexandria Network",
+      "text": "Der Alexandria Release konzentriert sich auf wichtige technische Updates, die eine effizientere zukünftige Entwicklung ermöglichen werden.",
+      "chipText": "Was ist das?"
+    },
+    "heroCard": {
+      "title": "ERSETZT DURCH BABYLON ON"
+    },
+    "modal": {
+      "title": "Alexandria",
+      "text": "An der Pompeiussäule in Alexandria, Ägypten, befinden sich zwei Sphinxe. Die Sphinxe und die dazugehörige Säule sind eines der wichtigsten antiken Denkmäler Alexandrias. <0/><0/> Die Sphinxe von Alexandria sind nicht zu verwechseln mit der bekannten Großen Sphinx von Gizeh, die knapp 200 Kilometer südöstlich von Alexandria liegt."
+    },
+    "criticalDocuments": {
+      "title": "Wichtige Dokumente",
+      "releasePlan": {
+        "title": "Freigabeplan",
+        "text": "Lies den Release-Plan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
+      },
+      "blogPost": {
+        "title": "Ankündigungs-Blogpost",
+        "text": "Lies eine kurze Einführung in das Alexandria Testnet und seine Ziele."
+      }
+    },
+    "testnetGoals": {
+      "title": "Ziele des Testnets",
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Alexandria Testnet.",
+      "goals": {
+        "membershipModule": {
+          "title": "Aufräumen des Mitgliedschaftsmoduls",
+          "text": "Beseitigung der technischen Fehler im Mitgliedschaftsmodul und Ermöglichung des Übergangs zur Verwendung von Mitgliedschaften als einzige Identifikation der Hauptakteure im System in zukünftigen Versionen."
+        },
+        "substrateVersion": {
+          "title": "Beginn der Verwendung von Substrate v2.0.0 RC4",
+          "text": "Wir stellen auf eine neue Version von Substrate um, um mit einer breiten Palette von Verbesserungen auf dem neuesten Stand zu bleiben und um den Rückstand unserer wachsenden Codebasis zu begrenzen."
+        },
+        "networkTesting": {
+          "title": "Verbessern unserer Netzwerktests",
+          "text": "Wir entwickeln unsere Netzwerktestinfrastruktur weiter, um echten End-to-End-Builds einen Schritt näher zu kommen, die einen immer kürzeren Entwicklungszyklus sicherstellen."
+        }
+      }
+    },
+    "roles": {
+      "title": "Inzentivierte Rollen für das Alexandria Network"
+    },
+    "map": {
+      "title": "Alexandria",
+      "text": "<0>Alexandria wurde ca. 331 v. Chr. von Alexander dem Großen gegründet.</0> Die Stadt ist vor allem für den Leuchtturm von Alexandria, eines der Sieben Weltwunder der Antike, sowie für ihre kolossale Große Bibliothek bekannt.<1/><1/> Alexandria war für einen Großteil des hellenistischen Zeitalters und der Spätantike das intellektuelle und kulturelle Zentrum der antiken Mittelmeerwelt. Sie war einst die größte Stadt der antiken Welt, bevor sie schließlich von Rom überholt wurde.<1/><1/><2><0/> Lesen Sie den Blogbeitrag</2>"
+    }
+  }
+}

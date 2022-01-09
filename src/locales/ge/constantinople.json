@@ -1,0 +1,51 @@
+{
+  "Konstantinopel": {
+    "siteMetadata": {
+      "description": "Erkunden Sie das Constantinople Testnet"
+    },
+    "hero": {
+      "title": "Constantinople Network",
+      "text": "Das Constantinople Testnet führt ein verbessertes Vorschlagssystem und ein Fiat-gestütztes Token-Modell zur Entschädigung der Teilnehmer ein.",
+      "chipText": "Was ist das?"
+    },
+    "heroCard": {
+      "title": "ERSETZT DURCH ALEXANDRIA ON"
+    },
+    "modal": {
+      "title": "Konstantinopel",
+      "text": "Die Konstantinssäule, auch bekannt als der Verbrannte Stein oder die Verbrannte Säule, ist eine römische Monumentalsäule, die auf Befehl des römischen Kaisers Konstantin des Großen im Jahr 330 n. Chr. errichtet wurde. Sie erinnert an die Erklärung von Byzanz zur neuen Hauptstadt des Römischen Reiches."
+    },
+    "criticalDocuments": {
+      "title": "Wichtige Dokumente",
+      "releasePlan": {
+        "title": "Freigabeplan",
+        "text": "Lies den Freigabeplan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
+      },
+      "blogPost": {
+        "title": "Ankündigungs-Blogpost",
+        "text": "Lies eine kurze Einführung in das Constantinople-Testnet und seine Ziele."
+      }
+    },
+    "testnetGoals": {
+      "title": "Ziele des Testnets",
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Constantinople Testnets.",
+      "goals": {
+        "proposalSystem": {
+          "title": "Ein neues Vorschlagssystem einführen",
+          "text": "Das Constantinople Testnet ist um die Einführung eines Vorschlagssystems herum aufgebaut, das die Governance-Struktur der Plattform stärkt und die tägliche Verantwortung für die Überwachung des Netzwerks und die Zuweisung von Ressourcen auf die Wähler und den Rat verlagert."
+        },
+        "tokenModel": {
+          "title": "Ein Fiat-gestütztes Tokenmodell einführen",          
+          "text": "Constantinople führt eine neue Anreizstruktur ein, bei der die Testnet-Tokens durch einen Fiat-Pool (USD) gedeckt sind, wodurch ein realistischeres Wirtschaftssystem für die Plattform geschaffen wird."
+        }
+      }
+    },
+    "roles": {
+      "title": "Inzentivierte Rollen für das Constantinople Network"
+    },
+    "map": {
+      "title": "Konstantinopel",
+      "text": "<0>Konstantinopel war die Hauptstadt des Oströmischen Reiches im vierten Jahrhundert.</0> Sie war berühmt für ihre massiven und komplexen Verteidigungsanlagen sowie ihre architektonischen Meisterwerke und opulenten Adelspaläste. Wie die Stadt, so hoffen wir, dass unser Constantinople Testnet ein würdiger Nachfolger von Rom sein wird.<1/><1/><2><0/> Lies den Blogbeitrag</2>"
+    }
+  }
+}

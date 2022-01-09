@@ -1,0 +1,59 @@
+{
+  "rome": {
+    "siteMetadata": {
+      "description": "Erkunde das Rome Testnet"
+    },
+    "hero": {
+      "Titel": "Rome Network",
+      "text": "Erkunde die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdiene dabei echtes Geld.",
+      "chipText": "Was ist das?"
+    },
+    "heroCard": {
+      "title": "ERSETZT DURCH CONSTANTINOPLE ON"
+    },
+    "modal": {
+      "title": "Rome",
+      "text": "<0>Das Römische Reich hinterließ viele Wahrzeichen.</0> Seine Architektur und Ingenieurskunst war während seiner Macht beispiellos. Das Konzept der Aquädukte wurde nicht von den Römern erfunden, wohl aber ihre Schönheit und ihr Ausmaß."
+    },
+    "criticalDocuments": {
+      "title": "Wichtige Dokumente",
+      "fullSpecifications": {
+        "title": "Vollständige Spezifikationen",
+        "text": "Für Rom wurden keine Spezifikationen veröffentlicht."
+      },
+      "releasePlan": {
+        "title": "Freigabeplan",
+        "text": "Lies den Freigabeplan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
+      }
+    },
+    "testnetGoals": {
+      "title": "Ziele des Testnets",
+      "subtitle": "Die nachstehenden Ziele sind eine vereinfachte Darstellung der in unserem Release <0>OKR</0> aufgeführten Schlüsselergebnisse",
+      "goals": {
+        "contentDirectory": {
+          "title": "Aufbau eines dynamischen, flexiblen und benutzerfreundlichen Inhaltsverzeichnisses",
+          "text": "Das Rome Testnet basiert auf der Einführung eines neuen Inhaltsverzeichnisses, das ohne Laufzeitupgrades ergänzt, geändert und verbessert werden kann. Alle wichtigen Ergebnisse und Ziele sind davon abgeleitet."
+        },
+        "Inhalt": {
+          "title": "Das Inhaltsverzeichnis mit einer Vielzahl von Inhalten befüllen",
+          "text": "Rome führt ein Inhaltsverzeichnissystem ein, das sowohl auf Dauer angelegt ist, als auch kontinuierlich verbessert werden soll. Wir werden Content Creator dafür bezahlen, dass sie eine Vielzahl von Inhalten hochladen, und wir hoffen, aus den Ergebnissen viel zu lernen."
+        },
+        "contentCurator": {
+          "title": "Wir stellen die neue Rolle des Inhaltskurators vor",
+          "text": "Mit einem neuen Inhaltsverzeichnis und Anreizen zum Hochladen von Inhalten brauchen wir eine Kontrolle. Die Inhaltskuratoren benötigen einen Einsatz und werden sowohl in Testnet-Token als auch in Monero bezahlt."
+        },
+        "contentCreator": {
+          "title": "Content Creator Profile hinzufügen",
+          "text": "Ohne Content Creator wird es keine Inhalte geben. Zugegeben, das Hinzufügen einer weiteren Ebene zusätzlich zur Mitgliedschaftsanforderung mag wie eine Hürde erscheinen, aber es wird Nutzern ermöglichen, mit mehreren Profilen hochzuladen."
+        }
+      }
+    },
+    "Rollen": {
+      "title": "Inzentivierte Rollen für das Rome Network"
+    },
+    "map": {
+      "title": "Rom",
+      "text": "<0>Rom war die Hauptstadt des großen Römischen Reiches während seiner Blütezeit.</0> Wie bei früheren Testnet-Namen war das Römische Reich und Rom ein weiterer wichtiger Schritt im Aufstieg von Demokratie, Rechtsstaatlichkeit und modernen Regierungsstrukturen.<1/><1/><2><0/> Erforsche das aktuelle Testnet</2>"
+    }
+  }
+}

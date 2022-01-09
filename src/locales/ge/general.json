@@ -1,0 +1,144 @@
+{
+  "joystream": "Joystream",
+  " button": {
+    "getStarted": {
+      "text": "Fang an zu verdienen",
+      "altText": "Mach mit und verdien Geld"
+    },
+    "download": "Herunterladen",
+    "close": "Schließen",
+    "accept": "Akzeptieren",
+    "openDiscord": "Discord öffnen",
+    "learnMore": "Mehr erfahren",
+    "gettingStarted": "Loslegen"
+  },
+  "rolesData": {
+    "validator": "Validator",
+    "council": "Rat",
+    "councilMember": "Ratsmitglied",
+    "storageProvider": "Storage Provider",
+    "contentCreator": "Content Creator",
+    "contentCurator": "Content Curator",
+    "discoveryProvider": "Discovery Provider",
+    "bandwidthProvider": "Bandwidth Provider",
+    "builder": "Builder",
+    "storageLead" : "Storage Lead",
+    "contentLead" : "Content Lead"
+  },
+  "siteMetadata": {
+    "title": "Joystream: Die Videoplattform DAO"
+  },
+  "colors": {
+    "joystreamBlue": "Joystream Blau",
+    "white": "Weiß",
+    "joystreamGrey": "Joystream Grau",
+    "black": "Schwarz"
+  },
+  "CMYK": "CMYK",
+  "RGB": "RGB",
+  "HEX": "HEX",
+  "orderedNumbers": {
+    "one": "01.",
+    "two": "02."
+  },
+  "Zahlen": {
+    "one": "1",
+    "two": "2",
+    "three": "3",
+    "four": "4",
+    "five": "5",
+    "six": "6",
+    "seven": "7"
+  },
+  "roleCard": {
+    "migration": "Bei der Migration hatten {{numberOfUsers}} (max) diese Rolle",
+    "aktuell": "{{numberOfUsers}} führen diese Rolle auf Antioch aus",
+    "most": "Höchstens {{numberOfUsers}} Benutzer hatten diese Rolle",
+    "new": "NEU"
+  },
+  "heroCard": {
+    "active":  "Netzwerk angekündigt",
+    "error": "Netzwerk ausgefallen",
+    "info": "Netzwerk ersetzt",
+    "finished": "Netzwerk live"
+  },
+  "dateCounter": {
+    "week": " Woche",
+    "weeks": "Wochen",
+    "day": "Tag",
+    "days": "Tage",
+    "hour": "Stunde",
+    "hours": "Stunden",
+    "minute": "Minute",
+    "minutes": "Minuten",
+    "second": "Sekunde",
+    "seconds": "Sekunden",
+    "month": "Monat",
+    "months": "Monate",
+    "year": "Jahr",
+    "years": "Jahre",
+    "timeToLaunch": "Zeit bis zum Start",
+    "launchedOn": "Gestartet am"
+  },
+  "sidebar": {
+    "activeRoles": "Aktive Rollen",
+    "upcomingRoles": "Kommende Rollen",
+    "viewAllRoles": "Alle Rollen ansehen"
+  },
+  "navbar": {
+    "product": "Produkt",
+    "atlas": "Atlas",
+    "pioneer": "Pionier",
+    "community": "Gemeinschaft",
+    "brandStory": "Markengeschichte",
+    "brandGuides": "Markenleitfäden",
+    "downloadAssets": "Download Assets",
+    "about": "Über"
+  },
+  "footer": {
+    "title": "Bleib auf dem Laufenden",
+    "alternateTitle": "Werde benachrichtigt",
+    "subtitle": "Mach dir keine Sorgen über Spam! Bleib auf dem Laufenden über alle wichtigen Updates",
+    "inputPlaceholder": "Email-Addresse...",
+    "joinNewsletter": "Melde dich für den Newsletter an",
+    "github": {
+      "Whitepaper": "Whitepaper",
+      "repository": "Repository"
+    },
+    "usefulLinks": {
+      "title": "Nützliche Links",
+      "hiring": "Wir stellen ein!",
+      "brandGuidance": "Markenführung",
+      "tokenomics": "Tokenomics"
+    },
+    "followUs": "Folge uns"
+  },
+  "pages": {
+    "blog": "Blog",
+    "manifesto": "Manifest",
+    "roles": "Rollen",
+    "token": "Token",
+    "hydra": "Hydra",
+    "foundingMembers": "Gründungsmitglieder",
+    "Leaderboards": "Bestenlisten",
+    "scoringForm": "Wertungsformular",
+    "overview": "Übersicht"
+
+  },
+  "socials": {
+    "twitter": "Twitter",
+    "github": "GitHub",
+    "discord": "Discord"
+  },
+  "cookiesNotice": {
+    "text": "Diese Seite verwendet Cookies. Wenn du auf der Seite weitersurfst, erklärst du dich mit der Verwendung von Cookies einverstanden.",
+    "findOutMore": "Finde mehr heraus '"
+  },
+  "testnet" : {
+    "goalStates": {
+      "achieved" : "erreicht",
+      "inProgress" : "in Bearbeitung",
+      "postponed" : "aufgeschoben"
+    }
+  }
+}

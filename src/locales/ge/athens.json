@@ -1,0 +1,61 @@
+{
+  "athens": {
+    "siteMetadata": {
+      "description": "Entdecke das Athens Testnet"
+    },
+    "hero": {
+      "Titel": "Athens Network",
+      "text": " Entdecke die verfügbaren Rollen und wähle diejenige, die am besten zu dir passt. Beeinflusse die Entwicklung der Plattform und verdienen dabei echtes Geld.",
+      "chipText": "Was ist das?"
+    },
+    "heroCard": {
+      "text": "NACH DEM START AM 17 / 04 / 19 <0/> WURDE DAS NETZWERK AUF <1>ACROPOLIS</1> AUFGERÜSTET"
+    },
+    "modal": {
+      "title": "Eule der Athene",
+      "text": "<0>In der griechischen Mythologie stellt eine kleine Eule (Athene noctua)</0> traditionell Athene, die jungfräuliche Göttin der Weisheit, dar oder begleitet sie. Aufgrund dieser Assoziation wurde der Vogel - oft als "Eule der Athene" bezeichnet - in der gesamten westlichen Welt als Symbol für Wissen, Weisheit, Scharfsinn und Gelehrsamkeit verwendet."
+    },
+    "criticalDocuments": {
+      "title": "Wichtige Dokumente",
+      "fullSpecifications": {
+        "title": "Vollständige Spezifikationen",
+        "text": "Für Athens wurden keine Spezifikationen veröffentlicht."
+      },
+      "releasePlan": {
+        "title": "Freigabeplan",
+        "text": "Lies den Freigabeplan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
+      }
+    },
+    "testnetGoals": {
+      "title": "Ziele des Testnet",
+      "subtitle": "Die nachstehenden Ziele sind eine vereinfachte Darstellung der in unserem Release <0>OKR</0> aufgeführten Schlüsselergebnisse",
+      "goals": {
+        "media": {
+          "title": "Medien auf der Plattform aktivieren",
+          "text": "Als \"nutzergesteuerte Medienplattform\" war es ein wichtiges Ziel für uns, den Nutzern das Hochladen und Konsumieren von Inhalten zu ermöglichen."
+        },
+        "Mitgliedschaften": {
+          "title": "Plattform-Mitgliedschaften einführen",
+          "text": "Obwohl wir eine offene Blockchain in dem Sinne aufbauen, dass es den Nutzern freisteht, Token nach Belieben zu versenden, geht es bei Joystream darum, dass die Plattformnutzer die Plattform besitzen, betreiben und steuern. Wir wissen nicht genau, welche Teile der Plattform für Mitglieder reserviert sein werden, aber einige Aktionen werden ein zusätzliches Maß an Kontrolle und Verantwortlichkeit erfordern."
+        },
+        "storageNode": {
+          "title": "Bau und Freigabe des Speicherknotens",
+          "text": "Obwohl ein Speicherknoten gebaut und verwendet wurde, um den Inhalt der Plattform zu hosten und zu verteilen, wies er einige Fehler auf, die dazu führten, dass er nicht zwischen Clients synchronisiert werden konnte und eine hartkodierte Verbindung erforderte."
+        },
+        "runtimeUpgrade": {
+          "title": "Upgrade der Laufzeit durch eine Ratsabstimmung",
+          "text": "Die Absicht war, dass Jsgenesis einen Vorschlag für ein <0>Runtime-Upgrade</0> erstellt und den Rat darüber abstimmen lässt. Wenn der Rat das Quorum erreicht, würden die Konsensregeln des Systems automatisch im Flug aktualisiert werden. Leider stürzte das <1>Sparta-Netzwerk</1> ab, bevor wir dieses Stadium erreichten, und wir mussten Athen als neue Kette mit einem neuen Genesis-Block starten."
+        }
+      }
+    },
+    "roles": {
+      "title": "Im Athens Testnet verfügbare Rollen"
+    },
+    "map": {
+      "title": "Die Stadt Athen",
+      "text": "<0>Athen ist die Hauptstadt Griechenlands.</0> Es war auch das Herz des antiken Griechenlands, einer mächtigen Zivilisation und eines Reiches. Die Stadt wird immer noch von Wahrzeichen aus dem 5. Jahrhundert v. Chr. dominiert, darunter die Akropolis, eine auf einem Hügel gelegene Zitadelle mit antiken Gebäuden wie dem Parthenon-Tempel.  <1/><1/> Wir haben den Namen Athen gewählt, weil das antike Athen, wie auch unsere vorherigen Testnetzwerke Mesopotamien und Sparta, eine historische Bedeutung für die Entwicklung hin zu moderner Demokratie und Rechtsstaatlichkeit hat. <1/><1/> <2> <0/> Erforsche das vorherige Testnetzwerk</2>"
+    }
+  }
+}
+
+

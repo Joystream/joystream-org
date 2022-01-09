@@ -1,0 +1,47 @@
+{
+  "sumer": {
+    "siteMetadata": {
+      "description": "Erforsche das Sumer Testnet"
+    },
+    "hero": {
+      "title": "Sumer Network",
+      "text": "Neben anderen Änderungen bietet die Version des Sumer Testnets wichtige Verbesserungen beim Hochladen von Inhalten über unsere Wiedergabe-App."
+    },
+    "criticalDocuments": {
+      "title": "Wichtige Dokumente",
+      "releasePlan": {
+        "title": "Freigabeplan",
+        "text": "Lies den Freigabeplan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
+      },
+      "blogPost": {
+        "title": "Ankündigungs-Blogpost",
+        "text": "Lies eine kurze Einführung in das Sumer Testnet und seine Ziele."      }
+    },
+    "testnetGoals": {
+      "title": "Ziele des Testnets",
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Sumer Testnet.",
+      "goals": {
+        "contentPublishing": {
+          "title": "Veröffentlichung von Inhalten über die Wiedergabeschnittstelle aktivieren",
+          "text": "Sumer führt die Möglichkeit ein, Kanäle und Videos im Joystream Player zu erstellen und zu verwalten und ersetzt damit den umständlichen und technisch anspruchsvollen CLI-abhängigen Prozess, der im Antioch Testnet erforderlich war."
+        },
+        "deployingNewContentDirectory": {
+          "title": "Bereitstellen des neuen Inhaltsverzeichnisses",
+          "text": "Als Teil von Sumer werden wir ein einfaches natives Laufzeitmodul einführen. Der Grund dafür ist, dass die technische Komplexität und die Kompromisse, die mit den vorherigen Iterationen des Inhaltsverzeichnisses verbunden waren, nicht akzeptabel waren."
+        },
+        "enableBuilderRole": {
+          "title": "Builder/Platform Operations-Rolle aktivieren",
+          "text": "Wir führen eine neue Arbeitsgruppe ein, die sich auf den Betrieb von Plattformen konzentriert. Ursprünglich hatten wir auch geplant, die neue Rolle "Gateway" zu aktivieren, obwohl dies nicht mehr zum Umfang des Sumer-Releases gehört."
+        }
+      }
+    },
+    "roles": {
+      "title": "Inzentivierte Rollen für das Sumer-Netzwerk"
+    },
+    "map": {
+      "title": "Sumer",
+      "text": "<0>Sumer ist die früheste bekannte Zivilisation in der historischen Region Südmesopotamien</0>, die während der Jungsteinzeit und der frühen Bronzezeit zwischen dem sechsten und fünften Jahrtausend v. Chr. entstand.<1/><1/>Die sumerischen Bauern lebten entlang der Täler von Tigris und Euphrat und bauten Getreide und andere Feldfrüchte im Überfluss an, was ihnen ermöglichte, städtische Siedlungen zu bilden. Man nimmt an, dass in dieser Region die frühesten Formen der Schrift entstanden sind.<1/><1/><2><0/> Lies den Blogbeitrag</2>"
+    }
+  }
+}
+

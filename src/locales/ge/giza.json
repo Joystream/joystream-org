@@ -1,0 +1,46 @@
+{
+  "Gizeh": {
+    "siteMetadata": {
+      "description": "Erforsche das Giza Testnet"
+    },
+    "hero": {
+      "Titel": "Giza Network",
+      "text": "Neben anderen geplanten Verbesserungen führt die Giza-Version die erste Iteration des Speicher- und Verteilungssystems ein, das wir im Hauptnetz verwenden werden."    },
+    "criticalDocuments": {
+      "title": "Wichtige Dokumente",
+      "releasePlan": {
+        "title": "Freigabeplan",
+        "text": "Lies den Freigabeplan, wie er in der Planungsphase erstellt wurde und erfahre mehr über den Verlauf der Entwicklung."
+      },
+      "blogPost": {
+        "title": "Ankündigungs-Blogpost",
+        "text": "Lies eine kurze Einführung in das Giza-Testnet und seine Ziele."
+      }
+    },
+    "testnetGoals": {
+      "title": "Ziele des Testnets",
+      "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Giza-Testnet.",
+      "goals": {
+        "launchStorageAndDistribution": {
+          "title": "Start von V2 des Speicher- und Verteilungssystems",
+          "text": "Dies beinhaltet die Einführung getrennter Rollen für die Datenspeicherung und -verteilung sowie ein Speichersystem mit Redundanz und nur teilweiser Replikation der Medien auf den Knoten, neben anderen Änderungen, die in der Spezifikation beschrieben sind."
+        },
+        "contentDirectoryEnhancements": {
+          "title": "Erweiterungen des Inhaltsverzeichnisses",
+          "text": "In dieser Version konzentrieren sich die Verbesserungen am Inhaltsverzeichnissystem auf die Erleichterung einiger geplanter Gemeinschaftsinitiativen, die Bereinigung technischer Fehler und die Integration mit dem neuen Speichersystem."
+        },
+        "newOperationsWorkingGroups": {
+          "title": "Neue operative Arbeitsgruppen",
+          "text": "Die operative Arbeitsgruppe, die im Sumer-Testnet aktiviert wurde, hat hervorragende Ergebnisse erzielt. Um die Arbeit an verschiedenen orthogonalen Bereichen zu erleichtern oder auch nur die Bemühungen innerhalb derselben Vertikale zu verstärken, werden wir nun zwei weitere allgemeine Arbeitsgruppen für Giza einrichten."
+        }
+      }
+    },
+    "Rollen": {
+      "title": "Inzentivierte Rollen für das Giza Network"
+    },
+    "map": {
+      "title": "Gizeh",
+      "text": "<0>Das Gebiet des heutigen Gizeh diente im 2. Jahrtausend v. Chr. als Nekropole mehrerer Pharaonen, die das alte Ägypten regierten.</0> Drei antike Gräber, die in Form von riesigen Pyramiden errichtet wurden, bilden den beeindruckenden und weltweit berühmten Pyramidenkomplex von Gizeh.<1/><1/>Diese Pyramiden sind in der westlichen Vorstellung seit Hunderten von Jahren ein Symbol für das alte Ägypten. Sie wurden erstmals im antiken Griechenland "populär" gemacht, als die Große Pyramide von Antipater von Sidon als eines der Sieben Weltwunder aufgeführt wurde.<1/><1/><2><0/> Lies den Blogbeitrag</2>"
+    }
+  }
+}
