@@ -10,20 +10,20 @@
     "accept": "Akzeptieren",
     "openDiscord": "Discord öffnen",
     "learnMore": "Mehr erfahren",
-    "gettingStarted": "Getting Started"
+    "gettingStarted": "Loslegen"
   },
   "rolesData": {
     "validator": "Validator",
     "council": "Rat",
     "councilMember": "Ratsmitglied",
-    "storageProvider": "Speicheranbieter",
-    "contentCreator": "Ersteller von Inhalten",
-    "contentCurator": " Inhaltskurator",
-    "discoveryProvider": "discoveryProvider",
-    "bandwidthProvider": "Bandbreitenanbieter",
-    "builder": "Ersteller",
-    "storageLead" : "Speicherplatzleiter",
-    "contentLead" : "Inhaltsleiter"
+    "storageProvider": "Storage Provider",
+    "contentCreator": "Content Creator",
+    "contentCurator": "Content Curator",
+    "discoveryProvider": "Discovery Provider",
+    "bandwidthProvider": "Bandwidth Provider",
+    "builder": "Builder",
+    "storageLead" : "Storage Lead",
+    "contentLead" : "Content Lead"
   },
   "siteMetadata": {
     "title": "Joystream: Die Videoplattform DAO"
@@ -64,7 +64,7 @@
   },
   "dateCounter": {
     "week": " Woche",
-    "weeks": "wochen",
+    "weeks": "Wochen",
     "day": "Tag",
     "days": "Tage",
     "hour": "Stunde",
@@ -98,9 +98,9 @@
   "footer": {
     "title": "Bleib auf dem Laufenden",
     "alternateTitle": "Werde benachrichtigt",
-    "subtitle": "Mach dir keine Sorgen über Spam! Bleiben Sie auf dem Laufenden über alle wichtigen Updates",
-    "inputPlaceholder": "Email Address...",
-    "joinNewsletter": "Melden Sie sich für den Newsletter an",
+    "subtitle": "Mach dir keine Sorgen über Spam! Bleib auf dem Laufenden über alle wichtigen Updates",
+    "inputPlaceholder": "Email-Addresse...",
+    "joinNewsletter": "Melde dich für den Newsletter an",
     "github": {
       "Whitepaper": "Whitepaper",
       "repository": "Repository"
@@ -131,7 +131,7 @@
     "discord": "Discord"
   },
   "cookiesNotice": {
-    "text": "Diese Seite verwendet Cookies. Wenn Sie auf der Seite weitersurfen, erklären Sie sich mit der Verwendung von Cookies einverstanden.",
+    "text": "Diese Seite verwendet Cookies. Wenn du auf der Seite weitersurfst, erklärst du dich mit der Verwendung von Cookies einverstanden.",
     "findOutMore": "Finde mehr heraus '"
   },
   "testnet" : {
