@@ -6,15 +6,15 @@
     "assets": {
       "Logo": "Logo",
       "logoIcons": "Logo-Symbole",
-      "descriptiveIcons": "Beschreibende Icons",
+      "descriptiveIcons": "Beschreibende Symbole",
       "Illustrations": "Illustrationen",
       "systemIcons": "System-Symbole",
       "typography": "Typografie",
-      "blogPostCovers": "Blog Post Cover",
+      "blogPostCovers": "Blogpost Cover",
       "displayTitle": {
         "logoPack": "Logo Pack"
       },
-      "files": "files"
+      "files": "Files"
     },
     "guides": {
       "general": {
@@ -30,7 +30,7 @@
         "supportivePallete": "Unterstützungspalette",
         "SekundärPalette": "Sekundäre Palette",
         "Ikonographie": "Ikonographie",
-        "descriptiveIcons": "Beschreibende Icons",
+        "descriptiveIcons": "Beschreibende Symbole",
         "systemIcons": "System-Symbole",
         "illustrations": "Illustrationen",
         "patterns": " Muster",
@@ -68,7 +68,7 @@
       },
       "logoSocialIcons": {
         "title": "04. Soziale Symbole",
-        "icon": "In Fällen, in denen die Marke Joystream bereits etabliert ist, können wir das Icon einfach für sich allein verwenden. Während das Icon ohne die Wortmarke existieren kann, sollte die Wortmarke niemals ohne das Icon existieren."
+        "icon": "In Fällen, in denen die Marke Joystream bereits etabliert ist, können wir das Symbol einfach für sich allein verwenden. Während das Symbol ohne die Wortmarke existieren kann, sollte die Wortmarke niemals ohne das Symbol existieren."
       },
       "logoForbiddenUses": {
         "title": "05. Verbotene Verwendungen des Logos",
@@ -92,27 +92,27 @@
         "states": "Dies sind weitere Farben, die bestimmte Zustände des Netzwerks darstellen können, sie können für einen Fehler, Erfolg, eine Warnung und mehr stehen."
       },
       "iconsOverview": {
-        "text": "Icons lassen sich in zwei Gruppen mit unterschiedlichen Zwecken einteilen. Beschreibende Icons sind ein Ersatz für Illustrationen und Systemicons sind ein rein funktionaler Teil der Schnittstelle.",
+        "text": "Symbole lassen sich in zwei Gruppen mit unterschiedlichen Zwecken einteilen. Beschreibende Symbole sind ein Ersatz für Illustrationen und System-Symbole sind ein rein funktionaler Teil der Schnittstelle.",
         "typeDescriptive": "01. Beschreibend",
         "typeSystem": "02. System"
       },
       "descriptiveIcons": {
-        "title": "01. Beschreibende Icons",
+        "title": "01. Beschreibende Symbole",
         "comprehensiveStyle": "Die Joystream-Ikonographie ist ein benutzerdefinierter, umfassender Ikonenstil, der dabei hilft, bestimmte komplexe Themen auf einfache, verständliche Weise zu erklären.",
         "symbolic": "Sie sind nicht immer sehr direkt und haben oft eine symbolische Bedeutung, aber sie helfen, wichtige Elemente zu betonen.",
         "characteristicFeatures": "Zu den charakteristischen Merkmalen der Beschreibungssymbole gehören paralell gestreifte Füllungen. Sie sind eine Übersetzung der Logo-Streifen und stellen Schatten dar.",
         "angle": "Linien haben einen Winkel von 45°, sie sollten einen Umfang von 2px und einen Abstand von 8px zwischen ihnen bei einer Skalierung von 100% haben.",
-        "outlines": "Icons werden mit Umrissen von 12px Breite bei 100% Maßstab gezeichnet, sie haben quadratische Linecaps und können je nach Komposition verschiedene Größen haben.",
-        "fit": "Icons im Maßstab 100% sollten in eine Box von 800x500px passen."
+        "outlines": "Symbole werden mit Umrissen von 12px Breite bei 100% Maßstab gezeichnet, sie haben quadratische Linecaps und können je nach Komposition verschiedene Größen haben.",
+        "fit": "Symbole im Maßstab 100% sollten in eine Box von 800x500px passen."
       },
       "systemIcons": {
         "title": "02. System-Symbole",
-        "basicStyle": " Systemsymbole in ihrem Grundstil kombinieren zwei Farben: Schwarz und Joystream Blue. Ihr Zweck ist es, bestimmte Aktionen auf der Website oder Plattform darzustellen. Sie sind auch in kleinen Größen bis zu 18x18px lesbar.",
-        "strokes": "System Icons werden mit 2px Strichen mit quadratischen Linecaps auf einem 24px Rasterrahmen gezeichnet.",
-        "subtleAccents": "Wenn möglich, sollten Icons subtile blaue Akzente haben, die nicht mehr als 40% der Gesamtfläche ausmachen.",
-        "types": "Typen von Systemsymbolen",
+        "basicStyle": " System-Symbole in ihrem Grundstil kombinieren zwei Farben: Schwarz und Joystream Blue. Ihr Zweck ist es, bestimmte Aktionen auf der Website oder Plattform darzustellen. Sie sind auch in kleinen Größen bis zu 18x18px lesbar.",
+        "strokes": "System-Symbole werden mit 2px Strichen mit quadratischen Linecaps auf einem 24px Rasterrahmen gezeichnet.",
+        "subtleAccents": "Wenn möglich, sollten Symbole subtile blaue Akzente haben, die nicht mehr als 40% der Gesamtfläche ausmachen.",
+        "types": "Typen von System-Symbolen",
         "fourTypes": {
-          "text": "Wir unterscheiden vier Arten von Systemsymbolen, die vorzugsweise in ihrer Grundform verwendet werden sollten, aber bei Bedarf auch untereinander ausgetauscht werden können.",
+          "text": "Wir unterscheiden vier Arten von System-Symbolen, die vorzugsweise in ihrer Grundform verwendet werden sollten, aber bei Bedarf auch untereinander ausgetauscht werden können.",
           "basic": "Grundstil",
           "blau": "Blaue Umrisse",
           "weiß": "Weiße Umrisse",
@@ -120,7 +120,7 @@
         }
       },
       "Abbildungen": {
-        "overview": "Joystream-Illustrationen sind symbolische Darstellungen von wichtigen Konzepten innerhalb des Joystream-Projekts. Dazu kann ein neues Testnetz, eine bestimmte Rolle im Netz oder ein anderes ebenso wichtiges Thema gehören.",
+        "overview": "Joystream-Illustrationen sind symbolische Darstellungen von wichtigen Konzepten innerhalb des Joystream-Projekts. Dazu kann ein neues Testnet, eine bestimmte Rolle im Netz oder ein anderes ebenso wichtiges Thema gehören.",
         "komplex": "Sie können visuell ziemlich komplex sein, obwohl sie nur drei Farben und keine Farbverläufe verwenden.",
         "patterns": "Illustrationen werden oft mit Mustern kombiniert, und wenn sie auf einem blauen Hintergrund platziert werden, kann der Umriss der Illustration in Joystream Blue geändert werden, um eine gute Farbbalance zwischen Mustern und Hintergrund zu schaffen.",
         "distinctive": "Illustrationen sollten einfach genug sein, um auch bei kleineren Auflösungen bis 300x300px unverwechselbar zu sein.",
@@ -158,7 +158,7 @@
     },
     "story": {
       "header": {
-        "title": "Joystream Brand Story",
+        "title": "Joystream Markengeschichte",
         "description": "Joystream bietet eine moderne, experimentelle Lösung für das Problem der verantwortlichen Steuerung in digitalen Medien. <0>Unser Ziel ist es, eine nutzergesteuerte Videoplattform mit einem starken Sinn für Gemeinschaft und Freiheit aufzubauen.</0>",
         "buttonText": "Manifesto"
       },
@@ -186,7 +186,7 @@
         "title": "Erklärung der Marke",
         "balance": "Bei unserem neuen Branding geht es darum, eine gute Balance zwischen einem sehr einfachen Kommunikationston und der Symbolik und Komplexität der Probleme und Technologien der modernen Welt zu finden.",
         "patterns": "Unser Branding verwendet mosaikartige, geometrische Muster und Formen in Kombination mit eindeutigen Farben und symbolischen Illustrationen.",
-        " style": "Wir verwenden auch beschreibende Icons in Kombination mit einfachen System-Icons im Glyphenstil und einem experimentellen Illustrationsstil."
+        " style": "Wir verwenden auch beschreibende Symbole in Kombination mit einfachen System-Symbole im Glyphenstil und einem experimentellen Illustrationsstil."
       }
     },
     "button": {
