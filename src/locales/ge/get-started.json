@@ -2,20 +2,20 @@
   "getStarted": {
     "siteMetadata": {
       "title": "Erste Schritte",
-      "description": "Erfahren Sie, wie Sie zum Joystream-Projekt beitragen und daran teilnehmen können"
+      "description": "Erfahre, wie du zum Joystream-Projekt beitragen und daran teilnehmen kannst"
     },
     "Held": {
       "title": "Wie man beiträgt und mitmacht",
-      "subtitle": "Lesen Sie mehr über die aktuellen Möglichkeiten, wie Sie einen Beitrag zum Projekt leisten und dafür Belohnungen erhalten können.",
+      "subtitle": "Lies mehr über die aktuellen Möglichkeiten, wie du einen Beitrag zum Projekt leisten und dafür Belohnungen erhalten kannst.",
       "buttonText": "Möglichkeiten anzeigen",
       "imageAlt": "Erste Schritte zum Helden"
     },
     "howToStart": {
       "title": "Wie man anfängt",
       "discord": "Unserem Discord beitreten",
-      "tokens": "Erhalten Sie kostenlose Testnetzwerk-Tokens",
+      "tokens": "Erhalte kostenlose Testnet-Tokens",
       "Mitgliedschaft": "Mitgliedschaft on-chain erstellen",
-      "opportunities": "Wählen Sie eine der unten aufgeführten Möglichkeiten"
+      "opportunities": "Wähle eine der unten aufgeführten Möglichkeiten"
     },
     "opportunities": {
       "title": "Chancen",
@@ -30,7 +30,7 @@
         "design": "Design",
         " marketing": "Marketing",
         " research": "Forschung",
-        "contentCreation": "Inhalt kreieren
+        "contentCreation": "Inhalt kreieren",
         " newcomers": "Beginner",
         " content": "Inhalt",
         " documentation": "Dokumentation",
@@ -38,19 +38,19 @@
       },
       " roles": {
         "title": "Rollen",
-        "text": "Unser aktuelles Testnetzwerk ermöglicht es Ihnen auch, an einigen der Plattformrollen teilzunehmen, die im Mainnet verfügbar sein werden.<0/><0/>Die Teilnahme an diesen Rollen wird in tJOY (unserem Testnetzwerk-Token) belohnt, der durch Fiat-Reserven bei Jsgenesis gedeckt ist und gegen Bitcoin-Cash eingelöst werden kann."
+        "text": "Unser aktuelles Testnet ermöglicht es auch, an einigen der Plattformrollen teilzunehmen, die im Mainnet verfügbar sein werden.<0/><0/>Die Teilnahme an diesen Rollen wird in tJOY (unserem Testnet-Token) belohnt, der durch Fiat-Reserven bei Jsgenesis gedeckt ist und gegen Bitcoin-Cash eingelöst werden kann."
         "imageAlt": "masks"
       }
     },
     "activeRoles": {
-      "title": "Aktive Rollen im aktuellen Testnetzwerk",
+      "title": "Aktive Rollen im aktuellen Testnet",
       "validatorText": "Ein Validator ist ein Nutzer, der die Gültigkeit von neu erstellten Blöcken prüft, neue Blöcke vorschlägt und am Konsensprozess für die Übergabe neuer Blöcke an die Kette teilnimmt. Validatoren werden in der Regel für jeden erzeugten Block mit einem festen Betrag bezahlt. Diese Rolle hat einen sehr ähnlichen Zweck wie die der Miner in der Bitcoin-Blockchain.",
       "councilMemberText": "Ratsmitglieder werden von den Beteiligten des Systems gewählt, um im langfristigen Interesse der Plattform zu handeln. Sie sind verantwortlich für die Zuteilung von Ressourcen und die Einstellung von Arbeitsgruppenleitern, die das Tagesgeschäft der Plattform leiten. Dies geschieht über das Vorschlagssystem, das es jedem Nutzer ermöglicht, Vorschläge für Änderungen an der Plattform einzureichen.",
-      "storageProviderText": "Es gibt kritische Plattform-Assets, die nicht auf der Blockchain gespeichert sind, wie z. B. Medieninhalte. Die Integrität dieser Vermögenswerte wird durch die Blockchain gesichert. Ein separater Satz von Speicher- und Verteilerknoten ermöglicht das Hoch- und Herunterladen solcher Daten. Der Speicherplatzanbieter ist an dieser Aktivität beteiligt, indem er insbesondere große Datenmengen speichert.",
-      "storageLeadText": "Der Speicherplatzverantwortliche wird direkt vom Rat über das Vorschlagssystem eingestellt und ist für die Einstellung, Entlassung und das weitere Management der Speicherplatzanbieter im Netzwerk zuständig.",
-      "contentCuratorText": "Inhaltskuratoren sind dafür verantwortlich, die Veröffentlichung neuer Inhalte im Inhaltsverzeichnis zu überwachen und auf Berichte über beanstandete Veröffentlichungen zu reagieren. Sie müssen auch die Informationen zu den Inhalten aktualisieren, um sicherzustellen, dass diese korrekt sind und die richtigen Metadaten enthalten. Die Zusammenarbeit mit den Erstellern zur Verbesserung der Tools und der Benutzerfreundlichkeit ist ein weiterer wichtiger Teil der Aufgabe.",
-      "contentCreatorText": "Content Creators sind diejenigen Plattformteilnehmer, die sich entschieden haben, ihre eigenen Originalinhalte (oder von Dritten lizenzierte Inhalte) zur Plattform beizusteuern. Zurzeit gibt es keine direkten Anreize für diese informelle Rolle, obwohl effektive Beitragende sehr wahrscheinlich durch das Founding Member Program belohnt werden.",     
- "contentLeadText": "Der Rat hat die Befugnis, einen Leiter der Inhaltskuratierung für das Netzwerk zu ernennen, der weitere Inhaltskuratoren einstellen kann. Der Leiter entscheidet auch über die Prioritäten der Kuratierung. Falls erforderlich, kann der Leiter nach Rücksprache mit dem Rat auch entscheiden, Kuratoren zu entlassen, die ihre Aufgaben nicht angemessen erfüllen."
+      "storageProviderText": "Es gibt kritische Plattform-Assets, die nicht auf der Blockchain gespeichert sind, wie z. B. Medieninhalte. Die Integrität dieser Vermögenswerte wird durch die Blockchain gesichert. Ein separater Satz von Speicher- und Verteilerknoten ermöglicht das Hoch- und Herunterladen solcher Daten. Der Storage Provider ist an dieser Aktivität beteiligt, indem er insbesondere große Datenmengen speichert.",
+      "storageLeadText": "Der Storage Lead wird direkt vom Rat über das Vorschlagssystem eingestellt und ist für die Einstellung, Entlassung und das weitere Management der Storage Provider im Netzwerk zuständig.",
+      "contentCuratorText": "Content Curators sind dafür verantwortlich, die Veröffentlichung neuer Inhalte im Inhaltsverzeichnis zu überwachen und auf Berichte über beanstandete Veröffentlichungen zu reagieren. Sie müssen auch die Informationen zu den Inhalten aktualisieren, um sicherzustellen, dass diese korrekt sind und die richtigen Metadaten enthalten. Die Zusammenarbeit mit den Buildern zur Verbesserung der Tools und der Benutzerfreundlichkeit ist ein weiterer wichtiger Teil der Aufgabe.",
+      "contentCreatorText": "Content Creators sind diejenigen Plattformteilnehmer, die sich entschieden haben, ihre eigenen Originalinhalte (oder von Dritten lizenzierte Inhalte) zur Plattform beizusteuern. Zurzeit gibt es keine direkten Anreize für diese informelle Rolle, obwohl effektive Beitragende sehr wahrscheinlich durch das Gründungsmitgliederprogramm belohnt werden.",     
+ "contentLeadText": "Der Rat hat die Befugnis, einen Leiter der Inhaltskuratierung für das Netzwerk zu ernennen, der weitere Inhaltskuratoren einstellen kann. Der Content Lead entscheidet auch über die Prioritäten der Kuratierung. Falls erforderlich, kann er nach Rücksprache mit dem Rat auch entscheiden, Curators zu entlassen, die ihre Aufgaben nicht angemessen erfüllen."
     },
     "roleCard": {
       "overview": "Übersicht",
