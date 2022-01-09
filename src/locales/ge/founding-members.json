@@ -27,14 +27,14 @@
       "days": "Tage",
       "hours": "Stunden",
       "minutes": "Minuten",
-      "submitSummary": "ZusammenfassungEinreichen",
+      "submitSummary": "Zusammenfassung einreichen",
       "periodAnnouncement": "Ankündigungszeitraum",
       "announcement": "Ankündigung"
     },
     "landing": {
       "siteMetadata": {
         "title": "Gründungsmitglieder",
-        "description": "Informationen und Daten zum neuen Founding Members Programm der Joystream Plattform."
+        "description": "Informationen und Daten zum neuen Gründungsmitgliederprogramm der Joystream Plattform."
       },
       "hero": {
         "title": "Joystream Gründungsmitgliederprogramm",
@@ -44,10 +44,10 @@
       "list": {
         "currentMembers": "Aktuelle Gründungsmitglieder",
         "neueMitglieder": "Neue Gründungsmitglieder",
-        "iconAlt": "Icon des Gründungsmitglieds"
+        "iconAlt": "Symbol des Gründungsmitglieds"
       },
       "benefits": {
-        "title": "Was ist das Gründungs <0/> mitgliederProgram <0/> und warum gibt es es?",
+        "title": "Was ist das Gründungs <0/> mitgliederprogramm <0/> und warum gibt es das?",
         "currentlyBuilding": "Während Jsgenesis das Team ist, das derzeit die Technologie hinter dem Joystream-Projekt aufbaut, werden wir nicht ewig da sein, und wir vertrauen stattdessen den zukünftigen Betrieb der Joystream DAO unseren Community-Mitgliedern an.",
         "foundingMembers": "Das Gründungsmitgliederprogramm vergibt offiziell JOY-Token an einige unserer hochwertigsten Community-Mitglieder in Anerkennung ihrer Beiträge zum Projekt und stellt sicher, dass eine ausreichend große, effektive und motivierte Gemeinschaft von Nutzern bereit ist, alle verschiedenen Rollen zu besetzen, die für den Betrieb, die Weiterentwicklung und das Wachstum der Plattform im Mainnet erforderlich sind.",
         "benefits": "Vorteile",
@@ -74,7 +74,7 @@
         },
         "contribute": {
           "text": "Beiträge zum Projekt leisten",
-          "contributions": "<0><0>Schulung anderer Teilnehmer</0><0>Schreiben von Blogbeiträgen und Dokumentationen</0><0>Erstellen und Veröffentlichen neuer Videoinhalte</0><0>Beteiligung an Plattformrollen im Testnetz</0><0>Finden und Melden von Bugs und Fehlern</0><0>Ausfüllen von offiziellen Kopfgeldern</0><0>Kreativ und Designarbeit</0></0>"
+          "contributions": "<0><0>Schulung anderer Teilnehmer</0><0>Schreiben von Blogbeiträgen und Dokumentationen</0><0>Erstellen und Veröffentlichen neuer Videoinhalte</0><0>Beteiligung an Plattformrollen im Testnet</0><0>Finden und Melden von Bugs und Fehlern</0><0>Ausfüllen von offiziellen Kopfgeldern</0><0>Kreativ und Designarbeit</0></0>"
         },
         "report": "Berichte regelmäßig über deine Aktivitäten.",
         "earnPoints": "Verdiene Ranglistenpunkte.",
@@ -92,7 +92,7 @@
         "Leaderboards": "Bestenlisten",
         "foundingMembersButton": "Alle Gründungsmitgliederergebnisse",
         "regularMembersButton": "Alle Ergebnisse der regulären Mitglieder",
-        "fullProgramRules": "Lesen Sie die vollständigen Programmregeln"
+        "fullProgramRules": "Lies die vollständigen Programmregeln"
       },
       "cta": {
         "title": "Besprich das Programm",
@@ -133,7 +133,7 @@
         "howToExport": {
           "link": "Wie exportiere ich meinen Schlüssel?",
           "title": "Wie exportiere ich mein Konto mit Schlüssel:",
-          "text": "Klicken Sie in der <0>Pioneer-Anwendung</0> auf die Registerkarte <1>Meine Schlüssel</1> und klicken Sie dann auf die Ellipsen (drei Punkte) auf dem Schlüssel, den Sie verwenden möchten. Klicken Sie dann auf <1>Sicherungsdatei für dieses Konto erstellen</1>. Geben Sie Ihr Passwort ein (falls zutreffend) und das JSON wird heruntergeladen."
+          "text": "Klicke in der <0>Pioneer-Anwendung</0> auf die Registerkarte <1>Meine Schlüssel</1> und klicke dann auf die Ellipsen (drei Punkte) auf dem Schlüssel, den du verwenden möchtest. Klicke dann auf <1>Sicherungsdatei für dieses Konto erstellen</1>. Gib dein Passwort ein (falls zutreffend) und das JSON wird heruntergeladen."
         },
         "fileFormat": "Akzeptiertes Dateiformat: .json"
       },
@@ -151,8 +151,8 @@
         "pleaseEnterPassword": "Bitte gib dein Passwort ein!"
      },
       "termsAndConditions": {
-        "title": "Lesen und akzeptieren Sie die Bedingungen und Konditionen",
-        "text": "<0>Bedingungen</0><1>Das Joystream-Gründungsmitgliederprogramm wurde im Februar 2021 formell gestartet. Das Programm wird etwa einen Monat vor dem Start des Mainnets aufhören, neue Einreichungen (Aktivitätszusammenfassungen) zu akzeptieren und weitere Ranglistenpunkte zu vergeben. </1><2><0>Unser derzeitiges Ziel für den Start des Mainnets ist das vierte Quartal 2021, dies kann sich jedoch noch ändern.</0></2><0>Berechtigung</0><1>Das Programm steht allen Personen über 18 Jahren offen, die nicht aus den USA stammen. </1><1>Um formell in das Programm aufgenommen zu werden, werden Sie von einem Jsgenesis-Vertreter kontaktiert und geprüft, sobald Ihre Beiträge zur Gemeinschaft unsere intern festgelegte Schwelle für die Aufnahme erreicht haben.</1><2>Die formelle Aufnahme neuer Gründungsmitglieder in das Programm erfolgt am Ende der Bewertungsperioden (deren Termine auf unserer Website veröffentlicht werden). Jeder Bewertungszeitraum dauert derzeit zwei Wochen.</2><0>Kommunikation</0><1>Wir werden weitere öffentliche Updates über das Programm über unsere regulären Kommunikationskanäle veröffentlichen, einschließlich unseres offiziellen Discord-Kanals, des Joystream-Newsletters, des offiziellen GitHub-Repos für das Programm (github.com/joystream/founding-members) sowie auf unserer Website (www.joystream. org) und im Blog (blog.joystream.org).</1><2>Alle privaten oder sensiblen Informationen über Ihre Teilnahme am Programm werden über Keybase oder eine andere vorher vereinbarte Kontaktmethode mitgeteilt.</2><0>Token-Zuteilungsformel</0><1>Wenn Sie offiziell den Status eines Gründungsmitglieds erhalten haben, werden Ihnen automatisch 0,02% des Genesis-Token-Vorrats im Mainnet zugeteilt. Der Rest Ihrer Token-Zuteilung wird auf der Grundlage Ihres Anteils an den Ranglistenpunkten aller Gründungsmitglieder berechnet.</1><2>Da das aktuelle Programm einen Token-Pool von 15 % vorsieht, setzen sich diese 15 % aus den Ansprüchen der standardmäßigen 0. Die verbleibende Zuteilung, die nicht bereits nach dieser Regel beansprucht wurde, wird proportional auf der Grundlage des relativen Anteils an den gesamten Leaderboard-Punkten für jedes Gründungsmitglied verteilt.</2><0>Belohnungspolitik</0><1>Punkte haben keinen inneren Wert, und wenn sie Nutzern mit dem Status eines Gründungsmitglieds zugewiesen werden, stellen sie nur einen Teilanspruch auf eine noch nicht festgelegte Menge an JOY-Tokens im Mainnet dar. Im Falle bösgläubiger Aktivitäten (siehe unten) können die Punkte für die Rangliste/Gründungsmitglieder jederzeit entwertet werden.</1><2>Teilnehmer sollten sich auch darüber im Klaren sein, dass die für das Mainnet zugewiesenen Token eine Sperrfrist enthalten können, die ihre Verwendung für einen bestimmten Zeitraum einschränkt. </2><0>Ausschlusspolitik</0><2>Jedes Mitglied der Plattform, das an betrügerischen oder böswilligen Aktivitäten teilnimmt, kann von den Bestenlisten und dem Gründungsmitgliederprogramm ausgeschlossen werden, wobei alle damit verbundenen Token-Ansprüche ungültig werden.</2><0>Konto- und Schlüsselsicherheit</0><1>Ihre Bestenlisten-/Gründungsmitglieder-Punkte gehören allein Ihnen und sind nicht übertragbar. Sie müssen Ihr Konto und alle privaten Schlüssel, die mit Ihrer Mitgliedschaft im Gründungsmitgliederprogramm verbunden sind, sicher aufbewahren und vernünftige digitale Sicherheitspraktiken anwenden.</1><1>Schlüssel, die mit Ansprüchen auf Gründungsmitglieder-Token verbunden sind, dürfen unter keinen Umständen an andere Personen übertragen werden. Wenn dies geschieht, können Punkte oder Token-Ansprüche ungültig werden (siehe oben).</1><2>Tokens können nur an Adressen vergeben werden, die Sie kontrollieren. Sie können aufgefordert werden, eine Nachricht zu unterschreiben, in der Sie nachweisen, dass Sie die privaten Schlüssel für die von Ihnen angegebenen Adressen besitzen.</2><0>Aktivitätsberichte</0><1>Sie können nicht mehr als einmal (d. h. in mehr als einer Zusammenfassung) dieselbe Aktivität geltend machen, um dieselben Punkte zweimal zu erhalten. Sollte dies dennoch geschehen, wird dies als böswillig angesehen und kann zum Ausschluss aus dem Programm führen.</1><1>Alle Aktivitäten müssen innerhalb von 30 Tagen nach ihrem Auftreten gemeldet werden. Beiträge, die außerhalb dieses Zeitraums gemeldet werden, können nicht belohnt werden. Aus diesem Grund ist es sehr wichtig, regelmäßig Zusammenfassungen einzureichen.</1><1>Wenn Sie Ihre Aktivitäten bis einschließlich eines bestimmten Datums eingereicht haben, können Sie keine Aktivitäten mehr einreichen, die vor diesem Datum liegen.</1><2>Bei der Meldung von Beiträgen ist das korrekte Format für Zusammenfassungen zu beachten. </2><0>Aktualisierungen dieser Regeln</0><1>Jsgenesis behält sich das Recht vor, die Regeln des Programms jederzeit und ohne Angabe von Gründen zu aktualisieren.</1><1>Wenn schwerwiegende Fehler in der Struktur des Programms entdeckt werden, behält sich Jsgenesis das Recht vor, anzukündigen, dass nach einer zukünftigen Wertungsperiode die \"Saison\" beendet ist und ein neues Schema für die folgenden Saisons gelten wird, wodurch die \"Punkte\" zurückgesetzt werden. In einem solchen Fall wird ein von Jsgenesis nach eigenem Ermessen festgelegter Anteil des Pools gemäß den bestehenden Regeln zugewiesen. </1><1>Jsgenesis behält sich das Recht vor, irgendeinen Aspekt dieser Vereinbarung aus rechtlichen Gründen nicht zu erfüllen.</1>"
+        "title": "Lies und akzeptiere die Bedingungen und Konditionen",
+        "text": "<0>Bedingungen</0><1>Das Joystream-Gründungsmitgliederprogramm wurde im Februar 2021 formell gestartet. Das Programm wird etwa einen Monat vor dem Start des Mainnets aufhören, neue Einreichungen (Aktivitätszusammenfassungen) zu akzeptieren und weitere Ranglistenpunkte zu vergeben. </1><2><0>Unser derzeitiges Ziel für den Start des Mainnets ist das vierte Quartal 2021, dies kann sich jedoch noch ändern.</0></2><0>Berechtigung</0><1>Das Programm steht allen Personen über 18 Jahren offen, die nicht aus den USA stammen. </1><1>Um formell in das Programm aufgenommen zu werden, wirst du von einem Jsgenesis-Vertreter kontaktiert und geprüft, sobald deine Beiträge zur Gemeinschaft unsere intern festgelegte Schwelle für die Aufnahme erreicht haben.</1><2>Die formelle Aufnahme neuer Gründungsmitglieder in das Programm erfolgt am Ende der Bewertungsperioden (deren Termine auf unserer Website veröffentlicht werden). Jeder Bewertungszeitraum dauert derzeit zwei Wochen.</2><0>Kommunikation</0><1>Wir werden weitere öffentliche Updates über das Programm über unsere regulären Kommunikationskanäle veröffentlichen, einschließlich unseres offiziellen Discord-Kanals, des Joystream-Newsletters, des offiziellen GitHub-Repos für das Programm (github.com/joystream/founding-members) sowie auf unserer Website (www.joystream. org) und im Blog (blog.joystream.org).</1><2>Alle privaten oder sensiblen Informationen über deine Teilnahme am Programm werden über Keybase oder eine andere vorher vereinbarte Kontaktmethode mitgeteilt.</2><0>Token-Zuteilungsformel</0><1>Wenn du offiziell den Status eines Gründungsmitglieds erhalten hast, werden dir automatisch 0,02% des Genesis-Token-Vorrats im Mainnet zugeteilt. Der Rest deiner Token-Zuteilung wird auf der Grundlage deines Anteils an den Ranglistenpunkten aller Gründungsmitglieder berechnet.</1><2>Da das aktuelle Programm einen Token-Pool von 15 % vorsieht, setzen sich diese 15 % aus den Ansprüchen der standardmäßigen 0. Die verbleibende Zuteilung, die nicht bereits nach dieser Regel beansprucht wurde, wird proportional auf der Grundlage des relativen Anteils an den gesamten Leaderboard-Punkten für jedes Gründungsmitglied verteilt.</2><0>Belohnungspolitik</0><1>Punkte haben keinen inneren Wert, und wenn sie Nutzern mit dem Status eines Gründungsmitglieds zugewiesen werden, stellen sie nur einen Teilanspruch auf eine noch nicht festgelegte Menge an JOY-Tokens im Mainnet dar. Im Falle bösgläubiger Aktivitäten (siehe unten) können die Punkte für die Rangliste/Gründungsmitglieder jederzeit entwertet werden.</1><2>Teilnehmer sollten sich auch darüber im Klaren sein, dass die für das Mainnet zugewiesenen Token eine Sperrfrist enthalten können, die ihre Verwendung für einen bestimmten Zeitraum einschränkt. </2><0>Ausschlusspolitik</0><2>Jedes Mitglied der Plattform, das an betrügerischen oder böswilligen Aktivitäten teilnimmt, kann von den Bestenlisten und dem Gründungsmitgliederprogramm ausgeschlossen werden, wobei alle damit verbundenen Token-Ansprüche ungültig werden.</2><0>Konto- und Schlüsselsicherheit</0><1>Ihre Bestenlisten-/Gründungsmitglieder-Punkte gehören allein Ihnen und sind nicht übertragbar. Mitglieder müssen Ihr Konto und alle privaten Schlüssel, die mit Ihrer Mitgliedschaft im Gründungsmitgliederprogramm verbunden sind, sicher aufbewahren und vernünftige digitale Sicherheitspraktiken anwenden.</1><1>Schlüssel, die mit Ansprüchen auf Gründungsmitglieder-Token verbunden sind, dürfen unter keinen Umständen an andere Personen übertragen werden. Wenn dies geschieht, können Punkte oder Token-Ansprüche ungültig werden (siehe oben).</1><2>Tokens können nur an Adressen vergeben werden, die du kontrollierst. Du kannst aufgefordert werden, eine Nachricht zu unterschreiben, in der du nachweist, dass du die privaten Schlüssel für die von dir angegebenen Adressen besitzt.</2><0>Aktivitätsberichte</0><1>Mitglieder können nicht mehr als einmal (d. h. in mehr als einer Zusammenfassung) dieselbe Aktivität geltend machen, um dieselben Punkte zweimal zu erhalten. Sollte dies dennoch geschehen, wird dies als böswillig angesehen und kann zum Ausschluss aus dem Programm führen.</1><1>Alle Aktivitäten müssen innerhalb von 30 Tagen nach ihrem Auftreten gemeldet werden. Beiträge, die außerhalb dieses Zeitraums gemeldet werden, können nicht belohnt werden. Aus diesem Grund ist es sehr wichtig, regelmäßig Zusammenfassungen einzureichen.</1><1>Wenn Mitglieder Aktivitäten bis einschließlich eines bestimmten Datums eingereicht haben, können sie keine Aktivitäten mehr einreichen, die vor diesem Datum liegen.</1><2>Bei der Meldung von Beiträgen ist das korrekte Format für Zusammenfassungen zu beachten. </2><0>Aktualisierungen dieser Regeln</0><1>Jsgenesis behält sich das Recht vor, die Regeln des Programms jederzeit und ohne Angabe von Gründen zu aktualisieren.</1><1>Wenn schwerwiegende Fehler in der Struktur des Programms entdeckt werden, behält sich Jsgenesis das Recht vor, anzukündigen, dass nach einer zukünftigen Wertungsperiode die \"Saison\" beendet ist und ein neues Schema für die folgenden Saisons gelten wird, wodurch die \"Punkte\" zurückgesetzt werden. In einem solchen Fall wird ein von Jsgenesis nach eigenem Ermessen festgelegter Anteil des Pools gemäß den bestehenden Regeln zugewiesen. </1><1>Jsgenesis behält sich das Recht vor, irgendeinen Aspekt dieser Vereinbarung aus rechtlichen Gründen nicht zu erfüllen.</1>"
     },
       "success": {
         "title": "Vielen Dank, dass du deine Zusammenfassung eingereicht hast, wir haben sie erfolgreich erhalten.",
@@ -160,12 +160,12 @@
       },
       "error": {
         "noSuchAccount": "Es existiert kein solches Konto. Versuch's nochmal!",
-        "incorrectPassword": "Das Passwort ist falsch, bitte versuchen Sie es noch einmal!",
-        "fileFormat": "Falsches Dateiformat! Bitte versuchen Sie es noch einmal oder lesen Sie unsere Tipps zum Exportieren.",
+        "incorrectPassword": "Das Passwort ist falsch, bitte versuche es noch einmal!",
+        "fileFormat": "Falsches Dateiformat! Bitte versuche es noch einmal oder lies unsere Tipps zum Exportieren.",
         "jsonWrongAccount": "Json-Datei entspricht nicht dem angegebenen Konto!",
-        "faultyJson": "Json-Datei hat unvollständige/falsche Bestandteile. Versuchen Sie, Ihr Konto erneut zu exportieren!"
+        "faultyJson": "Json-Datei hat unvollständige/falsche Bestandteile. Versuche, dein Konto erneut zu exportieren!"
       },
-      "dropFile": "Lege deine Datei hier ab oder <0>durchsuchen Sie Dateien</0>",
+      "dropFile": "Lege deine Datei hier ab oder <0>durchsuche Dateien</0>",
       "uploadFile": "Datei hochladen."
     }
   }
