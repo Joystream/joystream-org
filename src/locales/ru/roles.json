@@ -4,19 +4,19 @@
       "description": "Информация о текущих и будущих ролях на платформе Joystream"
     },
     "general" : {
-      "overview" : "Overview",
-      "responsibilities" : "Responsibilities",
-      "requirements" : "Requirements",
-      "seeATutorial" : "See a tutorial",
-      "askAQuestion" : "Ask a question",
-      "regularUpdates" : "Receive regular updates on the following role:",
-      "alertWhenActive" : "Alert me when the role will be active",
-      "emailAddressPlaceholder" : "Your email address",
-      "receiveEmailsAboutRole" : "I want to receive emails about this role.",
-      "informationTransferred" : "I acknowledge that my information will be transferred to Mailchimp, which has <0>these</0> privacy practices.",
-      "join" : "Join",
-      "subscribe" : "Subscribe",
-      "pleaseWait" : "Please wait.."
+      "overview" : "Обзор",
+      "responsibilities" : "Обязанности",
+      "requirements" : "Требования",
+      "seeATutorial" : "Инструкции",
+      "askAQuestion" : "Задать вопрос",
+      "regularUpdates" : "Получать новости о роли:",
+      "alertWhenActive" : "Оповестить когда роль станет доступна",
+      "emailAddressPlaceholder" : "Ваш email",
+      "receiveEmailsAboutRole" : "Я хочу получать письма касательно этой роли.",
+      "informationTransferred" : "Я осведомлен, что моя информация будет передана компании Mailchimp, политика конфиденциальности которой изложена <0>здесь</0>.",
+      "join" : "Присоединиться",
+      "subscribe" : "Подписаться",
+      "pleaseWait" : "Подождите, пожалуйста.."
     },
     "hero": {
       "title": "Выбирайте подходящую роль",
