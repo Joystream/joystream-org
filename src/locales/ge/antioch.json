@@ -22,7 +22,7 @@
       }
     },
     "testnetGoals": {
-      "title": "Ziele des Testnet"
+      "title": "Ziele des Testnet",
       "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Antioch Testnet"
       "goals": {
         "substrateVersion": {
