@@ -7,7 +7,7 @@ import { isValidJoystreamAddress, isValidTokenAmount, validateBchAddress, isVali
 
 import './style.scss';
 
-const CashoutForm = ({ Api }) => {
+const CashoutForm = ({ Api, bch, joy }) => {
   const [joystreamAddress, setJoystreamAddress] = useState({ value: '', error: null });
   const [tokenAmount, setTokenAmount] = useState({ value: '', error: null });
   const [bchAddress, setBchAddress] = useState({ value: '', error: null, warning: null });
@@ -108,6 +108,8 @@ const CashoutForm = ({ Api }) => {
             id="tokenAmount"
             label="Amount"
             placeholder="Amount"
+            bchInDollars={bch}
+            joyInDollars={joy}
           />
           <Input
             id="bchAddress"

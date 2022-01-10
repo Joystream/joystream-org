@@ -4,6 +4,7 @@ import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { types } from '@joystream/types';
 import { JoystreamWSProvider } from '../../data/shared';
+import axios from 'axios';
 
 // components
 import BaseLayout from '../../components/_layouts/Base';
@@ -11,13 +12,41 @@ import SiteMetadata from '../../components/SiteMetadata';
 import CashoutForm from '../../components/cashout-page/Form';
 import { ArrowButton } from '../founding-members/index';
 
+// utils
+import getBchValue from '../../utils/getBchValue';
+
 import './style.scss';
+
+const getValue = async (setCurrencyData) => {
+  const bchValue = await getBchValue();
+  const response = await axios.get("https://status.joystream.org/status");
+
+  let joyValue = null;
+  if(response.status === 200) {
+    joyValue = response.data.price;
+  }
+
+  setCurrencyData({ joy: joyValue, bch: bchValue });
+}
 
 const CashoutPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
   const [Api, setApi] = useState();
+  const [currencyData, setCurrencyData] = useState({
+    joy: null,
+    bch: null
+  });
+
+  useEffect(() => {
+    getValue(setCurrencyData);
+    const interval = setInterval(() => {
+      getValue(setCurrencyData);
+    }, 30000);
+
+    return () => clearInterval(interval);
+  });
 
   useEffect(() => {
     async function setUpApi() {
@@ -45,7 +74,7 @@ const CashoutPage = () => {
         </div>
 
         <div className="CashoutPage__body">
-          <CashoutForm />
+          <CashoutForm {...currencyData} />
 
           <div className="CashoutPage__additional-info">
             <div className="CashoutPage__additional-info__header">

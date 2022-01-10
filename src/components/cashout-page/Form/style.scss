@@ -109,10 +109,37 @@
           margin-left: -81px;
           color: #a5adb9;
           border-left: 2px solid #dee3e9;
+          fill: #a5adb9;
           place-items: center;
+
+          &--output {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            cursor: pointer;
+
+            &:hover {
+              color: $c_blue-ribbon;
+              fill: $c_blue-ribbon;
+            }
+          }
 
           &--empty {
             border-left: 2px solid #f2f5f9;
+          }
+        }
+
+        &__scroller {
+          display: flex;
+          flex-direction: column;
+          margin-right: 1px;
+          margin-bottom: 1px;
+          margin-left: 10px;
+          gap: 5px;
+
+          & > svg:nth-of-type(2) {
+            transform: rotate((180deg));
           }
         }
 
