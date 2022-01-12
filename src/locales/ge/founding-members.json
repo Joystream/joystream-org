@@ -125,7 +125,7 @@
         "acceptTermsShort": "Terms & cond."
       },
       "membership": {
-        "membershipHandle": "Mitgliedschaftskennung"
+        "membershipHandle": "Mitgliedschaftskennung",
         "avatarAlt": "Gründungsmitglied Avatar"
       },
       "json": {
