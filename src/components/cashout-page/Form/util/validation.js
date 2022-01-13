@@ -44,7 +44,7 @@ export const validateUser = async (api, membershipHandle, joystreamAddress) => {
   const id = await api.query.members.memberIdByHandle(membershipHandle);
 
   if (id.isEmpty) {
-    return { error: 'Not a valid Joystream handle.' };
+    return { error: 'No such account exists. Please try again' };
   }
 
   const membership = await api.query.members.membershipById(id);
