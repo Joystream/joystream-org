@@ -31,7 +31,7 @@
         },
         "enableBuilderRole": {
           "title": "Builder/Platform Operations-Rolle aktivieren",
-          "text": "Wir führen eine neue Arbeitsgruppe ein, die sich auf den Betrieb von Plattformen konzentriert. Ursprünglich hatten wir auch geplant, die neue Rolle "Gateway" zu aktivieren, obwohl dies nicht mehr zum Umfang des Sumer-Releases gehört."
+          "text": "Wir führen eine neue Arbeitsgruppe ein, die sich auf den Betrieb von Plattformen konzentriert. Ursprünglich hatten wir auch geplant, die neue Rolle Gateway zu aktivieren, obwohl dies nicht mehr zum Umfang des Sumer-Releases gehört."
         }
       }
     },
