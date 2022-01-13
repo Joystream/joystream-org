@@ -12,7 +12,7 @@
       "blockchain": "Der Begriff <0>\"Blockchain\"</0> bezieht sich auf die vom Full Node zusammengestellte(n) Blockchain(s).",
       "content": "Der Begriff <0>\"Inhalt\"</0> bezieht sich auf Mediendateien, die über unsere Software zugänglich sind.",
       "keys": "Der Begriff <0>\"Keys\"</0> bezieht sich auf ein privates/öffentliches kryptografisches Schlüsselpaar, das Nutzer generieren können, um Daten auf der Blockchain zu schreiben (und zu entschlüsseln).",
-      "membership": "Der Begriff <0>\"Mitgliedschaft\"</0> bezieht sich auf die Bindung der Schlüssel an ein öffentliches Profil, das es den Benutzern ermöglicht, auf Inhalte zuzugreifen und mit der Blockchain zu interagieren."
+      "membership": "Der Begriff <0>\"Mitgliedschaft\"</0> bezieht sich auf die Bindung der Schlüssel an ein öffentliches Profil, das es den Benutzern ermöglicht, auf Inhalte zuzugreifen und mit der Blockchain zu interagieren.",
       "memo": "Der Begriff <0>\"Memo\"</0> bezieht sich auf ein markdown-fähiges Textfeld, in das Benutzer Daten eingeben können, die mit ihren Schlüsseln verknüpft sind."
     },
     "privacyPolicyItems": {
