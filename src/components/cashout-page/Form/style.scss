@@ -2,11 +2,8 @@
 
 .CashoutPage {
   &__form-wrapper {
-    display: flex;
-    justify-content: center;
     width: 100%;
     height: auto;
-    min-height: 737px;
     margin-top: -76px;
     background-color: #f2f5f9;
   }
@@ -14,7 +11,6 @@
   &__form {
     display: flex;
     flex-direction: column;
-    width: 712px;
     background-color: $c_white;
     place-items: center;
 
@@ -107,6 +103,7 @@
 
       &__amount-input-wrapper {
         display: flex;
+        flex: 1;
         flex-direction: row;
       }
 
@@ -216,6 +213,8 @@
           gap: 13px;
 
           &__icon {
+            height: 24px;
+            min-width: 24px;
             margin-top: 3px;
           }
         }
@@ -279,6 +278,7 @@
       justify-content: center;
       width: 100%;
       height: 100%;
+      min-height: 660px;
       padding: 32px 64px;
 
       &__body-wrapper {
@@ -322,6 +322,181 @@
           color: #4038ff;
           background-color: transparent;
           border: 2px solid #4038ff;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__form__final-screen__button {
+      width: 335px;
+      margin: 0 auto;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__form__body {
+      &__amount-inputs {
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      &__amount-input {
+        &__type {
+          height: auto;
+        }
+      }
+
+      &__approximation-symbol {
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__form {
+      &__header {
+        height: 56px;
+        padding: 16px 20px;
+
+        &__title {
+          font-family: $font-primary;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0;
+        }
+      }
+
+      &__body {
+        &__input-wrapper {
+          position: relative;
+        }
+
+        &__input-label-wrapper {
+          z-index: 1;
+          margin-bottom: -8px;
+
+          & > p {
+            z-index: inherit;
+            margin-left: 10px;
+            padding: 0 4px;
+            font-family: $font-secondary;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0;
+            color: #5c6475;
+            background-color: $c_white;
+          }
+
+          & > div {
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            z-index: 3;
+          }
+        }
+
+        &__input {
+          &--info {
+            padding-right: 36px;
+          }
+        }
+
+        &__amount-input {
+          padding-right: 90px;
+
+          &__type {
+            font-family: $font-secondary;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -.4000000059604645px;
+          }
+        }
+
+        &__input,
+        &__amount-input {
+          height: 48px;
+          padding: 0 10px;
+          font-family: $font-secondary;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -.4000000059604645px;
+
+          &::-webkit-input-placeholder {
+            color: transparent;
+          }
+
+          &::-moz-placeholder {
+            color: transparent;
+          }
+
+          &:-moz-placeholder {
+            color: transparent;
+          }
+
+          &:-ms-input-placeholder {
+            color: transparent;
+          }
+        }
+
+        &__input-info,
+        &__input-error {
+          font-family: $font-secondary;
+          font-size: 12px;
+          line-height: 14px;
+          letter-spacing: 0;
+        }
+
+        &__notice {
+          padding: 20px;
+
+          &__header {
+            &__icon {
+              transform: scale(.85);
+            }
+
+            & > p {
+              font-size: 18px;
+              line-height: 24px;
+            }
+          }
+
+          & > p {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+
+        &__button {
+          height: 48px;
+          font-family: $font-primary;
+        }
+      }
+
+      &__final-screen {
+        min-height: 450px;
+        padding: 32px;
+
+        &__icon {
+          margin-bottom: 16px;
+          transform: scale(.8);
+        }
+
+        &__title {
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        &__subtitle {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        &__button {
+          width: 100%;
+          height: 48px;
         }
       }
     }

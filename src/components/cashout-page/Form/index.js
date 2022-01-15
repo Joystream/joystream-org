@@ -19,7 +19,7 @@ const CashoutForm = ({ Api }) => {
   const [bchAddress, setBchAddress] = useState({ value: '', error: null, warning: null });
   const [email, setEmail] = useState({ value: '', error: null });
   const [joystreamHandle, setJoystreamHandle] = useState({ value: '', error: null });
-  const [formState, setFormState] = useState({ isFilled: false, hasErrors: false, isLoading: false, finalized: null });
+  const [formState, setFormState] = useState({ isFilled: false, hasErrors: false, isLoading: false, finalized: {} });
 
   // TODO:
   // 1. You can move the error messages into validation functions returns.
@@ -123,6 +123,7 @@ const CashoutForm = ({ Api }) => {
         updateValue={setBchAddress}
         errorMessage={bchAddress.error}
         warning={bchAddress.warning}
+        info="BCH Account address"
       />
       <Input
         id="email"
@@ -173,7 +174,7 @@ const CashoutForm = ({ Api }) => {
     <div className="CashoutPage__form-wrapper">
       <div className="CashoutPage__form">
         <header className="CashoutPage__form__header">
-          <h2 className="CashoutPage__form__header__title">Joystream Cashout</h2>
+          <h2 className="CashoutPage__form__header__title">Withdraw details</h2>
         </header>
         {formState.finalized ? <FinalScreen /> : renderBody()}
       </div>
