@@ -44,13 +44,25 @@ const Input = ({ id, label, placeholder, inputType, updateValue, errorMessage, w
   }, [inputValue]);
 
   useEffect(() => {
-    if (help && helpIconRef) {
-      const iconOffsetLeft = helpIconRef?.current?.offsetLeft;
+    if (help && helpIconRef && window) {
       const iconOffsetTop = helpIconRef?.current?.offsetTop;
 
       if (hovered) {
+        if(window.innerWidth <= 550) {
+          const iconOffsetRight = helpIconRef?.current?.offsetRight;
+          setModalData(prev => ({
+            showModal: true,
+            left: "unset",
+            right: iconOffsetRight,
+            top: iconOffsetTop + ICON_HEIGHT + TEXTMODAL_TOP_MARGIN,
+          }))
+          return;
+        }
+
+        const iconOffsetLeft = helpIconRef?.current?.offsetLeft;
         setModalData(prev => ({
           showModal: true,
+          right: "unset",
           left: iconOffsetLeft - TEXTMODAL_LEFT_MARGIN,
           top: iconOffsetTop + ICON_HEIGHT + TEXTMODAL_TOP_MARGIN,
         }));
@@ -87,6 +99,7 @@ const Input = ({ id, label, placeholder, inputType, updateValue, errorMessage, w
         type={inputType ?? 'text'}
         className={cn('CashoutPage__form__body__input', {
           'CashoutPage__form__body__input--number': inputType === 'number',
+          'CashoutPage__form__body__input--info': info,
         })}
         value={inputValue}
         onChange={e => {
