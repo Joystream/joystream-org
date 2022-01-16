@@ -18,8 +18,8 @@
     "criticalDocuments": {
       "title": "Wichtige Dokumente",
       "releasePlan": {
-        "title": "Freigabeplan",
-        "text": "Lies den Release-Plan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
+        "title": "Veröffentlichungsplan",
+        "text": "Lies den Veröffentlichungsplan, wie er in der Planungsphase erstellt wurde, und erfahre mehr über den Verlauf der Entwicklung."
       },
       "blogPost": {
         "title": "Ankündigungs-Blogpost",
@@ -45,11 +45,11 @@
       }
     },
     "roles": {
-      "title": "Inzentivierte Rollen für das Alexandria Network"
+      "title": "Bezahlte Rollen für das Alexandria Network"
     },
     "map": {
       "title": "Alexandria",
-      "text": "<0>Alexandria wurde ca. 331 v. Chr. von Alexander dem Großen gegründet.</0> Die Stadt ist vor allem für den Leuchtturm von Alexandria, eines der Sieben Weltwunder der Antike, sowie für ihre kolossale Große Bibliothek bekannt.<1/><1/> Alexandria war für einen Großteil des hellenistischen Zeitalters und der Spätantike das intellektuelle und kulturelle Zentrum der antiken Mittelmeerwelt. Sie war einst die größte Stadt der antiken Welt, bevor sie schließlich von Rom überholt wurde.<1/><1/><2><0/> Lesen Sie den Blogbeitrag</2>"
+      "text": "<0>Alexandria wurde ca. 331 v. Chr. von Alexander dem Großen gegründet.</0> Die Stadt ist vor allem für den Leuchtturm von Alexandria, eines der Sieben Weltwunder der Antike, sowie für ihre kolossale Große Bibliothek bekannt.<1/><1/> Alexandria war für einen Großteil des hellenistischen Zeitalters und der Spätantike das intellektuelle und kulturelle Zentrum der antiken Mittelmeerwelt. Sie war einst die größte Stadt der antiken Welt, bevor sie schließlich von Rom überholt wurde.<1/><1/><2><0/> Zum Blogbeitrag</2>"
     }
   }
 }
