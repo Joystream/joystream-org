@@ -113,7 +113,7 @@
       }
     },
     "membershipScreener": {
-      "title": "Membership-Screener",
+      "title": "Mitgliederauswahl",
       "overview": "Eine Mitgliedschaft ist eine integrierte Darstellung von identifizierenden Informationen und damit verbundenen Aktivitäten eines Nutzers auf der Plattform. Der direkte Weg, eine Mitgliedschaft zu begründen, ist die Zahlung einer einmaligen Gebühr. Da es jedoch für viele potenzielle nicht-technische Endnutzer schwierig ist, Krypto-Assets zu erwerben, zu speichern und zu nutzen, wird es eine Möglichkeit für Nutzer geben, eine kostenlose Mitgliedschaft zu erwerben, die keine Token erfordert, um die Plattform in begrenztem Umfang zu nutzen. Der Membership Screener ist die Rolle, die für die Gewährung solcher Mitgliedschaften verantwortlich ist und gleichzeitig nach Sybill-Angreifern und -Missbrauchern sucht.",
       "responsibilities": {
         "runAndMaintainScreeningNodes": "Ausführen und Aufrechterhalten von Screening-Knoten, die immer verfügbar und leistungsfähig sind",
