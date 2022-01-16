@@ -57,7 +57,7 @@
     "exit": {
       "title": "Exit",
       "text": {
-        "exit": "Exit ist der Ansatz, die Teilnahme an einer Institution vollständig zu beenden, um entweder beizutreten oder eine Alternative zu schaffen. Die Effektivität dieses Ansatzes hängt davon ab, ob die Kosten für den Austritt, den Beitritt oder die Schaffung einer Alternative im Vergleich zu den Entbehrungen in der bestehenden Einrichtung gering sind. Dies ist derzeit nicht der Fall.",
+        "exit": "Austritt ist die Herangehensweise, die Teilnahme an einer Institution vollständig zu beenden, um entweder beizutreten oder eine Alternative zu schaffen. Die Effektivität dieser Herangehensweise hängt davon ab, ob die Kosten für den Austritt, den Beitritt oder die Schaffung einer Alternative im Vergleich zu den Entbehrungen in der bestehenden Einrichtung gering sind. Dies ist derzeit nicht der Fall.",
         "loweredCosts": "Durch den Aufbau von Plattformen, die auf freier und quelloffener Software, offenen Protokollen und offenen Daten basieren - wie es bei Blockchain-Systemen der Fall ist -, werden diese Kosten drastisch gesenkt. Da die Nutzer die Kontrolle über ihre eigenen Daten, ihre Identität und ihr Vermögen haben, fällt es ihnen viel leichter, sich neuen Plattformen anzuschließen und sogar ihre Mitstreiter mitzunehmen.",
         "competition": "Offene Protokolle und Daten werden dazu führen, dass es eine Vielzahl von Multi-Homing-Schnittstellen gibt, bei denen die Nutzer möglicherweise nicht einmal wechseln müssen, sondern stattdessen mehrere Plattformen gleichzeitig nutzen, was den Wettbewerb auf Plattformebene fördert [5].",
         "reusability": "Noch dramatischer ist, dass die Abhängigkeit von Open Source bedeutet, dass das gesamte Software-Kapital einer Plattform leicht wiederverwendet werden kann, und da der gesamte organisatorische Zustand ebenfalls öffentlich ist, können ganze Ökosysteme gegabelt werden, um neue alternative Plattformen mit veränderten Richtlinien und Zielen zu schaffen."
@@ -65,7 +65,7 @@
     },
     "ctaText": "Dieser Plan hat noch Platz für mehr Leute, also beteilige dich, indem du eine <0>E-Mail</0> schickst oder uns auf <1>Discord</1> beitrittst.",
     "references": {
-      "title": "references",
+      "title": "Fußnote",
       "text": "<0>[1] Ersam, F. Blockchain Tokens and the dawn of the Decentralized Business Model. Medium. Aug 1, 2016.</0><0>[2] Srinivasan, B. S. Thoughts on Tokens. Medium. May 27, 2017.</0><0>[3] Dixon, C. Crypto Tokens: A Breakthrough in Open Network Design. Medium. June 1, 2017.</0><0>[4] Hirschman, Albert O. Exit, voice, and loyalty: Reaktionen auf den Niedergang in Unternehmen, Organisationen und Staaten. Vol. 25. Harvard University Press, 1970.</0><0>[5] Rochet, Jean-Charles, und Jean Tirole. Platform competition in two-sided markets. Journal of the european economic association 1.4 (2003): 990-1029.</0>"
     }
   }
