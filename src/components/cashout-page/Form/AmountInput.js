@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
-import axios from 'axios';
 
 import { ReactComponent as NumberScrollPointer } from '../../../assets/svg/number-scroll-pointer.svg';
 
-// utils
-import getBchValue from '../../../utils/getBchValue';
 
 const Input = ({ id, placeholder, value, setValue }) => {
   return (
@@ -57,40 +54,14 @@ const OutputValueInput = ({ isActive, outputValue, outputCurrency, setOutputCurr
   );
 };
 
-const getValue = async setCurrencyData => {
-  const bchValue = await getBchValue();
-  const response = await axios.get('https://status.joystream.org/status');
-
-  let joyValue = null;
-  if (response.status === 200) {
-    joyValue = response.data.price;
-  }
-
-  setCurrencyData({ joy: joyValue, bch: bchValue });
-};
-
-const AmountInput = ({ id, label, placeholder, updateValue, errorMessage }) => {
+const AmountInput = ({ id, label, placeholder, updateValue, errorMessage, joyInDollars, bchInDollars }) => {
   const [joyAmount, setJoyAmount] = useState('');
   const [outputValue, setOutputValue] = useState('');
   const [outputCurrency, setOutputCurrency] = useState('USD');
 
-  const [{ joy: joyInDollars, bch: bchInDollars }, setCurrencyData] = useState({
-    joy: null,
-    bch: null,
-  });
-
   useEffect(() => {
     updateValue(prev => ({ ...prev, value: joyAmount }));
   }, [joyAmount])
-
-  // useEffect(() => {
-  //   getValue(setCurrencyData);
-  //   const interval = setInterval(() => {
-  //     getValue(setCurrencyData);
-  //   }, 60000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
 
   useEffect(() => {
     if (joyAmount) {

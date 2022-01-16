@@ -13,13 +13,13 @@ import { isValidJoystreamAddress, isValidTokenAmount, validateBchAddress, isVali
 
 import './style.scss';
 
-const CashoutForm = ({ Api }) => {
+const CashoutForm = ({ Api, joyInDollars, bchInDollars }) => {
   const [joystreamAddress, setJoystreamAddress] = useState({ value: '', error: null });
   const [tokenAmount, setTokenAmount] = useState({ value: '', error: null });
   const [bchAddress, setBchAddress] = useState({ value: '', error: null, warning: null });
   const [email, setEmail] = useState({ value: '', error: null });
   const [joystreamHandle, setJoystreamHandle] = useState({ value: '', error: null });
-  const [formState, setFormState] = useState({ isFilled: false, hasErrors: false, isLoading: false, finalized: {} });
+  const [formState, setFormState] = useState({ isFilled: false, hasErrors: false, isLoading: false, finalized: null });
 
   // TODO:
   // 1. You can move the error messages into validation functions returns.
@@ -115,6 +115,8 @@ const CashoutForm = ({ Api }) => {
         placeholder="Amount"
         updateValue={setTokenAmount}
         errorMessage={tokenAmount.error}
+        joyInDollars={joyInDollars}
+        bchInDollars={bchInDollars}
       />
       <Input
         id="bchAddress"

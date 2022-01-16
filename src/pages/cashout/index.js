@@ -4,6 +4,7 @@ import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { types } from '@joystream/types';
 import { JoystreamWSProvider } from '../../data/shared';
+import axios from 'axios';
 
 // components
 import BaseLayout from '../../components/_layouts/Base';
@@ -11,14 +12,23 @@ import SiteMetadata from '../../components/SiteMetadata';
 import CashoutForm from '../../components/cashout-page/Form';
 import { ArrowButton } from '../founding-members/index';
 
+// utils
+import getBchValue from '../../utils/getBchValue';
 
 import './style.scss';
+
+const CURRENCY_DATA_STORAGE_KEY = "CashoutDataJoystream";
+const CURRENCY_DATA_TIMEOUT_IN_SECONDS = 5 * 60;
 
 const CashoutPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
   const [Api, setApi] = useState();
+  const [{ joyInDollars, bchInDollars }, setCurrencyData] = useState({
+    joyInDollars: null,
+    bchInDollars: null,
+  });
 
   useEffect(() => {
     async function setUpApi() {
@@ -28,6 +38,44 @@ const CashoutPage = () => {
       setApi(api);
     }
     setUpApi();
+  }, []);
+
+  useEffect(() => {
+    const getCurrencyData = async () => {
+      const bchValue = await getBchValue();
+      const response = await axios.get('https://status.joystream.org/status');
+
+      let joyValue = null;
+      if (response.status === 200) {
+        joyValue = response.data.price;
+      }
+
+      setCurrencyData({ joyInDollars: joyValue, bchInDollars: bchValue });
+      localStorage.setItem(
+        CURRENCY_DATA_STORAGE_KEY,
+        JSON.stringify({ joyInDollars: joyValue, bchInDollars: bchValue, timestampString: (new Date()).toISOString() })
+      );
+    };
+
+    const localStorageCashoutData = localStorage.getItem(CURRENCY_DATA_STORAGE_KEY);
+
+    if(!localStorageCashoutData) {
+      getCurrencyData();
+      return;
+    }
+
+    const { joyInDollars, bchInDollars, timestampString } = JSON.parse(localStorageCashoutData);
+
+    const timestamp = (new Date(timestampString)).getTime();
+    const now = (new Date()).getTime();
+    const timeDifference = (now - timestamp) / 1000;
+
+    if(joyInDollars === null || bchInDollars === null || timeDifference > CURRENCY_DATA_TIMEOUT_IN_SECONDS) {
+      getCurrencyData();
+      return;
+    }
+
+    setCurrencyData({ joyInDollars, bchInDollars });
   }, []);
 
   return (
@@ -46,7 +94,7 @@ const CashoutPage = () => {
         </div>
 
         <div className="CashoutPage__body">
-          <CashoutForm Api={Api}/>
+          <CashoutForm Api={Api} joyInDollars={joyInDollars} bchInDollars={bchInDollars}/>
 
           <div className="CashoutPage__additional-info">
             <div className="CashoutPage__additional-info__header">
@@ -76,7 +124,7 @@ const CashoutPage = () => {
             <div className="CashoutPage__additional-info__token-price-wrapper">
               <div className="CashoutPage__additional-info__token-price">
                 <p className='CashoutPage__additional-info__token-price__title'>Price of Token</p>
-                <p className='CashoutPage__additional-info__token-price__value'>$0.0000278</p>
+                <p className='CashoutPage__additional-info__token-price__value'>{joyInDollars ? `$${joyInDollars.toFixed(7)}` : "Loading..."} </p>
               </div>
             </div>
           </div>
