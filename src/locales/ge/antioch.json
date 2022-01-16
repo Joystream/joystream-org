@@ -5,10 +5,10 @@
     },
     "hero": {
       "Titel": "Antioch Network",
-      "text": "Die Antioch-Veröffentlichung versucht, einen Kettenspaltungsfehler zu beheben, der leider das vorherige Testnet sabotiert hat."
+      "text": "Die Antioch-Veröffentlichung versucht, einen chain split zu beheben, der leider das vorherige Testnet sabotiert hat."
     },
     "heroCard": {
-      "title": "ERSETZT DURCH SUMER ON"
+      "title": "ERSETZT DURCH SUMER AN"
     },
     "criticalDocuments": {
       "title": "Wichtige Dokumente",
@@ -26,13 +26,13 @@
       "subtitle": "Die unten aufgeführten Ziele sind eine vereinfachte Darstellung unserer Hauptziele für das Antioch Testnet",
       "goals": {
         "substrateVersion": {
-          "title": "Upgrade der Substratversion",
-          "text": "<0>Um das Kettenspaltungsproblem zu beheben, das auf Babylon aufgetreten ist, müssen wir die Version von Substrate, auf der unser Netzwerk aufgebaut ist, von <1>v2-rc4</1> auf <1>v2.0.1</1></0> aktualisieren"
+          "title": "Upgrade der Substrateversion",
+          "text": "<0>Um den chain split zu beheben, der auf Babylon aufgetreten ist, müssen wir die Version von Substrate, auf der unser Netzwerk aufgebaut ist, von <1>v2-rc4</1> auf <1>v2.0.1</1></0> aktualisieren"
         }
       }
     },
     "roles": {
-      "title": "Inzentivierte Rollen für das Antioch Network"
+      "title": "Bezahlte Rollen für das Antioch Network"
     },
     "map": {
       "title": "Antioch",
