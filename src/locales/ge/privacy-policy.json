@@ -11,12 +11,12 @@
       "title": "Für die Datenschutzrichtlinie und die Cookie-Richtlinie sind die folgenden Begriffe relevant:",
       "blockchain": "Der Begriff <0>\"Blockchain\"</0> bezieht sich auf die vom Full Node zusammengestellte(n) Blockchain(s).",
       "content": "Der Begriff <0>\"Inhalt\"</0> bezieht sich auf Mediendateien, die über unsere Software zugänglich sind.",
-      "keys": "Der Begriff <0>\"Keys\"</0> bezieht sich auf ein privates/öffentliches kryptografisches Schlüsselpaar, das Nutzer generieren können, um Daten auf der Blockchain zu schreiben (und zu entschlüsseln).",
+      "keys": "Der Begriff <0>\"Schlüssel\"</0> bezieht sich auf ein privates/öffentliches kryptografisches Schlüsselpaar, das Nutzer generieren können, um Daten auf der Blockchain zu schreiben (und zu entschlüsseln).",
       "membership": "Der Begriff <0>\"Mitgliedschaft\"</0> bezieht sich auf die Bindung der Schlüssel an ein öffentliches Profil, das es den Benutzern ermöglicht, auf Inhalte zuzugreifen und mit der Blockchain zu interagieren.",
       "memo": "Der Begriff <0>\"Memo\"</0> bezieht sich auf ein markdown-fähiges Textfeld, in das Benutzer Daten eingeben können, die mit ihren Schlüsseln verknüpft sind."
     },
     "privacyPolicyItems": {
-      "title": "Privacy Policy",
+      "title": "Datenschutzrichtlinie",
       "subtitle": "Zuletzt aktualisiert am 17. April 2019",
       "agreement": {
         "title": "1. Zustimmung zur Richtlinie",
@@ -47,11 +47,11 @@
         "content": "Wir verwenden Cookies für die folgenden Zwecke unseren Service: <0 /><0 /><1><0>Analytik bereitstellen</0><0>Einstellungen speichern</0><0>Lokale Speicherung von Schlüsseln und Mitgliedschaften.</0></1>"
       },
       "thirdPartyCookies": {
-        "title": "3. Third-Party-Cookies",
+        "title": "3. Drittparteien-Cookies",
         "content": "Zusätzlich zu unseren eigenen Cookies verwenden wir auch verschiedene Cookies von Drittanbietern, um Nutzungsstatistiken des Dienstes zu erstellen, Werbung auf und über den Dienst auszuliefern und so weiter. Dazu gehören:<0/><0/><1><0><0>Google Analytics</0></0><0><0>Mailchimp</0> (nur bei der Anmeldung zu einem unserer Newsletter)</0><0><0>Godaddy</0></0></1><0 />Bitte lesen Sie Punkt 3. der Datenschutzerklärung für weitere Informationen zum Umfang dieser Anbieter."
       },
       "regardingYourCookies": {
-        "title": "Regarding Your Cookies",
+        "title": "Cookies löschen",
         "content": "Wenn Sie Cookies löschen oder Ihren Webbrowser anweisen möchten, Cookies zu löschen oder abzulehnen, besuchen Sie bitte die Hilfeseiten Ihres Webbrowsers.<0 /><0 /> Bitte beachten Sie jedoch, dass Sie, wenn Sie Cookies löschen oder deren Annahme ablehnen, möglicherweise nicht alle von uns angebotenen Funktionen nutzen können, dass Sie möglicherweise Ihre Einstellungen nicht speichern können und dass einige unserer Seiten möglicherweise nicht richtig angezeigt werden."
       }
     }
