@@ -35,7 +35,7 @@
           "text": "Die endgültige Plattform wird mehrere Möglichkeiten zur Erleichterung einer einfachen und sicheren öffentlichen und privaten Kommunikation und des Informationsaustauschs zwischen den Mitgliedern enthalten. Das Forum ist der erste Schritt, der es den Mitgliedern der Plattform ermöglicht, zu kommunizieren, Ideen auszutauschen und zu diskutieren."
         },
         "storageNode": {
-          "title": "Wiederherstellen und Freigeben des Storage Node",
+          "title": "Wiederherstellen und Freigeben des Datenknoten",
           "text": "Während der alte Storage Node einige Fehler aufwies, die eine Synchronisierung zwischen den Clients unmöglich machte und eine hartkodierte Verbindung erforderte, funktioniert der neue Storage Node wie vorgesehen, ohne Hierarchie oder Privilegien."
         },
         "storageProviders": {
