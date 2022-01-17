@@ -35,7 +35,7 @@ const CashoutPage = () => {
   useEffect(() => {
     async function setUpApi() {
       try{
-        const provider = new WsProvider();
+        const provider = new WsProvider(JoystreamWSProvider);
 
         // Attach error and disconnect listeners to set ApiError to true in case something goes wrong.
         provider.on("error", () => setApiData({ Api: null, ApiError: true }));

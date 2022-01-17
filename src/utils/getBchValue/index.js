@@ -1,19 +1,33 @@
 import axios from 'axios';
 
-// TODO:
-// 1. Add other exchanges in case this one is down.
-
-const COIN_GECKO_BCH_API_URL = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash&vs_currencies=usd"; 
+const EXCHANGE_APIS = [
+  {
+    url: 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash&vs_currencies=usd',
+    getValue: (response) => response.data["bitcoin-cash"].usd
+  },
+  {
+    url: 'https://api.coinbase.com/v2/exchange-rates?currency=BCH',
+    getValue: (response) => Number(response.data.data.rates["USD"])
+  },
+  {
+    url: "https://api.kraken.com/0/public/Ticker?pair=BCHUSD",
+    getValue: (response) => Number(response.data.result["BCHUSD"].c[0])
+  }
+];
 
 const getBchValue = async () => {
-  let bchValue;
+  let bchValue = null;
 
-  try {
-    const response = await axios.get(COIN_GECKO_BCH_API_URL);
-    bchValue = response.data["bitcoin-cash"].usd;
-  } catch (error) {
-    console.log(error);
-    return null;
+  for(const api of EXCHANGE_APIS) {
+    try {
+      const response = await axios.get(api.url);
+
+      if(response.status === 200 && api.getValue(response)) {
+        return api.getValue(response);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return bchValue;

@@ -15,8 +15,6 @@ export const isValidTokenAmount = value => {
 };
 
 export const validateBchAddress = bchAddress => {
-  // TODO: Add better validation (based on types of addresses)
-  // You can use bchaddr.isSomething to check
   if (!isValidAddress(bchAddress)) {
     return null;
   }
