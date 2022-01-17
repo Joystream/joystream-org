@@ -17,7 +17,7 @@ import getBchValue from '../../utils/getBchValue';
 
 import './style.scss';
 
-const STATUS_SERVER_URL = "https://status.joystream.org/statusSS";
+const STATUS_SERVER_URL = "https://status.joystream.org/status";
 const CURRENCY_DATA_STORAGE_KEY = "CashoutDataJoystream";
 const CURRENCY_DATA_TIMEOUT_IN_SECONDS = 5 * 60;
 
@@ -25,7 +25,7 @@ const CashoutPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
-  const [Api, setApi] = useState();
+  const [{ Api, ApiError }, setApiData] = useState({ Api: null, ApiError: false });
   const [{ joyInDollars, bchInDollars, error: currencyDataError }, setCurrencyData] = useState({
     joyInDollars: null,
     bchInDollars: null,
@@ -34,10 +34,20 @@ const CashoutPage = () => {
 
   useEffect(() => {
     async function setUpApi() {
-      const provider = new WsProvider(JoystreamWSProvider);
-      const api = await ApiPromise.create({ provider, types });
-      await api.isReady;
-      setApi(api);
+      try{
+        const provider = new WsProvider();
+
+        // Attach error and disconnect listeners to set ApiError to true in case something goes wrong.
+        provider.on("error", () => setApiData({ Api: null, ApiError: true }));
+        provider.on("disconnect", () => setApiData({ Api: null, ApiError: true }));
+
+        const api = await ApiPromise.create({ provider, types });
+        await api.isReady;
+
+        setApiData({ Api: api, ApiError: false });
+      } catch (e) {
+        setApiData({ Api: null, ApiError: true });
+      }
     }
     setUpApi();
   }, []);
@@ -110,6 +120,7 @@ const CashoutPage = () => {
             joyInDollars={joyInDollars}
             bchInDollars={bchInDollars}
             statusServerError={currencyDataError}
+            apiError={ApiError}
           />
           <div className="CashoutPage__additional-info">
             <div className="CashoutPage__additional-info__header">

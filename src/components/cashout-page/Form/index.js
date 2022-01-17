@@ -13,7 +13,7 @@ import { isValidJoystreamAddress, isValidTokenAmount, validateBchAddress, isVali
 
 import './style.scss';
 
-const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError }) => {
+const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiError }) => {
   const [joystreamAddress, setJoystreamAddress] = useState({ value: '', error: null });
   const [tokenAmount, setTokenAmount] = useState({ value: '', error: null });
   const [bchAddress, setBchAddress] = useState({ value: '', error: null, warning: null });
@@ -103,10 +103,12 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError }) => 
   }, [Api, joyInDollars]);
 
   useEffect(() => {
-    if(statusServerError) {
+    // TODO:
+    // Possibly add differentiating errors for api/status server.
+    if(statusServerError || apiError) {
       setFormState(prev => ({ ...prev, finalized: { state: "SERVERDOWN" } }));
     }
-  }, [statusServerError])
+  }, [statusServerError, apiError])
 
   const renderBody = () => (
     <div className={cn("CashoutPage__form__body", {
