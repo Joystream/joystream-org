@@ -3,7 +3,6 @@ import cn from 'classnames';
 
 import { ReactComponent as NumberScrollPointer } from '../../../assets/svg/number-scroll-pointer.svg';
 
-
 const Input = ({ id, placeholder, value, setValue, isLoading }) => {
   return (
     <div className="CashoutPage__form__body__amount-input-wrapper">
@@ -62,7 +61,7 @@ const AmountInput = ({ id, label, placeholder, updateValue, errorMessage, joyInD
 
   useEffect(() => {
     updateValue(prev => ({ ...prev, value: joyAmount }));
-  }, [joyAmount])
+  }, [joyAmount]);
 
   useEffect(() => {
     if (joyAmount) {

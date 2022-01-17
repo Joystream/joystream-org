@@ -17,8 +17,8 @@ import getBchValue from '../../utils/getBchValue';
 
 import './style.scss';
 
-const STATUS_SERVER_URL = "https://status.joystream.org/status";
-const CURRENCY_DATA_STORAGE_KEY = "CashoutDataJoystream";
+const STATUS_SERVER_URL = 'https://status.joystream.org/status';
+const CURRENCY_DATA_STORAGE_KEY = 'CashoutDataJoystream';
 const CURRENCY_DATA_TIMEOUT_IN_SECONDS = 5 * 60;
 
 const CashoutPage = () => {
@@ -29,17 +29,17 @@ const CashoutPage = () => {
   const [{ joyInDollars, bchInDollars, error: currencyDataError }, setCurrencyData] = useState({
     joyInDollars: null,
     bchInDollars: null,
-    error: false
+    error: false,
   });
 
   useEffect(() => {
     async function setUpApi() {
-      try{
+      try {
         const provider = new WsProvider(JoystreamWSProvider);
 
         // Attach error and disconnect listeners to set ApiError to true in case something goes wrong.
-        provider.on("error", () => setApiData({ Api: null, ApiError: true }));
-        provider.on("disconnect", () => setApiData({ Api: null, ApiError: true }));
+        provider.on('error', () => setApiData({ Api: null, ApiError: true }));
+        provider.on('disconnect', () => setApiData({ Api: null, ApiError: true }));
 
         const api = await ApiPromise.create({ provider, types });
         await api.isReady;
@@ -64,7 +64,7 @@ const CashoutPage = () => {
       } catch (e) {
         setCurrencyData(prev => ({ ...prev, error: true }));
       }
-    }
+    };
 
     const getBchData = async () => {
       const bchValue = await getBchValue();
@@ -72,7 +72,7 @@ const CashoutPage = () => {
       setCurrencyData(prev => ({ ...prev, bchInDollars: bchValue }));
       localStorage.setItem(
         CURRENCY_DATA_STORAGE_KEY,
-        JSON.stringify({ bchInDollars: bchValue, timestampString: (new Date()).toISOString() })
+        JSON.stringify({ bchInDollars: bchValue, timestampString: new Date().toISOString() })
       );
     };
 
@@ -80,18 +80,18 @@ const CashoutPage = () => {
 
     const localStorageCashoutData = localStorage.getItem(CURRENCY_DATA_STORAGE_KEY);
 
-    if(!localStorageCashoutData) {
+    if (!localStorageCashoutData) {
       getBchData();
       return;
     }
 
     const { bchInDollars, timestampString } = JSON.parse(localStorageCashoutData);
 
-    const timestamp = (new Date(timestampString)).getTime();
-    const now = (new Date()).getTime();
+    const timestamp = new Date(timestampString).getTime();
+    const now = new Date().getTime();
     const timeDifference = (now - timestamp) / 1000;
 
-    if(bchInDollars === null || timeDifference > CURRENCY_DATA_TIMEOUT_IN_SECONDS) {
+    if (bchInDollars === null || timeDifference > CURRENCY_DATA_TIMEOUT_IN_SECONDS) {
       getBchData();
       return;
     }
@@ -127,8 +127,8 @@ const CashoutPage = () => {
               <h2 className="CashoutPage__additional-info__header__title">Additional info</h2>
             </div>
             <div className="CashoutPage__additional-info__body">
-              <h2 className='CashoutPage__additional-info__body__title'>Where can I find my account address?</h2>
-              <p className='CashoutPage__additional-info__body__subtitle'>
+              <h2 className="CashoutPage__additional-info__body__title">Where can I find my account address?</h2>
+              <p className="CashoutPage__additional-info__body__subtitle">
                 It’s simple. Enter the transfer tab inside the Pioneer and copy the account you want to withdraw funds.
               </p>
               <ArrowButton
@@ -136,8 +136,8 @@ const CashoutPage = () => {
                 text="Go to Pioneer"
                 className="CashoutPage__additional-info__body__button"
               />
-              <h2 className='CashoutPage__additional-info__body__title'>You transferred funds but nothing happens?</h2>
-              <p className='CashoutPage__additional-info__body__subtitle'>
+              <h2 className="CashoutPage__additional-info__body__title">You transferred funds but nothing happens?</h2>
+              <p className="CashoutPage__additional-info__body__subtitle">
                 Don’t worry. Let us know on the Discord about the situation and we will solve the problem as soon as we
                 can.
               </p>
@@ -149,8 +149,10 @@ const CashoutPage = () => {
             </div>
             <div className="CashoutPage__additional-info__token-price-wrapper">
               <div className="CashoutPage__additional-info__token-price">
-                <p className='CashoutPage__additional-info__token-price__title'>Price of Token</p>
-                <p className='CashoutPage__additional-info__token-price__value'>{joyInDollars ? `$${joyInDollars.toFixed(7)}` : "Loading..."} </p>
+                <p className="CashoutPage__additional-info__token-price__title">Price of Token</p>
+                <p className="CashoutPage__additional-info__token-price__value">
+                  {joyInDollars ? `$${joyInDollars.toFixed(7)}` : 'Loading...'}{' '}
+                </p>
               </div>
             </div>
           </div>

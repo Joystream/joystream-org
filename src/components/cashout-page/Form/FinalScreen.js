@@ -31,7 +31,7 @@ const STATES = {
 };
 
 const FinalScreen = ({ state }) => {
-  const [currentState, setCurrentState] = useState(state ?? "FAILURE");
+  const [currentState, setCurrentState] = useState(state ?? 'FAILURE');
 
   return (
     <div className="CashoutPage__form__final-screen">

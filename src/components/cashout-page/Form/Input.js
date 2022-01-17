@@ -48,21 +48,21 @@ const Input = ({ id, label, placeholder, inputType, updateValue, errorMessage, w
       const iconOffsetTop = helpIconRef?.current?.offsetTop;
 
       if (hovered) {
-        if(window.innerWidth <= 550) {
+        if (window.innerWidth <= 550) {
           const iconOffsetRight = helpIconRef?.current?.offsetRight;
           setModalData(prev => ({
             showModal: true,
-            left: "unset",
+            left: 'unset',
             right: iconOffsetRight,
             top: iconOffsetTop + ICON_HEIGHT + TEXTMODAL_TOP_MARGIN,
-          }))
+          }));
           return;
         }
 
         const iconOffsetLeft = helpIconRef?.current?.offsetLeft;
         setModalData(prev => ({
           showModal: true,
-          right: "unset",
+          right: 'unset',
           left: iconOffsetLeft - TEXTMODAL_LEFT_MARGIN,
           top: iconOffsetTop + ICON_HEIGHT + TEXTMODAL_TOP_MARGIN,
         }));
