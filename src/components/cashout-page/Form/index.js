@@ -21,8 +21,6 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
   const [joystreamHandle, setJoystreamHandle] = useState({ value: '', error: null });
   const [formState, setFormState] = useState({ isFilled: false, hasErrors: false, isLoading: true, finalized: null });
 
-  // TODO:
-  // 1. You can move the error messages into validation functions returns.
   const validateData = async () => {
     // validate address
     if (isValidJoystreamAddress(joystreamAddress.value)) {
@@ -121,6 +119,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         updateValue={setJoystreamAddress}
         errorMessage={joystreamAddress.error}
         info="tJOY Account address"
+        isLoading={formState.isLoading}
       />
       <AmountInput
         id="tokenAmount"
@@ -130,6 +129,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={tokenAmount.error}
         joyInDollars={joyInDollars}
         bchInDollars={bchInDollars}
+        isLoading={formState.isLoading}
       />
       <Input
         id="bchAddress"
@@ -139,6 +139,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={bchAddress.error}
         warning={bchAddress.warning}
         info="BCH Account address"
+        isLoading={formState.isLoading}
       />
       <Input
         id="email"
@@ -149,6 +150,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={email.error}
         info="Optional"
         help="Help us to contact you in case of any problems"
+        isLoading={formState.isLoading}
       />
       <Input
         id="joystreamHandle"
@@ -158,6 +160,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={joystreamHandle.error}
         info="Optional"
         help="Help us to contact you in case of any problems"
+        isLoading={formState.isLoading}
       />
       {!formState.isLoading ? (
         <ArrowButton
