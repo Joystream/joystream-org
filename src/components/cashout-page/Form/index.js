@@ -13,13 +13,13 @@ import { isValidJoystreamAddress, isValidTokenAmount, validateBchAddress, isVali
 
 import './style.scss';
 
-const CashoutForm = ({ Api, joyInDollars, bchInDollars }) => {
+const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError }) => {
   const [joystreamAddress, setJoystreamAddress] = useState({ value: '', error: null });
   const [tokenAmount, setTokenAmount] = useState({ value: '', error: null });
   const [bchAddress, setBchAddress] = useState({ value: '', error: null, warning: null });
   const [email, setEmail] = useState({ value: '', error: null });
   const [joystreamHandle, setJoystreamHandle] = useState({ value: '', error: null });
-  const [formState, setFormState] = useState({ isFilled: false, hasErrors: false, isLoading: false, finalized: null });
+  const [formState, setFormState] = useState({ isFilled: false, hasErrors: false, isLoading: true, finalized: null });
 
   // TODO:
   // 1. You can move the error messages into validation functions returns.
@@ -66,7 +66,6 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars }) => {
 
   const handleSubmit = () => {
     if (Api) {
-      console.timeLog(Api);
       validateData();
     }
   };
@@ -95,7 +94,19 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars }) => {
 
       console.log("Sending data to server: ", { joystreamAddress, tokenAmount, bchAddress, email, joystreamHandle })
     }
-  }, [formState])
+  }, [formState]);
+
+  useEffect(() => {
+    if(Api && joyInDollars) {
+      setFormState(prev => ({ ...prev, isLoading: false }));
+    }
+  }, [Api, joyInDollars]);
+
+  useEffect(() => {
+    if(statusServerError) {
+      setFormState(prev => ({ ...prev, finalized: { state: "SERVERDOWN" } }));
+    }
+  }, [statusServerError])
 
   const renderBody = () => (
     <div className={cn("CashoutPage__form__body", {
@@ -178,7 +189,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars }) => {
         <header className="CashoutPage__form__header">
           <h2 className="CashoutPage__form__header__title">Withdraw details</h2>
         </header>
-        {formState.finalized ? <FinalScreen /> : renderBody()}
+        {formState.finalized ? <FinalScreen state={formState.finalized.state} /> : renderBody()}
       </div>
     </div>
   );

@@ -17,6 +17,7 @@ import getBchValue from '../../utils/getBchValue';
 
 import './style.scss';
 
+const STATUS_SERVER_URL = "https://status.joystream.org/statusSS";
 const CURRENCY_DATA_STORAGE_KEY = "CashoutDataJoystream";
 const CURRENCY_DATA_TIMEOUT_IN_SECONDS = 5 * 60;
 
@@ -25,9 +26,10 @@ const CashoutPage = () => {
   const { language } = useI18next();
 
   const [Api, setApi] = useState();
-  const [{ joyInDollars, bchInDollars }, setCurrencyData] = useState({
+  const [{ joyInDollars, bchInDollars, error: currencyDataError }, setCurrencyData] = useState({
     joyInDollars: null,
     bchInDollars: null,
+    error: false
   });
 
   useEffect(() => {
@@ -41,41 +43,50 @@ const CashoutPage = () => {
   }, []);
 
   useEffect(() => {
-    const getCurrencyData = async () => {
-      const bchValue = await getBchValue();
-      const response = await axios.get('https://status.joystream.org/status');
-
-      let joyValue = null;
-      if (response.status === 200) {
-        joyValue = response.data.price;
+    const getStatusData = async () => {
+      try {
+        const response = await axios.get(STATUS_SERVER_URL);
+        if (response.status === 200) {
+          setCurrencyData(prev => ({ ...prev, joyInDollars: response.data.price, error: false }));
+        } else {
+          setCurrencyData(prev => ({ ...prev, error: true }));
+        }
+      } catch (e) {
+        setCurrencyData(prev => ({ ...prev, error: true }));
       }
+    }
 
-      setCurrencyData({ joyInDollars: joyValue, bchInDollars: bchValue });
+    const getBchData = async () => {
+      const bchValue = await getBchValue();
+
+      setCurrencyData(prev => ({ ...prev, bchInDollars: bchValue }));
       localStorage.setItem(
         CURRENCY_DATA_STORAGE_KEY,
-        JSON.stringify({ joyInDollars: joyValue, bchInDollars: bchValue, timestampString: (new Date()).toISOString() })
+        JSON.stringify({ bchInDollars: bchValue, timestampString: (new Date()).toISOString() })
       );
     };
+
+    getStatusData();
 
     const localStorageCashoutData = localStorage.getItem(CURRENCY_DATA_STORAGE_KEY);
 
     if(!localStorageCashoutData) {
-      getCurrencyData();
+      getBchData();
       return;
     }
 
-    const { joyInDollars, bchInDollars, timestampString } = JSON.parse(localStorageCashoutData);
+    const { bchInDollars, timestampString } = JSON.parse(localStorageCashoutData);
 
     const timestamp = (new Date(timestampString)).getTime();
     const now = (new Date()).getTime();
     const timeDifference = (now - timestamp) / 1000;
 
-    if(joyInDollars === null || bchInDollars === null || timeDifference > CURRENCY_DATA_TIMEOUT_IN_SECONDS) {
-      getCurrencyData();
+    if(bchInDollars === null || timeDifference > CURRENCY_DATA_TIMEOUT_IN_SECONDS) {
+      getBchData();
       return;
     }
 
-    setCurrencyData({ joyInDollars, bchInDollars });
+    setCurrencyData(prev => ({ ...prev, bchInDollars }));
   }, []);
 
   return (
@@ -94,8 +105,12 @@ const CashoutPage = () => {
         </div>
 
         <div className="CashoutPage__body">
-          <CashoutForm Api={Api} joyInDollars={joyInDollars} bchInDollars={bchInDollars}/>
-
+          <CashoutForm
+            Api={Api}
+            joyInDollars={joyInDollars}
+            bchInDollars={bchInDollars}
+            statusServerError={currencyDataError}
+          />
           <div className="CashoutPage__additional-info">
             <div className="CashoutPage__additional-info__header">
               <h2 className="CashoutPage__additional-info__header__title">Additional info</h2>
