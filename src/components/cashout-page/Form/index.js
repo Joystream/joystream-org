@@ -9,7 +9,13 @@ import Loader from 'react-loader-spinner';
 import FinalScreen from './FinalScreen';
 
 //util
-import { isValidJoystreamAddress, isValidTokenAmount, validateBchAddress, isValidEmail, validateUser } from './util/validation';
+import {
+  isValidJoystreamAddress,
+  isValidTokenAmount,
+  validateBchAddress,
+  isValidEmail,
+  validateUser,
+} from './util/validation';
 
 import './style.scss';
 
@@ -80,7 +86,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
   useEffect(() => {
     const { isFilled, hasErrors } = formState;
 
-    if(isFilled && !hasErrors) {
+    if (isFilled && !hasErrors) {
       // const sendDataToServer = async () => {
       //   await fetch('https://www.localhost:', {
       //     method: 'POST',
@@ -90,12 +96,12 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
       // };
       // sendDataToServer();
 
-      console.log("Sending data to server: ", { joystreamAddress, tokenAmount, bchAddress, email, joystreamHandle })
+      console.log('Sending data to server: ', { joystreamAddress, tokenAmount, bchAddress, email, joystreamHandle });
     }
   }, [formState]);
 
   useEffect(() => {
-    if(Api && joyInDollars) {
+    if (Api && joyInDollars) {
       setFormState(prev => ({ ...prev, isLoading: false }));
     }
   }, [Api, joyInDollars]);
@@ -103,15 +109,17 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
   useEffect(() => {
     // TODO:
     // Possibly add differentiating errors for api/status server.
-    if(statusServerError || apiError) {
-      setFormState(prev => ({ ...prev, finalized: { state: "SERVERDOWN" } }));
+    if (statusServerError || apiError) {
+      setFormState(prev => ({ ...prev, finalized: { state: 'SERVERDOWN' } }));
     }
-  }, [statusServerError, apiError])
+  }, [statusServerError, apiError]);
 
   const renderBody = () => (
-    <div className={cn("CashoutPage__form__body", {
-      "CashoutPage__form__body--loading" : formState.isLoading
-    })}>
+    <div
+      className={cn('CashoutPage__form__body', {
+        'CashoutPage__form__body--loading': formState.isLoading,
+      })}
+    >
       <Input
         id="joystreamAddress"
         label="Send from"

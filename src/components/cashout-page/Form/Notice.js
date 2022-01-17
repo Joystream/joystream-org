@@ -6,7 +6,7 @@ const Notice = () => {
   return (
     <section className="CashoutPage__form__body__notice">
       <header className="CashoutPage__form__body__notice__header">
-        <NoticeIcon className="CashoutPage__form__body__notice__header__icon"/>
+        <NoticeIcon className="CashoutPage__form__body__notice__header__icon" />
         <p>We noticed that a similar payment is being processed</p>
       </header>
       <p>
