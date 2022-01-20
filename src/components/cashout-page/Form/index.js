@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 
 import Input from './Input';
@@ -10,11 +10,11 @@ import FinalScreen from './FinalScreen';
 
 //util
 import {
-  isValidJoystreamAddress,
-  isValidTokenAmount,
   validateBchAddress,
-  isValidEmail,
   validateUser,
+  validateJoystreamAddress,
+  validateTokenAmount,
+  validateEmail,
 } from './util/validation';
 
 import './style.scss';
@@ -25,99 +25,79 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
   const [bchAddress, setBchAddress] = useState({ value: '', error: null, warning: null });
   const [email, setEmail] = useState({ value: '', error: null });
   const [joystreamHandle, setJoystreamHandle] = useState({ value: '', error: null });
-  const [formState, setFormState] = useState({ isFilled: false, hasErrors: false, isLoading: true, finalized: null });
 
-  const validateData = async () => {
+  // state-derived variables
+  const formIsFilled =
+    !!joystreamAddress.value && !!tokenAmount.value && !!bchAddress.value && !!email.value && !!joystreamHandle.value;
+  const formIsLoading = !(Api && joyInDollars);
+
+  const formFinalizationState = () => {
+    if (statusServerError || apiError) {
+      return { state: 'SERVERDOWN' };
+    }
+
+    return null;
+  };
+
+  const submit = async () => {
+    const trimmedEmail = email.value.trimStart().trimEnd();
+
+    const joystreamAddressError = validateJoystreamAddress(joystreamAddress.value);
+    const tokenAmountError = validateTokenAmount(tokenAmount.value);
+    const bchAddressError = validateBchAddress(bchAddress.value);
+    const emailError = validateEmail(trimmedEmail);
+    const userError = await validateUser(Api, joystreamHandle.value, joystreamAddress.value);
+
+    const isValidBchAddress = !bchAddressError || !!bchAddressError?.warningMessage;
+
     // validate address
-    if (isValidJoystreamAddress(joystreamAddress.value)) {
+    if (!joystreamAddressError) {
       setJoystreamAddress(prev => ({ ...prev, error: null }));
     } else {
-      setJoystreamAddress(prev => ({ ...prev, error: 'Incorrect account adress. Please try again' }));
+      setJoystreamAddress(prev => ({ ...prev, error: joystreamAddressError }));
     }
 
     // validate token amount
-    if (isValidTokenAmount(tokenAmount.value)) {
+    if (!tokenAmountError) {
       setTokenAmount(prev => ({ ...prev, error: null }));
     } else {
-      setTokenAmount(prev => ({ ...prev, error: 'Invalid value. Please try again' }));
+      setTokenAmount(prev => ({ ...prev, error: tokenAmountError }));
     }
 
     // validate BCH address
-    const validatedBchAddress = validateBchAddress(bchAddress.value);
-
-    if (validatedBchAddress) {
-      setBchAddress(prev => ({ ...prev, error: null, warning: validatedBchAddress.warning }));
+    if (isValidBchAddress) {
+      setBchAddress(prev => ({
+        ...prev,
+        error: null,
+        ...(bchAddressError?.warningMessage && { warning: bchAddressError.warningMessage }),
+      }));
     } else {
-      setBchAddress(prev => ({ ...prev, error: 'Incorrect account adress. Please try again' }));
+      setBchAddress(prev => ({ ...prev, error: bchAddressError?.errorMessage }));
     }
 
-    const trimmedEmail = email.value.trimStart().trimEnd();
-    if (isValidEmail(trimmedEmail)) {
+    if (!emailError) {
       setEmail({ value: trimmedEmail, error: null });
     } else {
-      setEmail(prev => ({ ...prev, error: 'Incorrect email adress. Please try again' }));
+      setEmail(prev => ({ ...prev, error: emailError }));
     }
 
-    const validatedUser = await validateUser(Api, joystreamHandle.value, joystreamAddress.value);
-    if (!validatedUser.error) {
+    if (!userError) {
       setJoystreamHandle(prev => ({ ...prev, error: null }));
     } else {
-      setJoystreamHandle(prev => ({ ...prev, error: validatedUser.error }));
+      setJoystreamHandle(prev => ({ ...prev, error: userError }));
     }
 
-    return;
-  };
+    const isDataValid = !joystreamAddressError && !tokenAmountError && isValidBchAddress && !emailError && !userError;
 
-  const handleSubmit = () => {
-    if (Api) {
-      validateData();
-    }
-  };
-
-  useEffect(() => {
-    const isFilled =
-      !!joystreamAddress.value && !!tokenAmount.value && !!bchAddress.value && !!email.value && !!joystreamHandle.value;
-    const hasErrors =
-      joystreamAddress.error || tokenAmount.error || bchAddress.error || email.error || joystreamHandle.error;
-
-    setFormState(prev => ({ ...prev, isFilled, hasErrors }));
-  }, [joystreamAddress, tokenAmount, bchAddress, email, joystreamHandle]);
-
-  useEffect(() => {
-    const { isFilled, hasErrors } = formState;
-
-    if (isFilled && !hasErrors) {
-      // const sendDataToServer = async () => {
-      //   await fetch('https://www.localhost:', {
-      //     method: 'POST',
-      //     headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-      //     body: JSON.stringify({ joystreamAddress, tokenAmount, bchAddress, email, joystreamHandle }),
-      //   });
-      // };
-      // sendDataToServer();
-
+    if (isDataValid) {
       console.log('Sending data to server: ', { joystreamAddress, tokenAmount, bchAddress, email, joystreamHandle });
     }
-  }, [formState]);
-
-  useEffect(() => {
-    if (Api && joyInDollars) {
-      setFormState(prev => ({ ...prev, isLoading: false }));
-    }
-  }, [Api, joyInDollars]);
-
-  useEffect(() => {
-    // TODO:
-    // Possibly add differentiating errors for api/status server.
-    if (statusServerError || apiError) {
-      setFormState(prev => ({ ...prev, finalized: { state: 'SERVERDOWN' } }));
-    }
-  }, [statusServerError, apiError]);
+  };
 
   const renderBody = () => (
     <div
       className={cn('CashoutPage__form__body', {
-        'CashoutPage__form__body--loading': formState.isLoading,
+        'CashoutPage__form__body--loading': formIsLoading,
       })}
     >
       <Input
@@ -127,7 +107,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         updateValue={setJoystreamAddress}
         errorMessage={joystreamAddress.error}
         info="tJOY Account address"
-        isLoading={formState.isLoading}
+        isLoading={formIsLoading}
       />
       <AmountInput
         id="tokenAmount"
@@ -137,7 +117,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={tokenAmount.error}
         joyInDollars={joyInDollars}
         bchInDollars={bchInDollars}
-        isLoading={formState.isLoading}
+        isLoading={formIsLoading}
       />
       <Input
         id="bchAddress"
@@ -147,7 +127,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={bchAddress.error}
         warning={bchAddress.warning}
         info="BCH Account address"
-        isLoading={formState.isLoading}
+        isLoading={formIsLoading}
       />
       <Input
         id="email"
@@ -158,7 +138,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={email.error}
         info="Optional"
         help="Help us to contact you in case of any problems"
-        isLoading={formState.isLoading}
+        isLoading={formIsLoading}
       />
       <Input
         id="joystreamHandle"
@@ -168,17 +148,17 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={joystreamHandle.error}
         info="Optional"
         help="Help us to contact you in case of any problems"
-        isLoading={formState.isLoading}
+        isLoading={formIsLoading}
       />
-      {!formState.isLoading ? (
+      {!formIsLoading ? (
         <ArrowButton
           text="Submit"
           className={cn('CashoutPage__form__body__button', {
-            'CashoutPage__form__body__button--active': formState.isFilled,
+            'CashoutPage__form__body__button--active': formIsFilled,
           })}
           onClick={() => {
-            if (formState.isFilled) {
-              handleSubmit();
+            if (formIsFilled && Api) {
+              submit();
             }
           }}
         />
@@ -202,7 +182,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         <header className="CashoutPage__form__header">
           <h2 className="CashoutPage__form__header__title">Withdraw details</h2>
         </header>
-        {formState.finalized ? <FinalScreen state={formState.finalized.state} /> : renderBody()}
+        {formFinalizationState() ? <FinalScreen state={formFinalizationState().state} /> : renderBody()}
       </div>
     </div>
   );
