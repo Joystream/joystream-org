@@ -2,7 +2,19 @@ import React from 'react';
 
 import { ReactComponent as NoticeIcon } from '../../../assets/svg/notice.svg';
 
-const Notice = () => {
+const formatJoystreamAddress = (joystreamAddress) => {
+  let finalString = "";
+
+  finalString += joystreamAddress.substring(0, 4);
+  finalString += "...";
+  finalString += joystreamAddress.substring(joystreamAddress.length - 4);
+
+  return finalString;
+}
+
+const Notice = ({ data }) => {
+  const { tokenAmount, joystreamAddress } = data;
+
   return (
     <section className="CashoutPage__form__body__notice">
       <header className="CashoutPage__form__body__notice__header">
@@ -10,8 +22,8 @@ const Notice = () => {
         <p>We noticed that a similar payment is being processed</p>
       </header>
       <p>
-        You’ve recently made a transaction from <span>5DG4...4nxj</span> address for an amount of{' '}
-        <span>223 000 tJOY</span>. Click on submit to continue. If you have any doubts about a previous transaction,
+        You’ve recently made a transaction from <span>{formatJoystreamAddress(joystreamAddress)}</span> address for an amount of{' '}
+        <span>{tokenAmount} tJOY</span>. Click on submit to continue. If you have any doubts about a previous transaction,
         please let us know on our <a href="https://discord.gg/DE9UN3YpRP">Discord Channel</a>.
       </p>
     </section>
