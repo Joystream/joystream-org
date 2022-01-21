@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
+import axios from 'axios';
 
 import Input from './Input';
 import AmountInput from './AmountInput';
@@ -16,8 +17,20 @@ import {
   validateTokenAmount,
   validateEmail,
 } from './util/validation';
+import {
+  FINAL_UI_STATE_SUCCESS,
+  FINAL_UI_STATE_FAILURE,
+  FINAL_UI_STATE_TIMEOUT,
+  FINAL_UI_STATE_SERVERDOWN
+} from './FinalScreen';
 
 import './style.scss';
+
+const CASHOUT_SERVER_URL = "";
+const INITIATE_CASHOUT_ROUTE = "initiate-cashout";
+const CASHOUT_ROUTE = "cashout";
+
+const ERROR_TYPE_PROCESSING = "PROCESSING";
 
 const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiError }) => {
   const [joystreamAddress, setJoystreamAddress] = useState({ value: '', error: null });
@@ -25,15 +38,20 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
   const [bchAddress, setBchAddress] = useState({ value: '', error: null, warning: null });
   const [email, setEmail] = useState({ value: '', error: null });
   const [joystreamHandle, setJoystreamHandle] = useState({ value: '', error: null });
+  const [cashoutInitiationResponse, setCashoutInitiationResponse] = useState(null);
 
   // state-derived variables
   const formIsFilled =
     !!joystreamAddress.value && !!tokenAmount.value && !!bchAddress.value && !!email.value && !!joystreamHandle.value;
-  const formIsLoading = !(Api && joyInDollars);
+  const formIsLoading = !(Api && joyInDollars) || cashoutInitiationResponse?.loading;
 
   const formFinalizationState = () => {
+    if(cashoutInitiationResponse?.error) {
+      return { state: cashoutInitiationResponse.error };
+    }
+
     if (statusServerError || apiError) {
-      return { state: 'SERVERDOWN' };
+      return { state: FINAL_UI_STATE_SERVERDOWN };
     }
 
     return null;
@@ -90,7 +108,47 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
     const isDataValid = !joystreamAddressError && !tokenAmountError && isValidBchAddress && !emailError && !userError;
 
     if (isDataValid) {
-      console.log('Sending data to server: ', { joystreamAddress, tokenAmount, bchAddress, email, joystreamHandle });
+      setCashoutInitiationResponse({ loading: true });
+
+      try {
+        const response = await axios.post(CASHOUT_SERVER_URL + INITIATE_CASHOUT_ROUTE, {
+          joystreamAddress: joystreamAddress.value,
+          tokenAmount: tokenAmount.value,
+          bchAddress: bchAddress.value,
+          email: email.value,
+          joystreamHandle: joystreamHandle.value
+        });
+
+        if(response.status === 200) {
+          const { timeoutTimestamp } = response.data;
+
+          setCashoutInitiationResponse({ success: { timeoutTimestamp }, loading: false });
+        }
+      } catch (e) {
+        // Axios throws an error for 4xx and 5xx error codes. That is why
+        // we're dealing with those in the catch block.
+
+        if(e.response.status === 400 && e.response.data?.errorType === ERROR_TYPE_PROCESSING) {
+          const { joystreamAddress, tokenAmount } = e.response.data;
+
+          setCashoutInitiationResponse({
+            alreadyCashingOut: { tokenAmount, joystreamAddress },
+            loading: false,
+          });
+          return;
+        }
+
+        if(e.response.status === 400) {
+          // TODO: If just 400 then it's a validation error. (Shouldn't happen!)
+          setCashoutInitiationResponse({ loading: false });
+          return;
+        }
+
+        if(e.response.status === 500) {
+          setCashoutInitiationResponse({ error: FINAL_UI_STATE_SERVERDOWN, loading: false });
+          return;
+        }
+      }
     }
   };
 
@@ -150,6 +208,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         help="Help us to contact you in case of any problems"
         isLoading={formIsLoading}
       />
+      {cashoutInitiationResponse?.alreadyCashingOut ? <Notice data={cashoutInitiationResponse.alreadyCashingOut} /> : null}
       {!formIsLoading ? (
         <ArrowButton
           text="Submit"
