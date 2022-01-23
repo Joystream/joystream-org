@@ -7,7 +7,11 @@ import AmountInput from './AmountInput';
 import { ArrowButton } from '../../../pages/founding-members/index';
 import Notice from './Notice';
 import Loader from 'react-loader-spinner';
-import FinalScreen from './FinalScreen';
+import FinalScreen, {
+  FINAL_UI_STATE_SERVERDOWN,
+  FINAL_UI_STATE_SERVERPROBLEM
+} from './FinalScreen';
+import Success from './Success';
 
 //util
 import {
@@ -17,18 +21,12 @@ import {
   validateTokenAmount,
   validateEmail,
 } from './util/validation';
-import {
-  FINAL_UI_STATE_SUCCESS,
-  FINAL_UI_STATE_FAILURE,
-  FINAL_UI_STATE_TIMEOUT,
-  FINAL_UI_STATE_SERVERDOWN
-} from './FinalScreen';
 
 import './style.scss';
 
-const CASHOUT_SERVER_URL = "";
-const INITIATE_CASHOUT_ROUTE = "initiate-cashout";
-const CASHOUT_ROUTE = "cashout";
+export const CASHOUT_SERVER_URL = "";
+export const INITIATE_CASHOUT_ROUTE = "initiate-cashout";
+export const CASHOUT_ROUTE = "cashout";
 
 const ERROR_TYPE_PROCESSING = "PROCESSING";
 
@@ -57,7 +55,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
     return null;
   };
 
-  const submit = async () => {
+  const validateForm = async () => {
     const trimmedEmail = email.value.trimStart().trimEnd();
 
     const joystreamAddressError = validateJoystreamAddress(joystreamAddress.value);
@@ -105,7 +103,11 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
       setJoystreamHandle(prev => ({ ...prev, error: userError }));
     }
 
-    const isDataValid = !joystreamAddressError && !tokenAmountError && isValidBchAddress && !emailError && !userError;
+    return !joystreamAddressError && !tokenAmountError && isValidBchAddress && !emailError && !userError;
+  }
+
+  const submit = async () => {
+    const isDataValid = await validateForm();
 
     if (isDataValid) {
       setCashoutInitiationResponse({ loading: true });
@@ -120,15 +122,15 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         });
 
         if(response.status === 200) {
-          const { timeoutTimestamp } = response.data;
+          const { timeoutTimestamp, joystreamAddress } = response.data;
 
-          setCashoutInitiationResponse({ success: { timeoutTimestamp }, loading: false });
+          setCashoutInitiationResponse({ success: { timeoutTimestamp, joystreamAddress }, loading: false });
         }
       } catch (e) {
         // Axios throws an error for 4xx and 5xx error codes. That is why
         // we're dealing with those in the catch block.
 
-        if(e.response.status === 400 && e.response.data?.errorType === ERROR_TYPE_PROCESSING) {
+        if(e?.response?.status === 400 && e?.response?.data?.errorType === ERROR_TYPE_PROCESSING) {
           const { joystreamAddress, tokenAmount } = e.response.data;
 
           setCashoutInitiationResponse({
@@ -138,14 +140,14 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
           return;
         }
 
-        if(e.response.status === 400) {
+        if(e?.response?.status === 400) {
           // TODO: If just 400 then it's a validation error. (Shouldn't happen!)
           setCashoutInitiationResponse({ loading: false });
           return;
         }
 
-        if(e.response.status === 500) {
-          setCashoutInitiationResponse({ error: FINAL_UI_STATE_SERVERDOWN, loading: false });
+        if(e?.response?.status === 500) {
+          setCashoutInitiationResponse({ error: FINAL_UI_STATE_SERVERPROBLEM, loading: false });
           return;
         }
       }
@@ -208,8 +210,24 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         help="Help us to contact you in case of any problems"
         isLoading={formIsLoading}
       />
-      {cashoutInitiationResponse?.alreadyCashingOut ? <Notice data={cashoutInitiationResponse.alreadyCashingOut} /> : null}
-      {!formIsLoading ? (
+      {cashoutInitiationResponse?.alreadyCashingOut ? (
+        <Notice data={cashoutInitiationResponse.alreadyCashingOut} />
+      ) : null}
+      {!formIsLoading && cashoutInitiationResponse?.success ? (
+        <Success {...cashoutInitiationResponse.success} setCashoutInitiationResponse={setCashoutInitiationResponse} />
+      ) : null}
+      {formIsLoading ? (
+        <Loader
+          className="CashoutPage__form__body__loader"
+          type="Oval"
+          color="#302ABF"
+          secondaryColor="#00000"
+          height="100%"
+          width="100%"
+          timeout={0}
+        />
+      ) : null}
+      {!formIsLoading && !cashoutInitiationResponse?.success ? (
         <ArrowButton
           text="Submit"
           className={cn('CashoutPage__form__body__button', {
@@ -221,17 +239,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
             }
           }}
         />
-      ) : (
-        <Loader
-          className="CashoutPage__form__body__loader"
-          type="Oval"
-          color="#302ABF"
-          secondaryColor="#00000"
-          height="100%"
-          width="100%"
-          timeout={0}
-        />
-      )}
+      ) : null}
     </div>
   );
 
