@@ -9,6 +9,7 @@ export const FINAL_UI_STATE_SUCCESS = "SUCCESS";
 export const FINAL_UI_STATE_FAILURE = "FAILURE";
 export const FINAL_UI_STATE_TIMEOUT = "TIMEOUT";
 export const FINAL_UI_STATE_SERVERDOWN = "SERVERDOWN";
+export const FINAL_UI_STATE_SERVERPROBLEM = "SERVERPROBLEM";
 
 const STATES = {
   [FINAL_UI_STATE_SUCCESS]: {
@@ -32,6 +33,11 @@ const STATES = {
     icon: <FailureIcon style={{ stroke: '#ff3861' }} className="CashoutPage__form__final-screen__icon" />,
     title: 'Server is down',
     subtitle: "We can't process any transaction right now, please contact us on Discord.",
+  },
+  [FINAL_UI_STATE_SERVERPROBLEM]: {
+    icon: <FailureIcon style={{ stroke: '#ff3861' }} className="CashoutPage__form__final-screen__icon" />,
+    title: 'Server problem',
+    subtitle: "Server had a problem while processing your transaction, please contact us on Discord.",
   },
 };
 

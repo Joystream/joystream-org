@@ -201,6 +201,75 @@
         color: #ff3861;
       }
 
+      &__button {
+        width: 100%;
+        height: 60px;
+        background-color: $c_grayc-chateau;
+
+        &:hover {
+          background-color: $c_grayc-chateau;
+        }
+
+        &--active {
+          background-color: $c_blue-ribbon;
+
+          &:hover {
+            background-color: $c_han_purple;
+          }
+        }
+      }
+
+      &__loader {
+        width: 56px;
+        margin: 0 auto;
+        opacity: 1;
+
+        & * {
+          opacity: 1;
+        }
+
+        & circle {
+          opacity: 0;
+        }
+      }
+
+      &__success {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &__title {
+          margin-bottom: 8px;
+          font-family: $font-primary;
+          font-size: 22px;
+        }
+
+        &__subtitle {
+          font-family: $font-secondary;
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: -.20000000298023224px;
+
+          & > span {
+            font-weight: bold;
+            cursor: copy;
+          }
+        }
+
+        &__timeout {
+          font-family: $font-secondary;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 20px;
+          letter-spacing: -.20000000298023224px;
+        }
+
+        &__button {
+          width: 100%;
+          height: 60px;
+        }
+      }
+
       &__notice {
         margin-bottom: 32px;
         padding: 24px;
@@ -235,38 +304,6 @@
           & > span {
             color: $c_black;
           }
-        }
-      }
-
-      &__button {
-        width: 100%;
-        height: 60px;
-        background-color: $c_grayc-chateau;
-
-        &:hover {
-          background-color: $c_grayc-chateau;
-        }
-
-        &--active {
-          background-color: $c_blue-ribbon;
-
-          &:hover {
-            background-color: $c_han_purple;
-          }
-        }
-      }
-
-      &__loader {
-        width: 56px;
-        margin: 0 auto;
-        opacity: 1;
-
-        & * {
-          opacity: 1;
-        }
-
-        & circle {
-          opacity: 0;
         }
       }
     }
