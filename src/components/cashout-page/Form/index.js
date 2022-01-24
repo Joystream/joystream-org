@@ -37,13 +37,24 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
   const [email, setEmail] = useState({ value: '', error: null });
   const [joystreamHandle, setJoystreamHandle] = useState({ value: '', error: null });
   const [cashoutInitiationResponse, setCashoutInitiationResponse] = useState(null);
+  const [cashoutResponse, setCashoutResponse] = useState(null);
 
   // state-derived variables
   const formIsFilled =
     !!joystreamAddress.value && !!tokenAmount.value && !!bchAddress.value && !!email.value && !!joystreamHandle.value;
-  const formIsLoading = !(Api && joyInDollars) || cashoutInitiationResponse?.loading;
+  const formIsLoading = !(Api && joyInDollars) || cashoutInitiationResponse?.loading || cashoutResponse?.loading;
 
   const formFinalizationState = () => {
+    if(cashoutResponse?.success) {
+      const { success, dollarAmount } = cashoutResponse;
+
+      return { state: success, props: { dollarAmount } };
+    }
+
+    if(cashoutResponse?.error) {
+      return { state: cashoutResponse.error };
+    }
+
     if(cashoutInitiationResponse?.error) {
       return { state: cashoutInitiationResponse.error };
     }
@@ -167,7 +178,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         updateValue={setJoystreamAddress}
         errorMessage={joystreamAddress.error}
         info="tJOY Account address"
-        isLoading={formIsLoading}
+        disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
       <AmountInput
         id="tokenAmount"
@@ -177,7 +188,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={tokenAmount.error}
         joyInDollars={joyInDollars}
         bchInDollars={bchInDollars}
-        isLoading={formIsLoading}
+        disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
       <Input
         id="bchAddress"
@@ -187,7 +198,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={bchAddress.error}
         warning={bchAddress.warning}
         info="BCH Account address"
-        isLoading={formIsLoading}
+        disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
       <Input
         id="email"
@@ -198,7 +209,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={email.error}
         info="Optional"
         help="Help us to contact you in case of any problems"
-        isLoading={formIsLoading}
+        disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
       <Input
         id="joystreamHandle"
@@ -208,13 +219,13 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         errorMessage={joystreamHandle.error}
         info="Optional"
         help="Help us to contact you in case of any problems"
-        isLoading={formIsLoading}
+        disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
       {cashoutInitiationResponse?.alreadyCashingOut ? (
         <Notice data={cashoutInitiationResponse.alreadyCashingOut} />
       ) : null}
       {!formIsLoading && cashoutInitiationResponse?.success ? (
-        <Success {...cashoutInitiationResponse.success} setCashoutInitiationResponse={setCashoutInitiationResponse} />
+        <Success {...cashoutInitiationResponse.success} setCashoutResponse={setCashoutResponse} />
       ) : null}
       {formIsLoading ? (
         <Loader
@@ -249,7 +260,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         <header className="CashoutPage__form__header">
           <h2 className="CashoutPage__form__header__title">Withdraw details</h2>
         </header>
-        {formFinalizationState() ? <FinalScreen state={formFinalizationState().state} /> : renderBody()}
+        {formFinalizationState() ? <FinalScreen {...formFinalizationState()} /> : renderBody()}
       </div>
     </div>
   );

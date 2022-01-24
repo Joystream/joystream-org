@@ -33,7 +33,7 @@ const ICON_HEIGHT = 16;
 const TEXTMODAL_TOP_MARGIN = 6;
 const TEXTMODAL_LEFT_MARGIN = 32;
 
-const Input = ({ id, label, placeholder, inputType, updateValue, errorMessage, warning, info, help, isLoading }) => {
+const Input = ({ id, label, placeholder, inputType, updateValue, errorMessage, warning, info, help, disabled }) => {
   const helpIconRef = createRef();
   const [inputValue, setInputValue] = useState('');
   const [hovered, setHovered] = useState(false);
@@ -106,7 +106,7 @@ const Input = ({ id, label, placeholder, inputType, updateValue, errorMessage, w
           setInputValue(e.target.value);
         }}
         placeholder={placeholder ?? ''}
-        disabled={isLoading}
+        disabled={disabled}
       />
       {errorMessage ? (
         <p className="CashoutPage__form__body__input-error">{errorMessage}</p>
