@@ -161,11 +161,19 @@ export const bountiesLink =
 
 export const testnetData = [
   {
+    Image: Olympia,
+    number: 11,
+    name: 'Olympia',
+    date: '18.02.2022',
+    state: 'Future',
+    link: '/olympia',
+  },
+  {
     Image: Giza,
     number: 10,
     name: 'Giza',
-    date: '01.11.2021',
-    state: 'Future',
+    date: '26.01.2022',
+    state: 'Current',
     link: '/giza',
   },
   {
@@ -173,7 +181,7 @@ export const testnetData = [
     number: 9,
     name: 'Sumer',
     date: '27.05.2021',
-    state: 'Current',
+    state: 'Past',
     link: '/sumer',
   },
   {
