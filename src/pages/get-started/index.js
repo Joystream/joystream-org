@@ -10,10 +10,23 @@ import GetStartedBounties from '../../components/get-started/Bounties';
 
 import './style.scss';
 
+/**
+| Page | Details | FAQ | Contribute |
+|---|---|---|---|
+| Joystream | | X | |
+| DAO | Markdown, Pioneer | X | X |
+| FM | Markdown, Become FM block, Reward, Conversations | X | X |
+| Council | Markdown | X | X |
+| WG | List Groups | X | X |
+| Bounties | List Bounties | X | X |
+| Creator | NFT, Tokens, YT Sync | X | X |
+**/
+
 const GetStarted = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
-
+    if (role) return <Role >
+    return <Intro />
   return (
     <BaseLayout t={t}>
       <SiteMetadata
@@ -21,13 +34,6 @@ const GetStarted = () => {
         title={t("getStarted.siteMetadata.title")}
         description={t("getStarted.siteMetadata.description")}
       />
-
-      <GetStartedHero t={t} />
-
-      <GetStartedHowTo t={t} />
-
-      <GetStartedBounties t={t} />
-
     </BaseLayout>
   );
 };
