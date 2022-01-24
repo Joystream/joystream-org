@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import { ReactComponent as NumberScrollPointer } from '../../../assets/svg/number-scroll-pointer.svg';
 
-const Input = ({ id, placeholder, value, setValue, isLoading }) => {
+const Input = ({ id, placeholder, value, setValue, disabled }) => {
   return (
     <div className="CashoutPage__form__body__amount-input-wrapper">
       <input
@@ -13,7 +13,7 @@ const Input = ({ id, placeholder, value, setValue, isLoading }) => {
         placeholder={placeholder}
         value={value}
         onChange={e => setValue(e.target.value)}
-        disabled={isLoading}
+        disabled={disabled}
       />
       <div className="CashoutPage__form__body__amount-input__type CashoutPage__form__body__amount-input__type--active">
         tJOY
@@ -54,7 +54,7 @@ const OutputValueInput = ({ isActive, outputValue, outputCurrency, setOutputCurr
   );
 };
 
-const AmountInput = ({ id, label, placeholder, updateValue, errorMessage, joyInDollars, bchInDollars, isLoading }) => {
+const AmountInput = ({ id, label, placeholder, updateValue, errorMessage, joyInDollars, bchInDollars, disabled }) => {
   const [joyAmount, setJoyAmount] = useState('');
   const [outputValue, setOutputValue] = useState('');
   const [outputCurrency, setOutputCurrency] = useState('USD');
@@ -89,7 +89,7 @@ const AmountInput = ({ id, label, placeholder, updateValue, errorMessage, joyInD
         <p className="CashoutPage__form__body__input-label">{label}</p>
       </label>
       <div className="CashoutPage__form__body__amount-inputs">
-        <Input id={id} placeholder={placeholder} value={joyAmount} setValue={setJoyAmount} isLoading={isLoading} />
+        <Input id={id} placeholder={placeholder} value={joyAmount} setValue={setJoyAmount} disabled={disabled} />
         <p className="CashoutPage__form__body__approximation-symbol">≈</p>
         <OutputValueInput
           isActive={joyAmount}
