@@ -1,0 +1,153 @@
+@import '../../../../styles/main';
+
+.FooterAction {
+  &__hero-wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: $c_black;
+  }
+
+  &__hero {
+    @extend %container;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 588px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 40px;
+    }
+
+    &__video {
+      width: 606px;
+      height: 341px;
+      border: 1px solid white;
+    }
+
+    &__title {
+      max-width: 654px;
+      font-family: $font-primary;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 72px;
+      letter-spacing: 0;
+      color: $c_white;
+    }
+
+    &__subtitle {
+      max-width: 598px;
+      margin-top: 16px;
+      font-family: $font-secondary;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: $c_slate-gray;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 220px;
+      height: 60px;
+      margin: 40px 0;
+      padding: 18px 20px;
+      background: $c_blue-ribbon;
+
+      &:hover {
+        background-color: $c_han_purple;
+      }
+    }
+
+    &__button-text {
+      font-family: $font-primary;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: white;
+    }
+
+    &__button-arrow {
+      color: white;
+      transform: rotate(-90deg);
+    }
+
+    &__background {
+      position: relative;
+      flex: 1;
+      width: 662px;
+      height: 100%;
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__hero {
+      &__background {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__hero {
+      flex-direction: column;
+
+      &__content {
+        align-items: center;
+      }
+
+      &__title {
+        font-size: 60px;
+      }
+
+      &__subtitle {
+        max-width: 654px;
+      }
+
+      &__background {
+        width: 600px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__hero {
+      height: 550px;
+      padding: 32px 20px 0 20px;
+
+      &__background {
+        width: 500px;
+      }
+
+      &__title {
+        max-width: 500px;
+        font-size: 32px;
+        line-height: 40px;
+
+        br {
+          display: none;
+        }
+      }
+
+      &__subtitle {
+        max-width: 500px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__hero {
+      &__background {
+        width: 100%;
+      }
+    }
+  }
+}

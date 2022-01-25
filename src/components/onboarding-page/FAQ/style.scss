@@ -1,0 +1,109 @@
+@import '../../../styles/main';
+
+.FAQ {
+  &__wrapper {
+    background-color: $c_white;
+  }
+
+  &__manifesto-cta {
+    @extend %smallContainer;
+
+    max-width: 818px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__title {
+      margin-top: 120px;
+      margin-bottom: 64px;
+      font-family: $font-primary;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    &__items {
+      margin-bottom: 120px;
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 24px;
+      padding: 32px;
+      text-align: left;
+      border: 2px solid $c_blue-ribbon;
+
+      &__close {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: 11px;
+        height: 11px;
+        color: $c_blue-ribbon;
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+          color: $c_han_purple;
+        }
+      }
+
+      &__question {
+        font-family: $font-primary;
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      &__answer {
+        margin-top: 24px;
+        font-family: $font-primary;
+        font-size: 20px;
+        line-height: 28px;
+        color: #5c6475;
+      }
+    }
+
+    @media #{$screen-max-md} {
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+      padding-top: 40px;
+
+      &__content {
+        width: 85%;
+      }
+
+      &__title {
+        margin: 20px 0;
+      }
+    }
+
+    @media #{$screen-max-sm} {
+      &__title {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      &__icon {
+        display: none;
+      }
+
+      &__icon-alt {
+        display: block;
+      }
+    }
+
+    @media (max-width: 500px) {
+      &__content {
+        width: 300px;
+      }
+    }
+  }
+}

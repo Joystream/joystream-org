@@ -1,0 +1,78 @@
+@import '../../../../styles/main';
+
+.VideoProgressBar {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-right: 24px;
+    overflow: hidden;
+    background-color: $c_black;
+  }
+
+  &__text {
+    font-family: $font-primary;
+    font-size: 24px;
+    line-height: 24px;
+    color: $c_white;
+
+    &--secondary {
+      padding-right: 150px;
+      font-size: 18px;
+      color: #5c6475;
+    }
+  }
+
+  &__progress__wrapper {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    margin-top: 8px;
+  }
+
+  &__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #1f252e;
+
+    &--1 {
+      width: 14.3%;
+      background-color: $c_blue-ribbon;
+    }
+
+    &--2 {
+      width: 28.6%;
+      background-color: $c_blue-ribbon;
+    }
+
+    &--3 {
+      width: 42.9%;
+      background-color: $c_blue-ribbon;
+    }
+
+    &--4 {
+      width: 57.2%;
+      background-color: $c_blue-ribbon;
+    }
+
+    &--5 {
+      width: 71.5%;
+      background-color: $c_blue-ribbon;
+    }
+
+    &--6 {
+      width: 85.8%;
+      background-color: $c_blue-ribbon;
+    }
+
+    &--7 {
+      width: 100%;
+      background-color: $c_blue-ribbon;
+    }
+  }
+}

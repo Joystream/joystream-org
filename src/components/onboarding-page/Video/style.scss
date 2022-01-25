@@ -1,0 +1,285 @@
+@import '../../../styles/_main';
+
+$outline-regular: .35rem solid $c_blue-ribbon;
+$outline-hovered: .26rem solid $c_blue-ribbon;
+
+.AtlasDemo__video {
+  position: relative;
+  width: 1030px;
+  height: 580px;
+  margin: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  .absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__logo-wrapper {
+    @extend .absolute;
+
+    z-index: 3;
+    background-color: black;
+    outline: $outline-hovered;
+    outline-offset: -.1rem;
+    opacity: 0;
+    animation: fadeinandout 3s;
+    animation-fill-mode: forwards;
+  }
+
+  &__logo {
+    @extend .absolute;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeinandleavetop 2.5s;
+    animation-fill-mode: forwards;
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      color: $c_light-gray;
+      text-align: center;
+    }
+
+    svg {
+      height: 6.4rem;
+      color: $c_blue-ribbon;
+    }
+  }
+
+  &__overlay {
+    @extend .absolute;
+
+    z-index: 2;
+    background-color: black;
+    outline: $outline-hovered;
+    opacity: .7;
+    animation: fadeintohalf 1s;
+  }
+
+  &__thumbnail {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    outline: $outline-regular;
+  }
+
+  &__thumbnail--hovered {
+    outline: $outline-hovered;
+    outline-offset: -.1rem;
+  }
+
+  &__thumbnail--disappeared {
+    opacity: 0;
+  }
+
+  &__loader {
+    @extend .absolute;
+
+    z-index: 2;
+    width: 20%;
+    height: 20%;
+    margin: auto;
+    animation: fadein 2s;
+
+    circle {
+      stroke: #8583bf;
+      stroke-opacity: 1;
+    }
+  }
+
+  &__hide {
+    @extend .absolute;
+
+    background-color: black;
+  }
+
+  & > video {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    outline: $outline-hovered;
+    outline-offset: -.1rem;
+    box-sizing: border-box;
+  }
+
+  &__playbutton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 3rem;
+    left: 0;
+    z-index: 2;
+    height: 9rem;
+    margin: auto;
+    opacity: 0;
+    transition: all 1.5s;
+  }
+
+  &__playbutton--hovered {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  &__playbutton--playing {
+    bottom: 0;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  &__atlasbutton {
+    @extend .absolute;
+
+    z-index: 2;
+    width: 12rem;
+    height: 4rem;
+    margin: auto;
+    opacity: 0;
+    animation: slidefrombottom 1.5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @media #{$screen-max-lg} {
+    &__playbutton {
+      height: 7rem;
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__atlasbutton {
+      width: 10rem;
+      height: 3rem;
+      padding: 0;
+      font-size: 1.2rem;
+    }
+
+    &__overlay,
+    & > video,
+    &__thumbnail--hovered {
+      outline: .15rem solid $c_blue-ribbon;
+    }
+
+    &__thumbnail {
+      background-size: 100% 100%;
+      outline: .15rem solid $c_blue-ribbon;
+      outline-offset: -.1rem;
+    }
+
+    &__logo {
+      p {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: $c_light-gray;
+        text-align: center;
+      }
+
+      svg {
+        height: 4rem;
+        color: $c_blue-ribbon;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__logo {
+      p {
+        font-size: 1rem;
+      }
+
+      svg {
+        height: 3rem;
+      }
+    }
+
+    &__playbutton {
+      height: 5rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__playbutton {
+      height: 4rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    &__logo {
+      p {
+        font-size: .7rem;
+      }
+
+      svg {
+        height: 2rem;
+      }
+    }
+  }
+}
+
+@keyframes fadeintohalf {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: .7;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinandleavetop {
+  0% {
+    opacity: 0;
+  }
+
+  75% {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  100% {
+    bottom: 8rem;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeinandout {
+  0% {
+    opacity: 0;
+  }
+
+  25%,
+  80% {
+    opacity: 1;
+  }
+
+  99% {
+    z-index: 3;
+    opacity: 0;
+  }
+
+  100% {
+    z-index: 0;
+  }
+}

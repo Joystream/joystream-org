@@ -1,0 +1,57 @@
+{
+  "onboarding": {
+    "button": {
+      "getStarted": {
+        "text": "Get Started",
+        "altText": "Join & start earning"
+      }
+    },
+    "footer": {
+      "title": "",
+      "subtitle": "",
+      "button": {
+        "nextVideo": {
+          "text": "Next Video",
+          "altText": "Go to the next video"
+        }
+      }
+    },
+    "page1": {
+      "footer": {
+        "title": "Go to next video",
+        "subtitle": "Joystream is a DAO, owned and governed by its token holders"
+      },
+      "title": "We are giving away $9,000,000+ worth of $JOY tokens!",
+      "subtitle": "Here’s everything you need to know about Joystream, and information about how to receive $JOY tokens...",
+      "infoSection" : {
+        "title": "What is Joystream?",
+        "text": "Joystream is a decentralized video platform and blockchain. It's powered by the native $JOY token. We built an application called Atlas, which is similar to video platforms that you are already familiar with, but it uses the underlying Joystream blockchain to let you upload videos to your channel, build up your subscriber count, sell your videos as NFTs, and even create your own token for your channel so that people can invest in you. Those token holders can earn a share of the revenue you generate, get early access to your videos, and all sorts of cool things that you control."
+      },
+      "videoSection" : {
+        "button": {
+            "lessonList" : {
+                "text": "Lesson List"
+            }
+        },
+        "playingNow": "Playing now"
+      },
+      "faq" : {
+        "title": "Frequently asked questions",
+        "questions": {
+          "language": {
+            "question": "What language is Joystream built on?",
+            "answer": "Joystream is built using Substrate, in the Polkadot ecosystem. Joystream itself is its own blockchain, and the $JOY token is a native asset on our blockchain."
+          },
+          "polkadot": {
+            "question": "Is Joystream going for a Polkadot parachain auction?",
+            "answer": "In short, Joystream does intend to go for a Polkadot parachain slot, at the right time."
+          },
+          "framework": {
+            "question": "What framework is Joystream built on?",
+            "answer": "Joystream is built using Substrate."
+          }
+        }
+      }
+    }
+  }
+}

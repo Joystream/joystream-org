@@ -1,0 +1,77 @@
+@import '../../../styles/main';
+
+.InfoSection {
+  &__wrapper {
+    background-color: $c_catskill-white;
+  }
+
+  &__manifesto-cta {
+    @extend %smallContainer;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__title {
+      margin-top: 80px;
+      margin-bottom: 24px;
+      font-family: $font-primary;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0;
+    }
+
+    &__subtitle {
+      margin-bottom: 80px;
+      font-family: $font-secondary;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: #5c6475;
+      text-align: justify;
+    }
+
+    &__link-wrapper {
+      width: fit-content;
+      margin-top: 32px;
+    }
+
+    @media #{$screen-max-md} {
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+      padding-top: 40px;
+
+      &__content {
+        width: 85%;
+      }
+
+      &__title {
+        margin: 20px 0;
+      }
+    }
+
+    @media #{$screen-max-sm} {
+      &__title {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      &__icon {
+        display: none;
+      }
+
+      &__icon-alt {
+        display: block;
+      }
+    }
+
+    @media (max-width: 500px) {
+      &__content {
+        width: 300px;
+      }
+    }
+  }
+}
