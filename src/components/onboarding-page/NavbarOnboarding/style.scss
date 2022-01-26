@@ -97,6 +97,20 @@
     }
   }
 
+  &__button-lang {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 16px;
+    cursor: pointer;
+    border: 2px solid $c_blue-ribbon;
+
+    &:hover {
+      background-color: $c_blue-ribbon;
+      border: 2px solid $c_han_purple;
+    }
+  }
+
   &__button-text {
     font-family: $font-primary;
     font-size: 18px;

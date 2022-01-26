@@ -11,6 +11,7 @@ import { ReactComponent as Expand } from '../../../assets/svg/expand.svg';
 import { ReactComponent as LinkIcon } from '../../../assets/svg/link.svg';
 import { ReactComponent as NavClose } from '../../../assets/svg/navbar-close.svg';
 import { ReactComponent as NavHamburger } from '../../../assets/svg/navbar-hamburger.svg';
+import { ReactComponent as UKCircle } from '../../../assets/svg/uk-flag-circle.svg';
 
 import useWindowDimensions from '../../../utils/useWindowDimensions';
 
@@ -103,6 +104,10 @@ const Navbar = ({ light, links, t }) => {
             'Navbar__links--light': light,
           })}
         >
+          <div className="Navbar__button-lang">
+            <UKCircle className="Navbar__button-arrow" />
+          </div>
+
           {links.map(({ label, isButton, isDropdown, links, href, to }) => {
             if (isDropdown) {
               return <Dropdown key={label} t={t} label={t(label)} links={links} isScrollUp={isScrollUp} />;
