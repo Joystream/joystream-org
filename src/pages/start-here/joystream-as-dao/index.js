@@ -7,6 +7,7 @@ import VideoSection from '../../../components/onboarding-page/VideoSection';
 import TokenInformation from '../../../components/token-page/TokenInformation';
 
 import './style.scss';
+import Statistics from '../../../components/onboarding-page/Statistics';
 
 const Onboarding = () => {
   const { t } = useTranslation();
@@ -35,6 +36,7 @@ const Onboarding = () => {
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page2.infoSection.title')} text={t('onboarding.page2.infoSection.text')} />
+      <Statistics t={t} />
       <InfoSection title={t('onboarding.page2.infoSection2.title')} text={t('onboarding.page2.infoSection2.text')} />
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
     </OnboardingLayout>

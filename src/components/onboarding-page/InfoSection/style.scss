@@ -6,7 +6,8 @@
   }
 
   &__manifesto-cta {
-    @extend %smallContainer;
+    width: 818px;
+    margin: auto;
 
     &__content {
       display: flex;
