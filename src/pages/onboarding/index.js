@@ -4,29 +4,29 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../components/_layouts/Onboarding';
 import InfoSection from '../../components/onboarding-page/InfoSection';
 import VideoSection from '../../components/onboarding-page/VideoSection';
-import FAQ from '../../components/onboarding-page/FAQ';
+import TokenInformation from '../../components/token-page/TokenInformation';
 
 import './style.scss';
-
-const questions = [
-  {
-    question: 'onboarding.page1.faq.questions.language.question',
-    answer: 'onboarding.page1.faq.questions.language.answer',
-  },
-  {
-    question: 'onboarding.page1.faq.questions.polkadot.question',
-    answer: 'onboarding.page1.faq.questions.polkadot.answer',
-  },
-  {
-    question: 'onboarding.page1.faq.questions.framework.question',
-    answer: 'onboarding.page1.faq.questions.framework.answer',
-  },
-];
 
 const videoUrl = 'https://new.xjames.xyz/storage/asset/v0/5DGJcMrKSPUCDjPWXjuHTSHUxs29yAV2NUMdkxNJ6yP496PD';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+
+  const questions = [
+    {
+      title: t('onboarding.page1.faq.questions.language.question'),
+      text: t('onboarding.page1.faq.questions.language.answer'),
+    },
+    {
+      title: t('onboarding.page1.faq.questions.polkadot.question'),
+      text: t('onboarding.page1.faq.questions.polkadot.answer'),
+    },
+    {
+      title: t('onboarding.page1.faq.questions.framework.question'),
+      text: t('onboarding.page1.faq.questions.framework.answer'),
+    },
+  ];
 
   return (
     <OnboardingLayout t={t}>
@@ -40,7 +40,7 @@ const Onboarding = () => {
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page1.infoSection.title')} text={t('onboarding.page1.infoSection.text')} />
-      <FAQ t={t} title={t('onboarding.page1.faq.title')} questions={questions} />
+      <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
     </OnboardingLayout>
   );
 };
