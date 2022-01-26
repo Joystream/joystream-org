@@ -4,10 +4,11 @@
   &__wrapper {
     position: relative;
     display: flex;
+    align-self: end;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 15px;
     margin-right: 24px;
+    margin-bottom: 2px;
     overflow: hidden;
     background-color: $c_black;
   }

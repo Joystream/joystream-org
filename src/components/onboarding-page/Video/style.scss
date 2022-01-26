@@ -1,7 +1,6 @@
 @import '../../../styles/_main';
 
-$outline-regular: .35rem solid $c_blue-ribbon;
-$outline-hovered: .26rem solid $c_blue-ribbon;
+$outline-regular: 2px solid $c_blue-ribbon;
 
 .AtlasDemo__video {
   position: relative;
@@ -24,8 +23,7 @@ $outline-hovered: .26rem solid $c_blue-ribbon;
 
     z-index: 3;
     background-color: black;
-    outline: $outline-hovered;
-    outline-offset: -.1rem;
+    outline: $outline-regular;
     opacity: 0;
     animation: fadeinandout 3s;
     animation-fill-mode: forwards;
@@ -59,7 +57,7 @@ $outline-hovered: .26rem solid $c_blue-ribbon;
 
     z-index: 2;
     background-color: black;
-    outline: $outline-hovered;
+    outline: $outline-regular;
     opacity: .7;
     animation: fadeintohalf 1s;
   }
@@ -73,11 +71,6 @@ $outline-hovered: .26rem solid $c_blue-ribbon;
     background-repeat: no-repeat;
     background-size: 100%;
     outline: $outline-regular;
-  }
-
-  &__thumbnail--hovered {
-    outline: $outline-hovered;
-    outline-offset: -.1rem;
   }
 
   &__thumbnail--disappeared {
@@ -109,8 +102,7 @@ $outline-hovered: .26rem solid $c_blue-ribbon;
     width: 100%;
     height: 100%;
     background-color: black;
-    outline: $outline-hovered;
-    outline-offset: -.1rem;
+    outline: $outline-regular;
     box-sizing: border-box;
   }
 
@@ -166,16 +158,9 @@ $outline-hovered: .26rem solid $c_blue-ribbon;
       font-size: 1.2rem;
     }
 
-    &__overlay,
-    & > video,
-    &__thumbnail--hovered {
-      outline: .15rem solid $c_blue-ribbon;
-    }
-
     &__thumbnail {
       background-size: 100% 100%;
-      outline: .15rem solid $c_blue-ribbon;
-      outline-offset: -.1rem;
+      outline: $outline-regular;
     }
 
     &__logo {

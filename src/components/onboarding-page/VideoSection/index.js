@@ -17,8 +17,12 @@ const VideoSection = ({ t, title, subtitle, index, videoUrl }) => {
         <div className="VideoSection__hero__content">
           <h1 className="VideoSection__hero__title">{title}</h1>
           <h2 className="VideoSection__hero__subtitle">{subtitle}</h2>
-          <div className="VideoSection__hero__video">
-            <Video />
+          <div className="VideoSection__hero__video__wrapper">
+            <div className="VideoSection__hero__bg-pattern--1"></div>
+            <div className="VideoSection__hero__video">
+              <Video />
+            </div>
+            <div className="VideoSection__hero__bg-pattern--2"></div>
           </div>
           <div className="VideoSection__hero__actions">
             <Link key={lessonListButtonTitle} to={lessonListPageUrl}>

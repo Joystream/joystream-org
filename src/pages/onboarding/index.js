@@ -30,13 +30,15 @@ const Onboarding = () => {
 
   return (
     <OnboardingLayout t={t}>
-      <VideoSection
-        t={t}
-        title={t('onboarding.page1.title')}
-        subtitle={t('onboarding.page1.subtitle')}
-        videoUrl={videoUrl}
-        index={1}
-      ></VideoSection>
+      <div className="Onboarding__wrapper">
+        <VideoSection
+          t={t}
+          title={t('onboarding.page1.title')}
+          subtitle={t('onboarding.page1.subtitle')}
+          videoUrl={videoUrl}
+          index={1}
+        ></VideoSection>
+      </div>
       <InfoSection title={t('onboarding.page1.infoSection.title')} text={t('onboarding.page1.infoSection.text')} />
       <FAQ t={t} title={t('onboarding.page1.faq.title')} questions={questions} />
     </OnboardingLayout>

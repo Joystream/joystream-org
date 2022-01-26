@@ -20,6 +20,26 @@
       justify-content: space-between;
       width: 1030px;
       margin: auto;
+      margin-bottom: 80px;
+    }
+
+    &__video__wrapper {
+      display: flex;
+      height: 580px;
+    }
+
+    &__bg-pattern--1 {
+      width: 205px;
+      height: 1092px;
+      margin-top: -70px;
+      background: url('../../../assets/svg/onboarding-pattern-1.svg') no-repeat;
+    }
+
+    &__bg-pattern--2 {
+      width: 205px;
+      height: 1092px;
+      margin-top: -154px;
+      background: url('../../../assets/svg/onboarding-pattern-2.svg') no-repeat;
     }
 
     &__progressBar {
@@ -35,7 +55,7 @@
       justify-content: space-between;
       width: 220px;
       height: 60px;
-      margin: 40px 0;
+      margin: 32px 0 0;
       padding: 18px 20px;
       background: $c_blue-ribbon;
 
@@ -69,7 +89,8 @@
     }
 
     &__title {
-      max-width: 1239px;
+      width: 1239px;
+      margin: auto;
       margin-top: 80px;
       font-family: $font-primary;
       font-size: 72px;
@@ -81,7 +102,8 @@
     }
 
     &__subtitle {
-      max-width: 1239px;
+      max-width: 1030px;
+      margin: auto;
       margin-top: 16px;
       margin-bottom: 64px;
       font-family: $font-secondary;

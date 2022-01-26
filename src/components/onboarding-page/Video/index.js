@@ -3,7 +3,6 @@ import './style.scss';
 import Play from '../../../assets/svg/atlas-demo-play.svg';
 import AtlasDemoVideo from '../../../assets/videos/AtlasDemo.mp4';
 import cn from 'classnames';
-import Button from '../../Button';
 import Loader from 'react-loader-spinner';
 import { ReactComponent as Logo } from '../../../assets/svg/logo-white.svg';
 import AtlasThumbnail from '../../../assets/images/thumbnail-atlas.png';
@@ -67,7 +66,6 @@ const Video = () => {
 
   return (
     <>
-      <h2 className={cn('AtlasDemo__title', { 'AtlasDemo__title--hidden': videoIsHovered })}> Try It Out</h2>
       <div
         className={cn('AtlasDemo__video', { 'AtlasDemo__video--focused': videoIsFocused })}
         onMouseEnter={() => setVideoIsHovered(true)}
