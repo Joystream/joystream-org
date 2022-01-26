@@ -35,6 +35,7 @@ const Onboarding = () => {
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page2.infoSection.title')} text={t('onboarding.page2.infoSection.text')} />
+      <InfoSection title={t('onboarding.page2.infoSection2.title')} text={t('onboarding.page2.infoSection2.text')} />
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
     </OnboardingLayout>
   );
