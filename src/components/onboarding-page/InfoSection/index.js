@@ -8,7 +8,17 @@ const InfoSection = ({ title, text }) => {
       <div className="InfoSection__manifesto-cta">
         <div className="InfoSection__manifesto-cta__content">
           <h2 className="InfoSection__manifesto-cta__title">{title}</h2>
-          <h4 className="InfoSection__manifesto-cta__subtitle">{text}</h4>
+          <h4 className="InfoSection__manifesto-cta__subtitle">
+            {text.split('<br/>').map((line, index) => {
+              return (
+                <span key={index}>
+                  {line}
+                  <br />
+                  <br />
+                </span>
+              );
+            })}
+          </h4>
         </div>
       </div>
     </div>

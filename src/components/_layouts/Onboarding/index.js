@@ -14,14 +14,14 @@ const defaultTypes = {
   children: null,
 };
 
-const OnboardingLayout = ({ children, t, title, subtitle }) => {
+const OnboardingLayout = ({ children, t, nextVideoText, nextVideoUrl }) => {
   return (
     <ScrollProvider>
       <div>
         <NavbarOnboarding t={t} />
         {children}
         <CookiesNotice t={t} />
-        <FooterOnboarding t={t} />
+        <FooterOnboarding t={t} nextVideoText={nextVideoText} nextVideoUrl={nextVideoUrl} />
       </div>
     </ScrollProvider>
   );

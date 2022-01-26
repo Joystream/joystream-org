@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
-import Button from '../../Button';
+import React from 'react';
 import FooterAction from './FooterAction';
 
 import './style.scss';
 
-const FooterOnboarding = ({ t }) => {
+const FooterOnboarding = ({ t, nextVideoText, nextVideoUrl }) => {
   return (
     <footer className="FooterOnboarding">
       <FooterAction
         title={t('onboarding.page1.footer.title')}
-        subtitle={t('onboarding.page1.footer.subtitle')}
+        subtitle={nextVideoText}
         buttonTitle={t('onboarding.footer.button.nextVideo.text')}
-        to={'/next-page'}
+        to={nextVideoUrl}
       />
     </footer>
   );

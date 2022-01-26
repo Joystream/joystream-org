@@ -1,17 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import OnboardingLayout from '../../components/_layouts/Onboarding';
-import InfoSection from '../../components/onboarding-page/InfoSection';
-import VideoSection from '../../components/onboarding-page/VideoSection';
-import TokenInformation from '../../components/token-page/TokenInformation';
+import OnboardingLayout from '../../../components/_layouts/Onboarding';
+import InfoSection from '../../../components/onboarding-page/InfoSection';
+import VideoSection from '../../../components/onboarding-page/VideoSection';
+import TokenInformation from '../../../components/token-page/TokenInformation';
 
 import './style.scss';
 
-const videoUrl = 'https://new.xjames.xyz/storage/asset/v0/5DGJcMrKSPUCDjPWXjuHTSHUxs29yAV2NUMdkxNJ6yP496PD';
-
 const Onboarding = () => {
   const { t } = useTranslation();
+
+  const nextVideoUrl = '/start-here/joystream-as-dao';
 
   const questions = [
     {
@@ -29,13 +29,13 @@ const Onboarding = () => {
   ];
 
   return (
-    <OnboardingLayout t={t}>
+    <OnboardingLayout t={t} nextVideoText={t('onboarding.page1.footer.subtitle')} nextVideoUrl={nextVideoUrl}>
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
           title={t('onboarding.page1.title')}
           subtitle={t('onboarding.page1.subtitle')}
-          videoUrl={videoUrl}
+          nextVideoUrl={nextVideoUrl}
           index={1}
         ></VideoSection>
       </div>

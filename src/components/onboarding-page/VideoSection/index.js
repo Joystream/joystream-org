@@ -6,9 +6,8 @@ import Link from '../../Link';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import './style.scss';
 
-const VideoSection = ({ t, title, subtitle, index, videoUrl }) => {
+const VideoSection = ({ t, title, subtitle, index, nextVideoUrl }) => {
   const nextVideoButtonTitle = t('onboarding.footer.button.nextVideo.text');
-  const nextVideoPageUrl = '/next-video';
   const lessonListButtonTitle = t('onboarding.page1.videoSection.button.lessonList.text');
   const lessonListPageUrl = '/lessonList';
   return (
@@ -33,7 +32,7 @@ const VideoSection = ({ t, title, subtitle, index, videoUrl }) => {
             </Link>
             <div className="VideoSection__hero__progressBar">
               <VideoProgressBar t={t} index={index} />
-              <Link key={nextVideoButtonTitle} to={nextVideoPageUrl}>
+              <Link key={nextVideoButtonTitle} to={nextVideoUrl}>
                 <div className="VideoSection__hero__button">
                   <p className="VideoSection__hero__button-text">{nextVideoButtonTitle}</p>
                   <Arrow className="VideoSection__hero__button-arrow" />

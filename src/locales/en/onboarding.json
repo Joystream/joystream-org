@@ -52,6 +52,31 @@
           }
         }
       }
+    },
+    "page2": {
+      "title": "Joystream DAO is owned and governed by its token holders",
+      "subtitle": "Here’s what a DAO really is.. and how Joystream is governed by the token holders using our state of the art application...",
+      "footer": {
+        "title": "Go to next video",
+        "subtitle": "Become a Founding Member and split $9,000,000+ worth of $JOY"
+      },
+      "infoSection" : {
+        "title": "Joystream as a DAO",
+        "text": "DAO stands for Decentralized Autonomous Organization, and has been referred to as ‘An internet community with a shared bank account.<br/>A DAO is the attempt to align the incentives of the consumers, or users of a product, with those running the organization. This is done by the use of tokens. By holding tokens, you become a partial owner of the organization, the same way that a stock gives you partial ownership of a company.<br/>The difference is that you can use your ownership to influence the decisions of the organization. For example, you can apply to becoming a council member, or vote in the council member election. You can upload a proposal to suggest a new idea, and it will be voted on by the council. You can use your ownership to get your say in the direction of the organization, and not in a theoretical way, but in actual on-chain voting that cannot be defrauded. Also, everything is transparent, and out in the open for anyone to see, including budget & salaries."
+      },
+      "faq" : {
+        "title": "Frequently asked questions",
+        "questions": {
+          "council": {
+            "question": "What is the Council?",
+            "answer": "The Joystream council is a group of individuals that have been elected by token holders to improve the platform."
+          },
+          "workingGroups": {
+            "question": "What are Working Groups?",
+            "answer": "Think of working groups like company departments, like a Marketing, or HR department for example."
+          }
+        }
+      }
     }
   }
 }
