@@ -76,6 +76,19 @@
         "currentWorkers" : "Current Workers",
         "jobOpenings" : "Job Openings"
       },
+      "structure": {
+        "traditionalCompany" : "Traditional Company",
+        "boardOfDirectors" : "Board of Directors",
+        "council" : "Council",
+        "employees" : "Employees",
+        "workers" : "Workers",
+        "departments" : "Departments",
+        "workingGroups" : "Working Groups",
+        "managers" : "Managers",
+        "workingGroupLeads" : "Working Group Leads",
+        "contractors" : "Contractors",
+        "bounties" : "Bounties"
+      },
       "faq" : {
         "title": "Frequently asked questions",
         "questions": {

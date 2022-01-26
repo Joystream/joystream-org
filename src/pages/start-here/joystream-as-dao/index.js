@@ -8,6 +8,7 @@ import TokenInformation from '../../../components/token-page/TokenInformation';
 
 import './style.scss';
 import Statistics from '../../../components/onboarding-page/Statistics';
+import Structure from '../../../components/onboarding-page/Structure';
 
 const Onboarding = () => {
   const { t } = useTranslation();
@@ -38,6 +39,7 @@ const Onboarding = () => {
       <InfoSection title={t('onboarding.page2.infoSection.title')} text={t('onboarding.page2.infoSection.text')} />
       <Statistics t={t} />
       <InfoSection title={t('onboarding.page2.infoSection2.title')} text={t('onboarding.page2.infoSection2.text')} />
+      <Structure t={t} />
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
     </OnboardingLayout>
   );

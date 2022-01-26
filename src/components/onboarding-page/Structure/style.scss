@@ -1,6 +1,6 @@
 @import '../../../styles/main';
 
-.Statistics {
+.Structure {
   &__wrapper {
     background-color: $c_catskill-white;
   }
@@ -13,28 +13,29 @@
     width: 818px;
     margin: auto;
     margin-top: -80px;
+    padding-bottom: 120px;
+    text-align: center;
   }
 
   &__item {
-    width: 252px;
-    height: 132px;
-    margin-bottom: 30px;
-    padding: 18px 24px;
+    width: 408px;
+    height: 120px;
+    margin-bottom: 2px;
+    padding: 46px;
     background: $c_white;
 
-    &__title {
-      margin-bottom: 10px;
+    &__title__header {
       font-family: $font-primary;
-      font-size: 16px;
-      line-height: 24px;
-      color: #5c6475;
+      font-size: 24px;
+      line-height: 40px;
+      color: $c_black;
     }
 
-    &__count {
+    &__title {
       font-family: $font-primary;
-      font-size: 48px;
-      line-height: 56px;
-      color: $c_black;
+      font-size: 20px;
+      line-height: 28px;
+      color: #5c6475;
     }
   }
 }
