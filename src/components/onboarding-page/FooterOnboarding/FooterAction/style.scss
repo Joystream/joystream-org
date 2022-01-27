@@ -3,23 +3,25 @@
 .FooterAction {
   &__hero-wrapper {
     position: relative;
+    margin-bottom: 40px;
     overflow: hidden;
     background-color: $c_black;
   }
 
   &__hero {
-    @extend %container;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
+    justify-content: space-between;
+    width: 1440px;
     height: 588px;
+    margin: auto;
+    padding: 0 100px;
 
     &__content {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: 40px;
     }
 
     &__video {

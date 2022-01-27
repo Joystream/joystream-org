@@ -68,6 +68,14 @@
         "title": "Decentralized, and highly organized",
         "text": "One misconception about DAOs is that it's a free for all with no structure or leadership because there's no central owner. This is not the case. There is a system in place to organize all the people, much like in a traditional company."
       },
+      "pioneerInfo" : {
+        "title": "Pioneer",
+        "text": "Pioneer is our state of the art application that we use for all governance related things. This is where you keep track of everything. Discuss proposals, vote on elections & proposals, ee the finances in the treasury, and so on. Everything governance related is found in Pioneer."
+      },
+      "builderSection" : {
+        "title": "Ready to contribute as a Builder?",
+        "text": "Hit the button to see all the opportunities available to Builders."
+      },
       "statistics": {
         "forumPosts" : "Forum Posts",
         "proposals" : "Proposals",

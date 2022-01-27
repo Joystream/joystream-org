@@ -1,0 +1,88 @@
+@import '../../../styles/main';
+
+.PioneerInfo {
+  &__wrapper {
+    background-color: $c_black;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 1434px;
+    margin: auto;
+  }
+
+  &__text {
+    width: 500px;
+    margin-right: 135px;
+  }
+
+  &__title {
+    margin-top: 80px;
+    margin-bottom: 24px;
+    font-family: $font-primary;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0;
+    color: $c_white;
+  }
+
+  &__description {
+    margin-bottom: 80px;
+    font-family: $font-secondary;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #81858d;
+    text-align: justify;
+  }
+
+  &__image {
+    width: 606px;
+    height: 341px;
+    margin: 120px 0;
+  }
+
+  &__link-wrapper {
+    width: fit-content;
+    margin-top: 32px;
+  }
+
+  @media #{$screen-max-md} {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding-top: 40px;
+
+    &__content {
+      width: 85%;
+    }
+
+    &__title {
+      margin: 20px 0;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    &__icon-alt {
+      display: block;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__content {
+      width: 300px;
+    }
+  }
+}

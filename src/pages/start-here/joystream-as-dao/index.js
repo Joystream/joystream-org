@@ -3,6 +3,8 @@ import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
+import PioneerInfo from '../../../components/onboarding-page/PioneerInfo';
+import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import TokenInformation from '../../../components/token-page/TokenInformation';
 
@@ -40,7 +42,9 @@ const Onboarding = () => {
       <Statistics t={t} />
       <InfoSection title={t('onboarding.page2.infoSection2.title')} text={t('onboarding.page2.infoSection2.text')} />
       <Structure t={t} />
+      <PioneerInfo t={t} />
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
+      <BuilderSection t={t} />
     </OnboardingLayout>
   );
 };
