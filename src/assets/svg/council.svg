@@ -1,0 +1,9 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="40" cy="40" r="40" fill="#F2F5F9"/>
+<path d="M25 29C22.791 29 21 27.209 21 25C21 22.791 22.791 21 25 21C27.209 21 29 22.791 29 25C29 27.209 27.209 29 25 29Z" stroke="#4038FF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M28 59H22L21 48L18 47V38C18 35.791 19.791 34 22 34H28C29.454 34 30.727 34.777 31.427 35.937" stroke="#4038FF" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M55 29C57.209 29 59 27.209 59 25C59 22.791 57.209 21 55 21C52.791 21 51 22.791 51 25C51 27.209 52.791 29 55 29Z" stroke="#4038FF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M52 59H58L59 48L62 47V38C62 35.791 60.209 34 58 34H52C50.546 34 49.273 34.777 48.573 35.937" stroke="#4038FF" stroke-width="3" stroke-miterlimit="10"/>
+<path d="M40 30C36.686 30 34 27.314 34 24C34 20.686 36.686 18 40 18C43.314 18 46 20.686 46 24C46 27.314 43.314 30 40 30Z" stroke="#4038FF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M45 62H35L34 50L30 49V39C30 36.791 31.791 35 34 35H46C48.209 35 50 36.791 50 39V49L46 50L45 62Z" stroke="#4038FF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>
+</svg>

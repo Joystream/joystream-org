@@ -110,6 +110,61 @@
           }
         }
       }
+    },
+    "page3": {
+      "title": "Become a Founding Member and split $9,000,000+ worth of $JOY",
+      "subtitle": "Learn everything you need to know about the Founding Members program, and how to become one...",
+      "footer": {
+        "subtitle": "What is the Council?"
+      },
+      "infoSection" : {
+        "title": "What is the Founding Members program?",
+        "text": "The Founding Members program is like an ambassador program where at least 15% of the genesis supply of JOY tokens will be allocated to people who contribute to the organization in a meaningful way.<br/>Joystream, which you know by now, is a decentralized organization. This means we need people in place to run and operate the whole platform, and so we thought the best way to attract those people.. people like you.. would be to bribe you.<br/>15% of JOY tokens will be split between the Founding Members, and anyone, yourself included, can become a Founding Member simply by contributing meaningful work to the platform."
+      },
+      "infoSection2" : {
+        "title": "Get rewarded for referring people",
+        "text": "The referral program gives you an incentive to tell people that you think would make a good fit for the Founding Members program about it. If they become a founding member, and put you down as the person who referred them, you will get a nice reward for doing so."
+      },
+      "referallsInfo" : {
+        "reward": "Reward for Referral",
+        "payout": "Referrals Payout"
+      },
+      "tasksInfo" : {
+        "title": "4 things you can do to become a FM",
+        "task1": {
+          "title": "Join the Council",
+          "text": "Join the Council and vote on proposals, collaborate with Working Groups, and so on"
+        },
+        "task2": {
+          "title": "Join a Working Group",
+          "text": "Join one of the working groups and do the work to meet their objectives"
+        },
+        "task3": {
+          "title": "Work on pre defined Bounties",
+          "text": "Pre defined Bounties are one-off tasks that move the project forward"
+        },
+        "task4": {
+          "title": "Make your own Bounty",
+          "text": "If you see something to fix, or an opportunity to improve something, you can make your own bounty"
+        }
+      },
+      "faq" : {
+        "title": "Frequently asked questions",
+        "questions": {
+          "question1": {
+            "question": "Who is the Founding Member’s program for?",
+            "answer": "Founding Members can be developers, video content creators, video editors, writers, storage and bandwidth providers, among many other things. If you think you can help the project, you can become FM."
+          },
+          "question2": {
+            "question": "How long does it take to become a FM?",
+            "answer": "There is no set time frame, as your ability to become a Founding Member is based on valuable contributions. We have seen people become Founding Members in as little as 1 month."
+          },
+          "question3": {
+            "question": "What do I need to do to become a FM?",
+            "answer": "In short, contribute to the project in a meaningful way. Council work, Working groups, or bounties is how to earn your stripes."
+          }
+        }
+      }
     }
   }
 }

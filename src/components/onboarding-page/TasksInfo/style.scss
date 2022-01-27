@@ -1,0 +1,62 @@
+@import '../../../styles/main';
+
+.TasksInfo {
+  &__wrapper {
+    background-color: $c_catskill-white;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 818px;
+    margin: auto;
+  }
+
+  &__title {
+    width: 818px;
+    margin: auto;
+    padding-bottom: 40px;
+    font-family: $font-primary;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 818px;
+    height: 168px;
+    margin-bottom: 16px;
+    padding: 32px;
+    background: $c_white;
+
+    &__image {
+      width: 80px;
+      height: 80px;
+    }
+
+    &__text__wrapper {
+      width: 650px;
+      margin-left: 24px;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+      font-family: $font-primary;
+      font-size: 32px;
+      line-height: 40px;
+      color: $c_black;
+    }
+
+    &__text {
+      font-family: $font-primary;
+      font-size: 20px;
+      line-height: 28px;
+      color: #5c6475;
+    }
+  }
+}
