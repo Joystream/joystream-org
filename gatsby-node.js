@@ -22,16 +22,13 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   }
 
   rules.push({
-    test: /\.(js|jsx)?$/,
+    test: /\.(js)?$/,
+    include: /node_modules\/@joystream\//,
     use: {
       loader: 'babel-loader',
       options: {
         plugins: [
-            '@babel/plugin-proposal-class-properties',
-          '@babel/plugin-proposal-class-static-block',
-          ["@babel/plugin-proposal-private-property-in-object", { "loose": false }],
-          // use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
-          'babel-plugin-remove-graphql-queries']
+            '@babel/plugin-proposal-class-properties']
       }
     },
   })
