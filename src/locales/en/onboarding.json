@@ -148,6 +148,24 @@
           "text": "If you see something to fix, or an opportunity to improve something, you can make your own bounty"
         }
       },
+      "fmSteps" : {
+        "title": "How to become a FM?",
+        "step1": {
+          "title": "Get clear on what you can offer",
+          "text": "Are you a great communicator? graphic designer? video editor? do you like chatting to people in discord and helping them learn more about the project? are you a developer? and so on. Get clear on what you can offer."
+        },
+        "step2": {
+          "title": "Figure out some way to contribute (we can help)",
+          "text": "Find some problem to fix, or opportunity to improve. We have \"Integrators\" in discord whose job it is to help people like you get involved in the project, they can help you get clarity on this. All you have to do is join discord and get in touch with an integrator."
+        },
+        "step3": {
+          "title": "Get started!",
+          "text": "Once you have identified something you can work on, it's time to do that job. I'd recommend starting small, to just get the ball rolling. You can worry about picking the perfect task later on, for now, just get going, get integrated."
+        }
+      },
+      "fmInterviews": {
+        "title": "Conversations with Founding Members"
+      },
       "faq" : {
         "title": "Frequently asked questions",
         "questions": {

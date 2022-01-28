@@ -7,6 +7,7 @@ import ReferallsInfo from '../../../components/onboarding-page/ReferallsInfo';
 import TasksInfo from '../../../components/onboarding-page/TasksInfo';
 import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
+import BecomeFM from '../../../components/onboarding-page/BecomeFM';
 import TokenInformation from '../../../components/token-page/TokenInformation';
 
 import './style.scss';
@@ -43,6 +44,7 @@ const Onboarding = () => {
       </div>
       <InfoSection title={t('onboarding.page3.infoSection.title')} text={t('onboarding.page3.infoSection.text')} />
       <TasksInfo t={t} />
+      <BecomeFM t={t} />
       <InfoSection title={t('onboarding.page3.infoSection2.title')} text={t('onboarding.page3.infoSection2.text')} />
       <ReferallsInfo t={t} />
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />

@@ -1,0 +1,143 @@
+@import '../../../styles/main';
+
+.BecomeFM {
+  &__wrapper {
+    background-color: $c_black;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 818px;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-family: $font-primary;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0;
+    color: $c_white;
+  }
+
+  &__number-step {
+    display: flex;
+    align-items: flex-start;
+
+    &__number__wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__number {
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+      min-width: 64px;
+      font-family: $font-primary;
+      font-size: 24px;
+      line-height: 32px;
+      color: $c_white;
+      background: $c_blue-ribbon;
+      border-radius: 50%;
+
+      &--white {
+        color: $c_blue-ribbon;
+        background: $c_white;
+      }
+    }
+
+    &__line {
+      width: 2px;
+      height: 100px;
+      margin-top: 16px;
+      background: $c_blue-ribbon;
+    }
+
+    &__line-half-blue {
+      width: 2px;
+      height: 80px;
+      margin-top: 16px;
+      background: $c_blue-ribbon;
+    }
+
+    &__line-half-white {
+      width: 2px;
+      height: 50px;
+      background: $c_white;
+    }
+
+    &__texts {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text {
+      margin-bottom: 8px;
+      margin-left: 24px;
+      font-family: $font-primary;
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 0;
+      color: $c_white;
+    }
+
+    &__other-text {
+      margin-bottom: 64px;
+      margin-left: 24px;
+      font-family: $font-primary;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: $c_oslo-gray;
+    }
+  }
+
+  &__link-wrapper {
+    width: fit-content;
+    margin-top: 32px;
+  }
+
+  @media #{$screen-max-md} {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding-top: 40px;
+
+    &__content {
+      width: 85%;
+    }
+
+    &__title {
+      margin: 20px 0;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    &__icon-alt {
+      display: block;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__content {
+      width: 300px;
+    }
+  }
+}
