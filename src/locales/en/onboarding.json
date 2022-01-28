@@ -191,6 +191,66 @@
           }
         }
       }
+    },
+    "page4": {
+      "title": "What is the Council?",
+      "subtitle": "Everything you need to know about the group of people who lead the governance side of Joystream, including how you can become one",
+      "footer": {
+        "subtitle": "What are Working Groups?"
+      },
+      "infoSection" : {
+        "title": "What is the Council?",
+        "text": "The Joystream council is a group of individuals that have been elected by token holders to improve the platform. They're sort of the leaders of the platform, who strategically vote on proposals, hire and fire Working Group leads, give assignments, and so on. They're sort of a mix of a board member and a chief executive, if we think of traditional company structure."
+      },
+      "infoSection2" : {
+        "title": "What makes a good Council Member?",
+        "text": "Apart from voting on proposals and administrative tasks, council members are there to improve the platform.<br/>Maybe someone submitted a proposal that has a good core idea, but the proposal wasn't very good. It'll be in the best interest of the council member to help the person out, perhaps getting on a call with them, and helping them making the argument more compelling.<br/>Or they might help a WG lead figure out what new role they need to hire to reach the WG objectives. They're fundamentally there to help, and serve. What other characteristics do Council members people have?"
+      },
+      "councilCharacteristics" : {
+        "task1": {
+          "title": "Knowledge",
+          "text": "Council members typically have a good knowledge of Joystream, or at least are very quick learners."
+        },
+        "task2": {
+          "title": "Diplomacy",
+          "text": "Council members can hash out disagreements with civil debate, and maintain a high level of professionalism"
+        },
+        "task3": {
+          "title": "Activity and commitment",
+          "text": "The blockchain industry moves very fast and people need to stay engaged in the community to know what's happening."
+        },
+        "task4": {
+          "title": "Long term perspective",
+          "text": "Council members want to see Joystream succeed for a very long time, and short term gratification is not their objective."
+        }
+      },
+      "statistics" : {
+          "councilMembers": "Council Members",
+          "nextElection": "Days until the Next Election",
+          "councilPeriod": "Council Period in days"
+      },
+      "councilResponsibilities" : {
+        "title": "Council member responsibilites",
+        "proposalVoting": "Vote on proposals",
+        "manageWG": "Manage Working Groups"
+    },
+      "faq" : {
+        "title": "Frequently asked questions",
+        "questions": {
+          "question1": {
+            "question": "What do council members do?",
+            "answer": "They're sort of the leaders of the platform, who strategically vote on proposals, hire and fire Working Group leads, give assignments, and so on. So in essence the council is there to ensure that the platform improves, primarily by voting on proposals that have been submitted, and also administrative things like budgets and paying workers."
+          },
+          "question2": {
+            "question": "How do I become a council member?",
+            "answer": "The process of becoming a council member consists of running for a council seat on chain, and getting people to stake tJOY by voting for you."
+          },
+          "question3": {
+            "question": "How does voting of council members work?",
+            "answer": "Voters stake tJOY as a way to cast their vote."
+          }
+        }
+      }
     }
   }
 }

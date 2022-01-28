@@ -10,12 +10,16 @@ import VideoSection from '../../../components/onboarding-page/VideoSection';
 import BecomeFM from '../../../components/onboarding-page/BecomeFM';
 import FMInterviews from '../../../components/onboarding-page/FMInterviews';
 import TokenInformation from '../../../components/token-page/TokenInformation';
+import { ReactComponent as Council } from '../../../assets/svg/council.svg';
+import { ReactComponent as WorkingGroup } from '../../../assets/svg/working-group.svg';
+import { ReactComponent as Bounty } from '../../../assets/svg/bounty.svg';
+import { ReactComponent as MakeBounty } from '../../../assets/svg/create-bounty.svg';
 
 import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
-  const nextVideoUrl = '/start-here/what-is-joystream';
+  const nextVideoUrl = '/start-here/what-is-council';
 
   const questions = [
     {
@@ -32,6 +36,29 @@ const Onboarding = () => {
     },
   ];
 
+  const tasksData = [
+    {
+      title: 'onboarding.page3.tasksInfo.task1.title',
+      text: 'onboarding.page3.tasksInfo.task1.text',
+      image: <Council className="TasksInfo__item__image" />,
+    },
+    {
+      title: 'onboarding.page3.tasksInfo.task2.title',
+      text: 'onboarding.page3.tasksInfo.task2.text',
+      image: <WorkingGroup className="TasksInfo__item__image" />,
+    },
+    {
+      title: 'onboarding.page3.tasksInfo.task3.title',
+      text: 'onboarding.page3.tasksInfo.task3.text',
+      image: <Bounty className="TasksInfo__item__image" />,
+    },
+    {
+      title: 'onboarding.page3.tasksInfo.task4.title',
+      text: 'onboarding.page3.tasksInfo.task4.text',
+      image: <MakeBounty className="TasksInfo__item__image" />,
+    },
+  ];
+
   return (
     <OnboardingLayout t={t} nextVideoText={t('onboarding.page3.footer.subtitle')} nextVideoUrl={nextVideoUrl}>
       <div className="Onboarding__wrapper">
@@ -44,7 +71,7 @@ const Onboarding = () => {
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page3.infoSection.title')} text={t('onboarding.page3.infoSection.text')} />
-      <TasksInfo t={t} />
+      <TasksInfo t={t} title={'onboarding.page3.tasksInfo.title'} data={tasksData} />
       <BecomeFM t={t} />
       <InfoSection title={t('onboarding.page3.infoSection2.title')} text={t('onboarding.page3.infoSection2.text')} />
       <ReferallsInfo t={t} />

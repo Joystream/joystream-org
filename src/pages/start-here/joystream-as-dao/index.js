@@ -27,6 +27,34 @@ const Onboarding = () => {
     },
   ];
 
+  // TODO Fetch from API
+  const statisticsData = [
+    {
+      title: 'onboarding.page2.statistics.forumPosts',
+      count: 2154,
+    },
+    {
+      title: 'onboarding.page2.statistics.proposals',
+      count: 943,
+    },
+    {
+      title: 'onboarding.page2.statistics.videos',
+      count: 3561,
+    },
+    {
+      title: 'onboarding.page2.statistics.channels',
+      count: 485,
+    },
+    {
+      title: 'onboarding.page2.statistics.currentWorkers',
+      count: 193,
+    },
+    {
+      title: 'onboarding.page2.statistics.jobOpenings',
+      count: 320,
+    },
+  ];
+
   return (
     <OnboardingLayout t={t} nextVideoText={t('onboarding.page2.footer.subtitle')} nextVideoUrl={nextVideoUrl}>
       <div className="Onboarding__wrapper">
@@ -39,7 +67,7 @@ const Onboarding = () => {
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page2.infoSection.title')} text={t('onboarding.page2.infoSection.text')} />
-      <Statistics t={t} />
+      <Statistics t={t} data={statisticsData} />
       <InfoSection title={t('onboarding.page2.infoSection2.title')} text={t('onboarding.page2.infoSection2.text')} />
       <Structure t={t} />
       <PioneerInfo t={t} />
