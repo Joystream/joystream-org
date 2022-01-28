@@ -8,6 +8,7 @@ import TasksInfo from '../../../components/onboarding-page/TasksInfo';
 import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import BecomeFM from '../../../components/onboarding-page/BecomeFM';
+import FMInterviews from '../../../components/onboarding-page/FMInterviews';
 import TokenInformation from '../../../components/token-page/TokenInformation';
 
 import './style.scss';
@@ -47,6 +48,7 @@ const Onboarding = () => {
       <BecomeFM t={t} />
       <InfoSection title={t('onboarding.page3.infoSection2.title')} text={t('onboarding.page3.infoSection2.text')} />
       <ReferallsInfo t={t} />
+      <FMInterviews t={t} />
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
       <BuilderSection t={t} />
     </OnboardingLayout>

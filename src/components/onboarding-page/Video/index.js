@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './style.scss';
-import Play from '../../../assets/svg/atlas-demo-play.svg';
+import Play from '../../../assets/svg/btn-play.svg';
 import AtlasDemoVideo from '../../../assets/videos/AtlasDemo.mp4';
 import cn from 'classnames';
 import Loader from 'react-loader-spinner';
