@@ -20,7 +20,7 @@ import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
-  const nextVideoUrl = '/start-here/what-is-joystream';
+  const nextVideoUrl = '/start-here/what-are-working-groups';
 
   const questions = [
     {

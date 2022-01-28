@@ -233,7 +233,7 @@
         "title": "Council member responsibilites",
         "proposalVoting": "Vote on proposals",
         "manageWG": "Manage Working Groups"
-    },
+      },
       "faq" : {
         "title": "Frequently asked questions",
         "questions": {
@@ -248,6 +248,37 @@
           "question3": {
             "question": "How does voting of council members work?",
             "answer": "Voters stake tJOY as a way to cast their vote."
+          }
+        }
+      }
+    },
+    "page5": {
+      "title": "What are Working Groups?",
+      "subtitle": "Working groups are like company departments collectively working towards some specific objective",
+      "footer": {
+        "subtitle": "What are Bounties?"
+      },
+      "infoSection" : {
+        "title": "What are Working Groups?",
+        "text": "Think of working groups like company departments, like a Marketing Department for example. The Marketing department would have a head of that department, and in Joystream we have Working Group Leads. The WG lead is responsible for reaching the objectives of the WG, and those are agreed upon with the council, who holds the WG lead accountable. The same goes for a Curation working group, or Storage working group, and so on."
+      },
+      "workingGroups" : {
+          "storageProviders": {
+            "title": "Storage Providers",
+            "text": "Storage Providers are responsible for storing and providing platform content "
+          },
+          "operationsGroup": {
+            "title": "Operations Group",
+            "text": "Operations Working Group encompases all the activites that don't require privilages on chain like: Development, Management, Marketing."
+          },
+          "weeklyPayout": " in $JOY Weekly"
+      },
+      "faq" : {
+        "title": "Frequently asked questions",
+        "questions": {
+          "question1": {
+            "question": "What do workers do?",
+            "answer": "This of course depends on which Working Group they’re part of, but they do all types of tasks to help achieve the WG objectives, the same way an employee of a traditional company works to achieve the objectives of their department."
           }
         }
       }

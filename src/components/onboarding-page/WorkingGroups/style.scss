@@ -1,0 +1,68 @@
+@import '../../../styles/main';
+
+.WorkingGroups {
+  &__wrapper {
+    background-color: $c_catskill-white;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 818px;
+    margin: auto;
+    margin-top: -32px;
+    padding-bottom: 90px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 818px;
+    margin-bottom: 30px;
+    background: $c_white;
+
+    &__payout {
+      width: 818px;
+      padding: 20px 30px;
+      font-family: $font-primary;
+      font-size: 18px;
+      line-height: 30px;
+      color: $c_oslo-gray;
+      background: $c_ebony-clay;
+
+      &--amount {
+        font-family: $font-primary;
+        font-size: 30px;
+        line-height: 30px;
+        color: $c_catskill_white;
+      }
+    }
+
+    &__title {
+      width: 818px;
+      padding: 20px 30px 8px;
+      font-family: $font-primary;
+      font-size: 28px;
+      line-height: 36px;
+      color: $c_black;
+    }
+
+    &__subtitle {
+      width: 818px;
+      padding-bottom: 14px;
+      padding-left: 30px;
+      font-family: $font-primary;
+      font-size: 16px;
+      line-height: 24px;
+      color: #656565;
+    }
+
+    &__image {
+      width: 156px;
+      height: 48px;
+      margin: 30px;
+    }
+  }
+}
