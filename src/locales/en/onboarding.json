@@ -282,6 +282,48 @@
           }
         }
       }
+    },
+    "page6": {
+      "title": "What are bounties?",
+      "subtitle": "Everything you need to understand about how to make a living by working on bounties, and even creating your own bounty",
+      "footer": {
+        "subtitle": "What are Bounties?"
+      },
+      "infoSection" : {
+        "title": "What are bounties?",
+        "text": "A Bounty is a one-off task that needs to get done, but doesn't warrant a full-time position like a working group. Think of it like a gig. These types of one-off gigs are plentiful, and new ones are always popping up. Anyone can suggest a Bounty that doesn't already exist to also be added, and of course, whoever successfully completes a Bounty is rewarded by the council."
+      },
+      "bounties" : {
+        "title": "Bounties",
+        "text": "Bounties are tasks which anyone can attempt to tackle in a exchange for some reward. To contribute in earning via Bounties you need to contact one of our Integrators on Discord.",
+        "showMore": "Show more bounties",
+        "showLess": "Show less bounties",
+        "payoutCurrency": " in $JOY"
+      },
+      "workingGroups" : {
+          "storageProviders": {
+            "title": "Storage Providers",
+            "text": "Storage Providers are responsible for storing and providing platform content "
+          },
+          "operationsGroup": {
+            "title": "Operations Group",
+            "text": "Operations Working Group encompases all the activites that don't require privilages on chain like: Development, Management, Marketing."
+          },
+          "weeklyPayout": " in $JOY Weekly"
+      },
+      "faq" : {
+        "title": "Frequently asked questions",
+        "questions": {
+          "question1": {
+            "question": "How can I make my own bounty?",
+            "answer": "TODO: Insert process here"
+          },
+          "question2": {
+            "question": "Can multiple people work on the same bounty?",
+            "answer": "Who is working on a bounty is transparent, so while the opportunity to work in a collaborative way is there, it’s also to ensure you don’t have 2 people doing the same tasks."
+          }
+        }
+      }
     }
   }
 }
