@@ -161,14 +161,6 @@ export const bountiesLink =
 
 export const testnetData = [
   {
-    Image: Olympia,
-    number: 11,
-    name: 'Olympia',
-    date: '18.02.2022',
-    state: 'Future',
-    link: '/olympia',
-  },
-  {
     Image: Giza,
     number: 10,
     name: 'Giza',
