@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
@@ -7,7 +7,7 @@ import PioneerInfo from '../../../components/onboarding-page/PioneerInfo';
 import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import TokenInformation from '../../../components/token-page/TokenInformation';
-
+import useAtlasData from '../../../utils/pages/onboarding/useAtlasData';
 import './style.scss';
 import Statistics from '../../../components/onboarding-page/Statistics';
 import Structure from '../../../components/onboarding-page/Structure';
@@ -15,6 +15,23 @@ import Structure from '../../../components/onboarding-page/Structure';
 const Onboarding = () => {
   const { t } = useTranslation();
   const nextVideoUrl = '/start-here/what-is-fm-program';
+
+  const { videos, channels } = useAtlasData();
+
+  const [channelsCount, setChannelsCount] = useState(0);
+  const [videosCount, setVideosCount] = useState(0);
+
+  useEffect(() => {
+    if (channels.data) {
+      setChannelsCount(channels.data.length);
+    }
+  }, [channels]);
+
+  useEffect(() => {
+    if (videos.data) {
+      setVideosCount(videos.data.length);
+    }
+  }, [videos]);
 
   const questions = [
     {
@@ -27,7 +44,7 @@ const Onboarding = () => {
     },
   ];
 
-  // TODO Fetch from API
+  // TODO Fetch onchain data from JoyStream API
   const statisticsData = [
     {
       title: 'onboarding.page2.statistics.forumPosts',
@@ -39,11 +56,11 @@ const Onboarding = () => {
     },
     {
       title: 'onboarding.page2.statistics.videos',
-      count: 3561,
+      count: videosCount,
     },
     {
       title: 'onboarding.page2.statistics.channels',
-      count: 485,
+      count: channelsCount,
     },
     {
       title: 'onboarding.page2.statistics.currentWorkers',
