@@ -16,6 +16,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 120px;
   }
 
   &__form {
@@ -23,7 +24,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin: 24px 0 120px 0;
+    margin-top: 24px;
 
     &__title {
       margin-bottom: 5px;
@@ -53,6 +54,15 @@
       margin: 0 10px;
       padding: 0;
     }
+  }
+
+  &__note {
+    margin: 20px auto -10px;
+    font-family: $font-primary;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+    color: white;
   }
 
   &__layout {
