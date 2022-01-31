@@ -8,8 +8,10 @@ import './style.scss';
 
 const VideoSection = ({ t, title, subtitle, index, nextVideoUrl }) => {
   const nextVideoButtonTitle = t('onboarding.footer.button.nextVideo.text');
+  const getStartedButtonTitle = t('onboarding.button.getStarted.text');
   const lessonListButtonTitle = t('onboarding.page1.videoSection.button.lessonList.text');
   const lessonListPageUrl = '/lessonList';
+  const getStartedPageUrl = '/get-started';
   return (
     <div className="VideoSection__wrapper">
       <div className="VideoSection__hero">
@@ -32,9 +34,14 @@ const VideoSection = ({ t, title, subtitle, index, nextVideoUrl }) => {
             </Link>
             <div className="VideoSection__hero__progressBar">
               <VideoProgressBar t={t} index={index} />
-              <Link key={nextVideoButtonTitle} to={nextVideoUrl}>
+              <Link
+                key={nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle}
+                to={nextVideoUrl ? nextVideoUrl : getStartedPageUrl}
+              >
                 <div className="VideoSection__hero__button">
-                  <p className="VideoSection__hero__button-text">{nextVideoButtonTitle}</p>
+                  <p className="VideoSection__hero__button-text">
+                    {nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle}
+                  </p>
                   <Arrow className="VideoSection__hero__button-arrow" />
                 </div>
               </Link>

@@ -324,6 +324,47 @@
           }
         }
       }
+    },
+    "page7": {
+      "title": "How to make a living as a video creator",
+      "subtitle": "Learn how to create and monetize on Joystream using video NFTs, social tokens, and even getting paid by Joystream itself",
+      "footer": {
+        "subtitle": "What are Bounties?"
+      },
+      "infoSection" : {
+        "title": "How to make a living as a video creator",
+        "text": "Atlas is in many ways similar to video applications you are already familiar with, but it's on the blockchain, and decentralized, and it has some really amazing features like the ability to sell your videos as NFTs, and create a token for your own channel where subscribers, or any consumer of your content, can invest in you as a creator.<br/>It's a new way for content creators to make a living, without being at the mercy of the platform they publish on."
+      },
+      "atlasInfo1" : {
+        "title": "YouTube sync program",
+        "text": "YouTube sync is a way to back up your content automatically on Atlas, and of course being able to then sell the video as an NFT, and it’s a seamless automated experience."
+      },
+      "atlasInfo2" : {
+        "title": "Social Tokens",
+        "text": "With social tokens creators can even let token holders earn a share of the revenue they generate, give early access to content, and all sorts of cool things. Creators are loving this new way of making a living, where they are less reliant on having to agree on things like the politics of the platform they use, or having to pander to advertisers. Now creators can focus on making the content they want, and monetize that."
+      },
+      "atlasInfo3" : {
+        "title": "NFT’s",
+        "text": "With the ability to sell your content as NFTs, or have people invest in you as a creator by purchasing your token it gives creators new ways to monetize their content."
+      },
+      "atlasInfo4" : {
+        "title": "Atlas",
+        "text": "Atlas is the flagship content consumer and publishing app for Joystream. Watch videos, follow creators and discover new featured content, or create a channel and build your audience.",
+        "buttonText": "Try out Atlas"
+      },
+      "faq" : {
+        "title": "Frequently asked questions",
+        "questions": {
+          "question1": {
+            "question": "How do NFTs work?",
+            "answer": "Video NFTs work in many ways similarly to what you may already be used to on other platforms. Once you upload a video you can decide to issue it as an NFT, and you can sell it via auction, fixed price, among other options."
+          },
+          "question2": {
+            "question": "What are Social Tokens?",
+            "answer": "You can turn your channel on Atlas into its own token. This allows investors to support and speculate on you as a creator, and they can get benefits  such as revenue share, early content access, among other things."
+          }
+        }
+      }
     }
   }
 }
