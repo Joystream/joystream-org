@@ -86,7 +86,7 @@
     "viewAllRoles": "Посмотреть все роли"
   },
   "navbar": {
-    "product": "Продукт",
+    "product": "Testnet",
     "atlas": "Atlas",
     "pioneer": "Pioneer",
     "community": "Сообщество",
@@ -111,7 +111,8 @@
       "brandGuidance": "Правила использования айдентики",
       "tokenomics": "Tokenomics"
     },
-    "followUs": "Следите за новостями"
+    "followUs": "Следите за новостями",
+    "note": "* The Joystream video platform is currently in its TESTNET phase."
   },
   "pages": {
     "blog": "Блог",

@@ -81,6 +81,9 @@ const Footer = ({ t }) => {
             ))}
           </div>
         </div>
+        <div className='Footer__note'>
+          {t('footer.note')}
+        </div>
       </div>
     </footer>
   );
