@@ -21,18 +21,6 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     })
   }
 
-  rules.push({
-    test: /\.(js)?$/,
-    include: /node_modules\/@joystream\//,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        plugins: [
-            '@babel/plugin-proposal-class-properties']
-      }
-    },
-  })
-
   actions.setWebpackConfig({
     resolve: {
       extensions: ['*', '.mjs', '.jsx', '.js', '.json'],
