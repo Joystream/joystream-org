@@ -12,7 +12,7 @@
     "@svgr/webpack": "^4.3.0",
     "axios": "^0.21.1",
     "babel-jest": "^24.8.0",
-    "babel-preset-gatsby": "^2.6.0",
+    "babel-preset-gatsby": "^0.5.5",
     "classnames": "^2.2.6",
     "css-loader": "^3.0.0",
     "eslint-plugin-import": "^2.18.2",
