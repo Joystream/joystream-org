@@ -15,8 +15,8 @@ const ATLAS_DATA_QUERY = `
 `;
 
 const useAtlasData = () => {
-  const [videos, setVideos] = useState({ isLoading: true, error: false, data: 0 });
-  const [channels, setChannels] = useState({ isLoading: true, error: false, data: 0 });
+  const [videos, setVideos] = useState({ isLoading: true, error: false, count: 0 });
+  const [channels, setChannels] = useState({ isLoading: true, error: false, count: 0 });
 
   useEffect(() => {
     const getAtlasData = async () => {
@@ -32,12 +32,12 @@ const useAtlasData = () => {
           setChannels({
             isLoading: false,
             error: false,
-            data: data.channels,
+            count: data.channels.length,
           });
           setVideos({
             isLoading: false,
             error: false,
-            data: data.videos,
+            count: data.videos.length,
           });
         }
       } catch (e) {

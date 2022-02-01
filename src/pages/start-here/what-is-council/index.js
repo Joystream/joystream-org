@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
@@ -15,10 +15,35 @@ import { ReactComponent as Perspectives } from '../../../assets/svg/perspectives
 import { ReactComponent as ProposalsVoting } from '../../../assets/svg/proposalVoting.svg';
 import { ReactComponent as ManageWG } from '../../../assets/svg/manageWG.svg';
 import TokenInformation from '../../../components/token-page/TokenInformation';
+import useCouncilData from '../../../utils/pages/onboarding/useCouncilData';
 
 import './style.scss';
 
 const Onboarding = () => {
+  const { councilSize, councilEndDays, councilPeriodDays } = useCouncilData();
+
+  const [councilCount, setCouncilCount] = useState({ isLoading: true, count: 0 });
+  const [councilDaysLeft, setCouncilDaysLeft] = useState({ isLoading: true, count: 0 });
+  const [councilDaysCount, setCouncilDaysCount] = useState({ isLoading: true, count: 0 });
+
+  useEffect(() => {
+    if (councilSize) {
+      setCouncilCount(councilSize);
+    }
+  }, [councilSize]);
+
+  useEffect(() => {
+    if (councilEndDays) {
+      setCouncilDaysLeft(councilEndDays);
+    }
+  }, [councilEndDays]);
+
+  useEffect(() => {
+    if (councilPeriodDays) {
+      setCouncilDaysCount(councilPeriodDays);
+    }
+  }, [councilPeriodDays]);
+
   const { t } = useTranslation();
   const nextVideoUrl = '/start-here/what-are-working-groups';
 
@@ -37,19 +62,18 @@ const Onboarding = () => {
     },
   ];
 
-  // TODO Fetch from API
   const statisticsData = [
     {
       title: 'onboarding.page4.statistics.councilMembers',
-      count: 21,
+      data: councilCount,
     },
     {
       title: 'onboarding.page4.statistics.nextElection',
-      count: 12,
+      data: councilDaysLeft,
     },
     {
       title: 'onboarding.page4.statistics.councilPeriod',
-      count: 14,
+      data: councilDaysCount,
     },
   ];
 

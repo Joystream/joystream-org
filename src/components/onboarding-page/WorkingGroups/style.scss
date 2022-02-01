@@ -10,7 +10,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 818px;
+    width: 1240px;
     margin: auto;
     margin-top: -32px;
     padding-bottom: 90px;
@@ -19,12 +19,13 @@
   &__item {
     display: flex;
     flex-direction: column;
-    width: 818px;
+    justify-content: space-between;
+    width: 610px;
     margin-bottom: 30px;
     background: $c_white;
 
     &__payout {
-      width: 818px;
+      width: 610px;
       padding: 20px 30px;
       font-family: $font-primary;
       font-size: 18px;
@@ -41,7 +42,7 @@
     }
 
     &__title {
-      width: 818px;
+      width: 610px;
       padding: 20px 30px 8px;
       font-family: $font-primary;
       font-size: 28px;
@@ -50,7 +51,7 @@
     }
 
     &__subtitle {
-      width: 818px;
+      width: 610px;
       padding-bottom: 14px;
       padding-left: 30px;
       font-family: $font-primary;

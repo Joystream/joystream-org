@@ -31,10 +31,45 @@
     }
 
     &__count {
+      position: relative;
       font-family: $font-primary;
       font-size: 48px;
       line-height: 56px;
       color: $c_black;
+    }
+
+    &__linechart {
+      &__loader {
+        position: absolute;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+      }
+
+      &__tooltip {
+        padding: 15px;
+        background-color: white;
+
+        &__label {
+          margin-bottom: 10px;
+          font-family: $font-primary;
+          font-size: 25px;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        &__value {
+          font-family: $font-secondary;
+
+          span {
+            font-weight: bold;
+            color: #6c6cff;
+          }
+        }
+      }
     }
   }
 }

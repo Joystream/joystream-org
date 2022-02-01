@@ -269,7 +269,15 @@
           },
           "operationsGroup": {
             "title": "Operations Group",
-            "text": "Operations Working Group encompases all the activites that don't require privilages on chain like: Development, Management, Marketing."
+            "text": "Operations Working Group encompases all the activites that don't require privileges on chain like: Development, Management, Marketing."
+          },
+          "curators": {
+            "title": "Curators",
+            "text": "Content Curators are responsible for ensuring that all content is uploaded correctly and in line with the terms of service."
+          },
+          "distributors": {
+            "title": "Distributors",
+            "text": "Distribution Working Group is responsible for running and maintaining distributor nodes that deliver large volumes of upstream data to a large number of simultaneous end users."
           },
           "weeklyPayout": " in $JOY Weekly"
       },
@@ -299,17 +307,6 @@
         "showMore": "Show more bounties",
         "showLess": "Show less bounties",
         "payoutCurrency": " in $JOY"
-      },
-      "workingGroups" : {
-          "storageProviders": {
-            "title": "Storage Providers",
-            "text": "Storage Providers are responsible for storing and providing platform content "
-          },
-          "operationsGroup": {
-            "title": "Operations Group",
-            "text": "Operations Working Group encompases all the activites that don't require privilages on chain like: Development, Management, Marketing."
-          },
-          "weeklyPayout": " in $JOY Weekly"
       },
       "faq" : {
         "title": "Frequently asked questions",

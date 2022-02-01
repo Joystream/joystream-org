@@ -21,7 +21,7 @@ const Onboarding = () => {
     },
   ];
 
-  // TODO fetch salsry from api?
+  // TODO fetch salary from api?
   const workingGroupsData = [
     {
       payout: 500,
@@ -32,6 +32,16 @@ const Onboarding = () => {
       payout: 500,
       title: t('onboarding.page5.workingGroups.operationsGroup.title'),
       text: t('onboarding.page5.workingGroups.operationsGroup.text'),
+    },
+    {
+      payout: 500,
+      title: t('onboarding.page5.workingGroups.curators.title'),
+      text: t('onboarding.page5.workingGroups.curators.text'),
+    },
+    {
+      payout: 500,
+      title: t('onboarding.page5.workingGroups.distributors.title'),
+      text: t('onboarding.page5.workingGroups.distributors.text'),
     },
   ];
 
