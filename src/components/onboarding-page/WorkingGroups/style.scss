@@ -17,6 +17,7 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,6 +42,39 @@
       }
     }
 
+    &__linechart {
+      &__loader {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        width: 48px;
+        height: 48px;
+        margin: auto;
+      }
+
+      &__tooltip {
+        padding: 15px;
+        background-color: white;
+
+        &__label {
+          margin-bottom: 10px;
+          font-family: $font-primary;
+          font-size: 25px;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        &__value {
+          font-family: $font-secondary;
+
+          span {
+            font-weight: bold;
+            color: #6c6cff;
+          }
+        }
+      }
+    }
+
     &__title {
       width: 610px;
       padding: 20px 30px 8px;
@@ -60,10 +94,49 @@
       color: #656565;
     }
 
-    &__image {
-      width: 156px;
+    &__images {
+      display: flex;
+      width: 140px;
       height: 48px;
-      margin: 30px;
+      margin-top: 24px;
+      margin-bottom: 30px;
+      margin-left: 42px;
+    }
+
+    &__count {
+      z-index: 1;
+      width: 48px;
+      height: 48px;
+      margin-left: -12px;
+      padding-top: 14px;
+      font-family: $font-primary;
+      font-size: 16px;
+      font-weight: bold;
+      color: $c_blue_ribbon;
+      text-align: center;
+      background: #f2f5f9;
+      border-radius: 24px;
+    }
+
+    &__image {
+      width: 48px;
+      height: 48px;
+      margin-left: -12px;
+      background: $c_white;
+      border: 2px solid $c_black;
+      border-radius: 24px;
+
+      &:nth-of-type(1) {
+        z-index: 4;
+      }
+
+      &:nth-of-type(2) {
+        z-index: 3;
+      }
+
+      &:nth-of-type(3) {
+        z-index: 2;
+      }
     }
   }
 }

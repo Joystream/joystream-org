@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
@@ -7,6 +7,7 @@ import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import TokenInformation from '../../../components/token-page/TokenInformation';
 import WorkingGroups from '../../../components/onboarding-page/WorkingGroups';
+import useWorkingGroups from '../../../utils/pages/onboarding/useWorkingGroups';
 
 import './style.scss';
 
@@ -21,27 +22,86 @@ const Onboarding = () => {
     },
   ];
 
+  const [storageWorkersData, setStorageWorkersData] = useState({ isLoading: true, workers: [] });
+  const [curatorsWorkersData, setCuratorsWorkersData] = useState({ isLoading: true, workers: [] });
+  const [distributorsWorkersData, setDistributorsWorkersData] = useState({ isLoading: true, workers: [] });
+  const [operationsWorkersData, setOperationsWorkersData] = useState({ isLoading: true, workers: [] });
+
+  const {
+    storageWorkers,
+    curatorsWorkers,
+    distributionWorkers,
+    operationsAlphaWorkers,
+    operationsBetaWorkers,
+    operationsGammaWorkers,
+  } = useWorkingGroups();
+
+  useEffect(() => {
+    if (storageWorkers) {
+      setStorageWorkersData({
+        isLoading: storageWorkers.isLoading,
+        workers: storageWorkers.workers,
+      });
+    }
+  }, [storageWorkers]);
+
+  useEffect(() => {
+    if (curatorsWorkers) {
+      setCuratorsWorkersData({
+        isLoading: curatorsWorkers.isLoading,
+        workers: curatorsWorkers.workers,
+      });
+    }
+  }, [curatorsWorkers]);
+
+  useEffect(() => {
+    if (distributionWorkers) {
+      setDistributorsWorkersData({
+        isLoading: distributionWorkers.isLoading,
+        workers: distributionWorkers.workers,
+      });
+    }
+  }, [distributionWorkers]);
+
+  useEffect(() => {
+    if (operationsAlphaWorkers && operationsBetaWorkers && operationsGammaWorkers) {
+      setOperationsWorkersData({
+        isLoading:
+          operationsAlphaWorkers.isLoading && operationsBetaWorkers.isLoading && operationsGammaWorkers.isLoading,
+        workers: [
+          ...operationsAlphaWorkers.workers,
+          ...operationsBetaWorkers.workers,
+          ...operationsGammaWorkers.workers,
+        ],
+      });
+    }
+  }, [operationsAlphaWorkers, operationsBetaWorkers, operationsGammaWorkers]);
+
   // TODO fetch salary from api?
   const workingGroupsData = [
     {
       payout: 500,
       title: t('onboarding.page5.workingGroups.storageProviders.title'),
       text: t('onboarding.page5.workingGroups.storageProviders.text'),
+      data: storageWorkersData,
     },
     {
       payout: 500,
       title: t('onboarding.page5.workingGroups.operationsGroup.title'),
       text: t('onboarding.page5.workingGroups.operationsGroup.text'),
+      data: operationsWorkersData,
     },
     {
       payout: 500,
       title: t('onboarding.page5.workingGroups.curators.title'),
       text: t('onboarding.page5.workingGroups.curators.text'),
+      data: curatorsWorkersData,
     },
     {
       payout: 500,
       title: t('onboarding.page5.workingGroups.distributors.title'),
       text: t('onboarding.page5.workingGroups.distributors.text'),
+      data: distributorsWorkersData,
     },
   ];
 
