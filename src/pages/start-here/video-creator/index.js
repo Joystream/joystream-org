@@ -6,8 +6,8 @@ import InfoSection from '../../../components/onboarding-page/InfoSection';
 import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import TokenInformation from '../../../components/token-page/TokenInformation';
-import YoutubeSync from '../../../assets/images/youtube-sync.png';
-import SocialTokens from '../../../assets/images/social-tokens.png';
+import YoutubeSync from '../../../assets/svg/youtube-sync.svg';
+import SocialTokens from '../../../assets/svg/social-tokens.svg';
 import NFTVisual from '../../../assets/images/nft-visual.png';
 import AtlasVisual from '../../../assets/images/atlas-visual.png';
 
