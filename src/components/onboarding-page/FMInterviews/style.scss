@@ -2,8 +2,8 @@
 
 .FMInterviews {
   &__wrapper {
-    padding-top: 120px;
-    background-color: $c_white;
+    padding-top: 80px;
+    background-color: $c_catskill_white;
   }
 
   &__title {
@@ -15,6 +15,15 @@
     line-height: 56px;
     letter-spacing: 0;
     text-align: center;
+  }
+
+  &__item__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1242px;
+    margin: auto;
   }
 
   @media #{$screen-max-sm} {

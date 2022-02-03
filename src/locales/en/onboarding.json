@@ -164,14 +164,26 @@
         }
       },
       "fmInterviews": {
-        "title": "Conversations with Founding Members",
+        "title": "Advice from existing Founding Members",
         "section1": {
-          "title": "Desire M. Russell",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."
+          "title": "Swasilenko",
+          "text": "“Don't be scared and don't give up! Everything is real. Dive deep in the project. Try to see problems from the inside and propose their solutions. Do things which other didn't do.”"
         },
         "section2": {
-          "title": "Stewart Lewis",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."
+          "title": "l1dev",
+          "text": "“Joining a DAO is like arriving at a construction site. if you are lucky someone placed integrators at the fence to hand you a guide. if not you got to start bugging workers carrying stuff or just grab your tools and start building a wall.”"
+        },
+        "section3": {
+          "title": "Isonar",
+          "text": "“In DAOs, there usually isn't a single communication point or a \"call tree\". That means that you have to be prepared to get the information you need yourself, which can be hard sometimes. Second advice: look for a good first task for yourself. There are no shortage of things you can do, but strive to get a task that will make your skills really stand out. You may be a very highly professional videomaker, or coder, or writer, but you can't just send your portfolio and hope DAO will appreciate your skills and experience. Skills have to be proven here almost \"from scratch\". Show your professionalism, and make yourself visible to the community."
+        },
+        "section4": {
+          "title": "0x2bc",
+          "text": "“My two cents. First - allocate some time forJoystream activities, it may be even 20-30 minutes, but you should work consistently, day by day. Second - don't hesitate to ask questions. Third - Don't give up even if you are puzzled by work. Just split the task into pieces, do them step by step”"
+        },
+        "section5": {
+          "title": "Chiffah",
+          "text": "“Be brave, curious, don't be afraid to ask questions and speak your mind. It is your opinion, and not what seems right/appropriate/convenient to the community. The main thing is not to be hypocritical. And you will be surprised how many interesting people will want to help you and what opportunities will open up!”"
         }
       },
       "faq" : {
