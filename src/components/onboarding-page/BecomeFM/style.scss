@@ -5,13 +5,18 @@
     background-color: $c_black;
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  &__title__wrapper {
     width: 818px;
     margin: auto;
     padding-top: 120px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 818px;
+    margin: auto;
     padding-bottom: 80px;
   }
 
@@ -22,6 +27,121 @@
     line-height: 48px;
     letter-spacing: 0;
     color: $c_white;
+  }
+
+  &__howto-wrapper {
+    padding: 150px 0;
+    background-color: white;
+  }
+
+  &__howto {
+    &__title {
+      font-family: $font-primary;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: 0;
+    }
+
+    &__number-steps-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 80px;
+      margin-right: 30px;
+    }
+
+    &__number-steps {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &--animated {
+        & > div:nth-child(1) {
+          animation: animate-circle 1s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(2) {
+          animation: animate-separator 1s;
+          animation-delay: 1s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(3) {
+          animation: animate-circle 1s;
+          animation-delay: 2s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(4) {
+          animation: animate-separator 1s;
+          animation-delay: 3s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(5) {
+          animation: animate-circle 1s;
+          animation-delay: 4s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(6) {
+          animation: animate-separator 1s;
+          animation-delay: 5s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(7) {
+          animation: animate-circle 1s;
+          animation-delay: 6s;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+
+    &__number-step {
+      display: grid;
+      width: 64px;
+      height: 64px;
+      font-family: $font-primary;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0;
+      color: $c_blue-ribbon;
+      background-color: #e0e1ff;
+      border-radius: 50%;
+      place-items: center;
+
+      &--active {
+        color: white;
+        background-color: $c_blue-ribbon;
+      }
+    }
+
+    &__number-step-separator {
+      width: 2px;
+      height: 100px;
+      margin: 16px 0;
+      background: linear-gradient(to left, #dee3e9 50%, $c_blue-ribbon 50%) right;
+      background-size: 200%;
+
+      &--long {
+        height: 128px;
+      }
+    }
+
+    &__text-steps {
+      display: grid;
+      margin-top: 32px;
+      column-gap: 30px;
+      grid-template-columns: repeat(4, 290px);
+    }
+
+    &__text-step {
+      font-family: $font-primary;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: 0;
+    }
   }
 
   &__number-step {
