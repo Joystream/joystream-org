@@ -15,6 +15,7 @@ import Structure from '../../../components/onboarding-page/Structure';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+  const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const nextVideoUrl = '/start-here/what-is-fm-program';
 
   const { videos, channels } = useAtlasData();
@@ -170,7 +171,14 @@ const Onboarding = () => {
   ];
 
   return (
-    <OnboardingLayout t={t} nextVideoText={t('onboarding.page2.footer.subtitle')} nextVideoUrl={nextVideoUrl}>
+    <OnboardingLayout
+      t={t}
+      nextVideoText={t('onboarding.page2.footer.subtitle')}
+      nextVideoUrl={nextVideoUrl}
+      showLessonList={shouldShowLessonList}
+      lessonIndex={2}
+      onLessonListClose={() => setShouldShowLessonList(false)}
+    >
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
@@ -178,6 +186,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page2.subtitle')}
           nextVideoUrl={nextVideoUrl}
           index={2}
+          showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page2.infoSection.title')} text={t('onboarding.page2.infoSection.text')} />

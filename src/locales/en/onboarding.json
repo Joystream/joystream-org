@@ -4,6 +4,33 @@
       "getStarted": {
         "text": "Get Started",
         "altText": "Join & start earning"
+      },
+      "lessonList": {
+        "text": "Lesson List",
+        "altText": "Show Lesson List"
+      }
+    },
+    "lessonList": {
+      "lesson1": {
+        "title": "We are giving away $9,000,000+ worth of $JOY tokens!"
+      },
+      "lesson2": {
+        "title": "Joystream DAO is owned and governed by its token holders"
+      },
+      "lesson3": {
+        "title": "Become a Founding Member and split $9,000,000+ worth of $JOY"
+      },
+      "lesson4": {
+        "title": "What is the Council?"
+      },
+      "lesson5": {
+        "title": "What are Working Groups?"
+      },
+      "lesson6": {
+        "title": "What are Bounties?"
+      },
+      "lesson7": {
+        "title": "How to make a living as a video creator"
       }
     },
     "footer": {

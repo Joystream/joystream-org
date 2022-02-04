@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
@@ -15,6 +15,7 @@ import './style.scss';
 import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
 
 const Onboarding = () => {
+  const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const { t } = useTranslation();
 
   const questions = [
@@ -61,13 +62,19 @@ const Onboarding = () => {
   ];
 
   return (
-    <OnboardingLayout t={t}>
+    <OnboardingLayout
+      t={t}
+      showLessonList={shouldShowLessonList}
+      lessonIndex={7}
+      onLessonListClose={() => setShouldShowLessonList(false)}
+    >
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
           title={t('onboarding.page7.title')}
           subtitle={t('onboarding.page7.subtitle')}
           index={7}
+          showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page7.infoSection.title')} text={t('onboarding.page7.infoSection.text')} />

@@ -7,9 +7,12 @@ import VideoSection from '../../../components/onboarding-page/VideoSection';
 import TokenInformation from '../../../components/token-page/TokenInformation';
 
 import './style.scss';
+import { useState } from 'react';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+
+  const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
 
   const nextVideoUrl = '/start-here/joystream-as-dao';
 
@@ -29,7 +32,14 @@ const Onboarding = () => {
   ];
 
   return (
-    <OnboardingLayout t={t} nextVideoText={t('onboarding.page1.footer.subtitle')} nextVideoUrl={nextVideoUrl}>
+    <OnboardingLayout
+      t={t}
+      nextVideoText={t('onboarding.page1.footer.subtitle')}
+      nextVideoUrl={nextVideoUrl}
+      showLessonList={shouldShowLessonList}
+      lessonIndex={1}
+      onLessonListClose={() => setShouldShowLessonList(false)}
+    >
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
@@ -37,6 +47,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page1.subtitle')}
           nextVideoUrl={nextVideoUrl}
           index={1}
+          showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page1.infoSection.title')} text={t('onboarding.page1.infoSection.text')} />

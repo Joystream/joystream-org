@@ -6,11 +6,10 @@ import Link from '../../Link';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import './style.scss';
 
-const VideoSection = ({ t, title, subtitle, index, nextVideoUrl }) => {
+const VideoSection = ({ t, title, subtitle, index, nextVideoUrl, showLessonList }) => {
   const nextVideoButtonTitle = t('onboarding.footer.button.nextVideo.text');
   const getStartedButtonTitle = t('onboarding.button.getStarted.text');
   const lessonListButtonTitle = t('onboarding.page1.videoSection.button.lessonList.text');
-  const lessonListPageUrl = '/lessonList';
   const getStartedPageUrl = '/get-started';
   return (
     <div className="VideoSection__wrapper">
@@ -26,12 +25,14 @@ const VideoSection = ({ t, title, subtitle, index, nextVideoUrl }) => {
             <div className="VideoSection__hero__bg-pattern--2"></div>
           </div>
           <div className="VideoSection__hero__actions">
-            <Link key={lessonListButtonTitle} to={lessonListPageUrl}>
-              <div className="VideoSection__hero__button  VideoSection__hero__button--dark">
-                <p className="VideoSection__hero__button-text">{lessonListButtonTitle}</p>
-                <Arrow className="VideoSection__hero__button-arrow" />
-              </div>
-            </Link>
+            <div
+              role="presentation"
+              onClick={showLessonList}
+              className="VideoSection__hero__button  VideoSection__hero__button--dark"
+            >
+              <p className="VideoSection__hero__button-text">{lessonListButtonTitle}</p>
+              <Arrow className="VideoSection__hero__button-arrow" />
+            </div>
             <div className="VideoSection__hero__progressBar">
               <VideoProgressBar t={t} index={index} />
               <Link

@@ -65,6 +65,7 @@
     }
 
     &__button--dark {
+      cursor: pointer;
       background: $c_black;
       border: 2px solid $c_blue-ribbon;
     }

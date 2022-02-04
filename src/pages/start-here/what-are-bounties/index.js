@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
@@ -13,6 +13,7 @@ import './style.scss';
 const Onboarding = () => {
   const { t } = useTranslation();
   const nextVideoUrl = '/start-here/video-creator';
+  const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
 
   const questions = [
     {
@@ -26,7 +27,14 @@ const Onboarding = () => {
   ];
 
   return (
-    <OnboardingLayout t={t} nextVideoText={t('onboarding.page6.footer.subtitle')} nextVideoUrl={nextVideoUrl}>
+    <OnboardingLayout
+      t={t}
+      nextVideoText={t('onboarding.page6.footer.subtitle')}
+      nextVideoUrl={nextVideoUrl}
+      showLessonList={shouldShowLessonList}
+      lessonIndex={6}
+      onLessonListClose={() => setShouldShowLessonList(false)}
+    >
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
@@ -34,6 +42,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page6.subtitle')}
           nextVideoUrl={nextVideoUrl}
           index={6}
+          showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page6.infoSection.title')} text={t('onboarding.page6.infoSection.text')} />

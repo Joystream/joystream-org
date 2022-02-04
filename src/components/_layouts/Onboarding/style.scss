@@ -1,5 +1,11 @@
 @import '../../styles/main.scss';
 
+.OnboardingLayout {
+  &__wrapper {
+    position: relative;
+  }
+}
+
 .Footer {
   display: flex;
   align-items: center;

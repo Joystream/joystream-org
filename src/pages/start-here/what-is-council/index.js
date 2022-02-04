@@ -25,6 +25,7 @@ const Onboarding = () => {
   const [councilCount, setCouncilCount] = useState({ isLoading: true, count: 0 });
   const [councilDaysLeft, setCouncilDaysLeft] = useState({ isLoading: true, count: 0 });
   const [councilDaysCount, setCouncilDaysCount] = useState({ isLoading: true, count: 0 });
+  const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
 
   useEffect(() => {
     if (councilSize) {
@@ -112,7 +113,14 @@ const Onboarding = () => {
   ];
 
   return (
-    <OnboardingLayout t={t} nextVideoText={t('onboarding.page4.footer.subtitle')} nextVideoUrl={nextVideoUrl}>
+    <OnboardingLayout
+      t={t}
+      nextVideoText={t('onboarding.page4.footer.subtitle')}
+      nextVideoUrl={nextVideoUrl}
+      showLessonList={shouldShowLessonList}
+      lessonIndex={4}
+      onLessonListClose={() => setShouldShowLessonList(false)}
+    >
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
@@ -120,6 +128,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page4.subtitle')}
           nextVideoUrl={nextVideoUrl}
           index={4}
+          showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page4.infoSection.title')} text={t('onboarding.page4.infoSection.text')} />

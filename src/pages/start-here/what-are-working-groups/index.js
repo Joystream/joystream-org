@@ -14,6 +14,7 @@ import './style.scss';
 const Onboarding = () => {
   const { t } = useTranslation();
   const nextVideoUrl = '/start-here/what-are-bounties';
+  const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
 
   const questions = [
     {
@@ -106,7 +107,14 @@ const Onboarding = () => {
   ];
 
   return (
-    <OnboardingLayout t={t} nextVideoText={t('onboarding.page5.footer.subtitle')} nextVideoUrl={nextVideoUrl}>
+    <OnboardingLayout
+      t={t}
+      nextVideoText={t('onboarding.page5.footer.subtitle')}
+      nextVideoUrl={nextVideoUrl}
+      showLessonList={shouldShowLessonList}
+      lessonIndex={5}
+      onLessonListClose={() => setShouldShowLessonList(false)}
+    >
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
@@ -114,6 +122,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page5.subtitle')}
           nextVideoUrl={nextVideoUrl}
           index={5}
+          showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page5.infoSection.title')} text={t('onboarding.page5.infoSection.text')} />
