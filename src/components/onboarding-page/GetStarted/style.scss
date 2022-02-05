@@ -1,0 +1,136 @@
+@import '../../../styles/main';
+
+.GetStarted {
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw);
+    height: calc(100vh);
+    background: rgba($color: $c_black, $alpha: .95);
+  }
+
+  &__content {
+    z-index: 101;
+    width: 1242px;
+    height: 100%;
+    margin: auto;
+  }
+
+  &__lessons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    color: $c_white;
+    cursor: pointer;
+    border: 2px solid $c_blue-ribbon;
+
+    &:hover {
+      background: $c_blue-ribbon;
+    }
+  }
+
+  &__title {
+    padding: 80px 0 30px 0;
+    font-family: $font-primary;
+    font-size: 28px;
+    line-height: 36px;
+    color: $c_white;
+  }
+}
+
+.Role {
+  &__wrapper {
+    width: 606px;
+    height: 152px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: $c_black;
+    border: 1px solid #1f252e;
+    transition: transform .5s, box-shadow .5s, outline .2s;
+
+    &__notSure {
+      width: 1242px;
+      height: 80px;
+    }
+
+    &:hover {
+      background: $c_white;
+      outline: 2px solid $c_blue-ribbon;
+      box-shadow: 6px 6px 0 -2px $c_blue-ribbon;
+    }
+
+    &--active {
+      outline: 2px solid $c_blue-ribbon;
+
+      &:hover {
+        outline: 2px solid $c_blue-ribbon;
+        transform: unset;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin: 36px 32px;
+  }
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0;
+
+    &__notSure {
+      margin: 16px 32px;
+    }
+  }
+
+  &__title {
+    width: 320px;
+    margin-right: 28px;
+    font-family: $font-primary;
+    font-size: 28px;
+    line-height: 36px;
+    color: $c_white;
+
+    &--active {
+      color: $c_blue-ribbon;
+    }
+  }
+
+  &__subtitle {
+    width: 438px;
+    font-family: $font-primary;
+    font-size: 16px;
+    line-height: 24px;
+    color: $c_oslo_gray;
+
+    &--active {
+      color: $c_black;
+    }
+  }
+}

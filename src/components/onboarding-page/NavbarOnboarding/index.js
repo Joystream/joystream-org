@@ -85,7 +85,7 @@ const defaultProps = {
   links: defaultLinks,
 };
 
-const Navbar = ({ light, links, t }) => {
+const Navbar = ({ light, links, t, onShowGetStarted }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const context = useContext(ScrollContext);
@@ -106,6 +106,11 @@ const Navbar = ({ light, links, t }) => {
         >
           <div className="Navbar__button-lang">
             <UKCircle className="Navbar__button-arrow" />
+          </div>
+
+          <div className="Navbar__button" role="presentation" onClick={onShowGetStarted}>
+            <p className="Navbar__button-text">{t('onboarding.button.getStarted.text')}</p>
+            <Arrow className="Navbar__button-arrow" />
           </div>
 
           {links.map(({ label, isButton, isDropdown, links, href, to }) => {

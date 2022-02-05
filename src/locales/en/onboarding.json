@@ -33,6 +33,36 @@
         "title": "How to make a living as a video creator"
       }
     },
+    "getStarted": {
+      "title": "Pick the best option",
+      "builder": {
+        "title": "I’m a Builder",
+        "text": "Software development, DevOps, Scripting, Product Design, Product Management, Product & User Research"
+      },
+      "techie": {
+        "title": "I’m a Techie",
+        "text": "Server Administration, Infrastructure Engineering, SRE"
+      },
+      "organizer": {
+        "title": "I’m an Organiser",
+        "text": "Planning, Management, Analysis, Writing, Persuasion, Debate, Collaboration, Communication"
+      },
+      "marketer": {
+        "title": "I’m a Marketer",
+        "text": "Marketing, Content creation, Social Media, Crypto expert"
+      },
+      "curator": {
+        "title": "I’m a Curator",
+        "text": "Research, Collecting, Arbitration, Writing, Conflict Management"
+      },
+      "videoCreator": {
+        "title": "I’m a Video Creator",
+        "text": "Few points about video creation"
+      },
+      "notSure": {
+        "title": "I’m not sure yet"
+      }
+    },
     "footer": {
       "title": "",
       "subtitle": "",
