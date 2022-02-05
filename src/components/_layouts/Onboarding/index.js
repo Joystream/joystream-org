@@ -27,13 +27,20 @@ const OnboardingLayout = ({
   onLessonListClose,
 }) => {
   const [showGetStarted, setShowGetStarted] = useState(false);
+  const [role, setRole] = useState(localStorage.getItem('JoystreamRole'));
 
   return (
     <ScrollProvider>
       <div className="OnboardingLayout__wrapper">
-        <NavbarOnboarding t={t} onShowGetStarted={() => setShowGetStarted(true)} />
+        <NavbarOnboarding t={t} onShowGetStarted={() => setShowGetStarted(true)} role={role} />
         {showLessonList && <LessonList t={t} lessonIndex={lessonIndex} onLessonListClose={onLessonListClose} />}
-        {showGetStarted && <GetStarted t={t} onGetStartedClose={() => setShowGetStarted(false)} />}
+        {showGetStarted && (
+          <GetStarted
+            t={t}
+            onGetStartedClose={() => setShowGetStarted(false)}
+            onRoleChange={newRole => setRole(newRole)}
+          />
+        )}
         {children}
         <CookiesNotice t={t} />
         <FooterOnboarding t={t} nextVideoText={nextVideoText} nextVideoUrl={nextVideoUrl} />

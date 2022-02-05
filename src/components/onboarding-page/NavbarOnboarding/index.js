@@ -12,6 +12,7 @@ import { ReactComponent as LinkIcon } from '../../../assets/svg/link.svg';
 import { ReactComponent as NavClose } from '../../../assets/svg/navbar-close.svg';
 import { ReactComponent as NavHamburger } from '../../../assets/svg/navbar-hamburger.svg';
 import { ReactComponent as UKCircle } from '../../../assets/svg/uk-flag-circle.svg';
+import { ReactComponent as RoleIcon } from '../../../assets/svg/role-button-icon.svg';
 
 import useWindowDimensions from '../../../utils/useWindowDimensions';
 
@@ -85,7 +86,7 @@ const defaultProps = {
   links: defaultLinks,
 };
 
-const Navbar = ({ light, links, t, onShowGetStarted }) => {
+const Navbar = ({ light, links, t, onShowGetStarted, role }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const context = useContext(ScrollContext);
@@ -107,12 +108,16 @@ const Navbar = ({ light, links, t, onShowGetStarted }) => {
           <div className="Navbar__button-lang">
             <UKCircle className="Navbar__button-arrow" />
           </div>
-
+          {role && (
+            <div className="Navbar__button-role">
+              <RoleIcon className="Navbar__button-role-icon" />
+              <p className="Navbar__button-text">{role}</p>
+            </div>
+          )}
           <div className="Navbar__button" role="presentation" onClick={onShowGetStarted}>
             <p className="Navbar__button-text">{t('onboarding.button.getStarted.text')}</p>
             <Arrow className="Navbar__button-arrow" />
           </div>
-
           {links.map(({ label, isButton, isDropdown, links, href, to }) => {
             if (isDropdown) {
               return <Dropdown key={label} t={t} label={t(label)} links={links} isScrollUp={isScrollUp} />;

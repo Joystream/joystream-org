@@ -15,14 +15,16 @@ import { ReactComponent as VideoCreatorActive } from '../../../assets/svg/role-v
 import cn from 'classnames';
 import './style.scss';
 
-const Role = ({ title, text, icon, iconActive, role, onClose }) => {
+const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const chooseRole = () => {
     if (role) {
       localStorage.setItem('JoystreamRole', role);
+      onRoleChange(role);
     } else {
       localStorage.removeItem('JoystreamRole');
+      onRoleChange('');
     }
     onClose();
   };
@@ -66,7 +68,7 @@ const Role = ({ title, text, icon, iconActive, role, onClose }) => {
   );
 };
 
-const GetStarted = ({ t, onGetStartedClose }) => {
+const GetStarted = ({ t, onGetStartedClose, onRoleChange }) => {
   const data = [
     {
       title: 'onboarding.getStarted.builder.title',
@@ -144,6 +146,7 @@ const GetStarted = ({ t, onGetStartedClose }) => {
             data.map((item, key) => (
               <Role
                 onClose={onGetStartedClose}
+                onRoleChange={onRoleChange}
                 key={key}
                 title={t(item.title)}
                 text={t(item.text)}

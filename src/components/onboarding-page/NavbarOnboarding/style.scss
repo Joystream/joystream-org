@@ -112,6 +112,27 @@
     }
   }
 
+  &__button-role {
+    display: flex;
+    height: 60px;
+    margin: 0;
+    margin-left: 24px;
+    padding: 16px;
+    cursor: pointer;
+    border: 2px solid $c_blue-ribbon;
+
+    &:hover {
+      background-color: $c_blue-ribbon;
+      border: 2px solid $c_han_purple;
+    }
+  }
+
+  &__button-role-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+  }
+
   &__button-text {
     font-family: $font-primary;
     font-size: 18px;
