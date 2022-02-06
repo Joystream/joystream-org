@@ -61,6 +61,10 @@
       margin: auto;
     }
 
+    &__wrapper {
+      height: calc(100vh * 4);
+    }
+
     &__title {
       width: calc(90vw);
       padding-top: 80px;
@@ -80,6 +84,10 @@
       margin: auto;
     }
 
+    &__wrapper {
+      height: calc(100vh * 4);
+    }
+
     &__title {
       width: calc(90vw);
       padding-top: 80px;
@@ -97,6 +105,10 @@
     &__content {
       width: calc(90vw);
       margin: auto;
+    }
+
+    &__wrapper {
+      height: calc(100vh * 4);
     }
 
     &__title {
@@ -194,7 +206,7 @@
   @media #{$screen-max-md} {
     &__wrapper {
       width: calc(90vw);
-      height: fit-content;
+      height: calc(100vh * 2);
     }
 
     &__title {

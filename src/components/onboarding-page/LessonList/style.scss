@@ -63,6 +63,33 @@
     color: $c_white;
   }
 
+  @media #{$screen-max-md} {
+    &__backdrop {
+      display: none;
+    }
+
+    &__content {
+      width: calc(100vw);
+      margin: auto;
+    }
+
+    &__wrapper {
+      height: calc(100vh * 4);
+    }
+
+    &__title {
+      width: calc(90vw);
+      padding-top: 80px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    &__item {
+      width: calc(90vw);
+      margin-bottom: 40px;
+    }
+  }
+
   @media #{$screen-max-sm} {
     &__backdrop {
       display: none;
@@ -71,6 +98,10 @@
     &__content {
       width: calc(100vw);
       margin: auto;
+    }
+
+    &__wrapper {
+      height: calc(100vh * 4);
     }
 
     &__title {
@@ -96,6 +127,10 @@
       margin: auto;
     }
 
+    &__wrapper {
+      height: calc(100vh * 4);
+    }
+
     &__title {
       width: calc(90vw);
       padding-top: 80px;
@@ -113,7 +148,6 @@
 .Lesson {
   &__wrapper {
     width: 538px;
-    height: 88px;
     margin-bottom: 20px;
     cursor: pointer;
     border: 1px solid #1f252e;
@@ -144,8 +178,7 @@
   &__icon {
     width: 40px;
     height: 40px;
-    margin-right: 30px;
-    margin-left: 20px;
+    margin: 30px 30px 30px 20px;
   }
 
   &__title {
@@ -156,6 +189,7 @@
     line-height: 24px;
     color: $c_white;
 
+    &:hover,
     &--active {
       color: $c_black;
     }
@@ -191,28 +225,25 @@
 
     &__icon {
       width: calc(15vw);
-      margin: 0;
-      margin-top: 10px;
-      margin-left: 10px;
     }
 
     &__title {
       width: calc(60vw);
       margin: 0;
-      margin-top: 10px;
       padding: 0;
     }
 
     &__length {
-      width: calc(10vw);
-      margin: 0;
+      width: calc(66vw);
+      margin-bottom: 10px;
       padding: 0;
-      text-align: left;
+      text-align: center;
     }
   }
 
   @media #{$screen-max-md} {
     &__wrapper {
+      width: calc(90vw);
       padding-top: 10px;
     }
 
@@ -221,33 +252,31 @@
     }
 
     &__content {
+      flex-wrap: wrap;
       width: calc(90vw);
     }
 
     &__icon {
       width: calc(15vw);
-      margin: 0;
-      margin-top: 10px;
-      margin-left: 10px;
     }
 
     &__title {
       width: calc(60vw);
       margin: 0;
-      margin-top: 10px;
       padding: 0;
     }
 
     &__length {
-      width: calc(10vw);
-      margin: 0;
+      width: calc(66vw);
+      margin-bottom: 10px;
       padding: 0;
-      text-align: left;
+      text-align: center;
     }
   }
 
   @media #{$screen-max-sm} {
     &__wrapper {
+      width: calc(90vw);
       padding-top: 10px;
     }
 
@@ -256,33 +285,31 @@
     }
 
     &__content {
+      flex-wrap: wrap;
       width: calc(90vw);
     }
 
     &__icon {
       width: calc(15vw);
-      margin: 0;
-      margin-top: 10px;
-      margin-left: 10px;
     }
 
     &__title {
       width: calc(60vw);
       margin: 0;
-      margin-top: 10px;
       padding: 0;
     }
 
     &__length {
-      width: calc(10vw);
-      margin: 0;
+      width: calc(66vw);
+      margin-bottom: 10px;
       padding: 0;
-      text-align: left;
+      text-align: center;
     }
   }
 
   @media (max-width: 500px) {
     &__wrapper {
+      width: calc(90vw);
       padding-top: 10px;
     }
 
@@ -291,28 +318,25 @@
     }
 
     &__content {
+      flex-wrap: wrap;
       width: calc(90vw);
     }
 
     &__icon {
       width: calc(15vw);
-      margin: 0;
-      margin-top: 10px;
-      margin-left: 10px;
     }
 
     &__title {
       width: calc(60vw);
       margin: 0;
-      margin-top: 10px;
       padding: 0;
     }
 
     &__length {
-      width: calc(10vw);
-      margin: 0;
+      width: calc(66vw);
+      margin-bottom: 10px;
       padding: 0;
-      text-align: left;
+      text-align: center;
     }
   }
 }

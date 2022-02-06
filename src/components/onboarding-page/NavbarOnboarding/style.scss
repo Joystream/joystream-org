@@ -250,7 +250,7 @@
     }
 
     &__button {
-      width: calc(100vw * .9);
+      width: calc(90vw);
       margin: 20px 36px;
       background-color: $c_black;
 
@@ -346,6 +346,19 @@
         animation: grow;
         animation-duration: $duration;
       }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__links {
+      align-items: center;
+      justify-content: center;
+      width: calc(100vw);
+    }
+
+    &__button {
+      width: calc(90vw);
+      margin: 20px 0;
     }
   }
 }

@@ -146,6 +146,9 @@ $outline-regular: 2px solid $c_blue-ribbon;
   }
 
   @media #{$screen-max-lg} {
+    width: calc(90vw);
+    height: calc(90vw / 1.777);
+
     &__playbutton {
       height: 7rem;
     }
