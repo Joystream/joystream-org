@@ -76,4 +76,11 @@
       background-color: $c_blue-ribbon;
     }
   }
+
+  @media (max-width: 500px) {
+    &__wrapper {
+      width: calc(90vw);
+      margin: 0;
+    }
+  }
 }

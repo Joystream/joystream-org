@@ -196,12 +196,18 @@ $outline-regular: 2px solid $c_blue-ribbon;
   }
 
   @media (max-width: 550px) {
+    width: calc(90vw);
+    height: calc(90vw / 1.777);
+
     &__playbutton {
       height: 4rem;
     }
   }
 
   @media (max-width: 380px) {
+    width: calc(90vw);
+    height: calc(90vw / 1.777);
+
     &__logo {
       p {
         font-size: .7rem;

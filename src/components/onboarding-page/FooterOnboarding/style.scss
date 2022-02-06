@@ -71,14 +71,15 @@
     }
   }
 
-  // @media #{$screen-sm} {
-  //   background-image: url('../../../assets/background/footer-bottom-secondary.svg');
-  //   background-position: bottom left;
-  //   background-repeat: repeat-x;
-  //   background-size: auto 40px;
-  // }
+  @media #{$screen-sm} {
+    background-image: url('../../../assets/background/footer-bottom-secondary.svg');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    background-size: auto 40px;
+  }
 
   @media (max-width: 550px) {
-    padding-top: 80px;
+    width: calc(100vw);
+    padding-top: 40px;
   }
 }

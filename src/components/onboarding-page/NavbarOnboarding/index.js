@@ -105,11 +105,11 @@ const Navbar = ({ light, links, t, onShowGetStarted, role }) => {
             'Navbar__links--light': light,
           })}
         >
-          <div className="Navbar__button-lang">
+          <div className="Navbar__button Navbar__button-lang">
             <UKCircle className="Navbar__button-arrow" />
           </div>
           {role && (
-            <div className="Navbar__button-role">
+            <div className="Navbar__button Navbar__button-role">
               <RoleIcon className="Navbar__button-role-icon" />
               <p className="Navbar__button-text">{role}</p>
             </div>

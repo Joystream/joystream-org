@@ -18,10 +18,12 @@
   }
 
   &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 408px;
     height: 120px;
     margin-bottom: 2px;
-    padding: 46px;
     background: $c_white;
 
     &__title__header {
@@ -36,6 +38,26 @@
       font-size: 20px;
       line-height: 28px;
       color: #5c6475;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__content {
+      width: calc(90vw);
+    }
+
+    &__item {
+      width: calc(44.8vw);
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__content {
+      width: calc(90vw);
+    }
+
+    &__item {
+      width: calc(44.8vw);
     }
   }
 }

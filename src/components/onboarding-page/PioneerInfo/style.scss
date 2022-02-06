@@ -82,7 +82,25 @@
 
   @media (max-width: 500px) {
     &__content {
-      width: 300px;
+      flex-wrap: wrap;
+      width: calc(90vw);
+      padding-top: 80px;
+    }
+
+    &__title {
+      width: calc(90vw);
+      margin: 0 auto;
+    }
+
+    &__text {
+      width: calc(90vw);
+      margin: 0 auto;
+    }
+
+    &__image {
+      width: calc(90vw);
+      height: calc(90vw / 1.777);
+      margin: 80px auto;
     }
   }
 }

@@ -49,4 +49,23 @@
       color: $c_black;
     }
   }
+
+  @media (max-width: 500px) {
+    &__content {
+      width: calc(90vw);
+      margin: auto;
+    }
+
+    &__title {
+      width: calc(90vw);
+      padding: 0;
+      padding-top: 80px;
+      text-align: center;
+    }
+
+    &__item {
+      width: calc(90vw);
+      margin-bottom: 40px;
+    }
+  }
 }

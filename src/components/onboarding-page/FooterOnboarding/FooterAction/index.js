@@ -36,7 +36,7 @@ const FooterAction = ({ title, subtitle, buttonTitle, to, href }) => {
             </div>
           </Link>
         </div>
-        <div className="FooterAction__hero__content">
+        <div className="FooterAction__hero__content FooterAction__hero__content--centered">
           <Link key={buttonTitle} to={to} href={href}>
             <div
               ref={videoThumbnailRef}

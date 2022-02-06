@@ -70,8 +70,10 @@
     }
 
     @media (max-width: 500px) {
+      width: calc(100vw);
+
       &__content {
-        width: 300px;
+        width: calc(90vw);
       }
     }
   }

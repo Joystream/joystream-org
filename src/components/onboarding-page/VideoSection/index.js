@@ -4,6 +4,7 @@ import Video from '../Video';
 import VideoProgressBar from './VideoProgressBar';
 import Link from '../../Link';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
+import { ReactComponent as LessonListMobile } from '../../../assets/svg/lesson-list-m-icon.svg';
 import './style.scss';
 
 const VideoSection = ({ t, title, subtitle, index, nextVideoUrl, showLessonList }) => {
@@ -28,25 +29,32 @@ const VideoSection = ({ t, title, subtitle, index, nextVideoUrl, showLessonList 
             <div
               role="presentation"
               onClick={showLessonList}
-              className="VideoSection__hero__button  VideoSection__hero__button--dark"
+              className="VideoSection__hero__button  VideoSection__hero__button--dark VideoSection__hero__button--lesson-list"
             >
               <p className="VideoSection__hero__button-text">{lessonListButtonTitle}</p>
               <Arrow className="VideoSection__hero__button-arrow" />
             </div>
             <div className="VideoSection__hero__progressBar">
               <VideoProgressBar t={t} index={index} />
-              <Link
-                key={nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle}
-                to={nextVideoUrl ? nextVideoUrl : getStartedPageUrl}
-              >
-                <div className="VideoSection__hero__button">
-                  <p className="VideoSection__hero__button-text">
-                    {nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle}
-                  </p>
-                  <Arrow className="VideoSection__hero__button-arrow" />
-                </div>
-              </Link>
             </div>
+            <div
+              role="presentation"
+              onClick={showLessonList}
+              className="VideoSection__hero__button  VideoSection__hero__button--dark VideoSection__hero__button--lesson-list--mobile"
+            >
+              <LessonListMobile className="VideoSection__hero__button-list" />
+            </div>
+            <Link
+              key={nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle}
+              to={nextVideoUrl ? nextVideoUrl : getStartedPageUrl}
+            >
+              <div className="VideoSection__hero__button">
+                <p className="VideoSection__hero__button-text">
+                  {nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle}
+                </p>
+                <Arrow className="VideoSection__hero__button-arrow" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -90,15 +90,12 @@
 
   @media #{$screen-max-sm} {
     &__hero {
+      width: calc(90vw);
       height: 550px;
       padding: 32px 20px 0 20px;
 
-      &__background {
-        width: 500px;
-      }
-
       &__title {
-        max-width: 500px;
+        width: calc(90vw);
         font-size: 32px;
         line-height: 40px;
 
@@ -108,15 +105,30 @@
       }
 
       &__subtitle {
-        max-width: 500px;
+        width: calc(90vw);
       }
     }
   }
 
   @media (max-width: 500px) {
     &__hero {
-      &__background {
-        width: 100%;
+      width: calc(90vw);
+      height: 100%;
+      padding: 32px 20px 0 20px;
+
+      &__title {
+        width: calc(90vw);
+        font-size: 32px;
+        line-height: 40px;
+
+        br {
+          display: none;
+        }
+      }
+
+      &__subtitle {
+        width: calc(85vw);
+        padding-bottom: 20px;
       }
     }
   }

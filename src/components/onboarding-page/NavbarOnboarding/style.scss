@@ -119,6 +119,7 @@
     margin-left: 24px;
     padding: 16px;
     cursor: pointer;
+    background: $c_black;
     border: 2px solid $c_blue-ribbon;
 
     &:hover {
@@ -249,13 +250,25 @@
     }
 
     &__button {
-      width: 100%;
+      width: calc(100vw * .9);
       margin: 20px 36px;
       background-color: $c_black;
 
       &:hover {
         background-color: $c_black;
       }
+    }
+
+    &__button-lang {
+      justify-content: flex-start;
+      background: $c_blue-ribbon;
+      border: 2px solid $c_white;
+    }
+
+    &__button-role {
+      justify-content: flex-start;
+      background: $c_blue-ribbon;
+      border: 2px solid $c_white;
     }
 
     &__button-text {

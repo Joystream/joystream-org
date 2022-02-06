@@ -100,15 +100,22 @@
     padding-top: 40px;
 
     &__content {
-      width: 85%;
+      width: calc(90vw);
     }
 
     &__title {
+      width: calc(90vw);
       margin: 20px 0;
     }
   }
 
   @media #{$screen-max-sm} {
+    &__content {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+    }
+
     &__title {
       font-size: 32px;
       line-height: 40px;
@@ -125,7 +132,29 @@
 
   @media (max-width: 500px) {
     &__content {
-      width: 300px;
+      width: calc(90vw);
+    }
+
+    &__title {
+      width: calc(90vw);
+      margin: 20px 0;
+    }
+
+    &__description {
+      width: calc(90vw);
+    }
+
+    &__image {
+      width: calc(90vw);
+      margin: 0 auto;
+    }
+
+    &__text {
+      padding-left: 0;
+    }
+
+    &__button {
+      width: calc(90vw);
     }
   }
 }

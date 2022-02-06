@@ -119,8 +119,50 @@
   }
 
   @media (max-width: 500px) {
+    &__content__wrapper {
+      flex-wrap: wrap;
+      width: calc(90vw);
+      padding: 40px 0;
+
+      &--image-right {
+        flex-wrap: wrap-reverse;
+      }
+    }
+
     &__content {
-      width: 300px;
+      width: calc(90vw);
+      margin: auto;
+    }
+
+    &__subtitle {
+      width: calc(90vw);
+    }
+
+    &__title {
+      width: calc(90vw);
+      padding: 0;
+      text-align: center;
+    }
+
+    &__link-wrapper {
+      width: calc(90vw);
+    }
+
+    &__item {
+      width: calc(90vw);
+      margin-bottom: 40px;
+
+      &__title {
+        width: calc(90vw);
+      }
+
+      &__subtitle {
+        width: calc(90vw);
+      }
+
+      &__payout {
+        width: calc(90vw);
+      }
     }
   }
 }

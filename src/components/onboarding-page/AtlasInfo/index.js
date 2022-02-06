@@ -17,7 +17,7 @@ const AtlasInfo = ({ t, title, text, buttonText, image, isImageRight, isBackroun
           </div>
         </div>
       ) : (
-        <div className="AtlasInfo__content__wrapper">
+        <div className="AtlasInfo__content__wrapper AtlasInfo__content__wrapper--image-right">
           <div className="AtlasInfo__content">
             <img className="AtlasInfo__image" src={image} alt={t('landing.exploreJoystream.atlas.imageAlt')} />
           </div>

@@ -54,6 +54,25 @@
     line-height: 36px;
     color: $c_white;
   }
+
+  @media (max-width: 500px) {
+    &__content {
+      width: calc(90vw);
+      margin: auto;
+    }
+
+    &__title {
+      width: calc(90vw);
+      padding-top: 80px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    &__item {
+      width: calc(90vw);
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .Role {
@@ -131,6 +150,30 @@
 
     &--active {
       color: $c_black;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__wrapper {
+      width: calc(90vw);
+      height: fit-content;
+    }
+
+    &__title {
+      width: calc(55vw);
+    }
+
+    &__subtitle {
+      width: calc(55vw);
+    }
+
+    &__icon {
+      width: calc(35vw);
+      margin: 10px;
+    }
+
+    &__texts {
+      margin: 10px;
     }
   }
 }
