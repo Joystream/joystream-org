@@ -40,37 +40,23 @@
     }
 
     @media #{$screen-max-md} {
-      display: flex;
-      align-items: center;
-      flex-direction: column-reverse;
-      padding-top: 40px;
+      width: calc(90vw);
 
       &__content {
-        width: 85%;
-      }
-
-      &__title {
-        margin: 20px 0;
+        width: calc(90vw);
       }
     }
 
     @media #{$screen-max-sm} {
-      &__title {
-        font-size: 32px;
-        line-height: 40px;
-      }
+      width: calc(90vw);
 
-      &__icon {
-        display: none;
-      }
-
-      &__icon-alt {
-        display: block;
+      &__content {
+        width: calc(90vw);
       }
     }
 
     @media (max-width: 500px) {
-      width: calc(100vw);
+      width: calc(90vw);
 
       &__content {
         width: calc(90vw);

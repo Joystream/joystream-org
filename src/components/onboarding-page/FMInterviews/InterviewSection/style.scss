@@ -67,31 +67,8 @@
 
   @media #{$screen-max-md} {
     &__hero {
-      flex-direction: column;
-
-      &__content {
-        align-items: center;
-      }
-
-      &__title {
-        font-size: 60px;
-      }
-
-      &__subtitle {
-        max-width: 654px;
-      }
-
-      &__background {
-        width: 600px;
-        margin: 0 auto;
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__hero {
       width: calc(90vw);
-      height: 550px;
+      height: fit-content;
       padding: 32px 20px 0 20px;
 
       &__title {
@@ -105,7 +82,31 @@
       }
 
       &__subtitle {
+        width: calc(85vw);
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__hero {
+      width: calc(90vw);
+      height: fit-content;
+      padding: 32px 20px 0 20px;
+
+      &__title {
         width: calc(90vw);
+        font-size: 32px;
+        line-height: 40px;
+
+        br {
+          display: none;
+        }
+      }
+
+      &__subtitle {
+        width: calc(85vw);
+        padding-bottom: 20px;
       }
     }
   }

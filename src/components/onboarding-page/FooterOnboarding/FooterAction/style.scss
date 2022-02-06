@@ -155,31 +155,53 @@
 
   @media #{$screen-max-md} {
     &__hero {
-      flex-direction: column;
+      width: calc(90vw);
+      padding: 0;
 
       &__content {
-        align-items: flex-start;
+        padding-top: 40px;
+      }
+
+      &__button {
+        width: calc(90vw);
+        margin-bottom: 0;
+      }
+
+      &__video {
+        width: calc(90vw);
+        height: calc(90vw / 1.777);
       }
 
       &__title {
-        font-size: 60px;
+        width: calc(90vw);
+        font-size: 32px;
+        line-height: 40px;
+
+        br {
+          display: none;
+        }
       }
 
       &__subtitle {
-        max-width: 654px;
-      }
-
-      &__background {
-        width: 500px;
-        margin: 0 auto;
+        width: calc(90vw);
       }
     }
   }
 
   @media #{$screen-max-sm} {
     &__hero {
-      width: calc(10vw);
+      flex-direction: column;
+      width: calc(90vw);
       padding: 0;
+
+      &__content {
+        padding-top: 40px;
+      }
+
+      &__button {
+        width: calc(90vw);
+        margin-bottom: 0;
+      }
 
       &__video {
         width: calc(90vw);
@@ -187,11 +209,50 @@
       }
 
       &__background {
-        width: 550px;
+        width: calc(90vw);
       }
 
       &__title {
-        width: 500px;
+        width: calc(90vw);
+        font-size: 32px;
+        line-height: 40px;
+
+        br {
+          display: none;
+        }
+      }
+
+      &__subtitle {
+        width: calc(90vw);
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__hero {
+      width: calc(90vw);
+      padding: 0;
+
+      &__content {
+        padding-top: 40px;
+      }
+
+      &__button {
+        width: calc(90vw);
+        margin-bottom: 0;
+      }
+
+      &__video {
+        width: calc(90vw);
+        height: calc(90vw / 1.777);
+      }
+
+      &__background {
+        width: calc(90vw);
+      }
+
+      &__title {
+        width: calc(90vw);
         font-size: 32px;
         line-height: 40px;
 
@@ -203,17 +264,6 @@
       &__subtitle {
         width: 400px;
       }
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__hero-wrapper {
-      width: calc(90vw);
-      margin-bottom: 80px;
-    }
-
-    &__hero {
-      width: calc(100vw);
     }
   }
 }

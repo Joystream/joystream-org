@@ -226,32 +226,42 @@
   }
 
   @media #{$screen-max-md} {
-    display: flex;
-    align-items: center;
-    flex-direction: column-reverse;
-    padding-top: 40px;
-
-    &__content {
-      width: 85%;
+    &__title__wrapper {
+      width: calc(90vw);
+      padding: 0;
+      padding-top: 80px;
+      text-align: center;
     }
 
     &__title {
-      margin: 20px 0;
+      width: calc(90vw);
+    }
+
+    &__content {
+      width: calc(90vw);
+    }
+
+    &__howto {
+      &__number-steps {
+        display: none;
+      }
     }
   }
 
   @media #{$screen-max-sm} {
+    &__title__wrapper {
+      width: calc(90vw);
+      padding: 0;
+      padding-top: 80px;
+      text-align: center;
+    }
+
     &__title {
-      font-size: 32px;
-      line-height: 40px;
+      width: calc(90vw);
     }
 
-    &__icon {
-      display: none;
-    }
-
-    &__icon-alt {
-      display: block;
+    &__content {
+      width: calc(90vw);
     }
 
     &__howto {

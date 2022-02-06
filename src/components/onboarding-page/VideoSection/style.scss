@@ -151,70 +151,6 @@
 
   @media #{$screen-max-md} {
     &__hero {
-      flex-direction: column;
-
-      &__title {
-        font-size: 60px;
-      }
-
-      &__subtitle {
-        max-width: 654px;
-      }
-
-      &__background {
-        width: 600px;
-        margin: 0 auto;
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__hero {
-      padding: 0;
-
-      &__actions {
-        flex-wrap: wrap;
-        width: calc(90vw);
-      }
-
-      &__background {
-        width: calc(100vw);
-      }
-
-      &__video {
-        width: calc(100vw);
-        height: calc(100vh);
-        margin: auto;
-        margin-bottom: 32px;
-      }
-
-      &__video__wrapper {
-        display: flex;
-        width: 300px;
-        height: 580px;
-      }
-
-      &__title {
-        width: 300px;
-        font-size: 32px;
-        line-height: 40px;
-        text-align: left;
-        line-break: auto;
-
-        br {
-          display: none;
-        }
-      }
-
-      &__subtitle {
-        max-width: 300px;
-        text-align: left;
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__hero {
       width: calc(90vw);
       padding: 0;
 
@@ -225,12 +161,17 @@
         margin-bottom: 32px;
       }
 
+      &__actions {
+        flex-wrap: wrap;
+        width: calc(90vw);
+      }
+
       &__progressBar {
         width: calc(90vw);
       }
 
       &__button {
-        width: calc(74vw);
+        width: calc(75vw);
       }
 
       &__bg-pattern--1,
@@ -250,7 +191,135 @@
 
       &__button--lesson-list--mobile {
         display: block;
-        width: calc(14vw);
+        width: fit-content;
+      }
+
+      &__title {
+        width: calc(90vw);
+        font-size: 32px;
+        line-height: 40px;
+        text-align: left;
+        line-break: auto;
+
+        br {
+          display: none;
+        }
+      }
+
+      &__subtitle {
+        max-width: calc(100vw);
+        text-align: left;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__hero {
+      width: calc(90vw);
+      padding: 0;
+
+      &__video {
+        width: calc(90vw);
+        height: calc(100vh);
+        margin: auto;
+        margin-bottom: 32px;
+      }
+
+      &__actions {
+        flex-wrap: wrap;
+        width: calc(90vw);
+      }
+
+      &__progressBar {
+        width: calc(90vw);
+      }
+
+      &__button {
+        width: calc(75vw);
+      }
+
+      &__bg-pattern--1,
+      &__bg-pattern--2 {
+        display: none;
+      }
+
+      &__video__wrapper {
+        display: flex;
+        width: calc(90vw);
+        height: calc(90vw / 1.777);
+      }
+
+      &__button--lesson-list {
+        display: none;
+      }
+
+      &__button--lesson-list--mobile {
+        display: block;
+        width: fit-content;
+      }
+
+      &__title {
+        width: calc(90vw);
+        font-size: 32px;
+        line-height: 40px;
+        text-align: left;
+        line-break: auto;
+
+        br {
+          display: none;
+        }
+      }
+
+      &__subtitle {
+        max-width: calc(100vw);
+        text-align: left;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__hero {
+      width: calc(90vw);
+      padding: 0;
+
+      &__video {
+        width: calc(90vw);
+        height: calc(100vh);
+        margin: auto;
+        margin-bottom: 32px;
+      }
+
+      &__actions {
+        flex-wrap: wrap;
+        width: calc(90vw);
+      }
+
+      &__progressBar {
+        width: calc(90vw);
+      }
+
+      &__button {
+        width: calc(75vw);
+      }
+
+      &__bg-pattern--1,
+      &__bg-pattern--2 {
+        display: none;
+      }
+
+      &__video__wrapper {
+        display: flex;
+        width: calc(90vw);
+        height: calc(90vw / 1.777);
+      }
+
+      &__button--lesson-list {
+        display: none;
+      }
+
+      &__button--lesson-list--mobile {
+        display: block;
+        width: fit-content;
       }
 
       &__title {

@@ -41,6 +41,16 @@
     }
   }
 
+  @media #{$screen-max-md} {
+    &__content {
+      width: calc(90vw);
+    }
+
+    &__item {
+      width: calc(44.8vw);
+    }
+  }
+
   @media #{$screen-max-sm} {
     &__content {
       width: calc(90vw);

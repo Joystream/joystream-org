@@ -130,6 +130,34 @@
     }
   }
 
+  @media #{$screen-max-sm} {
+    &__content {
+      width: calc(90vw);
+    }
+
+    &__title {
+      width: calc(90vw);
+      margin: 20px 0;
+    }
+
+    &__description {
+      width: calc(90vw);
+    }
+
+    &__image {
+      width: calc(90vw);
+      margin: 0 auto;
+    }
+
+    &__text {
+      padding-left: 0;
+    }
+
+    &__button {
+      width: calc(90vw);
+    }
+  }
+
   @media (max-width: 500px) {
     &__content {
       width: calc(90vw);

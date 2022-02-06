@@ -72,6 +72,8 @@
   }
 
   @media #{$screen-sm} {
+    width: calc(100vw);
+    padding-top: 40px;
     background-image: url('../../../assets/background/footer-bottom-secondary.svg');
     background-position: bottom left;
     background-repeat: repeat-x;

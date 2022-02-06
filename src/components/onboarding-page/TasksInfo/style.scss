@@ -61,6 +61,26 @@
     }
   }
 
+  @media #{$screen-max-md} {
+    &__content {
+      width: calc(90vw);
+    }
+
+    &__title {
+      width: calc(90vw);
+    }
+
+    &__item {
+      flex-wrap: wrap;
+      width: calc(90vw);
+      height: 100%;
+
+      &__text__wrapper {
+        margin-left: 0;
+      }
+    }
+  }
+
   @media #{$screen-max-sm} {
     &__content {
       width: calc(90vw);

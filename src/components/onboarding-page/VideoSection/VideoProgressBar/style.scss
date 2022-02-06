@@ -77,6 +77,13 @@
     }
   }
 
+  @media #{$screen-max-sm} {
+    &__wrapper {
+      width: calc(90vw);
+      margin: 0;
+    }
+  }
+
   @media (max-width: 500px) {
     &__wrapper {
       width: calc(90vw);

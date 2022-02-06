@@ -152,43 +152,13 @@ $outline-regular: 2px solid $c_blue-ribbon;
   }
 
   @media #{$screen-max-md} {
-    &__atlasbutton {
-      width: 10rem;
-      height: 3rem;
-      padding: 0;
-      font-size: 1.2rem;
-    }
-
-    &__thumbnail {
-      background-size: 100% 100%;
-      outline: $outline-regular;
-    }
-
-    &__logo {
-      p {
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
-        color: $c_light-gray;
-        text-align: center;
-      }
-
-      svg {
-        height: 4rem;
-        color: $c_blue-ribbon;
-      }
-    }
+    width: calc(90vw);
+    height: calc(90vw / 1.777);
   }
 
   @media #{$screen-max-sm} {
-    &__logo {
-      p {
-        font-size: 1rem;
-      }
-
-      svg {
-        height: 3rem;
-      }
-    }
+    width: calc(90vw);
+    height: calc(90vw / 1.777);
 
     &__playbutton {
       height: 5rem;
