@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { node } from 'prop-types';
 
 import NavbarOnboarding from '../../onboarding-page/NavbarOnboarding';
@@ -27,7 +27,11 @@ const OnboardingLayout = ({
   onLessonListClose,
 }) => {
   const [showGetStarted, setShowGetStarted] = useState(false);
-  const [role, setRole] = useState(); //window && window.localStorage ? window.localStorage.getItem('JoystreamRole') : '');
+  const [role, setRole] = useState();
+
+  useEffect(() => {
+    setRole(localStorage.getItem('JoystreamRole'));
+  }, []);
 
   return (
     <ScrollProvider>

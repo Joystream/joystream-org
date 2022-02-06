@@ -20,10 +20,8 @@ const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange }) =>
 
   const chooseRole = () => {
     if (role) {
-      // if (window && window.localStorage) window.localStorage.setItem('JoystreamRole', role);
       onRoleChange(role);
     } else {
-      // if (window && window.localStorage) window.localStorage.removeItem('JoystreamRole');
       onRoleChange('');
     }
     onClose();
