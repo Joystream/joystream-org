@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as NumberScrollPointer } from '../../../assets/svg/number-scroll-pointer.svg';
 
 const Input = ({ id, placeholder, value, setValue, disabled }) => {
+  const { t } = useTranslation();
+  
   return (
     <div className="CashoutPage__form__body__amount-input-wrapper">
       <input
@@ -16,7 +19,7 @@ const Input = ({ id, placeholder, value, setValue, disabled }) => {
         disabled={disabled}
       />
       <div className="CashoutPage__form__body__amount-input__type CashoutPage__form__body__amount-input__type--active">
-        tJOY
+        {t('cashout.form.amount.tjoy')}
       </div>
     </div>
   );
@@ -25,6 +28,8 @@ const Input = ({ id, placeholder, value, setValue, disabled }) => {
 const ALLOWED_OUTPUT_CURRENCIES = ['BCH', 'USD'];
 
 const OutputValueInput = ({ isActive, outputValue, outputCurrency, setOutputCurrency }) => {
+  const { t } = useTranslation();
+  
   return (
     <div className="CashoutPage__form__body__amount-input-wrapper">
       <input
@@ -44,7 +49,7 @@ const OutputValueInput = ({ isActive, outputValue, outputCurrency, setOutputCurr
         role="presentation"
         onClick={() => setOutputCurrency(ALLOWED_OUTPUT_CURRENCIES.filter(currency => currency !== outputCurrency)[0])}
       >
-        {outputCurrency}
+        {t(`cashout.form.amount.${outputCurrency.toLowerCase()}`)}
         <div className="CashoutPage__form__body__amount-input__scroller">
           <NumberScrollPointer />
           <NumberScrollPointer />

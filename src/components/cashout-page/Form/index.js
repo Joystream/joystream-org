@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 import axios from 'axios';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Input from './Input';
 import AmountInput from './AmountInput';
@@ -24,13 +25,15 @@ import {
 
 import './style.scss';
 
-export const CASHOUT_SERVER_URL = "";
+export const CASHOUT_SERVER_URL = "http://localhost:3000/";
 export const INITIATE_CASHOUT_ROUTE = "initiate-cashout";
 export const CASHOUT_ROUTE = "cashout";
 
 const ERROR_TYPE_PROCESSING = "PROCESSING";
 
 const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiError }) => {
+  const { t } = useTranslation();
+
   const [joystreamAddress, setJoystreamAddress] = useState({ value: '', error: null });
   const [tokenAmount, setTokenAmount] = useState({ value: '', error: null });
   const [bchAddress, setBchAddress] = useState({ value: '', error: null, warning: null });
@@ -173,17 +176,17 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
     >
       <Input
         id="joystreamAddress"
-        label="Send from"
-        placeholder="Testnet address"
+        label={t("cashout.form.sendFrom.label")}
+        placeholder={t("cashout.form.sendFrom.placeholder")}
         updateValue={setJoystreamAddress}
         errorMessage={joystreamAddress.error}
-        info="tJOY Account address"
+        info={t("cashout.form.sendFrom.info")}
         disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
       <AmountInput
         id="tokenAmount"
-        label="Amount"
-        placeholder="Amount"
+        label={t("cashout.form.amount.label")}
+        placeholder={t("cashout.form.amount.placeholder")}
         updateValue={setTokenAmount}
         errorMessage={tokenAmount.error}
         joyInDollars={joyInDollars}
@@ -192,33 +195,33 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
       />
       <Input
         id="bchAddress"
-        label="Destination address"
-        placeholder="Account address"
+        label={t("cashout.form.destinationAddress.label")}
+        placeholder={t("cashout.form.destinationAddress.placeholder")}
         updateValue={setBchAddress}
         errorMessage={bchAddress.error}
         warning={bchAddress.warning}
-        info="BCH Account address"
+        info={t("cashout.form.destinationAddress.info")}
         disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
       <Input
         id="email"
-        label="Email"
-        placeholder="Email"
+        label={t("cashout.form.email.label")}
+        placeholder={t("cashout.form.email.placeholder")}
         inputType="text"
         updateValue={setEmail}
         errorMessage={email.error}
-        info="Optional"
-        help="Help us to contact you in case of any problems"
+        info={t("cashout.form.email.info")}
+        help={t("cashout.form.email.help")}
         disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
       <Input
         id="joystreamHandle"
-        label="Joystream Handle/ID"
-        placeholder="Handle/ID"
+        label={t("cashout.form.joystreamHandle.label")}
+        placeholder={t("cashout.form.joystreamHandle.placeholder")}
         updateValue={setJoystreamHandle}
         errorMessage={joystreamHandle.error}
-        info="Optional"
-        help="Help us to contact you in case of any problems"
+        info={t("cashout.form.joystreamHandle.info")}
+        help={t("cashout.form.joystreamHandle.help")}
         disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
       {cashoutInitiationResponse?.alreadyCashingOut ? (
@@ -240,7 +243,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
       ) : null}
       {!formIsLoading && !cashoutInitiationResponse?.success ? (
         <ArrowButton
-          text="Submit"
+          text={t("cashout.form.submitButton")}
           className={cn('CashoutPage__form__body__button', {
             'CashoutPage__form__body__button--active': formIsFilled,
           })}
@@ -258,7 +261,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
     <div className="CashoutPage__form-wrapper">
       <div className="CashoutPage__form">
         <header className="CashoutPage__form__header">
-          <h2 className="CashoutPage__form__header__title">Withdraw details</h2>
+          <h2 className="CashoutPage__form__header__title">{t("cashout.form.withdrawDetails")}</h2>
         </header>
         {formFinalizationState() ? <FinalScreen {...formFinalizationState()} /> : renderBody()}
       </div>

@@ -17,7 +17,7 @@ import getBchValue from '../../utils/getBchValue';
 
 import './style.scss';
 
-const STATUS_SERVER_URL = 'https://status.joystream.org/status';
+const STATUS_SERVER_URL = 'http://localhost:8081/';
 const CURRENCY_DATA_STORAGE_KEY = 'CashoutDataJoystream';
 const CURRENCY_DATA_TIMEOUT_IN_SECONDS = 5 * 60;
 
@@ -103,14 +103,14 @@ const CashoutPage = () => {
     <BaseLayout t={t}>
       <SiteMetadata
         lang={language}
-        title={t('siteMetadata.title')}
-        description={t('landing.siteMetadata.description')}
+        title={t('cashout.siteMetadata.title')}
+        description={t('cashout.siteMetadata.description')}
       />
 
       <div className="CashoutPage">
         <div className="CashoutPage__header">
           <div className="CashoutPage__header__title-wrapper">
-            <h1 className="CashoutPage__header__title">Cashout Funds</h1>
+            <h1 className="CashoutPage__header__title">{t('cashout.header')}</h1>
           </div>
         </div>
 
@@ -124,34 +124,39 @@ const CashoutPage = () => {
           />
           <div className="CashoutPage__additional-info">
             <div className="CashoutPage__additional-info__header">
-              <h2 className="CashoutPage__additional-info__header__title">Additional info</h2>
+              <h2 className="CashoutPage__additional-info__header__title">{t('cashout.additionalInfo.title')}</h2>
             </div>
             <div className="CashoutPage__additional-info__body">
-              <h2 className="CashoutPage__additional-info__body__title">Where can I find my account address?</h2>
+              <h2 className="CashoutPage__additional-info__body__title">
+                {t('cashout.additionalInfo.accountAddress.title')}
+              </h2>
               <p className="CashoutPage__additional-info__body__subtitle">
-                It’s simple. Enter the transfer tab inside the Pioneer and copy the account you want to withdraw funds.
+                {t('cashout.additionalInfo.accountAddress.subtitle')}
               </p>
               <ArrowButton
                 link="https://testnet.joystream.org/"
-                text="Go to Pioneer"
+                text={t('cashout.additionalInfo.goToPioneer')}
                 className="CashoutPage__additional-info__body__button"
               />
-              <h2 className="CashoutPage__additional-info__body__title">You transferred funds but nothing happens?</h2>
+              <h2 className="CashoutPage__additional-info__body__title">
+                {t('cashout.additionalInfo.transferredFunds.title')}
+              </h2>
               <p className="CashoutPage__additional-info__body__subtitle">
-                Don’t worry. Let us know on the Discord about the situation and we will solve the problem as soon as we
-                can.
+                {t('cashout.additionalInfo.transferredFunds.subtitle')}
               </p>
               <ArrowButton
                 link="https://discord.gg/DE9UN3YpRP"
-                text="Go to Discord"
+                text={t('cashout.additionalInfo.goToDiscord')}
                 className="CashoutPage__additional-info__body__button"
               />
             </div>
             <div className="CashoutPage__additional-info__token-price-wrapper">
               <div className="CashoutPage__additional-info__token-price">
-                <p className="CashoutPage__additional-info__token-price__title">Price of Token</p>
+                <p className="CashoutPage__additional-info__token-price__title">
+                  {t('cashout.additionalInfo.tokenPrice')}
+                </p>
                 <p className="CashoutPage__additional-info__token-price__value">
-                  {joyInDollars ? `$${joyInDollars.toFixed(7)}` : 'Loading...'}{' '}
+                  {joyInDollars ? `$${joyInDollars.toFixed(7)}` : t('cashout.additionalInfo.loading')}{' '}
                 </p>
               </div>
             </div>

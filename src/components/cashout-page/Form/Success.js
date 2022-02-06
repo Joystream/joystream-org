@@ -1,6 +1,7 @@
 import React from 'react';
 import Countdown from 'react-countdown-now';
 import axios from 'axios';
+import { useTranslation, Trans } from 'gatsby-plugin-react-i18next';
 
 import { ArrowButton } from '../../../pages/founding-members/index';
 
@@ -21,6 +22,7 @@ const CASHOUT_TIMEOUT = "TIMEOUT";
 const CASHOUT_NOCASHOUT = "NOCASHOUT";
 
 const Success = ({ timeoutTimestamp, joystreamAddress, setCashoutResponse }) => {
+  const { t } = useTranslation();
 
   const handleCashout = async () => {
     setCashoutResponse({ loading: true });
@@ -57,19 +59,12 @@ const Success = ({ timeoutTimestamp, joystreamAddress, setCashoutResponse }) => 
 
   return (
     <div className="CashoutPage__form__body__success">
-      <p className="CashoutPage__form__body__success__title">You've succesfully initiated the cashout process!</p>
+      <p className="CashoutPage__form__body__success__title">{t("cashout.form.success.title")}</p>
       <p className="CashoutPage__form__body__success__subtitle">
-        Now, please send the same amount of tokens to this joystream address:{' '}
-        <span
-          role="presentation"
-          onClick={() => navigator?.clipboard?.writeText(BURN_ADDRESS)}
-        >
-          5D5P...eKQu
-        </span>{' '}
-        and finish the process by clicking the button under after doing so.
+        <Trans i18nKey="cashout.form.success.subtitle" components={[<span role="presentation" onClick={() => navigator?.clipboard?.writeText(BURN_ADDRESS)}></span>]} />
       </p>
       <p className="CashoutPage__form__body__success__timeout">
-        Timeout:{' '}
+        {t("cashout.form.success.timeout")}{' '}
         <Countdown
           onComplete={() => setCashoutResponse({ error: FINAL_UI_STATE_TIMEOUT })}
           date={new Date(timeoutTimestamp)}

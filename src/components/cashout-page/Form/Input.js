@@ -87,7 +87,7 @@ const Input = ({ id, label, placeholder, inputType, updateValue, errorMessage, w
             {showModal && (
               <>
                 <div style={{ ...modalStyle }} className="CashoutPage__form__body__help-text">
-                  Helps us contact you in case of any problems
+                  {help}
                 </div>
               </>
             )}
