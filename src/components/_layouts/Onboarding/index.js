@@ -27,7 +27,7 @@ const OnboardingLayout = ({
   onLessonListClose,
 }) => {
   const [showGetStarted, setShowGetStarted] = useState(false);
-  const [role, setRole] = useState(localStorage.getItem('JoystreamRole'));
+  const [role, setRole] = useState(); //window && window.localStorage ? window.localStorage.getItem('JoystreamRole') : '');
 
   return (
     <ScrollProvider>
