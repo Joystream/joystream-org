@@ -21,6 +21,8 @@ const Onboarding = () => {
   const { t } = useTranslation();
   const nextVideoUrl = '/start-here/what-is-council';
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
+  const [shouldReloadRole, setShouldReloadRole] = useState(false);
+  const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
 
   const questions = [
     {
@@ -60,6 +62,8 @@ const Onboarding = () => {
     },
   ];
 
+  const handleGetStarted = () => setShouldShowGetStarted(true);
+
   return (
     <OnboardingLayout
       t={t}
@@ -67,7 +71,10 @@ const Onboarding = () => {
       nextVideoUrl={nextVideoUrl}
       showLessonList={shouldShowLessonList}
       lessonIndex={3}
+      shouldShowGetStarted={shouldShowGetStarted}
+      onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
+      onRoleUpdated={() => setShouldReloadRole(true)}
     >
       <div className="Onboarding__wrapper">
         <VideoSection
@@ -86,7 +93,12 @@ const Onboarding = () => {
       <ReferallsInfo t={t} />
       <FMInterviews t={t} />
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
-      <BuilderSection t={t} />
+      <BuilderSection
+        shouldReloadRole={shouldReloadRole}
+        t={t}
+        onShowGetStarted={handleGetStarted}
+        onRoleReloaded={() => setShouldReloadRole(false)}
+      />
     </OnboardingLayout>
   );
 };

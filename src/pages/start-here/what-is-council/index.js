@@ -26,6 +26,8 @@ const Onboarding = () => {
   const [councilDaysLeft, setCouncilDaysLeft] = useState({ isLoading: true, count: 0 });
   const [councilDaysCount, setCouncilDaysCount] = useState({ isLoading: true, count: 0 });
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
+  const [shouldReloadRole, setShouldReloadRole] = useState(false);
+  const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
 
   useEffect(() => {
     if (councilSize) {
@@ -112,6 +114,8 @@ const Onboarding = () => {
     },
   ];
 
+  const handleGetStarted = () => setShouldShowGetStarted(true);
+
   return (
     <OnboardingLayout
       t={t}
@@ -119,7 +123,10 @@ const Onboarding = () => {
       nextVideoUrl={nextVideoUrl}
       showLessonList={shouldShowLessonList}
       lessonIndex={4}
+      shouldShowGetStarted={shouldShowGetStarted}
+      onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
+      onRoleUpdated={() => setShouldReloadRole(true)}
     >
       <div className="Onboarding__wrapper">
         <VideoSection
@@ -141,7 +148,12 @@ const Onboarding = () => {
       <InfoSection title={t('onboarding.page4.infoSection2.title')} text={t('onboarding.page4.infoSection2.text')} />
       <TasksInfo t={t} data={tasksData} />
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
-      <BuilderSection t={t} />
+      <BuilderSection
+        shouldReloadRole={shouldReloadRole}
+        t={t}
+        onShowGetStarted={handleGetStarted}
+        onRoleReloaded={() => setShouldReloadRole(false)}
+      />
     </OnboardingLayout>
   );
 };

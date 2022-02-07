@@ -42,7 +42,7 @@
           "3": "Site reliability Engineers"
         }
       },
-      "oraganiser": {
+      "organiser": {
         "title": "Organiser",
         "specialities": {
           "1": "Communication Specialist",
@@ -76,6 +76,36 @@
           "1": "Motion Designers",
           "2": "Content Creators"
         }
+      }
+    },
+    "readyToContribureGeneric" : {
+      "title": "Ready to contribute?",
+      "text": "Hit the button to see all the opportunities."
+    },
+    "readyToContribureRoles" : {
+      "builder" : {
+        "title": "Ready to contribute as a Builder?",
+        "text": "Hit the button to see all the opportunities available to Builders."
+      },
+      "techie" : {
+        "title": "Ready to contribute as a Techie?",
+        "text": "Hit the button to see all the opportunities available to Techies."
+      },
+      "marketer" : {
+        "title": "Ready to contribute as a Marketer?",
+        "text": "Hit the button to see all the opportunities available to Marketers."
+      },
+      "organiser" : {
+        "title": "Ready to contribute as an Organiser?",
+        "text": "Hit the button to see all the opportunities available to Organisers."
+      },
+      "curator" : {
+        "title": "Ready to contribute as a Curator?",
+        "text": "Hit the button to see all the opportunities available to Curators."
+      },
+      "videoCreator" : {
+        "title": "Ready to contribute as a Video Creator?",
+        "text": "Hit the button to see all the opportunities available to Video Creators."
       }
     },
     "lessonList": {
@@ -196,10 +226,6 @@
       "pioneerInfo" : {
         "title": "Pioneer",
         "text": "Pioneer is our state of the art application that we use for all governance related things. This is where you keep track of everything. Discuss proposals, vote on elections & proposals, ee the finances in the treasury, and so on. Everything governance related is found in Pioneer."
-      },
-      "builderSection" : {
-        "title": "Ready to contribute as a Builder?",
-        "text": "Hit the button to see all the opportunities available to Builders."
       },
       "statistics": {
         "forumPosts" : "Forum Posts",

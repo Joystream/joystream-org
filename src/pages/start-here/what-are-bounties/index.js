@@ -14,7 +14,8 @@ const Onboarding = () => {
   const { t } = useTranslation();
   const nextVideoUrl = '/start-here/video-creator';
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
-
+  const [shouldReloadRole, setShouldReloadRole] = useState(false);
+  const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const questions = [
     {
       title: t('onboarding.page6.faq.questions.question1.question'),
@@ -26,6 +27,8 @@ const Onboarding = () => {
     },
   ];
 
+  const handleGetStarted = () => setShouldShowGetStarted(true);
+
   return (
     <OnboardingLayout
       t={t}
@@ -33,7 +36,10 @@ const Onboarding = () => {
       nextVideoUrl={nextVideoUrl}
       showLessonList={shouldShowLessonList}
       lessonIndex={6}
+      shouldShowGetStarted={shouldShowGetStarted}
+      onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
+      onRoleUpdated={() => setShouldReloadRole(true)}
     >
       <div className="Onboarding__wrapper">
         <VideoSection
@@ -48,7 +54,12 @@ const Onboarding = () => {
       <InfoSection title={t('onboarding.page6.infoSection.title')} text={t('onboarding.page6.infoSection.text')} />
       <Bounties t={t} />
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
-      <BuilderSection t={t} />
+      <BuilderSection
+        shouldReloadRole={shouldReloadRole}
+        t={t}
+        onShowGetStarted={handleGetStarted}
+        onRoleReloaded={() => setShouldReloadRole(false)}
+      />
     </OnboardingLayout>
   );
 };

@@ -16,6 +16,8 @@ import Structure from '../../../components/onboarding-page/Structure';
 const Onboarding = () => {
   const { t } = useTranslation();
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
+  const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
+  const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const nextVideoUrl = '/start-here/what-is-fm-program';
 
   const { videos, channels } = useAtlasData();
@@ -170,6 +172,8 @@ const Onboarding = () => {
     },
   ];
 
+  const handleGetStarted = () => setShouldShowGetStarted(true);
+
   return (
     <OnboardingLayout
       t={t}
@@ -177,7 +181,10 @@ const Onboarding = () => {
       nextVideoUrl={nextVideoUrl}
       showLessonList={shouldShowLessonList}
       lessonIndex={2}
+      shouldShowGetStarted={shouldShowGetStarted}
+      onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
+      onRoleUpdated={() => setShouldReloadRole(true)}
     >
       <div className="Onboarding__wrapper">
         <VideoSection
@@ -195,7 +202,12 @@ const Onboarding = () => {
       <Structure t={t} />
       <PioneerInfo t={t} />
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
-      <BuilderSection t={t} />
+      <BuilderSection
+        shouldReloadRole={shouldReloadRole}
+        t={t}
+        onShowGetStarted={handleGetStarted}
+        onRoleReloaded={() => setShouldReloadRole(false)}
+      />
     </OnboardingLayout>
   );
 };

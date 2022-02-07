@@ -89,7 +89,7 @@ const Navbar = ({ light, t, showGetStarted, onShowGetStarted, showChatIntegrator
     builder: 'builder',
     techie: 'techie',
     marketer: 'marketer',
-    oraganiser: 'oraganiser',
+    organiser: 'organiser',
     curator: 'curator',
     videocreator: 'video-creator',
   };

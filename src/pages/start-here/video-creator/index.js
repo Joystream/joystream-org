@@ -16,6 +16,9 @@ import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
 
 const Onboarding = () => {
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
+  const [shouldReloadRole, setShouldReloadRole] = useState(false);
+  const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
+
   const { t } = useTranslation();
 
   const questions = [
@@ -61,12 +64,17 @@ const Onboarding = () => {
     },
   ];
 
+  const handleGetStarted = () => setShouldShowGetStarted(true);
+
   return (
     <OnboardingLayout
       t={t}
       showLessonList={shouldShowLessonList}
       lessonIndex={7}
+      shouldShowGetStarted={shouldShowGetStarted}
+      onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
+      onRoleUpdated={() => setShouldReloadRole(true)}
     >
       <div className="Onboarding__wrapper">
         <VideoSection
@@ -82,7 +90,12 @@ const Onboarding = () => {
         return <AtlasInfo t={t} key={index} {...item} />;
       })}
       <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
-      <BuilderSection t={t} />
+      <BuilderSection
+        shouldReloadRole={shouldReloadRole}
+        t={t}
+        onShowGetStarted={handleGetStarted}
+        onRoleReloaded={() => setShouldReloadRole(false)}
+      />
     </OnboardingLayout>
   );
 };

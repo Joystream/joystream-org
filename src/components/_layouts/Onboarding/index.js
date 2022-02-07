@@ -24,7 +24,10 @@ const OnboardingLayout = ({
   nextVideoUrl,
   showLessonList,
   lessonIndex,
+  shouldShowGetStarted,
+  onGetStartedClose,
   onLessonListClose,
+  onRoleUpdated,
 }) => {
   const [showGetStarted, setShowGetStarted] = useState(false);
   const [role, setRole] = useState();
@@ -34,8 +37,20 @@ const OnboardingLayout = ({
   };
 
   useEffect(() => {
+    if (shouldShowGetStarted) {
+      setShowGetStarted(true);
+    }
+  }, [shouldShowGetStarted]);
+
+  useEffect(() => {
     setRole(localStorage.getItem('JoystreamRole'));
   }, []);
+
+  const updateRole = newRole => {
+    setRole(newRole);
+    localStorage.setItem('JoystreamRole', newRole);
+    onRoleUpdated();
+  };
 
   return (
     <ScrollProvider>
@@ -45,8 +60,11 @@ const OnboardingLayout = ({
         {showGetStarted && (
           <GetStarted
             t={t}
-            onGetStartedClose={() => setShowGetStarted(false)}
-            onRoleChange={newRole => setRole(newRole)}
+            onGetStartedClose={() => {
+              onGetStartedClose();
+              setShowGetStarted(false);
+            }}
+            onRoleChange={updateRole}
           />
         )}
         {children}

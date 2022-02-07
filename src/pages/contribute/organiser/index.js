@@ -69,14 +69,14 @@ const Onboarding = () => {
   }, [operationsAlphaWorkers, operationsBetaWorkers, operationsGammaWorkers]);
 
   const data = {
-    title: 'onboarding.contributorRoles.oraganiser.title',
+    title: 'onboarding.contributorRoles.organiser.title',
     specialities: [
-      'onboarding.contributorRoles.oraganiser.specialities.1',
-      'onboarding.contributorRoles.oraganiser.specialities.2',
-      'onboarding.contributorRoles.oraganiser.specialities.3',
-      'onboarding.contributorRoles.oraganiser.specialities.4',
-      'onboarding.contributorRoles.oraganiser.specialities.5',
-      'onboarding.contributorRoles.oraganiser.specialities.6',
+      'onboarding.contributorRoles.organiser.specialities.1',
+      'onboarding.contributorRoles.organiser.specialities.2',
+      'onboarding.contributorRoles.organiser.specialities.3',
+      'onboarding.contributorRoles.organiser.specialities.4',
+      'onboarding.contributorRoles.organiser.specialities.5',
+      'onboarding.contributorRoles.organiser.specialities.6',
     ],
   };
 
