@@ -16,6 +16,27 @@
     padding-bottom: 90px;
   }
 
+  &__title {
+    margin: auto;
+    margin-bottom: 24px;
+    padding-top: 80px;
+    font-family: $font-primary;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 80px;
+    font-family: $font-secondary;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #5c6475;
+    text-align: center;
+  }
+
   &__item {
     position: relative;
     display: flex;

@@ -29,6 +29,10 @@ const OnboardingLayout = ({
   const [showGetStarted, setShowGetStarted] = useState(false);
   const [role, setRole] = useState();
 
+  const handleShowGetStarted = () => {
+    setShowGetStarted(true);
+  };
+
   useEffect(() => {
     setRole(localStorage.getItem('JoystreamRole'));
   }, []);
@@ -36,7 +40,7 @@ const OnboardingLayout = ({
   return (
     <ScrollProvider>
       <div className="OnboardingLayout__wrapper">
-        <NavbarOnboarding t={t} onShowGetStarted={() => setShowGetStarted(true)} role={role} />
+        <NavbarOnboarding t={t} showGetStarted onShowGetStarted={handleShowGetStarted} role={role} />
         {showLessonList && <LessonList t={t} lessonIndex={lessonIndex} onLessonListClose={onLessonListClose} />}
         {showGetStarted && (
           <GetStarted

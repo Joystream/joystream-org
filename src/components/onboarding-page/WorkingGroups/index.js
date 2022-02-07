@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 import Loader from 'react-loader-spinner';
 
-const WorkingGroups = ({ t, title, data }) => {
+const WorkingGroups = ({ t, title, subtitle, data }) => {
   const workerAvatars = arr => {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -18,8 +18,9 @@ const WorkingGroups = ({ t, title, data }) => {
 
   return (
     <div className="WorkingGroups__wrapper">
-      {title && <h2 className="WorkingGroups__title">{t(title)}</h2>}
       <div className="WorkingGroups__content">
+        {title && <h2 className="WorkingGroups__title">{t(title)}</h2>}
+        {subtitle && <h2 className="WorkingGroups__subtitle">{t(subtitle)}</h2>}
         {data &&
           data.map((item, index) => {
             return (

@@ -3,7 +3,17 @@ import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.sv
 
 import './style.scss';
 
-const AtlasInfo = ({ t, title, text, buttonText, image, isImageRight, isBackroundBlack }) => {
+const AtlasInfo = ({
+  t,
+  title,
+  text,
+  buttonText,
+  isButtonAction,
+  image,
+  isImageRight,
+  isBackroundBlack,
+  onButtonClick,
+}) => {
   return (
     <div className={`AtlasInfo__wrapper ${isBackroundBlack ? 'AtlasInfo__wrapper--blackBg' : ''}`}>
       {isImageRight ? (
@@ -30,19 +40,25 @@ const AtlasInfo = ({ t, title, text, buttonText, image, isImageRight, isBackroun
             >
               {t(text)}
             </h4>
-            {buttonText && (
-              <a
-                className="AtlasInfo__link-wrapper"
-                target="_blank"
-                rel="noreferrer"
-                href="https://play.joystream.org/"
-              >
-                <div className="AtlasInfo__link">
+            {buttonText &&
+              (isButtonAction ? (
+                <div role="presentation" className="AtlasInfo__button" onClick={onButtonClick}>
                   <p className="AtlasInfo__link-text">{t(buttonText)}</p>
                   <Arrow className="AtlasInfo__link-arrow" />
                 </div>
-              </a>
-            )}
+              ) : (
+                <a
+                  className="AtlasInfo__link-wrapper"
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://play.joystream.org/"
+                >
+                  <div className="AtlasInfo__link">
+                    <p className="AtlasInfo__link-text">{t(buttonText)}</p>
+                    <Arrow className="AtlasInfo__link-arrow" />
+                  </div>
+                </a>
+              ))}
           </div>
         </div>
       )}

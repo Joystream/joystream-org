@@ -5,9 +5,77 @@
         "text": "Get Started",
         "altText": "Join & start earning"
       },
+      "chatIntegrator": {
+        "text": "Chat with Integrator",
+        "altText": "Chat with the Integrator"
+      },
       "lessonList": {
         "text": "Lesson List",
         "altText": "Show Lesson List"
+      }
+    },
+    "contributorRoles": {
+      "workingGroups" : {
+        "title": "Working Groups",
+        "subtitle": "These are groups in which you work on solving a particular problem. The work you do will be evaluated and the group members will be paid. To contribute in earning via WGs you need to contact with one of our Integrators"
+      },
+      "bounties": {
+        "title": "Create your own Bountie",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure"
+      },
+      "builder": {
+        "title": "Builder",
+        "specialities": {
+          "1": "Software Developers",
+          "2": "Product Designers",
+          "3": "DevOps",
+          "4": "Scripters",
+          "5": "Product Managers",
+          "6": "Product & User Researchers"
+        }
+      },
+      "techie": {
+        "title": "Techie",
+        "specialities": {
+          "1": "Server Administrators",
+          "2": "Infrastructure Engineers",
+          "3": "Site reliability Engineers"
+        }
+      },
+      "oraganiser": {
+        "title": "Organiser",
+        "specialities": {
+          "1": "Communication Specialist",
+          "2": "Collaboration Specialist",
+          "3": "Planners",
+          "4": "Managers",
+          "5": "Analists",
+          "6": "Writers"
+        }
+      },
+      "marketer": {
+        "title": "Marketer",
+        "specialities": {
+          "1": "Content Creators",
+          "2": "Social Media Specialist",
+          "3": "Crypto Experts"
+        }
+      },
+      "curator": {
+        "title": "Curator",
+        "specialities": {
+          "1": "Managment Specialist",
+          "2": "Researchers",
+          "3": "Arbitrators",
+          "4": "Writers"
+        }
+      },
+      "videoCreator": {
+        "title": "Video Creator",
+        "specialities": {
+          "1": "Motion Designers",
+          "2": "Content Creators"
+        }
       }
     },
     "lessonList": {
@@ -43,7 +111,7 @@
         "title": "I’m a Techie",
         "text": "Server Administration, Infrastructure Engineering, SRE"
       },
-      "organizer": {
+      "organiser": {
         "title": "I’m an Organiser",
         "text": "Planning, Management, Analysis, Writing, Persuasion, Debate, Collaboration, Communication"
       },

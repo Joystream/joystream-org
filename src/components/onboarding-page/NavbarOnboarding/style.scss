@@ -86,7 +86,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 220px;
+    width: fit-content;
     height: 60px;
     margin: 0 32px 0 24px;
     padding: 18px 20px;
@@ -143,6 +143,7 @@
   }
 
   &__button-arrow {
+    margin-left: 20px;
     color: white;
     transform: rotate(-90deg);
   }

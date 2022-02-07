@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import cn from 'classnames';
-import { bool, array } from 'prop-types';
+import { bool } from 'prop-types';
 
 import { ScrollContext } from '../../_enhancers/ScrollContext';
 import Link from '../../Link';
@@ -15,8 +15,6 @@ import { ReactComponent as UKCircle } from '../../../assets/svg/uk-flag-circle.s
 import { ReactComponent as RoleIcon } from '../../../assets/svg/role-button-icon.svg';
 
 import useWindowDimensions from '../../../utils/useWindowDimensions';
-
-import { links as defaultLinks } from './data';
 
 import './style.scss';
 
@@ -78,16 +76,27 @@ const Dropdown = ({ label, links, isScrollUp, t }) => {
 
 const propTypes = {
   light: bool,
-  links: array,
 };
 
 const defaultProps = {
   light: false,
-  links: defaultLinks,
 };
 
-const Navbar = ({ light, links, t, onShowGetStarted, role }) => {
+const Navbar = ({ light, t, showGetStarted, onShowGetStarted, showChatIntegrator, onShowChatIntegrator, role }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const contributorUrls = {
+    builder: 'builder',
+    techie: 'techie',
+    marketer: 'marketer',
+    oraganiser: 'oraganiser',
+    curator: 'curator',
+    videocreator: 'video-creator',
+  };
+
+  const getContributorPageUrl = () => {
+    return `/contribute/${contributorUrls[role.toLowerCase().replaceAll(' ', '')]}`;
+  };
 
   const context = useContext(ScrollContext);
   const { isScrollUp } = context;
@@ -105,49 +114,35 @@ const Navbar = ({ light, links, t, onShowGetStarted, role }) => {
             'Navbar__links--light': light,
           })}
         >
-          <div className="Navbar__button Navbar__button-lang">
-            <UKCircle className="Navbar__button-arrow" />
+          <div className="Navbar__button-lang">
+            <UKCircle />
           </div>
           {role && (
-            <div className="Navbar__button Navbar__button-role">
+            <div className="Navbar__button Navbar__button-role" role="presentation" onClick={onShowGetStarted}>
               <RoleIcon className="Navbar__button-role-icon" />
               <p className="Navbar__button-text">{role}</p>
             </div>
           )}
-          <div className="Navbar__button" role="presentation" onClick={onShowGetStarted}>
-            <p className="Navbar__button-text">{t('onboarding.button.getStarted.text')}</p>
-            <Arrow className="Navbar__button-arrow" />
-          </div>
-          {links.map(({ label, isButton, isDropdown, links, href, to }) => {
-            if (isDropdown) {
-              return <Dropdown key={label} t={t} label={t(label)} links={links} isScrollUp={isScrollUp} />;
-            }
-
-            let children = (
-              <div
-                className={cn('Navbar__link-wrapper', {
-                  'Navbar__link-wrapper--light': light,
-                })}
-              >
-                <p className="Navbar__link">{t(label)}</p>
-              </div>
-            );
-
-            if (isButton) {
-              children = (
-                <div className="Navbar__button">
-                  <p className="Navbar__button-text">{t(label)}</p>
+          {showGetStarted &&
+            (role ? (
+              <Link to={getContributorPageUrl()}>
+                <div className="Navbar__button" role="presentation" onClick={onShowGetStarted}>
+                  <p className="Navbar__button-text">{t('onboarding.button.getStarted.text')}</p>
                   <Arrow className="Navbar__button-arrow" />
                 </div>
-              );
-            }
-
-            return (
-              <Link key={label} to={to} href={href}>
-                {children}
               </Link>
-            );
-          })}
+            ) : (
+              <div className="Navbar__button" role="presentation" onClick={onShowGetStarted}>
+                <p className="Navbar__button-text">{t('onboarding.button.getStarted.text')}</p>
+                <Arrow className="Navbar__button-arrow" />
+              </div>
+            ))}
+          {showChatIntegrator && (
+            <div className="Navbar__button" role="presentation" onClick={onShowChatIntegrator}>
+              <p className="Navbar__button-text">{t('onboarding.button.chatIntegrator.text')}</p>
+              <Arrow className="Navbar__button-arrow" />
+            </div>
+          )}
         </div>
 
         <div

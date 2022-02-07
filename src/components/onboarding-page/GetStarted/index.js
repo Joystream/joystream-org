@@ -83,11 +83,11 @@ const GetStarted = ({ t, onGetStartedClose, onRoleChange }) => {
       role: 'Techie',
     },
     {
-      title: 'onboarding.getStarted.organizer.title',
-      text: 'onboarding.getStarted.organizer.text',
+      title: 'onboarding.getStarted.organiser.title',
+      text: 'onboarding.getStarted.organiser.text',
       icon: <Organizer className="Role__icon" />,
       iconActive: <OrganizerActive className="Role__icon" />,
-      role: 'Organizer',
+      role: 'Organiser',
     },
     {
       title: 'onboarding.getStarted.marketer.title',
@@ -108,7 +108,7 @@ const GetStarted = ({ t, onGetStartedClose, onRoleChange }) => {
       text: 'onboarding.getStarted.videoCreator.text',
       icon: <VideoCreator className="Role__icon" />,
       iconActive: <VideoCreatorActive className="Role__icon" />,
-      role: 'VideoCreator',
+      role: 'Video Creator',
     },
     {
       title: 'onboarding.getStarted.notSure.title',
