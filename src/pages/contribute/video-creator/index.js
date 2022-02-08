@@ -16,6 +16,7 @@ const Onboarding = () => {
     specialities: [
       'onboarding.contributorRoles.videoCreator.specialities.1',
       'onboarding.contributorRoles.videoCreator.specialities.2',
+      'onboarding.contributorRoles.videoCreator.specialities.3',
     ],
   };
 
