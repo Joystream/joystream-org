@@ -66,7 +66,7 @@ const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange }) =>
   );
 };
 
-const GetStarted = ({ t, onGetStartedClose, onRoleChange }) => {
+const GetStarted = ({ t, onGetStartedClose, onRoleChange, hideNotSureOption }) => {
   const data = [
     {
       title: 'onboarding.getStarted.builder.title',
@@ -112,6 +112,7 @@ const GetStarted = ({ t, onGetStartedClose, onRoleChange }) => {
     },
     {
       title: 'onboarding.getStarted.notSure.title',
+      isHidden: hideNotSureOption,
     },
   ];
 
@@ -141,18 +142,20 @@ const GetStarted = ({ t, onGetStartedClose, onRoleChange }) => {
         <h3 className="GetStarted__title">{t('onboarding.getStarted.title')}</h3>
         <div className="GetStarted__lessons">
           {data &&
-            data.map((item, key) => (
-              <Role
-                onClose={onGetStartedClose}
-                onRoleChange={onRoleChange}
-                key={key}
-                title={t(item.title)}
-                text={t(item.text)}
-                icon={item.icon}
-                iconActive={item.iconActive}
-                role={item.role}
-              />
-            ))}
+            data
+              .filter(i => !i.isHidden)
+              .map((item, key) => (
+                <Role
+                  onClose={onGetStartedClose}
+                  onRoleChange={onRoleChange}
+                  key={key}
+                  title={t(item.title)}
+                  text={t(item.text)}
+                  icon={item.icon}
+                  iconActive={item.iconActive}
+                  role={item.role}
+                />
+              ))}
         </div>
       </div>
     </div>

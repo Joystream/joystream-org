@@ -39,6 +39,7 @@ const Onboarding = () => {
       showLessonList={shouldShowLessonList}
       lessonIndex={1}
       onLessonListClose={() => setShouldShowLessonList(false)}
+      onRoleUpdated={() => {}}
     >
       <div className="Onboarding__wrapper">
         <VideoSection

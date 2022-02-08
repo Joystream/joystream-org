@@ -21,7 +21,7 @@
       },
       "bounties": {
         "title": "Create your own Bountie",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure"
+        "text": "See an opportunity to improve something.. or a problem you want to fix? If there’s no bounty for it you can create your own. Chat with an integrator to get started."
       },
       "builder": {
         "title": "Builder",
@@ -132,7 +132,7 @@
       }
     },
     "getStarted": {
-      "title": "Pick the best option",
+      "title": "Which role best describes you (we'll tailor the content for you)?",
       "builder": {
         "title": "I’m a Builder",
         "text": "Software development, DevOps, Scripting, Product Design, Product Management, Product & User Research"

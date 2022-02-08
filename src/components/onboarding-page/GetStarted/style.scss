@@ -62,7 +62,8 @@
     }
 
     &__wrapper {
-      height: calc(100vh * 4);
+      height: 100%;
+      overflow-y: scroll;
     }
 
     &__title {
@@ -85,7 +86,8 @@
     }
 
     &__wrapper {
-      height: calc(100vh * 4);
+      height: 100%;
+      overflow-y: scroll;
     }
 
     &__title {
@@ -108,7 +110,8 @@
     }
 
     &__wrapper {
-      height: calc(100vh * 4);
+      height: 100%;
+      overflow-y: scroll;
     }
 
     &__title {

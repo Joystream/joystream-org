@@ -30,6 +30,7 @@ const OnboardingLayout = ({
   onRoleUpdated,
 }) => {
   const [showGetStarted, setShowGetStarted] = useState(false);
+  const [hideNotSureOption, setHideNotSureOption] = useState(false);
   const [role, setRole] = useState();
 
   const handleShowGetStarted = () => {
@@ -39,6 +40,7 @@ const OnboardingLayout = ({
   useEffect(() => {
     if (shouldShowGetStarted) {
       setShowGetStarted(true);
+      setHideNotSureOption(true);
     }
   }, [shouldShowGetStarted]);
 
@@ -60,6 +62,7 @@ const OnboardingLayout = ({
         {showGetStarted && (
           <GetStarted
             t={t}
+            hideNotSureOption={hideNotSureOption}
             onGetStartedClose={() => {
               onGetStartedClose();
               setShowGetStarted(false);
