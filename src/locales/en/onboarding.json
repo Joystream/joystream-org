@@ -110,6 +110,9 @@
       }
     },
     "lessonList": {
+      "toggle": {
+        "allVideos": "All Videos"
+      },
       "lesson1": {
         "title": "We are giving away $9,000,000+ worth of $JOY tokens!"
       },

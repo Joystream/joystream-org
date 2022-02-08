@@ -2,7 +2,7 @@
 
 .LessonList {
   &__wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
@@ -17,6 +17,34 @@
     height: 100%;
     background: $c_black;
     opacity: .5;
+  }
+
+  &__path-toggle {
+    display: grid;
+    width: 454px;
+    height: 52px;
+    margin: 0 32px 32px 30px;
+    padding: 2px;
+    cursor: pointer;
+    background-color: $c_ebony-clay;
+    grid-template-columns: 1fr 1fr;
+
+    &__item {
+      display: grid;
+      place-items: center;
+
+      &__text {
+        font-family: $font-primary;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 0;
+        color: $c_white;
+      }
+    }
+
+    &__item--active {
+      background-color: $c_blue-ribbon;
+    }
   }
 
   &__content {
@@ -69,12 +97,23 @@
     }
 
     &__content {
-      width: calc(100vw);
-      margin: auto;
+      height: calc(100%);
+      overflow-y: scroll;
     }
 
     &__wrapper {
-      height: calc(100vh * 4);
+      height: calc(100%);
+      overflow-y: scroll;
+    }
+
+    &__path-toggle {
+      width: calc(90vw);
+      height: 42px;
+
+      &__item__text {
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
 
     &__title {
@@ -101,7 +140,8 @@
     }
 
     &__wrapper {
-      height: calc(100vh * 4);
+      height: 100%;
+      overflow-y: scroll;
     }
 
     &__title {
@@ -128,7 +168,8 @@
     }
 
     &__wrapper {
-      height: calc(100vh * 4);
+      height: 100%;
+      overflow-y: scroll;
     }
 
     &__title {

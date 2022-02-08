@@ -38,6 +38,7 @@ const Onboarding = () => {
       nextVideoUrl={nextVideoUrl}
       showLessonList={shouldShowLessonList}
       lessonIndex={1}
+      onGetStartedClose={() => {}}
       onLessonListClose={() => setShouldShowLessonList(false)}
       onRoleUpdated={() => {}}
     >

@@ -63,7 +63,9 @@ const Lesson = ({ title, length, currentIndex, index, onClose }) => {
   );
 };
 
-const LessonList = ({ t, lessonIndex, onLessonListClose }) => {
+const LessonList = ({ t, lessonIndex, onLessonListClose, currentRole }) => {
+  const [role, setRole] = useState(currentRole);
+
   const data = [
     {
       title: 'onboarding.lessonList.lesson1.title',
@@ -102,6 +104,35 @@ const LessonList = ({ t, lessonIndex, onLessonListClose }) => {
     },
   ];
 
+  const [useRolePath, setUseRolePath] = useState(!!currentRole);
+
+  const roleIndexes = {
+    builder: [1, 2, 3, 4, 5],
+    techie: [1, 2, 3, 4, 5],
+    marketer: [1, 2, 3, 4, 5],
+    curator: [1, 2, 3, 4, 5],
+    organiser: [1, 2, 3, 6, 4, 5],
+    videocreator: [1, 3, 7, 2, 5],
+  };
+
+  const getData = () => {
+    if (role && useRolePath) {
+      const rolePathOrder = roleIndexes[role.toLowerCase().replaceAll(' ', '')];
+      return rolePathOrder.map(index => data[index]);
+    }
+    return data;
+  };
+
+  useEffect(() => {
+    setRole(localStorage.getItem('JoystreamRole'));
+  }, []);
+
+  useEffect(() => {
+    if (role) {
+      setUseRolePath(true);
+    }
+  }, [role]);
+
   const escFunction = useCallback(
     event => {
       if (event.key === 'Escape') {
@@ -127,18 +158,39 @@ const LessonList = ({ t, lessonIndex, onLessonListClose }) => {
           <NavClose className="LessonList__button__icon" />
         </button>
         <h3 className="LessonList__title">{t('onboarding.button.lessonList.text')}</h3>
+        {role && (
+          <div className="LessonList__path-toggle">
+            <div
+              role="presentation"
+              className={cn('LessonList__path-toggle__item', {
+                'LessonList__path-toggle__item--active': useRolePath,
+              })}
+              onClick={() => setUseRolePath(true)}
+            >
+              <p className="LessonList__path-toggle__item__text">{role}</p>
+            </div>
+            <div
+              role="presentation"
+              className={cn('LessonList__path-toggle__item', {
+                'LessonList__path-toggle__item--active': !useRolePath,
+              })}
+              onClick={() => setUseRolePath(false)}
+            >
+              <p className="LessonList__path-toggle__item__text">{t('onboarding.lessonList.toggle.allVideos')}</p>
+            </div>
+          </div>
+        )}
         <div className="LessonList__lessons">
-          {data &&
-            data.map((item, key) => (
-              <Lesson
-                onClose={onLessonListClose}
-                key={key}
-                title={t(item.title)}
-                length={item.length}
-                index={item.index}
-                currentIndex={lessonIndex}
-              />
-            ))}
+          {getData().map((item, key) => (
+            <Lesson
+              onClose={onLessonListClose}
+              key={key}
+              title={t(item.title)}
+              length={item.length}
+              index={item.index}
+              currentIndex={lessonIndex}
+            />
+          ))}
         </div>
       </div>
     </div>
