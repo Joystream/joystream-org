@@ -45,6 +45,13 @@
     width: 610px;
     margin-bottom: 30px;
     background: $c_white;
+    transition: transform .5s, box-shadow .5s, outline .2s;
+
+    &:hover {
+      outline: 2px solid #000;
+      transform: translate(-5px, -5px);
+      box-shadow: 8px 8px 0 -2px #000;
+    }
 
     &__payout {
       width: 610px;
@@ -97,7 +104,7 @@
     }
 
     &__title {
-      width: 610px;
+      width: 600px;
       padding: 20px 30px 8px;
       font-family: $font-primary;
       font-size: 28px;
@@ -106,7 +113,7 @@
     }
 
     &__subtitle {
-      width: 610px;
+      width: 600px;
       padding-bottom: 14px;
       padding-left: 30px;
       font-family: $font-primary;
@@ -159,6 +166,32 @@
         z-index: 2;
       }
     }
+
+    &__link {
+      position: absolute;
+      right: 20px;
+      bottom: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 500px;
+      cursor: pointer;
+    }
+
+    &__link-text {
+      margin-right: 12px;
+      margin-bottom: 5px;
+      font-family: $font-primary;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: $c_blue-ribbon;
+    }
+
+    &__link-arrow {
+      color: $c_blue-ribbon;
+      transform: rotate(-90deg) scale(.85);
+    }
   }
 
   @media #{$screen-max-sm} {
@@ -177,6 +210,13 @@
     &__item {
       width: calc(90vw);
       margin-bottom: 40px;
+
+      &__link {
+        position: initial;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        margin-left: 20px;
+      }
 
       &__title {
         width: calc(90vw);

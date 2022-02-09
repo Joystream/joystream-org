@@ -15,9 +15,8 @@ const defaultTypes = {
   children: null,
 };
 
-const ContributeLayout = ({ children, t }) => {
+const ContributeLayout = ({ children, t, onChatWithIntegrator }) => {
   const [role, setRole] = useState();
-  const [showChatWithContributor, setShowChatWithContributor] = useState(false);
 
   useEffect(() => {
     setRole(localStorage.getItem('JoystreamRole'));
@@ -26,12 +25,7 @@ const ContributeLayout = ({ children, t }) => {
   return (
     <ScrollProvider>
       <div className="OnboardingLayout__wrapper">
-        <NavbarOnboarding
-          t={t}
-          showChatIntegrator
-          onShowChatIntegrator={() => setShowChatWithContributor(true)}
-          role={role}
-        />
+        <NavbarOnboarding t={t} showChatIntegrator onShowChatIntegrator={onChatWithIntegrator} role={role} />
         {children}
         <CookiesNotice t={t} />
         <FooterContribute t={t} />

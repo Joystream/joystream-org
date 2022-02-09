@@ -76,10 +76,12 @@
       height: 260px;
       margin-right: 30px;
       background-color: white;
+      transition: transform .5s, box-shadow .5s, outline .2s;
 
       &:hover {
-        outline: 2px solid $c_ebony-clay;
-        outline-offset: -2px;
+        outline: 2px solid #000;
+        transform: translate(-5px, -5px);
+        box-shadow: 8px 8px 0 -2px #000;
       }
     }
 
@@ -175,6 +177,33 @@
       margin-left: 20px;
       color: $c_blue-ribbon;
       transform: rotate(-90deg);
+    }
+
+    &__link {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 220px;
+      cursor: pointer;
+      background: white;
+    }
+
+    &__link-text {
+      margin-right: 12px;
+      margin-bottom: 5px;
+      font-family: $font-primary;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: $c_blue-ribbon;
+    }
+
+    &__link-arrow {
+      color: $c_blue-ribbon;
+      transform: rotate(-90deg) scale(.85);
     }
   }
 

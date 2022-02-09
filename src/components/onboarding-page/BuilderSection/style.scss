@@ -94,6 +94,32 @@
     margin-top: 32px;
   }
 
+  &__link {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 500px;
+    cursor: pointer;
+  }
+
+  &__link-text {
+    margin-right: 12px;
+    margin-bottom: 5px;
+    font-family: $font-primary;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: $c_blue-ribbon;
+  }
+
+  &__link-arrow {
+    color: $c_blue-ribbon;
+    transform: rotate(-90deg) scale(.85);
+  }
+
   @media #{$screen-max-md} {
     display: flex;
     align-items: center;

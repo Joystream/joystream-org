@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import ContributeLayout from '../../../components/_layouts/Contribute';
@@ -18,7 +18,7 @@ const Onboarding = () => {
   const [curatorsWorkersData, setCuratorsWorkersData] = useState({ isLoading: true, workers: [] });
   const [distributorsWorkersData, setDistributorsWorkersData] = useState({ isLoading: true, workers: [] });
   const [operationsWorkersData, setOperationsWorkersData] = useState({ isLoading: true, workers: [] });
-
+  const chatRef = useRef();
   const {
     storageWorkers,
     curatorsWorkers,
@@ -109,8 +109,9 @@ const Onboarding = () => {
   ];
 
   const handleButtonAction = () => {
-    console.log('Chat with integrator');
-    // TODO Handle Chat Integrator Button Action
+    if (chatRef && chatRef.current) {
+      chatRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const atlasInfoData = [
@@ -126,10 +127,10 @@ const Onboarding = () => {
   ];
 
   return (
-    <ContributeLayout t={t}>
+    <ContributeLayout t={t} onChatWithIntegrator={handleButtonAction}>
       <div className="Onboarding__wrapper"></div>
       <ContributorInfo t={t} title={t(data.title)} specialities={data.specialities} />
-      <Bounties t={t} />
+      <Bounties t={t} onChatWithIntegrator={handleButtonAction} renderChatWithIntegrator={true} />
       {atlasInfoData.map((item, index) => {
         return <AtlasInfo t={t} key={index} {...item} onButtonClick={handleButtonAction} />;
       })}
@@ -138,8 +139,11 @@ const Onboarding = () => {
         data={workingGroupsData}
         title={t('onboarding.contributorRoles.workingGroups.title')}
         subtitle={t('onboarding.contributorRoles.workingGroups.subtitle')}
+        onChatWithIntegrator={handleButtonAction}
+        renderChatWithIntegrator={true}
       />
       <ChatIntegrator t={t} />
+      <div ref={chatRef}></div>
     </ContributeLayout>
   );
 };

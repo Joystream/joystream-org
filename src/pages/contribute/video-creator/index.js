@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import ContributeLayout from '../../../components/_layouts/Contribute';
@@ -11,7 +11,7 @@ import ChatIntegrator from '../../../components/onboarding-page/ChatIntegrator';
 
 const Onboarding = () => {
   const { t } = useTranslation();
-
+  const chatRef = useRef();
   const data = {
     title: 'onboarding.contributorRoles.videoCreator.title',
     specialities: [
@@ -22,8 +22,9 @@ const Onboarding = () => {
   };
 
   const handleButtonAction = () => {
-    console.log('Chat with integrator');
-    // TODO Handle Chat Integrator Button Action
+    if (chatRef && chatRef.current) {
+      chatRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const atlasInfoData = [
@@ -39,14 +40,15 @@ const Onboarding = () => {
   ];
 
   return (
-    <ContributeLayout t={t}>
+    <ContributeLayout t={t} onChatWithIntegrator={handleButtonAction}>
       <div className="Onboarding__wrapper"></div>
       <ContributorInfo t={t} title={t(data.title)} specialities={data.specialities} />
-      <Bounties t={t} />
+      <Bounties t={t} onChatWithIntegrator={handleButtonAction} renderChatWithIntegrator={true} />
       {atlasInfoData.map((item, index) => {
         return <AtlasInfo t={t} key={index} {...item} onButtonClick={handleButtonAction} />;
       })}
       <ChatIntegrator t={t} />
+      <div ref={chatRef}></div>
     </ContributeLayout>
   );
 };
