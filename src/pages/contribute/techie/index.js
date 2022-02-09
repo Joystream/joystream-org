@@ -10,6 +10,8 @@ import useWorkingGroups from '../../../utils/pages/onboarding/useWorkingGroups';
 import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
 import BountiesImage from '../../../assets/svg/bounties-getting-started.svg';
 import ChatIntegrator from '../../../components/onboarding-page/ChatIntegrator';
+import ValidatorsInfo from '../../../components/onboarding-page/ValidatorsInfo';
+import useValidatorsData from '../../../utils/pages/onboarding/useValidatorsData';
 
 const Onboarding = () => {
   const { t } = useTranslation();
@@ -19,6 +21,27 @@ const Onboarding = () => {
   const [distributorsWorkersData, setDistributorsWorkersData] = useState({ isLoading: true, workers: [] });
   const [operationsWorkersData, setOperationsWorkersData] = useState({ isLoading: true, workers: [] });
   const chatRef = useRef();
+  const { maxValidatorsSize, validatorsSize } = useValidatorsData();
+  const [maxValidatorsData, setMaxValidatorsData] = useState({ isLoading: true, count: 0 });
+  const [activeValidatorsData, setActiveValidatorsData] = useState({ isLoading: true, count: 0 });
+
+  useEffect(() => {
+    if (maxValidatorsSize) {
+      setMaxValidatorsData({
+        isLoading: maxValidatorsSize.isLoading,
+        count: maxValidatorsSize.count,
+      });
+    }
+  }, [maxValidatorsSize]);
+
+  useEffect(() => {
+    if (validatorsSize) {
+      setActiveValidatorsData({
+        isLoading: validatorsSize.isLoading,
+        count: validatorsSize.count,
+      });
+    }
+  }, [validatorsSize]);
 
   const {
     storageWorkers,
@@ -79,6 +102,20 @@ const Onboarding = () => {
     ],
   };
 
+  // TODO Get Validator Payout in $USD
+  const validatorsData = [
+    {
+      title: t('onboarding.contributorRoles.validatorInfo.items.validatorsCount'),
+      activeValidatorsData,
+      maxValidatorsData,
+    },
+    {
+      payout: 280,
+      title: t('onboarding.contributorRoles.validatorInfo.items.validatorsPayout'),
+    },
+  ];
+
+  // TODO Get Working Groups Payouts in $USD
   const workingGroupsData = [
     {
       payout: 500,
@@ -140,6 +177,7 @@ const Onboarding = () => {
         onChatWithIntegrator={handleButtonAction}
         renderChatWithIntegrator={true}
       />
+      <ValidatorsInfo t={t} data={validatorsData} />
       <ChatIntegrator t={t} />
       <div ref={chatRef}></div>
     </ContributeLayout>

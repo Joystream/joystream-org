@@ -27,6 +27,14 @@
           "title": "Get Started!",
           "subtitle": "Opportunity to earn tokens is not available to US persons"
       },
+      "validatorInfo": {
+          "title": "Validator Role",
+          "text": "A Validator is an actor which checks the validity of newly constructed blocks, proposes new blocks and participates in the consensus process for committing new block to the chain. Validators are typically paid a fixed amount for each block produced. This role has a purpose very similar to that of the miners in the Bitcoin blockchain.",
+          "items": {
+            "validatorsCount": "Validators",
+            "validatorsPayout": "Weekly Reward in $JOY"
+          }
+      },
       "builder": {
         "title": "Builder",
         "specialities": {
