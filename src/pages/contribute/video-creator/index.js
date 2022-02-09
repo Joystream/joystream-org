@@ -7,6 +7,7 @@ import ContributorInfo from '../../../components/onboarding-page/ContributorInfo
 import Bounties from '../../../components/onboarding-page/Bounties';
 import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
 import BountiesImage from '../../../assets/svg/bounties-getting-started.svg';
+import ChatIntegrator from '../../../components/onboarding-page/ChatIntegrator';
 
 const Onboarding = () => {
   const { t } = useTranslation();
@@ -45,6 +46,7 @@ const Onboarding = () => {
       {atlasInfoData.map((item, index) => {
         return <AtlasInfo t={t} key={index} {...item} onButtonClick={handleButtonAction} />;
       })}
+      <ChatIntegrator t={t} />
     </ContributeLayout>
   );
 };

@@ -9,6 +9,7 @@ import WorkingGroups from '../../../components/onboarding-page/WorkingGroups';
 import useWorkingGroups from '../../../utils/pages/onboarding/useWorkingGroups';
 import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
 import BountiesImage from '../../../assets/svg/bounties-getting-started.svg';
+import ChatIntegrator from '../../../components/onboarding-page/ChatIntegrator';
 
 const Onboarding = () => {
   const { t } = useTranslation();
@@ -136,6 +137,7 @@ const Onboarding = () => {
         title={t('onboarding.contributorRoles.workingGroups.title')}
         subtitle={t('onboarding.contributorRoles.workingGroups.subtitle')}
       />
+      <ChatIntegrator t={t} />
     </ContributeLayout>
   );
 };

@@ -23,6 +23,10 @@
         "title": "Create your own Bountie",
         "text": "See an opportunity to improve something.. or a problem you want to fix? If there’s no bounty for it you can create your own. Chat with an integrator to get started."
       },
+      "chatIntergrator": {
+          "title": "Get Started!",
+          "subtitle": "Opportunity to earn tokens is not available to US persons"
+      },
       "builder": {
         "title": "Builder",
         "specialities": {
