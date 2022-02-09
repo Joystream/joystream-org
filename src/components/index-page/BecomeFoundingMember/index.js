@@ -1,6 +1,5 @@
 import React from 'react';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
-import { Link } from 'gatsby-plugin-react-i18next';
 
 import './style.scss';
 
@@ -16,15 +15,16 @@ const BecomeFoundingMember = ({ t }) => {
           <h2 className="IndexPage__fm-cta__title IndexPage__fm-cta__title--alt">
             {t("landing.becomeFM.alternateTitle")}
           </h2>
-          <Link
+          <a
             className="IndexPage__fm-cta__link-wrapper"
-            to='/founding-members'
+            href='https://joystream.gitbook.io/testnet-workspace/testnet/founding-member-program'
+            target="_blank"
           >
             <div className="IndexPage__fm-cta__link">
               {t("landing.becomeFM.link")}
               <Arrow className="IndexPage__fm-cta__link-arrow" />
             </div>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

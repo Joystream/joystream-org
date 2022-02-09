@@ -15,24 +15,6 @@ const links = [
       },
     ],
   },
-  {
-    label: 'pages.foundingMembers',
-    isDropdown: true,
-    links: [
-      {
-        to: '/founding-members',
-        label: 'pages.overview',
-      },
-      {
-        to: '/founding-members/leaderboards',
-        label: 'pages.leaderboards',
-      },
-      {
-        to: '/founding-members/form',
-        label: 'pages.scoringForm',
-      },
-    ],
-  },
   { to: '/about', label: 'navbar.about' },
   { href: sharedData.social.discordLink, label: 'navbar.community' },
   {
