@@ -16,12 +16,33 @@
     margin-bottom: 48px;
   }
 
+  &__text__wrapper {
+    width: 506px;
+  }
+
   &__text {
+    position: relative;
     width: 606px;
+    height: 400px;
+  }
+
+  &__waypoint {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__animation__wrapper {
+    position: relative;
+    width: 706px;
+    height: 1200px;
   }
 
   &__animation {
+    position: sticky;
+    top: 80px;
     width: 606px;
+    margin-bottom: 80px;
 
     & div {
       margin: 0 !important;
