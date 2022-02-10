@@ -8,6 +8,7 @@ import VideoSection from '../../../components/onboarding-page/VideoSection';
 import TokenInformation from '../../../components/token-page/TokenInformation';
 import WorkingGroups from '../../../components/onboarding-page/WorkingGroups';
 import useWorkingGroups from '../../../utils/pages/onboarding/useWorkingGroups';
+import Airtable from 'airtable';
 
 import './style.scss';
 
@@ -23,6 +24,12 @@ const Onboarding = () => {
       text: t('onboarding.page5.faq.questions.question1.answer'),
     },
   ];
+
+  Airtable.configure({
+    endpointUrl: 'https://api.airtable.com',
+    apiKey: 'keyGK0KkLpk2FOok7',
+  });
+  const base = Airtable.base('appNF9hNyOvfP5lvG');
 
   const [storageWorkersData, setStorageWorkersData] = useState({ isLoading: true, workers: [] });
   const [curatorsWorkersData, setCuratorsWorkersData] = useState({ isLoading: true, workers: [] });

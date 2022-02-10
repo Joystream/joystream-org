@@ -4,6 +4,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import ContributeLayout from '../../../components/_layouts/Contribute';
 import './style.scss';
 import ContributorInfo from '../../../components/onboarding-page/ContributorInfo';
+import Integrators from '../../../components/onboarding-page/Integrators';
 import Bounties from '../../../components/onboarding-page/Bounties';
 import WorkingGroups from '../../../components/onboarding-page/WorkingGroups';
 import useWorkingGroups from '../../../utils/pages/onboarding/useWorkingGroups';
@@ -128,6 +129,7 @@ const Onboarding = () => {
     <ContributeLayout t={t} onChatWithIntegrator={handleButtonAction}>
       <div className="Onboarding__wrapper"></div>
       <ContributorInfo t={t} title={t(data.title)} specialities={data.specialities} />
+      <Integrators t={t} onChatWithIntegrator={handleButtonAction} />
       <Bounties t={t} onChatWithIntegrator={handleButtonAction} renderChatWithIntegrator={true} />
       {atlasInfoData.map((item, index) => {
         return <AtlasInfo t={t} key={index} {...item} onButtonClick={handleButtonAction} />;

@@ -121,6 +121,19 @@
         "text": "Hit the button to see all the opportunities available to Video Creators."
       }
     },
+    "integrators": {
+      "online": "We are online now",
+      "button": "Get Started",
+      "section1": {
+        "title": "Get started.<br/>Earn $tJOY and $JOY"
+      },
+      "section2": {
+        "title": "Our integrators are online<br/>and ready to help you"
+      },
+      "section3": {
+        "title": "Tell us what you do<br/>and we will help you<br/>get started and earn tokens"
+      }
+    },
     "lessonList": {
       "toggle": {
         "allVideos": "All Videos"
