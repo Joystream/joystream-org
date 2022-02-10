@@ -16,7 +16,16 @@ const VideoSection = ({ t, title, subtitle, index, nextVideoUrl, showLessonList 
     <div className="VideoSection__wrapper">
       <div className="VideoSection__hero">
         <div className="VideoSection__hero__content">
-          <h1 className="VideoSection__hero__title">{title}</h1>
+          <h1 className="VideoSection__hero__title">
+            {title.split('<br/>').map((line, index) => {
+              return (
+                <span key={index}>
+                  {line}
+                  <br />
+                </span>
+              );
+            })}
+          </h1>
           <h2 className="VideoSection__hero__subtitle">{subtitle}</h2>
           <div className="VideoSection__hero__video__wrapper">
             <div className="VideoSection__hero__bg-pattern--1"></div>
