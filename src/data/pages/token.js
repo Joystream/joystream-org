@@ -39,7 +39,7 @@ const tokenQuestions = [
         text: {
             isModular : true,
             key : "token.faq.howToEarn.text",
-            components : [<Link to='/founding-members'>Founding Member Program</Link>]
+            components : [<a href='https://joystream.gitbook.io/testnet-workspace/testnet/founding-member-program' target="_blank">Founding Member Program</a>]
         }
     },
     {
