@@ -5,7 +5,7 @@ import AtlasDemoVideo from '../../../assets/videos/AtlasDemo.mp4';
 import cn from 'classnames';
 import Loader from 'react-loader-spinner';
 import { ReactComponent as Logo } from '../../../assets/svg/logo-white.svg';
-import AtlasThumbnail from '../../../assets/images/thumbnail-atlas.png';
+import VideoThumbnail from '../../../assets/images/onboarding-preview.png';
 
 const Video = () => {
   const videoRef = useRef();
@@ -37,11 +37,11 @@ const Video = () => {
 
     let preloaderImg = document.createElement('img');
     videoThumbnailRef.current.classList.add('AtlasDemo__video__thumbnail--disappeared');
-    preloaderImg.src = AtlasThumbnail;
+    preloaderImg.src = VideoThumbnail;
 
     preloaderImg.addEventListener('load', event => {
       videoThumbnailRef.current.classList.remove('AtlasDemo__video__thumbnail--disappeared');
-      videoThumbnailRef.current.style.backgroundImage = `url(${AtlasThumbnail})`;
+      videoThumbnailRef.current.style.backgroundImage = `url(${VideoThumbnail})`;
       setImageIsLoading(false);
       preloaderImg = null;
     });
