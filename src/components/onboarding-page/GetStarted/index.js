@@ -13,10 +13,24 @@ import { ReactComponent as CuratorActive } from '../../../assets/svg/role-curato
 import { ReactComponent as VideoCreator } from '../../../assets/svg/role-video-creator.svg';
 import { ReactComponent as VideoCreatorActive } from '../../../assets/svg/role-video-creator-active.svg';
 import cn from 'classnames';
+import { navigate } from 'gatsby';
 import './style.scss';
 
-const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange }) => {
+const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange, shouldSwitchRolePage }) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const contributorUrls = {
+    builder: 'builder',
+    techie: 'techie',
+    marketer: 'marketer',
+    organiser: 'organiser',
+    curator: 'curator',
+    videocreator: 'video-creator',
+  };
+
+  const getContributorPageUrl = () => {
+    return `/contribute/${contributorUrls[role.toLowerCase().replaceAll(' ', '')]}`;
+  };
 
   const chooseRole = () => {
     if (role) {
@@ -24,7 +38,11 @@ const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange }) =>
     } else {
       onRoleChange('');
     }
-    onClose();
+    if (shouldSwitchRolePage) {
+      navigate(getContributorPageUrl());
+    } else {
+      onClose();
+    }
   };
 
   return (
@@ -66,7 +84,7 @@ const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange }) =>
   );
 };
 
-const GetStarted = ({ t, onGetStartedClose, onRoleChange, hideNotSureOption }) => {
+const GetStarted = ({ t, onGetStartedClose, onRoleChange, hideNotSureOption, shouldSwitchRolePage }) => {
   const data = [
     {
       title: 'onboarding.getStarted.builder.title',
@@ -148,6 +166,7 @@ const GetStarted = ({ t, onGetStartedClose, onRoleChange, hideNotSureOption }) =
                 <Role
                   onClose={onGetStartedClose}
                   onRoleChange={onRoleChange}
+                  shouldSwitchRolePage={shouldSwitchRolePage}
                   key={key}
                   title={t(item.title)}
                   text={t(item.text)}
