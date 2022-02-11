@@ -138,6 +138,22 @@
     }
   }
 
+  @media #{$screen-max-md} {
+    &__note {
+      font-size: 20px;
+      line-height: 26px;
+      text-align: center;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    padding: 120px 0 230px;
+
+    &__note {
+      padding: 0 20px;
+    }
+  }
+
   @media #{$screen-sm} {
     padding: 120px 0 100px;
     background-image: url('../../assets/background/footer-bottom-secondary.svg');
