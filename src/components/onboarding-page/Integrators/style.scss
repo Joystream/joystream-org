@@ -17,13 +17,21 @@
   }
 
   &__text__wrapper {
-    width: 506px;
+    width: 606px;
   }
 
   &__text {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 606px;
     height: 400px;
+    margin-bottom: 10px;
+  }
+
+  &__text:last-of-type {
+    justify-content: flex-start;
   }
 
   &__waypoint {
@@ -34,7 +42,7 @@
 
   &__animation__wrapper {
     position: relative;
-    width: 706px;
+    width: 606px;
     height: 1200px;
   }
 
@@ -43,10 +51,6 @@
     top: 320px;
     width: 606px;
     margin-bottom: 80px;
-
-    & div {
-      margin: 0 !important;
-    }
   }
 
   &__button {
@@ -55,7 +59,7 @@
     justify-content: space-between;
     width: fit-content;
     height: 60px;
-    margin: 32px 0;
+    margin: 0;
     padding: 18px 20px;
     cursor: pointer;
     background: $c_blue-ribbon;
