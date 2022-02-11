@@ -222,6 +222,11 @@
 
       &__card {
         width: calc(90vw);
+        height: 300px;
+      }
+
+      &__date {
+        display: none;
       }
 
       &__top {

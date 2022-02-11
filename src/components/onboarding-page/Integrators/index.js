@@ -39,6 +39,19 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
           </div>
         </div>
         <div className="Integrators__text__wrapper">
+          <div className="Integrators__animation__mobile__wrapper">
+            <div className="Integrators__animation__mobile">
+              {shouldAnimateFirst && (
+                <Lottie options={{ ...defaultOptions, animationData: animationData1 }} height={340} width={520} />
+              )}
+              {shouldAnimateSecond && (
+                <Lottie options={{ ...defaultOptions, animationData: animationData2 }} height={340} width={520} />
+              )}
+              {shouldAnimateThird && (
+                <Lottie options={{ ...defaultOptions, animationData: animationData3 }} height={340} width={520} />
+              )}
+            </div>
+          </div>
           <div className="Integrators__text">
             <div className="Integrators__online-text">
               <OnlineIcon className="Integrators__online-icon" />
