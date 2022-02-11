@@ -58,6 +58,8 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
                 })}
             </h2>
             <Waypoint
+              bottomOffset={100}
+              topOffset={400}
               onEnter={() => {
                 setShouldAnimateThird(false);
                 setShouldAnimateSecond(false);
@@ -85,7 +87,8 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
             </h2>
             <Waypoint
               className="IntegratorsclassName"
-              bottomOffset={500}
+              bottomOffset={250}
+              topOffset={250}
               onEnter={() => {
                 setShouldAnimateFirst(false);
                 setShouldAnimateThird(false);
@@ -112,7 +115,8 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
                 })}
             </h2>
             <Waypoint
-              bottomOffset={500}
+              topOffset={100}
+              bottomOffset={400}
               onEnter={() => {
                 setShouldAnimateFirst(false);
                 setShouldAnimateSecond(false);
