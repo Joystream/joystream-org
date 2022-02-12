@@ -35,7 +35,7 @@
         }
       }
     },
-    "Rollen": {
+    "roles": {
       "title": "Inzentivierte Rollen für das Giza Network"
     },
     "map": {
