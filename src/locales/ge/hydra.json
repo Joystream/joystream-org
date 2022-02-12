@@ -1,5 +1,5 @@
 {
-  "Hydra": {
+  "hydra": {
     "siteMetadata": {
       "title": "Hydra - Ein Substrate Query Node Framework",
       "description": "Inspiriert von The Graph, bietet es eine einfache Möglichkeit, App-Entwicklern leistungsstarke GraphQL-Abfragen über den Zustand und die Historie der Substrate-Blockchain zur Verfügung zu stellen."
