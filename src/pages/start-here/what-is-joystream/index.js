@@ -12,6 +12,7 @@ import { useState } from 'react';
 const Onboarding = () => {
   const { t } = useTranslation();
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
+  const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const { getNextVideoUrl } = useLessonList();
   const lessonIndex = 1;
 
@@ -41,7 +42,7 @@ const Onboarding = () => {
       lessonIndex={lessonIndex}
       onGetStartedClose={() => {}}
       onLessonListClose={() => setShouldShowLessonList(false)}
-      onRoleUpdated={() => {}}
+      onRoleUpdated={() => setShouldReloadRole(true)}
     >
       <div className="Onboarding__wrapper">
         <VideoSection
@@ -50,6 +51,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page1.subtitle')}
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
           index={lessonIndex}
+          shouldReloadRole={shouldReloadRole}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>

@@ -95,6 +95,19 @@ const Navbar = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { getContributorPageUrl } = useContributors();
+  const [selectedRole, setSelectedRole] = useState(role);
+  const [contributorPageUrl, setContributorPageUrl] = useState();
+
+  useEffect(() => {
+    if (role !== selectedRole) {
+      console.log(`Role  changed ${selectedRole} -> ${role}`);
+      setSelectedRole(role);
+    }
+  }, [role, selectedRole]);
+
+  useEffect(() => {
+    setContributorPageUrl(getContributorPageUrl(selectedRole));
+  }, [getContributorPageUrl, selectedRole]);
 
   const context = useContext(ScrollContext);
   const { isScrollUp } = context;
@@ -122,8 +135,8 @@ const Navbar = ({
             </div>
           )}
           {showGetStarted &&
-            (role ? (
-              <Link to={getContributorPageUrl()}>
+            (role && contributorPageUrl ? (
+              <Link to={contributorPageUrl}>
                 <div className="Navbar__button" role="presentation" onClick={onShowGetStarted}>
                   <p className="Navbar__button-text">{t('onboarding.button.getStarted.text')}</p>
                   <Arrow className="Navbar__button-arrow" />

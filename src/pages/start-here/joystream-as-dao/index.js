@@ -196,6 +196,7 @@ const Onboarding = () => {
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
           index={lessonIndex}
           showLessonList={() => setShouldShowLessonList(true)}
+          shouldReloadRole={shouldReloadRole}
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page2.infoSection.title')} text={t('onboarding.page2.infoSection.text')} />

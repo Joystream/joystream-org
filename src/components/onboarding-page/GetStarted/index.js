@@ -28,7 +28,7 @@ const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange, shou
       onRoleChange('');
     }
     if (shouldSwitchRolePage) {
-      navigate(getContributorPageUrl());
+      navigate(getContributorPageUrl(role));
     } else {
       onClose();
     }

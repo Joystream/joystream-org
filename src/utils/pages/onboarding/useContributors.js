@@ -43,7 +43,10 @@ const useContributors = () => {
     videocreator: 'video-creator',
   };
 
-  const getContributorPageUrl = () => {
+  const getContributorPageUrl = selectedRole => {
+    if (selectedRole) {
+      return `/contribute/${contributorUrls[selectedRole.toLowerCase().replaceAll(' ', '')]}`;
+    }
     if (role) {
       return `/contribute/${contributorUrls[role.toLowerCase().replaceAll(' ', '')]}`;
     }

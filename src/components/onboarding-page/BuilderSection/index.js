@@ -34,7 +34,7 @@ const BuilderSection = ({ t, onShowGetStarted, shouldReloadRole, onRoleReloaded 
           <h2 className="BuilderSection__title">{t(title)}</h2>
           <p className="BuilderSection__description">{t(text)}</p>
           {role ? (
-            <Link to={getContributorPageUrl()}>
+            <Link to={getContributorPageUrl(role)}>
               <div className="BuilderSection__button">
                 <p className="BuilderSection__button-text">{t('onboarding.button.getStarted.text')}</p>
                 <Arrow className="BuilderSection__button-arrow" />

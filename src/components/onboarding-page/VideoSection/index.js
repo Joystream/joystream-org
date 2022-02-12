@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Video from '../Video';
 import VideoProgressBar from './VideoProgressBar';
@@ -8,17 +8,26 @@ import { ReactComponent as LessonListMobile } from '../../../assets/svg/lesson-l
 import useContributors from '../../../utils/pages/onboarding/useContributors';
 import './style.scss';
 
-const VideoSection = ({ t, title, subtitle, index, nextVideoUrl, showLessonList, onShowGetStarted }) => {
+const VideoSection = ({
+  t,
+  title,
+  subtitle,
+  index,
+  nextVideoUrl,
+  showLessonList,
+  onShowGetStarted,
+  shouldReloadRole,
+}) => {
   const nextVideoButtonTitle = t('onboarding.footer.button.nextVideo.text');
   const getStartedButtonTitle = t('onboarding.button.getStarted.text');
   const lessonListButtonTitle = t('onboarding.page1.videoSection.button.lessonList.text');
+  const [role, setRole] = useState();
+
   const { getContributorPageUrl } = useContributors();
 
-  const [contributorPageUrl, setContributorPageUrl] = useState();
-
   useEffect(() => {
-    setContributorPageUrl(getContributorPageUrl());
-  }, [getContributorPageUrl]);
+    setRole(localStorage.getItem('JoystreamRole'));
+  }, [shouldReloadRole]);
 
   return (
     <div className="VideoSection__wrapper">
@@ -62,16 +71,14 @@ const VideoSection = ({ t, title, subtitle, index, nextVideoUrl, showLessonList,
               <LessonListMobile className="VideoSection__hero__button-list" />
             </div>
             {nextVideoUrl ? (
-              <Link key={nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle} to={nextVideoUrl}>
+              <Link key={nextVideoButtonTitle} to={nextVideoUrl}>
                 <div className="VideoSection__hero__button">
-                  <p className="VideoSection__hero__button-text">
-                    {nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle}
-                  </p>
+                  <p className="VideoSection__hero__button-text">{nextVideoButtonTitle}</p>
                   <Arrow className="VideoSection__hero__button-arrow" />
                 </div>
               </Link>
-            ) : contributorPageUrl ? (
-              <Link key={getStartedButtonTitle} to={contributorPageUrl}>
+            ) : role ? (
+              <Link key={getStartedButtonTitle} to={getContributorPageUrl(role)}>
                 <div className="VideoSection__hero__button" role="presentation" onClick={onShowGetStarted}>
                   <p className="VideoSection__hero__button-text">
                     {nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle}
@@ -81,9 +88,7 @@ const VideoSection = ({ t, title, subtitle, index, nextVideoUrl, showLessonList,
               </Link>
             ) : (
               <div className="VideoSection__hero__button" role="presentation" onClick={onShowGetStarted}>
-                <p className="VideoSection__hero__button-text">
-                  {nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle}
-                </p>
+                <p className="VideoSection__hero__button-text">{getStartedButtonTitle}</p>
                 <Arrow className="VideoSection__hero__button-arrow" />
               </div>
             )}

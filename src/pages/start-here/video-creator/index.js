@@ -87,6 +87,7 @@ const Onboarding = () => {
           index={lessonIndex}
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
           showLessonList={() => setShouldShowLessonList(true)}
+          shouldReloadRole={shouldReloadRole}
           onShowGetStarted={handleGetStarted}
         ></VideoSection>
       </div>

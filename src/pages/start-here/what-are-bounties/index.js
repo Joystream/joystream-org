@@ -48,6 +48,7 @@ const Onboarding = () => {
           title={t('onboarding.page6.title')}
           subtitle={t('onboarding.page6.subtitle')}
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
+          shouldReloadRole={shouldReloadRole}
           index={lessonIndex}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
