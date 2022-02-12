@@ -40,8 +40,10 @@ const Video = () => {
     preloaderImg.src = VideoThumbnail;
 
     preloaderImg.addEventListener('load', event => {
-      videoThumbnailRef.current.classList.remove('AtlasDemo__video__thumbnail--disappeared');
-      videoThumbnailRef.current.style.backgroundImage = `url(${VideoThumbnail})`;
+      if (videoThumbnailRef.current) {
+        videoThumbnailRef.current.classList.remove('AtlasDemo__video__thumbnail--disappeared');
+        videoThumbnailRef.current.style.backgroundImage = `url(${VideoThumbnail})`;
+      }
       setImageIsLoading(false);
       preloaderImg = null;
     });

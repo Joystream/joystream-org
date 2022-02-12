@@ -12,25 +12,14 @@ import { ReactComponent as Curator } from '../../../assets/svg/role-curator.svg'
 import { ReactComponent as CuratorActive } from '../../../assets/svg/role-curator-active.svg';
 import { ReactComponent as VideoCreator } from '../../../assets/svg/role-video-creator.svg';
 import { ReactComponent as VideoCreatorActive } from '../../../assets/svg/role-video-creator-active.svg';
+import useContributors from '../../../utils/pages/onboarding/useContributors';
 import cn from 'classnames';
 import { navigate } from 'gatsby';
 import './style.scss';
 
 const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange, shouldSwitchRolePage }) => {
   const [isHovered, setIsHovered] = useState(false);
-
-  const contributorUrls = {
-    builder: 'builder',
-    techie: 'techie',
-    marketer: 'marketer',
-    organiser: 'organiser',
-    curator: 'curator',
-    videocreator: 'video-creator',
-  };
-
-  const getContributorPageUrl = () => {
-    return `/contribute/${contributorUrls[role.toLowerCase().replaceAll(' ', '')]}`;
-  };
+  const { getContributorPageUrl } = useContributors();
 
   const chooseRole = () => {
     if (role) {

@@ -16,7 +16,7 @@ import { ReactComponent as ProposalsVoting } from '../../../assets/svg/proposalV
 import { ReactComponent as ManageWG } from '../../../assets/svg/manageWG.svg';
 import TokenInformation from '../../../components/token-page/TokenInformation';
 import useCouncilData from '../../../utils/pages/onboarding/useCouncilData';
-
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
 const Onboarding = () => {
@@ -28,6 +28,8 @@ const Onboarding = () => {
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
+  const lessonIndex = 4;
+  const { getNextVideoUrl } = useLessonList();
 
   useEffect(() => {
     if (councilSize) {
@@ -48,7 +50,6 @@ const Onboarding = () => {
   }, [councilPeriodDays]);
 
   const { t } = useTranslation();
-  const nextVideoUrl = '/start-here/what-are-working-groups';
 
   const questions = [
     {
@@ -120,9 +121,9 @@ const Onboarding = () => {
     <OnboardingLayout
       t={t}
       nextVideoText={t('onboarding.page4.footer.subtitle')}
-      nextVideoUrl={nextVideoUrl}
+      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
-      lessonIndex={4}
+      lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
@@ -133,8 +134,8 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page4.title')}
           subtitle={t('onboarding.page4.subtitle')}
-          nextVideoUrl={nextVideoUrl}
-          index={4}
+          nextVideoUrl={getNextVideoUrl(lessonIndex)}
+          index={lessonIndex}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>

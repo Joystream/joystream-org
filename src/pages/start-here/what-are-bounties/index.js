@@ -7,12 +7,11 @@ import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import Bounties from '../../../components/onboarding-page/Bounties';
 import TokenInformation from '../../../components/token-page/TokenInformation';
-
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
-  const nextVideoUrl = '/start-here/video-creator';
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
@@ -26,6 +25,8 @@ const Onboarding = () => {
       text: t('onboarding.page6.faq.questions.question2.answer'),
     },
   ];
+  const lessonIndex = 6;
+  const { getNextVideoUrl } = useLessonList();
 
   const handleGetStarted = () => setShouldShowGetStarted(true);
 
@@ -33,9 +34,9 @@ const Onboarding = () => {
     <OnboardingLayout
       t={t}
       nextVideoText={t('onboarding.page6.footer.subtitle')}
-      nextVideoUrl={nextVideoUrl}
+      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
-      lessonIndex={6}
+      lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
@@ -46,8 +47,8 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page6.title')}
           subtitle={t('onboarding.page6.subtitle')}
-          nextVideoUrl={nextVideoUrl}
-          index={6}
+          nextVideoUrl={getNextVideoUrl(lessonIndex)}
+          index={lessonIndex}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>

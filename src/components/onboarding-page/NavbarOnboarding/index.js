@@ -13,7 +13,7 @@ import { ReactComponent as NavClose } from '../../../assets/svg/navbar-close.svg
 import { ReactComponent as NavHamburger } from '../../../assets/svg/navbar-hamburger.svg';
 import { ReactComponent as UKCircle } from '../../../assets/svg/uk-flag-circle.svg';
 import { ReactComponent as RoleIcon } from '../../../assets/svg/role-button-icon.svg';
-
+import useContributors from '../../../utils/pages/onboarding/useContributors';
 import useWindowDimensions from '../../../utils/useWindowDimensions';
 
 import './style.scss';
@@ -94,19 +94,7 @@ const Navbar = ({
   role,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const contributorUrls = {
-    builder: 'builder',
-    techie: 'techie',
-    marketer: 'marketer',
-    organiser: 'organiser',
-    curator: 'curator',
-    videocreator: 'video-creator',
-  };
-
-  const getContributorPageUrl = () => {
-    return `/contribute/${contributorUrls[role.toLowerCase().replaceAll(' ', '')]}`;
-  };
+  const { getContributorPageUrl } = useContributors();
 
   const context = useContext(ScrollContext);
   const { isScrollUp } = context;

@@ -14,15 +14,16 @@ import { ReactComponent as Council } from '../../../assets/svg/council.svg';
 import { ReactComponent as WorkingGroup } from '../../../assets/svg/working-group.svg';
 import { ReactComponent as Bounty } from '../../../assets/svg/bounty.svg';
 import { ReactComponent as MakeBounty } from '../../../assets/svg/create-bounty.svg';
-
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
-  const nextVideoUrl = '/start-here/what-is-council';
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
+  const lessonIndex = 3;
+  const { getNextVideoUrl } = useLessonList();
 
   const questions = [
     {
@@ -68,9 +69,9 @@ const Onboarding = () => {
     <OnboardingLayout
       t={t}
       nextVideoText={t('onboarding.page3.footer.subtitle')}
-      nextVideoUrl={nextVideoUrl}
+      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
-      lessonIndex={3}
+      lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
@@ -81,8 +82,8 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page3.title')}
           subtitle={t('onboarding.page3.subtitle')}
-          nextVideoUrl={nextVideoUrl}
-          index={3}
+          nextVideoUrl={getNextVideoUrl(lessonIndex)}
+          index={lessonIndex}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>

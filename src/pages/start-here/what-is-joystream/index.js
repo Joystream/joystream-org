@@ -5,14 +5,15 @@ import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import TokenInformation from '../../../components/token-page/TokenInformation';
-
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 import { useState } from 'react';
 
 const Onboarding = () => {
   const { t } = useTranslation();
-
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
+  const { getNextVideoUrl } = useLessonList();
+  const lessonIndex = 1;
 
   const nextVideoUrl = '/start-here/joystream-as-dao';
 
@@ -37,7 +38,7 @@ const Onboarding = () => {
       nextVideoText={t('onboarding.page1.footer.subtitle')}
       nextVideoUrl={nextVideoUrl}
       showLessonList={shouldShowLessonList}
-      lessonIndex={1}
+      lessonIndex={lessonIndex}
       onGetStartedClose={() => {}}
       onLessonListClose={() => setShouldShowLessonList(false)}
       onRoleUpdated={() => {}}
@@ -47,8 +48,8 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page1.title')}
           subtitle={t('onboarding.page1.subtitle')}
-          nextVideoUrl={nextVideoUrl}
-          index={1}
+          nextVideoUrl={getNextVideoUrl(lessonIndex)}
+          index={lessonIndex}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>

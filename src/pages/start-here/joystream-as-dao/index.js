@@ -9,16 +9,18 @@ import VideoSection from '../../../components/onboarding-page/VideoSection';
 import TokenInformation from '../../../components/token-page/TokenInformation';
 import useAtlasData from '../../../utils/pages/onboarding/useAtlasData';
 import usePioneerData from '../../../utils/pages/onboarding/usePioneerData';
-import './style.scss';
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import Statistics from '../../../components/onboarding-page/Statistics';
 import Structure from '../../../components/onboarding-page/Structure';
+import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
-  const nextVideoUrl = '/start-here/what-is-fm-program';
+  const lessonIndex = 2;
+  const { getNextVideoUrl } = useLessonList();
 
   const { videos, channels } = useAtlasData();
   const {
@@ -178,9 +180,9 @@ const Onboarding = () => {
     <OnboardingLayout
       t={t}
       nextVideoText={t('onboarding.page2.footer.subtitle')}
-      nextVideoUrl={nextVideoUrl}
+      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
-      lessonIndex={2}
+      lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
@@ -191,8 +193,8 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page2.title')}
           subtitle={t('onboarding.page2.subtitle')}
-          nextVideoUrl={nextVideoUrl}
-          index={2}
+          nextVideoUrl={getNextVideoUrl(lessonIndex)}
+          index={lessonIndex}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>

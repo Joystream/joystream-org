@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Pioneer from '../../../assets/svg/builder-illustration.svg';
 import Link from '../../Link';
+import useContributors from '../../../utils/pages/onboarding/useContributors';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import './style.scss';
 
 const BuilderSection = ({ t, onShowGetStarted, shouldReloadRole, onRoleReloaded }) => {
   const [role, setRole] = useState();
+  const { roleSuffixes, getContributorPageUrl } = useContributors();
 
   useEffect(() => {
     setRole(localStorage.getItem('JoystreamRole'));
@@ -15,33 +17,6 @@ const BuilderSection = ({ t, onShowGetStarted, shouldReloadRole, onRoleReloaded 
   const [title, setTitle] = useState('onboarding.readyToContribureGeneric.title');
   const [text, setText] = useState('onboarding.readyToContribureGeneric.text');
 
-  const [roleSuffixes] = useState({
-    builder: {
-      title: 'onboarding.readyToContribureRoles.builder.title',
-      text: 'onboarding.readyToContribureRoles.builder.text',
-    },
-    techie: {
-      title: 'onboarding.readyToContribureRoles.techie.title',
-      text: 'onboarding.readyToContribureRoles.techie.text',
-    },
-    marketer: {
-      title: 'onboarding.readyToContribureRoles.marketer.title',
-      text: 'onboarding.readyToContribureRoles.marketer.text',
-    },
-    organiser: {
-      title: 'onboarding.readyToContribureRoles.organiser.title',
-      text: 'onboarding.readyToContribureRoles.organiser.text',
-    },
-    curator: {
-      title: 'onboarding.readyToContribureRoles.curator.title',
-      text: 'onboarding.readyToContribureRoles.curator.text',
-    },
-    videocreator: {
-      title: 'onboarding.readyToContribureRoles.videoCreator.title',
-      text: 'onboarding.readyToContribureRoles.videoCreator.text',
-    },
-  });
-
   useEffect(() => {
     if (role && roleSuffixes) {
       const suffix = role.replaceAll(' ', '').toLowerCase();
@@ -50,19 +25,6 @@ const BuilderSection = ({ t, onShowGetStarted, shouldReloadRole, onRoleReloaded 
       setText(roleTexts.text);
     }
   }, [role, roleSuffixes]);
-
-  const contributorUrls = {
-    builder: 'builder',
-    techie: 'techie',
-    marketer: 'marketer',
-    organiser: 'organiser',
-    curator: 'curator',
-    videocreator: 'video-creator',
-  };
-
-  const getContributorPageUrl = () => {
-    return `/contribute/${contributorUrls[role.toLowerCase().replaceAll(' ', '')]}`;
-  };
 
   return (
     <div className="BuilderSection__wrapper">

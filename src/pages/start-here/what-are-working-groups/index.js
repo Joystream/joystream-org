@@ -8,16 +8,17 @@ import VideoSection from '../../../components/onboarding-page/VideoSection';
 import TokenInformation from '../../../components/token-page/TokenInformation';
 import WorkingGroups from '../../../components/onboarding-page/WorkingGroups';
 import useWorkingGroups from '../../../utils/pages/onboarding/useWorkingGroups';
-import Airtable from 'airtable';
-
+// import Airtable from 'airtable';
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
-  const nextVideoUrl = '/start-here/what-are-bounties';
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
+  const lessonIndex = 5;
+  const { getNextVideoUrl } = useLessonList();
   const questions = [
     {
       title: t('onboarding.page5.faq.questions.question1.question'),
@@ -25,11 +26,12 @@ const Onboarding = () => {
     },
   ];
 
-  Airtable.configure({
-    endpointUrl: 'https://api.airtable.com',
-    apiKey: 'keyGK0KkLpk2FOok7',
-  });
-  const base = Airtable.base('appNF9hNyOvfP5lvG');
+  // TODO Use airtable
+  // Airtable.configure({
+  //   endpointUrl: 'https://api.airtable.com',
+  //   apiKey: 'API_KEY',
+  // });
+  // const base = Airtable.base('appNF9hNyOvfP5lvG');
 
   const [storageWorkersData, setStorageWorkersData] = useState({ isLoading: true, workers: [] });
   const [curatorsWorkersData, setCuratorsWorkersData] = useState({ isLoading: true, workers: [] });
@@ -120,9 +122,9 @@ const Onboarding = () => {
     <OnboardingLayout
       t={t}
       nextVideoText={t('onboarding.page5.footer.subtitle')}
-      nextVideoUrl={nextVideoUrl}
+      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
-      lessonIndex={5}
+      lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
@@ -133,8 +135,9 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page5.title')}
           subtitle={t('onboarding.page5.subtitle')}
-          nextVideoUrl={nextVideoUrl}
-          index={5}
+          nextVideoUrl={getNextVideoUrl(lessonIndex)}
+          index={lessonIndex}
+          onShowGetStarted={handleGetStarted}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>

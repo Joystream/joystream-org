@@ -10,15 +10,16 @@ import YoutubeSync from '../../../assets/svg/youtube-sync.svg';
 import SocialTokens from '../../../assets/svg/social-tokens.svg';
 import NFTVisual from '../../../assets/images/nft-visual.png';
 import AtlasVisual from '../../../assets/images/atlas-visual.png';
-
-import './style.scss';
 import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
+import './style.scss';
 
 const Onboarding = () => {
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
-
+  const lessonIndex = 7;
+  const { getNextVideoUrl } = useLessonList();
   const { t } = useTranslation();
 
   const questions = [
@@ -69,8 +70,10 @@ const Onboarding = () => {
   return (
     <OnboardingLayout
       t={t}
+      nextVideoText={t('onboarding.page5.footer.subtitle')}
+      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
-      lessonIndex={7}
+      lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
@@ -81,8 +84,10 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page7.title')}
           subtitle={t('onboarding.page7.subtitle')}
-          index={7}
+          index={lessonIndex}
+          nextVideoUrl={getNextVideoUrl(lessonIndex)}
           showLessonList={() => setShouldShowLessonList(true)}
+          onShowGetStarted={handleGetStarted}
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page7.infoSection.title')} text={t('onboarding.page7.infoSection.text')} />

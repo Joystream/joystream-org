@@ -17,7 +17,9 @@ const FooterAction = ({ title, subtitle, buttonTitle, to, href }) => {
     preloaderImg.src = VideoThumbnail;
 
     preloaderImg.addEventListener('load', event => {
-      videoThumbnailRef.current.style.backgroundImage = `url(${VideoThumbnail})`;
+      if (videoThumbnailRef.current) {
+        videoThumbnailRef.current.style.backgroundImage = `url(${VideoThumbnail})`;
+      }
       setImageIsLoading(false);
       preloaderImg = null;
     });
