@@ -30,7 +30,7 @@
         }
       }
     },
-    "Rollen": {
+    "roles": {
       "title": "Im Sparta Testnet verfügbare Rollen"
     },
     "map": {
