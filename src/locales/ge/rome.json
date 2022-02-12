@@ -48,7 +48,7 @@
         }
       }
     },
-    "Rollen": {
+    "roles": {
       "title": "Inzentivierte Rollen für das Rome Network"
     },
     "map": {
