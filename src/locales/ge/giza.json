@@ -4,7 +4,7 @@
       "description": "Erforsche das Giza Testnet"
     },
     "hero": {
-      "Titel": "Giza Network",
+      "title": "Giza Network",
       "text": "Neben anderen geplanten Verbesserungen führt die Giza-Version die erste Iteration des Speicher- und Verteilungssystems ein, das wir im Hauptnetz verwenden werden."    },
     "criticalDocuments": {
       "title": "Wichtige Dokumente",
