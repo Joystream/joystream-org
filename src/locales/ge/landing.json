@@ -1,5 +1,5 @@
 {
-  "Landung": {
+  "landing": {
     "siteMetadata": {
       "description": "Joystream ist eine Videoplattform, die von ihren Nutzern kontrolliert, besessen und betrieben wird."
     },
@@ -65,7 +65,7 @@
         "Past": "Vergangenes Testnet",
         "Future": "Zukünftiges Testnet"
       },
-      "freigegeben": {
+      "released": {
         "Current": "Freigegeben am",
         "past": "Freigegeben am ",
         "Future": "Wird live sein am "
