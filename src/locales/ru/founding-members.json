@@ -2,12 +2,12 @@
   "foundingMembers": {
     "general": {
       "foundingMembers": "Члены-основатели",
-      "nonFoundingMembers": "Остальные члены",
+      "nonFoundingMembers": "Остальные",
       "directScore": "Заработанные баллы",
       "referralScore": "Реферальные баллы",
       "totalScore": "Общие баллы",
       "inducted": "Включен(а)",
-      "member": "Член",
+      "member": "Участник",
       "backButton": "Назад к описанию программы",
       "before": "До",
       "account": "Аккаунт",
