@@ -22,13 +22,13 @@ const TokenInformationSection = ({ title, text }) => {
     >
       <div className="TokensPage__tokeninfo__item__content">
         <h3 className="TokensPage__tokeninfo__item__title">{title}</h3>
-        <p
+        <div
           className={cn('TokensPage__tokeninfo__item__text', {
             'TokensPage__tokeninfo__item__text--active': active,
           })}
         >
           {text}
-        </p>
+        </div>
       </div>
       <Close
         className={cn('TokensPage__tokeninfo__item__icon', {
