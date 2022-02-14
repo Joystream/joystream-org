@@ -18,7 +18,7 @@ const Onboarding = () => {
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const lessonIndex = 5;
-  const { getNextVideoUrl } = useLessonList();
+  const { lessonLinks, getNextVideoUrl } = useLessonList();
   const questions = [
     {
       title: t('onboarding.page5.faq.questions.question1.question'),
@@ -137,6 +137,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page5.subtitle')}
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
           index={lessonIndex}
+          lesson={lessonLinks[lessonIndex]}
           shouldReloadRole={shouldReloadRole}
           onShowGetStarted={handleGetStarted}
           showLessonList={() => setShouldShowLessonList(true)}

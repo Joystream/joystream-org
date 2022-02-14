@@ -6,6 +6,7 @@ import Link from '../../Link';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 import { ReactComponent as LessonListMobile } from '../../../assets/svg/lesson-list-m-icon.svg';
 import useContributors from '../../../utils/pages/onboarding/useContributors';
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
 const VideoSection = ({
@@ -13,6 +14,7 @@ const VideoSection = ({
   title,
   subtitle,
   index,
+  lesson,
   nextVideoUrl,
   showLessonList,
   onShowGetStarted,
@@ -22,12 +24,20 @@ const VideoSection = ({
   const getStartedButtonTitle = t('onboarding.button.getStarted.text');
   const lessonListButtonTitle = t('onboarding.page1.videoSection.button.lessonList.text');
   const [role, setRole] = useState();
+  const { getTotalVideos, getVideoIndex } = useLessonList();
+  const [totalVideos, setTotalVideos] = useState(7);
+  const [videoIndex, setVideoIndex] = useState(index);
 
   const { getContributorPageUrl } = useContributors();
 
   useEffect(() => {
-    setRole(localStorage.getItem('JoystreamRole'));
-  }, [shouldReloadRole]);
+    const role = localStorage.getItem('JoystreamRole');
+    setRole(role);
+    if (role) {
+      setTotalVideos(getTotalVideos());
+      setVideoIndex(getVideoIndex(index));
+    }
+  }, [shouldReloadRole, getTotalVideos, getVideoIndex, index]);
 
   return (
     <div className="VideoSection__wrapper">
@@ -47,7 +57,7 @@ const VideoSection = ({
           <div className="VideoSection__hero__video__wrapper">
             <div className="VideoSection__hero__bg-pattern--1"></div>
             <div className="VideoSection__hero__video">
-              <Video />
+              <Video lesson={lesson} />
             </div>
             <div className="VideoSection__hero__bg-pattern--2"></div>
           </div>
@@ -55,18 +65,20 @@ const VideoSection = ({
             <div
               role="presentation"
               onClick={showLessonList}
-              className="VideoSection__hero__button  VideoSection__hero__button--dark VideoSection__hero__button--lesson-list"
+              className="VideoSection__hero__button  VideoSection__hero__button--dark 
+              VideoSection__hero__button--lesson-list"
             >
               <p className="VideoSection__hero__button-text">{lessonListButtonTitle}</p>
               <Arrow className="VideoSection__hero__button-arrow" />
             </div>
             <div className="VideoSection__hero__progressBar">
-              <VideoProgressBar t={t} index={index} />
+              <VideoProgressBar t={t} index={videoIndex} maxIndex={totalVideos} />
             </div>
             <div
               role="presentation"
               onClick={showLessonList}
-              className="VideoSection__hero__button  VideoSection__hero__button--dark VideoSection__hero__button--lesson-list--mobile"
+              className="VideoSection__hero__button  VideoSection__hero__button--dark 
+              VideoSection__hero__button--lesson-list--mobile"
             >
               <LessonListMobile className="VideoSection__hero__button-list" />
             </div>

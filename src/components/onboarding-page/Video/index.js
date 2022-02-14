@@ -6,8 +6,9 @@ import cn from 'classnames';
 import Loader from 'react-loader-spinner';
 import { ReactComponent as Logo } from '../../../assets/svg/logo-white.svg';
 import VideoThumbnail from '../../../assets/images/onboarding-preview.png';
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 
-const Video = () => {
+const Video = ({ lesson }) => {
   const videoRef = useRef();
   const videoThumbnailRef = useRef();
 
@@ -17,6 +18,8 @@ const Video = () => {
   const [videoIsFocused, setVideoIsFocused] = useState(false);
   const [videoHasEnded, setVideoHasEnded] = useState(false);
   const [imageIsLoading, setImageIsLoading] = useState(true);
+
+  const { addVideoToWatched } = useLessonList();
 
   const handlePlayVideo = () => {
     if (videoIsPlaying) {
@@ -58,7 +61,9 @@ const Video = () => {
     xhr.onload = function(oEvent) {
       const blob = new Blob([oEvent.target.response], { type: 'video/mp4' });
 
-      videoRef.current.src = URL.createObjectURL(blob);
+      if (videoRef.current) {
+        videoRef.current.src = URL.createObjectURL(blob);
+      }
 
       setVideoIsLoading(false);
     };
@@ -129,6 +134,7 @@ const Video = () => {
           onEnded={() => {
             setVideoHasEnded(true);
             setVideoIsPlaying(false);
+            addVideoToWatched(lesson);
             videoRef.current.pause();
             videoRef.current.currentTime = 0;
           }}

@@ -20,7 +20,7 @@ const Onboarding = () => {
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const lessonIndex = 2;
-  const { getNextVideoUrl } = useLessonList();
+  const { lessonLinks, getNextVideoUrl } = useLessonList();
 
   const { videos, channels } = useAtlasData();
   const {
@@ -183,6 +183,7 @@ const Onboarding = () => {
       nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
       lessonIndex={lessonIndex}
+      lesson={lessonLinks[lessonIndex]}
       shouldShowGetStarted={shouldShowGetStarted}
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
@@ -195,6 +196,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page2.subtitle')}
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
           index={lessonIndex}
+          lesson={lessonLinks[lessonIndex]}
           showLessonList={() => setShouldShowLessonList(true)}
           shouldReloadRole={shouldReloadRole}
         ></VideoSection>

@@ -63,6 +63,19 @@ const useLessonList = () => {
     7: '/start-here/video-creator',
   };
 
+  const addVideoToWatched = lesson => {
+    const watchedVideos = localStorage.getItem('JoystreamWatchedVideos');
+    localStorage.setItem('JoystreamWatchedVideos', `${watchedVideos ? `${watchedVideos},${lesson}` : lesson}`);
+  };
+
+  const isVideoWatched = lesson => {
+    const watchedVideos = localStorage.getItem('JoystreamWatchedVideos');
+    if (watchedVideos && watchedVideos.indexOf(lesson) > -1) {
+      return true;
+    }
+    return false;
+  };
+
   const roleIndexes = {
     builder: [1, 2, 3, 4, 5],
     techie: [1, 2, 3, 4, 5],
@@ -70,6 +83,26 @@ const useLessonList = () => {
     curator: [1, 2, 3, 4, 5],
     organiser: [1, 2, 3, 6, 4, 5],
     videocreator: [1, 3, 7, 2, 5],
+  };
+
+  const getTotalVideos = () => {
+    if (role) {
+      return roleIndexes[role.replaceAll(' ', '').toLowerCase()].length;
+    }
+    return lessonLinks.length;
+  };
+
+  const getVideoIndex = index => {
+    if (role) {
+      const indexes = roleIndexes[role.replaceAll(' ', '').toLowerCase()];
+      for (let i = 0; i < indexes.length; i++) {
+        if (indexes[i] === index) {
+          return i + 1;
+        }
+      }
+      return indexes.length;
+    }
+    return index;
   };
 
   const getNextVideoUrl = currentIndex => {
@@ -86,7 +119,16 @@ const useLessonList = () => {
     return lessonLinks[currentIndex + 1];
   };
 
-  return { lessonLinks, roleIndexes, getLessonData, getNextVideoUrl };
+  return {
+    lessonLinks,
+    roleIndexes,
+    getLessonData,
+    getNextVideoUrl,
+    getTotalVideos,
+    getVideoIndex,
+    addVideoToWatched,
+    isVideoWatched,
+  };
 };
 
 export default useLessonList;

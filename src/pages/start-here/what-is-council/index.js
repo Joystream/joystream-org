@@ -29,7 +29,7 @@ const Onboarding = () => {
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const lessonIndex = 4;
-  const { getNextVideoUrl } = useLessonList();
+  const { lessonLinks, getNextVideoUrl } = useLessonList();
 
   useEffect(() => {
     if (councilSize) {
@@ -136,6 +136,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page4.subtitle')}
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
           index={lessonIndex}
+          lesson={lessonLinks[lessonIndex]}
           shouldReloadRole={shouldReloadRole}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>

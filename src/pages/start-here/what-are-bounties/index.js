@@ -26,7 +26,7 @@ const Onboarding = () => {
     },
   ];
   const lessonIndex = 6;
-  const { getNextVideoUrl } = useLessonList();
+  const { lessonLinks, getNextVideoUrl } = useLessonList();
 
   const handleGetStarted = () => setShouldShowGetStarted(true);
 
@@ -50,6 +50,7 @@ const Onboarding = () => {
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
           shouldReloadRole={shouldReloadRole}
           index={lessonIndex}
+          lesson={lessonLinks[lessonIndex]}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>
