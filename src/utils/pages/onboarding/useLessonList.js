@@ -112,7 +112,7 @@ const useLessonList = () => {
           return i + 1;
         }
       }
-      return indexes.length;
+      return undefined;
     }
     return index;
   };

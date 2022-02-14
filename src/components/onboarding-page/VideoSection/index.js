@@ -37,6 +37,9 @@ const VideoSection = ({
     if (role) {
       setTotalVideos(getTotalVideos());
       setVideoIndex(getVideoIndex(index));
+    } else {
+      setVideoIndex(index);
+      setTotalVideos(7);
     }
   }, [shouldReloadRole, getTotalVideos, getVideoIndex, index]);
 
@@ -82,9 +85,11 @@ const VideoSection = ({
               <p className="VideoSection__hero__button-text">{lessonListButtonTitle}</p>
               <Arrow className="VideoSection__hero__button-arrow" />
             </div>
-            <div className="VideoSection__hero__progressBar">
-              <VideoProgressBar t={t} index={videoIndex} maxIndex={totalVideos} />
-            </div>
+            {videoIndex && totalVideos && (
+              <div className="VideoSection__hero__progressBar">
+                <VideoProgressBar t={t} index={videoIndex} maxIndex={totalVideos} />
+              </div>
+            )}
             <div
               role="presentation"
               onClick={showLessonList}
