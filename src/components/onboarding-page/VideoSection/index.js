@@ -16,6 +16,7 @@ const VideoSection = ({
   index,
   lesson,
   nextVideoUrl,
+  nextVideoTitle,
   showLessonList,
   onShowGetStarted,
   shouldReloadRole,
@@ -57,7 +58,17 @@ const VideoSection = ({
           <div className="VideoSection__hero__video__wrapper">
             <div className="VideoSection__hero__bg-pattern--1"></div>
             <div className="VideoSection__hero__video">
-              <Video lesson={lesson} />
+              <Video
+                t={t}
+                lesson={lesson}
+                role={role}
+                nextVideoUrl={nextVideoUrl}
+                nextVideoButtonTitle={nextVideoButtonTitle}
+                nextVideoTitle={nextVideoTitle}
+                getStartedButtonTitle={getStartedButtonTitle}
+                getStartedUrl={getContributorPageUrl(role)}
+                onShowGetStarted={onShowGetStarted}
+              />
             </div>
             <div className="VideoSection__hero__bg-pattern--2"></div>
           </div>

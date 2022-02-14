@@ -63,9 +63,21 @@ const useLessonList = () => {
     7: '/start-here/video-creator',
   };
 
+  const lessonTitles = {
+    1: 'onboarding.lessonList.lesson1.title',
+    2: 'onboarding.lessonList.lesson2.title',
+    3: 'onboarding.lessonList.lesson3.title',
+    4: 'onboarding.lessonList.lesson4.title',
+    5: 'onboarding.lessonList.lesson5.title',
+    6: 'onboarding.lessonList.lesson6.title',
+    7: 'onboarding.lessonList.lesson7.title',
+  };
+
   const addVideoToWatched = lesson => {
     const watchedVideos = localStorage.getItem('JoystreamWatchedVideos');
-    localStorage.setItem('JoystreamWatchedVideos', `${watchedVideos ? `${watchedVideos},${lesson}` : lesson}`);
+    if (!watchedVideos || watchedVideos.indexOf(lesson) < 0) {
+      localStorage.setItem('JoystreamWatchedVideos', `${watchedVideos ? `${watchedVideos},${lesson}` : lesson}`);
+    }
   };
 
   const isVideoWatched = lesson => {
@@ -119,11 +131,28 @@ const useLessonList = () => {
     return lessonLinks[currentIndex + 1];
   };
 
+  const getNextVideoTitle = currentIndex => {
+    if (role) {
+      const suffix = role.replaceAll(' ', '').toLowerCase();
+      const indexes = roleIndexes[suffix];
+      for (let index = 0; index < indexes.length - 1; index++) {
+        if (indexes[index] === currentIndex) {
+          console.log(`Next video title: ${lessonTitles[currentIndex + 1]}`);
+          return lessonTitles[indexes[index + 1]];
+        }
+      }
+      return undefined;
+    }
+    console.log(`Next video title: ${lessonTitles[currentIndex + 1]}`);
+    return lessonTitles[currentIndex + 1];
+  };
+
   return {
     lessonLinks,
     roleIndexes,
     getLessonData,
     getNextVideoUrl,
+    getNextVideoTitle,
     getTotalVideos,
     getVideoIndex,
     addVideoToWatched,

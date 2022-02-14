@@ -100,7 +100,6 @@ const Navbar = ({
 
   useEffect(() => {
     if (role !== selectedRole) {
-      console.log(`Role  changed ${selectedRole} -> ${role}`);
       setSelectedRole(role);
     }
   }, [role, selectedRole]);

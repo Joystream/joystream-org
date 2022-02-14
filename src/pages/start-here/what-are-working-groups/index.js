@@ -18,7 +18,7 @@ const Onboarding = () => {
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const lessonIndex = 5;
-  const { lessonLinks, getNextVideoUrl } = useLessonList();
+  const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
   const questions = [
     {
       title: t('onboarding.page5.faq.questions.question1.question'),
@@ -121,8 +121,8 @@ const Onboarding = () => {
   return (
     <OnboardingLayout
       t={t}
-      nextVideoText={t('onboarding.page5.footer.subtitle')}
       nextVideoUrl={getNextVideoUrl(lessonIndex)}
+      nextVideoText={t(getNextVideoTitle(lessonIndex))}
       showLessonList={shouldShowLessonList}
       lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
@@ -136,6 +136,7 @@ const Onboarding = () => {
           title={t('onboarding.page5.title')}
           subtitle={t('onboarding.page5.subtitle')}
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
+          nextVideoTitle={t(getNextVideoTitle(lessonIndex))}
           index={lessonIndex}
           lesson={lessonLinks[lessonIndex]}
           shouldReloadRole={shouldReloadRole}

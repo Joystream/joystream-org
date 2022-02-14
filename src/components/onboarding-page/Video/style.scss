@@ -56,10 +56,13 @@ $outline-regular: 2px solid $c_blue-ribbon;
     @extend .absolute;
 
     z-index: 2;
-    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .9);
     outline: $outline-regular;
-    opacity: .7;
     animation: fadeintohalf 1s;
+    backdrop-filter: blur(20px);
   }
 
   &__thumbnail {

@@ -13,7 +13,7 @@ const Onboarding = () => {
   const { t } = useTranslation();
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
-  const { lessonLinks, getNextVideoUrl } = useLessonList();
+  const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
   const lessonIndex = 1;
 
   const nextVideoUrl = '/start-here/joystream-as-dao';
@@ -36,7 +36,7 @@ const Onboarding = () => {
   return (
     <OnboardingLayout
       t={t}
-      nextVideoText={t('onboarding.page1.footer.subtitle')}
+      nextVideoText={t(getNextVideoTitle(lessonIndex))}
       nextVideoUrl={nextVideoUrl}
       showLessonList={shouldShowLessonList}
       lessonIndex={lessonIndex}
@@ -50,6 +50,7 @@ const Onboarding = () => {
           title={t('onboarding.page1.title')}
           subtitle={t('onboarding.page1.subtitle')}
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
+          nextVideoTitle={t(getNextVideoTitle(lessonIndex))}
           lesson={lessonLinks[lessonIndex]}
           index={lessonIndex}
           shouldReloadRole={shouldReloadRole}

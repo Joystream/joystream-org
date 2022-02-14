@@ -26,14 +26,14 @@ const Onboarding = () => {
     },
   ];
   const lessonIndex = 6;
-  const { lessonLinks, getNextVideoUrl } = useLessonList();
+  const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
 
   const handleGetStarted = () => setShouldShowGetStarted(true);
 
   return (
     <OnboardingLayout
       t={t}
-      nextVideoText={t('onboarding.page6.footer.subtitle')}
+      nextVideoText={t(getNextVideoTitle(lessonIndex))}
       nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
       lessonIndex={lessonIndex}
@@ -48,6 +48,7 @@ const Onboarding = () => {
           title={t('onboarding.page6.title')}
           subtitle={t('onboarding.page6.subtitle')}
           nextVideoUrl={getNextVideoUrl(lessonIndex)}
+          nextVideoTitle={getNextVideoTitle(lessonIndex)}
           shouldReloadRole={shouldReloadRole}
           index={lessonIndex}
           lesson={lessonLinks[lessonIndex]}

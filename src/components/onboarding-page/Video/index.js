@@ -4,11 +4,21 @@ import Play from '../../../assets/svg/btn-play.svg';
 import AtlasDemoVideo from '../../../assets/videos/AtlasDemo.mp4';
 import cn from 'classnames';
 import Loader from 'react-loader-spinner';
-import { ReactComponent as Logo } from '../../../assets/svg/logo-white.svg';
 import VideoThumbnail from '../../../assets/images/onboarding-preview.png';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
+import NextVideoPreview from './NextVideoPreview';
 
-const Video = ({ lesson }) => {
+const Video = ({
+  t,
+  lesson,
+  role,
+  nextVideoUrl,
+  nextVideoTitle,
+  nextVideoButtonTitle,
+  getStartedButtonTitle,
+  getStartedUrl,
+  onShowGetStarted,
+}) => {
   const videoRef = useRef();
   const videoThumbnailRef = useRef();
 
@@ -94,20 +104,17 @@ const Video = ({ lesson }) => {
         )}
         {videoHasEnded && (
           <>
-            <div className="AtlasDemo__video__logo-wrapper">
-              <div className="AtlasDemo__video__logo">
-                <p>brought to you by</p>
-                <Logo />
-              </div>
+            <div role="presentation" className="AtlasDemo__video__overlay">
+              <NextVideoPreview
+                t={t}
+                nextVideoUrl={nextVideoUrl}
+                nextVideoTitle={nextVideoTitle}
+                nextVideoButtonTitle={nextVideoButtonTitle}
+                getStartedButtonTitle={getStartedButtonTitle}
+                getStartedUrl={getStartedUrl}
+                onShowGetStarted={onShowGetStarted}
+              />
             </div>
-            <div
-              role="presentation"
-              className="AtlasDemo__video__overlay"
-              onClick={() => {
-                setVideoHasEnded(false);
-                setVideoIsFocused(false);
-              }}
-            ></div>
           </>
         )}
         <div
@@ -132,7 +139,9 @@ const Video = ({ lesson }) => {
             }
           }}
           onEnded={() => {
-            setVideoHasEnded(true);
+            if (nextVideoUrl) {
+              setVideoHasEnded(true);
+            }
             setVideoIsPlaying(false);
             addVideoToWatched(lesson);
             videoRef.current.pause();
