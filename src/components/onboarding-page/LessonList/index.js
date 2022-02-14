@@ -41,20 +41,22 @@ const Lesson = ({ title, length, currentIndex, index, onClose }) => {
             <IconPlay className="Lesson__icon" />
           )}
 
-          <h3
-            className={cn('Lesson__title', {
-              'Lesson__title--active': isHovered,
-            })}
-          >
-            {title}{' '}
-          </h3>
-          <h3
-            className={cn('Lesson__length', {
-              'Lesson__length--active': isHovered,
-            })}
-          >
-            {length}
-          </h3>
+          <div className="Lesson__content__text">
+            <h3
+              className={cn('Lesson__title', {
+                'Lesson__title--active': isHovered,
+              })}
+            >
+              {title}{' '}
+            </h3>
+            <h3
+              className={cn('Lesson__length', {
+                'Lesson__length--active': isHovered,
+              })}
+            >
+              {length}
+            </h3>
+          </div>
         </div>
       </div>
     </Link>
@@ -99,9 +101,11 @@ const LessonList = ({ t, lessonIndex, onLessonListClose, currentRole }) => {
     <div className="LessonList__wrapper">
       <div role="presentation" onClick={onLessonListClose} className="LessonList__backdrop"></div>
       <div className="LessonList__content">
-        <button className="LessonList__button" onClick={onLessonListClose}>
-          <NavClose className="LessonList__button__icon" />
-        </button>
+        <div className="LessonList__button__wrapper">
+          <button className="LessonList__button" onClick={onLessonListClose}>
+            <NavClose className="LessonList__button__icon" />
+          </button>
+        </div>
         <h3 className="LessonList__title">{t('onboarding.button.lessonList.text')}</h3>
         {role && (
           <div className="LessonList__path-toggle">
