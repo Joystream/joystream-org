@@ -77,6 +77,10 @@
       cursor: pointer;
       background: $c_black;
       border: 2px solid $c_blue-ribbon;
+
+      &:hover {
+        background-color: $c_blue-ribbon;
+      }
     }
 
     &__button-text {
@@ -109,6 +113,13 @@
       letter-spacing: 0;
       color: $c_white;
       text-align: center;
+
+      & span {
+        font-family: $font-primary;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 68px;
+      }
     }
 
     &__subtitle {
@@ -165,15 +176,18 @@
       &__actions {
         flex-wrap: wrap;
         width: calc(90vw);
+        margin-bottom: 40px;
       }
 
       &__progressBar {
         width: calc(90vw);
-        margin-top: 40px;
+        height: fit-content;
+        margin-top: 20px;
       }
 
       &__button {
         width: calc(70vw);
+        margin-top: 20px;
       }
 
       &__bg-pattern--1,
@@ -198,6 +212,7 @@
 
       &__title {
         width: calc(90vw);
+        margin-top: 12px;
         font-size: 32px;
         line-height: 40px;
         text-align: left;
@@ -210,138 +225,139 @@
 
       &__subtitle {
         max-width: calc(100vw);
+        margin-bottom: 20px;
         text-align: left;
       }
     }
   }
 
-  @media #{$screen-max-sm} {
-    &__hero {
-      width: calc(90vw);
-      padding: 0;
+  // @media #{$screen-max-sm} {
+  //   &__hero {
+  //     width: calc(90vw);
+  //     padding: 0;
 
-      &__video {
-        width: calc(90vw);
-        height: calc(100vh);
-        margin: auto;
-        margin-bottom: 32px;
-      }
+  //     &__video {
+  //       width: calc(90vw);
+  //       height: calc(100vh);
+  //       margin: auto;
+  //       margin-bottom: 32px;
+  //     }
 
-      &__actions {
-        flex-wrap: wrap;
-        width: calc(90vw);
-      }
+  //     &__actions {
+  //       flex-wrap: wrap;
+  //       width: calc(90vw);
+  //     }
 
-      &__progressBar {
-        width: calc(90vw);
-        margin-top: 40px;
-      }
+  //     &__progressBar {
+  //       width: calc(90vw);
+  //       margin-top: 40px;
+  //     }
 
-      &__button {
-        width: calc(70vw);
-      }
+  //     &__button {
+  //       width: calc(70vw);
+  //     }
 
-      &__bg-pattern--1,
-      &__bg-pattern--2 {
-        display: none;
-      }
+  //     &__bg-pattern--1,
+  //     &__bg-pattern--2 {
+  //       display: none;
+  //     }
 
-      &__video__wrapper {
-        display: flex;
-        width: calc(90vw);
-        height: calc(90vw / 1.777);
-      }
+  //     &__video__wrapper {
+  //       display: flex;
+  //       width: calc(90vw);
+  //       height: calc(90vw / 1.777);
+  //     }
 
-      &__button--lesson-list {
-        display: none;
-      }
+  //     &__button--lesson-list {
+  //       display: none;
+  //     }
 
-      &__button--lesson-list--mobile {
-        display: block;
-        width: fit-content;
-      }
+  //     &__button--lesson-list--mobile {
+  //       display: block;
+  //       width: fit-content;
+  //     }
 
-      &__title {
-        width: calc(90vw);
-        font-size: 32px;
-        line-height: 40px;
-        text-align: left;
-        line-break: auto;
+  //     &__title {
+  //       width: calc(90vw);
+  //       font-size: 32px;
+  //       line-height: 40px;
+  //       text-align: left;
+  //       line-break: auto;
 
-        br {
-          display: none;
-        }
-      }
+  //       br {
+  //         display: none;
+  //       }
+  //     }
 
-      &__subtitle {
-        max-width: calc(100vw);
-        text-align: left;
-      }
-    }
-  }
+  //     &__subtitle {
+  //       max-width: calc(100vw);
+  //       text-align: left;
+  //     }
+  //   }
+  // }
 
-  @media (max-width: 500px) {
-    &__hero {
-      width: calc(90vw);
-      padding: 0;
+  // @media (max-width: 500px) {
+  //   &__hero {
+  //     width: calc(90vw);
+  //     padding: 0;
 
-      &__video {
-        width: calc(90vw);
-        height: calc(100vh);
-        margin: auto;
-        margin-bottom: 32px;
-      }
+  //     &__video {
+  //       width: calc(90vw);
+  //       height: calc(100vh);
+  //       margin: auto;
+  //       margin-bottom: 32px;
+  //     }
 
-      &__actions {
-        flex-wrap: wrap;
-        width: calc(90vw);
-      }
+  //     &__actions {
+  //       flex-wrap: wrap;
+  //       width: calc(90vw);
+  //     }
 
-      &__progressBar {
-        width: calc(90vw);
-        margin-top: 40px;
-      }
+  //     &__progressBar {
+  //       width: calc(90vw);
+  //       margin-top: 40px;
+  //     }
 
-      &__button {
-        width: calc(70vw);
-      }
+  //     &__button {
+  //       width: calc(70vw);
+  //     }
 
-      &__bg-pattern--1,
-      &__bg-pattern--2 {
-        display: none;
-      }
+  //     &__bg-pattern--1,
+  //     &__bg-pattern--2 {
+  //       display: none;
+  //     }
 
-      &__video__wrapper {
-        display: flex;
-        width: calc(90vw);
-        height: calc(90vw / 1.777);
-      }
+  //     &__video__wrapper {
+  //       display: flex;
+  //       width: calc(90vw);
+  //       height: calc(90vw / 1.777);
+  //     }
 
-      &__button--lesson-list {
-        display: none;
-      }
+  //     &__button--lesson-list {
+  //       display: none;
+  //     }
 
-      &__button--lesson-list--mobile {
-        display: block;
-        width: fit-content;
-      }
+  //     &__button--lesson-list--mobile {
+  //       display: block;
+  //       width: fit-content;
+  //     }
 
-      &__title {
-        width: calc(90vw);
-        font-size: 32px;
-        line-height: 40px;
-        text-align: left;
-        line-break: auto;
+  //     &__title {
+  //       width: calc(90vw);
+  //       font-size: 32px;
+  //       line-height: 40px;
+  //       text-align: left;
+  //       line-break: auto;
 
-        br {
-          display: none;
-        }
-      }
+  //       br {
+  //         display: none;
+  //       }
+  //     }
 
-      &__subtitle {
-        max-width: calc(100vw);
-        text-align: left;
-      }
-    }
-  }
+  //     &__subtitle {
+  //       max-width: calc(100vw);
+  //       text-align: left;
+  //     }
+  //   }
+  // }
 }

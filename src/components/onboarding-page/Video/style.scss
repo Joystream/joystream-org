@@ -1,6 +1,7 @@
 @import '../../../styles/_main';
 
-$outline-regular: 2px solid $c_blue-ribbon;
+$outline-regular: 2px solid $c_ebony-clay;
+$outline-hover: 2px solid $c_blue-ribbon;
 
 .AtlasDemo__video {
   position: relative;
@@ -74,6 +75,15 @@ $outline-regular: 2px solid $c_blue-ribbon;
     background-repeat: no-repeat;
     background-size: 100%;
     outline: $outline-regular;
+    transition: outline .5s;
+
+    &:hover {
+      outline: $outline-hover;
+    }
+  }
+
+  &__thumbnail--hovered {
+    outline: $outline-hover;
   }
 
   &__thumbnail--disappeared {

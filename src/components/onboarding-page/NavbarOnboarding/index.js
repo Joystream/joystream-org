@@ -124,7 +124,7 @@ const Navbar = ({
             'Navbar__links--light': light,
           })}
         >
-          <div className="Navbar__button-lang">
+          <div className="Navbar__button-lang" style={{ display: 'none' }}>
             <UKCircle />
           </div>
           {role && (

@@ -61,14 +61,11 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
               {t('onboarding.integrators.section1.title')
                 .split('<br/>')
                 .map((line, index) => {
-                  return (
-                    <span key={index}>
-                      {line}
-                      <br />
-                      <br />
-                    </span>
-                  );
+                  return <span key={index}>{line}</span>;
                 })}
+            </h2>
+            <h2 className="Integrators__title--mobile">
+              {t('onboarding.integrators.section1.title').replaceAll('<br/>', ' ')}
             </h2>
             <Waypoint
               bottomOffset={100}
@@ -89,14 +86,11 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
               {t('onboarding.integrators.section2.title')
                 .split('<br/>')
                 .map((line, index) => {
-                  return (
-                    <span key={index}>
-                      {line}
-                      <br />
-                      <br />
-                    </span>
-                  );
+                  return <span key={index}>{line}</span>;
                 })}
+            </h2>
+            <h2 className="Integrators__title--mobile">
+              {t('onboarding.integrators.section2.title').replaceAll('<br/>', ' ')}
             </h2>
             <Waypoint
               className="IntegratorsclassName"
@@ -118,14 +112,11 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
               {t('onboarding.integrators.section3.title')
                 .split('<br/>')
                 .map((line, index) => {
-                  return (
-                    <span key={index}>
-                      {line}
-                      <br />
-                      <br />
-                    </span>
-                  );
+                  return <span key={index}>{line}</span>;
                 })}
+            </h2>
+            <h2 className="Integrators__title--mobile">
+              {t('onboarding.integrators.section3.title').replaceAll('<br/>', ' ')}
             </h2>
             <Waypoint
               topOffset={100}

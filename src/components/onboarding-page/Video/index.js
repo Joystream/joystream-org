@@ -155,7 +155,7 @@ const Video = ({
             role="presentation"
             onClick={() => handlePlayVideo()}
             className={cn('AtlasDemo__video__playbutton', {
-              'AtlasDemo__video__playbutton--hovered': !videoHasEnded && !videoIsPlaying && videoIsHovered,
+              'AtlasDemo__video__playbutton--hovered': !videoHasEnded && !videoIsPlaying,
               'AtlasDemo__video__playbutton--playing': videoIsPlaying,
             })}
             src={Play}

@@ -71,17 +71,12 @@
     }
   }
 
-  @media #{$screen-sm} {
+  @media #{$screen-max-md} {
     width: calc(100vw);
-    padding-top: 40px;
-    background-image: url('../../../assets/background/footer-bottom-secondary.svg');
+    padding-top: 25px;
+    background-image: url('../../../assets/background/footer-onboarding-bottom-mobile.svg');
     background-position: bottom left;
     background-repeat: repeat-x;
-    background-size: auto 40px;
-  }
-
-  @media (max-width: 550px) {
-    width: calc(100vw);
-    padding-top: 40px;
+    background-size: auto 25px;
   }
 }

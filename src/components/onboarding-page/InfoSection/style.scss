@@ -31,7 +31,13 @@
       line-height: 28px;
       letter-spacing: 0;
       color: #5c6475;
-      text-align: justify;
+      text-align: left;
+
+      & span {
+        font-family: $font-secondary;
+        font-size: 20px;
+        line-height: 28px;
+      }
     }
 
     &__link-wrapper {

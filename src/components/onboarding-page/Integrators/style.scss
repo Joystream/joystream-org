@@ -117,10 +117,10 @@
     font-family: $font-primary;
     font-size: 40px;
     color: $c_white;
+  }
 
-    & span {
-      line-height: 24px;
-    }
+  &__title--mobile {
+    display: none;
   }
 
   @media #{$screen-max-md} {
@@ -136,8 +136,19 @@
     }
 
     &__title {
+      display: none;
+    }
+
+    &__title--mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
       width: calc(90vw);
       margin: 20px 0;
+      margin-bottom: 12px;
+      font-family: $font-primary;
+      font-size: 40px;
+      color: $c_white;
     }
 
     &__text__wrapper {
