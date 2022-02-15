@@ -68,8 +68,8 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
             </h2>
             <h2 className="Integrators__title--mobile">{section1Title.split('<br/>').join(' ')}</h2>
             <Waypoint
-              bottomOffset={100}
-              topOffset={400}
+              bottomOffset={0}
+              topOffset={452}
               onEnter={() => {
                 setShouldAnimateThird(false);
                 setShouldAnimateSecond(false);
@@ -90,8 +90,8 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
             <h2 className="Integrators__title--mobile">{section2Title.split('<br/>').join(' ')}</h2>
             <Waypoint
               className="IntegratorsclassName"
-              bottomOffset={250}
-              topOffset={250}
+              bottomOffset={452}
+              topOffset={452}
               onEnter={() => {
                 setShouldAnimateFirst(false);
                 setShouldAnimateThird(false);
@@ -111,8 +111,8 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
             </h2>
             <h2 className="Integrators__title--mobile">{section3Title.split('<br/>').join(' ')}</h2>
             <Waypoint
-              topOffset={100}
-              bottomOffset={400}
+              topOffset={0}
+              bottomOffset={452}
               onEnter={() => {
                 setShouldAnimateFirst(false);
                 setShouldAnimateSecond(false);
