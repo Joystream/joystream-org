@@ -37,9 +37,11 @@
   }
 
   &__subtitle {
-    display: flex;
     align-items: center;
     justify-content: center;
+    width: 720px;
+    margin: auto;
+    margin-bottom: 12px;
     font-family: $font-primary;
     font-size: 18px;
     line-height: 24px;
@@ -47,8 +49,14 @@
     color: $c_oslo_gray;
     text-align: center;
 
-    &--icon {
-      margin-right: 10px;
+    &--link {
+      color: $c_blue-ribbon;
+      text-decoration: none;
+    }
+
+    &--example-message {
+      font-style: italic;
+      color: $c_white;
     }
   }
 
@@ -57,49 +65,16 @@
       width: calc(90vw);
       padding: 0;
       padding-top: 80px;
-      text-align: center;
-    }
-
-    &__subtitle--icon {
-      width: calc(10vw);
     }
 
     &__title {
       width: calc(90vw);
+      text-align: left;
     }
 
-    &__content {
+    &__subtitle {
       width: calc(90vw);
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__title__wrapper {
-      width: calc(90vw);
-      padding: 0;
-      padding-top: 80px;
-      text-align: center;
-    }
-
-    &__title {
-      width: calc(90vw);
-    }
-
-    &__content {
-      width: calc(90vw);
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__title__wrapper {
-      width: calc(90vw);
-      padding: 0;
-      padding-top: 80px;
-      text-align: center;
-    }
-
-    &__title {
-      width: calc(90vw);
+      text-align: left;
     }
 
     &__content {

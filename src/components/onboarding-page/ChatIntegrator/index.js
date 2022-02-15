@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import WidgetBot from '@widgetbot/react-embed';
-import { ReactComponent as InfoIcon } from '../../../assets/svg/exclamation-mark.svg';
 
 import './style.scss';
 
@@ -18,9 +17,21 @@ const ChatIntegrator = ({ t }) => {
       <div className="ChatIntegrator__title__wrapper">
         <h2 className="ChatIntegrator__title">{t('onboarding.contributorRoles.chatIntergrator.title')}</h2>
         <h2 className="ChatIntegrator__subtitle">
-          <InfoIcon className="ChatIntegrator__subtitle--icon" />
-          {t('onboarding.contributorRoles.chatIntergrator.subtitle')}
+          {t('onboarding.contributorRoles.chatIntergrator.subtitle1.text1')}
+          <a
+            className="ChatIntegrator__subtitle--link"
+            href="https://discord.gg/DE9UN3YpRP"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t('onboarding.contributorRoles.chatIntergrator.subtitle1.discordLink')}
+          </a>
+          {t('onboarding.contributorRoles.chatIntergrator.subtitle1.text2')}
+          <span className="ChatIntegrator__subtitle--example-message">
+            {t('onboarding.contributorRoles.chatIntergrator.subtitle1.example')}
+          </span>
         </h2>
+        <h2 className="ChatIntegrator__subtitle">{t('onboarding.contributorRoles.chatIntergrator.subtitle2')}</h2>
       </div>
       <div className="ChatIntegrator__content">{widget && widget}</div>
     </div>

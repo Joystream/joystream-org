@@ -31,7 +31,9 @@ const Bounties = ({ t, renderChatWithIntegrator, onChatWithIntegrator, noHover }
   return (
     <div className="Bounties__wrapper">
       <div className="Bounties__content">
-        <h2 className="Bounties__title">{t('onboarding.page6.bounties.title')}</h2>
+        <h2 className={`Bounties__title ${noHover ? '' : 'Bounties__title--top-padding'}`}>
+          {t('onboarding.page6.bounties.title')}
+        </h2>
         <h4 className="Bounties__subtitle">{t('onboarding.page6.bounties.text')}</h4>
 
         <div className="Bounties__bounties-carousel">

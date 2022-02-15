@@ -25,7 +25,13 @@
       },
       "chatIntergrator": {
           "title": "Get Started!",
-          "subtitle": "Opportunity to earn tokens is not available to US persons"
+          "subtitle1": {
+            "text1": "Let us know in the widget below or directly ",
+            "discordLink": "via Discord",
+            "text2": " that you would like to contribute. We would appreciate it, if you could indicate your strengths in the message, for example ",
+            "example": "\"I have experience in (insert relevant work)\""
+          },
+          "subtitle2": "Opportunity to earn tokens is not available to US persons"
       },
       "validatorInfo": {
           "title": "Validator Role",

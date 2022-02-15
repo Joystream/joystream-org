@@ -23,6 +23,10 @@
     line-height: 48px;
     letter-spacing: 0;
     text-align: center;
+
+    &--top-padding {
+      padding-top: 80px;
+    }
   }
 
   &__subtitle {
@@ -238,8 +242,11 @@
     &__title {
       width: calc(90vw);
       padding: 0;
-      padding-top: 80px;
       text-align: left;
+
+      &--top-padding {
+        padding-top: 80px;
+      }
     }
 
     &__subtitle {
