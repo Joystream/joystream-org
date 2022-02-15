@@ -1,8 +1,7 @@
 import React from 'react';
-import Pioneer from '../../../assets/svg/builder-illustration.svg';
 import './style.scss';
 
-const ContributorInfo = ({ t, title, specialities }) => {
+const ContributorInfo = ({ t, title, specialities, image }) => {
   return (
     <div className="ContributorInfo__wrapper">
       <div className="ContributorInfo__content">
@@ -17,7 +16,9 @@ const ContributorInfo = ({ t, title, specialities }) => {
               ))}
           </ul>
         </div>
-        <img className="ContributorInfo__image" src={Pioneer} alt={t('landing.exploreJoystream.pioneer.imageAlt')} />
+        {image && (
+          <img className="ContributorInfo__image" src={image} alt={t('landing.exploreJoystream.pioneer.imageAlt')} />
+        )}
       </div>
     </div>
   );

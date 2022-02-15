@@ -9,13 +9,13 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     width: 1434px;
     margin: auto;
   }
 
   &__text {
-    width: 712px;
+    width: 500px;
     padding-left: 30px;
   }
 
@@ -23,20 +23,19 @@
     width: 500px;
     margin-bottom: 12px;
     font-family: $font-primary;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 60px;
+    line-height: 68px;
     letter-spacing: 0;
     color: $c_white;
   }
 
   &__specialities {
-    padding-left: 10px;
+    padding-left: 0;
     list-style: none;
 
     & li::before {
       display: inline-block;
-      width: 1em;
-      margin-left: -1em;
+      margin-right: 8px;
       font-weight: bold;
       color: $c_blue-ribbon;
       content: '\2022';
@@ -45,16 +44,17 @@
 
   &__description {
     width: 500px;
+    padding: 0;
     font-family: $font-secondary;
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 0;
-    color: #81858d;
+    color: #dee3e9;
     text-align: left;
   }
 
   &__image {
-    width: 712px;
+    width: 811px;
     height: 492px;
     margin: 0;
     margin-bottom: 80px;
@@ -113,89 +113,33 @@
     padding-top: 40px;
 
     &__content {
-      width: calc(90vw);
-    }
-
-    &__text {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap-reverse;
       width: calc(90vw);
     }
 
     &__title {
       width: calc(90vw);
       margin: 20px 0;
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__content {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap-reverse;
-    }
-
-    &__title {
       font-size: 32px;
       line-height: 40px;
     }
 
-    &__icon {
-      display: none;
-    }
-
-    &__icon-alt {
-      display: block;
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__content {
+    &__text {
       width: calc(90vw);
-    }
-
-    &__title {
-      width: calc(90vw);
-      margin: 20px 0;
+      padding-left: 0;
     }
 
     &__description {
       width: calc(90vw);
+      font-size: 16px;
+      line-height: 24px;
     }
 
     &__image {
       width: calc(90vw);
       margin: 0 auto;
-    }
-
-    &__text {
-      padding-left: 0;
-    }
-
-    &__button {
-      width: calc(90vw);
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__content {
-      width: calc(90vw);
-    }
-
-    &__title {
-      width: calc(90vw);
-      margin: 20px 0;
-    }
-
-    &__description {
-      width: calc(90vw);
-    }
-
-    &__image {
-      width: calc(90vw);
-      margin: 0 auto;
-    }
-
-    &__text {
-      padding-left: 0;
     }
 
     &__button {

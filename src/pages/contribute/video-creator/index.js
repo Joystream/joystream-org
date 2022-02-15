@@ -9,6 +9,7 @@ import Bounties from '../../../components/onboarding-page/Bounties';
 import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
 import BountiesImage from '../../../assets/svg/bounties-getting-started.svg';
 import ChatIntegrator from '../../../components/onboarding-page/ChatIntegrator';
+import VideoCreator from '../../../assets/svg/contributor-video-creator.svg';
 
 const Onboarding = () => {
   const { t } = useTranslation();
@@ -43,7 +44,7 @@ const Onboarding = () => {
   return (
     <ContributeLayout t={t} onChatWithIntegrator={handleButtonAction}>
       <div className="Onboarding__wrapper"></div>
-      <ContributorInfo t={t} title={t(data.title)} specialities={data.specialities} />
+      <ContributorInfo t={t} title={t(data.title)} specialities={data.specialities} image={VideoCreator} />
       <Integrators t={t} onChatWithIntegrator={handleButtonAction} />
       <Bounties t={t} onChatWithIntegrator={handleButtonAction} renderChatWithIntegrator={true} />
       {atlasInfoData.map((item, index) => {
