@@ -117,7 +117,7 @@
 
   &__link-arrow {
     color: $c_blue-ribbon;
-    transform: rotate(-90deg) scale(0.85);
+    transform: rotate(-90deg) scale(.85);
   }
 
   @media #{$screen-max-md} {
@@ -127,10 +127,10 @@
     padding-top: 40px;
 
     &__content {
-      width: calc(90vw);
       display: flex;
       align-items: center;
       flex-wrap: wrap-reverse;
+      width: calc(90vw);
     }
 
     &__title {
