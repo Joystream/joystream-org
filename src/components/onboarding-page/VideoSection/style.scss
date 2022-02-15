@@ -47,6 +47,7 @@
       align-items: center;
       justify-content: space-between;
       height: 97px;
+      margin-left: 240px;
     }
 
     &__button {
@@ -183,6 +184,7 @@
         width: calc(90vw);
         height: fit-content;
         margin-top: 20px;
+        margin-left: 0;
       }
 
       &__button {
