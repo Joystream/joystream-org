@@ -41,6 +41,12 @@
     }
   }
 
+  &__item__logo {
+    & img {
+      width: 170px;
+    }
+  }
+
   @media #{$screen-max-md} {
     &__content {
       width: calc(90vw);
@@ -58,6 +64,13 @@
 
     &__item {
       width: calc(44.8vw);
+      padding: 0 30px;
+    }
+
+    &__item__logo {
+      & img {
+        width: 120px;
+      }
     }
   }
 

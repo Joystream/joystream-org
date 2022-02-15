@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../../../assets/svg/logo-black.svg';
+import Logo from '../../../assets/svg/logo-black.svg';
 import './style.scss';
 
 const Structure = ({ t }) => {
@@ -10,7 +10,7 @@ const Structure = ({ t }) => {
           <div className="Structure__item__title__header">{t('onboarding.page2.structure.traditionalCompany')}</div>
         </div>
         <div className="Structure__item Structure__item__logo">
-          <Logo />
+          <img src={Logo} alt="Joystream DAO" />
         </div>
         <div className="Structure__item">
           <div className="Structure__item__title">{t('onboarding.page2.structure.boardOfDirectors')}</div>
