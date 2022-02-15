@@ -15,12 +15,17 @@
     width: 1440px;
     margin: auto;
     padding: 80px 0;
+
+    &--no-top-padding {
+      padding-top: 0;
+    }
   }
 
   &__content {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     width: 720px;
   }
 
@@ -31,7 +36,7 @@
 
   &__title {
     width: 500px;
-    margin-top: 80px;
+    margin-top: 0;
     margin-bottom: 24px;
     font-family: $font-primary;
     font-size: 40px;
@@ -45,7 +50,6 @@
 
   &__subtitle {
     width: 500px;
-    margin-bottom: 80px;
     font-family: $font-secondary;
     font-size: 20px;
     line-height: 28px;
@@ -100,7 +104,10 @@
     &__content__wrapper {
       flex-wrap: wrap;
       width: calc(90vw);
-      padding: 40px 0;
+
+      &--no-top-padding {
+        padding-top: 0;
+      }
 
       &--image-right {
         flex-wrap: wrap-reverse;
@@ -119,7 +126,7 @@
     &__title {
       width: calc(90vw);
       padding: 0;
-      text-align: center;
+      text-align: left;
     }
 
     &__link-wrapper {
@@ -135,119 +142,6 @@
     &__image {
       width: calc(90vw);
       height: calc(90vw / 1.777);
-    }
-
-    &__item {
-      width: calc(90vw);
-      margin-bottom: 40px;
-
-      &__title {
-        width: calc(90vw);
-      }
-
-      &__subtitle {
-        width: calc(90vw);
-      }
-
-      &__payout {
-        width: calc(90vw);
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__content__wrapper {
-      flex-wrap: wrap;
-      width: calc(90vw);
-      padding: 40px 0;
-
-      &--image-right {
-        flex-wrap: wrap-reverse;
-      }
-    }
-
-    &__content {
-      width: calc(90vw);
-      margin: auto;
-    }
-
-    &__subtitle {
-      width: calc(90vw);
-    }
-
-    &__title {
-      width: calc(90vw);
-      padding: 0;
-      text-align: center;
-    }
-
-    &__link-wrapper {
-      width: calc(90vw);
-      margin-bottom: 40px;
-    }
-
-    &__button {
-      width: calc(90vw);
-      margin-bottom: 40px;
-    }
-
-    &__image {
-      width: calc(90vw);
-      height: calc(90vw / 1.777);
-    }
-
-    &__item {
-      width: calc(90vw);
-      margin-bottom: 40px;
-
-      &__title {
-        width: calc(90vw);
-      }
-
-      &__subtitle {
-        width: calc(90vw);
-      }
-
-      &__payout {
-        width: calc(90vw);
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__content__wrapper {
-      flex-wrap: wrap;
-      width: calc(90vw);
-      padding: 40px 0;
-
-      &--image-right {
-        flex-wrap: wrap-reverse;
-      }
-    }
-
-    &__image {
-      width: calc(90vw);
-      height: calc(90vw / 1.777);
-    }
-
-    &__content {
-      width: calc(90vw);
-      margin: auto;
-    }
-
-    &__subtitle {
-      width: calc(90vw);
-    }
-
-    &__title {
-      width: calc(90vw);
-      padding: 0;
-      text-align: center;
-    }
-
-    &__link-wrapper {
-      width: calc(90vw);
-      margin-bottom: 40px;
     }
 
     &__item {

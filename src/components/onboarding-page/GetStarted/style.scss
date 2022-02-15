@@ -72,7 +72,7 @@
   @media #{$screen-max-md} {
     &__content {
       width: calc(100vw);
-      margin: auto;
+      margin: 0;
     }
 
     &__lessons {
@@ -188,7 +188,7 @@
   @media #{$screen-max-md} {
     &__wrapper {
       width: calc(90vw);
-      height: calc(100vh * 2);
+      height: fit-content;
 
       &:hover {
         background: $c_black;
@@ -198,58 +198,10 @@
       }
     }
 
-    &__title {
-      width: calc(55vw);
-    }
-
-    &__subtitle {
-      width: calc(55vw);
-    }
-
-    &__icon {
-      width: calc(35vw);
-      margin: 10px;
-    }
-
-    &__texts {
-      margin: 10px;
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__wrapper {
-      width: calc(90vw);
-      height: fit-content;
-    }
-
-    &__title {
-      width: calc(55vw);
-    }
-
-    &__subtitle {
-      width: calc(55vw);
-    }
-
-    &__icon {
-      width: calc(35vw);
-      margin: 10px;
-    }
-
-    &__texts {
-      margin: 10px;
-    }
-  }
-
-  @media (max-width: 500px) {
     &__content {
       width: calc(90vw);
     }
 
-    &__wrapper {
-      width: calc(90vw);
-      height: fit-content;
-    }
-
     &__title {
       width: calc(55vw);
     }
@@ -264,6 +216,7 @@
     }
 
     &__texts {
+      width: calc(55vw);
       margin: 10px;
     }
   }

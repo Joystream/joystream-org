@@ -5,7 +5,7 @@ import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
-import TokenInformation from '../../../components/onboarding-page/TokenInformation';
+import FAQ from '../../../components/onboarding-page/FAQ';
 import YoutubeSync from '../../../assets/svg/youtube-sync.svg';
 import SocialTokens from '../../../assets/svg/social-tokens.svg';
 import NFTVisual from '../../../assets/images/nft-visual.png';
@@ -40,6 +40,7 @@ const Onboarding = () => {
       image: YoutubeSync,
       isImageRight: true,
       isBackroundBlack: false,
+      noTopPadding: true,
     },
     {
       title: 'onboarding.page7.atlasInfo2.title',
@@ -47,6 +48,7 @@ const Onboarding = () => {
       image: SocialTokens,
       isImageRight: false,
       isBackroundBlack: false,
+      noTopPadding: true,
     },
     {
       title: 'onboarding.page7.atlasInfo3.title',
@@ -62,6 +64,7 @@ const Onboarding = () => {
       image: AtlasVisual,
       isImageRight: false,
       isBackroundBlack: true,
+      noTopPadding: true,
     },
   ];
 
@@ -97,7 +100,7 @@ const Onboarding = () => {
       {atlasInfoData.map((item, index) => {
         return <AtlasInfo t={t} key={index} {...item} />;
       })}
-      <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
+      <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
       <BuilderSection
         shouldReloadRole={shouldReloadRole}
         t={t}

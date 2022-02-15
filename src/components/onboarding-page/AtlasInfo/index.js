@@ -13,11 +13,16 @@ const AtlasInfo = ({
   isImageRight,
   isBackroundBlack,
   onButtonClick,
+  noTopPadding,
 }) => {
   return (
     <div className={`AtlasInfo__wrapper ${isBackroundBlack ? 'AtlasInfo__wrapper--blackBg' : ''}`}>
       {isImageRight ? (
-        <div className="AtlasInfo__content__wrapper">
+        <div
+          className={`AtlasInfo__content__wrapper ${
+            noTopPadding ? 'AtlasInfo__content__wrapper--no-top-padding' : ''
+          } `}
+        >
           <div className="AtlasInfo__content">
             <h2 className={`AtlasInfo__title ${isBackroundBlack ? 'AtlasInfo__title--bgBlack' : ''}`}>{t(title)}</h2>
             <h4 className={`AtlasInfo__subtitle ${isBackroundBlack ? 'AtlasInfo__title--bgBlack' : ''}`}>{t(text)}</h4>
@@ -27,7 +32,11 @@ const AtlasInfo = ({
           </div>
         </div>
       ) : (
-        <div className="AtlasInfo__content__wrapper AtlasInfo__content__wrapper--image-right">
+        <div
+          className={`AtlasInfo__content__wrapper ${
+            noTopPadding ? 'AtlasInfo__content__wrapper--no-top-padding' : ''
+          } AtlasInfo__content__wrapper--image-right`}
+        >
           <div className="AtlasInfo__content">
             <img className="AtlasInfo__image" src={image} alt={t('landing.exploreJoystream.atlas.imageAlt')} />
           </div>
