@@ -22,9 +22,9 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
   const [shouldAnimateSecond, setShouldAnimateSecond] = useState(false);
   const [shouldAnimateThird, setShouldAnimateThird] = useState(false);
 
-  const section1Title = t('onboarding.integrators.section1.title') || '';
-  const section2Title = t('onboarding.integrators.section1.title') || '';
-  const section3Title = t('onboarding.integrators.section1.title') || '';
+  const section1Title = t('onboarding.integrators.section1.title');
+  const section2Title = t('onboarding.integrators.section2.title');
+  const section3Title = t('onboarding.integrators.section3.title');
 
   return (
     <div className="Integrators__wrapper">
@@ -66,7 +66,7 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
                 return <span key={index}>{line}</span>;
               })}
             </h2>
-            <h2 className="Integrators__title--mobile">{section1Title.replaceAll('<br/>', ' ')}</h2>
+            <h2 className="Integrators__title--mobile">{section1Title.split('<br/>').join(' ')}</h2>
             <Waypoint
               bottomOffset={100}
               topOffset={400}
@@ -87,7 +87,7 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
                 return <span key={index}>{line}</span>;
               })}
             </h2>
-            <h2 className="Integrators__title--mobile">{section2Title.replaceAll('<br/>', ' ')}</h2>
+            <h2 className="Integrators__title--mobile">{section2Title.split('<br/>').join(' ')}</h2>
             <Waypoint
               className="IntegratorsclassName"
               bottomOffset={250}
@@ -109,7 +109,7 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
                 return <span key={index}>{line}</span>;
               })}
             </h2>
-            <h2 className="Integrators__title--mobile">{section3Title.replaceAll('<br/>', ' ')}</h2>
+            <h2 className="Integrators__title--mobile">{section3Title.split('<br/>').join(' ')}</h2>
             <Waypoint
               topOffset={100}
               bottomOffset={400}
