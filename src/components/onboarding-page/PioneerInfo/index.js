@@ -1,5 +1,5 @@
 import React from 'react';
-import Pioneer from '../../../assets/images/pioneer.png';
+import Pioneer from '../../../assets/svg/pioneer.svg';
 import './style.scss';
 
 const PioneerInfo = ({ t }) => {
