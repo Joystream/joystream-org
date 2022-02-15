@@ -63,6 +63,7 @@
     width: fit-content;
     height: 60px;
     margin: 0;
+    margin-top: 20px;
     padding: 18px 20px;
     cursor: pointer;
     background: $c_blue-ribbon;
@@ -77,7 +78,7 @@
     align-items: center;
     width: fit-content;
     margin-bottom: 20px;
-    padding: 8px;
+    padding: 12px;
     font-family: $font-primary;
     font-size: 18px;
     line-height: 24px;
@@ -130,6 +131,7 @@
 
     &__content {
       display: flex;
+      align-items: center;
       flex-direction: column;
       width: calc(90vw);
     }
@@ -156,6 +158,8 @@
 
     &__text {
       width: calc(90vw);
+      margin: 100px 0;
+      padding-left: 0;
     }
 
     &__animation__mobile__wrapper {
@@ -193,78 +197,10 @@
         height: calc(90vw / 1.53) !important;
       }
     }
-  }
-
-  @media #{$screen-max-sm} {
-    &__content {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap-reverse;
-    }
-
-    &__title {
-      font-size: 32px;
-      line-height: 40px;
-    }
-
-    &__icon {
-      display: none;
-    }
-
-    &__icon-alt {
-      display: block;
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__content {
-      width: calc(90vw);
-    }
-
-    &__title {
-      width: calc(90vw);
-      margin: 20px 0;
-    }
-
-    &__description {
-      width: calc(90vw);
-    }
 
     &__image {
       width: calc(90vw);
       margin: 0 auto;
-    }
-
-    &__text {
-      padding-left: 0;
-    }
-
-    &__button {
-      width: calc(90vw);
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__content {
-      width: calc(90vw);
-    }
-
-    &__title {
-      width: calc(90vw);
-      margin: 20px 0;
-    }
-
-    &__description {
-      width: calc(90vw);
-    }
-
-    &__image {
-      width: calc(90vw);
-      margin: 0 auto;
-    }
-
-    &__text {
-      padding-left: 0;
     }
 
     &__button {
