@@ -1,0 +1,136 @@
+@import '../../../styles/main';
+
+.FAQSection {
+  &__tokeninfo-wrapper {
+    padding: 150px 0;
+    background-color: $c_white;
+  }
+
+  &__tokeninfo-title {
+    @extend %container;
+
+    font-family: $font-primary;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  &__tokeninfo {
+    @extend %container;
+
+    margin-top: 80px;
+
+    &__item {
+      display: grid;
+      margin: 16px 0;
+      padding: 32px;
+      cursor: pointer;
+      transition: transform .5s, box-shadow .5s, outline .2s;
+      grid-template-columns: auto 32px;
+
+      &:hover {
+        outline: 2px solid #000;
+        transform: translate(-5px, -5px);
+        box-shadow: 8px 8px 0 -2px #000;
+      }
+
+      &--active {
+        outline: 2px solid $c_blue-ribbon;
+
+        &:hover {
+          outline: 2px solid $c_blue-ribbon;
+          transform: unset;
+          box-shadow: none;
+        }
+      }
+
+      &__content {
+        padding-right: 20px;
+      }
+
+      &__title {
+        font-family: $font-primary;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0;
+      }
+
+      &__text {
+        display: none;
+        width: fit-content;
+        margin-top: 24px;
+        font-family: $font-secondary;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: #656565;
+
+        &--active {
+          display: block;
+        }
+      }
+
+      &__icon {
+        width: 20px;
+        margin-top: 12px;
+        color: $c_blue-ribbon;
+        transform: rotate(45deg);
+        transition: .3s transform, .5s color;
+
+        &--active {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__tokeninfo {
+      padding: 0 20px;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__tokeninfo-title {
+      padding: 0 20px;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: left;
+    }
+
+    &__tokeninfo {
+      margin-top: 44px;
+
+      &__item {
+        position: relative;
+        grid-template-columns: auto;
+
+        &__content {
+          padding: 0;
+        }
+
+        &__title {
+          padding-right: 32px;
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        &__text {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        &__icon {
+          position: absolute;
+          top: 24px;
+          right: 32px;
+
+          &--active {
+            color: #3b3b3b;
+          }
+        }
+      }
+    }
+  }
+}

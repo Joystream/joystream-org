@@ -5,7 +5,7 @@ import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
-import TokenInformation from '../../../components/token-page/TokenInformation';
+import FAQ from '../../../components/onboarding-page/FAQ';
 import WorkingGroups from '../../../components/onboarding-page/WorkingGroups';
 import useWorkingGroups from '../../../utils/pages/onboarding/useWorkingGroups';
 // import Airtable from 'airtable';
@@ -146,7 +146,7 @@ const Onboarding = () => {
       </div>
       <InfoSection title={t('onboarding.page5.infoSection.title')} text={t('onboarding.page5.infoSection.text')} />
       <WorkingGroups t={t} data={workingGroupsData} />
-      <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
+      <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
       <BuilderSection
         shouldReloadRole={shouldReloadRole}
         t={t}

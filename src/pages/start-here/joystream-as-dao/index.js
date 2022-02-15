@@ -6,7 +6,7 @@ import InfoSection from '../../../components/onboarding-page/InfoSection';
 import PioneerInfo from '../../../components/onboarding-page/PioneerInfo';
 import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
-import TokenInformation from '../../../components/token-page/TokenInformation';
+import FAQ from '../../../components/onboarding-page/FAQ';
 import useAtlasData from '../../../utils/pages/onboarding/useAtlasData';
 import usePioneerData from '../../../utils/pages/onboarding/usePioneerData';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
@@ -207,7 +207,7 @@ const Onboarding = () => {
       <InfoSection title={t('onboarding.page2.infoSection2.title')} text={t('onboarding.page2.infoSection2.text')} />
       <Structure t={t} />
       <PioneerInfo t={t} />
-      <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
+      <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
       <BuilderSection
         shouldReloadRole={shouldReloadRole}
         t={t}

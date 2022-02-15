@@ -4,7 +4,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
-import TokenInformation from '../../../components/token-page/TokenInformation';
+import FAQ from '../../../components/onboarding-page/FAQ';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 import { useState } from 'react';
@@ -58,7 +58,7 @@ const Onboarding = () => {
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page1.infoSection.title')} text={t('onboarding.page1.infoSection.text')} />
-      <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
+      <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
     </OnboardingLayout>
   );
 };

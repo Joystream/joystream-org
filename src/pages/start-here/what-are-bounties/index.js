@@ -6,7 +6,7 @@ import InfoSection from '../../../components/onboarding-page/InfoSection';
 import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import Bounties from '../../../components/onboarding-page/Bounties';
-import TokenInformation from '../../../components/token-page/TokenInformation';
+import FAQ from '../../../components/onboarding-page/FAQ';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
@@ -57,7 +57,7 @@ const Onboarding = () => {
       </div>
       <InfoSection title={t('onboarding.page6.infoSection.title')} text={t('onboarding.page6.infoSection.text')} />
       <Bounties t={t} />
-      <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
+      <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
       <BuilderSection
         shouldReloadRole={shouldReloadRole}
         t={t}

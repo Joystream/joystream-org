@@ -31,30 +31,7 @@
       width: calc(90vw);
       font-size: 40px;
       line-height: 48px;
-    }
-
-    &__item__wrapper {
-      width: calc(90vw);
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__title {
-      width: calc(90vw);
-      font-size: 40px;
-      line-height: 48px;
-    }
-
-    &__item__wrapper {
-      width: calc(90vw);
-    }
-  }
-
-  @media (max-width: 550px) {
-    &__title {
-      width: calc(90vw);
-      font-size: 40px;
-      line-height: 48px;
+      text-align: left;
     }
 
     &__item__wrapper {

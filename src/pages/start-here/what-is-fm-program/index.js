@@ -9,7 +9,7 @@ import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import BecomeFM from '../../../components/onboarding-page/BecomeFM';
 import FMInterviews from '../../../components/onboarding-page/FMInterviews';
-import TokenInformation from '../../../components/token-page/TokenInformation';
+import FAQ from '../../../components/onboarding-page/FAQ';
 import { ReactComponent as Council } from '../../../assets/svg/council.svg';
 import { ReactComponent as WorkingGroup } from '../../../assets/svg/working-group.svg';
 import { ReactComponent as Bounty } from '../../../assets/svg/bounty.svg';
@@ -96,7 +96,7 @@ const Onboarding = () => {
       <InfoSection title={t('onboarding.page3.infoSection2.title')} text={t('onboarding.page3.infoSection2.text')} />
       <ReferallsInfo t={t} />
       <FMInterviews t={t} />
-      <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
+      <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
       <BuilderSection
         shouldReloadRole={shouldReloadRole}
         t={t}

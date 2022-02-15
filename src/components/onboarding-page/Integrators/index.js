@@ -22,9 +22,9 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
   const [shouldAnimateSecond, setShouldAnimateSecond] = useState(false);
   const [shouldAnimateThird, setShouldAnimateThird] = useState(false);
 
-  const section1Title = t('onboarding.integrators.section1.title') ?? '';
-  const section2Title = t('onboarding.integrators.section1.title') ?? '';
-  const section3Title = t('onboarding.integrators.section1.title') ?? '';
+  const section1Title = t('onboarding.integrators.section1.title') || '';
+  const section2Title = t('onboarding.integrators.section1.title') || '';
+  const section3Title = t('onboarding.integrators.section1.title') || '';
 
   return (
     <div className="Integrators__wrapper">

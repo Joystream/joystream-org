@@ -14,7 +14,7 @@ import { ReactComponent as Activity } from '../../../assets/svg/activity.svg';
 import { ReactComponent as Perspectives } from '../../../assets/svg/perspectives.svg';
 import { ReactComponent as ProposalsVoting } from '../../../assets/svg/proposalVoting.svg';
 import { ReactComponent as ManageWG } from '../../../assets/svg/manageWG.svg';
-import TokenInformation from '../../../components/token-page/TokenInformation';
+import FAQ from '../../../components/onboarding-page/FAQ';
 import useCouncilData from '../../../utils/pages/onboarding/useCouncilData';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
@@ -151,7 +151,7 @@ const Onboarding = () => {
       />
       <InfoSection title={t('onboarding.page4.infoSection2.title')} text={t('onboarding.page4.infoSection2.text')} />
       <TasksInfo t={t} data={tasksData} />
-      <TokenInformation title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
+      <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
       <BuilderSection
         shouldReloadRole={shouldReloadRole}
         t={t}

@@ -5,7 +5,7 @@ import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
-import TokenInformation from '../../../components/token-page/TokenInformation';
+import TokenInformation from '../../../components/onboarding-page/TokenInformation';
 import YoutubeSync from '../../../assets/svg/youtube-sync.svg';
 import SocialTokens from '../../../assets/svg/social-tokens.svg';
 import NFTVisual from '../../../assets/images/nft-visual.png';
