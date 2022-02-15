@@ -46,15 +46,18 @@ const BecomeFM = ({ t }) => {
           <div className="BecomeFM__howto__number-step-separator BecomeFM__howto__number-step-separator--long"></div>
           <div className="BecomeFM__howto__number-step">{t('numbers.three')}</div>
         </div>
-        <div className="BecomeFM__number-steps">
+        <div className={`BecomeFM__number-steps ${shouldAnimate ? 'BecomeFM__howto__number-steps--animated' : ''}`}>
+          <div className="BecomeFM__howto__number-step-mobile">{t('numbers.one')}</div>
           <NumberStep
             text={t('onboarding.page3.fmSteps.step1.title')}
             otherText={t('onboarding.page3.fmSteps.step1.text')}
           />
+          <div className="BecomeFM__howto__number-step-mobile">{t('numbers.two')}</div>
           <NumberStep
             text={t('onboarding.page3.fmSteps.step2.title')}
             otherText={t('onboarding.page3.fmSteps.step2.text')}
           />
+          <div className="BecomeFM__howto__number-step-mobile">{t('numbers.three')}</div>
           <NumberStep
             text={t('onboarding.page3.fmSteps.step3.title')}
             otherText={t('onboarding.page3.fmSteps.step3.text')}

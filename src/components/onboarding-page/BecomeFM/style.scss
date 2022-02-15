@@ -117,6 +117,10 @@
       }
     }
 
+    &__number-step-mobile {
+      display: none;
+    }
+
     &__number-step-separator {
       width: 2px;
       height: 100px;
@@ -244,6 +248,27 @@
     &__howto {
       &__number-steps {
         display: none;
+      }
+
+      &__number-step-mobile {
+        display: grid;
+        width: 64px;
+        height: 64px;
+        margin-bottom: 16px;
+        margin-left: 24px;
+        font-family: $font-primary;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0;
+        color: $c_blue-ribbon;
+        background-color: #e0e1ff;
+        border-radius: 50%;
+        place-items: center;
+
+        &--active {
+          color: white;
+          background-color: $c_blue-ribbon;
+        }
       }
     }
   }

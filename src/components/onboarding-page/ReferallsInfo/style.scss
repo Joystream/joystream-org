@@ -8,7 +8,6 @@
   &__content {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     width: 818px;
     margin: auto;
@@ -45,41 +44,27 @@
     }
   }
 
-  @media #{$screen-max-sm} {
+  @media #{$screen-max-md} {
     &__content {
       width: calc(90vw);
       margin: auto;
+      overflow-y: scroll;
     }
 
     &__title {
-      width: calc(90vw);
       padding: 0;
       padding-top: 80px;
-      text-align: center;
+      text-align: left;
     }
 
     &__item {
       width: calc(90vw);
+      margin-right: 20px;
       margin-bottom: 40px;
-    }
-  }
 
-  @media (max-width: 500px) {
-    &__content {
-      width: calc(90vw);
-      margin: auto;
-    }
-
-    &__title {
-      width: calc(90vw);
-      padding: 0;
-      padding-top: 80px;
-      text-align: center;
-    }
-
-    &__item {
-      width: calc(90vw);
-      margin-bottom: 40px;
+      &__title {
+        width: 260px;
+      }
     }
   }
 }
