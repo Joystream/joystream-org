@@ -12,12 +12,13 @@ import { ReactComponent as Curator } from '../../../assets/svg/role-curator.svg'
 import { ReactComponent as CuratorActive } from '../../../assets/svg/role-curator-active.svg';
 import { ReactComponent as VideoCreator } from '../../../assets/svg/role-video-creator.svg';
 import { ReactComponent as VideoCreatorActive } from '../../../assets/svg/role-video-creator-active.svg';
+import { ReactComponent as RoleSelected } from '../../../assets/svg/role-selected.svg';
 import useContributors from '../../../utils/pages/onboarding/useContributors';
 import cn from 'classnames';
 import { navigate } from 'gatsby';
 import './style.scss';
 
-const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange, shouldSwitchRolePage }) => {
+const Role = ({ title, text, icon, iconActive, role, isCurrentRole, onClose, onRoleChange, shouldSwitchRolePage }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { getContributorPageUrl } = useContributors();
 
@@ -45,7 +46,7 @@ const Role = ({ title, text, icon, iconActive, role, onClose, onRoleChange, shou
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="Role__content">
-        {icon && (isHovered ? iconActive : icon)}
+        {icon && (isHovered ? iconActive : isCurrentRole ? <RoleSelected className="Role__icon" /> : icon)}
         <div
           className={cn('Role__texts', {
             Role__texts__notSure: !role,
@@ -123,6 +124,12 @@ const GetStarted = ({ t, onGetStartedClose, onRoleChange, hideNotSureOption, sho
     },
   ];
 
+  const [role, setRole] = useState();
+
+  useEffect(() => {
+    setRole(localStorage.getItem('JoystreamRole'));
+  }, []);
+
   const escFunction = useCallback(
     event => {
       if (event.key === 'Escape') {
@@ -164,6 +171,7 @@ const GetStarted = ({ t, onGetStartedClose, onRoleChange, hideNotSureOption, sho
                   icon={item.icon}
                   iconActive={item.iconActive}
                   role={item.role}
+                  isCurrentRole={item.role === role}
                 />
               ))}
         </div>

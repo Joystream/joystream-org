@@ -11,7 +11,7 @@
     width: 100%;
     height: calc(100vh);
     overflow-y: scroll;
-    background: rgba($color: $c_black, $alpha: .95);
+    background: rgba($color: $c_black, $alpha: 0.95);
     backdrop-filter: blur(20px);
   }
 
@@ -114,7 +114,7 @@
     cursor: pointer;
     background: $c_black;
     border: 1px solid #1f252e;
-    transition: transform .5s, box-shadow .5s, outline .2s;
+    transition: transform 0.5s, box-shadow 0.5s, outline 0.2s;
 
     &__notSure {
       width: 1242px;
@@ -123,9 +123,7 @@
 
     &:hover {
       background: $c_white;
-      border: 1px solid $c_blue-ribbon;
-      outline: 2px solid $c_blue-ribbon;
-      box-shadow: 6px 6px 0 -2px $c_blue-ribbon;
+      box-shadow: 10px 10px 0 -2px $c_blue-ribbon;
     }
 
     &--active {
