@@ -3,12 +3,12 @@ import './style.scss';
 import Loader from 'react-loader-spinner';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 
-const WorkingGroupItem = ({ workerAvatars, t, item, renderChatWithIntegrator, onChatWithIntegrator }) => {
+const WorkingGroupItem = ({ workerAvatars, t, item, renderChatWithIntegrator, onChatWithIntegrator, noHover }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="WorkingGroups__item"
+      className={`WorkingGroups__item ${noHover ? '' : 'WorkingGroups__item--hoverable'}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -36,7 +36,7 @@ const WorkingGroupItem = ({ workerAvatars, t, item, renderChatWithIntegrator, on
           </>
         )}
       </div>
-      {renderChatWithIntegrator && isHovered && (
+      {renderChatWithIntegrator && !noHover && isHovered && (
         <div role="presentation" className="WorkingGroups__item__link" onClick={onChatWithIntegrator}>
           <p className="WorkingGroups__item__link-text">{t('onboarding.button.chatIntegrator.text')}</p>
           <Arrow className="WorkingGroups__item__link-arrow" />
@@ -46,7 +46,7 @@ const WorkingGroupItem = ({ workerAvatars, t, item, renderChatWithIntegrator, on
   );
 };
 
-const WorkingGroups = ({ t, title, subtitle, data, renderChatWithIntegrator, onChatWithIntegrator }) => {
+const WorkingGroups = ({ t, title, subtitle, data, renderChatWithIntegrator, onChatWithIntegrator, noHover }) => {
   const workerAvatars = arr => {
     return arr
       .filter(w => w.avatar && w.avatar !== '')
@@ -70,6 +70,7 @@ const WorkingGroups = ({ t, title, subtitle, data, renderChatWithIntegrator, onC
               workerAvatars={workerAvatars}
               onChatWithIntegrator={onChatWithIntegrator}
               renderChatWithIntegrator={renderChatWithIntegrator}
+              noHover={noHover}
             />
           ))}
       </div>

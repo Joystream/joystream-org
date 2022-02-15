@@ -2,7 +2,6 @@
 
 .Bounties {
   &__wrapper {
-    padding-top: 80px;
     background-color: $c_catskill-white;
   }
 
@@ -12,6 +11,7 @@
     justify-content: center;
     width: 1242px;
     margin: auto;
+    padding-bottom: 80px;
   }
 
   &__title {
@@ -39,7 +39,7 @@
 
   &__showMore {
     margin-top: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 0;
     padding: 22px;
     font-family: $font-secondary;
     font-size: 20px;
@@ -78,7 +78,7 @@
       background-color: white;
       transition: transform .5s, box-shadow .5s, outline .2s;
 
-      &:hover {
+      &--hoverable:hover {
         outline: 2px solid #000;
         transform: translate(-5px, -5px);
         box-shadow: 8px 8px 0 -2px #000;
@@ -218,6 +218,7 @@
 
       &__card-wrapper-link {
         width: calc(90vw);
+        margin-bottom: 20px;
       }
 
       &__card {
@@ -238,136 +239,13 @@
       width: calc(90vw);
       padding: 0;
       padding-top: 80px;
-      text-align: center;
+      text-align: left;
     }
 
     &__subtitle {
       width: calc(90vw);
       padding: 0;
-      text-align: center;
-    }
-
-    &__item {
-      width: calc(90vw);
-      margin-bottom: 40px;
-
-      &__title {
-        width: calc(90vw);
-      }
-
-      &__subtitle {
-        width: calc(90vw);
-      }
-
-      &__payout {
-        width: calc(90vw);
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__content {
-      width: calc(90vw);
-      margin: auto;
-    }
-
-    &__bounties-carousel {
-      width: calc(90vw);
-
-      &__card-wrapper-link {
-        width: calc(90vw);
-      }
-
-      &__card {
-        width: calc(90vw);
-      }
-
-      &__top {
-        width: calc(90vw);
-      }
-    }
-
-    &__title {
-      width: calc(90vw);
-      padding: 0;
-      padding-top: 80px;
-      text-align: center;
-    }
-
-    &__subtitle {
-      width: calc(90vw);
-      padding: 0;
-      text-align: center;
-    }
-
-    &__item {
-      width: calc(90vw);
-      margin-bottom: 40px;
-
-      &__title {
-        width: calc(90vw);
-      }
-
-      &__subtitle {
-        width: calc(90vw);
-      }
-
-      &__payout {
-        width: calc(90vw);
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__content {
-      width: calc(90vw);
-      margin: auto;
-    }
-
-    &__bounties-carousel {
-      width: calc(90vw);
-
-      &__card-wrapper-link {
-        width: calc(90vw);
-      }
-
-      &__card {
-        width: calc(90vw);
-      }
-
-      &__top {
-        width: calc(90vw);
-      }
-    }
-
-    &__title {
-      width: calc(90vw);
-      padding: 0;
-      padding-top: 80px;
-      text-align: center;
-    }
-
-    &__subtitle {
-      width: calc(90vw);
-      padding: 0;
-      text-align: center;
-    }
-
-    &__item {
-      width: calc(90vw);
-      margin-bottom: 40px;
-
-      &__title {
-        width: calc(90vw);
-      }
-
-      &__subtitle {
-        width: calc(90vw);
-      }
-
-      &__payout {
-        width: calc(90vw);
-      }
+      text-align: left;
     }
   }
 }

@@ -145,7 +145,7 @@ const Onboarding = () => {
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page5.infoSection.title')} text={t('onboarding.page5.infoSection.text')} />
-      <WorkingGroups t={t} data={workingGroupsData} />
+      <WorkingGroups t={t} data={workingGroupsData} noHover={true} />
       <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
       <BuilderSection
         shouldReloadRole={shouldReloadRole}

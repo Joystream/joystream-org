@@ -56,7 +56,7 @@ const Onboarding = () => {
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page6.infoSection.title')} text={t('onboarding.page6.infoSection.text')} />
-      <Bounties t={t} />
+      <Bounties t={t} noHover={true} />
       <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
       <BuilderSection
         shouldReloadRole={shouldReloadRole}
