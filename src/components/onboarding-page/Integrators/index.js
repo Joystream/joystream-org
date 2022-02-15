@@ -22,6 +22,10 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
   const [shouldAnimateSecond, setShouldAnimateSecond] = useState(false);
   const [shouldAnimateThird, setShouldAnimateThird] = useState(false);
 
+  const section1Title = t('onboarding.integrators.section1.title') ?? '';
+  const section2Title = t('onboarding.integrators.section1.title') ?? '';
+  const section3Title = t('onboarding.integrators.section1.title') ?? '';
+
   return (
     <div className="Integrators__wrapper">
       <div className="Integrators__content">
@@ -58,15 +62,11 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
               {t('onboarding.integrators.online')}
             </div>
             <h2 className="Integrators__title">
-              {t('onboarding.integrators.section1.title')
-                .split('<br/>')
-                .map((line, index) => {
-                  return <span key={index}>{line}</span>;
-                })}
+              {section1Title.split('<br/>').map((line, index) => {
+                return <span key={index}>{line}</span>;
+              })}
             </h2>
-            <h2 className="Integrators__title--mobile">
-              {t('onboarding.integrators.section1.title').replaceAll('<br/>', ' ')}
-            </h2>
+            <h2 className="Integrators__title--mobile">{section1Title.replaceAll('<br/>', ' ')}</h2>
             <Waypoint
               bottomOffset={100}
               topOffset={400}
@@ -83,15 +83,11 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
               {t('onboarding.integrators.online')}
             </div>
             <h2 className="Integrators__title">
-              {t('onboarding.integrators.section2.title')
-                .split('<br/>')
-                .map((line, index) => {
-                  return <span key={index}>{line}</span>;
-                })}
+              {section2Title.split('<br/>').map((line, index) => {
+                return <span key={index}>{line}</span>;
+              })}
             </h2>
-            <h2 className="Integrators__title--mobile">
-              {t('onboarding.integrators.section2.title').replaceAll('<br/>', ' ')}
-            </h2>
+            <h2 className="Integrators__title--mobile">{section2Title.replaceAll('<br/>', ' ')}</h2>
             <Waypoint
               className="IntegratorsclassName"
               bottomOffset={250}
@@ -109,15 +105,11 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
               {t('onboarding.integrators.online')}
             </div>
             <h2 className="Integrators__title">
-              {t('onboarding.integrators.section3.title')
-                .split('<br/>')
-                .map((line, index) => {
-                  return <span key={index}>{line}</span>;
-                })}
+              {section3Title.split('<br/>').map((line, index) => {
+                return <span key={index}>{line}</span>;
+              })}
             </h2>
-            <h2 className="Integrators__title--mobile">
-              {t('onboarding.integrators.section3.title').replaceAll('<br/>', ' ')}
-            </h2>
+            <h2 className="Integrators__title--mobile">{section3Title.replaceAll('<br/>', ' ')}</h2>
             <Waypoint
               topOffset={100}
               bottomOffset={400}

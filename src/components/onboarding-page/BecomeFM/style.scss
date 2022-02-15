@@ -17,7 +17,7 @@
     justify-content: center;
     width: 818px;
     margin: auto;
-    padding-bottom: 80px;
+    padding-bottom: 16px;
   }
 
   &__title {
@@ -234,7 +234,7 @@
       width: calc(90vw);
       padding: 0;
       padding-top: 80px;
-      text-align: center;
+      text-align: left;
     }
 
     &__title {
@@ -243,6 +243,21 @@
 
     &__content {
       width: calc(90vw);
+      margin: 0;
+    }
+
+    &__number-step {
+      width: calc(90vw);
+
+      &__texts {
+        width: calc(90vw);
+      }
+
+      &__text,
+      &__other-text {
+        width: calc(90vw);
+        margin-left: 20px;
+      }
     }
 
     &__howto {
@@ -255,7 +270,7 @@
         width: 64px;
         height: 64px;
         margin-bottom: 16px;
-        margin-left: 24px;
+        margin-left: 20px;
         font-family: $font-primary;
         font-size: 24px;
         line-height: 32px;
@@ -269,52 +284,6 @@
           color: white;
           background-color: $c_blue-ribbon;
         }
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__title__wrapper {
-      width: calc(90vw);
-      padding: 0;
-      padding-top: 80px;
-      text-align: center;
-    }
-
-    &__title {
-      width: calc(90vw);
-    }
-
-    &__content {
-      width: calc(90vw);
-    }
-
-    &__howto {
-      &__number-steps {
-        display: none;
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__title__wrapper {
-      width: calc(90vw);
-      padding: 0;
-      padding-top: 80px;
-      text-align: center;
-    }
-
-    &__title {
-      width: calc(90vw);
-    }
-
-    &__content {
-      width: calc(90vw);
-    }
-
-    &__howto {
-      &__number-steps {
-        display: none;
       }
     }
   }
