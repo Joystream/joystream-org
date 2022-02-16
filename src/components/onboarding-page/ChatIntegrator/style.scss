@@ -13,12 +13,38 @@
 
   &__content {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
     width: 1030px;
     margin: auto;
     margin-top: 40px;
     padding-bottom: 80px;
+  }
+
+  &__link-wrapper {
+    width: fit-content;
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__link-text {
+    font-family: $font-primary;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: $c_blue-ribbon;
+  }
+
+  &__link-arrow {
+    margin-left: 13px;
+    color: $c_blue-ribbon;
+    transform: rotate(-90deg) scale(.85);
   }
 
   &__discord-widget {
@@ -41,20 +67,23 @@
     justify-content: center;
     width: 720px;
     margin: auto;
-    margin-bottom: 12px;
-    font-family: $font-primary;
+    margin-bottom: 20px;
+    font-family: $font-secondary;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0;
     color: $c_oslo_gray;
     text-align: center;
 
-    &--link {
-      color: $c_blue-ribbon;
-      text-decoration: none;
+    &--caption {
+      margin-top: 10px;
+      margin-bottom: 80px;
+      font-size: 14px;
+      line-height: 20px;
     }
 
     &--example-message {
+      margin-bottom: 80px;
       font-style: italic;
       color: $c_white;
     }
@@ -68,6 +97,11 @@
     }
 
     &__title {
+      width: calc(90vw);
+      text-align: left;
+    }
+
+    &__link-wrapper {
       width: calc(90vw);
       text-align: left;
     }
