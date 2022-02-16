@@ -4,6 +4,8 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as NumberScrollPointer } from '../../../assets/svg/number-scroll-pointer.svg';
 
+const FORBIDDEN_NUMBER_TYPE_INPUT_REGEX = /(-)|(—)/g;
+
 const Input = ({ id, placeholder, value, setValue, disabled }) => {
   const { t } = useTranslation();
   
@@ -15,7 +17,9 @@ const Input = ({ id, placeholder, value, setValue, disabled }) => {
         id={id}
         placeholder={placeholder}
         value={value}
-        onChange={e => setValue(e.target.value)}
+        onChange={e => {
+          setValue(e.target.value.replace(FORBIDDEN_NUMBER_TYPE_INPUT_REGEX, ""));
+        }}
         disabled={disabled}
       />
       <div className="CashoutPage__form__body__amount-input__type CashoutPage__form__body__amount-input__type--active">

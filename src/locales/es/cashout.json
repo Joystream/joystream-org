@@ -38,7 +38,7 @@
       },
       "notice": {
         "title": "We noticed that a similar payment is being processed",
-        "text": "You’ve recently made a transaction from <0>{{joystreamAddress}}</0> address for an amount of <0>{{tokenAmount}} tJOY</0>. Click on submit to continue. If you have any doubts about a previous transaction, please let us know on our <1>Discord Channel</1>."
+        "text": "You've already started the cashout process from address <0>{{joystreamAddress}}</0> for the amount of <0>{{tokenAmount}} tJOY</0>. Make sure to first finish that one before cashing out again. If you think this may be wrong, please let us know on our <1>Discord Server</1>."
       },
       "success": {
         "title": "You've succesfully initiated the cashout process!",

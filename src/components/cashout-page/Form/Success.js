@@ -61,7 +61,7 @@ const Success = ({ timeoutTimestamp, joystreamAddress, setCashoutResponse }) => 
     <div className="CashoutPage__form__body__success">
       <p className="CashoutPage__form__body__success__title">{t("cashout.form.success.title")}</p>
       <p className="CashoutPage__form__body__success__subtitle">
-        <Trans i18nKey="cashout.form.success.subtitle" components={[<span role="presentation" onClick={() => navigator?.clipboard?.writeText(BURN_ADDRESS)}></span>]} />
+        <Trans i18nKey="cashout.form.success.subtitle" components={[<span style={{ wordBreak: "break-all" }} role="presentation" onClick={() => navigator?.clipboard?.writeText(BURN_ADDRESS)}></span>]} />
       </p>
       <p className="CashoutPage__form__body__success__timeout">
         {t("cashout.form.success.timeout")}{' '}

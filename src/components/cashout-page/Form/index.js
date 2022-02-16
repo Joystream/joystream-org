@@ -164,6 +164,9 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
           setCashoutInitiationResponse({ error: FINAL_UI_STATE_SERVERPROBLEM, loading: false });
           return;
         }
+
+        // If we reach this point the cashout server is down.
+        setCashoutInitiationResponse({ error: FINAL_UI_STATE_SERVERPROBLEM, loading: false });
       }
     }
   };
