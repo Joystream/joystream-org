@@ -137,13 +137,11 @@ const useLessonList = () => {
       const indexes = roleIndexes[suffix];
       for (let index = 0; index < indexes.length - 1; index++) {
         if (indexes[index] === currentIndex) {
-          console.log(`Next video title: ${lessonTitles[currentIndex + 1]}`);
           return lessonTitles[indexes[index + 1]];
         }
       }
       return undefined;
     }
-    console.log(`Next video title: ${lessonTitles[currentIndex + 1]}`);
     return lessonTitles[currentIndex + 1];
   };
 

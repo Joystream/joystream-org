@@ -1,9 +1,69 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Loader from 'react-loader-spinner';
+import useValidatorsData from '../../../utils/pages/onboarding/useValidatorsData';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import './style.scss';
 
-const ValidatorsInfo = ({ t, data }) => {
+const ValidatorsInfo = ({ t }) => {
+  const { maxValidatorsSize, validatorsSize } = useValidatorsData();
+  const [maxValidatorsData, setMaxValidatorsData] = useState({ isLoading: true, count: 0 });
+  const [activeValidatorsData, setActiveValidatorsData] = useState({ isLoading: true, count: 0 });
+
+  const { workingGroups } = useStaticQuery(graphql`
+    query ValidatorsQuery {
+      workingGroups: allAirtable(
+        filter: { table: { eq: "BountyLabel" } }
+        sort: { fields: data___BountyLabelId, order: DESC }
+      ) {
+        nodes {
+          data {
+            BountyLabelId
+            Name
+          }
+          recordId
+        }
+      }
+    }
+  `);
+
+  useEffect(() => {
+    if (workingGroups && workingGroups.nodes) {
+      console.log(workingGroups.nodes);
+    }
+  }, [workingGroups]);
+
+  useEffect(() => {
+    if (maxValidatorsSize) {
+      setMaxValidatorsData({
+        isLoading: maxValidatorsSize.isLoading,
+        count: maxValidatorsSize.count,
+      });
+    }
+  }, [maxValidatorsSize]);
+
+  useEffect(() => {
+    if (validatorsSize) {
+      setActiveValidatorsData({
+        isLoading: validatorsSize.isLoading,
+        count: validatorsSize.count,
+      });
+    }
+  }, [validatorsSize]);
+
+  // TODO Get Validator Payout in $USD
+  const data = [
+    {
+      title: t('onboarding.contributorRoles.validatorInfo.items.validatorsCount'),
+      activeValidatorsData,
+      maxValidatorsData,
+    },
+    {
+      payout: 280,
+      title: t('onboarding.contributorRoles.validatorInfo.items.validatorsPayout'),
+    },
+  ];
+
   return (
     <div className="ValidatorsInfo__wrapper">
       <div className="ValidatorsInfo__title__wrapper">

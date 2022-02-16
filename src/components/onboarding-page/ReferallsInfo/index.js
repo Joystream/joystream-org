@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import './style.scss';
 
@@ -6,6 +7,29 @@ const ReferallsInfo = ({ t }) => {
   // TODO fetch counts from api
   const referalReward = 50;
   const referalsPayout = 24500;
+
+  const { referalls } = useStaticQuery(graphql`
+    query ReferallsQuery {
+      workingGroups: allAirtable(
+        filter: { table: { eq: "BountyLabel" } }
+        sort: { fields: data___BountyLabelId, order: DESC }
+      ) {
+        nodes {
+          data {
+            BountyLabelId
+            Name
+          }
+          recordId
+        }
+      }
+    }
+  `);
+
+  useEffect(() => {
+    if (referalls && referalls.nodes) {
+      console.log(referalls.nodes);
+    }
+  }, [referalls]);
 
   return (
     <div className="ReferallsInfo__wrapper">

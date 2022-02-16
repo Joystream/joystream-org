@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://joystream.org',
@@ -49,32 +53,44 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/locales`,
-        name: `locale`
-      }
+        name: 'locale',
+      },
     },
     {
-      resolve: `gatsby-plugin-react-i18next`,
+      resolve: 'gatsby-plugin-react-i18next',
       options: {
-        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`en`, `ru`, 'zh', 'es', 'fr'],
-        defaultLanguage: `en`,
-        siteUrl: `https://www.joystream.org/`,
+        localeJsonSourceName: 'locale', // name given to `gatsby-source-filesystem` plugin.
+        languages: ['en', 'ru', 'zh', 'es', 'fr'],
+        defaultLanguage: 'en',
+        siteUrl: 'https://www.joystream.org/',
         i18nextOptions: {
           interpolation: {
-            escapeValue: false // not needed for react as it escapes by default
+            escapeValue: false, // not needed for react as it escapes by default
           },
-          nsSeparator: false
+          nsSeparator: false,
         },
         pages: [
           {
             matchPath: '/',
-            languages: ['en','ru', 'zh', 'es', 'fr']
-          }
-        ]
-      }
+            languages: ['en', 'ru', 'zh', 'es', 'fr'],
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-source-airtable',
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        tables: [
+          {
+            baseId: 'appNF9hNyOvfP5lvG',
+            tableName: 'BountyLabel',
+          },
+        ],
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
