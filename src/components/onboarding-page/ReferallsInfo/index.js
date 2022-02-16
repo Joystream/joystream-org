@@ -10,14 +10,15 @@ const ReferallsInfo = ({ t }) => {
 
   const { referalls } = useStaticQuery(graphql`
     query ReferallsQuery {
-      workingGroups: allAirtable(
-        filter: { table: { eq: "BountyLabel" } }
-        sort: { fields: data___BountyLabelId, order: DESC }
+      referalls: allAirtable(
+        filter: { table: { eq: "Integrator" } }
+        sort: { fields: data___IntegratorId, order: DESC }
       ) {
         nodes {
           data {
-            BountyLabelId
-            Name
+            IntegratorId
+            PersonId
+            DiscordHandle
           }
           recordId
         }

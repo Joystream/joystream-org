@@ -89,6 +89,10 @@ module.exports = {
             baseId: 'appNF9hNyOvfP5lvG',
             tableName: 'BountyLabel',
           },
+          {
+            baseId: 'appNF9hNyOvfP5lvG',
+            tableName: 'Integrator',
+          },
         ],
       },
     },
