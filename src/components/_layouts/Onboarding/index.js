@@ -32,15 +32,6 @@ const OnboardingLayout = ({
   const [showGetStarted, setShowGetStarted] = useState(false);
   const [hideNotSureOption, setHideNotSureOption] = useState(false);
   const [role, setRole] = useState();
-  // const [pageIndex, setPageIndex] = useState(lessonIndex);
-  // useEffect(() => {
-  //   if (role) {
-  //     // TODO Update page index based on the role selected?
-  //     // setPageIndex()
-  //     // TODO Update next video url and title base on the role selected?
-  //     // setNextVideo({url: '', text: ''})
-  //   }
-  // }, [role]);
 
   const handleShowGetStarted = () => {
     setShowGetStarted(true);
