@@ -127,12 +127,10 @@ const Navbar = ({
           <div className="Navbar__button-lang" style={{ display: 'none' }}>
             <UKCircle />
           </div>
-          {role && (
-            <div className="Navbar__button Navbar__button-role" role="presentation" onClick={onShowGetStarted}>
-              <RoleIcon className="Navbar__button-role-icon" />
-              <p className="Navbar__button-text">{role}</p>
-            </div>
-          )}
+          <div className="Navbar__button Navbar__button-role" role="presentation" onClick={onShowGetStarted}>
+            <RoleIcon className="Navbar__button-role-icon" />
+            <p className="Navbar__button-text">{role ? role : t('onboarding.button.chooseRole.text')}</p>
+          </div>
           {showGetStarted &&
             (role && contributorPageUrl ? (
               <Link to={contributorPageUrl}>

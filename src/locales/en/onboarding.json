@@ -5,6 +5,10 @@
         "text": "Get Started",
         "altText": "Join & start earning"
       },
+      "chooseRole": {
+        "text": "Choose role",
+        "altText": "Choose a role"
+      },
       "chatIntegrator": {
         "text": "Chat with Integrator",
         "altText": "Chat with the Integrator"
@@ -281,7 +285,7 @@
         "workingGroups" : "Working Groups",
         "managers" : "Managers",
         "workingGroupLeads" : "Working Group Leads",
-        "contractors" : "Contractors",
+        "contractors" : "Contractors/Gigs",
         "bounties" : "Bounties"
       },
       "faq" : {
