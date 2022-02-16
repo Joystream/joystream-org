@@ -22,6 +22,11 @@
       font-size: 40px;
       line-height: 48px;
       letter-spacing: 0;
+      text-align: left;
+
+      &--centered {
+        text-align: center;
+      }
     }
 
     &__subtitle {
@@ -32,6 +37,10 @@
       letter-spacing: 0;
       color: #5c6475;
       text-align: left;
+
+      &--centered {
+        text-align: center;
+      }
 
       & span {
         font-family: $font-secondary;
@@ -51,21 +60,25 @@
       &__content {
         width: calc(90vw);
       }
-    }
 
-    @media #{$screen-max-sm} {
-      width: calc(90vw);
+      &__title {
+        text-align: left;
 
-      &__content {
-        width: calc(90vw);
+        &--centered {
+          text-align: left;
+        }
       }
-    }
 
-    @media (max-width: 500px) {
-      width: calc(90vw);
+      &__subtitle {
+        text-align: left;
 
-      &__content {
-        width: calc(90vw);
+        &--centered {
+          text-align: left;
+        }
+
+        & span {
+          text-align: left;
+        }
       }
     }
   }

@@ -144,7 +144,11 @@ const Onboarding = () => {
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>
-      <InfoSection title={t('onboarding.page5.infoSection.title')} text={t('onboarding.page5.infoSection.text')} />
+      <InfoSection
+        title={t('onboarding.page5.infoSection.title')}
+        text={t('onboarding.page5.infoSection.text')}
+        isCentered
+      />
       <WorkingGroups t={t} data={workingGroupsData} noHover={true} />
       <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
       <BuilderSection
