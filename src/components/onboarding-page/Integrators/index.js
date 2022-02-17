@@ -28,6 +28,19 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
 
   return (
     <div className="Integrators__wrapper">
+      <div className="Integrators__animation__mobile__wrapper">
+        <div className="Integrators__animation__mobile">
+          {shouldAnimateFirst && (
+            <Lottie options={{ ...defaultOptions, animationData: animationData1 }} height={340} width={520} />
+          )}
+          {shouldAnimateSecond && (
+            <Lottie options={{ ...defaultOptions, animationData: animationData2 }} height={340} width={520} />
+          )}
+          {shouldAnimateThird && (
+            <Lottie options={{ ...defaultOptions, animationData: animationData3 }} height={340} width={520} />
+          )}
+        </div>
+      </div>
       <div className="Integrators__content">
         <div className="Integrators__animation__wrapper">
           <div className="Integrators__animation">
@@ -43,19 +56,6 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
           </div>
         </div>
         <div className="Integrators__text__wrapper">
-          <div className="Integrators__animation__mobile__wrapper">
-            <div className="Integrators__animation__mobile">
-              {shouldAnimateFirst && (
-                <Lottie options={{ ...defaultOptions, animationData: animationData1 }} height={340} width={520} />
-              )}
-              {shouldAnimateSecond && (
-                <Lottie options={{ ...defaultOptions, animationData: animationData2 }} height={340} width={520} />
-              )}
-              {shouldAnimateThird && (
-                <Lottie options={{ ...defaultOptions, animationData: animationData3 }} height={340} width={520} />
-              )}
-            </div>
-          </div>
           <div className="Integrators__text">
             <div className="Integrators__online-text">
               <OnlineIcon className="Integrators__online-icon" />
@@ -86,18 +86,30 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
               {section2Title.split('<br/>').map((line, index) => {
                 return <span key={index}>{line}</span>;
               })}
+              <Waypoint
+                className="IntegratorsclassName"
+                bottomOffset={450}
+                topOffset={450}
+                onEnter={() => {
+                  setShouldAnimateFirst(false);
+                  setShouldAnimateThird(false);
+                  setShouldAnimateSecond(true);
+                }}
+              />
             </h2>
-            <h2 className="Integrators__title--mobile">{section2Title.split('<br/>').join(' ')}</h2>
-            <Waypoint
-              className="IntegratorsclassName"
-              bottomOffset={452}
-              topOffset={452}
-              onEnter={() => {
-                setShouldAnimateFirst(false);
-                setShouldAnimateThird(false);
-                setShouldAnimateSecond(true);
-              }}
-            />
+            <h2 className="Integrators__title--mobile">
+              {section2Title.split('<br/>').join(' ')}
+              <Waypoint
+                className="IntegratorsclassName"
+                bottomOffset={450}
+                topOffset={650}
+                onEnter={() => {
+                  setShouldAnimateFirst(false);
+                  setShouldAnimateThird(false);
+                  setShouldAnimateSecond(true);
+                }}
+              />
+            </h2>
           </div>
           <div className="Integrators__text">
             <div className="Integrators__online-text">
@@ -108,17 +120,29 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
               {section3Title.split('<br/>').map((line, index) => {
                 return <span key={index}>{line}</span>;
               })}
+              <Waypoint
+                topOffset={0}
+                bottomOffset={450}
+                onEnter={() => {
+                  setShouldAnimateFirst(false);
+                  setShouldAnimateSecond(false);
+                  setShouldAnimateThird(true);
+                }}
+              />
             </h2>
-            <h2 className="Integrators__title--mobile">{section3Title.split('<br/>').join(' ')}</h2>
-            <Waypoint
-              topOffset={0}
-              bottomOffset={452}
-              onEnter={() => {
-                setShouldAnimateFirst(false);
-                setShouldAnimateSecond(false);
-                setShouldAnimateThird(true);
-              }}
-            />
+            <h2 className="Integrators__title--mobile">
+              {section3Title.split('<br/>').join(' ')}
+              <Waypoint
+                topOffset={750}
+                bottomOffset={850}
+                onEnter={() => {
+                  setShouldAnimateFirst(false);
+                  setShouldAnimateSecond(false);
+                  setShouldAnimateThird(true);
+                }}
+              />
+            </h2>
+
             <div className="Integrators__button" role="presentation" onClick={onChatWithIntegrator}>
               <p className="Integrators__button-text">{t('onboarding.integrators.button')}</p>
               <Arrow className="Integrators__button-arrow" />

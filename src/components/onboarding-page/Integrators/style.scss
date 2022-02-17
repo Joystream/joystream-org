@@ -33,12 +33,6 @@
     justify-content: flex-start;
   }
 
-  &__waypoint {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-
   &__animation__wrapper {
     position: relative;
     width: 606px;
@@ -130,6 +124,10 @@
     flex-direction: column-reverse;
     padding-top: 40px;
 
+    &__wrapper {
+      padding-bottom: 0;
+    }
+
     &__content {
       display: flex;
       align-items: center;
@@ -167,7 +165,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      width: calc(90vw);
+      width: calc(100vw);
       padding: 50px 0;
       background: $c_black;
     }
@@ -176,6 +174,7 @@
       display: flex;
       width: calc(90vw);
       height: calc(90vw / 1.53);
+      margin: auto;
 
       & div {
         width: calc(90vw) !important;
