@@ -3,16 +3,37 @@ import Pioneer from '../../../assets/svg/builder-illustration.svg';
 import Link from '../../Link';
 import useContributors from '../../../utils/pages/onboarding/useContributors';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
+import BuilderImage from '../../../assets/svg/contributor-builder.svg';
+import Curator from '../../../assets/svg/contributor-curator.svg';
+import Marketer from '../../../assets/svg/contributor-marketer.svg';
+import Organiser from '../../../assets/svg/contributor-organiser.svg';
+import Techie from '../../../assets/svg/contributor-techie.svg';
+import VideoCreator from '../../../assets/svg/contributor-video-creator.svg';
 import './style.scss';
 
 const BuilderSection = ({ t, onShowGetStarted, shouldReloadRole, onRoleReloaded }) => {
   const [role, setRole] = useState();
+  const [image, setImage] = useState(Pioneer);
   const { roleSuffixes, getContributorPageUrl } = useContributors();
+  const roleImages = {
+    Builder: BuilderImage,
+    Techie: Techie,
+    Marketer: Marketer,
+    Organiser: Organiser,
+    Curator: Curator,
+    'Video Creator': VideoCreator,
+  };
 
   useEffect(() => {
-    setRole(localStorage.getItem('JoystreamRole'));
+    const newRole = localStorage.getItem('JoystreamRole');
+    setRole(newRole);
+    if (newRole) {
+      setImage(roleImages[newRole]);
+    } else {
+      setImage(Pioneer);
+    }
     onRoleReloaded();
-  }, [shouldReloadRole, onRoleReloaded]);
+  }, [shouldReloadRole, onRoleReloaded, roleImages]);
 
   const [title, setTitle] = useState('onboarding.readyToContribureGeneric.title');
   const [text, setText] = useState('onboarding.readyToContribureGeneric.text');
@@ -29,7 +50,7 @@ const BuilderSection = ({ t, onShowGetStarted, shouldReloadRole, onRoleReloaded 
   return (
     <div className="BuilderSection__wrapper">
       <div className="BuilderSection__content">
-        <img className="BuilderSection__image" src={Pioneer} alt={t('landing.exploreJoystream.pioneer.imageAlt')} />
+        <img className="BuilderSection__image" src={image} alt={t('landing.exploreJoystream.pioneer.imageAlt')} />
         <div className="BuilderSection__text">
           <h2 className="BuilderSection__title">{t(title)}</h2>
           <p className="BuilderSection__description">{t(text)}</p>
