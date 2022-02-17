@@ -22,6 +22,14 @@ const Role = ({ title, text, icon, iconActive, role, isCurrentRole, onClose, onR
   const [isHovered, setIsHovered] = useState(false);
   const { getContributorPageUrl } = useContributors();
 
+  useEffect(() => {
+    document.body.style.overflowY = 'hidden';
+
+    return () => {
+      document.body.style.overflowY = 'scroll';
+    };
+  }, []);
+
   const chooseRole = () => {
     if (role) {
       onRoleChange(role);

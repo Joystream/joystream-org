@@ -9,8 +9,8 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: calc(100%);
-    overflow-y: scroll;
+    height: 100%;
+    overflow-y: auto;
   }
 
   &__backdrop {
@@ -55,7 +55,7 @@
     z-index: 101;
     width: 598px;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     background: $c_black;
   }
 

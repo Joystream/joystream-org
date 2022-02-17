@@ -72,6 +72,11 @@ const LessonList = ({ t, lessonIndex, onLessonListClose, currentRole }) => {
 
   useEffect(() => {
     setRole(localStorage.getItem('JoystreamRole'));
+    document.body.style.overflowY = 'hidden';
+
+    return () => {
+      document.body.style.overflowY = 'scroll';
+    };
   }, []);
 
   useEffect(() => {
