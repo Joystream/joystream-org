@@ -116,7 +116,7 @@
     &__content {
       display: flex;
       align-items: center;
-      flex-wrap: wrap-reverse;
+      flex-wrap: wrap;
       width: calc(90vw);
     }
 
@@ -140,6 +140,7 @@
 
     &__image {
       width: calc(90vw);
+      height: fit-content;
       margin: 0 auto;
     }
 

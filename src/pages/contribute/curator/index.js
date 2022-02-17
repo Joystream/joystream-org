@@ -42,6 +42,7 @@ const Onboarding = () => {
       image: BountiesImage,
       isImageRight: false,
       isBackroundBlack: false,
+      noTopPadding: true,
     },
   ];
 

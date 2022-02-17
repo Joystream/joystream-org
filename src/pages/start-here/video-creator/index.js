@@ -11,7 +11,6 @@ import SocialTokens from '../../../assets/svg/social-tokens.svg';
 import NFTVisual from '../../../assets/images/nft-visual.png';
 import AtlasVisual from '../../../assets/images/atlas-visual.png';
 import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
-import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
 const Onboarding = () => {
@@ -19,7 +18,6 @@ const Onboarding = () => {
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const lessonIndex = 7;
-  const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
   const { t } = useTranslation();
 
   const questions = [
