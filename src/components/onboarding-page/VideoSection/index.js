@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Video from '../Video';
 import VideoProgressBar from './VideoProgressBar';
@@ -78,17 +78,7 @@ const VideoSection = ({
           <div className="VideoSection__hero__video__wrapper">
             <div className="VideoSection__hero__bg-pattern--1"></div>
             <div className="VideoSection__hero__video">
-              <Video
-                t={t}
-                lesson={lessonLinks[index]}
-                role={role}
-                nextVideoButtonTitle={nextVideoButtonTitle}
-                nextVideoUrl={nextVideo.url}
-                nextVideoTitle={t(nextVideo.title)}
-                getStartedButtonTitle={getStartedButtonTitle}
-                getStartedUrl={getContributorPageUrl(role)}
-                onShowGetStarted={onShowGetStarted}
-              />
+              <Video lesson={lessonLinks[index]} />
             </div>
             <div className="VideoSection__hero__bg-pattern--2"></div>
           </div>

@@ -1,4 +1,5 @@
 const useLessonList = () => {
+  // TODO Set correct length of videos
   const data = [
     {
       title: 'onboarding.lessonList.lesson1.title',
@@ -55,6 +56,17 @@ const useLessonList = () => {
     7: '/start-here/video-creator',
   };
 
+  // TODO put correct video URLS
+  const lessonUrls = {
+    '/start-here/what-is-joystream': 'https://play.joystream.org/embedded/video/12592',
+    '/start-here/joystream-as-dao': 'https://play.joystream.org/embedded/video/15025',
+    '/start-here/what-is-fm-program': 'https://play.joystream.org/embedded/video/14072',
+    '/start-here/what-is-council': 'https://play.joystream.org/embedded/video/14570',
+    '/start-here/what-are-working-groups': 'https://play.joystream.org/embedded/video/13913',
+    '/start-here/what-are-bounties': 'https://play.joystream.org/embedded/video/13348',
+    '/start-here/video-creator': 'https://play.joystream.org/embedded/video/13349',
+  };
+
   const lessonTitles = {
     1: 'onboarding.lessonList.lesson1.title',
     2: 'onboarding.lessonList.lesson2.title',
@@ -78,6 +90,14 @@ const useLessonList = () => {
       return true;
     }
     return false;
+  };
+
+  const setVideoInProgress = lesson => {
+    localStorage.setItem('JoystreamVideoInProgress', lesson);
+  };
+
+  const isVideoInProgress = lesson => {
+    return lesson === localStorage.getItem('JoystreamVideoInProgress');
   };
 
   const roleIndexes = {
@@ -139,6 +159,7 @@ const useLessonList = () => {
 
   return {
     lessonLinks,
+    lessonUrls,
     roleIndexes,
     getLessonData,
     getNextVideoUrl,
@@ -147,6 +168,8 @@ const useLessonList = () => {
     getVideoIndex,
     addVideoToWatched,
     isVideoWatched,
+    setVideoInProgress,
+    isVideoInProgress,
   };
 };
 

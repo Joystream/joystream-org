@@ -12,11 +12,14 @@ import './style.scss';
 const Lesson = ({ title, length, currentIndex, index, onClose }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isWatched, setIsWatched] = useState(false);
-  const { lessonLinks, isVideoWatched } = useLessonList();
+  const [isInProgress, setIsInProgress] = useState(false);
+  const { lessonLinks, isVideoWatched, isVideoInProgress } = useLessonList();
 
   useEffect(() => {
-    setIsWatched(isVideoWatched(lessonLinks[index]));
-  }, [isVideoWatched, index, lessonLinks]);
+    const lessonTitle = lessonLinks[index];
+    setIsWatched(isVideoWatched(lessonTitle));
+    setIsInProgress(isVideoInProgress(lessonTitle));
+  }, [isVideoWatched, isVideoInProgress, index, lessonLinks]);
 
   return (
     <Link to={lessonLinks[index] ?? ''} onClick={() => (currentIndex === index ? onClose() : {})}>
@@ -33,7 +36,7 @@ const Lesson = ({ title, length, currentIndex, index, onClose }) => {
             ) : (
               <IconPlayActive className="Lesson__icon" />
             )
-          ) : currentIndex === index ? (
+          ) : isInProgress ? (
             <IconPlaying className="Lesson__icon" />
           ) : isWatched ? (
             <IconPlayed className="Lesson__icon" />
