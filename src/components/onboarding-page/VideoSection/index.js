@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import Video from '../Video';
 import VideoProgressBar from './VideoProgressBar';
@@ -14,12 +14,10 @@ const VideoSection = ({
   title,
   subtitle,
   index,
-  lesson,
-  nextVideoUrl,
-  nextVideoTitle,
-  showLessonList,
   onShowGetStarted,
   shouldReloadRole,
+  onRoleReloaded,
+  showLessonList,
 }) => {
   const nextVideoButtonTitle = t('onboarding.footer.button.nextVideo.text');
   const getStartedButtonTitle = t('onboarding.button.getStarted.text');
@@ -28,20 +26,39 @@ const VideoSection = ({
   const { getTotalVideos, getVideoIndex } = useLessonList();
   const [totalVideos, setTotalVideos] = useState(7);
   const [videoIndex, setVideoIndex] = useState(index);
-
+  const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
   const { getContributorPageUrl } = useContributors();
 
+  const [nextVideo, setNextVideo] = useState({
+    url: '',
+    title: '',
+  });
+
   useEffect(() => {
-    const role = localStorage.getItem('JoystreamRole');
-    setRole(role);
+    setRole(localStorage.getItem('JoystreamRole'));
+    onRoleReloaded();
+  }, [shouldReloadRole, onRoleReloaded]);
+
+  useEffect(() => {
     if (role) {
-      setTotalVideos(getTotalVideos());
-      setVideoIndex(getVideoIndex(index));
+      setTotalVideos(getTotalVideos(role));
+      setVideoIndex(getVideoIndex(index, role));
     } else {
       setVideoIndex(index);
       setTotalVideos(7);
     }
-  }, [shouldReloadRole, getTotalVideos, getVideoIndex, index]);
+  }, [role, getTotalVideos, getVideoIndex, index]);
+
+  useEffect(() => {
+    const title = getNextVideoTitle(index, role);
+    const url = getNextVideoUrl(index, role);
+    if (nextVideo.title !== title || nextVideo.url !== url) {
+      setNextVideo({
+        title,
+        url,
+      });
+    }
+  }, [role, index, nextVideo.title, nextVideo.url, getNextVideoTitle, getNextVideoUrl]);
 
   return (
     <div className="VideoSection__wrapper">
@@ -63,11 +80,11 @@ const VideoSection = ({
             <div className="VideoSection__hero__video">
               <Video
                 t={t}
-                lesson={lesson}
+                lesson={lessonLinks[index]}
                 role={role}
-                nextVideoUrl={nextVideoUrl}
                 nextVideoButtonTitle={nextVideoButtonTitle}
-                nextVideoTitle={nextVideoTitle}
+                nextVideoUrl={nextVideo.url}
+                nextVideoTitle={t(nextVideo.title)}
                 getStartedButtonTitle={getStartedButtonTitle}
                 getStartedUrl={getContributorPageUrl(role)}
                 onShowGetStarted={onShowGetStarted}
@@ -98,8 +115,8 @@ const VideoSection = ({
             >
               <LessonListMobile className="VideoSection__hero__button-list" />
             </div>
-            {nextVideoUrl ? (
-              <Link key={nextVideoButtonTitle} to={nextVideoUrl}>
+            {nextVideo.url ? (
+              <Link key={nextVideoButtonTitle} to={nextVideo.url}>
                 <div className="VideoSection__hero__button">
                   <p className="VideoSection__hero__button-text">{nextVideoButtonTitle}</p>
                   <Arrow className="VideoSection__hero__button-arrow" />
@@ -109,7 +126,7 @@ const VideoSection = ({
               <Link key={getStartedButtonTitle} to={getContributorPageUrl(role)}>
                 <div className="VideoSection__hero__button" role="presentation" onClick={onShowGetStarted}>
                   <p className="VideoSection__hero__button-text">
-                    {nextVideoUrl ? nextVideoButtonTitle : getStartedButtonTitle}
+                    {nextVideo.url ? nextVideoButtonTitle : getStartedButtonTitle}
                   </p>
                   <Arrow className="VideoSection__hero__button-arrow" />
                 </div>

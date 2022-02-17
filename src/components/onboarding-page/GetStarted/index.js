@@ -149,12 +149,12 @@ const GetStarted = ({ t, onGetStartedClose, onRoleChange, hideNotSureOption, sho
 
   return (
     <div className="GetStarted__wrapper">
+      <div className="GetStarted__button__wrapper">
+        <button className="GetStarted__button" onClick={onGetStartedClose}>
+          <NavClose className="GetStarted__button__icon" />
+        </button>
+      </div>
       <div className="GetStarted__content">
-        <div className="GetStarted__button__wrapper">
-          <button className="GetStarted__button" onClick={onGetStartedClose}>
-            <NavClose className="GetStarted__button__icon" />
-          </button>
-        </div>
         <h3 className="GetStarted__title">{t('onboarding.getStarted.title')}</h3>
         <div className="GetStarted__lessons">
           {data &&

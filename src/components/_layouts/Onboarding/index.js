@@ -8,6 +8,7 @@ import CookiesNotice from '../../CookiesNotice';
 import { ScrollProvider } from '../../_enhancers/ScrollContext';
 import { useState } from 'react';
 import GetStarted from '../../onboarding-page/GetStarted';
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 
 const propTypes = {
   children: node,
@@ -20,8 +21,6 @@ const defaultTypes = {
 const OnboardingLayout = ({
   children,
   t,
-  nextVideoText,
-  nextVideoUrl,
   showLessonList,
   lessonIndex,
   shouldShowGetStarted,
@@ -32,6 +31,15 @@ const OnboardingLayout = ({
   const [showGetStarted, setShowGetStarted] = useState(false);
   const [hideNotSureOption, setHideNotSureOption] = useState(false);
   const [role, setRole] = useState();
+  const { getNextVideoUrl, getNextVideoTitle } = useLessonList();
+  const reloadNextVideo = newRole => {
+    return {
+      title: getNextVideoTitle(lessonIndex, newRole),
+      url: getNextVideoUrl(lessonIndex, newRole),
+    };
+  };
+
+  const [nextVideo, setNextVideo] = useState(reloadNextVideo());
 
   const handleShowGetStarted = () => {
     setShowGetStarted(true);
@@ -51,6 +59,7 @@ const OnboardingLayout = ({
   const updateRole = newRole => {
     setRole(newRole);
     localStorage.setItem('JoystreamRole', newRole);
+    setNextVideo(reloadNextVideo(newRole));
     onRoleUpdated();
   };
 
@@ -74,7 +83,7 @@ const OnboardingLayout = ({
         )}
         {children}
         <CookiesNotice t={t} />
-        <FooterOnboarding t={t} nextVideoText={nextVideoText} nextVideoUrl={nextVideoUrl} />
+        <FooterOnboarding t={t} nextVideoText={t(nextVideo.title)} nextVideoUrl={nextVideo.url} />
       </div>
     </ScrollProvider>
   );

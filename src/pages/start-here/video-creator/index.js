@@ -73,8 +73,6 @@ const Onboarding = () => {
   return (
     <OnboardingLayout
       t={t}
-      nextVideoText={t(getNextVideoTitle(lessonIndex))}
-      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
       lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
@@ -88,10 +86,8 @@ const Onboarding = () => {
           title={t('onboarding.page7.title')}
           subtitle={t('onboarding.page7.subtitle')}
           index={lessonIndex}
-          lesson={lessonLinks[lessonIndex]}
-          nextVideoUrl={getNextVideoUrl(lessonIndex)}
-          nextVideoTitle={getNextVideoTitle(lessonIndex)}
           showLessonList={() => setShouldShowLessonList(true)}
+          onRoleReloaded={() => setShouldReloadRole(false)}
           shouldReloadRole={shouldReloadRole}
           onShowGetStarted={handleGetStarted}
         ></VideoSection>

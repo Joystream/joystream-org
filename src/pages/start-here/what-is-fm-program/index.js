@@ -14,7 +14,6 @@ import { ReactComponent as Council } from '../../../assets/svg/council.svg';
 import { ReactComponent as WorkingGroup } from '../../../assets/svg/working-group.svg';
 import { ReactComponent as Bounty } from '../../../assets/svg/bounty.svg';
 import { ReactComponent as MakeBounty } from '../../../assets/svg/create-bounty.svg';
-import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
 const Onboarding = () => {
@@ -23,7 +22,6 @@ const Onboarding = () => {
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const lessonIndex = 3;
-  const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
 
   const questions = [
     {
@@ -68,8 +66,6 @@ const Onboarding = () => {
   return (
     <OnboardingLayout
       t={t}
-      nextVideoText={t(getNextVideoTitle(lessonIndex))}
-      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
       lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
@@ -82,11 +78,9 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page3.title')}
           subtitle={t('onboarding.page3.subtitle')}
-          nextVideoUrl={getNextVideoUrl(lessonIndex)}
-          nextVideoTitle={t(getNextVideoTitle(lessonIndex))}
           index={lessonIndex}
-          lesson={lessonLinks[lessonIndex]}
           shouldReloadRole={shouldReloadRole}
+          onRoleReloaded={() => setShouldReloadRole(false)}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>

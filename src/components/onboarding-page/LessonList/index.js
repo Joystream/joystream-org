@@ -130,7 +130,7 @@ const LessonList = ({ t, lessonIndex, onLessonListClose, currentRole }) => {
           </div>
         )}
         <div className="LessonList__lessons">
-          {getLessonData(useRolePath).map((item, key) => (
+          {getLessonData(useRolePath, role).map((item, key) => (
             <Lesson
               onClose={onLessonListClose}
               key={key}

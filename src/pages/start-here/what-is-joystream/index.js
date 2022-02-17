@@ -1,22 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import FAQ from '../../../components/onboarding-page/FAQ';
-import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
-import { useState } from 'react';
 
 const Onboarding = () => {
   const { t } = useTranslation();
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
-  const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
   const lessonIndex = 1;
-
-  const nextVideoUrl = '/start-here/joystream-as-dao';
 
   const questions = [
     {
@@ -36,8 +31,6 @@ const Onboarding = () => {
   return (
     <OnboardingLayout
       t={t}
-      nextVideoText={t(getNextVideoTitle(lessonIndex))}
-      nextVideoUrl={nextVideoUrl}
       showLessonList={shouldShowLessonList}
       lessonIndex={lessonIndex}
       onGetStartedClose={() => {}}
@@ -49,11 +42,9 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page1.title')}
           subtitle={t('onboarding.page1.subtitle')}
-          nextVideoUrl={getNextVideoUrl(lessonIndex)}
-          nextVideoTitle={t(getNextVideoTitle(lessonIndex))}
-          lesson={lessonLinks[lessonIndex]}
           index={lessonIndex}
           shouldReloadRole={shouldReloadRole}
+          onRoleReloaded={() => setShouldReloadRole(false)}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>

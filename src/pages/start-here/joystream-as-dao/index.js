@@ -9,7 +9,6 @@ import VideoSection from '../../../components/onboarding-page/VideoSection';
 import FAQ from '../../../components/onboarding-page/FAQ';
 import useAtlasData from '../../../utils/pages/onboarding/useAtlasData';
 import usePioneerData from '../../../utils/pages/onboarding/usePioneerData';
-import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import Statistics from '../../../components/onboarding-page/Statistics';
 import Structure from '../../../components/onboarding-page/Structure';
 import './style.scss';
@@ -20,8 +19,6 @@ const Onboarding = () => {
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const lessonIndex = 2;
-  const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
-
   const { videos, channels } = useAtlasData();
   const {
     proposals,
@@ -179,11 +176,8 @@ const Onboarding = () => {
   return (
     <OnboardingLayout
       t={t}
-      nextVideoText={t(getNextVideoTitle(lessonIndex))}
-      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
       lessonIndex={lessonIndex}
-      lesson={lessonLinks[lessonIndex]}
       shouldShowGetStarted={shouldShowGetStarted}
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
@@ -194,12 +188,10 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page2.title')}
           subtitle={t('onboarding.page2.subtitle')}
-          nextVideoUrl={getNextVideoUrl(lessonIndex)}
-          nextVideoTitle={getNextVideoTitle(lessonIndex)}
           index={lessonIndex}
-          lesson={lessonLinks[lessonIndex]}
-          showLessonList={() => setShouldShowLessonList(true)}
           shouldReloadRole={shouldReloadRole}
+          onRoleReloaded={() => setShouldReloadRole(false)}
+          showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>
       <InfoSection title={t('onboarding.page2.infoSection.title')} text={t('onboarding.page2.infoSection.text')} />

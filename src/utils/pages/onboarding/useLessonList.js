@@ -1,12 +1,4 @@
-import { useState, useEffect } from 'react';
-
 const useLessonList = () => {
-  const [role, setRole] = useState();
-
-  useEffect(() => {
-    setRole(localStorage.getItem('JoystreamRole'));
-  }, []);
-
   const data = [
     {
       title: 'onboarding.lessonList.lesson1.title',
@@ -45,7 +37,7 @@ const useLessonList = () => {
     },
   ];
 
-  const getLessonData = useRolePath => {
+  const getLessonData = (useRolePath, role) => {
     if (role && useRolePath) {
       const rolePathOrder = roleIndexes[role.toLowerCase().replaceAll(' ', '')];
       return rolePathOrder.map(index => data[index - 1]);
@@ -97,14 +89,14 @@ const useLessonList = () => {
     videocreator: [1, 3, 7, 2, 5],
   };
 
-  const getTotalVideos = () => {
+  const getTotalVideos = role => {
     if (role) {
       return roleIndexes[role.replaceAll(' ', '').toLowerCase()].length;
     }
     return lessonLinks.length;
   };
 
-  const getVideoIndex = index => {
+  const getVideoIndex = (index, role) => {
     if (role) {
       const indexes = roleIndexes[role.replaceAll(' ', '').toLowerCase()];
       for (let i = 0; i < indexes.length; i++) {
@@ -117,7 +109,7 @@ const useLessonList = () => {
     return index;
   };
 
-  const getNextVideoUrl = currentIndex => {
+  const getNextVideoUrl = (currentIndex, role) => {
     if (role) {
       const suffix = role.replaceAll(' ', '').toLowerCase();
       const indexes = roleIndexes[suffix];
@@ -131,7 +123,7 @@ const useLessonList = () => {
     return lessonLinks[currentIndex + 1];
   };
 
-  const getNextVideoTitle = currentIndex => {
+  const getNextVideoTitle = (currentIndex, role) => {
     if (role) {
       const suffix = role.replaceAll(' ', '').toLowerCase();
       const indexes = roleIndexes[suffix];

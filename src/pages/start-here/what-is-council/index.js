@@ -16,7 +16,6 @@ import { ReactComponent as ProposalsVoting } from '../../../assets/svg/proposalV
 import { ReactComponent as ManageWG } from '../../../assets/svg/manageWG.svg';
 import FAQ from '../../../components/onboarding-page/FAQ';
 import useCouncilData from '../../../utils/pages/onboarding/useCouncilData';
-import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
 const Onboarding = () => {
@@ -29,7 +28,6 @@ const Onboarding = () => {
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const lessonIndex = 4;
-  const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
 
   useEffect(() => {
     if (councilSize) {
@@ -120,8 +118,6 @@ const Onboarding = () => {
   return (
     <OnboardingLayout
       t={t}
-      nextVideoText={t(getNextVideoTitle(lessonIndex))}
-      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
       lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
@@ -134,11 +130,9 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page4.title')}
           subtitle={t('onboarding.page4.subtitle')}
-          nextVideoUrl={getNextVideoUrl(lessonIndex)}
-          nextVideoTitle={t(getNextVideoTitle(lessonIndex))}
           index={lessonIndex}
-          lesson={lessonLinks[lessonIndex]}
           shouldReloadRole={shouldReloadRole}
+          onRoleReloaded={() => setShouldReloadRole(false)}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>

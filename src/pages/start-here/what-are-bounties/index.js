@@ -7,7 +7,6 @@ import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import Bounties from '../../../components/onboarding-page/Bounties';
 import FAQ from '../../../components/onboarding-page/FAQ';
-import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
 const Onboarding = () => {
@@ -26,15 +25,12 @@ const Onboarding = () => {
     },
   ];
   const lessonIndex = 6;
-  const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
 
   const handleGetStarted = () => setShouldShowGetStarted(true);
 
   return (
     <OnboardingLayout
       t={t}
-      nextVideoText={t(getNextVideoTitle(lessonIndex))}
-      nextVideoUrl={getNextVideoUrl(lessonIndex)}
       showLessonList={shouldShowLessonList}
       lessonIndex={lessonIndex}
       shouldShowGetStarted={shouldShowGetStarted}
@@ -47,11 +43,9 @@ const Onboarding = () => {
           t={t}
           title={t('onboarding.page6.title')}
           subtitle={t('onboarding.page6.subtitle')}
-          nextVideoUrl={getNextVideoUrl(lessonIndex)}
-          nextVideoTitle={getNextVideoTitle(lessonIndex)}
-          shouldReloadRole={shouldReloadRole}
           index={lessonIndex}
-          lesson={lessonLinks[lessonIndex]}
+          shouldReloadRole={shouldReloadRole}
+          onRoleReloaded={() => setShouldReloadRole(false)}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
       </div>
