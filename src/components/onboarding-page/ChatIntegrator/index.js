@@ -9,7 +9,12 @@ const ChatIntegrator = ({ t }) => {
 
   useEffect(() => {
     setWidget(
-      <WidgetBot className="ChatIntegrator__discord-widget" server="882629308496105572" channel="882629308496105576" />
+      <WidgetBot
+        className="ChatIntegrator__discord-widget"
+        server="811216481340751934"
+        channel="938083062040911953"
+        shard="https://emerald.widgetbot.io"
+      />
     );
   }, []);
 

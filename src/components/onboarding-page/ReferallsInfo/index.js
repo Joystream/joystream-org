@@ -18,7 +18,6 @@ const ReferallsInfo = ({ t }) => {
           data {
             IntegratorId
             PersonId
-            DiscordHandle
           }
           recordId
         }
