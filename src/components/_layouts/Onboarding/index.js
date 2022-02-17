@@ -29,6 +29,7 @@ const OnboardingLayout = ({
   onRoleUpdated,
 }) => {
   const [showGetStarted, setShowGetStarted] = useState(false);
+  const [shouldNavigateToRolePage, setShouldNavigateToRolePage] = useState(false);
   const [hideNotSureOption, setHideNotSureOption] = useState(false);
   const [role, setRole] = useState();
   const { getNextVideoUrl, getNextVideoTitle } = useLessonList();
@@ -48,9 +49,12 @@ const OnboardingLayout = ({
   useEffect(() => {
     if (shouldShowGetStarted) {
       setShowGetStarted(true);
+      if (!nextVideo.url) {
+        setShouldNavigateToRolePage(true);
+      }
       setHideNotSureOption(true);
     }
-  }, [shouldShowGetStarted]);
+  }, [shouldShowGetStarted, nextVideo.url]);
 
   useEffect(() => {
     setRole(localStorage.getItem('JoystreamRole'));
@@ -73,6 +77,7 @@ const OnboardingLayout = ({
         {showGetStarted && (
           <GetStarted
             t={t}
+            shouldSwitchRolePage={shouldNavigateToRolePage}
             hideNotSureOption={hideNotSureOption}
             onGetStartedClose={() => {
               onGetStartedClose();
