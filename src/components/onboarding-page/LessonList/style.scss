@@ -140,7 +140,7 @@
     &__path-toggle {
       width: calc(90vw);
       height: 42px;
-      margin: 32px auto;
+      margin: 0 auto 32px;
 
       &__item__text {
         font-size: 14px;
@@ -151,7 +151,8 @@
     &__title {
       width: calc(90vw);
       padding-top: 20px;
-      padding-bottom: 0;
+      padding-bottom: 20px;
+      padding-left: 20px;
       text-align: left;
     }
 
