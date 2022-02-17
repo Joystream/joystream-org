@@ -123,6 +123,7 @@
 
     &:hover {
       background: $c_white;
+      border: 2px solid $c_blue-ribbon;
       box-shadow: 10px 10px 0 -2px $c_blue-ribbon;
     }
 
