@@ -27,28 +27,35 @@
     text-align: center;
   }
 
-  &__link {
-    display: inline-flex;
+  &__button {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    height: 60px;
+    margin: 0;
+    margin-top: 20px;
+    padding: 18px 20px;
     cursor: pointer;
+    background: $c_blue-ribbon;
 
     &:hover {
-      text-decoration: underline;
+      background-color: $c_han_purple;
     }
   }
 
-  &__link-text {
+  &__button-text {
     font-family: $font-primary;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 24px;
     letter-spacing: 0;
-    color: $c_blue-ribbon;
+    color: $c_white;
   }
 
-  &__link-arrow {
-    margin-left: 13px;
-    color: $c_blue-ribbon;
-    transform: rotate(-90deg) scale(.85);
+  &__button-arrow {
+    margin-left: 20px;
+    color: $c_white;
+    transform: rotate(-90deg);
   }
 
   &__discord-widget {
@@ -113,6 +120,10 @@
     }
 
     &__content {
+      width: calc(90vw);
+    }
+
+    &__button {
       width: calc(90vw);
     }
   }

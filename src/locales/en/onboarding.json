@@ -32,7 +32,7 @@
           "subtitle": {
             "text1": "Let us know in the widget below that you would like to contribute. We would appreciate it, if you could indicate your strengths in the message, for example:",
             "text2": "If you prefer to use the Discord app directly, click the link below to open the app",
-            "discordLink": "Open in Discord app",
+            "discordLink": "Open Discord",
             "example": "\"I have experience in front end development. How can I get involved?\"",
             "exampleCaption": "Example message: “I have experience in front end development. How can I get involved?”"
           },
