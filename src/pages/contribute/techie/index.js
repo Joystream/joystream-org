@@ -62,8 +62,8 @@ const Onboarding = () => {
         renderChatWithIntegrator={true}
       />
       <ValidatorsInfo t={t} />
-      <ChatIntegrator t={t} />
       <div ref={chatRef}></div>
+      <ChatIntegrator t={t} />
     </ContributeLayout>
   );
 };

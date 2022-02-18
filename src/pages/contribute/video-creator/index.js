@@ -51,8 +51,8 @@ const Onboarding = () => {
       {atlasInfoData.map((item, index) => {
         return <AtlasInfo t={t} key={index} {...item} onButtonClick={handleButtonAction} />;
       })}
-      <ChatIntegrator t={t} />
       <div ref={chatRef}></div>
+      <ChatIntegrator t={t} />
     </ContributeLayout>
   );
 };
