@@ -5,6 +5,7 @@ import { ReactComponent as OnlineIcon } from '../../../assets/svg/integrators-on
 import animationData1 from './animation-1';
 import animationData2 from './animation-2';
 import animationData3 from './animation-3';
+import MediaQuery from 'react-responsive';
 import { Waypoint } from 'react-waypoint';
 
 import './style.scss';
@@ -86,6 +87,9 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
               {section2Title.split('<br/>').map((line, index) => {
                 return <span key={index}>{line}</span>;
               })}
+            </h2>
+            <h2 className="Integrators__title--mobile">{section2Title.split('<br/>').join(' ')}</h2>
+            <MediaQuery minDeviceWidth={1224}>
               <Waypoint
                 className="IntegratorsclassName"
                 bottomOffset={450}
@@ -96,9 +100,8 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
                   setShouldAnimateSecond(true);
                 }}
               />
-            </h2>
-            <h2 className="Integrators__title--mobile">
-              {section2Title.split('<br/>').join(' ')}
+            </MediaQuery>
+            <MediaQuery maxDeviceWidth={1224}>
               <Waypoint
                 className="IntegratorsclassName"
                 bottomOffset={450}
@@ -109,7 +112,7 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
                   setShouldAnimateSecond(true);
                 }}
               />
-            </h2>
+            </MediaQuery>
           </div>
           <div className="Integrators__text">
             <div className="Integrators__online-text">
@@ -120,6 +123,9 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
               {section3Title.split('<br/>').map((line, index) => {
                 return <span key={index}>{line}</span>;
               })}
+            </h2>
+            <h2 className="Integrators__title--mobile">{section3Title.split('<br/>').join(' ')}</h2>
+            <MediaQuery minDeviceWidth={1224}>
               <Waypoint
                 topOffset={0}
                 bottomOffset={450}
@@ -129,20 +135,18 @@ const Integrators = ({ t, onChatWithIntegrator }) => {
                   setShouldAnimateThird(true);
                 }}
               />
-            </h2>
-            <h2 className="Integrators__title--mobile">
-              {section3Title.split('<br/>').join(' ')}
+            </MediaQuery>
+            <MediaQuery maxDeviceWidth={1224}>
               <Waypoint
-                topOffset={750}
-                bottomOffset={850}
+                topOffset={550}
+                bottomOffset={0}
                 onEnter={() => {
                   setShouldAnimateFirst(false);
                   setShouldAnimateSecond(false);
                   setShouldAnimateThird(true);
                 }}
               />
-            </h2>
-
+            </MediaQuery>
             <div className="Integrators__button" role="presentation" onClick={onChatWithIntegrator}>
               <p className="Integrators__button-text">{t('onboarding.integrators.button')}</p>
               <Arrow className="Integrators__button-arrow" />

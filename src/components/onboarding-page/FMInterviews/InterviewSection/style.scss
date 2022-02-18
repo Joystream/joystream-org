@@ -68,52 +68,6 @@
   @media #{$screen-max-md} {
     &__hero {
       width: calc(90vw);
-      height: fit-content;
-      padding: 32px 20px 0 20px;
-
-      &__title {
-        width: calc(90vw);
-        font-size: 32px;
-        line-height: 40px;
-
-        br {
-          display: none;
-        }
-      }
-
-      &__subtitle {
-        width: calc(85vw);
-        padding-bottom: 20px;
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__hero {
-      width: calc(90vw);
-      height: fit-content;
-      padding: 32px 20px 0 20px;
-
-      &__title {
-        width: calc(90vw);
-        font-size: 32px;
-        line-height: 40px;
-
-        br {
-          display: none;
-        }
-      }
-
-      &__subtitle {
-        width: calc(85vw);
-        padding-bottom: 20px;
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__hero {
-      width: calc(90vw);
       height: 100%;
       padding: 32px 20px 0 20px;
 

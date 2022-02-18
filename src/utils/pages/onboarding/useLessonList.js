@@ -33,7 +33,7 @@ const useLessonList = () => {
     },
     {
       title: 'onboarding.lessonList.lesson7.title',
-      length: '06:25',
+      length: '02:54',
       index: 7,
     },
   ];
@@ -64,7 +64,7 @@ const useLessonList = () => {
     '/start-here/what-is-council': 'https://play.joystream.org/embedded/video/15157',
     '/start-here/what-are-working-groups': 'https://play.joystream.org/embedded/video/15164',
     '/start-here/what-are-bounties': 'https://play.joystream.org/embedded/video/15165',
-    '/start-here/video-creator': 'https://play.joystream.org/embedded/video/15165',
+    '/start-here/video-creator': 'https://play.joystream.org/embedded/video/15201',
   };
 
   const lessonTitles = {
@@ -106,7 +106,7 @@ const useLessonList = () => {
     marketer: [1, 2, 3, 4, 5],
     curator: [1, 2, 3, 4, 5],
     organiser: [1, 2, 3, 6, 4, 5],
-    videocreator: [1, 3, 7, 2, 5],
+    videocreator: [1, 3, 7, 2, 6],
   };
 
   const getTotalVideos = role => {
