@@ -16,6 +16,10 @@
       "lessonList": {
         "text": "Lesson List",
         "altText": "Show Lesson List"
+      },
+      "nextVideo": {
+        "text": "Next Video",
+        "altText": "Go to the next video"
       }
     },
     "contributorRoles": {
@@ -318,7 +322,8 @@
         "text": "The referral program gives you an incentive to tell people that you think would make a good fit for the Founding Members program about it. If they become a founding member, and put you down as the person who referred them, you will get a nice reward for doing so."
       },
       "referallsInfo" : {
-        "reward": "Reward for Referral",
+        "reward": "$JOY Reward for Referral",
+        "refereeReward": "$JOY Reward for Referee",
         "payout": "Referrals Payout"
       },
       "tasksInfo" : {
