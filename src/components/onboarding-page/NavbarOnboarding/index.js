@@ -127,6 +127,12 @@ const Navbar = ({
           <div className="Navbar__button-lang" style={{ display: 'none' }}>
             <UKCircle />
           </div>
+          {showLessonList && (
+            <div className="Navbar__button Navbar__button-role" role="presentation" onClick={onShowLessonList}>
+              <p className="Navbar__button-text">{t('onboarding.page1.videoSection.button.lessonList.text')}</p>
+              <Arrow className="Navbar__button-arrow" />
+            </div>
+          )}
           <div className="Navbar__button Navbar__button-role" role="presentation" onClick={onShowGetStarted}>
             <RoleIcon className="Navbar__button-role-icon" />
             <p className="Navbar__button-text">{role ? role : t('onboarding.button.chooseRole.text')}</p>
@@ -145,12 +151,6 @@ const Navbar = ({
                 <Arrow className="Navbar__button-arrow" />
               </div>
             ))}
-          {showLessonList && (
-            <div className="Navbar__button Navbar__button-role" role="presentation" onClick={onShowLessonList}>
-              <p className="Navbar__button-text">{t('onboarding.page1.videoSection.button.lessonList.text')}</p>
-              <Arrow className="Navbar__button-arrow" />
-            </div>
-          )}
           {showChatIntegrator && (
             <div
               className="Navbar__button"
