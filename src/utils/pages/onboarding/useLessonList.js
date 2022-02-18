@@ -3,32 +3,32 @@ const useLessonList = () => {
   const data = [
     {
       title: 'onboarding.lessonList.lesson1.title',
-      length: '06:25',
+      length: '03:04',
       index: 1,
     },
     {
       title: 'onboarding.lessonList.lesson2.title',
-      length: '06:25',
+      length: '06:09',
       index: 2,
     },
     {
       title: 'onboarding.lessonList.lesson3.title',
-      length: '06:25',
+      length: '06:16',
       index: 3,
     },
     {
       title: 'onboarding.lessonList.lesson4.title',
-      length: '06:25',
+      length: '03:14',
       index: 4,
     },
     {
       title: 'onboarding.lessonList.lesson5.title',
-      length: '06:25',
+      length: '02:46',
       index: 5,
     },
     {
       title: 'onboarding.lessonList.lesson6.title',
-      length: '06:25',
+      length: '01:31',
       index: 6,
     },
     {
@@ -58,13 +58,13 @@ const useLessonList = () => {
 
   // TODO put correct video URLS
   const lessonUrls = {
-    '/start-here/what-is-joystream': 'https://play.joystream.org/embedded/video/12592',
-    '/start-here/joystream-as-dao': 'https://play.joystream.org/embedded/video/15025',
-    '/start-here/what-is-fm-program': 'https://play.joystream.org/embedded/video/14072',
-    '/start-here/what-is-council': 'https://play.joystream.org/embedded/video/14570',
-    '/start-here/what-are-working-groups': 'https://play.joystream.org/embedded/video/13913',
-    '/start-here/what-are-bounties': 'https://play.joystream.org/embedded/video/13348',
-    '/start-here/video-creator': 'https://play.joystream.org/embedded/video/13349',
+    '/start-here/what-is-joystream': 'https://play.joystream.org/embedded/video/15153',
+    '/start-here/joystream-as-dao': 'https://play.joystream.org/embedded/video/15154',
+    '/start-here/what-is-fm-program': 'https://play.joystream.org/embedded/video/15156',
+    '/start-here/what-is-council': 'https://play.joystream.org/embedded/video/15157',
+    '/start-here/what-are-working-groups': 'https://play.joystream.org/embedded/video/15164',
+    '/start-here/what-are-bounties': 'https://play.joystream.org/embedded/video/15165',
+    '/start-here/video-creator': 'https://play.joystream.org/embedded/video/15165',
   };
 
   const lessonTitles = {
