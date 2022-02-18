@@ -37,7 +37,7 @@ const ChatIntegrator = ({ t }) => {
           className="ChatIntegrator__link-wrapper"
           target="_blank"
           rel="noreferrer"
-          href="https://discord.gg/DE9UN3YpRP"
+          href="https://discord.gg/nmWPBJNT5x"
         >
           <div className="ChatIntegrator__link">
             <p className="ChatIntegrator__link-text">
