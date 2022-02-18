@@ -31,6 +31,10 @@
     display: inline-flex;
     align-items: center;
     cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__link-text {

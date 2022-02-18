@@ -152,7 +152,14 @@ const Navbar = ({
             </div>
           )}
           {showChatIntegrator && (
-            <div className="Navbar__button" role="presentation" onClick={onShowChatIntegrator}>
+            <div
+              className="Navbar__button"
+              role="presentation"
+              onClick={() => {
+                setIsOpen(false);
+                onShowChatIntegrator();
+              }}
+            >
               <p className="Navbar__button-text">{t('onboarding.button.chatIntegrator.text')}</p>
               <Arrow className="Navbar__button-arrow" />
             </div>
