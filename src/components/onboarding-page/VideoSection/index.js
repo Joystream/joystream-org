@@ -28,11 +28,16 @@ const VideoSection = ({
   const [videoIndex, setVideoIndex] = useState(index);
   const { lessonLinks, getNextVideoUrl, getNextVideoTitle } = useLessonList();
   const { getContributorPageUrl } = useContributors();
+  const [contributorPageUrl, setContributorPageUrl] = useState();
 
   const [nextVideo, setNextVideo] = useState({
     url: '',
     title: '',
   });
+
+  useEffect(() => {
+    setContributorPageUrl(getContributorPageUrl(role));
+  }, [getContributorPageUrl, role]);
 
   useEffect(() => {
     setRole(localStorage.getItem('JoystreamRole'));
@@ -105,25 +110,26 @@ const VideoSection = ({
             >
               <LessonListMobile className="VideoSection__hero__button-list" />
             </div>
-            {nextVideo.url ? (
-              <Link key={nextVideoButtonTitle} to={nextVideo.url}>
+
+            {role && nextVideo && nextVideo.url ? (
+              <Link to={nextVideo.url}>
                 <div className="VideoSection__hero__button">
                   <p className="VideoSection__hero__button-text">{nextVideoButtonTitle}</p>
                   <Arrow className="VideoSection__hero__button-arrow" />
                 </div>
               </Link>
-            ) : role ? (
-              <Link key={getStartedButtonTitle} to={getContributorPageUrl(role)}>
-                <div className="VideoSection__hero__button" role="presentation" onClick={onShowGetStarted}>
-                  <p className="VideoSection__hero__button-text">
-                    {nextVideo.url ? nextVideoButtonTitle : getStartedButtonTitle}
-                  </p>
+            ) : role && contributorPageUrl ? (
+              <Link to={contributorPageUrl}>
+                <div className="VideoSection__hero__button" role="presentation">
+                  <p className="VideoSection__hero__button-text">{getStartedButtonTitle}</p>
                   <Arrow className="VideoSection__hero__button-arrow" />
                 </div>
               </Link>
             ) : (
               <div className="VideoSection__hero__button" role="presentation" onClick={onShowGetStarted}>
-                <p className="VideoSection__hero__button-text">{getStartedButtonTitle}</p>
+                <p className="VideoSection__hero__button-text">
+                  {nextVideo.url ? nextVideoButtonTitle : getStartedButtonTitle}
+                </p>
                 <Arrow className="VideoSection__hero__button-arrow" />
               </div>
             )}

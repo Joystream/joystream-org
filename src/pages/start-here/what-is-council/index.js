@@ -5,7 +5,6 @@ import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import TasksInfo from '../../../components/onboarding-page/TasksInfo';
 import Statistics from '../../../components/onboarding-page/Statistics';
-import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import CouncilResponsibilities from '../../../components/onboarding-page/CouncilResponsibilities';
 import { ReactComponent as Knowledge } from '../../../assets/svg/knowledge.svg';
@@ -113,8 +112,6 @@ const Onboarding = () => {
     },
   ];
 
-  const handleGetStarted = () => setShouldShowGetStarted(true);
-
   return (
     <OnboardingLayout
       t={t}
@@ -124,6 +121,7 @@ const Onboarding = () => {
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
       onRoleUpdated={() => setShouldReloadRole(true)}
+      onIsLastPage={() => {}}
     >
       <div className="Onboarding__wrapper">
         <VideoSection
@@ -132,6 +130,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page4.subtitle')}
           index={lessonIndex}
           shouldReloadRole={shouldReloadRole}
+          onShowGetStarted={() => setShouldShowGetStarted(true)}
           onRoleReloaded={() => setShouldReloadRole(false)}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
@@ -146,12 +145,6 @@ const Onboarding = () => {
       <InfoSection title={t('onboarding.page4.infoSection2.title')} text={t('onboarding.page4.infoSection2.text')} />
       <TasksInfo t={t} data={tasksData} />
       <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
-      <BuilderSection
-        shouldReloadRole={shouldReloadRole}
-        t={t}
-        onShowGetStarted={handleGetStarted}
-        onRoleReloaded={() => setShouldReloadRole(false)}
-      />
     </OnboardingLayout>
   );
 };

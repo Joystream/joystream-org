@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
@@ -11,6 +11,7 @@ import SocialTokens from '../../../assets/svg/social-tokens.svg';
 import NFTVisual from '../../../assets/images/nft-visual.png';
 import AtlasVisual from '../../../assets/images/atlas-visual.png';
 import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import './style.scss';
 
 const Onboarding = () => {
@@ -18,7 +19,20 @@ const Onboarding = () => {
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const lessonIndex = 7;
+  const [isLastPage, setIsLastPage] = useState(false);
   const { t } = useTranslation();
+  const { getNextVideoUrl } = useLessonList();
+  const [role, setRole] = useState();
+
+  useEffect(() => {
+    if (!getNextVideoUrl(lessonIndex, role)) {
+      setIsLastPage(true);
+    }
+  }, [role, lessonIndex, getNextVideoUrl]);
+
+  useEffect(() => {
+    setRole(localStorage.getItem('JoystreamRole'));
+  }, []);
 
   const questions = [
     {
@@ -77,6 +91,7 @@ const Onboarding = () => {
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
       onRoleUpdated={() => setShouldReloadRole(true)}
+      isLastPage={isLastPage}
     >
       <div className="Onboarding__wrapper">
         <VideoSection
@@ -95,12 +110,14 @@ const Onboarding = () => {
         return <AtlasInfo t={t} key={index} {...item} />;
       })}
       <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
-      <BuilderSection
-        shouldReloadRole={shouldReloadRole}
-        t={t}
-        onShowGetStarted={handleGetStarted}
-        onRoleReloaded={() => setShouldReloadRole(false)}
-      />
+      {isLastPage && (
+        <BuilderSection
+          shouldReloadRole={shouldReloadRole}
+          t={t}
+          onShowGetStarted={handleGetStarted}
+          onRoleReloaded={() => setShouldReloadRole(false)}
+        />
+      )}
     </OnboardingLayout>
   );
 };

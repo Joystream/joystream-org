@@ -6,8 +6,9 @@ import Link from '../../../Link';
 import Loader from 'react-loader-spinner';
 import { ReactComponent as Arrow } from '../../../../assets/svg/arrow-down-small.svg';
 import './style.scss';
+import { navigate } from 'gatsby';
 
-const FooterAction = ({ title, subtitle, buttonTitle, to, href }) => {
+const FooterAction = ({ title, subtitle, buttonTitle, role, url, onShowGetStarted }) => {
   const [videoIsHovered, setVideoIsHovered] = useState(false);
   const [imageIsLoading, setImageIsLoading] = useState(false);
   const videoThumbnailRef = useRef();
@@ -31,43 +32,54 @@ const FooterAction = ({ title, subtitle, buttonTitle, to, href }) => {
         <div className="FooterAction__hero__content">
           <h1 className="FooterAction__hero__title">{title}</h1>
           <h2 className="FooterAction__hero__subtitle">{subtitle}</h2>
-          <Link key={buttonTitle} to={to} href={href}>
-            <div className="FooterAction__hero__button">
+          {role && url ? (
+            <Link key={buttonTitle} to={url}>
+              <div className="FooterAction__hero__button">
+                <p className="FooterAction__hero__button-text">{buttonTitle}</p>
+                <Arrow className="FooterAction__hero__button-arrow" />
+              </div>
+            </Link>
+          ) : (
+            <div className="FooterAction__hero__button" role="presentation" onClick={onShowGetStarted}>
               <p className="FooterAction__hero__button-text">{buttonTitle}</p>
               <Arrow className="FooterAction__hero__button-arrow" />
             </div>
-          </Link>
+          )}
         </div>
         <div className="FooterAction__hero__content FooterAction__hero__content--centered">
-          <Link key={buttonTitle} to={to} href={href}>
-            <div
-              ref={videoThumbnailRef}
-              role="presentation"
-              className="FooterAction__hero__video"
-              onMouseEnter={() => setVideoIsHovered(true)}
-              onMouseLeave={() => setVideoIsHovered(false)}
-            >
-              {imageIsLoading && (
-                <Loader
-                  className="FooterAction__hero__video__loader"
-                  type="Oval"
-                  color="#302ABF"
-                  height="100%"
-                  width="100%"
-                  timeout={0}
-                />
-              )}
-              <img
-                role="presentation"
-                onClick={() => {}}
-                className={cn('FooterAction__hero__video__playbutton', {
-                  'FooterAction__hero__video__playbutton--hovered': videoIsHovered,
-                })}
-                src={Play}
-                alt="Play button"
+          <div
+            ref={videoThumbnailRef}
+            role="presentation"
+            className="FooterAction__hero__video"
+            onMouseEnter={() => setVideoIsHovered(true)}
+            onMouseLeave={() => setVideoIsHovered(false)}
+          >
+            {imageIsLoading && (
+              <Loader
+                className="FooterAction__hero__video__loader"
+                type="Oval"
+                color="#302ABF"
+                height="100%"
+                width="100%"
+                timeout={0}
               />
-            </div>
-          </Link>
+            )}
+            <img
+              role="presentation"
+              onClick={() => {
+                if (role && url) {
+                  navigate(url);
+                } else {
+                  onShowGetStarted();
+                }
+              }}
+              className={cn('FooterAction__hero__video__playbutton', {
+                'FooterAction__hero__video__playbutton--hovered': videoIsHovered,
+              })}
+              src={Play}
+              alt="Play button"
+            />
+          </div>
         </div>
       </div>
     </div>

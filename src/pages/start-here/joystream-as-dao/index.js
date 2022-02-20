@@ -4,7 +4,6 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import PioneerInfo from '../../../components/onboarding-page/PioneerInfo';
-import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import FAQ from '../../../components/onboarding-page/FAQ';
 import useAtlasData from '../../../utils/pages/onboarding/useAtlasData';
@@ -171,8 +170,6 @@ const Onboarding = () => {
     },
   ];
 
-  const handleGetStarted = () => setShouldShowGetStarted(true);
-
   return (
     <OnboardingLayout
       t={t}
@@ -190,6 +187,7 @@ const Onboarding = () => {
           subtitle={t('onboarding.page2.subtitle')}
           index={lessonIndex}
           shouldReloadRole={shouldReloadRole}
+          onShowGetStarted={() => setShouldShowGetStarted(true)}
           onRoleReloaded={() => setShouldReloadRole(false)}
           showLessonList={() => setShouldShowLessonList(true)}
         ></VideoSection>
@@ -200,12 +198,6 @@ const Onboarding = () => {
       <Structure t={t} />
       <PioneerInfo t={t} />
       <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
-      <BuilderSection
-        shouldReloadRole={shouldReloadRole}
-        t={t}
-        onShowGetStarted={handleGetStarted}
-        onRoleReloaded={() => setShouldReloadRole(false)}
-      />
     </OnboardingLayout>
   );
 };

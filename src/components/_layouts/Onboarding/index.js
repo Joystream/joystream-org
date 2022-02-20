@@ -9,6 +9,8 @@ import { ScrollProvider } from '../../_enhancers/ScrollContext';
 import { useState } from 'react';
 import GetStarted from '../../onboarding-page/GetStarted';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
+import useContributors from '../../../utils/pages/onboarding/useContributors';
+import { navigate } from 'gatsby';
 
 const propTypes = {
   children: node,
@@ -26,21 +28,16 @@ const OnboardingLayout = ({
   shouldShowGetStarted,
   onGetStartedClose,
   onLessonListClose,
-  onRoleUpdated,
+  isLastPage,
 }) => {
   const [showGetStarted, setShowGetStarted] = useState(false);
-  const [shouldNavigateToRolePage, setShouldNavigateToRolePage] = useState(false);
-  const [hideNotSureOption, setHideNotSureOption] = useState(false);
   const [role, setRole] = useState();
-  const { getNextVideoUrl, getNextVideoTitle } = useLessonList();
-  const reloadNextVideo = newRole => {
-    return {
-      title: getNextVideoTitle(lessonIndex, newRole),
-      url: getNextVideoUrl(lessonIndex, newRole),
-    };
-  };
+  const { getNextVideoUrl } = useLessonList();
+  const { getContributorPageUrl } = useContributors();
 
-  const [nextVideo, setNextVideo] = useState(reloadNextVideo());
+  useEffect(() => {
+    setRole(localStorage.getItem('JoystreamRole'));
+  }, []);
 
   const handleShowGetStarted = () => {
     setShowGetStarted(true);
@@ -49,36 +46,37 @@ const OnboardingLayout = ({
   useEffect(() => {
     if (shouldShowGetStarted) {
       setShowGetStarted(true);
-      if (!nextVideo.url) {
-        setShouldNavigateToRolePage(true);
-      }
-      setHideNotSureOption(true);
     }
-  }, [shouldShowGetStarted, nextVideo.url]);
-
-  useEffect(() => {
-    setRole(localStorage.getItem('JoystreamRole'));
-  }, []);
+  }, [shouldShowGetStarted]);
 
   const updateRole = newRole => {
-    setRole(newRole);
     localStorage.setItem('JoystreamRole', newRole);
-    setNextVideo(reloadNextVideo(newRole));
-    onRoleUpdated();
+    setRole(newRole);
+    const url = getNextVideoUrl(lessonIndex, newRole);
+    if (newRole && isLastPage) {
+      navigate(getContributorPageUrl(newRole));
+    } else if (url) {
+      navigate(url);
+    }
   };
 
   return (
     <ScrollProvider>
       <div className="OnboardingLayout__wrapper">
-        <NavbarOnboarding t={t} showGetStarted onShowGetStarted={handleShowGetStarted} role={role} />
+        <NavbarOnboarding
+          t={t}
+          showGetStarted
+          onShowGetStarted={handleShowGetStarted}
+          role={role}
+          lessonIndex={lessonIndex}
+        />
         {showLessonList && (
           <LessonList t={t} lessonIndex={lessonIndex} onLessonListClose={onLessonListClose} currentRole={role} />
         )}
         {showGetStarted && (
           <GetStarted
             t={t}
-            shouldSwitchRolePage={shouldNavigateToRolePage}
-            hideNotSureOption={hideNotSureOption}
+            hideNotSureOption={isLastPage}
             onGetStartedClose={() => {
               onGetStartedClose();
               setShowGetStarted(false);
@@ -88,7 +86,7 @@ const OnboardingLayout = ({
         )}
         {children}
         <CookiesNotice t={t} />
-        <FooterOnboarding t={t} nextVideoText={t(nextVideo.title)} nextVideoUrl={nextVideo.url} />
+        <FooterOnboarding t={t} lessonIndex={lessonIndex} role={role} onShowGetStarted={handleShowGetStarted} />
       </div>
     </ScrollProvider>
   );

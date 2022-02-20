@@ -5,7 +5,6 @@ import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import ReferallsInfo from '../../../components/onboarding-page/ReferallsInfo';
 import TasksInfo from '../../../components/onboarding-page/TasksInfo';
-import BuilderSection from '../../../components/onboarding-page/BuilderSection';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import BecomeFM from '../../../components/onboarding-page/BecomeFM';
 import FMInterviews from '../../../components/onboarding-page/FMInterviews';
@@ -61,8 +60,6 @@ const Onboarding = () => {
     },
   ];
 
-  const handleGetStarted = () => setShouldShowGetStarted(true);
-
   return (
     <OnboardingLayout
       t={t}
@@ -72,6 +69,7 @@ const Onboarding = () => {
       onGetStartedClose={() => setShouldShowGetStarted(false)}
       onLessonListClose={() => setShouldShowLessonList(false)}
       onRoleUpdated={() => setShouldReloadRole(true)}
+      onIsLastPage={() => {}}
     >
       <div className="Onboarding__wrapper">
         <VideoSection
@@ -79,6 +77,7 @@ const Onboarding = () => {
           title={t('onboarding.page3.title')}
           subtitle={t('onboarding.page3.subtitle')}
           index={lessonIndex}
+          onShowGetStarted={() => setShouldShowGetStarted(true)}
           shouldReloadRole={shouldReloadRole}
           onRoleReloaded={() => setShouldReloadRole(false)}
           showLessonList={() => setShouldShowLessonList(true)}
@@ -91,12 +90,6 @@ const Onboarding = () => {
       <ReferallsInfo t={t} />
       <FMInterviews t={t} />
       <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
-      <BuilderSection
-        shouldReloadRole={shouldReloadRole}
-        t={t}
-        onShowGetStarted={handleGetStarted}
-        onRoleReloaded={() => setShouldReloadRole(false)}
-      />
     </OnboardingLayout>
   );
 };

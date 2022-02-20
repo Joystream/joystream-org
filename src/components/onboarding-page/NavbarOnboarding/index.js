@@ -15,6 +15,7 @@ import { ReactComponent as UKCircle } from '../../../assets/svg/uk-flag-circle.s
 import { ReactComponent as RoleIcon } from '../../../assets/svg/role-button-icon.svg';
 import useContributors from '../../../utils/pages/onboarding/useContributors';
 import useWindowDimensions from '../../../utils/useWindowDimensions';
+import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 
 import './style.scss';
 
@@ -92,21 +93,31 @@ const Navbar = ({
   showChatIntegrator,
   onShowChatIntegrator,
   role,
+  lessonIndex,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { getContributorPageUrl } = useContributors();
-  const [selectedRole, setSelectedRole] = useState(role);
   const [contributorPageUrl, setContributorPageUrl] = useState();
+  const [nextVideo, setNextVideo] = useState({
+    url: '',
+    title: '',
+  });
+  const { getNextVideoUrl, getNextVideoTitle } = useLessonList();
 
   useEffect(() => {
-    if (role !== selectedRole) {
-      setSelectedRole(role);
+    const title = getNextVideoTitle(lessonIndex, role);
+    const url = getNextVideoUrl(lessonIndex, role);
+    if (nextVideo.title !== title || nextVideo.url !== url) {
+      setNextVideo({
+        title,
+        url,
+      });
     }
-  }, [role, selectedRole]);
+  }, [role, lessonIndex, nextVideo.title, nextVideo.url, getNextVideoTitle, getNextVideoUrl]);
 
   useEffect(() => {
-    setContributorPageUrl(getContributorPageUrl(selectedRole));
-  }, [getContributorPageUrl, selectedRole]);
+    setContributorPageUrl(getContributorPageUrl(role));
+  }, [getContributorPageUrl, role]);
 
   const context = useContext(ScrollContext);
   const { isScrollUp } = context;
@@ -138,16 +149,27 @@ const Navbar = ({
             <p className="Navbar__button-text">{role ? role : t('onboarding.button.chooseRole.text')}</p>
           </div>
           {showGetStarted &&
-            (role && contributorPageUrl ? (
+            (role && nextVideo && nextVideo.url ? (
+              <Link to={nextVideo.url}>
+                <div className="Navbar__button">
+                  <p className="Navbar__button-text">{t('onboarding.button.nextVideo.text')}</p>
+                  <Arrow className="Navbar__button-arrow" />
+                </div>
+              </Link>
+            ) : role && contributorPageUrl ? (
               <Link to={contributorPageUrl}>
-                <div className="Navbar__button" role="presentation" onClick={onShowGetStarted}>
+                <div className="Navbar__button">
                   <p className="Navbar__button-text">{t('onboarding.button.getStarted.text')}</p>
                   <Arrow className="Navbar__button-arrow" />
                 </div>
               </Link>
             ) : (
               <div className="Navbar__button" role="presentation" onClick={onShowGetStarted}>
-                <p className="Navbar__button-text">{t('onboarding.button.getStarted.text')}</p>
+                <p className="Navbar__button-text">
+                  {nextVideo && nextVideo.url
+                    ? t('onboarding.button.nextVideo.text')
+                    : t('onboarding.button.getStarted.text')}
+                </p>
                 <Arrow className="Navbar__button-arrow" />
               </div>
             ))}
