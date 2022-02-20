@@ -208,6 +208,13 @@
     margin: 30px 30px 30px 20px;
   }
 
+  &__progress {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 30px 30px 30px 20px;
+  }
+
   &__title {
     width: 320px;
     margin-right: 28px;
@@ -265,6 +272,12 @@
 
     &__icon {
       width: calc(15vw);
+    }
+
+    &__progress {
+      width: calc(15vw);
+      margin: 0;
+      margin-left: 8px;
     }
 
     &__title {

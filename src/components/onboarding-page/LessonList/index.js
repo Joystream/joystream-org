@@ -6,6 +6,9 @@ import { ReactComponent as IconPlay } from '../../../assets/svg/icon-play.svg';
 import { ReactComponent as IconPlayed } from '../../../assets/svg/icon-played.svg';
 import { ReactComponent as IconPlayActive } from '../../../assets/svg/icon-play-active.svg';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+
 import cn from 'classnames';
 import './style.scss';
 
@@ -13,13 +16,21 @@ const Lesson = ({ title, length, currentIndex, index, onClose }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isWatched, setIsWatched] = useState(false);
   const [isInProgress, setIsInProgress] = useState(false);
-  const { lessonLinks, isVideoWatched, isVideoInProgress } = useLessonList();
+  const [videoPercentage, setVideoPercentage] = useState(0);
+  const { lessonLinks, isVideoWatched, isVideoInProgress, getVideoProgress } = useLessonList();
 
   useEffect(() => {
     const lessonTitle = lessonLinks[index];
     setIsWatched(isVideoWatched(lessonTitle));
     setIsInProgress(isVideoInProgress(lessonTitle));
   }, [isVideoWatched, isVideoInProgress, index, lessonLinks]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setVideoPercentage(getVideoProgress());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [getVideoProgress]);
 
   return (
     <Link to={lessonLinks[index] ?? ''} onClick={() => (currentIndex === index ? onClose() : {})}>
@@ -37,7 +48,22 @@ const Lesson = ({ title, length, currentIndex, index, onClose }) => {
               <IconPlayActive className="Lesson__icon" />
             )
           ) : isInProgress ? (
-            <IconPlaying className="Lesson__icon" />
+            <>
+              <IconPlaying className="Lesson__icon" />
+              <CircularProgressbar
+                styles={{
+                  path: {
+                    stroke: '#4038FF',
+                    strokeLinecap: 'butt',
+                  },
+                  trail: {
+                    stroke: 'rgba(64, 56, 255, 0.2)',
+                  },
+                }}
+                className="Lesson__progress"
+                value={videoPercentage}
+              />
+            </>
           ) : isWatched ? (
             <IconPlayed className="Lesson__icon" />
           ) : (

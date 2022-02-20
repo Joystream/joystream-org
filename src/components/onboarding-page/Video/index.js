@@ -3,7 +3,7 @@ import './style.scss';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 
 const Video = ({ lesson }) => {
-  const { lessonUrls, addVideoToWatched, setVideoInProgress } = useLessonList();
+  const { lessonUrls, addVideoToWatched, setVideoInProgress, setVideoProgress } = useLessonList();
 
   useEffect(() => {
     const handler = event => {
@@ -15,6 +15,10 @@ const Video = ({ lesson }) => {
         }
         if (data && data.indexOf('atlas_video_progress') >= 0) {
           setVideoInProgress(lesson);
+          if (data.split(':') && data.split(':')[1]) {
+            const percentage = data.split(':')[1] * 100;
+            setVideoProgress(parseInt(percentage));
+          }
         }
       }
     };
@@ -22,7 +26,7 @@ const Video = ({ lesson }) => {
     window.addEventListener('message', handler);
 
     return () => window.removeEventListener('message', handler);
-  }, [addVideoToWatched, setVideoInProgress, lesson]);
+  }, [addVideoToWatched, setVideoInProgress, setVideoProgress, lesson]);
 
   return (
     <>

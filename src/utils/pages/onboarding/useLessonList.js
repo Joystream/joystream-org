@@ -56,7 +56,6 @@ const useLessonList = () => {
     7: '/start-here/video-creator',
   };
 
-  // TODO put correct video URLS
   const lessonUrls = {
     '/start-here/what-is-joystream': 'https://play.joystream.org/embedded/video/15153',
     '/start-here/joystream-as-dao': 'https://play.joystream.org/embedded/video/15154',
@@ -98,6 +97,14 @@ const useLessonList = () => {
 
   const isVideoInProgress = lesson => {
     return lesson === localStorage.getItem('JoystreamVideoInProgress');
+  };
+
+  const setVideoProgress = lesson => {
+    localStorage.setItem('JoystreamVideoProgress', lesson);
+  };
+
+  const getVideoProgress = lesson => {
+    return localStorage.getItem('JoystreamVideoProgress');
   };
 
   const roleIndexes = {
@@ -170,6 +177,8 @@ const useLessonList = () => {
     isVideoWatched,
     setVideoInProgress,
     isVideoInProgress,
+    setVideoProgress,
+    getVideoProgress,
   };
 };
 
