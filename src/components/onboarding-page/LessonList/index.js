@@ -42,7 +42,24 @@ const Lesson = ({ title, length, currentIndex, index, onClose }) => {
       >
         <div className="Lesson__content">
           {isHovered ? (
-            isWatched ? (
+            isInProgress ? (
+              <>
+                <IconPlaying className="Lesson__icon" />
+                <CircularProgressbar
+                  styles={{
+                    path: {
+                      stroke: '#4038FF',
+                      strokeLinecap: 'butt',
+                    },
+                    trail: {
+                      stroke: 'rgba(64, 56, 255, 0.2)',
+                    },
+                  }}
+                  className="Lesson__progress"
+                  value={videoPercentage}
+                />
+              </>
+            ) : isWatched ? (
               <IconPlayed className="Lesson__icon" />
             ) : (
               <IconPlayActive className="Lesson__icon" />
