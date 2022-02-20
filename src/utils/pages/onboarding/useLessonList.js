@@ -1,5 +1,4 @@
 const useLessonList = () => {
-  // TODO Set correct length of videos
   const data = [
     {
       title: 'onboarding.lessonList.lesson1.title',
