@@ -1,3 +1,11 @@
+import VideoThumbnail1 from '../../../assets/images/Joystream_Thumbnail_1.jpeg';
+import VideoThumbnail2 from '../../../assets/images/Joystream_Thumbnail_2.jpeg';
+import VideoThumbnail3 from '../../../assets/images/Joystream_Thumbnail_3.jpeg';
+import VideoThumbnail4 from '../../../assets/images/Joystream_Thumbnail_4.jpeg';
+import VideoThumbnail5 from '../../../assets/images/Joystream_Thumbnail_5.jpeg';
+import VideoThumbnail6 from '../../../assets/images/Joystream_Thumbnail_6.jpeg';
+import VideoThumbnail7 from '../../../assets/images/Joystream_Thumbnail_7.jpeg';
+
 const useLessonList = () => {
   const data = [
     {
@@ -63,6 +71,16 @@ const useLessonList = () => {
     '/start-here/what-are-working-groups': 'https://play.joystream.org/embedded/video/15164',
     '/start-here/what-are-bounties': 'https://play.joystream.org/embedded/video/15165',
     '/start-here/video-creator': 'https://play.joystream.org/embedded/video/15201',
+  };
+
+  const lessonThumbnails = {
+    '/start-here/what-is-joystream': VideoThumbnail1,
+    '/start-here/joystream-as-dao': VideoThumbnail2,
+    '/start-here/what-is-fm-program': VideoThumbnail3,
+    '/start-here/what-is-council': VideoThumbnail4,
+    '/start-here/what-are-working-groups': VideoThumbnail5,
+    '/start-here/what-are-bounties': VideoThumbnail6,
+    '/start-here/video-creator': VideoThumbnail7,
   };
 
   const lessonTitles = {
@@ -167,6 +185,7 @@ const useLessonList = () => {
     lessonLinks,
     lessonUrls,
     roleIndexes,
+    lessonThumbnails,
     getLessonData,
     getNextVideoUrl,
     getNextVideoTitle,

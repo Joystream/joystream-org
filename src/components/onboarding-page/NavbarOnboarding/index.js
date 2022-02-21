@@ -144,10 +144,12 @@ const Navbar = ({
               <Arrow className="Navbar__button-arrow" />
             </div>
           )}
-          <div className="Navbar__button Navbar__button-role" role="presentation" onClick={onShowGetStarted}>
-            <RoleIcon className="Navbar__button-role-icon" />
-            <p className="Navbar__button-text">{role ? role : t('onboarding.button.chooseRole.text')}</p>
-          </div>
+          {(lessonIndex !== 1 || role) && (
+            <div className="Navbar__button Navbar__button-role" role="presentation" onClick={onShowGetStarted}>
+              <RoleIcon className="Navbar__button-role-icon" />
+              <p className="Navbar__button-text">{role ? role : t('onboarding.button.chooseRole.text')}</p>
+            </div>
+          )}
           {showGetStarted &&
             (role && nextVideo && nextVideo.url ? (
               <Link to={nextVideo.url}>

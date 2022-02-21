@@ -1,30 +1,29 @@
 import React, { useState, useRef, useEffect } from 'react';
 import cn from 'classnames';
 import Play from '../../../../assets/svg/btn-play.svg';
-import VideoThumbnail from '../../../../assets/images/onboarding-preview.png';
 import Link from '../../../Link';
 import Loader from 'react-loader-spinner';
 import { ReactComponent as Arrow } from '../../../../assets/svg/arrow-down-small.svg';
 import './style.scss';
 import { navigate } from 'gatsby';
 
-const FooterAction = ({ title, subtitle, buttonTitle, role, url, onShowGetStarted }) => {
+const FooterAction = ({ title, subtitle, buttonTitle, role, url, thumbnail, onShowGetStarted }) => {
   const [videoIsHovered, setVideoIsHovered] = useState(false);
   const [imageIsLoading, setImageIsLoading] = useState(false);
   const videoThumbnailRef = useRef();
 
   useEffect(() => {
     let preloaderImg = document.createElement('img');
-    preloaderImg.src = VideoThumbnail;
+    preloaderImg.src = thumbnail;
 
     preloaderImg.addEventListener('load', event => {
       if (videoThumbnailRef.current) {
-        videoThumbnailRef.current.style.backgroundImage = `url(${VideoThumbnail})`;
+        videoThumbnailRef.current.style.backgroundImage = `url(${thumbnail})`;
       }
       setImageIsLoading(false);
       preloaderImg = null;
     });
-  }, []);
+  }, [thumbnail]);
 
   return (
     <div className="FooterAction__hero-wrapper">
