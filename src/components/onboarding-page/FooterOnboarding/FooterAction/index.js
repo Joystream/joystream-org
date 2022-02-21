@@ -7,7 +7,7 @@ import { ReactComponent as Arrow } from '../../../../assets/svg/arrow-down-small
 import './style.scss';
 import { navigate } from 'gatsby';
 
-const FooterAction = ({ title, subtitle, buttonTitle, role, url, thumbnail, onShowGetStarted }) => {
+const FooterAction = ({ title, subtitle, buttonTitle, role, url, thumbnail, lessonIndex, onShowGetStarted }) => {
   const [videoIsHovered, setVideoIsHovered] = useState(false);
   const [imageIsLoading, setImageIsLoading] = useState(false);
   const videoThumbnailRef = useRef();
@@ -31,7 +31,7 @@ const FooterAction = ({ title, subtitle, buttonTitle, role, url, thumbnail, onSh
         <div className="FooterAction__hero__content">
           <h1 className="FooterAction__hero__title">{title}</h1>
           <h2 className="FooterAction__hero__subtitle">{subtitle}</h2>
-          {role && url ? (
+          {(role || (!role && lessonIndex !== 1)) && url ? (
             <Link key={buttonTitle} to={url}>
               <div className="FooterAction__hero__button">
                 <p className="FooterAction__hero__button-text">{buttonTitle}</p>
@@ -66,7 +66,7 @@ const FooterAction = ({ title, subtitle, buttonTitle, role, url, thumbnail, onSh
             <img
               role="presentation"
               onClick={() => {
-                if (role && url) {
+                if ((role || (!role && lessonIndex !== 1)) && url) {
                   navigate(url);
                 } else {
                   onShowGetStarted();

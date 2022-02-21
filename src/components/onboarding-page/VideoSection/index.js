@@ -111,7 +111,7 @@ const VideoSection = ({
               <LessonListMobile className="VideoSection__hero__button-list" />
             </div>
 
-            {role && nextVideo && nextVideo.url ? (
+            {(role || (!role && index !== 1)) && nextVideo && nextVideo.url ? (
               <Link to={nextVideo.url}>
                 <div className="VideoSection__hero__button">
                   <p className="VideoSection__hero__button-text">{nextVideoButtonTitle}</p>

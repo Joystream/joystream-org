@@ -29,6 +29,7 @@ const OnboardingLayout = ({
   onGetStartedClose,
   onLessonListClose,
   isLastPage,
+  onRoleUpdated,
 }) => {
   const [showGetStarted, setShowGetStarted] = useState(false);
   const [role, setRole] = useState();
@@ -55,8 +56,10 @@ const OnboardingLayout = ({
     const url = getNextVideoUrl(lessonIndex, newRole);
     if (newRole && isLastPage) {
       navigate(getContributorPageUrl(newRole));
-    } else if (url) {
+    } else if (!role && url && lessonIndex === 1) {
       navigate(url);
+    } else {
+      onRoleUpdated();
     }
   };
 

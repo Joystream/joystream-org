@@ -33,6 +33,7 @@ const FooterOnboarding = ({ t, role, lessonIndex, onShowGetStarted }) => {
           title={t('onboarding.page1.footer.title')}
           subtitle={t(nextVideo.title)}
           role={role}
+          lessonIndex={lessonIndex}
           buttonTitle={t('onboarding.footer.button.nextVideo.text')}
           url={nextVideo.url}
           thumbnail={nextVideo.thumbnail}

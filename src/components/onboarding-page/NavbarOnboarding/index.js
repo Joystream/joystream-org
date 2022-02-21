@@ -151,7 +151,7 @@ const Navbar = ({
             </div>
           )}
           {showGetStarted &&
-            (role && nextVideo && nextVideo.url ? (
+            ((role || (!role && lessonIndex !== 1)) && nextVideo && nextVideo.url ? (
               <Link to={nextVideo.url}>
                 <div className="Navbar__button">
                   <p className="Navbar__button-text">{t('onboarding.button.nextVideo.text')}</p>
