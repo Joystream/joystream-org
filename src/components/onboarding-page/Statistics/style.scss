@@ -75,16 +75,14 @@
 
   @media #{$screen-max-md} {
     &__content {
-      flex-wrap: nowrap;
       width: calc(90vw);
-      overflow-y: scroll;
     }
 
     &__item {
-      margin-right: 20px;
+      width: calc(90vw);
 
       &__title {
-        width: 252px;
+        width: calc(90vw);
       }
     }
   }

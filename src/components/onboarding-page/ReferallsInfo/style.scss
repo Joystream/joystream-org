@@ -46,9 +46,9 @@
 
   @media #{$screen-max-md} {
     &__content {
+      flex-wrap: wrap;
       width: calc(90vw);
       margin: auto;
-      overflow-y: scroll;
     }
 
     &__title {
@@ -59,11 +59,10 @@
 
     &__item {
       width: calc(90vw);
-      margin-right: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
 
       &__title {
-        width: 260px;
+        width: calc(90vw);
       }
     }
   }

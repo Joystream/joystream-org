@@ -120,16 +120,15 @@
     }
 
     &__content {
+      flex-wrap: wrap;
       width: calc(90vw);
-      overflow-y: scroll;
     }
 
     &__item {
       width: calc(90vw);
-      margin-right: 20px;
 
       &__title {
-        width: 260px;
+        width: calc(90vw);
       }
     }
   }
