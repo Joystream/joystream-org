@@ -17,7 +17,7 @@
     },
     "privacyPolicyItems": {
       "title": "Privacy Policy",
-      "subtitle": "Last updated on the 17th of April 2019",
+      "subtitle": "Last updated on the 23rd of February 2022",
       "agreement": {
         "title": "1. Agreement to the Policy",
         "content": "By using any of Our Software, the User are accepting this Privacy Policy. If you are acting on behalf of another company or an employer, you must have the rights to act on their behalf. The Privacy Policy is not extended to any of our newsletters, where Users are bound by the <0>privacy policy</0> of <1>Mailchimp</1><2/><2/>The Privacy Policy does not apply to any other third party services including, but not limited to, applications, websites, tools or software, even if accessible through links or guides in our Software."
@@ -32,7 +32,7 @@
       },
       "googleAnalytics": {
         "title": "",
-        "content": "Company uses <0>Google Analytics</0>, with IP anonymization, to collect statistics on Website and the version of App hosted by us. All customisable data sharing settings are turned off to improve the privacy of Users. ‍<1 />‍<1 /> <2>Company will not sell your data for advertising, or other purposes.</2>"
+        "content": "Company uses <0>Google Analytics</0>, with IP anonymization, to collect statistics on Website and the version of App hosted by us. All customisable data sharing settings are turned off to improve the privacy of Users. ‍<1 />‍<1 /> Company also uses <3>Livesession</3> to help us find bugs, improve UX and more by using session replays. Sensitive data such as passwords and IP addresses are anonymized. <1 /><1 /> <2>Company will not sell your data for advertising, or other purposes.</2>"
       }
     },
     "cookiePolicyItems": {
