@@ -40,7 +40,7 @@
     "node-sass": "^4.12.0",
     "openpgp": "^4.10.10",
     "pre-commit": "^1.2.2",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.27.0",
     "prop-types": "^15.7.2",
     "pure-react-carousel": "^1.27.1",
     "rc-slider": "^8.7.1",
