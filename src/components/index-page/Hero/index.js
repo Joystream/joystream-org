@@ -42,7 +42,7 @@ const Hero = ({ statusData, t }) => {
           <p className="IndexPage__hero__subtitle">
             <Trans i18nKey="landing.hero.subtitle" components={[<br />]} />
           </p>
-          <Link to="/get-started" className="IndexPage__hero__button-container">
+          <Link to="/start-here/what-is-joystream" className="IndexPage__hero__button-container">
             <div className="IndexPage__hero__button">
               <p className="IndexPage__hero__button-text">{t('button.getStarted.text')}</p>
               <Arrow className="IndexPage__hero__button-arrow" />

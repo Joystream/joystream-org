@@ -39,9 +39,9 @@ const WhyYouShouldJoin = ({ t }) => (
           text={t('landing.whyYouShouldJoin.reasons.reputationAndSkill.text')}
         />
       </div>
-      <Link to="/get-started" className="IndexPage__join-info__button-container">
+      <Link to="/start-here/what-is-joystream" className="IndexPage__join-info__button-container">
         <div className="IndexPage__join-info__button">
-          <p className="IndexPage__join-info__button-text">{t("button.getStarted.text")}</p>
+          <p className="IndexPage__join-info__button-text">{t('button.getStarted.text')}</p>
           <Arrow className="IndexPage__join-info__button-arrow" />
         </div>
       </Link>
