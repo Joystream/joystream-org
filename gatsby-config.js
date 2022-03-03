@@ -44,13 +44,6 @@ module.exports = {
         trackingId: process.env.GA_ID,
       },
     },
-    {
-      resolve: 'gatsby-plugin-hotjar',
-      options: {
-        id: process.env.HJ_ID,
-        sv: process.env.HJ_SV,
-      },
-    },
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',

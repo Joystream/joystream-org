@@ -29,29 +29,12 @@ const CardCarousel = ({ children, scrollAmount = DEFAULT_SCROLL_AMOUNT }) => {
     });
   };
 
-  const setStructure = () => {
-    if (children?.length <= 3) {
-      return {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 400px)',
-      };
-    } else if (children?.length === 4) {
-      return {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 295px)',
-      };
-    }
-
-    return null;
-  };
-
   return (
     <div className="CardCarousel">
       <div
         ref={listRef}
         onScrollCapture={e => setScrollPosition(e.target.scrollLeft)}
         className="CardCarousel__cards"
-        style={{ ...setStructure() }}
       >
         {children}
       </div>

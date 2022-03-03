@@ -36,6 +36,7 @@ const privacyPolicyItems = [
         <Link href="https://marketingplatform.google.com/about/analytics/">Google Analytics</Link>,
         <br />,
         <strong />,
+        <Link href="https://livesession.io/security/">Livesession</Link>
       ],
     },
   },
