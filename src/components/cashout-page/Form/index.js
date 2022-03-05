@@ -25,7 +25,7 @@ import {
 
 import './style.scss';
 
-export const CASHOUT_SERVER_URL = "http://localhost:3000/";
+export const CASHOUT_SERVER_URL = "https://status-giza.joystream.app/cashout";
 export const INITIATE_CASHOUT_ROUTE = "initiate-cashout";
 export const CASHOUT_ROUTE = "cashout";
 
