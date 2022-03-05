@@ -11,13 +11,17 @@ function set(name, value, days, doc = document) {
 }
 
 function get(name, doc = document) {
-  const nameEQ = `${name}=`;
-  const ca = doc.cookie.split(';');
-  for (let i = 0; i < ca.length; i += 1) {
-    let c = ca[i];
-    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  const joystreamCookiePrefix = `${name}=`;
+  const cookies = doc.cookie.split(';');
+
+  for (const cookie of cookies) {
+    const trimmedCookie = cookie.trimLeft();
+
+    if(trimmedCookie.indexOf(joystreamCookiePrefix) == 0) {
+      return trimmedCookie.substring(joystreamCookiePrefix.length);
+    }
   }
+
   return null;
 }
 

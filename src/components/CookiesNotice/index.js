@@ -16,6 +16,8 @@ const defaultProps = {
   actionless: false,
 };
 
+const LAST_PRIVACY_POLICY_CHANGE_DATE_STRING = "2022-02-23T11:29:46.000Z";
+
 class CookiesNotice extends React.Component {
   constructor() {
     super();
@@ -29,8 +31,20 @@ class CookiesNotice extends React.Component {
   }
 
   componentDidMount() {
-    const isCookieSet = cookies.get(this.cookieName);
+    const cookieValue = cookies.get(this.cookieName);
     const { actionless } = this.props;
+
+    let cookieSetDate = null;
+    let isCookieSet = false;
+
+    if(Date.parse(cookieValue) !== NaN) {
+      cookieSetDate = new Date(cookieValue);
+    }
+
+    const lastPrivacyPolicyChangeDate = new Date(LAST_PRIVACY_POLICY_CHANGE_DATE_STRING);
+    if(cookieSetDate !== null && cookieSetDate > lastPrivacyPolicyChangeDate) {
+      isCookieSet = true;
+    }
 
     if (!actionless && isCookieSet) {
       this.setState({ visible: false });
@@ -41,8 +55,10 @@ class CookiesNotice extends React.Component {
     const { cookieName, expires } = this;
     const { actionless } = this.props;
 
+    const nowAsISOString = (new Date()).toISOString();
+
     if (!actionless) {
-      cookies.set(cookieName, true, expires);
+      cookies.set(cookieName, nowAsISOString, expires);
       this.setState({ visible: false });
     }
   };
