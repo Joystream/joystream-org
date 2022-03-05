@@ -17,7 +17,7 @@ import getBchValue from '../../utils/getBchValue';
 
 import './style.scss';
 
-const STATUS_SERVER_URL = 'https://status-giza.joystream.app/status';
+const STATUS_SERVER_URL = 'https://status-giza.joystream.app/status/';
 const CURRENCY_DATA_STORAGE_KEY = 'CashoutDataJoystream';
 const CURRENCY_DATA_TIMEOUT_IN_SECONDS = 5 * 60;
 
