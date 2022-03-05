@@ -100,7 +100,7 @@
     transform: rotate(-90deg) scale(.85);
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     &__content__wrapper {
       flex-wrap: wrap;
       width: calc(90vw);
@@ -121,6 +121,7 @@
 
     &__subtitle {
       width: calc(90vw);
+      padding-bottom: 20px;
     }
 
     &__title {
@@ -131,6 +132,7 @@
 
     &__link-wrapper {
       width: calc(90vw);
+      margin-top: 12px;
       margin-bottom: 40px;
     }
 

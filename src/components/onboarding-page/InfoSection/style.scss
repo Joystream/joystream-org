@@ -54,7 +54,7 @@
       margin-top: 32px;
     }
 
-    @media #{$screen-max-md} {
+    @media #{$screen-max-xl} {
       width: calc(90vw);
 
       &__content {

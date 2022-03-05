@@ -85,13 +85,7 @@
     }
   }
 
-  @media #{$screen-max-md} {
-    &__tokeninfo {
-      padding: 0 20px;
-    }
-  }
-
-  @media #{$screen-max-sm} {
+  @media #{$screen-max-xl} {
     &__tokeninfo-title {
       padding: 0 20px;
       font-size: 40px;
@@ -101,6 +95,7 @@
 
     &__tokeninfo {
       margin-top: 44px;
+      padding: 0 20px;
 
       &__item {
         position: relative;

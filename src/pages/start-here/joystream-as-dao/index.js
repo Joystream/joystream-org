@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import PioneerInfo from '../../../components/onboarding-page/PioneerInfo';
@@ -10,6 +10,7 @@ import useAtlasData from '../../../utils/pages/onboarding/useAtlasData';
 import usePioneerData from '../../../utils/pages/onboarding/usePioneerData';
 import Statistics from '../../../components/onboarding-page/Statistics';
 import Structure from '../../../components/onboarding-page/Structure';
+import SiteMetadata from '../../../components/SiteMetadata';
 import './style.scss';
 
 const Onboarding = () => {
@@ -36,6 +37,7 @@ const Onboarding = () => {
     operationsGammaOpenings,
   } = usePioneerData();
 
+  const { language } = useI18next();
   const [channelsCount, setChannelsCount] = useState({ isLoading: true, count: 0 });
   const [videosCount, setVideosCount] = useState({ isLoading: true, count: 0 });
   const [postsData, setPostsData] = useState({ isLoading: true, count: 0 });
@@ -180,6 +182,7 @@ const Onboarding = () => {
       onLessonListClose={() => setShouldShowLessonList(false)}
       onRoleUpdated={() => setShouldReloadRole(true)}
     >
+      <SiteMetadata lang={language} title={t('onboarding.page2.title')} description={t('onboarding.page2.subtitle')} />
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
@@ -207,13 +210,7 @@ export default Onboarding;
 export const query = graphql`
   query($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageQueryFields
     }
   }
 `;

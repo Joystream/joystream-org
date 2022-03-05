@@ -69,7 +69,7 @@
     color: $c_white;
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     &__content {
       width: calc(100vw);
       margin: 0;
@@ -184,7 +184,7 @@
     }
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     &__wrapper {
       width: calc(90vw);
       height: 100%;

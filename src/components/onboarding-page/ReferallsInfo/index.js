@@ -28,7 +28,6 @@ const ReferallsInfo = ({ t }) => {
 
   useEffect(() => {
     if (referalls && referalls.nodes) {
-      console.log(referalls.nodes);
     }
   }, [referalls]);
 

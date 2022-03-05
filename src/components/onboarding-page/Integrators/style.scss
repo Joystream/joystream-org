@@ -118,7 +118,7 @@
     display: none;
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     display: flex;
     align-items: center;
     flex-direction: column-reverse;

@@ -194,7 +194,7 @@
     display: none;
   }
 
-  @media #{$screen-max-lg} {
+  @media #{$screen-max-xl} {
     background-color: $c_black;
 
     &--open {
@@ -211,8 +211,10 @@
       left: 0;
       z-index: -1;
       display: flex;
-      align-items: unset;
+      align-items: center;
       flex-direction: column;
+      justify-content: center;
+      width: calc(100vw);
       width: 100%;
       background-color: $c_blue-ribbon;
       transform: translateY(0);
@@ -252,7 +254,7 @@
 
     &__button {
       width: calc(90vw);
-      margin: 20px 36px;
+      margin: 20px 0;
       background-color: $c_black;
 
       &:hover {
@@ -347,19 +349,6 @@
         animation: grow;
         animation-duration: $duration;
       }
-    }
-  }
-
-  @media #{$screen-max-md} {
-    &__links {
-      align-items: center;
-      justify-content: center;
-      width: calc(100vw);
-    }
-
-    &__button {
-      width: calc(90vw);
-      margin: 20px 0;
     }
   }
 }

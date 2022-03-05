@@ -26,7 +26,7 @@
     margin: auto;
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     &__title {
       width: calc(90vw);
       font-size: 40px;

@@ -44,7 +44,7 @@
     }
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     &__content {
       flex-wrap: wrap;
       width: calc(90vw);

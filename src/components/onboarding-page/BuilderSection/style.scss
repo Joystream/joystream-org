@@ -120,7 +120,7 @@
     transform: rotate(-90deg) scale(.85);
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
@@ -141,6 +141,7 @@
     }
 
     &__text {
+      width: calc(90vw);
       padding-left: 0;
     }
 

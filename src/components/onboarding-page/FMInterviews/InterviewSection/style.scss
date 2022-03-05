@@ -55,17 +55,7 @@
     }
   }
 
-  @media #{$screen-max-lg} {
-    &__hero {
-      &__background {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-  }
-
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     &__hero {
       width: calc(90vw);
       height: 100%;

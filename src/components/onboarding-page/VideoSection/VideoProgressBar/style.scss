@@ -145,14 +145,7 @@
     }
   }
 
-  @media #{$screen-max-sm} {
-    &__wrapper {
-      width: calc(90vw);
-      margin: 0;
-    }
-  }
-
-  @media (max-width: 500px) {
+  @media #{$screen-max-xl} {
     &__wrapper {
       width: calc(90vw);
       margin: 0;

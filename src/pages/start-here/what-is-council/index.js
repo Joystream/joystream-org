@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import TasksInfo from '../../../components/onboarding-page/TasksInfo';
@@ -15,11 +15,12 @@ import { ReactComponent as ProposalsVoting } from '../../../assets/svg/proposalV
 import { ReactComponent as ManageWG } from '../../../assets/svg/manageWG.svg';
 import FAQ from '../../../components/onboarding-page/FAQ';
 import useCouncilData from '../../../utils/pages/onboarding/useCouncilData';
+import SiteMetadata from '../../../components/SiteMetadata';
 import './style.scss';
 
 const Onboarding = () => {
   const { councilSize, councilEndDays, councilPeriodDays } = useCouncilData();
-
+  const { language } = useI18next();
   const [councilCount, setCouncilCount] = useState({ isLoading: true, count: 0 });
   const [councilDaysLeft, setCouncilDaysLeft] = useState({ isLoading: true, count: 0 });
   const [councilDaysCount, setCouncilDaysCount] = useState({ isLoading: true, count: 0 });
@@ -123,6 +124,7 @@ const Onboarding = () => {
       onRoleUpdated={() => setShouldReloadRole(true)}
       onIsLastPage={() => {}}
     >
+      <SiteMetadata lang={language} title={t('onboarding.page4.title')} description={t('onboarding.page4.subtitle')} />
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
@@ -154,13 +156,7 @@ export default Onboarding;
 export const query = graphql`
   query($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageQueryFields
     }
   }
 `;

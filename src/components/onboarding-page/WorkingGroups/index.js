@@ -160,7 +160,6 @@ const WorkingGroups = ({ t, title, subtitle, renderChatWithIntegrator, onChatWit
 
   useEffect(() => {
     if (workingGroups && workingGroups.nodes) {
-      console.log(workingGroups.nodes);
     }
   }, [workingGroups]);
 

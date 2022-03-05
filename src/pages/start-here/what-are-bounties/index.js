@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import BuilderSection from '../../../components/onboarding-page/BuilderSection';
@@ -8,10 +8,12 @@ import VideoSection from '../../../components/onboarding-page/VideoSection';
 import Bounties from '../../../components/onboarding-page/Bounties';
 import FAQ from '../../../components/onboarding-page/FAQ';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
+import SiteMetadata from '../../../components/SiteMetadata';
 import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+  const { language } = useI18next();
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [isLastPage, setIsLastPage] = useState(false);
@@ -55,6 +57,7 @@ const Onboarding = () => {
       onRoleUpdated={() => setShouldReloadRole(true)}
       isLastPage={isLastPage}
     >
+      <SiteMetadata lang={language} title={t('onboarding.page2.title')} description={t('onboarding.page2.subtitle')} />
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
@@ -87,13 +90,7 @@ export default Onboarding;
 export const query = graphql`
   query($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageQueryFields
     }
   }
 `;

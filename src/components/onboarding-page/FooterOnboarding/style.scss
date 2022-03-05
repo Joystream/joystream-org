@@ -71,7 +71,7 @@
     }
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     width: calc(100vw);
     padding-top: 25px;
     background-image: url('../../../assets/background/footer-onboarding-bottom-mobile.svg');

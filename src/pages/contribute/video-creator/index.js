@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { graphql } from 'gatsby';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import ContributeLayout from '../../../components/_layouts/Contribute';
 import './style.scss';
 import ContributorInfo from '../../../components/onboarding-page/ContributorInfo';
@@ -10,9 +10,11 @@ import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
 import BountiesImage from '../../../assets/svg/bounties-getting-started.svg';
 import ChatIntegrator from '../../../components/onboarding-page/ChatIntegrator';
 import VideoCreator from '../../../assets/svg/contributor-video-creator.svg';
+import SiteMetadata from '../../../components/SiteMetadata';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+  const { language } = useI18next();
   const chatRef = useRef();
   const data = {
     title: 'onboarding.contributorRoles.videoCreator.title',
@@ -44,6 +46,7 @@ const Onboarding = () => {
 
   return (
     <ContributeLayout t={t} onChatWithIntegrator={handleButtonAction}>
+      <SiteMetadata lang={language} title={t(data.title)} />
       <div className="Onboarding__wrapper"></div>
       <ContributorInfo t={t} title={t(data.title)} specialities={data.specialities} image={VideoCreator} />
       <Integrators t={t} onChatWithIntegrator={handleButtonAction} />

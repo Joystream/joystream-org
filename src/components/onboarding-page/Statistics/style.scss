@@ -73,7 +73,7 @@
     }
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     &__content {
       width: calc(90vw);
     }

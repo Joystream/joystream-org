@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
 import InfoSection from '../../../components/onboarding-page/InfoSection';
 import ReferallsInfo from '../../../components/onboarding-page/ReferallsInfo';
@@ -13,10 +13,12 @@ import { ReactComponent as Council } from '../../../assets/svg/council.svg';
 import { ReactComponent as WorkingGroup } from '../../../assets/svg/working-group.svg';
 import { ReactComponent as Bounty } from '../../../assets/svg/bounty.svg';
 import { ReactComponent as MakeBounty } from '../../../assets/svg/create-bounty.svg';
+import SiteMetadata from '../../../components/SiteMetadata';
 import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+  const { language } = useI18next();
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
@@ -71,6 +73,7 @@ const Onboarding = () => {
       onRoleUpdated={() => setShouldReloadRole(true)}
       onIsLastPage={() => {}}
     >
+      <SiteMetadata lang={language} title={t('onboarding.page3.title')} description={t('onboarding.page3.subtitle')} />
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
@@ -99,13 +102,7 @@ export default Onboarding;
 export const query = graphql`
   query($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageQueryFields
     }
   }
 `;

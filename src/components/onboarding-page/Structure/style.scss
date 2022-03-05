@@ -47,7 +47,7 @@
     }
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-xl} {
     &__content {
       width: calc(90vw);
     }
@@ -71,16 +71,6 @@
       & img {
         width: 120px;
       }
-    }
-  }
-
-  @media (max-width: 550px) {
-    &__content {
-      width: calc(90vw);
-    }
-
-    &__item {
-      width: calc(44.8vw);
     }
   }
 }
