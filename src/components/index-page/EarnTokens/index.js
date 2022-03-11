@@ -11,7 +11,7 @@ const EarnTokens = ({ t }) => (
     <div className="IndexPage__earntokens">
       <div className="IndexPage__earntokens__content">
         <h2 className="IndexPage__earntokens__title">{t('landing.earnTokens.title')}</h2>
-        <Link to="/get-started" className="IndexPage__earntokens__button-container">
+        <Link to="/start-here/what-is-joystream" className="IndexPage__earntokens__button-container">
           <div className="IndexPage__earntokens__button">
             <p className="IndexPage__earntokens__button-text">{t('button.getStarted.text')}</p>
             <p className="IndexPage__earntokens__button-text IndexPage__earntokens__button-text--alt">

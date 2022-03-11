@@ -18,7 +18,7 @@ const links = [
   { to: '/about', label: 'navbar.about' },
   { href: sharedData.social.discordLink, label: 'navbar.community' },
   {
-    to: '/get-started',
+    to: '/start-here/what-is-joystream', // TODO validate
     label: 'button.getStarted.text',
     isButton: true,
   },

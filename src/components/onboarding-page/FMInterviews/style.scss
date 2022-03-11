@@ -1,0 +1,41 @@
+@import '../../../styles/main';
+
+.FMInterviews {
+  &__wrapper {
+    padding-top: 80px;
+    background-color: $c_catskill_white;
+  }
+
+  &__title {
+    @extend %container;
+
+    margin-bottom: 64px;
+    font-family: $font-primary;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  &__item__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1242px;
+    margin: auto;
+  }
+
+  @media #{$screen-max-xl} {
+    &__title {
+      width: calc(90vw);
+      font-size: 40px;
+      line-height: 48px;
+      text-align: left;
+    }
+
+    &__item__wrapper {
+      width: calc(90vw);
+    }
+  }
+}
