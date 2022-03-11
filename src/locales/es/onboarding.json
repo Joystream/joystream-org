@@ -245,10 +245,6 @@
           "polkadot": {
             "question": "Is Joystream going for a Polkadot parachain auction?",
             "answer": "In short, Joystream does intend to go for a Polkadot parachain slot, at the right time."
-          },
-          "framework": {
-            "question": "What framework is Joystream built on?",
-            "answer": "Joystream is built using Substrate."
           }
         }
       }
