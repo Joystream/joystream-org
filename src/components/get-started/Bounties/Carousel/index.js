@@ -5,22 +5,11 @@ import CardCarousel from '../../../../components/CardCarousel';
 import useAxios from '../../../../utils/useAxios';
 import { bountiesLink } from '../../../../data/pages/get-started';
 import convertToCamelCase from '../../../../utils/convertToCamelCase';
+import parseDate from '../../../../utils/parseDate';
 
 import './style.scss';
 
-const parseDate = dateString => {
-  if (!dateString) {
-    return null;
-  }
-
-  const date = new Date(dateString);
-  const parsedDate = `${date.toLocaleString('default', { month: 'short' })}. ${date.getDate()} ${date.getFullYear()}`;
-
-  return parsedDate;
-};
-
 const BountiesCard = ({ title, amount, categories, date, id, link, description, t }) => {
-  console.log(t);
   return (
     <a className="GetStarted__bounties-carousel__card-wrapper-link" target="_blank" href={link ? link : '#'}>
       <div className="GetStarted__bounties-carousel__card">

@@ -80,7 +80,7 @@ const useAtlasData = numberOfDataPoints => {
       }
     };
     getAtlasData();
-  }, []);
+  }, [numberOfDataPoints]);
 
   return { videos, channels };
 };
