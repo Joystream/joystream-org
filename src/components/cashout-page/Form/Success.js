@@ -5,19 +5,10 @@ import { useTranslation, Trans } from 'gatsby-plugin-react-i18next';
 
 import { ArrowButton } from '../../../pages/founding-members/index';
 
-import { CASHOUT_SERVER_URL, CASHOUT_ROUTE } from './index';
+import { CASHOUT_ROUTE, addLeadingZero } from './index';
 import { FINAL_UI_STATE_NOCASHOUT, FINAL_UI_STATE_SUCCESS, FINAL_UI_STATE_TIMEOUT, FINAL_UI_STATE_SERVERPROBLEM } from './FinalScreen';
 
 const BURN_ADDRESS = '5D5PhZQNJzcJXVBxwJxZcsutjKPqUPydrvpu6HeiBfMaeKQu';
-
-const addLeadingZero = number => {
-  if(number < 10) {
-    return `0${number}`
-  }
-
-  return `${number}`
-}
-
 const CASHOUT_TIMEOUT = "TIMEOUT";
 const CASHOUT_NOCASHOUT = "NOCASHOUT";
 
@@ -28,7 +19,7 @@ const Success = ({ timeoutTimestamp, joystreamAddress, setCashoutResponse }) => 
     setCashoutResponse({ loading: true });
 
     try {
-      const response = await axios.post(CASHOUT_SERVER_URL + CASHOUT_ROUTE, {
+      const response = await axios.post(process.env.GATSBY_CASHOUT_SERVER_URL + CASHOUT_ROUTE, {
         joystreamAddress: joystreamAddress
       });
 

@@ -17,18 +17,19 @@ import getBchValue from '../../utils/getBchValue';
 
 import './style.scss';
 
-const STATUS_SERVER_URL = 'http://localhost:8081/';
 const CURRENCY_DATA_STORAGE_KEY = 'CashoutDataJoystream';
 const CURRENCY_DATA_TIMEOUT_IN_SECONDS = 5 * 60;
+const CASHOUT_SERVER_BALANCE_ROUTE = "balance";
 
 const CashoutPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
   const [{ Api, ApiError }, setApiData] = useState({ Api: null, ApiError: false });
-  const [{ joyInDollars, bchInDollars, error: currencyDataError }, setCurrencyData] = useState({
+  const [{ joyInDollars, bchInDollars, bchBalance, error: currencyDataError }, setCurrencyData] = useState({
     joyInDollars: null,
     bchInDollars: null,
+    bchBalance: null,
     error: false,
   });
 
@@ -55,9 +56,11 @@ const CashoutPage = () => {
   useEffect(() => {
     const getStatusData = async () => {
       try {
-        const response = await axios.get(STATUS_SERVER_URL);
-        if (response.status === 200) {
-          setCurrencyData(prev => ({ ...prev, joyInDollars: response.data.price, error: false }));
+        const statusServerResponse = await axios.get(process.env.GATSBY_API_URL);
+        const cashoutServerResponse = await axios.get(process.env.GATSBY_CASHOUT_SERVER_URL + CASHOUT_SERVER_BALANCE_ROUTE);
+
+        if (statusServerResponse.status === 200 && cashoutServerResponse.status === 200) {
+          setCurrencyData(prev => ({ ...prev, joyInDollars: statusServerResponse.data.price, bchBalance: cashoutServerResponse.data.balance, error: false }));
         } else {
           setCurrencyData(prev => ({ ...prev, error: true }));
         }
@@ -119,6 +122,7 @@ const CashoutPage = () => {
             Api={Api}
             joyInDollars={joyInDollars}
             bchInDollars={bchInDollars}
+            bchBalance={bchBalance}
             statusServerError={currencyDataError}
             apiError={ApiError}
           />

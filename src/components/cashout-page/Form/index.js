@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import cn from 'classnames';
 import axios from 'axios';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import Countdown from 'react-countdown-now';
 
 import Input from './Input';
 import AmountInput from './AmountInput';
@@ -25,13 +26,20 @@ import {
 
 import './style.scss';
 
-export const CASHOUT_SERVER_URL = "http://localhost:3000/";
 export const INITIATE_CASHOUT_ROUTE = "initiate-cashout";
 export const CASHOUT_ROUTE = "cashout";
 
 const ERROR_TYPE_PROCESSING = "PROCESSING";
 
-const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiError }) => {
+export const addLeadingZero = number => {
+  if(number < 10) {
+    return `0${number}`
+  }
+
+  return `${number}`
+}
+
+const CashoutForm = ({ Api, joyInDollars, bchInDollars, bchBalance, statusServerError, apiError }) => {
   const { t } = useTranslation();
 
   const [joystreamAddress, setJoystreamAddress] = useState({ value: '', error: null });
@@ -44,7 +52,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
 
   // state-derived variables
   const formIsFilled =
-    !!joystreamAddress.value && !!tokenAmount.value && !!bchAddress.value && !!email.value && !!joystreamHandle.value;
+    !!joystreamAddress.value && !!tokenAmount.value && !!bchAddress.value;
   const formIsLoading = !(Api && joyInDollars) || cashoutInitiationResponse?.loading || cashoutResponse?.loading;
 
   const formFinalizationState = () => {
@@ -70,13 +78,9 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
   };
 
   const validateForm = async () => {
-    const trimmedEmail = email.value.trimStart().trimEnd();
-
     const joystreamAddressError = validateJoystreamAddress(joystreamAddress.value);
-    const tokenAmountError = validateTokenAmount(tokenAmount.value);
+    const tokenAmountError = validateTokenAmount(tokenAmount.value, joyInDollars, bchInDollars, bchBalance);
     const bchAddressError = validateBchAddress(bchAddress.value);
-    const emailError = validateEmail(trimmedEmail);
-    const userError = await validateUser(Api, joystreamHandle.value, joystreamAddress.value);
 
     const isValidBchAddress = !bchAddressError || !!bchAddressError?.warningMessage;
 
@@ -105,16 +109,29 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
       setBchAddress(prev => ({ ...prev, error: bchAddressError?.errorMessage }));
     }
 
-    if (!emailError) {
-      setEmail({ value: trimmedEmail, error: null });
-    } else {
-      setEmail(prev => ({ ...prev, error: emailError }));
+    let emailError;
+
+    if(email.value) {
+      const trimmedEmail = email.value.trimStart().trimEnd();
+      emailError = validateEmail(trimmedEmail);
+
+      if (!emailError) {
+        setEmail({ value: trimmedEmail, error: null });
+      } else {
+        setEmail(prev => ({ ...prev, error: emailError }));
+      }
     }
 
-    if (!userError) {
-      setJoystreamHandle(prev => ({ ...prev, error: null }));
-    } else {
-      setJoystreamHandle(prev => ({ ...prev, error: userError }));
+    let userError;
+
+    if(joystreamHandle.value) {
+      userError = await validateUser(Api, joystreamHandle.value, joystreamAddress.value);
+
+      if (!userError) {
+        setJoystreamHandle(prev => ({ ...prev, error: null }));
+      } else {
+        setJoystreamHandle(prev => ({ ...prev, error: userError }));
+      }
     }
 
     return !joystreamAddressError && !tokenAmountError && isValidBchAddress && !emailError && !userError;
@@ -127,12 +144,12 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
       setCashoutInitiationResponse({ loading: true });
 
       try {
-        const response = await axios.post(CASHOUT_SERVER_URL + INITIATE_CASHOUT_ROUTE, {
+        const response = await axios.post(process.env.GATSBY_CASHOUT_SERVER_URL + INITIATE_CASHOUT_ROUTE, {
           joystreamAddress: joystreamAddress.value,
           tokenAmount: tokenAmount.value,
           bchAddress: bchAddress.value,
           email: email.value,
-          joystreamHandle: joystreamHandle.value
+          joystreamMembershipIdentification: joystreamHandle.value
         });
 
         if(response.status === 200) {
@@ -182,7 +199,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         label={t("cashout.form.sendFrom.label")}
         placeholder={t("cashout.form.sendFrom.placeholder")}
         updateValue={setJoystreamAddress}
-        errorMessage={joystreamAddress.error}
+        errorMessage={joystreamAddress.error && t(`${joystreamAddress.error}`)}
         info={t("cashout.form.sendFrom.info")}
         disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
@@ -191,7 +208,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         label={t("cashout.form.amount.label")}
         placeholder={t("cashout.form.amount.placeholder")}
         updateValue={setTokenAmount}
-        errorMessage={tokenAmount.error}
+        errorMessage={tokenAmount.error && t(`${tokenAmount.error}`)}
         joyInDollars={joyInDollars}
         bchInDollars={bchInDollars}
         disabled={formIsLoading || cashoutInitiationResponse?.success}
@@ -201,8 +218,8 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         label={t("cashout.form.destinationAddress.label")}
         placeholder={t("cashout.form.destinationAddress.placeholder")}
         updateValue={setBchAddress}
-        errorMessage={bchAddress.error}
-        warning={bchAddress.warning}
+        errorMessage={bchAddress.error && t(`${bchAddress.error}`)}
+        warning={bchAddress.warning && t(`${bchAddress.warning}`)}
         info={t("cashout.form.destinationAddress.info")}
         disabled={formIsLoading || cashoutInitiationResponse?.success}
       />
@@ -212,7 +229,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         placeholder={t("cashout.form.email.placeholder")}
         inputType="text"
         updateValue={setEmail}
-        errorMessage={email.error}
+        errorMessage={email.error && t(`${email.error}`)}
         info={t("cashout.form.email.info")}
         help={t("cashout.form.email.help")}
         disabled={formIsLoading || cashoutInitiationResponse?.success}
@@ -222,7 +239,7 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
         label={t("cashout.form.joystreamHandle.label")}
         placeholder={t("cashout.form.joystreamHandle.placeholder")}
         updateValue={setJoystreamHandle}
-        errorMessage={joystreamHandle.error}
+        errorMessage={joystreamHandle.error && t(`${joystreamHandle.error}`)}
         info={t("cashout.form.joystreamHandle.info")}
         help={t("cashout.form.joystreamHandle.help")}
         disabled={formIsLoading || cashoutInitiationResponse?.success}
@@ -232,6 +249,18 @@ const CashoutForm = ({ Api, joyInDollars, bchInDollars, statusServerError, apiEr
       ) : null}
       {!formIsLoading && cashoutInitiationResponse?.success ? (
         <Success {...cashoutInitiationResponse.success} setCashoutResponse={setCashoutResponse} />
+      ) : null}
+      {formIsLoading && cashoutInitiationResponse?.success ? (
+        <div className="CashoutPage__form__body__success">
+          <p className="CashoutPage__form__body__success__title" style={{ marginBottom: 0 }} >{t("cashout.form.success.waiting")}</p>
+          <p className="CashoutPage__form__body__success__timeout" style={{ marginBottom: "15px" }}>{t("cashout.form.success.timeout")}{' '}
+            <Countdown
+              date={new Date(cashoutInitiationResponse.success.timeoutTimestamp)}
+              renderer={({ minutes, seconds }) => <span>{addLeadingZero(minutes)}:{addLeadingZero(seconds)}</span>}
+              zeroPadTime={2}
+            />
+          </p>
+        </div>
       ) : null}
       {formIsLoading ? (
         <Loader

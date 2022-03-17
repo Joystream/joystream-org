@@ -10,31 +10,43 @@
       "sendFrom": {
         "label": "Send from",
         "placeholder": "Testnet address",
-        "info": "tJOY Account address"
+        "info": "tJOY Account address",
+        "incorrectAddress": "Incorrect account adress. Please try again"
       },
       "amount": {
         "label": "Amount",
         "placeholder": "Amount",
         "tjoy": "tJOY",
         "usd": "USD",
-        "bch": "BCH"
+        "bch": "BCH",
+        "invalidValue": "Invalid value. Please try again",
+        "needsToBeGreater": "Dollar value needs to be greater than $1",
+        "needsToBeLess": "Dollar value needs to be less than $300",
+        "notEnoughFunds": "There are currently not enough funds to execute this cashout. Please contact us on our Discord!"
       },
       "destinationAddress": {
         "label": "Destination address",
         "placeholder": "Account address",
-        "info": "BCH Account address"
+        "info": "BCH Account address",
+        "incorrectAddress": "Incorrect account adress. Please try again",
+        "legacyAddress": "This is a legacy address. Make sure to avoid mixing BCH/BTC up!",
+        "btcAddress": "This is very likely a BTC address. Make sure to avoid mixing BCH/BTC up!"
       },
       "email": {
         "label": "Email",
         "placeholder": "Email",
         "info": "Optional",
-        "help": "Helps us contact you in case of any problems"
+        "help": "Helps us contact you in case of any problems",
+        "incorrectEmailAddress": "Incorrect email adress. Please try again"
       },
       "joystreamHandle": {
         "label": "Joystream Handle/ID",
         "placeholder": "Handle/ID",
         "info": "Optional",
-        "help": "Helps us contact you in case of any problems"
+        "help": "Helps us contact you in case of any problems",
+        "addressMismatch": "The address you've provided does not belong to this account",
+        "idMismatch": "The id you've provided does not belong to this account",
+        "noSuchAccount": "No such account exists. Please try again"
       },
       "notice": {
         "title": "We noticed that a similar payment is being processed",
@@ -43,7 +55,8 @@
       "success": {
         "title": "You've succesfully initiated the cashout process!",
         "subtitle": "Now, please send the same amount of tokens to this joystream address: <0>5D5PhZQNJzcJXVBxwJxZcsutjKPqUPydrvpu6HeiBfMaeKQu</0> and finish the process by clicking the button under after doing so.",
-        "timeout": "Timeout:"
+        "timeout": "Timeout:",
+        "waiting": "Waiting for the tokens to arrive.."
       },
       "finalScreen": {
         "success": {
