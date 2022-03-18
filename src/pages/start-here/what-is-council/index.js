@@ -16,6 +16,7 @@ import { ReactComponent as ManageWG } from '../../../assets/svg/manageWG.svg';
 import FAQ from '../../../components/onboarding-page/FAQ';
 import useCouncilData from '../../../utils/pages/onboarding/useCouncilData';
 import SiteMetadata from '../../../components/SiteMetadata';
+import OGImage from '../../../assets/images/Joystream_Thumbnail_4.jpeg';
 import './style.scss';
 
 const Onboarding = () => {
@@ -124,7 +125,12 @@ const Onboarding = () => {
       onRoleUpdated={() => setShouldReloadRole(true)}
       onIsLastPage={() => {}}
     >
-      <SiteMetadata lang={language} title={t('onboarding.page4.title')} description={t('onboarding.page4.subtitle')} />
+      <SiteMetadata
+        lang={language}
+        title={t('onboarding.page4.siteTitle')}
+        description={t('onboarding.page4.subtitle')}
+        image={OGImage}
+      />
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}

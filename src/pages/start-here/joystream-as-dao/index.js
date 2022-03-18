@@ -11,6 +11,7 @@ import usePioneerData from '../../../utils/pages/onboarding/usePioneerData';
 import Statistics from '../../../components/onboarding-page/Statistics';
 import Structure from '../../../components/onboarding-page/Structure';
 import SiteMetadata from '../../../components/SiteMetadata';
+import OGImage from '../../../assets/images/Joystream_Thumbnail_2.jpeg';
 import './style.scss';
 
 const Onboarding = () => {
@@ -182,7 +183,12 @@ const Onboarding = () => {
       onLessonListClose={() => setShouldShowLessonList(false)}
       onRoleUpdated={() => setShouldReloadRole(true)}
     >
-      <SiteMetadata lang={language} title={t('onboarding.page2.title')} description={t('onboarding.page2.subtitle')} />
+      <SiteMetadata
+        lang={language}
+        title={t('onboarding.page2.siteTitle')}
+        description={t('onboarding.page2.subtitle')}
+        image={OGImage}
+      />
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}

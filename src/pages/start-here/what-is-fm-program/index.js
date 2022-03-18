@@ -14,6 +14,7 @@ import { ReactComponent as WorkingGroup } from '../../../assets/svg/working-grou
 import { ReactComponent as Bounty } from '../../../assets/svg/bounty.svg';
 import { ReactComponent as MakeBounty } from '../../../assets/svg/create-bounty.svg';
 import SiteMetadata from '../../../components/SiteMetadata';
+import OGImage from '../../../assets/images/Joystream_Thumbnail_3.jpeg';
 import './style.scss';
 
 const Onboarding = () => {
@@ -73,7 +74,12 @@ const Onboarding = () => {
       onRoleUpdated={() => setShouldReloadRole(true)}
       onIsLastPage={() => {}}
     >
-      <SiteMetadata lang={language} title={t('onboarding.page3.title')} description={t('onboarding.page3.subtitle')} />
+      <SiteMetadata
+        lang={language}
+        title={t('onboarding.page3.siteTitle')}
+        description={t('onboarding.page3.subtitle')}
+        image={OGImage}
+      />
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
