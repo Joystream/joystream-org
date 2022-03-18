@@ -9,6 +9,7 @@ import FAQ from '../../../components/onboarding-page/FAQ';
 import WorkingGroups from '../../../components/onboarding-page/WorkingGroups';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import SiteMetadata from '../../../components/SiteMetadata';
+import OGImage from '../../../assets/images/Joystream_Thumbnail_5.jpeg';
 import './style.scss';
 
 const Onboarding = () => {
@@ -51,7 +52,12 @@ const Onboarding = () => {
       onRoleUpdated={() => setShouldReloadRole(true)}
       isLastPage={isLastPage}
     >
-      <SiteMetadata lang={language} title={t('onboarding.page5.title')} description={t('onboarding.page5.subtitle')} />
+      <SiteMetadata
+        lang={language}
+        title={t('onboarding.page5.siteTitle')}
+        description={t('onboarding.page5.subtitle')}
+        image={OGImage}
+      />
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}

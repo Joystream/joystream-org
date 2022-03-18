@@ -13,6 +13,7 @@ import AtlasVisual from '../../../assets/images/atlas-visual.png';
 import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import SiteMetadata from '../../../components/SiteMetadata';
+import OGImage from '../../../assets/images/Joystream_Thumbnail_7.jpeg';
 import './style.scss';
 
 const Onboarding = () => {
@@ -95,7 +96,12 @@ const Onboarding = () => {
       onRoleUpdated={() => setShouldReloadRole(true)}
       isLastPage={isLastPage}
     >
-      <SiteMetadata lang={language} title={t('onboarding.page7.title')} description={t('onboarding.page7.subtitle')} />
+      <SiteMetadata
+        lang={language}
+        title={t('onboarding.page7.siteTitle')}
+        description={t('onboarding.page7.subtitle')}
+        image={OGImage}
+      />
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
