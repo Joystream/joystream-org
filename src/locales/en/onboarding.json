@@ -220,6 +220,7 @@
         "title": "Go to next video",
         "subtitle": "Joystream is a DAO, owned and governed by its token holders"
       },
+      "siteTitle": "We are giving away $12,000,000+ worth of $JOY tokens!",
       "title": "We are giving away $12,000,000+<br/>worth of $JOY tokens!",
       "subtitle": "Here’s everything you need to know about Joystream, and information about how to receive $JOY tokens...",
       "infoSection" : {
@@ -250,6 +251,7 @@
       }
     },
     "page2": {
+      "siteTitle": "Joystream DAO is owned and governed by its token holders",
       "title": "Joystream DAO is owned and governed by its token holders",
       "subtitle": "Here’s what a DAO really is.. and how Joystream is governed by the token holders using our state of the art application...",
       "footer": {
@@ -304,6 +306,7 @@
       }
     },
     "page3": {
+      "siteTitle": "Become a Founding Member and split $12,000,000+ worth of $JOY",
       "title": "Become a Founding Member and split $12,000,000+ worth of $JOY",
       "subtitle": "Learn everything you need to know about the Founding Members program, and how to become one...",
       "footer": {
@@ -398,6 +401,7 @@
       }
     },
     "page4": {
+      "siteTitle": "What is the Council?",
       "title": "What is the Council?",
       "subtitle": "Everything you need to know about the group of people who lead the governance side of Joystream, including how you can become one",
       "footer": {
@@ -458,6 +462,7 @@
       }
     },
     "page5": {
+      "siteTitle": "What are Working Groups?",
       "title": "What are Working Groups?",
       "subtitle": "Working groups are like company departments collectively working towards some specific objective",
       "footer": {
@@ -497,6 +502,7 @@
       }
     },
     "page6": {
+      "siteTitle": "What are bounties?",
       "title": "What are bounties?",
       "subtitle": "Everything you need to understand about how to make a living by working on bounties, and even creating your own bounty",
       "footer": {
@@ -528,6 +534,7 @@
       }
     },
     "page7": {
+      "siteTitle": "How to make a living as a video creator",
       "title": "How to make a living as a video creator",
       "subtitle": "Learn how to create and monetize on Joystream using video NFTs, social tokens, and even getting paid by Joystream itself",
       "footer": {
