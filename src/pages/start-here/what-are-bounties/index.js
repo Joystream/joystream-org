@@ -67,7 +67,7 @@ const Onboarding = () => {
       <div className="Onboarding__wrapper">
         <VideoSection
           t={t}
-          title={t('onboarding.page6.siteTitle')}
+          title={t('onboarding.page6.title')}
           subtitle={t('onboarding.page6.subtitle')}
           index={lessonIndex}
           shouldReloadRole={shouldReloadRole}
