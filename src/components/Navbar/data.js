@@ -2,7 +2,7 @@ import { sharedData } from '../../data/pages';
 
 const links = [
   { href: 'https://play.joystream.org/', label: 'navbar.atlas' },
-  { href: 'https://www.dao.joystream.org', label: 'navbar.pioneer' },
+  { href: 'https://dao.joystream.org', label: 'navbar.pioneer' },
   { to: '/about', label: 'navbar.about' },
   { href: sharedData.social.discordLink, label: 'navbar.community' },
   { href: 'https://joystream.gitbook.io/testnet-workspace/', label: "navbar.learnMore" },
