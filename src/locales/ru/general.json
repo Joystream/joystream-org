@@ -87,13 +87,14 @@
   },
   "navbar": {
     "product": "Продукт",
-    "atlas": "Atlas",
-    "pioneer": "Pioneer",
+    "atlas": "Content",
+    "pioneer": "DAO",
     "community": "Сообщество",
     "brandStory": "История бренда",
     "brandGuides": "Правила использования айдентики",
     "downloadAssets": "Скачать ресурсы",
-    "about": "О нас"
+    "about": "Team",
+    "learnMore": "Learn More"
   },
   "footer": {
     "title": "Следите за новостями",

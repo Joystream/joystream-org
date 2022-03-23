@@ -87,13 +87,14 @@
   },
   "navbar": {
     "product": "Product",
-    "atlas": "Atlas",
-    "pioneer": "Pioneer",
+    "atlas": "Content",
+    "pioneer": "DAO",
     "community": "Community",
     "brandStory": "Brand Story",
     "brandGuides": "Brand Guides",
     "downloadAssets": "Download Assets",
-    "about": "About"
+    "about": "Team",
+    "learnMore": "Learn More"
   },
   "footer": {
     "title": "Stay up to date",
