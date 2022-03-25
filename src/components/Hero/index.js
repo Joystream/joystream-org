@@ -28,7 +28,7 @@ const defaultProps = {
   animationEnd: 500,
   theme: 'black',
   noOverflow: false,
-  reverse: false
+  reverse: false,
 };
 
 const Hero = ({
@@ -42,7 +42,7 @@ const Hero = ({
   animationEndValue,
   theme,
   noOverflow,
-  reverse
+  reverse,
 }) => {
   const parallaxData = [
     {
@@ -60,13 +60,13 @@ const Hero = ({
 
   return (
     <section className={cn('Hero', `Hero--${theme}`, { 'Hero--indented': indent, 'Hero--no-overflow': noOverflow })}>
-      <div className={cn('Hero__container', { "Hero__container--reverse" : reverse })}>
-        <div className={cn('Hero__content', { "Hero__content--reverse" : reverse })}>
+      <div className={cn('Hero__container', { 'Hero__container--reverse' : reverse })}>
+        <div className={cn('Hero__content', { 'Hero__content--reverse' : reverse })}>
           <h1 className="Hero__title">{title}</h1>
           <div className="Hero__description">{children}</div>
         </div>
         {image && (
-          <div className={cn('Hero__image-wrapper', { "Hero__image-wrapper--reverse" : reverse })}>
+          <div className={cn('Hero__image-wrapper', { 'Hero__image-wrapper--reverse' : reverse })}>
             <Plx parallaxData={parallaxData}>
               <img src={image} alt={title} className="Hero__image" />
             </Plx>

@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 const Klaudiusz = React.forwardRef(({ className, ...props }, ref) => {
   return (
@@ -84,7 +84,7 @@ const Klaudiusz = React.forwardRef(({ className, ...props }, ref) => {
         </clipPath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
-export default Klaudiusz
+export default Klaudiusz;

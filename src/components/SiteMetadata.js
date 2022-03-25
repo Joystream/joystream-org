@@ -82,9 +82,9 @@ function SiteMetadata({ description, lang, meta, title, image }) {
       ].concat(meta)}
       script={[
         {
-          type: "text/javascript",
-          innerHTML: LiveSessionScript
-        }
+          type: 'text/javascript',
+          innerHTML: LiveSessionScript,
+        },
       ]}
     />
   );

@@ -13,6 +13,8 @@ import ExploreJoystream from '../components/index-page/ExploreJoystream';
 import EarnTokens from '../components/index-page/EarnTokens';
 import BecomeFoundingMember from '../components/index-page/BecomeFoundingMember';
 import RoadToMainnet from '../components/index-page/RoadToMainnet';
+import EarnJOYCoins from '../components/index-page/EarnJOYCoins';
+import OurInvestors from '../components/index-page/OurInvestors';
 
 import './style.scss';
 
@@ -25,11 +27,13 @@ const IndexPage = () => {
     <BaseLayout t={t}>
       <SiteMetadata
         lang={language}
-        title={t("siteMetadata.title")}
-        description={t("landing.siteMetadata.description")}
+        title={t('siteMetadata.title')}
+        description={t('landing.siteMetadata.description')}
       />
 
       <Hero t={t} statusData={statusData} />
+
+      <EarnJOYCoins t={t}/>
 
       <BecomeFoundingMember t={t}/>
 
@@ -42,6 +46,8 @@ const IndexPage = () => {
       <RoadToMainnet t={t}/>
 
       <EarnTokens t={t}/>
+
+      <OurInvestors t={t}/>
     </BaseLayout>
   );
 };

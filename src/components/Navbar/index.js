@@ -100,7 +100,7 @@ const Navbar = ({ light, links, t }) => {
         <div
           className={cn('Navbar__links', {
             'Navbar__links--open': isOpen,
-            'Navbar__links--light' : light
+            'Navbar__links--light' : light,
           })}
         >
           {links.map(({ label, isButton, isDropdown, links, href, to }) => {
@@ -109,8 +109,8 @@ const Navbar = ({ light, links, t }) => {
             }
 
             let children = (
-              <div className={cn("Navbar__link-wrapper", {
-                "Navbar__link-wrapper--light" : light
+              <div className={cn('Navbar__link-wrapper', {
+                'Navbar__link-wrapper--light' : light,
               })}>
                 <p className="Navbar__link">{t(label)}</p>
               </div>

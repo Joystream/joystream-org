@@ -235,8 +235,8 @@ const rolesData = {
         {
           isModular: true,
           key: 'roles.discoveryProvider.responsibilities.collaborate',
-          components: [<Link href="#builder">Builders</Link>]
-        }
+          components: [<Link href="#builder">Builders</Link>],
+        },
       ],
       requirements: [
         'roles.discoveryProvider.requirements.setupAndMaintainInfrastructure',

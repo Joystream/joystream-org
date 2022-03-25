@@ -16,7 +16,7 @@ const GetStartedHowTo = ({ t }) => {
         setShouldAnimate(true);
       }
     }
-  }, [scrollPosition]);
+  }, [height, scrollPosition]);
 
   return (
     <div ref={componentRef} className="GetStarted__howto-wrapper">

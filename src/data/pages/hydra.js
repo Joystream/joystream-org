@@ -29,27 +29,27 @@ export default {
     sections: [
       {
         image: SlowFetching,
-        key: "hydra.value.values.slowFetching"
+        key: 'hydra.value.values.slowFetching',
       },
       {
         image: SlowProcessing,
-        key: "hydra.value.values.slowProcessing"
+        key: 'hydra.value.values.slowProcessing',
       },
       {
         image: ComplexClient,
-        key: "hydra.value.values.complexClient"
+        key: 'hydra.value.values.complexClient',
       },
       {
         image: NoSearch,
-        key: "hydra.value.values.noSearch"
+        key: 'hydra.value.values.noSearch',
       },
       {
         image: OverFetching,
-        key: "hydra.value.values.overFetching"
+        key: 'hydra.value.values.overFetching',
       },
       {
         image: Costly,
-        key: "hydra.value.values.costlyNodes"
+        key: 'hydra.value.values.costlyNodes',
       },
     ],
   },

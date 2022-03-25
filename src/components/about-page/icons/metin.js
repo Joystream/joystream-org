@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 const Metin = React.forwardRef(({ className, ...props }, ref) => {
   return (
@@ -76,7 +76,7 @@ const Metin = React.forwardRef(({ className, ...props }, ref) => {
         </clipPath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
-export default Metin
+export default Metin;

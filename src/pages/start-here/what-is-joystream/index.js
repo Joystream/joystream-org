@@ -25,7 +25,7 @@ const Onboarding = () => {
     {
       title: t('onboarding.page1.faq.questions.polkadot.question'),
       text: t('onboarding.page1.faq.questions.polkadot.answer'),
-    }
+    },
   ];
 
   return (

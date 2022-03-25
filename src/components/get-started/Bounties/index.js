@@ -108,21 +108,21 @@ const GetStartedBounties = ({ t }) => {
           />
           <BountiesRoleCard
             RoleImage={contentCurator.image}
-            title={t("rolesData.contentCurator")}
+            title={t('rolesData.contentCurator')}
             text={t('getStarted.activeRoles.contentCuratorText')}
             link={contentCurator.link}
             t={t}
           />
           <BountiesRoleCard
             RoleImage={contentCreator.image}
-            title={t("rolesData.contentCreator")}
+            title={t('rolesData.contentCreator')}
             text={t('getStarted.activeRoles.contentCreatorText')}
             link={contentCreator.link}
             t={t}
           />
           <BountiesRoleCard
             RoleImage={contentLead.image}
-            title={t("rolesData.contentLead")}
+            title={t('rolesData.contentLead')}
             text={t('getStarted.activeRoles.contentLeadText')}
             link={contentLead.link}
             t={t}

@@ -43,7 +43,7 @@ const roles = {
       hasLabel: false,
     },
     { image: builderImage, title: 'Builder', to: '/roles#builder', key: 'builders', hasLabel: false },
-  ]
+  ],
 };
 
 const goalsData = [
