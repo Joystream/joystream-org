@@ -104,7 +104,7 @@ const GuidesPage = () => {
 
   return (
     <BrandLayout t={t}>
-      <SiteMetadata lang={language} title={t("brand.siteMetadata.title")} />
+      <SiteMetadata lang={language} title={t('brand.siteMetadata.title')} />
 
       <BrandLayoutWrapper className="AssetsPage">
         <SidebarProvider>

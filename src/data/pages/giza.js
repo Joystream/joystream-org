@@ -45,7 +45,7 @@ const roles = {
     },
     { image: BuilderImage, title: 'Builder', to: '/roles#builder', key: 'builders', hasLabel: false },
     { image: BandwidthProviderImage, title: 'Bandwidth Provider', to: '/roles#bandwidth-provider', key: 'bandwidthProviders', hasLabel: false },
-  ]
+  ],
 };
 
 const goalsData = [

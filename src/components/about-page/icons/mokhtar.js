@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 const Mokhtar = React.forwardRef(({ className, ...props }, ref) => {
   return (
@@ -92,7 +92,7 @@ const Mokhtar = React.forwardRef(({ className, ...props }, ref) => {
         </clipPath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
-export default Mokhtar
+export default Mokhtar;

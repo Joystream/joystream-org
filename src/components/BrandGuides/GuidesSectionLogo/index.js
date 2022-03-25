@@ -72,7 +72,7 @@ export default ({ t }) => {
 
         <SubTitle small>{t('brand.guides.logoUseCases.safeUse')}</SubTitle>
         <Text>
-          <Trans i18nKey='brand.guides.logoUseCases.visualPresentation' components={[<strong/>]}/>
+          <Trans i18nKey="brand.guides.logoUseCases.visualPresentation" components={[<strong/>]}/>
         </Text>
 
         <div className="GuidesSectionLogo__safe-use SafeUse">

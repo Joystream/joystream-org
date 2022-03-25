@@ -15,6 +15,9 @@ exports[`IndexPage page renders correctly 1`] = `
     statusData={null}
     t={[Function]}
   />
+  <EarnJOYCoins
+    t={[Function]}
+  />
   <BecomeFoundingMember
     t={[Function]}
   />
@@ -31,6 +34,9 @@ exports[`IndexPage page renders correctly 1`] = `
     t={[Function]}
   />
   <EarnTokens
+    t={[Function]}
+  />
+  <OurInvestors
     t={[Function]}
   />
 </BaseLayout>

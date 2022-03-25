@@ -18,8 +18,8 @@ const GetStartedHero = ({ t }) => (
           </div>
         </a>
       </div>
-      <img src={GetStartedHeroImage} className="GetStarted__hero__image" alt={t("getStarted.hero.imageAlt")} />
-      <img src={GetStartedHeroAlt} className="GetStarted__hero__image-alt" alt={t("getStarted.hero.imageAlt")} />
+      <img src={GetStartedHeroImage} className="GetStarted__hero__image" alt={t('getStarted.hero.imageAlt')} />
+      <img src={GetStartedHeroAlt} className="GetStarted__hero__image-alt" alt={t('getStarted.hero.imageAlt')} />
     </div>
   </div>
 );

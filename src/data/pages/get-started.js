@@ -10,32 +10,32 @@ import { ReactComponent as ContentLeadImage } from '../../assets/svg/content-cur
 export const roleCardData = {
     validator: {
         image: ValidatorImage,
-        link: "https://github.com/Joystream/helpdesk/tree/master/roles/validators"
+        link: 'https://github.com/Joystream/helpdesk/tree/master/roles/validators',
     },
     council: {
         image: CouncilMemberImage,
-        link: "https://github.com/Joystream/helpdesk/tree/master/roles/council-members"
+        link: 'https://github.com/Joystream/helpdesk/tree/master/roles/council-members',
     },
     storageProvider: {
         image: StorageProviderImage,
-        link: "https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers"
+        link: 'https://github.com/Joystream/helpdesk/tree/master/roles/storage-providers',
     },
     storageLead: {
         image: StorageLeadImage,
-        link: "https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead"
+        link: 'https://github.com/Joystream/helpdesk/tree/master/roles/storage-lead',
     },
     contentCurator: {
         image: ContentCuratorImage,
-        link: "https://github.com/Joystream/helpdesk/tree/master/roles/content-curators"
+        link: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-curators',
     },
     contentCreator: {
         image: ContentCreatorImage,
-        link: "https://github.com/Joystream/helpdesk/tree/master/roles/content-creators"
+        link: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-creators',
     },
     contentLead: {
         image: ContentLeadImage,
-        link: "https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead"
-    }
-}
+        link: 'https://github.com/Joystream/helpdesk/tree/master/roles/content-curator-lead',
+    },
+};
 
 export const bountiesLink = 'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties/bounties-status.json';

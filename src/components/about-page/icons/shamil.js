@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 const Shamil = React.forwardRef(({ className, ...props }, ref) => {
   return (
@@ -88,7 +88,7 @@ const Shamil = React.forwardRef(({ className, ...props }, ref) => {
         </clipPath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
-export default Shamil
+export default Shamil;

@@ -18,8 +18,8 @@ const GetStarted = () => {
     <BaseLayout t={t}>
       <SiteMetadata
         lang={language}
-        title={t("getStarted.siteMetadata.title")}
-        description={t("getStarted.siteMetadata.description")}
+        title={t('getStarted.siteMetadata.title')}
+        description={t('getStarted.siteMetadata.description')}
       />
 
       <GetStartedHero t={t} />

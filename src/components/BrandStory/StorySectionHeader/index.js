@@ -18,7 +18,7 @@ const StorySectionHeader = React.forwardRef(({ onActionClick, t }, ref) => {
         <div className="StorySectionHeader__content">
           <h2 className="StorySectionHeader__title">{t('brand.story.header.title')}</h2>
           <div className="StorySectionHeader__description">
-            <p><Trans i18nKey='brand.story.header.description' components={[<strong />]} /></p>
+            <p><Trans i18nKey="brand.story.header.description" components={[<strong />]} /></p>
           </div>
           <Button to="/manifesto" className="StorySectionHeader__button" large>
             {t('brand.story.header.buttonText')}

@@ -135,7 +135,7 @@ const RoadToMainnet = ({ t }) => {
   return (
     <div className="IndexPage__road-wrapper">
       <div className="IndexPage__road">
-        <h2 className="IndexPage__road__title">{t("landing.roadToMainnet.title")}</h2>
+        <h2 className="IndexPage__road__title">{t('landing.roadToMainnet.title')}</h2>
         <div className="IndexPage__road-main-wrapper">
           <div onClick={() => moveLeft()} role="presentation" className="IndexPage__road-main__arrow-wrapper">
             <Arrow className="IndexPage__road-main__arrow" />

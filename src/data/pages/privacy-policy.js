@@ -36,7 +36,7 @@ const privacyPolicyItems = [
         <Link href="https://marketingplatform.google.com/about/analytics/">Google Analytics</Link>,
         <br />,
         <strong />,
-        <Link href="https://livesession.io/security/">Livesession</Link>
+        <Link href="https://livesession.io/security/">Livesession</Link>,
       ],
     },
   },
@@ -83,9 +83,9 @@ const cookiePolicyItems = [
     title: 'privacyPolicy.cookiePolicyItems.regardingYourCookies.title',
     content: {
       isModular: true,
-      key: "privacyPolicy.cookiePolicyItems.regardingYourCookies.content",
-      components: [<br />]
-    }
+      key: 'privacyPolicy.cookiePolicyItems.regardingYourCookies.content',
+      components: [<br />],
+    },
   },
 ];
 

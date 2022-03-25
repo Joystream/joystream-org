@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 
-import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg'
+import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
 
 import './style.scss';
 

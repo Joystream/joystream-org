@@ -40,7 +40,7 @@ const CardCarousel = ({ children, scrollAmount = DEFAULT_SCROLL_AMOUNT }) => {
       </div>
       {maxScrollLeft > 0 ? (
         <div className="CardCarousel__control">
-          <div role='presentation' onClick={() => scrollBy(-scrollAmount)} className="CardCarousel__control__arrow-wrapper">
+          <div role="presentation" onClick={() => scrollBy(-scrollAmount)} className="CardCarousel__control__arrow-wrapper">
             <Arrow onClick={() => scrollBy(-scrollAmount)} className="CardCarousel__control__arrow-left" />
           </div>
           <div className="CardCarousel__control__tracker">
@@ -49,7 +49,7 @@ const CardCarousel = ({ children, scrollAmount = DEFAULT_SCROLL_AMOUNT }) => {
               className="CardCarousel__control__tracker__position"
             ></div>
           </div>
-          <div role='presentation' onClick={() => scrollBy(scrollAmount)} className="CardCarousel__control__arrow-wrapper">
+          <div role="presentation" onClick={() => scrollBy(scrollAmount)} className="CardCarousel__control__arrow-wrapper">
             <Arrow onClick={() => scrollBy(scrollAmount)} className="CardCarousel__control__arrow-right" />
           </div>
         </div>

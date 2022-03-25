@@ -24,7 +24,7 @@ const usefulLinks = [
 const socialMedias = [
   { icon: TwitterIcon, href: sharedData.social.twitterLink, name: 'socials.twitter' },
   { icon: GithubIcon, href: sharedData.links.github, name: 'socials.github' },
-  { icon: DiscordIcon, href: sharedData.social.discordLink, name: 'socials.discord' }
+  { icon: DiscordIcon, href: sharedData.social.discordLink, name: 'socials.discord' },
 ];
 
 export { joystreamLinks, githubLinks, usefulLinks, socialMedias };
