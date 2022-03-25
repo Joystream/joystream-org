@@ -82,7 +82,7 @@ const BountiesCarousel = ({ t }) => {
       setCategoryValues(tempCategoryValues);
       setBounties(data?.activeBounties);
     }
-  }, [data]);
+  }, [data, loading]);
 
   return (
     <div className="GetStarted__bounties-carousel-wrapper">

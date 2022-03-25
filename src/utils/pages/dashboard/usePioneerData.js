@@ -91,7 +91,7 @@ const usePioneerData = numberOfUserDataPoints => {
         setUsers({
           isLoading: false,
           error: false,
-          data: parsePioneerData(members, numberOfUserDataPoints)
+          data: parsePioneerData(members, numberOfUserDataPoints),
         });
 
         // posts and threads data
@@ -104,7 +104,7 @@ const usePioneerData = numberOfUserDataPoints => {
         setPosts({
           isLoading: false,
           error: false,
-          data: parsePioneerData(posts, numberOfUserDataPoints)
+          data: parsePioneerData(posts, numberOfUserDataPoints),
         });
 
         const numberOfThreads = (await Api.query.forum.nextThreadId()).toNumber();
@@ -116,12 +116,12 @@ const usePioneerData = numberOfUserDataPoints => {
         setThreads({
           isLoading: false,
           error: false,
-          data: parsePioneerData(threads, numberOfUserDataPoints)
+          data: parsePioneerData(threads, numberOfUserDataPoints),
         });
       };
       getMembers();
     }
-  }, [Api, apiError]);
+  }, [Api, apiError, numberOfUserDataPoints]);
 
   return { users, posts, threads };
 };

@@ -20,7 +20,7 @@ export default function RedirectToOnboarding() {
       description={t('onboarding.page1.subtitle')}
       image={OGImage}
     />
-  )
+  );
 };
 
 

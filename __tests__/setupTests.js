@@ -7,7 +7,17 @@ import * as jest from 'jest';
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({ t: key => key }),
   Trans: ({ children }) => children,
-  t: key => key
+  t: key => key,
 }));
 
 configure({ adapter: new Adapter() });
+
+window.matchMedia =
+  window.matchMedia ||
+  function() {
+    return {
+      matches: false,
+      addListener: function() {},
+      removeListener: function() {},
+    };
+  };

@@ -5,7 +5,7 @@ const keys = {
   councilMembersCount: 'council.members_count',
   storageProviders: 'roles.storage_providers',
   contentCuratorsCount: 'media.activeCurators',
-  contentCreatorsCount: 'media.channels'
+  contentCreatorsCount: 'media.channels',
 };
 
 const mapStatusDataToRoles = data => {

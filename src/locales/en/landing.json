@@ -16,6 +16,13 @@
         }
       }
     },
+    "earnJoyCoins": {
+      "title": "Earn $JOY coins",
+      "subtitle": "Here’s everything you need to know about Joystream and how to get started earning $JOY coins",
+      "button": {
+        "text": "Start earning"
+      }
+    },
     "becomeFM": {
       "subtitle": "Our brand new and unparalleled community token distribution scheme",
       "title": "Become a Founding Member to earn mainnet tokens and influence the development of the platform.",
@@ -125,6 +132,9 @@
     },
     "earnTokens": {
       "title": "Earn mainnet tokens, cash and influence."
+    },
+    "ourInvestors": {
+      "title": "Our Investors"
     }
   }
 }

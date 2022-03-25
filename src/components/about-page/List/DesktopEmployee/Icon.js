@@ -33,7 +33,7 @@ const EmployeeIcon = ({ Icon, name, wrapperRef, jobTitle, color, windowWidth }) 
         });
       }
     }
-  }, [hoveredIcon, hoveredWrapper, windowWidth]);
+  }, [hoveredIcon, hoveredWrapper, windowWidth, wrapperRef]);
 
   return (
     <>

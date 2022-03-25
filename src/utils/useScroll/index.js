@@ -9,7 +9,7 @@ function getScrollData() {
   }
 
   return {
-        scrollPosition
+        scrollPosition,
   };
 }
 

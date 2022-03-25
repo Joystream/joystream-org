@@ -13,7 +13,7 @@ const Position = ({ Icon, role, location, employmentType, salary, link, iconType
     <a href={link} target="_blank">
       <div className="AboutPage__position">
         <div className="AboutPage__position__icon-wrapper">
-          <img src={Icon} className={`AboutPage__position__icon AboutPage__position__icon--${iconType}`} alt='' />
+          <img src={Icon} className={`AboutPage__position__icon AboutPage__position__icon--${iconType}`} alt="" />
         </div>
         <h4 className="AboutPage__position__role">{role}</h4>
         <div className="AboutPage__position__info">
@@ -39,7 +39,7 @@ const Positions = () => {
         <h3 className="AboutPage__positions__jobs">{t('about.positions.available')}</h3>
         <div className="AboutPage__positions__subtitle">
           <span>{t('about.positions.join')}</span>{' '}
-          <img src={Jsgenesis} className="AboutPage__positions__jsgenesis" alt='' />
+          <img src={Jsgenesis} className="AboutPage__positions__jsgenesis" alt="" />
         </div>
         <div className="AboutPage__positions__list">
           <Position

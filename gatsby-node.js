@@ -13,12 +13,12 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         include: /node_modules/,
         type: 'javascript/auto',
       },
-  ]
+  ];
   if(stage === 'build-html'){
     rules.push({
       test: /openpgp/,
-      use: loaders.null()
-    })
+      use: loaders.null(),
+    });
   }
 
   actions.setWebpackConfig({
@@ -27,8 +27,8 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     },
     module: {
       rules: [
-        ...rules
-      ]
+        ...rules,
+      ],
     },
   });
 };

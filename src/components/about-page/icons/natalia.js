@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 const Natalia = React.forwardRef(({ className, ...props }, ref) => {
   return (
@@ -88,7 +88,7 @@ const Natalia = React.forwardRef(({ className, ...props }, ref) => {
         </clipPath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
-export default Natalia
+export default Natalia;

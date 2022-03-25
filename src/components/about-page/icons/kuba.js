@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 const Kuba = React.forwardRef(({ className, ...props }, ref) => {
   return (
@@ -96,7 +96,7 @@ const Kuba = React.forwardRef(({ className, ...props }, ref) => {
         </clipPath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
-export default Kuba
+export default Kuba;

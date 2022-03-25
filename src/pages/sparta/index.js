@@ -53,7 +53,7 @@ const SpartaPage = ({ content }) => {
         <HeroCard error content={t('sparta.heroCard.markdown')} t={t}/>
 
         <TestnetModal
-          title={t("sparta.modal.title")}
+          title={t('sparta.modal.title')}
           image={SpartaHelmetImg}
           closeModal={() => setModalOpen(false)}
           isOpen={isModalOpen}
@@ -86,7 +86,7 @@ const SpartaPage = ({ content }) => {
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title={t("sparta.map.title")} location="sparta">
+      <MapInfo title={t('sparta.map.title')} location="sparta">
         <p>
           <Trans
             i18nKey="sparta.map.text"

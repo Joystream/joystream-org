@@ -1,4 +1,4 @@
-{
+  {
   "onboarding": {
     "button": {
       "getStarted": {
@@ -323,7 +323,7 @@
       "referallsInfo" : {
         "reward": "$JOY Reward for Referrer",
         "refereeReward": "$JOY Reward for Referee",
-        "payout": "Referrals Payout"
+        "payout": "Paid out to referrers"
       },
       "tasksInfo" : {
         "title": "4 things you can do to become a FM",
