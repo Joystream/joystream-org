@@ -7,10 +7,8 @@ import Loader from 'react-loader-spinner';
 import SiteMetadata from '../../components/SiteMetadata';
 import BaseLayout from '../../components/_layouts/Base';
 
-import useAtlasData from '../../utils/pages/dashboard/useAtlasData';
-import usePioneerData from '../../utils/pages/dashboard/usePioneerData';
-
 import './style.scss';
+import useGraphqlData from '../../utils/pages/dashboard/useGraphqlData';
 
 const DashboardTooltip = ({ payload, active }) => {
   const { t } = useTranslation();
@@ -58,8 +56,7 @@ const DashboardLineChart = ({ title, data, isLoading, error }) => (
 const DashboardPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
-  const { videos, channels } = useAtlasData(300);
-  const { users, posts, threads } = usePioneerData(300);
+  const { videos, channels, users, posts, threads } = useGraphqlData(300);
 
   return (
     <BaseLayout t={t}>

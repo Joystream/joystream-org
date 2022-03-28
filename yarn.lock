@@ -1762,10 +1762,10 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@joystream/types@^0.17.3":
-  version "0.17.3"
-  resolved "https://registry.yarnpkg.com/@joystream/types/-/types-0.17.3.tgz#47259340272b0313c81e3d7bb75f0cf8a1c8a875"
-  integrity sha512-jzJRORVvAYeG74VytgDX26wEzlJw1Z9tfu7jrBGXW5ClSGef0/Ajez84B3tu24ZyYaoioYAUFYTxhBJ2P4SIXw==
+"@joystream/types@^0.18.1":
+  version "0.18.2"
+  resolved "https://registry.yarnpkg.com/@joystream/types/-/types-0.18.2.tgz#fd82d28cb14145784d3b3e18857fa8df76c97a01"
+  integrity sha512-ylvC0g3BjirWhbrlgkWLnCzcIntzlFwnObNyYCQ7pV4//TrwGPeS6ozdKnFNlzUz/xRfY3GMCedl5Sa6Def5BQ==
   dependencies:
     "@polkadot/api" "5.9.1"
     "@polkadot/keyring" "7.3.1"

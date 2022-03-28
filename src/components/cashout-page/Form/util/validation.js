@@ -1,4 +1,4 @@
-import { decodeAddress } from '@polkadot/util-crypto';
+import { decodeAddress, blake2AsHex } from '@polkadot/util-crypto';
 import { isCashAddress, isLegacyAddress, isP2SHAddress, isValidAddress } from 'bchaddrjs';
 
 export const validateJoystreamAddress = address => {
@@ -84,7 +84,8 @@ export const validateUser = async (api, membershipIdentification, joystreamAddre
     return null;
   }
 
-  const id = await api.query.members.memberIdByHandle(membershipIdentification);
+  const handleHash = blake2AsHex(membershipIdentification);
+  const id = await api.query.members.memberIdByHandleHash(handleHash);
 
   if (id.isEmpty) {
     return 'cashout.form.joystreamHandle.noSuchAccount';

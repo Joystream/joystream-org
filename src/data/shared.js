@@ -1,1 +1,1 @@
-export const JoystreamWSProvider = 'wss://rome-rpc-endpoint.joystream.org:9944/';
+export const JoystreamWSProvider = 'wss://rpc.joystream.org:9944/';
