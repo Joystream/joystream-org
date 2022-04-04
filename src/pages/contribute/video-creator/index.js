@@ -11,9 +11,11 @@ import BountiesImage from '../../../assets/svg/bounties-getting-started.svg';
 import ChatIntegrator from '../../../components/onboarding-page/ChatIntegrator';
 import VideoCreator from '../../../assets/svg/contributor-video-creator.svg';
 import SiteMetadata from '../../../components/SiteMetadata';
+import useLivesessionIdentifyOnboardingRole from '../../../utils/pages/onboarding/useLivesessionIdentifyOnboardingRole';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+  useLivesessionIdentifyOnboardingRole();
   const { language } = useI18next();
   const chatRef = useRef();
   const data = {
