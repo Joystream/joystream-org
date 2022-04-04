@@ -13,15 +13,15 @@ const ATLAS_DATA_QUERY = `
         id,
         createdAt
     },
-    memberships(limit: 999999) { 
+    memberships(limit: 999999) {
       id,
       createdAt
     },
-    forumThreads(limit: 999999) { 
+    forumThreads(limit: 999999) {
       id,
       createdAt
     },
-    forumPosts(limit: 999999) { 
+    forumPosts(limit: 999999) {
       id,
       createdAt
     }
