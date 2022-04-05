@@ -12,10 +12,12 @@ import Statistics from '../../../components/onboarding-page/Statistics';
 import Structure from '../../../components/onboarding-page/Structure';
 import SiteMetadata from '../../../components/SiteMetadata';
 import OGImage from '../../../assets/images/Joystream_Thumbnail_2.jpeg';
+import useLivesessionIdentifyOnboardingRole from '../../../utils/pages/onboarding/useLivesessionIdentifyOnboardingRole';
 import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+  useLivesessionIdentifyOnboardingRole();
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);

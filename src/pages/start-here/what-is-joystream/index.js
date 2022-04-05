@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import OnboardingLayout from '../../../components/_layouts/Onboarding';
@@ -7,10 +7,12 @@ import VideoSection from '../../../components/onboarding-page/VideoSection';
 import FAQ from '../../../components/onboarding-page/FAQ';
 import SiteMetadata from '../../../components/SiteMetadata';
 import OGImage from '../../../assets/images/Joystream_Thumbnail_1.jpeg';
+import useLivesessionIdentifyOnboardingRole from '../../../utils/pages/onboarding/useLivesessionIdentifyOnboardingRole';
 import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+  useLivesessionIdentifyOnboardingRole();
   const { language } = useI18next();
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);

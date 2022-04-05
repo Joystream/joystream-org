@@ -13,9 +13,11 @@ import ChatIntegrator from '../../../components/onboarding-page/ChatIntegrator';
 import ValidatorsInfo from '../../../components/onboarding-page/ValidatorsInfo';
 import Techie from '../../../assets/svg/contributor-techie.svg';
 import SiteMetadata from '../../../components/SiteMetadata';
+import useLivesessionIdentifyOnboardingRole from '../../../utils/pages/onboarding/useLivesessionIdentifyOnboardingRole';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+  useLivesessionIdentifyOnboardingRole();
   const { language } = useI18next();
   const chatRef = useRef();
 

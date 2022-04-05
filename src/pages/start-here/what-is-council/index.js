@@ -17,11 +17,13 @@ import FAQ from '../../../components/onboarding-page/FAQ';
 import useCouncilData from '../../../utils/pages/onboarding/useCouncilData';
 import SiteMetadata from '../../../components/SiteMetadata';
 import OGImage from '../../../assets/images/Joystream_Thumbnail_4.jpeg';
+import useLivesessionIdentifyOnboardingRole from '../../../utils/pages/onboarding/useLivesessionIdentifyOnboardingRole';
 import './style.scss';
 
 const Onboarding = () => {
   const { councilSize, councilEndDays, councilPeriodDays } = useCouncilData();
   const { language } = useI18next();
+  useLivesessionIdentifyOnboardingRole();
   const [councilCount, setCouncilCount] = useState({ isLoading: true, count: 0 });
   const [councilDaysLeft, setCouncilDaysLeft] = useState({ isLoading: true, count: 0 });
   const [councilDaysCount, setCouncilDaysCount] = useState({ isLoading: true, count: 0 });
