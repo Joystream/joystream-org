@@ -7,8 +7,6 @@ const setCustomProperty = () => {
   if(typeof __ls !== "undefined") {
     const role = localStorage.getItem('JoystreamRole') ?? "Undecided";
 
-    console.log("Your role: ", { role });
-
     /* eslint-disable no-undef */
     __ls("setCustomParams", { params: { role } });
   } else {
