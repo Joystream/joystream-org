@@ -2,8 +2,8 @@
   "about": {
     "general": {
       "roles": {
-        "blockchain": "Blockchain Engineer",
-        "frontEnd": "Front-End Engineer",
+        "blockchain": "Blockchain Ingénieur",
+        "frontEnd": "Front-End Ingénieur",
         "design": "Designer",
         "growth": "Growth",
         "core": "Core",
@@ -11,21 +11,21 @@
         "cto": "CTO",
         "cooAndGrowth": "COO & Growth",
         "all": "All",
-        "allMembers": "All members"
+        "allMembers": "Tous les Membres"
       }
     },
     "siteMetadata": {
-      "title": "About us",
-      "description": "We don't just offer great compensation and flexibility, but the perfect mission, team and timing for you to build something that changes everything."
+      "title": "À propos de nous",
+      "description": "Nous n'offrons pas seulement une excellente rémunération et flexibilité, mais la mission parfaite, l'équipe et le timing pour que vous construisiez quelque chose qui change tout."
     },
     "hero": {
-      "title": "We are building Joystream to set it free",
-      "subtitle": "Jsgenesis is the core team building Joystream the platform and open-source blockchain."
+      "title": "Nous construisons Joystream pour le libérer",
+      "subtitle": "Jsgenesis est l'équipe centrale qui construit la plate-forme Joystream et source ouverte de blockchain."
     },
     "ourTeam": {
-      "title": "Our team",
-      "subtitle": "We come from different continents, but share a passion for open source, blockchain technology, distributed systems, privacy and building a new internet based on accountable and forkable institutions.",
-      "moreMembers": "Load more team members"
+      "title": "Notre Équipe",
+      "subtitle": "Nous venons de différents continents, mais partagez une passion pour l'open source, la technologie blockchain, systèmes distribués, la vie privée et la construction d'un nouvel Internet basé sur des institutions responsables et bifurquables.",
+      "moreMembers": "Charger plus de membres de l'équipe"
     },
     "investors": {
       "title": "Our investors"
