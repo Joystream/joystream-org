@@ -1,59 +1,59 @@
 {
   "acropolis": {
     "siteMetadata": {
-      "description": "Explore the Acropolis testnet"
+      "description": "Explorez le testnet Acropolis"
     },
     "hero": {
-      "title": "Acropolis Network",
-      "text": "Explore available roles and pick the one that suits you best. Influence the platform's development and earn real money in the process.",
-      "chipText": "What is this?"
+      "title": "Le Réseau Acropolis",
+      "text": "Explorez les rôles disponibles et sélectionnez l’option plus appropriée. Gagne plus d’argent par l’assiste du development de la plate-forme.",
+      "chipText": "Qu’est-ce que c’est?"
     },
     "heroCard": {
-      "title": "REPLACED BY ROME ON"
+      "title": "REMPLACÉ PAR ROME ON"
     },
     "modal": {
-      "title": "The Acropolis of Athens",
-      "text": "<0>Known for its great architecture, Acropolis'</0> perhaps most famous building is the Parthenon. It was built to celebrate their victory over Persian invaders, and is today seen as a symbol for democracy and western civilization."
+      "title": "L’Acropolis de l’Athens",
+      "text": "<0>connu pour son grand architecture, le plus célèbre édifice en Acropolis'</0> c’est le Parthenon. C’était crée pour célébrer leur victoire sur les envahisseurs Persans, et ce jour elle est le symbole de démocratie et de civilisation de l’ouest."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Documents Critiques",
       "fullSpecifications": {
-        "title": "Full Specifications",
-        "text": "Read the specs of the newly implemented features of Acropolis."
+        "title": "Complète Specifications",
+        "text": "Lisez les spécifications des nouveaux fonctionalités d’Acropolis mis en œuvre,"
       },
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": " Plan De Sortie",
+        "text": "Lisez le plan de sortie comme il était fabriqué pendant la phase de plannification, et apprenez plus comment le développement a évolué."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals below are a simplified representation of the Key Results listed in our Release <0>OKR</0>",
+      "title": "Les Buts De Testnet",
+      "subtitle": "TLes buts ci-dessous sont une representation simplifié des Résultats clés énuméré dans notre Sortie.<0>OKR</0>",
       "goals": {
         "forum": {
-          "title": "Build and release an on-chain forum",
-          "text": "The final platform will have built in multiple ways of facilitating easy and secure public, and private, communication and information sharing among members. The forum is the first step allowing the platform members to communicate, share ideas and discuss."
+          "title": "Construisez et sortez un on-chain forum",
+          "text": "La plate-forme finale devra être construit de multiples manières de faciliter la communication et information public, facile, sécurisé, et privée, partagé entre les membres. Le forum est la première étape permettant les members de la plate-formeà communiquer, partager des idées et discuter."
         },
         "storageNode": {
-          "title": "Rebuild and release the storage node",
-          "text": "Where the old storage node had some bugs making it unable to sync between clients and required a hardcoded liaison, the new storage node is working as intended with no hierarchy or privileges."
+          "title": "Reconstruire et libérer le nœud de stockage",
+          "text": "Où l'ancien nœud de stockage avait des bogues ce qui rend impossible la synchronisation entre les clients et nécessitait une liaison codée en dur, le nouveau nœud de stockage fonctionne comme prévu sans hiérarchie ni privilèges."
         },
         "storageProviders": {
-          "title": "Ensure high uptime of storage providers",
-          "text": "Both content creators and consumers user experience depends on various metrics, but perhaps the most important is that the storage node they connect to responds to their request. Whether or not this goal is achieved depends on both the reliability of the software, a good reporting system and corrective actions from multiple parties."
+          "title": "Garantir une disponibilité élevée des fournisseurs de stockage",
+          "text": "Les créateurs de contenu et les expériences de consommateurs utilisateurs dépend de divers paramètres, mais peut-être le plus important est-ce que le nœud de stockage ils se connectent, répondent à leur demande. Que cet objectif soit atteint ou non dépend à la fois de la fiabilité du logiciel, un bon système de reporting et des actions correctives de plusieurs parties."
         },
         "tranches": {
-          "title": "Build the storage node with \"tranches\"",
-          "text": "Although the content directory is currently small, at some point it's not feasible to expect all storage providers to have full replication of all the content. Tranches would allow storage providers to select a subset of the content directory, suitable to their capabilities."
+          "title": "Construire le nœud de stockage avec \"tranches\"",
+          "text": "Bien que le répertoire de contenu est actuellement petit, à un moment donné ce n'est pas faisable d'attendre de tous les fournisseurs de stockage pour avoir une réplication complète de tout le contenu. Les tranches permettraient aux fournisseurs de stockage de sélectionner un sous-ensemble du répertoire de contenu, adapté  aux leurs capabilités."
         }
       }
     },
     "roles": {
-      "title": "Roles available on the Acropolis testnet"
+      "title": "Rôles disponible sur le testnet Acropolis."
     },
     "map": {
-      "title": "Acropolis of Athens",
-      "text": "<0>The Acropolis is a citadel on a hill in the heart of Athens.</0> It was also at the heart of Ancient Greece, a powerful civilization and empire. Acropolis is famous for its ancient buildings, architecture, historical significance and is one of the main tourist attractions of Athens. It is on UNESCOs list \"World Heritage Sites\".<1/><1/> We chose the name as we had to scale back our ambitions for the next testnet after some issues with the release of Athens. Thus, Acropolis can be considered a sub-release, despite including some new features not intended for Athens. <1/><1/> <2><0/> Explore previous testnet</2>"
+      "title": "Acropolis d’Athens",
+      "text": "<0>L’Acropolis est une citadelle sur un colline au coeur de la ville d'Athens. </0> C'était aussi au cœur de la Grèce Antique, un empire et civilization puissant. Acropolis est célèbre pour ses bâtiments anciens, architecture, importance historique et c’est l'une des principales attractions touristiques d’Athens. C’est sur la liste d’UNESCO\" Sites du patrimoine mondial \". <1/><1/> Nous avons choisi le nom car nous avons dû réduire nos ambitions pour la suite testnet après quelques problèmes avec la sortie d'Athens. «Ainsi, Acropolis peut être considéré comme une sous-version, malgré l'inclusion de quelques nouvelles fonctionnalités non destiné à Athènes. <1/><1/> <2><0/> Explorez les précédents testnet</2>"
     }
   }
 }
