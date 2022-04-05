@@ -4,16 +4,16 @@
       "description": "Explorez le testnet Babylon"
     },
     "hero": {
-      "title": "Babylon Network",
-      "text": "The Babylon release offers improvements which greatly enhance the video publishing and consumption experience.",
-      "chipText": "What is this?"
+      "title": "Réseau Babylon",
+      "text": "La version Babylon propose des améliorations qui améliorent grandement l'édition vidéo et expérience de consommation.",
+      "chipText": "Qu’est-ce que c’est?"
     },
     "heroCard": {
-      "title": "REPLACED BY ANTIOCH ON"
+      "title": "REMPLACÉ PAR ANTIOCH ON"
     },
     "modal": {
-      "title": "Tower of Babel",
-      "text": "The Tower of Babel story is an origin myth meant to explain why the world's peoples speak different languages.<0/><0/>According to the story, a united human race in the generations following the Great Flood, speaking a single language and migrating eastward, comes to the land of Shinar. There they agree to build a city and a tower tall enough to reach heaven.<0/><0/> God, observing their city and tower, confounds their speech so that they can no longer understand each other, and scatters them around the world."
+      "title": "Tour de Babel",
+      "text":   "L'histoire de Tour de Babel  est un mythe d'origine destiné à expliquer pourquoi les peuples du monde parlent des langues différentes.  <0/><0/>Selon l'histoire,une race humaine unie dans les générations après le déluge, parler une seule langue et migrer vers l'est, vient au pays de Shinar. Là, ils acceptent de construire une ville et une tour assez haute pour atteindre le ciel.<0/><0/> Dieu, observant leur ville et leur tour, confond leur parole pour qu'ils ne puissent plus se comprendre, et les disperse dans le monde."
     },
     "criticalDocuments": {
       "title": "Critical Documents",
@@ -22,7 +22,7 @@
         "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
+        "title": "Article De Blog D'annonce",
         "text": "Read a brief primer on the Babylon testnet and its objectives."
       }
     },

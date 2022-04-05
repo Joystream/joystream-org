@@ -1,42 +1,42 @@
 {
   "antioch": {
     "siteMetadata": {
-      "description": "Explore the Antioch testnet"
+      "description": "Explorez le testnet Antioch"
     },
     "hero": {
-      "title": "Antioch Network",
-      "text": "The Antioch release seeks to patch a chain split bug which unfortunately sabotaged the previous testnet."
+      "title": "Réseau Antioch",
+      "text": "L’Antioch sorrtie cherche à corriger un bogue de division de chaîne qui malheureusement a sabotagé l’ancient testnet."
     },
     "heroCard": {
-      "title": "REPLACED BY SUMER ON"
+      "title": "REMPLACÉ PAR SUMER ON"
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Documents Critiques",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Plan de Sortie",
+        "text": "Lisez le plan de sortie comme il était fabriqué pendant la phase de la plannification, et savez plus comment le développement a évolué."
       },
       "blogPost": {
-        "title": "Announcement Blog Post",
-        "text": "Read a brief primer on the Antioch testnet and its objectives."
+        "title": "Article de Blog D'annonce",
+        "text": "Lisez une brève introduction sur le testnet d'Antioche et ses objectifs."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Antioch testnet.",
+      "title": "Buts Testnet",
+      "subtitle": "Les buts indiqué ci-dessous ce sont representations simplifié de nos objectifs principaux pour le testnet Antioch.",
       "goals": {
         "substrateVersion": {
-          "title": "Upgrade Substrate Version",
-          "text": "<0>To patch the chain split issue encountered on Babylon we need to update the version of Substrate our network is built on from <1>v2-rc4</1> to <1>v2.0.1</1></0>"
+          "title": "Mise à niveau de la version du Substrate",
+          "text": "<0> Pour corriger le problème de division de chaîne rencontré sur Babylon nous devons mettre à jour la version de Substrate sur laquelle notre réseau est construit à partir de <1>v2-rc4</1> à<1>v2.0.1</1></0>"
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Antioch Network"
+      "title": "Rôles incitatifs pour le réseau d'Antioche"
     },
     "map": {
       "title": "Antioch",
-      "text": "<0>Antioch was an ancient Greek city on the eastern side of the Orontes River.</0> The city's position benefited its occupants greatly, particularly on account of such features as the spice trade, the Silk Road, and the Royal Road.<1/><1/>At its height it rivaled Alexandria as the chief city of the Near East. Many also consider the city to be \"the cradle of Christianity\".<1/><1/><2><0/> Read the blog post</2>"
+      "text": "<0> Antioche était une ancienne ville grecque sur la rive orientale de l'Oronte.</0> La position de la ville a grandement profité à ses occupants, notamment en raison de caractéristiques telles que le commerce des épices, , la route de la soie et la route royale.<1/><1/> À son apogée, elle rivalisait avec Alexandrie en tant que principale ville du Proche-Orient. Beaucoup considèrent également la ville comme \"le berceau du Christianisme\".<1/><1/><2><0/> Lisez l’article de blog</2>"
     }
   }
 }
