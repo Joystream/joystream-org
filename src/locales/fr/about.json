@@ -28,19 +28,19 @@
       "moreMembers": "Charger plus de membres de l'équipe"
     },
     "investors": {
-      "title": "Our investors"
+      "title": "Nos investisseurs"
     },
     "positions": {
-      "title": "Open positions",
-      "available": "3 jobs available",
-      "join": "Join",
+      "title": "postes ouverts",
+      "available": "3 jobs disponibles",
+      "join": "Joindre",
       "roles": {
-        "frontEnd": "Front-end Developer",
-        "blockchain": "Blockchain Developer",
+        "frontEnd": "Front-end Développeur",
+        "blockchain": "Blockchain Développeur",
         "designer": "UI/UX Design Lead"
       },
       "location": "Oslo, Europe, Remote",
-      "employmentType": "Full time",
+      "employmentType": "à temps plein",
       "salary": {
         "frontEnd": "$80K-$130K",
         "blockchain": "$100K-$140K",
