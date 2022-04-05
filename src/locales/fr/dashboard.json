@@ -1,16 +1,16 @@
 {
     "dashboard" : {
         "siteMetadata" : {
-            "title" : "Live Dashboard",
-            "description" : "Data compiled from current Pioneer and Atlas instances and visualized through charts."
+            "title" : "En direct Dashboard",
+            "description" : "Compilé donnés du  courrant Pioneer et Atlas instances et visualizé par des carts."
         },
         "title" : "Joystream Dashboard",
         "subtitles" : {
-            "videos" : "Videos",
-            "channels" : "Channels",
-            "users" : "Users",
+            "videos" : "Vidéos",
+            "channels" : "Canaux",
+            "users" : "Utilisateurs",
             "posts" : "Posts",
-            "threads" : "Threads"
+            "threads" : "Fils"
         },
         "amount" : "Amount"
     }
