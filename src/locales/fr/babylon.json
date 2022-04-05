@@ -16,40 +16,40 @@
       "text":   "L'histoire de Tour de Babel  est un mythe d'origine destiné à expliquer pourquoi les peuples du monde parlent des langues différentes.  <0/><0/>Selon l'histoire,une race humaine unie dans les générations après le déluge, parler une seule langue et migrer vers l'est, vient au pays de Shinar. Là, ils acceptent de construire une ville et une tour assez haute pour atteindre le ciel.<0/><0/> Dieu, observant leur ville et leur tour, confond leur parole pour qu'ils ne puissent plus se comprendre, et les disperse dans le monde."
     },
     "criticalDocuments": {
-      "title": "Critical Documents",
+      "title": "Documents Critiques",
       "releasePlan": {
-        "title": "Release Plan",
-        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+        "title": "Plan de Sortie",
+        "text": "isez le plan de sortie tel qu'il a été fait lors de la phase de planification, et en savoir plus sur l'évolution du développement."
       },
       "blogPost": {
         "title": "Article De Blog D'annonce",
-        "text": "Read a brief primer on the Babylon testnet and its objectives."
+        "text": "Lire une brève introduction sur le testnet Babylon et ses objectifs."
       }
     },
     "testnetGoals": {
-      "title": "Testnet Goals",
-      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Babylon testnet.",
+      "title": "Buts de Testnet",
+      "subtitle": "Les objectifs énumérés ci-dessous sont une représentation simplifiée de nos principaux objectifs pour le testnet Babylon.",
       "goals": {
         "atlas": {
-          "title": "Launch Atlas 0.1",
-          "text": "This will be the initial release of our content consumption client, aiming to be considerably more effective than the current Pioneer media experience."
+          "title": "Lancer l'Atlas 0.1",
+          "text": "Ce sera la première version notre client de consommation de contenu, visant à être considérablement plus efficace aut l'expérience multimédia actuelle de Pioneer."
         },
         "contentDirectory": {
-          "title": "Deploy a new content directory and corresponding working group",
-          "text": "We will be modifying the content directory to allow for a new data model for content, supported by new schemas. We will also make some associated improvements to the Content Curator Working Group."
+          "title": "Déployer un nouveau répertoire de contenu et groupe de travail correspondant",
+          "text": "Nous allons modifier le répertoire de contenu pour permettre un nouveau modèle de données pour le contenu, pris en charge par de nouveaux schémas. Nous apporterons également quelques améliorations associées au groupe de travail sur les conservateurs de contenu."
         },
         "hydraNode": {
-          "title": "Deploy first self-hosted Joystream Hydra node only supporting content directory",
-          "text": "Further work on our Hydra framework is required in order to support the new content directory."
+          "title": "éployer d'abord auto-hébergé d'Joystream Hydra node ne prenant en charge que le répertoire de contenu",
+          "text": "Poursuite des travaux sur notre Hydra cadre est requis dans l'ordre pour prendre en charge le nouveau répertoire de contenu."
         }
       }
     },
     "roles": {
-      "title": "Incentivized Roles for the Babylon Network"
+      "title": "Rôles incitatifs pour le réseau Babylon"
     },
     "map": {
       "title": "Babylon",
-      "text": "<0>Babylon was the capital city of Babylonia, a kingdom in ancient Mesopotamia, almost 4000 years ago.</0> It was built along the left and right banks of the Euphrates river with steep embankments to contain the river's seasonal floods. <1/><1/> The city is considered to be of great historical and cultural importance. The Hanging Gardens of Babylon were one of the Seven Wonders of the Ancient World and Babylon was also purported to be the site of the Tower of Babel.<1/><1/><2><0/> Read the blog post</2>"
+      "text": "<0>Babylon était la ville capital de Babylonia, un royaume dans l'ancient Mésopotamie, presqu'il ya 4000 ans. </0> c'était construit selon le gauche et rive droite de l'Euphrate remblais escarpés pour contenir les crues saisonnières de la rivièr. <1/><1/> La ville est considérée comme un grand monument historique et l'importance culturelle. Les jardins suspendus de Babylone étaient l'une des sept merveilles du Monde ancient et Babylone était également censée d'être le site de la.<1/><1/><2><0/> Lisez l'article du blog</2>"
     }
   }
 }
