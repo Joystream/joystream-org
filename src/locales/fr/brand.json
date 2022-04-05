@@ -9,70 +9,70 @@
       "descriptiveIcons": "Descriptive Icons",
       "illustrations": "Illustrations",
       "systemIcons": "System Icons",
-      "typography": "Typography",
+      "typography": "Typographie",
       "blogPostCovers": "Blog Post Covers",
       "displayTitle": {
         "logoPack": "Logo Pack"
       },
-      "files": "files"
+      "files": "Des Dossiers"
     },
     "guides": {
       "general": {
         "logo": "Logo",
-        "overview": "Overview",
+        "overview": " Aperçu",
         "logomark": "Logomark",
         "construction": "Construction",
-        "useCases": "Use Cases",
-        "socialIcons": "Social Icons",
-        "forbiddenUses": "Forbidden Uses",
+        "useCases": "Utiliser le Cas",
+        "socialIcons": "Icônes Sociales",
+        "forbiddenUses": "Les Usages Interdits",
         "colorPalettes": "Color Palettes",
         "primaryColors": "Primary Colors",
-        "supportivePallete": "Supportive Pallete",
-        "secondaryPallete": "Secondary Pallete",
+        "supportivePallete": "Palette de Soutien",
+        "secondaryPallete": "Palette Secondaire",
         "iconography": "Iconography",
-        "descriptiveIcons": "Descriptive Icons",
-        "systemIcons": "System Icons",
+        "descriptiveIcons": "Icônes Descriptives",
+        "systemIcons": "Icônes du Système",
         "illustrations": "Illustrations",
         "patterns": "Patterns",
-        "typography": "Typography",
-        "photography": "Photography",
+        "typography": "Typographie",
+        "photography": "Photographie",
         "motion": "Motion",
         "back": "Back",
-        "more": "More"
+        "more": "Plus"
       },
       "logo": {
-        "experimentation": "Our brand should promote a feeling of experimentation, excitement and building something ethical and dynamic.",
-        "conceptIterations": "Before we agreed on a final logo concept we went through multiple iterations of various concepts. We explored various ideas in depth before settling on the final logo concept."
+        "experimentation": "Notre marque doit promouvoir un sentiment d'expérimentation, l'excitation et construire quelque chose d'éthique et de dynamique.",
+        "conceptIterations": "Avant de nous mettre d'accord sur un concept de logo final nous sommes passés par plusieurs itérations de divers concepts. Nous avons exploré diverses idées en profondeur avant de nous décider pour la finale concept de logo."
       },
       "logomarkConstruction": {
         "title": "01. Logomark Construction",
-        "simplePrinciples": "In the end we came up with a logomark that combines several simple principles which translate well to the voice of the brand.",
-        "combination": "Our logomark is a combination of the letter J (to represent the name Joystream) and three parallel stripes that are a representation of streaming data and the flow of information and technology.",
+        "simplePrinciples": "Au final, nous avons créé un logo qui combiner plusieurs principes simples qui traduissent bien à la voix de la marque.",
+        "combination": "Notre logomark est une combinaison de la lettre J (représenter le nom Joystream) et trois bandes parallèles qui sont une représentation o flux de données et le flux d’information et technologie.",
         "image": {
-          "logomarkDescription": "Logomark's exclusion zone is equal to the blue square height (marked as 5a in the diagram)."
+          "logomarkDescription": "Logomark's la zone d'exclusion est égale au bleu hauteur carrée. (Marqué comme 5a dans le schéma)."
         }
       },
       "logoConstruction": {
         "title": "02. Logo Construction",
-        "combination": "The Joystream logo is a combination of the logomark and dedicated typography that was designed to be the best link between the logomark and what Joystream stands for. It is firm and technical but shows plasticity and sense of a structure.",
+        "combination": "Le Joystream logo est une combinaison de logomark et une typographie dédiée qui a été conçue être le meilleur lien entre le logomark et ce que signifie Joystream. Il est ferme et technique mais fait preuve de plasticité et sense d’une structure.",
         "horizontalLockup": "Horizontal Lockup",
         "verticalLockup": "Vertical Lockup"
       },
       "logoUseCases": {
         "title": "03. Logo Use Cases",
-        "originalForm": "The Joystream logo is primarly used in its original form on white backgrounds but it can also be used in its complimentary forms if necessary. Examples show such use cases below.",
-        "safeUse": "The smallest safe use",
-        "visualPresentation": "In order to ensure the best visual presentation of the logo, it is best offered in sizes between <0>200 and 500+px</0> width on digital devices.",
-        "horizontalNarrow": "The Joystream logo should never be narrower than 100px in digital or 20mm in print horisontal lockup.",
-        "verticalNarrow": "Vertical lockup should never be narrower than 70px in digital or 15mm in print."
+        "originalForm": "Le Joystream logo est principalement utilisé sa version originale sur fond blanc mais il peut aussi être utilisé dans sa formulaires complémentaires si nécessaire. Des exemples montrent de tels cas d'utilisation ci-dessous.",
+        "safeUse": "La plus petite utilisation sûre",
+        "visualPresentation": "Afin d'assurer la meilleure présentation visuelle du logo, il est préférable de l'offrir dans des tailles entre <0>200 and 500+px</0> largeur sur les appareils numériques.",
+        "horizontalNarrow": "Le logo Joystream ne doit jamais être plus étroit que 100px en numérique ou en 20 mm en impression horizontale verrouillée.",
+        "verticalNarrow": "Le verrouillage vertical ne doit jamais être plus étroit que 70px en numérique ou 15 mm en impression."
       },
       "logoSocialIcons": {
-        "title": "04. Social Icons",
-        "icon": "In cases when the Joystream brand has already been established we can simply use the icon on its own. While the icon can exist without the wordmark, the wordmark should never exist without the icon."
+        "title": "04. Icônes sociales",
+        "icon": "Dans les cas où la marque Joystream a déjà Dans les cas où la marque Joystream a déjà. Alors que l'icône peut exister sans le mot-symbole, le mot-symbole ne devrait jamais exister sans l'icône."
       },
       "logoForbiddenUses": {
-        "title": "05. Forbidden uses of the logo",
-        "rules": "The logotype and the icon must follow certain rules and there are general cases of use that should be avoided at all costs! In order to preserve the brand voice remember to avoid examples such as the following:"
+        "title": "05. Logo Usages Interdits.",
+        "rules": "Le logotype et l'icône doivent respecter certaines règles et il y a des cas généraux d'utilisation qu'il faut éviter à tout prix! Afin de préserver la voix de la marque n'oubliez pas d'éviter les exemples tels que les suivants:"
       },
       "colorOverview": {
         "combine": "Our brand colors combine three primary colors: black, white and blue. They define the mood and present brand values including:",
