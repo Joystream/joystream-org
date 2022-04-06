@@ -8,9 +8,7 @@ import SiteMetadata from '../components/SiteMetadata';
 // components
 import Hero from '../components/index-page/Hero';
 import WhatWeDo from '../components/index-page/WhatWeDo';
-import WhyYouShouldJoin from '../components/index-page/WhyYouShouldJoin';
 import ExploreJoystream from '../components/index-page/ExploreJoystream';
-import EarnTokens from '../components/index-page/EarnTokens';
 import BecomeFoundingMember from '../components/index-page/BecomeFoundingMember';
 import RoadToMainnet from '../components/index-page/RoadToMainnet';
 import EarnJOYCoins from '../components/index-page/EarnJOYCoins';
@@ -39,13 +37,9 @@ const IndexPage = () => {
 
       <WhatWeDo t={t}/>
 
-      <WhyYouShouldJoin t={t}/>
-
       <ExploreJoystream t={t}/>
 
       <RoadToMainnet t={t}/>
-
-      <EarnTokens t={t}/>
 
       <OurInvestors t={t}/>
     </BaseLayout>

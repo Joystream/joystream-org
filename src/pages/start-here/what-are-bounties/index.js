@@ -10,10 +10,12 @@ import FAQ from '../../../components/onboarding-page/FAQ';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import SiteMetadata from '../../../components/SiteMetadata';
 import OGImage from '../../../assets/images/Joystream_Thumbnail_6.jpeg';
+import useLivesessionIdentifyOnboardingRole from '../../../utils/pages/onboarding/useLivesessionIdentifyOnboardingRole';
 import './style.scss';
 
 const Onboarding = () => {
   const { t } = useTranslation();
+  useLivesessionIdentifyOnboardingRole();
   const { language } = useI18next();
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);

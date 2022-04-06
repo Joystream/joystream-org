@@ -14,6 +14,7 @@ import AtlasInfo from '../../../components/onboarding-page/AtlasInfo';
 import useLessonList from '../../../utils/pages/onboarding/useLessonList';
 import SiteMetadata from '../../../components/SiteMetadata';
 import OGImage from '../../../assets/images/Joystream_Thumbnail_7.jpeg';
+import useLivesessionIdentifyOnboardingRole from '../../../utils/pages/onboarding/useLivesessionIdentifyOnboardingRole';
 import './style.scss';
 
 const Onboarding = () => {
@@ -23,6 +24,7 @@ const Onboarding = () => {
   const lessonIndex = 7;
   const [isLastPage, setIsLastPage] = useState(false);
   const { t } = useTranslation();
+  useLivesessionIdentifyOnboardingRole();
   const { getNextVideoUrl } = useLessonList();
   const [role, setRole] = useState();
   const { language } = useI18next();
