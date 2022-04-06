@@ -17,7 +17,7 @@
       }
     },
     "earnJoyCoins": {
-      "title": "Earn $JOY coins",
+      "title": "Earn $JOY tokens",
       "subtitle": "Here’s everything you need to know about Joystream and how to get started earning $JOY coins",
       "button": {
         "text": "Start earning"
@@ -33,23 +33,6 @@
       "subtitle": "Наша мотивация при построении протокола Joystream",
       "title": "Мы за устройство, при котором медиаплатформы ответственны перед людьми, на которых они влияют.",
       "link": "Прочтите манифест"
-    },
-    "whyYouShouldJoin": {
-      "title": "Зачем участвовать в тестнетах?",
-      "reasons": {
-        "tokens": {
-          "title": "Токены",
-          "text": "Зарабатывайте токены основной сети, которая запускается в 2022 г."
-        },
-        "cash": {
-          "title": "Наличные",
-          "text": "Получайте вознаграждение в реальной валюте за участие"
-        },
-        "reputationAndSkill": {
-          "title": "Репутация и навыки",
-          "text": "Получайте знания, которые понадобятся для участия в основной сети"
-        }
-      }
     },
     "exploreJoystream": {
       "title": "Начните изучение Joystream прямо сейчас",
@@ -129,9 +112,6 @@
           "explore": "Explore Giza"
         }
       }
-    },
-    "earnTokens": {
-      "title": "Получите токены основной сети, деньги и влияние."
     },
     "ourInvestors": {
       "title": "Our Investors"
