@@ -21,7 +21,7 @@
         "bch": "BCH",
         "invalidValue": "Invalid value. Please try again",
         "needsToBeGreater": "Dollar value needs to be greater than $1",
-        "needsToBeLess": "Dollar value needs to be less than $300",
+        "needsToBeLess": "Dollar value needs to be less than $50",
         "notEnoughFunds": "There are currently not enough funds to execute this cashout. Please contact us on our Discord!"
       },
       "destinationAddress": {
