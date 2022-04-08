@@ -1,0 +1,227 @@
+@import '../../../styles/main';
+
+.VideoSection {
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: $c_black;
+  }
+
+  &__hero {
+    @extend %largeContainer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 1030px;
+      margin: auto;
+      margin-bottom: 80px;
+    }
+
+    &__video__wrapper {
+      display: flex;
+      height: 580px;
+    }
+
+    &__bg-pattern--1 {
+      width: 205px;
+      height: 1092px;
+      margin-top: -70px;
+      background: url('../../../assets/svg/onboarding-pattern-1.svg') no-repeat;
+    }
+
+    &__bg-pattern--2 {
+      width: 205px;
+      height: 1092px;
+      margin-top: -154px;
+      background: url('../../../assets/svg/onboarding-pattern-2.svg') no-repeat;
+    }
+
+    &__progressBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 97px;
+      margin-left: 240px;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 220px;
+      height: 60px;
+      margin: 32px 0 0;
+      padding: 18px 20px;
+      cursor: pointer;
+      background: $c_blue-ribbon;
+
+      &:hover {
+        background-color: $c_han_purple;
+      }
+    }
+
+    &__button--lesson-list--mobile {
+      display: none;
+    }
+
+    &__button-list {
+      color: white;
+    }
+
+    &__button--dark {
+      cursor: pointer;
+      background: $c_black;
+      border: 2px solid $c_blue-ribbon;
+
+      &:hover {
+        background-color: $c_blue-ribbon;
+      }
+    }
+
+    &__button-text {
+      font-family: $font-primary;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: white;
+    }
+
+    &__button-arrow {
+      color: white;
+      transform: rotate(-90deg);
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__title {
+      width: 1239px;
+      margin: auto;
+      margin-top: 80px;
+      font-family: $font-primary;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 68px;
+      letter-spacing: 0;
+      color: $c_white;
+      text-align: center;
+
+      & span {
+        font-family: $font-primary;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 68px;
+      }
+    }
+
+    &__subtitle {
+      max-width: 1241px;
+      margin: auto;
+      margin-top: 12px;
+      margin-bottom: 40px;
+      font-family: $font-secondary;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0;
+      color: $c_slate-gray;
+      text-align: center;
+    }
+
+    &__video {
+      width: 1030px;
+      height: 580px;
+      margin: auto;
+      margin-bottom: 32px;
+    }
+
+    &__background {
+      position: relative;
+      flex: 1;
+      width: 662px;
+      height: 100%;
+    }
+  }
+
+  @media #{$screen-max-xl} {
+    &__hero {
+      width: calc(90vw);
+      padding: 0;
+
+      &__video {
+        width: calc(90vw);
+        height: calc(100vh);
+        margin: auto;
+        margin-bottom: 32px;
+      }
+
+      &__actions {
+        flex-wrap: wrap;
+        width: calc(90vw);
+        margin-bottom: 40px;
+      }
+
+      &__progressBar {
+        width: calc(90vw);
+        height: fit-content;
+        margin-top: 20px;
+        margin-left: 0;
+      }
+
+      &__button {
+        width: calc(70vw);
+        margin-top: 20px;
+      }
+
+      &__bg-pattern--1,
+      &__bg-pattern--2 {
+        display: none;
+      }
+
+      &__video__wrapper {
+        display: flex;
+        width: calc(90vw);
+        height: calc(90vw / 1.777);
+      }
+
+      &__button--lesson-list {
+        display: none;
+      }
+
+      &__button--lesson-list--mobile {
+        display: block;
+        width: fit-content;
+      }
+
+      &__title {
+        width: calc(90vw);
+        margin-top: 12px;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: left;
+        line-break: auto;
+
+        & span {
+          width: calc(90vw);
+          font-size: 32px;
+          line-height: 40px;
+        }
+      }
+
+      &__subtitle {
+        max-width: calc(100vw);
+        margin-bottom: 20px;
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import '../../../../styles/main';
+
+.InterviewSection {
+  &__hero-wrapper {
+    position: relative;
+    margin-bottom: 64px;
+    overflow: hidden;
+    background-color: $c_white;
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    width: 606px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: $c_white;
+
+    &__full-width {
+      width: 1242px;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      width: 546px;
+      font-family: $font-primary;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 0;
+      color: $c_black;
+    }
+
+    &__image {
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+    }
+
+    &__subtitle {
+      width: 546px;
+      margin-top: 16px;
+      font-family: $font-secondary;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: #5c6475;
+
+      &__full-width {
+        width: 1182px;
+      }
+    }
+  }
+
+  @media #{$screen-max-xl} {
+    &__hero {
+      width: calc(90vw);
+      height: 100%;
+      padding: 32px 20px 0 20px;
+
+      &__title {
+        width: calc(90vw);
+        font-size: 32px;
+        line-height: 40px;
+
+        br {
+          display: none;
+        }
+      }
+
+      &__subtitle {
+        width: calc(85vw);
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

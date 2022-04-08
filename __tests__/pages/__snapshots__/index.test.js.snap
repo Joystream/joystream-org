@@ -15,13 +15,13 @@ exports[`IndexPage page renders correctly 1`] = `
     statusData={null}
     t={[Function]}
   />
+  <EarnJOYCoins
+    t={[Function]}
+  />
   <BecomeFoundingMember
     t={[Function]}
   />
   <WhatWeDo
-    t={[Function]}
-  />
-  <WhyYouShouldJoin
     t={[Function]}
   />
   <ExploreJoystream
@@ -30,7 +30,7 @@ exports[`IndexPage page renders correctly 1`] = `
   <RoadToMainnet
     t={[Function]}
   />
-  <EarnTokens
+  <OurInvestors
     t={[Function]}
   />
 </BaseLayout>

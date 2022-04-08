@@ -19,7 +19,7 @@ const DashboardTooltip = ({ payload, active }) => {
     return (
       <div className="DashboardPage__linechart__tooltip">
         <p className="DashboardPage__linechart__tooltip__label">{name}</p>
-        <p className="DashboardPage__linechart__tooltip__value">{t("dashboard.amount")}: <span>{value}</span></p>
+        <p className="DashboardPage__linechart__tooltip__value">{t('dashboard.amount')}: <span>{value}</span></p>
       </div>
     );
   }
@@ -43,8 +43,8 @@ const DashboardLineChart = ({ title, data, isLoading, error }) => (
       ) : null}
       <ResponsiveContainer width="100%" height="100%">
         <LineChart className="Chart" data={data}>
-          <CartesianGrid strokeDasharray="2000" stroke="#A7AEB7" opacity="30%" strokeWidth='1px'/>
-          <XAxis dataKey="name" minTickGap={25} stroke="#A7AEB7" opacity="35%" strokeWidth='2px' />
+          <CartesianGrid strokeDasharray="2000" stroke="#A7AEB7" opacity="30%" strokeWidth="1px"/>
+          <XAxis dataKey="name" minTickGap={25} stroke="#A7AEB7" opacity="35%" strokeWidth="2px" />
           <Tooltip content={<DashboardTooltip />} />
           <Line type="monotone" dataKey="value" stroke="#6C6CFF" dot={false} strokeWidth="3px" />
         </LineChart>
@@ -91,13 +91,7 @@ export default DashboardPage;
 export const query = graphql`
   query($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageQueryFields
     }
   }
 `;

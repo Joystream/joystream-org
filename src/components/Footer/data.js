@@ -6,7 +6,6 @@ import { sharedData } from '../../data/pages';
 const joystreamLinks = [
   { href: sharedData.links.blog, label: 'pages.blog' },
   { to: '/manifesto', label: 'pages.manifesto' },
-  { to: '/roles', label: 'pages.roles' },
   { to: '/token', label: 'pages.token' },
   { to: '/hydra', label: 'pages.hydra' },
 ];
@@ -24,7 +23,7 @@ const usefulLinks = [
 const socialMedias = [
   { icon: TwitterIcon, href: sharedData.social.twitterLink, name: 'socials.twitter' },
   { icon: GithubIcon, href: sharedData.links.github, name: 'socials.github' },
-  { icon: DiscordIcon, href: sharedData.social.discordLink, name: 'socials.discord' }
+  { icon: DiscordIcon, href: sharedData.social.discordLink, name: 'socials.discord' },
 ];
 
 export { joystreamLinks, githubLinks, usefulLinks, socialMedias };

@@ -87,13 +87,14 @@
   },
   "navbar": {
     "product": "Product",
-    "atlas": "Atlas",
-    "pioneer": "Pioneer",
+    "atlas": "Content",
+    "pioneer": "DAO",
     "community": "Community",
     "brandStory": "Brand Story",
     "brandGuides": "Brand Guides",
     "downloadAssets": "Download Assets",
-    "about": "About"
+    "about": "Team",
+    "learnMore": "Learn More"
   },
   "footer": {
     "title": "Stay up to date",
@@ -119,7 +120,6 @@
     "roles": "Roles",
     "token": "Token",
     "hydra": "Hydra",
-    "foundingMembers": "Founding Members",
     "leaderboards": "Leaderboards",
     "scoringForm": "Scoring form",
     "overview": "Overview"
@@ -130,7 +130,7 @@
     "discord": "Discord"
   },
   "cookiesNotice": {
-    "text": "This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.",
+    "text": "This site uses cookies and external trackers to improve our services and your experience. By continuing to use our site, you agree to their use.",
     "findOutMore": "Find out more ›"
   },
   "testnet" : {

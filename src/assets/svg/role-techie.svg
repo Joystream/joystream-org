@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="40" cy="40" r="40" fill="#1F252E"/>
+<path d="M62.5 20.5H18.5V36.5H62.5V20.5Z" stroke="white" stroke-width="3" stroke-linecap="square"/>
+<path d="M62.5 44.5H18.5V60.5H62.5V44.5Z" stroke="white" stroke-width="3" stroke-linecap="square"/>
+<path d="M28.5 28.5H24.5" stroke="white" stroke-width="3" stroke-linecap="square"/>
+<path d="M28.5 52.5H24.5" stroke="white" stroke-width="3" stroke-linecap="square"/>
+<path d="M38.5 28.5H34.5" stroke="white" stroke-width="3" stroke-linecap="square"/>
+<path d="M38.5 52.5H34.5" stroke="white" stroke-width="3" stroke-linecap="square"/>
+<path d="M54.5 30.5C55.6046 30.5 56.5 29.6046 56.5 28.5C56.5 27.3954 55.6046 26.5 54.5 26.5C53.3954 26.5 52.5 27.3954 52.5 28.5C52.5 29.6046 53.3954 30.5 54.5 30.5Z" fill="white"/>
+<path d="M54.5 54.5C55.6046 54.5 56.5 53.6046 56.5 52.5C56.5 51.3954 55.6046 50.5 54.5 50.5C53.3954 50.5 52.5 51.3954 52.5 52.5C52.5 53.6046 53.3954 54.5 54.5 54.5Z" fill="white"/>
+<path d="M24 37V44" stroke="white" stroke-width="3" stroke-linecap="square"/>
+<path d="M56 37V44" stroke="white" stroke-width="3" stroke-linecap="square"/>
+</svg>

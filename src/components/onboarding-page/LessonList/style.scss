@@ -1,0 +1,295 @@
+@import '../../../styles/main';
+
+.LessonList {
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  &__backdrop {
+    width: 100%;
+    height: 100%;
+    background: $c_ebony-clay;
+    opacity: .9;
+  }
+
+  &__path-toggle {
+    display: grid;
+    width: 454px;
+    height: 52px;
+    margin: 0 32px 32px 30px;
+    padding: 2px;
+    cursor: pointer;
+    background-color: $c_ebony-clay;
+    grid-template-columns: 1fr 1fr;
+
+    &__item {
+      display: grid;
+      place-items: center;
+
+      &__text {
+        font-family: $font-primary;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 0;
+        color: $c_white;
+      }
+    }
+
+    &__item--active {
+      background-color: $c_blue-ribbon;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 101;
+    width: 598px;
+    height: 100%;
+    overflow-y: auto;
+    background: $c_black;
+  }
+
+  &__lessons {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 0;
+  }
+
+  &__button__wrapper {
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 102;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    background: $c_black;
+  }
+
+  &__button {
+    position: sticky;
+    top: 0;
+    right: 4px;
+    z-index: 102;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    color: $c_white;
+    cursor: pointer;
+    background: $c_black;
+    border: 2px solid $c_blue-ribbon;
+
+    &:hover {
+      background: $c_blue-ribbon;
+    }
+  }
+
+  &__title {
+    padding: 20px 0 30px 30px;
+    font-family: $font-primary;
+    font-size: 28px;
+    line-height: 36px;
+    color: $c_white;
+  }
+
+  @media #{$screen-max-xl} {
+    &__backdrop {
+      display: none;
+    }
+
+    &__content {
+      width: calc(100vw);
+      height: 100%;
+      margin: auto;
+      overflow-y: scroll;
+    }
+
+    &__wrapper {
+      height: 100%;
+      overflow-y: scroll;
+    }
+
+    &__button,
+    &__button__wrapper {
+      position: sticky;
+    }
+
+    &__lessons {
+      width: calc(90vw);
+      margin: auto;
+    }
+
+    &__path-toggle {
+      width: calc(90vw);
+      height: 42px;
+      margin: 0 auto 32px;
+
+      &__item__text {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &__title {
+      width: calc(90vw);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    &__item {
+      width: calc(90vw);
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.Lesson {
+  &__wrapper {
+    width: 538px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 1px solid #1f252e;
+    transition: transform .5s, box-shadow .5s, outline .2s;
+
+    &:hover {
+      background: $c_white;
+      border: 1px solid $c_blue-ribbon;
+      outline: 2px solid $c_blue-ribbon;
+      box-shadow: 6px 6px 0 -2px $c_blue-ribbon;
+    }
+
+    &--active {
+      outline: 2px solid $c_blue-ribbon;
+
+      &:hover {
+        outline: 2px solid $c_blue-ribbon;
+        transform: unset;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__content__text {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    margin: 30px 30px 30px 20px;
+  }
+
+  &__progress {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 30px 30px 30px 20px;
+  }
+
+  &__title {
+    width: 320px;
+    margin-right: 28px;
+    font-family: $font-primary;
+    font-size: 18px;
+    line-height: 24px;
+    color: $c_white;
+
+    &:hover,
+    &--active {
+      color: $c_black;
+    }
+  }
+
+  &__length {
+    width: 48px;
+    padding: 28px;
+    padding-right: 48px;
+    font-family: $font-primary;
+    font-size: 18px;
+    line-height: 24px;
+    color: $c_oslo_gray;
+
+    &--active {
+      color: $c_black;
+    }
+  }
+
+  @media #{$screen-max-xl} {
+    &__wrapper {
+      width: calc(90vw);
+      padding-top: 10px;
+
+      &:hover {
+        background: $c_black;
+        border: 1px solid #1f252e;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    &__backdrop {
+      display: none;
+    }
+
+    &__content {
+      width: calc(90vw);
+    }
+
+    &__content__text {
+      align-items: flex-start;
+      flex-direction: column;
+      width: calc(75vw);
+    }
+
+    &__icon {
+      width: calc(15vw);
+    }
+
+    &__progress {
+      margin: 0;
+      margin-left: 20px;
+    }
+
+    &__title {
+      width: calc(60vw);
+      margin: 0;
+      padding: 0;
+
+      &:hover,
+      &--active {
+        color: $c_white;
+      }
+    }
+
+    &__length {
+      width: calc(66vw);
+      padding: 0;
+      text-align: left;
+    }
+  }
+}

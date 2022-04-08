@@ -16,6 +16,13 @@
         }
       }
     },
+    "earnJoyCoins": {
+      "title": "Earn $JOY tokens",
+      "subtitle": "Here’s everything you need to know about Joystream and how to get started earning $JOY coins",
+      "button": {
+        "text": "Start earning"
+      }
+    },
     "becomeFM": {
       "subtitle": "Our brand new and unparalleled community token distribution scheme",
       "title": "Become a Founding Member to earn mainnet tokens and influence the development of the platform.",
@@ -26,23 +33,6 @@
       "subtitle": "Our motivation for building the Joystream protocol",
       "title": "We call for an arrangement where media platforms are accountable to the people they impact.",
       "link": "Read our manifesto"
-    },
-    "whyYouShouldJoin": {
-      "title": "Why join our testnets?",
-      "reasons": {
-        "tokens": {
-          "title": "Tokens",
-          "text": "Earn tokens distributed on mainnet, launching 2022"
-        },
-        "cash": {
-          "title": "Cash",
-          "text": "Get rewarded with real money for your participation"
-        },
-        "reputationAndSkill": {
-          "title": "Reputation & Skill",
-          "text": "Gain the knowledge required to participate on mainnet"
-        }
-      }
     },
     "exploreJoystream": {
       "title": "Explore Joystream Now",
@@ -118,13 +108,13 @@
         },
         "Giza": {
           "title": "Giza testnet",
-          "text": "Sumer is our eleventh testnet, introducing V2 of the Storage and Distribution System.",
+          "text": "Giza is our eleventh testnet, introducing V2 of the Storage and Distribution System.",
           "explore": "Explore Giza"
         }
       }
     },
-    "earnTokens": {
-      "title": "Earn mainnet tokens, cash and influence."
+    "ourInvestors": {
+      "title": "Our Investors"
     }
   }
 }

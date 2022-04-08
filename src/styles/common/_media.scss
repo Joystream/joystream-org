@@ -37,3 +37,4 @@ $screen-only-md: 'only screen and (min-width: #{map-get($breakpoints, 'md')}) an
 $screen-max-sm: media-max-width('sm');
 $screen-max-md: media-max-width('md');
 $screen-max-lg: media-max-width('lg');
+$screen-max-xl: media-max-width('xl');

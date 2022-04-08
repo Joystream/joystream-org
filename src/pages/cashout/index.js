@@ -10,7 +10,7 @@ import axios from 'axios';
 import BaseLayout from '../../components/_layouts/Base';
 import SiteMetadata from '../../components/SiteMetadata';
 import CashoutForm from '../../components/cashout-page/Form';
-import { ArrowButton } from '../founding-members/index';
+import { ArrowButton } from '../../components/ArrowButton';
 
 // utils
 import getBchValue from '../../utils/getBchValue';

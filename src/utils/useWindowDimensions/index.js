@@ -11,7 +11,7 @@ function getWindowDimensions() {
 
   return {
     width,
-    height
+    height,
   };
 }
 

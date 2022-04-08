@@ -256,6 +256,13 @@ exports[`PrivacyPolicyPage page renders correctly 1`] = `
                 </Link>,
                 <br />,
                 <strong />,
+                <Link
+                  className=""
+                  highlighted={false}
+                  href="https://livesession.io/security/"
+                >
+                  Livesession
+                </Link>,
               ]
             }
             i18nKey="privacyPolicy.privacyPolicyItems.googleAnalytics.content"

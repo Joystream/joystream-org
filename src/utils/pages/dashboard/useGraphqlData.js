@@ -126,7 +126,7 @@ const useGraphqlData = numberOfDataPoints => {
       }
     };
     getAtlasData();
-  }, []);
+  }, [numberOfDataPoints]);
 
   return { videos, channels, users, posts, threads };
 };

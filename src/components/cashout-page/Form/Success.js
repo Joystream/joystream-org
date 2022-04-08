@@ -3,7 +3,7 @@ import Countdown from 'react-countdown-now';
 import axios from 'axios';
 import { useTranslation, Trans } from 'gatsby-plugin-react-i18next';
 
-import { ArrowButton } from '../../../pages/founding-members/index';
+import { ArrowButton } from '../../ArrowButton';
 
 import { CASHOUT_ROUTE, addLeadingZero } from './index';
 import { FINAL_UI_STATE_NOCASHOUT, FINAL_UI_STATE_SUCCESS, FINAL_UI_STATE_TIMEOUT, FINAL_UI_STATE_SERVERPROBLEM } from './FinalScreen';

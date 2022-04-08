@@ -18,8 +18,8 @@ const GetStarted = () => {
     <BaseLayout t={t}>
       <SiteMetadata
         lang={language}
-        title={t("getStarted.siteMetadata.title")}
-        description={t("getStarted.siteMetadata.description")}
+        title={t('getStarted.siteMetadata.title')}
+        description={t('getStarted.siteMetadata.description')}
       />
 
       <GetStartedHero t={t} />
@@ -37,13 +37,7 @@ export default GetStarted;
 export const query = graphql`
   query($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageQueryFields
     }
   }
 `;

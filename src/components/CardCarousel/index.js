@@ -29,35 +29,18 @@ const CardCarousel = ({ children, scrollAmount = DEFAULT_SCROLL_AMOUNT }) => {
     });
   };
 
-  const setStructure = () => {
-    if (children?.length <= 3) {
-      return {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 400px)',
-      };
-    } else if (children?.length === 4) {
-      return {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 295px)',
-      };
-    }
-
-    return null;
-  };
-
   return (
     <div className="CardCarousel">
       <div
         ref={listRef}
         onScrollCapture={e => setScrollPosition(e.target.scrollLeft)}
         className="CardCarousel__cards"
-        style={{ ...setStructure() }}
       >
         {children}
       </div>
       {maxScrollLeft > 0 ? (
         <div className="CardCarousel__control">
-          <div role='presentation' onClick={() => scrollBy(-scrollAmount)} className="CardCarousel__control__arrow-wrapper">
+          <div role="presentation" onClick={() => scrollBy(-scrollAmount)} className="CardCarousel__control__arrow-wrapper">
             <Arrow onClick={() => scrollBy(-scrollAmount)} className="CardCarousel__control__arrow-left" />
           </div>
           <div className="CardCarousel__control__tracker">
@@ -66,7 +49,7 @@ const CardCarousel = ({ children, scrollAmount = DEFAULT_SCROLL_AMOUNT }) => {
               className="CardCarousel__control__tracker__position"
             ></div>
           </div>
-          <div role='presentation' onClick={() => scrollBy(scrollAmount)} className="CardCarousel__control__arrow-wrapper">
+          <div role="presentation" onClick={() => scrollBy(scrollAmount)} className="CardCarousel__control__arrow-wrapper">
             <Arrow onClick={() => scrollBy(scrollAmount)} className="CardCarousel__control__arrow-right" />
           </div>
         </div>

@@ -89,10 +89,19 @@
 
     &__metrics {
       display: grid;
-      overflow-x: hidden;
+      overflow-x: auto;
       column-gap: 30px;
-      grid-template-columns: repeat(4, 280px);
+      grid-template-columns: repeat(4, 275px);
       grid-template-rows: 132px;
+
+      &::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba(222, 227, 233, .4);
+        border-radius: 2px;
+      }
 
       &__title {
         margin-bottom: 24px;

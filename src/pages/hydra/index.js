@@ -51,19 +51,19 @@ function HydraPage() {
         </div>
       </LayoutWrapper>
       <LayoutWrapper className="Snippet">
-        <TitleWrapper title={t("hydra.snippet.title")} subtitle={t("hydra.snippet.subtitle")} />
+        <TitleWrapper title={t('hydra.snippet.title')} subtitle={t('hydra.snippet.subtitle')} />
         <Snippet />
       </LayoutWrapper>
       <LayoutWrapper className="Features">
-        <TitleWrapper title={t("hydra.features.title")}/>
+        <TitleWrapper title={t('hydra.features.title')}/>
         <Features features={content.Features.features} t={t}/>
       </LayoutWrapper>
       <LayoutWrapper className="Video">
-        <TitleWrapper title={t("hydra.video.title")} />
-        <Video src={content.Video.video.src} subtitle={t("hydra.video.subtitle")} />
+        <TitleWrapper title={t('hydra.video.title')} />
+        <Video src={content.Video.video.src} subtitle={t('hydra.video.subtitle')} />
       </LayoutWrapper>
       <LayoutWrapper className="GetStarted">
-        <TitleWrapper title={t("hydra.getStarted.title")} subtitle={<p>{t("hydra.getStarted.subtitle")}</p>} />
+        <TitleWrapper title={t('hydra.getStarted.title')} subtitle={<p>{t('hydra.getStarted.subtitle')}</p>} />
         <div className="GetStarted__Container">
           {content.GetStarted.links.map(link => (
             <Link key={t(`${link.name}`)} to={link.link.to}>
@@ -93,13 +93,7 @@ export default HydraPage;
 export const query = graphql`
   query($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageQueryFields
     }
   }
 `;

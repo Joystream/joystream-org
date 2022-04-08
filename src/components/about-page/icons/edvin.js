@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 const Edvin = React.forwardRef(({ className, ...props }, ref) => {
   return (
@@ -68,7 +68,7 @@ const Edvin = React.forwardRef(({ className, ...props }, ref) => {
         </clipPath>
       </defs>
     </svg>
-  )
-})
+  );
+});
 
-export default Edvin
+export default Edvin;

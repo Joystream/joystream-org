@@ -18,7 +18,7 @@ export default function withApi(WrappedComponent, apiPath) {
     }
 
     getData = async () => {
-      const apiUrl = process.env.GATSBY_API_URL || "https://status.joystream.app/";
+      const apiUrl = process.env.GATSBY_API_URL || 'https://status.joystream.app/';
 
       if (!apiUrl) {
         return;

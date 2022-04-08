@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation, Trans } from 'gatsby-plugin-react-i18next';
 
-import { ArrowButton } from '../../../pages/founding-members/index';
+import { ArrowButton } from '../../ArrowButton';
 
 import { ReactComponent as SuccessIcon } from '../../../assets/svg/success.svg';
 import { ReactComponent as FailureIcon } from '../../../assets/svg/failure.svg';

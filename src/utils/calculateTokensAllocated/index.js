@@ -4,7 +4,7 @@ export default (extraAllocation, totalScore, partialTokenAllocation) => {
   const tokensProjected = totalScore * partialTokenAllocation;
 
   if(tokensAllocated !== undefined || tokensAllocated !== null){
-    tokensAllocatedString = `${tokensAllocated.toFixed(2)}`
+    tokensAllocatedString = `${tokensAllocated.toFixed(2)}`;
   }else {
       tokensAllocatedString = '-';
   }
@@ -15,5 +15,5 @@ export default (extraAllocation, totalScore, partialTokenAllocation) => {
       tokensProjectedString = '-';
   }
 
-  return `${tokensAllocatedString}% / ${tokensProjectedString}%`
-}
+  return `${tokensAllocatedString}% / ${tokensProjectedString}%`;
+};

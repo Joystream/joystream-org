@@ -6,7 +6,7 @@ import Countdown from 'react-countdown-now';
 
 import Input from './Input';
 import AmountInput from './AmountInput';
-import { ArrowButton } from '../../../pages/founding-members/index';
+import { ArrowButton } from '../../ArrowButton';
 import Notice from './Notice';
 import Loader from 'react-loader-spinner';
 import FinalScreen, {

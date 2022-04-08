@@ -3,31 +3,31 @@ import { Link } from 'gatsby-plugin-react-i18next';
 
 const tokenQuestions = [
     {
-        title: "token.faq.whatIsTJoy.title",
-        text: "token.faq.whatIsTJoy.text"
+        title: 'token.faq.whatIsTJoy.title',
+        text: 'token.faq.whatIsTJoy.text',
     },
     {
-        title: "token.faq.tJoyValueOrigin.title",
-        text: "token.faq.tJoyValueOrigin.text"
+        title: 'token.faq.tJoyValueOrigin.title',
+        text: 'token.faq.tJoyValueOrigin.text',
     },
     {
-        title: "token.faq.purposeOfTJoy.title",
+        title: 'token.faq.purposeOfTJoy.title',
         text: {
             isModular: true,
-            key: "token.faq.purposeOfTJoy.text",
-            components: [<br />]
-        }
+            key: 'token.faq.purposeOfTJoy.text',
+            components: [<br />],
+        },
     },
     {
-        title: "token.faq.whereCanTJoyBeObtained.title",
-        text: "token.faq.whereCanTJoyBeObtained.text"
+        title: 'token.faq.whereCanTJoyBeObtained.title',
+        text: 'token.faq.whereCanTJoyBeObtained.text',
     },
     {
-        title: "token.faq.linkBetweenTJoyAndFutureToken.title",
-        text: "token.faq.linkBetweenTJoyAndFutureToken.text"
+        title: 'token.faq.linkBetweenTJoyAndFutureToken.title',
+        text: 'token.faq.linkBetweenTJoyAndFutureToken.text',
     },
     {
-        title: "token.faq.howToCashout.title",
+        title: 'token.faq.howToCashout.title',
         text: {
             isModular: true,
             key: "token.faq.howToCashout.text",
@@ -41,17 +41,17 @@ const tokenQuestions = [
         }
     },
     {
-        title: "token.faq.howToEarn.title",
+        title: 'token.faq.howToEarn.title',
         text: {
             isModular : true,
-            key : "token.faq.howToEarn.text",
-            components : [<Link to='/founding-members'>Founding Member Program</Link>]
-        }
+            key : 'token.faq.howToEarn.text',
+            components : [<a href="https://joystream.gitbook.io/testnet-workspace/testnet/founding-member-program" target="_blank">Founding Member Program</a>],
+        },
     },
     {
-        title: "token.faq.TJoyWorth.title",
-        text: "token.faq.TJoyWorth.text"
-    }
-]
+        title: 'token.faq.TJoyWorth.title',
+        text: 'token.faq.TJoyWorth.text',
+    },
+];
 
 export default tokenQuestions;

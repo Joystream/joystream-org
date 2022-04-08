@@ -16,7 +16,7 @@ const TokenInformationSection = ({ title, text }) => {
       })}
       onClick={() => {
         if(window && window.getSelection().toString() === ''){
-          setActive(prev => !prev)
+          setActive(prev => !prev);
         }
       }}
     >

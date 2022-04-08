@@ -17,7 +17,7 @@
     },
     "privacyPolicyItems": {
       "title": "Политика Конфиденциальности",
-      "subtitle": "Последнее обновление 17 Апреля 2019",
+      "subtitle": "Last updated on the 23rd of February 2022",
       "agreement": {
         "title": "1. Согласие с Политикой",
         "content": "Используя любое Наше Программное обеспечение, Пользователь принимает настоящую Политику Конфиденциальности. Если Вы действуете от имени другой компании или работодателя, Вы должны иметь полномочия действовать от их имени. Политика Конфиденциальности не распространяется ни на одну нашу рассылку, где Пользователи связаны <0>политикой конфиденциальности</0> <1>Mailchimp</1><2/><2/>Политика Конфиденциальности не применяется к любым другим сторонним службам, включая, помимо прочего, приложения, веб-сайты, инструменты или программное обеспечение, даже если они доступны по ссылкам или руководствам к нашему Программному обеспечению."
@@ -32,7 +32,7 @@
       },
       "googleAnalytics": {
         "title": "",
-        "content": "Компания использует <0>Google Analytics</0> с анонимизацией IP-адресов для сбора статистики на Веб-сайте и в версии Приложения, размещенной у Нас. Все настраиваемые параметры обмена данными отключены для улучшения защиты конфиденциальности Пользователей. ‍<1/> <1/><2> Компания не будет продавать ваши данные в рекламных или других целях.</2>"
+        "content": "Company uses <0>Google Analytics</0>, with IP anonymization, to collect statistics on Website and the version of App hosted by us. All customisable data sharing settings are turned off to improve the privacy of Users. ‍<1 />‍<1 /> Company also uses <3>Livesession</3> to help us find bugs, improve UX and more by using session replays. Sensitive data such as passwords and IP addresses are anonymized. <1 /><1 /> <2>Company will not sell your data for advertising, or other purposes.</2>"
       }
     },
     "cookiePolicyItems": {

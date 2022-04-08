@@ -8,11 +8,11 @@ import SiteMetadata from '../components/SiteMetadata';
 // components
 import Hero from '../components/index-page/Hero';
 import WhatWeDo from '../components/index-page/WhatWeDo';
-import WhyYouShouldJoin from '../components/index-page/WhyYouShouldJoin';
 import ExploreJoystream from '../components/index-page/ExploreJoystream';
-import EarnTokens from '../components/index-page/EarnTokens';
 import BecomeFoundingMember from '../components/index-page/BecomeFoundingMember';
 import RoadToMainnet from '../components/index-page/RoadToMainnet';
+import EarnJOYCoins from '../components/index-page/EarnJOYCoins';
+import OurInvestors from '../components/index-page/OurInvestors';
 
 import './style.scss';
 
@@ -25,23 +25,23 @@ const IndexPage = () => {
     <BaseLayout t={t}>
       <SiteMetadata
         lang={language}
-        title={t("siteMetadata.title")}
-        description={t("landing.siteMetadata.description")}
+        title={t('siteMetadata.title')}
+        description={t('landing.siteMetadata.description')}
       />
 
       <Hero t={t} statusData={statusData} />
+
+      <EarnJOYCoins t={t}/>
 
       <BecomeFoundingMember t={t}/>
 
       <WhatWeDo t={t}/>
 
-      <WhyYouShouldJoin t={t}/>
-
       <ExploreJoystream t={t}/>
 
       <RoadToMainnet t={t}/>
 
-      <EarnTokens t={t}/>
+      <OurInvestors t={t}/>
     </BaseLayout>
   );
 };
@@ -52,13 +52,7 @@ export default IndexPage;
 export const query = graphql`
   query($language: String!) {
     locales: allLocale(filter: {language: {eq: $language}}) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+      ...LanguageQueryFields
     }
   }
 `;

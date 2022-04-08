@@ -1,0 +1,152 @@
+@import '../../styles/main.scss';
+
+.OnboardingLayout {
+  &__wrapper {
+    position: relative;
+  }
+}
+
+.Footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 20px 120px;
+  background-color: $c_black;
+  background-image: url('../../assets/background/footer-bottom.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  &__form-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 24px 0 120px 0;
+
+    &__title {
+      margin-bottom: 5px;
+      font-family: $font-primary;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: 0;
+      color: white;
+    }
+
+    &__subtitle {
+      font-family: $font-secondary;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -.4000000059604645px;
+      color: #a7aeb7;
+      text-align: center;
+    }
+
+    &__input {
+      width: 354px;
+      margin: 0 10px;
+    }
+
+    &__button {
+      width: 198px;
+      margin: 0 10px;
+      padding: 0;
+    }
+  }
+
+  &__layout {
+    @extend %container;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  &__section {
+    flex: 1 0 50%;
+    padding: 0 10px 50px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  &__section-title {
+    display: block;
+    margin-bottom: 20px;
+    font-family: $font-secondary;
+    font-weight: bold;
+    color: $c_white;
+  }
+
+  &__section-link {
+    display: block;
+    color: $c_grayc-chateau;
+
+    &:hover,
+    &:active {
+      color: $c_white;
+    }
+
+    & + & {
+      margin-top: 14px;
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin-right: 24px;
+    margin-bottom: 20px;
+  }
+
+  @media #{$screen-sm} {
+    padding: 120px 0 100px;
+    background-image: url('../../assets/background/footer-bottom-secondary.svg');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    background-size: auto 30px;
+
+    &__layout {
+      width: 100%;
+    }
+
+    &__socials {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    &__section {
+      flex: 1 0 25%;
+      width: 175px;
+    }
+
+    &__section-title {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    padding-top: 80px;
+
+    &__form {
+      flex-direction: column;
+      margin-bottom: 80px;
+
+      &__input {
+        width: auto;
+      }
+
+      &__button {
+        width: auto;
+        margin-top: 12px;
+      }
+    }
+  }
+}

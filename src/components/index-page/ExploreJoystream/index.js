@@ -13,7 +13,7 @@ const ExploreJoystream = ({ t }) => (
 
       <div className="IndexPage__explore__explanation">
         <a href="https://play.joystream.org/">
-          <img src={AtlasVisual} alt={t("landing.exploreJoystream.atlas.imageAlt")} />
+          <img src={AtlasVisual} alt={t('landing.exploreJoystream.atlas.imageAlt')} />
         </a>
         <div className="IndexPage__explore__explanation__content">
           <h3 className="IndexPage__explore__explanation__title">Atlas</h3>
@@ -31,15 +31,15 @@ const ExploreJoystream = ({ t }) => (
         <div className="IndexPage__explore__explanation__content">
           <h3 className="IndexPage__explore__explanation__title">Pioneer</h3>
           <p className="IndexPage__explore__explanation__text">{t('landing.exploreJoystream.pioneer.text')}</p>
-          <a className="IndexPage__explore__explanation__link-wrapper" href="https://testnet.joystream.org/">
+          <a className="IndexPage__explore__explanation__link-wrapper" href="https://dao.joystream.org/">
             <div className="IndexPage__explore__explanation__link">
               <p className="IndexPage__explore__explanation__link-text">{t('landing.exploreJoystream.pioneer.link')}</p>
               <Arrow className="IndexPage__explore__explanation__link-arrow" />
             </div>
           </a>
         </div>
-        <a href="https://testnet.joystream.org/">
-          <img src={PioneerVisual} alt={t("landing.exploreJoystream.pioneer.imageAlt")}  />
+        <a href="https://dao.joystream.org/">
+          <img src={PioneerVisual} alt={t('landing.exploreJoystream.pioneer.imageAlt')}  />
         </a>
       </div>
     </div>

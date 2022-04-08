@@ -14,7 +14,7 @@ const IconBackground = () => {
   
   useEffect(() => {
     setEmployeesToShow(shuffleArray(employees).slice(0,5));
-  },[])
+  },[]);
 
   return (
     <div className="AboutPage__hero__background">
@@ -23,10 +23,10 @@ const IconBackground = () => {
           key={`empty-icon${index}`}
           src={EmptyIcon}
           className={`AboutPage__hero__background__empty-icon${index + 1}`}
-          alt=''
+          alt=""
         />
       ))}
-      <img src={Jsgenesis} className='AboutPage__hero__background__jsgenesis' alt=''/>
+      <img src={Jsgenesis} className="AboutPage__hero__background__jsgenesis" alt=""/>
       {employeesToShow.map(({ Icon }, index) => {
         return (
           <Icon
