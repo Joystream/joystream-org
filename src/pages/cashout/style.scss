@@ -1,0 +1,226 @@
+@import '../../styles/main';
+
+.CashoutPage {
+  padding-bottom: 350px;
+  background-color: $c_catskill-white;
+
+  &__header {
+    padding: 24px 0 84px 0;
+    background-color: $c_black;
+
+    &__title-wrapper {
+      @extend %container;
+
+      margin-top: 48px;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: 0;
+      color: $c_white;
+    }
+  }
+
+  &__body {
+    @extend %container;
+
+    display: flex;
+  }
+
+  &__additional-info {
+    width: 500px;
+    height: 737px;
+    min-width: 500px;
+    min-height: 737px;
+    margin-top: -76px;
+    margin-left: 30px;
+    background-color: $c_blue-ribbon;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 76px;
+      padding: 24px 32px;
+      background-color: $c_han-purple;
+
+      &__title {
+        font-family: $font-primary;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_white;
+      }
+    }
+
+    &__body {
+      margin: auto;
+      padding: 32px;
+      background: none;
+
+      & > h2:nth-of-type(2) {
+        margin-top: 40px;
+      }
+
+      &__title {
+        margin-bottom: 16px;
+        font-family: $font-primary;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_white;
+      }
+
+      &__subtitle {
+        margin-bottom: 24px;
+        font-family: $font-primary;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: #dee3e9;
+      }
+
+      &__button {
+        width: 185px;
+        height: 60px;
+        padding: 0;
+        font-family: $font-primary;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0;
+        border: 2px solid $c_white;
+      }
+    }
+
+    &__token-price-wrapper {
+      width: 100%;
+      height: 188px;
+      padding: 32px;
+      border-top: 1px solid $c_han_purple;
+    }
+
+    &__token-price {
+      width: 100%;
+      height: 100%;
+      padding: 18px 24px 24px 24px;
+      background-color: #2f2ff4;
+
+      &__title {
+        font-family: $font-secondary;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: $c_white;
+      }
+
+      &__value {
+        font-family: $font-primary;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: 0;
+        color: $c_white;
+      }
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    padding-bottom: 20px;
+
+    &__body {
+      flex-direction: column;
+    }
+
+    &__additional-info {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__header {
+      padding: 24px 20px 84px;
+
+      &__title-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        padding: 0;
+      }
+
+      &__title {
+        display: inline-block;
+        font-family: $font-primary;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+
+    &__body {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__additional-info {
+      width: 335px;
+      height: auto;
+      min-width: unset;
+
+      &__header {
+        height: 56px;
+        padding: 16px 20px;
+
+        & > h2 {
+          font-family: $font-primary;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0;
+        }
+      }
+
+      &__body {
+        padding: 20px;
+
+        &__title {
+          font-family: $font-primary;
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: 0;
+        }
+
+        &__subtitle {
+          font-family: $font-primary;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0;
+        }
+
+        &__button {
+          width: 100%;
+        }
+      }
+
+      &__token-price {
+        padding: 20px;
+
+        &__value {
+          font-family: $font-primary;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__header {
+      &__title-wrapper {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  }
+}
