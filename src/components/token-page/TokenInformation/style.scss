@@ -69,6 +69,10 @@
         &--active {
           display: block;
         }
+
+        & > ol {
+          margin: 10px 0;
+        }
       }
 
       &__icon {

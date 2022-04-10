@@ -30,9 +30,15 @@ const tokenQuestions = [
         title: 'token.faq.howToCashout.title',
         text: {
             isModular: true,
-            key: 'token.faq.howToCashout.text',
-            components: [<strong/>, <br/>, <a href="https://github.com/Joystream/helpdesk">here</a>],
-        },
+            key: "token.faq.howToCashout.text",
+            components: {
+              list: <ol></ol>,
+              listItem: <li></li>,
+              cashoutLink: <Link to='/cashout'>this form</Link>,
+              bold: <strong style={{ wordBreak: "break-all" }}/>,
+              discordLink: <a href="https://discord.gg/DE9UN3YpRP">Discord server</a>
+            }
+        }
     },
     {
         title: 'token.faq.howToEarn.title',
