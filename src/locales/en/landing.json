@@ -23,6 +23,31 @@
         "text": "Start earning"
       }
     },
+    "availableActivities": {
+      "title": "Available activities",
+      "subtitle": "See the wide range of opportunities with which you can participate on our testnet",
+      "activityTitles": {
+        "referral": "Refer a friend",
+        "bounties": "Bounties",
+        "councilMember": "Council Member",
+        "contentCurator": "Content Curator",
+        "contentCuratorLead": "Content Curator Lead",
+        "builder": "Builder",
+        "builderLead": "Builder Lead",
+        "hr": "HR",
+        "hrLead": "HR Lead",
+        "marketer": "Marketer",
+        "marketerLead": "Marketer Lead",
+        "storageProvider": "Storage Provider",
+        "storageProviderLead": "Storage Provider Lead",
+        "distributor": "Distributor",
+        "distributorLead": "Distributor Lead",
+        "validator": "Validator"
+      },
+      "weekly": "Weekly",
+      "placeForYou": "Place for you?",
+      "chatWithIntegrator": "Chat with Integrator"
+    },
     "becomeFM": {
       "subtitle": "Our brand new and unparalleled community token distribution scheme",
       "title": "Become a Founding Member to earn mainnet tokens and influence the development of the platform.",
