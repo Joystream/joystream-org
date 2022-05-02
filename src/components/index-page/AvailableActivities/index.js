@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
+import Loader from 'react-loader-spinner';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
@@ -10,7 +11,7 @@ import useAirtableData, { REFERRAL_ACTIVITY, WORKER_ACTIVITIES } from '../../../
 
 import './style.scss';
 
-const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isMobile, t }) => {
+const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isLoading, isMobile, t }) => {
   const icons = memberIcons?.reduce((acc, curr) => {
     if(curr == undefined) {
       acc.others++;
@@ -24,7 +25,7 @@ const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isMobile, t }) =
 
     acc.others++;
     return acc;
-  }, { others: 0, toRender: [] });
+  }, { others: 0, toRender: [] }) ?? { others: 0, toRender: [] };
 
   const handleImageError = (e) => {
     e.target.src = PlaceholderIcon;
@@ -41,6 +42,34 @@ const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isMobile, t }) =
       )}
     </div>
   );
+
+  const renderIcons = () => {
+    if (isLoading) {
+      return (
+        <Loader
+          className="IndexPage__available-activities__list-item__loader"
+          type="Oval"
+          color="#302ABF"
+          height="100%"
+          width="100%"
+          timeout={0}
+        />
+      );
+    }
+
+    return (
+      <>
+        {icons?.toRender?.map((iconString, index) => (
+          <div key={iconString + index} className="IndexPage__available-activities__list-item__member-icon">
+            <img src={iconString} onError={handleImageError} alt="" />
+          </div>
+        ))}
+        {icons?.toRender?.length === 3 && icons?.others !== 0 ? (
+          <div className="IndexPage__available-activities__list-item__number-icon">+{icons.others}</div>
+        ) : null}
+      </>
+    );
+  };
 
   const arrowCta = (
     <div className="IndexPage__available-activities__list-item__cta">
@@ -62,18 +91,9 @@ const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isMobile, t }) =
       </div>
       <div className="IndexPage__available-activities__list-item__bottom">
         <div className='IndexPage__available-activities__list-item__member-icons'>
-          {icons?.toRender?.map((iconString, index) => (
-            <div key={iconString + index} className='IndexPage__available-activities__list-item__member-icon'>
-              <img src={iconString} onError={handleImageError} alt=""/>
-            </div>
-          ))}
-          {icons?.toRender?.length === 3 && icons?.others !== 0 ? (
-            <div className='IndexPage__available-activities__list-item__number-icon'>
-              +{icons.others}
-            </div>
-          ) : null}
+          {renderIcons()}
         </div>
-        {icons?.toRender?.length === 0 ? (
+        {icons?.toRender?.length === 0 && !isLoading ? (
           <div className='IndexPage__available-activities__list-item__place-for-you'>
             <div className='IndexPage__available-activities__list-item__place-for-you__icon'>
               <PlaceForYouIcon />  
@@ -115,7 +135,8 @@ const AvailableActivities = ({ t }) => {
             Icon={REFERRAL_ACTIVITY.icon}
             title={t(REFERRAL_ACTIVITY.title)}
             amount={referralAmount}
-            memberIcons={referralIcons}
+            memberIcons={referralIcons.data}
+            isLoading={referralIcons.isLoading}
             isMobile={isMobile}
             t={t}
           />
@@ -128,7 +149,8 @@ const AvailableActivities = ({ t }) => {
                 title={t(WORKER_ACTIVITIES[activityKey].title)}
                 amount={activityAmounts?.[activityKey]?.amountEarned}
                 isWeekly={true}
-                memberIcons={activityIcons?.[activityKey]?.memberAvatars}
+                memberIcons={activityIcons.data?.[activityKey]?.memberAvatars}
+                isLoading={activityIcons.isLoading}
                 isMobile={isMobile}
                 t={t}
               />

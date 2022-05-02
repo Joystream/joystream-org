@@ -162,6 +162,13 @@
         place-items: center;
       }
 
+      &__loader {
+        width: 45px;
+        height: 45px;
+        margin-top: 3px;
+        margin-left: 10px;
+      }
+
       &__cta {
         display: flex;
         align-items: center;
@@ -190,12 +197,13 @@
         color: $c_white;
 
         &__icon {
-          display: grid;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-right: 16px;
           padding: 10px;
           background-color: $c_ebony-clay;
           border-radius: 50%;
-          place-items: center;
         }
       }
 
@@ -323,8 +331,25 @@
           line-height: 28px;
         }
 
+        &__loader {
+          width: 35px;
+          height: 35px;
+          margin-left: 5px;
+        }
+
         &__cta {
           opacity: 1;
+        }
+
+        &__place-for-you {
+          font-size: 14px;
+          line-height: 20px;
+
+          &__icon {
+            margin-right: 0;
+            margin-left: -8px;
+            transform: scale(.68);
+          }
         }
 
         &__bottom {

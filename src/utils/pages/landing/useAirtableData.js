@@ -40,50 +40,50 @@ export const WORKER_ACTIVITIES = {
     title: "landing.availableActivities.activityTitles.contentCurator",
     icon: ContentCuratorIcon
   },
-  "ContentDirectoryLead": {
-    title: "landing.availableActivities.activityTitles.contentCuratorLead",
-    icon: ContentCuratorLeadIcon
-  },
+  // "ContentDirectoryLead": {
+  //   title: "landing.availableActivities.activityTitles.contentCuratorLead",
+  //   icon: ContentCuratorLeadIcon
+  // },
   "BuildersWorker": {
     title: "landing.availableActivities.activityTitles.builder",
     icon: BuilderIcon
   },
-  "BuildersLead": {
-    title: "landing.availableActivities.activityTitles.builderLead",
-    icon: BuilderLeadIcon
-  },
+  // "BuildersLead": {
+  //   title: "landing.availableActivities.activityTitles.builderLead",
+  //   icon: BuilderLeadIcon
+  // },
   "HRWorker": {
     title: "landing.availableActivities.activityTitles.hr",
     icon: HRIcon
   },
-  "HRLead": {
-    title: "landing.availableActivities.activityTitles.hrLead",
-    icon: HRLeadIcon
-  },
+  // "HRLead": {
+  //   title: "landing.availableActivities.activityTitles.hrLead",
+  //   icon: HRLeadIcon
+  // },
   "MarketingWorker": {
     title: "landing.availableActivities.activityTitles.marketer",
     icon: MarketerIcon
   },
-  "MarketingLead": {
-    title: "landing.availableActivities.activityTitles.marketerLead",
-    icon: MarketerLeadIcon
-  },
+  // "MarketingLead": {
+  //   title: "landing.availableActivities.activityTitles.marketerLead",
+  //   icon: MarketerLeadIcon
+  // },
   "StorageWorker": {
     title: "landing.availableActivities.activityTitles.storageProvider",
     icon: StorageProviderIcon
   },
-  "StorageLead": {
-    title: "landing.availableActivities.activityTitles.storageProviderLead",
-    icon: StorageProviderLeadIcon
-  },
+  // "StorageLead": {
+  //   title: "landing.availableActivities.activityTitles.storageProviderLead",
+  //   icon: StorageProviderLeadIcon
+  // },
   "ContentDeliveryWorker": {
     title: "landing.availableActivities.activityTitles.distributor",
     icon: DistributorIcon
   },
-  "ContentDeliveryLead": {
-    title: "landing.availableActivities.activityTitles.distributorLead",
-    icon: DistributorLeadIcon
-  },
+  // "ContentDeliveryLead": {
+  //   title: "landing.availableActivities.activityTitles.distributorLead",
+  //   icon: DistributorLeadIcon
+  // },
   "Validator": {
     title: "landing.availableActivities.activityTitles.validator",
     icon: ValidatorIcon
@@ -235,9 +235,9 @@ const useAirtableData = () => {
   const { rewardedData, lastCouncil }  = useStaticQuery(QUERY);
 
   const [activityAmounts, setActivityAmount] = useState({});
-  const [activityIcons, setActivityIcons] = useState({});
+  const [activityIcons, setActivityIcons] = useState({ isLoading: true, data: {} });
   const [referralAmount, setReferralAmount] = useState(0);
-  const [referralIcons, setReferralIcons] = useState();
+  const [referralIcons, setReferralIcons] = useState({ isLoading: true, data: [] });
 
   useEffect(() => {
     const previousCouncilId = lastCouncil.nodes[0].data.CouncilId;
@@ -252,8 +252,14 @@ const useAirtableData = () => {
 
     const getRewardsIconsData = async() => {
       const { memberAvatarsById, referredMembers } = await getMembershipData();
-      setActivityIcons(getRewardsRelatedIcons(rewardedData, previousCouncilId, memberAvatarsById));
-      setReferralIcons(referredMembers);
+      setActivityIcons({
+        isLoading: false,
+        data: getRewardsRelatedIcons(rewardedData, previousCouncilId, memberAvatarsById)
+      });
+      setReferralIcons({
+        isLoading: false,
+        data: referredMembers
+      });
     }
     
     getRewardsAmountsData();
