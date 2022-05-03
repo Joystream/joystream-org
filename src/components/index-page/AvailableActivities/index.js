@@ -106,6 +106,10 @@ const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isLoading, isMob
     </div>
   );
 
+  if(!isLoading && icons?.toRender?.length === 0 && icons?.others === 0) {
+    return null;
+  }
+
   return (
     <a href="https://discord.gg/jq5VtcSuqj" target="_blank">
       {itemContent}
