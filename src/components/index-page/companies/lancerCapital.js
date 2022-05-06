@@ -11,12 +11,12 @@ const Inactive = (props) => (
   <img alt="" {...props} src={InactiveImage} />
 );
 
-const LancerCapital = ({ className }) => {
+const LancerCapital = ({ className, isMobile }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <div onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}>
-      {isActive ? <Active className={className}/> : <Inactive className={className} />}
+      {(isActive && !isMobile) ? <Active className={className}/> : <Inactive className={className} />}
     </div>
   );
 };
