@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import ActiveImage from '../../../assets/images/investor-logos/D1/Color.png';
 import InactiveImage from '../../../assets/images/investor-logos/D1/Mono.png';
@@ -13,11 +13,10 @@ const Inactive = (props) => (
 
 
 const D1Ventures = ({ className }) => {
-  const [isActive, setIsActive] = useState(false);
-
   return (
-    <div onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}>
-      {isActive ? <Active className={className}/> : <Inactive className={className} />}
+    <div>
+      <Active className={`${className} ${className}--active`} />
+      <Inactive className={`${className} ${className}--inactive`} />
     </div>
   );
 };
