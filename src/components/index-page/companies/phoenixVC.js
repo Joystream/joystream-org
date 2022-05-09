@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import ActiveImage from '../../../assets/images/investor-logos/Phoenix/Color.png';
 import InactiveImage from '../../../assets/images/investor-logos/Phoenix/Mono.png';
@@ -11,11 +11,10 @@ const Inactive = (props) => (
   <img alt="" {...props} src={InactiveImage} />
 );
 const PheonixVC = ({ className }) => {
-  const [isActive, setIsActive] = useState(false);
-
   return (
-    <div onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}>
-      {isActive ? <Active className={className}/> : <Inactive className={className} />}
+    <div>
+      <Active className={`${className} ${className}--active`} />
+      <Inactive className={`${className} ${className}--inactive`} />
     </div>
   );
 };

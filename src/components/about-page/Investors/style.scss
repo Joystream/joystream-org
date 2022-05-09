@@ -1,0 +1,61 @@
+@import '../../../styles/main';
+
+.AboutPage {
+  &__investors-wrapper {
+    padding: 128px 0;
+    background-color: $c_black;
+  }
+
+  &__investors {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: 0;
+      color: $c_white;
+    }
+
+    &__list {
+      display: grid;
+      justify-content: space-between;
+      width: 100%;
+      // justify-items: center;
+      margin-top: 56px;
+      grid-template-columns: repeat(5, 182px);
+    }
+
+    &__icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__investors {
+      padding: 64px 20px;
+
+      &__title {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &__list {
+        gap: 15px;
+        grid-template-columns: repeat(2, 157px);
+        grid-template-rows: 64px 64px;
+      }
+
+      &__icon-wrapper {
+        border: 1px solid #dae2eb;
+      }
+    }
+  }
+}
