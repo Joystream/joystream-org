@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import ActiveImage from '../../../assets/images/investor-logos/ZB/Color.png';
 import InactiveImage from '../../../assets/images/investor-logos/ZB/Mono.png';
@@ -11,12 +11,11 @@ const Inactive = (props) => (
   <img alt="" {...props} src={InactiveImage} />
 );
 
-const ZBCapital = ({ className, isMobile }) => {
-  const [isActive, setIsActive] = useState(false);
-
+const ZBCapital = ({ className }) => {
   return (
-    <div onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}>
-      {(isActive && !isMobile) ? <Active className={className}/> : <Inactive className={className} />}
+    <div>
+      <Active className={`${className} ${className}--active`} />
+      <Inactive className={`${className} ${className}--inactive`} />
     </div>
   );
 };

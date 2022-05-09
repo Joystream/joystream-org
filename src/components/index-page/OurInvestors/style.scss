@@ -34,6 +34,24 @@
 
     &__list-item {
       width: 182px;
+
+      &__icon--active {
+        display: none;
+      }
+
+      &__icon--inactive {
+        display: block;
+      }
+
+      &:hover {
+        .IndexPage__investors__list-item__icon--active {
+          display: block;
+        }
+
+        .IndexPage__investors__list-item__icon--inactive {
+          display: none;
+        }
+      }
     }
 
     &__icon-wrapper {
@@ -62,6 +80,16 @@
       &__list-item {
         width: 158px;
         height: 69.5px;
+
+        &:hover {
+          .IndexPage__investors__list-item__icon--active {
+            display: none;
+          }
+
+          .IndexPage__investors__list-item__icon--inactive {
+            display: block;
+          }
+        }
       }
 
       &__icon-wrapper {

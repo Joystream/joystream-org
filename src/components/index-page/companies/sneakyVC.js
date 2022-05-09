@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import ActiveImage from '../../../assets/images/investor-logos/Sneaky/Color.png';
 import InactiveImage from '../../../assets/images/investor-logos/Sneaky/Mono.png';
@@ -11,12 +11,11 @@ const Inactive = (props) => (
   <img alt="" {...props} src={InactiveImage} />
 );
 
-const SneakyVC = ({ className, isMobile }) => {
-  const [isActive, setIsActive] = useState(false);
-
+const SneakyVC = ({ className }) => {
   return (
-    <div onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}>
-      {(isActive && !isMobile) ? <Active className={className}/> : <Inactive className={className} />}
+    <div>
+      <Active className={`${className} ${className}--active`} />
+      <Inactive className={`${className} ${className}--inactive`} />
     </div>
   );
 };
