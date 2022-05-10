@@ -240,7 +240,7 @@
         "title": "Frequently asked questions",
         "questions": {
           "language": {
-            "question": "What language is Joystream built on?",
+            "question": "What framework is Joystream built on?",
             "answer": "Joystream is built using Substrate, in the Polkadot ecosystem. Joystream itself is its own blockchain, and the $JOY token is a native asset on our blockchain."
           },
           "polkadot": {
