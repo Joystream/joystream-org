@@ -18,6 +18,9 @@ exports[`IndexPage page renders correctly 1`] = `
   <EarnJOYCoins
     t={[Function]}
   />
+  <AvailableActivities
+    t={[Function]}
+  />
   <BecomeFoundingMember
     t={[Function]}
   />
