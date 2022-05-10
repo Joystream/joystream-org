@@ -84,6 +84,14 @@ module.exports = {
             baseId: 'appNF9hNyOvfP5lvG',
             tableName: 'Integrator',
           },
+          {
+            baseId: 'appNF9hNyOvfP5lvG',
+            tableName: 'RewardedActivity',
+          },
+          {
+            baseId: 'appNF9hNyOvfP5lvG',
+            tableName: 'TestnetCouncil',
+          },
         ],
       },
     },

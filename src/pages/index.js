@@ -1,6 +1,6 @@
 import React from 'react';
 import useAxios from '../utils/useAxios';
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../components/_layouts/Base';
 import SiteMetadata from '../components/SiteMetadata';
@@ -13,6 +13,7 @@ import BecomeFoundingMember from '../components/index-page/BecomeFoundingMember'
 import RoadToMainnet from '../components/index-page/RoadToMainnet';
 import EarnJOYCoins from '../components/index-page/EarnJOYCoins';
 import OurInvestors from '../components/index-page/OurInvestors';
+import AvailableActivities from '../components/index-page/AvailableActivities';
 
 import './style.scss';
 
@@ -20,6 +21,8 @@ const IndexPage = () => {
   const [statusData, loading, error] = useAxios();
   const { t } = useTranslation();
   const { language } = useI18next();
+
+
 
   return (
     <BaseLayout t={t}>
@@ -32,6 +35,8 @@ const IndexPage = () => {
       <Hero t={t} statusData={statusData} />
 
       <EarnJOYCoins t={t}/>
+
+      <AvailableActivities t={t}/>
 
       <BecomeFoundingMember t={t}/>
 
