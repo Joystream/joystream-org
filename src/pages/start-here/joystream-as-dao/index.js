@@ -39,7 +39,7 @@ const Onboarding = () => {
   const statisticsData = [
     {
       title: 'onboarding.page2.statistics.forumPosts',
-      data: { count: data.channels, isLoading },
+      data: { count: data.forumPosts, isLoading },
     },
     {
       title: 'onboarding.page2.statistics.proposals',

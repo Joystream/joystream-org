@@ -57,7 +57,7 @@ const useQueryNodeData = () => {
             data: {
               channels: data.channels.length,
               videos: data.videos.length,
-              formPosts: data.forumPosts.length,
+              forumPosts: data.forumPosts.length,
               proposals: data.proposals.length,
               jobOpenings: data.workingGroupOpenings.length,
               currentWorkers: data.workers.length
