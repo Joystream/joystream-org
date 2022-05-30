@@ -53,8 +53,7 @@ const useReferrerData = () => {
     setPaidOutToReferrers(paidOutToReferrers);
     
     // TODO:
-    // 1. Add up all of the things and multiply by the constant to figure out the dollar value.
-    // 2. Figure out what to do with the referee value.
+    // 1. Add referree value as soon as it's added to the airtable.
   }, []);
 
   return { referrerReward, paidOutToReferrers };
