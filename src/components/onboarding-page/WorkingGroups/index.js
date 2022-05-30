@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner';
 import { useStaticQuery, graphql } from 'gatsby';
 import useWorkingGroups from '../../../utils/pages/onboarding/useWorkingGroups';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
+import useAirtableData from '../../../utils/pages/landing/useAirtableData';
 
 const WorkingGroupItem = ({ workerAvatars, t, item, renderChatWithIntegrator, onChatWithIntegrator, noHover }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -48,87 +49,44 @@ const WorkingGroupItem = ({ workerAvatars, t, item, renderChatWithIntegrator, on
   );
 };
 
+const formatPayoutAmount = (amount) => {
+  if(amount === 0)
+    return 0;
+
+  if(!amount)
+    return "";
+
+  return Math.round(amount);
+}
+
 const WorkingGroups = ({ t, title, subtitle, renderChatWithIntegrator, onChatWithIntegrator, noHover }) => {
-  const [storageWorkersData, setStorageWorkersData] = useState({ isLoading: true, workers: [] });
-  const [curatorsWorkersData, setCuratorsWorkersData] = useState({ isLoading: true, workers: [] });
-  const [distributorsWorkersData, setDistributorsWorkersData] = useState({ isLoading: true, workers: [] });
-  const [operationsWorkersData, setOperationsWorkersData] = useState({ isLoading: true, workers: [] });
+  const { workers: { isLoading, error, groups } } = useWorkingGroups();
+  const { activityAmounts: { StorageWorker, BuildersWorker, ContentDirectoryWorker, ContentDeliveryWorker } } = useAirtableData();
 
-  const {
-    storageWorkers,
-    curatorsWorkers,
-    distributionWorkers,
-    operationsAlphaWorkers,
-    operationsBetaWorkers,
-    operationsGammaWorkers,
-  } = useWorkingGroups();
-
-  useEffect(() => {
-    if (storageWorkers) {
-      setStorageWorkersData({
-        isLoading: storageWorkers.isLoading,
-        workers: storageWorkers.workers,
-      });
-    }
-  }, [storageWorkers]);
-
-  useEffect(() => {
-    if (curatorsWorkers) {
-      setCuratorsWorkersData({
-        isLoading: curatorsWorkers.isLoading,
-        workers: curatorsWorkers.workers,
-      });
-    }
-  }, [curatorsWorkers]);
-
-  useEffect(() => {
-    if (distributionWorkers) {
-      setDistributorsWorkersData({
-        isLoading: distributionWorkers.isLoading,
-        workers: distributionWorkers.workers,
-      });
-    }
-  }, [distributionWorkers]);
-
-  useEffect(() => {
-    if (operationsAlphaWorkers && operationsBetaWorkers && operationsGammaWorkers) {
-      setOperationsWorkersData({
-        isLoading:
-          operationsAlphaWorkers.isLoading && operationsBetaWorkers.isLoading && operationsGammaWorkers.isLoading,
-        workers: [
-          ...operationsAlphaWorkers.workers,
-          ...operationsBetaWorkers.workers,
-          ...operationsGammaWorkers.workers,
-        ],
-      });
-    }
-  }, [operationsAlphaWorkers, operationsBetaWorkers, operationsGammaWorkers]);
-
-  // TODO fetch salary from api?
   const data = [
     {
-      payout: 500,
+      payout: formatPayoutAmount(StorageWorker?.amountEarned),
       title: t('onboarding.page5.workingGroups.storageProviders.title'),
       text: t('onboarding.page5.workingGroups.storageProviders.text'),
-      data: storageWorkersData,
+      data: { isLoading, workers: groups.storage },
     },
     {
-      payout: 500,
+      payout: formatPayoutAmount(BuildersWorker?.amountEarned),
       title: t('onboarding.page5.workingGroups.operationsGroup.title'),
       text: t('onboarding.page5.workingGroups.operationsGroup.text'),
-      data: operationsWorkersData,
+      data: { isLoading, workers: groups.operations },
     },
     {
-      payout: 500,
+      payout: formatPayoutAmount(ContentDirectoryWorker?.amountEarned),
       title: t('onboarding.page5.workingGroups.curators.title'),
       text: t('onboarding.page5.workingGroups.curators.text'),
-      data: curatorsWorkersData,
+      data: { isLoading, workers: groups.content },
     },
     {
-      payout: 500,
+      payout: formatPayoutAmount(ContentDeliveryWorker?.amountEarned),
       title: t('onboarding.page5.workingGroups.distributors.title'),
       text: t('onboarding.page5.workingGroups.distributors.text'),
-      data: distributorsWorkersData,
+      data: { isLoading, workers: groups.distribution },
     },
   ];
 

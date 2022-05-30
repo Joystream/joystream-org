@@ -240,7 +240,8 @@ const useAirtableData = () => {
   const [referralIcons, setReferralIcons] = useState({ isLoading: true, data: [] });
 
   useEffect(() => {
-    const previousCouncilId = lastCouncil.nodes[0].data.CouncilId;
+    // TODO: This needs to be updated after airtable data is updated!
+    const previousCouncilId = lastCouncil.nodes[0].data.CouncilId - 1;
     const referralAmount = lastCouncil.nodes[0].data.ReferralJOYBonusPercentage;
 
     setReferralAmount(Math.round(referralAmount * JOY_PERCENTAGE_VALUE_MULTIPLIER));
