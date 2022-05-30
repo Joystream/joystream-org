@@ -3,33 +3,10 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import './style.scss';
 
-const ReferallsInfo = ({ t }) => {
+const ReferallsInfo = ({ t, paidOutToReferrers, referrerReward }) => {
   // TODO fetch counts from api
-  const referalReward = 1000;
   const refereeReward = 200;
-  const referalsPayout = 24500;
-
-  const { referalls } = useStaticQuery(graphql`
-    query ReferallsQuery {
-      referalls: allAirtable(
-        filter: { table: { eq: "Integrator" } }
-        sort: { fields: data___IntegratorId, order: DESC }
-      ) {
-        nodes {
-          data {
-            IntegratorId
-            PersonId
-          }
-          recordId
-        }
-      }
-    }
-  `);
-
-  useEffect(() => {
-    if (referalls && referalls.nodes) {
-    }
-  }, [referalls]);
+  const referalsPayout = 24500 + paidOutToReferrers;
 
   return (
     <div className="ReferallsInfo__wrapper">
@@ -38,7 +15,7 @@ const ReferallsInfo = ({ t }) => {
           <div className="ReferallsInfo__item__title">{t('onboarding.page3.referallsInfo.reward')}</div>
           <div className="ReferallsInfo__item__count">
             <span className="ReferallsInfo__item__currency">$</span>
-            {referalReward}
+            {referrerReward}
           </div>
         </div>
 
