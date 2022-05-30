@@ -6,8 +6,7 @@ import InfoSection from '../../../components/onboarding-page/InfoSection';
 import PioneerInfo from '../../../components/onboarding-page/PioneerInfo';
 import VideoSection from '../../../components/onboarding-page/VideoSection';
 import FAQ from '../../../components/onboarding-page/FAQ';
-import useAtlasData from '../../../utils/pages/onboarding/useAtlasData';
-import usePioneerData from '../../../utils/pages/onboarding/usePioneerData';
+import useQueryNodeData from '../../../utils/pages/onboarding/useQueryNodeData';
 import Statistics from '../../../components/onboarding-page/Statistics';
 import Structure from '../../../components/onboarding-page/Structure';
 import SiteMetadata from '../../../components/SiteMetadata';
@@ -22,120 +21,9 @@ const Onboarding = () => {
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const lessonIndex = 2;
-  const { videos, channels } = useAtlasData();
-  const {
-    proposals,
-    posts,
-    storageCount,
-    distributorsCount,
-    curatorsCount,
-    operationsAlphaCount,
-    operationsBetaCount,
-    operationsGammaCount,
-    curatorsOpenings,
-    storageOpenings,
-    distributorsOpenings,
-    operationsAlphaOpenings,
-    operationsBetaOpenings,
-    operationsGammaOpenings,
-  } = usePioneerData();
+  const { data, isLoading } = useQueryNodeData();
 
   const { language } = useI18next();
-  const [channelsCount, setChannelsCount] = useState({ isLoading: true, count: 0 });
-  const [videosCount, setVideosCount] = useState({ isLoading: true, count: 0 });
-  const [postsData, setPostsData] = useState({ isLoading: true, count: 0 });
-  const [proposalsData, setProposalsData] = useState({ isLoading: true, count: 0 });
-  const [workersData, setWorkersData] = useState({ isLoading: true, count: 0 });
-  const [openingsData, setOpeningsData] = useState({ isLoading: true, count: 0 });
-
-  useEffect(() => {
-    if (channels) {
-      setChannelsCount(channels);
-    }
-  }, [channels]);
-
-  useEffect(() => {
-    if (videos) {
-      setVideosCount(videos);
-    }
-  }, [videos]);
-
-  useEffect(() => {
-    if (posts) {
-      setPostsData(posts);
-    }
-  }, [posts]);
-
-  useEffect(() => {
-    if (proposals) {
-      setProposalsData(proposals);
-    }
-  }, [proposals]);
-
-  useEffect(() => {
-    if (
-      storageCount &&
-      distributorsCount &&
-      curatorsCount &&
-      operationsAlphaCount &&
-      operationsBetaCount &&
-      operationsGammaCount
-    ) {
-      setWorkersData({
-        count:
-          storageCount.count +
-          distributorsCount.count +
-          curatorsCount.count +
-          operationsAlphaCount.count +
-          operationsBetaCount.count +
-          operationsGammaCount.count,
-        isLoading:
-          storageCount.isLoading ||
-          distributorsCount.isLoading ||
-          curatorsCount.isLoading ||
-          operationsAlphaCount.isLoading ||
-          operationsBetaCount.isLoading ||
-          operationsGammaCount.isLoading,
-      });
-    }
-  }, [storageCount, distributorsCount, curatorsCount, operationsAlphaCount, operationsBetaCount, operationsGammaCount]);
-
-  useEffect(() => {
-    if (
-      curatorsOpenings &&
-      storageOpenings &&
-      distributorsOpenings &&
-      operationsAlphaOpenings &&
-      operationsBetaOpenings &&
-      operationsGammaOpenings
-    ) {
-      setOpeningsData(prev => {
-        return {
-          isLoading:
-            curatorsOpenings.isLoading ||
-            storageOpenings.isLoading ||
-            distributorsOpenings.isLoading ||
-            operationsAlphaOpenings.isLoading ||
-            operationsBetaOpenings.isLoading ||
-            operationsGammaOpenings.isLoading,
-          count:
-            curatorsOpenings.count +
-            storageOpenings.count +
-            distributorsOpenings.count +
-            operationsAlphaOpenings.count +
-            operationsBetaOpenings.count +
-            operationsGammaOpenings.count,
-        };
-      });
-    }
-  }, [
-    curatorsOpenings,
-    storageOpenings,
-    distributorsOpenings,
-    operationsAlphaOpenings,
-    operationsBetaOpenings,
-    operationsGammaOpenings,
-  ]);
 
   const questions = [
     {
@@ -151,27 +39,27 @@ const Onboarding = () => {
   const statisticsData = [
     {
       title: 'onboarding.page2.statistics.forumPosts',
-      data: postsData,
+      data: { count: data.forumPosts, isLoading },
     },
     {
       title: 'onboarding.page2.statistics.proposals',
-      data: proposalsData,
+      data: { count: data.proposals, isLoading },
     },
     {
       title: 'onboarding.page2.statistics.videos',
-      data: videosCount,
+      data: { count: data.videos, isLoading },
     },
     {
       title: 'onboarding.page2.statistics.channels',
-      data: channelsCount,
+      data: { count: data.channels, isLoading },
     },
     {
       title: 'onboarding.page2.statistics.currentWorkers',
-      data: workersData,
+      data: { count: data.currentWorkers, isLoading },
     },
     {
       title: 'onboarding.page2.statistics.jobOpenings',
-      data: openingsData,
+      data: { count: data.jobOpenings, isLoading },
     },
   ];
 

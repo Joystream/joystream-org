@@ -16,6 +16,7 @@ import { ReactComponent as MakeBounty } from '../../../assets/svg/create-bounty.
 import SiteMetadata from '../../../components/SiteMetadata';
 import OGImage from '../../../assets/images/Joystream_Thumbnail_3.jpeg';
 import useLivesessionIdentifyOnboardingRole from '../../../utils/pages/onboarding/useLivesessionIdentifyOnboardingRole';
+import useReferrerData from '../../../utils/pages/onboarding/useReferrerData';
 import './style.scss';
 
 const Onboarding = () => {
@@ -26,6 +27,7 @@ const Onboarding = () => {
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const lessonIndex = 3;
+  const { referrerReward, paidOutToReferrers } = useReferrerData();
 
   const questions = [
     {
@@ -98,7 +100,7 @@ const Onboarding = () => {
       <TasksInfo t={t} title={'onboarding.page3.tasksInfo.title'} data={tasksData} />
       <BecomeFM t={t} />
       <InfoSection title={t('onboarding.page3.infoSection2.title')} text={t('onboarding.page3.infoSection2.text')} />
-      <ReferallsInfo t={t} />
+      <ReferallsInfo t={t} paidOutToReferrers={paidOutToReferrers} referrerReward={referrerReward} />
       <FMInterviews t={t} />
       <FAQ title={t('onboarding.page1.faq.title')} tokenQuestions={questions} />
     </OnboardingLayout>

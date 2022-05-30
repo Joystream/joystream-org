@@ -1,89 +1,84 @@
 import { useState, useEffect } from 'react';
-import { ApiPromise, WsProvider } from '@polkadot/api';
-import { types } from '@joystream/types';
 
-const JOYSTREAM_WS_PROVIDER = 'wss://rome-rpc-endpoint.joystream.org:9944';
+const QUERY_URL = 'https://query.joystream.org/graphql';
+const WORKERS_QUERY = `
+{
+  workers (limit: 999999, where: { isActive_eq: true }) {
+    id,
+    groupId,
+    membership {
+      id,
+      metadata {
+        avatar{
+          __typename
+          ... on AvatarUri {
+            avatarUri
+          }
+        }
+      }
+    }
+  }
+}
+`;
 
 const useWorkingGroups = () => {
-  const [Api, setApi] = useState();
-  const [apiError, setApiError] = useState(false);
-  const [storageWorkers, setStorageWorkers] = useState({ isLoading: true, error: false, workers: [] });
-  const [curatorsWorkers, setCuratorWorkers] = useState({ isLoading: true, error: false, workers: [] });
-  const [distributionWorkers, setDistributorsWorkers] = useState({ isLoading: true, error: false, workers: [] });
-  const [operationsAlphaWorkers, setOperationsAlphaWorkers] = useState({ isLoading: true, error: false, workers: [] });
-  const [operationsBetaWorkers, setOperationsBetaWorkers] = useState({ isLoading: true, error: false, workers: [] });
-  const [operationsGammaWorkers, setOperationsGammaWorkers] = useState({ isLoading: true, error: false, workers: [] });
-
-  // setup api
-  useEffect(() => {
-    const setUpApi = async () => {
-      try {
-        const provider = new WsProvider(JOYSTREAM_WS_PROVIDER);
-        const api = await ApiPromise.create({ provider, types });
-        await api.isReady;
-        setApi(api);
-      } catch (e) {
-        setApiError(true);
-        console.log(e);
-      }
-    };
-    setUpApi();
-  }, []);
+  const [workers, setWorkers] = useState({ isLoading: true, error: false, groups: {
+    storage: [],
+    operations: [],
+    content: [],
+    distribution: []
+  } });
 
   // fetch data
   useEffect(() => {
-    if (Api && !apiError) {
-      const fetchWorkers = async (workingGroup, setMethod) => {
-        const nextWorkerID = (await Api.query[workingGroup].nextWorkerId()).toNumber();
-        for (let workerId = nextWorkerID - 1; workerId >= 0; workerId--) {
-          const workerById = (await Api.query[workingGroup].workerById(workerId)).toJSON();
-          if (workerId === 0) {
-            setMethod(prev => {
-              return {
-                ...prev,
-                isLoading: false,
-              };
-            });
-          }
-          if (workerById.reward_relationship !== null) {
-            const memberId = workerById.member_id;
-            const membership = (await Api.query.members.membershipById(memberId)).toHuman();
-            setMethod(prev => {
-              if (prev.workers.filter(w => w.avatar === membership.avatar_uri).length === 0) {
-                return {
-                  ...prev,
-                  workers: [...prev.workers, { workerId, memberId, avatar: membership.avatar_uri }],
-                };
-              } else {
-                return {
-                  ...prev,
-                };
-              }
-            });
-          }
+    const getWorkerData = async () => {
+      try {
+        const res = await fetch(QUERY_URL, {
+          method: 'POST',
+          headers: { 'Content-type': 'application/json' },
+          body: JSON.stringify({ query: WORKERS_QUERY }),
+        });
+
+        if (res.ok) {
+          const { data: { workers } } = await res.json();
+
+          const mappedWorkers = workers.map(worker => ({
+            groupId: worker.groupId,
+            workerId: worker.id,
+            memberId: worker.membership.id,
+            avatar: worker.membership.metadata.avatar.avatarUri
+          }));
+
+          const storage = mappedWorkers.filter(({ groupId }) => groupId === "storageWorkingGroup");
+          const operations = mappedWorkers.filter(({ groupId }) =>
+            ['operationsWorkingGroupAlpha', 'operationsWorkingGroupBeta', 'operationsWorkingGroupGamma'].includes(
+              groupId
+          ));
+          const content = mappedWorkers.filter(({ groupId }) => groupId === "contentWorkingGroup");
+          const distribution = mappedWorkers.filter(({ groupId }) => groupId === "distributionWorkingGroup");
+
+          console.log({ storage, operations, distribution, content });
+
+          setWorkers({
+            isLoading: false,
+            error: false,
+            groups: {
+              storage,
+              operations,
+              content,
+              distribution
+            }
+          })
+
         }
-      };
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    getWorkerData();
+  }, []);
 
-      const getWorkers = async () => {
-        await fetchWorkers('contentWorkingGroup', setCuratorWorkers);
-        await fetchWorkers('storageWorkingGroup', setStorageWorkers);
-        await fetchWorkers('distributionWorkingGroup', setDistributorsWorkers);
-        await fetchWorkers('operationsWorkingGroupAlpha', setOperationsAlphaWorkers);
-        await fetchWorkers('operationsWorkingGroupBeta', setOperationsBetaWorkers);
-        await fetchWorkers('operationsWorkingGroupGamma', setOperationsGammaWorkers);
-      };
-      getWorkers();
-    }
-  }, [Api, apiError]);
-
-  return {
-    storageWorkers,
-    curatorsWorkers,
-    distributionWorkers,
-    operationsAlphaWorkers,
-    operationsBetaWorkers,
-    operationsGammaWorkers,
-  };
+  return { workers };
 };
 
 export default useWorkingGroups;

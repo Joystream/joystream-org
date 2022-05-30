@@ -23,34 +23,13 @@ import './style.scss';
 const Onboarding = () => {
   const { councilSize, councilEndDays, councilPeriodDays } = useCouncilData();
   const { language } = useI18next();
-  useLivesessionIdentifyOnboardingRole();
-  const [councilCount, setCouncilCount] = useState({ isLoading: true, count: 0 });
-  const [councilDaysLeft, setCouncilDaysLeft] = useState({ isLoading: true, count: 0 });
-  const [councilDaysCount, setCouncilDaysCount] = useState({ isLoading: true, count: 0 });
   const [shouldShowLessonList, setShouldShowLessonList] = useState(false);
   const [shouldReloadRole, setShouldReloadRole] = useState(false);
   const [shouldShowGetStarted, setShouldShowGetStarted] = useState(false);
   const lessonIndex = 4;
 
-  useEffect(() => {
-    if (councilSize) {
-      setCouncilCount(councilSize);
-    }
-  }, [councilSize]);
-
-  useEffect(() => {
-    if (councilEndDays) {
-      setCouncilDaysLeft(councilEndDays);
-    }
-  }, [councilEndDays]);
-
-  useEffect(() => {
-    if (councilPeriodDays) {
-      setCouncilDaysCount(councilPeriodDays);
-    }
-  }, [councilPeriodDays]);
-
   const { t } = useTranslation();
+  useLivesessionIdentifyOnboardingRole();
 
   const questions = [
     {
@@ -70,15 +49,15 @@ const Onboarding = () => {
   const statisticsData = [
     {
       title: 'onboarding.page4.statistics.councilMembers',
-      data: councilCount,
+      data: { isLoading: councilSize.isLoading, count: councilSize.count },
     },
     {
       title: 'onboarding.page4.statistics.nextElection',
-      data: councilDaysLeft,
+      data: { isLoading: councilEndDays.isLoading, count: councilEndDays.count },
     },
     {
       title: 'onboarding.page4.statistics.councilPeriod',
-      data: councilDaysCount,
+      data: { isLoading: councilPeriodDays.isLoading, count: councilPeriodDays.count },
     },
   ];
 
