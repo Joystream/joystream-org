@@ -11,7 +11,7 @@ export const validateJoystreamAddress = address => {
 };
 
 const MIN_ALLOWED_DOLLAR_AMOUNT = 1;
-const MAX_ALLOWED_DOLLAR_AMOUNT = 50;
+const MAX_ALLOWED_DOLLAR_AMOUNT = 300;
 
 export const validateTokenAmount = (value, joyInDollars, bchInDollars, bchBalance) => {
   const valueAsFloat = parseFloat(value);
