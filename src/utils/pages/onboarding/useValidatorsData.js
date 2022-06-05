@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { types } from '@joystream/types';
 
-const JOYSTREAM_WS_PROVIDER = 'wss://rome-rpc-endpoint.joystream.org:9944';
+const JOYSTREAM_WS_PROVIDER = 'wss://rpc.joystream.org:9944';
 
 const useValidatorsData = () => {
   const [Api, setApi] = useState();
