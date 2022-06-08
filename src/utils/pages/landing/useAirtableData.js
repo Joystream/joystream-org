@@ -218,8 +218,7 @@ const useAirtableData = () => {
         ]
       }).all();
 
-      // TODO: Update 2 to 1
-      const councilForProcessing = councilData[2].fields;
+      const councilForProcessing = councilData[1].fields;
       const councilForProcessingId = councilForProcessing.CouncilId;
 
       setPreviousCouncilId(councilForProcessingId);

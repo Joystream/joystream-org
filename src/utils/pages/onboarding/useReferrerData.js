@@ -16,8 +16,7 @@ const useReferrerData = () => {
         ]
       }).all();
 
-      // TODO: Update 2 to 1 here
-      const councilForProcessing = councilData[2].fields;
+      const councilForProcessing = councilData[1].fields;
 
       setReferrerReward(Math.round(councilForProcessing.ReferralJOYBonusPercentage * JOY_PERCENTAGE_VALUE_MULTIPLIER))
 
