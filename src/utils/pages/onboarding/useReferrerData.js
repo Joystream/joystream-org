@@ -24,8 +24,6 @@ const useReferrerData = () => {
       // setReferrerReward(Math.round(councilForProcessing.RefereeJOYBonusPercentage * JOY_PERCENTAGE_VALUE_MULTIPLIER))
 
       const referralRewardData = (await airtable("RewardedActivity").select({
-        // TODO: The Activity string needs to be updated if it
-        // doesn't match when new referrals are actually added.
         filterByFormula: `Activity="Referral"`
       }).all()).map(activity => activity.fields);
 
