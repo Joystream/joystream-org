@@ -99,28 +99,6 @@ const WorkingGroups = ({ t, title, subtitle, renderChatWithIntegrator, onChatWit
       ));
   };
 
-  const { workingGroups } = useStaticQuery(graphql`
-    query WorkingGroupsQuery {
-      workingGroups: allAirtable(
-        filter: { table: { eq: "BountyLabel" } }
-        sort: { fields: data___BountyLabelId, order: DESC }
-      ) {
-        nodes {
-          data {
-            BountyLabelId
-            Name
-          }
-          recordId
-        }
-      }
-    }
-  `);
-
-  useEffect(() => {
-    if (workingGroups && workingGroups.nodes) {
-    }
-  }, [workingGroups]);
-
   return (
     <div className="WorkingGroups__wrapper">
       <div className="WorkingGroups__content">
