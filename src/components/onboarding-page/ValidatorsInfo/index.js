@@ -10,29 +10,6 @@ const ValidatorsInfo = ({ t }) => {
   const [maxValidatorsData, setMaxValidatorsData] = useState({ isLoading: true, count: 0 });
   const [activeValidatorsData, setActiveValidatorsData] = useState({ isLoading: true, count: 0 });
 
-  const { workingGroups } = useStaticQuery(graphql`
-    query ValidatorsQuery {
-      workingGroups: allAirtable(
-        filter: { table: { eq: "BountyLabel" } }
-        sort: { fields: data___BountyLabelId, order: DESC }
-      ) {
-        nodes {
-          data {
-            BountyLabelId
-            Name
-          }
-          recordId
-        }
-      }
-    }
-  `);
-
-  useEffect(() => {
-    if (workingGroups && workingGroups.nodes) {
-      console.log(workingGroups.nodes);
-    }
-  }, [workingGroups]);
-
   useEffect(() => {
     if (maxValidatorsSize) {
       setMaxValidatorsData({

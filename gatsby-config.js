@@ -71,30 +71,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-source-airtable',
-      options: {
-        apiKey: process.env.AIRTABLE_API_KEY,
-        tables: [
-          {
-            baseId: 'appNF9hNyOvfP5lvG',
-            tableName: 'BountyLabel',
-          },
-          {
-            baseId: 'appNF9hNyOvfP5lvG',
-            tableName: 'Integrator',
-          },
-          {
-            baseId: 'appNF9hNyOvfP5lvG',
-            tableName: 'RewardedActivity',
-          },
-          {
-            baseId: 'appNF9hNyOvfP5lvG',
-            tableName: 'TestnetCouncil',
-          },
-        ],
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,6 +1,6 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { airtable } from '../../airtable';
 
 // Icons
 import { ReactComponent as ReferIcon } from '../../../assets/svg/available-activities-icons/refer.svg';
@@ -111,39 +111,6 @@ const MEMBERSHIPS_QUERY = `
 }
 `;
 
-const QUERY = graphql`
-query Query {
-  rewardedData: allAirtable(
-    filter: { table: { eq: "RewardedActivity" } }
-  ) {
-    nodes {
-      data {
-        RewardedActivityId
-        Activity
-        TestnetCouncilIdInteger
-      	tJOYEarned
-        JOYEarnedPercent
-        MemberId__from_PersonId_
-      }
-    }
-  },
-  lastCouncil:
-  	allAirtable(
-      filter: {table: {eq: "TestnetCouncil"}, data: {CouncilId: {ne: null}}}
-    	sort: { fields: data___CouncilId, order: DESC}
-    	limit: 1
-    ) {
-    nodes {
-      data {
-        Network
-        CouncilId
-        ReferralJOYBonusPercentage
-      }
-    }
-  }
-}
-`;
-
 const JOY_PERCENTAGE_VALUE_MULTIPLIER = 600_000;
 
 const getMembershipData = async () => {
@@ -186,8 +153,8 @@ const getPreviousCouncilTermRewards = async (rewardedData, previousCouncilId) =>
   } catch(e) {}
 
   // Building the final data object
-  const previousCouncilTermRewards = rewardedData.nodes.reduce(
-    (prev, { data: { Activity, TestnetCouncilIdInteger, JOYEarnedPercent, tJOYEarned } }) => {
+  const previousCouncilTermRewards = rewardedData.reduce(
+    (prev, { Activity, TestnetCouncilIdInteger, JOYEarnedPercent, tJOYEarned }) => {
       if (TestnetCouncilIdInteger != previousCouncilId) {
         return prev;
       }
@@ -211,13 +178,13 @@ const getPreviousCouncilTermRewards = async (rewardedData, previousCouncilId) =>
 }
 
 const getRewardsRelatedIcons = (rewardedData, previousCouncilId, memberAvatarsById) => {
-  return rewardedData.nodes.reduce(
-    (prev, { data: { Activity, TestnetCouncilIdInteger, MemberId__from_PersonId_ } }) => {
-      if (TestnetCouncilIdInteger != previousCouncilId || !MemberId__from_PersonId_) {
+  return rewardedData.reduce(
+    (prev, { Activity, TestnetCouncilIdInteger, "MemberId (from PersonId)": memberIdFromPersonId }) => {
+      if (TestnetCouncilIdInteger != previousCouncilId || !memberIdFromPersonId) {
         return prev;
       }
 
-      const memberId = MemberId__from_PersonId_[0];
+      const memberId = memberIdFromPersonId[0];
 
       if (prev[Activity]) {
         prev[Activity].memberAvatars.push(memberAvatarsById?.[memberId]);
@@ -232,40 +199,66 @@ const getRewardsRelatedIcons = (rewardedData, previousCouncilId, memberAvatarsBy
 }
 
 const useAirtableData = () => {
-  const { rewardedData, lastCouncil }  = useStaticQuery(QUERY);
 
+  // Processing-related state
+  const [rewardedActivityData, setRewardedActivityData] = useState(null);
+  const [previousCouncilId, setPreviousCouncilId] = useState(null);
+
+  // Final state
   const [activityAmounts, setActivityAmount] = useState({});
-  const [activityIcons, setActivityIcons] = useState({ isLoading: true, data: {} });
   const [referralAmount, setReferralAmount] = useState(0);
+  const [activityIcons, setActivityIcons] = useState({ isLoading: true, data: {} });
   const [referralIcons, setReferralIcons] = useState({ isLoading: true, data: [] });
 
   useEffect(() => {
-    // TODO: This needs to be updated after airtable data is updated!
-    const previousCouncilId = lastCouncil.nodes[0].data.CouncilId - 1;
-    const referralAmount = lastCouncil.nodes[0].data.ReferralJOYBonusPercentage;
-
-    setReferralAmount(Math.round(referralAmount * JOY_PERCENTAGE_VALUE_MULTIPLIER));
-
     const getRewardsAmountsData = async () => {
-      const previousCouncilTermRewards = await getPreviousCouncilTermRewards(rewardedData, previousCouncilId);
-      setActivityAmount(previousCouncilTermRewards);
-    }
+      const councilData = await airtable("TestnetCouncil").select({
+        sort: [
+          { field: "TestnetCouncilId", direction: "desc" }
+        ]
+      }).all();
 
-    const getRewardsIconsData = async() => {
-      const { memberAvatarsById, referredMembers } = await getMembershipData();
-      setActivityIcons({
-        isLoading: false,
-        data: getRewardsRelatedIcons(rewardedData, previousCouncilId, memberAvatarsById)
-      });
-      setReferralIcons({
-        isLoading: false,
-        data: referredMembers
-      });
-    }
-    
+      const councilForProcessing = councilData[1].fields;
+      const councilForProcessingId = councilForProcessing.CouncilId;
+
+      setPreviousCouncilId(councilForProcessingId);
+
+      const lastCouncilRewardedActivityData = (await airtable("RewardedActivity").select({
+        filterByFormula: `TestnetCouncilId=${councilForProcessingId}`
+      }).all()).map(activity => activity.fields);
+
+
+      const previousCouncilTermRewards = await getPreviousCouncilTermRewards(
+        lastCouncilRewardedActivityData,
+        councilForProcessingId
+      );
+
+      // Updating the state
+      setReferralAmount(Math.round(councilForProcessing.ReferralJOYBonusPercentage * JOY_PERCENTAGE_VALUE_MULTIPLIER));
+      setActivityAmount(previousCouncilTermRewards);
+      setRewardedActivityData(lastCouncilRewardedActivityData)
+    };
+
     getRewardsAmountsData();
-    getRewardsIconsData();
-  },[]);
+  }, []);
+
+  useEffect(() => {
+    if(rewardedActivityData && (previousCouncilId != null)) {
+      const getRewardsIconsData = async() => {
+        const { memberAvatarsById, referredMembers } = await getMembershipData();
+        setActivityIcons({
+          isLoading: false,
+          data: getRewardsRelatedIcons(rewardedActivityData, previousCouncilId, memberAvatarsById)
+        });
+        setReferralIcons({
+          isLoading: false,
+          data: referredMembers
+        });
+      }
+
+      getRewardsIconsData();
+    }
+  }, [rewardedActivityData, previousCouncilId]);
 
   return { activityAmounts, referralAmount, activityIcons, referralIcons };
 };
