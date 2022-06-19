@@ -29,7 +29,8 @@ import { ReactComponent as BlogImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 
 import { roles } from '../../data/pages/sumer';
-import { goalsData, launchDate } from '../../data/pages/sumer';
+import { goalsData } from '../../data/pages/sumer';
+import { launchDate } from '../../data/pages/giza';
 
 const SumerPage = ({ content }) => {
   const { t } = useTranslation();
@@ -47,7 +48,7 @@ const SumerPage = ({ content }) => {
         <p>{t('sumer.hero.text')}</p>
         <br />
         <br />
-        <HeroCard date={launchDate} t={t} />
+        <HeroCard info date={launchDate} counterTitle={<>{t('sumer.heroCard.title')}</>} t={t} />
       </Hero>
 
       <LayoutWrapper>

@@ -23,7 +23,9 @@
     "bandwidthProvider": "Bandwidth Provider",
     "builder": "Builder",
     "storageLead" : "Storage Lead",
-    "contentLead" : "Content Lead"
+    "contentLead" : "Content Lead",
+    "membershipCurator" : "Membership Curator",
+    "communicationModerator" : "Communication Moderator"
   },
   "siteMetadata": {
     "title": "Joystream: The video platform DAO"
