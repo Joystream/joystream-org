@@ -135,6 +135,16 @@
           "title": "Giza testnet",
           "text": "Giza is our eleventh testnet, introducing V2 of the Storage and Distribution System.",
           "explore": "Explore Giza"
+        },
+        "Olympia": {
+          "title": "Olympia testnet",
+          "text": "Olympia is our twelfth testnet, introducing a new major runtime and V2 of Pioneer.",
+          "explore": "Explore Olympia"
+        },
+        "Rhodes": {
+          "title": "Rhodes testnet",
+          "text": "Rhodes is our thirteenth testnet, enabling the launch of video NFTs.",
+          "explore": "Explore Rhodes"
         }
       }
     },

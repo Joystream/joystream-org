@@ -28,6 +28,8 @@ import Acropolis from '../../assets/svg/acropolis-building.svg';
 import Antioch from '../../assets/svg/antioch-logo.svg';
 import Sumer from '../../assets/svg/sumer-logo.svg';
 import Giza from '../../assets/svg/giza-logo.svg';
+import Olympia from '../../assets/svg/olympia-logo.svg';
+import Rhodes from '../../assets/svg/rhodes-logo.svg';
 
 export const sharedData = {
   defaultEmail: 'hello@jsgenesis.com',
@@ -161,11 +163,27 @@ export const bountiesLink =
 
 export const testnetData = [
   {
+    Image: Rhodes,
+    number: 12,
+    name: 'Rhodes',
+    date: '11.05.2022',
+    state: 'Current',
+    link: '/rhodes'
+  },
+  {
+    Image: Olympia,
+    number: 11,
+    name: 'Olympia',
+    date: '23.03.2022',
+    state: 'Past',
+    link: '/olympia'
+  },
+  {
     Image: Giza,
     number: 10,
     name: 'Giza',
     date: '26.01.2022',
-    state: 'Current',
+    state: 'Past',
     link: '/giza',
   },
   {

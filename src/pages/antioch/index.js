@@ -29,7 +29,7 @@ import { ReactComponent as BlogImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 
 import { roles } from '../../data/pages';
-import { goalsData, launchDate } from '../../data/pages/antioch';
+import { goalsData } from '../../data/pages/antioch';
 
 import './style.scss';
 
