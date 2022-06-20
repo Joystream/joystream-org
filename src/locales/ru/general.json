@@ -23,7 +23,9 @@
     "bandwidthProvider": "Провайдер пропускной способности",
     "builder": "Разработчик",
     "storageLead" : "Главный провайдер хранилищ",
-    "contentLead" : "Главный куратор контента"
+    "contentLead" : "Главный куратор контента",
+    "membershipCurator" : "Membership Curator",
+    "communicationModerator" : "Communication Moderator"
   },
   "siteMetadata": {
     "title": "Joystream: видеоплатформа DAO"

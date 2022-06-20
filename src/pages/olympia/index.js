@@ -23,16 +23,16 @@ import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
 import SiteMetadata from '../../components/SiteMetadata';
 
-import gizaImage from '../../assets/svg/giza.svg';
+import olympiaImage from '../../assets/svg/olympia.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 import { ReactComponent as BlogImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 
-import { roles } from '../../data/pages/giza';
-import { goalsData } from '../../data/pages/giza';
-import { launchDate } from '../../data/pages/olympia';
+import { roles } from '../../data/pages/olympia';
+import { goalsData } from '../../data/pages/olympia';
+import { launchDate } from '../../data/pages/rhodes';
 
-const GizaPage = ({ content }) => {
+const OlympiaPage = ({ content }) => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
@@ -41,45 +41,45 @@ const GizaPage = ({ content }) => {
       <SiteMetadata
         lang={language}
         title={t('siteMetadata.title')}
-        description={t('giza.siteMetadata.description')}
+        description={t('olympia.siteMetadata.description')}
       />
 
-      <Hero image={gizaImage} title={t('giza.hero.title')} indent animationStartValue={0}>
-        <p>{t('giza.hero.text')}</p>
+      <Hero image={olympiaImage} title={t('olympia.hero.title')} indent animationStartValue={0}>
+        <p>{t('olympia.hero.text')}</p>
         <br />
         <br />
-        <HeroCard info date={launchDate} counterTitle={<>{t('giza.heroCard.title')}</>} t={t} />
+        <HeroCard info date={launchDate} counterTitle={<>{t('olympia.heroCard.title')}</>} t={t} />
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper title={t('giza.criticalDocuments.title')}>
+        <TitleWrapper title={t('olympia.criticalDocuments.title')}>
           <ColumnsLayout>
             <Pane
               image={SpecImg}
-              href="https://github.com/Joystream/joystream/issues/2580"
-              title={t('giza.criticalDocuments.releasePlan.title')}
+              href="https://github.com/Joystream/joystream/issues/2855"
+              title={t('olympia.criticalDocuments.releasePlan.title')}
               target="_blank"
             >
-              {t('giza.criticalDocuments.releasePlan.text')}
+              {t('olympia.criticalDocuments.releasePlan.text')}
             </Pane>
             <Pane
               image={BlogImg}
-              title={t('giza.criticalDocuments.blogPost.title')}
-              href="https://blog.joystream.org/announcing-giza/"
+              title={t('olympia.criticalDocuments.blogPost.title')}
+              href="https://blog.joystream.org/announcing-olympia/"
               target="_blank"
             >
-              {t('giza.criticalDocuments.blogPost.text')}
+              {t('olympia.criticalDocuments.blogPost.text')}
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
 
-        <TitleWrapper title={t('giza.testnetGoals.title')} subtitle={<>{t('giza.testnetGoals.subtitle')}</>}>
+        <TitleWrapper title={t('olympia.testnetGoals.title')} subtitle={<>{t('olympia.testnetGoals.subtitle')}</>}>
           <GoalList data={translateGoals(goalsData, t)} />
         </TitleWrapper>
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title={t('giza.roles.title')}>
+        <TitleWrapper title={t('olympia.roles.title')}>
           <ColumnsLayout>
             <RoleList
               roles={roles.active.map(({ title, ...rest }) => ({
@@ -94,14 +94,14 @@ const GizaPage = ({ content }) => {
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title={t('giza.map.title')} location="giza">
+      <MapInfo title={t('olympia.map.title')} location="olympia">
         <p>
           <Trans
-            i18nKey="giza.map.text"
+            i18nKey="olympia.map.text"
             components={[
               <strong />,
               <br />,
-              <Link href="https://blog.joystream.org/giza-announced/">
+              <Link href="https://blog.joystream.org/announcing-olympia/">
                 <PersonIcon />
                 Read the blog post
               </Link>,
@@ -113,10 +113,10 @@ const GizaPage = ({ content }) => {
   );
 };
 
-GizaPage.propTypes = pagePropTypes;
+OlympiaPage.propTypes = pagePropTypes;
 
-export { GizaPage };
-export default withApi(GizaPage, getApiPath('STATUS'));
+export { OlympiaPage };
+export default withApi(OlympiaPage, getApiPath('STATUS'));
 
 export const query = graphql`
   query($language: String!) {

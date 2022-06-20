@@ -135,6 +135,16 @@
           "title": "Тестнет Giza",
           "text": "Giza - наш одинадцатый тестнет, представляющий 2-ю версию системы хранения и распространения контента.",
           "explore": "Explore Giza"
+        },
+        "Olympia": {
+          "title": "Olympia testnet",
+          "text": "Olympia is our twelfth testnet, introducing a new major runtime and V2 of Pioneer.",
+          "explore": "Explore Olympia"
+        },
+        "Rhodes": {
+          "title": "Rhodes testnet",
+          "text": "Rhodes is our thirteenth testnet, enabling the launch of video NFTs.",
+          "explore": "Explore Rhodes"
         }
       }
     },

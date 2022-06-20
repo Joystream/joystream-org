@@ -1,0 +1,46 @@
+{
+  "olympia": {
+    "siteMetadata": {
+      "description": "Explore the Olympia testnet"
+    },
+    "hero": {
+      "title": "Olympia Network",
+      "text": "The Olympia release introduces a plethora of new governance features along with a new feature-packed governance product, Pioneer V2."
+    },
+    "heroCard": {
+      "title": "REPLACED BY RHODES ON"
+    },
+    "criticalDocuments": {
+      "title": "Critical Documents",
+      "releasePlan": {
+        "title": "Release Plan",
+        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+      },
+      "blogPost": {
+        "title": "Announcement Blog Post",
+        "text": "Read a brief primer on the Olympia testnet and its objectives."
+      }
+    },
+    "testnetGoals": {
+      "title": "Testnet Goals",
+      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Olympia testnet.",
+      "goals": {
+        "launchPioneerV2": {
+          "title": "Launching V2 of Pioneer",
+          "text": "The primary goal for Olympia was to finally unveil V2 of Pioneer, which is the most developed governance product in the entire space."
+        },
+        "launchNewMajorRuntime": {
+          "title": "New Major Runtime",
+          "text": "This release introduces a new major runtime that features plenty of new enhancements: a new proposal system, new council and election system, new membership system, a constitution, new on-chain forum with reactions and many more."
+        }
+      }
+    },
+    "roles": {
+      "title": "Incentivized Roles for the Olympia Network"
+    },
+    "map": {
+      "title": "Olympia",
+      "text": "<0>Olympia was a city in ancient Greece located near the western coast of the Peloponnese peninsula of southern Greece, 16 kilometers inland from the Ionian Sea.</0> This site was a major Panhellenic religious sanctuary of ancient Greece.<1/><1/> Here, the ancient Olympic Games were held every four years throughout Classical antiquity, from the 8th century BC to the 4th century AD. It was also the home of the massive statue of Zeus, one of the Seven Wonders of the world. <1/><1/><2><0/> Read the blog post</2>"
+    }
+  }
+}

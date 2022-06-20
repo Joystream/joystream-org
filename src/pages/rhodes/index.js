@@ -23,16 +23,14 @@ import Link from '../../components/Link';
 import MapInfo from '../../components/MapInfo';
 import SiteMetadata from '../../components/SiteMetadata';
 
-import gizaImage from '../../assets/svg/giza.svg';
+import rhodesImage from '../../assets/svg/rhodes.svg';
 import { ReactComponent as SpecImg } from '../../assets/svg/specifications.svg';
 import { ReactComponent as BlogImg } from '../../assets/svg/release-doc.svg';
 import { ReactComponent as PersonIcon } from '../../assets/svg/person.svg';
 
-import { roles } from '../../data/pages/giza';
-import { goalsData } from '../../data/pages/giza';
-import { launchDate } from '../../data/pages/olympia';
+import { roles, goalsData, launchDate } from '../../data/pages/rhodes';
 
-const GizaPage = ({ content }) => {
+const RhodesPage = ({ content }) => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
@@ -41,45 +39,45 @@ const GizaPage = ({ content }) => {
       <SiteMetadata
         lang={language}
         title={t('siteMetadata.title')}
-        description={t('giza.siteMetadata.description')}
+        description={t('rhodes.siteMetadata.description')}
       />
 
-      <Hero image={gizaImage} title={t('giza.hero.title')} indent animationStartValue={0}>
-        <p>{t('giza.hero.text')}</p>
+      <Hero image={rhodesImage} title={t('rhodes.hero.title')} indent animationStartValue={0}>
+        <p>{t('rhodes.hero.text')}</p>
         <br />
         <br />
-        <HeroCard info date={launchDate} counterTitle={<>{t('giza.heroCard.title')}</>} t={t} />
+        <HeroCard date={launchDate} t={t} />
       </Hero>
 
       <LayoutWrapper>
-        <TitleWrapper title={t('giza.criticalDocuments.title')}>
+        <TitleWrapper title={t('rhodes.criticalDocuments.title')}>
           <ColumnsLayout>
             <Pane
               image={SpecImg}
-              href="https://github.com/Joystream/joystream/issues/2580"
-              title={t('giza.criticalDocuments.releasePlan.title')}
+              href="https://github.com/Joystream/joystream/issues/3296"
+              title={t('rhodes.criticalDocuments.releasePlan.title')}
               target="_blank"
             >
-              {t('giza.criticalDocuments.releasePlan.text')}
+              {t('rhodes.criticalDocuments.releasePlan.text')}
             </Pane>
             <Pane
               image={BlogImg}
-              title={t('giza.criticalDocuments.blogPost.title')}
-              href="https://blog.joystream.org/announcing-giza/"
+              title={t('rhodes.criticalDocuments.blogPost.title')}
+              href="https://blog.joystream.org/announcing-rhodes/"
               target="_blank"
             >
-              {t('giza.criticalDocuments.blogPost.text')}
+              {t('rhodes.criticalDocuments.blogPost.text')}
             </Pane>
           </ColumnsLayout>
         </TitleWrapper>
 
-        <TitleWrapper title={t('giza.testnetGoals.title')} subtitle={<>{t('giza.testnetGoals.subtitle')}</>}>
+        <TitleWrapper title={t('rhodes.testnetGoals.title')} subtitle={<>{t('rhodes.testnetGoals.subtitle')}</>}>
           <GoalList data={translateGoals(goalsData, t)} />
         </TitleWrapper>
       </LayoutWrapper>
 
       <LayoutWrapper dark>
-        <TitleWrapper title={t('giza.roles.title')}>
+        <TitleWrapper title={t('rhodes.roles.title')}>
           <ColumnsLayout>
             <RoleList
               roles={roles.active.map(({ title, ...rest }) => ({
@@ -94,14 +92,14 @@ const GizaPage = ({ content }) => {
         </TitleWrapper>
       </LayoutWrapper>
 
-      <MapInfo title={t('giza.map.title')} location="giza">
+      <MapInfo title={t('rhodes.map.title')} location="rhodes">
         <p>
           <Trans
-            i18nKey="giza.map.text"
+            i18nKey="rhodes.map.text"
             components={[
               <strong />,
               <br />,
-              <Link href="https://blog.joystream.org/giza-announced/">
+              <Link href="https://blog.joystream.org/announcing-rhodes/">
                 <PersonIcon />
                 Read the blog post
               </Link>,
@@ -113,10 +111,10 @@ const GizaPage = ({ content }) => {
   );
 };
 
-GizaPage.propTypes = pagePropTypes;
+RhodesPage.propTypes = pagePropTypes;
 
-export { GizaPage };
-export default withApi(GizaPage, getApiPath('STATUS'));
+export { RhodesPage };
+export default withApi(RhodesPage, getApiPath('STATUS'));
 
 export const query = graphql`
   query($language: String!) {
