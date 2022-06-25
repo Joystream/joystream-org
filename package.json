@@ -41,7 +41,7 @@
     "identity-obj-proxy": "^3.0.0",
     "intersection-observer": "^0.7.0",
     "jest": "^24.8.0",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "node-sass": "^4.12.0",
     "openpgp": "^4.10.10",
     "pre-commit": "^1.2.2",
