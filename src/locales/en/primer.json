@@ -1,0 +1,66 @@
+{
+  "primer": {
+    "siteMetadata": {
+      "description": "Joystream is a video platform controlled, owned, and operated by its users."
+    },
+    "header": {
+      "title": "A Joystream Primer",
+      "subtitle": "a 2 minute project overview"
+    },
+    "whyWeExist": {
+      "sectionTitle": "Why we exist",
+      "title": "Video is the primary way that content, ideas and expressions are distributed today. ",
+      "monopoly": {
+        "title": "Unfortunately, due to network effects, there’s effectively a monopoly on video distribution and monetization. ",
+        "text": "The problem with a monopoly on the distribution of ideas is that if you as a creator are unfairly censored or demonetised, or consumer are unhappy about some aspect, such as the algorithm, you are unable to campaign for change with any success, and you also cannot leave for a better alternative."
+      },
+      "newVideoPlatform": {
+        "title": "A new video platform, video NFTs, Creator tokens..",
+        "subtitle": "There are 2 dApps built on Joystream you should understand: Atlas, and Pioneer."
+      },
+      "atlas": {
+        "title": "Atlas",
+        "text": "— is a video platform, similar to ones you are familiar with, but with new and exciting opportunities to monetise. "
+      },
+      "monetisation": "There are 2 new exciting ways for creators to monetise their work.",
+      "videoNFTs": {
+        "title": "Video NFTs",
+        "text": "— creators can list any of their videos for sale as an NFT, using 3 different types of auctions English (predefined end date), Open (no predefined end date), and \"Buy now\" (auction concludes immediately upon a bid matching apredefined asking price). NFTs can also be sold on the secondary market, where the creator can also be earning royalties on sales."
+      },
+      "creatorTokens": {
+        "title": "",
+        "text": ""
+      },
+      "community": ""
+    },
+    "governance": {
+      "sectionTitle": "Governance",
+      "title": "For the people, by the people.",
+      "whatIsPioneer": {
+        "title": "Pioneer",
+        "text": "— is our state-of-the-art governance app, which has been built with one goal in mind: allow Joystream to be a fully functioning decentralized autonomous organization. This means we’ve had to build features that most other DAO governance apps do not have, such as our on-chain forum, in-depth proposal system, and working groups structure."
+      },
+      "decentralizedFutureQuote": "We see a future where lots of brilliant people are coming together and working on the evolution of Joystream, in a fully decentralized fashion."
+    },
+    "chooseYourOwnAdventure": {
+      "title": "Choose your own adventure",
+      "subtitle": "See the wide range of opportunities with which you can participate on our testnet",
+      "earnJoy": {
+        "title": "Want to earn $JOY by participating in testnet?",
+        "button": "Earn $JOY"
+      },
+      "tryGovernanceApp": {
+        "title": "Want to try out our governance app?",
+        "button": "Try Governance app"
+      },
+      "tryOurVideoPlatform": {
+        "title": "Want to try out our video platform?",
+        "button": "Joystream platform?"
+      },
+      "joinOurCommunity": {
+        "title": "Want to join our community and say hello?",
+        "button": "Join our community"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../../styles/main';
+
+.PrimerPage {
+  &__header-wrapper {
+    padding: 120px 0 215px 0;
+    background-color: $c_black;
+  }
+
+  &__header {
+    @extend %container;
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 72px;
+      font-weight: 300;
+      line-height: 80px;
+      letter-spacing: 0;
+      color: $c_white;
+      text-align: center;
+    }
+
+    &__subtitle {
+      margin-top: 20px;
+      font-family: $font-secondary;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 32px;
+      letter-spacing: 0;
+      color: #a7aeb7;
+      text-align: center;
+    }
+  }
+}

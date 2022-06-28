@@ -1,0 +1,12 @@
+@import '../../../styles/main';
+
+.PrimerPage {
+  &__why-we-exist-wrapper {
+    padding: 115px 0 40px 0;
+    background-color: $c_blue-ribbon;
+  }
+
+  &__why-we-exist {
+    @extend %container;
+  }
+}
