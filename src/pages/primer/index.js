@@ -9,6 +9,8 @@ import ChooseYourOwnAdventure from '../../components/primer-page/ChooseYourOwnAd
 import Header from '../../components/primer-page/Header'
 import Governance from '../../components/primer-page/Governance';
 import WhyWeExist from '../../components/primer-page/WhyWeExist';
+import VideoPlatform from '../../components/primer-page/VideoPlatform';
+import JoystreamDAO from '../../components/primer-page/JoystreamDAO';
 // import Hero from '../components/index-page/Hero';
 // import WhatWeDo from '../components/index-page/WhatWeDo';
 // import ExploreJoystream from '../components/index-page/ExploreJoystream';
@@ -36,7 +38,11 @@ const PrimerPage = () => {
 
       <WhyWeExist t={t} />
 
+      <VideoPlatform t={t}/>
+
       <Governance t={t} />
+
+      <JoystreamDAO t={t} />
 
       <ChooseYourOwnAdventure t={t} />
 

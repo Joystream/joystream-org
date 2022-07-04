@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PioneerVisual from '../../../assets/images/pioneer-visual.png';
+import PioneerVisual from '../../../assets/images/pioneer-overview.png';
 
 import './style.scss';
 
@@ -13,7 +13,6 @@ const Governance = ({ t }) => {
         <div className='PrimerPage__governance__pioneer'>
           <h3 className='PrimerPage__governance__pioneer__title'>{t('primer.governance.whatIsPioneer.title')}</h3>
           <p className='PrimerPage__governance__pioneer__text'>{t('primer.governance.whatIsPioneer.text')}</p>
-          {/* PRIMER TODO: Update the image here! */}
           <img className='PrimerPage__governance__pioneer__image' src={PioneerVisual} alt="Overview of the Governance product, Pioneer"/>
         </div>
         <p className='PrimerPage__governance__quote'>{t('primer.governance.decentralizedFutureQuote')}</p>

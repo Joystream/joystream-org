@@ -28,10 +28,10 @@
         "text": "— creators can list any of their videos for sale as an NFT, using 3 different types of auctions English (predefined end date), Open (no predefined end date), and \"Buy now\" (auction concludes immediately upon a bid matching apredefined asking price). NFTs can also be sold on the secondary market, where the creator can also be earning royalties on sales."
       },
       "creatorTokens": {
-        "title": "",
-        "text": ""
+        "title": "Creator tokens",
+        "text": "— In Atlas, creators can issue their own Creator tokens, this allows creators to align their most passionate community members around the future creative activities of the creator and the community, by pooling the resources of the community and sharing the upside. This is particularly impactful for creators with an ambitious plan for growing the scope and scale of their activities before they have garnered a big audience. "
       },
-      "community": ""
+      "community": "By sharing the upside, the community members become natural evangelists and collaborators on making the creator as successful as possible in the future. "
     },
     "governance": {
       "sectionTitle": "Governance",
@@ -41,6 +41,41 @@
         "text": "— is our state-of-the-art governance app, which has been built with one goal in mind: allow Joystream to be a fully functioning decentralized autonomous organization. This means we’ve had to build features that most other DAO governance apps do not have, such as our on-chain forum, in-depth proposal system, and working groups structure."
       },
       "decentralizedFutureQuote": "We see a future where lots of brilliant people are coming together and working on the evolution of Joystream, in a fully decentralized fashion."
+    },
+    "joystreamDAO": {
+      "sectionTitle": "Joystream DAO",
+      "title": "The future of work, Joystream DAO",
+      "subtitle": "The Joystream DAO is a hierarchy of people getting together to build the future of video. ",
+      "everyoneEarns": "By working for the Joystream DAO, everyone earns $JOY tokens.",
+      "council": {
+        "title": "Council",
+        "text": "The governance process is divided into a sequence of periods known as terms, Each term has a corresponding council, which is a set of staked members responsible for voting over submitted proposals. Proposals are bids to execute given operations on the platform state in order to serve some contemplated end. The council for a given term is established through a council election."
+      },
+      "workingGroups": {
+        "title": "Working groups",
+        "text": "All non-validator service-provider roles on the platform are organized into domain specific groups termed working groups. Each group has two distinct types of roles, namely the group lead and the worker. Leads are elected by the council through the proposal system and are responsible for populating and managing other roles in the given group as well as policing the conduct of group workers. Leads can also be replaced or evicted and, if the latter, or if there is no lead to begin with, then no group workers can perform any platform-level actions until a new leader is installed. The particular rights and privileges of a worker are entirely dependent on the group in question."
+      },
+      "bounties": {
+        "title": "Bounties ",
+        "text": "Bounties are one-off gigs that are typically smaller in scope, and fill some kind of need in the Joystream DAO. An example would be to translate the main website from English to Russian. Bounties are a great way for newcomers to dip their toe in the DAO, without making a big commitment."
+      }
+    },
+    "businessModel": {
+      "sectionTitle": "The Joystream business model ",
+      "title": "How does $JOY capture value?",
+      "text": "The native asset $JOY captures value on the platform by having to be burned for access to key network features. The more such features are used, the more $JOY is burned. The set of features will likely expand over time, but below we outline the three current ones.",
+      "gateways": {
+        "title": "Gateways ",
+        "text": "Gateways are effectively consumer-facing apps built on Joystream. As an example, someone could create “decentralised Tik Tok” on Joystream. This would be a “gateway”. They effectively pay for the bandwidth service of accessing the content from Joystream, in order to display it to their consumers."
+      },
+      "mintingAndSellingNFTs": {
+        "title": "Minting & selling NFTs ",
+        "text": "Every time an NFT is minted, Joystream takes a fee. This is also the case on all sales, both primary and secondary, just like on a platform like OpenSea."
+      },
+      "creatorTokenSales": {
+        "title": "Sales of creator tokens   ",
+        "text": "As you know, every creator can have their own token, and the same way an exchange like Binance charges a small fee on the trading of a token, so does Joystream."
+      }
     },
     "chooseYourOwnAdventure": {
       "title": "Choose your own adventure",

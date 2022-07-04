@@ -3,7 +3,10 @@
 .PrimerPage {
   &__header-wrapper {
     padding: 120px 0 215px 0;
+    background: url('../../../assets/svg/primer/header-background-desktop.svg');
     background-color: $c_black;
+    background-position: 45% 75%;
+    background-repeat: no-repeat;
   }
 
   &__header {
