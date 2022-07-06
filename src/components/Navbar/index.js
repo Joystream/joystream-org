@@ -188,8 +188,8 @@ const Navbar = ({ light, links, t, primer }) => {
   const shouldRenderPrimerSection = primer != null;
 
   return (
-    <nav className={cn('Navbar', { 'Navbar--hidden': !isScrollUp, 'Navbar--light': light, 'Navbar--open': isOpen })}>
-      <div className="Navbar__container">
+    <nav className={cn('Navbar', { 'Navbar--hidden': !isScrollUp, 'Navbar--light': light, 'Navbar--open': isOpen, 'Navbar--primer': primer })}>
+      <div className={cn("Navbar__container", { "Navbar__container--primer": primer })}>
         <Link to="/">
           <Logo className={cn('Navbar__logo', { 'Navbar__logo--open': isOpen })} />
         </Link>
