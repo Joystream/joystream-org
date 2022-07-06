@@ -3,6 +3,14 @@
     "siteMetadata": {
       "description": "Joystream is a video platform controlled, owned, and operated by its users."
     },
+    "navbar": {
+      "futureOfVideo": "The future of video",
+      "whyWeExist": "Why we exist",
+      "theSolution": "The solution",
+      "governance": "Governance",
+      "businessModel": "Business model",
+      "nextSteps": "Next steps"
+    },
     "header": {
       "title": "A Joystream Primer",
       "subtitle": "a 2 minute project overview"

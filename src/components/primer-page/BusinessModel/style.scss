@@ -1,21 +1,25 @@
 @import '../../../styles/main';
 
 .PrimerPage {
-  &__joystreamDAO-wrapper {
-    padding: 155px 0;
-    background: url('../../../assets/svg/primer/backgrounds/dao-desktop.svg'), url('../../../assets/svg/primer/backgrounds/council-desktop.svg'), url('../../../assets/svg/primer/backgrounds/working-groups-desktop.svg'), url('../../../assets/svg/primer/backgrounds/bounties-desktop.svg');
-    background-color: $c_black;
-    background-position: right 32% top 4%, left 21.8% top 40%, left 17.8% bottom 32%, left 22% bottom 9%;
+  &__business-model-wrapper {
+    padding: 80px 0;
+    background: url('../../../assets/svg/primer/backgrounds/capture-value-desktop.svg'), url('../../../assets/svg/primer/backgrounds/gateways-desktop.svg'), url('../../../assets/svg/primer/backgrounds/minting-selling-nfts-desktop.svg'), url('../../../assets/svg/primer/backgrounds/selling-creator-tokens-desktop.svg');
+    background-color: $c_blue-ribbon;
+    background-position: left 24.5% top -3%, right 27.2% top 39.4%, left 27.2% bottom 30.5%, right 27.5% bottom 4%;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   }
 
-  &__joystreamDAO {
+  &__business-model {
     @extend %container;
 
-    &__future-work {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__capture-value {
       display: flex;
       flex-direction: row;
-      gap: 70px;
+      gap: 120px;
 
       &__section-title {
         font-family: $font-secondary;
@@ -28,7 +32,7 @@
       }
 
       &__title {
-        max-width: 520px;
+        max-width: 450px;
         margin-top: 24px;
         font-family: $font-primary;
         font-size: 48px;
@@ -40,35 +44,53 @@
       }
 
       &__text {
-        max-width: 480px;
+        max-width: 615px;
         margin-top: 24px;
         font-family: $font-secondary;
         font-size: 25px;
         font-weight: 400;
         line-height: 40px;
         letter-spacing: 0;
-        color: #a7aeb7;
+        color: $c_white;
         text-align: left;
       }
     }
 
-    &__everyone-earns {
-      max-width: 902px;
-      margin-top: 155px;
-      font-family: $font-primary;
-      font-size: 48px;
-      font-weight: 400;
-      line-height: 56px;
-      letter-spacing: 0;
-      color: $c_white;
-      text-align: left;
-    }
-
-    &__council {
+    &__gateways {
       display: flex;
       align-items: center;
       flex-direction: row;
-      margin-top: 80px;
+      margin-top: 120px;
+      gap: 216px;
+
+      &__title {
+        font-family: $font-primary;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0;
+        color: $c_white;
+        text-align: left;
+      }
+
+      &__text {
+        max-width: 510px;
+        margin-top: 20px;
+        font-family: $font-secondary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_white;
+        text-align: left;
+      }
+    }
+
+    &__minting-selling-nfts {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 90px;
       gap: 136px;
 
       &__title {
@@ -82,24 +104,24 @@
       }
 
       &__text {
-        max-width: 713px;
+        max-width: 520px;
         margin-top: 20px;
         font-family: $font-secondary;
         font-size: 20px;
         font-weight: 400;
         line-height: 28px;
         letter-spacing: 0;
-        color: #a7aeb7;
+        color: $c_white;
         text-align: left;
       }
     }
 
-    &__working-groups {
+    &__selling-creator-tokens {
       display: flex;
       align-items: center;
       flex-direction: row;
-      margin-top: 160px;
-      gap: 136px;
+      margin-top: 180px;
+      gap: 206px;
 
       &__title {
         font-family: $font-primary;
@@ -112,44 +134,14 @@
       }
 
       &__text {
-        max-width: 621px;
+        max-width: 520px;
         margin-top: 20px;
         font-family: $font-secondary;
         font-size: 20px;
         font-weight: 400;
         line-height: 28px;
-        letter-spacing: 0;
-        color: #a7aeb7;
-        text-align: left;
-      }
-    }
-
-    &__bounties {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      margin-top: 160px;
-      gap: 176px;
-
-      &__title {
-        font-family: $font-primary;
-        font-size: 32px;
-        font-weight: 400;
-        line-height: 40px;
         letter-spacing: 0;
         color: $c_white;
-        text-align: left;
-      }
-
-      &__text {
-        max-width: 600px;
-        margin-top: 20px;
-        font-family: $font-secondary;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0;
-        color: #a7aeb7;
         text-align: left;
       }
     }

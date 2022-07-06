@@ -6,7 +6,7 @@ import './style.scss';
 
 const Governance = ({ t }) => {
   return (
-    <div className='PrimerPage__governance-wrapper'>
+    <div className='PrimerPage__governance-wrapper' id="primer-the-solution">
       <div className='PrimerPage__governance'>
         <p className='PrimerPage__governance__section-title'>{t('primer.governance.sectionTitle')}</p>
         <h2 className='PrimerPage__governance__title'>{t('primer.governance.title')}</h2>

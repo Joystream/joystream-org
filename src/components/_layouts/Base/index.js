@@ -8,21 +8,21 @@ import { ScrollProvider } from '../../_enhancers/ScrollContext';
 
 const propTypes = {
   children: node,
-  onlyNewsletter: bool
+  primer: bool
 };
 
 const defaultTypes = {
   children: null,
 };
 
-const BaseLayout = ({ children, t, onlyNewsletter }) => {
+const BaseLayout = ({ children, t, primer }) => {
   return (
     <ScrollProvider>
       <div>
-        <Navbar t={t}/>
+        <Navbar t={t} primer={primer} />
         {children}
         <CookiesNotice t={t}/>
-        <Footer t={t} onlyNewsletter={onlyNewsletter}/>
+        <Footer t={t} primer={primer}/>
       </div>
     </ScrollProvider>
   );

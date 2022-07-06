@@ -3,7 +3,10 @@
 .PrimerPage {
   &__video-platform-wrapper {
     padding: 155px 0;
+    background: url('../../../assets/svg/primer/backgrounds/youtube-token-desktop.svg'), url('../../../assets/svg/primer/backgrounds/nfts-desktop.svg'), url('../../../assets/svg/primer/backgrounds/creator-tokens-desktop.svg');
     background-color: $c_black;
+    background-position: right 24.2% top 6.1%, left 22.5% bottom 32.9%, right 25% bottom 13.85%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
   }
 
   &__video-platform {
@@ -13,10 +16,6 @@
       display: flex;
       flex-direction: row;
       gap: 135px;
-
-      &__content {
-        // margin-right: 135px;
-      }
 
       &__section-title {
         font-family: $font-secondary;
@@ -81,7 +80,7 @@
 
     &__monetisation {
       max-width: 902px;
-      margin: 0 auto;
+      margin: 120px auto 0 auto;
       font-family: $font-primary;
       font-size: 48px;
       font-weight: 400;
@@ -127,7 +126,7 @@
       align-items: center;
       flex-direction: row;
       justify-content: center;
-      margin-top: 120px;
+      margin-top: 250px;
       gap: 136px;
 
       &__title {
@@ -155,7 +154,7 @@
 
     &__sharing {
       max-width: 902px;
-      margin: 120px auto 0 auto;
+      margin: 230px auto 0 auto;
       font-family: $font-primary;
       font-size: 32px;
       font-weight: 400;

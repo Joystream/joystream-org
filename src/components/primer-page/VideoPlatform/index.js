@@ -8,11 +8,9 @@ import AtlasOverview from '../../../assets/images/atlas-overview.png';
 
 import './style.scss';
 
-// PRIMER TODO: Add backgrounds behind the logos/icons. Maybe make it more "pixel-perfect"
-
 const VideoPlatform = ({ t }) => {
   return (
-    <div className='PrimerPage__video-platform-wrapper'>
+    <div className='PrimerPage__video-platform-wrapper' id='primer-why-we-exist'>
       <div className='PrimerPage__video-platform'>
         <div className='PrimerPage__video-platform__new-platform'>
           <div className='PrimerPage__video-platform__new-platform__content'>

@@ -2,12 +2,19 @@
 
 .PrimerPage {
   &__why-we-exist-wrapper {
-    padding: 115px 0 40px 0;
+    padding: 115px 0 108px 0;
+    background: url('../../../assets/svg/primer/backgrounds/youtube-logo-desktop.svg'), url('../../../assets/svg/primer/backgrounds/lock-icon-desktop.svg');
     background-color: $c_blue-ribbon;
+    background-position: 24% -6%, right 23% bottom 8%;
+    background-repeat: no-repeat, no-repeat;
   }
 
   &__why-we-exist {
     @extend %container;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     &__section-title {
       font-family: $font-secondary;
@@ -20,6 +27,7 @@
     }
 
     &__title {
+      max-width: 616px;
       margin-top: 24px;
       font-family: $font-primary;
       font-size: 48px;
@@ -40,7 +48,7 @@
       }
 
       &--lock {
-        margin-top: 105px;
+        margin-top: 250px;
         gap: 183px;
       }
 
@@ -57,6 +65,7 @@
         }
 
         &__paragraph {
+          max-width: 692.5px;
           margin-top: 24px;
           font-family: $font-secondary;
           font-size: 20px;

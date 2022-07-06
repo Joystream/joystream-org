@@ -55,7 +55,7 @@ const LinkSection = ({ t }) => (
   </div>
 );
 
-const Footer = ({ t, onlyNewsletter }) => {
+const Footer = ({ t, primer }) => {
   const [email, setEmail] = useState('');
 
   return (
@@ -85,7 +85,7 @@ const Footer = ({ t, onlyNewsletter }) => {
           </Button>
         </form>
       </div>
-      {!onlyNewsletter ? <LinkSection t={t} /> : null}
+      {!primer ? <LinkSection t={t} /> : null}
     </footer>
   );
 };

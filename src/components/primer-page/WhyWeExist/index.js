@@ -5,11 +5,9 @@ import { ReactComponent as LockIcon } from '../../../assets/svg/primer/lock-icon
 
 import './style.scss';
 
-// PRIMER TODO: Add backgrounds behind the logos/icons. Maybe make it more "pixel-perfect"
-
 const WhyWeExist = ({ t }) => {
   return (
-    <div className='PrimerPage__why-we-exist-wrapper'>
+    <div className='PrimerPage__why-we-exist-wrapper' id="primer-future-of-video">
       <div className='PrimerPage__why-we-exist'>
         <div className='PrimerPage__why-we-exist__section'>
           <div className='PrimerPage__why-we-exist__section__image'>
