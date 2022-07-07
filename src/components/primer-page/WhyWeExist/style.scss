@@ -2,15 +2,16 @@
 
 .PrimerPage {
   &__why-we-exist-wrapper {
-    padding: 115px 0 108px 0;
-    background: url('../../../assets/svg/primer/backgrounds/youtube-logo-desktop.svg'), url('../../../assets/svg/primer/backgrounds/lock-icon-desktop.svg');
     background-color: $c_blue-ribbon;
-    background-position: 24% -6%, right 23% bottom 8%;
-    background-repeat: no-repeat, no-repeat;
   }
 
   &__why-we-exist {
     @extend %container;
+
+    padding: 115px 40px 108px 40px;
+    background: url('../../../assets/svg/primer/backgrounds/youtube-logo-desktop.svg'), url('../../../assets/svg/primer/backgrounds/lock-icon-desktop.svg');
+    background-position: left 35px top -33px, right 40px bottom 45px;
+    background-repeat: no-repeat, no-repeat;
 
     display: flex;
     align-items: center;
@@ -76,6 +77,97 @@
           text-align: left;
         }
       }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__why-we-exist {
+      padding: 115px 40px 108px 40px;
+      background-size: 380px, 225px;
+      background-position: left 40px top 3px, right 30px bottom 95px;
+
+      &__title {
+        font-size: 38px;
+        line-height: 41px;
+      }
+
+      &__section {
+        gap: 40px;
+
+        &--lock {
+          margin-top: 125px;
+          gap: 60px;
+        }
+
+        &__image {
+          transform: scale(0.88);
+        }
+
+        &__text {
+          &__title {
+            font-size: 28px;
+            line-height: 36px;
+          }
+
+          &__paragraph {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__why-we-exist {
+      padding: 56px 24px 56px 24px;
+      background: url('../../../assets/svg/primer/backgrounds/youtube-logo-mobile.svg'), url('../../../assets/svg/primer/backgrounds/lock-icon-mobile.svg');
+      background-position: center top 43px, center top 520px;
+      background-repeat: no-repeat, no-repeat;
+
+      &__title {
+        margin-top: 16px;
+        font-size: 28px;
+        line-height: 34px;
+      }
+
+      &__section {
+        flex-direction: column;
+
+        &--reverse {
+          flex-direction: column;
+        }
+
+        &--lock {
+          margin-top: 51px;
+        }
+
+        &__image {
+          margin: 0 auto;
+          transform: scale(0.75);
+        }
+
+        &__text {
+          max-width: 616px;
+          &__title {
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -0.005em;
+          }
+
+          &__paragraph {
+            margin-top: 16px;
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__why-we-exist {
+      background-position: center top 43px, center top 580px;
     }
   }
 }
