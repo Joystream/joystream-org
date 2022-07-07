@@ -14,8 +14,10 @@ const CTA = ({ Image, title, buttonText, href, to }) => {
 
   const linkChildren = (
     <>
-      {buttonText}
-      <ArrowIcon className="PrimerPage__choose-your-adventure__list-item__cta__arrow" />
+      <span className='PrimerPage__choose-your-adventure__list-item__cta__text'>{buttonText}</span>
+      <div className="PrimerPage__choose-your-adventure__list-item__cta__arrow-wrapper">
+        <ArrowIcon className="PrimerPage__choose-your-adventure__list-item__cta__arrow" />
+      </div>
     </>
   );
 
