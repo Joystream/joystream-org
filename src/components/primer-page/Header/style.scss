@@ -34,6 +34,21 @@
     }
   }
 
+  @media #{$screen-lg} {
+    &__header-wrapper {
+      padding: 0;
+      background: none;
+      background-color: $c_black;
+    }
+
+    &__header {
+      padding: 120px 0 215px 0;
+      background: url('../../../assets/svg/primer/backgrounds/header-desktop.svg');
+      background-position: left 43% bottom 28%;
+      background-repeat: no-repeat;
+    }
+  }
+
   @media #{$screen-max-lg} {
     &__header-wrapper {
       padding: 100px 0 150px 0;
