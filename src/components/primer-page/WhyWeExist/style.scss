@@ -8,14 +8,13 @@
   &__why-we-exist {
     @extend %container;
 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: 115px 40px 108px 40px;
     background: url('../../../assets/svg/primer/backgrounds/youtube-logo-desktop.svg'), url('../../../assets/svg/primer/backgrounds/lock-icon-desktop.svg');
     background-position: left 35px top -33px, right 40px bottom 45px;
     background-repeat: no-repeat, no-repeat;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 
     &__section-title {
       font-family: $font-secondary;
@@ -83,8 +82,8 @@
   @media #{$screen-max-md} {
     &__why-we-exist {
       padding: 115px 40px 108px 40px;
-      background-size: 380px, 225px;
       background-position: left 40px top 3px, right 30px bottom 95px;
+      background-size: 380px, 225px;
 
       &__title {
         font-size: 38px;
@@ -100,7 +99,7 @@
         }
 
         &__image {
-          transform: scale(0.88);
+          transform: scale(.88);
         }
 
         &__text {
@@ -144,15 +143,16 @@
 
         &__image {
           margin: 0 auto;
-          transform: scale(0.75);
+          transform: scale(.75);
         }
 
         &__text {
           max-width: 616px;
+
           &__title {
             font-size: 24px;
             line-height: 32px;
-            letter-spacing: -0.005em;
+            letter-spacing: -.005em;
           }
 
           &__paragraph {
