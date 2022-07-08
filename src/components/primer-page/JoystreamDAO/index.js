@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ReactComponent as DAO } from '../../../assets/svg/primer/dao.svg';
+import DAO from '../../../assets/svg/primer/dao.svg';
 import { ReactComponent as Council } from '../../../assets/svg/primer/council.svg';
 import { ReactComponent as WorkingGroups } from '../../../assets/svg/primer/working-groups.svg';
 import { ReactComponent as Bounties } from '../../../assets/svg/primer/bounties.svg';
@@ -18,7 +18,7 @@ const JoystreamDAO = ({ t }) => {
             <p className='PrimerPage__joystreamDAO__future-work__text'>{t('primer.joystreamDAO.subtitle')}</p>
           </div>
           <div className='PrimerPage__joystreamDAO__future-work__image'>
-            <DAO />
+            <img src={DAO} alt=""/>
           </div>
         </div>
         <div className='PrimerPage__joystreamDAO__everyone-earns'>{t('primer.joystreamDAO.everyoneEarns')}</div>
