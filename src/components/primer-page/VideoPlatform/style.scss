@@ -2,15 +2,16 @@
 
 .PrimerPage {
   &__video-platform-wrapper {
-    padding: 155px 0;
-    background: url('../../../assets/svg/primer/backgrounds/youtube-token-desktop.svg'), url('../../../assets/svg/primer/backgrounds/nfts-desktop.svg'), url('../../../assets/svg/primer/backgrounds/creator-tokens-desktop.svg');
     background-color: $c_black;
-    background-position: right 24.2% top 6.1%, left 22.5% bottom 32.9%, right 25% bottom 13.85%;
-    background-repeat: no-repeat, no-repeat, no-repeat;
   }
 
   &__video-platform {
     @extend %container;
+
+    padding: 155px 40px;
+    background: url('../../../assets/svg/primer/backgrounds/youtube-token-desktop.svg'), url('../../../assets/svg/primer/backgrounds/nfts-desktop.svg'), url('../../../assets/svg/primer/backgrounds/creator-tokens-desktop.svg');
+    background-position: right 6% top 5.7%, left 2.5% bottom 32.9%, right 7% bottom 13.85%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
 
     &__new-platform {
       display: flex;
@@ -162,6 +163,270 @@
       letter-spacing: 0;
       color: $c_white;
       text-align: center;
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__video-platform {
+      background-position: right 6% top 5.7%, left 2.5% bottom 35%, right 7% bottom 13.85%;
+
+      &__new-platform {
+        gap: 55px;
+      }
+
+      &__monetisation {
+        margin-top: 100px;
+      }
+    }
+  }
+
+  @media (max-width: 1100px) {
+    &__video-platform {
+      background-position: right 6% top 5.7%, left 2.5% bottom 36%, right 7% bottom 13.85%;
+    }
+  }
+
+  // PRIMER TODO: Continue here!
+  @media #{$screen-max-md} {
+    &__video-platform {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      background-position: right 88px top 150px, left 20px bottom 760px, right 7% bottom 12.7%;
+      background-size: 300px, 300px, 255px;
+
+      &__new-platform {
+        gap: 30px;
+
+        &__title {
+          font-size: 38px;
+          line-height: 45px;
+        }
+
+        &__text {
+          font-size: 22px;
+          line-height: 32px;
+        }
+
+        &__image {
+          transform: scale(.85);
+        }
+      }
+
+      &__atlas {
+        &__title {
+          font-size: 38px;
+          line-height: 45px;
+        }
+
+        &__text {
+          font-size: 22px;
+          line-height: 32px;
+        }
+
+        &__image {
+          margin-top: 40px;
+        }
+      }
+
+      &__monetisation {
+        margin-top: 50px;
+        font-size: 38px;
+        line-height: 45px;
+      }
+
+      &__nfts {
+        margin-top: 100px;
+        gap: 75px;
+
+        &__title {
+          font-size: 28px;
+          line-height: 36px;
+          letter-spacing: -.005em;
+        }
+
+        &__text {
+          font-size: 18px;
+          line-height: 26px;
+        }
+
+        &__image {
+          transform: scale(.9);
+        }
+      }
+
+      &__tokens {
+        margin-top: 125px;
+        gap: 75px;
+
+        &__title {
+          font-size: 28px;
+          line-height: 36px;
+          letter-spacing: -.005em;
+        }
+
+        &__text {
+          font-size: 18px;
+          line-height: 26px;
+        }
+
+        &__image {
+          transform: scale(.92);
+        }
+      }
+
+      &__sharing {
+        margin-top: 115px;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -.005em;
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    &__video-platform {
+      background-position: right 88px top 150px, left 20px bottom 820px, right 7% bottom 14%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    &__video-platform {
+      background-position: right 88px top 150px, left 20px bottom 850px, right 7% bottom 15.5%;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__video-platform {
+      padding: 50px 24px;
+      background: url('../../../assets/svg/primer/backgrounds/youtube-token-mobile.svg'), url('../../../assets/svg/primer/backgrounds/nfts-mobile.svg'), url('../../../assets/svg/primer/backgrounds/creator-tokens-mobile.svg');
+      background-position: center top 85px, center top 1500px, center top 2050px;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+
+      &__new-platform {
+        flex-direction: column-reverse;
+
+        &__title {
+          margin-top: 16px;
+          font-size: 28px;
+          line-height: 34px;
+        }
+
+        &__text {
+          margin-top: 16px;
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        &__image {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          width: 100%;
+          transform: scale(1);
+
+          & > svg {
+            transform: scale(.75);
+          }
+        }
+      }
+
+      &__atlas {
+        margin-top: 40px;
+
+        &__title {
+          font-size: 28px;
+          line-height: 34px;
+        }
+
+        &__text {
+          margin-top: 8px;
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+
+      &__monetisation {
+        max-width: 550px;
+        font-size: 28px;
+        line-height: 34px;
+      }
+
+      &__nfts {
+        flex-direction: column;
+        gap: 0;
+
+        &__title {
+          font-size: 24px;
+          line-height: 32px;
+          letter-spacing: -.005em;
+        }
+
+        &__text {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        &__image {
+          & > svg {
+            transform: scale(.81);
+          }
+        }
+      }
+
+      &__tokens {
+        flex-direction: column-reverse;
+        margin-top: 60px;
+        gap: 0;
+
+        &__title {
+          font-size: 24px;
+          line-height: 32px;
+          letter-spacing: -.005em;
+        }
+
+        &__text {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        &__image {
+          & > svg {
+            transform: scale(.84);
+          }
+        }
+      }
+
+      &__sharing {
+        max-width: 600px;
+        margin-top: 40px;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -.005em;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__video-platform {
+      background-position: center top 85px, center top 1430px, center top 2000px;
+    }
+  }
+
+  @media (max-width: 530px) {
+    &__video-platform {
+      background-position: center top 85px, center top 1400px, center top 1950px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__video-platform {
+      background-position: center top 85px, center top 1400px, center top 2020px;
+
+      &__new-platform__image {
+        display: unset;
+        margin-right: auto;
+        margin-left: -25px;
+      }
     }
   }
 }
