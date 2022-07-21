@@ -30,6 +30,7 @@ import Sumer from '../../assets/svg/sumer-logo.svg';
 import Giza from '../../assets/svg/giza-logo.svg';
 import Olympia from '../../assets/svg/olympia-logo.svg';
 import Rhodes from '../../assets/svg/rhodes-logo.svg';
+import Carthage from '../../assets/svg/carthage-logo.svg';
 
 export const sharedData = {
   defaultEmail: 'hello@jsgenesis.com',
@@ -162,6 +163,15 @@ export const bountiesLink =
   'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties/overview/bounties-status.json';
 
 export const testnetData = [
+  {
+    Image: Carthage,
+    number: 13,
+    name: 'Carthage',
+    // CARTHAGE TODO: Figure out if this is fine or should be changed!
+    date: '22.07.2022',
+    state: 'Future',
+    link: '/carthage'
+  },
   {
     Image: Rhodes,
     number: 12,

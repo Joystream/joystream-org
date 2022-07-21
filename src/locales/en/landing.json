@@ -145,6 +145,11 @@
           "title": "Rhodes testnet",
           "text": "Rhodes is our thirteenth testnet, enabling the launch of video NFTs.",
           "explore": "Explore Rhodes"
+        },
+        "Carthage": {
+          "title": "Carthage testnet",
+          "text": "Carthage is our fourteenth (and final) testnet, enabling the soon to follow transition to mainnet.",
+          "explore": "Explore Carthage"
         }
       }
     },

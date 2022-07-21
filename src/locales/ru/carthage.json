@@ -1,0 +1,47 @@
+{
+  "carthage": {
+    "siteMetadata": {
+      "description": "Explore the Carthage testnet"
+    },
+    "hero": {
+      "title": "Carthage Network",
+      "text": "The Carthage release aims to finish laying the groundwork for mainnet by setting real fees and parameter values, deploying a process for a mainnet genesis bootstrapping and implementing a few brand new important features."
+    },
+    "criticalDocuments": {
+      "title": "Critical Documents",
+      "releasePlan": {
+        "title": "Release Plan",
+        "text": "Read the release plan as it was made during the planning stage, and learn more about how the development evolved."
+      },
+      "blogPost": {
+        "title": "Announcement Blog Post",
+        "text": "Read a brief primer on the Carthage testnet and its objectives."
+      }
+    },
+    "testnetGoals": {
+      "title": "Testnet Goals",
+      "subtitle": "The goals listed below are a simplified representation of our main objectives for the Carthage testnet.",
+      "goals": {
+        "launchingReadyRuntimeFeatureScope": {
+          "title": "Launching ready runtime feature scope",
+          "text": "As part of the feature set planned for mainnet, Carthage introduces many new features. These include an upgrade to Substrate (V3), fixes to Quarkslab Audit findings, Creator Tokens and Creator Payouts runtime features, V2 of Bounties and more."
+        },
+        "realFeesAndParameterValues": {
+          "title": "Setting real fees & parameter values",
+          "text": "Carthage sets fees and parameter values that will be reflective of the system on mainnet, namely real values for the token issuance, introduction of non-zero fees and others. "
+        },
+        "realMainnetGenesisBootstrapping": {
+          "title": "Mainnet genesis bootstrapping",
+          "text": "As part of the mainnet genesis bootstrapping for Carthage, initially there will be just a small number of validators and Rhodes network memberships will be imported along with dedicated Founding Member decorations. Following that will be a sudo runtime upgrade which will convert the sudo to multisig and after a small grace period, sudo will be completely removed."
+        }
+      }
+    },
+    "roles": {
+      "title": "Incentivized Roles for the Carthage Network"
+    },
+    "map": {
+      "title": "Carthage",
+      "text": "<0>Carthage was a great city of antiquity found on the north coast of Africa and on the eastern side of the Lake of Tunis.</0> The city was, according to legend, founded by colonists from the city-state of Tyre lead by the exiled princess Dido. <1/><1/> Due to its position, which allowed it to influence and control ships between Sicily and the northafrican coast, it became a thriving port and trading centre and one of the richest cities of the classical world. Carthage was also famous for its involvement in a series of wars against Rome, also known as the Punic Wars, which resulted in the destruction of the city in 146 BC.<1/><1/><2><0/> Read the blog post</2>"
+    }
+  }
+}
