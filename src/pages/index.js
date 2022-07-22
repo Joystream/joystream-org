@@ -22,8 +22,6 @@ const IndexPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
-
-
   return (
     <BaseLayout t={t}>
       <SiteMetadata

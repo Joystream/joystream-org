@@ -14,6 +14,7 @@ import sumerImage from '../../assets/images/sumer.png';
 import gizaImage from '../../assets/images/giza.png';
 import olympiaImage from '../../assets/images/olympia.png';
 import rhodesImage from '../../assets/images/rhodes.png';
+import carthageImage from '../../assets/images/carthage.png';
 import { ReactComponent as PointerImage } from '../../assets/svg/pointer.svg';
 
 import { mapPropTypes } from '../../propTypes';
@@ -41,6 +42,7 @@ const maps = {
   giza: gizaImage,
   olympia: olympiaImage,
   rhodes: rhodesImage,
+  carthage: carthageImage
 };
 
 const Map = ({ location, className, ...props }) => {
