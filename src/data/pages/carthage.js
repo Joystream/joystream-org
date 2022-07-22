@@ -94,7 +94,6 @@ const goalsData = [
   },
 ];
 
-// CARTHAGE TODO: Update this date here!
-const launchDate = '2022/07/22 11:00';
+const launchDate = '2022/08/18 11:00';
 
 export { goalsData, launchDate, roles };

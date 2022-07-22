@@ -167,8 +167,7 @@ export const testnetData = [
     Image: Carthage,
     number: 13,
     name: 'Carthage',
-    // CARTHAGE TODO: Figure out if this is fine or should be changed!
-    date: '22.07.2022',
+    date: '18.08.2022',
     state: 'Future',
     link: '/carthage'
   },
