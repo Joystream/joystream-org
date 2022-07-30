@@ -5,35 +5,7 @@ import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.sv
 
 import './style.scss';
 
-const TestnetMetric = ({ title, metric }) => (
-  <div className="IndexPage__hero__metric">
-    <h3 className="IndexPage__hero__metric__title">{title}</h3>
-    <p className="IndexPage__hero__metric__value">{metric}</p>
-  </div>
-);
-
-const TestnetMetricPlaceholder = () => (
-  <div className="IndexPage__hero__metric IndexPage__hero__metric--placeholder">
-    <div className="IndexPage__hero__metric__title-placeholder"></div>
-    <div className="IndexPage__hero__metric__value-placeholder"></div>
-  </div>
-);
-
-const formatBlockHeight = blockheight => {
-  if (!blockheight && blockheight !== 0) {
-    return '-';
-  }
-
-  if (blockheight < 1000) {
-    return blockheight;
-  }
-
-  return `${Math.floor(blockheight / 1000)}k`;
-};
-
-const OLD_PAYOUTS = 28554;
-
-const Hero = ({ statusData, t }) => {
+const Hero = ({ t }) => {
   return (
     <div className="IndexPage__hero-wrapper">
       <div className="IndexPage__hero">
@@ -51,38 +23,6 @@ const Hero = ({ statusData, t }) => {
         </div>
         <img src={HeroImage} className="IndexPage__hero__image" alt="getting started hero" />
         <img src={HeroImage} className="IndexPage__hero__image-alt" alt="alternate getting started hero" />
-      </div>
-      <div className="IndexPage__hero__metrics-wrapper">
-        <h2 className="IndexPage__hero__metrics__title">{t('landing.hero.metrics.mainTitle')}</h2>
-        <div className="IndexPage__hero__metrics">
-          {statusData ? (
-            <>
-              <TestnetMetric
-                title={t('landing.hero.metrics.titles.participationPayout')}
-                metric={statusData?.totalUSDPaid ? `$${Math.floor(statusData?.totalUSDPaid + OLD_PAYOUTS)}` : '-'}
-              />
-              <TestnetMetric
-                title={t('landing.hero.metrics.titles.activeValidators')}
-                metric={statusData?.validators?.count ?? '-'}
-              />
-              <TestnetMetric
-                title={t('landing.hero.metrics.titles.blockHeight')}
-                metric={formatBlockHeight(statusData?.finalizedBlockHeight)}
-              />
-              <TestnetMetric
-                title={t('landing.hero.metrics.titles.memberships')}
-                metric={statusData?.memberships?.platform_members ?? '-'}
-              />
-            </>
-          ) : (
-            <>
-              <TestnetMetricPlaceholder />
-              <TestnetMetricPlaceholder />
-              <TestnetMetricPlaceholder />
-              <TestnetMetricPlaceholder />
-            </>
-          )}
-        </div>
       </div>
     </div>
   );

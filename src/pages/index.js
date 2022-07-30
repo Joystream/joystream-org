@@ -8,41 +8,28 @@ import SiteMetadata from '../components/SiteMetadata';
 // components
 import Hero from '../components/index-page/Hero';
 import WhatWeDo from '../components/index-page/WhatWeDo';
-import ExploreJoystream from '../components/index-page/ExploreJoystream';
-import BecomeFoundingMember from '../components/index-page/BecomeFoundingMember';
-import RoadToMainnet from '../components/index-page/RoadToMainnet';
-import EarnJOYCoins from '../components/index-page/EarnJOYCoins';
 import OurInvestors from '../components/index-page/OurInvestors';
 import AvailableActivities from '../components/index-page/AvailableActivities';
 
 import './style.scss';
 
 const IndexPage = () => {
-  const [statusData, loading, error] = useAxios();
   const { t } = useTranslation();
   const { language } = useI18next();
 
   return (
-    <BaseLayout t={t}>
+    <BaseLayout t={t} mainnetReminder={true}>
       <SiteMetadata
         lang={language}
         title={t('siteMetadata.title')}
         description={t('landing.siteMetadata.description')}
       />
 
-      <Hero t={t} statusData={statusData} />
-
-      <EarnJOYCoins t={t}/>
+      <Hero t={t}/>
 
       <AvailableActivities t={t}/>
 
-      <BecomeFoundingMember t={t}/>
-
       <WhatWeDo t={t}/>
-
-      <ExploreJoystream t={t}/>
-
-      <RoadToMainnet t={t}/>
 
       <OurInvestors t={t}/>
     </BaseLayout>
