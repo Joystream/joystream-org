@@ -44,28 +44,28 @@ const Dropdown = ({ label, links, isScrollUp, t }) => {
   return (
     <>
       <div
-        className={cn('Navbar__link-wrapper', {
-          'Navbar__link-wrapper--active': isActive && (firstRender || isScrollUp || width <= 1200),
+        className={cn('NavbarOnboarding__link-wrapper', {
+          'NavbarOnboarding__link-wrapper--active': isActive && (firstRender || isScrollUp || width <= 1200),
         })}
         onClick={() => setIsActive(prev => !prev)}
         role="presentation"
       >
-        <p className="Navbar__link">{t(label)}</p>
+        <p className="NavbarOnboarding__link">{t(label)}</p>
         <Expand
-          className={cn('Navbar__expand-icon', {
-            'Navbar__expand-icon--active': isActive && (firstRender || isScrollUp || width <= 1200),
+          className={cn('NavbarOnboarding__expand-icon', {
+            'NavbarOnboarding__expand-icon--active': isActive && (firstRender || isScrollUp || width <= 1200),
           })}
         />
         <div
-          className={cn('Navbar__dropdown', {
-            'Navbar__dropdown--active': isActive && (firstRender || isScrollUp || width <= 1200),
+          className={cn('NavbarOnboarding__dropdown', {
+            'NavbarOnboarding__dropdown--active': isActive && (firstRender || isScrollUp || width <= 1200),
           })}
         >
           {links.map(({ label, href, to }) => (
             <Link key={label} href={href} to={to}>
-              <div className="Navbar__dropdown-item">
-                <p className="Navbar__dropdown-item__text">{t(label)}</p>
-                {href ? <LinkIcon className="Navbar__link-icon" /> : null}
+              <div className="NavbarOnboarding__dropdown-item">
+                <p className="NavbarOnboarding__dropdown-item__text">{t(label)}</p>
+                {href ? <LinkIcon className="NavbarOnboarding__link-icon" /> : null}
               </div>
             </Link>
           ))}
@@ -123,81 +123,81 @@ const Navbar = ({
   const { isScrollUp } = context;
 
   return (
-    <nav className={cn('Navbar', { 'Navbar--hidden': !isScrollUp, 'Navbar--light': light, 'Navbar--open': isOpen })}>
-      <div className="Navbar__container">
+    <nav className={cn('NavbarOnboarding', { 'NavbarOnboarding--hidden': !isScrollUp, 'NavbarOnboarding--light': light, 'NavbarOnboarding--open': isOpen })}>
+      <div className="NavbarOnboarding__container">
         <Link to="/">
-          <Logo className={cn('Navbar__logo', { 'Navbar__logo--open': isOpen })} />
+          <Logo className={cn('NavbarOnboarding__logo', { 'NavbarOnboarding__logo--open': isOpen })} />
         </Link>
 
         <div
-          className={cn('Navbar__links', {
-            'Navbar__links--open': isOpen,
-            'Navbar__links--light': light,
+          className={cn('NavbarOnboarding__links', {
+            'NavbarOnboarding__links--open': isOpen,
+            'NavbarOnboarding__links--light': light,
           })}
         >
-          <div className="Navbar__button-lang" style={{ display: 'none' }}>
+          <div className="NavbarOnboarding__button-lang" style={{ display: 'none' }}>
             <UKCircle />
           </div>
           {showLessonList && (
-            <div className="Navbar__button Navbar__button-role" role="presentation" onClick={onShowLessonList}>
-              <p className="Navbar__button-text">{t('onboarding.page1.videoSection.button.lessonList.text')}</p>
-              <Arrow className="Navbar__button-arrow" />
+            <div className="NavbarOnboarding__button NavbarOnboarding__button-role" role="presentation" onClick={onShowLessonList}>
+              <p className="NavbarOnboarding__button-text">{t('onboarding.page1.videoSection.button.lessonList.text')}</p>
+              <Arrow className="NavbarOnboarding__button-arrow" />
             </div>
           )}
           {(lessonIndex !== 1 || role) && (
-            <div className="Navbar__button Navbar__button-role" role="presentation" onClick={onShowGetStarted}>
-              <RoleIcon className="Navbar__button-role-icon" />
-              <p className="Navbar__button-text">{role ? role : t('onboarding.button.chooseRole.text')}</p>
+            <div className="NavbarOnboarding__button NavbarOnboarding__button-role" role="presentation" onClick={onShowGetStarted}>
+              <RoleIcon className="NavbarOnboarding__button-role-icon" />
+              <p className="NavbarOnboarding__button-text">{role ? role : t('onboarding.button.chooseRole.text')}</p>
             </div>
           )}
           {showGetStarted &&
             ((role || (!role && lessonIndex !== 1)) && nextVideo && nextVideo.url ? (
               <Link to={nextVideo.url}>
-                <div className="Navbar__button">
-                  <p className="Navbar__button-text">{t('onboarding.button.nextVideo.text')}</p>
-                  <Arrow className="Navbar__button-arrow" />
+                <div className="NavbarOnboarding__button">
+                  <p className="NavbarOnboarding__button-text">{t('onboarding.button.nextVideo.text')}</p>
+                  <Arrow className="NavbarOnboarding__button-arrow" />
                 </div>
               </Link>
             ) : role && contributorPageUrl ? (
               <Link to={contributorPageUrl}>
-                <div className="Navbar__button">
-                  <p className="Navbar__button-text">{t('onboarding.button.getStarted.text')}</p>
-                  <Arrow className="Navbar__button-arrow" />
+                <div className="NavbarOnboarding__button">
+                  <p className="NavbarOnboarding__button-text">{t('onboarding.button.getStarted.text')}</p>
+                  <Arrow className="NavbarOnboarding__button-arrow" />
                 </div>
               </Link>
             ) : (
-              <div className="Navbar__button" role="presentation" onClick={onShowGetStarted}>
-                <p className="Navbar__button-text">
+              <div className="NavbarOnboarding__button" role="presentation" onClick={onShowGetStarted}>
+                <p className="NavbarOnboarding__button-text">
                   {nextVideo && nextVideo.url
                     ? t('onboarding.button.nextVideo.text')
                     : t('onboarding.button.getStarted.text')}
                 </p>
-                <Arrow className="Navbar__button-arrow" />
+                <Arrow className="NavbarOnboarding__button-arrow" />
               </div>
             ))}
           {showChatIntegrator && (
             <div
-              className="Navbar__button"
+              className="NavbarOnboarding__button"
               role="presentation"
               onClick={() => {
                 setIsOpen(false);
                 onShowChatIntegrator();
               }}
             >
-              <p className="Navbar__button-text">{t('onboarding.button.chatIntegrator.text')}</p>
-              <Arrow className="Navbar__button-arrow" />
+              <p className="NavbarOnboarding__button-text">{t('onboarding.button.chatIntegrator.text')}</p>
+              <Arrow className="NavbarOnboarding__button-arrow" />
             </div>
           )}
         </div>
 
         <div
-          className={cn('Navbar__trigger', {
-            'Navbar__trigger--active': isOpen,
+          className={cn('NavbarOnboarding__trigger', {
+            'NavbarOnboarding__trigger--active': isOpen,
           })}
           onClick={() => setIsOpen(!isOpen)}
           role="presentation"
         >
-          {isOpen ? <NavClose className="Navbar__trigger__icon" /> : <NavHamburger className="Navbar__trigger__icon" />}
+          {isOpen ? <NavClose className="NavbarOnboarding__trigger__icon" /> : <NavHamburger className="NavbarOnboarding__trigger__icon" />}
         </div>
       </div>
     </nav>

@@ -3,12 +3,13 @@ import { sharedData } from '../../data/pages';
 const links = [
   { href: 'https://play.joystream.org/', label: 'navbar.atlas' },
   { href: 'https://dao.joystream.org', label: 'navbar.pioneer' },
-  { to: '/about', label: 'navbar.about' },
-  { href: sharedData.social.discordLink, label: 'navbar.community' },
-  { href: 'https://joystream.gitbook.io/testnet-workspace/', label: "navbar.learnMore" },
+  { to: '/manifesto', label: 'navbar.manifesto' },
+  { href: sharedData.social.discordLink, label: 'navbar.discord' },
+  // NEW LANDING PAGE TODO: Update this link!
+  { href: '#', label: "navbar.youtubePartnerProgram" },
   {
-    to: '/start-here/what-is-joystream', // TODO validate
-    label: 'button.getStarted.text',
+    href: 'https://play.joystream.org/studio/',
+    label: 'navbar.claimChannel',
     isButton: true,
   },
 ];
