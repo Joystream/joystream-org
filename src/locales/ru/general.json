@@ -88,15 +88,12 @@
     "viewAllRoles": "Посмотреть все роли"
   },
   "navbar": {
-    "product": "Продукт",
-    "atlas": "Content",
-    "pioneer": "DAO",
-    "community": "Сообщество",
-    "brandStory": "История бренда",
-    "brandGuides": "Правила использования айдентики",
-    "downloadAssets": "Скачать ресурсы",
-    "about": "Team",
-    "learnMore": "Learn More"
+    "atlas": "Atlas",
+    "pioneer": "Governance",
+    "manifesto": "Manifesto",
+    "discord": "Discord",
+    "youtubePartnerProgram": "Youtube Partner Program",
+    "claimChannel": "Claim your channel"
   },
   "footer": {
     "title": "Следите за новостями",
