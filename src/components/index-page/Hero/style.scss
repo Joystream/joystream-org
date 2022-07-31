@@ -1,297 +1,72 @@
 @import '../../../styles/main';
 
+%h1 {
+  font-family: $font-primary;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 68px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+%base-1 {
+  font-family: $font-secondary;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
 .IndexPage {
   &__hero-wrapper {
-    padding: 57px 0 80px;
+    padding: 96px 100px;
     background-color: black;
   }
 
   &__hero {
     @extend %container;
 
-    display: grid;
-    column-gap: 50px;
-    grid-template-columns: 1fr 1.3fr;
-
-    &__content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     &__title {
-      font-family: $font-primary;
-      font-size: 72px;
-      line-height: 80px;
-      letter-spacing: 0;
-      color: white;
+      @extend %h1;
+
+      max-width: 818px;
+      color: $c_white;
+
+      span {
+        color: #6c6cff;
+      }
     }
 
     &__subtitle {
-      margin-top: 20px;
-      font-family: $font-secondary;
-      font-size: 20px;
-      line-height: 28px;
-      letter-spacing: 0;
-      color: $c_grayc-chateau;
-    }
+      @extend %base-1;
 
-    &__button-container {
-      width: fit-content;
-      margin-top: 32px;
+      margin-top: 24px;
+      color: #a7aeb7;
     }
 
     &__button {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 264px;
-      height: 80px;
-      padding: 0 30px;
-      background-color: $c_blue-ribbon;
-
-      &:hover {
-        background-color: $c_han_purple;
-      }
+      width: 229px;
+      height: 60px;
+      margin-top: 66px;
+      padding: 18px 15px !important;
     }
 
     &__button-text {
       font-family: $font-primary;
       font-size: 18px;
+      font-weight: 400;
       line-height: 24px;
       letter-spacing: 0;
-      color: white;
-    }
-
-    &__button-arrow {
-      margin-left: 17px;
-      color: white;
-      transform: scale(.9) rotate(-90deg);
+      text-align: left;
     }
 
     &__image {
-      width: 650px;
-      height: 450px;
-      margin: auto 0;
+      margin-top: 80px;
     }
-
-    &__image-alt {
-      display: none;
-      width: 375px;
-      height: 259.8px;
-    }
-
-    &__metrics-wrapper {
-      @extend %container;
-
-      margin-top: 50px;
-    }
-
-    &__metrics {
-      display: grid;
-      overflow-x: auto;
-      column-gap: 30px;
-      grid-template-columns: repeat(4, 275px);
-      grid-template-rows: 132px;
-
-      &::-webkit-scrollbar {
-        height: 3px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background: rgba(222, 227, 233, .4);
-        border-radius: 2px;
-      }
-
-      &__title {
-        margin-bottom: 24px;
-        font-family: $font-primary;
-        font-size: 24px;
-        line-height: 32px;
-        letter-spacing: 0;
-        color: $c_white;
-      }
-    }
-
-    &__metric {
-      padding: 18px 24px;
-      background-color: #111316;
-
-      &--placeholder {
-        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-metric;
-      }
-
-      &__title-placeholder {
-        width: 100px;
-        height: 16px;
-        margin-bottom: 20px;
-        background-color: #1f252e;
-        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-metric-text;
-      }
-
-      &__title {
-        margin-bottom: 10px;
-        font-family: $font-secondary;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0;
-        color: $c_grayc-chateau;
-        animation: animate-metric-text .5s linear;
-      }
-
-      &__value-placeholder {
-        width: 200px;
-        height: 48px;
-        background-color: #1f252e;
-        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-metric-text;
-      }
-
-      &__value {
-        font-family: $font-primary;
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: 0;
-        color: $c_white;
-        animation: animate-metric-text .5s linear;
-      }
-    }
-  }
-
-  @media #{$screen-max-lg} {
-    &__hero {
-      padding: 0 50px;
-      grid-template-columns: 1fr 1.5fr;
-    }
-  }
-
-  @media #{$screen-max-md} {
-    &__hero {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-
-      &__content {
-        align-items: center;
-        width: 85%;
-      }
-
-      &__title {
-        text-align: center;
-
-        & > br {
-          display: none;
-        }
-      }
-
-      &__subtitle {
-        text-align: center;
-      }
-
-      &__image {
-        width: 85%;
-        margin-top: 40px;
-      }
-
-      &__metrics-wrapper {
-        padding-left: 20px;
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__hero {
-      &__title {
-        font-size: 42px;
-        line-height: 50px;
-
-        & > br {
-          display: block;
-        }
-      }
-
-      &__subtitle {
-        font-size: 18px;
-        line-height: 24px;
-      }
-
-      &__button {
-        height: 60px;
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__hero {
-      padding: 0;
-
-      &__title {
-        font-size: 32px;
-        line-height: 40px;
-        text-align: left;
-      }
-
-      &__subtitle {
-        font-size: 16px;
-        line-height: 24px;
-        text-align: left;
-      }
-
-      &__content {
-        align-items: unset;
-        width: 335px;
-      }
-
-      &__button {
-        width: 335px;
-      }
-
-      &__image {
-        display: none;
-      }
-
-      &__image-alt {
-        display: block;
-        max-width: 375px;
-        margin-top: 40px;
-      }
-    }
-  }
-}
-
-@keyframes loading-metric {
-  0% {
-    background-color: rgba(17, 19, 22, 1);
-  }
-
-  50% {
-    background-color: rgba(17, 19, 22, .5);
-  }
-
-  100% {
-    background-color: rgba(17, 19, 22, 1);
-  }
-}
-
-@keyframes loading-metric-text {
-  0% {
-    background-color: rgb(31, 37, 46);
-  }
-
-  50% {
-    background-color: rgba(31, 37, 46, .5);
-  }
-
-  100% {
-    background-color: rgb(31, 37, 46);
-  }
-}
-
-@keyframes animate-metric-text {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }

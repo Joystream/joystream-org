@@ -1,6 +1,8 @@
 import React from 'react';
-import { Trans, Link } from 'gatsby-plugin-react-i18next';
-import HeroImage from '../../../assets/svg/hero-builder.svg';
+
+import { ArrowButton } from '../../ArrowButton';
+
+import AtlasHeroBackgroundImage from '../../../assets/images/landing/atlas-hero-background.png';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 
 import './style.scss';
@@ -9,20 +11,19 @@ const Hero = ({ t }) => {
   return (
     <div className="IndexPage__hero-wrapper">
       <div className="IndexPage__hero">
-        <div className="IndexPage__hero__content">
-          <h1 className="IndexPage__hero__title">{t('landing.hero.title')}</h1>
-          <p className="IndexPage__hero__subtitle">
-            <Trans i18nKey="landing.hero.subtitle" components={[<br />]} />
-          </p>
-          <Link to="/start-here/what-is-joystream" className="IndexPage__hero__button-container">
-            <div className="IndexPage__hero__button">
-              <p className="IndexPage__hero__button-text">{t('button.getStarted.text')}</p>
-              <Arrow className="IndexPage__hero__button-arrow" />
-            </div>
-          </Link>
-        </div>
-        <img src={HeroImage} className="IndexPage__hero__image" alt="getting started hero" />
-        <img src={HeroImage} className="IndexPage__hero__image-alt" alt="alternate getting started hero" />
+        <h1 className="IndexPage__hero__title">The streaming platform with more power to <span>creators</span></h1>
+        <h3 className="IndexPage__hero__subtitle">Built on blockchain and managed by Joystream DAO.</h3>
+        <ArrowButton
+          link="https://play.joystream.org/studio/"
+          text="Claim your channel"
+          className="IndexPage__hero__button"
+          textClassname="IndexPage__hero__button-text"
+        />
+        <img
+          className='IndexPage__hero__image'
+          src={AtlasHeroBackgroundImage}
+          alt="video playing on atlas, next to the video is a bid section for the associated NFT"
+        />
       </div>
     </div>
   );
