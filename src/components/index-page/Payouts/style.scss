@@ -1,0 +1,98 @@
+@import '../../../styles/main';
+@import '../../../pages/style';
+
+.IndexPage {
+  &__payouts-wrapper {
+    padding: 96px 0;
+    background-color: #111316;
+  }
+
+  &__payouts {
+    @extend %container;
+
+    display: grid;
+    gap: 34px;
+    grid-template-columns: 500px auto;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &__section-title {
+        @extend %section-title;
+
+        color: #6c6cff;
+      }
+
+      &__title {
+        @extend %h3;
+
+        margin-top: 4px;
+        color: $c_white;
+      }
+
+      &__subtitle {
+        @extend %base-1;
+
+        margin-top: 16px;
+        color: #a7aeb7;
+      }
+    }
+
+    &__illustration {
+      position: relative;
+
+      &__background {
+        max-width: 576px;
+      }
+    }
+  }
+
+  &__payouts-cta {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 256px;
+    margin-top: 96px;
+    background-color: #1f252e;
+    background-image: url('../../../assets/svg/landing/payouts-cta-background.svg');
+    background-position: right 0;
+    background-repeat: no-repeat;
+    border-left: 4px solid $c_blue-ribbon;
+
+    &__content {
+      max-width: 558px;
+
+      &__logos {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &__joystream {
+          height: 40px;
+          color: $c_white;
+        }
+      }
+
+      &__title {
+        @extend %h6;
+
+        margin-top: 24px;
+        color: $c_white;
+      }
+    }
+
+    &__link {
+      width: 220px;
+      height: 60px;
+      padding: 18px !important;
+    }
+
+    &__link-text {
+      @extend %landing-page-button-text;
+    }
+  }
+}

@@ -1,12 +1,12 @@
 import React from 'react';
-import useAxios from '../utils/useAxios';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../components/_layouts/Base';
 import SiteMetadata from '../components/SiteMetadata';
 
 // components
 import Hero from '../components/index-page/Hero';
+import Payouts from '../components/index-page/Payouts';
 import WhatWeDo from '../components/index-page/WhatWeDo';
 import OurInvestors from '../components/index-page/OurInvestors';
 import AvailableActivities from '../components/index-page/AvailableActivities';
@@ -26,6 +26,8 @@ const IndexPage = () => {
       />
 
       <Hero t={t}/>
+
+      <Payouts t={t}/>
 
       <AvailableActivities t={t}/>
 

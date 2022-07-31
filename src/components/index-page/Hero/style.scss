@@ -1,4 +1,5 @@
 @import '../../../styles/main';
+@import '../../../pages/style';
 
 %h1 {
   font-family: $font-primary;
@@ -57,12 +58,7 @@
     }
 
     &__button-text {
-      font-family: $font-primary;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0;
-      text-align: left;
+      @extend %landing-page-button-text;
     }
 
     &__image {
