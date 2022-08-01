@@ -1,0 +1,53 @@
+@import '../../../styles/main';
+@import '../../../pages/style';
+
+.IndexPage {
+  &__jsgenesis-wrapper {
+    background-color: $c_white;
+  }
+
+  &__jsgenesis {
+    @extend %largeContainer;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 128px 0;
+    background-image: url('../../../assets/svg/landing/jsgenesis-background-left.svg'), url('../../../assets/svg/landing/jsgenesis-background-right.svg');
+    background-position: top 0 left 0, top 0 right 0;
+    background-repeat: no-repeat, no-repeat;
+
+    &__section-title {
+      @extend %section-title;
+
+      color: $c_blue-ribbon;
+      text-align: center;
+    }
+
+    &__title {
+      @extend %h3;
+
+      margin-top: 4px;
+      margin-bottom: 32px;
+      color: $c_black;
+      text-align: center;
+    }
+
+    &__link {
+      font-family: $font-primary;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: $c_blue-ribbon;
+      text-align: center;
+
+      &__arrow {
+        margin-bottom: -3px;
+        margin-left: 10px;
+        transform: rotate(-90deg) scale(.8);
+      }
+    }
+  }
+}

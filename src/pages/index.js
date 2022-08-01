@@ -12,6 +12,7 @@ import CreatorTokens from '../components/index-page/CreatorTokens';
 import YoutubeSync from '../components/index-page/YoutubeSync';
 import WhatWeDo from '../components/index-page/WhatWeDo';
 import JoystreamDAO from '../components/index-page/JoystreamDAO';
+import Jsgenesis from '../components/index-page/Jsgenesis';
 import OurInvestors from '../components/index-page/OurInvestors';
 import AvailableActivities from '../components/index-page/AvailableActivities';
 
@@ -44,6 +45,8 @@ const IndexPage = () => {
       <AvailableActivities t={t}/>
 
       <JoystreamDAO t={t}/>
+
+      <Jsgenesis t={t} />
 
       <OurInvestors t={t}/>
     </BaseLayout>
