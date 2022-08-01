@@ -1,0 +1,234 @@
+@import '../../../styles/main';
+@import '../../../pages/style';
+
+.IndexPage {
+  &__creator-tokens-wrapper {
+    padding: 96px 0;
+    background-color: #111316;
+  }
+
+  &__creator-tokens {
+    @extend %container;
+
+    &__hero {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &__coming-soon {
+        @extend %base-5;
+
+        padding: 4px 8px;
+        color: #a7aeb7;
+        background-color: #1f252e;
+        border-radius: 10px;
+      }
+
+      &__section-title {
+        @extend %section-title;
+
+        margin-top: 32px;
+        color: #6c6cff;
+      }
+
+      &__title {
+        @extend %h3;
+
+        max-width: 816px;
+        margin-top: 4px;
+        color: $c_white;
+        text-align: center;
+      }
+
+      &__subtitle {
+        @extend %base-1;
+
+        max-width: 816px;
+        margin-top: 16px;
+        color: #a7aeb7;
+        text-align: center;
+      }
+
+      &__link {
+        margin-top: 32px;
+        font-family: $font-primary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: #6c6cff;
+
+        &__arrow {
+          margin-bottom: -3px;
+          margin-left: 10px;
+          transform: rotate(-90deg) scale(.8);
+        }
+      }
+
+      &__image {
+        margin-top: 80px;
+      }
+    }
+
+    &__fundraising {
+      display: grid;
+      margin-top: 96px;
+      gap: 30px;
+      grid-template-columns: auto 500px;
+
+      &__illustration {
+        display: flex;
+        justify-content: center;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__section-title {
+          @extend %section-title-md;
+
+          color: #6c6cff;
+        }
+
+        &__title {
+          @extend %h6;
+
+          margin-top: 4px;
+          color: $c_white;
+        }
+
+        &__subtitle {
+          @extend %base-3;
+
+          margin-top: 16px;
+          color: #a7aeb7;
+        }
+      }
+    }
+
+    &__stable-income {
+      display: grid;
+      margin-top: 96px;
+      gap: 30px;
+      grid-template-columns: 500px auto;
+
+      &__content {
+        &__section-title {
+          @extend %section-title-md;
+
+          color: #6c6cff;
+        }
+
+        &__title {
+          @extend %h6;
+
+          margin-top: 4px;
+          color: $c_white;
+        }
+
+        &__subtitle {
+          @extend %base-3;
+
+          margin-top: 16px;
+          color: #a7aeb7;
+        }
+      }
+
+      &__illustration {
+        display: flex;
+        justify-content: center;
+
+        &__image {
+          max-width: 480px;
+          max-height: 168px;
+        }
+      }
+    }
+
+    &__secure-listing {
+      display: grid;
+      height: 360px;
+      max-height: 360px;
+      margin-top: 96px;
+      gap: 30px;
+      grid-template-columns: auto 500px;
+
+      &__illustration {
+        display: flex;
+        justify-content: center;
+        overflow-y: hidden;
+
+        &__image {
+          width: 360px;
+          height: 555px;
+        }
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__section-title {
+          @extend %section-title-md;
+
+          color: #6c6cff;
+        }
+
+        &__title {
+          @extend %h6;
+
+          margin-top: 4px;
+          color: $c_white;
+        }
+
+        &__subtitle {
+          @extend %base-3;
+
+          margin-top: 16px;
+          color: #a7aeb7;
+        }
+      }
+    }
+
+    &__share-upside {
+      display: grid;
+      margin-top: 96px;
+      gap: 30px;
+      grid-template-columns: 500px auto;
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__section-title {
+          @extend %section-title-md;
+
+          color: #6c6cff;
+        }
+
+        &__title {
+          @extend %h6;
+
+          margin-top: 4px;
+          color: $c_white;
+        }
+
+        &__subtitle {
+          @extend %base-3;
+
+          margin-top: 16px;
+          color: #a7aeb7;
+        }
+      }
+
+      &__illustration {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
