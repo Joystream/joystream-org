@@ -32,6 +32,22 @@
   letter-spacing: 0;
 }
 
+%base-3 {
+  font-family: $font-secondary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+%base-5 {
+  font-family: $font-secondary;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: .25px;
+}
+
 %landing-page-button-text {
   font-family: $font-primary;
   font-size: 18px;

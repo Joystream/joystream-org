@@ -1,0 +1,93 @@
+@import '../../../styles/main';
+@import '../../../pages/style';
+
+.IndexPage {
+  &__video-nfts-wrapper {
+    padding-top: 96px;
+    background-color: #111316;
+  }
+
+  &__video-nfts {
+    @extend %container;
+
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 670px auto;
+
+    &__illustration {
+      position: relative;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &__section-title {
+        @extend %section-title;
+
+        color: #6c6cff;
+      }
+
+      &__title {
+        @extend %h3;
+
+        margin-top: 4px;
+        color: $c_white;
+      }
+
+      &__subtitle {
+        @extend %base-1;
+
+        margin-top: 16px;
+        color: #a7aeb7;
+      }
+    }
+  }
+
+  &__video-nfts-cta {
+    @extend %largeContainer;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 96px;
+    padding-bottom: 96px;
+    background-image: url('../../../assets/svg/landing/video-nfts-cta-background.svg');
+    background-position: bottom 0 left 0;
+    background-repeat: no-repeat;
+
+    &__title {
+      @extend %h3;
+
+      max-width: 816px;
+      color: $c_white;
+      text-align: center;
+    }
+
+    &__about {
+      @extend %base-3;
+
+      margin-top: 16px;
+      color: #a7aeb7;
+    }
+
+    &__podcast {
+      @extend %base-5;
+
+      margin-top: 4px;
+      color: #5c6475;
+    }
+
+    &__button {
+      width: 229px;
+      height: 60px;
+      margin-top: 48px;
+      padding: 18px 15px !important;
+    }
+
+    &__button-text {
+      @extend %landing-page-button-text;
+    }
+  }
+}

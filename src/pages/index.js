@@ -7,6 +7,7 @@ import SiteMetadata from '../components/SiteMetadata';
 // components
 import Hero from '../components/index-page/Hero';
 import Payouts from '../components/index-page/Payouts';
+import VideoNFTs from '../components/index-page/VideoNFTs';
 import WhatWeDo from '../components/index-page/WhatWeDo';
 import OurInvestors from '../components/index-page/OurInvestors';
 import AvailableActivities from '../components/index-page/AvailableActivities';
@@ -28,6 +29,8 @@ const IndexPage = () => {
       <Hero t={t}/>
 
       <Payouts t={t}/>
+
+      <VideoNFTs t={t}/>
 
       <AvailableActivities t={t}/>
 
