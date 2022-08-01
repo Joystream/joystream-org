@@ -8,7 +8,6 @@
   &__available-activities {
     @extend %container;
 
-    // height: 200px;
     padding: 150px 0;
 
     &__title {
@@ -20,6 +19,8 @@
     }
 
     &__subtitle {
+      max-width: 818px;
+      margin: 0 auto;
       margin-top: 16px;
       font-family: $font-secondary;
       font-size: 20px;

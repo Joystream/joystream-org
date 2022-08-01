@@ -132,8 +132,8 @@ const AvailableActivities = ({ t }) => {
   return (
     <div className="IndexPage__available-activities-wrapper">
       <div className="IndexPage__available-activities">
-        <h2 className="IndexPage__available-activities__title">{t('landing.availableActivities.title')}</h2>
-        <p className="IndexPage__available-activities__subtitle">{t('landing.availableActivities.subtitle')}</p>
+        <h2 className="IndexPage__available-activities__title">Not a creator?<br/>Explore rewardable activities</h2>
+        <p className="IndexPage__available-activities__subtitle">Joystream is a video platform managed by DAO, which means there are all sorts of ways you can join and earn by contributing to the project.</p>
         <div className="IndexPage__available-activities__list">
           <Activity
             Icon={REFERRAL_ACTIVITY.icon}
