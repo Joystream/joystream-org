@@ -38,9 +38,9 @@ const IndexPage = () => {
 
       <YoutubeSync t={t}/>
 
-      <AvailableActivities t={t}/>
-
       <WhatWeDo t={t}/>
+
+      <AvailableActivities t={t}/>
 
       <OurInvestors t={t}/>
     </BaseLayout>
