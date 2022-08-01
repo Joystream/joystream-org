@@ -11,6 +11,7 @@ import VideoNFTs from '../components/index-page/VideoNFTs';
 import CreatorTokens from '../components/index-page/CreatorTokens';
 import YoutubeSync from '../components/index-page/YoutubeSync';
 import WhatWeDo from '../components/index-page/WhatWeDo';
+import JoystreamDAO from '../components/index-page/JoystreamDAO';
 import OurInvestors from '../components/index-page/OurInvestors';
 import AvailableActivities from '../components/index-page/AvailableActivities';
 
@@ -41,6 +42,8 @@ const IndexPage = () => {
       <WhatWeDo t={t}/>
 
       <AvailableActivities t={t}/>
+
+      <JoystreamDAO t={t}/>
 
       <OurInvestors t={t}/>
     </BaseLayout>

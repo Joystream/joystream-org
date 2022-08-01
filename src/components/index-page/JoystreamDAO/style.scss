@@ -1,0 +1,64 @@
+@import '../../../styles/main';
+@import '../../../pages/style';
+
+.IndexPage {
+  &__joystream-dao-wrapper {
+    padding: 96px 0;
+    background-color: #f2f5f9;
+  }
+
+  &__joystream-dao {
+    @extend %container;
+
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 500px auto;
+
+    &__content {
+      &__section-title {
+        @extend %section-title;
+
+        color: $c_blue-ribbon;
+      }
+
+      &__title {
+        @extend %h3;
+
+        margin-top: 4px;
+        color: $c_black;
+      }
+
+      &__subtitle {
+        @extend %base-1;
+
+        margin-top: 16px;
+        margin-bottom: 32px;
+        color: #5c6475;
+      }
+
+      &__link {
+        font-family: $font-primary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_blue-ribbon;
+
+        &__arrow {
+          margin-bottom: -3px;
+          margin-left: 10px;
+          transform: rotate(-90deg) scale(.8);
+        }
+      }
+    }
+
+    &__illustration {
+      display: flex;
+      justify-content: center;
+
+      &__image {
+        height: 360px;
+      }
+    }
+  }
+}
