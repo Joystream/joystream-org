@@ -24,7 +24,7 @@ const Payouts = ({ t }) => {
         <div className="IndexPage__payouts__illustration">
           <img
             src={PayoutsBackgroundImage}
-            class="IndexPage__payouts__illustration__background"
+            className="IndexPage__payouts__illustration__background"
             alt="in the background, my payments tab in atlas studio is shown, in the foreground, a claim payout popup"
           />
         </div>
