@@ -61,15 +61,11 @@ const Footer = ({ t }) => {
           links={joystreamLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
         />
         <FooterSection
-          title={t('socials.github')}
-          links={githubLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
-        />
-        <FooterSection
           title={t('footer.usefulLinks.title')}
           links={usefulLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
         />
 
-        <div className="Footer__section">
+        <div className="Footer__section Footer__section--socials">
           <h6 className="Footer__section-title">{t('footer.followUs')}</h6>
 
           <div className="Footer__socials">

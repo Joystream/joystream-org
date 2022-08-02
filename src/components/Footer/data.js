@@ -8,6 +8,7 @@ const joystreamLinks = [
   { to: '/manifesto', label: 'pages.manifesto' },
   { to: '/token', label: 'pages.token' },
   { to: '/hydra', label: 'pages.hydra' },
+  { to: '#0', label: 'Founding Members Program' },
 ];
 
 const githubLinks = [
@@ -15,9 +16,8 @@ const githubLinks = [
 ];
 
 const usefulLinks = [
-  { href: sharedData.links.openings, label: 'footer.usefulLinks.hiring' },
+  { href: '#0', label: 'FAQ' },
   { to: '/brand/guides', label: 'footer.usefulLinks.brandGuidance' },
-  { href: 'https://joystreamstats.live/tokenomics', label: 'footer.usefulLinks.tokenomics' },
 ];
 
 const socialMedias = [

@@ -47,8 +47,6 @@ const IndexPage = () => {
       <JoystreamDAO t={t}/>
 
       <Jsgenesis t={t} />
-
-      <OurInvestors t={t}/>
     </BaseLayout>
   );
 };

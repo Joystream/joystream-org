@@ -64,7 +64,6 @@
   }
 
   &__section {
-    flex: 1 0 50%;
     padding: 0 10px 50px;
     font-size: 14px;
     line-height: 1.2;
@@ -90,11 +89,6 @@
     & + & {
       margin-top: 14px;
     }
-  }
-
-  &__socials {
-    // display: flex;
-    // flex-direction: row;
   }
 
   &__social-link {
@@ -137,6 +131,7 @@
 
     &__layout {
       width: 100%;
+      gap: 90px;
     }
 
     &__socials {
@@ -145,8 +140,12 @@
     }
 
     &__section {
-      flex: 1 0 25%;
-      width: 175px;
+      width: 220px;
+
+      &--socials {
+        margin-right: 125px;
+        margin-left: auto;
+      }
     }
 
     &__section-title {
