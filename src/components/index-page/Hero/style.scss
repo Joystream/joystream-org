@@ -52,6 +52,8 @@
 
     &__typewriter-cursor {
       color: #6c6cff;
+      animation: animateTextCaret 1s ease-out;
+      animation-iteration-count: infinite;
     }
 
     &__subtitle {
@@ -72,8 +74,39 @@
       @extend %landing-page-button-text;
     }
 
-    &__image {
+    &__illustration {
+      position: relative;
       margin-top: 80px;
+      overflow: hidden;
+
+      &__foreground {
+        position: absolute;
+        top: 95px;
+        right: -25px;
+      }
+
+      &__button {
+        position: absolute;
+        top: 400px;
+        right: 0;
+      }
     }
+  }
+}
+
+@keyframes animateTextCaret {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
   }
 }
