@@ -65,8 +65,26 @@
         }
       }
 
-      &__image {
+      &__illustration {
+        position: relative;
+        width: 100%;
+        height: 756px;
         margin-top: 80px;
+        overflow: hidden;
+
+        &__background {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 960px;
+        }
+
+        &__foreground {
+          position: absolute;
+          top: 182px;
+          left: 80px;
+          width: 312px;
+        }
       }
     }
 

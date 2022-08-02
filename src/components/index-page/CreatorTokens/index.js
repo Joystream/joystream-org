@@ -1,7 +1,9 @@
 import React from 'react';
+import Plx from 'react-plx';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import CreatorTokensBackground from '../../../assets/images/landing/creator-tokens-background.png';
+import CreatorTokensForeground from '../../../assets/images/landing/creator-tokens-foreground.png';
 import Fundraising from '../../../assets/images/landing/fundraising.png';
 import StableIncome from '../../../assets/images/landing/stable-income.png';
 import SecureListing from '../../../assets/images/landing/secure-listing.png';
@@ -9,7 +11,49 @@ import ShareUpside from '../../../assets/images/landing/share-upside.png';
 
 import './style.scss';
 
-const CreatorTokens = () => {
+const parallaxDataForeground = [
+  {
+    start: 0,
+    end: 3500,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: 250,
+        endValue: 0,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  },
+  {
+    start: 3500,
+    end: 3800,
+    properties: [
+      {
+        startValue: 0,
+        endValue: 0,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  },
+  {
+    start: 3800,
+    end: 4400,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: 0,
+        endValue: -125,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  }
+];
+
+
+const CreatorTokens = ({ t }) => {
   return (
     <div className="IndexPage__creator-tokens-wrapper">
       <div className="IndexPage__creator-tokens">
@@ -27,11 +71,20 @@ const CreatorTokens = () => {
             Sign up for beta tests
             <ArrowIcon className="IndexPage__creator-tokens__hero__link__arrow" />
           </a>
-          <img
-            src={CreatorTokensBackground}
-            className="IndexPage__creator-tokens__hero__image"
-            alt="(creator) token tab on atlas, showing a video (left) and the status of your token (right)"
-          />
+          <div className='IndexPage__creator-tokens__hero__illustration'>
+            <img
+              src={CreatorTokensBackground}
+              className="IndexPage__creator-tokens__hero__illustration__background"
+              alt="(creator) token tab on atlas, showing a video and the status of your token (right)"
+            />
+            <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
+              <img
+                src={CreatorTokensForeground}
+                className="IndexPage__creator-tokens__hero__illustration__foreground"
+                alt="token holders list popup"
+              />
+            </Plx>
+          </div>
         </div>
         <div className="IndexPage__creator-tokens__fundraising">
           <div className="IndexPage__creator-tokens__fundraising__illustration">

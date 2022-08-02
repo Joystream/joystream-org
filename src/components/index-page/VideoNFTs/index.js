@@ -100,20 +100,20 @@ const VideoNFTs = ({ t }) => {
           <img
             src={VideoNFTsBackgroundImage}
             className="IndexPage__video-nfts__illustration__background"
-            alt="in the background, my payments tab in atlas studio is shown, in the foreground, a claim payout popup"
+            alt="row of nfts"
           />
           <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
             <img
               src={VideoNFTsForegroundImage}
               className="IndexPage__video-nfts__illustration__foreground"
-              alt="in the background, my payments tab in atlas studio is shown, in the foreground, a claim payout popup"
+              alt="one nft in the middle, highlighted"
             />
           </Plx>
           <Plx parallaxData={parallaxDataPopup} animateWhenNotInViewport={true}>
             <img
               src={VideoNFTsPopupImage}
               className="IndexPage__video-nfts__illustration__popup"
-              alt="in the background, my payments tab in atlas studio is shown, in the foreground, a claim payout popup"
+              alt="nft settings popup"
             />
           </Plx>
         </div>
