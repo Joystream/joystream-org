@@ -1,9 +1,96 @@
 import React from 'react';
+import Plx from 'react-plx';
 
 import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.png';
+import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.png';
+import VideoNFTsPopupImage from '../../../assets/images/landing/video-nfts-popup.png';
 import { ArrowButton } from '../../ArrowButton';
 
 import './style.scss';
+
+const parallaxDataForeground = [
+  {
+    start: 0,
+    end: 2100,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: -315,
+        endValue: -392,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  },
+  {
+    start: 2100,
+    end: 2400,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: -392,
+        endValue: -392,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  },
+  {
+    start: 2400,
+    end: 3000,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: -392,
+        endValue: -500,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  }
+];
+
+const parallaxDataPopup = [
+  {
+    start: 0,
+    end: 2100,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: 250,
+        endValue: 20,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  },
+  {
+    start: 2100,
+    end: 2400,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: 20,
+        endValue: 20,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  },
+  {
+    start: 2400,
+    end: 3000,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: 20,
+        endValue: -125,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  }
+];
 
 const VideoNFTs = ({ t }) => {
   return (
@@ -15,6 +102,20 @@ const VideoNFTs = ({ t }) => {
             className="IndexPage__video-nfts__illustration__background"
             alt="in the background, my payments tab in atlas studio is shown, in the foreground, a claim payout popup"
           />
+          <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
+            <img
+              src={VideoNFTsForegroundImage}
+              className="IndexPage__video-nfts__illustration__foreground"
+              alt="in the background, my payments tab in atlas studio is shown, in the foreground, a claim payout popup"
+            />
+          </Plx>
+          <Plx parallaxData={parallaxDataPopup} animateWhenNotInViewport={true}>
+            <img
+              src={VideoNFTsPopupImage}
+              className="IndexPage__video-nfts__illustration__popup"
+              alt="in the background, my payments tab in atlas studio is shown, in the foreground, a claim payout popup"
+            />
+          </Plx>
         </div>
         <section className="IndexPage__video-nfts__content">
           <h3 className="IndexPage__video-nfts__content__section-title">VIDEO NFTs</h3>

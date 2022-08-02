@@ -11,11 +11,24 @@
     @extend %container;
 
     display: grid;
+    height: 413px;
     gap: 30px;
     grid-template-columns: 670px auto;
 
     &__illustration {
       position: relative;
+      overflow: hidden;
+
+      &__foreground {
+        position: absolute;
+        left: 104px;
+      }
+
+      &__popup {
+        position: absolute;
+        right: 70px;
+        bottom: -50px;
+      }
     }
 
     &__content {
