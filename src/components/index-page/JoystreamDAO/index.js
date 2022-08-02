@@ -1,9 +1,53 @@
 import React from 'react';
+import Plx from 'react-plx';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
-import PayoutsBackgroundImage from '../../../assets/images/landing/joystream-dao-background.png';
+import JoystreamDaoBackgroundImage from '../../../assets/images/landing/joystream-dao-background.png';
+import JoystreamDaoForegroundImage from '../../../assets/images/landing/joystream-dao-foreground.png';
 
 import './style.scss';
+
+const joystreamDaoForeground = [
+  {
+    start: 0,
+    end: 9500,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: 700,
+        endValue: 445,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  },
+  {
+    start: 9500,
+    end: 10000,
+    properties: [
+      {
+        startValue: 445,
+        endValue: 445,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  },
+  {
+    start: 10000,
+    end: 10400,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: 445,
+        endValue: 380,
+        property: 'translateY',
+        unit: "px"
+      },
+    ],
+  }
+];
+
 
 const JoystreamDAO = () => {
   return (
@@ -19,7 +63,10 @@ const JoystreamDAO = () => {
           </a>
         </div>
         <div className='IndexPage__joystream-dao__illustration'>
-          <img src={PayoutsBackgroundImage} className="IndexPage__joystream-dao__illustration__image" alt=""/>
+          <img src={JoystreamDaoBackgroundImage} className="IndexPage__joystream-dao__illustration__background" alt="joystream governance product, open on tab working groups, outlining the currently available groups"/>
+          <Plx parallaxData={joystreamDaoForeground} animateWhenNotInViewport={true}>
+            <img src={JoystreamDaoForegroundImage} className="IndexPage__joystream-dao__illustration__foreground" alt="one of the working groups rows extracted in front of the others"/>
+          </Plx>
         </div>
       </div>
     </div>
