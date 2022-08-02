@@ -78,6 +78,7 @@
     "stylelint-order": "^3.0.0",
     "stylelint-scss": "^3.8.0",
     "stylelint-webpack-plugin": "^0.10.5",
+    "typewriter-effect": "^2.19.0",
     "url-loader": "^2.1.0"
   },
   "devDependencies": {
@@ -104,6 +105,7 @@
     "lint:fix": "yarn lint --fix",
     "stylelint": "stylelint \"src/**/*.scss\"",
     "stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
+    "lint:all": "yarn lint && yarn stylelint --fix",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",

@@ -12,7 +12,7 @@ const VideoNFTs = ({ t }) => {
         <div className="IndexPage__video-nfts__illustration">
           <img
             src={VideoNFTsBackgroundImage}
-            class="IndexPage__video-nfts__illustration__background"
+            className="IndexPage__video-nfts__illustration__background"
             alt="in the background, my payments tab in atlas studio is shown, in the foreground, a claim payout popup"
           />
         </div>
@@ -35,7 +35,7 @@ const VideoNFTs = ({ t }) => {
         <ArrowButton 
           className="IndexPage__video-nfts-cta__button"
           text="Claim your channel"
-          textClassName="IndexPage__video-nfts-cta__button-text"
+          textClassname="IndexPage__video-nfts-cta__button-text"
           link="https://play.joystream.org/studio/"
         />
       </div>

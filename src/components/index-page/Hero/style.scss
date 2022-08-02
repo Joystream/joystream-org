@@ -38,9 +38,20 @@
       max-width: 818px;
       color: $c_white;
 
-      span {
-        color: #6c6cff;
+      span > div {
+        display: inline-block;
       }
+    }
+
+    &__typewriter-title {
+      @extend %h1;
+
+      margin-left: 12px;
+      color: #6c6cff;
+    }
+
+    &__typewriter-cursor {
+      color: #6c6cff;
     }
 
     &__subtitle {
