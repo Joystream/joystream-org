@@ -5,8 +5,8 @@ import { ArrowButton } from '../../ArrowButton';
 
 import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.png';
 import PayoutsForeground from '../../../assets/images/landing/payouts-foreground.png';
-import { ReactComponent as YoutubeLogo } from '../../../assets/svg/landing/youtube-logo.svg'
-import { ReactComponent as ConnectionIcon } from '../../../assets/svg/landing/connection-icon.svg'
+import { ReactComponent as YoutubeLogo } from '../../../assets/svg/landing/youtube-logo.svg';
+import { ReactComponent as ConnectionIcon } from '../../../assets/svg/landing/connection-icon.svg';
 import { ReactComponent as JoystreamLogo } from '../../../assets/svg/logo-mark.svg';
 
 import './style.scss';
@@ -21,7 +21,7 @@ const parallaxDataBackground = [
         startValue: 100,
         endValue: 0,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
   },
@@ -33,23 +33,23 @@ const parallaxDataBackground = [
         startValue: 0,
         endValue: 0,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
   },
   {
     start: 1300,
     end: 1800,
-    easing: 'easeIn',
+    easing: 'easeInOut',
     properties: [
       {
         startValue: 0,
         endValue: -150,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
-  }
+  },
 ];
 
 const parallaxDataForeground = [
@@ -60,9 +60,9 @@ const parallaxDataForeground = [
     properties: [
       {
         startValue: 550,
-        endValue: 310,
+        endValue: 280,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
   },
@@ -71,26 +71,26 @@ const parallaxDataForeground = [
     end: 1300,
     properties: [
       {
-        startValue: 310,
-        endValue: 310,
+        startValue: 280,
+        endValue: 280,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
   },
   {
     start: 1300,
     end: 1800,
-    easing: 'easeIn',
+    easing: 'easeInOut',
     properties: [
       {
-        startValue: 310,
+        startValue: 280,
         endValue: 200,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
-  }
+  },
 ];
 
 const Payouts = ({ t }) => {
@@ -101,8 +101,8 @@ const Payouts = ({ t }) => {
           <h3 className="IndexPage__payouts__content__section-title">PAYOUTS</h3>
           <h2 className="IndexPage__payouts__content__title">Receive payouts for uploading quality videos</h2>
           <p className="IndexPage__payouts__content__subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet rhoncus iaculis viverra nunc gravida a
-            egestas. Urna pellentesque laoreet facilisis pharetra at arcu vitae.
+            Upload high quality videos to get cash rewadrs from the Joystream DAO council on a regular basis. Popular
+            creators are rewarded higher.
           </p>
         </section>
         <div className="IndexPage__payouts__illustration">
@@ -125,16 +125,21 @@ const Payouts = ({ t }) => {
       <div className="IndexPage__payouts-cta">
         <div className="IndexPage__payouts-cta__content">
           <div className="IndexPage__payouts-cta__content__logos">
-            <YoutubeLogo className="IndexPage__payouts-cta__content__logos__youtube"/>
-            <ConnectionIcon className="IndexPage__payouts-cta__content__logos__connection-icon"/>
-            <JoystreamLogo className="IndexPage__payouts-cta__content__logos__joystream"/>
+            <YoutubeLogo className="IndexPage__payouts-cta__content__logos__youtube" />
+            <ConnectionIcon className="IndexPage__payouts-cta__content__logos__connection-icon" />
+            <JoystreamLogo className="IndexPage__payouts-cta__content__logos__joystream" />
           </div>
           <p className="IndexPage__payouts-cta__content__title">
-            Have a YouTube channel already? <br/>Reupload your videos to receive a guaranteed payout in the YouTube Partner
-            Program.
+            Have a YouTube channel already? <br />
+            Reupload your videos to receive a guaranteed payout in the YouTube Partner Program.
           </p>
         </div>
-        <ArrowButton link="#" className="IndexPage__payouts-cta__link" text="Learn more" textClassname="IndexPage__payouts-cta__link-text"/>
+        <ArrowButton
+          link="#"
+          className="IndexPage__payouts-cta__link"
+          text="Learn more"
+          textClassname="IndexPage__payouts-cta__link-text"
+        />
       </div>
     </div>
   );

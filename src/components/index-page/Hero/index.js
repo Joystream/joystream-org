@@ -85,7 +85,7 @@ const Hero = ({ t }) => {
             />
           </span>
         </h1>
-        <p className="IndexPage__hero__subtitle">Built on blockchain and managed by Joystream DAO.</p>
+        <p className="IndexPage__hero__subtitle">Built on Joystream blockchain and managed by the DAO community.</p>
         <ArrowButton
           link="https://play.joystream.org/studio/"
           text="Claim your channel"
