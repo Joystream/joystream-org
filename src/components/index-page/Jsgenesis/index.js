@@ -11,10 +11,10 @@ const Jsgenesis = () => {
       <div className='IndexPage__jsgenesis'>
         <div className='IndexPage__jsgenesis__content'>
           <h3 className='IndexPage__jsgenesis__section-title'>JSGENESIS</h3>
-          <h2 className='IndexPage__jsgenesis__title'>We’re building<br/>Joystream to set it free</h2>
+          <h2 className='IndexPage__jsgenesis__title'>We’re building<br/><span>Joystream</span> to set it free</h2>
           <Link to="/about">
             <p className='IndexPage__jsgenesis__link'>
-              Meet the Team
+              Meet the team
               <ArrowIcon className='IndexPage__jsgenesis__link__arrow' />
             </p>
           </Link>

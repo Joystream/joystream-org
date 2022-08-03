@@ -13,7 +13,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 128px 0;
+    padding: 125px 0;
     background-image: url('../../../assets/svg/landing/jsgenesis-background-left.svg'), url('../../../assets/svg/landing/jsgenesis-background-right.svg');
     background-position: top 0 left 0, top 0 right 0;
     background-repeat: no-repeat, no-repeat;
@@ -26,7 +26,7 @@
     }
 
     &__title {
-      @extend %h3;
+      @include h2;
 
       margin-top: 4px;
       margin-bottom: 32px;
@@ -48,6 +48,58 @@
         margin-left: 10px;
         transform: rotate(-90deg) scale(.8);
       }
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__jsgenesis {
+      background-position: top 0 left -75px, top 0 right -50px;
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__jsgenesis {
+      padding: 75px 0;
+      background-size: 310px, 245px;
+
+      &__title {
+        @include h3;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__jsgenesis {
+      padding: 65px 0;
+      background-position: top 0 left -150px, top 0 right -125px;
+
+      &__title {
+        @include h4;
+
+        max-width: 300px;
+
+        & > span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__jsgenesis {
+      padding: 158px 0;
+      background-image: url('../../../assets/svg/landing/jsgenesis-background-top-mobile.svg'), url('../../../assets/svg/landing/jsgenesis-background-bottom-mobile.svg');
+      background-position: top 0 center, bottom 0 center;
+      background-size: 510px, 510px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    &__jsgenesis {
+      padding: 128px 0;
+      background-image: url('../../../assets/svg/landing/jsgenesis-background-top-mobile.svg'), url('../../../assets/svg/landing/jsgenesis-background-bottom-mobile.svg');
+      background-size: 375px, 375px;
+      background-size: unset, unset;
     }
   }
 }

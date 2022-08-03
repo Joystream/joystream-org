@@ -1,5 +1,7 @@
 @import '../styles/main.scss';
 
+// NEW LANDING PAGE TODO: Replace all of these with mixins!
+
 %section-title {
   font-family: $font-primary;
   font-size: 16px;
@@ -40,11 +42,43 @@
   letter-spacing: 0;
 }
 
+%h4 {
+  font-family: $font-primary;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0;
+}
+
 %h6 {
   font-family: $font-primary;
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
+  letter-spacing: 0;
+}
+
+@mixin h2 {
+  font-family: $font-primary;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: 0;
+}
+
+@mixin h3 {
+  font-family: $font-primary;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0;
+}
+
+@mixin h4 {
+  font-family: $font-primary;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
   letter-spacing: 0;
 }
 
