@@ -70,7 +70,7 @@
     background-repeat: no-repeat;
 
     &__title {
-      @extend %h3;
+      @include h3;
 
       max-width: 816px;
       color: $c_white;
@@ -100,6 +100,30 @@
 
     &__button-text {
       @extend %landing-page-button-text;
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__video-nfts-cta {
+      background-position: bottom 0 left -70px;
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__video-nfts-cta {
+      background: none;
+
+      &__title {
+        max-width: 620px;
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__video-nfts-cta {
+      &__title {
+        @include h4;
+      }
     }
   }
 }
