@@ -16,6 +16,14 @@
   letter-spacing: .25px;
 }
 
+%h1 {
+  font-family: $font-primary;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 68px;
+  letter-spacing: 0;
+}
+
 %h2 {
   font-family: $font-primary;
   font-size: 48px;

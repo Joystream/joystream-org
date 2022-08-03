@@ -12,13 +12,13 @@ import './style.scss';
 
 const parallaxDataForeground = [
   {
-    start: "0px",
-    end: "400px",
+    start: 0,
+    end: 200,
     easing: 'easeIn',
     properties: [
       {
-        startValue: -720,
-        endValue: -755,
+        startValue: -700,
+        endValue: -728,
         property: 'translateY',
         unit: "px"
       },
@@ -30,8 +30,8 @@ const parallaxDataForeground = [
     easing: 'easeOut',
     properties: [
       {
-        startValue: -755,
-        endValue: -855,
+        startValue: -728,
+        endValue: -805,
         property: 'translateY',
         unit: "px"
       },
@@ -42,12 +42,12 @@ const parallaxDataForeground = [
 const parallaxDataButton = [
   {
     start: 0,
-    duration: 400,
+    duration: 200,
     easing: 'easeIn',
     properties: [
       {
         startValue: -680,
-        endValue: -760,
+        endValue: -730,
         property: 'translateY',
       },
     ],
@@ -58,8 +58,8 @@ const parallaxDataButton = [
     easing: 'easeOut',
     properties: [
       {
-        startValue: -760,
-        endValue: -880,
+        startValue: -730,
+        endValue: -800,
         property: 'translateY',
         unit: "px"
       },
@@ -113,6 +113,7 @@ const Hero = ({ t }) => {
             />
           </Plx>
         </div>
+        <div className="IndexPage__hero__overlay"></div>
       </div>
     </div>
   );
