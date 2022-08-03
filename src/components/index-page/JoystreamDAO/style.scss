@@ -55,12 +55,12 @@
     &__illustration {
       position: relative;
       height: 440px;
-      // overflow: hidden;
 
       &__background {
         position: absolute;
         right: 0;
         height: 360px;
+        box-shadow: 0 0 18px rgba(3, 0, 65, .1), 0 0 4.02054px rgba(3, 0, 65, .0596107), 0 0 1.19702px rgba(3, 0, 65, .0403893);
       }
 
       &__foreground {
@@ -68,6 +68,7 @@
         bottom: 35px;
         left: 15px;
         width: 633px;
+        box-shadow: 0 0 18px rgba(3, 0, 65, .1), 0 0 4.02054px rgba(3, 0, 65, .0596107), 0 0 1.19702px rgba(3, 0, 65, .0403893);
       }
     }
   }
