@@ -75,7 +75,7 @@
     border-left: 4px solid $c_blue-ribbon;
 
     &__content {
-      max-width: 558px;
+      max-width: 500px;
 
       &__logos {
         display: flex;
@@ -89,7 +89,7 @@
       }
 
       &__title {
-        @extend %h6;
+        @include h6;
 
         margin-top: 24px;
         color: $c_white;
@@ -104,6 +104,55 @@
 
     &__link-text {
       @extend %landing-page-button-text;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__payouts-cta {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__payouts-cta {
+      padding: 0 32px;
+    }
+  }
+
+  @media (max-width: 870px) {
+    &__payouts-cta {
+      align-items: unset;
+      flex-direction: column;
+      justify-content: center;
+      height: 380px;
+      background-image: url('../../../assets/svg/landing/payouts-cta-background-mobile.svg');
+      background-position: right 0;
+      background-repeat: no-repeat;
+
+      &__content {
+        &__title {
+          @include h7;
+        }
+      }
+
+      &__link {
+        width: 271px;
+        height: 48px;
+        margin-top: 32px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__payouts-cta {
+      &__content {
+        &__title {
+          & > br {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
