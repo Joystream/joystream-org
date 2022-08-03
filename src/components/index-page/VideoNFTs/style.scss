@@ -17,7 +17,6 @@
 
     &__illustration {
       position: relative;
-      overflow: hidden;
 
       &__foreground {
         position: absolute;
@@ -26,7 +25,7 @@
 
       &__popup {
         position: absolute;
-        right: 70px;
+        right: 100px;
         bottom: -50px;
       }
     }

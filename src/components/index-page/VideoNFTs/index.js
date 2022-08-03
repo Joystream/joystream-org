@@ -18,7 +18,7 @@ const parallaxDataForeground = [
         startValue: -315,
         endValue: -392,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
   },
@@ -31,7 +31,7 @@ const parallaxDataForeground = [
         startValue: -392,
         endValue: -392,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
   },
@@ -44,10 +44,10 @@ const parallaxDataForeground = [
         startValue: -392,
         endValue: -500,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
-  }
+  },
 ];
 
 const parallaxDataPopup = [
@@ -58,9 +58,9 @@ const parallaxDataPopup = [
     properties: [
       {
         startValue: 250,
-        endValue: 20,
+        endValue: -25,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
   },
@@ -70,10 +70,10 @@ const parallaxDataPopup = [
     easing: 'easeIn',
     properties: [
       {
-        startValue: 20,
-        endValue: 20,
+        startValue: -25,
+        endValue: -25,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
   },
@@ -83,13 +83,13 @@ const parallaxDataPopup = [
     easing: 'easeIn',
     properties: [
       {
-        startValue: 20,
+        startValue: -25,
         endValue: -125,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
-  }
+  },
 ];
 
 const VideoNFTs = ({ t }) => {
@@ -118,22 +118,22 @@ const VideoNFTs = ({ t }) => {
           </Plx>
         </div>
         <section className="IndexPage__video-nfts__content">
-          <h3 className="IndexPage__video-nfts__content__section-title">VIDEO NFTs</h3>
+          <h3 className="IndexPage__video-nfts__content__section-title">VIDEO NFTS</h3>
           <h2 className="IndexPage__video-nfts__content__title">Monetise your videos with NFT sales and royalties</h2>
           <p className="IndexPage__video-nfts__content__subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet rhoncus iaculis viverra nunc gravida a
-            egestas. Urna pellentesque laoreet facilisis pharetra at arcu vitae.
+            Turn your videos into NFTs and put them up for sale. Choose between fixed price, open auction, and timed
+            auction. Define royalties to get a cut every time your NFT gets sold again.
           </p>
         </section>
       </div>
       <div className="IndexPage__video-nfts-cta">
         <p className="IndexPage__video-nfts-cta__title">
-          “This should be the greatest time <br/> in history for creative people. And I think we might have finally figured it
-          out.”
+          “This should be the greatest time <br /> in history for creative people. And I think we might have finally
+          figured it out.”
         </p>
-        <p className='IndexPage__video-nfts-cta__about'>Chris Dixon, entrepreneur and investor</p>
-        <p className='IndexPage__video-nfts-cta__podcast'>The Tim Ferris Show podcast, episode #542</p>
-        <ArrowButton 
+        <p className="IndexPage__video-nfts-cta__about">Chris Dixon, entrepreneur and investor</p>
+        <p className="IndexPage__video-nfts-cta__podcast">The Tim Ferris Show podcast, episode #542</p>
+        <ArrowButton
           className="IndexPage__video-nfts-cta__button"
           text="Claim your channel"
           textClassname="IndexPage__video-nfts-cta__button-text"
