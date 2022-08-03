@@ -21,6 +21,7 @@ const MainnetBanner = () => (
         <Arrow className="Banner__read-more__arrow"/>
       </a>
     </div>
+    <div className='Banner-overlay'></div>
   </div>
 );
 
