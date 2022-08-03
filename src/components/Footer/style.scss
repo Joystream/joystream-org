@@ -6,10 +6,10 @@
   flex-direction: column;
   padding: 100px 20px 120px;
   background-color: $c_black;
-  background-image: url('../../assets/background/footer-bottom.svg');
+  background-image: url('../../assets/background/footer-bottom-secondary.svg');
   background-position: bottom center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: auto 30px;
 
   &__form-wrapper {
     display: flex;
@@ -61,12 +61,18 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
+    gap: 90px;
   }
 
   &__section {
     padding: 0 10px 50px;
     font-size: 14px;
     line-height: 1.2;
+
+    &--socials {
+      margin-right: 55px;
+      margin-left: auto;
+    }
   }
 
   &__section-title {
@@ -122,16 +128,39 @@
     }
   }
 
+  @media #{$screen-max-lg} {
+    &__layout {
+      padding-left: 96px;
+      gap: unset;
+    }
+
+    &__section {
+      &--socials {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__layout {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    &__section {
+      margin-left: unset;
+    }
+  }
+
   @media #{$screen-sm} {
     padding: 120px 0 100px;
-    background-image: url('../../assets/background/footer-bottom-secondary.svg');
     background-position: bottom left;
     background-repeat: repeat-x;
-    background-size: auto 30px;
 
     &__layout {
       width: 100%;
-      gap: 90px;
     }
 
     &__socials {
@@ -141,11 +170,6 @@
 
     &__section {
       width: 220px;
-
-      &--socials {
-        margin-right: 125px;
-        margin-left: auto;
-      }
     }
 
     &__section-title {
@@ -155,6 +179,7 @@
 
   @media (max-width: 550px) {
     padding-top: 80px;
+    padding-bottom: 40px;
 
     &__form {
       flex-direction: column;
@@ -168,6 +193,11 @@
         width: auto;
         margin-top: 12px;
       }
+    }
+
+    &__layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
