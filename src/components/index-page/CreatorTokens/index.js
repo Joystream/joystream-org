@@ -18,10 +18,10 @@ const parallaxDataForeground = [
     easing: 'easeIn',
     properties: [
       {
-        startValue: 250,
+        startValue: 280,
         endValue: 0,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
   },
@@ -33,7 +33,7 @@ const parallaxDataForeground = [
         startValue: 0,
         endValue: 0,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
   },
@@ -46,12 +46,11 @@ const parallaxDataForeground = [
         startValue: 0,
         endValue: -125,
         property: 'translateY',
-        unit: "px"
+        unit: 'px',
       },
     ],
-  }
+  },
 ];
-
 
 const CreatorTokens = ({ t }) => {
   return (
@@ -64,14 +63,14 @@ const CreatorTokens = ({ t }) => {
             New ways to engage and <br /> get support from your audience
           </h2>
           <p className="IndexPage__creator-tokens__hero__subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet rhoncus iaculis viverra nunc gravida a
-            egestas. Urna pellentesque laoreet facilisis pharetra at arcu vitae.
+            Turn viewers into evengelists [?] by letting them hold a share in your channel when they buy your own
+            channel token.
           </p>
           <a href="#0" target="_blank" className="IndexPage__creator-tokens__hero__link">
             Sign up for beta tests
             <ArrowIcon className="IndexPage__creator-tokens__hero__link__arrow" />
           </a>
-          <div className='IndexPage__creator-tokens__hero__illustration'>
+          <div className="IndexPage__creator-tokens__hero__illustration">
             <img
               src={CreatorTokensBackground}
               className="IndexPage__creator-tokens__hero__illustration__background"
@@ -85,6 +84,7 @@ const CreatorTokens = ({ t }) => {
               />
             </Plx>
           </div>
+          <div className="IndexPage__creator-tokens__hero__overlay"></div>
         </div>
         <div className="IndexPage__creator-tokens__fundraising">
           <div className="IndexPage__creator-tokens__fundraising__illustration">
@@ -100,8 +100,8 @@ const CreatorTokens = ({ t }) => {
               Put your token sale on autopilot <br /> or sell it on your own terms
             </h4>
             <p className="IndexPage__creator-tokens__fundraising__content__subtitle">
-              [Not only do we offer AMM, but there’s also the manual sale option, which gives you more control over how
-              you want to sell your token]
+              Have your token supply follow the demand effortlessly with the Automated Market Maker, or go with Custom
+              Sale to decide on the exact terms you want your token to be traded on.
             </p>
           </div>
         </div>
@@ -109,11 +109,11 @@ const CreatorTokens = ({ t }) => {
           <div className="IndexPage__creator-tokens__stable-income__content">
             <h5 className="IndexPage__creator-tokens__stable-income__content__section-title">STABLE INCOME</h5>
             <h4 className="IndexPage__creator-tokens__stable-income__content__title">
-              Invest in other creators <br /> and receive regular payouts
+              Receive stable stream of tokens every year
             </h4>
             <p className="IndexPage__creator-tokens__stable-income__content__subtitle">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet rhoncus iaculis viverra nunc gravida a
-              egestas. Urna pellentesque laoreet facilisis pharetra at arcu vitae.
+              Have your token supply follow the demand effortlessly with the Automated Market Maker, or go with Custom
+              Sale to decide on the exact terms you want your token to be traded on.
             </p>
           </div>
           <div className="IndexPage__creator-tokens__stable-income__illustration">
@@ -142,8 +142,9 @@ const CreatorTokens = ({ t }) => {
               No to monkey business.
             </h4>
             <p className="IndexPage__creator-tokens__secure-listing__content__subtitle">
-              [Mention that Joystream takes active efforts to implement mechanisms protecting token owners from scams
-              and malicious investors]
+              Flexible vesting schedule allows you to specify at what rate the newly purchased tokens should be
+              unlocked. Paired with abilityto run whitelist-only sales, it provides everything you need to feel safe
+              about your investments.
             </p>
           </div>
         </div>
@@ -152,10 +153,12 @@ const CreatorTokens = ({ t }) => {
             <h5 className="IndexPage__creator-tokens__share-upside__content__section-title">
               SHARE UPSIDE WITH THE COMMUNITY
             </h5>
-            <h4 className="IndexPage__creator-tokens__share-upside__content__title">[Revenue split feature]</h4>
+            <h4 className="IndexPage__creator-tokens__share-upside__content__title">
+              Invest in other creators to receive <br /> a portion of their revenue
+            </h4>
             <p className="IndexPage__creator-tokens__share-upside__content__subtitle">
-              [this explains one reason why community will be interested. Here you can also talk about how they become a
-              stakeholder that can get more aligned with helping you grow]
+              Support other creators and receive a portion of their revenue, or reward your audience by sharing some of
+              your channel’s earnings with them.
             </p>
           </div>
           <div className="IndexPage__creator-tokens__share-upside__illustration">
