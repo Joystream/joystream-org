@@ -137,9 +137,7 @@ const CreatorTokens = ({ t }) => {
           <div className="IndexPage__creator-tokens__secure-listing__content">
             <h5 className="IndexPage__creator-tokens__secure-listing__content__section-title">SECURE LISTING</h5>
             <h4 className="IndexPage__creator-tokens__secure-listing__content__title">
-              Yes to whitelists & vesting schedules.
-              <br />
-              No to monkey business.
+              Yes to whitelists & vesting schedules.<br /> No to monkey business.
             </h4>
             <p className="IndexPage__creator-tokens__secure-listing__content__subtitle">
               Flexible vesting schedule allows you to specify at what rate the newly purchased tokens should be

@@ -120,7 +120,7 @@
         }
 
         &__title {
-          @extend %h6;
+          @include h6;
 
           margin-top: 4px;
           color: $c_white;
@@ -170,18 +170,11 @@
       &__illustration {
         display: flex;
         justify-content: center;
-
-        &__image {
-          width: 712px;
-          height: 360px;
-        }
       }
     }
 
     &__secure-listing {
       display: grid;
-      height: 360px;
-      max-height: 360px;
       margin-top: 96px;
       gap: 30px;
       grid-template-columns: auto 500px;
@@ -254,6 +247,132 @@
       &__illustration {
         display: flex;
         justify-content: center;
+      }
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__creator-tokens {
+      &__fundraising,
+      &__stable-income,
+      &__secure-listing,
+      &__share-upside {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  @media (max-width: 1050px) {
+    &__creator-tokens {
+      &__fundraising {
+        grid-template-columns: 450px auto;
+
+        &__illustration {
+          & > img {
+            height: 227px;
+          }
+        }
+      }
+
+      &__stable-income {
+        grid-template-columns: auto 450px;
+      }
+
+      &__secure-listing {
+        grid-template-columns: 450px auto;
+      }
+
+      &__share-upside {
+        grid-template-columns: auto 450px;
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__creator-tokens {
+      &__fundraising,
+      &__stable-income,
+      &__secure-listing,
+      &__share-upside {
+        gap: 15px;
+
+        &__content {
+          &__title {
+            @include h7;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    &__creator-tokens {
+      &__fundraising,
+      &__secure-listing {
+        &__content {
+          &__title {
+            & > br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__creator-tokens {
+      &__fundraising,
+      &__stable-income,
+      &__secure-listing,
+      &__share-upside {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 32px;
+
+        &__content {
+          max-width: 450px;
+
+          &__title {
+            & > br {
+              display: none;
+            }
+          }
+        }
+
+        &__illustration {
+          & > img {
+            height: unset;
+            max-width: 450px;
+          }
+        }
+      }
+
+      &__stable-income,
+      &__share-upside,
+      &__secure-listing {
+        margin-top: 64px;
+      }
+
+      &__stable-income,
+      &__share-upside {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  @media (max-width: 475px) {
+    &__creator-tokens {
+      &__fundraising,
+      &__stable-income,
+      &__secure-listing,
+      &__share-upside {
+        &__illustration {
+          & > img {
+            max-width: 100%;
+          }
+        }
       }
     }
   }
