@@ -141,7 +141,7 @@ const CreatorTokens = ({ t }) => {
             </h4>
             <p className="IndexPage__creator-tokens__secure-listing__content__subtitle">
               Flexible vesting schedule allows you to specify at what rate the newly purchased tokens should be
-              unlocked. Paired with abilityto run whitelist-only sales, it provides everything you need to feel safe
+              unlocked. Paired with ability to run whitelist-only sales, it provides everything you need to feel safe
               about your investments.
             </p>
           </div>

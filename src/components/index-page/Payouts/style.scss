@@ -73,6 +73,7 @@
     background-position: right 0;
     background-repeat: no-repeat;
     border-left: 4px solid $c_blue-ribbon;
+    box-shadow: 0 8px 32px 0 rgba(26, 26, 26, .24);
 
     &__content {
       max-width: 500px;
