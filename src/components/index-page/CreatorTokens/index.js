@@ -58,7 +58,7 @@ const CreatorTokens = ({ t }) => {
       <div className="IndexPage__creator-tokens">
         <div className="IndexPage__creator-tokens__hero">
           <div className="IndexPage__creator-tokens__hero__coming-soon">Coming early 2023</div>
-          <h3 className="IndexPage__creator-tokens__hero__section-title">Creator tokens</h3>
+          <h3 className="IndexPage__creator-tokens__hero__section-title">CREATOR TOKENS</h3>
           <h2 className="IndexPage__creator-tokens__hero__title">
             New ways to engage and <br /> get support from your audience
           </h2>
