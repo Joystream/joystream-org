@@ -38,7 +38,7 @@ const IndexPage = () => {
 
       <CreatorTokens t={t}/>
 
-      <YoutubeSync t={t}/>
+      {/* <YoutubeSync t={t}/> */}
 
       <WhatWeDo t={t}/>
 
