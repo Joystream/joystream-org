@@ -15,7 +15,7 @@ const parallaxDataForeground = [
     easing: 'easeIn',
     properties: [
       {
-        startValue: -315,
+        startValue: -292,
         endValue: -392,
         property: 'translateY',
         unit: 'px',
@@ -37,12 +37,12 @@ const parallaxDataForeground = [
   },
   {
     start: 2400,
-    end: 3000,
+    end: 3300,
     easing: 'easeIn',
     properties: [
       {
         startValue: -392,
-        endValue: -500,
+        endValue: -470,
         property: 'translateY',
         unit: 'px',
       },
@@ -57,7 +57,7 @@ const parallaxDataPopup = [
     easing: 'easeIn',
     properties: [
       {
-        startValue: 250,
+        startValue: 300,
         endValue: -25,
         property: 'translateY',
         unit: 'px',
@@ -79,12 +79,12 @@ const parallaxDataPopup = [
   },
   {
     start: 2400,
-    end: 3000,
+    end: 3300,
     easing: 'easeIn',
     properties: [
       {
         startValue: -25,
-        endValue: -125,
+        endValue: -95,
         property: 'translateY',
         unit: 'px',
       },

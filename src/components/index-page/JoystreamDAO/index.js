@@ -9,6 +9,20 @@ import './style.scss';
 
 const joystreamDaoForeground = [
   {
+    start: 0,
+    end: '.IndexPage__joystream-dao__illustration',
+    endOffset: 0,
+    easing: 'easeIn',
+    properties: [
+      {
+        startValue: 510,
+        endValue: 510,
+        property: 'translateY',
+        unit: 'px',
+      },
+    ],
+  },
+  {
     start: '.IndexPage__joystream-dao__illustration',
     startOffset: 0,
     end: '.IndexPage__joystream-dao__illustration',

@@ -14,7 +14,7 @@ import './style.scss';
 const parallaxDataForeground = [
   {
     start: 0,
-    end: 3500,
+    end: 3700,
     easing: 'easeIn',
     properties: [
       {
@@ -26,8 +26,8 @@ const parallaxDataForeground = [
     ],
   },
   {
-    start: 3500,
-    end: 3800,
+    start: 3700,
+    end: 4100,
     properties: [
       {
         startValue: 0,
@@ -38,8 +38,8 @@ const parallaxDataForeground = [
     ],
   },
   {
-    start: 3800,
-    end: 4400,
+    start: 4100,
+    end: 4800,
     easing: 'easeIn',
     properties: [
       {

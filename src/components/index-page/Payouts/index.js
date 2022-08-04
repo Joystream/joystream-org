@@ -14,7 +14,7 @@ import './style.scss';
 const parallaxDataBackground = [
   {
     start: 0,
-    end: 1000,
+    end: 1400,
     easing: 'easeInOut',
     properties: [
       {
@@ -26,8 +26,8 @@ const parallaxDataBackground = [
     ],
   },
   {
-    start: 1000,
-    end: 1300,
+    start: 1400,
+    end: 1700,
     properties: [
       {
         startValue: 0,
@@ -38,13 +38,13 @@ const parallaxDataBackground = [
     ],
   },
   {
-    start: 1300,
-    end: 1800,
+    start: 1700,
+    end: 2200,
     easing: 'easeInOut',
     properties: [
       {
         startValue: 0,
-        endValue: -150,
+        endValue: -50,
         property: 'translateY',
         unit: 'px',
       },
@@ -55,7 +55,7 @@ const parallaxDataBackground = [
 const parallaxDataForeground = [
   {
     start: 0,
-    end: 1000,
+    end: 1400,
     easing: 'easeInOut',
     properties: [
       {
@@ -67,8 +67,8 @@ const parallaxDataForeground = [
     ],
   },
   {
-    start: 1000,
-    end: 1300,
+    start: 1400,
+    end: 1700,
     properties: [
       {
         startValue: 280,
@@ -79,8 +79,8 @@ const parallaxDataForeground = [
     ],
   },
   {
-    start: 1300,
-    end: 1800,
+    start: 1700,
+    end: 2200,
     easing: 'easeInOut',
     properties: [
       {
