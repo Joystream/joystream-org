@@ -104,12 +104,78 @@
   }
 
   @media #{$screen-max-lg} {
+    &__video-nfts {
+      grid-template-columns: 500px auto;
+
+      &__illustration {
+        &__background {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        &__foreground {
+          bottom: -732px;
+          left: 74px;
+          width: 235px;
+        }
+
+        &__popup {
+          right: 20px;
+          bottom: -445px;
+        }
+      }
+    }
+
     &__video-nfts-cta {
       background-position: bottom 0 left -70px;
     }
   }
 
   @media #{$screen-max-md} {
+    &__video-nfts {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+
+      &__illustration {
+        width: 100%;
+        height: 290px;
+
+        &__background {
+          top: unset;
+          right: 0;
+          bottom: unset;
+          left: 0;
+          height: 100%;
+          margin: auto;
+        }
+
+        &__foreground {
+          top: unset;
+          right: 115px;
+          bottom: unset;
+          left: 0;
+          margin: auto;
+        }
+
+        &__popup {
+          top: 175px;
+          right: 0;
+          bottom: unset;
+          left: 205px;
+          width: 160px;
+          margin: auto;
+        }
+      }
+
+      &__content {
+        margin-top: 50px;
+        padding: 0 22px;
+      }
+    }
+
     &__video-nfts-cta {
       background: none;
 
@@ -119,10 +185,54 @@
     }
   }
 
-  @media #{$screen-max-md} {
+  @media #{$screen-max-sm} {
+    &__video-nfts-wrapper {
+      padding-top: 80px;
+    }
+
+    &__video-nfts {
+      &__content {
+        padding: 0 10px;
+
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+    }
+
     &__video-nfts-cta {
+      margin-top: 64px;
+      padding-bottom: 80px;
+
       &__title {
         @include h4;
+      }
+    }
+  }
+
+  @media (max-width: 525px) {
+    &__video-nfts {
+      &__illustration {
+        height: 194px;
+
+        &__foreground {
+          right: 76px;
+          width: 155px;
+        }
+
+        &__popup {
+          top: 120px;
+          left: 130px;
+          width: 100px;
+        }
+      }
+
+      &__content {
+        margin-top: 32px;
       }
     }
   }
