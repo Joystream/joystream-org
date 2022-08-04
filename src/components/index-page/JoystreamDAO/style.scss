@@ -22,14 +22,14 @@
       }
 
       &__title {
-        @extend %h3;
+        @include h3;
 
         margin-top: 4px;
         color: $c_black;
       }
 
       &__subtitle {
-        @extend %base-1;
+        @include base-1;
 
         margin-top: 16px;
         margin-bottom: 32px;
@@ -59,7 +59,8 @@
       &__background {
         position: absolute;
         right: 0;
-        height: 360px;
+        bottom: 18%;
+        width: 86%;
         box-shadow: 0 0 18px rgba(3, 0, 65, .1), 0 0 4.02054px rgba(3, 0, 65, .0596107), 0 0 1.19702px rgba(3, 0, 65, .0403893);
       }
 
@@ -67,8 +68,133 @@
         position: absolute;
         bottom: 35px;
         left: 15px;
-        width: 633px;
+        width: 95%;
         box-shadow: 0 0 18px rgba(3, 0, 65, .1), 0 0 4.02054px rgba(3, 0, 65, .0596107), 0 0 1.19702px rgba(3, 0, 65, .0403893);
+      }
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__joystream-dao {
+      display: flex;
+      flex-direction: column-reverse;
+
+      &__content {
+        &__title {
+          & > br {
+            display: none;
+          }
+        }
+      }
+
+      &__illustration {
+        width: 700px;
+        margin: 0 auto;
+
+        &__background {
+          width: auto;
+        }
+
+        &__foreground {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__joystream-dao {
+      &__content {
+        padding: 0 22px;
+      }
+
+      &__illustration {
+        &__foreground {
+          bottom: -410px;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__joystream-wrapper {
+      padding: 80px 0;
+    }
+
+    &__joystream-dao {
+      &__content {
+        padding: 0 10px;
+
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+
+      &__illustration {
+        width: 90%;
+
+        &__background {
+          bottom: 10%;
+          width: 95%;
+        }
+
+        &__foreground {
+          bottom: -440px;
+          left: 0;
+          width: 86%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__joystream-dao {
+      &__illustration {
+        height: 380px;
+
+        &__foreground {
+          bottom: -380px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__joystream-dao {
+      &__illustration {
+        height: 310px;
+
+        &__foreground {
+          bottom: -310px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 440px) {
+    &__joystream-dao {
+      &__illustration {
+        height: 250px;
+
+        &__foreground {
+          bottom: -250px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 380px) {
+    &__joystream-dao {
+      &__illustration {
+        height: 200px;
+
+        &__foreground {
+          bottom: -200px;
+        }
       }
     }
   }

@@ -9,12 +9,14 @@ import './style.scss';
 
 const joystreamDaoForeground = [
   {
-    start: 0,
-    end: 9700,
+    start: '.IndexPage__joystream-dao__illustration',
+    startOffset: 0,
+    end: '.IndexPage__joystream-dao__illustration',
+    endOffset: 600,
     easing: 'easeIn',
     properties: [
       {
-        startValue: 750,
+        startValue: 510,
         endValue: 445,
         property: 'translateY',
         unit: 'px',
@@ -22,8 +24,11 @@ const joystreamDaoForeground = [
     ],
   },
   {
-    start: 9700,
-    end: 10200,
+    start: '.IndexPage__joystream-dao__illustration',
+    startOffset: 600,
+    end: '.IndexPage__joystream-dao__illustration',
+    endOffset: 1000,
+    easing: 'easeIn',
     properties: [
       {
         startValue: 445,
@@ -34,8 +39,10 @@ const joystreamDaoForeground = [
     ],
   },
   {
-    start: 10200,
-    end: 10400,
+    start: '.IndexPage__joystream-dao__illustration',
+    startOffset: 1000,
+    end: '.IndexPage__joystream-dao__illustration',
+    endOffset: 1500,
     easing: 'easeIn',
     properties: [
       {
@@ -55,9 +62,7 @@ const JoystreamDAO = () => {
         <div className="IndexPage__joystream-dao__content">
           <h3 className="IndexPage__joystream-dao__content__section-title">JOYSTREAM DAO</h3>
           <h2 className="IndexPage__joystream-dao__content__title">
-            Have a hand in shaping the future of Joystream.
-            <br />
-            Join our DAO.
+            Have a hand in shaping the future of Joystream.<br /> Join our DAO.
           </h2>
           <p className="IndexPage__joystream-dao__content__subtitle">
             Pioneer is the place to participate in community governance and operation. Vote on elections, submit
