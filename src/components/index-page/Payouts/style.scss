@@ -28,14 +28,14 @@
       }
 
       &__title {
-        @extend %h3;
+        @include h3;
 
         margin-top: 4px;
         color: $c_white;
       }
 
       &__subtitle {
-        @extend %base-1;
+        @include base-1;
 
         margin-top: 16px;
         color: #a7aeb7;
@@ -114,7 +114,63 @@
     }
   }
 
+  @media #{$screen-max-lg} {
+    &__payouts {
+      height: 400px;
+      min-height: 400px;
+      grid-template-columns: auto 500px;
+
+      &__illustration {
+        height: 400px;
+        min-height: 400px;
+
+        &__background {
+          width: 400px;
+        }
+
+        &__foreground {
+          bottom: -50px;
+          width: 250px;
+        }
+      }
+    }
+  }
+
   @media #{$screen-max-md} {
+    &__payouts {
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+      min-height: auto;
+      gap: 32px;
+
+      &__illustration {
+        height: 400px;
+        min-height: 400px;
+        padding: 0 22px;
+
+        &__background {
+          top: 0;
+          right: 0;
+          left: 0;
+          width: 500px;
+          margin: auto;
+        }
+
+        &__foreground {
+          top: 480px;
+          right: 300px;
+          left: 0;
+          width: 270px;
+          margin: auto;
+        }
+      }
+
+      &__content {
+        padding: 0 22px;
+      }
+    }
+
     &__payouts-cta {
       padding: 0 32px;
     }
@@ -144,7 +200,68 @@
     }
   }
 
+  @media #{$screen-max-sm} {
+    &__payouts-wrapper {
+      padding: 86px 0;
+    }
+
+    &__payouts {
+      &__illustration {
+        padding: 0 10px;
+      }
+
+      &__content {
+        padding: 0 10px;
+
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__payouts {
+      &__illustration {
+        height: 300px;
+        min-height: 300px;
+
+        &__background {
+          top: 0;
+          width: 380px;
+        }
+
+        &__foreground {
+          top: 340px;
+          width: 180px;
+        }
+      }
+    }
+  }
+
   @media (max-width: 500px) {
+    &__payouts {
+      &__illustration {
+        height: 200px;
+        min-height: 200px;
+
+        &__background {
+          top: 0;
+          width: 271px;
+        }
+
+        &__foreground {
+          top: 240px;
+          right: 180px;
+          width: 140px;
+        }
+      }
+    }
+
     &__payouts-cta {
       &__content {
         &__title {
