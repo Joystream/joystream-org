@@ -1,5 +1,5 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { node, bool } from 'prop-types';
 
 import Navbar from '../../Navbar';
 import Footer from '../../Footer';
@@ -8,20 +8,21 @@ import { ScrollProvider } from '../../_enhancers/ScrollContext';
 
 const propTypes = {
   children: node,
+  primer: bool
 };
 
 const defaultTypes = {
   children: null,
 };
 
-const BaseLayout = ({ children, t }) => {
+const BaseLayout = ({ children, t, primer }) => {
   return (
     <ScrollProvider>
       <div>
-        <Navbar t={t}/>
+        <Navbar t={t} primer={primer} />
         {children}
         <CookiesNotice t={t}/>
-        <Footer t={t}/>
+        <Footer t={t} primer={primer}/>
       </div>
     </ScrollProvider>
   );
