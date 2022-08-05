@@ -65,6 +65,7 @@
     "react-player": "^2.6.0",
     "react-plx": "^2.0.1",
     "react-responsive": "^9.0.0-beta.6",
+    "react-slick": "^0.29.0",
     "react-spring": "^8.0.27",
     "react-waypoint": "^10.1.0",
     "recharts": "^2.0.9",

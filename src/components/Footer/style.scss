@@ -1,5 +1,20 @@
 @import '../../styles/main.scss';
 
+.slick-list,
+.slick-track,
+.slick-slide div {
+  height: 80px !important;
+}
+
+.slick-slide {
+  width: 182px !important;
+  margin: 0 24px !important;
+
+  @media #{$screen-max-sm} {
+    margin: 0 5px !important;
+  }
+}
+
 .Footer {
   display: flex;
   align-items: center;
@@ -23,7 +38,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin: 24px 0 120px 0;
+    margin: 24px 0 96px 0;
 
     &__title {
       margin-bottom: 5px;

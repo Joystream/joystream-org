@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from '../Button';
 import Link from '../Link';
 import Input from '../Input';
+import OurInvestors from './OurInvestors';
 
 import { joystreamLinks, githubLinks, usefulLinks, socialMedias } from './data';
 
@@ -55,6 +56,7 @@ const Footer = ({ t }) => {
           </Button>
         </form>
       </div>
+      <OurInvestors t={t}/>
       <div className="Footer__layout">
         <FooterSection
           title={t('joystream')}
