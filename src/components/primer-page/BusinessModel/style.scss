@@ -1,0 +1,453 @@
+@import '../../../styles/main';
+
+.PrimerPage {
+  &__business-model-wrapper {
+    background-color: $c_blue-ribbon;
+  }
+
+  &__business-model {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 40px;
+    background: url('../../../assets/svg/primer/backgrounds/capture-value-desktop.svg'), url('../../../assets/svg/primer/backgrounds/gateways-desktop.svg'), url('../../../assets/svg/primer/backgrounds/minting-selling-nfts-desktop.svg'), url('../../../assets/svg/primer/backgrounds/selling-creator-tokens-desktop.svg');
+    background-position: left 30px top -30px, right 120px top 547px, left 85px top 1025px, right 103px top 1457px;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+
+    &__capture-value {
+      display: flex;
+      flex-direction: row;
+      gap: 120px;
+
+      &__section-title {
+        font-family: $font-secondary;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: .04em;
+        color: $c_white;
+        text-align: left;
+      }
+
+      &__title {
+        max-width: 450px;
+        margin-top: 24px;
+        font-family: $font-primary;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 56px;
+        letter-spacing: 0;
+        color: $c_white;
+        text-align: left;
+      }
+
+      &__text {
+        max-width: 615px;
+        margin-top: 24px;
+        font-family: $font-secondary;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0;
+        color: $c_white;
+        text-align: left;
+      }
+    }
+
+    &__gateways {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 120px;
+      gap: 216px;
+
+      &__title {
+        font-family: $font-primary;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0;
+        color: $c_white;
+        text-align: left;
+      }
+
+      &__text {
+        max-width: 510px;
+        margin-top: 20px;
+        font-family: $font-secondary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_white;
+        text-align: left;
+      }
+    }
+
+    &__minting-selling-nfts {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 90px;
+      gap: 136px;
+
+      &__title {
+        font-family: $font-primary;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0;
+        color: $c_white;
+        text-align: left;
+      }
+
+      &__text {
+        max-width: 520px;
+        margin-top: 20px;
+        font-family: $font-secondary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_white;
+        text-align: left;
+      }
+    }
+
+    &__selling-creator-tokens {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 180px;
+      gap: 206px;
+
+      &__title {
+        font-family: $font-primary;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0;
+        color: $c_white;
+        text-align: left;
+      }
+
+      &__text {
+        max-width: 520px;
+        margin-top: 20px;
+        font-family: $font-secondary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: $c_white;
+        text-align: left;
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    &__business-model {
+      background-position: left 30px top -30px, right 120px top 605px, left 85px top 1025px, right 103px top 1457px;
+    }
+  }
+
+  @media (max-width: 1015px) {
+    &__business-model {
+      background-position: left 30px top -30px, right 120px top 605px, left 85px top 1095px, right 103px top 1537px;
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__business-model {
+      background-position: left -10px top -30px, right 90px top 515px, left 75px top 945px, right 45px top 1245px;
+      background-size: 450px, 250px, 350px, 345px;
+
+      &__capture-value {
+        gap: 80px;
+
+        &__title {
+          font-size: 38px;
+          line-height: 45px;
+          letter-spacing: 0;
+        }
+
+        &__text {
+          font-size: 22px;
+          line-height: 32px;
+          letter-spacing: 0;
+        }
+
+        &__image {
+          & > svg {
+            transform: scale(.92);
+          }
+        }
+      }
+
+      &__gateways {
+        margin-top: 60px;
+        gap: 60px;
+
+        &__title {
+          font-size: 28px;
+          line-height: 36px;
+          letter-spacing: -.005em;
+        }
+
+        &__text {
+          font-size: 18px;
+          line-height: 26px;
+          letter-spacing: -.005em;
+        }
+
+        &__image {
+          & > svg {
+            transform: scale(.87);
+          }
+        }
+      }
+
+      &__minting-selling-nfts {
+        margin-top: 45px;
+        gap: 60px;
+
+        &__title {
+          font-size: 28px;
+          line-height: 36px;
+          letter-spacing: -.005em;
+        }
+
+        &__text {
+          font-size: 18px;
+          line-height: 26px;
+          letter-spacing: -.005em;
+        }
+
+        &__image {
+          & > svg {
+            transform: scale(.84);
+          }
+        }
+      }
+
+      &__selling-creator-tokens {
+        margin-top: 60px;
+        gap: 60px;
+
+        &__title {
+          font-size: 28px;
+          line-height: 36px;
+          letter-spacing: -.005em;
+        }
+
+        &__text {
+          font-size: 18px;
+          line-height: 26px;
+          letter-spacing: -.005em;
+        }
+
+        &__image {
+          & > svg {
+            transform: scale(.9);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__business-model {
+      background-position: left -10px top -30px, right 90px top 535px, left 75px top 945px, right 45px top 1245px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    &__business-model {
+      background-position: left -10px top -30px, right 90px top 585px, left 75px top 985px, right 45px top 1295px;
+    }
+  }
+
+  @media (max-width: 825px) {
+    &__business-model {
+      background-position: left -10px top -30px, right 90px top 625px, left 75px top 1025px, right 45px top 1325px;
+    }
+  }
+
+  @media (max-width: 790px) {
+    &__business-model {
+      background-position: left -10px top -30px, right 90px top 625px, left 75px top 1075px, right 45px top 1415px;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__business-model {
+      padding: 56px 24px;
+      background: url('../../../assets/svg/primer/backgrounds/capture-value-mobile.svg'), url('../../../assets/svg/primer/backgrounds/gateways-mobile.svg'), url('../../../assets/svg/primer/backgrounds/minting-selling-nfts-mobile.svg'), url('../../../assets/svg/primer/backgrounds/selling-creator-tokens-mobile.svg');
+      background-position: center top 100px, center top 790px, center top 1300px, center top 1695px;
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+
+      &__capture-value {
+        flex-direction: column;
+        gap: 20px;
+
+        &__title {
+          margin-top: 16px;
+          font-size: 28px;
+          line-height: 34px;
+          letter-spacing: 0;
+        }
+
+        &__text {
+          max-width: unset;
+          margin-top: 16px;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: 0;
+        }
+
+        &__image {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          & > svg {
+            transform: scale(.85);
+          }
+        }
+      }
+
+      &__gateways {
+        flex-direction: column-reverse;
+        gap: 20px;
+
+        &__title {
+          font-size: 24px;
+          line-height: 32px;
+          letter-spacing: -.005em;
+        }
+
+        &__text {
+          max-width: unset;
+          margin-top: 16px;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -.005em;
+        }
+
+        &__image {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          & > svg {
+            transform: scale(.72);
+          }
+        }
+      }
+
+      &__minting-selling-nfts {
+        flex-direction: column;
+        gap: 20px;
+
+        &__title {
+          font-size: 24px;
+          line-height: 32px;
+          letter-spacing: -.005em;
+        }
+
+        &__text {
+          max-width: unset;
+          margin-top: 16px;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -.005em;
+        }
+
+        &__image {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          & > svg {
+            transform: scale(.68);
+          }
+        }
+      }
+
+      &__selling-creator-tokens {
+        flex-direction: column-reverse;
+        gap: 20px;
+
+        &__title {
+          font-size: 24px;
+          line-height: 32px;
+          letter-spacing: -.005em;
+        }
+
+        &__text {
+          max-width: unset;
+          margin-top: 16px;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -.005em;
+        }
+
+        &__image {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          & > svg {
+            transform: scale(.8);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 660px) {
+    &__business-model {
+      background-position: center top 100px, center top 830px, center top 1350px, center top 1775px;
+    }
+  }
+
+  @media (max-width: 570px) {
+    &__business-model {
+      background-position: center top 100px, center top 860px, center top 1400px, center top 1845px;
+    }
+  }
+
+  @media (max-width: 440px) {
+    &__business-model {
+      background-position: center top 100px, center top 880px, center top 1450px, center top 1895px;
+
+      &__minting-selling-nfts {
+        &__image {
+          width: 310px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    &__business-model {
+      &__gateways {
+        &__image {
+          width: 310px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 390px) {
+    &__business-model {
+      background-position: center top 100px, center top 920px, center top 1500px, center top 1935px;
+    }
+  }
+}
