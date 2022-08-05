@@ -1,15 +1,30 @@
 @import '../../styles/main.scss';
 
+.slick-list,
+.slick-track,
+.slick-slide div {
+  height: 80px !important;
+}
+
+.slick-slide {
+  width: 182px !important;
+  margin: 0 24px !important;
+
+  @media #{$screen-max-sm} {
+    margin: 0 5px !important;
+  }
+}
+
 .Footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 100px 20px 120px;
+  padding: 80px 0;
   background-color: $c_black;
-  background-image: url('../../assets/background/footer-bottom.svg');
+  background-image: url('../../assets/background/footer-bottom-secondary.svg');
   background-position: bottom center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: auto 30px;
 
   &__form-wrapper {
     display: flex;
@@ -23,10 +38,10 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin: 24px 0 120px 0;
+    margin: 24px 0 96px 0;
 
     &__title {
-      margin-bottom: 5px;
+      margin-bottom: 4px;
       font-family: $font-primary;
       font-size: 28px;
       line-height: 36px;
@@ -59,12 +74,11 @@
     @extend %container;
 
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -10px;
+    justify-content: space-between;
+    margin-top: 96px;
   }
 
   &__section {
-    flex: 1 0 50%;
     padding: 0 10px 50px;
     font-size: 14px;
     line-height: 1.2;
@@ -73,14 +87,28 @@
   &__section-title {
     display: block;
     margin-bottom: 20px;
-    font-family: $font-secondary;
-    font-weight: bold;
+    font-family: $font-primary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
     color: $c_white;
+    text-align: left;
+
+    &--socials {
+      margin-bottom: 0;
+    }
   }
 
   &__section-link {
     display: block;
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
     color: $c_grayc-chateau;
+    text-align: left;
 
     &:hover,
     &:active {
@@ -88,21 +116,16 @@
     }
 
     & + & {
-      margin-top: 14px;
+      margin-top: 12px;
     }
-  }
-
-  &__socials {
-    // display: flex;
-    // flex-direction: row;
   }
 
   &__social-link {
     display: flex;
     flex-direction: row;
     width: fit-content;
+    margin-top: 12px;
     margin-right: 24px;
-    margin-bottom: 20px;
   }
 
   &__social-name {
@@ -110,9 +133,11 @@
     margin-left: 12px;
     font-family: $font-secondary;
     font-size: 14px;
+    font-weight: 400;
     line-height: 20px;
-    letter-spacing: -.4000000059604645px;
+    letter-spacing: 0;
     color: #a7aeb7;
+    text-align: left;
 
     &:hover {
       color: $c_white;
@@ -121,19 +146,52 @@
 
   &__social-icon {
     width: 16px;
+    fill: #a7aeb7;
 
     &:hover,
     &:active {
       transform: scale(1.5);
+      fill: $c_white;
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__layout {
+      padding-left: 96px;
+      gap: unset;
+    }
+
+    &__section {
+      &--socials {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__form {
+      margin: 16px 0 80px 0;
+    }
+
+    &__layout {
+      display: grid;
+      width: 100%;
+      margin-top: 80px;
+      padding: 0 20px;
+      gap: 40px 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__section {
+      margin-left: unset;
+      padding: 0;
     }
   }
 
   @media #{$screen-sm} {
-    padding: 120px 0 100px;
-    background-image: url('../../assets/background/footer-bottom-secondary.svg');
+    padding: 96px 0;
     background-position: bottom left;
     background-repeat: repeat-x;
-    background-size: auto 30px;
 
     &__layout {
       width: 100%;
@@ -145,8 +203,7 @@
     }
 
     &__section {
-      flex: 1 0 25%;
-      width: 175px;
+      width: 220px;
     }
 
     &__section-title {
@@ -155,11 +212,14 @@
   }
 
   @media (max-width: 550px) {
-    padding-top: 80px;
+    padding: 80px 0;
 
     &__form {
       flex-direction: column;
-      margin-bottom: 80px;
+
+      &__subtitle {
+        max-width: 315px;
+      }
 
       &__input {
         width: auto;
@@ -169,6 +229,11 @@
         width: auto;
         margin-top: 12px;
       }
+    }
+
+    &__layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

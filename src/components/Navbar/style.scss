@@ -5,7 +5,7 @@
 
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 5;
   height: $navbar-height;
   background-color: $c_black;
   transition: top 400ms ease 0s;
@@ -87,9 +87,9 @@
     align-items: center;
     justify-content: space-between;
     width: 220px;
-    height: 60px;
+    height: 48px;
     margin: 0 32px 0 24px;
-    padding: 18px 20px;
+    padding: 12px 16px;
     background: $c_blue-ribbon;
 
     &:hover {
@@ -107,7 +107,7 @@
 
   &__button-arrow {
     color: white;
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) scale(.8);
   }
 
   &__expand-icon {
@@ -326,6 +326,7 @@
 
     &__button {
       width: 100%;
+      height: 60px;
       margin: 20px 36px;
       background-color: $c_black;
 
