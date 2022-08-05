@@ -3,6 +3,7 @@
 
 .IndexPage {
   &__hero-wrapper {
+    min-height: 1294px;
     padding: 96px 100px;
     overflow: hidden;
     background-color: black;
@@ -22,6 +23,9 @@
       max-width: 818px;
       color: $c_white;
       text-align: center;
+      opacity: 0;
+      animation: animateLandingContent .75s forwards ease;
+      animation-delay: .1s;
 
       span > div {
         display: inline-block;
@@ -47,6 +51,9 @@
       margin-top: 24px;
       color: #a7aeb7;
       text-align: center;
+      opacity: 0;
+      animation: animateLandingContent .75s forwards ease;
+      animation-delay: .1s;
     }
 
     &__button {
@@ -54,6 +61,9 @@
       height: 60px;
       margin-top: 48px;
       padding: 18px 15px !important;
+      opacity: 0;
+      animation: animateLandingContent .75s forwards ease;
+      animation-delay: .1s;
     }
 
     &__button-text {
@@ -65,19 +75,28 @@
       margin-top: 80px;
 
       &__background {
+        opacity: 0;
         filter: drop-shadow(0 33px 100px rgba(0, 0, 0, .22)) drop-shadow(0 7.37098px 22.3363px rgba(0, 0, 0, .131144)) drop-shadow(0 2.19453px 6.6501px rgba(0, 0, 0, .0888564));
+        animation: animateLandingHeroImage .75s forwards ease;
+        animation-delay: .3s;
       }
 
       &__foreground {
         position: absolute;
         top: 95px;
         right: -45px;
+        opacity: 0;
+        animation: animateLandingNftWidget .75s forwards ease;
+        animation-delay: .3s;
       }
 
       &__button {
         position: absolute;
         top: 400px;
         right: -21px;
+        opacity: 0;
+        animation: animateLandingButton 1s .75s forwards ease;
+        animation-delay: .3s;
       }
     }
 
@@ -92,6 +111,7 @@
 
   @media (max-width: 1420px) {
     &__hero-wrapper {
+      min-height: 1136.5px;
       padding: 96px 0;
     }
 
@@ -122,6 +142,7 @@
 
   @media #{$screen-max-md} {
     &__hero-wrapper {
+      min-height: unset;
       padding: 80px 0;
     }
 
@@ -133,6 +154,13 @@
 
       &__title {
         max-width: 700px;
+      }
+
+      &__title,
+      &__subtitle,
+      &__button {
+        opacity: 1;
+        animation: none;
       }
 
       &__illustration {
@@ -150,6 +178,13 @@
           top: -210px;
           right: 10px;
           width: 200px;
+        }
+
+        &__background,
+        &__foreground,
+        &__button {
+          opacity: 1;
+          animation: none;
         }
       }
 
@@ -265,5 +300,67 @@
   100% {
     display: block;
     opacity: 1;
+  }
+}
+
+// NEW LANDING PAGE TODO: Refactor this using scss!
+
+@keyframes animateLandingContent {
+  0% {
+    opacity: 0;
+    transform: translateY(125px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animateLandingHeroImage {
+  0% {
+    opacity: 0;
+    transform: translateY(125px);
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animateLandingNftWidget {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animateLandingButton {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
