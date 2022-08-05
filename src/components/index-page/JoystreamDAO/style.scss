@@ -96,11 +96,12 @@
         margin: 0 auto;
 
         &__background {
-          width: auto;
+          top: 0;
         }
 
         &__foreground {
-          width: auto;
+          bottom: 20px;
+          width: 88%;
         }
       }
     }
@@ -114,14 +115,14 @@
 
       &__illustration {
         &__foreground {
-          bottom: -410px;
+          bottom: -425px;
         }
       }
     }
   }
 
   @media #{$screen-max-sm} {
-    &__joystream-wrapper {
+    &__joystream-dao-wrapper {
       padding: 80px 0;
     }
 
@@ -139,65 +140,41 @@
       }
 
       &__illustration {
-        width: 90%;
+        width: 100%;
+        height: 280px;
 
         &__background {
-          bottom: 10%;
-          width: 95%;
+          right: 0;
+          bottom: unset;
+          left: 50px;
+          width: 400px;
+          margin: auto;
         }
 
         &__foreground {
-          bottom: -440px;
+          right: 10px;
+          bottom: -283px;
           left: 0;
-          width: 86%;
+          width: 380px;
+          margin: auto;
         }
       }
     }
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 500px) {
     &__joystream-dao {
       &__illustration {
-        height: 380px;
+        height: 207px;
 
-        &__foreground {
-          bottom: -380px;
+        &__background {
+          left: 33px;
+          width: 301px;
         }
-      }
-    }
-  }
-
-  @media (max-width: 550px) {
-    &__joystream-dao {
-      &__illustration {
-        height: 310px;
 
         &__foreground {
-          bottom: -310px;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 440px) {
-    &__joystream-dao {
-      &__illustration {
-        height: 250px;
-
-        &__foreground {
-          bottom: -250px;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 380px) {
-    &__joystream-dao {
-      &__illustration {
-        height: 200px;
-
-        &__foreground {
-          bottom: -200px;
+          bottom: -212px;
+          width: 298px;
         }
       }
     }
