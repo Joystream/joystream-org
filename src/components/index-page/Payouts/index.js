@@ -122,7 +122,7 @@ const Payouts = ({ t }) => {
           </Plx>
         </div>
       </div>
-      <div className="IndexPage__payouts-cta">
+      {/* <div className="IndexPage__payouts-cta">
         <div className="IndexPage__payouts-cta__content">
           <div className="IndexPage__payouts-cta__content__logos">
             <YoutubeLogo className="IndexPage__payouts-cta__content__logos__youtube" />
@@ -140,7 +140,7 @@ const Payouts = ({ t }) => {
           text="Learn more"
           textClassname="IndexPage__payouts-cta__link-text"
         />
-      </div>
+      </div> */}
     </div>
   );
 };
