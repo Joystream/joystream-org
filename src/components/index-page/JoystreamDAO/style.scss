@@ -15,6 +15,10 @@
     grid-template-columns: 500px auto;
 
     &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
       &__section-title {
         @extend %section-title;
 

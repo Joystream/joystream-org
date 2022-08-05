@@ -8,7 +8,7 @@
   &__available-activities {
     @extend %container;
 
-    padding: 150px 0;
+    padding: 96px 0;
 
     &__title {
       font-family: $font-primary;
@@ -311,7 +311,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: 64px;
       }
 
       &__list-item {

@@ -2,6 +2,8 @@
 
 .Footer {
   &__our-investors-wrapper {
+    width: 100%;
+    overflow: hidden;
     background-color: $c_black;
   }
 
@@ -11,7 +13,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 230px;
+    height: 150px;
 
     &__title {
       font-family: $font-primary;
@@ -26,7 +28,7 @@
     &__carousels {
       position: absolute;
       width: 100%;
-      margin-top: 72px;
+      margin-top: 68px;
 
       &__top {
         width: 100%;
@@ -73,6 +75,8 @@
       }
 
       &__carousels {
+        margin-top: 64px;
+
         &__top {
           height: auto;
         }

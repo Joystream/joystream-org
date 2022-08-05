@@ -98,7 +98,7 @@ const Payouts = ({ t }) => {
     <div className="IndexPage__payouts-wrapper">
       <div className="IndexPage__payouts">
         <section className="IndexPage__payouts__content">
-          <h3 className="IndexPage__payouts__content__section-title">{t("landing.payouts.sectionTitle")}</h3>
+          <div className="IndexPage__payouts__content__section-title">{t("landing.payouts.sectionTitle")}</div>
           <h2 className="IndexPage__payouts__content__title">{t("landing.payouts.title")}</h2>
           <p className="IndexPage__payouts__content__subtitle">{t("landing.payouts.subtitle")}</p>
         </section>

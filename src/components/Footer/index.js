@@ -68,7 +68,7 @@ const Footer = ({ t }) => {
         />
 
         <div className="Footer__section Footer__section--socials">
-          <h6 className="Footer__section-title">{t('footer.followUs')}</h6>
+          <h6 className="Footer__section-title Footer__section-title--socials">{t('footer.followUs')}</h6>
 
           <div className="Footer__socials">
             {socialMedias.map(({ icon: Icon, name, href }) => (

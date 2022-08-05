@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 100px 20px 120px;
+  padding: 80px 0;
   background-color: $c_black;
   background-image: url('../../assets/background/footer-bottom-secondary.svg');
   background-position: bottom center;
@@ -41,7 +41,7 @@
     margin: 24px 0 96px 0;
 
     &__title {
-      margin-bottom: 5px;
+      margin-bottom: 4px;
       font-family: $font-primary;
       font-size: 28px;
       line-height: 36px;
@@ -75,7 +75,7 @@
 
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px;
+    margin-top: 96px;
     gap: 90px;
   }
 
@@ -100,6 +100,10 @@
     letter-spacing: 0;
     color: $c_white;
     text-align: left;
+
+    &--socials {
+      margin-bottom: 0;
+    }
   }
 
   &__section-link {
@@ -118,7 +122,7 @@
     }
 
     & + & {
-      margin-top: 14px;
+      margin-top: 12px;
     }
   }
 
@@ -126,8 +130,8 @@
     display: flex;
     flex-direction: row;
     width: fit-content;
+    margin-top: 12px;
     margin-right: 24px;
-    margin-bottom: 20px;
   }
 
   &__social-name {
@@ -171,20 +175,27 @@
   }
 
   @media #{$screen-max-sm} {
+    &__form {
+      margin: 16px 0 80px 0;
+    }
+
     &__layout {
       display: flex;
       justify-content: space-around;
       width: 100%;
-      padding: 0 10px;
+      margin-top: 80px;
+      padding: 0 20px;
+      gap: 40px 20px;
     }
 
     &__section {
       margin-left: unset;
+      padding: 0;
     }
   }
 
   @media #{$screen-sm} {
-    padding: 120px 0 100px;
+    padding: 96px 0;
     background-position: bottom left;
     background-repeat: repeat-x;
 
@@ -207,12 +218,10 @@
   }
 
   @media (max-width: 550px) {
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding: 80px 0;
 
     &__form {
       flex-direction: column;
-      margin-bottom: 80px;
 
       &__subtitle {
         max-width: 315px;

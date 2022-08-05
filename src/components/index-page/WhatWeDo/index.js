@@ -13,7 +13,7 @@ const WhatWeDo = ({ t }) => {
         <Fist className="IndexPage__manifesto-cta__icon" />
         <FistAlt className="IndexPage__manifesto-cta__icon-alt" />
         <div className="IndexPage__manifesto-cta__content">
-          <h4 className="IndexPage__manifesto-cta__subtitle">{t('landing.whatWeDo.sectionTitle')}</h4>
+          <div className="IndexPage__manifesto-cta__subtitle">{t('landing.whatWeDo.sectionTitle')}</div>
           <h2 className="IndexPage__manifesto-cta__title">{t('landing.whatWeDo.title')}</h2>
           <Link className="IndexPage__manifesto-cta__link-wrapper" to="/manifesto">
             <div className="IndexPage__manifesto-cta__link">

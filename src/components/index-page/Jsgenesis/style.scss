@@ -13,9 +13,9 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 125px 0;
+    padding: 128px 0;
     background-image: url('../../../assets/svg/landing/jsgenesis-background-left.svg'), url('../../../assets/svg/landing/jsgenesis-background-right.svg');
-    background-position: top 0 left 0, top 0 right 0;
+    background-position: top -15px left 0, top -17px right 0;
     background-repeat: no-repeat, no-repeat;
 
     &__section-title {
@@ -53,13 +53,14 @@
 
   @media #{$screen-max-lg} {
     &__jsgenesis {
-      background-position: top 0 left -75px, top 0 right -50px;
+      background-position: top -15px left -75px, top -17px right -50px;
     }
   }
 
   @media #{$screen-max-md} {
     &__jsgenesis {
       padding: 75px 0;
+      background-position: top -12px left -75px, top -12px right -50px;
       background-size: 310px, 245px;
 
       &__title {
@@ -71,7 +72,7 @@
   @media #{$screen-max-sm} {
     &__jsgenesis {
       padding: 65px 0;
-      background-position: top 0 left -150px, top 0 right -125px;
+      background-position: top -12px left -150px, top -12px right -125px;
 
       &__title {
         @include h4;
@@ -89,7 +90,7 @@
     &__jsgenesis {
       padding: 158px 0;
       background-image: url('../../../assets/svg/landing/jsgenesis-background-top-mobile.svg'), url('../../../assets/svg/landing/jsgenesis-background-bottom-mobile.svg');
-      background-position: top 0 center, bottom 0 center;
+      background-position: top -10px center, bottom -12px center;
       background-size: 510px, 510px;
     }
   }
@@ -98,8 +99,8 @@
     &__jsgenesis {
       padding: 128px 0;
       background-image: url('../../../assets/svg/landing/jsgenesis-background-top-mobile.svg'), url('../../../assets/svg/landing/jsgenesis-background-bottom-mobile.svg');
+      background-position: top -8px center, bottom -9px center;
       background-size: 375px, 375px;
-      background-size: unset, unset;
     }
   }
 }

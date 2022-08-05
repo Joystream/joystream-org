@@ -99,7 +99,7 @@
 
     &__fundraising {
       display: grid;
-      margin-top: 96px;
+      margin-top: 64px;
       gap: 30px;
       grid-template-columns: auto 500px;
 
@@ -137,7 +137,7 @@
 
     &__stable-income {
       display: grid;
-      margin-top: 96px;
+      margin-top: 64px;
       gap: 30px;
       grid-template-columns: 500px auto;
 
@@ -175,7 +175,7 @@
 
     &__secure-listing {
       display: grid;
-      margin-top: 96px;
+      margin-top: 64px;
       gap: 30px;
       grid-template-columns: auto 500px;
 
@@ -213,7 +213,7 @@
 
     &__share-upside {
       display: grid;
-      margin-top: 96px;
+      margin-top: 64px;
       gap: 30px;
       grid-template-columns: 500px auto;
 
@@ -410,6 +410,10 @@
             & > br {
               display: none;
             }
+          }
+
+          &__subtitle {
+            margin-top: 8px;
           }
         }
 

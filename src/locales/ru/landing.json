@@ -4,7 +4,7 @@
       "description": "Joystream - видеоплатформа, которая принадлежит, контролируется и управляется своими пользователями."
     },
     "hero": {
-      "title": "The streaming platform with more power to <span><typewriter/></span>",
+      "title": "The streaming platform with more power to<span><typewriter/></span>",
       "typewriterOptions": {
         "creators": "creators",
         "consumers": "consumers",

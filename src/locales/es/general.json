@@ -93,7 +93,10 @@
     "manifesto": "Manifesto",
     "discord": "Discord",
     "youtubePartnerProgram": "Youtube Partner Program",
-    "claimChannel": "Claim your channel"
+    "claimChannel": "Claim your channel",
+    "brandStory": "Brand Story",
+    "brandGuides": "Brand Guides",
+    "downloadAssets": "Download Assets"
   },
   "footer": {
     "title": "Stay up to date",
