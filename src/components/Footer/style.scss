@@ -74,20 +74,14 @@
     @extend %container;
 
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 96px;
-    gap: 90px;
   }
 
   &__section {
     padding: 0 10px 50px;
     font-size: 14px;
     line-height: 1.2;
-
-    &--socials {
-      margin-right: 55px;
-      margin-left: auto;
-    }
   }
 
   &__section-title {
@@ -180,12 +174,12 @@
     }
 
     &__layout {
-      display: flex;
-      justify-content: space-around;
+      display: grid;
       width: 100%;
       margin-top: 80px;
       padding: 0 20px;
       gap: 40px 20px;
+      grid-template-columns: 1fr 1fr;
     }
 
     &__section {

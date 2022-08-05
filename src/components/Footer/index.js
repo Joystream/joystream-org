@@ -35,6 +35,10 @@ const LinkSection = ({ t }) => (
         links={joystreamLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
       />
       <FooterSection
+        title={t('socials.github')}
+        links={githubLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
+        />
+      <FooterSection
         title={t('footer.usefulLinks.title')}
         links={usefulLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
       />

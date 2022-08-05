@@ -50,12 +50,14 @@
       &__background {
         position: absolute;
         right: 0;
+        width: 576px;
       }
 
       &__foreground {
         position: absolute;
         bottom: -200px;
         left: -10px;
+        width: 360px;
       }
     }
   }
