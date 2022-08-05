@@ -1,5 +1,6 @@
 import React from 'react';
 import Plx from 'react-plx';
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.png';
 import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.png';
@@ -118,24 +119,20 @@ const VideoNFTs = ({ t }) => {
           </Plx>
         </div>
         <section className="IndexPage__video-nfts__content">
-          <h3 className="IndexPage__video-nfts__content__section-title">VIDEO NFTS</h3>
-          <h2 className="IndexPage__video-nfts__content__title">Monetise your videos with NFT sales and royalties</h2>
-          <p className="IndexPage__video-nfts__content__subtitle">
-            Turn your videos into NFTs and put them up for sale. Choose between fixed price, open auction, and timed
-            auction. Define royalties to get a cut every time your NFT gets sold again.
-          </p>
+          <h3 className="IndexPage__video-nfts__content__section-title">{t("landing.videoNFTs.sectionTitle")}</h3>
+          <h2 className="IndexPage__video-nfts__content__title">{t("landing.videoNFTs.title")}</h2>
+          <p className="IndexPage__video-nfts__content__subtitle">{t("landing.videoNFTs.subtitle")}</p>
         </section>
       </div>
       <div className="IndexPage__video-nfts-cta">
         <p className="IndexPage__video-nfts-cta__title">
-          “This should be the greatest time <br /> in history for creative people. And I think we might have finally
-          figured it out.”
+          <Trans i18nKey="landing.videoNFTs.cta.title" components={{ br: <br /> }} />
         </p>
-        <p className="IndexPage__video-nfts-cta__about">Chris Dixon, entrepreneur and investor</p>
-        <p className="IndexPage__video-nfts-cta__podcast">The Tim Ferris Show podcast, episode #542</p>
+        <p className="IndexPage__video-nfts-cta__about">{t("landing.videoNFTs.cta.about")}</p>
+        <p className="IndexPage__video-nfts-cta__podcast">{t("landing.videoNFTs.cta.podcast")}</p>
         <ArrowButton
           className="IndexPage__video-nfts-cta__button"
-          text="Claim your channel"
+          text={t("landing.videoNFTs.cta.button")}
           textClassname="IndexPage__video-nfts-cta__button-text"
           link="https://play.joystream.org/studio/"
         />

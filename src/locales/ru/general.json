@@ -109,9 +109,12 @@
       "title": "Полезные ссылки",
       "hiring": "Вакансии",
       "brandGuidance": "Правила использования айдентики",
-      "tokenomics": "Tokenomics"
+      "tokenomics": "Tokenomics",
+      "faq": "FAQ"
     },
-    "followUs": "Следите за новостями"
+    "fmProgram": "Founding Members Program",
+    "followUs": "Следите за новостями",
+    "ourInvestors": "Our Investors"
   },
   "pages": {
     "blog": "Блог",

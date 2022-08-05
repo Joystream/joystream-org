@@ -1,6 +1,7 @@
 import React from 'react';
 import TypeWriter from 'typewriter-effect';
 import Plx from 'react-plx';
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ArrowButton } from '../../ArrowButton';
 
@@ -72,23 +73,34 @@ const Hero = ({ t }) => {
     <div className="IndexPage__hero-wrapper">
       <div className="IndexPage__hero">
         <h1 className="IndexPage__hero__title">
-          The streaming platform with more power to
-          <span>
-            <TypeWriter
-              options={{
-                strings: ['creators', 'consumers', 'you', 'me', 'us'],
-                autoStart: true,
-                loop: true,
-                wrapperClassName: 'IndexPage__hero__typewriter-title',
-                cursorClassName: 'IndexPage__hero__typewriter-cursor',
-              }}
-            />
-          </span>
+          <Trans
+            i18nKey="landing.hero.title"
+            components={{
+              span: <span />,
+              typewriter: (
+                <TypeWriter
+                  options={{
+                    strings: [
+                      t('landing.hero.typewriterOptions.creators'),
+                      t('landing.hero.typewriterOptions.consumers'),
+                      t('landing.hero.typewriterOptions.you'),
+                      t('landing.hero.typewriterOptions.me'),
+                      t('landing.hero.typewriterOptions.us'),
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    wrapperClassName: 'IndexPage__hero__typewriter-title',
+                    cursorClassName: 'IndexPage__hero__typewriter-cursor',
+                  }}
+                />
+              ),
+            }}
+          />
         </h1>
-        <p className="IndexPage__hero__subtitle">Built on Joystream blockchain and managed by the DAO community.</p>
+        <p className="IndexPage__hero__subtitle">{t('landing.hero.subtitle')}</p>
         <ArrowButton
           link="https://play.joystream.org/studio/"
-          text="Claim your channel"
+          text={t('landing.hero.button')}
           className="IndexPage__hero__button"
           textClassname="IndexPage__hero__button-text"
         />

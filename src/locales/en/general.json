@@ -109,9 +109,12 @@
       "title": "Useful links",
       "hiring": "We are hiring!",
       "brandGuidance": "Brand guidance",
-      "tokenomics": "Tokenomics"
+      "tokenomics": "Tokenomics",
+      "faq": "FAQ"
     },
-    "followUs": "Follow us"
+    "fmProgram": "Founding Members Program",
+    "followUs": "Follow us",
+    "ourInvestors": "Our Investors"
   },
   "pages": {
     "blog": "Blog",

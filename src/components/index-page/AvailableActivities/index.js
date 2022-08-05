@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 import Loader from 'react-loader-spinner';
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
@@ -132,8 +133,10 @@ const AvailableActivities = ({ t }) => {
   return (
     <div className="IndexPage__available-activities-wrapper">
       <div className="IndexPage__available-activities">
-        <h2 className="IndexPage__available-activities__title">Not a creator?<br/>Explore rewardable activities</h2>
-        <p className="IndexPage__available-activities__subtitle">Joystream is a video platform managed by DAO, which means there are all sorts of ways you can join and earn by contributing to the project.</p>
+        <h2 className="IndexPage__available-activities__title">
+          <Trans i18nKey="landing.availableActivities.title" components={{ br: <br/> }} />
+        </h2>
+        <p className="IndexPage__available-activities__subtitle">{t("landing.availableActivities.subtitle")}</p>
         <div className="IndexPage__available-activities__list">
           <Activity
             Icon={REFERRAL_ACTIVITY.icon}
@@ -166,7 +169,7 @@ const AvailableActivities = ({ t }) => {
             onClick={() => setNumberOfRenderedActivities(prev => prev + 1)}
             role="presentation"
           >
-            Show more activities <ArrowIcon className="IndexPage__available-activities__show-more__arrow-icon" />
+            {t("landing.availableActivities.showMore")} <ArrowIcon className="IndexPage__available-activities__show-more__arrow-icon" />
           </div>
         ) : null}
       </div>

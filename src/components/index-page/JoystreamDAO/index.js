@@ -1,5 +1,6 @@
 import React from 'react';
 import Plx from 'react-plx';
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import JoystreamDaoBackgroundImage from '../../../assets/images/landing/joystream-dao-background.png';
@@ -69,21 +70,20 @@ const joystreamDaoForeground = [
   },
 ];
 
-const JoystreamDAO = () => {
+const JoystreamDAO = ({ t }) => {
   return (
     <div className="IndexPage__joystream-dao-wrapper">
       <div className="IndexPage__joystream-dao">
         <div className="IndexPage__joystream-dao__content">
-          <h3 className="IndexPage__joystream-dao__content__section-title">JOYSTREAM DAO</h3>
+          <h3 className="IndexPage__joystream-dao__content__section-title">{t("landing.joystreamDAO.sectionTitle")}</h3>
           <h2 className="IndexPage__joystream-dao__content__title">
-            Have a hand in shaping the future of Joystream.<br /> Join our DAO.
+            <Trans i18nKey="landing.joystreamDAO.title" components={{ br: <br /> }} />
           </h2>
           <p className="IndexPage__joystream-dao__content__subtitle">
-            Pioneer is the place to participate in community governance and operation. Vote on elections, submit
-            proposals or enter a paid role to support the platform growth.
+            {t("landing.joystreamDAO.subtitle")}
           </p>
           <a href="https://dao.joystream.org/" className="IndexPage__joystream-dao__content__link">
-            Go to Pioneer
+            {t("landing.joystreamDAO.link")}
             <ArrowIcon className="IndexPage__joystream-dao__content__link__arrow" />
           </a>
         </div>

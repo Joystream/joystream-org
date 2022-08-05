@@ -26,7 +26,7 @@ const OurInvestors = ({ t }) => {
   return (
     <div className="Footer__our-investors-wrapper">
       <div className="Footer__our-investors">
-        <h2 className="Footer__our-investors__title">Our Investors</h2>
+        <h2 className="Footer__our-investors__title">{t("footer.ourInvestors")}</h2>
         <div className="Footer__our-investors__carousels">
           <Slider {...settings} className="Footer__our-investors__carousels__top">
             {companyIcons.map(({ Icon, key }) => (

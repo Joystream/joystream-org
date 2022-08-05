@@ -1,5 +1,6 @@
 import React from 'react';
 import Plx from 'react-plx';
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import CreatorTokensBackground from '../../../assets/images/landing/creator-tokens-background.png';
@@ -57,17 +58,16 @@ const CreatorTokens = ({ t }) => {
     <div className="IndexPage__creator-tokens-wrapper">
       <div className="IndexPage__creator-tokens">
         <div className="IndexPage__creator-tokens__hero">
-          <div className="IndexPage__creator-tokens__hero__coming-soon">Coming early 2023</div>
-          <h3 className="IndexPage__creator-tokens__hero__section-title">CREATOR TOKENS</h3>
+          <div className="IndexPage__creator-tokens__hero__coming-soon">{t("landing.creatorTokens.hero.comingSoon")}</div>
+          <h3 className="IndexPage__creator-tokens__hero__section-title">{t("landing.creatorTokens.hero.sectionTitle")}</h3>
           <h2 className="IndexPage__creator-tokens__hero__title">
-            New ways to engage and <br /> get support from your audience
+            <Trans i18nKey="landing.creatorTokens.hero.title" components={{ br: <br/> }} />
           </h2>
           <p className="IndexPage__creator-tokens__hero__subtitle">
-            Turn viewers into evengelists [?] by letting them hold a share in your channel when they buy your own
-            channel token.
+            {t("landing.creatorTokens.hero.subtitle")}
           </p>
           <a href="#0" target="_blank" className="IndexPage__creator-tokens__hero__link">
-            Sign up for beta tests
+            {t("landing.creatorTokens.hero.link")}
             <ArrowIcon className="IndexPage__creator-tokens__hero__link__arrow" />
           </a>
           <div className="IndexPage__creator-tokens__hero__illustration">
@@ -95,25 +95,23 @@ const CreatorTokens = ({ t }) => {
             />
           </div>
           <div className="IndexPage__creator-tokens__fundraising__content">
-            <h5 className="IndexPage__creator-tokens__fundraising__content__section-title">FUND RAISING</h5>
+            <h5 className="IndexPage__creator-tokens__fundraising__content__section-title">{t("landing.creatorTokens.fundraising.sectionTitle")}</h5>
             <h4 className="IndexPage__creator-tokens__fundraising__content__title">
-              Put your token sale on autopilot <br /> or sell it on your own terms
+              <Trans i18nKey="landing.creatorTokens.fundraising.title" components={{ br: <br/> }} />
             </h4>
             <p className="IndexPage__creator-tokens__fundraising__content__subtitle">
-              Have your token supply follow the demand effortlessly with the Automated Market Maker, or go with Custom
-              Sale to decide on the exact terms you want your token to be traded on.
+              {t("landing.creatorTokens.fundraising.subtitle")}
             </p>
           </div>
         </div>
         <div className="IndexPage__creator-tokens__stable-income">
           <div className="IndexPage__creator-tokens__stable-income__content">
-            <h5 className="IndexPage__creator-tokens__stable-income__content__section-title">STABLE INCOME</h5>
+            <h5 className="IndexPage__creator-tokens__stable-income__content__section-title">{t("landing.creatorTokens.stableIncome.sectionTitle")}</h5>
             <h4 className="IndexPage__creator-tokens__stable-income__content__title">
-              Receive stable stream of tokens every year
+              {t("landing.creatorTokens.stableIncome.title")}
             </h4>
             <p className="IndexPage__creator-tokens__stable-income__content__subtitle">
-              Have your token supply follow the demand effortlessly with the Automated Market Maker, or go with Custom
-              Sale to decide on the exact terms you want your token to be traded on.
+              {t("landing.creatorTokens.stableIncome.subtitle")}
             </p>
           </div>
           <div className="IndexPage__creator-tokens__stable-income__illustration">
@@ -135,28 +133,25 @@ const CreatorTokens = ({ t }) => {
             />
           </div>
           <div className="IndexPage__creator-tokens__secure-listing__content">
-            <h5 className="IndexPage__creator-tokens__secure-listing__content__section-title">SECURE LISTING</h5>
+            <h5 className="IndexPage__creator-tokens__secure-listing__content__section-title">{t("landing.creatorTokens.secureListing.sectionTitle")}</h5>
             <h4 className="IndexPage__creator-tokens__secure-listing__content__title">
-              Yes to whitelists & vesting schedules.<br /> No to monkey business.
+              <Trans i18nKey="landing.creatorTokens.secureListing.title" components={{ br: <br/> }} />
             </h4>
             <p className="IndexPage__creator-tokens__secure-listing__content__subtitle">
-              Flexible vesting schedule allows you to specify at what rate the newly purchased tokens should be
-              unlocked. Paired with ability to run whitelist-only sales, it provides everything you need to feel safe
-              about your investments.
+              {t("landing.creatorTokens.secureListing.subtitle")}
             </p>
           </div>
         </div>
         <div className="IndexPage__creator-tokens__share-upside">
           <div className="IndexPage__creator-tokens__share-upside__content">
             <h5 className="IndexPage__creator-tokens__share-upside__content__section-title">
-              SHARE UPSIDE WITH THE COMMUNITY
+              {t("landing.creatorTokens.shareUpside.sectionTitle")}
             </h5>
             <h4 className="IndexPage__creator-tokens__share-upside__content__title">
-              Invest in other creators to receive <br /> a portion of their revenue
+              <Trans i18nKey="landing.creatorTokens.shareUpside.title" components={{ br: <br/> }} />
             </h4>
             <p className="IndexPage__creator-tokens__share-upside__content__subtitle">
-              Support other creators and receive a portion of their revenue, or reward your audience by sharing some of
-              your channel’s earnings with them.
+              {t("landing.creatorTokens.shareUpside.subtitle")}
             </p>
           </div>
           <div className="IndexPage__creator-tokens__share-upside__illustration">

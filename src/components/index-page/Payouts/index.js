@@ -98,12 +98,9 @@ const Payouts = ({ t }) => {
     <div className="IndexPage__payouts-wrapper">
       <div className="IndexPage__payouts">
         <section className="IndexPage__payouts__content">
-          <h3 className="IndexPage__payouts__content__section-title">PAYOUTS</h3>
-          <h2 className="IndexPage__payouts__content__title">Receive payouts for uploading quality videos</h2>
-          <p className="IndexPage__payouts__content__subtitle">
-            Upload high quality videos to get cash rewadrs from the Joystream DAO council on a regular basis. Popular
-            creators are rewarded higher.
-          </p>
+          <h3 className="IndexPage__payouts__content__section-title">{t("landing.payouts.sectionTitle")}</h3>
+          <h2 className="IndexPage__payouts__content__title">{t("landing.payouts.title")}</h2>
+          <p className="IndexPage__payouts__content__subtitle">{t("landing.payouts.subtitle")}</p>
         </section>
         <div className="IndexPage__payouts__illustration">
           <Plx parallaxData={parallaxDataBackground} animateWhenNotInViewport={true}>
