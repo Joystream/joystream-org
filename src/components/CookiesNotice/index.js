@@ -22,7 +22,7 @@ class CookiesNotice extends React.Component {
     super();
 
     this.state = {
-      visible: true,
+      visible: false,
     };
 
     this.cookieName = 'CookiesNoticeJoystream';
