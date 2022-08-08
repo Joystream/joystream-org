@@ -16,7 +16,7 @@ const defaultTypes = {
   children: null,
 };
 
-const BaseLayout = ({ children, t, mainnetReminder, primer }) => {
+const BaseLayout = ({ children, t, mainnetReminder = false, primer }) => {
   return (
     <ScrollProvider>
       <div>

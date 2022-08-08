@@ -59,7 +59,7 @@ const CreatorTokens = ({ t }) => {
       <div className="IndexPage__creator-tokens">
         <div className="IndexPage__creator-tokens__hero">
           <div className="IndexPage__creator-tokens__hero__coming-soon">{t("landing.creatorTokens.hero.comingSoon")}</div>
-          <div className="IndexPage__creator-tokens__hero__section-title">{t("landing.creatorTokens.hero.sectionTitle")}</div>
+          <span className="IndexPage__creator-tokens__hero__section-title">{t("landing.creatorTokens.hero.sectionTitle")}</span>
           <h2 className="IndexPage__creator-tokens__hero__title">
             <Trans i18nKey="landing.creatorTokens.hero.title" components={{ br: <br/> }} />
           </h2>
@@ -95,7 +95,7 @@ const CreatorTokens = ({ t }) => {
             />
           </div>
           <div className="IndexPage__creator-tokens__fundraising__content">
-            <div className="IndexPage__creator-tokens__fundraising__content__section-title">{t("landing.creatorTokens.fundraising.sectionTitle")}</div>
+            <span className="IndexPage__creator-tokens__fundraising__content__section-title">{t("landing.creatorTokens.fundraising.sectionTitle")}</span>
             <h4 className="IndexPage__creator-tokens__fundraising__content__title">
               <Trans i18nKey="landing.creatorTokens.fundraising.title" components={{ br: <br/> }} />
             </h4>
@@ -106,7 +106,7 @@ const CreatorTokens = ({ t }) => {
         </div>
         <div className="IndexPage__creator-tokens__stable-income">
           <div className="IndexPage__creator-tokens__stable-income__content">
-            <div className="IndexPage__creator-tokens__stable-income__content__section-title">{t("landing.creatorTokens.stableIncome.sectionTitle")}</div>
+            <span className="IndexPage__creator-tokens__stable-income__content__section-title">{t("landing.creatorTokens.stableIncome.sectionTitle")}</span>
             <h4 className="IndexPage__creator-tokens__stable-income__content__title">
               {t("landing.creatorTokens.stableIncome.title")}
             </h4>
@@ -133,7 +133,7 @@ const CreatorTokens = ({ t }) => {
             />
           </div>
           <div className="IndexPage__creator-tokens__secure-listing__content">
-            <div className="IndexPage__creator-tokens__secure-listing__content__section-title">{t("landing.creatorTokens.secureListing.sectionTitle")}</div>
+            <span className="IndexPage__creator-tokens__secure-listing__content__section-title">{t("landing.creatorTokens.secureListing.sectionTitle")}</span>
             <h4 className="IndexPage__creator-tokens__secure-listing__content__title">
               <Trans i18nKey="landing.creatorTokens.secureListing.title" components={{ br: <br/> }} />
             </h4>
@@ -144,9 +144,9 @@ const CreatorTokens = ({ t }) => {
         </div>
         <div className="IndexPage__creator-tokens__share-upside">
           <div className="IndexPage__creator-tokens__share-upside__content">
-            <div className="IndexPage__creator-tokens__share-upside__content__section-title">
+            <span className="IndexPage__creator-tokens__share-upside__content__section-title">
               {t("landing.creatorTokens.shareUpside.sectionTitle")}
-            </div>
+            </span>
             <h4 className="IndexPage__creator-tokens__share-upside__content__title">
               <Trans i18nKey="landing.creatorTokens.shareUpside.title" components={{ br: <br/> }} />
             </h4>

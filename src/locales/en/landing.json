@@ -7,10 +7,8 @@
       "title": "The streaming platform with more power to<span><typewriter/></span>",
       "typewriterOptions": {
         "creators": "creators",
-        "consumers": "consumers",
-        "you": "you",
-        "me": "me",
-        "us": "us"
+        "builders": "builders",
+        "users": "users"
       },
       "subtitle": "Built on Joystream blockchain and managed by the DAO community.",
       "button": "Claim your channel"

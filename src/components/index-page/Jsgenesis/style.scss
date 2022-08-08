@@ -21,6 +21,7 @@
     &__section-title {
       @extend %section-title;
 
+      display: inline-block;
       color: $c_blue-ribbon;
       text-align: center;
     }

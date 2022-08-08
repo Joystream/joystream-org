@@ -75,7 +75,7 @@ const JoystreamDAO = ({ t }) => {
     <div className="IndexPage__joystream-dao-wrapper">
       <div className="IndexPage__joystream-dao">
         <div className="IndexPage__joystream-dao__content">
-          <div className="IndexPage__joystream-dao__content__section-title">{t("landing.joystreamDAO.sectionTitle")}</div>
+          <span className="IndexPage__joystream-dao__content__section-title">{t("landing.joystreamDAO.sectionTitle")}</span>
           <h2 className="IndexPage__joystream-dao__content__title">
             <Trans i18nKey="landing.joystreamDAO.title" components={{ br: <br /> }} />
           </h2>

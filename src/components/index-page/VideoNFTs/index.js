@@ -119,7 +119,7 @@ const VideoNFTs = ({ t }) => {
           </Plx>
         </div>
         <section className="IndexPage__video-nfts__content">
-          <div className="IndexPage__video-nfts__content__section-title">{t("landing.videoNFTs.sectionTitle")}</div>
+          <span className="IndexPage__video-nfts__content__section-title">{t("landing.videoNFTs.sectionTitle")}</span>
           <h2 className="IndexPage__video-nfts__content__title">{t("landing.videoNFTs.title")}</h2>
           <p className="IndexPage__video-nfts__content__subtitle">{t("landing.videoNFTs.subtitle")}</p>
         </section>

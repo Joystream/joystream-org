@@ -10,7 +10,7 @@ import Payouts from '../components/index-page/Payouts';
 import VideoNFTs from '../components/index-page/VideoNFTs';
 import CreatorTokens from '../components/index-page/CreatorTokens';
 import YoutubeSync from '../components/index-page/YoutubeSync';
-import WhatWeDo from '../components/index-page/WhatWeDo';
+import Manifesto from '../components/index-page/Manifesto';
 import JoystreamDAO from '../components/index-page/JoystreamDAO';
 import Jsgenesis from '../components/index-page/Jsgenesis';
 import AvailableActivities from '../components/index-page/AvailableActivities';
@@ -22,7 +22,7 @@ const IndexPage = () => {
   const { language } = useI18next();
 
   return (
-    <BaseLayout t={t} mainnetReminder={true}>
+    <BaseLayout t={t} mainnetReminder={false}>
       <SiteMetadata
         lang={language}
         title={t('siteMetadata.title')}
@@ -39,7 +39,7 @@ const IndexPage = () => {
 
       {/* <YoutubeSync t={t}/> */}
 
-      <WhatWeDo t={t}/>
+      <Manifesto t={t}/>
 
       <AvailableActivities t={t}/>
 
