@@ -1,5 +1,6 @@
 import React from 'react';
 import { bool } from 'prop-types';
+import cn from 'classnames';
 
 import Button from '../Button';
 import Link from '../Link';
@@ -50,28 +51,24 @@ class CookiesNotice extends React.Component {
   render() {
     const { visible } = this.state;
 
-    if (visible) {
-      return (
-        <div className="CookiesNotice">
-          <div className="CookiesNotice__container">
-            <div className="CookiesNotice__content">
-              <p>{this.props.t('cookiesNotice.text')}</p>
-              <p>
-                <Link to="/privacy-policy" className="CookiesNotice__link">
-                  {this.props.t('cookiesNotice.findOutMore')}
-                </Link>
-              </p>
-            </div>
-
-            <Button large className="CookiesNotice__accept" onClick={this.onAccept} secondary>
-              {this.props.t('button.accept')}
-            </Button>
+    return (
+      <div className="CookiesNotice">
+        <div className={cn('CookiesNotice__container', { 'CookiesNotice__container--visible': visible })}>
+          <div className="CookiesNotice__content">
+            <span className="CookiesNotice__text">{this.props.t('cookiesNotice.text1')}</span>
+            <br />
+            <span className="CookiesNotice__text">{this.props.t('cookiesNotice.text2')} </span>
+            <Link to="/privacy-policy" className="CookiesNotice__link">
+              {this.props.t('cookiesNotice.findOutMore')}
+            </Link>
           </div>
-        </div>
-      );
-    }
 
-    return null;
+          <Button large={false} className="CookiesNotice__accept" onClick={this.onAccept} secondary>
+            {this.props.t('button.accept')}
+          </Button>
+        </div>
+      </div>
+    );
   }
 }
 
