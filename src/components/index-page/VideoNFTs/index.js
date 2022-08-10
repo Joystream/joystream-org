@@ -11,39 +11,14 @@ import './style.scss';
 
 const parallaxDataForeground = [
   {
-    start: 0,
-    end: 2100,
+    start: 'self',
+    startOffset: -350,
+    duration: 1700,
     easing: 'easeIn',
     properties: [
       {
-        startValue: -292,
-        endValue: -392,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: 2100,
-    end: 2400,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: -392,
-        endValue: -392,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: 2400,
-    end: 3300,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: -392,
-        endValue: -470,
+        startValue: -350,
+        endValue: -600,
         property: 'translateY',
         unit: 'px',
       },
@@ -53,39 +28,14 @@ const parallaxDataForeground = [
 
 const parallaxDataPopup = [
   {
-    start: 0,
-    end: 2100,
+    start: 'self',
+    startOffset: -200,
+    duration: 1500,
     easing: 'easeIn',
     properties: [
       {
-        startValue: 300,
-        endValue: -25,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: 2100,
-    end: 2400,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: -25,
-        endValue: -25,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: 2400,
-    end: 3300,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: -25,
-        endValue: -95,
+        startValue: 25,
+        endValue: -275,
         property: 'translateY',
         unit: 'px',
       },
@@ -119,7 +69,7 @@ const VideoNFTs = ({ t }) => {
           </Plx>
         </div>
         <section className="IndexPage__video-nfts__content">
-          <div className="IndexPage__video-nfts__content__section-title">{t("landing.videoNFTs.sectionTitle")}</div>
+          <span className="IndexPage__video-nfts__content__section-title">{t("landing.videoNFTs.sectionTitle")}</span>
           <h2 className="IndexPage__video-nfts__content__title">{t("landing.videoNFTs.title")}</h2>
           <p className="IndexPage__video-nfts__content__subtitle">{t("landing.videoNFTs.subtitle")}</p>
         </section>

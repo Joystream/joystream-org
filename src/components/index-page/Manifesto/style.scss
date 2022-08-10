@@ -1,6 +1,9 @@
 @import '../../../styles/main';
 @import '../../../pages/style';
 
+$desktop-v-padding: 96px;
+$mobile-v-padding: 80px;
+
 .IndexPage {
   &__manifesto-cta-wrapper {
     background-color: $c_catskill-white;
@@ -10,11 +13,12 @@
     @extend %container;
 
     display: grid;
+    padding: $desktop-v-padding 0;
     column-gap: 90px;
     grid-template-columns: 1fr 3.5fr;
 
-    &__icon-alt {
-      display: none;
+    &__icon {
+      margin-bottom: (-$desktop-v-padding);
     }
 
     &__content {
@@ -70,9 +74,15 @@
       &__title {
         margin: 20px 0;
       }
+
+      &__icon {
+        margin-top: 32px;
+      }
     }
 
     @media #{$screen-max-sm} {
+      padding: $mobile-v-padding 0;
+
       &__title {
         margin: 0;
         font-size: 32px;
@@ -80,11 +90,7 @@
       }
 
       &__icon {
-        display: none;
-      }
-
-      &__icon-alt {
-        display: block;
+        margin-bottom: (-$mobile-v-padding);
       }
     }
 

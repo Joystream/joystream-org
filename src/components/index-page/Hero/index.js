@@ -14,55 +14,28 @@ import './style.scss';
 const parallaxDataForeground = [
   {
     start: 0,
-    end: 200,
+    duration: 1400,
     easing: 'easeIn',
     properties: [
       {
         startValue: -700,
-        endValue: -728,
+        endValue: -900,
         property: 'translateY',
-        unit: "px"
       },
     ],
   },
-  {
-    start: 700,
-    end: 1200,
-    easing: 'easeOut',
-    properties: [
-      {
-        startValue: -728,
-        endValue: -805,
-        property: 'translateY',
-        unit: "px"
-      },
-    ],
-  }
 ];
 
 const parallaxDataButton = [
   {
     start: 0,
-    duration: 200,
+    end: 1400,
     easing: 'easeIn',
     properties: [
       {
-        startValue: -680,
-        endValue: -730,
+        startValue: -685,
+        endValue: -985,
         property: 'translateY',
-      },
-    ],
-  },
-  {
-    start: 700,
-    end: 1200,
-    easing: 'easeOut',
-    properties: [
-      {
-        startValue: -730,
-        endValue: -800,
-        property: 'translateY',
-        unit: "px"
       },
     ],
   },
@@ -82,10 +55,8 @@ const Hero = ({ t }) => {
                   options={{
                     strings: [
                       t('landing.hero.typewriterOptions.creators'),
-                      t('landing.hero.typewriterOptions.consumers'),
-                      t('landing.hero.typewriterOptions.you'),
-                      t('landing.hero.typewriterOptions.me'),
-                      t('landing.hero.typewriterOptions.us'),
+                      t('landing.hero.typewriterOptions.builders'),
+                      t('landing.hero.typewriterOptions.users'),
                     ],
                     autoStart: true,
                     loop: true,
