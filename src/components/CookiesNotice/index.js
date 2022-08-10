@@ -42,9 +42,8 @@ class CookiesNotice extends React.Component {
       <div className="CookiesNotice">
         <div className={cn('CookiesNotice__container', { 'CookiesNotice__container--visible': visible })}>
           <div className="CookiesNotice__content">
-            <span className="CookiesNotice__text">{this.props.t('cookiesNotice.text1')}</span>
-            <br />
-            <span className="CookiesNotice__text">{this.props.t('cookiesNotice.text2')} </span>
+            <span className="CookiesNotice__text">{this.props.t('cookiesNotice.text')}</span>
+            {' '}
             <Link to="/privacy-policy" className="CookiesNotice__link">
               {this.props.t('cookiesNotice.findOutMore')}
             </Link>

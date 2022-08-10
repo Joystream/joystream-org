@@ -9,10 +9,14 @@
   display: flex;
   justify-content: center;
 
-  &__content * {
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: .25px;
+  &__content {
+    max-width: 536px;
+
+    * {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: .25px;
+    }
   }
 
   &__text {
