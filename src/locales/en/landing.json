@@ -4,7 +4,7 @@
       "description": "Joystream is a video platform controlled, owned, and operated by its users."
     },
     "hero": {
-      "title": "The streaming platform with more power to<span><typewriter/></span>",
+      "title": "The streaming platform empowering<span><typewriter/></span>",
       "typewriterOptions": {
         "creators": "creators",
         "consumers": "consumers",
@@ -12,22 +12,22 @@
         "me": "me",
         "us": "us"
       },
-      "subtitle": "Built on Joystream blockchain and managed by the DAO community.",
+      "subtitle": "Built on and operated by the Joystream blockchain and DAO.",
       "button": "Claim your channel"
     },
     "payouts": {
       "sectionTitle": "PAYOUTS",
-      "title": "Receive payouts for uploading quality videos",
-      "subtitle": "Upload high quality videos to get cash rewards from the Joystream DAO council on a regular basis. Popular creators are rewarded higher."
+      "title": "Rewards for publishing your videos",
+      "subtitle": "Publish your videos to get cash rewards from the Joystream DAO council on a regular basis. More popular videos receive greater rewards."
     },
     "videoNFTs": {
       "sectionTitle": "VIDEO NFTS",
-      "title": "Monetise your videos with NFT sales and royalties",
+      "title": "Monetise your videos as NFTs and royalties",
       "subtitle": "Turn your videos into NFTs and put them up for sale. Choose between fixed price, open auction, and timed auction. Define royalties to get a cut every time your NFT gets sold again.",
       "cta": {
         "title": "“This should be the greatest time <br /> in history for creative people. And I think we might have finally figured it out.”",
         "about": "Chris Dixon, entrepreneur and investor",
-        "podcast": "The Tim Ferris Show podcast, episode #542",
+        "podcast": "The Tim Ferris Show podcast",
         "button": "Claim your channel"
       }
     },
@@ -35,33 +35,33 @@
       "hero": {
         "comingSoon": "Coming early 2023",
         "sectionTitle": "CREATOR TOKENS",
-        "title": "New ways to engage and <br /> get support from your audience",
+        "title": "Make your community <br /> a stakeholder in your future",
         "subtitle": "Turn viewers into evangelists by letting them hold a share in your channel when they buy your own channel token.",
         "link": "Sign up for beta tests"
       },
       "fundraising": {
         "sectionTitle": "FUND RAISING",
-        "title": "Put your token sale on autopilot <br /> or sell it on your own terms",
+        "title": "Sell on your terms",
         "subtitle": "Have your token supply follow the demand effortlessly with the Automated Market Maker, or go with Custom Sale to decide on the exact terms you want your token to be traded on."
       },
       "stableIncome": {
         "sectionTitle": "STABLE INCOME",
-        "title": "Receive stable stream of tokens every year",
+        "title": "A weekly stream of revenue to support your work",
         "subtitle": "Patronage gives you the power to earn regular annual token supply, as a compensation for your effort in curating the community and managing token economics."
       },
       "secureListing": {
         "sectionTitle": "SECURE LISTING",
         "title": "Yes to whitelists & vesting schedules.<br /> No to monkey business.",
-        "subtitle": "Flexible vesting schedule allows you to specify at what rate the newly purchased tokens should be unlocked. Paired with ability to run whitelist-only sales, it provides everything you need to feel safe about your investments."
+        "subtitle": "Whitelisting allows you to control who can get access, and with vesting schedules for yourself and others, you can make everyone aligned and focused on the future."
       },
       "shareUpside": {
         "sectionTitle": "SHARE UPSIDE WITH THE COMMUNITY",
-        "title": "Invest in other creators to receive <br /> a portion of their revenue",
+        "title": "Scout for future stars <br /> and back your favorite creators",
         "subtitle": "Support other creators and receive a portion of their revenue, or reward your audience by sharing some of your channel’s earnings with them."
       }
     },
     "availableActivities": {
-      "title": "Not a creator?<br/> Explore rewardable activities",
+      "title": "Not a creator?<br/> Help build the future with us",
       "subtitle": "Joystream is a video platform managed by DAO, which means there are all sorts of ways you can join and earn by contributing to the project.",
       "activityTitles": {
         "referral": "Refer a friend",
@@ -88,7 +88,7 @@
     },
     "whatWeDo": {
       "sectionTitle": "MANIFESTO",
-      "title": "We call for an arrangement where media platforms are accountable to the people they impact.",
+      "title": "Due to network effects, economies of scale, regulations and political interests, we are today left with handful of massive institutions.",
       "link": "Read our manifesto"
     },
     "joystreamDAO": {
