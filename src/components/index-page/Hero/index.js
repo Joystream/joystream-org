@@ -14,12 +14,12 @@ import './style.scss';
 const parallaxDataForeground = [
   {
     start: 0,
-    end: 1200,
+    duration: 1400,
     easing: 'easeIn',
     properties: [
       {
         startValue: -700,
-        endValue: -805,
+        endValue: -900,
         property: 'translateY',
       },
     ],
@@ -29,12 +29,12 @@ const parallaxDataForeground = [
 const parallaxDataButton = [
   {
     start: 0,
-    end: 1200,
+    end: 1400,
     easing: 'easeIn',
     properties: [
       {
-        startValue: -700,
-        endValue: -850,
+        startValue: -650,
+        endValue: -950,
         property: 'translateY',
       },
     ],

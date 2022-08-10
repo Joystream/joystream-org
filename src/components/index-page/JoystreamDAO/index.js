@@ -10,58 +10,13 @@ import './style.scss';
 
 const joystreamDaoForeground = [
   {
-    start: 0,
-    end: '.IndexPage__joystream-dao__illustration',
-    endOffset: 0,
+    start: 'self',
+    startOffset: -200,
+    duration: 1400,
     easing: 'easeIn',
     properties: [
       {
         startValue: 510,
-        endValue: 510,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: '.IndexPage__joystream-dao__illustration',
-    startOffset: 0,
-    end: '.IndexPage__joystream-dao__illustration',
-    endOffset: 600,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: 510,
-        endValue: 445,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: '.IndexPage__joystream-dao__illustration',
-    startOffset: 600,
-    end: '.IndexPage__joystream-dao__illustration',
-    endOffset: 1000,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: 445,
-        endValue: 445,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: '.IndexPage__joystream-dao__illustration',
-    startOffset: 1000,
-    end: '.IndexPage__joystream-dao__illustration',
-    endOffset: 1500,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: 445,
         endValue: 400,
         property: 'translateY',
         unit: 'px',

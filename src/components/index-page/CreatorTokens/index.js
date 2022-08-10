@@ -14,37 +14,12 @@ import './style.scss';
 
 const parallaxDataForeground = [
   {
-    start: 0,
-    end: 3700,
+    start: 'self',
+    duration: 1400,
     easing: 'easeIn',
     properties: [
       {
         startValue: 280,
-        endValue: 0,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: 3700,
-    end: 4100,
-    properties: [
-      {
-        startValue: 0,
-        endValue: 0,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: 4100,
-    end: 4800,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: 0,
         endValue: -125,
         property: 'translateY',
         unit: 'px',

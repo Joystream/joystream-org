@@ -11,38 +11,13 @@ import './style.scss';
 
 const parallaxDataForeground = [
   {
-    start: 0,
-    end: 2100,
+    start: 'self',
+    startOffset: -300,
+    duration: 1700,
     easing: 'easeIn',
     properties: [
       {
         startValue: -292,
-        endValue: -392,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: 2100,
-    end: 2400,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: -392,
-        endValue: -392,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: 2400,
-    end: 3300,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: -392,
         endValue: -470,
         property: 'translateY',
         unit: 'px',
@@ -53,39 +28,14 @@ const parallaxDataForeground = [
 
 const parallaxDataPopup = [
   {
-    start: 0,
-    end: 2100,
+    start: 'self',
+    startOffset: -200,
+    duration: 1500,
     easing: 'easeIn',
     properties: [
       {
-        startValue: 300,
-        endValue: -25,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: 2100,
-    end: 2400,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: -25,
-        endValue: -25,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-  {
-    start: 2400,
-    end: 3300,
-    easing: 'easeIn',
-    properties: [
-      {
-        startValue: -25,
-        endValue: -95,
+        startValue: 100,
+        endValue: -250,
         property: 'translateY',
         unit: 'px',
       },
