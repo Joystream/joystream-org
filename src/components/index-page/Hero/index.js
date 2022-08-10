@@ -33,8 +33,8 @@ const parallaxDataButton = [
     easing: 'easeIn',
     properties: [
       {
-        startValue: -650,
-        endValue: -950,
+        startValue: -685,
+        endValue: -985,
         property: 'translateY',
       },
     ],

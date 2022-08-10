@@ -12,13 +12,13 @@ import './style.scss';
 const parallaxDataForeground = [
   {
     start: 'self',
-    startOffset: -300,
+    startOffset: -350,
     duration: 1700,
     easing: 'easeIn',
     properties: [
       {
-        startValue: -292,
-        endValue: -470,
+        startValue: -350,
+        endValue: -600,
         property: 'translateY',
         unit: 'px',
       },
@@ -34,8 +34,8 @@ const parallaxDataPopup = [
     easing: 'easeIn',
     properties: [
       {
-        startValue: 100,
-        endValue: -250,
+        startValue: 25,
+        endValue: -275,
         property: 'translateY',
         unit: 'px',
       },
