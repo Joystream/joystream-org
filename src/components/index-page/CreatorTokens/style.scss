@@ -317,8 +317,15 @@
           max-width: 580px;
         }
 
+        &__overlay {
+          bottom: -20px;
+        }
+
         &__illustration {
-          height: 650px;
+          max-height: 600px;
+          margin-bottom: 100px;
+          transform: scale(1.2);
+          transform-origin: left top;
 
           &__background {
             left: 0;
@@ -350,7 +357,13 @@
     &__creator-tokens {
       &__hero {
         &__illustration {
-          height: 590px;
+          max-height: 450px;
+          margin-bottom: 200px;
+          transform: scale(1.5);
+
+          &__foreground {
+            top: 130px;
+          }
         }
       }
 
@@ -441,6 +454,8 @@
   @media (max-width: 500px) {
     &__creator-tokens__hero__illustration {
       height: 400px;
+      margin-bottom: 250px;
+      transform: scale(2);
 
       &__foreground {
         top: 77px;
@@ -455,6 +470,9 @@
       &__secure-listing,
       &__share-upside {
         &__illustration {
+          margin-right: -20px;
+          margin-left: -20px;
+
           & > img {
             max-width: 100%;
           }

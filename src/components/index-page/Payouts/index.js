@@ -1,13 +1,13 @@
 import React from 'react';
 import Plx from 'react-plx';
 
-import { ArrowButton } from '../../ArrowButton';
+// import { ArrowButton } from '../../ArrowButton';
 
-import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.png';
-import PayoutsForeground from '../../../assets/images/landing/payouts-foreground.png';
-import { ReactComponent as YoutubeLogo } from '../../../assets/svg/landing/youtube-logo.svg';
-import { ReactComponent as ConnectionIcon } from '../../../assets/svg/landing/connection-icon.svg';
-import { ReactComponent as JoystreamLogo } from '../../../assets/svg/logo-mark.svg';
+import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.webp';
+import PayoutsForeground from '../../../assets/images/landing/payouts-foreground.webp';
+// import { ReactComponent as YoutubeLogo } from '../../../assets/svg/landing/youtube-logo.svg';
+// import { ReactComponent as ConnectionIcon } from '../../../assets/svg/landing/connection-icon.svg';
+// import { ReactComponent as JoystreamLogo } from '../../../assets/svg/logo-mark.svg';
 
 import './style.scss';
 

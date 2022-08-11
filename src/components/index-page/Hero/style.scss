@@ -75,6 +75,7 @@
       margin-top: 80px;
 
       &__background {
+        max-width: 1152px;
         opacity: 0;
         filter: drop-shadow(0 33px 100px rgba(0, 0, 0, .22)) drop-shadow(0 7.37098px 22.3363px rgba(0, 0, 0, .131144)) drop-shadow(0 2.19453px 6.6501px rgba(0, 0, 0, .0888564));
         animation: animateLandingHeroImage .75s forwards ease;
@@ -83,8 +84,9 @@
 
       &__foreground {
         position: absolute;
-        top: 95px;
+        top: 90px;
         right: -45px;
+        max-width: 404px;
         opacity: 0;
         animation: animateLandingNftWidget .75s forwards ease;
         animation-delay: .3s;
@@ -94,6 +96,7 @@
         position: absolute;
         top: 400px;
         right: -21px;
+        max-width: 356px;
         opacity: 0;
         animation: animateLandingButton 1s .75s forwards ease;
         animation-delay: .3s;
@@ -263,19 +266,25 @@
     &__hero {
       &__illustration {
         &__background {
-          width: 310px;
+          width: 100%;
         }
 
         &__foreground {
-          top: -172px;
+          top: unset;
           right: -10px;
-          width: 108px;
+          bottom: -11px;
+          width: 33%;
         }
 
         &__button {
-          top: -93px;
+          top: 51%;
           right: -4px;
-          width: 96px;
+          width: calc(33% - 12px);
+        }
+
+        &__button-plx {
+          // override will-change: transform applied by Plx to not create a new stacking context
+          will-change: width !important;
         }
       }
 

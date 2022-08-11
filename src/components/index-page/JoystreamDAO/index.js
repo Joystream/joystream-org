@@ -3,8 +3,8 @@ import Plx from 'react-plx';
 import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
-import JoystreamDaoBackgroundImage from '../../../assets/images/landing/joystream-dao-background.png';
-import JoystreamDaoForegroundImage from '../../../assets/images/landing/joystream-dao-foreground.png';
+import JoystreamDaoBackgroundImage from '../../../assets/images/landing/joystream-dao-background.webp';
+import JoystreamDaoForegroundImage from '../../../assets/images/landing/joystream-dao-foreground.webp';
 
 import './style.scss';
 
