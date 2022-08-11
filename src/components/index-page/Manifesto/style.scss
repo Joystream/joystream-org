@@ -76,6 +76,8 @@ $mobile-v-padding: 80px;
       }
 
       &__icon {
+        height: auto;
+        max-width: 350px;
         margin-top: 32px;
       }
     }
@@ -90,6 +92,7 @@ $mobile-v-padding: 80px;
       }
 
       &__icon {
+        max-width: 250px;
         margin-bottom: (-$mobile-v-padding);
       }
     }

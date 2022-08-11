@@ -19,6 +19,11 @@ module.exports = {
       resolve: 'gatsby-plugin-svgr',
       options: {
         exclude: /(hydra-hero.svg)$/,
+        svgoConfig: {
+          plugins: [
+            { removeViewBox: false },
+          ],
+        },
       },
     },
     'gatsby-plugin-anchor-links',

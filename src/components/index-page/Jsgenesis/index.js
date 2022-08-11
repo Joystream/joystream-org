@@ -13,7 +13,7 @@ const Jsgenesis = ({ t }) => {
         <div className='IndexPage__jsgenesis__content'>
           <span className='IndexPage__jsgenesis__section-title'>{t("landing.jsgenesis.sectionTitle")}</span>
           <h2 className='IndexPage__jsgenesis__title'>
-            <Trans i18nKey="landing.jsgenesis.title" components={{ br: <br />, span: <span></span> }} />
+            <Trans i18nKey="landing.jsgenesis.title" components={{ br: <br /> }} />
           </h2>
           <Link to="/about">
             <p className='IndexPage__jsgenesis__link'>
