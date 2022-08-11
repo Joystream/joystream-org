@@ -9,7 +9,7 @@ import MainnetBanner from '../../MainnetBanner';
 
 const propTypes = {
   children: node,
-  primer: bool
+  primer: bool,
 };
 
 const defaultTypes = {
@@ -19,7 +19,7 @@ const defaultTypes = {
 const BaseLayout = ({ children, t, mainnetReminder = false, primer }) => {
   return (
     <ScrollProvider>
-      <div>
+      <div style={{ overflowX: 'hidden' }}>
         {mainnetReminder ? <MainnetBanner /> : null}
         <Navbar t={t} primer={primer} />
         {children}

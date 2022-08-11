@@ -5,9 +5,9 @@ import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ArrowButton } from '../../ArrowButton';
 
-import AtlasHeroBackgroundImage from '../../../assets/images/landing/atlas-hero-background.png';
-import AtlasHeroForegroundImage from '../../../assets/images/landing/atlas-hero-foreground.png';
-import AtlasHeroButtonImage from '../../../assets/images/landing/atlas-hero-button.png';
+import AtlasHeroBackgroundImage from '../../../assets/images/landing/atlas-hero-background.webp';
+import AtlasHeroForegroundImage from '../../../assets/images/landing/atlas-hero-foreground.webp';
+import AtlasHeroButtonImage from '../../../assets/images/landing/atlas-hero-button.webp';
 
 import './style.scss';
 
@@ -88,7 +88,7 @@ const Hero = ({ t }) => {
               alt="bid section for the associated video NFT"
             />
           </Plx>
-          <Plx parallaxData={parallaxDataButton} animateWhenNotInViewport={true}>
+          <Plx parallaxData={parallaxDataButton} animateWhenNotInViewport={true} className="IndexPage__hero__illustration__button-plx">
             <img
               className="IndexPage__hero__illustration__button"
               src={AtlasHeroButtonImage}

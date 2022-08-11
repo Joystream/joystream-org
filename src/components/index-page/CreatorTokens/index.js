@@ -3,12 +3,12 @@ import Plx from 'react-plx';
 import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
-import CreatorTokensBackground from '../../../assets/images/landing/creator-tokens-background.png';
-import CreatorTokensForeground from '../../../assets/images/landing/creator-tokens-foreground.png';
-import Fundraising from '../../../assets/images/landing/fundraising.png';
-import StableIncome from '../../../assets/images/landing/stable-income.png';
-import SecureListing from '../../../assets/images/landing/secure-listing.png';
-import ShareUpside from '../../../assets/images/landing/share-upside.png';
+import CreatorTokensBackground from '../../../assets/images/landing/creator-tokens-background.webp';
+import CreatorTokensForeground from '../../../assets/images/landing/creator-tokens-foreground.webp';
+import Fundraising from '../../../assets/images/landing/creator-tokens-fundraising.webp';
+import StableIncome from '../../../assets/images/landing/creator-tokens-stable-income.webp';
+import SecureListing from '../../../assets/images/landing/creator-tokens-secure-listing.webp';
+import ShareUpside from '../../../assets/images/landing/creator-tokens-share-upside.webp';
 
 import './style.scss';
 
@@ -58,8 +58,8 @@ const CreatorTokens = ({ t }) => {
                 alt="token holders list popup"
               />
             </Plx>
+            <div className="IndexPage__creator-tokens__hero__overlay"></div>
           </div>
-          <div className="IndexPage__creator-tokens__hero__overlay"></div>
         </div>
         <div className="IndexPage__creator-tokens__fundraising">
           <div className="IndexPage__creator-tokens__fundraising__illustration">

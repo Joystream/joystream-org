@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
-import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.png';
+import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.webp';
 import { ArrowButton } from '../../ArrowButton';
 
 import './style.scss';

@@ -2,9 +2,9 @@ import React from 'react';
 import Plx from 'react-plx';
 import { Trans } from 'gatsby-plugin-react-i18next';
 
-import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.png';
-import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.png';
-import VideoNFTsPopupImage from '../../../assets/images/landing/video-nfts-popup.png';
+import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.webp';
+import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.webp';
+import VideoNFTsPopupImage from '../../../assets/images/landing/video-nfts-popup.webp';
 import { ArrowButton } from '../../ArrowButton';
 
 import './style.scss';
