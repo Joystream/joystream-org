@@ -5,10 +5,10 @@ import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
 
 import './style.scss';
 
-export const ArrowButton = ({ link, text, className, onClick, state, to, style, ...props }) => {
+export const ArrowButton = ({ link, text, className, textClassname, onClick, state, to, style, ...props }) => {
   const children = (
     <div className="ArrowButton">
-      <span className="ArrowButton__text"> {text} </span>
+      <span className={`ArrowButton__text ${textClassname ?? ""}`}> {text} </span>
       <Arrow className="ArrowButton__arrow" />
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from '../Button';
 import Link from '../Link';
 import Input from '../Input';
+import OurInvestors from './OurInvestors';
 
 import { joystreamLinks, githubLinks, usefulLinks, socialMedias } from './data';
 
@@ -25,7 +26,40 @@ const FooterSection = ({ title, links }) => {
   );
 };
 
-const Footer = ({ t }) => {
+const LinkSection = ({ t }) => (
+  <>
+    <OurInvestors t={t} />
+    <div className="Footer__layout">
+      <FooterSection
+        title={t('joystream')}
+        links={joystreamLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
+      />
+      <FooterSection
+        title={t('socials.github')}
+        links={githubLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
+        />
+      <FooterSection
+        title={t('footer.usefulLinks.title')}
+        links={usefulLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
+      />
+
+      <div className="Footer__section Footer__section--socials">
+        <h6 className="Footer__section-title Footer__section-title--socials">{t('footer.followUs')}</h6>
+
+        <div className="Footer__socials">
+          {socialMedias.map(({ icon: Icon, name, href }) => (
+            <a href={href} className="Footer__social-link" key={name}>
+              <Icon className="Footer__social-icon" />
+              <p className="Footer__social-name">{t(name)}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </>
+);
+
+const Footer = ({ t, primer }) => {
   const [email, setEmail] = useState('');
 
   return (
@@ -55,33 +89,7 @@ const Footer = ({ t }) => {
           </Button>
         </form>
       </div>
-      <div className="Footer__layout">
-        <FooterSection
-          title={t('joystream')}
-          links={joystreamLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
-        />
-        <FooterSection
-          title={t('socials.github')}
-          links={githubLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
-        />
-        <FooterSection
-          title={t('footer.usefulLinks.title')}
-          links={usefulLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
-        />
-
-        <div className="Footer__section">
-          <h6 className="Footer__section-title">{t('footer.followUs')}</h6>
-
-          <div className="Footer__socials">
-            {socialMedias.map(({ icon: Icon, name, href }) => (
-              <a href={href} className="Footer__social-link" key={name}>
-                <Icon className="Footer__social-icon" />
-                <p className="Footer__social-name">{t(name)}</p>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
+      {!primer ? <LinkSection t={t} /> : null}
     </footer>
   );
 };

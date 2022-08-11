@@ -1,0 +1,242 @@
+@import '../../../styles/main';
+@import '../../../pages/style';
+
+.IndexPage {
+  &__video-nfts-wrapper {
+    padding-top: 96px;
+    background-color: $c_black;
+  }
+
+  &__video-nfts {
+    @extend %container;
+
+    display: grid;
+    height: 413px;
+    gap: 30px;
+    grid-template-columns: 670px auto;
+
+    &__illustration {
+      position: relative;
+
+      &__foreground {
+        position: absolute;
+        left: 104px;
+        width: 308px;
+      }
+
+      &__popup {
+        position: absolute;
+        right: 100px;
+        bottom: -50px;
+        width: 208px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &__section-title {
+        @extend %section-title;
+
+        color: #6c6cff;
+      }
+
+      &__title {
+        @extend %h3;
+
+        margin-top: 4px;
+        color: $c_white;
+      }
+
+      &__subtitle {
+        @extend %base-1;
+
+        margin-top: 16px;
+        color: #a7aeb7;
+      }
+    }
+  }
+
+  &__video-nfts-cta {
+    @extend %largeContainer;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 96px;
+    padding-bottom: 96px;
+    background-image: url('../../../assets/svg/landing/video-nfts-cta-background.svg');
+    background-position: bottom 0 left 0;
+    background-repeat: no-repeat;
+
+    &__title {
+      @include h3;
+
+      max-width: 816px;
+      color: $c_white;
+      text-align: center;
+    }
+
+    &__about {
+      @extend %base-3;
+
+      margin-top: 16px;
+      color: #a7aeb7;
+    }
+
+    &__podcast {
+      @extend %base-5;
+
+      margin-top: 4px;
+      color: #5c6475;
+    }
+
+    &__button {
+      width: 229px;
+      height: 60px;
+      margin-top: 48px;
+      padding: 18px 15px !important;
+    }
+
+    &__button-text {
+      @extend %landing-page-button-text;
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__video-nfts {
+      grid-template-columns: 500px auto;
+
+      &__illustration {
+        &__background {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        &__foreground {
+          bottom: -732px;
+          left: 74px;
+          width: 235px;
+        }
+
+        &__popup {
+          right: 20px;
+          bottom: -445px;
+        }
+      }
+    }
+
+    &__video-nfts-cta {
+      background-position: bottom 0 left -70px;
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__video-nfts {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+
+      &__illustration {
+        width: 100%;
+        height: 290px;
+        transform: scale(1.3);
+
+        &__background {
+          top: unset;
+          right: 0;
+          bottom: unset;
+          left: 0;
+          height: 100%;
+          margin: auto;
+        }
+
+        &__foreground {
+          top: unset;
+          right: 115px;
+          bottom: unset;
+          left: 0;
+          margin: auto;
+        }
+
+        &__popup {
+          top: 175px;
+          right: 0;
+          bottom: unset;
+          left: 205px;
+          width: 160px;
+          margin: auto;
+        }
+      }
+
+      &__content {
+        margin-top: 50px;
+        padding: 0 22px;
+      }
+    }
+
+    &__video-nfts-cta {
+      background: none;
+
+      &__title {
+        max-width: 620px;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__video-nfts-wrapper {
+      padding-top: 80px;
+    }
+
+    &__video-nfts {
+      &__content {
+        padding: 0 10px;
+
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+    }
+
+    &__video-nfts-cta {
+      margin-top: 64px;
+      padding-bottom: 80px;
+
+      &__title {
+        @include h4;
+      }
+    }
+  }
+
+  @media (max-width: 525px) {
+    &__video-nfts {
+      &__illustration {
+        height: 194px;
+
+        &__foreground {
+          right: 76px;
+          width: 155px;
+        }
+
+        &__popup {
+          top: 120px;
+          left: 130px;
+          width: 100px;
+        }
+      }
+
+      &__content {
+        margin-top: 32px;
+      }
+    }
+  }
+}

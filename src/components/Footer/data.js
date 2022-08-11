@@ -15,7 +15,6 @@ const githubLinks = [
 ];
 
 const usefulLinks = [
-  { href: sharedData.links.openings, label: 'footer.usefulLinks.hiring' },
   { to: '/brand/guides', label: 'footer.usefulLinks.brandGuidance' },
   { href: 'https://joystreamstats.live/tokenomics', label: 'footer.usefulLinks.tokenomics' },
 ];

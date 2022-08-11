@@ -4,28 +4,65 @@
       "description": "Joystream - видеоплатформа, которая принадлежит, контролируется и управляется своими пользователями."
     },
     "hero": {
-      "title": "DAO платформа для видео",
-      "subtitle": "Joystream - видеоплатформа, которая принадлежит,<0/> контролируется и управляется своими пользователями.",
-      "metrics": {
-        "mainTitle": "Метрики тестнета",
-        "titles": {
-          "participationPayout": "Выплаты участникам",
-          "activeValidators": "Активные валидаторы",
-          "blockHeight": "Высота блоков",
-          "memberships": "Участников"
-        }
+      "title": "The streaming platform with more power to<span><typewriter/></span>",
+      "typewriterOptions": {
+        "creators": "creators",
+        "consumers": "consumers",
+        "you": "you",
+        "me": "me",
+        "us": "us"
+      },
+      "subtitle": "Built on Joystream blockchain and managed by the DAO community.",
+      "button": "Claim your channel"
+    },
+    "payouts": {
+      "sectionTitle": "PAYOUTS",
+      "title": "Receive payouts for uploading quality videos",
+      "subtitle": "Upload high quality videos to get cash rewards from the Joystream DAO council on a regular basis. Popular creators are rewarded higher."
+    },
+    "videoNFTs": {
+      "sectionTitle": "VIDEO NFTS",
+      "title": "Monetise your videos with NFT sales and royalties",
+      "subtitle": "Turn your videos into NFTs and put them up for sale. Choose between fixed price, open auction, and timed auction. Define royalties to get a cut every time your NFT gets sold again.",
+      "cta": {
+        "title": "“This should be the greatest time <br /> in history for creative people. And I think we might have finally figured it out.”",
+        "about": "Chris Dixon, entrepreneur and investor",
+        "podcast": "The Tim Ferris Show podcast, episode #542",
+        "button": "Claim your channel"
       }
     },
-    "earnJoyCoins": {
-      "title": "Participate & earn $JOY",
-      "subtitle": "Here’s everything you need to know about Joystream and how to get started earning $JOY tokens",
-      "button": {
-        "text": "Start earning"
+    "creatorTokens": {
+      "hero": {
+        "comingSoon": "Coming early 2023",
+        "sectionTitle": "CREATOR TOKENS",
+        "title": "New ways to engage and <br /> get support from your audience",
+        "subtitle": "Turn viewers into evangelists by letting them hold a share in your channel when they buy your own channel token.",
+        "link": "Sign up for beta tests"
+      },
+      "fundraising": {
+        "sectionTitle": "FUND RAISING",
+        "title": "Put your token sale on autopilot <br /> or sell it on your own terms",
+        "subtitle": "Have your token supply follow the demand effortlessly with the Automated Market Maker, or go with Custom Sale to decide on the exact terms you want your token to be traded on."
+      },
+      "stableIncome": {
+        "sectionTitle": "STABLE INCOME",
+        "title": "Receive stable stream of tokens every year",
+        "subtitle": "Patronage gives you the power to earn regular annual token supply, as a compensation for your effort in curating the community and managing token economics."
+      },
+      "secureListing": {
+        "sectionTitle": "SECURE LISTING",
+        "title": "Yes to whitelists & vesting schedules.<br /> No to monkey business.",
+        "subtitle": "Flexible vesting schedule allows you to specify at what rate the newly purchased tokens should be unlocked. Paired with ability to run whitelist-only sales, it provides everything you need to feel safe about your investments."
+      },
+      "shareUpside": {
+        "sectionTitle": "SHARE UPSIDE WITH THE COMMUNITY",
+        "title": "Invest in other creators to receive <br /> a portion of their revenue",
+        "subtitle": "Support other creators and receive a portion of their revenue, or reward your audience by sharing some of your channel’s earnings with them."
       }
     },
     "availableActivities": {
-      "title": "Available activities",
-      "subtitle": "See the wide range of opportunities with which you can participate on our testnet",
+      "title": "Not a creator?<br/> Explore rewardable activities",
+      "subtitle": "Joystream is a video platform managed by DAO, which means there are all sorts of ways you can join and earn by contributing to the project.",
       "activityTitles": {
         "referral": "Refer a friend",
         "bounties": "Bounties",
@@ -46,115 +83,24 @@
       },
       "weekly": "Weekly",
       "placeForYou": "Place for you?",
-      "chatWithIntegrator": "Chat with Integrator"
-    },
-    "becomeFM": {
-      "subtitle": "Уникальная схема распределения токенов среди сообщества",
-      "title": "Станьте одним из членов-основателей и получите токены основной сети, влияя на развитие платформы.",
-      "alternateTitle": "Станьте одним из членов-основателей и оказывайте ощутимое влияние на развитие платформы.",
-      "link": "Узнать больше о нашей щедрой программе лояльности"
+      "chatWithIntegrator": "Chat with Integrator",
+      "showMore": "Show more activities"
     },
     "whatWeDo": {
-      "subtitle": "Наша мотивация при построении протокола Joystream",
+      "sectionTitle": "MANIFESTO",
       "title": "Мы за устройство, при котором медиаплатформы ответственны перед людьми, на которых они влияют.",
       "link": "Прочтите манифест"
     },
-    "exploreJoystream": {
-      "title": "Начните изучение Joystream прямо сейчас",
-      "subtitle": "Два быстро развивающихся приложения для просмотра контента и управления",
-      "atlas": {
-        "text": "Atlas - флагманское приложение для просмотра и публикации контента в Joystream. Смотрите видео, подписывайтесь на авторов, открывайте для себя новый контент либо создавайте собственный канал и формируйте свою аудиторию.",
-        "link": "Попробовать Atlas",
-        "imageAlt": "Обзор интерфейса Atlas"
-      },
-      "pioneer": {
-        "text": "Pioneer дает возможность выполнять работу в рамках сообщества, а также управлять им. Голосуйте на выборах, организовывайте сбор средств на собственный проект либо поддерживайте работу платформы, принимая участие в оплачиваемых ролях.",
-        "link": "Попробовать Pioneer",
-        "imageAlt": "Обзор интерфейса Pioneer"
-      }
+    "joystreamDAO": {
+      "sectionTitle": "JOYSTREAM DAO",
+      "title" : "Have a hand in shaping the future of Joystream.<br /> Join our DAO.",
+      "subtitle": "Pioneer is the place to participate in community governance and operation. Vote on elections, submit proposals or enter a paid role to support the platform growth.",
+      "link": "Go to Pioneer"
     },
-    "roadToMainnet": {
-      "title": "Путь к основной сети",
-      "testnetState": {
-        "Current": "Текущий тестнет",
-        "Past": "Прошедший тестнет",
-        "Future": "Будущий тестнет"
-      },
-      "released": {
-        "Current": "Запущен ",
-        "Past": "Был запущен ",
-        "Future": "Будет запущен "
-      },
-      "testnets": {
-        "Sparta": {
-          "title": "Тестнет Sparta",
-          "text": "Sparta - наш второй тестнет, в котором представлено множество важных технических улучшений.",
-          "explore": "Информация о Sparta"
-        },
-        "Athens": {
-          "title": "Тестнет Athens",
-          "text": "Athens - наш третий тестнет, в котором представлено множество важных технических улучшений.",
-          "explore": "Информация об Athens"
-        },
-        "Acropolis": {
-          "title": "Тестнет Acropolis",
-          "text": "Acropolis - наш четвертый тестнет, в котором представлено множество важных технических улучшений.",
-          "explore": "Информация об Acropolis"
-        },
-        "Rome": {
-          "title": "Тестнет Rome",
-          "text": "Rome - наш пятый тестнет, в котором представлено множество важных технических улучшений.",
-          "explore": "Информация о Rome"
-        },
-        "Constantinople": {
-          "title": "Тестнет Constantinople",
-          "text": "Constantinople - наш шестой тестнет, в котором представлено множество важных технических улучшений.",
-          "explore": "Информация о Constantinople"
-        },
-        "Alexandria": {
-          "title": "Тестнет Alexandria",
-          "text": "Alexandria - наш седьмой тестнет, в котором представлено множество важных технических улучшений.",
-          "explore": "Информация об Alexandria"
-        },
-        "Babylon": {
-          "title": "Тестнет Babylon",
-          "text": "Babylon - наш восьмой тестнет, в котором представлено множество важных технических улучшений.",
-          "explore": "Информация о Babylon"
-        },
-        "Antioch": {
-          "title": "Тестнет Antioch",
-          "text": "Antioch - наш девятый тестнет, устранивший баг, который вызвал разрыв блокчейна в сети Babylon.",
-          "explore": "Информация об Antioch"
-        },
-        "Sumer": {
-          "title": "Тестнет Sumer",
-          "text": "Sumer - наш десятый тестнет, представивший приложение для воспроизведения, которое упрощает загрузку контента.",
-          "explore": "Информация о Sumer"
-        },
-        "Giza": {
-          "title": "Тестнет Giza",
-          "text": "Giza - наш одинадцатый тестнет, представляющий 2-ю версию системы хранения и распространения контента.",
-          "explore": "Explore Giza"
-        },
-        "Olympia": {
-          "title": "Olympia testnet",
-          "text": "Olympia is our twelfth testnet, introducing a new major runtime and V2 of Pioneer.",
-          "explore": "Explore Olympia"
-        },
-        "Rhodes": {
-          "title": "Rhodes testnet",
-          "text": "Rhodes is our thirteenth testnet, enabling the launch of video NFTs.",
-          "explore": "Explore Rhodes"
-        },
-        "Carthage": {
-          "title": "Carthage testnet",
-          "text": "Carthage is our fourteenth (and final) testnet, enabling the soon to follow transition to mainnet.",
-          "explore": "Explore Carthage"
-        }
-      }
-    },
-    "ourInvestors": {
-      "title": "Investors"
+    "jsgenesis": {
+      "sectionTitle": "JSGENESIS",
+      "title": "We’re building<br/><span>Joystream</span> to set it free",
+      "link": "Meet the team"
     }
   }
 }

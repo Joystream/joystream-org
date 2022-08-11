@@ -1,50 +1,51 @@
 import React from 'react';
-import useAxios from '../utils/useAxios';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../components/_layouts/Base';
 import SiteMetadata from '../components/SiteMetadata';
 
 // components
 import Hero from '../components/index-page/Hero';
-import WhatWeDo from '../components/index-page/WhatWeDo';
-import ExploreJoystream from '../components/index-page/ExploreJoystream';
-import BecomeFoundingMember from '../components/index-page/BecomeFoundingMember';
-import RoadToMainnet from '../components/index-page/RoadToMainnet';
-import EarnJOYCoins from '../components/index-page/EarnJOYCoins';
-import OurInvestors from '../components/index-page/OurInvestors';
+import Payouts from '../components/index-page/Payouts';
+import VideoNFTs from '../components/index-page/VideoNFTs';
+import CreatorTokens from '../components/index-page/CreatorTokens';
+import YoutubeSync from '../components/index-page/YoutubeSync';
+import Manifesto from '../components/index-page/Manifesto';
+import JoystreamDAO from '../components/index-page/JoystreamDAO';
+import Jsgenesis from '../components/index-page/Jsgenesis';
 import AvailableActivities from '../components/index-page/AvailableActivities';
 
 import './style.scss';
 
 const IndexPage = () => {
-  const [statusData, loading, error] = useAxios();
   const { t } = useTranslation();
   const { language } = useI18next();
 
   return (
-    <BaseLayout t={t}>
+    <BaseLayout t={t} mainnetReminder={false}>
       <SiteMetadata
         lang={language}
         title={t('siteMetadata.title')}
         description={t('landing.siteMetadata.description')}
       />
 
-      <Hero t={t} statusData={statusData} />
+      <Hero t={t}/>
 
-      <EarnJOYCoins t={t}/>
+      <Payouts t={t}/>
+
+      <VideoNFTs t={t}/>
+
+      <CreatorTokens t={t}/>
+
+      {/* <YoutubeSync t={t}/> */}
+
+      <Manifesto t={t}/>
 
       <AvailableActivities t={t}/>
 
-      <BecomeFoundingMember t={t}/>
+      <JoystreamDAO t={t}/>
 
-      <WhatWeDo t={t}/>
-
-      <ExploreJoystream t={t}/>
-
-      <RoadToMainnet t={t}/>
-
-      <OurInvestors t={t}/>
+      <Jsgenesis t={t} />
     </BaseLayout>
   );
 };

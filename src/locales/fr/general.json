@@ -88,15 +88,16 @@
     "viewAllRoles": "View all Roles"
   },
   "navbar": {
-    "product": "Product",
-    "atlas": "Content",
-    "pioneer": "DAO",
-    "community": "Community",
+    "atlas": "Atlas",
+    "pioneer": "Governance",
+    "manifesto": "Manifesto",
+    "discord": "Discord",
+    "youtubePartnerProgram": "Youtube Partner Program",
+    "claimChannel": "Claim your channel",
     "brandStory": "Brand Story",
     "brandGuides": "Brand Guides",
     "downloadAssets": "Download Assets",
-    "about": "Team",
-    "learnMore": "Learn More"
+    "primer": "Primer"
   },
   "footer": {
     "title": "Stay up to date",
@@ -112,9 +113,12 @@
       "title": "Useful links",
       "hiring": "We are hiring!",
       "brandGuidance": "Brand guidance",
-      "tokenomics": "Tokenomics"
+      "tokenomics": "Tokenomics",
+      "faq": "FAQ"
     },
-    "followUs": "Follow us"
+    "fmProgram": "Founding Members Program",
+    "followUs": "Follow us",
+    "ourInvestors": "Our Investors"
   },
   "pages": {
     "blog": "Blog",

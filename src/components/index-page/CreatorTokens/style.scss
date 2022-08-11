@@ -1,0 +1,513 @@
+@import '../../../styles/main';
+@import '../../../pages/style';
+
+.IndexPage {
+  &__creator-tokens-wrapper {
+    padding: 96px 0;
+    background-color: #111316;
+  }
+
+  &__creator-tokens {
+    @extend %container;
+
+    &__hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &__coming-soon {
+        @extend %base-5;
+
+        padding: 4px 8px;
+        color: #a7aeb7;
+        background-color: #1f252e;
+        border-radius: 10px;
+      }
+
+      &__section-title {
+        @extend %section-title;
+
+        margin-top: 32px;
+        color: #6c6cff;
+      }
+
+      &__title {
+        @extend %h3;
+
+        max-width: 816px;
+        margin-top: 4px;
+        color: $c_white;
+        text-align: center;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        max-width: 816px;
+        margin-top: 16px;
+        color: #a7aeb7;
+        text-align: center;
+      }
+
+      &__link {
+        margin-top: 32px;
+        font-family: $font-primary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: #6c6cff;
+
+        &__arrow {
+          margin-bottom: -3px;
+          margin-left: 10px;
+          transform: rotate(-90deg) scale(.8);
+        }
+      }
+
+      &__illustration {
+        position: relative;
+        width: 100%;
+        height: 756px;
+        margin-top: 80px;
+        overflow: hidden;
+
+        &__background {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 960px;
+        }
+
+        &__foreground {
+          position: absolute;
+          top: 182px;
+          left: 80px;
+          width: 312px;
+        }
+      }
+
+      &__overlay {
+        position: absolute;
+        bottom: -5px;
+        width: 100%;
+        height: 161px;
+        background: linear-gradient(180deg, rgba(17, 19, 22, 0) 0%, #111316 100%);
+      }
+    }
+
+    &__fundraising {
+      display: grid;
+      margin-top: 64px;
+      gap: 30px;
+      grid-template-columns: auto 500px;
+
+      &__illustration {
+        display: flex;
+        justify-content: center;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__section-title {
+          @extend %section-title-md;
+
+          color: #6c6cff;
+        }
+
+        &__title {
+          @include h6;
+
+          margin-top: 4px;
+          color: $c_white;
+        }
+
+        &__subtitle {
+          @extend %base-3;
+
+          margin-top: 16px;
+          color: #a7aeb7;
+        }
+      }
+    }
+
+    &__stable-income {
+      display: grid;
+      margin-top: 64px;
+      gap: 30px;
+      grid-template-columns: 500px auto;
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__section-title {
+          @extend %section-title-md;
+
+          color: #6c6cff;
+        }
+
+        &__title {
+          @extend %h6;
+
+          margin-top: 4px;
+          color: $c_white;
+        }
+
+        &__subtitle {
+          @extend %base-3;
+
+          margin-top: 16px;
+          color: #a7aeb7;
+        }
+      }
+
+      &__illustration {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &__secure-listing {
+      display: grid;
+      margin-top: 64px;
+      gap: 30px;
+      grid-template-columns: auto 500px;
+
+      &__illustration {
+        display: flex;
+        justify-content: center;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__section-title {
+          @extend %section-title-md;
+
+          color: #6c6cff;
+        }
+
+        &__title {
+          @extend %h6;
+
+          margin-top: 4px;
+          color: $c_white;
+        }
+
+        &__subtitle {
+          @extend %base-3;
+
+          margin-top: 16px;
+          color: #a7aeb7;
+        }
+      }
+    }
+
+    &__share-upside {
+      display: grid;
+      margin-top: 64px;
+      gap: 30px;
+      grid-template-columns: 500px auto;
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__section-title {
+          @extend %section-title-md;
+
+          color: #6c6cff;
+        }
+
+        &__title {
+          @extend %h6;
+
+          margin-top: 4px;
+          color: $c_white;
+        }
+
+        &__subtitle {
+          @extend %base-3;
+
+          margin-top: 16px;
+          padding-right: 15px;
+          color: #a7aeb7;
+        }
+      }
+
+      &__illustration {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__creator-tokens {
+      &__hero {
+        &__illustration {
+          &__background {
+            width: 85%;
+          }
+
+          &__foreground {
+            width: 27.6%;
+          }
+        }
+      }
+
+      &__fundraising,
+      &__stable-income,
+      &__secure-listing,
+      &__share-upside {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  @media (max-width: 1050px) {
+    &__creator-tokens {
+      &__hero {
+        &__illustration {
+          height: 715px;
+
+          &__foreground {
+            top: 155px;
+          }
+        }
+      }
+
+      &__fundraising {
+        grid-template-columns: 450px auto;
+
+        &__illustration {
+          & > img {
+            height: 227px;
+          }
+        }
+      }
+
+      &__stable-income {
+        grid-template-columns: auto 450px;
+      }
+
+      &__secure-listing {
+        grid-template-columns: 450px auto;
+      }
+
+      &__share-upside {
+        grid-template-columns: auto 450px;
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__creator-tokens {
+      &__hero {
+        &__subtitle {
+          max-width: 580px;
+        }
+
+        &__overlay {
+          bottom: -20px;
+        }
+
+        &__illustration {
+          max-height: 600px;
+          margin-bottom: 100px;
+          transform: scale(1.2);
+          transform-origin: left top;
+
+          &__background {
+            left: 0;
+            margin: auto;
+          }
+
+          &__foreground {
+            left: 2%;
+          }
+        }
+      }
+
+      &__fundraising,
+      &__stable-income,
+      &__secure-listing,
+      &__share-upside {
+        gap: 15px;
+
+        &__content {
+          &__title {
+            @include h7;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    &__creator-tokens {
+      &__hero {
+        &__illustration {
+          max-height: 450px;
+          margin-bottom: 200px;
+          transform: scale(1.5);
+
+          &__foreground {
+            top: 130px;
+          }
+        }
+      }
+
+      &__fundraising,
+      &__secure-listing {
+        &__content {
+          &__title {
+            & > br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__creator-tokens-wrapper {
+      padding: 80px 0;
+    }
+
+    &__creator-tokens {
+      &__hero {
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+
+          max-width: 500px;
+        }
+
+        &__illustration {
+          height: 450px;
+          max-width: 600px;
+
+          &__foreground {
+            top: 95px;
+          }
+        }
+      }
+
+      &__fundraising,
+      &__stable-income,
+      &__secure-listing,
+      &__share-upside {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 32px;
+
+        &__content {
+          max-width: 450px;
+
+          &__title {
+            & > br {
+              display: none;
+            }
+          }
+
+          &__subtitle {
+            margin-top: 8px;
+          }
+        }
+
+        &__illustration {
+          & > img {
+            height: unset;
+            max-width: 450px;
+          }
+        }
+      }
+
+      &__stable-income,
+      &__share-upside,
+      &__secure-listing {
+        margin-top: 64px;
+      }
+
+      &__stable-income,
+      &__share-upside {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__creator-tokens__hero__illustration {
+      height: 400px;
+      margin-bottom: 250px;
+      transform: scale(2);
+
+      &__foreground {
+        top: 77px;
+      }
+    }
+  }
+
+  @media (max-width: 475px) {
+    &__creator-tokens {
+      &__fundraising,
+      &__stable-income,
+      &__secure-listing,
+      &__share-upside {
+        &__illustration {
+          margin-right: -20px;
+          margin-left: -20px;
+
+          & > img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__creator-tokens__hero {
+      &__title {
+        padding: 0 10px;
+
+        & > br {
+          display: none;
+        }
+      }
+
+      &__illustration {
+        height: 300px;
+
+        &__foreground {
+          top: 65px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 380px) {
+    &__creator-tokens__hero__illustration {
+      height: 250px;
+
+      &__foreground {
+        top: 58px;
+      }
+    }
+  }
+}
