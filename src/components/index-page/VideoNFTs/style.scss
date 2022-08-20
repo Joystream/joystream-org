@@ -38,20 +38,20 @@
       justify-content: center;
 
       &__section-title {
-        @extend %section-title;
+        @include section-title;
 
         color: #6c6cff;
       }
 
       &__title {
-        @extend %h3;
+        @include h3;
 
         margin-top: 4px;
         color: $c_white;
       }
 
       &__subtitle {
-        @extend %base-1;
+        @include base-1;
 
         margin-top: 16px;
         color: #a7aeb7;
@@ -80,14 +80,14 @@
     }
 
     &__about {
-      @extend %base-3;
+      @include base-3;
 
       margin-top: 16px;
       color: #a7aeb7;
     }
 
     &__podcast {
-      @extend %base-5;
+      @include base-5;
 
       margin-top: 4px;
       color: #5c6475;
@@ -101,7 +101,7 @@
     }
 
     &__button-text {
-      @extend %landing-page-button-text;
+      @include landing-page-button-text;
     }
   }
 

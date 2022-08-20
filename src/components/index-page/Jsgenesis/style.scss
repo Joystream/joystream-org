@@ -19,7 +19,7 @@
     background-repeat: no-repeat, no-repeat;
 
     &__section-title {
-      @extend %section-title;
+      @include section-title;
 
       display: block;
       color: $c_blue-ribbon;

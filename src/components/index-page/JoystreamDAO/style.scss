@@ -20,7 +20,7 @@
       justify-content: center;
 
       &__section-title {
-        @extend %section-title;
+        @include section-title;
 
         color: $c_blue-ribbon;
       }
