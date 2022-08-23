@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
-import Slider from 'react-slick';
 
 import companyIcons from '../../index-page/companies';
 
