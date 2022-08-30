@@ -38,7 +38,7 @@
         @include base-1;
 
         margin-top: 16px;
-        color: #a7aeb7;
+        color: $c_grayc-chateau;
       }
     }
 
@@ -61,6 +61,123 @@
     }
   }
 
+  &__payouts-carousel {
+    margin-top: 96px;
+
+    &__title-and-info {
+      @extend %container;
+
+      display: flex;
+      justify-content: space-between;
+
+      &__title {
+        @include h6;
+
+        color: $c_white;
+      }
+
+      &__info {
+        @include base-5;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: $c_white;
+
+        &__icon {
+          margin-left: 6px;
+        }
+
+        &__modal {
+          position: absolute;
+          right: 0;
+          bottom: 30px;
+          width: 240px;
+          height: 190px;
+          padding: 12px 12px 18px 12px;
+          color: $c_ebony-clay;
+          background-color: $c_neutral-200;
+          opacity: 0;
+          transition: opacity .2s linear;
+          clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 6px), 100% 100%, calc(100% - 8px) calc(100% - 6px), 0% calc(100% - 6px));
+        }
+
+        &:hover &__modal {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    &__item {
+      width: 224px;
+      height: 200px;
+      padding: 24px;
+      background-color: $c_ebony-clay;
+
+      &__image {
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, .3);
+        border-radius: 50%;
+      }
+
+      &__price {
+        display: flex;
+        margin-top: 16px;
+
+        &__icon {
+          margin: auto 4px auto 0;
+        }
+
+        &__text {
+          @include h7;
+
+          color: $c_grayc-chateau;
+
+          & > span {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 40px;
+            letter-spacing: 0;
+            color: $c_white;
+            text-align: left;
+          }
+        }
+      }
+
+      &__channel {
+        @include base-5;
+
+        margin-top: 4px;
+        color: $c_grayc-chateau;
+
+        & > span {
+          color: $c_white;
+        }
+      }
+
+      &__time {
+        @include base-5;
+
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        color: $c_grayc-chateau;
+
+        &__icon {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
   &__payouts-cta {
     @extend %container;
 
@@ -69,7 +186,7 @@
     justify-content: space-between;
     height: 256px;
     margin-top: 96px;
-    background-color: #1f252e;
+    background-color: $c_ebony-clay;
     background-image: url('../../../assets/svg/landing/payouts-cta-background.svg');
     background-position: right 0;
     background-repeat: no-repeat;
