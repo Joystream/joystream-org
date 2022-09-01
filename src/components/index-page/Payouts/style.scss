@@ -98,12 +98,14 @@
           color: $c_ebony-clay;
           background-color: $c_neutral-200;
           opacity: 0;
-          transition: opacity .2s linear;
+          visibility: hidden;
+          transition: visibility .2s linear, opacity .2s linear;
           clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 6px), 100% 100%, calc(100% - 8px) calc(100% - 6px), 0% calc(100% - 6px));
         }
 
         &:hover &__modal {
           opacity: 1;
+          visibility: visible;
         }
       }
     }
