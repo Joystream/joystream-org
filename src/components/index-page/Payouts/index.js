@@ -99,18 +99,12 @@ const Payouts = ({ t }) => {
             <InfoIcon className="IndexPage__payouts-carousel__title-and-info__info__icon" />
             <div className="IndexPage__payouts-carousel__title-and-info__info__modal">
               JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing
-              NFTs, trading creator tokens, and covering the blockchain processing fees. We are in the process of
-              getting the JOY token listed on popular exchanges, so you can buy or sell JOYs for FIAT currencies, such
-              as USD.
+              NFTs, trading creator tokens, and covering the blockchain processing fees.
             </div>
           </div>
         </div>
         <div className="IndexPage__payouts-carousel__items">
-          <CarouselItem
-            joyAmount="1365"
-            channelName="Top Project"
-            time="2 hours ago"
-          />
+          <CarouselItem joyAmount="1365" channelName="Top Project" time="2 hours ago" />
         </div>
       </div>
       {/* <div className="IndexPage__payouts-cta">
