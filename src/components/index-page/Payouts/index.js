@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import cn from 'classnames';
 import Plx from 'react-plx';
 
 // import { ArrowButton } from '../../ArrowButton';
@@ -47,8 +48,12 @@ const parallaxDataForeground = [
   },
 ];
 
-const CarouselItem = ({ joyAmount, channelName, time }) => (
-  <div className="IndexPage__payouts-carousel__item">
+const CarouselItem = ({ joyAmount, channelName, time, setIsCarouselRunning }) => (
+  <div
+    className="IndexPage__payouts-carousel__item"
+    onMouseEnter={() => setIsCarouselRunning(true)}
+    onMouseLeave={() => setIsCarouselRunning(false)}
+  >
     <div className="IndexPage__payouts-carousel__item__image"></div>
     <div className="IndexPage__payouts-carousel__item__price">
       <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
@@ -65,18 +70,38 @@ const CarouselItem = ({ joyAmount, channelName, time }) => (
   </div>
 );
 
-const Carousel = ({ items }) => {
+const Carousel = ({ itemsData }) => {
+  const [isCarouselRunning, setIsCarouselRunning] = useState(false);
+
+  const items = itemsData.map(({ joyAmount, channelName, time }) => (
+    <CarouselItem
+      joyAmount={joyAmount}
+      channelName={channelName}
+      time={time}
+      setIsCarouselRunning={setIsCarouselRunning}
+    />
+  ));
+
   return (
     <div className="IndexPage__payouts-carousel__items-wrapper">
-      <div className='IndexPage__payouts-carousel__items'>
+      <div
+        className={cn('IndexPage__payouts-carousel__items', {
+          'IndexPage__payouts-carousel__items--paused': isCarouselRunning,
+        })}
+      >
         {items}
       </div>
-      <div className='IndexPage__payouts-carousel__items' aria-hidden="true">
+      <div
+        className={cn('IndexPage__payouts-carousel__items', {
+          'IndexPage__payouts-carousel__items--paused': isCarouselRunning,
+        })}
+        aria-hidden="true"
+      >
         {items}
       </div>
     </div>
   );
-}
+};
 
 const Payouts = ({ t }) => {
   return (
@@ -117,13 +142,13 @@ const Payouts = ({ t }) => {
           </div>
         </div>
         <Carousel
-          items={[
-            <CarouselItem joyAmount="1365" channelName="Top Project" time="2 hours ago" />,
-            <CarouselItem joyAmount="245" channelName="Света Василенко" time="5 hours ago" />,
-            <CarouselItem joyAmount="668" channelName="kriptos" time="5 hours ago" />,
-            <CarouselItem joyAmount="1139" channelName="Andrey_Miror" time="6 hours ago" />,
-            <CarouselItem joyAmount="987" channelName="Mary" time="1 day ago" />,
-            <CarouselItem joyAmount="119" channelName="kate" time="2 days ago" />,
+          itemsData={[
+            { joyAmount: '1365', channelName: 'Top Project', time: '2 hours ago' },
+            { joyAmount: '245', channelName: 'Света Василенко', time: '5 hours ago' },
+            { joyAmount: '668', channelName: 'kriptos', time: '5 hours ago' },
+            { joyAmount: '1139', channelName: 'Andrey_Miror', time: '6 hours ago' },
+            { joyAmount: '987', channelName: 'Mary', time: '1 day ago' },
+            { joyAmount: '119', channelName: 'kate', time: '2 day ago' },
           ]}
         />
       </div>
