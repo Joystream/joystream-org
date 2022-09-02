@@ -65,6 +65,19 @@ const CarouselItem = ({ joyAmount, channelName, time }) => (
   </div>
 );
 
+const Carousel = ({ items }) => {
+  return (
+    <div className="IndexPage__payouts-carousel__items-wrapper">
+      <div className='IndexPage__payouts-carousel__items'>
+        {items}
+      </div>
+      <div className='IndexPage__payouts-carousel__items' aria-hidden="true">
+        {items}
+      </div>
+    </div>
+  );
+}
+
 const Payouts = ({ t }) => {
   return (
     <div className="IndexPage__payouts-wrapper">
@@ -103,9 +116,16 @@ const Payouts = ({ t }) => {
             </div>
           </div>
         </div>
-        <div className="IndexPage__payouts-carousel__items">
-          <CarouselItem joyAmount="1365" channelName="Top Project" time="2 hours ago" />
-        </div>
+        <Carousel
+          items={[
+            <CarouselItem joyAmount="1365" channelName="Top Project" time="2 hours ago" />,
+            <CarouselItem joyAmount="245" channelName="Света Василенко" time="5 hours ago" />,
+            <CarouselItem joyAmount="668" channelName="kriptos" time="5 hours ago" />,
+            <CarouselItem joyAmount="1139" channelName="Andrey_Miror" time="6 hours ago" />,
+            <CarouselItem joyAmount="987" channelName="Mary" time="1 day ago" />,
+            <CarouselItem joyAmount="119" channelName="kate" time="2 days ago" />,
+          ]}
+        />
       </div>
       {/* <div className="IndexPage__payouts-cta">
         <div className="IndexPage__payouts-cta__content">
