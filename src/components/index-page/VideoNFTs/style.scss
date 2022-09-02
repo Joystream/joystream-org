@@ -116,11 +116,29 @@
       }
     }
 
+    &__items-wrapper {
+      --video-nfts-carousel-gap: 24px;
+
+      display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
+      margin-top: 32px;
+      overflow: hidden;
+      gap: var(--video-nfts-carousel-gap);
+    }
+
     &__items {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 32px;
+      flex-shrink: 0;
+      justify-content: space-between;
+      min-width: 100%;
+      animation: video-nfts-horizontal-scroll-animation 15s linear infinite;
+      animation-play-state: running;
+      gap: var(--video-nfts-carousel-gap);
+
+      &--paused {
+        animation-play-state: paused;
+      }
     }
 
     &__item {
@@ -140,6 +158,7 @@
         &__title {
           @include base-5;
 
+          min-height: 32px;
           color: rgba(129, 133, 141, 1);
 
           & > span {
@@ -370,5 +389,15 @@
         margin-top: 32px;
       }
     }
+  }
+}
+
+@keyframes video-nfts-horizontal-scroll-animation {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--video-nfts-carousel-gap)));
   }
 }

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Plx from 'react-plx';
+import cn from 'classnames';
 import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ArrowButton } from '../../ArrowButton';
@@ -46,8 +47,12 @@ const parallaxDataPopup = [
   },
 ];
 
-const CarouselItem = ({ nftTitle, channelName, joyAmount, time }) => (
-  <div className="IndexPage__video-nfts-carousel__item">
+const CarouselItem = ({ nftTitle, channelName, joyAmount, time, setIsCarouselRunning }) => (
+  <div
+    className="IndexPage__video-nfts-carousel__item"
+    onMouseEnter={() => setIsCarouselRunning(true)}
+    onMouseLeave={() => setIsCarouselRunning(false)}
+  >
     <div className="IndexPage__video-nfts-carousel__item__image"></div>
     <div className="IndexPage__video-nfts-carousel__item__content">
       <div className="IndexPage__video-nfts-carousel__item__content__title">
@@ -65,6 +70,40 @@ const CarouselItem = ({ nftTitle, channelName, joyAmount, time }) => (
     </div>
   </div>
 );
+
+const Carousel = ({ itemsData }) => {
+  const [isCarouselRunning, setIsCarouselRunning] = useState(false);
+
+  const items = itemsData.map(({ nftTitle, channelName, joyAmount, time }) => (
+    <CarouselItem
+      nftTitle={nftTitle}
+      channelName={channelName}
+      joyAmount={joyAmount}
+      time={time}
+      setIsCarouselRunning={setIsCarouselRunning}
+    />
+  ));
+
+  return (
+    <div className="IndexPage__video-nfts-carousel__items-wrapper">
+      <div
+        className={cn('IndexPage__video-nfts-carousel__items', {
+          'IndexPage__video-nfts-carousel__items--paused': isCarouselRunning,
+        })}
+      >
+        {items}
+      </div>
+      <div
+        className={cn('IndexPage__video-nfts-carousel__items', {
+          'IndexPage__video-nfts-carousel__items--paused': isCarouselRunning,
+        })}
+        aria-hidden="true"
+      >
+        {items}
+      </div>
+    </div>
+  );
+};
 
 const VideoNFTs = ({ t }) => {
   return (
@@ -109,14 +148,25 @@ const VideoNFTs = ({ t }) => {
             </div>
           </div>
         </div>
-        <div className="IndexPage__video-nfts-carousel__items">
-          <CarouselItem
-            nftTitle="Know your Councils #02 (CheOmsk)"
-            channelName="Joystream movie"
-            joyAmount="228"
-            time="15 days ago"
-          />
-        </div>
+        <Carousel
+          itemsData={[
+            {
+              nftTitle: 'Did An Alternate Reality Game Gone Wrong',
+              channelName: 'SCHISM',
+              joyAmount: '715',
+              time: '15 days ago',
+            },
+            {
+              nftTitle: 'Know your Councils #02 (CheOmsk)',
+              channelName: 'Joystream movie',
+              joyAmount: '228',
+              time: '15 days ago',
+            },
+            { nftTitle: 'Phones controlling LN nodes', channelName: 'kriptos', joyAmount: '784', time: '15 days ago' },
+            { nftTitle: 'The MAGA Coup Did Not Happen', channelName: 'SCHIZM', joyAmount: '1613', time: '15 days ago' },
+            { nftTitle: 'Laura Live Workout', channelName: 'LAURA LIVE', joyAmount: '1081', time: '15 days ago' },
+          ]}
+        />
       </div>
       <div className="IndexPage__video-nfts-cta">
         <p className="IndexPage__video-nfts-cta__title">
