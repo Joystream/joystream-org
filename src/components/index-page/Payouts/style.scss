@@ -1,5 +1,6 @@
 @import '../../../styles/main';
 @import '../../../pages/style';
+@import '../shared-styles';
 
 .IndexPage {
   &__payouts-wrapper {
@@ -62,6 +63,8 @@
   }
 
   &__payouts-carousel {
+    $carousel-gap: 24px;
+
     margin-top: 96px;
 
     &__title-and-info {
@@ -111,24 +114,22 @@
     }
 
     &__items-wrapper {
-      --payouts-carousel-gap: 24px;
-
       display: flex;
       max-width: 1440px;
       margin: 0 auto;
       margin-top: 32px;
       overflow: hidden;
-      gap: var(--payouts-carousel-gap);
+      gap: $carousel-gap;
     }
 
     &__items {
+      @include animate-carousel($carousel-gap, 25s);
+
       display: flex;
       flex-shrink: 0;
       justify-content: space-between;
       min-width: 100%;
-      animation: payouts-horizontal-scroll-animation 25s linear infinite;
-      animation-play-state: running;
-      gap: var(--payouts-carousel-gap);
+      gap: $carousel-gap;
 
       &--paused {
         animation-play-state: paused;
@@ -420,15 +421,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes payouts-horizontal-scroll-animation {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-100% - var(--payouts-carousel-gap)));
   }
 }

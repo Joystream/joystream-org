@@ -1,5 +1,6 @@
 @import '../../../styles/main';
 @import '../../../pages/style';
+@import '../shared-styles';
 
 .IndexPage {
   &__video-nfts-wrapper {
@@ -60,6 +61,8 @@
   }
 
   &__video-nfts-carousel {
+    $carousel-gap: 24px;
+
     margin-top: 96px;
 
     &__title-and-info {
@@ -117,24 +120,22 @@
     }
 
     &__items-wrapper {
-      --video-nfts-carousel-gap: 24px;
-
       display: flex;
       max-width: 1440px;
       margin: 0 auto;
       margin-top: 32px;
       overflow: hidden;
-      gap: var(--video-nfts-carousel-gap);
+      gap: $carousel-gap;
     }
 
     &__items {
+      @include animate-carousel($carousel-gap, 25s);
+
       display: flex;
       flex-shrink: 0;
       justify-content: space-between;
       min-width: 100%;
-      animation: video-nfts-horizontal-scroll-animation 25s linear infinite;
-      animation-play-state: running;
-      gap: var(--video-nfts-carousel-gap);
+      gap: $carousel-gap;
 
       &--paused {
         animation-play-state: paused;
