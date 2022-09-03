@@ -75,6 +75,7 @@ const Carousel = ({ itemsData }) => {
 
   const items = itemsData.map(({ joyAmount, channelName, time }) => (
     <CarouselItem
+      key={`${joyAmount}-${channelName}-${time}`}
       joyAmount={joyAmount}
       channelName={channelName}
       time={time}
