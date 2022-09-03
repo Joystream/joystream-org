@@ -66,6 +66,7 @@ const Carousel = ({ itemsData }) => {
 
   const items = itemsData.map(({ proposalTitle, status, date, link }) => (
     <CarouselItem
+      key={`${proposalTitle}-${status}-${date}`}
       proposalTitle={proposalTitle}
       status={status}
       date={date}

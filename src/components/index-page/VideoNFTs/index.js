@@ -76,6 +76,7 @@ const Carousel = ({ itemsData }) => {
 
   const items = itemsData.map(({ nftTitle, channelName, joyAmount, time }) => (
     <CarouselItem
+      key={`${nftTitle}-${channelName}-${joyAmount}-${time}`}
       nftTitle={nftTitle}
       channelName={channelName}
       joyAmount={joyAmount}
