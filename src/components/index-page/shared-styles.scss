@@ -1,0 +1,16 @@
+@mixin animate-carousel ($carousel-gap, $animation-length) {
+  $animation-name: unique-id() !global;
+
+  @keyframes #{$animation-name} {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-100% - #{$carousel-gap}));
+    }
+  }
+
+  animation: $animation-name $animation-length linear infinite;
+  animation-play-state: running;
+}
