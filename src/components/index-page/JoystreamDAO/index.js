@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Plx from 'react-plx';
+import cn from 'classnames';
 import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
@@ -25,27 +26,74 @@ const joystreamDaoForeground = [
   },
 ];
 
-const CarouselItem = ({ proposalTitle, status, date, link }) => (
-  <div className="IndexPage__joystream-dao-carousel__item">
-    <div className="IndexPage__joystream-dao-carousel__item__image"></div>
-    <div className="IndexPage__joystream-dao-carousel__item__title">
-      {proposalTitle}
-    </div>
-    <div className="IndexPage__joystream-dao-carousel__item__info">
-      <div className='IndexPage__joystream-dao-carousel__item__info__status'>
-        <p className='IndexPage__joystream-dao-carousel__item__info__status__label'>Status</p>
-        <div className='IndexPage__joystream-dao-carousel__item__info__status__value'>{status}</div>
+const REJECTED = 'rejected';
+
+const CarouselItem = ({ proposalTitle, status, date, link, setIsCarouselRunning }) => {
+  return (
+    <div
+      className="IndexPage__joystream-dao-carousel__item"
+      onMouseEnter={() => setIsCarouselRunning(true)}
+      onMouseLeave={() => setIsCarouselRunning(false)}
+    >
+      <div className="IndexPage__joystream-dao-carousel__item__image"></div>
+      <div className="IndexPage__joystream-dao-carousel__item__title">{proposalTitle}</div>
+      <div className="IndexPage__joystream-dao-carousel__item__info">
+        <div className="IndexPage__joystream-dao-carousel__item__info__status">
+          <p className="IndexPage__joystream-dao-carousel__item__info__status__label">Status</p>
+          <div
+            className={cn('IndexPage__joystream-dao-carousel__item__info__status__value', {
+              'IndexPage__joystream-dao-carousel__item__info__status__value--rejected':
+                status.toLowerCase() === REJECTED,
+            })}
+          >
+            {status}
+          </div>
+        </div>
+        <div className="IndexPage__joystream-dao-carousel__item__info__date">
+          <p className="IndexPage__joystream-dao-carousel__item__info__date__label">Date</p>
+          <p className="IndexPage__joystream-dao-carousel__item__info__date__value">{date}</p>
+        </div>
       </div>
-      <div className='IndexPage__joystream-dao-carousel__item__info__date'>
-        <p className='IndexPage__joystream-dao-carousel__item__info__date__label'>Date</p>
-        <p className='IndexPage__joystream-dao-carousel__item__info__date__value'>{date}</p>
+      <a className="IndexPage__joystream-dao-carousel__item__link" href={link} target="_blank">
+        View discussion <ArrowIcon className="IndexPage__joystream-dao-carousel__item__link__icon" />
+      </a>
+    </div>
+  );
+};
+
+const Carousel = ({ itemsData }) => {
+  const [isCarouselRunning, setIsCarouselRunning] = useState(false);
+
+  const items = itemsData.map(({ proposalTitle, status, date, link }) => (
+    <CarouselItem
+      proposalTitle={proposalTitle}
+      status={status}
+      date={date}
+      link={link}
+      setIsCarouselRunning={setIsCarouselRunning}
+    />
+  ));
+
+  return (
+    <div className="IndexPage__joystream-dao-carousel__items-wrapper">
+      <div
+        className={cn('IndexPage__joystream-dao-carousel__items', {
+          'IndexPage__joystream-dao-carousel__items--paused': isCarouselRunning,
+        })}
+      >
+        {items}
+      </div>
+      <div
+        className={cn('IndexPage__joystream-dao-carousel__items', {
+          'IndexPage__joystream-dao-carousel__items--paused': isCarouselRunning,
+        })}
+        aria-hidden="true"
+      >
+        {items}
       </div>
     </div>
-    <a className="IndexPage__joystream-dao-carousel__item__link" href={link}>
-      View discussion <ArrowIcon className="IndexPage__joystream-dao-carousel__item__link__icon" />
-    </a>
-  </div>
-);
+  );
+};
 
 const JoystreamDAO = ({ t }) => {
   return (
@@ -83,14 +131,46 @@ const JoystreamDAO = ({ t }) => {
         <div className="IndexPage__joystream-dao-carousel__title-section">
           <h3 className="IndexPage__joystream-dao-carousel__title-section__text">Recent proposals</h3>
         </div>
-        <div className="IndexPage__joystream-dao-carousel__items">
-          <CarouselItem
-            proposalTitle="BWG T16 Summary (2nd Attempt)"
-            status="Executed"
-            date="07/25/2022"
-            link="https://www.google.com"
-          />
-        </div>
+        <Carousel
+          itemsData={[
+            {
+              proposalTitle: 'Rhodes Council #16 - Summary',
+              status: 'Executed',
+              date: '07/21/2022',
+              link: 'https://www.google.com',
+            },
+            {
+              proposalTitle: 'BWG T16 Summary',
+              status: 'Rejected',
+              date: '07/23/2022',
+              link: 'https://www.google.com',
+            },
+            {
+              proposalTitle: 'BWG T16 Summary (2nd Attempt)',
+              status: 'Executed',
+              date: '07/25/2022',
+              link: 'https://www.google.com',
+            },
+            {
+              proposalTitle: 'Extra Hours HR Lead Bonus',
+              status: 'Executed',
+              date: '07/25/2022',
+              link: 'https://www.google.com',
+            },
+            {
+              proposalTitle: 'Storage WG Report - 16 Term',
+              status: 'Deciding',
+              date: '07/25/2022',
+              link: 'https://www.google.com',
+            },
+            {
+              proposalTitle: 'Update Content Group Budget',
+              status: 'Deciding',
+              date: '07/25/2022',
+              link: 'https://www.google.com',
+            },
+          ]}
+        />
       </div>
     </div>
   );
