@@ -18,7 +18,18 @@
     "payouts": {
       "sectionTitle": "PAYOUTS",
       "title": "Receive payouts for uploading quality videos",
-      "subtitle": "Upload high quality videos to get cash rewards from the Joystream DAO council on a regular basis. Popular creators are rewarded higher."
+      "subtitle": "Upload high quality videos to get cash rewards from the Joystream DAO council on a regular basis. Popular creators are rewarded higher.",
+      "carousel": {
+        "title": "Recently paid out channels",
+        "info": {
+          "label": "Payments are made in JOY tokens",
+          "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees."
+        },
+        "item": {
+          "price": "<span><joyAmount/></span> JOY",
+          "channel": "for <span>{{channelName}}</span>"
+        }
+      }
     },
     "videoNFTs": {
       "sectionTitle": "VIDEO NFTS",
@@ -29,6 +40,20 @@
         "about": "Chris Dixon, entrepreneur and investor",
         "podcast": "The Tim Ferris Show podcast, episode #542",
         "button": "Claim your channel"
+      },
+      "carousel": {
+        "title": "Recently sold NFT videos",
+        "info": {
+          "label": "NFTs can be sold for JOY tokens",
+          "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees."
+        },
+        "item": {
+          "title": "<span><nftTitle/></span> by <span><channelName/></span>",
+          "price": {
+            "label": "Sold for:",
+            "amount": " <span><joyAmount/></span> JOY"
+          }
+        }
       }
     },
     "creatorTokens": {
@@ -95,7 +120,22 @@
       "sectionTitle": "JOYSTREAM DAO",
       "title" : "Have a hand in shaping the future of Joystream.<br /> Join our DAO.",
       "subtitle": "Pioneer is the place to participate in community governance and operation. Vote on elections, submit proposals or enter a paid role to support the platform growth.",
-      "link": "Go to Pioneer"
+      "link": "Go to Pioneer",
+      "carousel": {
+        "title": "Recent proposals",
+        "item": {
+          "status": {
+            "label": "Status",
+            "value": {
+              "rejected": "Rejected",
+              "executed": "Executed",
+              "deciding": "Deciding"
+            }
+          },
+          "dateLabel": "Date",
+          "viewDiscussion": "View discussion"
+        }
+      }
     },
     "jsgenesis": {
       "sectionTitle": "JSGENESIS",

@@ -28,7 +28,7 @@ const joystreamDaoForeground = [
 
 const REJECTED = 'rejected';
 
-const CarouselItem = ({ proposalTitle, status, date, link, setIsCarouselRunning }) => {
+const CarouselItem = ({ proposalTitle, status, date, link, setIsCarouselRunning, t }) => {
   return (
     <div
       className="IndexPage__joystream-dao-carousel__item"
@@ -39,29 +39,34 @@ const CarouselItem = ({ proposalTitle, status, date, link, setIsCarouselRunning 
       <div className="IndexPage__joystream-dao-carousel__item__title">{proposalTitle}</div>
       <div className="IndexPage__joystream-dao-carousel__item__info">
         <div className="IndexPage__joystream-dao-carousel__item__info__status">
-          <p className="IndexPage__joystream-dao-carousel__item__info__status__label">Status</p>
+          <p className="IndexPage__joystream-dao-carousel__item__info__status__label">
+            {t('landing.joystreamDAO.carousel.item.status.label')}
+          </p>
           <div
             className={cn('IndexPage__joystream-dao-carousel__item__info__status__value', {
               'IndexPage__joystream-dao-carousel__item__info__status__value--rejected':
                 status.toLowerCase() === REJECTED,
             })}
           >
-            {status}
+            {t(`landing.joystreamDAO.carousel.item.status.value.${status.toLowerCase()}`)}
           </div>
         </div>
         <div className="IndexPage__joystream-dao-carousel__item__info__date">
-          <p className="IndexPage__joystream-dao-carousel__item__info__date__label">Date</p>
+          <p className="IndexPage__joystream-dao-carousel__item__info__date__label">
+            {t('landing.joystreamDAO.carousel.item.dateLabel')}
+          </p>
           <p className="IndexPage__joystream-dao-carousel__item__info__date__value">{date}</p>
         </div>
       </div>
       <a className="IndexPage__joystream-dao-carousel__item__link" href={link} target="_blank">
-        View discussion <ArrowIcon className="IndexPage__joystream-dao-carousel__item__link__icon" />
+        {t('landing.joystreamDAO.carousel.item.viewDiscussion')}{' '}
+        <ArrowIcon className="IndexPage__joystream-dao-carousel__item__link__icon" />
       </a>
     </div>
   );
 };
 
-const Carousel = ({ itemsData }) => {
+const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
   const items = itemsData.map(({ proposalTitle, status, date, link }) => (
@@ -72,6 +77,7 @@ const Carousel = ({ itemsData }) => {
       date={date}
       link={link}
       setIsCarouselRunning={setIsCarouselRunning}
+      t={t}
     />
   ));
 
@@ -130,7 +136,9 @@ const JoystreamDAO = ({ t }) => {
       </div>
       <div className="IndexPage__joystream-dao-carousel">
         <div className="IndexPage__joystream-dao-carousel__title-section">
-          <h3 className="IndexPage__joystream-dao-carousel__title-section__text">Recent proposals</h3>
+          <h3 className="IndexPage__joystream-dao-carousel__title-section__text">
+            {t('landing.joystreamDAO.carousel.title')}
+          </h3>
         </div>
         <Carousel
           itemsData={[
@@ -171,6 +179,7 @@ const JoystreamDAO = ({ t }) => {
               link: 'https://www.google.com',
             },
           ]}
+          t={t}
         />
       </div>
     </div>

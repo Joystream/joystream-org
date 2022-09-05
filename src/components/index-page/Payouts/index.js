@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 import Plx from 'react-plx';
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 // import { ArrowButton } from '../../ArrowButton';
 
@@ -58,11 +59,11 @@ const CarouselItem = ({ joyAmount, channelName, time, setIsCarouselRunning }) =>
     <div className="IndexPage__payouts-carousel__item__price">
       <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
       <div className="IndexPage__payouts-carousel__item__price__text">
-        <span>{joyAmount}</span> JOY
+        <Trans i18nKey="landing.payouts.carousel.item.price" components={{ span: <span />, joyAmount }} />
       </div>
     </div>
     <div className="IndexPage__payouts-carousel__item__channel">
-      for <span>{channelName}</span>
+      <Trans i18nKey="landing.payouts.carousel.item.channel" components={{ span: <span />, channelName }} />
     </div>
     <div className="IndexPage__payouts-carousel__item__time">
       <ClockIcon className="IndexPage__payouts-carousel__item__time__icon" /> {time}
@@ -70,7 +71,7 @@ const CarouselItem = ({ joyAmount, channelName, time, setIsCarouselRunning }) =>
   </div>
 );
 
-const Carousel = ({ itemsData }) => {
+const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
   const items = itemsData.map(({ joyAmount, channelName, time }) => (
@@ -80,6 +81,7 @@ const Carousel = ({ itemsData }) => {
       channelName={channelName}
       time={time}
       setIsCarouselRunning={setIsCarouselRunning}
+      t={t}
     />
   ));
 
@@ -132,13 +134,12 @@ const Payouts = ({ t }) => {
       </div>
       <div className="IndexPage__payouts-carousel">
         <div className="IndexPage__payouts-carousel__title-and-info">
-          <h3 className="IndexPage__payouts-carousel__title-and-info__title">Recently paid out channels</h3>
+          <h3 className="IndexPage__payouts-carousel__title-and-info__title">{t('landing.payouts.carousel.title')}</h3>
           <div className="IndexPage__payouts-carousel__title-and-info__info">
-            Payments are made in JOY tokens{' '}
+            {t('landing.payouts.carousel.info.label')}
             <InfoIcon className="IndexPage__payouts-carousel__title-and-info__info__icon" />
             <div className="IndexPage__payouts-carousel__title-and-info__info__modal">
-              JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing
-              NFTs, trading creator tokens, and covering the blockchain processing fees.
+              {t('landing.payouts.carousel.info.text')}
             </div>
           </div>
         </div>
@@ -151,6 +152,7 @@ const Payouts = ({ t }) => {
             { joyAmount: '987', channelName: 'Mary', time: '1 day ago' },
             { joyAmount: '119', channelName: 'kate', time: '2 day ago' },
           ]}
+          t={t}
         />
       </div>
       {/* <div className="IndexPage__payouts-cta">
