@@ -47,7 +47,7 @@ const parallaxDataPopup = [
   },
 ];
 
-const CarouselItem = ({ nftTitle, channelName, joyAmount, time, setIsCarouselRunning }) => (
+const CarouselItem = ({ nftTitle, channelName, joyAmount, time, setIsCarouselRunning, t }) => (
   <div
     className="IndexPage__video-nfts-carousel__item"
     onMouseEnter={() => setIsCarouselRunning(true)}
@@ -56,12 +56,27 @@ const CarouselItem = ({ nftTitle, channelName, joyAmount, time, setIsCarouselRun
     <div className="IndexPage__video-nfts-carousel__item__image"></div>
     <div className="IndexPage__video-nfts-carousel__item__content">
       <div className="IndexPage__video-nfts-carousel__item__content__title">
-        <span>{nftTitle}</span> by <span>{channelName}</span>
+        <Trans
+          i18nKey="landing.videoNFTs.carousel.item.title"
+          components={{
+            span: <span />,
+            nftTitle,
+            channelName,
+          }}
+        />
       </div>
       <div className="IndexPage__video-nfts-carousel__item__content__price">
-        <div className="IndexPage__video-nfts-carousel__item__content__price__title">Sold for:</div>
+        <div className="IndexPage__video-nfts-carousel__item__content__price__title">
+          {t('landing.videoNFTs.carousel.item.price.label')}
+        </div>
         <div className="IndexPage__video-nfts-carousel__item__content__price__amount">
-          <span>{joyAmount}</span> JOY
+          <Trans
+            i18nKey="landing.videoNFTs.carousel.item.price.amount"
+            components={{
+              span: <span />,
+              joyAmount,
+            }}
+          />
         </div>
       </div>
       <div className="IndexPage__video-nfts-carousel__item__content__time">
@@ -71,7 +86,7 @@ const CarouselItem = ({ nftTitle, channelName, joyAmount, time, setIsCarouselRun
   </div>
 );
 
-const Carousel = ({ itemsData }) => {
+const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
   const items = itemsData.map(({ nftTitle, channelName, joyAmount, time }) => (
@@ -82,6 +97,7 @@ const Carousel = ({ itemsData }) => {
       joyAmount={joyAmount}
       time={time}
       setIsCarouselRunning={setIsCarouselRunning}
+      t={t}
     />
   ));
 
@@ -139,13 +155,14 @@ const VideoNFTs = ({ t }) => {
       </div>
       <div className="IndexPage__video-nfts-carousel">
         <div className="IndexPage__video-nfts-carousel__title-and-info">
-          <h3 className="IndexPage__video-nfts-carousel__title-and-info__title">Recently sold NFT videos</h3>
+          <h3 className="IndexPage__video-nfts-carousel__title-and-info__title">
+            {t('landing.videoNFTs.carousel.title')}
+          </h3>
           <div className="IndexPage__video-nfts-carousel__title-and-info__info">
-            NFTs can be sold for JOY tokens{' '}
+            {t('landing.videoNFTs.carousel.info.label')}
             <InfoIcon className="IndexPage__video-nfts-carousel__title-and-info__info__icon" />
             <div className="IndexPage__video-nfts-carousel__title-and-info__info__modal">
-              JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing
-              NFTs, trading creator tokens, and covering the blockchain processing fees.
+              {t('landing.videoNFTs.carousel.info.text')}
             </div>
           </div>
         </div>
@@ -167,6 +184,7 @@ const VideoNFTs = ({ t }) => {
             { nftTitle: 'The MAGA Coup Did Not Happen', channelName: 'SCHIZM', joyAmount: '1613', time: '15 days ago' },
             { nftTitle: 'Laura Live Workout', channelName: 'LAURA LIVE', joyAmount: '1081', time: '15 days ago' },
           ]}
+          t={t}
         />
       </div>
       <div className="IndexPage__video-nfts-cta">
