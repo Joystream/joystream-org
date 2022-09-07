@@ -147,6 +147,10 @@
         height: 40px;
         background: rgba(0, 0, 0, .3);
         border-radius: 50%;
+
+        & > img {
+          width: 100%;
+        }
       }
 
       &__price {

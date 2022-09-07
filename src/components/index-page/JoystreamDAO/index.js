@@ -3,9 +3,11 @@ import Plx from 'react-plx';
 import cn from 'classnames';
 import { Trans } from 'gatsby-plugin-react-i18next';
 
-import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import JoystreamDaoBackgroundImage from '../../../assets/images/landing/joystream-dao-background.webp';
 import JoystreamDaoForegroundImage from '../../../assets/images/landing/joystream-dao-foreground.webp';
+
+import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
+import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
 
 import './style.scss';
 
@@ -28,14 +30,22 @@ const joystreamDaoForeground = [
 
 const REJECTED = 'rejected';
 
-const CarouselItem = ({ proposalTitle, status, date, link, setIsCarouselRunning, t }) => {
+const CarouselItem = ({ img, proposalTitle, status, date, link, setIsCarouselRunning, t }) => {
   return (
     <div
       className="IndexPage__joystream-dao-carousel__item"
       onMouseEnter={() => setIsCarouselRunning(true)}
       onMouseLeave={() => setIsCarouselRunning(false)}
     >
-      <div className="IndexPage__joystream-dao-carousel__item__image"></div>
+      <div className="IndexPage__joystream-dao-carousel__item__image">
+        <img
+          src={img}
+          onError={e => {
+            e.currentTarget.src = PlaceholderIcon;
+          }}
+          alt=""
+        />
+      </div>
       <div className="IndexPage__joystream-dao-carousel__item__title">{proposalTitle}</div>
       <div className="IndexPage__joystream-dao-carousel__item__info">
         <div className="IndexPage__joystream-dao-carousel__item__info__status">
@@ -69,9 +79,10 @@ const CarouselItem = ({ proposalTitle, status, date, link, setIsCarouselRunning,
 const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
-  const items = itemsData.map(({ proposalTitle, status, date, link }) => (
+  const items = itemsData.map(({ img, proposalTitle, status, date, link }) => (
     <CarouselItem
       key={`${proposalTitle}-${status}-${date}`}
+      img={img}
       proposalTitle={proposalTitle}
       status={status}
       date={date}
@@ -103,6 +114,7 @@ const Carousel = ({ itemsData, t }) => {
 };
 
 const JoystreamDAO = ({ t }) => {
+  const img = "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true";
   return (
     <div className="IndexPage__joystream-dao-wrapper">
       <div className="IndexPage__joystream-dao">
@@ -143,36 +155,42 @@ const JoystreamDAO = ({ t }) => {
         <Carousel
           itemsData={[
             {
+              img,
               proposalTitle: 'Rhodes Council #16 - Summary',
               status: 'Executed',
               date: '07/21/2022',
               link: 'https://www.google.com',
             },
             {
+              img,
               proposalTitle: 'BWG T16 Summary',
               status: 'Rejected',
               date: '07/23/2022',
               link: 'https://www.google.com',
             },
             {
+              img,
               proposalTitle: 'BWG T16 Summary (2nd Attempt)',
               status: 'Executed',
               date: '07/25/2022',
               link: 'https://www.google.com',
             },
             {
+              img,
               proposalTitle: 'Extra Hours HR Lead Bonus',
               status: 'Executed',
               date: '07/25/2022',
               link: 'https://www.google.com',
             },
             {
+              img,
               proposalTitle: 'Storage WG Report - 16 Term',
               status: 'Deciding',
               date: '07/25/2022',
               link: 'https://www.google.com',
             },
             {
+              img: "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true",
               proposalTitle: 'Update Content Working Group Budget',
               status: 'Deciding',
               date: '07/25/2022',
