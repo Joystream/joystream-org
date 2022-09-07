@@ -158,6 +158,7 @@
 
         &__title {
           @include base-5;
+          @include line-clamp(2);
 
           min-height: 32px;
           color: rgba(129, 133, 141, 1);
