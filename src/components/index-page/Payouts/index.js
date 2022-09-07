@@ -10,6 +10,7 @@ import PayoutsForeground from '../../../assets/images/landing/payouts-foreground
 import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
 import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
 import { ReactComponent as PlusIcon } from '../../../assets/svg/plus.svg';
+import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
 // import { ReactComponent as YoutubeLogo } from '../../../assets/svg/landing/youtube-logo.svg';
 // import { ReactComponent as ConnectionIcon } from '../../../assets/svg/landing/connection-icon.svg';
 // import { ReactComponent as JoystreamLogo } from '../../../assets/svg/logo-mark.svg';
@@ -49,13 +50,21 @@ const parallaxDataForeground = [
   },
 ];
 
-const CarouselItem = ({ joyAmount, channelName, time, setIsCarouselRunning }) => (
+const CarouselItem = ({ img, joyAmount, channelName, time, setIsCarouselRunning }) => (
   <div
     className="IndexPage__payouts-carousel__item"
     onMouseEnter={() => setIsCarouselRunning(true)}
     onMouseLeave={() => setIsCarouselRunning(false)}
   >
-    <div className="IndexPage__payouts-carousel__item__image"></div>
+    <div className="IndexPage__payouts-carousel__item__image">
+      <img
+        src={img}
+        onError={e => {
+          e.currentTarget.src = PlaceholderIcon;
+        }}
+        alt=""
+      />
+    </div>
     <div className="IndexPage__payouts-carousel__item__price">
       <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
       <div className="IndexPage__payouts-carousel__item__price__text">
@@ -74,9 +83,10 @@ const CarouselItem = ({ joyAmount, channelName, time, setIsCarouselRunning }) =>
 const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
-  const items = itemsData.map(({ joyAmount, channelName, time }) => (
+  const items = itemsData.map(({ img, joyAmount, channelName, time }) => (
     <CarouselItem
       key={`${joyAmount}-${channelName}-${time}`}
+      img={img}
       joyAmount={joyAmount}
       channelName={channelName}
       time={time}
@@ -107,6 +117,7 @@ const Carousel = ({ itemsData, t }) => {
 };
 
 const Payouts = ({ t }) => {
+  const img = "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true";
   return (
     <div className="IndexPage__payouts-wrapper">
       <div className="IndexPage__payouts">
@@ -145,12 +156,12 @@ const Payouts = ({ t }) => {
         </div>
         <Carousel
           itemsData={[
-            { joyAmount: '1365', channelName: 'Top Project', time: '2 hours ago' },
-            { joyAmount: '245', channelName: 'Света Василенко', time: '5 hours ago' },
-            { joyAmount: '668', channelName: 'kriptos', time: '5 hours ago' },
-            { joyAmount: '1139', channelName: 'Andrey_Miror', time: '6 hours ago' },
-            { joyAmount: '987', channelName: 'Mary', time: '1 day ago' },
-            { joyAmount: '119', channelName: 'kate', time: '2 day ago' },
+            { img, joyAmount: '1365', channelName: 'Top Project', time: '2 hours ago' },
+            { img, joyAmount: '245', channelName: 'Света Василенко', time: '5 hours ago' },
+            { img, joyAmount: '668', channelName: 'kriptos', time: '5 hours ago' },
+            { img, joyAmount: '1139', channelName: 'Andrey_Miror', time: '6 hours ago' },
+            { img, joyAmount: '987', channelName: 'Mary', time: '1 day ago' },
+            { img: "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true", joyAmount: '119', channelName: 'kate', time: '2 day ago' },
           ]}
           t={t}
         />
