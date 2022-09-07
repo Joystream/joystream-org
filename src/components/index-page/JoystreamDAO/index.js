@@ -173,7 +173,7 @@ const JoystreamDAO = ({ t }) => {
               link: 'https://www.google.com',
             },
             {
-              proposalTitle: 'Update Content Group Budget',
+              proposalTitle: 'Update Content Working Group Budget',
               status: 'Deciding',
               date: '07/25/2022',
               link: 'https://www.google.com',

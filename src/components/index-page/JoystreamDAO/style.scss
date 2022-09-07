@@ -132,6 +132,7 @@
 
       &__title {
         @include h6;
+        @include line-clamp(2);
 
         min-height: 64px;
         margin-top: 24px;
