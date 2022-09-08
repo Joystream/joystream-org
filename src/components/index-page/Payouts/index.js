@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 import Plx from 'react-plx';
-import { Trans } from 'gatsby-plugin-react-i18next';
+import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
+
+import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
 
 // import { ArrowButton } from '../../ArrowButton';
 
@@ -117,6 +119,8 @@ const Carousel = ({ itemsData, t }) => {
 };
 
 const Payouts = ({ t }) => {
+  const { language } = useI18next();
+
   const img = "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true";
   return (
     <div className="IndexPage__payouts-wrapper">
@@ -156,12 +160,12 @@ const Payouts = ({ t }) => {
         </div>
         <Carousel
           itemsData={[
-            { img, joyAmount: '1365', channelName: 'Top Project', time: '2 hours ago' },
-            { img, joyAmount: '245', channelName: 'Света Василенко', time: '5 hours ago' },
-            { img, joyAmount: '668', channelName: 'kriptos', time: '5 hours ago' },
-            { img, joyAmount: '1139', channelName: 'Andrey_Miror', time: '6 hours ago' },
-            { img, joyAmount: '987', channelName: 'Mary', time: '1 day ago' },
-            { img: "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true", joyAmount: '119', channelName: 'kate', time: '2 day ago' },
+            { img, joyAmount: '1365', channelName: 'Top Project', time: parseDateToRelativeTime(getDateHoursAgo(2), language) },
+            { img, joyAmount: '245', channelName: 'Света Василенко', time: parseDateToRelativeTime(getDateHoursAgo(5), language) },
+            { img, joyAmount: '668', channelName: 'kriptos', time: parseDateToRelativeTime(getDateHoursAgo(5), language) },
+            { img, joyAmount: '1139', channelName: 'Andrey_Miror', time: parseDateToRelativeTime(getDateHoursAgo(5), language) },
+            { img, joyAmount: '987', channelName: 'Mary', time: parseDateToRelativeTime(getDateHoursAgo(24), language) },
+            { img: "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true", joyAmount: '119', channelName: 'kate', time: parseDateToRelativeTime(getDateHoursAgo(48), language) },
           ]}
           t={t}
         />
