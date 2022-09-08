@@ -133,6 +133,8 @@
             }
           },
           "dateLabel": "Date",
+          "timeLeft": "Time left",
+          "timeLeftValue": "{{days}}d {{hours}}h {{minutes}}m",
           "viewDiscussion": "View discussion"
         }
       }
