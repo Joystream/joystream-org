@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Plx from 'react-plx';
 import cn from 'classnames';
-import { Trans } from 'gatsby-plugin-react-i18next';
+import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
+import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
 
 import { ArrowButton } from '../../ArrowButton';
 
@@ -123,6 +124,7 @@ const Carousel = ({ itemsData, t }) => {
 };
 
 const VideoNFTs = ({ t }) => {
+  const { language } = useI18next();
   return (
     <div className="IndexPage__video-nfts-wrapper">
       <div className="IndexPage__video-nfts">
@@ -172,17 +174,17 @@ const VideoNFTs = ({ t }) => {
               nftTitle: 'Did An Alternate Reality Game Gone Wrong',
               channelName: 'SCHISM',
               joyAmount: '715',
-              time: '15 days ago',
+              time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
             },
             {
               nftTitle: 'Know your Councils #02 (CheOmsk)',
               channelName: 'Joystream movie',
               joyAmount: '228',
-              time: '15 days ago',
+              time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
             },
-            { nftTitle: 'Phones controlling LN nodes', channelName: 'kriptos', joyAmount: '784', time: '15 days ago' },
-            { nftTitle: 'The MAGA Coup Did Not Happen', channelName: 'SCHIZM', joyAmount: '1613', time: '15 days ago' },
-            { nftTitle: 'Laura Live Workout', channelName: 'LAURA LIVE', joyAmount: '1081', time: '15 days ago' },
+            { nftTitle: 'Phones controlling LN nodes', channelName: 'kriptos', joyAmount: '784', time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language) },
+            { nftTitle: 'The MAGA Coup Did Not Happen', channelName: 'SCHIZM', joyAmount: '1613', time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language) },
+            { nftTitle: 'Laura Live Workout', channelName: 'LAURA LIVE', joyAmount: '1081', time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language) },
           ]}
           t={t}
         />
