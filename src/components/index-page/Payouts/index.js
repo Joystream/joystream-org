@@ -123,13 +123,15 @@ const Payouts = ({ t }) => {
 
   const img = "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true";
   return (
-    <div className="IndexPage__payouts-wrapper">
+    <section className="IndexPage__payouts-wrapper">
       <div className="IndexPage__payouts">
-        <section className="IndexPage__payouts__content">
-          <span className="IndexPage__payouts__content__section-title">{t('landing.payouts.sectionTitle')}</span>
-          <h2 className="IndexPage__payouts__content__title">{t('landing.payouts.title')}</h2>
+        <div className="IndexPage__payouts__content">
+          <header>
+            <span className="IndexPage__payouts__content__section-title">{t('landing.payouts.sectionTitle')}</span>
+            <h2 className="IndexPage__payouts__content__title">{t('landing.payouts.title')}</h2>
+          </header>
           <p className="IndexPage__payouts__content__subtitle">{t('landing.payouts.subtitle')}</p>
-        </section>
+        </div>
         <div className="IndexPage__payouts__illustration">
           <Plx parallaxData={parallaxDataBackground} animateWhenNotInViewport={true}>
             <img
@@ -189,7 +191,7 @@ const Payouts = ({ t }) => {
           textClassname="IndexPage__payouts-cta__link-text"
         />
       </div> */}
-    </div>
+    </section>
   );
 };
 
