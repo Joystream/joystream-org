@@ -232,18 +232,25 @@
       text-align: center;
     }
 
-    &__about {
-      @include base-3;
+    &__caption {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
 
-      margin-top: 16px;
-      color: #a7aeb7;
-    }
+      &__about {
+        @include base-3;
 
-    &__podcast {
-      @include base-5;
+        margin-top: 16px;
+        color: #a7aeb7;
+      }
 
-      margin-top: 4px;
-      color: #5c6475;
+      &__podcast {
+        @include base-5;
+
+        margin-top: 4px;
+        font-style: normal;
+        color: #5c6475;
+      }
     }
 
     &__button {

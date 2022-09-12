@@ -126,7 +126,7 @@ const Carousel = ({ itemsData, t }) => {
 const VideoNFTs = ({ t }) => {
   const { language } = useI18next();
   return (
-    <div className="IndexPage__video-nfts-wrapper">
+    <section className="IndexPage__video-nfts-wrapper">
       <div className="IndexPage__video-nfts">
         <div className="IndexPage__video-nfts__illustration">
           <img
@@ -149,11 +149,13 @@ const VideoNFTs = ({ t }) => {
             />
           </Plx>
         </div>
-        <section className="IndexPage__video-nfts__content">
-          <span className="IndexPage__video-nfts__content__section-title">{t('landing.videoNFTs.sectionTitle')}</span>
-          <h2 className="IndexPage__video-nfts__content__title">{t('landing.videoNFTs.title')}</h2>
+        <div className="IndexPage__video-nfts__content">
+          <header>
+            <span className="IndexPage__video-nfts__content__section-title">{t('landing.videoNFTs.sectionTitle')}</span>
+            <h2 className="IndexPage__video-nfts__content__title">{t('landing.videoNFTs.title')}</h2>
+          </header>
           <p className="IndexPage__video-nfts__content__subtitle">{t('landing.videoNFTs.subtitle')}</p>
-        </section>
+        </div>
       </div>
       <div className="IndexPage__video-nfts-carousel">
         <div className="IndexPage__video-nfts-carousel__title-and-info">
@@ -182,19 +184,38 @@ const VideoNFTs = ({ t }) => {
               joyAmount: '228',
               time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
             },
-            { nftTitle: 'Phones controlling LN nodes', channelName: 'kriptos', joyAmount: '784', time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language) },
-            { nftTitle: 'The MAGA Coup Did Not Happen', channelName: 'SCHIZM', joyAmount: '1613', time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language) },
-            { nftTitle: 'Laura Live Workout', channelName: 'LAURA LIVE', joyAmount: '1081', time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language) },
+            {
+              nftTitle: 'Phones controlling LN nodes',
+              channelName: 'kriptos',
+              joyAmount: '784',
+              time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
+            },
+            {
+              nftTitle: 'The MAGA Coup Did Not Happen',
+              channelName: 'SCHIZM',
+              joyAmount: '1613',
+              time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
+            },
+            {
+              nftTitle: 'Laura Live Workout',
+              channelName: 'LAURA LIVE',
+              joyAmount: '1081',
+              time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
+            },
           ]}
           t={t}
         />
       </div>
       <div className="IndexPage__video-nfts-cta">
-        <p className="IndexPage__video-nfts-cta__title">
-          <Trans i18nKey="landing.videoNFTs.cta.title" components={{ br: <br /> }} />
-        </p>
-        <p className="IndexPage__video-nfts-cta__about">{t('landing.videoNFTs.cta.about')}</p>
-        <p className="IndexPage__video-nfts-cta__podcast">{t('landing.videoNFTs.cta.podcast')}</p>
+        <figure>
+          <blockquote className="IndexPage__video-nfts-cta__title">
+            <Trans i18nKey="landing.videoNFTs.cta.title" components={{ br: <br /> }} />
+          </blockquote>
+          <figcaption className='IndexPage__video-nfts-cta__caption'>
+            <p className="IndexPage__video-nfts-cta__caption__about">{t('landing.videoNFTs.cta.about')}</p>
+            <cite><p className="IndexPage__video-nfts-cta__caption__podcast">{t('landing.videoNFTs.cta.podcast')}</p></cite>
+          </figcaption>
+        </figure>
         <ArrowButton
           className="IndexPage__video-nfts-cta__button"
           text={t('landing.videoNFTs.cta.button')}
@@ -202,7 +223,7 @@ const VideoNFTs = ({ t }) => {
           link="https://play.joystream.org/studio/"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -44,30 +44,32 @@ const parallaxDataButton = [
 const Hero = ({ t }) => {
   return (
     <div className="IndexPage__hero-wrapper">
-      <div className="IndexPage__hero">
-        <h1 className="IndexPage__hero__title">
-          <Trans
-            i18nKey="landing.hero.title"
-            components={{
-              span: <span />,
-              typewriter: (
-                <TypeWriter
-                  options={{
-                    strings: [
-                      t('landing.hero.typewriterOptions.creators'),
-                      t('landing.hero.typewriterOptions.builders'),
-                      t('landing.hero.typewriterOptions.users'),
-                    ],
-                    autoStart: true,
-                    loop: true,
-                    wrapperClassName: 'IndexPage__hero__typewriter-title',
-                    cursorClassName: 'IndexPage__hero__typewriter-cursor',
-                  }}
-                />
-              ),
-            }}
-          />
-        </h1>
+      <section className="IndexPage__hero">
+        <header>
+          <h1 className="IndexPage__hero__title">
+            <Trans
+              i18nKey="landing.hero.title"
+              components={{
+                span: <span />,
+                typewriter: (
+                  <TypeWriter
+                    options={{
+                      strings: [
+                        t('landing.hero.typewriterOptions.creators'),
+                        t('landing.hero.typewriterOptions.builders'),
+                        t('landing.hero.typewriterOptions.users'),
+                      ],
+                      autoStart: true,
+                      loop: true,
+                      wrapperClassName: 'IndexPage__hero__typewriter-title',
+                      cursorClassName: 'IndexPage__hero__typewriter-cursor',
+                    }}
+                  />
+                ),
+              }}
+            />
+          </h1>
+        </header>
         <p className="IndexPage__hero__subtitle">{t('landing.hero.subtitle')}</p>
         <ArrowButton
           link="https://play.joystream.org/studio/"
@@ -88,7 +90,11 @@ const Hero = ({ t }) => {
               alt="bid section for the associated video NFT"
             />
           </Plx>
-          <Plx parallaxData={parallaxDataButton} animateWhenNotInViewport={true} className="IndexPage__hero__illustration__button-plx">
+          <Plx
+            parallaxData={parallaxDataButton}
+            animateWhenNotInViewport={true}
+            className="IndexPage__hero__illustration__button-plx"
+          >
             <img
               className="IndexPage__hero__illustration__button"
               src={AtlasHeroButtonImage}
@@ -97,7 +103,7 @@ const Hero = ({ t }) => {
           </Plx>
         </div>
         <div className="IndexPage__hero__overlay"></div>
-      </div>
+      </section>
     </div>
   );
 };
