@@ -28,8 +28,10 @@
       &__section-title {
         @extend %section-title;
 
+        display: block;
         margin-top: 32px;
         color: #6c6cff;
+        text-align: center;
       }
 
       &__title {
