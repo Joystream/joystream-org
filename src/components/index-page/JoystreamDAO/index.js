@@ -40,7 +40,7 @@ const CarouselItemDate = ({ date, isStatusDeciding, t }) => {
         intervalDelay={0}
         precision={3}
         renderer={({ days, hours, minutes }) => {
-          return t("landing.joystreamDAO.carousel.item.timeLeftValue", { days, hours, minutes })
+          return t('landing.joystreamDAO.carousel.item.timeLeftValue', { days, hours, minutes });
         }}
       />
     );
@@ -86,11 +86,9 @@ const CarouselItem = ({ img, proposalTitle, status, date, link, setIsCarouselRun
           </div>
         </div>
         <div className="IndexPage__joystream-dao-carousel__item__info__date">
-          <p className="IndexPage__joystream-dao-carousel__item__info__date__label">
-            {dateLabel}
-          </p>
+          <p className="IndexPage__joystream-dao-carousel__item__info__date__label">{dateLabel}</p>
           <p className="IndexPage__joystream-dao-carousel__item__info__date__value">
-            <CarouselItemDate date={date} isStatusDeciding={status.toLowerCase() === DECIDING} t={t}/>
+            <CarouselItemDate date={date} isStatusDeciding={status.toLowerCase() === DECIDING} t={t} />
           </p>
         </div>
       </div>
@@ -148,17 +146,19 @@ const getDateHoursInTheFuture = hours => {
 };
 
 const JoystreamDAO = ({ t }) => {
-  const img = "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true";
+  const img = 'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true';
   return (
-    <div className="IndexPage__joystream-dao-wrapper">
+    <section className="IndexPage__joystream-dao-wrapper">
       <div className="IndexPage__joystream-dao">
         <div className="IndexPage__joystream-dao__content">
-          <span className="IndexPage__joystream-dao__content__section-title">
-            {t('landing.joystreamDAO.sectionTitle')}
-          </span>
-          <h2 className="IndexPage__joystream-dao__content__title">
-            <Trans i18nKey="landing.joystreamDAO.title" components={{ br: <br /> }} />
-          </h2>
+          <header>
+            <span className="IndexPage__joystream-dao__content__section-title">
+              {t('landing.joystreamDAO.sectionTitle')}
+            </span>
+            <h2 className="IndexPage__joystream-dao__content__title">
+              <Trans i18nKey="landing.joystreamDAO.title" components={{ br: <br /> }} />
+            </h2>
+          </header>
           <p className="IndexPage__joystream-dao__content__subtitle">{t('landing.joystreamDAO.subtitle')}</p>
           <a href="https://dao.joystream.org/" className="IndexPage__joystream-dao__content__link">
             {t('landing.joystreamDAO.link')}
@@ -224,7 +224,8 @@ const JoystreamDAO = ({ t }) => {
               link: 'https://www.google.com',
             },
             {
-              img: "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true",
+              img:
+                'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true',
               proposalTitle: 'Update Content Working Group Budget',
               status: 'Deciding',
               date: getDateHoursInTheFuture(74),
@@ -234,7 +235,7 @@ const JoystreamDAO = ({ t }) => {
           t={t}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -131,11 +131,13 @@ const AvailableActivities = ({ t }) => {
   }, [width]);
 
   return (
-    <div className="IndexPage__available-activities-wrapper">
+    <section className="IndexPage__available-activities-wrapper">
       <div className="IndexPage__available-activities">
-        <h2 className="IndexPage__available-activities__title">
-          <Trans i18nKey="landing.availableActivities.title" components={{ br: <br/> }} />
-        </h2>
+        <header>
+          <h2 className="IndexPage__available-activities__title">
+            <Trans i18nKey="landing.availableActivities.title" components={{ br: <br/> }} />
+          </h2>
+        </header>
         <p className="IndexPage__available-activities__subtitle">{t("landing.availableActivities.subtitle")}</p>
         <div className="IndexPage__available-activities__list">
           <Activity
@@ -173,7 +175,7 @@ const AvailableActivities = ({ t }) => {
           </div>
         ) : null}
       </div>
-    </div>
+    </section>
   );
 }
 
