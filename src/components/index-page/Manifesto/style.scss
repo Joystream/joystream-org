@@ -28,7 +28,7 @@ $mobile-v-padding: 80px;
     }
 
     &__subtitle {
-      @extend %section-title;
+      @include section-title;
 
       color: #4038ff;
     }

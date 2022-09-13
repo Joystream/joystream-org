@@ -118,7 +118,7 @@
     },
     "fmProgram": "Founding Members Program",
     "followUs": "Follow us",
-    "ourInvestors": "Our Investors"
+    "ourInvestors": "Investors"
   },
   "pages": {
     "blog": "Blog",
@@ -137,7 +137,7 @@
   },
   "cookiesNotice": {
     "text": "This site uses cookies and external trackers to improve our services and your experience. By continuing to use our site, you agree to their use.",
-    "findOutMore": "Find out more ›"
+    "findOutMore": "Find out more →"
   },
   "testnet" : {
     "goalStates": {

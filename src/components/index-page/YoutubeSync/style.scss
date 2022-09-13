@@ -15,7 +15,7 @@
 
     &__content {
       &__coming-soon {
-        @extend %base-5;
+        @include base-5;
 
         display: grid;
         width: 148px;
@@ -27,21 +27,21 @@
       }
 
       &__section-title {
-        @extend %section-title;
+        @include section-title;
 
         margin-top: 32px;
         color: #6c6cff;
       }
 
       &__title {
-        @extend %h3;
+        @include h3;
 
         margin-top: 4px;
         color: $c_white;
       }
 
       &__subtitle {
-        @extend %base-1;
+        @include base-1;
 
         margin-top: 16px;
         margin-bottom: 32px;
@@ -90,13 +90,13 @@
     background-repeat: no-repeat, no-repeat;
 
     &__section-title {
-      @extend %section-title;
+      @include section-title;
 
       color: #6c6cff;
     }
 
     &__title {
-      @extend %h2;
+      @include h2;
 
       max-width: 816px;
       margin-top: 4px;
@@ -117,7 +117,7 @@
     }
 
     &__button-text {
-      @extend %landing-page-button-text;
+      @include landing-page-button-text;
     }
   }
 }

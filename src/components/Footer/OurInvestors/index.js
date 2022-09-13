@@ -1,41 +1,51 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React, { useState } from 'react';
+import cn from 'classnames';
 
 import companyIcons from '../../index-page/companies';
 
 import './style.scss';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-const settings = {
-  arrows: false,
-  dots: false,
-  infinite: true,
-  speed: 5000,
-  autoplaySpeed: 0,
-  centerMode: true,
-  cssEase: 'linear',
-  slidesToShow: 7,
-  slidesToScroll: 1,
-  autoplay: true,
-  vertical: false,
-  pauseOnHover: false,
-  rows: 1,
-};
 
 const OurInvestors = ({ t }) => {
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
     <div className="Footer__our-investors-wrapper">
       <div className="Footer__our-investors">
-        <h2 className="Footer__our-investors__title">{t("footer.ourInvestors")}</h2>
-        <div className="Footer__our-investors__carousels">
-          <Slider {...settings} className="Footer__our-investors__carousels__top">
+        <h2 className="Footer__our-investors__title">{t('footer.ourInvestors')}</h2>
+        <div className="Footer__our-investors__carousel">
+          <div
+            className={cn('Footer__our-investors__carousel__content', {
+              'Footer__our-investors__carousel__content--paused': isPaused,
+            })}
+          >
             {companyIcons.map(({ Icon, key }) => (
-              <div key={key} className="Footer__our-investors__list-item">
-                <Icon className="Footer__our-investors__list-item__icon" />
+              <div
+                key={key}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+                className="Footer__our-investors__carousel__list-item"
+              >
+                <Icon className="Footer__our-investors__carousel__list-item__icon" />
               </div>
             ))}
-          </Slider>
+          </div>
+          <div
+            className={cn('Footer__our-investors__carousel__content', {
+              'Footer__our-investors__carousel__content--paused': isPaused,
+            })}
+            aria-hidden="true"
+          >
+            {companyIcons.map(({ Icon, key }) => (
+              <div
+                key={key}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+                className="Footer__our-investors__carousel__list-item"
+              >
+                <Icon className="Footer__our-investors__carousel__list-item__icon" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

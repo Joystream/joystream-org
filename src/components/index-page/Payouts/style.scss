@@ -22,7 +22,7 @@
       justify-content: center;
 
       &__section-title {
-        @extend %section-title;
+        @include section-title;
 
         color: #6c6cff;
       }
@@ -105,7 +105,7 @@
     }
 
     &__link-text {
-      @extend %landing-page-button-text;
+      @include landing-page-button-text;
     }
   }
 

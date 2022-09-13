@@ -25,44 +25,60 @@
       text-align: center;
     }
 
-    &__carousels {
-      position: absolute;
-      width: 100%;
-      margin-top: 68px;
+    &__carousel {
+      --our-investors-carousel-gap: 16px;
 
-      &__top {
-        width: 100%;
-        height: 100px;
+      display: flex;
+      max-width: 1440px;
+      margin-top: 32px;
+      overflow: hidden;
+      user-select: none;
+      gap: var(--our-investors-carousel-gap);
 
-        h3 {
-          color: white;
+      &__content {
+        display: flex;
+        flex-shrink: 0;
+        justify-content: space-between;
+        min-width: 100%;
+        animation: our-investors-horizontal-scroll-animation 100s linear infinite;
+        animation-play-state: running;
+        gap: 24px;
+
+        &--paused {
+          animation-play-state: paused;
         }
       }
-    }
 
-    &__list-item {
-      width: 182px;
-
-      &__icon {
+      &__list-item {
+        display: grid;
         width: 182px;
-      }
+        place-items: center;
 
-      &__icon--active {
-        display: none !important;
-      }
+        &__icon--active {
+          display: none !important;
+        }
 
-      &__icon--inactive {
-        display: block !important;
-      }
-
-      &:hover {
-        .Footer__our-investors__list-item__icon--active {
+        &__icon--inactive {
           display: block !important;
         }
 
-        .Footer__our-investors__list-item__icon--inactive {
-          display: none !important;
+        &:hover {
+          .Footer__our-investors__carousel__list-item__icon--active {
+            display: block !important;
+          }
+
+          .Footer__our-investors__carousel__list-item__icon--inactive {
+            display: none !important;
+          }
         }
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__our-investors__carousel__content {
+      &--paused {
+        animation-play-state: running;
       }
     }
   }
@@ -74,13 +90,19 @@
         line-height: 32px;
       }
 
-      &__carousels {
-        margin-top: 64px;
-
-        &__top {
-          height: auto;
-        }
+      &__carousel__content {
+        gap: 0;
       }
     }
+  }
+}
+
+@keyframes our-investors-horizontal-scroll-animation {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--our-investors-carousel-gap)));
   }
 }

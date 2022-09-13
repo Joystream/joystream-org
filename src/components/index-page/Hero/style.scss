@@ -46,7 +46,7 @@
     }
 
     &__subtitle {
-      @extend %base-1;
+      @include base-1;
 
       margin-top: 24px;
       color: #a7aeb7;
@@ -67,7 +67,7 @@
     }
 
     &__button-text {
-      @extend %landing-page-button-text;
+      @include landing-page-button-text;
     }
 
     &__illustration {
@@ -312,24 +312,29 @@
   }
 }
 
-// NEW LANDING PAGE TODO: Refactor this using scss!
+@mixin move-to-new-position ($length_to_position) {
+  opacity: 0;
+  transform: translateY($length_to_position);
+}
+
+@mixin return-to-og-position {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @keyframes animateLandingContent {
   0% {
-    opacity: 0;
-    transform: translateY(125px);
+    @include move-to-new-position(125px);
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    @include return-to-og-position;
   }
 }
 
 @keyframes animateLandingHeroImage {
   0% {
-    opacity: 0;
-    transform: translateY(125px);
+    @include move-to-new-position(125px);
   }
 
   25% {
@@ -337,15 +342,13 @@
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    @include return-to-og-position;
   }
 }
 
 @keyframes animateLandingNftWidget {
   0% {
-    opacity: 0;
-    transform: translateY(200px);
+    @include move-to-new-position(200px);
   }
 
   25% {
@@ -353,15 +356,13 @@
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    @include return-to-og-position;
   }
 }
 
 @keyframes animateLandingButton {
   0% {
-    opacity: 0;
-    transform: translateY(250px);
+    @include move-to-new-position(250px);
   }
 
   25% {
@@ -369,7 +370,6 @@
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    @include return-to-og-position;
   }
 }
