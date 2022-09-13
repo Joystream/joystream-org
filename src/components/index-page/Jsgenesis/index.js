@@ -8,23 +8,25 @@ import './style.scss';
 
 const Jsgenesis = ({ t }) => {
   return (
-    <div className='IndexPage__jsgenesis-wrapper'>
-      <div className='IndexPage__jsgenesis'>
-        <div className='IndexPage__jsgenesis__content'>
-          <span className='IndexPage__jsgenesis__section-title'>{t("landing.jsgenesis.sectionTitle")}</span>
-          <h2 className='IndexPage__jsgenesis__title'>
-            <Trans i18nKey="landing.jsgenesis.title" components={{ br: <br /> }} />
-          </h2>
+    <section className="IndexPage__jsgenesis-wrapper">
+      <div className="IndexPage__jsgenesis">
+        <div className="IndexPage__jsgenesis__content">
+          <header>
+            <span className="IndexPage__jsgenesis__section-title">{t('landing.jsgenesis.sectionTitle')}</span>
+            <h2 className="IndexPage__jsgenesis__title">
+              <Trans i18nKey="landing.jsgenesis.title" components={{ br: <br /> }} />
+            </h2>
+          </header>
           <Link to="/about">
-            <p className='IndexPage__jsgenesis__link'>
-              {t("landing.jsgenesis.link")}
-              <ArrowIcon className='IndexPage__jsgenesis__link__arrow' />
+            <p className="IndexPage__jsgenesis__link">
+              {t('landing.jsgenesis.link')}
+              <ArrowIcon className="IndexPage__jsgenesis__link__arrow" />
             </p>
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default Jsgenesis;
