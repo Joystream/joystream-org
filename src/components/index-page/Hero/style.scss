@@ -46,7 +46,7 @@
     }
 
     &__subtitle {
-      @extend %base-1;
+      @include base-1;
 
       margin-top: 24px;
       color: #a7aeb7;
@@ -67,7 +67,7 @@
     }
 
     &__button-text {
-      @extend %landing-page-button-text;
+      @include landing-page-button-text;
     }
 
     &__illustration {
@@ -77,7 +77,9 @@
       &__background {
         max-width: 1152px;
         opacity: 0;
-        filter: drop-shadow(0 33px 100px rgba(0, 0, 0, .22)) drop-shadow(0 7.37098px 22.3363px rgba(0, 0, 0, .131144)) drop-shadow(0 2.19453px 6.6501px rgba(0, 0, 0, .0888564));
+        // TODO: Using drop-shadow results in graphical problems in firefox and that is why it is commented out.
+        // This functionality should be reinstated as soon as that is fixed on their end.
+        // filter: drop-shadow(0 33px 100px rgba(0, 0, 0, .22)) drop-shadow(0 7.37098px 22.3363px rgba(0, 0, 0, .131144)) drop-shadow(0 2.19453px 6.6501px rgba(0, 0, 0, .0888564));
         animation: animateLandingHeroImage .75s forwards ease;
         animation-delay: .3s;
       }
@@ -312,24 +314,29 @@
   }
 }
 
-// NEW LANDING PAGE TODO: Refactor this using scss!
+@mixin move-to-new-position ($length_to_position) {
+  opacity: 0;
+  transform: translateY($length_to_position);
+}
+
+@mixin return-to-og-position {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @keyframes animateLandingContent {
   0% {
-    opacity: 0;
-    transform: translateY(125px);
+    @include move-to-new-position(125px);
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    @include return-to-og-position;
   }
 }
 
 @keyframes animateLandingHeroImage {
   0% {
-    opacity: 0;
-    transform: translateY(125px);
+    @include move-to-new-position(125px);
   }
 
   25% {
@@ -337,15 +344,13 @@
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    @include return-to-og-position;
   }
 }
 
 @keyframes animateLandingNftWidget {
   0% {
-    opacity: 0;
-    transform: translateY(200px);
+    @include move-to-new-position(200px);
   }
 
   25% {
@@ -353,15 +358,13 @@
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    @include return-to-og-position;
   }
 }
 
 @keyframes animateLandingButton {
   0% {
-    opacity: 0;
-    transform: translateY(250px);
+    @include move-to-new-position(250px);
   }
 
   25% {
@@ -369,7 +372,6 @@
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    @include return-to-og-position;
   }
 }
