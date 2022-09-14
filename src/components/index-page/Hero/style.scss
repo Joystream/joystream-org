@@ -77,7 +77,9 @@
       &__background {
         max-width: 1152px;
         opacity: 0;
-        filter: drop-shadow(0 33px 100px rgba(0, 0, 0, .22)) drop-shadow(0 7.37098px 22.3363px rgba(0, 0, 0, .131144)) drop-shadow(0 2.19453px 6.6501px rgba(0, 0, 0, .0888564));
+        // TODO: Using drop-shadow results in graphical problems in firefox and that is why it is commented out.
+        // This functionality should be reinstated as soon as that is fixed on their end.
+        // filter: drop-shadow(0 33px 100px rgba(0, 0, 0, .22)) drop-shadow(0 7.37098px 22.3363px rgba(0, 0, 0, .131144)) drop-shadow(0 2.19453px 6.6501px rgba(0, 0, 0, .0888564));
         animation: animateLandingHeroImage .75s forwards ease;
         animation-delay: .3s;
       }
