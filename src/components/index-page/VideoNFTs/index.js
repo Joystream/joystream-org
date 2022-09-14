@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Plx from 'react-plx';
 import cn from 'classnames';
 import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
+
 import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
+import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
 
 import { ArrowButton } from '../../ArrowButton';
 
@@ -125,6 +127,9 @@ const Carousel = ({ itemsData, t }) => {
 
 const VideoNFTs = ({ t }) => {
   const { language } = useI18next();
+  const videoNFTsCarouselInfoLabelRef = useRef();
+  useRemoveElementFocusOnKeydown(videoNFTsCarouselInfoLabelRef, ['Escape']);
+
   return (
     <section className="IndexPage__video-nfts-wrapper">
       <div className="IndexPage__video-nfts">
@@ -163,9 +168,17 @@ const VideoNFTs = ({ t }) => {
             {t('landing.videoNFTs.carousel.title')}
           </h3>
           <div className="IndexPage__video-nfts-carousel__title-and-info__info">
-            {t('landing.videoNFTs.carousel.info.label')}
-            <InfoIcon className="IndexPage__video-nfts-carousel__title-and-info__info__icon" />
-            <div className="IndexPage__video-nfts-carousel__title-and-info__info__modal">
+            <div
+              className="IndexPage__video-nfts-carousel__title-and-info__info__label"
+              /* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */
+              tabIndex={0}
+              aria-describedby="IndexPage__video-nfts-carousel__title-and-info__info__modal"
+              ref={videoNFTsCarouselInfoLabelRef}
+            >
+              {t('landing.videoNFTs.carousel.info.label')}
+              <InfoIcon className="IndexPage__video-nfts-carousel__title-and-info__info__icon" />
+            </div>
+            <div role="tooltip" id="IndexPage__video-nfts-carousel__title-and-info__info__modal" className="IndexPage__video-nfts-carousel__title-and-info__info__modal">
               {t('landing.videoNFTs.carousel.info.text')}
             </div>
           </div>
@@ -211,9 +224,11 @@ const VideoNFTs = ({ t }) => {
           <blockquote className="IndexPage__video-nfts-cta__title">
             <Trans i18nKey="landing.videoNFTs.cta.title" components={{ br: <br /> }} />
           </blockquote>
-          <figcaption className='IndexPage__video-nfts-cta__caption'>
+          <figcaption className="IndexPage__video-nfts-cta__caption">
             <p className="IndexPage__video-nfts-cta__caption__about">{t('landing.videoNFTs.cta.about')}</p>
-            <cite><p className="IndexPage__video-nfts-cta__caption__podcast">{t('landing.videoNFTs.cta.podcast')}</p></cite>
+            <cite>
+              <p className="IndexPage__video-nfts-cta__caption__podcast">{t('landing.videoNFTs.cta.podcast')}</p>
+            </cite>
           </figcaption>
         </figure>
         <ArrowButton
