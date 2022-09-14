@@ -112,6 +112,16 @@
             );
         }
 
+        &__label {
+          display: flex;
+          align-items: center;
+        }
+
+        &__label:focus + &__modal {
+          opacity: 1;
+          visibility: visible;
+        }
+
         &:hover &__modal {
           opacity: 1;
           visibility: visible;

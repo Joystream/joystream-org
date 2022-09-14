@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import cn from 'classnames';
 import Plx from 'react-plx';
 import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
 
 import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
+import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
 
 // import { ArrowButton } from '../../ArrowButton';
 
@@ -120,8 +121,10 @@ const Carousel = ({ itemsData, t }) => {
 
 const Payouts = ({ t }) => {
   const { language } = useI18next();
+  const payoutsCarouselInfoLabelRef = useRef();
+  useRemoveElementFocusOnKeydown(payoutsCarouselInfoLabelRef, ["Escape"]);
 
-  const img = "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true";
+  const img = 'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true';
   return (
     <section className="IndexPage__payouts-wrapper">
       <div className="IndexPage__payouts">
@@ -153,21 +156,64 @@ const Payouts = ({ t }) => {
         <div className="IndexPage__payouts-carousel__title-and-info">
           <h3 className="IndexPage__payouts-carousel__title-and-info__title">{t('landing.payouts.carousel.title')}</h3>
           <div className="IndexPage__payouts-carousel__title-and-info__info">
-            {t('landing.payouts.carousel.info.label')}
-            <InfoIcon className="IndexPage__payouts-carousel__title-and-info__info__icon" />
-            <div className="IndexPage__payouts-carousel__title-and-info__info__modal">
+            <div
+              className="IndexPage__payouts-carousel__title-and-info__info__label"
+              /* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */
+              tabIndex={0}
+              aria-describedby="IndexPage__payouts-carousel__title-and-info__info__modal"
+              ref={payoutsCarouselInfoLabelRef}
+            >
+              {t('landing.payouts.carousel.info.label')}
+              <InfoIcon className="IndexPage__payouts-carousel__title-and-info__info__icon" />
+            </div>
+            <div
+              role="tooltip"
+              id="IndexPage__payouts-carousel__title-and-info__info__modal"
+              className="IndexPage__payouts-carousel__title-and-info__info__modal"
+            >
               {t('landing.payouts.carousel.info.text')}
             </div>
           </div>
         </div>
         <Carousel
           itemsData={[
-            { img, joyAmount: '1365', channelName: 'Top Project', time: parseDateToRelativeTime(getDateHoursAgo(2), language) },
-            { img, joyAmount: '245', channelName: 'Света Василенко', time: parseDateToRelativeTime(getDateHoursAgo(5), language) },
-            { img, joyAmount: '668', channelName: 'kriptos', time: parseDateToRelativeTime(getDateHoursAgo(5), language) },
-            { img, joyAmount: '1139', channelName: 'Andrey_Miror', time: parseDateToRelativeTime(getDateHoursAgo(5), language) },
-            { img, joyAmount: '987', channelName: 'Mary', time: parseDateToRelativeTime(getDateHoursAgo(24), language) },
-            { img: "https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true", joyAmount: '119', channelName: 'kate', time: parseDateToRelativeTime(getDateHoursAgo(48), language) },
+            {
+              img,
+              joyAmount: '1365',
+              channelName: 'Top Project',
+              time: parseDateToRelativeTime(getDateHoursAgo(2), language),
+            },
+            {
+              img,
+              joyAmount: '245',
+              channelName: 'Света Василенко',
+              time: parseDateToRelativeTime(getDateHoursAgo(5), language),
+            },
+            {
+              img,
+              joyAmount: '668',
+              channelName: 'kriptos',
+              time: parseDateToRelativeTime(getDateHoursAgo(5), language),
+            },
+            {
+              img,
+              joyAmount: '1139',
+              channelName: 'Andrey_Miror',
+              time: parseDateToRelativeTime(getDateHoursAgo(5), language),
+            },
+            {
+              img,
+              joyAmount: '987',
+              channelName: 'Mary',
+              time: parseDateToRelativeTime(getDateHoursAgo(24), language),
+            },
+            {
+              img:
+                'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true',
+              joyAmount: '119',
+              channelName: 'kate',
+              time: parseDateToRelativeTime(getDateHoursAgo(48), language),
+            },
           ]}
           t={t}
         />
