@@ -63,7 +63,7 @@ const CreatorTokens = ({ t }) => {
             <div className="IndexPage__creator-tokens__hero__overlay"></div>
           </div>
         </div>
-        <div className="IndexPage__creator-tokens__fundraising">
+        <section className="IndexPage__creator-tokens__fundraising">
           <div className="IndexPage__creator-tokens__fundraising__illustration">
             <img
               src={Fundraising}
@@ -80,8 +80,8 @@ const CreatorTokens = ({ t }) => {
               {t("landing.creatorTokens.fundraising.subtitle")}
             </p>
           </div>
-        </div>
-        <div className="IndexPage__creator-tokens__stable-income">
+        </section>
+        <section className="IndexPage__creator-tokens__stable-income">
           <div className="IndexPage__creator-tokens__stable-income__content">
             <span className="IndexPage__creator-tokens__stable-income__content__section-title">{t("landing.creatorTokens.stableIncome.sectionTitle")}</span>
             <h3 className="IndexPage__creator-tokens__stable-income__content__title">
@@ -98,8 +98,8 @@ const CreatorTokens = ({ t }) => {
               alt="patronage (how many tokens you wish to receive based on the supply of your tokens on the market) slider popup that goes from 0% to 30%"
             />
           </div>
-        </div>
-        <div className="IndexPage__creator-tokens__secure-listing">
+        </section>
+        <section className="IndexPage__creator-tokens__secure-listing">
           <div className="IndexPage__creator-tokens__secure-listing__illustration">
             <img
               src={SecureListing}
@@ -118,8 +118,8 @@ const CreatorTokens = ({ t }) => {
               {t("landing.creatorTokens.secureListing.subtitle")}
             </p>
           </div>
-        </div>
-        <div className="IndexPage__creator-tokens__share-upside">
+        </section>
+        <section className="IndexPage__creator-tokens__share-upside">
           <div className="IndexPage__creator-tokens__share-upside__content">
             <span className="IndexPage__creator-tokens__share-upside__content__section-title">
               {t("landing.creatorTokens.shareUpside.sectionTitle")}
@@ -138,7 +138,7 @@ const CreatorTokens = ({ t }) => {
               alt={'shows active revenue split popup with a counter and button with the title "stake"'}
             />
           </div>
-        </div>
+        </section>
       </div>
     </section>
   );

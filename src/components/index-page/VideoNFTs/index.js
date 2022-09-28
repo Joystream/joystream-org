@@ -162,7 +162,7 @@ const VideoNFTs = ({ t }) => {
           <p className="IndexPage__video-nfts__content__subtitle">{t('landing.videoNFTs.subtitle')}</p>
         </div>
       </div>
-      <div className="IndexPage__video-nfts-carousel">
+      <section className="IndexPage__video-nfts-carousel">
         <div className="IndexPage__video-nfts-carousel__title-and-info">
           <h3 className="IndexPage__video-nfts-carousel__title-and-info__title">
             {t('landing.videoNFTs.carousel.title')}
@@ -218,7 +218,7 @@ const VideoNFTs = ({ t }) => {
           ]}
           t={t}
         />
-      </div>
+      </section>
       <div className="IndexPage__video-nfts-cta">
         <figure>
           <blockquote className="IndexPage__video-nfts-cta__title">
