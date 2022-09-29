@@ -83,10 +83,12 @@
         position: relative;
         display: flex;
         align-items: center;
-        color: $c_white;
+        color: $c_grayc-chateau;
+        fill: $c_grayc-chateau;
 
         &__icon {
           margin-left: 6px;
+          fill: inherit;
         }
 
         &__modal {
@@ -120,6 +122,13 @@
         &__label:focus + &__modal {
           opacity: 1;
           visibility: visible;
+          fill: $c_white;
+        }
+
+        &:hover,
+        &__label:focus {
+          color: $c_white;
+          fill: $c_white;
         }
 
         &:hover &__modal {
@@ -383,6 +392,31 @@
 
       &__title {
         @include h4;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__video-nfts-carousel {
+      &__title-and-info {
+        flex-direction: column;
+
+        &__info {
+          margin-top: 8px;
+
+          &__modal {
+            right: unset;
+            bottom: 20px;
+            left: 80px;
+            clip-path:
+              polygon(
+                0% 0%,
+                0% calc(100% - 6px),
+                100% calc(100% - 6px),
+                100% 0%
+              );
+          }
+        }
       }
     }
   }
