@@ -39,7 +39,7 @@ const ActivityArrowCTA = ({ mobile, t }) => {
   )
 };
 
-const ActivityIcons = (isLoading, icons) => {
+const ActivityIcons = ({ isLoading, icons }) => {
   if (isLoading) {
     return (
       <Loader
