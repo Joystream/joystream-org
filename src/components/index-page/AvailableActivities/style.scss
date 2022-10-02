@@ -43,10 +43,6 @@
       background-color: #111316;
       transition: all .2s;
 
-      &--mobile {
-        width: 350px;
-      }
-
       &__top {
         display: flex;
         align-items: center;
@@ -81,6 +77,10 @@
         letter-spacing: 0;
         color: $c_white;
         background-color: $c_ebony-clay;
+
+        &--mobile {
+          display: none;
+        }
 
         span {
           font-family: $font-primary;
@@ -181,6 +181,10 @@
         letter-spacing: 0;
         color: $c_blue-ribbon;
         opacity: 0;
+
+        &--mobile {
+          display: none;
+        }
       }
 
       &__cta-icon {
@@ -339,7 +343,16 @@
         }
 
         &__cta {
+          display: none;
           opacity: 1;
+
+          &--mobile {
+            display: block;
+
+            & > span {
+              display: none;
+            }
+          }
         }
 
         &__place-for-you {
@@ -373,9 +386,14 @@
         }
 
         &__amount {
+          display: none;
           padding: 6px 8px;
           font-size: 20px;
           line-height: 28px;
+
+          &--mobile {
+            display: block;
+          }
 
           span {
             font-size: 14px;

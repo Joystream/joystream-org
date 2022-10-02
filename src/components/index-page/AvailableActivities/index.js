@@ -12,7 +12,62 @@ import useAirtableData, { REFERRAL_ACTIVITY, WORKER_ACTIVITIES } from '../../../
 
 import './style.scss';
 
-const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isLoading, isMobile, t }) => {
+const ActivityListAmount = ({ mobile, amount, isWeekly, t }) => {
+  return (
+    <div className={cn("IndexPage__available-activities__list-item__amount", {
+      "IndexPage__available-activities__list-item__amount--mobile" : mobile
+    })}>
+      <span className="IndexPage__available-activities__list-item__amount__dollar-sign">$</span>
+      {amount ? Math.floor(amount) : 0}
+      {isWeekly && (
+        <span className="IndexPage__available-activities__list-item__amount__weekly">
+          {t('landing.availableActivities.weekly')}
+        </span>
+      )}
+    </div>
+  );
+};
+
+const ActivityArrowCTA = ({ mobile, t }) => {
+  return (
+    <div className={cn("IndexPage__available-activities__list-item__cta", {
+      "IndexPage__available-activities__list-item__cta--mobile": mobile
+    })}>
+      <span>{t('landing.availableActivities.chatWithIntegrator')}</span>
+      <ArrowIcon className="IndexPage__available-activities__list-item__cta-icon" />
+    </div>
+  )
+};
+
+const ActivityIcons = (isLoading, icons) => {
+  if (isLoading) {
+    return (
+      <Loader
+        className="IndexPage__available-activities__list-item__loader"
+        type="Oval"
+        color="#302ABF"
+        height="100%"
+        width="100%"
+        timeout={0}
+      />
+    );
+  }
+
+  return (
+    <>
+      {icons?.toRender?.map((iconString, index) => (
+        <div key={iconString + index} className="IndexPage__available-activities__list-item__member-icon">
+          <img src={iconString} onError={(e) => { e.target.src = PlaceholderIcon }} alt="" />
+        </div>
+      ))}
+      {icons?.toRender?.length === 3 && icons?.others !== 0 ? (
+        <div className="IndexPage__available-activities__list-item__number-icon">+{icons.others}</div>
+      ) : null}
+    </>
+  );
+};
+
+const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isLoading, t }) => {
   const icons = memberIcons?.reduce((acc, curr) => {
     if(curr == undefined) {
       acc.others++;
@@ -28,71 +83,19 @@ const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isLoading, isMob
     return acc;
   }, { others: 0, toRender: [] }) ?? { others: 0, toRender: [] };
 
-  const handleImageError = (e) => {
-    e.target.src = PlaceholderIcon;
-  }
-
-  const listAmount = (
-    <div className="IndexPage__available-activities__list-item__amount">
-      <span className="IndexPage__available-activities__list-item__amount__dollar-sign">$</span>
-      {amount ? Math.floor(amount) : 0}
-      {isWeekly && (
-        <span className="IndexPage__available-activities__list-item__amount__weekly">
-          {t('landing.availableActivities.weekly')}
-        </span>
-      )}
-    </div>
-  );
-
-  const renderIcons = () => {
-    if (isLoading) {
-      return (
-        <Loader
-          className="IndexPage__available-activities__list-item__loader"
-          type="Oval"
-          color="#302ABF"
-          height="100%"
-          width="100%"
-          timeout={0}
-        />
-      );
-    }
-
-    return (
-      <>
-        {icons?.toRender?.map((iconString, index) => (
-          <div key={iconString + index} className="IndexPage__available-activities__list-item__member-icon">
-            <img src={iconString} onError={handleImageError} alt="" />
-          </div>
-        ))}
-        {icons?.toRender?.length === 3 && icons?.others !== 0 ? (
-          <div className="IndexPage__available-activities__list-item__number-icon">+{icons.others}</div>
-        ) : null}
-      </>
-    );
-  };
-
-  const arrowCta = (
-    <div className="IndexPage__available-activities__list-item__cta">
-      {isMobile ? null : t('landing.availableActivities.chatWithIntegrator')}
-      <ArrowIcon className="IndexPage__available-activities__list-item__cta-icon" />
-    </div>
-  );
-
   const itemContent = (
-    <div className={cn("IndexPage__available-activities__list-item", {
-      "IndexPage__available-activities__list-item--mobile": isMobile
-    })}>
+    <div className="IndexPage__available-activities__list-item">
       <div className="IndexPage__available-activities__list-item__top">
         <div className="IndexPage__available-activities__list-item__icon-wrapper" >
           <Icon className="IndexPage__available-activities__list-item__icon" />
         </div>
         <p className="IndexPage__available-activities__list-item__title">{title}</p>
-        {isMobile ? arrowCta : listAmount}
+        <ActivityListAmount amount={amount} isWeekly={isWeekly} t={t} />
+        <ActivityArrowCTA mobile={true} t={t} />
       </div>
       <div className="IndexPage__available-activities__list-item__bottom">
         <div className='IndexPage__available-activities__list-item__member-icons'>
-          {renderIcons()}
+          <ActivityIcons isLoading={isLoading} icons={icons} />
         </div>
         {icons?.toRender?.length === 0 && !isLoading ? (
           <div className='IndexPage__available-activities__list-item__place-for-you'>
@@ -102,7 +105,8 @@ const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isLoading, isMob
             {t("landing.availableActivities.placeForYou")}
           </div>
         ) : null}
-        {isMobile ? listAmount : arrowCta}
+        <ActivityListAmount mobile={true} amount={amount} isWeekly={isWeekly} t={t} />
+        <ActivityArrowCTA t={t} />
       </div>
     </div>
   );
@@ -122,7 +126,6 @@ const AvailableActivities = ({ t }) => {
   const { activityAmounts, referralAmount, activityIcons, referralIcons } = useAirtableData();
   const [numberOfRenderedActivities, setNumberOfRenderedActivities] = useState(WORKER_ACTIVITIES.length);
   const { width } = useWindowDimensions();
-  const isMobile = width && width <= 650;
 
   useEffect(() => {
     if(width) {
@@ -144,7 +147,6 @@ const AvailableActivities = ({ t }) => {
             amount={referralAmount}
             memberIcons={referralIcons.data}
             isLoading={referralIcons.isLoading}
-            isMobile={isMobile}
             t={t}
           />
           {Object.keys(WORKER_ACTIVITIES)
@@ -158,7 +160,6 @@ const AvailableActivities = ({ t }) => {
                 isWeekly={true}
                 memberIcons={activityIcons.data?.[activityKey]?.memberAvatars}
                 isLoading={activityIcons.isLoading}
-                isMobile={isMobile}
                 t={t}
               />
             ))}
