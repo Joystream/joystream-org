@@ -1,0 +1,118 @@
+@import '../../../styles/_main.scss';
+@import '../../../pages/style.scss';
+
+.IndexPage {
+  &__ecosystem-wrapper {
+    padding: 96px 0;
+    background-color: $c_black;
+  }
+
+  &__ecosystem {
+    @extend %container;
+
+    &__hero {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      & > header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      &__section-title {
+        @include section-title;
+
+        color: #6c6cff;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: $c_white;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        max-width: 816px;
+        margin-top: 16px;
+        color: #a7aeb7;
+        text-align: center;
+      }
+    }
+
+    &__apps {
+      margin-top: 96px;
+
+      &__title {
+        @include h6;
+
+        color: $c_white;
+
+        &__app-count {
+          @include base-4;
+
+          display: inline-block;
+          padding: 4px 8px;
+          color: #a7aeb7;
+          background-color: #111316;
+          border-radius: 999px;
+        }
+      }
+
+      &__main {
+        height: 540px;
+        margin-top: 32px;
+        padding: 48px;
+        background-color: #111316;
+
+        &__about {
+          max-width: 330px;
+
+          &__gleev-logo {
+            width: 72px;
+          }
+
+          &__section-title {
+            @include section-title-md;
+
+            margin-top: 64px;
+            color: #6c6cff;
+          }
+
+          &__platform-name {
+            @include h5;
+
+            margin-top: 8px;
+            color: $c_white;
+          }
+
+          &__platform-description {
+            @include base-3;
+
+            margin-top: 8px;
+            color: #a7aeb7;
+          }
+        }
+      }
+
+      &__info {
+        @include base-5;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 34px auto 0 auto;
+        color: #a7aeb7;
+
+        &__icon {
+          margin-right: 6px;
+          fill: #d9d9d9;
+        }
+      }
+    }
+  }
+}
