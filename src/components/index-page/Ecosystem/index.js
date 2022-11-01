@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
+import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import GleevLogo from '../../../assets/images/landing/gleev-logo.png';
+import GleevIllustration from '../../../assets/images/landing/gleev-illustration.png';
 
 import './styles.scss';
 
@@ -39,11 +41,23 @@ const Ecosystem = () => {
                 Gleev has its sole focus on the Web3 and Crypto content vertical, bringing together the like-minded
                 creators and viewers around the shared passion of the present and the future of Crypto affairs.
               </p>
+              <p className="IndexPage__ecosystem__apps__main__about__platforms-title">Platforms</p>
+              <p className="IndexPage__ecosystem__apps__main__about__platforms">Web</p>
+              <a
+                className="IndexPage__ecosystem__apps__main__about__link"
+                href="https://www.google.com"
+                target="_blank"
+              >
+                Visit <ArrowIcon className="IndexPage__ecosystem__apps__main__about__link__icon" />
+              </a>
             </div>
-            <div className="IndexPage__ecosystem__apps__main__visual"></div>
+            <div className="IndexPage__ecosystem__apps__main__visual">
+              <img src={GleevIllustration} alt="illustration of the gleev platform homepage" />
+              <div className='IndexPage__ecosystem__apps__main__visual__bottom-gradient'></div>
+            </div>
           </div>
           <p className="IndexPage__ecosystem__apps__info">
-            <InfoIcon className="IndexPage__ecosystem__apps__info__icon"/>
+            <InfoIcon className="IndexPage__ecosystem__apps__info__icon" />
             We've just launched, so our app collection is yet to grow. Check back soon for more exciting apps built on
             Joystream.
           </p>
