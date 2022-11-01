@@ -160,5 +160,151 @@
         }
       }
     }
+
+    &__developers {
+      margin-top: 96px;
+
+      &__main {
+        display: flex;
+        justify-content: space-between;
+
+        &__about {
+          max-width: 500px;
+
+          &__section-title {
+            @include section-title;
+
+            color: #6c6cff;
+          }
+
+          &__title {
+            @include h3;
+
+            margin-top: 4px;
+            color: $c_white;
+          }
+
+          &__subtitle {
+            @include base-1;
+
+            margin-top: 16px;
+            color: #a7aeb7;
+          }
+
+          &__link {
+            @include h8;
+
+            max-width: 250px;
+            margin-top: 32px;
+            padding: 18px;
+            color: $c_white;
+            background-color: $c_blue-ribbon;
+
+            &__icon {
+              margin-bottom: -3px;
+              margin-left: 12px;
+              transform: rotate(-90deg) scale(.8);
+            }
+          }
+        }
+
+        &__visual {
+          width: 584px;
+          height: 436px;
+          padding: 22px 23px;
+          background: url('../../../assets/images/landing/code-background.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          &__code {
+            margin-top: 24px;
+            color: $c_white;
+
+            & > span {
+              // TODO: Update this font here!
+              font-family: $font-primary;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
+              letter-spacing: 0;
+              color: #5c6475;
+              user-select: none;
+            }
+
+            & > code {
+              margin-left: 20px;
+              // TODO: Update this font here (IBM Plex Mono)!
+              font-family: $font-secondary;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
+              letter-spacing: 0;
+              color: #a7aeb7;
+            }
+
+            & > code:last-child {
+              font-style: italic;
+              color: rgba(92, 100, 117, 1);
+            }
+          }
+        }
+      }
+
+      &__steps {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 110px;
+
+        &__item {
+          width: 292.5px;
+          height: 292px;
+          padding: 24px;
+          background-color: #111316;
+
+          &:nth-child(2) {
+            margin-top: 24px;
+          }
+
+          &:nth-child(3) {
+            margin-top: 48px;
+          }
+
+          &:nth-child(4) {
+            margin-top: 72px;
+          }
+
+          &__number {
+            font-family: $font-primary;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 70px;
+            letter-spacing: 0;
+            color: #111316;
+            -webkit-text-stroke: 3px #1f252e;
+          }
+
+          &__section-title {
+            @include section-title;
+
+            margin-top: 24px;
+            color: #6c6cff;
+          }
+
+          &__title {
+            @include h6;
+
+            margin-top: 4px;
+            color: $c_white;
+          }
+
+          &__subtitle {
+            @include base-3;
+
+            margin-top: 16px;
+            color: #a7aeb7;
+          }
+        }
+      }
+    }
   }
 }
