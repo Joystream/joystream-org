@@ -97,7 +97,6 @@ const Ecosystem = () => {
             </div>
             <div className="IndexPage__ecosystem__developers__main__visual">
               <CodeWindowControls />
-              {/* <div className='IndexPage__ecosystem__developers__main__visual__code'> */}
               <pre className="IndexPage__ecosystem__developers__main__visual__code">
                 <span>1</span>
                 <code>git clone https://github.com/Joystream/atlas</code>
@@ -117,7 +116,6 @@ const Ecosystem = () => {
                 <code>// this is where you're stepping in <span role="img" aria-label='rocketship emoji'>🚀</span></code>
                 {'\n'}
               </pre>
-              {/* </div> */}
             </div>
           </div>
 

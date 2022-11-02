@@ -16,12 +16,12 @@
     "payouts": {
       "sectionTitle": "PAYOUTS",
       "title": "Rewards for publishing your videos",
-      "subtitle": "Publish your videos to get cash rewards from the Joystream DAO council on a regular basis. More popular videos receive greater rewards.",
+      "subtitle": "Publishing videos can get creators cash rewards from the Joystream DAO council on a regular basis. More popular videos receive greater rewards.",
       "carousel": {
-        "title": "Recently paid out channels",
+        "title": "Recent rewards from the Joystream DAO",
         "info": {
           "label": "Payments are made in JOY tokens",
-          "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees."
+          "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees. We are in the process of getting the JOY token listed on popular exchanges, so you can buy or sell JOYs for FIAT currencies, such as USD."
         },
         "item": {
           "price": "<span><joyAmount/></span> JOY",
@@ -31,8 +31,8 @@
     },
     "videoNFTs": {
       "sectionTitle": "VIDEO NFTS",
-      "title": "Monetise your videos as NFTs with royalties",
-      "subtitle": "Turn your videos into NFTs and put them up for sale. Choose between fixed price, open auction, and timed auction. Define royalties to get a cut every time your NFT gets sold again.",
+      "title": "Video monetisation with NFT sales and royalties",
+      "subtitle": "Videos can be turned into NFT minted on the Joystream network and put up for sale.\n\nCreators can choose between fixed price, open auction, and timed auction. With royalties, creators can get a cut every time their NFT is sold again on any app in the network.",
       "cta": {
         "title": "“This should be the greatest time <br /> in history for creative people. And I think we might have finally figured it out.”",
         "about": "Chris Dixon, entrepreneur and investor",
@@ -40,10 +40,10 @@
         "button": "Claim your channel"
       },
       "carousel": {
-        "title": "Recently sold NFT videos",
+        "title": "Recently sold NFTs on the Joystream blockchain",
         "info": {
           "label": "NFTs can be sold for JOY tokens",
-          "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees."
+          "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees. We are in the process of getting the JOY token listed on popular exchanges, so you can buy or sell JOYs for FIAT currencies, such as USD."
         },
         "item": {
           "title": "<span><nftTitle/></span> by <span><channelName/></span>",

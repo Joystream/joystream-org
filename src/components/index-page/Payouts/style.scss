@@ -8,12 +8,42 @@
     background-color: #111316;
   }
 
+  &__payouts-atlas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 816px;
+    margin: 0 auto;
+
+    &__section-title {
+      @include section-title;
+
+      color: #6c6cff;
+    }
+
+    &__title {
+      @include h3;
+
+      margin-top: 4px;
+      color: $c_white;
+    }
+
+    &__subtitle {
+      @include base-1;
+
+      margin-top: 16px;
+      color: #a7aeb7;
+      text-align: center;
+    }
+  }
+
   &__payouts {
     @extend %container;
 
     display: grid;
     height: 486px;
     min-height: 486px;
+    margin-top: 96px;
     gap: 30px;
     grid-template-columns: 500px auto;
 
@@ -50,14 +80,10 @@
 
       &__background {
         position: absolute;
-        right: 0;
-        width: 576px;
       }
 
       &__foreground {
         position: absolute;
-        bottom: -200px;
-        width: 360px;
       }
     }
   }

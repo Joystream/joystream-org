@@ -200,6 +200,10 @@
             color: $c_white;
             background-color: $c_blue-ribbon;
 
+            &:hover {
+              background-color: $c_han_purple;
+            }
+
             &__icon {
               margin-bottom: -3px;
               margin-left: 12px;

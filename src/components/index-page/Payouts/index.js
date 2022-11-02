@@ -8,8 +8,8 @@ import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocus
 
 // import { ArrowButton } from '../../ArrowButton';
 
-import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.webp';
-import PayoutsForeground from '../../../assets/images/landing/payouts-foreground.webp';
+import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.png';
+import PayoutsForeground from '../../../assets/images/landing/payouts-foreground.png';
 import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
 import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
 import { ReactComponent as PlusIcon } from '../../../assets/svg/plus.svg';
@@ -44,8 +44,8 @@ const parallaxDataForeground = [
     easing: 'easeInOut',
     properties: [
       {
-        startValue: 500,
-        endValue: 250,
+        startValue: 175,
+        endValue: -75,
         property: 'translateY',
         unit: 'px',
       },
@@ -122,17 +122,23 @@ const Carousel = ({ itemsData, t }) => {
 const Payouts = ({ t }) => {
   const { language } = useI18next();
   const payoutsCarouselInfoLabelRef = useRef();
-  useRemoveElementFocusOnKeydown(payoutsCarouselInfoLabelRef, ["Escape"]);
+  useRemoveElementFocusOnKeydown(payoutsCarouselInfoLabelRef, ['Escape']);
 
   const img = 'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true';
   return (
     <section className="IndexPage__payouts-wrapper">
+      <div className="IndexPage__payouts-atlas">
+        <span className="IndexPage__payouts-atlas__section-title">ATLAS</span>
+        <h3 className="IndexPage__payouts-atlas__title">Open source codebase with rich feature set</h3>
+        <p className="IndexPage__payouts-atlas__subtitle">
+          All apps built from the Atlas open source codebase can offer the full feature set encapsulating NFTs, Creator
+          Rewards, Creator Tokens Minting from day one and benefit from regular updates with new features released.
+        </p>
+      </div>
       <div className="IndexPage__payouts">
         <div className="IndexPage__payouts__content">
-          <header>
-            <span className="IndexPage__payouts__content__section-title">{t('landing.payouts.sectionTitle')}</span>
-            <h2 className="IndexPage__payouts__content__title">{t('landing.payouts.title')}</h2>
-          </header>
+          <span className="IndexPage__payouts__content__section-title">{t('landing.payouts.sectionTitle')}</span>
+          <h3 className="IndexPage__payouts__content__title">{t('landing.payouts.title')}</h3>
           <p className="IndexPage__payouts__content__subtitle">{t('landing.payouts.subtitle')}</p>
         </div>
         <div className="IndexPage__payouts__illustration">

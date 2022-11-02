@@ -4,8 +4,7 @@
 
 .IndexPage {
   &__video-nfts-wrapper {
-    padding-top: 96px;
-    background-color: $c_black;
+    background-color: #111316;
   }
 
   &__video-nfts {
@@ -21,15 +20,10 @@
 
       &__foreground {
         position: absolute;
-        left: 104px;
-        width: 308px;
       }
 
       &__popup {
         position: absolute;
-        right: 100px;
-        bottom: -50px;
-        width: 208px;
       }
     }
 
@@ -56,6 +50,7 @@
 
         margin-top: 16px;
         color: #a7aeb7;
+        white-space: pre-line;
       }
     }
   }

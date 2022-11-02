@@ -8,9 +8,9 @@ import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocus
 
 import { ArrowButton } from '../../ArrowButton';
 
-import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.webp';
-import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.webp';
-import VideoNFTsPopupImage from '../../../assets/images/landing/video-nfts-popup.webp';
+import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.png';
+import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.png';
+import VideoNFTsPopupImage from '../../../assets/images/landing/video-nfts-popup.png';
 import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
 import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
 
@@ -24,8 +24,8 @@ const parallaxDataForeground = [
     easing: 'easeIn',
     properties: [
       {
-        startValue: -350,
-        endValue: -600,
+        startValue: -400,
+        endValue: -650,
         property: 'translateY',
         unit: 'px',
       },
@@ -41,8 +41,8 @@ const parallaxDataPopup = [
     easing: 'easeIn',
     properties: [
       {
-        startValue: 25,
-        endValue: -275,
+        startValue: -300,
+        endValue: -600,
         property: 'translateY',
         unit: 'px',
       },
