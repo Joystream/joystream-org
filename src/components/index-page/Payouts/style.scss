@@ -4,7 +4,7 @@
 
 .IndexPage {
   &__payouts-wrapper {
-    padding: 96px 0;
+    padding-top: 96px;
     background-color: #111316;
   }
 
@@ -14,6 +14,12 @@
     flex-direction: column;
     max-width: 816px;
     margin: 0 auto;
+
+    & > header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
 
     &__section-title {
       @include section-title;
@@ -91,7 +97,7 @@
   &__payouts-carousel {
     $carousel-gap: 24px;
 
-    margin-top: 96px;
+    margin-top: 64px;
 
     &__title-and-info {
       @extend %container;

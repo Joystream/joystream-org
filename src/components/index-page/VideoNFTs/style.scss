@@ -4,6 +4,7 @@
 
 .IndexPage {
   &__video-nfts-wrapper {
+    padding-top: 96px;
     background-color: #111316;
   }
 
@@ -58,7 +59,7 @@
   &__video-nfts-carousel {
     $carousel-gap: 24px;
 
-    margin-top: 96px;
+    margin-top: 64px;
 
     &__title-and-info {
       @extend %container;
@@ -226,59 +227,6 @@
     }
   }
 
-  &__video-nfts-cta {
-    @extend %largeContainer;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 96px;
-    padding-bottom: 96px;
-    background-image: url('../../../assets/svg/landing/video-nfts-cta-background.svg');
-    background-position: bottom 0 left 0;
-    background-repeat: no-repeat;
-
-    &__title {
-      @include h3;
-
-      max-width: 816px;
-      color: $c_white;
-      text-align: center;
-    }
-
-    &__caption {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-
-      &__about {
-        @include base-3;
-
-        margin-top: 16px;
-        color: #a7aeb7;
-      }
-
-      &__podcast {
-        @include base-5;
-
-        margin-top: 4px;
-        font-style: normal;
-        color: #5c6475;
-      }
-    }
-
-    &__button {
-      width: 229px;
-      height: 60px;
-      margin-top: 48px;
-      padding: 18px 15px !important;
-    }
-
-    &__button-text {
-      @include landing-page-button-text;
-    }
-  }
-
   @media #{$screen-max-lg} {
     &__video-nfts {
       grid-template-columns: 500px auto;
@@ -302,10 +250,6 @@
           bottom: -445px;
         }
       }
-    }
-
-    &__video-nfts-cta {
-      background-position: bottom 0 left -70px;
     }
   }
 
@@ -352,14 +296,6 @@
         padding: 0 22px;
       }
     }
-
-    &__video-nfts-cta {
-      background: none;
-
-      &__title {
-        max-width: 620px;
-      }
-    }
   }
 
   @media #{$screen-max-sm} {
@@ -378,15 +314,6 @@
         &__subtitle {
           @include base-3;
         }
-      }
-    }
-
-    &__video-nfts-cta {
-      margin-top: 64px;
-      padding-bottom: 80px;
-
-      &__title {
-        @include h4;
       }
     }
   }

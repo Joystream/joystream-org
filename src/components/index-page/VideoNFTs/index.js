@@ -6,8 +6,6 @@ import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
 import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
 import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
 
-import { ArrowButton } from '../../ArrowButton';
-
 import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.png';
 import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.png';
 import VideoNFTsPopupImage from '../../../assets/images/landing/video-nfts-popup.png';
@@ -219,25 +217,6 @@ const VideoNFTs = ({ t }) => {
           t={t}
         />
       </section>
-      <div className="IndexPage__video-nfts-cta">
-        <figure>
-          <blockquote className="IndexPage__video-nfts-cta__title">
-            <Trans i18nKey="landing.videoNFTs.cta.title" components={{ br: <br /> }} />
-          </blockquote>
-          <figcaption className="IndexPage__video-nfts-cta__caption">
-            <p className="IndexPage__video-nfts-cta__caption__about">{t('landing.videoNFTs.cta.about')}</p>
-            <cite>
-              <p className="IndexPage__video-nfts-cta__caption__podcast">{t('landing.videoNFTs.cta.podcast')}</p>
-            </cite>
-          </figcaption>
-        </figure>
-        <ArrowButton
-          className="IndexPage__video-nfts-cta__button"
-          text={t('landing.videoNFTs.cta.button')}
-          textClassname="IndexPage__video-nfts-cta__button-text"
-          link="https://play.joystream.org/studio/"
-        />
-      </div>
     </section>
   );
 };

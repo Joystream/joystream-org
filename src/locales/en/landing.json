@@ -15,7 +15,7 @@
     },
     "payouts": {
       "sectionTitle": "PAYOUTS",
-      "title": "Rewards for publishing your videos",
+      "title": "Rewards for <br/> publishing your videos",
       "subtitle": "Publishing videos can get creators cash rewards from the Joystream DAO council on a regular basis. More popular videos receive greater rewards.",
       "carousel": {
         "title": "Recent rewards from the Joystream DAO",
@@ -56,31 +56,30 @@
     },
     "creatorTokens": {
       "hero": {
-        "comingSoon": "Coming early 2023",
         "sectionTitle": "CREATOR TOKENS",
-        "title": "Make your community <br /> a stakeholder in your future",
-        "subtitle": "Turn viewers into evangelists by letting them hold a share in your channel when they buy your own channel token.",
+        "title": "It’s time for the community to become channels' main stakeholder",
+        "subtitle": "Viewers can be turned into evangelists by holding a share in their favorite channels upon purchasing a channel token.",
         "link": "Sign up to usability testing"
       },
       "fundraising": {
         "sectionTitle": "FUND RAISING",
-        "title": "Sell on your terms",
-        "subtitle": "Have your token supply follow the demand effortlessly with the Automated Market Maker, or go with Custom Sale to decide on the exact terms you want your token to be traded on."
+        "title": "Creator mint sell on their own terms",
+        "subtitle": "Token supply can follow the demand effortlessly with the Automated Market Maker, while the Custom Sale gives a creator complete control over the terms the token is traded on."
       },
       "stableIncome": {
         "sectionTitle": "STABLE INCOME",
-        "title": "A weekly stream of revenue to support your work",
-        "subtitle": "Patronage gives you the power to earn regular annual token supply, as a compensation for your effort in curating the community and managing token economics."
+        "title": "A stable stream of tokens every year",
+        "subtitle": "Patronage gives creators the power to earn a regular annual token supply as compensation for their effort in curating the community and managing token economics."
       },
       "secureListing": {
         "sectionTitle": "SECURE LISTING",
-        "title": "Yes to whitelists & vesting schedules.<br /> No to monkey business.",
-        "subtitle": "Whitelisting allows you to control who can get access, and with vesting schedules for yourself and others, you can make everyone aligned and focused on the future."
+        "title": "Yes to allowlists & vesting schedules. No to monkey business.",
+        "subtitle": "Allowlists put creators in charge of controlling the access to their token, and with vesting schedules (for both creators and buyers) everyone can get aligned and focused on the future."
       },
       "shareUpside": {
         "sectionTitle": "SHARE UPSIDE WITH THE COMMUNITY",
-        "title": "Scout for future stars <br /> and back your favorite creators",
-        "subtitle": "Support other creators and receive a portion of their revenue, or reward your audience by sharing some of your channel’s earnings with them."
+        "title": "Support favourites and earn together. Scout for future starts.",
+        "subtitle": "Everyone can support creators to receive a portion of their revenue. Creators can reward their audience by sharing some of their channel's earnings."
       }
     },
     "availableActivities": {
