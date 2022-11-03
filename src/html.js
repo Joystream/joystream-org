@@ -16,6 +16,9 @@ export default function HTML(props) {
           rel="stylesheet"
           href="https://eu-central-1.linodeobjects.com/atlas-assets/fonts/Optimo-PxGrotesk/PxGroteskBold-Regular.css"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet"/>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
