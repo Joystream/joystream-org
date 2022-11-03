@@ -55,7 +55,7 @@ const Ecosystem = () => {
                 Gleev has its sole focus on the Web3 and Crypto content vertical, bringing together the like-minded
                 creators and viewers around the shared passion of the present and the future of Crypto affairs.
               </p>
-              <p className="IndexPage__ecosystem__apps__main__about__platforms-title">Platforms</p>
+              <p className="IndexPage__ecosystem__apps__main__about__platforms-title">PLATFORMS</p>
               <p className="IndexPage__ecosystem__apps__main__about__platforms">Web</p>
               <a
                 className="IndexPage__ecosystem__apps__main__about__link"
@@ -66,15 +66,21 @@ const Ecosystem = () => {
               </a>
             </div>
             <div className="IndexPage__ecosystem__apps__main__visual">
-              <img src={GleevIllustration} alt="illustration of the gleev platform homepage" />
+              <img
+                className="IndexPage__ecosystem__apps__main__visual__image"
+                src={GleevIllustration}
+                alt="illustration of the gleev platform homepage"
+              />
               <div className="IndexPage__ecosystem__apps__main__visual__bottom-gradient"></div>
             </div>
           </div>
-          <p className="IndexPage__ecosystem__apps__info">
+          <div className="IndexPage__ecosystem__apps__info">
             <InfoIcon className="IndexPage__ecosystem__apps__info__icon" />
-            We've just launched, so our app collection is yet to grow. Check back soon for more exciting apps built on
-            Joystream.
-          </p>
+            <p className="IndexPage__ecosystem__apps__info__text">
+              We've just launched, so our app collection is yet to grow. Check back soon for more exciting apps built on
+              Joystream.
+            </p>
+          </div>
         </div>
 
         <div className="IndexPage__ecosystem__developers">
@@ -113,7 +119,12 @@ const Ecosystem = () => {
                 <span>5</span>
                 {'\n'}
                 <span>6</span>
-                <code>// this is where you're stepping in <span role="img" aria-label='rocketship emoji'>🚀</span></code>
+                <code>
+                  // this is where you're stepping in{' '}
+                  <span role="img" aria-label="rocketship emoji">
+                    🚀
+                  </span>
+                </code>
                 {'\n'}
               </pre>
             </div>

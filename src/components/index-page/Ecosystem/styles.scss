@@ -56,6 +56,7 @@
           @include base-4;
 
           display: inline-block;
+          margin-left: 8px;
           padding: 4px 8px;
           color: #a7aeb7;
           background-color: #111316;
@@ -65,11 +66,11 @@
 
       &__main {
         display: flex;
-        justify-content: space-between;
         height: 540px;
         margin-top: 32px;
-        padding: 48px 48px 0 48px;
+        padding: 48px 0 0 48px;
         background-color: #111316;
+        gap: 54px;
 
         &__about {
           max-width: 330px;
@@ -146,15 +147,20 @@
       }
 
       &__info {
-        @include base-5;
-
         display: flex;
-        align-items: center;
+        // align-items: center;
         justify-content: center;
         margin: 34px auto 0 auto;
-        color: #a7aeb7;
+
+        &__text {
+          @include base-5;
+
+          color: #a7aeb7;
+        }
 
         &__icon {
+          width: 16px;
+          min-width: 16px;
           margin-right: 6px;
           fill: #d9d9d9;
         }
@@ -306,6 +312,134 @@
 
             margin-top: 16px;
             color: #a7aeb7;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-lg} {
+    &__ecosystem {
+      &__apps {
+        &__title {
+          max-width: 935px;
+          margin: 0 auto;
+        }
+
+        &__main {
+          width: 935px;
+          min-width: 935px;
+          margin: 32px auto 0;
+          gap: 32px;
+
+          &__visual {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+            &__image {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 720px;
+              height: 490px;
+              min-width: 720px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__ecosystem {
+      &__apps {
+        &__title {
+          max-width: 730px;
+        }
+
+        &__main {
+          width: 730px;
+          height: 444px;
+          min-width: 730px;
+          padding: 24px 0 0 24px;
+
+          &__about {
+            max-width: 260px;
+
+            &__gleev-logo {
+              width: 64px;
+            }
+
+            &__section-title {
+              margin-top: 32px;
+            }
+
+            &__platform-name {
+              @include h6;
+            }
+
+            &__platform-description {
+              @include base-4;
+            }
+
+            &__platforms {
+              @include base-4;
+            }
+          }
+
+          &__visual {
+            &__image {
+              top: unset;
+              bottom: 0;
+              width: 590px;
+              height: 401px;
+              min-width: 590px;
+            }
+          }
+        }
+
+        &__info {
+          max-width: 500px;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__ecosystem {
+      &__apps {
+        padding: 0 10px;
+
+        &__title {
+          max-width: 526px;
+        }
+
+        &__main {
+          flex-direction: column;
+          width: auto;
+          height: 712px;
+          max-width: 526px;
+          min-width: unset;
+
+          &__about {
+            max-width: 287px;
+          }
+
+          &__visual {
+            height: 100%;
+
+            &__image {
+              top: 0;
+              bottom: unset;
+              width: 480px;
+              height: 327px;
+              min-width: 480px;
+            }
+
+            &__bottom-gradient {
+              height: 88px;
+            }
           }
         }
       }
