@@ -7,6 +7,10 @@ const links = [
   { href: sharedData.social.discordLink, label: 'navbar.discord' },
   { to: '/primer', label: 'navbar.primer' },
   {
+    href: 'https://joystream.gitbook.io/testnet-workspace',
+    label: 'navbar.handbook',
+  },
+  {
     href: 'https://play.joystream.org/studio/',
     label: 'navbar.claimChannel',
     isButton: true,
