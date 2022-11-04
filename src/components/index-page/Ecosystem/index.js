@@ -105,7 +105,15 @@ const Ecosystem = () => {
               <CodeWindowControls />
               <pre className="IndexPage__ecosystem__developers__main__visual__code">
                 <span>1</span>
-                <code>git clone https://github.com/Joystream/atlas</code>
+                {/* This line is rendered on desktop: */}
+                <code className="IndexPage__ecosystem__developers__main__visual__code__full-line">git clone https://github.com/Joystream/atlas</code>
+                {/* This line is rendered on mobile: */}
+                <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line">
+                  git clone https://
+                </code>
+                <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line IndexPage__ecosystem__developers__main__visual__code__broken-line--newline">
+                  github.com/Joystream/atlas
+                </code>
                 {'\n'}
                 <span>2</span>
                 <code>cd atlas</code>
@@ -119,8 +127,19 @@ const Ecosystem = () => {
                 <span>5</span>
                 {'\n'}
                 <span>6</span>
-                <code>
+                {/* This line is rendered on desktop: */}
+                <code className="IndexPage__ecosystem__developers__main__visual__code__full-line">
                   // this is where you're stepping in{' '}
+                  <span role="img" aria-label="rocketship emoji">
+                    🚀
+                  </span>
+                </code>
+                {/* This line is rendered on mobile: */}
+                <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line">
+                  // this is where you're
+                </code>
+                <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line IndexPage__ecosystem__developers__main__visual__code__broken-line--newline">
+                  stepping in{' '}
                   <span role="img" aria-label="rocketship emoji">
                     🚀
                   </span>

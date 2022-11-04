@@ -254,6 +254,10 @@
               font-style: italic;
               color: rgba(92, 100, 117, 1);
             }
+
+            &__broken-line {
+              display: none;
+            }
           }
         }
       }
@@ -373,6 +377,17 @@
           }
         }
       }
+
+      &__developers {
+        &__main {
+          gap: 32px;
+
+          &__visual {
+            width: 524px;
+            min-width: 524px;
+          }
+        }
+      }
     }
   }
 
@@ -428,13 +443,31 @@
           max-width: 500px;
         }
       }
+
+      &__developers {
+        &__main {
+          flex-direction: column;
+          max-width: 730px;
+          margin: 0 auto;
+          gap: 32px;
+
+          &__about {
+            max-width: 730px;
+          }
+
+          &__visual {
+            width: 584px;
+            min-width: 584px;
+          }
+        }
+      }
     }
   }
 
   @media #{$screen-max-sm} {
     &__ecosystem {
       &__apps {
-        padding: 0 10px;
+        // padding: 0 10px;
 
         &__title {
           max-width: 526px;
@@ -464,6 +497,72 @@
 
             &__bottom-gradient {
               height: 88px;
+            }
+          }
+        }
+      }
+
+      &__developers {
+        &__main {
+          max-width: 526px;
+
+          &__about {
+            &__title {
+              @include h4;
+            }
+
+            &__subtitle {
+              @include base-3;
+            }
+
+            &__link {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 246px;
+              height: 48px;
+              padding: 12px;
+            }
+          }
+
+          &__visual {
+            width: 526px;
+            height: 393px;
+            min-width: 526px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 560px) {
+    &__ecosystem {
+      &__developers {
+        &__main {
+          &__visual {
+            width: 335px;
+            height: 250px;
+            min-width: 335px;
+
+            &__code {
+              & > code:nth-last-child(2) {
+                font-style: italic;
+                color: rgba(92, 100, 117, 1);
+              }
+
+              &__full-line {
+                display: none;
+              }
+
+              &__broken-line {
+                display: inline;
+
+                &--newline {
+                  &::before {
+                    content: '\a  ';
+                  }
+                }
+              }
             }
           }
         }
