@@ -250,7 +250,7 @@
               color: #a7aeb7;
             }
 
-            & > code:last-child {
+            & > code:nth-last-child(3) {
               font-style: italic;
               color: rgba(92, 100, 117, 1);
             }
@@ -545,7 +545,8 @@
             min-width: 335px;
 
             &__code {
-              & > code:nth-last-child(2) {
+              & > code:nth-last-child(2),
+              & > code:last-child {
                 font-style: italic;
                 color: rgba(92, 100, 117, 1);
               }
