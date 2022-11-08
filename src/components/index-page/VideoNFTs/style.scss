@@ -229,25 +229,19 @@
 
   @media #{$screen-max-lg} {
     &__video-nfts {
+      height: auto;
       grid-template-columns: 500px auto;
 
       &__illustration {
-        &__background {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-        }
+        height: 290px;
+        margin: auto 0;
 
         &__foreground {
-          bottom: -732px;
-          left: 74px;
-          width: 235px;
+          top: 110px;
         }
 
         &__popup {
-          right: 20px;
-          bottom: -445px;
+          top: 110px;
         }
       }
     }
@@ -258,55 +252,50 @@
       display: flex;
       flex-direction: column;
       height: auto;
+      max-width: 730px;
 
       &__illustration {
-        width: 100%;
-        height: 290px;
-        transform: scale(1.3);
-
-        &__background {
-          top: unset;
-          right: 0;
-          bottom: unset;
-          left: 0;
-          height: 100%;
-          margin: auto;
-        }
+        height: auto;
 
         &__foreground {
           top: unset;
-          right: 115px;
-          bottom: unset;
-          left: 0;
-          margin: auto;
+          bottom: -82px;
         }
 
         &__popup {
-          top: 175px;
-          right: 0;
-          bottom: unset;
-          left: 205px;
-          width: 160px;
-          margin: auto;
+          top: unset;
+          bottom: -130px;
         }
-      }
-
-      &__content {
-        margin-top: 50px;
-        padding: 0 22px;
       }
     }
   }
 
   @media #{$screen-max-sm} {
     &__video-nfts-wrapper {
-      padding-top: 80px;
+      padding-top: 64px;
     }
 
     &__video-nfts {
-      &__content {
-        padding: 0 10px;
+      max-width: 534px;
 
+      &__illustration {
+        width: 534px;
+        height: 310px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+
+        &__foreground {
+          top: unset;
+          bottom: -59px;
+        }
+
+        &__popup {
+          top: unset;
+          bottom: -95px;
+        }
+      }
+
+      &__content {
         &__title {
           @include h4;
         }
@@ -339,29 +328,6 @@
               );
           }
         }
-      }
-    }
-  }
-
-  @media (max-width: 525px) {
-    &__video-nfts {
-      &__illustration {
-        height: 194px;
-
-        &__foreground {
-          right: 76px;
-          width: 155px;
-        }
-
-        &__popup {
-          top: 120px;
-          left: 130px;
-          width: 100px;
-        }
-      }
-
-      &__content {
-        margin-top: 32px;
       }
     }
   }
