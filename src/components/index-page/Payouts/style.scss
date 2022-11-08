@@ -14,6 +14,7 @@
     flex-direction: column;
     max-width: 816px;
     margin: 0 auto;
+    padding: 0 10px;
 
     & > header {
       display: flex;
@@ -32,6 +33,7 @@
 
       margin-top: 4px;
       color: $c_white;
+      text-align: center;
     }
 
     &__subtitle {
@@ -82,7 +84,6 @@
     &__illustration {
       position: relative;
       height: 486px;
-      min-height: 486px;
 
       &__background {
         position: absolute;
@@ -311,59 +312,41 @@
 
   @media #{$screen-max-lg} {
     &__payouts {
-      height: 400px;
-      min-height: 400px;
       grid-template-columns: auto 500px;
 
       &__illustration {
-        height: 400px;
-        min-height: 400px;
-
         &__background {
-          width: 400px;
+          top: 60px;
         }
 
         &__foreground {
-          bottom: -50px;
-          width: 250px;
+          top: 60px;
         }
       }
     }
   }
 
   @media #{$screen-max-md} {
+    &__payouts-atlas {
+      max-width: 650px;
+    }
+
     &__payouts {
       display: flex;
       flex-direction: column-reverse;
       height: auto;
+      max-width: 730px;
       min-height: auto;
       gap: 32px;
 
       &__illustration {
-        height: 400px;
-        min-height: 400px;
-        padding: 0 22px;
-        transform: scale(1.3);
-        transform-origin: left;
-
         &__background {
-          top: 0;
-          right: 0;
-          left: 0;
-          width: 500px;
-          margin: auto;
+          top: unset;
         }
 
         &__foreground {
-          top: 220px;
-          left: 50px;
-          width: 270px;
-          margin: auto;
+          top: unset;
         }
-      }
-
-      &__content {
-        padding: 0 22px;
       }
     }
 
@@ -398,48 +381,38 @@
 
   @media #{$screen-max-sm} {
     &__payouts-wrapper {
-      padding: 86px 0;
+      padding: 80px 0;
+    }
+
+    &__payouts-atlas {
+      max-width: 500px;
+
+      &__title {
+        @include h4;
+      }
+
+      &__subtitle {
+        @include base-3;
+      }
     }
 
     &__payouts {
-      &__illustration {
-        padding: 0 10px;
+      max-width: 534px;
+      margin-top: 64px;
 
-        &__background {
-          left: 50px;
-        }
+      &__illustration {
+        width: 534px;
+        height: 365px;
+        overflow: hidden;
       }
 
       &__content {
-        padding: 0 10px;
-
         &__title {
           @include h4;
         }
 
         &__subtitle {
           @include base-3;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 650px) {
-    &__payouts {
-      &__illustration {
-        height: 300px;
-        min-height: 300px;
-        transform: scale(1.4);
-
-        &__background {
-          top: 0;
-          width: 380px;
-        }
-
-        &__foreground {
-          top: 180px;
-          left: 0;
-          width: 200px;
         }
       }
     }
@@ -471,27 +444,6 @@
   }
 
   @media (max-width: 500px) {
-    &__payouts {
-      &__illustration {
-        height: 200px;
-        min-height: 200px;
-        transform: scale(1.5);
-
-        &__background {
-          top: 0;
-          left: 50px;
-          width: 271px;
-          margin: 0;
-        }
-
-        &__foreground {
-          top: 120px;
-          left: 0;
-          width: 140px;
-        }
-      }
-    }
-
     &__payouts-cta {
       &__content {
         &__title {
