@@ -301,14 +301,15 @@
 
   @media #{$screen-max-lg} {
     &__creator-tokens {
-      &__hero {
+      &__main {
+        grid-template-columns: auto 500px;
+
         &__illustration {
-          &__background {
-            width: 85%;
-          }
+          height: 360px;
+          margin: auto 0;
 
           &__foreground {
-            width: 27.6%;
+            top: -50px;
           }
         }
       }
@@ -323,44 +324,20 @@
     }
   }
 
-  @media (max-width: 1050px) {
-    &__creator-tokens {
-      &__hero {
-        &__illustration {
-          height: 715px;
-
-          &__foreground {
-            top: 155px;
-          }
-        }
-      }
-    }
-  }
-
   @media #{$screen-max-md} {
     &__creator-tokens {
-      &__hero {
-        &__subtitle {
-          max-width: 580px;
-        }
-
-        &__overlay {
-          bottom: -20px;
-        }
+      &__main {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        max-width: 730px;
+        margin: 0 auto;
 
         &__illustration {
-          max-height: 600px;
-          margin-bottom: 100px;
-          transform: scale(1.2);
-          transform-origin: left top;
-
-          &__background {
-            left: 0;
-            margin: auto;
-          }
+          height: 525px;
 
           &__foreground {
-            left: 2%;
+            top: 120px;
           }
         }
       }
@@ -379,22 +356,6 @@
     }
   }
 
-  @media (max-width: 850px) {
-    &__creator-tokens {
-      &__hero {
-        &__illustration {
-          max-height: 450px;
-          margin-bottom: 200px;
-          transform: scale(1.5);
-
-          &__foreground {
-            top: 130px;
-          }
-        }
-      }
-    }
-  }
-
   @media #{$screen-max-sm} {
     &__creator-tokens-wrapper {
       padding: 80px 0;
@@ -403,23 +364,26 @@
     &__creator-tokens {
       padding: 0;
 
-      &__hero {
-        &__title {
-          @include h4;
-        }
-
-        &__subtitle {
-          @include base-3;
-
-          max-width: 500px;
-        }
+      &__main {
+        max-width: 605px;
+        padding: 0 10px;
 
         &__illustration {
-          height: 450px;
-          max-width: 600px;
+          width: 605px;
+          height: 435px;
 
           &__foreground {
-            top: 95px;
+            top: 100px;
+          }
+        }
+
+        &__content {
+          &__title {
+            @include h4;
+          }
+
+          &__subtitle {
+            @include base-3;
           }
         }
       }
@@ -427,8 +391,8 @@
       &__grid {
         display: flex;
         flex-direction: column;
-        max-width: 550px;
-        margin: 0 auto;
+        max-width: 534px;
+        margin: 64px auto 0;
         gap: 30px;
       }
 
@@ -448,48 +412,6 @@
 
       &__title {
         @include h4;
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__creator-tokens__hero__illustration {
-      height: 400px;
-      margin-bottom: 250px;
-      transform: scale(2);
-
-      &__foreground {
-        top: 77px;
-      }
-    }
-  }
-
-  @media (max-width: 425px) {
-    &__creator-tokens__hero {
-      &__title {
-        padding: 0 10px;
-
-        & > br {
-          display: none;
-        }
-      }
-
-      &__illustration {
-        height: 300px;
-
-        &__foreground {
-          top: 65px;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 380px) {
-    &__creator-tokens__hero__illustration {
-      height: 250px;
-
-      &__foreground {
-        top: 58px;
       }
     }
   }
