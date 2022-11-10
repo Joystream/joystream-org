@@ -84,7 +84,7 @@
     &__grid {
       display: grid;
       margin-top: 64px;
-      gap: 30px 64px;
+      gap: 64px 30px;
       grid-template-columns: 1fr 1fr;
     }
 
@@ -253,7 +253,6 @@
     align-items: center;
     flex-direction: column;
     margin-top: 96px;
-    padding-bottom: 96px;
     background-image: url('../../../assets/svg/landing/video-nfts-cta-background.svg');
     background-position: bottom 0 left 0;
     background-repeat: no-repeat;
@@ -358,7 +357,7 @@
 
   @media #{$screen-max-sm} {
     &__creator-tokens-wrapper {
-      padding: 80px 0;
+      padding: 64px 0 80px 0;
     }
 
     &__creator-tokens {
@@ -408,7 +407,6 @@
 
     &__atlas-cta {
       margin-top: 64px;
-      padding-bottom: 80px;
 
       &__title {
         @include h4;

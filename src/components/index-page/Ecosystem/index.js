@@ -28,7 +28,7 @@ const Ecosystem = () => {
         <div className="IndexPage__ecosystem__hero">
           <header>
             <span className="IndexPage__ecosystem__hero__section-title">ECOSYSTEM</span>
-            <h2 className="IndexPage__ecosystem__hero__title">One platform. Multiple apps.</h2>
+            <h2 className="IndexPage__ecosystem__hero__title">One platform.<br/> Multiple apps.</h2>
           </header>
           <p className="IndexPage__ecosystem__hero__subtitle">
             Joystream is an open source platform, with the proprietary blockchain network at its core, powering multiple

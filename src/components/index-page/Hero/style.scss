@@ -4,7 +4,7 @@
 .IndexPage {
   &__hero-wrapper {
     min-height: 1294px;
-    padding: 96px 100px;
+    padding: 96px 100px 0;
     overflow: hidden;
     background-color: black;
   }
@@ -117,7 +117,7 @@
   @media (max-width: 1420px) {
     &__hero-wrapper {
       min-height: 1136.5px;
-      padding: 96px 0;
+      padding: 96px 0 0 0;
     }
 
     &__hero {
@@ -148,7 +148,7 @@
   @media #{$screen-max-md} {
     &__hero-wrapper {
       min-height: unset;
-      padding: 80px 0;
+      padding: 80px 0 0 0;
     }
 
     &__hero {
