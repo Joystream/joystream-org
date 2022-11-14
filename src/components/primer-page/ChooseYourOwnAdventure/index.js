@@ -36,7 +36,11 @@ const CTA = ({ Image, title, buttonText, href, to }) => {
     return <Link to={to}>{children}</Link>
   }
 
-  return <a href={href}>{children}</a>
+  if(href) {
+    return <a href={href}>{children}</a>
+  }
+
+  return children;
 };
 
 const ChooseYourOwnAdventure = ({ t }) => {
@@ -50,7 +54,7 @@ const ChooseYourOwnAdventure = ({ t }) => {
             Image={JoyIcon}
             title={t('primer.chooseYourOwnAdventure.earnJoy.title')}
             buttonText={t('primer.chooseYourOwnAdventure.earnJoy.button')}
-            to="/start-here/what-is-joystream"
+            href=""
           />
           <CTA
             Image={GovernanceApp}
