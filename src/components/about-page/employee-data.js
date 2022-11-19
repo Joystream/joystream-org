@@ -145,7 +145,7 @@ const employees = [
   {
     Icon: Mokhtar,
     type: ['core', 'blockchain'],
-    name: 'Mokhtar Namaani',
+    name: 'Mokhtar Naamani',
     jobTitle: 'about.general.roles.cto',
     color: '#623ad6',
   },
