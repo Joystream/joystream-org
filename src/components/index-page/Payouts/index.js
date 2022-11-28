@@ -162,13 +162,13 @@ const Payouts = ({ t }) => {
           </Plx>
         </div>
       </div>
-      <section className="IndexPage__payouts-carousel">
+      {/* <section className="IndexPage__payouts-carousel">
         <div className="IndexPage__payouts-carousel__title-and-info">
           <h3 className="IndexPage__payouts-carousel__title-and-info__title">{t('landing.payouts.carousel.title')}</h3>
           <div className="IndexPage__payouts-carousel__title-and-info__info">
             <div
               className="IndexPage__payouts-carousel__title-and-info__info__label"
-              /* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */
+              // TODO: Add this line here eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
               tabIndex={0}
               aria-describedby="IndexPage__payouts-carousel__title-and-info__info__modal"
               ref={payoutsCarouselInfoLabelRef}
@@ -227,7 +227,7 @@ const Payouts = ({ t }) => {
           ]}
           t={t}
         />
-      </section>
+      </section> */}
       {/* <div className="IndexPage__payouts-cta">
         <div className="IndexPage__payouts-cta__content">
           <div className="IndexPage__payouts-cta__content__logos">

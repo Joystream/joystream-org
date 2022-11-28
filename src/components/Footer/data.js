@@ -1,6 +1,7 @@
 import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
 import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
 import { ReactComponent as DiscordIcon } from '../../assets/svg/discord.svg';
+import { ReactComponent as SecurityIcon } from '../../assets/svg/security.svg';
 import { sharedData } from '../../data/pages';
 
 const joystreamLinks = [
@@ -15,8 +16,9 @@ const githubLinks = [
 ];
 
 const usefulLinks = [
+  { href: 'mailto:security@joystream.org', label: "Security", icon: SecurityIcon },
+  { href: 'https://polkadot.subscan.io/', label: 'Block Explorer' },
   { to: '/brand/guides', label: 'footer.usefulLinks.brandGuidance' },
-  { href: 'https://joystreamstats.live/tokenomics', label: 'footer.usefulLinks.tokenomics' },
 ];
 
 const socialMedias = [

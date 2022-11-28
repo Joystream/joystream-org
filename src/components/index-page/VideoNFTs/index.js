@@ -160,7 +160,7 @@ const VideoNFTs = ({ t }) => {
           <p className="IndexPage__video-nfts__content__subtitle">{t('landing.videoNFTs.subtitle')}</p>
         </div>
       </div>
-      <section className="IndexPage__video-nfts-carousel">
+      {/* <section className="IndexPage__video-nfts-carousel">
         <div className="IndexPage__video-nfts-carousel__title-and-info">
           <h3 className="IndexPage__video-nfts-carousel__title-and-info__title">
             {t('landing.videoNFTs.carousel.title')}
@@ -168,7 +168,7 @@ const VideoNFTs = ({ t }) => {
           <div className="IndexPage__video-nfts-carousel__title-and-info__info">
             <div
               className="IndexPage__video-nfts-carousel__title-and-info__info__label"
-              /* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */
+              // TODO: Readd this line here eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
               tabIndex={0}
               aria-describedby="IndexPage__video-nfts-carousel__title-and-info__info__modal"
               ref={videoNFTsCarouselInfoLabelRef}
@@ -216,7 +216,7 @@ const VideoNFTs = ({ t }) => {
           ]}
           t={t}
         />
-      </section>
+      </section> */}
     </section>
   );
 };

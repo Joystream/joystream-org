@@ -180,7 +180,7 @@ const JoystreamDAO = ({ t }) => {
           </Plx>
         </div>
       </div>
-      <section className="IndexPage__joystream-dao-carousel">
+      {/* <section className="IndexPage__joystream-dao-carousel">
         <div className="IndexPage__joystream-dao-carousel__title-section">
           <h3 className="IndexPage__joystream-dao-carousel__title-section__text">
             {t('landing.joystreamDAO.carousel.title')}
@@ -234,7 +234,7 @@ const JoystreamDAO = ({ t }) => {
           ]}
           t={t}
         />
-      </section>
+      </section> */}
     </section>
   );
 };
