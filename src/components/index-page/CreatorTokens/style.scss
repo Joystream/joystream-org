@@ -408,6 +408,7 @@
 
     &__atlas-cta {
       margin-top: 64px;
+      padding-bottom: 0;
 
       &__title {
         @include h4;
