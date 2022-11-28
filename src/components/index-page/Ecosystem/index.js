@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GleevLogo from '../../../assets/images/landing/gleev-logo.png';
-import GleevIllustration from '../../../assets/images/landing/gleev-illustration.png';
+import GleevLogo from '../../../assets/images/landing/gleev-logo.webp';
+import GleevIllustration from '../../../assets/images/landing/gleev-illustration.webp';
 
 import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';

@@ -6,9 +6,9 @@ import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
 import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
 import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
 
-import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.png';
-import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.png';
-import VideoNFTsPopupImage from '../../../assets/images/landing/video-nfts-popup.png';
+import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.webp';
+import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.webp';
+import VideoNFTsPopupImage from '../../../assets/images/landing/video-nfts-popup.webp';
 import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
 import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
 

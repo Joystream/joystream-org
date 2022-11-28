@@ -8,8 +8,8 @@ import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocus
 
 // import { ArrowButton } from '../../ArrowButton';
 
-import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.png';
-import PayoutsForeground from '../../../assets/images/landing/payouts-foreground.png';
+import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.webp';
+import PayoutsForeground from '../../../assets/images/landing/payouts-foreground.webp';
 import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
 import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
 import { ReactComponent as PlusIcon } from '../../../assets/svg/plus.svg';
