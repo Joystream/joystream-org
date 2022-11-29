@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
 
 import GleevLogo from '../../../assets/images/landing/gleev-logo.webp';
 import GleevIllustration from '../../../assets/images/landing/gleev-illustration.webp';
@@ -21,26 +22,23 @@ const DevelopmentStep = ({ stepNumber, sectionTitle, title, subtitle }) => (
 const DEVELOPERS_SECTION_CODE = `
 `;
 
-const Ecosystem = () => {
+const Ecosystem = ({ t }) => {
   return (
     <section className="IndexPage__ecosystem-wrapper">
       <div className="IndexPage__ecosystem">
         <div className="IndexPage__ecosystem__hero">
           <header>
-            <span className="IndexPage__ecosystem__hero__section-title">ECOSYSTEM</span>
-            <h2 className="IndexPage__ecosystem__hero__title">One platform.<br/> Multiple apps.</h2>
+            <span className="IndexPage__ecosystem__hero__section-title">{t("landing.ecosystem.sectionTitle")}</span>
+            <h2 className="IndexPage__ecosystem__hero__title"><Trans i18nKey="landing.ecosystem.title" components={{ br: <br /> }} /></h2>
           </header>
           <p className="IndexPage__ecosystem__hero__subtitle">
-            Joystream is an open source platform, with the proprietary blockchain network at its core, powering multiple
-            video streaming Apps at once. Videos uploaded via any app built on Joystream can reach consumers of other
-            apps on the network, allowing creators to expand their audience with the single account without extra
-            effort.
+            {t("landing.ecosystem.subtitle")}
           </p>
         </div>
 
         <div className="IndexPage__ecosystem__apps" id="apps-built-on-joystream">
           <h3 className="IndexPage__ecosystem__apps__title">
-            Check out apps built on Joystream <div className="IndexPage__ecosystem__apps__title__app-count">1</div>
+            {t("landing.ecosystem.appsBuiltOnJoystream.title")} <div className="IndexPage__ecosystem__apps__title__app-count">1</div>
           </h3>
           <div className="IndexPage__ecosystem__apps__main">
             <div className="IndexPage__ecosystem__apps__main__about">
@@ -49,20 +47,19 @@ const Ecosystem = () => {
                 src={GleevLogo}
                 alt="gleev platform logo"
               />
-              <div className="IndexPage__ecosystem__apps__main__about__section-title">FEATURED</div>
-              <h4 className="IndexPage__ecosystem__apps__main__about__platform-name">Gleev</h4>
+              <div className="IndexPage__ecosystem__apps__main__about__section-title">{t("landing.ecosystem.appsBuiltOnJoystream.sectionTitle")}</div>
+              <h4 className="IndexPage__ecosystem__apps__main__about__platform-name">{t("landing.ecosystem.appsBuiltOnJoystream.platformName")}</h4>
               <p className="IndexPage__ecosystem__apps__main__about__platform-description">
-                Gleev has its sole focus on the Web3 and Crypto content vertical, bringing together the like-minded
-                creators and viewers around the shared passion of the present and the future of Crypto affairs.
+                {t("landing.ecosystem.appsBuiltOnJoystream.platformDescription")}
               </p>
-              <p className="IndexPage__ecosystem__apps__main__about__platforms-title">PLATFORMS</p>
-              <p className="IndexPage__ecosystem__apps__main__about__platforms">Web</p>
+              <p className="IndexPage__ecosystem__apps__main__about__platforms-title">{t("landing.ecosystem.appsBuiltOnJoystream.platformsTitle")}</p>
+              <p className="IndexPage__ecosystem__apps__main__about__platforms">{t("landing.ecosystem.appsBuiltOnJoystream.platforms")}</p>
               <a
                 className="IndexPage__ecosystem__apps__main__about__link"
                 href="https://gleev.xyz"
                 target="_blank"
               >
-                Visit <ArrowIcon className="IndexPage__ecosystem__apps__main__about__link__icon" />
+                {t("landing.ecosystem.appsBuiltOnJoystream.link")} <ArrowIcon className="IndexPage__ecosystem__apps__main__about__link__icon" />
               </a>
             </div>
             <div className="IndexPage__ecosystem__apps__main__visual">
@@ -77,8 +74,7 @@ const Ecosystem = () => {
           <div className="IndexPage__ecosystem__apps__info">
             <InfoIcon className="IndexPage__ecosystem__apps__info__icon" />
             <p className="IndexPage__ecosystem__apps__info__text">
-              We've just launched, so our app collection is yet to grow. Check back soon for more exciting apps built on
-              Joystream.
+              {t("landing.ecosystem.appsBuiltOnJoystream.info")}
             </p>
           </div>
         </div>
@@ -86,17 +82,16 @@ const Ecosystem = () => {
         <div className="IndexPage__ecosystem__developers" id="start-your-community">
           <div className="IndexPage__ecosystem__developers__main">
             <div className="IndexPage__ecosystem__developers__main__about">
-              <div className="IndexPage__ecosystem__developers__main__about__section-title">DEVELOPERS</div>
+              <div className="IndexPage__ecosystem__developers__main__about__section-title">{t("landing.developers.sectionTitle")}</div>
               <h3 className="IndexPage__ecosystem__developers__main__about__title">
-                How about starting your own video community?
+                {t("landing.developers.title")}
               </h3>
               <p className="IndexPage__ecosystem__developers__main__about__subtitle">
-                Spinning up your very own app was never easier before. Configurable feature set, no-code approach, and
-                support from the DAO lowers the set up barriers and lets you focus on your mission instead.
+                {t("landing.developers.subtitle")}
               </p>
               <a href="https://github.com/Joystream/atlas" target="_blank">
                 <div className="IndexPage__ecosystem__developers__main__about__link">
-                  Start your community{' '}
+                  {t("landing.developers.link")}
                   <ArrowIcon className="IndexPage__ecosystem__developers__main__about__link__icon" />
                 </div>
               </a>
@@ -129,17 +124,17 @@ const Ecosystem = () => {
                 <span>6</span>
                 {/* This line is rendered on desktop: */}
                 <code className="IndexPage__ecosystem__developers__main__visual__code__full-line">
-                  // this is where you're stepping in{' '}
+                  {t("landing.developers.commentPartOne")}{' '}{t("landing.developers.commentPartTwo")}{' '}
                   <span role="img" aria-label="rocketship emoji">
                     🚀
                   </span>
                 </code>
                 {/* This line is rendered on mobile: */}
                 <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line">
-                  // this is where you're
+                  {t("landing.developers.commentPartOne")}
                 </code>
                 <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line IndexPage__ecosystem__developers__main__visual__code__broken-line--newline">
-                  stepping in{' '}
+                  {t("landing.developers.commentPartTwo")}{' '}
                   <span role="img" aria-label="rocketship emoji">
                     🚀
                   </span>
@@ -152,27 +147,27 @@ const Ecosystem = () => {
           <div className="IndexPage__ecosystem__developers__steps">
             <DevelopmentStep
               stepNumber="1"
-              sectionTitle="STEP 1"
-              title="Customize"
-              subtitle="Pick a name, logo & content theme. Update the design and make it yours."
+              sectionTitle={t("landing.developers.stepOne.sectionTitle")}
+              title={t("landing.developers.stepOne.title")}
+              subtitle={t("landing.developers.stepOne.subtitle")}
             />
             <DevelopmentStep
               stepNumber="2"
-              sectionTitle="STEP 2"
-              title="Launch"
-              subtitle="Make your webapp available to the world on your domain."
+              sectionTitle={t("landing.developers.stepTwo.sectionTitle")}
+              title={t("landing.developers.stepTwo.title")}
+              subtitle={t("landing.developers.stepTwo.subtitle")}
             />
             <DevelopmentStep
               stepNumber="3"
-              sectionTitle="STEP 3"
-              title="Build"
-              subtitle="Build a community of creators and consumers around your business model."
+              sectionTitle={t("landing.developers.stepThree.sectionTitle")}
+              title={t("landing.developers.stepThree.title")}
+              subtitle={t("landing.developers.stepThree.subtitle")}
             />
             <DevelopmentStep
               stepNumber="4"
-              sectionTitle="STEP 4"
-              title="Earn"
-              subtitle="Get paid a share of the value the creators and audience generates."
+              sectionTitle={t("landing.developers.stepFour.sectionTitle")}
+              title={t("landing.developers.stepFour.title")}
+              subtitle={t("landing.developers.stepFour.subtitle")}
             />
           </div>
         </div>

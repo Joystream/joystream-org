@@ -97,7 +97,9 @@
     "brandStory": "Brand Story",
     "brandGuides": "Brand Guides",
     "downloadAssets": "Download Assets",
-    "primer": "Primer"
+    "primer": "Primer",
+    "apps": "Apps",
+    "viewApps": "View apps"
   },
   "footer": {
     "title": "Stay up to date",
@@ -118,7 +120,9 @@
     },
     "fmProgram": "Founding Members Program",
     "followUs": "Follow us",
-    "ourInvestors": "Investors"
+    "ourInvestors": "Investors",
+    "security": "Security",
+    "blockExplorer": "Block Explorer"
   },
   "pages": {
     "blog": "Blog",

@@ -11,13 +11,11 @@ const joystreamLinks = [
   { to: '/hydra', label: 'pages.hydra' },
 ];
 
-const githubLinks = [
-  { href: sharedData.links.repository, label: 'footer.github.repository' },
-];
+const githubLinks = [{ href: sharedData.links.repository, label: 'footer.github.repository' }];
 
 const usefulLinks = [
-  { href: 'mailto:security@joystream.org', label: "Security", icon: SecurityIcon },
-  { href: 'https://polkadot.subscan.io/', label: 'Block Explorer' },
+  { href: 'mailto:security@joystream.org', label: 'footer.security', icon: SecurityIcon },
+  { href: 'https://polkadot.subscan.io/', label: 'footer.blockExplorer' },
   { to: '/brand/guides', label: 'footer.usefulLinks.brandGuidance' },
 ];
 

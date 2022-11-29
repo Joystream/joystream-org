@@ -32,7 +32,7 @@ const IndexPage = () => {
 
       <Hero t={t}/>
 
-      <Ecosystem />
+      <Ecosystem t={t}/>
 
       <Payouts t={t}/>
 

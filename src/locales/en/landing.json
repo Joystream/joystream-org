@@ -11,9 +11,74 @@
         "users": "users"
       },
       "subtitle": "Built on and operated by the Joystream blockchain and DAO.",
-      "button": "Claim your channel"
+      "viewApps": "View apps",
+      "startYourCommunity": "Start your community",
+      "stepOne": {
+        "title": "Application",
+        "subtitle": "Each app brings its own discovery algorithms, terms of user policy, form factor and possible vertical focus."
+      },
+      "stepTwo": {
+        "title": "Storage system",
+        "subtitle": "All the video, images and assets in the system are stored on community run and incentived infrastructure."
+      },
+      "stepThree": {
+        "title": "Content delivery",
+        "subtitle": "All videos, images, and asset in the system are delivered through a community run and incentivised low latency content delivery network."
+      },
+      "stepFour": {
+        "title": "Public Blockchain Layer",
+        "subtitle": "Shared index of content, people and interactions. Content uploaded by creators in any app as well as channel's transactions and engagement are portable to any other app on the network."
+      }
+    },
+    "ecosystem": {
+      "sectionTitle": "ECOSYSTEM",
+      "title": "One platform.<br/> Multiple apps.",
+      "subtitle": "Joystream is an open source platform, with the proprietary blockchain network at its core, powering multiple video streaming Apps at once. Videos uploaded via any app built on Joystream can reach consumers of other apps on the network, allowing creators to expand their audience with the single account without extra effort.",
+      "appsBuiltOnJoystream": {
+        "title": "Check out apps built on Joystream",
+        "sectionTitle": "FEATURED",
+        "platformName": "Gleev",
+        "platformDescription": "Gleev has its sole focus on the Web3 and Crypto content vertical, bringing together the like-minded creators and viewers around the shared passion of the present and the future of Crypto affairs.",
+        "platformsTitle": "PLATFORMS",
+        "platforms": "Web",
+        "link": "Visit",
+        "info": "We've just launched, so our app collection is yet to grow. Check back soon for more exciting apps built on Joystream."
+      }
+    },
+    "developers": {
+      "sectionTitle": "DEVELOPERS",
+      "title": "How about starting your own video community?",
+      "subtitle": "Spinning up your very own app was never easier before. Configurable feature set, no-code approach, and support from the DAO lowers the set up barriers and lets you focus on your mission instead.",
+      "link": "Start your community",
+      "commentPartOne": "// this is where you're",
+      "commentPartTwo": "stepping in",
+      "stepOne": {
+        "sectionTitle": "STEP 1",
+        "title": "Customize",
+        "subtitle": "Pick a name, logo & content theme. Update the design and make it yours."
+      },
+      "stepTwo": {
+        "sectionTitle": "STEP 2",
+        "title": "Launch",
+        "subtitle": "Make your webapp available to the world on your domain."
+      },
+      "stepThree": {
+        "sectionTitle": "STEP 3",
+        "title": "Build",
+        "subtitle": "Build a community of creators and consumers around your business model."
+      },
+      "stepFour": {
+        "sectionTitle": "STEP 4",
+        "title": "Earn",
+        "subtitle": "Get paid a share of the value the creators and audience generates."
+      }
     },
     "payouts": {
+      "atlas": {
+        "sectionTitle": "ATLAS",
+        "title" : "Open source codebase with rich feature set",
+        "subtitle": "All apps built from the Atlas open source codebase can offer the full feature set encapsulating NFTs, Creator Rewards, Creator Tokens Minting from day one and benefit from regular updates with new features released."
+      },
       "sectionTitle": "PAYOUTS",
       "title": "Rewards for <br/> publishing your videos",
       "subtitle": "Publishing videos can get creators cash rewards from the Joystream DAO council on a regular basis. More popular videos receive greater rewards.",

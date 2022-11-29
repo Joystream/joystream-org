@@ -97,7 +97,9 @@
     "brandStory": "История бренда",
     "brandGuides": "Правила использования айдентики",
     "downloadAssets": "Скачать ресурсы",
-    "primer": "Primer"
+    "primer": "Primer",
+    "apps": "Apps",
+    "viewApps": "View apps"
   },
   "footer": {
     "title": "Следите за новостями",
@@ -118,7 +120,9 @@
     },
     "fmProgram": "Founding Members Program",
     "followUs": "Следите за новостями",
-    "ourInvestors": "Investors"
+    "ourInvestors": "Investors",
+    "security": "Security",
+    "blockExplorer": "Block Explorer"
   },
   "pages": {
     "blog": "Блог",

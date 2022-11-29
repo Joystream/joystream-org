@@ -17,31 +17,27 @@ import Button from '../../Button';
 const ILLUSTRATION_MESSAGES = [
   {
     variantClassSuffix: 'application',
-    title: 'Application',
-    subtitle:
-      'Each app brings its own discovery algorithms, terms of user policy, form factor and possible vertical focus.',
+    title: 'landing.hero.stepOne.title',
+    subtitle: 'landing.hero.stepOne.subtitle',
   },
   {
     variantClassSuffix: 'storage',
-    title: 'Storage system',
-    subtitle:
-      'All the video, images and assets in the system are stored on community run and incentived infrastructure.',
+    title: 'landing.hero.stepTwo.title',
+    subtitle: 'landing.hero.stepTwo.subtitle',
   },
   {
     variantClassSuffix: 'content',
-    title: 'Content delivery',
-    subtitle:
-      'All videos, images, and asset in the system are delivered through a community run and incentivised low latency content delivery network.',
+    title: 'landing.hero.stepThree.title',
+    subtitle: 'landing.hero.stepThree.subtitle',
   },
   {
     variantClassSuffix: 'blockchain',
-    title: 'Public Blockchain Layer',
-    subtitle:
-      "Shared index of content, people and interactions. Content uploaded by creators in any app as well as channel's transactions and engagement are portable to any other app on the network.",
+    title: 'landing.hero.stepFour.title',
+    subtitle: 'landing.hero.stepFour.subtitle',
   },
 ];
 
-const IllustrationMessage = memo(({ variant, messageToShow }) => {
+const IllustrationMessage = memo(({ variant, messageToShow, t }) => {
   return (
     <div
       className={cn(
@@ -64,17 +60,17 @@ const IllustrationMessage = memo(({ variant, messageToShow }) => {
       </div>
       <div className="IndexPage__hero__illustration-message__content">
         <p className="IndexPage__hero__illustration-message__content__title">
-          {messageToShow === variant ? ILLUSTRATION_MESSAGES[variant].title : null}
+          {messageToShow === variant ? t(ILLUSTRATION_MESSAGES[variant].title) : null}
         </p>
         <p className="IndexPage__hero__illustration-message__content__subtitle">
-          {messageToShow === variant ? ILLUSTRATION_MESSAGES[variant].subtitle : null}
+          {messageToShow === variant ? t(ILLUSTRATION_MESSAGES[variant].subtitle) : null}
         </p>
       </div>
     </div>
   );
 });
 
-const Illustration = ({ animationInfo, isAnimationDone, setIsAnimationDone }) => {
+const Illustration = ({ animationInfo, isAnimationDone, setIsAnimationDone, t }) => {
   const canvasRef = useRef();
   const illustrationWrapperRef = useRef();
   const [messageToShow, setMessageToShow] = useState(null);
@@ -92,10 +88,10 @@ const Illustration = ({ animationInfo, isAnimationDone, setIsAnimationDone }) =>
           <canvas className="IndexPage__hero__illustration" ref={canvasRef} width={1080} height={656} />
           {!isAnimationDone ? (
             <>
-              <IllustrationMessage variant={0} messageToShow={messageToShow} />
-              <IllustrationMessage variant={1} messageToShow={messageToShow} />
-              <IllustrationMessage variant={2} messageToShow={messageToShow} />
-              <IllustrationMessage variant={3} messageToShow={messageToShow} />
+              <IllustrationMessage variant={0} messageToShow={messageToShow} t={t} />
+              <IllustrationMessage variant={1} messageToShow={messageToShow} t={t} />
+              <IllustrationMessage variant={2} messageToShow={messageToShow} t={t} />
+              <IllustrationMessage variant={3} messageToShow={messageToShow} t={t} />
             </>
           ) : null}
         </div>
@@ -143,15 +139,15 @@ const Hero = ({ t }) => {
           </h1>
         </header>
         <p className="IndexPage__hero__subtitle">{t('landing.hero.subtitle')}</p>
-        <div className='IndexPage__hero__buttons'>
+        <div className="IndexPage__hero__buttons">
           <ArrowButton
             link="#apps-built-on-joystream"
-            text="View apps"
+            text={t('landing.hero.viewApps')}
             className="IndexPage__hero__button"
             textClassname="IndexPage__hero__button-text"
           />
           <Button href="#start-your-community" className="IndexPage__hero__community-button">
-            Start your community
+            {t('landing.hero.startYourCommunity')}
           </Button>
         </div>
         <div className="IndexPage__hero__browsers-wrapper">
@@ -191,6 +187,7 @@ const Hero = ({ t }) => {
           animationInfo={animationInfo}
           isAnimationDone={isAnimationDone}
           setIsAnimationDone={setIsAnimationDone}
+          t={t}
         />
       </section>
     </div>

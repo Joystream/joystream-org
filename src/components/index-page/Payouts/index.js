@@ -129,12 +129,11 @@ const Payouts = ({ t }) => {
     <section className="IndexPage__payouts-wrapper">
       <div className="IndexPage__payouts-atlas">
         <header>
-          <span className="IndexPage__payouts-atlas__section-title">ATLAS</span>
-          <h2 className="IndexPage__payouts-atlas__title">Open source codebase with rich feature set</h2>
+          <span className="IndexPage__payouts-atlas__section-title">{t("landing.payouts.atlas.sectionTitle")}</span>
+          <h2 className="IndexPage__payouts-atlas__title">{t("landing.payouts.atlas.title")}</h2>
         </header>
         <p className="IndexPage__payouts-atlas__subtitle">
-          All apps built from the Atlas open source codebase can offer the full feature set encapsulating NFTs, Creator
-          Rewards, Creator Tokens Minting from day one and benefit from regular updates with new features released.
+          {t("landing.payouts.atlas.subtitle")}
         </p>
       </div>
       <div className="IndexPage__payouts">
