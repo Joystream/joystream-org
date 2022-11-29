@@ -54,14 +54,31 @@
       animation-delay: .1s;
     }
 
-    &__button {
-      width: 229px;
-      height: 60px;
+    &__buttons {
+      display: flex;
       margin-top: 48px;
-      padding: 18px 15px !important;
       opacity: 0;
       animation: animateLandingContent .75s forwards ease;
       animation-delay: .1s;
+      gap: 16px;
+    }
+
+    &__button {
+      width: 157px;
+      height: 60px;
+      padding: 18px 15px !important;
+    }
+
+    &__community-button {
+      width: 214px;
+      height: 60px;
+      padding: 18px 16px;
+      background-color: $c_black;
+      border: 2px solid #5c6475;
+
+      &:hover {
+        background-color: $c_black;
+      }
     }
 
     &__button-text {
@@ -394,7 +411,7 @@
         margin-top: 12px;
       }
 
-      &__button {
+      &__buttons {
         margin-top: 24px;
       }
 
@@ -459,6 +476,11 @@
         span > div {
           display: block;
         }
+      }
+
+      &__buttons {
+        align-items: center;
+        flex-direction: column;
       }
 
       &__illustration-background {

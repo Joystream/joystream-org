@@ -12,6 +12,7 @@ import Browser2 from '../../../assets/images/landing/hero/browser-2.webp';
 import Browser3 from '../../../assets/images/landing/hero/browser-3.webp';
 
 import './style.scss';
+import Button from '../../Button';
 
 const ILLUSTRATION_MESSAGES = [
   {
@@ -104,7 +105,9 @@ const Illustration = ({ animationInfo, isAnimationDone, setIsAnimationDone }) =>
 };
 
 const BrowserImage = ({ className, variant, imageSrc, isAnimationDone }) => {
-  return <img className={cn(className, { [`${className}--update-${variant}`]: isAnimationDone })} src={imageSrc} alt="" />;
+  return (
+    <img className={cn(className, { [`${className}--update-${variant}`]: isAnimationDone })} src={imageSrc} alt="" />
+  );
 };
 
 const Hero = ({ t }) => {
@@ -149,12 +152,17 @@ const Hero = ({ t }) => {
           </h1>
         </header>
         <p className="IndexPage__hero__subtitle">{t('landing.hero.subtitle')}</p>
-        <ArrowButton
-          link="https://play.joystream.org/studio/"
-          text={t('landing.hero.button')}
-          className="IndexPage__hero__button"
-          textClassname="IndexPage__hero__button-text"
-        />
+        <div className='IndexPage__hero__buttons'>
+          <ArrowButton
+            link="#apps-built-on-joystream"
+            text="View apps"
+            className="IndexPage__hero__button"
+            textClassname="IndexPage__hero__button-text"
+          />
+          <Button href="#start-your-community" className="IndexPage__hero__community-button">
+            Start your community
+          </Button>
+        </div>
         <div className="IndexPage__hero__browsers-wrapper">
           <div
             className={cn('IndexPage__hero__browsers', {

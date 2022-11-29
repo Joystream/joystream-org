@@ -38,7 +38,7 @@ const Ecosystem = () => {
           </p>
         </div>
 
-        <div className="IndexPage__ecosystem__apps">
+        <div className="IndexPage__ecosystem__apps" id="apps-built-on-joystream">
           <h3 className="IndexPage__ecosystem__apps__title">
             Check out apps built on Joystream <div className="IndexPage__ecosystem__apps__title__app-count">1</div>
           </h3>
@@ -59,7 +59,7 @@ const Ecosystem = () => {
               <p className="IndexPage__ecosystem__apps__main__about__platforms">Web</p>
               <a
                 className="IndexPage__ecosystem__apps__main__about__link"
-                href="https://www.google.com"
+                href="https://gleev.xyz"
                 target="_blank"
               >
                 Visit <ArrowIcon className="IndexPage__ecosystem__apps__main__about__link__icon" />
@@ -83,7 +83,7 @@ const Ecosystem = () => {
           </div>
         </div>
 
-        <div className="IndexPage__ecosystem__developers">
+        <div className="IndexPage__ecosystem__developers" id="start-your-community">
           <div className="IndexPage__ecosystem__developers__main">
             <div className="IndexPage__ecosystem__developers__main__about">
               <div className="IndexPage__ecosystem__developers__main__about__section-title">DEVELOPERS</div>

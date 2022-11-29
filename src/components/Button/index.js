@@ -1,4 +1,5 @@
-import { Link } from 'gatsby-plugin-react-i18next';
+import { Link as I18nLink } from 'gatsby-plugin-react-i18next';
+import Link from '../Link';
 import PropTypes from 'prop-types';
 import React from 'react';
 import cn from 'classnames';
@@ -44,10 +45,18 @@ const Button = ({ href, to, className, children, reversed, secondary, light, lar
 
   if (to) {
     return (
-      <Link {...props} className={classes} to={to}>
+      <I18nLink {...props} className={classes} to={to}>
+        {children}
+      </I18nLink>
+    );
+  }
+
+  if(href && href.startsWith("#")) {
+    return (
+      <Link {...props} className={classes} href={href}>
         {children}
       </Link>
-    );
+    )
   }
 
   if (href) {
