@@ -299,7 +299,7 @@
           }
 
           &__section-title {
-            @include section-title;
+            @include section-title-md;
 
             margin-top: 24px;
             color: #6c6cff;
