@@ -76,6 +76,14 @@ export default function useHeroAnimation(canvasRef, illustrationWrapperRef, anim
   };
 
   useEffect(() => {
+    // preload images
+    for(let i = 0; i < sourceImages.length; i++) {
+      const img = new Image();
+      img.src = sourceImages[i];
+    }
+  }, [])
+
+  useEffect(() => {
     if(animationInfo && illustrationWrapperRef.current) {
       const { scrollPosition } = animationInfo;
 
@@ -128,7 +136,7 @@ export default function useHeroAnimation(canvasRef, illustrationWrapperRef, anim
           });
 
           // TODO: Check if this is optimal!
-          setIsAnimationDone(frameIndex <= 50);
+          setIsAnimationDone(frameIndex <= 22);
           setMessageToShow(null);
           setCacheValue(cacheValue);
         }

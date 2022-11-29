@@ -114,15 +114,6 @@ const Hero = ({ t }) => {
   const animationInfo = useScroll();
   const [isAnimationDone, setIsAnimationDone] = useState(false);
 
-  // useEffect(() => {
-  //   // preload images
-  //   console.log("Called!");
-  //   for(let i = 0; i < images.length; i++) {
-  //     const img = new Image();
-  //     img.src = images[i];
-  //   }
-  // }, [])
-
   return (
     <div className="IndexPage__hero-wrapper">
       <section className="IndexPage__hero">
