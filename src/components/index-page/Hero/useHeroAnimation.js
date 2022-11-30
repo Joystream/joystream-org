@@ -18,17 +18,17 @@ const drawImage = (canvasRef, image, drawOver = false, options) => {
       context.clearRect(0, 0, ILLUSTRATION_CANVAS_WIDTH, ILLUSTRATION_CANVAS_HEIGHT);
 
     if(options?.toAnimate) {
-      context.drawImage(img, 0, options.xOffset, ILLUSTRATION_CANVAS_WIDTH, options.yOffset, 0, options.xOffset, ILLUSTRATION_CANVAS_WIDTH, options.yOffset);
+      context.drawImage(img, 0, options.yOffset, ILLUSTRATION_CANVAS_WIDTH, options.heightToRender, 0, options.yOffset, ILLUSTRATION_CANVAS_WIDTH, options.heightToRender);
     } else {
       context.drawImage(img, 0, 0);
     }
   }
 }
 
-const INITIAL_ANIMATION_FRACTION = 0.32;
-const STEPS_ANIMATION_FRACTION = 0.10;
+const INITIAL_ANIMATION_FRACTION = 0.2;
+const STEPS_ANIMATION_FRACTION = 0.15;
 const STEPS_ANIMATION_WAIT_FRACTION = 0.05;
-const FINAL_ANIMATION_FRACTION = 0.28;
+const FINAL_ANIMATION_FRACTION = 0.2;
 const STEPS_ANIMATION_FRAMES = [StepsImage1, StepsImage2, StepsImage3, StepsImage4];
 
 // HELPER FUNCTIONS
@@ -46,10 +46,23 @@ const preloadImages = (images) => {
 export default function useHeroAnimation(canvasRef, illustrationWrapperRef, animationInfo, setIsAnimationDone, setMessageToShow) {
   const lastRenderedImageIndex = useRef();
 
+  const isStepAnimationAfter = (nextCacheValue) => {
+    let previousFrameIndex = Number(lastRenderedImageIndex.current.split("-")[3]);
+    const nextFrameIndex = Number(nextCacheValue.split("-")[3]);
+
+    if(isNaN(previousFrameIndex)) {
+      previousFrameIndex = 0;
+    }
+
+    console.log({ previousFrameIndex, nextFrameIndex });
+
+    return nextFrameIndex >= previousFrameIndex;
+  }
+
   const isValueInCache = (value) => lastRenderedImageIndex.current === value;
 
   const setCacheValue = (value) => {
-    console.log("Cache value updated with: ", value);
+    // console.log("Cache value updated with: ", value);
     lastRenderedImageIndex.current = value
   };
 
@@ -89,8 +102,7 @@ export default function useHeroAnimation(canvasRef, illustrationWrapperRef, anim
         const fullStepAnimationScrollFraction = (mainScrollFraction - INITIAL_ANIMATION_FRACTION) / fullStepAnimationFraction;
 
         // Here we find which of the steps images we want to render:
-        const imageIndex = Math.floor(fullStepAnimationScrollFraction * 4);
-        let imageToRender = STEPS_ANIMATION_FRAMES[imageIndex];
+        let imageIndex = Math.floor(fullStepAnimationScrollFraction * 4);
 
         const STEP_SIZE = 5;
         const IMAGE_STEP_SIZE_REMAINDER = ILLUSTRATION_CANVAS_HEIGHT % STEP_SIZE;
@@ -99,19 +111,29 @@ export default function useHeroAnimation(canvasRef, illustrationWrapperRef, anim
         // Note: For this specific animation it goes over 1.0, when it does the animation is essentially to stall while showing text.
         const scrollFraction = (mainScrollFraction - (INITIAL_ANIMATION_FRACTION + STEPS_ANIMATION_FRACTION*imageIndex)) / (STEPS_ANIMATION_FRACTION - STEPS_ANIMATION_WAIT_FRACTION);
 
-        // Calculate which frame to show (1 - 26)
+        // Calculate which frame to show 1 - 131 (650 / 5)
         const frameIndex = calculateFrameIndex(scrollFraction, (ILLUSTRATION_CANVAS_HEIGHT - IMAGE_STEP_SIZE_REMAINDER) / STEP_SIZE) + 1;
         const cacheValue = `step-one-animation-${frameIndex}-${scrollFraction.toFixed(2)}`;
 
-        const xOffset = (ILLUSTRATION_CANVAS_HEIGHT - IMAGE_STEP_SIZE_REMAINDER) - (frameIndex * STEP_SIZE);
-        const yOffset = IMAGE_STEP_SIZE_REMAINDER + (frameIndex * STEP_SIZE);
+        let yOffset = (ILLUSTRATION_CANVAS_HEIGHT - IMAGE_STEP_SIZE_REMAINDER) - (frameIndex * STEP_SIZE);
+        let heightToRender = IMAGE_STEP_SIZE_REMAINDER + (frameIndex * STEP_SIZE);
 
+        // TODO: Make sure messages are properly shown!
         if(!isValueInCache(cacheValue)) {
+          let imageToRender = STEPS_ANIMATION_FRAMES[imageIndex];
+          if(!isStepAnimationAfter(cacheValue)) {
+            imageIndex -= 1;
+            imageToRender = imageIndex == - 1 ? sourceImages[sourceImages.length - 1] :  STEPS_ANIMATION_FRAMES[Math.max(0, imageIndex)];
+            yOffset = 0;
+            heightToRender = (ILLUSTRATION_CANVAS_HEIGHT - heightToRender) + STEP_SIZE;
+          }
+          console.log({ yOffset, heightToRender, imageIndex });
+
           requestAnimationFrame(() => {
-            drawImage(canvasRef, imageToRender, true, { toAnimate: true, xOffset, yOffset });
+            drawImage(canvasRef, imageToRender, true, { toAnimate: true, yOffset: yOffset, heightToRender });
           });
 
-          if(scrollFraction > 0.8) {
+          if(scrollFraction > 0.6) {
             setMessageToShow(imageIndex);
           }
 
