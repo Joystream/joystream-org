@@ -25,11 +25,11 @@ const drawImage = (canvasRef, image, drawOver = false, options) => {
   }
 }
 
-const INITIAL_ANIMATION_FRACTION = 0.2;
-const STEPS_ANIMATION_FRACTION = 0.15;
+const INITIAL_ANIMATION_FRACTION = 0.175;
+const STEPS_ANIMATION_FRACTION = 0.13;
 const STEPS_ANIMATION_WAIT_FRACTION = 0.05;
-const FINAL_ANIMATION_FRACTION = 0.2;
-const STEPS_ANIMATION_FRAMES = [StepsImage1, StepsImage2, StepsImage3, StepsImage4];
+const FINAL_ANIMATION_FRACTION = 0.175;
+const STEPS_ANIMATION_FRAMES = [StepsImage1, StepsImage2, StepsImage3, StepsImage4, sourceImages[sourceImages.length - 1]];
 
 // HELPER FUNCTIONS
 const calculateFrameIndex = (scrollFraction, numberOfFrames) => {
@@ -54,15 +54,13 @@ export default function useHeroAnimation(canvasRef, illustrationWrapperRef, anim
       previousFrameIndex = 0;
     }
 
-    console.log({ previousFrameIndex, nextFrameIndex });
-
     return nextFrameIndex >= previousFrameIndex;
   }
 
   const isValueInCache = (value) => lastRenderedImageIndex.current === value;
 
   const setCacheValue = (value) => {
-    // console.log("Cache value updated with: ", value);
+    console.log("Cache value updated with: ", value);
     lastRenderedImageIndex.current = value
   };
 
@@ -85,7 +83,6 @@ export default function useHeroAnimation(canvasRef, illustrationWrapperRef, anim
 
         if(!isValueInCache(cacheValue)) {
           requestAnimationFrame(() => {
-            console.log("Requested animation: ", cacheValue);
             drawImage(canvasRef, sourceImages[frameIndex]);
           });
 
@@ -95,16 +92,16 @@ export default function useHeroAnimation(canvasRef, illustrationWrapperRef, anim
         }
       }
 
-      const fullStepAnimationFraction = STEPS_ANIMATION_FRACTION * 4;
+      const fullStepAnimationFraction = STEPS_ANIMATION_FRACTION * STEPS_ANIMATION_FRAMES.length;
       const fullStepAnimationEndFractionBoundary = fullStepAnimationFraction + INITIAL_ANIMATION_FRACTION;
 
       if(mainScrollFraction > INITIAL_ANIMATION_FRACTION && mainScrollFraction <= fullStepAnimationEndFractionBoundary) {
         const fullStepAnimationScrollFraction = (mainScrollFraction - INITIAL_ANIMATION_FRACTION) / fullStepAnimationFraction;
 
         // Here we find which of the steps images we want to render:
-        let imageIndex = Math.floor(fullStepAnimationScrollFraction * 4);
+        const imageIndex = Math.floor(fullStepAnimationScrollFraction * STEPS_ANIMATION_FRAMES.length);
 
-        const STEP_SIZE = 5;
+        const STEP_SIZE = 1;
         const IMAGE_STEP_SIZE_REMAINDER = ILLUSTRATION_CANVAS_HEIGHT % STEP_SIZE;
 
         // Here we calculate the scroll fraction:
@@ -118,33 +115,28 @@ export default function useHeroAnimation(canvasRef, illustrationWrapperRef, anim
         let yOffset = (ILLUSTRATION_CANVAS_HEIGHT - IMAGE_STEP_SIZE_REMAINDER) - (frameIndex * STEP_SIZE);
         let heightToRender = IMAGE_STEP_SIZE_REMAINDER + (frameIndex * STEP_SIZE);
 
-        // TODO: Make sure messages are properly shown!
         if(!isValueInCache(cacheValue)) {
           let imageToRender = STEPS_ANIMATION_FRAMES[imageIndex];
+
           if(!isStepAnimationAfter(cacheValue)) {
-            imageIndex -= 1;
-            imageToRender = imageIndex == - 1 ? sourceImages[sourceImages.length - 1] :  STEPS_ANIMATION_FRAMES[Math.max(0, imageIndex)];
+            const newImageIndex = imageIndex - 1;
+            imageToRender = newImageIndex == - 1 ? sourceImages[sourceImages.length - 1] :  STEPS_ANIMATION_FRAMES[Math.max(0, newImageIndex)];
             yOffset = 0;
             heightToRender = (ILLUSTRATION_CANVAS_HEIGHT - heightToRender) + STEP_SIZE;
           }
-          console.log({ yOffset, heightToRender, imageIndex });
 
           requestAnimationFrame(() => {
             drawImage(canvasRef, imageToRender, true, { toAnimate: true, yOffset: yOffset, heightToRender });
           });
 
-          if(scrollFraction > 0.6) {
-            setMessageToShow(imageIndex);
-          }
-
+          // TODO: This can still be adjusted to find the sweet spot!
+          setMessageToShow(scrollFraction > 0.75 ? imageIndex : null);
           setCacheValue(cacheValue);
           setIsAnimationDone(false);
         }
       }
 
-      const finalAnimationEndFractionBoundary = fullStepAnimationEndFractionBoundary + FINAL_ANIMATION_FRACTION;
-
-      if(mainScrollFraction > fullStepAnimationEndFractionBoundary && mainScrollFraction <= finalAnimationEndFractionBoundary) {
+      if(mainScrollFraction > fullStepAnimationEndFractionBoundary) {
         const scrollFraction = (mainScrollFraction - fullStepAnimationEndFractionBoundary) / FINAL_ANIMATION_FRACTION;
         const frameIndex = sourceImages.length - calculateFrameIndex(scrollFraction, sourceImages.length);
         const cacheValue = `final-animation-${frameIndex}`;
