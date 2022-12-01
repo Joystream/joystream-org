@@ -3,7 +3,9 @@
 
 .IndexPage {
   &__hero-wrapper {
-    padding: 96px 0 0;
+    min-height: 1294px;
+    padding: 96px 100px;
+    overflow: hidden;
     background-color: black;
   }
 
@@ -85,239 +87,77 @@
       @include landing-page-button-text;
     }
 
-    &__illustration-background {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: 3500px;
-    }
-
-    &__illustration-wrapper {
-      position: sticky;
-      top: 150px;
-      z-index: 2;
-      width: 1080px;
-      height: 656px;
-      margin-top: 64px;
-      animation: animateLandingHeroImage .75s forwards ease;
-      animation-delay: .1s;
-      transition: all 1s ease-in-out;
-
-      &--updated {
-        top: 200px;
-        width: 480px;
-        height: 271px;
-        margin-right: 185px;
-        margin-bottom: 126px;
-      }
-    }
-
     &__illustration {
-      width: 100%;
-      height: 100%;
-    }
-
-    &__illustration-message {
-      position: absolute;
-      right: 0;
-      left: 0;
-      display: flex;
-      width: 360px;
-      margin: 0 auto;
-      opacity: 0;
-      transition: all 1s ease-in-out;
-      transition-delay: .25s;
-      gap: 14px;
-
-      &__content {
-        &__title {
-          @include h6;
-
-          color: #f2f5f9;
-        }
-
-        &__subtitle {
-          @include base-3;
-
-          margin-top: 4px;
-          color: #a7aeb7;
-        }
-      }
-
-      &__pointer {
-        position: relative;
-        display: flex;
-        width: 8px;
-        opacity: 0;
-
-        &--show {
-          opacity: 1;
-        }
-
-        &__circle {
-          width: 8px;
-          height: 8px;
-          background-color: rgba(232, 242, 254, .72);
-          border-radius: 50%;
-        }
-
-        &__line {
-          position: absolute;
-          width: 2px;
-          height: 100%;
-          margin: auto;
-          background-color: rgba(232, 242, 254, .72);
-          inset: 0;
-        }
-
-        &--content &__circle,
-        &--blockchain &__circle {
-          align-self: flex-end;
-        }
-      }
-
-      &--application &__content,
-      &--storage &__content {
-        align-self: flex-end;
-      }
-
-      &--application {
-        top: 195px;
-      }
-
-      &--application &__pointer {
-        height: 172px;
-      }
-
-      &--storage {
-        top: 340px;
-      }
-
-      &--storage &__pointer {
-        height: 172px;
-      }
-
-      &--content {
-        top: 90px;
-      }
-
-      &--content &__pointer {
-        height: 196px;
-      }
-
-      &--blockchain {
-        top: 200px;
-      }
-
-      &--blockchain &__pointer {
-        height: 220px;
-      }
-
-      &--show {
-        opacity: 1;
-      }
-    }
-
-    &__browsers-wrapper {
-      position: absolute;
-      bottom: 0;
-    }
-
-    &__browsers {
       position: relative;
-      opacity: 0;
-      transform: scale(.75);
-      transition: all 1s ease-in-out;
+      margin-top: 80px;
 
-      &--updated {
-        opacity: 1;
-        transform: scale(1);
+      &__background {
+        max-width: 1152px;
+        opacity: 0;
+        // TODO: Using drop-shadow results in graphical problems in firefox and that is why it is commented out.
+        // This functionality should be reinstated as soon as that is fixed on their end.
+        // filter: drop-shadow(0 33px 100px rgba(0, 0, 0, .22)) drop-shadow(0 7.37098px 22.3363px rgba(0, 0, 0, .131144)) drop-shadow(0 2.19453px 6.6501px rgba(0, 0, 0, .0888564));
+        animation: animateLandingHeroImage .75s forwards ease;
+        animation-delay: .3s;
       }
 
-      &__main {
-        position: relative;
-        z-index: 1;
-        width: 720px;
-        height: 450px;
-      }
-
-      &__alt,
-      &__second-alt {
+      &__foreground {
         position: absolute;
-        z-index: 0;
-        margin: auto;
-        transition: all 1s ease-in-out;
-        inset: 0;
+        top: 90px;
+        right: -45px;
+        max-width: 404px;
+        opacity: 0;
+        animation: animateLandingNftWidget .75s forwards ease;
+        animation-delay: .3s;
       }
 
-      &__alt--update-1 {
-        transform: translateX(-235px);
+      &__button {
+        position: absolute;
+        top: 400px;
+        right: -21px;
+        max-width: 356px;
+        opacity: 0;
+        animation: animateLandingButton 1s .75s forwards ease;
+        animation-delay: .3s;
       }
+    }
 
-      &__alt--update-2 {
-        transform: translateX(235px);
-      }
-
-      &__second-alt--update-1 {
-        transform: translateX(-400px);
-      }
-
-      &__second-alt--update-2 {
-        transform: translateX(400px);
-      }
+    &__overlay {
+      position: absolute;
+      bottom: -100px;
+      width: 100%;
+      height: 400px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
     }
   }
 
-  @media #{$screen-max-lg} {
+  @media (max-width: 1420px) {
+    &__hero-wrapper {
+      min-height: 1136.5px;
+      padding: 96px 0;
+    }
+
     &__hero {
-      &__illustration-background {
-        height: 2000px;
-      }
+      &__illustration {
+        &__background {
+          width: 900px;
+        }
 
-      &__illustration-wrapper {
-        width: 900px;
-        height: 547px;
+        &__foreground {
+          top: 233px;
+          right: -15px;
+          width: 300px;
+        }
 
-        &--updated {
-          width: 480px;
-          height: 271px;
+        &__button {
+          top: 455px;
+          right: 0;
+          width: 270px;
         }
       }
 
-      &__illustration-message {
-        &--application {
-          top: 140px;
-        }
-
-        &--storage {
-          top: 265px;
-        }
-
-        &--content {
-          top: 35px;
-        }
-
-        &--blockchain {
-          top: 115px;
-        }
-      }
-
-      &__browsers {
-        &__alt--update-1 {
-          transform: translateX(-180px);
-        }
-
-        &__alt--update-2 {
-          transform: translateX(180px);
-        }
-
-        &__second-alt--update-1 {
-          transform: translateX(-330px);
-        }
-
-        &__second-alt--update-2 {
-          transform: translateX(330px);
-        }
+      &__overlay {
+        height: 360px;
       }
     }
   }
@@ -325,7 +165,7 @@
   @media #{$screen-max-md} {
     &__hero-wrapper {
       min-height: unset;
-      padding: 80px 0 0 0;
+      padding: 80px 0;
     }
 
     &__hero {
@@ -340,55 +180,39 @@
 
       &__title,
       &__subtitle,
-      &__button {
+      &__buttons {
         opacity: 1;
         animation: none;
       }
 
-      &__illustration-wrapper {
-        top: 300px;
-        width: 700px;
-        height: 425.6px;
+      &__illustration {
+        &__background {
+          width: 680px;
+        }
 
-        &--updated {
-          width: 480px;
-          height: 271px;
+        &__foreground {
+          top: -375px;
+          right: -2px;
+          width: 220px;
+        }
+
+        &__button {
+          top: -210px;
+          right: 10px;
+          width: 200px;
+        }
+
+        &__background,
+        &__foreground,
+        &__button {
+          opacity: 1;
+          animation: none;
         }
       }
 
-      &__illustration-message {
-        &--application {
-          top: 110px;
-        }
-
-        &--storage {
-          top: 225px;
-        }
-
-        &--content {
-          top: 15px;
-        }
-
-        &--blockchain {
-          top: 55px;
-        }
-      }
-
-      &__browsers {
-        &__alt--update-1,
-        &__alt--update-2,
-        &__second-alt--update-1,
-        &__second-alt--update-2 {
-          transform: translateX(0);
-        }
-
-        &__alt--update-1 {
-          transform: translateY(-140px);
-        }
-
-        &__second-alt--update-1 {
-          transform: translateY(-255px);
-        }
+      &__overlay {
+        bottom: -20px;
+        height: 200px;
       }
     }
   }
@@ -415,116 +239,85 @@
         margin-top: 24px;
       }
 
-      &__illustration-wrapper {
-        width: 500px;
-        height: 304px;
-
-        &--updated {
-          width: 335px;
-          height: 189.1px;
-          margin-right: 130px;
-          margin-bottom: 90px;
-        }
+      &__illustration {
+        margin-top: 64px;
       }
+    }
+  }
 
-      &__illustration-message {
-        width: 335px;
+  @media (max-width: 725px) {
+    &__hero-wrapper {
+      padding-bottom: 0;
+    }
 
-        &__content {
-          &__title,
-          &__subtitle {
-            text-align: center;
-          }
-        }
-
-        &__pointer {
-          display: none;
-        }
-
-        &--application,
-        &--storage,
-        &--content,
-        &--blockchain {
-          top: 325px;
-        }
-      }
-
-      &__browsers {
-        &__main {
+    &__hero {
+      &__illustration {
+        &__background {
           width: 500px;
-          height: 314.4px;
         }
 
-        &__alt--update-1 {
-          transform: translateY(-100px);
+        &__foreground {
+          top: -277px;
+          right: -8px;
+          width: 165px;
         }
 
-        &__second-alt--update-1 {
-          transform: translateY(-180px);
+        &__button {
+          top: -155px;
+          right: -1px;
+          width: 150px;
         }
+      }
+
+      &__overlay {
+        height: 150px;
       }
     }
   }
 
   @media (max-width: 560px) {
-    &__hero {
-      padding: 0;
+    &__hero__title {
+      max-width: 335px;
 
-      &__title {
-        max-width: 335px;
-
-        span > div {
-          display: block;
-        }
+      span > div {
+        display: block;
       }
+    }
+  }
 
+  @media (max-width: 540px) {
+    &__hero {
       &__buttons {
         align-items: center;
         flex-direction: column;
       }
 
-      &__illustration-background {
-        height: 1500px;
-      }
+      &__illustration {
+        &__background {
+          width: 100%;
+        }
 
-      &__illustration-wrapper {
-        width: 375px;
-        height: 227.17px;
-        min-width: 375px;
-        min-height: 227.17px;
+        &__foreground {
+          top: unset;
+          right: -10px;
+          bottom: -11px;
+          width: 33%;
+        }
 
-        &--updated {
-          width: 222px;
-          height: 135px;
-          min-width: 222px;
-          min-height: 135px;
-          margin-right: 85px;
-          margin-bottom: 52px;
+        &__button {
+          top: 51%;
+          right: -4px;
+          width: calc(33% - 12px);
+        }
+
+        &__button-plx {
+          // override will-change: transform applied by Plx to not create a new stacking context
+          will-change: width !important;
         }
       }
 
-      &__illustration-message {
-        &--application,
-        &--storage,
-        &--content,
-        &--blockchain {
-          top: 250px;
-        }
-      }
-
-      &__browsers {
-        &__main {
-          width: 335px;
-          height: 210px;
-        }
-
-        &__alt--update-1 {
-          transform: translateY(-68px);
-        }
-
-        &__second-alt--update-1 {
-          transform: translateY(-120px);
-        }
+      &__overlay {
+        height: 105px;
       }
     }
   }

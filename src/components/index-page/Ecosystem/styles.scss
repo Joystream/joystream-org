@@ -3,7 +3,7 @@
 
 .IndexPage {
   &__ecosystem-wrapper {
-    padding: 96px 0;
+    padding: 64px 0 96px;
     background-color: $c_black;
   }
 
@@ -45,6 +45,58 @@
         margin-top: 16px;
         color: #a7aeb7;
         text-align: center;
+      }
+    }
+
+    &__browsers {
+      position: relative;
+      width: 720px;
+      height: 450px;
+      margin: 64px auto 0;
+
+      &__main {
+        position: relative;
+        z-index: 1;
+      }
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &__alt,
+      &__second-alt {
+        position: absolute;
+        z-index: 0;
+        margin: auto;
+        inset: 0;
+      }
+
+      &__alt {
+        &--1 {
+          transform: translateX(-235px);
+        }
+
+        &--2 {
+          transform: translateX(235px);
+        }
+      }
+
+      &__second-alt {
+        &--1 {
+          transform: translateX(-400px);
+        }
+
+        &--2 {
+          transform: translateX(400px);
+        }
+      }
+
+      &__video-player {
+        position: absolute;
+        z-index: 2;
+        margin: auto;
+        inset: 0;
       }
     }
 
@@ -352,6 +404,28 @@
 
   @media #{$screen-max-lg} {
     &__ecosystem {
+      &__browsers {
+        &__alt {
+          &--1 {
+            transform: translateX(-180px);
+          }
+
+          &--2 {
+            transform: translateX(180px);
+          }
+        }
+
+        &__second-alt {
+          &--1 {
+            transform: translateX(-330px);
+          }
+
+          &--2 {
+            transform: translateX(330px);
+          }
+        }
+      }
+
       &__apps {
         &__title {
           max-width: 935px;
@@ -395,7 +469,30 @@
   }
 
   @media #{$screen-max-md} {
+    &__ecosystem-wrapper {
+      padding-top: 32px;
+    }
+
     &__ecosystem {
+      &__browsers {
+        margin-top: 220px;
+
+        &__alt--1,
+        &__alt--2,
+        &__second-alt--1,
+        &__second-alt--2 {
+          transform: translateX(0);
+        }
+
+        &__alt--1 {
+          transform: translateY(-140px);
+        }
+
+        &__second-alt--1 {
+          transform: translateY(-255px);
+        }
+      }
+
       &__hero {
         &__subtitle {
           max-width: 650px;
@@ -500,6 +597,20 @@
         }
       }
 
+      &__browsers {
+        width: 526px;
+        height: 330.7px;
+        margin-top: 150px;
+
+        &__alt--1 {
+          transform: translateY(-100px);
+        }
+
+        &__second-alt--1 {
+          transform: translateY(-180px);
+        }
+      }
+
       &__apps {
         margin-top: 64px;
 
@@ -573,6 +684,20 @@
 
   @media (max-width: 560px) {
     &__ecosystem {
+      &__browsers {
+        width: 100%;
+        height: auto;
+        margin-top: 32%;
+
+        &__alt--1 {
+          transform: translateY(-30%);
+        }
+
+        &__second-alt--1 {
+          transform: translateY(-55%);
+        }
+      }
+
       &__developers {
         &__main {
           &__visual {
