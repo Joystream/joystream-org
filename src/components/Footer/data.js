@@ -17,6 +17,7 @@ const usefulLinks = [
   { href: 'mailto:security@joystream.org', label: 'footer.security', icon: SecurityIcon },
   { href: 'https://polkadot.subscan.io/', label: 'footer.blockExplorer' },
   { to: '/brand/guides', label: 'footer.usefulLinks.brandGuidance' },
+  { to: '/privacy-policy', label: 'footer.usefulLinks.privacyPolicy' },
 ];
 
 const socialMedias = [
