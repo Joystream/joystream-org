@@ -8,16 +8,19 @@
       "text": "Our Manifesto sets out both the problems we believe are associated with digital media platforms in their current form as well as our proposed solution to these concerns."
     },
     "problem": {
+      "sectionTitle": "CHAPTER I",
       "title": "Problem",
       "text": {
         "artAsTool": "We believe that art, be it as literature, music, film, games or performance, is a critical tool through which societies establish a shared understanding of what is common knowledge among all members. These expressions define values and narratives that end up shaping culture, faith and even public policy. It therefore matters deeply how it is financed, distributed and paid for.",
         "mediaAsPrimaryMedium": "Digital media has become the primary medium through which such expression is distributed, and digital media platforms have become the key institutions organizing this activity.",
+        "however": "However...",
         "unaccountableInstitutions": "Unfortunately, due to network effects, economies of scale, regulations and political interests, we are today left with handful of massive institutions which set the terms for how this happens. They are almost entirely unaccountable to normal market and political mechanisms.",
         "filteredOnTheirTerms": "As a result, our stories, expressions and interactions are managed and filtered on their terms. This continues to generate an ever changing set of problems, be it",
         "inflexible": "inflexible monetization, censorship of controversial speech, inequitable sharing of gains with creators and audience, low platform innovation or lack of credibility with third party developers."
       }
     },
     "goal": {
+      "sectionTitle": "CHAPTER II",
       "title": "Goal",
       "text": {
         "arrangement": "We call for an arrangement where media platforms are accountable to the people they impact, which are primarily their users, be it as consumers, creatives, third party developer or workers.",
@@ -25,6 +28,7 @@
       }
     },
     "thesis": {
+      "sectionTitle": "Chapter III",
       "title": "Thesis",
       "text": {
         "coreThesis": "Our core thesis is that there are two basic challenges which must be addressed to achieve this goal, and that an appropriate application of contemporary distributed systems technology, including blockchains, smart contracts and tokens, is the right means to do so."
@@ -66,7 +70,11 @@
     "ctaText": "This plan still has room for more people, so get involved by sending an <0>email</0> or joining us on <1>Discord</1>.",
     "references": {
       "title": "References",
-      "text": "<0>[1] Ersam, F. Blockchain Tokens and the dawn of the Decentralized Business Model. Medium. Aug 1, 2016.</0><0>[2] Srinivasan, B. S. Thoughts on Tokens. Medium. May 27, 2017.</0><0>[3] Dixon, C. Crypto Tokens: A Breakthrough in Open Network Design. Medium. June 1, 2017.</0><0>[4] Hirschman, Albert O. Exit, voice, and loyalty: Responses to decline in firms, organizations, and states. Vol. 25. Harvard university press, 1970.</0><0>[5] Rochet, Jean‐Charles, and Jean Tirole. “Platform competition in two‐sided markets.” Journal of the european economic association 1.4 (2003): 990–1029.</0>"
+      "one": "1. Ersam, F. Blockchain Tokens and the dawn of the Decentralized Business Model. Medium. Aug 1, 2016.",
+      "two": "2. Srinivasan, B. S. Thoughts on Tokens. Medium. May 27, 2017.",
+      "three": "3. Dixon, C. Crypto Tokens: A Breakthrough in Open Network Design. Medium. June 1, 2017.",
+      "four": "4. Hirschman, Albert O. Exit, voice, and loyalty: Responses to decline in firms, organizations, and states. Vol. 25. Harvard university press, 1970.",
+      "five": "5. Rochet, Jean‐Charles, and Jean Tirole. “Platform competition in two‐sided markets.” Journal of the european economic association 1.4 (2003): 990–1029."
     }
   }
 }

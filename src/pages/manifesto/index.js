@@ -1,20 +1,20 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
-import Hero from '../../components/Hero';
-import LayoutWrapper from '../../components/LayoutWrapper';
 import SiteMetadata from '../../components/SiteMetadata';
-import ImageSection from '../../components/ImageSection';
 import BaseLayout from '../../components/_layouts/Base';
-import pageData from '../../data/pages/manifesto';
-import { sharedData } from '../../data/pages';
 
-import fistImage from '../../assets/svg/fist-main.svg';
+import { ReactComponent as TheWedge } from '../../assets/svg/the-wedge.svg';
+import { ReactComponent as Accountability } from '../../assets/svg/accountability.svg';
+import { ReactComponent as Voice } from '../../assets/svg/voice.svg';
+import { ReactComponent as Exit } from '../../assets/svg/exit.svg';
+import { ReactComponent as Fist } from '../../assets/svg/fist-main.svg';
+import { ReactComponent as BrokenGroundLeft } from '../../assets/svg/manifesto-broken-ground-left.svg';
+import { ReactComponent as BrokenGroundRight } from '../../assets/svg/manifesto-broken-ground-right.svg';
 
 import './style.scss';
 
 const ManifestoPage = () => {
-  const { sections, groupSections } = pageData;
   const { t } = useTranslation();
   const { language } = useI18next();
 
@@ -26,81 +26,166 @@ const ManifestoPage = () => {
         description={t('manifesto.siteMetadata.description')}
       />
 
-      <Hero
-        image={fistImage}
-        title={t('manifesto.hero.title')}
-        animationStartValue={10}
-        animationEndValue={120}
-        animationEnd="100vh"
-        indent
-        theme="blue"
-        noOverflow
-      >
-        <p className="AcropolisPage__hero-paragraph">{t('manifesto.hero.text')}</p>
-      </Hero>
-
-      <LayoutWrapper>
-        <ImageSection title={t('manifesto.problem.title')} image={sections.problem.image} imageOffset={50}>
-          <p>{t('manifesto.problem.text.artAsTool')}</p>
-          <p>{t('manifesto.problem.text.mediaAsPrimaryMedium')}</p>
-          <blockquote>{t('manifesto.problem.text.unaccountableInstitutions')}</blockquote>
-          <p>{t('manifesto.problem.text.filteredOnTheirTerms')}</p>
-          <blockquote>{t('manifesto.problem.text.inflexible')}</blockquote>
-        </ImageSection>
-
-        <ImageSection title={t('manifesto.goal.title')} image={sections.goal.image}>
-          <p>{t('manifesto.goal.text.arrangement')}</p>
-          <blockquote>{t('manifesto.goal.text.accountability')}</blockquote>
-        </ImageSection>
-
-        <ImageSection title={t('manifesto.thesis.title')} image={sections.thesis.image}>
-          <p>{t('manifesto.thesis.text.coreThesis')}</p>
-        </ImageSection>
-
-        <div className="ManifestoPage__grouped-sections">
-          <ImageSection title={t('manifesto.wedge.title')} image={groupSections.wedge.image} grouped imageOffset={200}>
-            <p>{t('manifesto.wedge.text.alternative')}</p>
-            <blockquote>{t('manifesto.wedge.text.blockchainTokens')}</blockquote>
-            <p>{t('manifesto.wedge.text.initialHurdle')}</p>
-          </ImageSection>
-
-          <ImageSection title={t('manifesto.accountability.title')} image={groupSections.accountability.image} grouped>
-            <p>{t('manifesto.accountability.text.createAndSustain')}</p>
-            <blockquote>{t('manifesto.accountability.text.twoWays')}</blockquote>
-          </ImageSection>
-
-          <ImageSection title={t('manifesto.voice.title')} image={groupSections.voice.image} grouped imageOffset={200}>
-            <p>{t('manifesto.voice.text.improveWithin')}</p>
-            <p>{t('manifesto.voice.text.infrastructure')}</p>
-            <blockquote>{t('manifesto.voice.text.control')}</blockquote>
-            <p>{t('manifesto.voice.text.signWithCrypto')}</p>
-          </ImageSection>
-
-          <ImageSection title={t('manifesto.exit.title')} image={groupSections.exit.image} grouped imageOffset={200}>
-            <p>{t('manifesto.exit.text.exit')}</p>
-            <p>{t('manifesto.exit.text.loweredCosts')}</p>
-            <blockquote>{t('manifesto.exit.text.competition')}</blockquote>
-            <p>{t('manifesto.exit.text.reusability')}</p>
-          </ImageSection>
+      <section className="ManifestoPage__hero-wrapper">
+        <div className="ManifestoPage__hero-background">
+          <div className="ManifestoPage__hero-background__left">
+            <BrokenGroundLeft className="ManifestoPage__hero-background__left__illustration" />
+          </div>
+          <div className="ManifestoPage__hero-background__middle"></div>
+          <div className="ManifestoPage__hero-background__right">
+            <BrokenGroundRight className="ManifestoPage__hero-background__right__illustration" />
+          </div>
         </div>
 
-        <h3 className="ManifestoPage__cta">
-          <Trans
-            i18nKey="manifesto.ctaText"
-            components={[
-              <a href={`mailto:${sharedData.defaultEmail}`}>email</a>,
-              <a href={sharedData.social.discordLink} target="_blank" rel="noopener noreferrer">
-                Discord
-              </a>,
-            ]}
-          />
-        </h3>
+        <div className="ManifestoPage__hero">
+          <header className="ManifestoPage__hero__header">
+            <h1 className="ManifestoPage__hero__title">{t('manifesto.hero.title')}</h1>
+            <p className="ManifestoPage__hero__subtitle">{t('manifesto.hero.text')}</p>
+          </header>
+          <Fist className="ManifestoPage__hero__illustration" />
+        </div>
+      </section>
 
-        <section className="ManifestoPage__references">
-          <h2 className="ManifestoPage__references-title">{t('manifesto.references.title')}</h2>
-          <Trans i18nKey="manifesto.references.text" components={[<p />]} />
-        </section>
-      </LayoutWrapper>
+      <section className="ManifestoPage__problem-wrapper">
+        <div className="ManifestoPage__problem ManifestoPage__section">
+          <span className="ManifestoPage__section-title">{t('manifesto.problem.sectionTitle')}</span>
+          <h2 className="ManifestoPage__title ManifestoPage__problem__title">{t('manifesto.problem.title')}</h2>
+          <div className="ManifestoPage__paragraph ManifestoPage__paragraph--top">
+            {t('manifesto.problem.text.artAsTool')}
+          </div>
+          <div className="ManifestoPage__paragraph">{t('manifesto.problem.text.mediaAsPrimaryMedium')}</div>
+          <div className="ManifestoPage__subtitle ManifestoPage__problem__subtitle">
+            {t('manifesto.problem.text.however')}
+          </div>
+          <div className="ManifestoPage__paragraph">
+            <span className="ManifestoPage__text-highlight ManifestoPage__text-highlight--red">
+              {t('manifesto.problem.text.unaccountableInstitutions')}
+            </span>
+          </div>
+          <div className="ManifestoPage__paragraph ManifestoPage__problem__paragraph-4">
+            {t('manifesto.problem.text.filteredOnTheirTerms')} <span>{t('manifesto.problem.text.inflexible')}</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="ManifestoPage__goal-wrapper">
+        <div className="ManifestoPage__section">
+          <span className="ManifestoPage__section-title ManifestoPage__section-title--white">
+            {t('manifesto.goal.sectionTitle')}
+          </span>
+          <h2 className="ManifestoPage__title">{t('manifesto.goal.title')}</h2>
+          <div className="ManifestoPage__paragraph ManifestoPage__paragraph--white ManifestoPage__paragraph--top">
+            {t('manifesto.goal.text.arrangement')}
+          </div>
+          <div className="ManifestoPage__paragraph ManifestoPage__paragraph--white">
+            <span className="ManifestoPage__text-highlight ManifestoPage__text-highlight--white">{t('manifesto.goal.text.accountability')}</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="ManifestoPage__thesis-wrapper">
+        <div className="ManifestoPage__thesis">
+          <div className="ManifestoPage__section">
+            <span className="ManifestoPage__section-title ManifestoPage__section-title--blue">
+              {t('manifesto.thesis.sectionTitle')}
+            </span>
+            <h2 className="ManifestoPage__title ManifestoPage__title--black">
+              {t('manifesto.thesis.title')}
+            </h2>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black ManifestoPage__paragraph--top">
+              {t('manifesto.thesis.text.coreThesis')}
+            </div>
+          </div>
+
+          <div className="ManifestoPage__illustration-wrapper">
+            <TheWedge className="ManifestoPage__illustration" />
+          </div>
+
+          <div className="ManifestoPage__section">
+            <h2 className="ManifestoPage__subtitle ManifestoPage__subtitle--black ManifestoPage__thesis__subtitle">{t('manifesto.wedge.title')}</h2>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.wedge.text.alternative')}
+            </div>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.wedge.text.blockchainTokens')}
+            </div>
+            {/* TODO: [1,2,3] needs to be styled better */}
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.wedge.text.initialHurdle')}
+            </div>
+          </div>
+
+          <div className="ManifestoPage__illustration-wrapper">
+            <Accountability className="ManifestoPage__illustration" />
+          </div>
+
+          <div className="ManifestoPage__section">
+            <h2 className="ManifestoPage__subtitle ManifestoPage__subtitle--black ManifestoPage__thesis__subtitle">
+              {t('manifesto.accountability.title')}
+            </h2>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.accountability.text.createAndSustain')}
+            </div>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.accountability.text.twoWays')}
+            </div>
+          </div>
+
+          <div className="ManifestoPage__illustration-wrapper">
+            <Voice className="ManifestoPage__illustration" />
+          </div>
+
+          <div className="ManifestoPage__section">
+            <h2 className="ManifestoPage__subtitle ManifestoPage__subtitle--black ManifestoPage__thesis__subtitle">{t('manifesto.voice.title')}</h2>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.voice.text.improveWithin')}
+            </div>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.voice.text.infrastructure')}
+            </div>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.voice.text.control')}
+            </div>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.voice.text.signWithCrypto')}
+            </div>
+          </div>
+
+          <div className="ManifestoPage__illustration-wrapper">
+            <Exit className="ManifestoPage__illustration" />
+          </div>
+
+          <div className="ManifestoPage__section">
+            <h2 className="ManifestoPage__subtitle ManifestoPage__subtitle--black ManifestoPage__thesis__subtitle">{t('manifesto.exit.title')}</h2>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.exit.text.exit')}
+            </div>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.exit.text.loweredCosts')}
+            </div>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.exit.text.competition')}
+            </div>
+            <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
+              {t('manifesto.exit.text.reusability')}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TODO: Fix the spacing after new line.  */}
+      <section className="ManifestoPage__references-wrapper">
+        <div className="ManifestoPage__references">
+          <h2 className="ManifestoPage__references__title">{t('manifesto.references.title')}</h2>
+          <div className="ManifestoPage__references__items">
+            <p className="ManifestoPage__references__item">{t('manifesto.references.one')}</p>
+            <p className="ManifestoPage__references__item">{t('manifesto.references.two')}</p>
+            <p className="ManifestoPage__references__item">{t('manifesto.references.three')}</p>
+            <p className="ManifestoPage__references__item">{t('manifesto.references.four')}</p>
+            <p className="ManifestoPage__references__item">{t('manifesto.references.five')}</p>
+          </div>
+        </div>
+      </section>
     </BaseLayout>
   );
 };
