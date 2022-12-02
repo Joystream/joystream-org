@@ -56,14 +56,31 @@
       animation-delay: .1s;
     }
 
-    &__button {
-      width: 229px;
-      height: 60px;
+    &__buttons {
+      display: flex;
       margin-top: 48px;
-      padding: 18px 15px !important;
       opacity: 0;
       animation: animateLandingContent .75s forwards ease;
       animation-delay: .1s;
+      gap: 16px;
+    }
+
+    &__button {
+      width: 157px;
+      height: 60px;
+      padding: 18px 15px !important;
+    }
+
+    &__community-button {
+      width: 214px;
+      height: 60px;
+      padding: 18px 16px;
+      background-color: $c_black;
+      border: 2px solid #5c6475;
+
+      &:hover {
+        background-color: $c_black;
+      }
     }
 
     &__button-text {
@@ -163,7 +180,7 @@
 
       &__title,
       &__subtitle,
-      &__button {
+      &__buttons {
         opacity: 1;
         animation: none;
       }
@@ -218,7 +235,7 @@
         margin-top: 12px;
       }
 
-      &__button {
+      &__buttons {
         margin-top: 24px;
       }
 
@@ -229,6 +246,10 @@
   }
 
   @media (max-width: 725px) {
+    &__hero-wrapper {
+      padding-bottom: 0;
+    }
+
     &__hero {
       &__illustration {
         &__background {
@@ -266,6 +287,11 @@
 
   @media (max-width: 540px) {
     &__hero {
+      &__buttons {
+        align-items: center;
+        flex-direction: column;
+      }
+
       &__illustration {
         &__background {
           width: 100%;

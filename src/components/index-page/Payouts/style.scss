@@ -1,10 +1,48 @@
 @import '../../../styles/main';
 @import '../../../pages/style';
+@import '../shared-styles';
 
 .IndexPage {
   &__payouts-wrapper {
-    padding: 96px 0;
+    padding-top: 96px;
     background-color: #111316;
+  }
+
+  &__payouts-atlas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 816px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    & > header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__section-title {
+      @include section-title;
+
+      color: #6c6cff;
+    }
+
+    &__title {
+      @include h3;
+
+      margin-top: 4px;
+      color: $c_white;
+      text-align: center;
+    }
+
+    &__subtitle {
+      @include base-1;
+
+      margin-top: 16px;
+      color: #a7aeb7;
+      text-align: center;
+    }
   }
 
   &__payouts {
@@ -13,6 +51,7 @@
     display: grid;
     height: 486px;
     min-height: 486px;
+    margin-top: 96px;
     gap: 30px;
     grid-template-columns: 500px auto;
 
@@ -38,25 +77,180 @@
         @include base-1;
 
         margin-top: 16px;
-        color: #a7aeb7;
+        color: $c_grayc-chateau;
       }
     }
 
     &__illustration {
       position: relative;
       height: 486px;
-      min-height: 486px;
 
       &__background {
         position: absolute;
-        right: 0;
-        width: 576px;
       }
 
       &__foreground {
         position: absolute;
-        bottom: -200px;
-        width: 360px;
+      }
+    }
+  }
+
+  &__payouts-carousel {
+    $carousel-gap: 24px;
+
+    margin-top: 64px;
+
+    &__title-and-info {
+      @extend %container;
+
+      display: flex;
+      justify-content: space-between;
+
+      &__title {
+        @include h6;
+
+        color: $c_white;
+      }
+
+      &__info {
+        @include base-5;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: $c_grayc-chateau;
+        fill: $c_grayc-chateau;
+
+        &__icon {
+          margin-left: 6px;
+          fill: inherit;
+        }
+
+        &__modal {
+          position: absolute;
+          right: 0;
+          bottom: 30px;
+          width: 240px;
+          height: auto;
+          padding: 12px 12px 18px 12px;
+          color: $c_ebony-clay;
+          background-color: $c_neutral-200;
+          opacity: 0;
+          visibility: hidden;
+          transition: visibility .2s linear, opacity .2s linear;
+          clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 6px), 100% 100%, calc(100% - 8px) calc(100% - 6px), 0% calc(100% - 6px));
+        }
+
+        &__label {
+          display: flex;
+          align-items: center;
+        }
+
+        &__label:focus + &__modal {
+          opacity: 1;
+          visibility: visible;
+          fill: $c_white;
+        }
+
+        &:hover,
+        &__label:focus {
+          color: $c_white;
+          fill: $c_white;
+        }
+
+        &:hover &__modal {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    &__items-wrapper {
+      display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
+      margin-top: 32px;
+      overflow: hidden;
+      gap: $carousel-gap;
+    }
+
+    &__items {
+      @include animate-carousel($carousel-gap, 25s);
+
+      display: flex;
+      flex-shrink: 0;
+      justify-content: space-between;
+      min-width: 100%;
+      gap: $carousel-gap;
+
+      &--paused {
+        animation-play-state: paused;
+      }
+    }
+
+    &__item {
+      width: 224px;
+      height: 200px;
+      padding: 24px;
+      background-color: $c_ebony-clay;
+
+      &__image {
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, .3);
+        border-radius: 50%;
+
+        & > img {
+          width: 100%;
+        }
+      }
+
+      &__price {
+        display: flex;
+        margin-top: 16px;
+
+        &__icon {
+          margin: auto 4px auto 0;
+        }
+
+        &__text {
+          @include h7;
+
+          color: $c_grayc-chateau;
+
+          & > span {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 40px;
+            letter-spacing: 0;
+            color: $c_white;
+            text-align: left;
+          }
+        }
+      }
+
+      &__channel {
+        @include base-5;
+
+        margin-top: 4px;
+        color: $c_grayc-chateau;
+
+        & > span {
+          color: $c_white;
+        }
+      }
+
+      &__time {
+        @include base-5;
+
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        color: $c_grayc-chateau;
+
+        &__icon {
+          margin-right: 6px;
+        }
       }
     }
   }
@@ -69,7 +263,7 @@
     justify-content: space-between;
     height: 256px;
     margin-top: 96px;
-    background-color: #1f252e;
+    background-color: $c_ebony-clay;
     background-image: url('../../../assets/svg/landing/payouts-cta-background.svg');
     background-position: right 0;
     background-repeat: no-repeat;
@@ -118,59 +312,41 @@
 
   @media #{$screen-max-lg} {
     &__payouts {
-      height: 400px;
-      min-height: 400px;
       grid-template-columns: auto 500px;
 
       &__illustration {
-        height: 400px;
-        min-height: 400px;
-
         &__background {
-          width: 400px;
+          top: 60px;
         }
 
         &__foreground {
-          bottom: -50px;
-          width: 250px;
+          top: 60px;
         }
       }
     }
   }
 
   @media #{$screen-max-md} {
+    &__payouts-atlas {
+      max-width: 650px;
+    }
+
     &__payouts {
       display: flex;
       flex-direction: column-reverse;
       height: auto;
+      max-width: 730px;
       min-height: auto;
       gap: 32px;
 
       &__illustration {
-        height: 400px;
-        min-height: 400px;
-        padding: 0 22px;
-        transform: scale(1.3);
-        transform-origin: left;
-
         &__background {
-          top: 0;
-          right: 0;
-          left: 0;
-          width: 500px;
-          margin: auto;
+          top: unset;
         }
 
         &__foreground {
-          top: 220px;
-          left: 50px;
-          width: 270px;
-          margin: auto;
+          top: unset;
         }
-      }
-
-      &__content {
-        padding: 0 22px;
       }
     }
 
@@ -205,21 +381,32 @@
 
   @media #{$screen-max-sm} {
     &__payouts-wrapper {
-      padding: 86px 0;
+      padding-top: 80px;
+    }
+
+    &__payouts-atlas {
+      max-width: 500px;
+
+      &__title {
+        @include h4;
+      }
+
+      &__subtitle {
+        @include base-3;
+      }
     }
 
     &__payouts {
-      &__illustration {
-        padding: 0 10px;
+      max-width: 534px;
+      margin-top: 64px;
 
-        &__background {
-          left: 50px;
-        }
+      &__illustration {
+        width: 534px;
+        height: 365px;
+        overflow: hidden;
       }
 
       &__content {
-        padding: 0 10px;
-
         &__title {
           @include h4;
         }
@@ -231,49 +418,32 @@
     }
   }
 
-  @media (max-width: 650px) {
-    &__payouts {
-      &__illustration {
-        height: 300px;
-        min-height: 300px;
-        transform: scale(1.4);
+  @media (max-width: 600px) {
+    &__payouts-carousel {
+      &__title-and-info {
+        flex-direction: column;
 
-        &__background {
-          top: 0;
-          width: 380px;
-        }
+        &__info {
+          margin-top: 8px;
 
-        &__foreground {
-          top: 180px;
-          left: 0;
-          width: 200px;
+          &__modal {
+            right: unset;
+            bottom: 20px;
+            left: 80px;
+            clip-path:
+              polygon(
+                0% 0%,
+                0% calc(100% - 6px),
+                100% calc(100% - 6px),
+                100% 0%
+              );
+          }
         }
       }
     }
   }
 
   @media (max-width: 500px) {
-    &__payouts {
-      &__illustration {
-        height: 200px;
-        min-height: 200px;
-        transform: scale(1.5);
-
-        &__background {
-          top: 0;
-          left: 50px;
-          width: 271px;
-          margin: 0;
-        }
-
-        &__foreground {
-          top: 120px;
-          left: 0;
-          width: 140px;
-        }
-      }
-    }
-
     &__payouts-cta {
       &__content {
         &__title {

@@ -22,7 +22,9 @@ const BaseLayout = ({ children, t, mainnetReminder = false, primer }) => {
       <div style={{ overflowX: 'hidden' }}>
         {mainnetReminder ? <MainnetBanner /> : null}
         <Navbar t={t} primer={primer} />
-        {children}
+        <main>
+          {children}
+        </main>
         <CookiesNotice t={t}/>
         <Footer t={t} primer={primer}/>
       </div>

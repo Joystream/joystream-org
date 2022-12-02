@@ -7,12 +7,14 @@ import './style.scss';
 
 const Manifesto = ({ t }) => {
   return (
-    <div className="IndexPage__manifesto-cta-wrapper">
+    <section className="IndexPage__manifesto-cta-wrapper">
       <div className="IndexPage__manifesto-cta">
         <Fist className="IndexPage__manifesto-cta__icon" />
         <div className="IndexPage__manifesto-cta__content">
-          <span className="IndexPage__manifesto-cta__subtitle">{t('landing.whatWeDo.sectionTitle')}</span>
-          <h2 className="IndexPage__manifesto-cta__title">{t('landing.whatWeDo.title')}</h2>
+          <header>
+            <span className="IndexPage__manifesto-cta__subtitle">{t('landing.whatWeDo.sectionTitle')}</span>
+            <h2 className="IndexPage__manifesto-cta__title">{t('landing.whatWeDo.title')}</h2>
+          </header>
           <Link className="IndexPage__manifesto-cta__link-wrapper" to="/manifesto">
             <div className="IndexPage__manifesto-cta__link">
               {t('landing.whatWeDo.link')}
@@ -21,7 +23,7 @@ const Manifesto = ({ t }) => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

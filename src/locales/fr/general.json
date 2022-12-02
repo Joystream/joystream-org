@@ -98,7 +98,8 @@
     "brandGuides": "Brand Guides",
     "downloadAssets": "Download Assets",
     "primer": "Primer",
-    "handbook": "Handbook"
+    "apps": "Apps",
+    "viewApps": "View apps"
   },
   "footer": {
     "title": "Stay up to date",
@@ -115,11 +116,14 @@
       "hiring": "We are hiring!",
       "brandGuidance": "Brand guidance",
       "tokenomics": "Tokenomics",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "privacyPolicy": "Privacy Policy"
     },
     "fmProgram": "Founding Members Program",
     "followUs": "Follow us",
-    "ourInvestors": "Investors"
+    "ourInvestors": "Investors",
+    "security": "Security",
+    "blockExplorer": "Block Explorer"
   },
   "pages": {
     "blog": "Blog",

@@ -4,6 +4,7 @@ import Plx from 'react-plx';
 import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ArrowButton } from '../../ArrowButton';
+import Button from '../../Button';
 
 import AtlasHeroBackgroundImage from '../../../assets/images/landing/atlas-hero-background.webp';
 import AtlasHeroForegroundImage from '../../../assets/images/landing/atlas-hero-foreground.webp';
@@ -69,12 +70,17 @@ const Hero = ({ t }) => {
           />
         </h1>
         <p className="IndexPage__hero__subtitle">{t('landing.hero.subtitle')}</p>
-        <ArrowButton
-          link="https://play.joystream.org/studio/"
-          text={t('landing.hero.button')}
-          className="IndexPage__hero__button"
-          textClassname="IndexPage__hero__button-text"
-        />
+        <div className="IndexPage__hero__buttons">
+          <ArrowButton
+            link="#apps-built-on-joystream"
+            text={t('landing.hero.viewApps')}
+            className="IndexPage__hero__button"
+            textClassname="IndexPage__hero__button-text"
+          />
+          <Button href="#start-your-community" className="IndexPage__hero__community-button">
+            {t('landing.hero.startYourCommunity')}
+          </Button>
+        </div>
         <div className="IndexPage__hero__illustration">
           <img
             className="IndexPage__hero__illustration__background"
@@ -88,7 +94,11 @@ const Hero = ({ t }) => {
               alt="bid section for the associated video NFT"
             />
           </Plx>
-          <Plx parallaxData={parallaxDataButton} animateWhenNotInViewport={true} className="IndexPage__hero__illustration__button-plx">
+          <Plx
+            parallaxData={parallaxDataButton}
+            animateWhenNotInViewport={true}
+            className="IndexPage__hero__illustration__button-plx"
+          >
             <img
               className="IndexPage__hero__illustration__button"
               src={AtlasHeroButtonImage}

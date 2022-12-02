@@ -1,6 +1,7 @@
 import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
 import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
 import { ReactComponent as DiscordIcon } from '../../assets/svg/discord.svg';
+import { ReactComponent as SecurityIcon } from '../../assets/svg/security.svg';
 import { sharedData } from '../../data/pages';
 
 const joystreamLinks = [
@@ -10,13 +11,13 @@ const joystreamLinks = [
   { to: '/hydra', label: 'pages.hydra' },
 ];
 
-const githubLinks = [
-  { href: sharedData.links.repository, label: 'footer.github.repository' },
-];
+const githubLinks = [{ href: sharedData.links.repository, label: 'footer.github.repository' }];
 
 const usefulLinks = [
+  { href: 'mailto:security@joystream.org', label: 'footer.security', icon: SecurityIcon },
+  { href: 'https://polkadot.subscan.io/', label: 'footer.blockExplorer' },
   { to: '/brand/guides', label: 'footer.usefulLinks.brandGuidance' },
-  { href: 'https://joystreamstats.live/tokenomics', label: 'footer.usefulLinks.tokenomics' },
+  { to: '/privacy-policy', label: 'footer.usefulLinks.privacyPolicy' },
 ];
 
 const socialMedias = [

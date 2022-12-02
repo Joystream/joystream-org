@@ -14,6 +14,7 @@ import Manifesto from '../components/index-page/Manifesto';
 import JoystreamDAO from '../components/index-page/JoystreamDAO';
 import Jsgenesis from '../components/index-page/Jsgenesis';
 import AvailableActivities from '../components/index-page/AvailableActivities';
+import Ecosystem from '../components/index-page/Ecosystem';
 
 import './style.scss';
 
@@ -31,6 +32,8 @@ const IndexPage = () => {
 
       <Hero t={t}/>
 
+      <Ecosystem t={t}/>
+
       <Payouts t={t}/>
 
       <VideoNFTs t={t}/>
@@ -45,7 +48,7 @@ const IndexPage = () => {
 
       <JoystreamDAO t={t}/>
 
-      <Jsgenesis t={t} />
+      {/* <Jsgenesis t={t} /> */}
     </BaseLayout>
   );
 };

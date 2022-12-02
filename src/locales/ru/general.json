@@ -98,7 +98,8 @@
     "brandGuides": "Правила использования айдентики",
     "downloadAssets": "Скачать ресурсы",
     "primer": "Primer",
-    "handbook": "Handbook"
+    "apps": "Apps",
+    "viewApps": "View apps"
   },
   "footer": {
     "title": "Следите за новостями",
@@ -115,11 +116,14 @@
       "hiring": "Вакансии",
       "brandGuidance": "Правила использования айдентики",
       "tokenomics": "Tokenomics",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "privacyPolicy": "Privacy Policy"
     },
     "fmProgram": "Founding Members Program",
     "followUs": "Следите за новостями",
-    "ourInvestors": "Investors"
+    "ourInvestors": "Investors",
+    "security": "Security",
+    "blockExplorer": "Block Explorer"
   },
   "pages": {
     "blog": "Блог",
