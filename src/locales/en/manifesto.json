@@ -39,14 +39,14 @@
       "text": {
         "alternative": "First is the question of how to create an alternative from scratch in the face of platform externalities which make any new platform nearly useless, regardless of any of its inherent characteristics. The process of doing this sort of bootstrapping has historically been mostly an art, where success has rarely been reproducible.",
         "blockchainTokens": "We believe that blockchain tokens, earned by and issued to early participants, have been shown to be extremely effective at mobilizing, integrating and motivating an international and dynamic community.",
-        "initialHurdle": "This has now repeatedly allowed nascent communities, like the Bitcoin community, to overcome the initial network effect hurdle [1, 2, 3]. There is no certainty that this will be sufficient, but we believe this mechanism is as promising as anything which is likely to have a chance in a long time."
+        "initialHurdle": "This has now repeatedly allowed nascent communities, like the Bitcoin community, to overcome the initial network effect hurdle <reference>[1, 2, 3]</reference>. There is no certainty that this will be sufficient, but we believe this mechanism is as promising as anything which is likely to have a chance in a long time."
       }
     },
     "accountability": {
       "title": "Accountability at scale",
       "text": {
         "createAndSustain": "Second is the question of how to create and sustain accountability in such a platform when it actually reaches scale.",
-        "twoWays": "We understand there to be two fundamental ways that participants can hold institutions of any kind accountable: Voice and exit, in the tradition of Hirschman A. O. [4]."
+        "twoWays": "We understand there to be two fundamental ways that participants can hold institutions of any kind accountable: Voice and exit, in the tradition of Hirschman A. O. <reference>[4]</reference>"
       }
     },
     "voice": {
@@ -63,7 +63,7 @@
       "text": {
         "exit": "Exit is the approach of entirely ending participation in an institution in favor of either joining or creating an alternative. The effectiveness of this depends on costs of leaving, and either joining or creating an alternative, all being low compared to the deprivation in the existing institution. This is currently not the case.",
         "loweredCosts": "By building platforms based on free & open source software, open protocols and open data — as is the case with Blockchain systems, one dramatically lowers these costs. Since users control their own data, identity and assets, they have a much easier time joining new platforms, and even taking their peers with them.",
-        "competition": "Open protocols and data will make multi homing interfaces abundant, where users may not even need to switch, but instead use multiple platforms simultaneously, which encourages platform level competition [5].",
+        "competition": "Open protocols and data will make multi homing interfaces abundant, where users may not even need to switch, but instead use multiple platforms simultaneously, which encourages platform level competition <reference>[5]</reference>.",
         "reusability": "Even more dramatically, reliance on open source means that all the software capital of a platform can easily be reused, and since the entire organizational state is also public, entire ecosystems can be forked to create new alternative platforms with modified policies and objectives."
       }
     },

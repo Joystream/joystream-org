@@ -190,12 +190,25 @@ exports[`ManifestoPage page renders correctly 1`] = `
         <div
           className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
         >
-          manifesto.wedge.text.blockchainTokens
+          <span
+            className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue"
+          >
+            manifesto.wedge.text.blockchainTokens
+          </span>
         </div>
         <div
           className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
         >
-          manifesto.wedge.text.initialHurdle
+          <Trans
+            components={
+              Object {
+                "reference": <div
+                  className="ManifestoPage__reference"
+                />,
+              }
+            }
+            i18nKey="manifesto.wedge.text.initialHurdle"
+          />
         </div>
       </div>
       <div
@@ -221,7 +234,20 @@ exports[`ManifestoPage page renders correctly 1`] = `
         <div
           className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
         >
-          manifesto.accountability.text.twoWays
+          <span
+            className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue"
+          >
+            <Trans
+              components={
+                Object {
+                  "reference": <div
+                    className="ManifestoPage__reference ManifestoPage__reference--bold"
+                  />,
+                }
+              }
+              i18nKey="manifesto.accountability.text.twoWays"
+            />
+          </span>
         </div>
       </div>
       <div
@@ -252,7 +278,11 @@ exports[`ManifestoPage page renders correctly 1`] = `
         <div
           className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
         >
-          manifesto.voice.text.control
+          <span
+            className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue"
+          >
+            manifesto.voice.text.control
+          </span>
         </div>
         <div
           className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
@@ -288,7 +318,20 @@ exports[`ManifestoPage page renders correctly 1`] = `
         <div
           className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
         >
-          manifesto.exit.text.competition
+          <span
+            className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue"
+          >
+            <Trans
+              components={
+                Object {
+                  "reference": <div
+                    className="ManifestoPage__reference ManifestoPage__reference--bold"
+                  />,
+                }
+              }
+              i18nKey="manifesto.exit.text.competition"
+            />
+          </span>
         </div>
         <div
           className="ManifestoPage__paragraph ManifestoPage__paragraph--black"

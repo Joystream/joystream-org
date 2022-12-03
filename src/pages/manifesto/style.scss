@@ -84,6 +84,24 @@
       color: $c_black;
       background-color: rgba(255, 255, 255, .75);
     }
+
+    &--light-blue {
+      font-weight: 600;
+      color: #0b0c0f;
+      background-color: rgba(64, 56, 255, .2);
+    }
+  }
+
+  &__reference {
+    @include base-5;
+
+    position: relative;
+    top: -7px;
+    display: inline-block;
+
+    &--bold {
+      font-weight: 600;
+    }
   }
 
   // -----------------------

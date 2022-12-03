@@ -107,11 +107,10 @@ const ManifestoPage = () => {
               {t('manifesto.wedge.text.alternative')}
             </div>
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
-              {t('manifesto.wedge.text.blockchainTokens')}
+              <span className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue">{t('manifesto.wedge.text.blockchainTokens')}</span>
             </div>
-            {/* TODO: [1,2,3] needs to be styled better */}
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
-              {t('manifesto.wedge.text.initialHurdle')}
+              <Trans i18nKey="manifesto.wedge.text.initialHurdle" components={{ reference: <div className='ManifestoPage__reference'></div> }} />
             </div>
           </div>
 
@@ -127,7 +126,9 @@ const ManifestoPage = () => {
               {t('manifesto.accountability.text.createAndSustain')}
             </div>
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
-              {t('manifesto.accountability.text.twoWays')}
+              <span className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue">
+                <Trans i18nKey="manifesto.accountability.text.twoWays" components={{ reference: <div className='ManifestoPage__reference ManifestoPage__reference--bold'></div> }} />
+              </span>
             </div>
           </div>
 
@@ -144,7 +145,7 @@ const ManifestoPage = () => {
               {t('manifesto.voice.text.infrastructure')}
             </div>
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
-              {t('manifesto.voice.text.control')}
+              <span className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue">{t('manifesto.voice.text.control')}</span>
             </div>
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
               {t('manifesto.voice.text.signWithCrypto')}
@@ -164,7 +165,9 @@ const ManifestoPage = () => {
               {t('manifesto.exit.text.loweredCosts')}
             </div>
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
-              {t('manifesto.exit.text.competition')}
+              <span className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue">
+                <Trans i18nKey="manifesto.exit.text.competition" components={{ reference: <div className='ManifestoPage__reference ManifestoPage__reference--bold'></div> }} />
+              </span>
             </div>
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
               {t('manifesto.exit.text.reusability')}
