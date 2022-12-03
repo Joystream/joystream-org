@@ -221,6 +221,8 @@
 
   &__thesis {
     @extend %container;
+
+    padding: 0;
   }
 
   &__references-wrapper {
@@ -265,6 +267,112 @@
         &__illustration {
           width: 103%;
         }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__section {
+      padding: 0 20px;
+    }
+
+    &__title {
+      @include h4;
+
+      margin-top: 4px;
+    }
+
+    &__subtitle {
+      @include h6;
+
+      margin-top: 24px;
+    }
+
+    &__paragraph {
+      @include base-3;
+
+      margin-top: 16px;
+
+      &--top {
+        margin-top: 24px;
+      }
+    }
+
+    &__illustration-wrapper {
+      height: 240px;
+      margin-top: 64px;
+    }
+
+    &__illustration {
+      width: 160px;
+      height: 160px;
+    }
+
+    &__hero-wrapper {
+      padding-top: 80px;
+    }
+
+    &__hero-background {
+      height: 64px;
+
+      &__left__illustration {
+        height: 100%;
+      }
+
+      &__middle {
+        width: 100px;
+        height: 64px;
+        min-width: 100px;
+        min-height: 64px;
+      }
+
+      &__right__illustration {
+        height: 100%;
+      }
+    }
+
+    &__hero {
+      &__title {
+        @include h3;
+
+        max-width: 335px;
+        margin: auto;
+      }
+
+      &__subtitle {
+        margin-top: 16px;
+        padding: 0 10px;
+      }
+
+      &__illustration {
+        width: 247px;
+        height: 300px;
+        margin-top: 64px;
+      }
+    }
+
+    &__problem-wrapper,
+    &__goal-wrapper {
+      padding: 80px 0;
+    }
+
+    &__thesis-wrapper {
+      padding: 80px 0 64px 0;
+    }
+
+    &__references-wrapper {
+      padding-bottom: 80px;
+    }
+
+    &__references {
+      padding: 0 20px;
+
+      &__title {
+        @include h8;
+      }
+
+      &__item {
+        @include base-5;
       }
     }
   }
