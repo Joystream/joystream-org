@@ -70,6 +70,7 @@
   &__text-highlight {
     display: inline;
     padding: .2rem;
+    font-weight: 600;
     color: $c_white;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -80,13 +81,11 @@
     }
 
     &--white {
-      font-weight: 600;
       color: $c_black;
       background-color: rgba(255, 255, 255, .75);
     }
 
     &--light-blue {
-      font-weight: 600;
       color: #0b0c0f;
       background-color: rgba(64, 56, 255, .2);
     }
@@ -296,6 +295,10 @@
       &--top {
         margin-top: 24px;
       }
+    }
+
+    &__text-highlight {
+      padding: .1rem .2rem;
     }
 
     &__illustration-wrapper {
