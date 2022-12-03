@@ -176,16 +176,30 @@ const ManifestoPage = () => {
         </div>
       </section>
 
-      {/* TODO: Fix the spacing after new line.  */}
       <section className="ManifestoPage__references-wrapper">
         <div className="ManifestoPage__references">
           <h2 className="ManifestoPage__references__title">{t('manifesto.references.title')}</h2>
           <div className="ManifestoPage__references__items">
-            <p className="ManifestoPage__references__item">{t('manifesto.references.one')}</p>
-            <p className="ManifestoPage__references__item">{t('manifesto.references.two')}</p>
-            <p className="ManifestoPage__references__item">{t('manifesto.references.three')}</p>
-            <p className="ManifestoPage__references__item">{t('manifesto.references.four')}</p>
-            <p className="ManifestoPage__references__item">{t('manifesto.references.five')}</p>
+            <div className="ManifestoPage__references__item">
+              <div className='ManifestoPage__references__item__number'>1.</div>
+              <div className='ManifestoPage__references__item__text'>{t('manifesto.references.one')}</div>
+            </div>
+            <div className="ManifestoPage__references__item">
+              <div className='ManifestoPage__references__item__number'>2.</div>
+              <div className='ManifestoPage__references__item__text'>{t('manifesto.references.two')}</div>
+            </div>
+            <div className="ManifestoPage__references__item">
+              <div className='ManifestoPage__references__item__number'>3.</div>
+              <div className='ManifestoPage__references__item__text'>{t('manifesto.references.three')}</div>
+            </div>
+            <div className="ManifestoPage__references__item">
+              <div className='ManifestoPage__references__item__number'>4.</div>
+              <div className='ManifestoPage__references__item__text'>{t('manifesto.references.four')}</div>
+            </div>
+            <div className="ManifestoPage__references__item">
+              <div className='ManifestoPage__references__item__number'>5.</div>
+              <div className='ManifestoPage__references__item__text'>{t('manifesto.references.five')}</div>
+            </div>
           </div>
         </div>
       </section>

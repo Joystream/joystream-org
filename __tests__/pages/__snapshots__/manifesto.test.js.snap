@@ -355,31 +355,76 @@ exports[`ManifestoPage page renders correctly 1`] = `
       <div
         className="ManifestoPage__references__items"
       >
-        <p
+        <div
           className="ManifestoPage__references__item"
         >
-          manifesto.references.one
-        </p>
-        <p
+          <div
+            className="ManifestoPage__references__item__number"
+          >
+            1.
+          </div>
+          <div
+            className="ManifestoPage__references__item__text"
+          >
+            manifesto.references.one
+          </div>
+        </div>
+        <div
           className="ManifestoPage__references__item"
         >
-          manifesto.references.two
-        </p>
-        <p
+          <div
+            className="ManifestoPage__references__item__number"
+          >
+            2.
+          </div>
+          <div
+            className="ManifestoPage__references__item__text"
+          >
+            manifesto.references.two
+          </div>
+        </div>
+        <div
           className="ManifestoPage__references__item"
         >
-          manifesto.references.three
-        </p>
-        <p
+          <div
+            className="ManifestoPage__references__item__number"
+          >
+            3.
+          </div>
+          <div
+            className="ManifestoPage__references__item__text"
+          >
+            manifesto.references.three
+          </div>
+        </div>
+        <div
           className="ManifestoPage__references__item"
         >
-          manifesto.references.four
-        </p>
-        <p
+          <div
+            className="ManifestoPage__references__item__number"
+          >
+            4.
+          </div>
+          <div
+            className="ManifestoPage__references__item__text"
+          >
+            manifesto.references.four
+          </div>
+        </div>
+        <div
           className="ManifestoPage__references__item"
         >
-          manifesto.references.five
-        </p>
+          <div
+            className="ManifestoPage__references__item__number"
+          >
+            5.
+          </div>
+          <div
+            className="ManifestoPage__references__item__text"
+          >
+            manifesto.references.five
+          </div>
+        </div>
       </div>
     </div>
   </section>
