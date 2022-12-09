@@ -16,12 +16,12 @@ const defaultTypes = {
   children: null,
 };
 
-const BaseLayout = ({ children, t, mainnetReminder = false, primer }) => {
+const BaseLayout = ({ children, t, mainnetReminder = false, primer, lightNavbar }) => {
   return (
     <ScrollProvider>
       <div style={{ overflowX: 'hidden' }}>
         {mainnetReminder ? <MainnetBanner /> : null}
-        <Navbar t={t} primer={primer} />
+        <Navbar t={t} primer={primer} light={lightNavbar} />
         <main>
           {children}
         </main>

@@ -95,6 +95,14 @@
     &:hover {
       background-color: $c_han_purple;
     }
+
+    &--light {
+      background: $c_black;
+
+      &:hover {
+        background: $c_black;
+      }
+    }
   }
 
   &__button-text {

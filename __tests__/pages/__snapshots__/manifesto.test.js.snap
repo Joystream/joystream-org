@@ -3,6 +3,7 @@
 exports[`ManifestoPage page renders correctly 1`] = `
 <BaseLayout
   className="ManifestoPage"
+  lightNavbar={true}
   t={[Function]}
 >
   <SiteMetadata
@@ -12,179 +13,420 @@ exports[`ManifestoPage page renders correctly 1`] = `
     meta={Array []}
     title="siteMetadata.title"
   />
-  <Hero
-    animationEnd="100vh"
-    animationEndValue={120}
-    animationStartValue={10}
-    chip={null}
-    image="icon-mock"
-    indent={true}
-    noOverflow={true}
-    reverse={false}
-    theme="blue"
-    title="manifesto.hero.title"
+  <section
+    className="ManifestoPage__hero-wrapper"
   >
-    <p
-      className="AcropolisPage__hero-paragraph"
-    >
-      manifesto.hero.text
-    </p>
-  </Hero>
-  <LayoutWrapper
-    className=""
-    dark={false}
-    gradient={false}
-  >
-    <ImageSection
-      image="icon-mock"
-      imageOffset={50}
-      title="manifesto.problem.title"
-    >
-      <p>
-        manifesto.problem.text.artAsTool
-      </p>
-      <p>
-        manifesto.problem.text.mediaAsPrimaryMedium
-      </p>
-      <blockquote>
-        manifesto.problem.text.unaccountableInstitutions
-      </blockquote>
-      <p>
-        manifesto.problem.text.filteredOnTheirTerms
-      </p>
-      <blockquote>
-        manifesto.problem.text.inflexible
-      </blockquote>
-    </ImageSection>
-    <ImageSection
-      image="test-file-stub"
-      title="manifesto.goal.title"
-    >
-      <p>
-        manifesto.goal.text.arrangement
-      </p>
-      <blockquote>
-        manifesto.goal.text.accountability
-      </blockquote>
-    </ImageSection>
-    <ImageSection
-      image="icon-mock"
-      title="manifesto.thesis.title"
-    >
-      <p>
-        manifesto.thesis.text.coreThesis
-      </p>
-    </ImageSection>
     <div
-      className="ManifestoPage__grouped-sections"
+      className="ManifestoPage__hero-background"
     >
-      <ImageSection
-        grouped={true}
-        image="icon-mock"
-        imageOffset={200}
-        title="manifesto.wedge.title"
+      <div
+        className="ManifestoPage__hero-background__left"
       >
-        <p>
-          manifesto.wedge.text.alternative
-        </p>
-        <blockquote>
-          manifesto.wedge.text.blockchainTokens
-        </blockquote>
-        <p>
-          manifesto.wedge.text.initialHurdle
-        </p>
-      </ImageSection>
-      <ImageSection
-        grouped={true}
-        image="icon-mock"
-        title="manifesto.accountability.title"
-      >
-        <p>
-          manifesto.accountability.text.createAndSustain
-        </p>
-        <blockquote>
-          manifesto.accountability.text.twoWays
-        </blockquote>
-      </ImageSection>
-      <ImageSection
-        grouped={true}
-        image="icon-mock"
-        imageOffset={200}
-        title="manifesto.voice.title"
-      >
-        <p>
-          manifesto.voice.text.improveWithin
-        </p>
-        <p>
-          manifesto.voice.text.infrastructure
-        </p>
-        <blockquote>
-          manifesto.voice.text.control
-        </blockquote>
-        <p>
-          manifesto.voice.text.signWithCrypto
-        </p>
-      </ImageSection>
-      <ImageSection
-        grouped={true}
-        image="icon-mock"
-        imageOffset={200}
-        title="manifesto.exit.title"
-      >
-        <p>
-          manifesto.exit.text.exit
-        </p>
-        <p>
-          manifesto.exit.text.loweredCosts
-        </p>
-        <blockquote>
-          manifesto.exit.text.competition
-        </blockquote>
-        <p>
-          manifesto.exit.text.reusability
-        </p>
-      </ImageSection>
-    </div>
-    <h3
-      className="ManifestoPage__cta"
-    >
-      <Trans
-        components={
-          Array [
-            <a
-              href="mailto:hello@jsgenesis.com"
-            >
-              email
-            </a>,
-            <a
-              href="https://discord.gg/DE9UN3YpRP"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Discord
-            </a>,
-          ]
-        }
-        i18nKey="manifesto.ctaText"
+        <icon-component-mock
+          className="ManifestoPage__hero-background__left__illustration"
+        />
+      </div>
+      <div
+        className="ManifestoPage__hero-background__middle"
       />
-    </h3>
-    <section
+      <div
+        className="ManifestoPage__hero-background__right"
+      >
+        <icon-component-mock
+          className="ManifestoPage__hero-background__right__illustration"
+        />
+      </div>
+    </div>
+    <div
+      className="ManifestoPage__hero"
+    >
+      <header
+        className="ManifestoPage__hero__header"
+      >
+        <h1
+          className="ManifestoPage__hero__title"
+        >
+          manifesto.hero.title
+        </h1>
+        <p
+          className="ManifestoPage__hero__subtitle"
+        >
+          manifesto.hero.text
+        </p>
+      </header>
+      <icon-component-mock
+        className="ManifestoPage__hero__illustration"
+      />
+    </div>
+  </section>
+  <section
+    className="ManifestoPage__problem-wrapper"
+  >
+    <div
+      className="ManifestoPage__problem ManifestoPage__section"
+    >
+      <span
+        className="ManifestoPage__section-title"
+      >
+        manifesto.problem.sectionTitle
+      </span>
+      <h2
+        className="ManifestoPage__title ManifestoPage__problem__title"
+      >
+        manifesto.problem.title
+      </h2>
+      <div
+        className="ManifestoPage__paragraph ManifestoPage__paragraph--top"
+      >
+        manifesto.problem.text.artAsTool
+      </div>
+      <div
+        className="ManifestoPage__paragraph"
+      >
+        manifesto.problem.text.mediaAsPrimaryMedium
+      </div>
+      <div
+        className="ManifestoPage__subtitle ManifestoPage__problem__subtitle"
+      >
+        manifesto.problem.text.however
+      </div>
+      <div
+        className="ManifestoPage__paragraph"
+      >
+        <span
+          className="ManifestoPage__text-highlight ManifestoPage__text-highlight--red"
+        >
+          manifesto.problem.text.unaccountableInstitutions
+        </span>
+      </div>
+      <div
+        className="ManifestoPage__paragraph ManifestoPage__problem__paragraph-4"
+      >
+        manifesto.problem.text.filteredOnTheirTerms
+         
+        <span>
+          manifesto.problem.text.inflexible
+        </span>
+      </div>
+    </div>
+  </section>
+  <section
+    className="ManifestoPage__goal-wrapper"
+  >
+    <div
+      className="ManifestoPage__section"
+    >
+      <span
+        className="ManifestoPage__section-title ManifestoPage__section-title--white"
+      >
+        manifesto.goal.sectionTitle
+      </span>
+      <h2
+        className="ManifestoPage__title"
+      >
+        manifesto.goal.title
+      </h2>
+      <div
+        className="ManifestoPage__paragraph ManifestoPage__paragraph--white ManifestoPage__paragraph--top"
+      >
+        manifesto.goal.text.arrangement
+      </div>
+      <div
+        className="ManifestoPage__paragraph ManifestoPage__paragraph--white"
+      >
+        <span
+          className="ManifestoPage__text-highlight ManifestoPage__text-highlight--white"
+        >
+          manifesto.goal.text.accountability
+        </span>
+      </div>
+    </div>
+  </section>
+  <section
+    className="ManifestoPage__thesis-wrapper"
+  >
+    <div
+      className="ManifestoPage__thesis"
+    >
+      <div
+        className="ManifestoPage__section"
+      >
+        <span
+          className="ManifestoPage__section-title ManifestoPage__section-title--blue"
+        >
+          manifesto.thesis.sectionTitle
+        </span>
+        <h2
+          className="ManifestoPage__title ManifestoPage__title--black"
+        >
+          manifesto.thesis.title
+        </h2>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black ManifestoPage__paragraph--top"
+        >
+          manifesto.thesis.text.coreThesis
+        </div>
+      </div>
+      <div
+        className="ManifestoPage__illustration-wrapper"
+      >
+        <icon-component-mock
+          className="ManifestoPage__illustration"
+        />
+      </div>
+      <div
+        className="ManifestoPage__section"
+      >
+        <h2
+          className="ManifestoPage__subtitle ManifestoPage__subtitle--black ManifestoPage__thesis__subtitle"
+        >
+          manifesto.wedge.title
+        </h2>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          manifesto.wedge.text.alternative
+        </div>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          <span
+            className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue"
+          >
+            manifesto.wedge.text.blockchainTokens
+          </span>
+        </div>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          <Trans
+            components={
+              Object {
+                "reference": <div
+                  className="ManifestoPage__reference"
+                />,
+              }
+            }
+            i18nKey="manifesto.wedge.text.initialHurdle"
+          />
+        </div>
+      </div>
+      <div
+        className="ManifestoPage__illustration-wrapper"
+      >
+        <icon-component-mock
+          className="ManifestoPage__illustration"
+        />
+      </div>
+      <div
+        className="ManifestoPage__section"
+      >
+        <h2
+          className="ManifestoPage__subtitle ManifestoPage__subtitle--black ManifestoPage__thesis__subtitle"
+        >
+          manifesto.accountability.title
+        </h2>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          manifesto.accountability.text.createAndSustain
+        </div>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          <span
+            className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue"
+          >
+            <Trans
+              components={
+                Object {
+                  "reference": <div
+                    className="ManifestoPage__reference ManifestoPage__reference--bold"
+                  />,
+                }
+              }
+              i18nKey="manifesto.accountability.text.twoWays"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        className="ManifestoPage__illustration-wrapper"
+      >
+        <icon-component-mock
+          className="ManifestoPage__illustration"
+        />
+      </div>
+      <div
+        className="ManifestoPage__section"
+      >
+        <h2
+          className="ManifestoPage__subtitle ManifestoPage__subtitle--black ManifestoPage__thesis__subtitle"
+        >
+          manifesto.voice.title
+        </h2>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          manifesto.voice.text.improveWithin
+        </div>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          manifesto.voice.text.infrastructure
+        </div>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          <span
+            className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue"
+          >
+            manifesto.voice.text.control
+          </span>
+        </div>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          manifesto.voice.text.signWithCrypto
+        </div>
+      </div>
+      <div
+        className="ManifestoPage__illustration-wrapper"
+      >
+        <icon-component-mock
+          className="ManifestoPage__illustration"
+        />
+      </div>
+      <div
+        className="ManifestoPage__section"
+      >
+        <h2
+          className="ManifestoPage__subtitle ManifestoPage__subtitle--black ManifestoPage__thesis__subtitle"
+        >
+          manifesto.exit.title
+        </h2>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          manifesto.exit.text.exit
+        </div>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          manifesto.exit.text.loweredCosts
+        </div>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          <span
+            className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue"
+          >
+            <Trans
+              components={
+                Object {
+                  "reference": <div
+                    className="ManifestoPage__reference ManifestoPage__reference--bold"
+                  />,
+                }
+              }
+              i18nKey="manifesto.exit.text.competition"
+            />
+          </span>
+        </div>
+        <div
+          className="ManifestoPage__paragraph ManifestoPage__paragraph--black"
+        >
+          manifesto.exit.text.reusability
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    className="ManifestoPage__references-wrapper"
+  >
+    <div
       className="ManifestoPage__references"
     >
       <h2
-        className="ManifestoPage__references-title"
+        className="ManifestoPage__references__title"
       >
         manifesto.references.title
       </h2>
-      <Trans
-        components={
-          Array [
-            <p />,
-          ]
-        }
-        i18nKey="manifesto.references.text"
-      />
-    </section>
-  </LayoutWrapper>
+      <div
+        className="ManifestoPage__references__items"
+      >
+        <div
+          className="ManifestoPage__references__item"
+        >
+          <div
+            className="ManifestoPage__references__item__number"
+          >
+            1.
+          </div>
+          <div
+            className="ManifestoPage__references__item__text"
+          >
+            manifesto.references.one
+          </div>
+        </div>
+        <div
+          className="ManifestoPage__references__item"
+        >
+          <div
+            className="ManifestoPage__references__item__number"
+          >
+            2.
+          </div>
+          <div
+            className="ManifestoPage__references__item__text"
+          >
+            manifesto.references.two
+          </div>
+        </div>
+        <div
+          className="ManifestoPage__references__item"
+        >
+          <div
+            className="ManifestoPage__references__item__number"
+          >
+            3.
+          </div>
+          <div
+            className="ManifestoPage__references__item__text"
+          >
+            manifesto.references.three
+          </div>
+        </div>
+        <div
+          className="ManifestoPage__references__item"
+        >
+          <div
+            className="ManifestoPage__references__item__number"
+          >
+            4.
+          </div>
+          <div
+            className="ManifestoPage__references__item__text"
+          >
+            manifesto.references.four
+          </div>
+        </div>
+        <div
+          className="ManifestoPage__references__item"
+        >
+          <div
+            className="ManifestoPage__references__item__number"
+          >
+            5.
+          </div>
+          <div
+            className="ManifestoPage__references__item__text"
+          >
+            manifesto.references.five
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 `;
