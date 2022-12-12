@@ -149,5 +149,9 @@
       "inProgress" : "в процессе",
       "postponed" : "отложено"
     }
+  },
+  "mainnetBanner": {
+    "text": "We're now on mainnet!",
+    "cta": "Read more"
   }
 }

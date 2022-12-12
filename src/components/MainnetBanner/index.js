@@ -5,19 +5,19 @@ import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
 
 import './style.scss';
 
-const MainnetBanner = () => (
+const MainnetBanner = ({ t }) => (
   <div className="Banner-wrapper">
     <div className='Banner'>
       <p className="Banner__reminder">
         <Bell className="Banner__reminder__bell"/>
-        We're now on mainnet!
+        {t("mainnetBanner.text")}
       </p>
-      <a 
+      <a
         className='Banner__read-more'
-        href="https://blog.joystream.org/announcing-carthage/"
+        href="https://blog.joystream.org/mainnet-is-live/"
         target="_blank"
       >
-        Read more
+        {t("mainnetBanner.cta")}
         <Arrow className="Banner__read-more__arrow"/>
       </a>
     </div>

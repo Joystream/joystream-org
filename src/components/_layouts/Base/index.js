@@ -20,7 +20,7 @@ const BaseLayout = ({ children, t, mainnetReminder = false, primer, lightNavbar 
   return (
     <ScrollProvider>
       <div style={{ overflowX: 'hidden' }}>
-        {mainnetReminder ? <MainnetBanner /> : null}
+        {mainnetReminder ? <MainnetBanner t={t} /> : null}
         <Navbar t={t} primer={primer} light={lightNavbar} />
         <main>
           {children}

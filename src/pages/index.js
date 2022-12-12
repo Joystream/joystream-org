@@ -23,7 +23,7 @@ const IndexPage = () => {
   const { language } = useI18next();
 
   return (
-    <BaseLayout t={t} mainnetReminder={false}>
+    <BaseLayout t={t} mainnetReminder={true}>
       <SiteMetadata
         lang={language}
         title={t('siteMetadata.title')}
