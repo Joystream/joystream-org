@@ -97,7 +97,6 @@
     "brandStory": "История бренда",
     "brandGuides": "Правила использования айдентики",
     "downloadAssets": "Скачать ресурсы",
-    "primer": "Primer",
     "apps": "Apps",
     "viewApps": "View apps"
   },
@@ -150,5 +149,9 @@
       "inProgress" : "в процессе",
       "postponed" : "отложено"
     }
+  },
+  "mainnetBanner": {
+    "text": "We're now on mainnet!",
+    "cta": "Read more"
   }
 }

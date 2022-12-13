@@ -167,12 +167,12 @@ const CreatorTokens = ({ t }) => {
             </cite>
           </figcaption>
         </figure>
-        <ArrowButton
+        {/* <ArrowButton
           className="IndexPage__atlas-cta__button"
           text={t('landing.videoNFTs.cta.button')}
           textClassname="IndexPage__atlas-cta__button-text"
           link="https://play.joystream.org/studio/"
-        />
+        /> */}
       </div>
     </section>
   );
