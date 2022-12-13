@@ -24,7 +24,6 @@ const MainnetBanner = ({ t, light }) => (
       <a
         className='Banner__read-more'
         href="https://blog.joystream.org/mainnet-is-live/"
-        target="_blank"
       >
         {t("mainnetBanner.cta")}
         <Arrow className="Banner__read-more__arrow"/>
