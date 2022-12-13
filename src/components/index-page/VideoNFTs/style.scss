@@ -1,10 +1,11 @@
 @import '../../../styles/main';
 @import '../../../pages/style';
+@import '../shared-styles';
 
 .IndexPage {
   &__video-nfts-wrapper {
     padding-top: 96px;
-    background-color: $c_black;
+    background-color: #111316;
   }
 
   &__video-nfts {
@@ -12,7 +13,7 @@
 
     display: grid;
     height: 413px;
-    gap: 30px;
+    gap: 32px;
     grid-template-columns: 670px auto;
 
     &__illustration {
@@ -20,15 +21,10 @@
 
       &__foreground {
         position: absolute;
-        left: 104px;
-        width: 308px;
       }
 
       &__popup {
         position: absolute;
-        right: 100px;
-        bottom: -50px;
-        width: 208px;
       }
     }
 
@@ -55,83 +51,199 @@
 
         margin-top: 16px;
         color: #a7aeb7;
+        white-space: pre-line;
       }
     }
   }
 
-  &__video-nfts-cta {
-    @extend %largeContainer;
+  &__video-nfts-carousel {
+    $carousel-gap: 24px;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 96px;
-    padding-bottom: 96px;
-    background-image: url('../../../assets/svg/landing/video-nfts-cta-background.svg');
-    background-position: bottom 0 left 0;
-    background-repeat: no-repeat;
+    margin-top: 64px;
 
-    &__title {
-      @include h3;
+    &__title-and-info {
+      @extend %container;
 
-      max-width: 816px;
-      color: $c_white;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+
+      &__title {
+        @include h6;
+
+        color: $c_white;
+      }
+
+      &__info {
+        @include base-5;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: $c_grayc-chateau;
+        fill: $c_grayc-chateau;
+
+        &__icon {
+          margin-left: 6px;
+          fill: inherit;
+        }
+
+        &__modal {
+          position: absolute;
+          right: 0;
+          bottom: 30px;
+          width: 240px;
+          height: auto;
+          padding: 12px 12px 18px 12px;
+          color: $c_ebony-clay;
+          background-color: $c_neutral-200;
+          opacity: 0;
+          visibility: hidden;
+          transition: visibility .2s linear, opacity .2s linear;
+          clip-path:
+            polygon(
+              0% 0%,
+              100% 0%,
+              100% calc(100% - 6px),
+              100% 100%,
+              calc(100% - 8px) calc(100% - 6px),
+              0% calc(100% - 6px)
+            );
+        }
+
+        &__label {
+          display: flex;
+          align-items: center;
+        }
+
+        &__label:focus + &__modal {
+          opacity: 1;
+          visibility: visible;
+          fill: $c_white;
+        }
+
+        &:hover,
+        &__label:focus {
+          color: $c_white;
+          fill: $c_white;
+        }
+
+        &:hover &__modal {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
 
-    &__about {
-      @include base-3;
-
-      margin-top: 16px;
-      color: #a7aeb7;
+    &__items-wrapper {
+      display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
+      margin-top: 32px;
+      overflow: hidden;
+      gap: $carousel-gap;
     }
 
-    &__podcast {
-      @include base-5;
+    &__items {
+      @include animate-carousel($carousel-gap, 25s);
 
-      margin-top: 4px;
-      color: #5c6475;
+      display: flex;
+      flex-shrink: 0;
+      justify-content: space-between;
+      min-width: 100%;
+      gap: $carousel-gap;
+
+      &--paused {
+        animation-play-state: paused;
+      }
     }
 
-    &__button {
-      width: 229px;
-      height: 60px;
-      margin-top: 48px;
-      padding: 18px 15px !important;
-    }
+    &__item {
+      width: 288px;
+      height: 354px;
+      background-color: $c_ebony-clay;
 
-    &__button-text {
-      @include landing-page-button-text;
+      &__image {
+        width: 100%;
+        height: 162px;
+        background: rgba(0, 0, 0, .3);
+      }
+
+      &__content {
+        padding: 24px;
+
+        &__title {
+          @include base-5;
+          @include line-clamp(2);
+
+          min-height: 32px;
+          color: rgba(129, 133, 141, 1);
+
+          & > span {
+            color: #f2f5f9;
+          }
+        }
+
+        &__price {
+          display: flex;
+          flex-direction: column;
+          margin-top: 16px;
+
+          &__title {
+            @include base-5;
+
+            color: #a7aeb7;
+          }
+
+          &__amount {
+            @include h7;
+
+            margin-top: 4px;
+            color: $c_grayc-chateau;
+
+            & > span {
+              font-size: 32px;
+              font-weight: 700;
+              line-height: 40px;
+              letter-spacing: 0;
+              color: $c_white;
+              text-align: left;
+            }
+          }
+        }
+
+        &__time {
+          @include base-5;
+
+          display: flex;
+          align-items: center;
+          margin-top: 16px;
+          color: $c_grayc-chateau;
+
+          &__icon {
+            margin-right: 6px;
+          }
+        }
+      }
     }
   }
 
   @media #{$screen-max-lg} {
     &__video-nfts {
+      height: auto;
       grid-template-columns: 500px auto;
 
       &__illustration {
-        &__background {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-        }
+        height: 290px;
+        margin: auto 0;
 
         &__foreground {
-          bottom: -732px;
-          left: 74px;
-          width: 235px;
+          top: 110px;
         }
 
         &__popup {
-          right: 20px;
-          bottom: -445px;
+          top: 110px;
         }
       }
-    }
-
-    &__video-nfts-cta {
-      background-position: bottom 0 left -70px;
     }
   }
 
@@ -140,63 +252,50 @@
       display: flex;
       flex-direction: column;
       height: auto;
+      max-width: 730px;
 
       &__illustration {
-        width: 100%;
-        height: 290px;
-        transform: scale(1.3);
-
-        &__background {
-          top: unset;
-          right: 0;
-          bottom: unset;
-          left: 0;
-          height: 100%;
-          margin: auto;
-        }
+        height: auto;
 
         &__foreground {
           top: unset;
-          right: 115px;
-          bottom: unset;
-          left: 0;
-          margin: auto;
+          bottom: -82px;
         }
 
         &__popup {
-          top: 175px;
-          right: 0;
-          bottom: unset;
-          left: 205px;
-          width: 160px;
-          margin: auto;
+          top: unset;
+          bottom: -130px;
         }
-      }
-
-      &__content {
-        margin-top: 50px;
-        padding: 0 22px;
-      }
-    }
-
-    &__video-nfts-cta {
-      background: none;
-
-      &__title {
-        max-width: 620px;
       }
     }
   }
 
   @media #{$screen-max-sm} {
     &__video-nfts-wrapper {
-      padding-top: 80px;
+      padding-top: 64px;
     }
 
     &__video-nfts {
-      &__content {
-        padding: 0 10px;
+      max-width: 534px;
 
+      &__illustration {
+        width: 534px;
+        height: 310px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+
+        &__foreground {
+          top: unset;
+          bottom: -59px;
+        }
+
+        &__popup {
+          top: unset;
+          bottom: -95px;
+        }
+      }
+
+      &__content {
         &__title {
           @include h4;
         }
@@ -206,37 +305,40 @@
         }
       }
     }
+  }
 
-    &__video-nfts-cta {
-      margin-top: 64px;
-      padding-bottom: 80px;
+  @media (max-width: 600px) {
+    &__video-nfts-carousel {
+      &__title-and-info {
+        flex-direction: column;
 
-      &__title {
-        @include h4;
+        &__info {
+          margin-top: 8px;
+
+          &__modal {
+            right: unset;
+            bottom: 20px;
+            left: 80px;
+            clip-path:
+              polygon(
+                0% 0%,
+                0% calc(100% - 6px),
+                100% calc(100% - 6px),
+                100% 0%
+              );
+          }
+        }
       }
     }
   }
+}
 
-  @media (max-width: 525px) {
-    &__video-nfts {
-      &__illustration {
-        height: 194px;
+@keyframes video-nfts-horizontal-scroll-animation {
+  from {
+    transform: translateX(0);
+  }
 
-        &__foreground {
-          right: 76px;
-          width: 155px;
-        }
-
-        &__popup {
-          top: 120px;
-          left: 130px;
-          width: 100px;
-        }
-      }
-
-      &__content {
-        margin-top: 32px;
-      }
-    }
+  to {
+    transform: translateX(calc(-100% - var(--video-nfts-carousel-gap)));
   }
 }

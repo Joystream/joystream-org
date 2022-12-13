@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Plx from 'react-plx';
+import cn from 'classnames';
 import { Trans } from 'gatsby-plugin-react-i18next';
+import Countdown from 'react-countdown-now';
 
-import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import JoystreamDaoBackgroundImage from '../../../assets/images/landing/joystream-dao-background.webp';
 import JoystreamDaoForegroundImage from '../../../assets/images/landing/joystream-dao-foreground.webp';
+
+import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
+import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
 
 import './style.scss';
 
@@ -25,20 +29,139 @@ const joystreamDaoForeground = [
   },
 ];
 
-const JoystreamDAO = ({ t }) => {
+const REJECTED = 'rejected';
+const DECIDING = 'deciding';
+
+const CarouselItemDate = ({ date, isStatusDeciding, t }) => {
+  if (isStatusDeciding) {
+    return (
+      <Countdown
+        date={new Date(date)}
+        intervalDelay={0}
+        precision={3}
+        renderer={({ days, hours, minutes }) => {
+          return t('landing.joystreamDAO.carousel.item.timeLeftValue', { days, hours, minutes });
+        }}
+      />
+    );
+  }
+
+  return <>{date}</>;
+};
+
+const CarouselItem = ({ img, proposalTitle, status, date, link, setIsCarouselRunning, t }) => {
+  const dateLabel =
+    status.toLowerCase() === DECIDING
+      ? t('landing.joystreamDAO.carousel.item.timeLeft')
+      : t('landing.joystreamDAO.carousel.item.dateLabel');
+
   return (
-    <div className="IndexPage__joystream-dao-wrapper">
+    <div
+      className="IndexPage__joystream-dao-carousel__item"
+      onMouseEnter={() => setIsCarouselRunning(true)}
+      onMouseLeave={() => setIsCarouselRunning(false)}
+    >
+      <div className="IndexPage__joystream-dao-carousel__item__image">
+        <img
+          src={img}
+          onError={e => {
+            e.currentTarget.src = PlaceholderIcon;
+          }}
+          alt=""
+        />
+      </div>
+      <div className="IndexPage__joystream-dao-carousel__item__title">{proposalTitle}</div>
+      <div className="IndexPage__joystream-dao-carousel__item__info">
+        <div className="IndexPage__joystream-dao-carousel__item__info__status">
+          <p className="IndexPage__joystream-dao-carousel__item__info__status__label">
+            {t('landing.joystreamDAO.carousel.item.status.label')}
+          </p>
+          <div
+            className={cn('IndexPage__joystream-dao-carousel__item__info__status__value', {
+              'IndexPage__joystream-dao-carousel__item__info__status__value--rejected':
+                status.toLowerCase() === REJECTED,
+            })}
+          >
+            {t(`landing.joystreamDAO.carousel.item.status.value.${status.toLowerCase()}`)}
+          </div>
+        </div>
+        <div className="IndexPage__joystream-dao-carousel__item__info__date">
+          <p className="IndexPage__joystream-dao-carousel__item__info__date__label">{dateLabel}</p>
+          <p className="IndexPage__joystream-dao-carousel__item__info__date__value">
+            <CarouselItemDate date={date} isStatusDeciding={status.toLowerCase() === DECIDING} t={t} />
+          </p>
+        </div>
+      </div>
+      <a className="IndexPage__joystream-dao-carousel__item__link" href={link} target="_blank">
+        {t('landing.joystreamDAO.carousel.item.viewDiscussion')}{' '}
+        <ArrowIcon className="IndexPage__joystream-dao-carousel__item__link__icon" />
+      </a>
+    </div>
+  );
+};
+
+const Carousel = ({ itemsData, t }) => {
+  const [isCarouselRunning, setIsCarouselRunning] = useState(false);
+
+  const items = itemsData.map(({ img, proposalTitle, status, date, link }) => (
+    <CarouselItem
+      key={`${proposalTitle}-${status}-${date}`}
+      img={img}
+      proposalTitle={proposalTitle}
+      status={status}
+      date={date}
+      link={link}
+      setIsCarouselRunning={setIsCarouselRunning}
+      t={t}
+    />
+  ));
+
+  return (
+    <div className="IndexPage__joystream-dao-carousel__items-wrapper">
+      <div
+        className={cn('IndexPage__joystream-dao-carousel__items', {
+          'IndexPage__joystream-dao-carousel__items--paused': isCarouselRunning,
+        })}
+      >
+        {items}
+      </div>
+      <div
+        className={cn('IndexPage__joystream-dao-carousel__items', {
+          'IndexPage__joystream-dao-carousel__items--paused': isCarouselRunning,
+        })}
+        aria-hidden="true"
+      >
+        {items}
+      </div>
+    </div>
+  );
+};
+
+const getDateHoursInTheFuture = hours => {
+  let date = new Date();
+
+  date.setHours(date.getHours() + hours);
+
+  return date.toLocaleString('en-US', { timeZone: 'Europe/Oslo' });
+};
+
+const JoystreamDAO = ({ t }) => {
+  const img = 'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true';
+  return (
+    <section className="IndexPage__joystream-dao-wrapper">
       <div className="IndexPage__joystream-dao">
         <div className="IndexPage__joystream-dao__content">
-          <span className="IndexPage__joystream-dao__content__section-title">{t("landing.joystreamDAO.sectionTitle")}</span>
-          <h2 className="IndexPage__joystream-dao__content__title">
-            <Trans i18nKey="landing.joystreamDAO.title" components={{ br: <br /> }} />
-          </h2>
-          <p className="IndexPage__joystream-dao__content__subtitle">
-            {t("landing.joystreamDAO.subtitle")}
-          </p>
+          <header>
+            <span className="IndexPage__joystream-dao__content__section-title">
+              {t('landing.joystreamDAO.sectionTitle')}
+            </span>
+            <h2 className="IndexPage__joystream-dao__content__title">
+              <Trans i18nKey="landing.joystreamDAO.title" components={{ br: <br /> }} />
+            </h2>
+          </header>
+          <p className="IndexPage__joystream-dao__content__subtitle">{t('landing.joystreamDAO.subtitle')}</p>
           <a href="https://dao.joystream.org/" className="IndexPage__joystream-dao__content__link">
-            {t("landing.joystreamDAO.link")}
+            {t('landing.joystreamDAO.link')}
             <ArrowIcon className="IndexPage__joystream-dao__content__link__arrow" />
           </a>
         </div>
@@ -57,7 +180,62 @@ const JoystreamDAO = ({ t }) => {
           </Plx>
         </div>
       </div>
-    </div>
+      {/* <section className="IndexPage__joystream-dao-carousel">
+        <div className="IndexPage__joystream-dao-carousel__title-section">
+          <h3 className="IndexPage__joystream-dao-carousel__title-section__text">
+            {t('landing.joystreamDAO.carousel.title')}
+          </h3>
+        </div>
+        <Carousel
+          itemsData={[
+            {
+              img,
+              proposalTitle: 'Rhodes Council #16 - Summary',
+              status: 'Executed',
+              date: '07/21/2022',
+              link: 'https://www.google.com',
+            },
+            {
+              img,
+              proposalTitle: 'BWG T16 Summary',
+              status: 'Rejected',
+              date: '07/23/2022',
+              link: 'https://www.google.com',
+            },
+            {
+              img,
+              proposalTitle: 'BWG T16 Summary (2nd Attempt)',
+              status: 'Executed',
+              date: '07/25/2022',
+              link: 'https://www.google.com',
+            },
+            {
+              img,
+              proposalTitle: 'Extra Hours HR Lead Bonus',
+              status: 'Executed',
+              date: '07/25/2022',
+              link: 'https://www.google.com',
+            },
+            {
+              img,
+              proposalTitle: 'Storage WG Report - 16 Term',
+              status: 'Deciding',
+              date: getDateHoursInTheFuture(74),
+              link: 'https://www.google.com',
+            },
+            {
+              img:
+                'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true',
+              proposalTitle: 'Update Content Working Group Budget',
+              status: 'Deciding',
+              date: getDateHoursInTheFuture(74),
+              link: 'https://www.google.com',
+            },
+          ]}
+          t={t}
+        />
+      </section> */}
+    </section>
   );
 };
 

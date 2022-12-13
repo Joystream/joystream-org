@@ -1,0 +1,32 @@
+@mixin animate-carousel ($carousel-gap, $animation-length) {
+  $animation-name: unique-id() !global;
+
+  @keyframes #{$animation-name} {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-100% - #{$carousel-gap}));
+    }
+  }
+
+  animation: $animation-name $animation-length linear infinite;
+  animation-play-state: running;
+}
+
+// This is the easiest css-only solution for clamping and adding an
+// ellipsis to overflowing text. I've tested this solution and it works
+// (chrome/firefox) but that may change at any time as this is really
+// deprecated functionality. Will keep it in as it checks every box we
+// need it for at this time.
+
+@mixin line-clamp($number-of-lines) {
+  @supports (-webkit-line-clamp: $number-of-lines) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $number-of-lines;
+  }
+}

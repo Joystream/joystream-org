@@ -86,7 +86,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 220px;
+    width: 153px;
     height: 48px;
     margin: 0 32px 0 24px;
     padding: 12px 16px;
@@ -94,6 +94,14 @@
 
     &:hover {
       background-color: $c_han_purple;
+    }
+
+    &--light {
+      background: $c_black;
+
+      &:hover {
+        background: $c_black;
+      }
     }
   }
 

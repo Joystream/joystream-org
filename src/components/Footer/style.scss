@@ -38,7 +38,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin: 24px 0 96px 0;
+    margin-top: 24px;
 
     &__title {
       margin-bottom: 4px;
@@ -74,8 +74,10 @@
     @extend %container;
 
     display: flex;
-    justify-content: space-between;
-    margin-top: 96px;
+
+    & > div:nth-of-type(3) {
+      margin-left: auto;
+    }
   }
 
   &__section {
@@ -101,7 +103,7 @@
   }
 
   &__section-link {
-    display: block;
+    display: flex;
     font-family: $font-secondary;
     font-size: 14px;
     font-weight: 400;
@@ -109,15 +111,22 @@
     letter-spacing: 0;
     color: $c_grayc-chateau;
     text-align: left;
+    fill: #a7aeb7;
 
     &:hover,
     &:active {
       color: $c_white;
+      fill: $c_white;
     }
 
     & + & {
       margin-top: 12px;
     }
+  }
+
+  &__section-icon {
+    margin-left: 8px;
+    fill: inherit;
   }
 
   &__social-link {
@@ -157,11 +166,6 @@
   }
 
   @media #{$screen-max-lg} {
-    &__layout {
-      padding-left: 96px;
-      gap: unset;
-    }
-
     &__section {
       &--socials {
         margin-right: 0;
@@ -171,21 +175,16 @@
 
   @media #{$screen-max-sm} {
     &__form {
-      margin: 16px 0 80px 0;
+      margin-top: 16px;
     }
 
     &__layout {
-      display: grid;
       width: 100%;
       margin-top: 80px;
-      padding: 0 20px;
-      gap: 40px 20px;
-      grid-template-columns: 1fr 1fr;
     }
 
     &__section {
-      margin-left: unset;
-      padding: 0;
+      width: 288px;
     }
   }
 
@@ -196,6 +195,7 @@
 
     &__layout {
       width: 100%;
+      margin-top: 96px;
     }
 
     &__socials {
@@ -204,7 +204,7 @@
     }
 
     &__section {
-      width: 220px;
+      width: 288px;
     }
 
     &__section-title {
@@ -235,6 +235,15 @@
     &__layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
+
+      & > div:nth-of-type(3) {
+        margin-left: unset;
+        padding-bottom: 0;
+      }
+    }
+
+    &__section {
+      width: 157px;
     }
   }
 }

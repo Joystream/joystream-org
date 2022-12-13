@@ -1,5 +1,6 @@
 @import '../../../styles/main';
 @import '../../../pages/style';
+@import '../shared-styles';
 
 .IndexPage {
   &__joystream-dao-wrapper {
@@ -76,6 +77,132 @@
         width: 95%;
         border-radius: 8px;
         box-shadow: 0 0 18px rgba(3, 0, 65, .1), 0 0 4.02054px rgba(3, 0, 65, .0596107), 0 0 1.19702px rgba(3, 0, 65, .0403893);
+      }
+    }
+  }
+
+  &__joystream-dao-carousel {
+    $carousel-gap: 24px;
+
+    margin-top: 96px;
+
+    &__title-section {
+      @extend %container;
+
+      &__text {
+        @include h6;
+      }
+    }
+
+    &__items-wrapper {
+      display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
+      margin-top: 32px;
+      overflow: hidden;
+      gap: $carousel-gap;
+    }
+
+    &__items {
+      @include animate-carousel($carousel-gap, 25s);
+
+      display: flex;
+      flex-shrink: 0;
+      justify-content: space-between;
+      min-width: 100%;
+      gap: $carousel-gap;
+
+      &--paused {
+        animation-play-state: paused;
+      }
+    }
+
+    &__item {
+      width: 288px;
+      height: 288px;
+      padding: 24px;
+      background-color: $c_white;
+
+      &__image {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, .3);
+        border-radius: 50%;
+
+        & > img {
+          width: 100%;
+        }
+      }
+
+      &__title {
+        @include h6;
+        @include line-clamp(2);
+
+        min-height: 64px;
+        margin-top: 24px;
+      }
+
+      &__info {
+        display: flex;
+        margin-top: 16px;
+        gap: 24px;
+
+        &__status {
+          min-width: 108px;
+
+          &__label {
+            @include base-5;
+
+            color: #81858d;
+          }
+
+          &__value {
+            @include base-5;
+
+            display: grid;
+            width: 72px;
+            height: 24px;
+            margin-top: 8px;
+            background-color: #dee3e9;
+            border-radius: 999px;
+            place-items: center;
+
+            &--rejected {
+              color: #ff3861;
+              background-color: rgba(255, 56, 97, .1);
+            }
+          }
+        }
+
+        &__date {
+          &__label {
+            @include base-5;
+
+            color: #81858d;
+          }
+
+          &__value {
+            @include h9;
+
+            margin-top: 4px;
+          }
+        }
+      }
+
+      &__link {
+        @include h9;
+
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 149px;
+        margin-top: 24px;
+
+        &__icon {
+          margin-top: 3px;
+          transform: rotate(-90deg) scale(.75);
+        }
       }
     }
   }

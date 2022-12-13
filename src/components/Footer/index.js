@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../Button';
 import Link from '../Link';
 import Input from '../Input';
-import OurInvestors from './OurInvestors';
+// import OurInvestors from './OurInvestors';
 
 import { joystreamLinks, githubLinks, usefulLinks, socialMedias } from './data';
 
@@ -12,13 +12,16 @@ const FooterSection = ({ title, links }) => {
   return (
     <div className="Footer__section">
       <h6 className="Footer__section-title">{title}</h6>
-      {links.map(({ label, ...link }) => {
+      {links.map(({ label, icon: Icon, ...link }) => {
         const LinkComponent = link.to ? Link : 'a';
         const props = link.to ? link : { ...link, target: '_blank', rel: 'noopener noreferrer' };
+
+        const iconComponent = Icon ? <Icon className="Footer__section-icon"  /> : null;
 
         return (
           <LinkComponent key={label} className="Footer__section-link" {...props}>
             {label}
+            {iconComponent}
           </LinkComponent>
         );
       })}
@@ -28,16 +31,16 @@ const FooterSection = ({ title, links }) => {
 
 const LinkSection = ({ t }) => (
   <>
-    <OurInvestors t={t} />
+    {/* <OurInvestors t={t} /> */}
     <div className="Footer__layout">
       <FooterSection
         title={t('joystream')}
         links={joystreamLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
       />
-      <FooterSection
+      {/* <FooterSection
         title={t('socials.github')}
         links={githubLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
-        />
+        /> */}
       <FooterSection
         title={t('footer.usefulLinks.title')}
         links={usefulLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}

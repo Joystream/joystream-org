@@ -111,7 +111,9 @@ const NavbarLinksSection = ({ t, links, isScrollUp, isOpen, light, setIsOpen }) 
 
           if (isButton) {
             children = (
-              <div className="Navbar__button">
+              <div className={cn("Navbar__button", {
+                "Navbar__button--light": light
+              })} >
                 <p className="Navbar__button-text">{t(label)}</p>
                 <Arrow className="Navbar__button-arrow" />
               </div>

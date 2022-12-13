@@ -4,12 +4,10 @@
   position: relative;
   z-index: 6;
   background-color: #111316;
-}
 
-.Banner-overlay {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(92, 100, 117, 0) 0%, #5c6475 28.65%, rgba(92, 100, 117, 0) 58.33%);
+  &--light {
+    background-color: $c_blue-ribbon;
+  }
 }
 
 .Banner {
@@ -23,19 +21,32 @@
   height: 56px;
   background-color: #111316;
 
+  &--light {
+    background-color: $c_blue-ribbon;
+  }
+
   &__reminder {
+    display: flex;
     font-family: $font-secondary;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 24px;
     letter-spacing: 0;
-    color: $c_neutral-200;
+    color: #f2f5f9;
     text-align: center;
 
+    &--light {
+      color: #e0e1ff;
+    }
+
     &__bell {
-      height: 10px;
+      height: 24px;
       margin-right: 10px;
-      fill: $c_neutral-200;
+      fill: #f2f5f9;
+
+      &--light {
+        fill: #e0e1ff;
+      }
     }
   }
 
