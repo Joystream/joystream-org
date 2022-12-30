@@ -3,6 +3,7 @@
 
 .CommunityPage {
   &__hero-wrapper {
+    padding-bottom: 28px;
     background-color: black;
   }
 
@@ -45,16 +46,20 @@
   }
 
   &__links-wrapper {
-    padding: 30px 0;
+    padding: 30px 0 98px 0;
     background-color: #f2f5f9;
   }
 
-  &__links {
-    @extend %container;
+  &__links-section {
+    @extend %largeContainer;
+  }
 
+  &__links {
     display: grid;
+    justify-content: center;
+    margin-top: -75px;
     gap: 30px;
-    grid-template-columns: repeat(4, 288px);
+    grid-template-columns: repeat(auto-fill, 288px);
   }
 
   &__link {
@@ -146,6 +151,10 @@
       display: none;
       width: 20px;
       color: #a7aeb7;
+    }
+
+    &:hover &__external-link {
+      display: block;
     }
   }
 }
