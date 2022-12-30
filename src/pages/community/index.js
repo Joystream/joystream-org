@@ -20,14 +20,16 @@ import { ReactComponent as ExternalLinkIcon } from '../../assets/svg/link.svg';
 
 import './style.scss';
 
-const LinkCard = ({ icon, title, subtitle }) => {
+const LinkCard = ({ icon, title, subtitle, link }) => {
   return (
-    <div className="CommunityPage__link">
-      <div className={`CommunityPage__link__icon CommunityPage__link__icon--${title.toLowerCase()}`}>{icon}</div>
-      <p className="CommunityPage__link__title">{title}</p>
-      <p className="CommunityPage__link__subtitle">{subtitle}</p>
-      <ExternalLinkIcon className="CommunityPage__link__external-link"/>
-    </div>
+    <a href={link}>
+      <div className="CommunityPage__link">
+        <div className={`CommunityPage__link__icon CommunityPage__link__icon--${title.toLowerCase()}`}>{icon}</div>
+        <p className="CommunityPage__link__title">{title}</p>
+        <p className="CommunityPage__link__subtitle">{subtitle}</p>
+        <ExternalLinkIcon className="CommunityPage__link__external-link"/>
+      </div>
+    </a>
   );
 };
 
@@ -60,15 +62,17 @@ const CommunityPage = () => {
       </section>
 
       <section className="CommunityPage__links-wrapper">
-        <div className="CommunityPage__links">
-          <LinkCard icon={<Twitter />} title="Twitter" subtitle="Follow us @JoystreamDAO" />
-          <LinkCard icon={<Discord />} title="Discord" subtitle="Engage with community" />
-          <LinkCard icon={<Gleev />} title="Gleev" subtitle="Watch community calls" />
-          <LinkCard icon={<Reddit />} title="Reddit" subtitle="Join the discussion" />
-          <LinkCard icon={<GitHub />} title="GitHub" subtitle="Contribute to our codebase" />
-          <LinkCard icon={<Handbook />} title="Handbook" subtitle="Read our documentation" />
-          <LinkCard icon={<Element />} title="Element" subtitle="Get support" />
-          <LinkCard icon={<Youtube />} title="YouTube" subtitle="Watch community calls" />
+        <div className="CommunityPage__links-section">
+          <div className="CommunityPage__links">
+            <LinkCard icon={<Twitter />} title="Twitter" subtitle="Follow us @JoystreamDAO" link="https://twitter.com/JoystreamDAO/" />
+            <LinkCard icon={<Discord />} title="Discord" subtitle="Engage with community" link="https://discord.gg/DE9UN3YpRP" />
+            <LinkCard icon={<Gleev />} title="Gleev" subtitle="Watch community calls" link="https://gleev.xyz/"/>
+            <LinkCard icon={<Reddit />} title="Reddit" subtitle="Join the discussion" link="https://www.reddit.com/r/joystream_dao/"/>
+            <LinkCard icon={<GitHub />} title="GitHub" subtitle="Contribute to our codebase" link="https://github.com/Joystream"/>
+            <LinkCard icon={<Handbook />} title="Handbook" subtitle="Read our documentation" link="https://joystream.gitbook.io/testnet-workspace/"/>
+            <LinkCard icon={<Element />} title="Element" subtitle="Get support" link="#0"/>
+            <LinkCard icon={<Youtube />} title="YouTube" subtitle="Watch community calls" link="https://www.youtube.com/@joystream8627"/>
+          </div>
         </div>
       </section>
     </BaseLayout>
