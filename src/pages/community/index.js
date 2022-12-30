@@ -55,7 +55,7 @@ const CommunityPage = () => {
             </p>
           </div>
           <div className="CommunityPage__hero__image">
-            <CommunityBackground className="CommunityPage__hero__image__bacgkround" />
+            <CommunityBackground className="CommunityPage__hero__image__background" />
             <CommunityHero className="CommunityPage__hero__image__foreground" />
           </div>
         </div>
