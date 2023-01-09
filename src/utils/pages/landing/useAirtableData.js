@@ -22,73 +22,73 @@ import { ReactComponent as ValidatorIcon } from '../../../assets/svg/available-a
 
 const QUERY_URL = 'https://query.joystream.org/graphql';
 
-export const REFERRAL_ACTIVITY = {
-  title: "landing.availableActivities.activityTitles.referral",
-  icon: ReferIcon
-}
+// export const REFERRAL_ACTIVITY = {
+//   title: "landing.availableActivities.activityTitles.referral",
+//   icon: ReferIcon
+// }
 
 export const WORKER_ACTIVITIES = {
-  "Bounty": {
-    title: "landing.availableActivities.activityTitles.bounties",
-    icon: BountiesIcon
+  // "Bounty": {
+  //   title: "landing.availableActivities.activityTitles.bounties",
+  //   icon: BountiesIcon
+  // },
+  council: {
+    title: 'landing.availableActivities.activityTitles.councilMember',
+    icon: CouncilMemberIcon,
   },
-  "CouncilMember": {
-    title: "landing.availableActivities.activityTitles.councilMember",
-    icon: CouncilMemberIcon
-  },
-  "ContentDirectoryWorker": {
-    title: "landing.availableActivities.activityTitles.contentCurator",
-    icon: ContentCuratorIcon
+  contentWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.contentCurator',
+    icon: ContentCuratorIcon,
   },
   // "ContentDirectoryLead": {
   //   title: "landing.availableActivities.activityTitles.contentCuratorLead",
   //   icon: ContentCuratorLeadIcon
   // },
-  "BuildersWorker": {
-    title: "landing.availableActivities.activityTitles.builder",
-    icon: BuilderIcon
+  buildersWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.builder',
+    icon: BuilderIcon,
   },
   // "BuildersLead": {
   //   title: "landing.availableActivities.activityTitles.builderLead",
   //   icon: BuilderLeadIcon
   // },
-  "HRWorker": {
-    title: "landing.availableActivities.activityTitles.hr",
-    icon: HRIcon
+  hrWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.hr',
+    icon: HRIcon,
   },
   // "HRLead": {
   //   title: "landing.availableActivities.activityTitles.hrLead",
   //   icon: HRLeadIcon
   // },
-  "MarketingWorker": {
-    title: "landing.availableActivities.activityTitles.marketer",
-    icon: MarketerIcon
+  marketingWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.marketer',
+    icon: MarketerIcon,
   },
   // "MarketingLead": {
   //   title: "landing.availableActivities.activityTitles.marketerLead",
   //   icon: MarketerLeadIcon
   // },
-  "StorageWorker": {
-    title: "landing.availableActivities.activityTitles.storageProvider",
-    icon: StorageProviderIcon
+  storageWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.storageProvider',
+    icon: StorageProviderIcon,
   },
   // "StorageLead": {
   //   title: "landing.availableActivities.activityTitles.storageProviderLead",
   //   icon: StorageProviderLeadIcon
   // },
-  "ContentDeliveryWorker": {
-    title: "landing.availableActivities.activityTitles.distributor",
-    icon: DistributorIcon
+  distributionWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.distributor',
+    icon: DistributorIcon,
   },
   // "ContentDeliveryLead": {
   //   title: "landing.availableActivities.activityTitles.distributorLead",
   //   icon: DistributorLeadIcon
   // },
-  "Validator": {
-    title: "landing.availableActivities.activityTitles.validator",
-    icon: ValidatorIcon
-  }
-}
+  validators: {
+    title: 'landing.availableActivities.activityTitles.validator',
+    icon: ValidatorIcon,
+  },
+};
 
 const MEMBERSHIPS_QUERY = `
 {
@@ -121,36 +121,38 @@ const getMembershipData = async () => {
       body: JSON.stringify({ query: MEMBERSHIPS_QUERY }),
     });
 
-    if(res.ok) {
-      const { data: { memberships } } = await res.json();
+    if (res.ok) {
+      const {
+        data: { memberships },
+      } = await res.json();
 
       const memberAvatarsByHandle = {};
       const memberAvatarsById = {};
       const referredMembers = [];
-      for(let membership of memberships) {
+      for (let membership of memberships) {
         const { isFoundingMember, referredBy, metadata, handle, id } = membership;
 
-        if(referredBy) {
+        if (referredBy) {
           referredMembers.push(metadata?.avatar?.avatarUri ? metadata?.avatar?.avatarUri : undefined);
         }
-        
+
         memberAvatarsByHandle[handle] = metadata?.avatar?.avatarUri;
         memberAvatarsById[id] = metadata?.avatar?.avatarUri;
       }
 
       return { memberAvatarsById, memberAvatarsByHandle, referredMembers };
     }
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
-}
+};
 
 const getPreviousCouncilTermRewards = async (rewardedData, previousCouncilId) => {
   // SETUP
   let tJoyDollarValue;
   try {
-    tJoyDollarValue = (await axios.get("https://status.joystream.org/price")).data.price;
-  } catch(e) {}
+    tJoyDollarValue = (await axios.get('https://status.joystream.org/price')).data.price;
+  } catch (e) {}
 
   // Building the final data object
   const previousCouncilTermRewards = rewardedData.reduce(
@@ -159,9 +161,9 @@ const getPreviousCouncilTermRewards = async (rewardedData, previousCouncilId) =>
         return prev;
       }
 
-      const amountEarned = tJoyDollarValue ? (
-        (JOYEarnedPercent * JOY_PERCENTAGE_VALUE_MULTIPLIER) + (tJOYEarned * tJoyDollarValue)
-      ) : 0;
+      const amountEarned = tJoyDollarValue
+        ? JOYEarnedPercent * JOY_PERCENTAGE_VALUE_MULTIPLIER + tJOYEarned * tJoyDollarValue
+        : 0;
 
       if (prev[Activity]) {
         prev[Activity].amountEarned += amountEarned;
@@ -175,11 +177,11 @@ const getPreviousCouncilTermRewards = async (rewardedData, previousCouncilId) =>
   );
 
   return previousCouncilTermRewards;
-}
+};
 
 const getRewardsRelatedIcons = (rewardedData, previousCouncilId, memberAvatarsById) => {
   return rewardedData.reduce(
-    (prev, { Activity, TestnetCouncilIdInteger, "MemberId (from PersonId)": memberIdFromPersonId }) => {
+    (prev, { Activity, TestnetCouncilIdInteger, 'MemberId (from PersonId)': memberIdFromPersonId }) => {
       if (TestnetCouncilIdInteger != previousCouncilId || !memberIdFromPersonId) {
         return prev;
       }
@@ -196,10 +198,9 @@ const getRewardsRelatedIcons = (rewardedData, previousCouncilId, memberAvatarsBy
     },
     {}
   );
-}
+};
 
 const useAirtableData = () => {
-
   // Processing-related state
   const [rewardedActivityData, setRewardedActivityData] = useState(null);
   const [previousCouncilId, setPreviousCouncilId] = useState(null);
@@ -212,21 +213,24 @@ const useAirtableData = () => {
 
   useEffect(() => {
     const getRewardsAmountsData = async () => {
-      const councilData = await airtable("TestnetCouncil").select({
-        sort: [
-          { field: "TestnetCouncilId", direction: "desc" }
-        ]
-      }).all();
+      const councilData = await airtable('TestnetCouncil')
+        .select({
+          sort: [{ field: 'TestnetCouncilId', direction: 'desc' }],
+        })
+        .all();
 
       const councilForProcessing = councilData[1].fields;
       const councilForProcessingId = councilForProcessing.CouncilId;
 
       setPreviousCouncilId(councilForProcessingId);
 
-      const lastCouncilRewardedActivityData = (await airtable("RewardedActivity").select({
-        filterByFormula: `TestnetCouncilId=${councilForProcessingId}`
-      }).all()).map(activity => activity.fields);
-
+      const lastCouncilRewardedActivityData = (
+        await airtable('RewardedActivity')
+          .select({
+            filterByFormula: `TestnetCouncilId=${councilForProcessingId}`,
+          })
+          .all()
+      ).map(activity => activity.fields);
 
       const previousCouncilTermRewards = await getPreviousCouncilTermRewards(
         lastCouncilRewardedActivityData,
@@ -236,25 +240,25 @@ const useAirtableData = () => {
       // Updating the state
       setReferralAmount(Math.round(councilForProcessing.ReferralJOYBonusPercentage * JOY_PERCENTAGE_VALUE_MULTIPLIER));
       setActivityAmount(previousCouncilTermRewards);
-      setRewardedActivityData(lastCouncilRewardedActivityData)
+      setRewardedActivityData(lastCouncilRewardedActivityData);
     };
 
     getRewardsAmountsData();
   }, []);
 
   useEffect(() => {
-    if(rewardedActivityData && (previousCouncilId != null)) {
-      const getRewardsIconsData = async() => {
+    if (rewardedActivityData && previousCouncilId != null) {
+      const getRewardsIconsData = async () => {
         const { memberAvatarsById, referredMembers } = await getMembershipData();
         setActivityIcons({
           isLoading: false,
-          data: getRewardsRelatedIcons(rewardedActivityData, previousCouncilId, memberAvatarsById)
+          data: getRewardsRelatedIcons(rewardedActivityData, previousCouncilId, memberAvatarsById),
         });
         setReferralIcons({
           isLoading: false,
-          data: referredMembers
+          data: referredMembers,
         });
-      }
+      };
 
       getRewardsIconsData();
     }

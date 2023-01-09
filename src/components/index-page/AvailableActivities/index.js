@@ -8,17 +8,20 @@ import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.
 import { ReactComponent as PlaceForYouIcon } from '../../../assets/svg/available-activities-icons/place-for-you.svg';
 
 import useWindowDimensions from '../../../utils/useWindowDimensions';
-import useAirtableData, { REFERRAL_ACTIVITY, WORKER_ACTIVITIES } from '../../../utils/pages/landing/useAirtableData';
+import { WORKER_ACTIVITIES } from '../../../utils/pages/landing/useAirtableData';
 
 import './style.scss';
+import useAxios from '../../../utils/useAxios';
 
 const ActivityListAmount = ({ mobile, amount, isWeekly, t }) => {
   return (
-    <div className={cn("IndexPage__available-activities__list-item__amount", {
-      "IndexPage__available-activities__list-item__amount--mobile" : mobile
-    })}>
-      <span className="IndexPage__available-activities__list-item__amount__dollar-sign">$</span>
-      {amount ? Math.floor(amount) : 0}
+    <div
+      className={cn('IndexPage__available-activities__list-item__amount', {
+        'IndexPage__available-activities__list-item__amount--mobile': mobile,
+      })}
+    >
+      <span className="IndexPage__available-activities__list-item__amount__dollar-sign">JOY </span>
+      {amount ? Math.round(amount) : 0}
       {isWeekly && (
         <span className="IndexPage__available-activities__list-item__amount__weekly">
           {t('landing.availableActivities.weekly')}
@@ -30,16 +33,18 @@ const ActivityListAmount = ({ mobile, amount, isWeekly, t }) => {
 
 const ActivityArrowCTA = ({ mobile, t }) => {
   return (
-    <div className={cn("IndexPage__available-activities__list-item__cta", {
-      "IndexPage__available-activities__list-item__cta--mobile": mobile
-    })}>
+    <div
+      className={cn('IndexPage__available-activities__list-item__cta', {
+        'IndexPage__available-activities__list-item__cta--mobile': mobile,
+      })}
+    >
       <span>{t('landing.availableActivities.chatWithIntegrator')}</span>
       <ArrowIcon className="IndexPage__available-activities__list-item__cta-icon" />
     </div>
-  )
+  );
 };
 
-const ActivityIcons = ({ isLoading, icons }) => {
+const ActivityIcons = ({ isLoading, icons, numberOfWorkers }) => {
   if (isLoading) {
     return (
       <Loader
@@ -53,40 +58,42 @@ const ActivityIcons = ({ isLoading, icons }) => {
     );
   }
 
+  if (numberOfWorkers === 0) return null;
+
+  const iconsToRender = icons.slice(0, 3);
+  const placeholdersToRender = Array(3 - iconsToRender.length).fill(PlaceholderIcon);
+  const others = numberOfWorkers - (iconsToRender.length + placeholdersToRender.length);
+
   return (
     <>
-      {icons?.toRender?.map((iconString, index) => (
+      {iconsToRender?.map((iconString, index) => (
         <div key={iconString + index} className="IndexPage__available-activities__list-item__member-icon">
-          <img src={iconString} onError={(e) => { e.target.src = PlaceholderIcon }} alt="" />
+          <img
+            src={iconString}
+            onError={e => {
+              e.target.src = PlaceholderIcon;
+            }}
+            alt=""
+          />
         </div>
       ))}
-      {icons?.toRender?.length === 3 && icons?.others !== 0 ? (
-        <div className="IndexPage__available-activities__list-item__number-icon">+{icons.others}</div>
+      {placeholdersToRender.map((Icon, index) => (
+        <div key={'placeholder' + index} className="IndexPage__available-activities__list-item__member-icon">
+          <img src={Icon} alt="" />
+        </div>
+      ))}
+      {numberOfWorkers > 3 && others !== 0 ? (
+        <div className="IndexPage__available-activities__list-item__number-icon">+{others}</div>
       ) : null}
     </>
   );
 };
 
-const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isLoading, t }) => {
-  const icons = memberIcons?.reduce((acc, curr) => {
-    if(curr == undefined) {
-      acc.others++;
-      return acc;
-    }
-
-    if(acc.toRender.length < 3) {
-      acc.toRender.push(curr);
-      return acc;
-    }
-
-    acc.others++;
-    return acc;
-  }, { others: 0, toRender: [] }) ?? { others: 0, toRender: [] };
-
+const Activity = ({ Icon, title, amount, isWeekly, icons, isLoading, t, numberOfWorkers }) => {
   const itemContent = (
     <div className="IndexPage__available-activities__list-item">
       <div className="IndexPage__available-activities__list-item__top">
-        <div className="IndexPage__available-activities__list-item__icon-wrapper" >
+        <div className="IndexPage__available-activities__list-item__icon-wrapper">
           <Icon className="IndexPage__available-activities__list-item__icon" />
         </div>
         <p className="IndexPage__available-activities__list-item__title">{title}</p>
@@ -94,15 +101,15 @@ const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isLoading, t }) 
         <ActivityArrowCTA mobile={true} t={t} />
       </div>
       <div className="IndexPage__available-activities__list-item__bottom">
-        <div className='IndexPage__available-activities__list-item__member-icons'>
-          <ActivityIcons isLoading={isLoading} icons={icons} />
+        <div className="IndexPage__available-activities__list-item__member-icons">
+          <ActivityIcons isLoading={isLoading} icons={icons} numberOfWorkers={numberOfWorkers} />
         </div>
-        {icons?.toRender?.length === 0 && !isLoading ? (
-          <div className='IndexPage__available-activities__list-item__place-for-you'>
-            <div className='IndexPage__available-activities__list-item__place-for-you__icon'>
-              <PlaceForYouIcon />  
+        {numberOfWorkers === 0 && !isLoading ? (
+          <div className="IndexPage__available-activities__list-item__place-for-you">
+            <div className="IndexPage__available-activities__list-item__place-for-you__icon">
+              <PlaceForYouIcon />
             </div>
-            {t("landing.availableActivities.placeForYou")}
+            {t('landing.availableActivities.placeForYou')}
           </div>
         ) : null}
         <ActivityListAmount mobile={true} amount={amount} isWeekly={isWeekly} t={t} />
@@ -111,46 +118,40 @@ const Activity = ({ Icon, title, amount, isWeekly, memberIcons, isLoading, t }) 
     </div>
   );
 
-  if(!isLoading && icons?.toRender?.length === 0 && icons?.others === 0) {
-    return null;
-  }
+  // if(!isLoading && icons?.toRender?.length === 0 && icons?.others === 0) {
+  //   return null;
+  // }
 
   return (
     <a href="https://discord.gg/jq5VtcSuqj" target="_blank">
       {itemContent}
     </a>
   );
-}
+};
 
 const AvailableActivities = ({ t }) => {
-  const { activityAmounts, referralAmount, activityIcons, referralIcons } = useAirtableData();
+  const [data, loading, error] = useAxios('http://localhost:8081/budgets');
   const [numberOfRenderedActivities, setNumberOfRenderedActivities] = useState(WORKER_ACTIVITIES.length);
   const { width } = useWindowDimensions();
 
   useEffect(() => {
-    if(width) {
-      setNumberOfRenderedActivities(width < 1400 ? 3 : WORKER_ACTIVITIES.length); 
+    if (width) {
+      setNumberOfRenderedActivities(width < 1400 ? 3 : WORKER_ACTIVITIES.length);
     }
   }, [width]);
+
+  console.log({ data });
 
   return (
     <section className="IndexPage__available-activities-wrapper">
       <div className="IndexPage__available-activities">
         <header>
           <h2 className="IndexPage__available-activities__title">
-            <Trans i18nKey="landing.availableActivities.title" components={{ br: <br/> }} />
+            <Trans i18nKey="landing.availableActivities.title" components={{ br: <br /> }} />
           </h2>
         </header>
-        <p className="IndexPage__available-activities__subtitle">{t("landing.availableActivities.subtitle")}</p>
+        <p className="IndexPage__available-activities__subtitle">{t('landing.availableActivities.subtitle')}</p>
         <div className="IndexPage__available-activities__list">
-          <Activity
-            Icon={REFERRAL_ACTIVITY.icon}
-            title={t(REFERRAL_ACTIVITY.title)}
-            amount={referralAmount}
-            memberIcons={referralIcons.data}
-            isLoading={referralIcons.isLoading}
-            t={t}
-          />
           {Object.keys(WORKER_ACTIVITIES)
             .slice(0, numberOfRenderedActivities)
             .map(activityKey => (
@@ -158,10 +159,11 @@ const AvailableActivities = ({ t }) => {
                 key={activityKey}
                 Icon={WORKER_ACTIVITIES[activityKey].icon}
                 title={t(WORKER_ACTIVITIES[activityKey].title)}
-                amount={activityAmounts?.[activityKey]?.amountEarned}
+                amount={data?.[activityKey]?.weeklyEarnings}
                 isWeekly={true}
-                memberIcons={activityIcons.data?.[activityKey]?.memberAvatars}
-                isLoading={activityIcons.isLoading}
+                icons={data?.[activityKey]?.icons}
+                numberOfWorkers={data?.[activityKey]?.numberOfWorkers}
+                isLoading={loading}
                 t={t}
               />
             ))}
@@ -172,12 +174,13 @@ const AvailableActivities = ({ t }) => {
             onClick={() => setNumberOfRenderedActivities(prev => prev + 1)}
             role="presentation"
           >
-            {t("landing.availableActivities.showMore")} <ArrowIcon className="IndexPage__available-activities__show-more__arrow-icon" />
+            {t('landing.availableActivities.showMore')}{' '}
+            <ArrowIcon className="IndexPage__available-activities__show-more__arrow-icon" />
           </div>
         ) : null}
       </div>
     </section>
   );
-}
+};
 
 export default AvailableActivities;
