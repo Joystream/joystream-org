@@ -52,7 +52,8 @@ const Ecosystem = ({ t }) => {
         <div className="IndexPage__ecosystem__apps" id="apps-built-on-joystream">
           <h3 className="IndexPage__ecosystem__apps__title">
             {t('landing.ecosystem.appsBuiltOnJoystream.title')}{' '}
-            <div className="IndexPage__ecosystem__apps__title__app-count">1</div>
+            {/* TODO: This will need to be made dynamic alogn with the rest of the content in the carousel. */}
+            <div className="IndexPage__ecosystem__apps__title__app-count">2</div>
           </h3>
           <div className="IndexPage__ecosystem__apps__main">
             <div className="IndexPage__ecosystem__apps__main__about">
@@ -88,6 +89,17 @@ const Ecosystem = ({ t }) => {
                 alt="illustration of the gleev platform homepage"
               />
               <div className="IndexPage__ecosystem__apps__main__visual__bottom-gradient"></div>
+            </div>
+          </div>
+          <div className="IndexPage__ecosystem__apps__carousel">
+            <div className="IndexPage__ecosystem__apps__carousel__item">
+              <img className="IndexPage__ecosystem__apps__carousel__item__logo" src={GleevLogo} alt="" />
+              <p className="IndexPage__ecosystem__apps__carousel__item__title">l1.media</p>
+              <p className="IndexPage__ecosystem__apps__carousel__item__content">
+                Education, news and entertainment from around the world.
+              </p>
+              <p className="IndexPage__ecosystem__apps__carousel__item__platforms-title">PLATFORMS</p>
+              <p className="IndexPage__ecosystem__apps__carousel__item__platforms">Web</p>
             </div>
           </div>
           <div className="IndexPage__ecosystem__apps__info">
