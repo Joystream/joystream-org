@@ -42,7 +42,12 @@
         "platformsTitle": "PLATFORMS",
         "platforms": "Web",
         "link": "Visit",
-        "info": "We've just launched, so our app collection is yet to grow. Check back soon for more exciting apps built on Joystream."
+        "info": "We've just launched, so our app collection is yet to grow. Check back soon for more exciting apps built on Joystream.",
+        "l1Media": {
+          "name": "l1.media",
+          "description": "Education, news and entertainment from around the world.",
+          "platforms": "Web"
+        }
       }
     },
     "developers": {
