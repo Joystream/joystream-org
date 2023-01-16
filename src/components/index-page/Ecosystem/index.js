@@ -2,12 +2,13 @@ import React from 'react';
 import { Trans } from 'react-i18next';
 import cn from 'classnames';
 
-import GleevLogo from '../../../assets/images/landing/gleev-logo.webp';
+import GleevLogo from '../../../assets/images/landing/ecosystem-app-icons/gleev.webp';
 import GleevIllustration from '../../../assets/images/landing/gleev-illustration.webp';
 import Browser1 from '../../../assets/images/landing/hero/browser-1.webp';
 import Browser2 from '../../../assets/images/landing/hero/browser-2.webp';
 import Browser3 from '../../../assets/images/landing/hero/browser-3.webp';
 import VideoPlayer from '../../../assets/images/landing/hero/illustration-ecosystem-l1.webp';
+import L1MediaLogo from '../../../assets/images/landing/ecosystem-app-icons/l1-media.webp';
 
 import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
@@ -27,6 +28,21 @@ const DevelopmentStep = ({ stepNumber, sectionTitle, title, subtitle }) => (
 const BrowserImage = ({ className, variant, imageSrc }) => {
   return <img className={`${className} ${className}--${variant}`} src={imageSrc} alt="" />;
 };
+
+// TODO: Do these need a link?
+const CarouselItem = ({ logo, name, description, platforms, link, t }) => (
+  <a href={link}>
+    <div className="IndexPage__ecosystem__apps__carousel__item">
+      <img className="IndexPage__ecosystem__apps__carousel__item__logo" src={logo} alt="" />
+      <p className="IndexPage__ecosystem__apps__carousel__item__title">{name}</p>
+      <p className="IndexPage__ecosystem__apps__carousel__item__content">{description}</p>
+      <p className="IndexPage__ecosystem__apps__carousel__item__platforms-title">
+        {t('landing.ecosystem.appsBuiltOnJoystream.platformsTitle')}
+      </p>
+      <p className="IndexPage__ecosystem__apps__carousel__item__platforms">{platforms}</p>
+    </div>
+  </a>
+);
 
 const Ecosystem = ({ t }) => {
   return (
@@ -92,15 +108,14 @@ const Ecosystem = ({ t }) => {
             </div>
           </div>
           <div className="IndexPage__ecosystem__apps__carousel">
-            <div className="IndexPage__ecosystem__apps__carousel__item">
-              <img className="IndexPage__ecosystem__apps__carousel__item__logo" src={GleevLogo} alt="" />
-              <p className="IndexPage__ecosystem__apps__carousel__item__title">l1.media</p>
-              <p className="IndexPage__ecosystem__apps__carousel__item__content">
-                Education, news and entertainment from around the world.
-              </p>
-              <p className="IndexPage__ecosystem__apps__carousel__item__platforms-title">PLATFORMS</p>
-              <p className="IndexPage__ecosystem__apps__carousel__item__platforms">Web</p>
-            </div>
+            <CarouselItem
+              logo={L1MediaLogo}
+              name={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
+              description={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.description')}
+              platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
+              link="https://l1.media/"
+              t={t}
+            />
           </div>
           <div className="IndexPage__ecosystem__apps__info">
             <InfoIcon className="IndexPage__ecosystem__apps__info__icon" />

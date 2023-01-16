@@ -211,9 +211,15 @@
           padding: 24px;
           background-color: #111316;
 
+          &:hover {
+            background-color: #1f252e;
+          }
+
           &__logo {
             width: 64px;
             height: 64px;
+            border: 1px solid rgba(163, 195, 242, .19);
+            border-radius: 12px;
           }
 
           &__title {
