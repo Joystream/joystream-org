@@ -13,6 +13,7 @@ import L1MediaLogo from '../../../assets/images/landing/ecosystem-app-icons/l1-m
 import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import { ReactComponent as CodeWindowControls } from '../../../assets/svg/landing/code-window-controls.svg';
+import { ReactComponent as CarouselItemPlaceholder } from '../../../assets/svg/landing/carousel-item-placeholder.svg';
 
 import './styles.scss';
 
@@ -29,11 +30,12 @@ const BrowserImage = ({ className, variant, imageSrc }) => {
   return <img className={`${className} ${className}--${variant}`} src={imageSrc} alt="" />;
 };
 
-// TODO: Do these need a link?
 const CarouselItem = ({ logo, name, description, platforms, link, t }) => (
-  <a href={link}>
+  <a href={link} target="_blank">
     <div className="IndexPage__ecosystem__apps__carousel__item">
-      <img className="IndexPage__ecosystem__apps__carousel__item__logo" src={logo} alt="" />
+      <div className="IndexPage__ecosystem__apps__carousel__item__logo-wrapper">
+        <img className="IndexPage__ecosystem__apps__carousel__item__logo" src={logo} alt="" />
+      </div>
       <p className="IndexPage__ecosystem__apps__carousel__item__title">{name}</p>
       <p className="IndexPage__ecosystem__apps__carousel__item__content">{description}</p>
       <p className="IndexPage__ecosystem__apps__carousel__item__platforms-title">
@@ -116,6 +118,9 @@ const Ecosystem = ({ t }) => {
               link="https://l1.media/"
               t={t}
             />
+            <CarouselItemPlaceholder className="IndexPage__ecosystem__apps__carousel__item-placeholder"/>
+            <CarouselItemPlaceholder className="IndexPage__ecosystem__apps__carousel__item-placeholder"/>
+            <CarouselItemPlaceholder className="IndexPage__ecosystem__apps__carousel__item-placeholder"/>
           </div>
           <div className="IndexPage__ecosystem__apps__info">
             <InfoIcon className="IndexPage__ecosystem__apps__info__icon" />
