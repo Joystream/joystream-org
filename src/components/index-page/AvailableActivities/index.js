@@ -14,18 +14,29 @@ import './style.scss';
 import useAxios from '../../../utils/useAxios';
 
 const ActivityListAmount = ({ mobile, amount, isWeekly, t }) => {
+  let amountToRender = 0;
+  if (amount) {
+    amountToRender = Math.round(amount);
+
+    if (amount > 10000) {
+      amountToRender = `${Math.round(amount / 1000)}K`;
+    }
+  }
+
   return (
     <div
       className={cn('IndexPage__available-activities__list-item__amount', {
         'IndexPage__available-activities__list-item__amount--mobile': mobile,
       })}
     >
-      <span className="IndexPage__available-activities__list-item__amount__dollar-sign">JOY </span>
-      {amount ? Math.round(amount) : 0}
+      <div className="IndexPage__available-activities__list-item__amount__value">
+        {amountToRender}
+        <span className="IndexPage__available-activities__list-item__amount__currency">JOY</span>
+      </div>
       {isWeekly && (
-        <span className="IndexPage__available-activities__list-item__amount__weekly">
+        <div className="IndexPage__available-activities__list-item__amount__weekly">
           {t('landing.availableActivities.weekly')}
-        </span>
+        </div>
       )}
     </div>
   );
@@ -130,7 +141,7 @@ const Activity = ({ Icon, title, amount, isWeekly, icons, isLoading, t, numberOf
 };
 
 const AvailableActivities = ({ t }) => {
-  const [data, loading, error] = useAxios('http://localhost:8081/budgets');
+  const [data, loading, error] = useAxios('https://status.joystream.org/budgets');
   const [numberOfRenderedActivities, setNumberOfRenderedActivities] = useState(WORKER_ACTIVITIES.length);
   const { width } = useWindowDimensions();
 
@@ -139,8 +150,6 @@ const AvailableActivities = ({ t }) => {
       setNumberOfRenderedActivities(width < 1400 ? 3 : WORKER_ACTIVITIES.length);
     }
   }, [width]);
-
-  console.log({ data });
 
   return (
     <section className="IndexPage__available-activities-wrapper">
