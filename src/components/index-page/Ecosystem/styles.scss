@@ -203,19 +203,27 @@
       }
 
       &__carousel {
-        display: flex;
+        display: grid;
         justify-content: space-between;
         margin-top: 24px;
+        gap: 12px;
+        grid-template-columns: repeat(4, minmax(230px, 288px));
 
         &__item {
           display: inline-block;
-          width: 270px;
           height: 288px;
+          max-width: 288px;
           padding: 24px;
           background-color: #111316;
 
           &:hover {
             background-color: #1f252e;
+          }
+
+          &--placeholder {
+            &:hover {
+              background-color: #111316;
+            }
           }
 
           &__logo-wrapper {
@@ -523,8 +531,10 @@
         }
 
         &__carousel {
+          width: 935px;
           max-width: 935px;
           margin: 24px auto 0;
+          grid-template-columns: repeat(3, minmax(230px, 288px));
 
           & > :nth-child(3) {
             display: none;
@@ -623,10 +633,13 @@
         }
 
         &__carousel {
+          display: flex;
           max-width: 730px;
 
-          &__item-placeholder {
-            display: none;
+          &__item {
+            &--placeholder {
+              display: none;
+            }
           }
         }
 

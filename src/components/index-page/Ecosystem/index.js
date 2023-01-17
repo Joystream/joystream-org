@@ -46,6 +46,12 @@ const CarouselItem = ({ logo, name, description, platforms, link, t }) => (
   </a>
 );
 
+const CarouselPlaceholder = () => (
+  <div className="IndexPage__ecosystem__apps__carousel__item IndexPage__ecosystem__apps__carousel__item--placeholder">
+    <CarouselItemPlaceholder />
+  </div>
+)
+
 const Ecosystem = ({ t }) => {
   return (
     <section className="IndexPage__ecosystem-wrapper">
@@ -118,9 +124,9 @@ const Ecosystem = ({ t }) => {
               link="https://l1.media/"
               t={t}
             />
-            <CarouselItemPlaceholder className="IndexPage__ecosystem__apps__carousel__item-placeholder"/>
-            <CarouselItemPlaceholder className="IndexPage__ecosystem__apps__carousel__item-placeholder"/>
-            <CarouselItemPlaceholder className="IndexPage__ecosystem__apps__carousel__item-placeholder"/>
+            <CarouselPlaceholder />
+            <CarouselPlaceholder />
+            <CarouselPlaceholder />
           </div>
           <div className="IndexPage__ecosystem__apps__info">
             <InfoIcon className="IndexPage__ecosystem__apps__info__icon" />
