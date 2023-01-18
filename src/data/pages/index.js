@@ -16,21 +16,24 @@ import { ReactComponent as liveStreamingProviderImage } from '../../assets/svg/l
 import { ReactComponent as builderImage } from '../../assets/svg/builder.svg';
 import { ReactComponent as communicationModeratorImage } from '../../assets/svg/communication-moderator.svg';
 
-// testnet images
+// Available activities icons
+import { ReactComponent as ReferIcon } from '../../assets/svg/available-activities-icons/refer.svg';
+import { ReactComponent as BountiesIcon } from '../../assets/svg/available-activities-icons/bounties.svg';
+import { ReactComponent as CouncilMemberIcon } from '../../assets/svg/available-activities-icons/council-member.svg';
+import { ReactComponent as ContentCuratorIcon } from '../../assets/svg/available-activities-icons/content-curator.svg';
+import { ReactComponent as ContentCuratorLeadIcon } from '../../assets/svg/available-activities-icons/content-curator-lead.svg';
+import { ReactComponent as BuilderIcon } from '../../assets/svg/available-activities-icons/builder.svg';
+import { ReactComponent as BuilderLeadIcon } from '../../assets/svg/available-activities-icons/builder-lead.svg';
+import { ReactComponent as HRIcon } from '../../assets/svg/available-activities-icons/hr.svg';
+import { ReactComponent as HRLeadIcon } from '../../assets/svg/available-activities-icons/hr-lead.svg';
+import { ReactComponent as MarketerIcon } from '../../assets/svg/available-activities-icons/marketer.svg';
+import { ReactComponent as MarketerLeadIcon } from '../../assets/svg/available-activities-icons/marketer-lead.svg';
+import { ReactComponent as StorageProviderIcon } from '../../assets/svg/available-activities-icons/storage-provider.svg';
+import { ReactComponent as StorageProviderLeadIcon } from '../../assets/svg/available-activities-icons/storage-provider-lead.svg';
+import { ReactComponent as DistributorIcon } from '../../assets/svg/available-activities-icons/distributor.svg';
+import { ReactComponent as DistributorLeadIcon } from '../../assets/svg/available-activities-icons/distributor-lead.svg';
+import { ReactComponent as ValidatorIcon } from '../../assets/svg/available-activities-icons/validator.svg';
 
-import Babylon from '../../assets/svg/babylon-logo.svg';
-import Alexandria from '../../assets/svg/alexandria-logo.svg';
-import Constantinople from '../../assets/svg/constantinople-building.svg';
-import Rome from '../../assets/svg/rome-building.svg';
-import Sparta from '../../assets/svg/sparta-helmet.svg';
-import Athens from '../../assets/svg/athens-owl.svg';
-import Acropolis from '../../assets/svg/acropolis-building.svg';
-import Antioch from '../../assets/svg/antioch-logo.svg';
-import Sumer from '../../assets/svg/sumer-logo.svg';
-import Giza from '../../assets/svg/giza-logo.svg';
-import Olympia from '../../assets/svg/olympia-logo.svg';
-import Rhodes from '../../assets/svg/rhodes-logo.svg';
-import Carthage from '../../assets/svg/carthage-logo.svg';
 
 export const sharedData = {
   defaultEmail: 'hello@jsgenesis.com',
@@ -128,143 +131,65 @@ export const roles = {
   ],
 };
 
-export const roleCardData = {
-  validator: {
-    image: ValidatorImage,
-    title: 'Validator',
-  },
+export const WORKER_ACTIVITIES = {
+  // "Bounty": {
+  //   title: "landing.availableActivities.activityTitles.bounties",
+  //   icon: BountiesIcon
+  // },
   council: {
-    image: CouncilMemberImage,
-    title: 'Council',
+    title: 'landing.availableActivities.activityTitles.councilMember',
+    icon: CouncilMemberIcon,
   },
-  storageProvider: {
-    image: StorageProviderImage,
-    title: 'Storage Provider',
+  contentWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.contentCurator',
+    icon: ContentCuratorIcon,
   },
-  storageLead: {
-    image: StorageLeadImage,
-    title: 'Storage Lead',
+  // "ContentDirectoryLead": {
+  //   title: "landing.availableActivities.activityTitles.contentCuratorLead",
+  //   icon: ContentCuratorLeadIcon
+  // },
+  buildersWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.builder',
+    icon: BuilderIcon,
   },
-  contentCurator: {
-    image: ContentCuratorImage,
-    title: 'Content Curator',
+  // "BuildersLead": {
+  //   title: "landing.availableActivities.activityTitles.builderLead",
+  //   icon: BuilderLeadIcon
+  // },
+  hrWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.hr',
+    icon: HRIcon,
   },
-  contentCreator: {
-    image: ContentCreatorImage,
-    title: 'Content Creator',
+  // "HRLead": {
+  //   title: "landing.availableActivities.activityTitles.hrLead",
+  //   icon: HRLeadIcon
+  // },
+  marketingWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.marketer',
+    icon: MarketerIcon,
   },
-  contentLead: {
-    image: ContentLeadImage,
-    title: 'Content Lead',
+  // "MarketingLead": {
+  //   title: "landing.availableActivities.activityTitles.marketerLead",
+  //   icon: MarketerLeadIcon
+  // },
+  storageWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.storageProvider',
+    icon: StorageProviderIcon,
+  },
+  // "StorageLead": {
+  //   title: "landing.availableActivities.activityTitles.storageProviderLead",
+  //   icon: StorageProviderLeadIcon
+  // },
+  distributionWorkingGroup: {
+    title: 'landing.availableActivities.activityTitles.distributor',
+    icon: DistributorIcon,
+  },
+  // "ContentDeliveryLead": {
+  //   title: "landing.availableActivities.activityTitles.distributorLead",
+  //   icon: DistributorLeadIcon
+  // },
+  validators: {
+    title: 'landing.availableActivities.activityTitles.validator',
+    icon: ValidatorIcon,
   },
 };
-
-export const bountiesLink =
-  'https://raw.githubusercontent.com/Joystream/community-repo/master/bounties/overview/bounties-status.json';
-
-export const testnetData = [
-  {
-    Image: Carthage,
-    number: 13,
-    name: 'Carthage',
-    date: '18.08.2022',
-    state: 'Future',
-    link: '/carthage'
-  },
-  {
-    Image: Rhodes,
-    number: 12,
-    name: 'Rhodes',
-    date: '11.05.2022',
-    state: 'Current',
-    link: '/rhodes'
-  },
-  {
-    Image: Olympia,
-    number: 11,
-    name: 'Olympia',
-    date: '23.03.2022',
-    state: 'Past',
-    link: '/olympia'
-  },
-  {
-    Image: Giza,
-    number: 10,
-    name: 'Giza',
-    date: '26.01.2022',
-    state: 'Past',
-    link: '/giza',
-  },
-  {
-    Image: Sumer,
-    number: 9,
-    name: 'Sumer',
-    date: '27.05.2021',
-    state: 'Past',
-    link: '/sumer',
-  },
-  {
-    Image: Antioch,
-    number: 8,
-    name: 'Antioch',
-    date: '07.04.2021',
-    state: 'Past',
-    link: '/antioch',
-  },
-  {
-    Image: Babylon,
-    number: 7,
-    name: 'Babylon',
-    date: '21.12.2020',
-    state: 'Past',
-    link: '/babylon',
-  },
-  {
-    Image: Alexandria,
-    number: 6,
-    name: 'Alexandria',
-    date: '03.09.2020',
-    state: 'Past',
-    link: '/alexandria',
-  },
-  {
-    Image: Constantinople,
-    number: 5,
-    name: 'Constantinople',
-    date: '20.05.2020',
-    state: 'Past',
-    link: '/constantinople',
-  },
-  {
-    Image: Rome,
-    number: 4,
-    name: 'Rome',
-    date: '17.03.2020',
-    state: 'Past',
-    link: '/rome',
-  },
-  {
-    Image: Acropolis,
-    number: 3,
-    name: 'Acropolis',
-    date: '24.06.2019',
-    state: 'Past',
-    link: '/acropolis',
-  },
-  {
-    Image: Athens,
-    number: 2,
-    name: 'Athens',
-    date: '17.04.2019',
-    state: 'Past',
-    link: '/athens',
-  },
-  {
-    Image: Sparta,
-    number: 1,
-    name: 'Sparta',
-    date: '28.02.2019',
-    state: 'Past',
-    link: '/sparta',
-  },
-];

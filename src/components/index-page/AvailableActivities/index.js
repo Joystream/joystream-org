@@ -8,7 +8,7 @@ import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.
 import { ReactComponent as PlaceForYouIcon } from '../../../assets/svg/available-activities-icons/place-for-you.svg';
 
 import useWindowDimensions from '../../../utils/useWindowDimensions';
-import { WORKER_ACTIVITIES } from '../../../utils/pages/landing/useAirtableData';
+import { WORKER_ACTIVITIES } from '../../../data/pages';
 
 import './style.scss';
 import useAxios from '../../../utils/useAxios';
