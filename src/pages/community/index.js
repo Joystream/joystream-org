@@ -22,7 +22,7 @@ import './style.scss';
 
 const LinkCard = ({ icon, title, subtitle, link }) => {
   return (
-    <a href={link}>
+    <a href={link} target="_blank">
       <div className="CommunityPage__link">
         <div className={`CommunityPage__link__icon CommunityPage__link__icon--${title.toLowerCase()}`}>{icon}</div>
         <p className="CommunityPage__link__title">{title}</p>
