@@ -48,10 +48,9 @@ const CommunityPage = () => {
       <section className="CommunityPage__hero-wrapper">
         <div className="CommunityPage__hero">
           <div className="CommunityPage__hero__content">
-            <h1 className="CommunityPage__hero__content__title">Join our community</h1>
+            <h1 className="CommunityPage__hero__content__title">{t("community.hero.title")}</h1>
             <p className="CommunityPage__hero__content__subtitle">
-              There are many ways you can engage with our community and follow up on the platform development news.
-              Everyone is welcome.
+              {t("community.hero.subtitle")}
             </p>
           </div>
           <div className="CommunityPage__hero__image">
@@ -64,14 +63,14 @@ const CommunityPage = () => {
       <section className="CommunityPage__links-wrapper">
         <div className="CommunityPage__links-section">
           <div className="CommunityPage__links">
-            <LinkCard icon={<Twitter />} title="Twitter" subtitle="Follow us @JoystreamDAO" link="https://twitter.com/JoystreamDAO/" />
-            <LinkCard icon={<Discord />} title="Discord" subtitle="Engage with community" link="https://discord.gg/DE9UN3YpRP" />
-            <LinkCard icon={<Gleev />} title="Gleev" subtitle="Watch community calls" link="https://gleev.xyz/"/>
-            <LinkCard icon={<Reddit />} title="Reddit" subtitle="Join the discussion" link="https://www.reddit.com/r/joystream_dao/"/>
-            <LinkCard icon={<GitHub />} title="GitHub" subtitle="Contribute to our codebase" link="https://github.com/Joystream"/>
-            <LinkCard icon={<Handbook />} title="Handbook" subtitle="Read our documentation" link="https://joystream.gitbook.io/testnet-workspace/"/>
-            <LinkCard icon={<Element />} title="Element" subtitle="Get support" link="#0"/>
-            <LinkCard icon={<Youtube />} title="YouTube" subtitle="Watch community calls" link="https://www.youtube.com/@joystream8627"/>
+            <LinkCard icon={<Twitter />} title={t("community.links.twitter.title")} subtitle={t("community.links.twitter.subtitle")} link="https://twitter.com/JoystreamDAO/" />
+            <LinkCard icon={<Discord />} title={t("community.links.discord.title")} subtitle={t("community.links.discord.subtitle")} link="https://discord.gg/DE9UN3YpRP" />
+            <LinkCard icon={<Gleev />} title={t("community.links.gleev.title")} subtitle={t("community.links.gleev.subtitle")} link="https://gleev.xyz/"/>
+            <LinkCard icon={<Reddit />} title={t("community.links.reddit.title")} subtitle={t("community.links.reddit.subtitle")} link="https://www.reddit.com/r/joystream_dao/"/>
+            <LinkCard icon={<GitHub />} title={t("community.links.github.title")} subtitle={t("community.links.github.subtitle")} link="https://github.com/Joystream"/>
+            <LinkCard icon={<Handbook />} title={t("community.links.handbook.title")} subtitle={t("community.links.handbook.subtitle")} link="https://joystream.gitbook.io/testnet-workspace/"/>
+            <LinkCard icon={<Element />} title={t("community.links.element.title")} subtitle={t("community.links.element.subtitle")} link="#0"/>
+            <LinkCard icon={<Youtube />} title={t("community.links.youtube.title")} subtitle={t("community.links.youtube.subtitle")} link="https://www.youtube.com/@joystream8627"/>
           </div>
         </div>
       </section>

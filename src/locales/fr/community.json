@@ -1,0 +1,42 @@
+{
+  "community": {
+    "hero": {
+      "title": "Join our community",
+      "subtitle": "There are many ways you can engage with our community and follow up on the platform development news. Everyone is welcome."
+    },
+    "links": {
+      "twitter": {
+        "title": "Twitter",
+        "subtitle": "Follow us @JoystreamDAO"
+      },
+      "discord": {
+        "title": "Discord",
+        "subtitle": "Engage with community"
+      },
+      "gleev": {
+        "title": "Gleev",
+        "subtitle": "Watch community calls"
+      },
+      "reddit": {
+        "title": "Reddit",
+        "subtitle": "Join the discussion"
+      },
+      "github": {
+        "title": "GitHub",
+        "subtitle": "Contribute to our codebase"
+      },
+      "handbook": {
+        "title": "Handbook",
+        "subtitle": "Read our documentation"
+      },
+      "element": {
+        "title": "Element",
+        "subtitle": "Get support"
+      },
+      "youtube": {
+        "title": "YouTube",
+        "subtitle": "Watch community calls"
+      }
+    }
+  }
+}
