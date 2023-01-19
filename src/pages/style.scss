@@ -88,6 +88,14 @@
   letter-spacing: 0;
 }
 
+@mixin h10 {
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
 @mixin base-1 {
   font-family: $font-secondary;
   font-size: 20px;
