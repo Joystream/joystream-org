@@ -69,7 +69,7 @@ const CommunityPage = () => {
             <LinkCard icon={<Reddit />} title={t("community.links.reddit.title")} subtitle={t("community.links.reddit.subtitle")} link="https://www.reddit.com/r/joystream_dao/"/>
             <LinkCard icon={<GitHub />} title={t("community.links.github.title")} subtitle={t("community.links.github.subtitle")} link="https://github.com/Joystream"/>
             <LinkCard icon={<Handbook />} title={t("community.links.handbook.title")} subtitle={t("community.links.handbook.subtitle")} link="https://joystream.gitbook.io/testnet-workspace/"/>
-            <LinkCard icon={<Element />} title={t("community.links.element.title")} subtitle={t("community.links.element.subtitle")} link="#0"/>
+            <LinkCard icon={<Element />} title={t("community.links.element.title")} subtitle={t("community.links.element.subtitle")} link="https://app.element.io/#/room/#js-general:matrix.org"/>
             <LinkCard icon={<Youtube />} title={t("community.links.youtube.title")} subtitle={t("community.links.youtube.subtitle")} link="https://www.youtube.com/@joystream8627"/>
           </div>
         </div>

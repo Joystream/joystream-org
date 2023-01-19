@@ -1,7 +1,7 @@
 import { sharedData } from '../../data/pages';
 
 const links = [
-  { to: '/#apps-built-on-joystream', label: 'navbar.apps' },
+  { to: '/community', label: 'navbar.community' },
   { href: 'https://dao.joystream.org', label: 'navbar.pioneer' },
   { to: '/manifesto', label: 'navbar.manifesto' },
   { href: sharedData.social.discordLink, label: 'navbar.discord' },
