@@ -1,0 +1,280 @@
+@import '../../styles/_main.scss';
+@import '../style.scss';
+
+.CommunityPage {
+  &__hero-wrapper {
+    padding-bottom: 28px;
+    background-color: black;
+  }
+
+  &__hero {
+    @extend %container;
+
+    display: flex;
+    gap: 16px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 606px;
+
+      &__title {
+        @include h1;
+
+        color: $c_white;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        margin-top: 16px;
+        color: #a7aeb7;
+      }
+    }
+
+    &__image {
+      position: relative;
+
+      &__foreground {
+        position: absolute;
+        right: 80px;
+        margin: auto;
+        inset: 0;
+      }
+    }
+  }
+
+  &__links-wrapper {
+    padding: 30px 0 98px 0;
+    background-color: #f2f5f9;
+  }
+
+  &__links-section {
+    @extend %largeContainer;
+  }
+
+  &__links {
+    display: grid;
+    justify-content: center;
+    margin-top: -75px;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, 288px);
+  }
+
+  &__link {
+    position: relative;
+    height: 164px;
+    padding: 24px;
+    cursor: pointer;
+    background-color: $c_white;
+    transition: all .3s;
+
+    &:hover {
+      transform: translate(-7.2px, -8px);
+      box-shadow: 7.2px 8px 0 0 $c_blue-ribbon;
+    }
+
+    &__icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(163, 195, 242, .19);
+      border-radius: 50%;
+      place-items: center;
+
+      & > svg {
+        width: 32px;
+      }
+
+      &--twitter {
+        background-color: rgba(29, 155, 240, .15);
+
+        & > svg {
+          width: 21px;
+          fill: rgba(29, 155, 240, 1);
+        }
+      }
+
+      &--discord {
+        background-color: rgba(88, 101, 242, .15);
+      }
+
+      &--gleev {
+        background-color: rgba(64, 56, 255, .15);
+      }
+
+      &--reddit {
+        background-color: rgba(255, 69, 0, .15);
+      }
+
+      &--github {
+        background-color: rgba(92, 100, 117, .15);
+
+        & > svg {
+          width: 21px;
+          fill: rgba(92, 100, 117, 1);
+        }
+      }
+
+      &--handbook {
+        background-color: rgba(54, 129, 252, .1);
+      }
+
+      &--element {
+        background-color: rgba(13, 189, 139, .15);
+      }
+
+      &--youtube {
+        background-color: rgba(255, 0, 0, .15);
+      }
+    }
+
+    &__title {
+      @include h7;
+
+      margin-top: 16px;
+      color: $c_black;
+    }
+
+    &__subtitle {
+      @include base-4;
+
+      margin-top: 4px;
+      color: #5c6475;
+    }
+
+    &__external-link {
+      position: absolute;
+      top: 27px;
+      right: 27px;
+      display: none;
+      width: 20px;
+      color: #a7aeb7;
+    }
+
+    &:hover &__external-link {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__hero {
+      justify-content: center;
+
+      &__content {
+        max-width: 500px;
+        min-width: unset;
+      }
+
+      &__image {
+        width: 500px;
+
+        &__background {
+          width: 500px;
+          height: 389.4px;
+        }
+
+        &__foreground {
+          width: 421.4px;
+          height: 278px;
+        }
+      }
+    }
+
+    &__links {
+      margin-top: -60px;
+      gap: 24px;
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__hero {
+      padding: 0 20px;
+
+      &__content {
+        &__title {
+          @include h3;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+
+      &__image {
+        width: 375px;
+
+        &__background {
+          width: 375px;
+          height: 312.7px;
+        }
+
+        &__foreground {
+          width: 335px;
+          height: 234.6px;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__hero {
+      align-items: center;
+      flex-direction: column;
+      justify-content: unset;
+      padding-top: 80px;
+
+      &__content {
+        &__title {
+          text-align: center;
+        }
+
+        &__subtitle {
+          text-align: center;
+        }
+      }
+    }
+
+    &__links-wrapper {
+      padding-bottom: 80px;
+    }
+
+    &__link {
+      &:hover {
+        transform: unset;
+        box-shadow: unset;
+      }
+
+      &__external-link {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 660px) {
+    &__hero-wrapper {
+      padding-bottom: 42px;
+    }
+
+    &__hero {
+      gap: 32px;
+    }
+
+    &__links {
+      margin-top: -80px;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fill, 335px);
+    }
+
+    &__link {
+      width: 335px;
+      height: 156px;
+
+      &__icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
