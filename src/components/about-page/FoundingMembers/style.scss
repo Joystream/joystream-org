@@ -1,0 +1,43 @@
+@import '../../../styles/_main';
+@import '../../../pages/style.scss';
+
+.AboutPage {
+  &__founding-members-wrapper {
+    padding: 96px 0;
+    background-color: #f2f5f9;
+  }
+
+  &__founding-members {
+    @extend %container;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      max-width: 816px;
+      margin: 0 auto;
+
+      &__section-title {
+        @include section-title;
+
+        color: $c_blue-ribbon;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: #1a1a1a;
+        text-align: center;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        margin-top: 16px;
+        color: #3b3b3b;
+        text-align: center;
+      }
+    }
+  }
+}

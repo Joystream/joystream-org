@@ -1,8 +1,10 @@
 @import '../../../styles/main';
+@import '../../../pages/style.scss';
 
 .AboutPage {
   &__hero-wrapper {
     position: relative;
+    padding-top: 96px;
     overflow: hidden;
     background-color: $c_black;
   }
@@ -11,81 +13,67 @@
     @extend %container;
 
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 588px;
+    align-items: center;
+    flex-direction: column;
 
     &__content {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      max-width: 710px;
     }
 
     &__title {
-      max-width: 654px;
-      font-family: $font-primary;
-      font-size: 60px;
-      font-weight: 700;
-      line-height: 72px;
-      letter-spacing: 0;
+      @include h1;
+
       color: $c_white;
+      text-align: center;
     }
 
     &__subtitle {
-      max-width: 598px;
-      margin-top: 16px;
-      font-family: $font-secondary;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 0;
+      @include base-1;
+
+      margin-top: 24px;
       color: $c_slate-gray;
+      text-align: center;
     }
 
     &__background {
       position: relative;
-      flex: 1;
-      width: 662px;
-      height: 100%;
-
-      &__jsgenesis {
-        position: absolute;
-        top: 261px;
-        right: 100px;
-        width: 175px;
-        height: 31px;
-      }
+      width: 1030px;
+      height: 366px;
+      margin-top: 96px;
 
       &__empty-icon1 {
         position: absolute;
-        top: -60px;
-        right: -130px;
-        width: 84px;
-        height: 84px;
+        bottom: 32px;
+        left: 71.5px;
+        width: 48px;
+        height: 48px;
       }
 
       &__empty-icon2 {
         position: absolute;
-        right: 150px;
-        bottom: 53px;
-        width: 115px;
-        height: 115px;
+        bottom: 137px;
+        left: 339px;
+        width: 48px;
+        height: 48px;
       }
 
       &__empty-icon3 {
         position: absolute;
-        right: -30px;
-        bottom: 187px;
-        width: 84px;
-        height: 84px;
+        right: 412px;
+        bottom: 278px;
+        width: 56px;
+        height: 56px;
       }
 
       &__empty-icon4 {
         position: absolute;
-        top: 64px;
-        left: 235px;
-        width: 44px;
-        height: 44px;
+        right: 136.5px;
+        bottom: 222px;
+        width: 88px;
+        height: 88px;
       }
 
       &__empty-icon5 {
@@ -98,42 +86,98 @@
 
       &__employee-icon1 {
         position: absolute;
-        top: 36px;
-        right: 66px;
-        color: #ff3861;
-        transform: scale(1.329);
+        bottom: 142px;
+        left: 85.5px;
+        width: 64px;
+        height: 64px;
       }
 
       &__employee-icon2 {
         position: absolute;
-        top: 245px;
-        left: 90px;
-        color: #ff3861;
-        transform: scale(.83);
+        bottom: 38px;
+        left: 180.5px;
+        width: 120px;
+        height: 120px;
       }
 
       &__employee-icon3 {
         position: absolute;
-        bottom: 70px;
-        left: 50px;
-        color: #f2994a;
-        transform: scale(1.815);
+        bottom: 214px;
+        left: 217.5px;
+        width: 80px;
+        height: 80px;
       }
 
       &__employee-icon4 {
         position: absolute;
-        right: -85px;
-        bottom: 0;
-        color: #00efe1;
-        transform: scale(2.83);
+        top: 0;
+        left: 361.5px;
+        width: 128px;
+        height: 128px;
       }
 
       &__employee-icon5 {
         position: absolute;
-        top: 147px;
-        right: -70px;
-        color: #d09dff;
-        transform: scale(1);
+        bottom: -50px;
+        left: 323.5px;
+        width: 140px;
+        height: 140px;
+      }
+
+      &__employee-icon6 {
+        position: absolute;
+        right: 402.5px;
+        bottom: 55px;
+        width: 174px;
+        height: 174px;
+      }
+
+      &__employee-icon7 {
+        position: absolute;
+        right: 404.5px;
+        bottom: -30px;
+        width: 56px;
+        height: 56px;
+      }
+
+      &__employee-icon8 {
+        position: absolute;
+        right: 236.5px;
+        bottom: -15px;
+        width: 120px;
+        height: 120px;
+      }
+
+      &__employee-icon9 {
+        position: absolute;
+        right: 271.5px;
+        bottom: 162px;
+        width: 96px;
+        height: 96px;
+      }
+
+      &__employee-icon10 {
+        position: absolute;
+        right: 170.5px;
+        bottom: 108px;
+        width: 64px;
+        height: 64px;
+      }
+
+      &__employee-icon11 {
+        position: absolute;
+        right: 125.5px;
+        bottom: 34px;
+        width: 40px;
+        height: 40px;
+      }
+
+      &__employee-icon12 {
+        position: absolute;
+        right: 54.5px;
+        bottom: 143px;
+        width: 56px;
+        height: 56px;
       }
     }
   }
@@ -144,10 +188,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        &__jsgenesis {
-          position: unset;
-        }
 
         &__empty-icon4,
         &__empty-icon2 {
@@ -283,11 +323,6 @@
     &__hero {
       &__background {
         width: 100%;
-
-        &__jsgenesis {
-          width: 139px;
-          height: unset;
-        }
 
         &__empty-icon3 {
           right: 65px;
