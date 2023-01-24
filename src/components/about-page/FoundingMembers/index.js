@@ -1,6 +1,22 @@
 import React from 'react';
 
+import employees from '../employee-data.json';
+import foundingMembers from '../founding-members.json';
+import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
+
 import './style.scss';
+
+const JsgenesisCard = ({ avatarUrl, memberHandle, memberId, type = 'jsgenesis' }) => {
+  const baseClassName = `AboutPage__founding-members__${type}__card`;
+
+  return (
+    <div className={baseClassName}>
+      <img className={`${baseClassName}__icon`} src={avatarUrl} alt="" />
+      <p className={`${baseClassName}__handle`}>{memberHandle}</p>
+      <p className={`${baseClassName}__id`}>#{memberId}</p>
+    </div>
+  );
+};
 
 const FoundingMembers = () => {
   return (
@@ -22,6 +38,34 @@ const FoundingMembers = () => {
             .
           </p>
         </header>
+        <div className="AboutPage__founding-members__jsgenesis">
+          <div className="AboutPage__founding-members__jsgenesis__title-section">
+            <h3 className="AboutPage__founding-members__jsgenesis__title-section__title">Jsgenesis</h3>
+            <div className="AboutPage__founding-members__jsgenesis__title-section__info">
+              Who are Jsgenesis founding members?{' '}
+              <InfoIcon className="AboutPage__founding-members__jsgenesis__title-section__info__icon" />
+            </div>
+          </div>
+          <div className="AboutPage__founding-members__jsgenesis__cards">
+            {employees.map(({ avatarId, memberHandle, memberId }) => (
+              <JsgenesisCard avatarUrl={avatarId} memberHandle={memberHandle} memberId={memberId} />
+            ))}
+          </div>
+        </div>
+        <div className="AboutPage__founding-members__community">
+          <div className="AboutPage__founding-members__community__title-section">
+            <h3 className="AboutPage__founding-members__community__title-section__title">Community</h3>
+            <div className="AboutPage__founding-members__community__title-section__info">
+              Who are community founding members?{' '}
+              <InfoIcon className="AboutPage__founding-members__community__title-section__info__icon" />
+            </div>
+          </div>
+          <div className="AboutPage__founding-members__community__cards">
+            {foundingMembers.map(({ avatarId, memberHandle, memberId }) => (
+              <JsgenesisCard avatarUrl={avatarId} memberHandle={memberHandle} memberId={memberId} type="community" />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
