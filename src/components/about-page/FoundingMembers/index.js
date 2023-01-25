@@ -61,7 +61,7 @@ const FoundingMembers = () => {
             </div>
           </div>
           <div className="AboutPage__founding-members__community__cards">
-            {foundingMembers.map(({ avatarId, memberHandle, memberId }) => (
+            {foundingMembers.slice(0,12).map(({ avatarId, memberHandle, memberId }) => (
               <JsgenesisCard avatarUrl={avatarId} memberHandle={memberHandle} memberId={memberId} type="community" />
             ))}
           </div>
