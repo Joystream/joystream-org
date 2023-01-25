@@ -8,6 +8,7 @@ import Hero from '../../components/about-page/Hero';
 // import List from '../../components/about-page/List';
 import Positions from '../../components/about-page/Positions';
 import FoundingMembers from '../../components/about-page/FoundingMembers';
+import Investors from '../../components/about-page/Investors';
 
 import './style.scss';
 
@@ -30,6 +31,8 @@ const AboutPage = () => {
       {/* <List title={t('about.ourTeam.title')} subtitle={t('about.ourTeam.subtitle')} /> */}
 
       {/* <Positions /> */}
+
+      <Investors />
     </BaseLayout>
   );
 };

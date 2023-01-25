@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ActiveImage from '../../../assets/images/investor-logos/BoostVC/Color.png';
-import InactiveImage from '../../../assets/images/investor-logos/BoostVC/Mono.png';
+import ActiveImage from '../../assets/images/investor-logos/BoostVC/Color.png';
+import InactiveImage from '../../assets/images/investor-logos/BoostVC/Mono.png';
 
 const Active = (props) => (
   <img alt="" {...props} src={ActiveImage} />

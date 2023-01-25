@@ -30,6 +30,7 @@ import LVTCapital from './lvtCapital';
 import BasicsCapital from './basicsCapital';
 import ZBCapital from './zbCapital';
 import CabinVC from './cabinVC';
+// import KirinFund from './kirinFund';
 import StartupLab from './startupLab';
 import Polkadotters from './polkadotters';
 import LionLine from './lionLine';
