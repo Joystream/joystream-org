@@ -37,15 +37,17 @@
       "appsBuiltOnJoystream": {
         "title": "Check out apps built on Joystream",
         "sectionTitle": "FEATURED",
-        "platformName": "Gleev",
-        "platformDescription": "Gleev has its sole focus on the Web3 and Crypto content vertical, bringing together the like-minded creators and viewers around the shared passion of the present and the future of Crypto affairs.",
         "platformsTitle": "PLATFORMS",
-        "platforms": "Web",
         "link": "Visit",
         "info": "We've just launched, so our app collection is yet to grow. Check back soon for more exciting apps built on Joystream.",
+        "gleev": {
+          "name": "Gleev",
+          "description": "Gleev has its sole focus on the Web3 and Crypto content vertical, bringing together the like-minded creators and viewers around the shared passion of the present and the future of Crypto affairs.",
+          "platforms": "Web"
+        },
         "l1Media": {
           "name": "l1.media",
-          "description": "Education, news, entertainment from around the world.",
+          "description": "For education, news, science, entertainment beyond borders. First community-run gateway by founding members implementing new features and funding models empowering creators.",
           "platforms": "Web"
         }
       }
