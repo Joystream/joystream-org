@@ -117,18 +117,18 @@ const Ecosystem = ({ t }) => {
           </h3>
           <FeaturedPlatform
             image={GleevLogo}
-            platformName={t('landing.ecosystem.appsBuiltOnJoystream.platformName')}
-            platformDescription={t('landing.ecosystem.appsBuiltOnJoystream.platformDescription')}
-            platforms={t('landing.ecosystem.appsBuiltOnJoystream.platforms')}
+            platformName={t('landing.ecosystem.appsBuiltOnJoystream.gleev.name')}
+            platformDescription={t('landing.ecosystem.appsBuiltOnJoystream.gleev.description')}
+            platforms={t('landing.ecosystem.appsBuiltOnJoystream.gleev.platforms')}
             link="https://gleev.xyz"
             illustration={GleevIllustration}
             t={t}
           />
           <FeaturedPlatform
             image={L1MediaLogo}
-            platformName="l1.media"
-            platformDescription="For education, news, science, entertainment beyond borders. First community-run gateway by founding members implementing new features and funding models empowering creators."
-            platforms={t('landing.ecosystem.appsBuiltOnJoystream.platforms')}
+            platformName={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
+            platformDescription={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.description')}
+            platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
             link="https://l1.media/"
             illustration={L1MediaIllustration}
             t={t}
