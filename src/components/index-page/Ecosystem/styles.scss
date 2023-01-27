@@ -1,6 +1,23 @@
 @import '../../../styles/_main.scss';
 @import '../../../pages/style.scss';
 
+@mixin logo-wrapper($height, $width) {
+  position: relative;
+  width: $height;
+  height: $width;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    content: '';
+    box-shadow: inset 0 0 0 1px rgba(163, 195, 242, .19);
+  }
+}
+
 .IndexPage {
   &__ecosystem-wrapper {
     padding: 64px 0 96px;
@@ -132,20 +149,7 @@
           max-width: 330px;
 
           &__logo-wrapper {
-            position: relative;
-            width: 72px;
-            height: 72px;
-
-            &::before {
-              position: absolute;
-              top: 0;
-              display: block;
-              width: 100%;
-              height: 100%;
-              border-radius: 12px;
-              content: '';
-              box-shadow: inset 0 0 0 1px rgba(163, 195, 242, .19);
-            }
+            @include logo-wrapper(72px, 72px);
           }
 
           &__logo {
@@ -246,20 +250,7 @@
           }
 
           &__logo-wrapper {
-            position: relative;
-            width: 64px;
-            height: 64px;
-
-            &::before {
-              position: absolute;
-              top: 0;
-              display: block;
-              width: 100%;
-              height: 100%;
-              border-radius: 12px;
-              content: '';
-              box-shadow: inset 0 0 0 1px rgba(163, 195, 242, .19);
-            }
+            @include logo-wrapper(64px, 64px);
           }
 
           &__logo {
