@@ -2,16 +2,19 @@ import React from 'react';
 import { Trans } from 'react-i18next';
 import cn from 'classnames';
 
-import GleevLogo from '../../../assets/images/landing/gleev-logo.webp';
+import GleevLogo from '../../../assets/images/landing/ecosystem-app-icons/gleev.webp';
 import GleevIllustration from '../../../assets/images/landing/gleev-illustration.webp';
 import Browser1 from '../../../assets/images/landing/hero/browser-1.webp';
 import Browser2 from '../../../assets/images/landing/hero/browser-2.webp';
 import Browser3 from '../../../assets/images/landing/hero/browser-3.webp';
 import VideoPlayer from '../../../assets/images/landing/hero/illustration-ecosystem-l1.webp';
+import L1MediaLogo from '../../../assets/images/landing/ecosystem-app-icons/l1-media.webp';
+import L1MediaIllustration from '../../../assets/images/landing/l1-media-illustration.webp';
 
 import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import { ReactComponent as CodeWindowControls } from '../../../assets/svg/landing/code-window-controls.svg';
+import { ReactComponent as CarouselItemPlaceholder } from '../../../assets/svg/landing/carousel-item-placeholder.svg';
 
 import './styles.scss';
 
@@ -27,6 +30,63 @@ const DevelopmentStep = ({ stepNumber, sectionTitle, title, subtitle }) => (
 const BrowserImage = ({ className, variant, imageSrc }) => {
   return <img className={`${className} ${className}--${variant}`} src={imageSrc} alt="" />;
 };
+
+const CarouselItem = ({ logo, name, description, platforms, link, t }) => (
+  <a href={link} target="_blank">
+    <div className="IndexPage__ecosystem__apps__carousel__item">
+      <div className="IndexPage__ecosystem__apps__carousel__item__logo-wrapper">
+        <img className="IndexPage__ecosystem__apps__carousel__item__logo" src={logo} alt="" />
+      </div>
+      <p className="IndexPage__ecosystem__apps__carousel__item__title">{name}</p>
+      <p className="IndexPage__ecosystem__apps__carousel__item__content">{description}</p>
+      <p className="IndexPage__ecosystem__apps__carousel__item__platforms-title">
+        {t('landing.ecosystem.appsBuiltOnJoystream.platformsTitle')}
+      </p>
+      <p className="IndexPage__ecosystem__apps__carousel__item__platforms">{platforms}</p>
+    </div>
+  </a>
+);
+
+const CarouselPlaceholder = () => (
+  <div className="IndexPage__ecosystem__apps__carousel__item IndexPage__ecosystem__apps__carousel__item--placeholder">
+    <CarouselItemPlaceholder />
+  </div>
+);
+
+const FeaturedPlatform = ({ image, platformName, platformDescription, platforms, link, illustration, t }) => (
+  <div className="IndexPage__ecosystem__apps__main">
+    <div className="IndexPage__ecosystem__apps__main__about">
+      <div className="IndexPage__ecosystem__apps__main__about__logo-wrapper">
+        <img
+          className="IndexPage__ecosystem__apps__main__about__logo"
+          src={image}
+          alt={`${platformName} platform logo`}
+        />
+      </div>
+      <div className="IndexPage__ecosystem__apps__main__about__section-title">
+        {t('landing.ecosystem.appsBuiltOnJoystream.sectionTitle')}
+      </div>
+      <h4 className="IndexPage__ecosystem__apps__main__about__platform-name">{platformName}</h4>
+      <p className="IndexPage__ecosystem__apps__main__about__platform-description">{platformDescription}</p>
+      <p className="IndexPage__ecosystem__apps__main__about__platforms-title">
+        {t('landing.ecosystem.appsBuiltOnJoystream.platformsTitle')}
+      </p>
+      <p className="IndexPage__ecosystem__apps__main__about__platforms">{platforms}</p>
+      <a className="IndexPage__ecosystem__apps__main__about__link" href={link} target="_blank">
+        {t('landing.ecosystem.appsBuiltOnJoystream.link')}{' '}
+        <ArrowIcon className="IndexPage__ecosystem__apps__main__about__link__icon" />
+      </a>
+    </div>
+    <div className="IndexPage__ecosystem__apps__main__visual">
+      <img
+        className="IndexPage__ecosystem__apps__main__visual__image"
+        src={illustration}
+        alt={`illustration of the ${platformName} platform homepage`}
+      />
+      <div className="IndexPage__ecosystem__apps__main__visual__bottom-gradient"></div>
+    </div>
+  </div>
+);
 
 const Ecosystem = ({ t }) => {
   return (
@@ -52,44 +112,40 @@ const Ecosystem = ({ t }) => {
         <div className="IndexPage__ecosystem__apps" id="apps-built-on-joystream">
           <h3 className="IndexPage__ecosystem__apps__title">
             {t('landing.ecosystem.appsBuiltOnJoystream.title')}{' '}
-            <div className="IndexPage__ecosystem__apps__title__app-count">1</div>
+            {/* TODO: This will need to be made dynamic alogn with the rest of the content in the carousel. */}
+            <div className="IndexPage__ecosystem__apps__title__app-count">2</div>
           </h3>
-          <div className="IndexPage__ecosystem__apps__main">
-            <div className="IndexPage__ecosystem__apps__main__about">
-              <img
-                className="IndexPage__ecosystem__apps__main__about__gleev-logo"
-                src={GleevLogo}
-                alt="gleev platform logo"
-              />
-              <div className="IndexPage__ecosystem__apps__main__about__section-title">
-                {t('landing.ecosystem.appsBuiltOnJoystream.sectionTitle')}
-              </div>
-              <h4 className="IndexPage__ecosystem__apps__main__about__platform-name">
-                {t('landing.ecosystem.appsBuiltOnJoystream.platformName')}
-              </h4>
-              <p className="IndexPage__ecosystem__apps__main__about__platform-description">
-                {t('landing.ecosystem.appsBuiltOnJoystream.platformDescription')}
-              </p>
-              <p className="IndexPage__ecosystem__apps__main__about__platforms-title">
-                {t('landing.ecosystem.appsBuiltOnJoystream.platformsTitle')}
-              </p>
-              <p className="IndexPage__ecosystem__apps__main__about__platforms">
-                {t('landing.ecosystem.appsBuiltOnJoystream.platforms')}
-              </p>
-              <a className="IndexPage__ecosystem__apps__main__about__link" href="https://gleev.xyz" target="_blank">
-                {t('landing.ecosystem.appsBuiltOnJoystream.link')}{' '}
-                <ArrowIcon className="IndexPage__ecosystem__apps__main__about__link__icon" />
-              </a>
-            </div>
-            <div className="IndexPage__ecosystem__apps__main__visual">
-              <img
-                className="IndexPage__ecosystem__apps__main__visual__image"
-                src={GleevIllustration}
-                alt="illustration of the gleev platform homepage"
-              />
-              <div className="IndexPage__ecosystem__apps__main__visual__bottom-gradient"></div>
-            </div>
-          </div>
+          <FeaturedPlatform
+            image={GleevLogo}
+            platformName={t('landing.ecosystem.appsBuiltOnJoystream.gleev.name')}
+            platformDescription={t('landing.ecosystem.appsBuiltOnJoystream.gleev.description')}
+            platforms={t('landing.ecosystem.appsBuiltOnJoystream.gleev.platforms')}
+            link="https://gleev.xyz"
+            illustration={GleevIllustration}
+            t={t}
+          />
+          <FeaturedPlatform
+            image={L1MediaLogo}
+            platformName={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
+            platformDescription={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.description')}
+            platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
+            link="https://l1.media/"
+            illustration={L1MediaIllustration}
+            t={t}
+          />
+          {/* <div className="IndexPage__ecosystem__apps__carousel">
+            <CarouselItem
+              logo={L1MediaLogo}
+              name={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
+              description={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.description')}
+              platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
+              link="https://l1.media/"
+              t={t}
+            />
+            <CarouselPlaceholder />
+            <CarouselPlaceholder />
+            <CarouselPlaceholder />
+          </div> */}
           <div className="IndexPage__ecosystem__apps__info">
             <InfoIcon className="IndexPage__ecosystem__apps__info__icon" />
             <p className="IndexPage__ecosystem__apps__info__text">{t('landing.ecosystem.appsBuiltOnJoystream.info')}</p>
