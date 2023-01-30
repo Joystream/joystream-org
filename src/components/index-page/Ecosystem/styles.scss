@@ -1,6 +1,23 @@
 @import '../../../styles/_main.scss';
 @import '../../../pages/style.scss';
 
+@mixin logo-wrapper($height, $width) {
+  position: relative;
+  width: $height;
+  height: $width;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    content: '';
+    box-shadow: inset 0 0 0 1px rgba(163, 195, 242, .19);
+  }
+}
+
 .IndexPage {
   &__ecosystem-wrapper {
     padding: 64px 0 96px;
@@ -131,8 +148,13 @@
         &__about {
           max-width: 330px;
 
-          &__gleev-logo {
-            width: 72px;
+          &__logo-wrapper {
+            @include logo-wrapper(72px, 72px);
+          }
+
+          &__logo {
+            width: 100%;
+            height: 100%;
           }
 
           &__section-title {
@@ -196,8 +218,72 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+            height: 100%;
             height: 136px;
             background: linear-gradient(180deg, rgba(17, 19, 22, 0) 0%, #111316 100%);
+          }
+        }
+      }
+
+      &__carousel {
+        display: grid;
+        justify-content: space-between;
+        margin-top: 24px;
+        gap: 12px;
+        grid-template-columns: repeat(4, minmax(230px, 288px));
+
+        &__item {
+          display: inline-block;
+          height: 288px;
+          max-width: 288px;
+          padding: 24px;
+          background-color: #111316;
+
+          &:hover {
+            background-color: #1f252e;
+          }
+
+          &--placeholder {
+            &:hover {
+              background-color: #111316;
+            }
+          }
+
+          &__logo-wrapper {
+            @include logo-wrapper(64px, 64px);
+          }
+
+          &__logo {
+            width: 100%;
+            height: 100%;
+          }
+
+          &__title {
+            @include h7;
+
+            margin-top: 40px;
+            color: $c_white;
+          }
+
+          &__content {
+            @include base-4;
+
+            margin-top: 8px;
+            color: #a7aeb7;
+          }
+
+          &__platforms-title {
+            @include section-title-md;
+
+            margin-top: 16px;
+            color: #dee3e9;
+          }
+
+          &__platforms {
+            @include base-4;
+
+            margin-top: 8px;
+            color: #a7aeb7;
           }
         }
       }
@@ -453,6 +539,17 @@
             }
           }
         }
+
+        &__carousel {
+          width: 935px;
+          max-width: 935px;
+          margin: 24px auto 0;
+          grid-template-columns: repeat(3, minmax(230px, 288px));
+
+          & > :nth-child(3) {
+            display: none;
+          }
+        }
       }
 
       &__developers {
@@ -513,8 +610,9 @@
           &__about {
             max-width: 260px;
 
-            &__gleev-logo {
+            &__logo-wrapper {
               width: 64px;
+              height: 64px;
             }
 
             &__section-title {
@@ -541,6 +639,17 @@
               width: 590px;
               height: 401px;
               min-width: 590px;
+            }
+          }
+        }
+
+        &__carousel {
+          display: flex;
+          max-width: 730px;
+
+          &__item {
+            &--placeholder {
+              display: none;
             }
           }
         }
@@ -644,6 +753,10 @@
               height: 88px;
             }
           }
+        }
+
+        &__carousel {
+          max-width: 526px;
         }
       }
 
