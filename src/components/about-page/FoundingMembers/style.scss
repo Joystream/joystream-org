@@ -55,12 +55,42 @@
         &__info {
           @include base-5;
 
+          position: relative;
           display: flex;
           align-items: center;
 
           &__icon {
             margin-left: 6px;
             fill: #1f252e;
+          }
+
+          &__modal {
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            width: 240px;
+            height: auto;
+            padding: 12px 12px 18px 12px;
+            color: $c_white;
+            background-color: #1f252e;
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility .3s linear, opacity .3s linear;
+            transition-delay: .1s;
+            clip-path:
+              polygon(
+                0% 0%,
+                100% 0%,
+                100% calc(100% - 6px),
+                100% 100%,
+                calc(100% - 8px) calc(100% - 6px),
+                0% calc(100% - 6px)
+              );
+          }
+
+          &:hover &__modal {
+            opacity: 1;
+            visibility: visible;
           }
         }
       }

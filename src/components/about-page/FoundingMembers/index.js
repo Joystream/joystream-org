@@ -44,6 +44,12 @@ const FoundingMembers = () => {
             <div className="AboutPage__founding-members__jsgenesis__title-section__info">
               Who are Jsgenesis founding members?{' '}
               <InfoIcon className="AboutPage__founding-members__jsgenesis__title-section__info__icon" />
+              <div className="AboutPage__founding-members__jsgenesis__title-section__info__modal">
+                Jsgenesis is the founding team and platform development partner set up as a structure to help develop
+                and set up the autonomous operation of Joystream DAO. Its focus has been on developing the apps and
+                processes to build and train the team of founding members and support the community on the path to
+                autonomy and self-organization.
+              </div>
             </div>
           </div>
           <div className="AboutPage__founding-members__jsgenesis__cards">
@@ -58,11 +64,22 @@ const FoundingMembers = () => {
             <div className="AboutPage__founding-members__community__title-section__info">
               Who are community founding members?{' '}
               <InfoIcon className="AboutPage__founding-members__community__title-section__info__icon" />
+              <div className="AboutPage__founding-members__jsgenesis__title-section__info__modal">
+                Joystream is built by a strongly committed community of highly skilled founding members, responsible for
+                technical infrastructure maintenance, DAO operations management and all aspects contributing to the
+                growth of the Joystream platform.
+              </div>
             </div>
           </div>
           <div className="AboutPage__founding-members__community__cards">
-            {foundingMembers.slice(0,12).map(({ avatarId, memberHandle, memberId }) => (
-              <FMCard key={memberHandle} avatarUrl={avatarId} memberHandle={memberHandle} memberId={memberId} type="community" />
+            {foundingMembers.slice(0, 12).map(({ avatarId, memberHandle, memberId }) => (
+              <FMCard
+                key={memberHandle}
+                avatarUrl={avatarId}
+                memberHandle={memberHandle}
+                memberId={memberId}
+                type="community"
+              />
             ))}
           </div>
         </div>
