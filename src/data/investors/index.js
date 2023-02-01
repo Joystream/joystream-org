@@ -55,8 +55,8 @@ const companyIcons = [
   { Icon: GateIOLabs, key: 'GateIOLabs' },
   { Icon: GSR, key: 'GSR' },
   { Icon: M6, key: 'M6' },
-  { Icon: MasterVentures, key: 'MasterVentures' },
   { Icon: VestigiumCapital, key: 'VestigiumCapital' },
+  { Icon: MasterVentures, key: 'MasterVentures' },
   { Icon: KernelVentures, key: 'KernelVentures' },
   { Icon: IllusionistGroup, key: 'IllusionistGroup' },
   { Icon: LotusCapital, key: 'LotusCapital' },
@@ -71,11 +71,11 @@ const companyIcons = [
   { Icon: BasicsCapital, key: 'BasicsCapital' },
   { Icon: ZBCapital, key: 'ZBCapital' },
   { Icon: CabinVC, key: 'CabinVC' },
+  { Icon: KirinFund, key: 'KirinFund' },
   { Icon: StartupLab, key: 'StartupLab' },
   { Icon: Polkadotters, key: 'Polkadotters' },
   { Icon: LionLine, key: 'LionLine' },
   { Icon: FMFW, key: 'FMFW' },
-  { Icon: KirinFund, key: 'KirinFund' },
 ];
 
 export default companyIcons;

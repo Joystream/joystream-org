@@ -36,12 +36,12 @@
     }
 
     &__list {
-      display: grid;
-      justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       width: 100%;
       margin-top: 80px;
       gap: 48px;
-      grid-template-columns: repeat(5, 182px);
     }
 
     &__list-item {
@@ -65,6 +65,38 @@
         .AboutPage__investors__list-item__icon--inactive {
           display: none !important;
         }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__investors-wrapper {
+      padding-top: 80px;
+    }
+
+    &__investors {
+      &__header {
+        &__title {
+          @include h4;
+        }
+      }
+
+      &__list {
+        margin-top: 64px;
+        gap: 16px;
+      }
+
+      &__list-item {
+        width: 160px;
+        height: 70px;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__investors {
+      &__header {
+        max-width: 315px;
       }
     }
   }
