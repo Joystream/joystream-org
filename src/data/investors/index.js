@@ -30,7 +30,7 @@ import LVTCapital from './lvtCapital';
 import BasicsCapital from './basicsCapital';
 import ZBCapital from './zbCapital';
 import CabinVC from './cabinVC';
-// import KirinFund from './kirinFund';
+import KirinFund from './kirinFund';
 import StartupLab from './startupLab';
 import Polkadotters from './polkadotters';
 import LionLine from './lionLine';
@@ -75,6 +75,7 @@ const companyIcons = [
   { Icon: Polkadotters, key: 'Polkadotters' },
   { Icon: LionLine, key: 'LionLine' },
   { Icon: FMFW, key: 'FMFW' },
+  { Icon: KirinFund, key: 'KirinFund' },
 ];
 
 export default companyIcons;

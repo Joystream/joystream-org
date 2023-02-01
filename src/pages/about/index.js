@@ -9,6 +9,7 @@ import Hero from '../../components/about-page/Hero';
 import Positions from '../../components/about-page/Positions';
 import FoundingMembers from '../../components/about-page/FoundingMembers';
 import Investors from '../../components/about-page/Investors';
+import Auditors from '../../components/about-page/Auditors';
 
 import './style.scss';
 
@@ -33,6 +34,8 @@ const AboutPage = () => {
       {/* <Positions /> */}
 
       <Investors />
+
+      <Auditors />
     </BaseLayout>
   );
 };

@@ -1,0 +1,128 @@
+@import '../../../styles/_main.scss';
+@import '../../../pages/style.scss';
+
+.AboutPage {
+  &__auditors-wrapper {
+    padding: 96px 0;
+    background-color: $c_black;
+  }
+
+  &__auditors {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      max-width: 700px;
+
+      &__section-title {
+        @include section-title;
+
+        color: #6c6cff;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: $c_white;
+        text-align: center;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      margin-top: 80px;
+      gap: 68px;
+    }
+
+    &__list-item {
+      display: flex;
+      flex-direction: column;
+
+      &__image-wrapper {
+        display: grid;
+        width: 273px;
+        height: 120px;
+        place-items: center;
+      }
+
+      &__image {
+        &--srl {
+          width: 188.24px;
+          height: 69.88px;
+        }
+
+        &--quarks {
+          width: 225px;
+          height: 50.95px;
+        }
+
+        &--color {
+          display: none;
+        }
+
+        &--mono {
+          display: block;
+        }
+      }
+
+      &:hover &__image--color {
+        display: block;
+      }
+
+      &:hover &__image--mono {
+        display: none;
+      }
+
+      &__link {
+        @include base-4;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #a7aeb7;
+
+        &__icon {
+          width: 15px;
+          height: 15px;
+          margin-left: 8px;
+        }
+      }
+
+      &:hover &__link {
+        color: $c_white;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__auditors-wrapper {
+      padding: 64px 0 80px 0;
+    }
+
+    &__auditors {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__auditors {
+      &__header {
+        max-width: 550px;
+      }
+
+      &__list {
+        flex-direction: column;
+        margin-top: 64px;
+        gap: 32px;
+      }
+    }
+  }
+}
