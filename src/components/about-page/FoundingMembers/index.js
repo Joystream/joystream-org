@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import employees from '../employee-data.json';
 import foundingMembers from '../founding-members.json';
@@ -7,7 +7,29 @@ import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg
 import './style.scss';
 
 const FMCard = ({ avatarUrl, memberHandle, memberId, type = 'jsgenesis' }) => {
+  const [showPlaceholder, setShowPlaceholder] = useState(true);
   const baseClassName = `AboutPage__founding-members__${type}__card`;
+
+  // Start loading the image when the component is rendered and only remove the
+  // placeholder icon, handle and id once the image has fully finished loading.
+  useEffect(() => {
+    const img = new Image();
+    img.src = avatarUrl;
+
+    img.onload = () => {
+      setShowPlaceholder(false);
+    };
+  });
+
+  if (showPlaceholder) {
+    return (
+      <div className={`${baseClassName} ${baseClassName}--loading`}>
+        <div className={`${baseClassName}__icon ${baseClassName}__icon--loading`} />
+        <div className={`${baseClassName}__handle ${baseClassName}__handle--loading`}></div>
+        <div className={`${baseClassName}__id ${baseClassName}__id--loading`}></div>
+      </div>
+    );
+  }
 
   return (
     <div className={baseClassName}>

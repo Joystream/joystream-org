@@ -115,12 +115,23 @@
         &__icon {
           width: 80px;
           height: 80px;
+          border-radius: 50%;
+
+          &--loading {
+            background-color: #dee3e9;
+          }
         }
 
         &__handle {
           @include h7;
 
           margin-top: 16px;
+
+          &--loading {
+            width: 108px;
+            height: 28px;
+            background-color: #dee3e9;
+          }
         }
 
         &__id {
@@ -128,6 +139,12 @@
 
           margin-top: 4px;
           color: #5c6475;
+
+          &--loading {
+            width: 52px;
+            height: 20px;
+            background-color: #dee3e9;
+          }
         }
       }
     }
@@ -151,12 +168,23 @@
         &__icon {
           width: 64px;
           height: 64px;
+          border-radius: 50%;
+
+          &--loading {
+            background-color: #dee3e9;
+          }
         }
 
         &__handle {
           @include h8;
 
           margin-top: 16px;
+
+          &--loading {
+            width: 107px;
+            height: 24px;
+            background-color: #dee3e9;
+          }
         }
 
         &__id {
@@ -164,6 +192,12 @@
 
           margin-top: 4px;
           color: #5c6475;
+
+          &--loading {
+            width: 52px;
+            height: 20px;
+            background-color: #dee3e9;
+          }
         }
       }
     }
