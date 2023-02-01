@@ -182,174 +182,167 @@
     }
   }
 
-  @media #{$screen-max-lg} {
-    &__hero {
-      &__background {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &__empty-icon4,
-        &__empty-icon2 {
-          display: none;
-        }
-
-        &__empty-icon5 {
-          top: 80px;
-          left: 50px;
-        }
-
-        &__employee-icon1 {
-          right: 100px;
-        }
-
-        &__employee-icon2 {
-          top: 150px;
-          left: -50px;
-        }
-      }
+  @media #{$screen-max-sm} {
+    &__hero-wrapper {
+      padding-top: 80px;
     }
-  }
 
-  @media #{$screen-max-md} {
     &__hero {
-      flex-direction: column;
+      padding: 0 20px;
 
       &__content {
-        align-items: center;
+        max-width: 550px;
       }
 
       &__title {
-        font-size: 60px;
+        @include h3;
       }
 
       &__subtitle {
-        max-width: 654px;
+        @include base-3;
+
+        margin-top: 16px;
       }
 
       &__background {
-        width: 600px;
-        margin: 0 auto;
+        width: 515px;
+        height: 183px;
+        margin-top: 64px;
 
         &__empty-icon1 {
-          top: 20px;
-          right: unset;
-          left: 120px;
-          width: 39px;
-          height: 39px;
+          position: absolute;
+          bottom: 16px;
+          left: 35.75px;
+          width: 24px;
+          height: 24px;
+        }
+
+        &__empty-icon2 {
+          position: absolute;
+          bottom: 68.5px;
+          left: 169.5px;
+          width: 24px;
+          height: 24px;
         }
 
         &__empty-icon3 {
-          right: 135px;
-          bottom: 75px;
-          width: 37px;
-          height: 37px;
+          position: absolute;
+          right: 206px;
+          bottom: 139px;
+          width: 28px;
+          height: 28px;
         }
 
         &__empty-icon4 {
-          top: unset;
-          bottom: 30px;
-          left: 150px;
-          display: block;
-          width: 62px;
-          height: 62px;
+          position: absolute;
+          right: 68.25px;
+          bottom: 111px;
+          width: 44px;
+          height: 44px;
         }
 
         &__empty-icon5 {
-          top: 60px;
-          left: -15px;
-          width: 55px;
-          height: 55px;
+          position: absolute;
+          top: 70px;
+          left: 55px;
+          width: 12.5px;
+          height: 12.5px;
         }
 
         &__employee-icon1 {
-          top: 0;
-          right: 0;
-          transform: scale(.92);
+          position: absolute;
+          bottom: 71px;
+          left: 42.75px;
+          width: 32px;
+          height: 32px;
         }
 
         &__employee-icon2 {
-          left: -20px;
-          transform: scale(.52);
+          position: absolute;
+          bottom: 19px;
+          left: 90.25px;
+          width: 60px;
+          height: 60px;
         }
 
         &__employee-icon3 {
-          bottom: 0;
-          left: -20px;
-          transform: scale(1.27);
+          position: absolute;
+          bottom: 107px;
+          left: 108.75px;
+          width: 40px;
+          height: 40px;
         }
 
         &__employee-icon4 {
-          right: 0;
-          bottom: -20px;
-          transform: scale(1.98);
+          position: absolute;
+          top: 0;
+          left: 180.75px;
+          width: 64px;
+          height: 64px;
         }
 
         &__employee-icon5 {
-          top: 100px;
-          right: -20px;
-          transform: scale(.69);
-        }
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__hero {
-      height: 550px;
-      padding: 32px 20px 0 20px;
-
-      &__background {
-        width: 500px;
-      }
-
-      &__title {
-        max-width: 500px;
-        font-size: 32px;
-        line-height: 40px;
-
-        br {
-          display: none;
-        }
-      }
-
-      &__subtitle {
-        max-width: 500px;
-      }
-    }
-  }
-
-  @media (max-width: 500px) {
-    &__hero {
-      &__background {
-        width: 100%;
-
-        &__empty-icon3 {
-          right: 65px;
-          bottom: 50px;
+          position: absolute;
+          bottom: -25px;
+          left: 161.75px;
+          width: 70px;
+          height: 70px;
         }
 
-        &__empty-icon4 {
+        &__employee-icon6 {
+          position: absolute;
+          right: 201.25px;
+          bottom: 27.5px;
+          width: 87px;
+          height: 87px;
+        }
+
+        &__employee-icon7 {
+          position: absolute;
+          right: 202.25px;
           bottom: -15px;
-          left: 80px;
+          width: 28px;
+          height: 28px;
         }
 
-        &__employee-icon1 {
-          top: 10px;
+        &__employee-icon8 {
+          position: absolute;
+          right: 118.25px;
+          bottom: -7.5px;
+          width: 60px;
+          height: 60px;
         }
 
-        &__employee-icon3 {
-          bottom: -40px;
-          left: -50px;
+        &__employee-icon9 {
+          position: absolute;
+          right: 135.75px;
+          bottom: 81px;
+          width: 48px;
+          height: 48px;
         }
 
-        &__employee-icon4 {
-          right: -50px;
-          bottom: -60px;
+        &__employee-icon10 {
+          position: absolute;
+          right: 85.25px;
+          bottom: 54px;
+          width: 32px;
+          height: 32px;
         }
 
-        &__employee-icon5 {
-          right: -40px;
+        &__employee-icon11 {
+          position: absolute;
+          right: 62.75px;
+          bottom: 17px;
+          width: 20px;
+          height: 20px;
+        }
+
+        &__employee-icon12 {
+          position: absolute;
+          right: 27.25px;
+          bottom: 71.5px;
+          width: 28px;
+          height: 28px;
         }
       }
     }

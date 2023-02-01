@@ -6,7 +6,7 @@ import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg
 
 import './style.scss';
 
-const JsgenesisCard = ({ avatarUrl, memberHandle, memberId, type = 'jsgenesis' }) => {
+const FMCard = ({ avatarUrl, memberHandle, memberId, type = 'jsgenesis' }) => {
   const baseClassName = `AboutPage__founding-members__${type}__card`;
 
   return (
@@ -48,7 +48,7 @@ const FoundingMembers = () => {
           </div>
           <div className="AboutPage__founding-members__jsgenesis__cards">
             {employees.map(({ avatarId, memberHandle, memberId }) => (
-              <JsgenesisCard avatarUrl={avatarId} memberHandle={memberHandle} memberId={memberId} />
+              <FMCard key={memberHandle} avatarUrl={avatarId} memberHandle={memberHandle} memberId={memberId} />
             ))}
           </div>
         </div>
@@ -62,7 +62,7 @@ const FoundingMembers = () => {
           </div>
           <div className="AboutPage__founding-members__community__cards">
             {foundingMembers.slice(0,12).map(({ avatarId, memberHandle, memberId }) => (
-              <JsgenesisCard avatarUrl={avatarId} memberHandle={memberHandle} memberId={memberId} type="community" />
+              <FMCard key={memberHandle} avatarUrl={avatarId} memberHandle={memberHandle} memberId={memberId} type="community" />
             ))}
           </div>
         </div>
