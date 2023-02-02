@@ -42,6 +42,10 @@
 
     &__jsgenesis,
     &__community {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
       &__title-section {
         display: flex;
         align-items: center;
@@ -94,6 +98,14 @@
           }
         }
       }
+
+      &__show-all {
+        @include h7;
+
+        margin: 32px;
+        color: $c_blue-ribbon;
+        cursor: pointer;
+      }
     }
 
     &__jsgenesis {
@@ -111,6 +123,10 @@
         height: 196px;
         padding: 24px;
         background-color: $c_white;
+
+        &--no-display {
+          display: none;
+        }
 
         &__icon {
           width: 80px;
