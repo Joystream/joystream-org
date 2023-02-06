@@ -31,6 +31,7 @@ const FMCard = ({
 }) => {
   const [showPlaceholder, setShowPlaceholder] = useState(true);
   const baseClassName = `AboutPage__founding-members__${type}__card`;
+  const placeholderClass = `AboutPage__founding-members__${type}__placeholder`
 
   // Start loading the image when the component is rendered and only remove the
   // placeholder icon, handle and id once the image has fully finished loading.
@@ -50,7 +51,7 @@ const FMCard = ({
 
   if (onlyRenderPlaceholder || showPlaceholder) {
     return (
-      <div className={`${baseClassName} ${baseClassName}--loading`}>
+      <div className={`${baseClassName} ${onlyRenderPlaceholder ? placeholderClass : ""} ${baseClassName}--loading`}>
         <div className={`${baseClassName}__icon ${baseClassName}__icon--loading`} />
         <div className={`${baseClassName}__handle ${baseClassName}__handle--loading`}></div>
         <div className={`${baseClassName}__id ${baseClassName}__id--loading`}></div>
