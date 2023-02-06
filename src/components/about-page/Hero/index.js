@@ -12,8 +12,6 @@ import './style.scss';
 const NUMBER_OF_EMPTY_ICONS = 4;
 const NUMBER_OF_COLORED_ICONS = 12;
 
-// TODO: Make sure to delete the icons folder if it is decided that we don't need them anymore!
-
 const IconBackground = () => {
   const [employeesToShow, setEmployeesToShow] = useState([]);
 

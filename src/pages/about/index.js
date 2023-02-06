@@ -5,8 +5,6 @@ import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../../components/_layouts/Base';
 import SiteMetadata from '../../components/SiteMetadata';
 import Hero from '../../components/about-page/Hero';
-// import List from '../../components/about-page/List';
-import Positions from '../../components/about-page/Positions';
 import FoundingMembers from '../../components/about-page/FoundingMembers';
 import Investors from '../../components/about-page/Investors';
 import Auditors from '../../components/about-page/Auditors';
@@ -28,10 +26,6 @@ const AboutPage = () => {
       <Hero title={<Trans i18nKey="about.hero.title" components={[<br />]} />} subtitle={t('about.hero.subtitle')} />
 
       <FoundingMembers />
-
-      {/* <List title={t('about.ourTeam.title')} subtitle={t('about.ourTeam.subtitle')} /> */}
-
-      {/* <Positions /> */}
 
       <Investors />
 
