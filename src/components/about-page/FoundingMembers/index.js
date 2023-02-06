@@ -184,6 +184,7 @@ const FoundingMembers = () => {
                   memberId={memberId}
                   updatePreloadedImageCounter={() => setNumberOfPreloadedCommunityMemberImages(prev => prev + 1)}
                   shouldRenderOtherMembers={shouldRenderOtherCommunityMembers}
+                  type="community"
                 />
               ))}
           </div>

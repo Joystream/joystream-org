@@ -147,7 +147,12 @@
         &__handle {
           @include h7;
 
+          width: 229.5px;
           margin-top: 16px;
+          overflow: hidden;
+          text-align: center;
+          text-overflow: ellipsis;
+          white-space: nowrap;
 
           &--loading {
             width: 108px;
@@ -200,7 +205,12 @@
         &__handle {
           @include h8;
 
+          width: 127px;
           margin-top: 16px;
+          overflow: hidden;
+          text-align: center;
+          text-overflow: ellipsis;
+          white-space: nowrap;
 
           &--loading {
             width: 107px;
@@ -348,6 +358,12 @@
           max-width: 335px;
           gap: 16px;
           grid-template-columns: repeat(2, 159.5px);
+        }
+
+        &__card {
+          &__handle {
+            width: 111.5px;
+          }
         }
       }
 
