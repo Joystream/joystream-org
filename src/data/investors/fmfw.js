@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ActiveImage from '../../assets/images/investor-logos/FMFW.io/Color.png';
-import InactiveImage from '../../assets/images/investor-logos/FMFW.io/Mono.png';
+import ActiveImage from '../../assets/images/investor-logos/FMFW.io/Color.webp';
+import InactiveImage from '../../assets/images/investor-logos/FMFW.io/Mono.webp';
 
 const Active = (props) => (
   <img alt="" {...props} src={ActiveImage} />

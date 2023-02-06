@@ -2,11 +2,10 @@ import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as LinkIcon } from '../../../assets/svg/link.svg';
-import QuarksLabColor from '../../../assets/images/auditor-logos/quarksLab/Color.png';
-// TODO: Update to Mono when the logo is done!
-import QuarksLabMono from '../../../assets/images/auditor-logos/quarksLab/Mono.png';
-import SRLColor from '../../../assets/images/auditor-logos/SRL/Color.png';
-import SRLMono from '../../../assets/images/auditor-logos/SRL/Mono.png';
+import QuarksLabColor from '../../../assets/images/auditor-logos/quarksLab/Color.webp';
+import QuarksLabMono from '../../../assets/images/auditor-logos/quarksLab/Mono.webp';
+import SRLColor from '../../../assets/images/auditor-logos/SRL/Color.webp';
+import SRLMono from '../../../assets/images/auditor-logos/SRL/Mono.webp';
 
 import './style.scss';
 
