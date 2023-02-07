@@ -7,6 +7,32 @@
     "hero": {
       "title": "We built Joystream",
       "subtitle": "The community, technology, and products in Joystream were built over more than three years and 13 test networks of the team effort."
+    },
+    "foundingMembers": {
+      "sectionTitle": "FOUNDING MEMBERS",
+      "title": "Meet the people who launched Joystream",
+      "subtitle": "Joystream was launched by people working in the entity <linkOne>Jsgenesis</linkOne> and to a highly committed subset of the community which participated through many test networks as part of the <linkTwo>founding member program</linkTwo>.",
+      "jsgenesis": {
+        "title": "Jsgenesis",
+        "info": "Who are Jsgenesis founding members?",
+        "modal": "Jsgenesis is the founding team and platform development partner set up as a structure to help develop and set up the autonomous operation of Joystream DAO. Its focus has been on developing the apps and processes to build and train the team of founding members and support the community on the path to autonomy and self-organization.",
+        "showAll": "Show all Jsgenesis team members ({{numberOfEmployees}})"
+      },
+      "community": {
+        "title": "Community",
+        "info": "Who are community founding members?  ",
+        "modal": "Joystream is built by a strongly committed community of highly skilled founding members, responsible for technical infrastructure maintenance, DAO operations management and all aspects contributing to the growth of the Joystream platform.",
+        "showAll": "Show all community members ({{numberOfCommunityMembers}})"
+      }
+    },
+    "investors": {
+      "sectionTitle": "INVESTORS",
+      "title": "A team effort recognized and trusted by over 40 investors"
+    },
+    "auditors": {
+      "sectionTitle": "SAFETY & SECURITY",
+      "title": "Joystream blockchain audited by top Substrate auditors",
+      "report": "Report"
     }
   }
 }

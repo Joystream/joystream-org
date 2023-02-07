@@ -12,9 +12,9 @@ const Investors = () => {
     <section className="AboutPage__investors-wrapper">
       <div className="AboutPage__investors">
         <header className="AboutPage__investors__header">
-          <span className="AboutPage__investors__header__section-title">INVESTORS</span>
+          <span className="AboutPage__investors__header__section-title">{t("about.investors.sectionTitle")}</span>
           <h2 className="AboutPage__investors__header__title">
-            A team effort recognized and trusted by over 40 investors
+            {t("about.investors.title")}
           </h2>
         </header>
         <div className="AboutPage__investors__list">
