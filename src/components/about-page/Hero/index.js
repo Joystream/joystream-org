@@ -12,11 +12,30 @@ import './style.scss';
 const NUMBER_OF_EMPTY_ICONS = 4;
 const NUMBER_OF_COLORED_ICONS = 12;
 
+const Icon = ({ avatarSrc, iconIndex }) => {
+  const [showPlaceholder, setShowPlaceholder] = useState(true);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = avatarSrc;
+
+    img.onload = () => {
+      setShowPlaceholder(false);
+    };
+  }, []);
+
+  if (showPlaceholder) {
+    return <img src={EmptyIcon} className={`AboutPage__hero__background__employee-icon${iconIndex + 1}`} alt="" />;
+  }
+
+  return <img src={avatarSrc} className={`AboutPage__hero__background__employee-icon${iconIndex + 1}`} alt="" />;
+};
+
 const IconBackground = () => {
   const [employeesToShow, setEmployeesToShow] = useState([]);
 
   useEffect(() => {
-    setEmployeesToShow(shuffleArray([...employees,...foundingMembers]).slice(0, NUMBER_OF_COLORED_ICONS));
+    setEmployeesToShow(shuffleArray([...employees, ...foundingMembers]).slice(0, NUMBER_OF_COLORED_ICONS));
   }, []);
 
   return (
@@ -29,14 +48,8 @@ const IconBackground = () => {
           alt=""
         />
       ))}
-      {/* TODO: Add placeholders while loading the image. */}
       {employeesToShow.map(({ avatarId }, index) => (
-        <img
-          key={`employee-icon${index}`}
-          src={avatarId}
-          className={`AboutPage__hero__background__employee-icon${index + 1}`}
-          alt=""
-        />
+        <Icon avatarSrc={avatarId} iconIndex={index} />
       ))}
     </div>
   );
