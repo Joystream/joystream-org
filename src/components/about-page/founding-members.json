@@ -1,0 +1,860 @@
+[
+  {
+    "memberId": "2",
+    "memberHandle": "tomato",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/31.png",
+    "fmId": "1"
+  },
+  {
+    "memberId": "4",
+    "memberHandle": "nexusfallout",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/6.png",
+    "fmId": "2"
+  },
+  {
+    "memberId": "5",
+    "memberHandle": "enjoythefood",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/19.png",
+    "fmId": "3"
+  },
+  {
+    "memberId": "306",
+    "memberHandle": "freakstatic",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/3.png",
+    "fmId": "5"
+  },
+  {
+    "memberId": "515",
+    "memberHandle": "l1dev",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/8.png",
+    "fmId": "6"
+  },
+  {
+    "memberId": "552",
+    "memberHandle": "cheomsk",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/2.png",
+    "fmId": "7"
+  },
+  {
+    "memberId": "1369",
+    "memberHandle": "lopegor",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/39.png",
+    "fmId": "8"
+  },
+  {
+    "memberId": "1316",
+    "memberHandle": "andybut",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/1.png",
+    "fmId": "9"
+  },
+  {
+    "memberId": "1173",
+    "memberHandle": "gryhail",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/40.png",
+    "fmId": "10"
+  },
+  {
+    "memberId": "867",
+    "memberHandle": "xandrell",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/9.png",
+    "fmId": "11"
+  },
+  {
+    "memberId": "555",
+    "memberHandle": "joystreamenthusiast",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/37.png",
+    "fmId": "12"
+  },
+  {
+    "memberId": "2183",
+    "memberHandle": "dapplooker",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/44.png",
+    "fmId": "13"
+  },
+  {
+    "memberId": "1048",
+    "memberHandle": "igrex",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/49.png",
+    "fmId": "14"
+  },
+  {
+    "memberId": "2130",
+    "memberHandle": "maxlevush",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/29.png",
+    "fmId": "15"
+  },
+  {
+    "memberId": "982",
+    "memberHandle": "drmarkovi",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/22.png",
+    "fmId": "16"
+  },
+  {
+    "memberId": "684",
+    "memberHandle": "seainvestor",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/38.png",
+    "fmId": "17"
+  },
+  {
+    "memberId": "525",
+    "memberHandle": "oiclid",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/5.png",
+    "fmId": "18"
+  },
+  {
+    "memberId": "2182",
+    "memberHandle": "isonar",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/25.png",
+    "fmId": "19"
+  },
+  {
+    "memberId": "644",
+    "memberHandle": "lkskrn",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/13.png",
+    "fmId": "20"
+  },
+  {
+    "memberId": "2329",
+    "memberHandle": "laura",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/16.png",
+    "fmId": "21"
+  },
+  {
+    "memberId": "1905",
+    "memberHandle": "kate_fm",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/26.png",
+    "fmId": "22"
+  },
+  {
+    "memberId": "2462",
+    "memberHandle": "chiffah",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/14.png",
+    "fmId": "23"
+  },
+  {
+    "memberId": "736",
+    "memberHandle": "mmsaww",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/51.png",
+    "fmId": "24"
+  },
+  {
+    "memberId": "2096",
+    "memberHandle": "svasilenko",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/7.png",
+    "fmId": "25"
+  },
+  {
+    "memberId": "790",
+    "memberHandle": "ururu",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/43.png",
+    "fmId": "26"
+  },
+  {
+    "memberId": "2194",
+    "memberHandle": "ilich",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/41.png",
+    "fmId": "27"
+  },
+  {
+    "memberId": "2154",
+    "memberHandle": "marat_mu",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/21.png",
+    "fmId": "28"
+  },
+  {
+    "memberId": "2098",
+    "memberHandle": "0x2bc",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/28.png",
+    "fmId": "29"
+  },
+  {
+    "memberId": "1997",
+    "memberHandle": "marinag_mary",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/50.png",
+    "fmId": "30"
+  },
+  {
+    "memberId": "605",
+    "memberHandle": "okayko",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/17.png",
+    "fmId": "31"
+  },
+  {
+    "memberId": "798",
+    "memberHandle": "shtihmas",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/47.png",
+    "fmId": "32"
+  },
+  {
+    "memberId": "2531",
+    "memberHandle": "nanapa6otaet",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/11.png",
+    "fmId": "33"
+  },
+  {
+    "memberId": "3029",
+    "memberHandle": "mikeshipa",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/35.png",
+    "fmId": "34"
+  },
+  {
+    "memberId": "957",
+    "memberHandle": "leet_joy",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/42.png",
+    "fmId": "35"
+  },
+  {
+    "memberId": "3234",
+    "memberHandle": "jen4ph",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/48.png",
+    "fmId": "36"
+  },
+  {
+    "memberId": "2502",
+    "memberHandle": "adovrn",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/15.png",
+    "fmId": "37"
+  },
+  {
+    "memberId": "2137",
+    "memberHandle": "kalpakci",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/33.png",
+    "fmId": "38"
+  },
+  {
+    "memberId": "2574",
+    "memberHandle": "alexznet",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/54.png",
+    "fmId": "39"
+  },
+  {
+    "memberId": "4466",
+    "memberHandle": "akondratiev",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/212.png",
+    "fmId": "40"
+  },
+  {
+    "memberId": "4448",
+    "memberHandle": "l3p",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/180.png",
+    "fmId": "50"
+  },
+  {
+    "memberId": "4529",
+    "memberHandle": "kedyw",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/46.png",
+    "fmId": "62"
+  },
+  {
+    "memberId": "2228",
+    "memberHandle": "kira_skipper",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/208.png",
+    "fmId": "63"
+  },
+  {
+    "memberId": "3336",
+    "memberHandle": "songoku",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/120.png",
+    "fmId": "64"
+  },
+  {
+    "memberId": "2697",
+    "memberHandle": "ardashoff",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/52.png",
+    "fmId": "65"
+  },
+  {
+    "memberId": "3452",
+    "memberHandle": "valeriadom",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/101.png",
+    "fmId": "66"
+  },
+  {
+    "memberId": "1131",
+    "memberHandle": "gameover",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/197.png",
+    "fmId": "67"
+  },
+  {
+    "memberId": "1082",
+    "memberHandle": "alexmanilove",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/115.png",
+    "fmId": "68"
+  },
+  {
+    "memberId": "1839",
+    "memberHandle": "minatofund",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/108.png",
+    "fmId": "69"
+  },
+  {
+    "memberId": "2532",
+    "memberHandle": "swargo",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/109.png",
+    "fmId": "70"
+  },
+  {
+    "memberId": "705",
+    "memberHandle": "flakes9776",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/168.png",
+    "fmId": "71"
+  },
+  {
+    "memberId": "3886",
+    "memberHandle": "Craci_BwareLabs",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/211.png",
+    "fmId": "72"
+  },
+  {
+    "memberId": "685",
+    "memberHandle": "antonmashnin",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/139.png",
+    "fmId": "73"
+  },
+  {
+    "memberId": "2342",
+    "memberHandle": "vladislav220294",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/175.png",
+    "fmId": "74"
+  },
+  {
+    "memberId": "559",
+    "memberHandle": "baikal",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/184.png",
+    "fmId": "75"
+  },
+  {
+    "memberId": "4236",
+    "memberHandle": "Deathix",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/105.png",
+    "fmId": "76"
+  },
+  {
+    "memberId": "770",
+    "memberHandle": "andicapitan",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/158.png",
+    "fmId": "77"
+  },
+  {
+    "memberId": "582",
+    "memberHandle": "hayabusa",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/58.png",
+    "fmId": "78"
+  },
+  {
+    "memberId": "2682",
+    "memberHandle": "alenleps",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/113.png",
+    "fmId": "79"
+  },
+  {
+    "memberId": "597",
+    "memberHandle": "lesnik_utsa",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/183.png",
+    "fmId": "80"
+  },
+  {
+    "memberId": "3639",
+    "memberHandle": "arsi44_dst",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/110.png",
+    "fmId": "81"
+  },
+  {
+    "memberId": "1521",
+    "memberHandle": "arseniy2706",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/119.png",
+    "fmId": "82"
+  },
+  {
+    "memberId": "458",
+    "memberHandle": "sieemma",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/213.png",
+    "fmId": "83"
+  },
+  {
+    "memberId": "4215",
+    "memberHandle": "Genius",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/203.png",
+    "fmId": "84"
+  },
+  {
+    "memberId": "590",
+    "memberHandle": "svdeshka",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/116.png",
+    "fmId": "85"
+  },
+  {
+    "memberId": "3089",
+    "memberHandle": "ivant",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/122.png",
+    "fmId": "86"
+  },
+  {
+    "memberId": "604",
+    "memberHandle": "botzmann",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/195.png",
+    "fmId": "87"
+  },
+  {
+    "memberId": "1894",
+    "memberHandle": "joyanna",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/133.png",
+    "fmId": "88"
+  },
+  {
+    "memberId": "2174",
+    "memberHandle": "alekjoy",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/32.png",
+    "fmId": "89"
+  },
+  {
+    "memberId": "2435",
+    "memberHandle": "zazik",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/61.png",
+    "fmId": "90"
+  },
+  {
+    "memberId": "3428",
+    "memberHandle": "makszagaria",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/123.png",
+    "fmId": "91"
+  },
+  {
+    "memberId": "3646",
+    "memberHandle": "ismail",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/128.png",
+    "fmId": "92"
+  },
+  {
+    "memberId": "4108",
+    "memberHandle": "Palllke",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/141.png",
+    "fmId": "93"
+  },
+  {
+    "memberId": "1015",
+    "memberHandle": "sasha",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/143.png",
+    "fmId": "94"
+  },
+  {
+    "memberId": "1027",
+    "memberHandle": "stavr",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/70.png",
+    "fmId": "95"
+  },
+  {
+    "memberId": "4008",
+    "memberHandle": "adams2002",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/218.png",
+    "fmId": "96"
+  },
+  {
+    "memberId": "2156",
+    "memberHandle": "kirillmagicpie",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/126.png",
+    "fmId": "97"
+  },
+  {
+    "memberId": "772",
+    "memberHandle": "kudo94",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/150.png",
+    "fmId": "98"
+  },
+  {
+    "memberId": "782",
+    "memberHandle": "blxpro",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/140.png",
+    "fmId": "99"
+  },
+  {
+    "memberId": "1843",
+    "memberHandle": "spat_sochi",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/59.png",
+    "fmId": "100"
+  },
+  {
+    "memberId": "3594",
+    "memberHandle": "crptowolf",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/100.png",
+    "fmId": "101"
+  },
+  {
+    "memberId": "1345",
+    "memberHandle": "kadyrovs",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/111.png",
+    "fmId": "102"
+  },
+  {
+    "memberId": "2673",
+    "memberHandle": "polikosi",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/102.png",
+    "fmId": "103"
+  },
+  {
+    "memberId": "3098",
+    "memberHandle": "yyagi",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/154.png",
+    "fmId": "104"
+  },
+  {
+    "memberId": "513",
+    "memberHandle": "kriptos",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/153.png",
+    "fmId": "105"
+  },
+  {
+    "memberId": "635",
+    "memberHandle": "xfactorus",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/191.png",
+    "fmId": "106"
+  },
+  {
+    "memberId": "786",
+    "memberHandle": "1337member",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/220.png",
+    "fmId": "107"
+  },
+  {
+    "memberId": "909",
+    "memberHandle": "moodman",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/209.png",
+    "fmId": "108"
+  },
+  {
+    "memberId": "1101",
+    "memberHandle": "darijn",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/164.png",
+    "fmId": "109"
+  },
+  {
+    "memberId": "1737",
+    "memberHandle": "prontera",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/210.png",
+    "fmId": "110"
+  },
+  {
+    "memberId": "1747",
+    "memberHandle": "vagif",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/204.png",
+    "fmId": "111"
+  },
+  {
+    "memberId": "1961",
+    "memberHandle": "itsys4",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/132.png",
+    "fmId": "112"
+  },
+  {
+    "memberId": "3082",
+    "memberHandle": "abramaria_",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/182.png",
+    "fmId": "113"
+  },
+  {
+    "memberId": "3323",
+    "memberHandle": "ferdikesh_studio",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/206.png",
+    "fmId": "114"
+  },
+  {
+    "memberId": "3443",
+    "memberHandle": "secret_girl",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/73.png",
+    "fmId": "115"
+  },
+  {
+    "memberId": "4141",
+    "memberHandle": "gyroflaw",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/151.png",
+    "fmId": "116"
+  },
+  {
+    "memberId": "4353",
+    "memberHandle": "x3mario",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/66.png",
+    "fmId": "117"
+  },
+  {
+    "memberId": "1019",
+    "memberHandle": "razumv",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/214.png",
+    "fmId": "118"
+  },
+  {
+    "memberId": "3233",
+    "memberHandle": "eclipsingbinary",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/179.png",
+    "fmId": "119"
+  },
+  {
+    "memberId": "1986",
+    "memberHandle": "goldmember",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/155.png",
+    "fmId": "120"
+  },
+  {
+    "memberId": "4280",
+    "memberHandle": "Helen4749",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/129.png",
+    "fmId": "121"
+  },
+  {
+    "memberId": "585",
+    "memberHandle": "narniec",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/91.png",
+    "fmId": "122"
+  },
+  {
+    "memberId": "4354",
+    "memberHandle": "jpaul",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/200.png",
+    "fmId": "123"
+  },
+  {
+    "memberId": "4278",
+    "memberHandle": "mkblockchaindev",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/34.png",
+    "fmId": "124"
+  },
+  {
+    "memberId": "4154",
+    "memberHandle": "Hanzo",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/137.png",
+    "fmId": "125"
+  },
+  {
+    "memberId": "3655",
+    "memberHandle": "goksel",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/112.png",
+    "fmId": "126"
+  },
+  {
+    "memberId": "1999",
+    "memberHandle": "surpaul",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/193.png",
+    "fmId": "127"
+  },
+  {
+    "memberId": "3611",
+    "memberHandle": "_e9orov_",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/216.png",
+    "fmId": "128"
+  },
+  {
+    "memberId": "4129",
+    "memberHandle": "Codefikeyz",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/57.png",
+    "fmId": "129"
+  },
+  {
+    "memberId": "2440",
+    "memberHandle": "codervv",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/134.png",
+    "fmId": "130"
+  },
+  {
+    "memberId": "2276",
+    "memberHandle": "np900",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/144.png",
+    "fmId": "131"
+  },
+  {
+    "memberId": "1541",
+    "memberHandle": "godshunter",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/156.png",
+    "fmId": "132"
+  },
+  {
+    "memberId": "4166",
+    "memberHandle": "Kyler_Zm",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/103.png",
+    "fmId": "133"
+  },
+  {
+    "memberId": "2141",
+    "memberHandle": "plycho",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/75.png",
+    "fmId": "134"
+  },
+  {
+    "memberId": "4259",
+    "memberHandle": "F1rst",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/146.png",
+    "fmId": "135"
+  },
+  {
+    "memberId": "1219",
+    "memberHandle": "dd659",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/131.png",
+    "fmId": "136"
+  },
+  {
+    "memberId": "4279",
+    "memberHandle": "tremtremson",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/135.png",
+    "fmId": "137"
+  },
+  {
+    "memberId": "4095",
+    "memberHandle": "advo",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/107.png",
+    "fmId": "138"
+  },
+  {
+    "memberId": "4346",
+    "memberHandle": "Katya",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/152.png",
+    "fmId": "139"
+  },
+  {
+    "memberId": "3625",
+    "memberHandle": "firuz89",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/130.png",
+    "fmId": "140"
+  },
+  {
+    "memberId": "4327",
+    "memberHandle": "victorythewave",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/104.png",
+    "fmId": "141"
+  },
+  {
+    "memberId": "3947",
+    "memberHandle": "Shahzad",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/4.png",
+    "fmId": "142"
+  },
+  {
+    "memberId": "1158",
+    "memberHandle": "arsonque",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/165.png",
+    "fmId": "143"
+  },
+  {
+    "memberId": "4406",
+    "memberHandle": "chaos77",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/55.png",
+    "fmId": "144"
+  },
+  {
+    "memberId": "550",
+    "memberHandle": "optimusalgo91",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/219.png",
+    "fmId": "145"
+  },
+  {
+    "memberId": "793",
+    "memberHandle": "prettyfreak",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/67.png",
+    "fmId": "146"
+  },
+  {
+    "memberId": "1921",
+    "memberHandle": "liskis87",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/147.png",
+    "fmId": "147"
+  },
+  {
+    "memberId": "2032",
+    "memberHandle": "alex6370",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/60.png",
+    "fmId": "148"
+  },
+  {
+    "memberId": "2345",
+    "memberHandle": "olgakuzia",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/161.png",
+    "fmId": "149"
+  },
+  {
+    "memberId": "2549",
+    "memberHandle": "vladv77",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/167.png",
+    "fmId": "150"
+  },
+  {
+    "memberId": "4093",
+    "memberHandle": "tes_hsn",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/187.png",
+    "fmId": "151"
+  },
+  {
+    "memberId": "4211",
+    "memberHandle": "7185",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/194.png",
+    "fmId": "152"
+  },
+  {
+    "memberId": "4234",
+    "memberHandle": "SASY",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/166.png",
+    "fmId": "153"
+  },
+  {
+    "memberId": "4373",
+    "memberHandle": "investor",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/117.png",
+    "fmId": "154"
+  },
+  {
+    "memberId": "4351",
+    "memberHandle": "Gift_szn",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/118.png",
+    "fmId": "155"
+  },
+  {
+    "memberId": "1781",
+    "memberHandle": "nickomenty",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/121.png",
+    "fmId": "156"
+  },
+  {
+    "memberId": "4058",
+    "memberHandle": "vikan#4315",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/90.png",
+    "fmId": "157"
+  },
+  {
+    "memberId": "3085",
+    "memberHandle": "mmx1916",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/30.png",
+    "fmId": "158"
+  },
+  {
+    "memberId": "2148",
+    "memberHandle": "controlla",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/136.png",
+    "fmId": "159"
+  },
+  {
+    "memberId": "4135",
+    "memberHandle": "Black_fish",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/10.png",
+    "fmId": "160"
+  },
+  {
+    "memberId": "1497",
+    "memberHandle": "wasabi",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/12.png",
+    "fmId": "161"
+  },
+  {
+    "memberId": "4124",
+    "memberHandle": "BeardKoda",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/178.png",
+    "fmId": "162"
+  },
+  {
+    "memberId": "4017",
+    "memberHandle": "Counsellor",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/79.png",
+    "fmId": "163"
+  },
+  {
+    "memberId": "4183",
+    "memberHandle": "gru-dev-membership",
+    "avatarId": "https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/202.png",
+    "fmId": "164"
+  }
+]

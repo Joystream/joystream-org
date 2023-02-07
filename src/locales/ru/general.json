@@ -91,7 +91,6 @@
     "atlas": "Atlas",
     "pioneer": "Governance",
     "manifesto": "Manifesto",
-    "discord": "Discord",
     "youtubePartnerProgram": "Youtube Partner Program",
     "claimChannel": "Claim your channel",
     "brandStory": "История бренда",
@@ -99,7 +98,8 @@
     "downloadAssets": "Скачать ресурсы",
     "apps": "Apps",
     "viewApps": "View apps",
-    "community": "Community"
+    "community": "Community",
+    "about": "About"
   },
   "footer": {
     "title": "Следите за новостями",
