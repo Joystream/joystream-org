@@ -7,8 +7,8 @@ import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg
 
 import './style.scss';
 
-const INITIAL_RENDER_EMPLOYEES = employees.slice(0, 8);
-const OTHER_EMPLOYEES = employees.slice(8);
+// const INITIAL_RENDER_EMPLOYEES = employees.slice(0, 8);
+// const OTHER_EMPLOYEES = employees.slice(8);
 const INITIAL_RENDER_FOUNDING_MEMBERS = foundingMembers.slice(0, 18);
 const OTHER_FOUNDING_MEMBERS = foundingMembers.slice(18);
 
@@ -72,18 +72,10 @@ const FMCard = ({
 const FoundingMembers = () => {
   const { t } = useTranslation();
 
-  const [shouldRenderAllEmployees, setShouldRenderAllEmployees] = useState(false);
-  const [numberOfPreloadedEmployeeImages, setNumberOfPreloadedEmployeeImages] = useState(0);
-
   const [shouldRenderAllCommunityMembers, setShouldRenderAllCommunityMembers] = useState(false);
   const [numberOfPreloadedCommunityMemberImages, setNumberOfPreloadedCommunityMemberImages] = useState(0);
 
   // Derived state
-  const shouldRenderOtherEmployees =
-    shouldRenderAllEmployees && numberOfPreloadedEmployeeImages == OTHER_EMPLOYEES.length;
-  const shouldShowTemporaryEmployeePlaceholders =
-    shouldRenderAllEmployees && numberOfPreloadedEmployeeImages != OTHER_EMPLOYEES.length;
-
   const shouldRenderOtherCommunityMembers =
     shouldRenderAllCommunityMembers && numberOfPreloadedCommunityMemberImages == OTHER_FOUNDING_MEMBERS.length;
   const shouldShowTemporaryCommunityMemberPlaceholders =
@@ -129,33 +121,10 @@ const FoundingMembers = () => {
             </div>
           </div>
           <div className="AboutPage__founding-members__jsgenesis__cards">
-            {INITIAL_RENDER_EMPLOYEES.map(({ avatarId, memberHandle, memberId }) => (
+            {employees.map(({ avatarId, memberHandle, memberId }) => (
               <FMCard key={memberHandle} avatarUrl={avatarId} memberHandle={memberHandle} memberId={memberId} />
             ))}
-            {shouldShowTemporaryEmployeePlaceholders &&
-              Array.from({ length: 4 }, (_, index) => (
-                <FMCard key={`placeholder-${index}`} onlyRenderPlaceholder={true} />
-              ))}
-            {shouldRenderAllEmployees &&
-              OTHER_EMPLOYEES.map(({ avatarId, memberHandle, memberId }) => (
-                <FMCard
-                  key={memberHandle}
-                  avatarUrl={avatarId}
-                  memberHandle={memberHandle}
-                  memberId={memberId}
-                  updatePreloadedImageCounter={() => setNumberOfPreloadedEmployeeImages(prev => prev + 1)}
-                  shouldRenderOtherMembers={shouldRenderOtherEmployees}
-                />
-              ))}
           </div>
-          {!shouldRenderAllEmployees && (
-            <button
-              className="AboutPage__founding-members__jsgenesis__show-all"
-              onClick={() => setShouldRenderAllEmployees(true)}
-            >
-              {t('about.foundingMembers.jsgenesis.showAll', { numberOfEmployees: employees.length })}
-            </button>
-          )}
         </div>
         <div className="AboutPage__founding-members__community">
           <div className="AboutPage__founding-members__community__title-section">
