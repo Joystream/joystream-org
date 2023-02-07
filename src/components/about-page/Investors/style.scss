@@ -1,8 +1,9 @@
-@import '../../../styles/main';
+@import '../../../styles/_main';
+@import '../../../pages/style';
 
 .AboutPage {
   &__investors-wrapper {
-    padding: 128px 0;
+    padding-top: 96px;
     background-color: $c_black;
   }
 
@@ -13,48 +14,89 @@
     align-items: center;
     flex-direction: column;
 
-    &__title {
-      font-family: $font-primary;
-      font-size: 52px;
-      font-weight: 700;
-      line-height: 60px;
-      letter-spacing: 0;
-      color: $c_white;
+    &__header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      max-width: 600px;
+
+      &__section-title {
+        @include section-title;
+
+        color: #6c6cff;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: $c_white;
+        text-align: center;
+      }
     }
 
     &__list {
-      display: grid;
-      justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       width: 100%;
-      // justify-items: center;
-      margin-top: 56px;
-      grid-template-columns: repeat(5, 182px);
+      margin-top: 80px;
+      gap: 48px;
     }
 
-    &__icon-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    &__list-item {
+      display: grid;
+      width: 182px;
+      place-items: center;
+
+      &__icon--active {
+        display: none;
+      }
+
+      &__icon--inactive {
+        display: block;
+      }
+
+      &:hover {
+        .AboutPage__investors__list-item__icon--active {
+          display: block !important;
+        }
+
+        .AboutPage__investors__list-item__icon--inactive {
+          display: none !important;
+        }
+      }
     }
   }
 
   @media #{$screen-max-sm} {
-    &__investors {
-      padding: 64px 20px;
+    &__investors-wrapper {
+      padding-top: 80px;
+    }
 
-      &__title {
-        font-size: 20px;
-        line-height: 24px;
+    &__investors {
+      &__header {
+        &__title {
+          @include h4;
+        }
       }
 
       &__list {
-        gap: 15px;
-        grid-template-columns: repeat(2, 157px);
-        grid-template-rows: 64px 64px;
+        margin-top: 64px;
+        gap: 16px;
       }
 
-      &__icon-wrapper {
-        border: 1px solid #dae2eb;
+      &__list-item {
+        width: 160px;
+        height: 70px;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__investors {
+      &__header {
+        max-width: 315px;
       }
     }
   }

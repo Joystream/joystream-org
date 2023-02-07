@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 
-import companyIcons from '../../index-page/companies';
+import companyIcons from '../../../data/investors';
 
 import './style.scss';
 
