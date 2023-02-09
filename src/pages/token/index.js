@@ -12,12 +12,9 @@ import ArrowLink from '../../components/ArrowLink';
 import { sharedData } from '../../data/pages';
 import tokenQuestions from '../../data/pages/token';
 
-import useAxios from '../../utils/useAxios';
-
 import './style.scss';
 
 const TokensPage = () => {
-  const [statusServerData, loading, error] = useAxios();
   const { t } = useTranslation();
   const { language } = useI18next();
 
@@ -29,7 +26,7 @@ const TokensPage = () => {
         description={t('token.siteMetadata.description')}
       />
 
-      <Hero statusServerData={statusServerData} />
+      <Hero />
 
       <TokenInformation
         title={t('token.faq.title')}
@@ -39,12 +36,17 @@ const TokensPage = () => {
         }))}
       />
 
-      <PendingCashouts cashouts={statusServerData?.exchanges} />
+      {/* <PendingCashouts cashouts={statusServerData?.exchanges} /> */}
 
       <div className="TokensPage__cta-wrapper">
         <div className="TokensPage__cta">
           <h2 className="TokensPage__cta__title">{t('token.cta.title')}</h2>
-          <ArrowLink className="TokensPage__cta__link" text={t('button.openDiscord')} href={sharedData.social.discordLink} dark />
+          <ArrowLink
+            className="TokensPage__cta__link"
+            text={t('button.openDiscord')}
+            href={sharedData.social.discordLink}
+            dark
+          />
         </div>
       </div>
     </BaseLayout>

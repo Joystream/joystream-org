@@ -9,7 +9,7 @@ import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocus
 import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.webp';
 import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.webp';
 import VideoNFTsPopupImage from '../../../assets/images/landing/video-nfts-popup.webp';
-import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
+import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
 
 import './style.scss';
