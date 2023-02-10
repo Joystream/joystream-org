@@ -110,7 +110,7 @@
       }
 
       &__loading-bar {
-        @include loading-bar-animation(428px, 4s, 0s);
+        @include loading-bar-animation(428px, 3s, 0s);
 
         position: absolute;
         top: 0;

@@ -1,26 +1,16 @@
 @import '../../styles/main';
+@import '../../pages/style.scss';
 
 .ArrowLink {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 28px 28px 33px 28px;
-  background-color: $c_blue-ribbon;
+  @include h8;
 
-  &--dark {
-    background-color: $c_black;
-  }
-
-  &__text {
-    font-family: $font-primary;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0;
-    color: $c_white;
-  }
+  display: inline-block;
+  color: #6c6cff;
 
   &__arrow {
-    color: $c_white;
-    transform: rotate(-90deg) scale(.85);
+    margin-bottom: -4px;
+    margin-left: 8px;
+    color: inherit;
+    transform: rotate(-90deg) scale(.75);
   }
 }

@@ -7,6 +7,7 @@ import BaseLayout from '../../components/_layouts/Base';
 import Hero from '../../components/token-page/Hero';
 import TokenInformation from '../../components/token-page/TokenInformation';
 import PendingCashouts from '../../components/token-page/PendingCashouts';
+import Wallets from '../../components/token-page/Wallets';
 import ArrowLink from '../../components/ArrowLink';
 
 import { sharedData } from '../../data/pages';
@@ -27,6 +28,8 @@ const TokensPage = () => {
       />
 
       <Hero />
+
+      <Wallets />
 
       <TokenInformation
         title={t('token.faq.title')}

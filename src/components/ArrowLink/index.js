@@ -7,21 +7,29 @@ import './style.scss';
 
 export const ArrowLink = ({ className, href, to, text, dark }) => {
   const children = (
-    <div
-      className={cn(`ArrowLink ${className ?? ''}`, {
-        'ArrowLink--dark': dark,
-      })}
-    >
-      <p className="ArrowLink__text">{text}</p>
+    <>
+      {text}
       <Arrow className="ArrowLink__arrow" />
-    </div>
+    </>
   );
+  // const children = (
+  //   <div
+  //     className={cn(`ArrowLink ${className ?? ''}`, {
+  //       'ArrowLink--dark': dark,
+  //     })}
+  //   >
+  //   </div>
+  // );
 
-  if (to) {
-    return <Link to={to}>{children}</Link>;
-  }
+  // if (to) {
+  //   return <Link to={to}>{children}</Link>;
+  // }
 
-  return <a href={href}>{children}</a>;
+  return (
+    <a href={href} className={`ArrowLink ${className}`}>
+      {children}
+    </a>
+  );
 };
 
 export default ArrowLink;
