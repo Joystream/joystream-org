@@ -68,7 +68,14 @@
     &__item {
       height: 240px;
       padding: 32px;
+      cursor: pointer;
       background-color: $c_white;
+      transition: all .3s;
+
+      &:hover {
+        transform: translate(-7.2px, -8px);
+        box-shadow: 7.2px 8px 0 0 $c_blue-ribbon;
+      }
 
       &__image-wrapper {
         @include logo-wrapper(64px, 64px);
@@ -88,6 +95,19 @@
 
       &__link {
         margin-top: 16px;
+      }
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 32px;
+      color: #5c6475;
+
+      &__icon {
+        margin-right: 6px;
+        fill: #5c6475;
       }
     }
   }

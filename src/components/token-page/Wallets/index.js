@@ -5,6 +5,7 @@ import ArrowLink from '../../ArrowLink';
 import PolkadotIcon from '../../../assets/images/token/polkadot-wallet.webp';
 import SubWalletIcon from '../../../assets/images/token/sub-wallet.webp';
 import TalismanIcon from '../../../assets/images/token/talisman.webp';
+import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 
 import './style.scss';
 
@@ -40,6 +41,10 @@ const Wallets = () => {
           />
           <WalletSection walletIcon={SubWalletIcon} walletName="Talisman" walletLink="https://www.talisman.xyz/" />
           <WalletSection walletIcon={TalismanIcon} walletName="SubWallet" walletLink="https://subwallet.app/" />
+        </div>
+        <div className="TokenPage__wallets__info">
+          <InfoIcon className="TokenPage__wallets__info__icon" />
+          The list of wallets is yet to grow. Check back soon for more wallets allowing for storing JOY tokens.
         </div>
       </div>
     </section>
