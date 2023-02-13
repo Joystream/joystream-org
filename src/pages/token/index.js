@@ -8,6 +8,8 @@ import Hero from '../../components/token-page/Hero';
 import TokenInformation from '../../components/token-page/TokenInformation';
 import PendingCashouts from '../../components/token-page/PendingCashouts';
 import Wallets from '../../components/token-page/Wallets';
+import Faucets from '../../components/token-page/Faucets';
+
 import ArrowLink from '../../components/ArrowLink';
 
 import { sharedData } from '../../data/pages';
@@ -30,6 +32,8 @@ const TokensPage = () => {
       <Hero />
 
       <Wallets />
+
+      <Faucets />
 
       <TokenInformation
         title={t('token.faq.title')}
