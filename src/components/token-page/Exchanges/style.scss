@@ -1,0 +1,112 @@
+@import '../../../styles/_main.scss';
+@import '../../../pages/style.scss';
+
+.TokenPage {
+  &__exchanges-wrapper {
+    padding: 96px 0;
+    background-color: #f2f5f9;
+  }
+
+  &__exchanges {
+    @extend %container;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 816px;
+      margin: 0 auto;
+
+      &__section-title {
+        @include section-title;
+
+        margin: 0 auto;
+        color: $c_blue-ribbon;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: #1a1a1a;
+        text-align: center;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        margin-top: 16px;
+        color: #3b3b3b;
+        text-align: center;
+      }
+    }
+
+    &__newsletter {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 400px;
+      max-width: 1200px;
+      margin-top: 80px;
+      background-color: $c_white;
+
+      &__title {
+        @include h5;
+
+        color: #1f252e;
+      }
+
+      &__subtitle {
+        @include base-3;
+
+        max-width: 606px;
+        margin-top: 8px;
+        color: #5c6475;
+        text-align: center;
+      }
+
+      &__form {
+        display: flex;
+        margin-top: 32px;
+        gap: 20px;
+
+        &__input {
+          width: 320px;
+          height: 60px;
+          padding: 16px 18px;
+          font-family: $font-secondary;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: -.4000000059604645px;
+          text-align: left;
+          border: 2px solid #dee3e9;
+
+          &::placeholder {
+            color: #a5adb9;
+          }
+        }
+
+        &__button {
+          width: 198px;
+          height: 60px;
+          padding: 18px 21px;
+          font-family: $font-primary;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          color: $c_white;
+          text-align: center;
+          cursor: pointer;
+          background-color: $c_blue-ribbon;
+
+          &:hover {
+            background-color: #322af1;
+          }
+        }
+      }
+    }
+  }
+}
