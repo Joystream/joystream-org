@@ -7,10 +7,19 @@
   display: inline-block;
   color: #6c6cff;
 
+  &--small {
+    font-size: 16px;
+  }
+
   &__arrow {
     margin-bottom: -4px;
     margin-left: 8px;
     color: inherit;
     transform: rotate(-90deg) scale(.75);
+  }
+
+  &--small &__arrow {
+    margin-bottom: -5px;
+    transform: rotate(-90deg) scale(.55);
   }
 }

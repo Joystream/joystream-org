@@ -129,7 +129,7 @@ const VideoNFTs = ({ t }) => {
   useRemoveElementFocusOnKeydown(videoNFTsCarouselInfoLabelRef, ['Escape']);
 
   return (
-    <section className="IndexPage__video-nfts-wrapper">
+    <section className="IndexPage__video-nfts-wrapper" id="video-nfts">
       <div className="IndexPage__video-nfts">
         <div className="IndexPage__video-nfts__illustration">
           <img

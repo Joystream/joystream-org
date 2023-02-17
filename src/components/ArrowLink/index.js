@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import './style.scss';
 
-export const ArrowLink = ({ className, href, to, text, dark }) => {
+export const ArrowLink = ({ className, href, to, text, dark, small = false }) => {
   const children = (
     <>
       {text}
@@ -21,12 +21,26 @@ export const ArrowLink = ({ className, href, to, text, dark }) => {
   //   </div>
   // );
 
-  // if (to) {
-  //   return <Link to={to}>{children}</Link>;
-  // }
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={cn(`ArrowLink ${className}`, {
+          'ArrowLink--small': small,
+        })}
+      >
+        {children}
+      </Link>
+    );
+  }
 
   return (
-    <a href={href} className={`ArrowLink ${className}`}>
+    <a
+      href={href}
+      className={cn(`ArrowLink ${className}`, {
+        'ArrowLink--small': small,
+      })}
+    >
       {children}
     </a>
   );

@@ -136,7 +136,7 @@ const Payouts = ({ t }) => {
           {t("landing.payouts.atlas.subtitle")}
         </p>
       </div>
-      <div className="IndexPage__payouts">
+      <div className="IndexPage__payouts" id="creator-payouts">
         <div className="IndexPage__payouts__content">
           <span className="IndexPage__payouts__content__section-title">{t('landing.payouts.sectionTitle')}</span>
           <h3 className="IndexPage__payouts__content__title">

@@ -1,0 +1,120 @@
+@import '../../../styles/_main.scss';
+@import '../../../pages/style.scss';
+
+.TokenPage {
+  &__earn-wrapper {
+    padding: 96px 0;
+    background-color: $c_white;
+  }
+
+  &__earn {
+    @extend %container;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 816px;
+      margin: 0 auto;
+
+      &__section-title {
+        @include section-title;
+
+        margin: 0 auto;
+        color: $c_blue-ribbon;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: #1a1a1a;
+        text-align: center;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        margin-top: 16px;
+        color: #3b3b3b;
+        text-align: center;
+      }
+    }
+
+    &__explanations {
+      display: flex;
+      margin-top: 80px;
+      gap: 30px;
+    }
+
+    &__explanation-section {
+      &:nth-child(2) {
+        margin-top: 96px;
+      }
+
+      &__title {
+        @include h6;
+      }
+
+      &__link {
+        display: block;
+        width: 132px;
+        margin: 32px auto 0 auto;
+
+        &--alt {
+          width: 105px;
+        }
+      }
+    }
+
+    &__explanation {
+      display: flex;
+      width: 585px;
+      height: 168px;
+      margin-top: 30px;
+      padding: 24px;
+      background-color: #f2f5f9;
+
+      &:nth-child(2) {
+        margin-top: 32px;
+      }
+
+      &__icon-section {
+        margin-right: 24px;
+
+        &__icon-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 48px;
+          height: 48px;
+          background-color: #e0e1ff;
+          border-radius: 999px;
+        }
+
+        &__icon {
+          margin-right: -3px;
+        }
+      }
+
+      &__content {
+        &__title {
+          @include h7;
+
+          color: #1f252e;
+        }
+
+        &__subtitle {
+          @include base-3;
+
+          margin-top: 4px;
+          color: #5c6475;
+        }
+
+        &__link {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}

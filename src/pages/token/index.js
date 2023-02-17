@@ -10,6 +10,7 @@ import PendingCashouts from '../../components/token-page/PendingCashouts';
 import Wallets from '../../components/token-page/Wallets';
 import Faucets from '../../components/token-page/Faucets';
 import Exchanges from '../../components/token-page/Exchanges';
+import Earn from '../../components/token-page/Earn';
 
 import ArrowLink from '../../components/ArrowLink';
 
@@ -37,6 +38,8 @@ const TokensPage = () => {
       <Faucets />
 
       <Exchanges />
+
+      <Earn />
 
       <TokenInformation
         title={t('token.faq.title')}
