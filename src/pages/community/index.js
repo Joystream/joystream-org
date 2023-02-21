@@ -64,7 +64,7 @@ const CommunityPage = () => {
         <div className="CommunityPage__links-section">
           <div className="CommunityPage__links">
             <LinkCard icon={<Twitter />} title={t("community.links.twitter.title")} subtitle={t("community.links.twitter.subtitle")} link="https://twitter.com/JoystreamDAO/" />
-            <LinkCard icon={<Discord />} title={t("community.links.discord.title")} subtitle={t("community.links.discord.subtitle")} link="https://discord.gg/DE9UN3YpRP" />
+            <LinkCard icon={<Discord />} title={t("community.links.discord.title")} subtitle={t("community.links.discord.subtitle")} link="https://discord.gg/NaNzysB5YZ" />
             <LinkCard icon={<Gleev />} title={t("community.links.gleev.title")} subtitle={t("community.links.gleev.subtitle")} link="https://gleev.xyz/"/>
             <LinkCard icon={<Reddit />} title={t("community.links.reddit.title")} subtitle={t("community.links.reddit.subtitle")} link="https://www.reddit.com/r/joystream_dao/"/>
             <LinkCard icon={<GitHub />} title={t("community.links.github.title")} subtitle={t("community.links.github.subtitle")} link="https://github.com/Joystream"/>
