@@ -1,0 +1,164 @@
+@import '../../../styles/_main.scss';
+@import '../../../pages/style.scss';
+
+.TokenPage {
+  &__utility-wrapper {
+    padding: 128px 0;
+    background-color: $c_black;
+  }
+
+  &__utility {
+    @extend %container;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 820px;
+      margin: 0 auto;
+
+      &__section-title {
+        @include section-title;
+
+        margin: 0 auto;
+        color: #6c6cff;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: $c_white;
+        text-align: center;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        margin-top: 16px;
+        color: #a7aeb7;
+        text-align: center;
+      }
+    }
+
+    &__grid {
+      display: grid;
+      margin-top: 80px;
+      gap: 8px;
+      grid-template-areas:
+        'working-group  videos      election'
+        'working-group  videos      election'
+        'working-group  videos      interact'
+        'creators       videos      interact'
+        'creators       videos      interact'
+        'creators       validators  interact'
+        'creators       validators  proposals'
+        'creators       validators  proposals';
+      grid-template-columns: repeat(3, 400px);
+      grid-template-rows: repeat(8, 116px);
+
+      &__working-group,
+      &__election,
+      &__validators,
+      &__proposals,
+      &__videos,
+      &__creators,
+      &__interact {
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+        background-color: #111316;
+
+        &__icon-wrapper {
+          display: grid;
+          width: 48px;
+          height: 48px;
+          background-color: #1f252e;
+          border-radius: 999px;
+          place-items: center;
+        }
+
+        &__info {
+          &__title {
+            @include h6;
+
+            color: $c_white;
+          }
+
+          &__subtitle {
+            @include base-3;
+
+            margin-top: 8px;
+            color: #a7aeb7;
+          }
+        }
+      }
+
+      &__working-group,
+      &__election,
+      &__validators,
+      &__proposals {
+        justify-content: space-between;
+      }
+
+      &__videos,
+      &__creators,
+      &__interact {
+        &__info {
+          margin-top: 32px;
+        }
+      }
+
+      &__working-group {
+        grid-area: working-group;
+
+        &__icon {
+          & > path:nth-of-type(1),
+          & > path:nth-of-type(2) {
+            fill: #a7aeb7;
+          }
+
+          & > path:nth-of-type(3) {
+            fill: $c_white;
+          }
+        }
+      }
+
+      &__videos {
+        grid-area: videos;
+
+        &__icon {
+          & > path:nth-of-type(1) {
+            fill: #a7aeb7;
+          }
+
+          & > path:nth-of-type(2) {
+            fill: $c_white;
+          }
+        }
+      }
+
+      &__election {
+        grid-area: election;
+      }
+
+      &__interact {
+        background-color: #111316;
+        grid-area: interact;
+      }
+
+      &__creators {
+        background-color: #111316;
+        grid-area: creators;
+      }
+
+      &__validators {
+        grid-area: validators;
+      }
+
+      &__proposals {
+        grid-area: proposals;
+      }
+    }
+  }
+}

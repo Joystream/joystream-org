@@ -11,6 +11,7 @@ import Wallets from '../../components/token-page/Wallets';
 import Faucets from '../../components/token-page/Faucets';
 import Exchanges from '../../components/token-page/Exchanges';
 import Earn from '../../components/token-page/Earn';
+import Utility from '../../components/token-page/Utility';
 
 import ArrowLink from '../../components/ArrowLink';
 
@@ -40,6 +41,8 @@ const TokensPage = () => {
       <Exchanges />
 
       <Earn />
+
+      <Utility />
 
       <TokenInformation
         title={t('token.faq.title')}
