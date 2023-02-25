@@ -3,8 +3,16 @@
 
 .TokenPage {
   &__utility-wrapper {
-    padding: 128px 0;
     background-color: $c_black;
+  }
+
+  &__utility-background-wrapper {
+    @extend %largeContainer;
+
+    padding: 128px 0;
+    background: url('../../../assets/svg/token/utility-section-background.svg');
+    background-position: top 0 left 33px;
+    background-repeat: no-repeat;
   }
 
   &__utility {
@@ -64,9 +72,11 @@
       &__videos,
       &__creators,
       &__interact {
+        position: relative;
         display: flex;
         flex-direction: column;
         padding: 32px;
+        overflow: hidden;
         background-color: #111316;
 
         &__icon-wrapper {
@@ -136,6 +146,12 @@
             fill: $c_white;
           }
         }
+
+        &__illustration {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
       }
 
       &__election {
@@ -143,13 +159,42 @@
       }
 
       &__interact {
-        background-color: #111316;
         grid-area: interact;
+
+        &__illustration {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
       }
 
       &__creators {
-        background-color: #111316;
         grid-area: creators;
+
+        &__illustration {
+          position: absolute;
+
+          &--center {
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+          }
+
+          &--right {
+            right: 0;
+            bottom: 54px;
+            width: 71.5px;
+            height: 274px;
+          }
+
+          &--left {
+            bottom: 54px;
+            left: 0;
+            width: 71.5px;
+            height: 274px;
+          }
+        }
       }
 
       &__validators {
