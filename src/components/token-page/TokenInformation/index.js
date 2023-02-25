@@ -11,41 +11,44 @@ const TokenInformationSection = ({ title, text }) => {
   return (
     <div
       role="presentation"
-      className={cn('TokensPage__tokeninfo__item', {
-        'TokensPage__tokeninfo__item--active': active,
-      })}
+      className="TokenPage__tokeninfo__item"
       onClick={() => {
-        if(window && window.getSelection().toString() === ''){
+        if (window && window.getSelection().toString() === '') {
           setActive(prev => !prev);
         }
       }}
     >
-      <div className="TokensPage__tokeninfo__item__content">
-        <h3 className="TokensPage__tokeninfo__item__title">{title}</h3>
-        <div
-          className={cn('TokensPage__tokeninfo__item__text', {
-            'TokensPage__tokeninfo__item__text--active': active,
+      <div className="TokenPage__tokeninfo__item__title-section">
+        <h3 className="TokenPage__tokeninfo__item__title-section__title">{title}</h3>
+        <Close
+          className={cn('TokenPage__tokeninfo__item__title-section__icon', {
+            'TokenPage__tokeninfo__item__title-section__icon--active': active,
           })}
-        >
-          {text}
-        </div>
+        />
       </div>
-      <Close
-        className={cn('TokensPage__tokeninfo__item__icon', {
-          'TokensPage__tokeninfo__item__icon--active': active,
+      <div
+        className={cn('TokenPage__tokeninfo__item__text', {
+          'TokenPage__tokeninfo__item__text--active': active,
         })}
-      />
+      >
+        {text}
+      </div>
     </div>
   );
 };
 
 const TokenInformation = ({ tokenQuestions, title }) => (
-  <div className="TokensPage__tokeninfo-wrapper">
-    <h2 className="TokensPage__tokeninfo-title">{title}</h2>
-    <div className="TokensPage__tokeninfo">
-      {tokenQuestions.map(({ title, text }) => (
-        <TokenInformationSection key={title} title={title} text={text} />
-      ))}
+  <div className="TokenPage__tokeninfo-wrapper">
+    <div className="TokenPage__tokeninfo">
+      <header className="TokenPage__tokeninfo__header">
+        <span className="TokenPage__tokeninfo__header__section-title">FAQ</span>
+        <h2 className="TokenPage__tokeninfo__header__title">Frequently Asked Questions</h2>
+      </header>
+      <div className="TokenPage__tokeninfo__items">
+        {tokenQuestions.map(({ title, text }) => (
+          <TokenInformationSection key={title} title={title} text={text} />
+        ))}
+      </div>
     </div>
   </div>
 );
