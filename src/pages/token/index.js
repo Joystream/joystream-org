@@ -5,13 +5,14 @@ import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import SiteMetadata from '../../components/SiteMetadata';
 import BaseLayout from '../../components/_layouts/Base';
 import Hero from '../../components/token-page/Hero';
-import TokenInformation from '../../components/token-page/TokenInformation';
 import PendingCashouts from '../../components/token-page/PendingCashouts';
 import Wallets from '../../components/token-page/Wallets';
 import Faucets from '../../components/token-page/Faucets';
 import Exchanges from '../../components/token-page/Exchanges';
 import Earn from '../../components/token-page/Earn';
 import Utility from '../../components/token-page/Utility';
+import Supply from '../../components/token-page/Supply';
+import TokenInformation from '../../components/token-page/TokenInformation';
 
 import ArrowLink from '../../components/ArrowLink';
 
@@ -43,6 +44,8 @@ const TokensPage = () => {
       <Earn />
 
       <Utility />
+
+      <Supply />
 
       <TokenInformation
         title={t('token.faq.title')}
