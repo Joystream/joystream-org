@@ -56,18 +56,6 @@ const TokensPage = () => {
       />
 
       {/* <PendingCashouts cashouts={statusServerData?.exchanges} /> */}
-
-      <div className="TokensPage__cta-wrapper">
-        <div className="TokensPage__cta">
-          <h2 className="TokensPage__cta__title">{t('token.cta.title')}</h2>
-          <ArrowLink
-            className="TokensPage__cta__link"
-            text={t('button.openDiscord')}
-            href={sharedData.social.discordLink}
-            dark
-          />
-        </div>
-      </div>
     </BaseLayout>
   );
 };
