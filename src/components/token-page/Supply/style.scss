@@ -12,8 +12,8 @@
 
     &__header {
       display: flex;
+      align-items: center;
       flex-direction: column;
-      justify-content: center;
       max-width: 820px;
       margin: 0 auto;
 
@@ -56,9 +56,6 @@
           position: sticky;
           top: 75px;
           left: 0;
-
-          // display: block;
-          height: 85px;
           color: $c_white;
         }
       }
@@ -98,6 +95,76 @@
 
             margin-top: 8px;
             color: #a7aeb7;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__supply {
+      padding: 0 20px;
+
+      &__content-section {
+        gap: 40px;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__supply-wrapper {
+      padding: 80px 0;
+    }
+
+    &__supply {
+      padding: 0 10px;
+
+      &__header {
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+
+          max-width: 550px;
+        }
+      }
+
+      &__content-section {
+        flex-direction: column;
+        margin-top: 64px;
+        gap: unset;
+
+        &__explanations {
+          width: unset;
+
+          &__text {
+            @include h6;
+          }
+        }
+
+        &__change-event {
+          margin-top: 32px;
+
+          &__icon-wrapper {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            min-height: 40px;
+            margin-right: 16px;
+          }
+
+          &__content {
+            &__title {
+              @include h7;
+            }
+
+            &__subtitle {
+              @include base-4;
+
+              margin-top: 4px;
+            }
           }
         }
       }
