@@ -10,7 +10,7 @@
   &__tokeninfo {
     @extend %container;
 
-    margin-top: 80px;
+    padding: 0 20px;
 
     &__header {
       display: flex;
@@ -44,7 +44,7 @@
     }
 
     &__items {
-      width: 818px;
+      max-width: 818px;
       margin: 80px auto 0 auto;
       margin-top: 80px;
     }
@@ -61,18 +61,21 @@
 
       &__title-section {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         width: 100%;
 
         &__title {
           @include h6;
 
+          margin-right: 16px;
           color: #1f252e;
         }
 
         &__icon {
           width: 16px;
-          margin-top: 12px;
+          min-width: 16px;
+          // margin-top: 12px;
           color: #a7aeb7;
           transition: .3s transform, .5s color;
 
@@ -102,50 +105,37 @@
     }
   }
 
-  // @media #{$screen-max-md} {
-  //   &__tokeninfo {
-  //     padding: 0 20px;
-  //   }
-  // }
+  @media #{$screen-max-sm} {
+    &__tokeninfo-wrapper {
+      padding: 80px 0;
+    }
 
-  // @media #{$screen-max-sm} {
-  //   &__tokeninfo-title {
-  //     font-size: 40px;
-  //     line-height: 48px;
-  //   }
+    &__tokeninfo {
+      &__header {
+        &__title {
+          @include h4;
+        }
+      }
 
-  //   &__tokeninfo {
-  //     margin-top: 44px;
+      &__items {
+        margin-top: 64px;
+      }
 
-  //     &__item {
-  //       position: relative;
-  //       grid-template-columns: auto;
+      &__item {
+        padding: 16px 0;
 
-  //       &__content {
-  //         padding: 0;
-  //       }
+        &__title-section {
+          &__title {
+            @include h7;
+          }
+        }
 
-  //       &__title {
-  //         padding-right: 32px;
-  //         font-size: 24px;
-  //         line-height: 32px;
-  //       }
+        &__text {
+          @include base-4;
 
-  //       &__text {
-  //         font-size: 14px;
-  //         line-height: 20px;
-  //       }
-
-  //       &__icon {
-  //         position: absolute;
-  //         top: 24px;
-  //         right: 32px;
-
-  //         &--active {
-  //           color: #3b3b3b;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+          margin-top: 8px;
+        }
+      }
+    }
+  }
 }
