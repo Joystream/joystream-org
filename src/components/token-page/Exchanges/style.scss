@@ -49,12 +49,14 @@
       height: 400px;
       max-width: 1200px;
       margin-top: 80px;
+      padding: 48px 24px;
       background-color: $c_white;
 
       &__title {
         @include h5;
 
         color: #1f252e;
+        text-align: center;
       }
 
       &__subtitle {
@@ -104,6 +106,75 @@
 
           &:hover {
             background-color: #322af1;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__exchanges {
+      padding: 0 20px;
+
+      &__header {
+        max-width: 600px;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__exchanges-wrapper {
+      padding: 80px 0;
+    }
+
+    &__exchanges {
+      &__header {
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+
+      &__newsletter {
+        height: auto;
+        margin-top: 64px;
+
+        &__title {
+          @include h6;
+        }
+
+        &__subtitle {
+          @include base-4;
+        }
+
+        &__form {
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          gap: 12px;
+
+          &__input {
+            width: 450px;
+          }
+
+          &__button {
+            width: 287px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__exchanges {
+      &__newsletter {
+        &__form {
+          &__input,
+          &__button {
+            width: 100%;
           }
         }
       }
