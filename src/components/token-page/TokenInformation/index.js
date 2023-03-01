@@ -38,7 +38,7 @@ const TokenInformationSection = ({ title, text }) => {
 };
 
 const TokenInformation = ({ tokenQuestions, title }) => (
-  <div className="TokenPage__tokeninfo-wrapper">
+  <section className="TokenPage__tokeninfo-wrapper">
     <div className="TokenPage__tokeninfo">
       <header className="TokenPage__tokeninfo__header">
         <span className="TokenPage__tokeninfo__header__section-title">FAQ</span>
@@ -50,7 +50,7 @@ const TokenInformation = ({ tokenQuestions, title }) => (
         ))}
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default TokenInformation;

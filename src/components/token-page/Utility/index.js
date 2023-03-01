@@ -36,41 +36,16 @@ const Utility = () => {
                 <WorkingGroupIcon className="TokenPage__utility__grid__working-group__icon" />
               </div>
               <div className="TokenPage__utility__grid__working-group__info">
-                <h3 className="TokenPage__utility__grid__working-group__info__title">Publish videos</h3>
+                <h3 className="TokenPage__utility__grid__working-group__info__title">Be part of a Working Group</h3>
                 <h3 className="TokenPage__utility__grid__working-group__info__subtitle">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus.
-                </h3>
-              </div>
-            </div>
-
-            <div className="TokenPage__utility__grid__videos">
-              <div className="TokenPage__utility__grid__videos__icon-wrapper">
-                <VideosIcon className="TokenPage__utility__grid__videos__icon" />
-              </div>
-              <div className="TokenPage__utility__grid__videos__info">
-                <h3 className="TokenPage__utility__grid__videos__info__title">Be part of a Working Group</h3>
-                <h3 className="TokenPage__utility__grid__videos__info__subtitle">
                   Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus.
-                </h3>
-              </div>
-              <img src={VideosIllustration} className="TokenPage__utility__grid__videos__illustration" alt="" />
-            </div>
-
-            <div className="TokenPage__utility__grid__election">
-              <div className="TokenPage__utility__grid__election__icon-wrapper">
-                <ElectionsIcon className="TokenPage__utility__grid__election__icon" />
-              </div>
-              <div className="TokenPage__utility__grid__election__info">
-                <h3 className="TokenPage__utility__grid__election__info__title">Participate in elections</h3>
-                <h3 className="TokenPage__utility__grid__election__info__subtitle">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus.
                 </h3>
               </div>
             </div>
 
             <div className="TokenPage__utility__grid__creators">
               <div className="TokenPage__utility__grid__creators__icon-wrapper">
-                <InteractIcon className="TokenPage__utility__grid__creators__icon" />
+                <InvestIcon className="TokenPage__utility__grid__creators__icon" />
               </div>
               <div className="TokenPage__utility__grid__creators__info">
                 <h3 className="TokenPage__utility__grid__creators__info__title">Invest in creators</h3>
@@ -95,17 +70,17 @@ const Utility = () => {
               />
             </div>
 
-            <div className="TokenPage__utility__grid__interact">
-              <div className="TokenPage__utility__grid__interact__icon-wrapper">
-                <InvestIcon className="TokenPage__utility__grid__interact__icon" />
+            <div className="TokenPage__utility__grid__videos">
+              <div className="TokenPage__utility__grid__videos__icon-wrapper">
+                <VideosIcon className="TokenPage__utility__grid__videos__icon" />
               </div>
-              <div className="TokenPage__utility__grid__interact__info">
-                <h3 className="TokenPage__utility__grid__interact__info__title">Interact with others</h3>
-                <h3 className="TokenPage__utility__grid__interact__info__subtitle">
+              <div className="TokenPage__utility__grid__videos__info">
+                <h3 className="TokenPage__utility__grid__videos__info__title">Publish videos</h3>
+                <h3 className="TokenPage__utility__grid__videos__info__subtitle">
                   Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus.
                 </h3>
               </div>
-              <img src={InteractIllustration} className="TokenPage__utility__grid__interact__illustration" alt="" />
+              <img src={VideosIllustration} className="TokenPage__utility__grid__videos__illustration" alt="" />
             </div>
 
             <div className="TokenPage__utility__grid__validators">
@@ -118,6 +93,31 @@ const Utility = () => {
                   Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus.
                 </h3>
               </div>
+            </div>
+
+            <div className="TokenPage__utility__grid__election">
+              <div className="TokenPage__utility__grid__election__icon-wrapper">
+                <ElectionsIcon className="TokenPage__utility__grid__election__icon" />
+              </div>
+              <div className="TokenPage__utility__grid__election__info">
+                <h3 className="TokenPage__utility__grid__election__info__title">Participate in elections</h3>
+                <h3 className="TokenPage__utility__grid__election__info__subtitle">
+                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus.
+                </h3>
+              </div>
+            </div>
+
+            <div className="TokenPage__utility__grid__interact">
+              <div className="TokenPage__utility__grid__interact__icon-wrapper">
+                <InteractIcon className="TokenPage__utility__grid__interact__icon" />
+              </div>
+              <div className="TokenPage__utility__grid__interact__info">
+                <h3 className="TokenPage__utility__grid__interact__info__title">Interact with others</h3>
+                <h3 className="TokenPage__utility__grid__interact__info__subtitle">
+                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus.
+                </h3>
+              </div>
+              <img src={InteractIllustration} className="TokenPage__utility__grid__interact__illustration" alt="" />
             </div>
 
             <div className="TokenPage__utility__grid__proposals">

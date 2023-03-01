@@ -149,7 +149,7 @@
 
         &__illustration {
           position: absolute;
-          bottom: 0;
+          bottom: 10px;
           left: 0;
         }
       }
@@ -203,6 +203,178 @@
 
       &__proposals {
         grid-area: proposals;
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__utility-background-wrapper {
+      background-position: top 0 left 0;
+    }
+
+    &__utility {
+      &__grid {
+        justify-content: center;
+        grid-template-areas:
+          'working-group  videos'
+          'working-group  videos'
+          'working-group  videos'
+          'creators       videos'
+          'creators       videos'
+          'creators       validators'
+          'creators       validators'
+          'creators       validators'
+          'election       interact'
+          'election       interact'
+          'proposals      interact'
+          'proposals      interact';
+        grid-template-columns: repeat(2, 400px);
+        grid-template-rows: repeat(12, 116px);
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__utility-background-wrapper {
+      background: unset;
+    }
+
+    &__utility {
+      &__grid {
+        grid-template-columns: repeat(2, 335px);
+
+        &__creators {
+          &__illustration {
+            &--right {
+              right: 0;
+              width: 58px;
+              height: 225px;
+            }
+
+            &--left {
+              left: -2px;
+              width: 58px;
+              height: 225px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__utility-background-wrapper {
+      padding: 80px 0;
+    }
+
+    &__utility {
+      &__header {
+        max-width: 550px;
+
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+
+      &__grid {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 64px;
+
+        &__working-group,
+        &__election,
+        &__validators,
+        &__proposals,
+        &__videos,
+        &__creators,
+        &__interact {
+          width: 335px;
+          padding: 24px;
+
+          &__icon-wrapper {
+            width: 40px;
+            height: 40px;
+          }
+
+          &__info {
+            &__title {
+              @include h7;
+
+              margin-top: 24px;
+            }
+
+            &__subtitle {
+              @include base-4;
+
+              margin-top: 4px;
+            }
+          }
+        }
+
+        &__videos,
+        &__creators,
+        &__interact {
+          &__info {
+            margin-top: 0;
+          }
+        }
+
+        &__creators {
+          height: 416px;
+
+          &__illustration {
+            &--right {
+              right: -38px;
+              bottom: -70px;
+              width: 70px;
+              height: 270px;
+            }
+
+            &--center {
+              bottom: -122px;
+              left: -37px;
+              width: 415px;
+              min-width: 415px;
+            }
+
+            &--left {
+              bottom: -70px;
+              left: -38px;
+              width: 70px;
+              height: 270px;
+            }
+          }
+        }
+
+        &__videos {
+          height: 416px;
+
+          &__illustration {
+            bottom: -120px;
+            left: -73px;
+            width: 402px;
+            height: 346px;
+            min-width: 402px;
+            min-height: 346px;
+          }
+        }
+
+        &__interact {
+          height: 416px;
+
+          &__illustration {
+            left: -72px;
+            width: 395px;
+            height: 224px;
+            min-width: 395px;
+            min-height: 224px;
+          }
+        }
       }
     }
   }

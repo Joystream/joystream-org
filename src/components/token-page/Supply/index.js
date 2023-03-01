@@ -30,7 +30,7 @@ const ChangeEvent = ({ isEventMint, title, subtitle }) => {
 
 const Supply = () => {
   return (
-    <div className="TokenPage__supply-wrapper">
+    <section className="TokenPage__supply-wrapper">
       <div className="TokenPage__supply">
         <header className="TokenPage__supply__header">
           <span className="TokenPage__supply__header__section-title">SUPPLY</span>
@@ -66,7 +66,7 @@ const Supply = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
