@@ -75,7 +75,8 @@
         }
 
         &__about {
-          max-width: 330px;
+          width: 330px;
+          min-width: 330px;
 
           &__logo-wrapper {
             @include logo-wrapper(72px, 72px);
@@ -114,7 +115,109 @@
 
         &__visual {
           position: relative;
-          max-width: 720px;
+          width: 720px;
+          min-width: 720px;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__faucets {
+      padding: 0 20px;
+
+      &__apps {
+        &__main {
+          height: 400px;
+
+          &__about {
+            width: 250px;
+            min-width: 250px;
+
+            &__logo-wrapper {
+              @include logo-wrapper(64px, 64px);
+            }
+
+            &__section-title {
+              margin-top: 32px;
+            }
+
+            &__platform-name {
+              @include h6;
+            }
+
+            &__platform-description {
+              @include base-4;
+            }
+          }
+
+          &__visual {
+            width: 645px;
+            min-width: 645px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__faucets-wrapper {
+      padding: 80px 0;
+    }
+
+    &__faucets {
+      &__header {
+        max-width: 600px;
+
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+
+      &__apps {
+        justify-content: space-between;
+        margin-top: 64px;
+
+        &__main {
+          flex-direction: column;
+          // height: 720px;
+          height: 655px;
+          padding: 24px;
+          gap: 24px;
+
+          &__about {
+            width: auto;
+            max-width: 350px;
+            min-width: auto;
+          }
+
+          &__visual {
+            width: 600px;
+            min-width: 600px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__faucets {
+      &__apps {
+        &__main {
+          height: 620px;
+
+          &__about {
+            max-width: 287px;
+          }
+
+          &__visual {
+            width: 480px;
+            min-width: 480px;
+          }
         }
       }
     }
