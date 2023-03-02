@@ -2,23 +2,23 @@ import React, { useState } from 'react';
 
 import './style.scss'
 
-const Exchanges = () => {
+const Exchanges = ({ t }) => {
   const [email, setEmail] = useState("");
 
   return (
     <section className="TokenPage__exchanges-wrapper">
       <div className='TokenPage__exchanges'>
         <header className="TokenPage__exchanges__header">
-          <span className="TokenPage__exchanges__header__section-title">EXCHANGES</span>
-          <h2 className="TokenPage__exchanges__header__title">Where can you buy and sell JOY?</h2>
+          <span className="TokenPage__exchanges__header__section-title">{t("token.exchanges.sectionTitle")}</span>
+          <h2 className="TokenPage__exchanges__header__title">{t("token.exchanges.title")}</h2>
           <p className="TokenPage__exchanges__header__subtitle">
-            If you have an appetite for more JOY tokens, check one of the exchanges listed below to buy more, or gain profit from the tokens you already have.
+            {t("token.exchanges.subtitle")}
           </p>
         </header>
 
         <div className='TokenPage__exchanges__newsletter'>
-          <h3 className='TokenPage__exchanges__newsletter__title'>No exchanges available at the moment</h3>
-          <p className='TokenPage__exchanges__newsletter__subtitle'>Join our newsletter to be the first to know when the JOY token makes its debut on popular exchanges.</p>
+          <h3 className='TokenPage__exchanges__newsletter__title'>{t("token.exchanges.newsletter.title")}</h3>
+          <p className='TokenPage__exchanges__newsletter__subtitle'>{t("token.exchanges.newsletter.subtitle")}</p>
           <form
             method="post"
             action="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"
@@ -29,7 +29,7 @@ const Exchanges = () => {
           >
             <input
               className="TokenPage__exchanges__newsletter__form__input"
-              placeholder="Email Address.."
+              placeholder={t("token.exchanges.newsletter.placeholder")}
               type="email"
               name="EMAIL"
               required
@@ -37,7 +37,7 @@ const Exchanges = () => {
               value={email}
             />
             <button className="TokenPage__exchanges__newsletter__form__button" type="submit" name="subscribe">
-              Join the newsletter
+              {t("token.exchanges.newsletter.join")}
             </button>
           </form>
         </div>

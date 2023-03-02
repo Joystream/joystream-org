@@ -9,42 +9,43 @@ import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 
 import './style.scss';
 
-const WalletSection = ({ walletIcon, walletName, walletLink }) => {
+const WalletSection = ({ walletIcon, walletName, walletLink, t }) => {
   return (
     <div className="TokenPage__wallets__item">
       <div className="TokenPage__wallets__item__image-wrapper">
         <img src={walletIcon} className="TokenPage__wallets__item__image" alt="" />
       </div>
       <p className="TokenPage__wallets__item__name">{walletName}</p>
-      <ArrowLink href={walletLink} className="TokenPage__wallets__item__link" text="Learn more" />
+      <ArrowLink href={walletLink} className="TokenPage__wallets__item__link" text={t("token.wallets.learnMore")} />
     </div>
   );
 };
 
-const Wallets = () => {
+const Wallets = ({ t }) => {
   return (
     <section className="TokenPage__wallets-wrapper">
       <div className="TokenPage__wallets">
         <header className="TokenPage__wallets__header">
-          <span className="TokenPage__wallets__header__section-title">WALLETS</span>
-          <h2 className="TokenPage__wallets__header__title">Where can you store JOY?</h2>
+          <span className="TokenPage__wallets__header__section-title">{t("token.wallets.sectionTitle")}</span>
+          <h2 className="TokenPage__wallets__header__title">{t("token.wallets.title")}</h2>
           <p className="TokenPage__wallets__header__subtitle">
-            You can keep your JOY tokens on a number of wallets that you can install as a browser extension.
+            {t("token.wallets.subtitle")}
           </p>
         </header>
 
         <div className="TokenPage__wallets__items">
           <WalletSection
             walletIcon={PolkadotIcon}
-            walletName="Polkadot"
+            walletName={t("token.wallets.polkadot")}
             walletLink="https://polkadot.js.org/extension/"
+            t={t}
           />
-          <WalletSection walletIcon={SubWalletIcon} walletName="Talisman" walletLink="https://www.talisman.xyz/" />
-          <WalletSection walletIcon={TalismanIcon} walletName="SubWallet" walletLink="https://subwallet.app/" />
+          <WalletSection walletIcon={SubWalletIcon} walletName={t("token.wallets.talisman")} walletLink="https://www.talisman.xyz/" t={t} />
+          <WalletSection walletIcon={TalismanIcon} walletName={t("token.wallets.subwallet")} walletLink="https://subwallet.app/" t={t} />
         </div>
         <div className="TokenPage__wallets__info">
           <InfoIcon className="TokenPage__wallets__info__icon" />
-          The list of wallets is yet to grow. Check back soon for more wallets allowing for storing JOY tokens.
+          {t("token.wallets.info")}
         </div>
       </div>
     </section>

@@ -5,7 +5,6 @@ import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import SiteMetadata from '../../components/SiteMetadata';
 import BaseLayout from '../../components/_layouts/Base';
 import Hero from '../../components/token-page/Hero';
-import PendingCashouts from '../../components/token-page/PendingCashouts';
 import Wallets from '../../components/token-page/Wallets';
 import Faucets from '../../components/token-page/Faucets';
 import Exchanges from '../../components/token-page/Exchanges';
@@ -33,19 +32,19 @@ const TokensPage = () => {
         description={t('token.siteMetadata.description')}
       />
 
-      <Hero />
+      <Hero t={t} />
 
-      <Wallets />
+      <Wallets t={t} />
 
-      <Faucets />
+      <Faucets t={t} />
 
-      <Exchanges />
+      <Exchanges  t={t}/>
 
-      <Earn />
+      <Earn t={t} />
 
-      <Utility />
+      <Utility t={t} />
 
-      <Supply />
+      <Supply t={t} />
 
       <TokenInformation
         title={t('token.faq.title')}
@@ -54,8 +53,6 @@ const TokensPage = () => {
           text: text?.isModular ? <Trans i18nKey={text?.key} components={text?.components} /> : t(text),
         }))}
       />
-
-      {/* <PendingCashouts cashouts={statusServerData?.exchanges} /> */}
     </BaseLayout>
   );
 };

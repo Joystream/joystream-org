@@ -1,15 +1,11 @@
 import React from 'react';
-import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import cn from 'classnames';
 
 import useAxios from '../../../utils/useAxios';
 
 import Tokens from '../../../assets/svg/token/joy-token-hero.svg';
-import TokensAlt from '../../../assets/svg/token/joy-token-hero-background.svg';
 import { ReactComponent as JoyTokenIcon } from '../../../assets/svg/token/joy-token.svg';
 import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
-
-import parseBalance from '../../../utils/parseBalance';
 
 import './style.scss';
 
@@ -21,9 +17,10 @@ const TokenStatsItem = ({
   tooltip = '',
   loading = false,
   statusServerData = null,
+  t
 }) => {
   if (loading) {
-    value = 'Loading...';
+    value = t("token.hero.loading");
   }
 
   if (statusServerData && !loading) {
@@ -59,47 +56,46 @@ const TokenStatsItem = ({
   );
 };
 
-const TokenHero = () => {
+const TokenHero = ({ t }) => {
   const [statusServerData, loading, error] = useAxios('https://status.joystream.org/status');
-  const { t } = useTranslation();
 
   return (
     <div className="TokenPage__hero-background">
       <div className="TokenPage__hero-wrapper">
         <div className="TokenPage__hero">
           <div className="TokenPage__hero__content">
-            <h2 className="TokenPage__hero__title">The JOY token</h2>
+            <h2 className="TokenPage__hero__title">{t("token.hero.title")}</h2>
             <p className="TokenPage__hero__text">
-              $JOY, being Joystream’s native token, is used to govern and keep the network secured. It’s used as a
-              currency in all dApps built on Joystream.
+              {t("token.hero.text")}
             </p>
           </div>
           <div className="TokenPage__hero__illustration">
             <img className="TokenPage__hero__illustration__image" alt="" src={Tokens} />
-            {/* <img className="TokenPage__hero__image TokenPage__hero__image--alt" alt="" src={TokensAlt} /> */}
           </div>
         </div>
         <div className="TokenPage__tokenstats-wrapper">
-          {/* <h2 className="TokenPage__tokenstats-title">{t('token.hero.tokenStats.title')}</h2> */}
           <div className="TokenPage__tokenstats">
-            <TokenStatsItem title="Symbol" value="JOY" joyIcon />
+            <TokenStatsItem title={t("token.hero.tokenStats.symbol.title")} value="JOY" joyIcon t={t} />
             <TokenStatsItem
-              title={t('token.hero.tokenStats.supply')}
+              title={t('token.hero.tokenStats.supply.title')}
               value="totalIssuance"
               statusServerData={statusServerData}
               loading={loading}
+              t={t}
             />
             <TokenStatsItem
-              title="Price"
-              value="Unavailable"
+              title={t("token.hero.tokenStats.price.title")}
+              value={t("token.hero.tokenStats.price.value")}
               disabled
-              tooltip="Price data will be available once the JOY token is listed on exchanges."
+              tooltip={t("token.hero.tokenStats.price.tooltip")}
+              t={t}
             />
             <TokenStatsItem
-              title="FDV"
-              value="Unavailable"
+              title={t("token.hero.tokenStats.fdv.title")}
+              value={t("token.hero.tokenStats.fdv.value")}
               disabled
-              tooltip="FDV data will be available once the JOY token is listed on exchanges."
+              tooltip={t("token.hero.tokenStats.fdv.tooltip")}
+              t={t}
             />
           </div>
         </div>
