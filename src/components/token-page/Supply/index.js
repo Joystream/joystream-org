@@ -28,41 +28,40 @@ const ChangeEvent = ({ isEventMint, title, subtitle }) => {
   );
 };
 
-const Supply = () => {
+const Supply = ({ t }) => {
   return (
     <section className="TokenPage__supply-wrapper">
       <div className="TokenPage__supply">
         <header className="TokenPage__supply__header">
-          <span className="TokenPage__supply__header__section-title">SUPPLY</span>
-          <h2 className="TokenPage__supply__header__title">How is the JOY supply changing?</h2>
+          <span className="TokenPage__supply__header__section-title">{t("token.supply.sectionTitle")}</span>
+          <h2 className="TokenPage__supply__header__title">{t("token.supply.title")}</h2>
           <p className="TokenPage__supply__header__subtitle">
-            As with all other tokens, some events can increase (mint) and decrease (burn) the number of JOY tokens in
-            the pool.
+            {t("token.supply.subtitle")}
           </p>
         </header>
 
         <div className="TokenPage__supply__content-section">
           <div className="TokenPage__supply__content-section__explanations">
-            <p className='TokenPage__supply__content-section__explanations__text'>JOY tokens are minted when...</p>
+            <p className='TokenPage__supply__content-section__explanations__text'>{t("token.supply.minted.explanation")}</p>
           </div>
           <div className="TokenPage__supply__content-section__change-events">
-            <ChangeEvent isEventMint={true} title="Validators are rewarded for their work" subtitle="Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus." />
-            <ChangeEvent isEventMint={true} title="Councilors, workers and leads are paid out" subtitle="Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus." />
-            <ChangeEvent isEventMint={true} title="Creators are being rewarded for publishing high quality content" subtitle="Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus." />
-            <ChangeEvent isEventMint={true} title="Joystream-based applications are being recognized and rewarded" subtitle="Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus." />
-            <ChangeEvent isEventMint={true} title="Financing spending proposals and bounties" subtitle="Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus." />
+            <ChangeEvent isEventMint={true} title={t("token.supply.minted.validatorsReward.title")} subtitle={t("token.supply.minted.validatorsReward.subtitle")} />
+            <ChangeEvent isEventMint={true} title={t("token.supply.minted.paidOut.title")} subtitle={t("token.supply.minted.paidOut.subtitle")} />
+            <ChangeEvent isEventMint={true} title={t("token.supply.minted.publishContent.title")} subtitle={t("token.supply.minted.publishContent.subtitle")} />
+            <ChangeEvent isEventMint={true} title={t("token.supply.minted.apps.title")} subtitle={t("token.supply.minted.apps.subtitle")} />
+            <ChangeEvent isEventMint={true} title={t("token.supply.minted.proposalsAndBounties.title")} subtitle={t("token.supply.minted.proposalsAndBounties.subtitle")} />
           </div>
         </div>
 
         <div className="TokenPage__supply__content-section">
           <div className="TokenPage__supply__content-section__explanations">
-            <p className='TokenPage__supply__content-section__explanations__text'>JOY tokens are burned when...</p>
+            <p className='TokenPage__supply__content-section__explanations__text'>{t("token.supply.burned.explanation")}</p>
           </div>
           <div className="TokenPage__supply__content-section__change-events">
-            <ChangeEvent isEventMint={false} title="A creator token is sold" subtitle="Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus." />
-            <ChangeEvent isEventMint={false} title="An NFT is sold" subtitle="Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus." />
-            <ChangeEvent isEventMint={false} title="Application fee is charged" subtitle="Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus." />
-            <ChangeEvent isEventMint={false} title="New content is published" subtitle="Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus." />
+            <ChangeEvent isEventMint={false} title={t("token.supply.burned.creatorTokenSold.title")} subtitle={t("token.supply.burned.creatorTokenSold.subtitle")} />
+            <ChangeEvent isEventMint={false} title={t("token.supply.burned.nftSold.title")} subtitle={t("token.supply.burned.nftSold.subtitle")} />
+            <ChangeEvent isEventMint={false} title={t("token.supply.burned.appFee.title")} subtitle={t("token.supply.burned.appFee.subtitle")} />
+            <ChangeEvent isEventMint={false} title={t("token.supply.burned.contentPublished.title")} subtitle={t("token.supply.burned.contentPublished.subtitle")} />
           </div>
         </div>
       </div>

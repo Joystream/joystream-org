@@ -37,12 +37,12 @@ const TokenInformationSection = ({ title, text }) => {
   );
 };
 
-const TokenInformation = ({ tokenQuestions, title }) => (
+const TokenInformation = ({ tokenQuestions, t }) => (
   <section className="TokenPage__tokeninfo-wrapper">
     <div className="TokenPage__tokeninfo">
       <header className="TokenPage__tokeninfo__header">
-        <span className="TokenPage__tokeninfo__header__section-title">FAQ</span>
-        <h2 className="TokenPage__tokeninfo__header__title">Frequently Asked Questions</h2>
+        <span className="TokenPage__tokeninfo__header__section-title">{t("token.faq.sectionTitle")}</span>
+        <h2 className="TokenPage__tokeninfo__header__title">{t("token.faq.title")}</h2>
       </header>
       <div className="TokenPage__tokeninfo__items">
         {tokenQuestions.map(({ title, text }) => (

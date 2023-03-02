@@ -94,13 +94,13 @@ const Earn = ({ t }) => {
               href="https://handbook.joystream.org/"
               t={t}
             />
-            <ExplanationSection
+            {/* <ExplanationSection
               Icon={EngageBountiesIcon}
               title={t("token.earn.daoParticipant.bounties.title")}
               subtitle={t("token.earn.daoParticipant.bounties.subtitle")}
               href="https://handbook.joystream.org/"
               t={t}
-            />
+            /> */}
             <ArrowLink
               text={t("token.earn.daoParticipant.join")}
               className="TokenPage__earn__explanation-section__link TokenPage__earn__explanation-section__link--alt"

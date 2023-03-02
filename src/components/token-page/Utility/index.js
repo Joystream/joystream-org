@@ -16,17 +16,16 @@ import VideosIllustration from '../../../assets/images/token/videos-illustration
 
 import './style.scss';
 
-const Utility = () => {
+const Utility = ({ t }) => {
   return (
     <section className="TokenPage__utility-wrapper">
       <div className="TokenPage__utility-background-wrapper">
         <div className="TokenPage__utility">
           <header className="TokenPage__utility__header">
-            <span className="TokenPage__utility__header__section-title">UTILITY</span>
-            <h2 className="TokenPage__utility__header__title">What can you do with the JOY token?</h2>
+            <span className="TokenPage__utility__header__section-title">{t("token.utility.sectionTitle")}</span>
+            <h2 className="TokenPage__utility__header__title">{t("token.utility.title")}</h2>
             <p className="TokenPage__utility__header__subtitle">
-              Holding on to your JOY tokens opens up a world of exciting opportunities for engaging with the Joystream
-              community.
+              {t("token.utility.subtitle")}
             </p>
           </header>
 
@@ -36,9 +35,9 @@ const Utility = () => {
                 <WorkingGroupIcon className="TokenPage__utility__grid__working-group__icon" />
               </div>
               <div className="TokenPage__utility__grid__working-group__info">
-                <h3 className="TokenPage__utility__grid__working-group__info__title">Be part of a Working Group</h3>
+                <h3 className="TokenPage__utility__grid__working-group__info__title">{t("token.utility.workingGroup.title")}</h3>
                 <h3 className="TokenPage__utility__grid__working-group__info__subtitle">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus.
+                  {t("token.utility.workingGroup.subtitle")}
                 </h3>
               </div>
             </div>
@@ -48,9 +47,9 @@ const Utility = () => {
                 <InvestIcon className="TokenPage__utility__grid__creators__icon" />
               </div>
               <div className="TokenPage__utility__grid__creators__info">
-                <h3 className="TokenPage__utility__grid__creators__info__title">Invest in creators</h3>
+                <h3 className="TokenPage__utility__grid__creators__info__title">{t("token.utility.creators.title")}</h3>
                 <h3 className="TokenPage__utility__grid__creators__info__subtitle">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus.
+                  {t("token.utility.creators.subtitle")}
                 </h3>
               </div>
               <img
@@ -75,9 +74,9 @@ const Utility = () => {
                 <VideosIcon className="TokenPage__utility__grid__videos__icon" />
               </div>
               <div className="TokenPage__utility__grid__videos__info">
-                <h3 className="TokenPage__utility__grid__videos__info__title">Publish videos</h3>
+                <h3 className="TokenPage__utility__grid__videos__info__title">{t("token.utility.videos.title")}</h3>
                 <h3 className="TokenPage__utility__grid__videos__info__subtitle">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus.
+                  {t("token.utility.videos.subtitle")}
                 </h3>
               </div>
               <img src={VideosIllustration} className="TokenPage__utility__grid__videos__illustration" alt="" />
@@ -88,9 +87,9 @@ const Utility = () => {
                 <NominateValidatorsIcon className="TokenPage__utility__grid__validators__icon" />
               </div>
               <div className="TokenPage__utility__grid__validators__info">
-                <h3 className="TokenPage__utility__grid__validators__info__title">Nominate validators</h3>
+                <h3 className="TokenPage__utility__grid__validators__info__title">{t("token.utility.validators.title")}</h3>
                 <h3 className="TokenPage__utility__grid__validators__info__subtitle">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus dignissim purus.
+                  {t("token.utility.validators.subtitle")}
                 </h3>
               </div>
             </div>
@@ -100,9 +99,9 @@ const Utility = () => {
                 <ElectionsIcon className="TokenPage__utility__grid__election__icon" />
               </div>
               <div className="TokenPage__utility__grid__election__info">
-                <h3 className="TokenPage__utility__grid__election__info__title">Participate in elections</h3>
+                <h3 className="TokenPage__utility__grid__election__info__title">{t("token.utility.elections.title")}</h3>
                 <h3 className="TokenPage__utility__grid__election__info__subtitle">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus.
+                  {t("token.utility.elections.subtitle")}
                 </h3>
               </div>
             </div>
@@ -112,9 +111,9 @@ const Utility = () => {
                 <InteractIcon className="TokenPage__utility__grid__interact__icon" />
               </div>
               <div className="TokenPage__utility__grid__interact__info">
-                <h3 className="TokenPage__utility__grid__interact__info__title">Interact with others</h3>
+                <h3 className="TokenPage__utility__grid__interact__info__title">{t("token.utility.interact.title")}</h3>
                 <h3 className="TokenPage__utility__grid__interact__info__subtitle">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus.
+                  {t("token.utility.interact.subtitle")}
                 </h3>
               </div>
               <img src={InteractIllustration} className="TokenPage__utility__grid__interact__illustration" alt="" />
@@ -125,9 +124,9 @@ const Utility = () => {
                 <ProposalsIcon className="TokenPage__utility__grid__proposals__icon" />
               </div>
               <div className="TokenPage__utility__grid__proposals__info">
-                <h3 className="TokenPage__utility__grid__proposals__info__title">Engage in proposals</h3>
+                <h3 className="TokenPage__utility__grid__proposals__info__title">{t("token.utility.proposals.title")}</h3>
                 <h3 className="TokenPage__utility__grid__proposals__info__subtitle">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet venenatis pharetra faucibus.
+                  {t("token.utility.proposals.subtitle")}
                 </h3>
               </div>
             </div>
