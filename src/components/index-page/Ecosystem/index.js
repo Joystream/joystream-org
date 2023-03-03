@@ -11,7 +11,7 @@ import VideoPlayer from '../../../assets/images/landing/hero/illustration-ecosys
 import L1MediaLogo from '../../../assets/images/landing/ecosystem-app-icons/l1-media.webp';
 import L1MediaIllustration from '../../../assets/images/landing/l1-media-illustration.webp';
 
-import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
+import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import { ReactComponent as CodeWindowControls } from '../../../assets/svg/landing/code-window-controls.svg';
 import { ReactComponent as CarouselItemPlaceholder } from '../../../assets/svg/landing/carousel-item-placeholder.svg';

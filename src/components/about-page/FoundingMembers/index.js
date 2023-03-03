@@ -3,7 +3,7 @@ import { useTranslation, Trans } from 'gatsby-plugin-react-i18next';
 
 import employees from '../employee-data.json';
 import foundingMembers from '../founding-members.json';
-import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
+import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 
 import './style.scss';
 

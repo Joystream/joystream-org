@@ -32,7 +32,7 @@ const parallaxDataForeground = [
 
 const CreatorTokens = ({ t }) => {
   return (
-    <section className="IndexPage__creator-tokens-wrapper">
+    <section className="IndexPage__creator-tokens-wrapper" id="creator-tokens">
       <div className="IndexPage__creator-tokens">
         <div className="IndexPage__creator-tokens__main">
           <div className="IndexPage__creator-tokens__main__content">

@@ -1,0 +1,382 @@
+@import '../../../styles/_main.scss';
+@import '../../../pages/style.scss';
+
+.TokenPage {
+  &__utility-wrapper {
+    background-color: $c_black;
+  }
+
+  &__utility-background-wrapper {
+    @extend %largeContainer;
+
+    padding: 128px 0;
+    background: url('../../../assets/svg/token/utility-section-background.svg');
+    background-position: top 0 left 33px;
+    background-repeat: no-repeat;
+  }
+
+  &__utility {
+    @extend %container;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 820px;
+      margin: 0 auto;
+
+      &__section-title {
+        @include section-title;
+
+        margin: 0 auto;
+        color: #6c6cff;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: $c_white;
+        text-align: center;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        margin-top: 16px;
+        color: #a7aeb7;
+        text-align: center;
+      }
+    }
+
+    &__grid {
+      display: grid;
+      margin-top: 80px;
+      gap: 8px;
+      grid-template-areas:
+        'working-group  videos      election'
+        'working-group  videos      election'
+        'working-group  videos      interact'
+        'creators       videos      interact'
+        'creators       videos      interact'
+        'creators       validators  interact'
+        'creators       validators  proposals'
+        'creators       validators  proposals';
+      grid-template-columns: repeat(3, 400px);
+      grid-template-rows: repeat(8, 116px);
+
+      &__working-group,
+      &__election,
+      &__validators,
+      &__proposals,
+      &__videos,
+      &__creators,
+      &__interact {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+        overflow: hidden;
+        background-color: #111316;
+
+        &__icon-wrapper {
+          display: grid;
+          width: 48px;
+          height: 48px;
+          background-color: #1f252e;
+          border-radius: 999px;
+          place-items: center;
+        }
+
+        &__info {
+          &__title {
+            @include h6;
+
+            color: $c_white;
+          }
+
+          &__subtitle {
+            @include base-3;
+
+            margin-top: 8px;
+            color: #a7aeb7;
+          }
+        }
+      }
+
+      &__working-group,
+      &__election,
+      &__validators,
+      &__proposals {
+        justify-content: space-between;
+      }
+
+      &__videos,
+      &__creators,
+      &__interact {
+        &__info {
+          margin-top: 32px;
+        }
+      }
+
+      &__working-group {
+        grid-area: working-group;
+
+        &__icon {
+          & > path:nth-of-type(1),
+          & > path:nth-of-type(2) {
+            fill: #a7aeb7;
+          }
+
+          & > path:nth-of-type(3) {
+            fill: $c_white;
+          }
+        }
+      }
+
+      &__videos {
+        grid-area: videos;
+
+        &__icon {
+          & > path:nth-of-type(1) {
+            fill: #a7aeb7;
+          }
+
+          & > path:nth-of-type(2) {
+            fill: $c_white;
+          }
+        }
+
+        &__illustration {
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+        }
+      }
+
+      &__election {
+        grid-area: election;
+      }
+
+      &__interact {
+        grid-area: interact;
+
+        &__illustration {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      &__creators {
+        grid-area: creators;
+
+        &__illustration {
+          position: absolute;
+
+          &--center {
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+          }
+
+          &--right {
+            right: 0;
+            bottom: 54px;
+            width: 71.5px;
+            height: 274px;
+          }
+
+          &--left {
+            bottom: 54px;
+            left: 0;
+            width: 71.5px;
+            height: 274px;
+          }
+        }
+      }
+
+      &__validators {
+        grid-area: validators;
+      }
+
+      &__proposals {
+        grid-area: proposals;
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__utility-background-wrapper {
+      background-position: top 0 left 0;
+    }
+
+    &__utility {
+      &__grid {
+        justify-content: center;
+        grid-template-areas:
+          'working-group  videos'
+          'working-group  videos'
+          'working-group  videos'
+          'creators       videos'
+          'creators       videos'
+          'creators       validators'
+          'creators       validators'
+          'creators       validators'
+          'election       interact'
+          'election       interact'
+          'proposals      interact'
+          'proposals      interact';
+        grid-template-columns: repeat(2, 400px);
+        grid-template-rows: repeat(12, 116px);
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__utility-background-wrapper {
+      background: unset;
+    }
+
+    &__utility {
+      &__grid {
+        grid-template-columns: repeat(2, 335px);
+
+        &__creators {
+          &__illustration {
+            &--right {
+              right: 0;
+              width: 58px;
+              height: 225px;
+            }
+
+            &--left {
+              left: -2px;
+              width: 58px;
+              height: 225px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__utility-background-wrapper {
+      padding: 80px 0;
+    }
+
+    &__utility {
+      &__header {
+        max-width: 550px;
+
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+
+      &__grid {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 64px;
+
+        &__working-group,
+        &__election,
+        &__validators,
+        &__proposals,
+        &__videos,
+        &__creators,
+        &__interact {
+          width: 335px;
+          padding: 24px;
+
+          &__icon-wrapper {
+            width: 40px;
+            height: 40px;
+          }
+
+          &__info {
+            &__title {
+              @include h7;
+
+              margin-top: 24px;
+            }
+
+            &__subtitle {
+              @include base-4;
+
+              margin-top: 4px;
+            }
+          }
+        }
+
+        &__videos,
+        &__creators,
+        &__interact {
+          &__info {
+            margin-top: 0;
+          }
+        }
+
+        &__creators {
+          height: 416px;
+
+          &__illustration {
+            &--right {
+              right: -38px;
+              bottom: -75px;
+              width: 70px;
+              height: 270px;
+            }
+
+            &--center {
+              bottom: -145px;
+              left: -37px;
+              width: 415px;
+              min-width: 415px;
+            }
+
+            &--left {
+              bottom: -75px;
+              left: -38px;
+              width: 70px;
+              height: 270px;
+            }
+          }
+        }
+
+        &__videos {
+          height: 416px;
+
+          &__illustration {
+            bottom: -140px;
+            left: -73px;
+            width: 402px;
+            height: 346px;
+            min-width: 402px;
+            min-height: 346px;
+          }
+        }
+
+        &__interact {
+          height: 416px;
+
+          &__illustration {
+            bottom: -10px;
+            left: -72px;
+            width: 395px;
+            height: 224px;
+            min-width: 395px;
+            min-height: 224px;
+          }
+        }
+      }
+    }
+  }
+}

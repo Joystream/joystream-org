@@ -1,38 +1,71 @@
-@import '../../../styles/main';
+@import '../../../styles/_main.scss';
+@import '../../../pages/style.scss';
 
-.TokensPage {
-  &__header {
-    padding: 56px 0 80px 0;
+@mixin loading-bar-animation ($translateAmount, $duration, $delay) {
+  @keyframes animate-tokenstats-loading-bar {
+    0% {
+      transform: translateX(0);
+    }
+
+    75% {
+      transform: translateX($translateAmount);
+    }
+
+    100% {
+      transform: translateX($translateAmount);
+    }
+  }
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+  animation-name: animate-tokenstats-loading-bar;
+  // TODO: Maybe this can be looked into?
+  animation-timing-function: ease;
+}
+
+.TokenPage {
+  &__hero-background {
+    width: 100%;
+    height: 100%;
     background-color: $c_black;
+  }
+
+  &__hero-wrapper {
+    @extend %largeContainer;
+
+    position: relative;
+    padding: 128px 0 96px 0;
+    background-image: url('../../../assets/svg/token/joy-token-hero-background.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
   }
 
   &__hero {
     @extend %container;
 
-    display: grid;
-    column-gap: 34px;
-    grid-template-columns: 1fr 1.5fr;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 128px;
+    gap: 30px;
 
     &__content {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      max-width: 606px;
     }
 
     &__title {
-      font-family: $font-primary;
-      font-size: 72px;
-      line-height: 80px;
-      letter-spacing: 0;
+      @include h1;
+
       color: $c_white;
     }
 
     &__text {
-      margin-top: 12px;
-      font-family: $font-secondary;
-      font-size: 20px;
-      line-height: 28px;
-      letter-spacing: 0;
+      @include base-1;
+
+      margin-top: 16px;
       color: $c_grayc_chateau;
     }
 
@@ -42,9 +75,14 @@
       margin-top: 32px;
     }
 
-    &__image {
-      &--alt {
-        display: none;
+    &__illustration {
+      display: grid;
+      width: 606px;
+      height: 304px;
+      place-items: center;
+
+      &__image {
+        margin-left: 25px;
       }
     }
   }
@@ -55,177 +93,209 @@
     margin-top: 40px;
   }
 
-  &__tokenstats-title {
-    font-family: $font-primary;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: 0;
-    color: $c_white;
-  }
-
   &__tokenstats {
     display: grid;
-    margin-top: 24px;
-    overflow-x: hidden;
-    column-gap: 30px;
-    grid-template-columns: repeat(3, 380px);
-    grid-template-rows: 132px;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, 288px);
 
     &__item {
-      padding: 18px 24px 24px 24px;
+      position: relative;
+      height: 108px;
+      padding: 20px 24px 20px 24px;
+      overflow: hidden;
       background-color: #111316;
 
-      &--placeholder {
-        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading;
+      &--disabled {
+        overflow: unset;
       }
 
-      &__title-placeholder {
+      &__loading-bar {
+        @include loading-bar-animation(428px, 3s, 0s);
+
+        position: absolute;
+        top: 0;
+        left: -140px;
         width: 140px;
-        height: 16px;
-        margin-bottom: 20px;
-        background-color: #1f252e;
-        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-metric-text;
+        height: 2px;
+        min-width: 140px;
+        min-height: 2px;
+        background-color: #5c6475;
       }
 
       &__title {
-        font-family: $font-secondary;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0;
-        color: $c_grayc_chateau;
-        animation: animate-tokenstats-text .5s linear;
-      }
+        @include base-4;
 
-      &__value-placeholder {
-        width: 284px;
-        height: 48px;
-        background-color: #1f252e;
-        animation: 1s cubic-bezier(.4, 0, .6, 1) 0s infinite normal none running loading-metric-text;
+        color: $c_grayc_chateau;
       }
 
       &__value {
-        font-family: $font-primary;
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: 0;
+        @include h5;
+
+        display: flex;
+        align-items: center;
+        height: 36px;
+        margin-top: 12px;
         color: $c_white;
-        animation: animate-tokenstats-text .5s linear;
+
+        &--loading {
+          color: #5c6475;
+        }
+
+        &--disabled {
+          color: #a7aeb7;
+        }
+
+        &__joy-icon {
+          margin-right: 8px;
+        }
+      }
+
+      &__tooltip-wrapper {
+        position: absolute;
+        right: 26px;
+        bottom: 32px;
+        width: 16px;
+        height: 16px;
+        margin: auto;
+      }
+
+      &__tooltip {
+        &__icon {
+          fill: #a7aeb7;
+        }
+
+        &:hover &__icon {
+          fill: $c_white;
+        }
+
+        &__modal {
+          @include base-5;
+
+          position: absolute;
+          right: 0;
+          bottom: 25px;
+          width: 240px;
+          height: auto;
+          padding: 12px 12px 18px 12px;
+          color: #1f252e;
+          background-color: #dee3e9;
+          opacity: 0;
+          visibility: hidden;
+          transition: visibility .3s linear, opacity .3s linear;
+          transition-delay: .1s;
+          clip-path:
+            polygon(
+              0% 0%,
+              100% 0%,
+              100% calc(100% - 6px),
+              100% 100%,
+              calc(100% - 8px) calc(100% - 6px),
+              0% calc(100% - 6px)
+            );
+        }
+
+        &:hover &__modal {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__hero-wrapper {
+      background-position: top 10% right 20px;
+      background-size: 45%;
+    }
+
+    &__hero {
+      &__illustration {
+        width: 454.5px;
+        height: 228px;
+        min-width: 454.5px;
+        min-height: 228px;
+
+        &__image {
+          margin-left: 0;
+        }
       }
     }
   }
 
   @media #{$screen-max-lg} {
-    &__hero {
-      &__title {
-        font-size: 60px;
-        line-height: 68px;
-      }
+    &__hero-wrapper {
+      background-position: top 18% right 20px;
     }
   }
 
   @media #{$screen-max-md} {
-    &__header {
-      padding-top: 64px;
+    &__hero-wrapper {
+      padding: 80px 0;
+      background-position: top 250px center;
+      background-size: 500px;
     }
 
     &__hero {
-      display: flex;
       align-items: center;
       flex-direction: column;
-      width: 85%;
+      justify-content: unset;
+      gap: 64px;
 
       &__content {
-        align-items: center;
-      }
-
-      &__title {
+        max-width: 750px;
         text-align: center;
       }
-
-      &__text {
-        text-align: center;
-      }
-
-      &__image {
-        width: 85%;
-        margin-top: 40px;
-      }
-    }
-
-    &__tokenstats-wrapper {
-      padding-left: 20px;
     }
 
     &__tokenstats {
-      &__value {
-        font-size: 40px;
-        line-height: 48px;
-      }
+      justify-content: center;
     }
   }
 
   @media #{$screen-max-sm} {
-    &__hero {
-      &__link {
-        width: 335px;
-        height: 60px;
-      }
+    &__hero-wrapper {
+      background-position: top 225px center;
+      background-size: 400px;
     }
-  }
 
-  @media (max-width: 500px) {
     &__hero {
-      width: 335px;
+      margin-bottom: 64px;
+
+      &__content {
+        max-width: 550px;
+      }
 
       &__title {
-        font-size: 40px;
-        line-height: 48px;
-        text-align: left;
+        @include h3;
       }
 
       &__text {
-        font-size: 16px;
-        line-height: 24px;
-        text-align: left;
+        @include base-3;
       }
 
-      &__image {
-        display: none;
-        width: auto;
-
-        &--alt {
-          display: block;
-          margin-top: 40px;
-        }
+      &__illustration {
+        width: 335px;
+        height: 199px;
+        min-width: 335px;
+        min-height: 199px;
       }
     }
-  }
-}
 
-@keyframes loading {
-  0% {
-    opacity: 1;
+    &__tokenstats-wrapper {
+      margin-top: 0;
+    }
   }
 
-  50% {
-    opacity: .5;
+  @media (max-width: 630px) {
+    &__tokenstats {
+      grid-template-columns: repeat(auto-fit, 335px);
+    }
   }
 
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes animate-tokenstats-text {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
+  @media (max-width: 400px) {
+    &__hero-wrapper {
+      background-position: top 260px center;
+      background-size: 390px;
+    }
   }
 }

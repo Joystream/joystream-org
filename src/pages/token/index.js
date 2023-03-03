@@ -5,19 +5,22 @@ import { useTranslation, useI18next, Trans } from 'gatsby-plugin-react-i18next';
 import SiteMetadata from '../../components/SiteMetadata';
 import BaseLayout from '../../components/_layouts/Base';
 import Hero from '../../components/token-page/Hero';
+import Wallets from '../../components/token-page/Wallets';
+import Faucets from '../../components/token-page/Faucets';
+import Exchanges from '../../components/token-page/Exchanges';
+import Earn from '../../components/token-page/Earn';
+import Utility from '../../components/token-page/Utility';
+import Supply from '../../components/token-page/Supply';
 import TokenInformation from '../../components/token-page/TokenInformation';
-import PendingCashouts from '../../components/token-page/PendingCashouts';
+
 import ArrowLink from '../../components/ArrowLink';
 
 import { sharedData } from '../../data/pages';
 import tokenQuestions from '../../data/pages/token';
 
-import useAxios from '../../utils/useAxios';
-
 import './style.scss';
 
 const TokensPage = () => {
-  const [statusServerData, loading, error] = useAxios();
   const { t } = useTranslation();
   const { language } = useI18next();
 
@@ -29,24 +32,27 @@ const TokensPage = () => {
         description={t('token.siteMetadata.description')}
       />
 
-      <Hero statusServerData={statusServerData} />
+      <Hero t={t} />
+
+      <Wallets t={t} />
+
+      <Faucets t={t} />
+
+      <Exchanges  t={t}/>
+
+      <Earn t={t} />
+
+      <Utility t={t} />
+
+      <Supply t={t} />
 
       <TokenInformation
-        title={t('token.faq.title')}
         tokenQuestions={tokenQuestions.map(({ title, text }) => ({
           title: t(title),
           text: text?.isModular ? <Trans i18nKey={text?.key} components={text?.components} /> : t(text),
         }))}
+        t={t}
       />
-
-      <PendingCashouts cashouts={statusServerData?.exchanges} />
-
-      <div className="TokensPage__cta-wrapper">
-        <div className="TokensPage__cta">
-          <h2 className="TokensPage__cta__title">{t('token.cta.title')}</h2>
-          <ArrowLink className="TokensPage__cta__link" text={t('button.openDiscord')} href={sharedData.social.discordLink} dark />
-        </div>
-      </div>
     </BaseLayout>
   );
 };
