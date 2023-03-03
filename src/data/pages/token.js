@@ -1,56 +1,19 @@
-import React from 'react';
-import { Link } from 'gatsby-plugin-react-i18next';
-
 const tokenQuestions = [
     {
-        title: 'token.faq.whatIsTJoy.title',
-        text: 'token.faq.whatIsTJoy.text',
+        title: 'token.faq.joyPurpose.title',
+        text: 'token.faq.joyPurpose.text',
     },
     {
-        title: 'token.faq.tJoyValueOrigin.title',
-        text: 'token.faq.tJoyValueOrigin.text',
+        title: 'token.faq.whereToGet.title',
+        text: 'token.faq.whereToGet.text',
     },
     {
-        title: 'token.faq.purposeOfTJoy.title',
-        text: {
-            isModular: true,
-            key: 'token.faq.purposeOfTJoy.text',
-            components: [<br />],
-        },
+        title: 'token.faq.worth.title',
+        text: 'token.faq.worth.text',
     },
     {
-        title: 'token.faq.whereCanTJoyBeObtained.title',
-        text: 'token.faq.whereCanTJoyBeObtained.text',
-    },
-    {
-        title: 'token.faq.linkBetweenTJoyAndFutureToken.title',
-        text: 'token.faq.linkBetweenTJoyAndFutureToken.text',
-    },
-    {
-        title: 'token.faq.howToCashout.title',
-        text: {
-            isModular: true,
-            key: "token.faq.howToCashout.text",
-            components: {
-              list: <ol></ol>,
-              listItem: <li></li>,
-              cashoutLink: <Link to='/cashout'>this form</Link>,
-              bold: <strong style={{ wordBreak: "break-all" }}/>,
-              discordLink: <a href="https://discord.gg/DE9UN3YpRP">Discord server</a>
-            }
-        }
-    },
-    {
-        title: 'token.faq.howToEarn.title',
-        text: {
-            isModular : true,
-            key : 'token.faq.howToEarn.text',
-            components : [<a href="https://joystream.gitbook.io/testnet-workspace/testnet/founding-member-program" target="_blank">Founding Member Program</a>],
-        },
-    },
-    {
-        title: 'token.faq.TJoyWorth.title',
-        text: 'token.faq.TJoyWorth.text',
+        title: 'token.faq.cashout.title',
+        text: 'token.faq.cashout.text',
     },
 ];
 

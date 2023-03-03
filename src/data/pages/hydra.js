@@ -132,7 +132,7 @@ export default {
         name: 'hydra.getStarted.links.discord.name',
         icon: DiscordIcon,
         link: {
-          to: 'https://discord.gg/DE9UN3YpRP',
+          to: 'https://discord.gg/NaNzysB5YZ',
           as: 'hydra.getStarted.links.discord.link',
         },
       },

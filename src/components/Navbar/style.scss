@@ -3,7 +3,7 @@
 .Navbar {
   $r: &;
 
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 5;
   height: $navbar-height;
@@ -11,7 +11,7 @@
   transition: top 400ms ease 0s;
 
   &--hidden {
-    top: -$navbar-height;
+    // top: -$navbar-height;
   }
 
   &--light {

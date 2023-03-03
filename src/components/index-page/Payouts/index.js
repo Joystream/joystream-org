@@ -10,7 +10,7 @@ import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocus
 
 import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.webp';
 import PayoutsForeground from '../../../assets/images/landing/payouts-foreground.webp';
-import { ReactComponent as InfoIcon } from '../../../assets/svg/landing/info.svg';
+import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
 import { ReactComponent as PlusIcon } from '../../../assets/svg/plus.svg';
 import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
@@ -136,7 +136,7 @@ const Payouts = ({ t }) => {
           {t("landing.payouts.atlas.subtitle")}
         </p>
       </div>
-      <div className="IndexPage__payouts">
+      <div className="IndexPage__payouts" id="creator-payouts">
         <div className="IndexPage__payouts__content">
           <span className="IndexPage__payouts__content__section-title">{t('landing.payouts.sectionTitle')}</span>
           <h3 className="IndexPage__payouts__content__title">
