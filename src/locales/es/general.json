@@ -99,7 +99,8 @@
     "apps": "Apps",
     "viewApps": "View apps",
     "community": "Community",
-    "about": "About"
+    "about": "About",
+    "token": "Token"
   },
   "footer": {
     "title": "Stay up to date",
