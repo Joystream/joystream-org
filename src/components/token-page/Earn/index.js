@@ -77,21 +77,21 @@ const Earn = ({ t }) => {
               Icon={GatewayOperatorIcon}
               title={t("token.earn.daoParticipant.gateway.title")}
               subtitle={t("token.earn.daoParticipant.gateway.subtitle")}
-              href="https://handbook.joystream.org/"
+              href="https://www.notion.so/joystream/Apps-05bec9dc2a5949aeb063ad510ad3eb92?pvs=4"
               t={t}
             />
             <ExplanationSection
               Icon={WorkingGroupIcon}
               title={t("token.earn.daoParticipant.workingGroup.title")}
               subtitle={t("token.earn.daoParticipant.workingGroup.subtitle")}
-              href="https://handbook.joystream.org/"
+              href="https://pioneerapp.xyz/#/working-groups"
               t={t}
             />
             <ExplanationSection
               Icon={ValidateAndStakeIcon}
               title={t("token.earn.daoParticipant.validateAndStake.title")}
               subtitle={t("token.earn.daoParticipant.validateAndStake.subtitle")}
-              href="https://handbook.joystream.org/"
+              href="https://polkadot.js.org/apps/?rpc=wss://rpc.joystream.org:9944#/staking"
               t={t}
             />
             {/* <ExplanationSection
