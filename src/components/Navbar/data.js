@@ -1,6 +1,7 @@
 import { sharedData } from '../../data/pages';
 
 const links = [
+  { to: '/lightpaper.pdf', label: 'navbar.lightpaper' },
   { to: '/about', label: 'navbar.about' },
   { to: '/community', label: 'navbar.community' },
   { to: '/token', label: 'navbar.token' },

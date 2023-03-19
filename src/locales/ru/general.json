@@ -22,10 +22,10 @@
     "discoveryProvider": "Провайдер обнаружения",
     "bandwidthProvider": "Провайдер пропускной способности",
     "builder": "Разработчик",
-    "storageLead" : "Главный провайдер хранилищ",
-    "contentLead" : "Главный куратор контента",
-    "membershipCurator" : "Membership Curator",
-    "communicationModerator" : "Communication Moderator"
+    "storageLead": "Главный провайдер хранилищ",
+    "contentLead": "Главный куратор контента",
+    "membershipCurator": "Membership Curator",
+    "communicationModerator": "Communication Moderator"
   },
   "siteMetadata": {
     "title": "Joystream: видеоплатформа DAO"
@@ -100,7 +100,8 @@
     "viewApps": "View apps",
     "community": "Community",
     "about": "About",
-    "token": "Token"
+    "token": "Token",
+    "lightpaper": "Lightpaper"
   },
   "footer": {
     "title": "Следите за новостями",
@@ -145,11 +146,11 @@
     "text": "This site uses cookies and external trackers to improve our services and your experience. By continuing to use our site, you agree to their use.",
     "findOutMore": "Find out more →"
   },
-  "testnet" : {
+  "testnet": {
     "goalStates": {
-      "achieved" : "достигнуто",
-      "inProgress" : "в процессе",
-      "postponed" : "отложено"
+      "achieved": "достигнуто",
+      "inProgress": "в процессе",
+      "postponed": "отложено"
     }
   },
   "mainnetBanner": {
