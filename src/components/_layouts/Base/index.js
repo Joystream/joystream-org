@@ -5,7 +5,6 @@ import Navbar from '../../Navbar';
 import Footer from '../../Footer';
 import CookiesNotice from '../../CookiesNotice';
 import { ScrollProvider } from '../../_enhancers/ScrollContext';
-import MainnetBanner from '../../MainnetBanner';
 
 const propTypes = {
   children: node,
@@ -20,13 +19,10 @@ const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }
   return (
     <ScrollProvider>
       <div>
-        {mainnetReminder ? <MainnetBanner t={t} light={lightNavbar} /> : null}
         <Navbar t={t} primer={primer} light={lightNavbar} />
-        <main>
-          {children}
-        </main>
-        <CookiesNotice t={t}/>
-        <Footer t={t} primer={primer}/>
+        <main>{children}</main>
+        <CookiesNotice t={t} />
+        <Footer t={t} primer={primer} />
       </div>
     </ScrollProvider>
   );
