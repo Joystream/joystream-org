@@ -22,10 +22,10 @@
     "discoveryProvider": "Discovery Provider",
     "bandwidthProvider": "Bandwidth Provider",
     "builder": "Builder",
-    "storageLead" : "Storage Lead",
-    "contentLead" : "Content Lead",
-    "membershipCurator" : "Membership Curator",
-    "communicationModerator" : "Communication Moderator"
+    "storageLead": "Storage Lead",
+    "contentLead": "Content Lead",
+    "membershipCurator": "Membership Curator",
+    "communicationModerator": "Communication Moderator"
   },
   "siteMetadata": {
     "title": "Joystream: The video platform DAO"
@@ -100,7 +100,8 @@
     "viewApps": "View apps",
     "community": "Community",
     "about": "About",
-    "token": "Token"
+    "token": "Token",
+    "lightpaper": "Lightpaper"
   },
   "footer": {
     "title": "Stay up to date",
@@ -145,11 +146,11 @@
     "text": "This site uses cookies and external trackers to improve our services and your experience. By continuing to use our site, you agree to their use.",
     "findOutMore": "Find out more →"
   },
-  "testnet" : {
+  "testnet": {
     "goalStates": {
-      "achieved" : "achieved",
-      "inProgress" : "in progress",
-      "postponed" : "postponed"
+      "achieved": "achieved",
+      "inProgress": "in progress",
+      "postponed": "postponed"
     }
   },
   "mainnetBanner": {
