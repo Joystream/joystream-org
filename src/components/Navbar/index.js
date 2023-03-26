@@ -94,7 +94,7 @@ const NavbarLinksSection = ({ t, links, isScrollUp, isOpen, light, setIsOpen }) 
           'Navbar__links--light': light,
         })}
       >
-        {links.map(({ label, isButton, isDropdown, links, href, to }) => {
+        {links.map(({ label, isButton, isDropdown, links, href, to, language }) => {
           if (isDropdown) {
             return <Dropdown key={label} t={t} label={t(label)} links={links} isScrollUp={isScrollUp} />;
           }
@@ -111,9 +111,11 @@ const NavbarLinksSection = ({ t, links, isScrollUp, isOpen, light, setIsOpen }) 
 
           if (isButton) {
             children = (
-              <div className={cn("Navbar__button", {
-                "Navbar__button--light": light
-              })} >
+              <div
+                className={cn('Navbar__button', {
+                  'Navbar__button--light': light,
+                })}
+              >
                 <p className="Navbar__button-text">{t(label)}</p>
                 <Arrow className="Navbar__button-arrow" />
               </div>
@@ -121,7 +123,7 @@ const NavbarLinksSection = ({ t, links, isScrollUp, isOpen, light, setIsOpen }) 
           }
 
           return (
-            <Link key={label} to={to} href={href}>
+            <Link key={label} to={to} href={href} language={language}>
               {children}
             </Link>
           );
@@ -148,29 +150,53 @@ const NavbarPrimerSection = ({ t }) => {
     document.getElementById(sectionIdName).scrollIntoView({
       behavior: 'smooth',
     });
-  } 
+  }
 
   // PRIMER TODO: These seem to be wrong, clear it up with the team.
 
   return (
     <div className="Navbar__primer-section">
       <div className="Navbar__primer-section__section-items">
-        <p className="Navbar__primer-section__section-item" role="presentation" onClick={() => goToSection(sectionIDs[1])}>
+        <p
+          className="Navbar__primer-section__section-item"
+          role="presentation"
+          onClick={() => goToSection(sectionIDs[1])}
+        >
           {t('primer.navbar.futureOfVideo')}
         </p>
-        <p className="Navbar__primer-section__section-item" role="presentation" onClick={() => goToSection(sectionIDs[2])}>
+        <p
+          className="Navbar__primer-section__section-item"
+          role="presentation"
+          onClick={() => goToSection(sectionIDs[2])}
+        >
           {t('primer.navbar.whyWeExist')}
         </p>
-        <p className="Navbar__primer-section__section-item" role="presentation" onClick={() => goToSection(sectionIDs[3])}>
+        <p
+          className="Navbar__primer-section__section-item"
+          role="presentation"
+          onClick={() => goToSection(sectionIDs[3])}
+        >
           {t('primer.navbar.theSolution')}
         </p>
-        <p className="Navbar__primer-section__section-item" role="presentation" onClick={() => goToSection(sectionIDs[4])}>
+        <p
+          className="Navbar__primer-section__section-item"
+          role="presentation"
+          onClick={() => goToSection(sectionIDs[4])}
+        >
           {t('primer.navbar.governance')}
         </p>
-        <p className="Navbar__primer-section__section-item" role="presentation" onClick={() => goToSection(sectionIDs[5])}>
+        <p
+          className="Navbar__primer-section__section-item"
+          role="presentation"
+          onClick={() => goToSection(sectionIDs[5])}
+        >
           {t('primer.navbar.businessModel')}
         </p>
-        <p className="Navbar__primer-section__section-item" role="presentation" onClick={() => goToSection(sectionIDs[6])}>
+        <p
+          className="Navbar__primer-section__section-item"
+          role="presentation"
+          onClick={() => goToSection(sectionIDs[6])}
+        >
           {t('primer.navbar.nextSteps')}
         </p>
       </div>
@@ -190,8 +216,15 @@ const Navbar = ({ light, links, t, primer }) => {
   const shouldRenderPrimerSection = primer != null;
 
   return (
-    <nav className={cn('Navbar', { 'Navbar--hidden': !isScrollUp, 'Navbar--light': light, 'Navbar--open': isOpen, 'Navbar--primer': primer })}>
-      <div className={cn("Navbar__container", { "Navbar__container--primer": primer })}>
+    <nav
+      className={cn('Navbar', {
+        'Navbar--hidden': !isScrollUp,
+        'Navbar--light': light,
+        'Navbar--open': isOpen,
+        'Navbar--primer': primer,
+      })}
+    >
+      <div className={cn('Navbar__container', { 'Navbar__container--primer': primer })}>
         <Link to="/">
           <Logo className={cn('Navbar__logo', { 'Navbar__logo--open': isOpen })} />
         </Link>
@@ -199,7 +232,14 @@ const Navbar = ({ light, links, t, primer }) => {
         {shouldRenderPrimerSection ? (
           <NavbarPrimerSection t={t} />
         ) : (
-          <NavbarLinksSection t={t} links={links} isScrollUp={isScrollUp} isOpen={isOpen} light={light} setIsOpen={setIsOpen} />
+          <NavbarLinksSection
+            t={t}
+            links={links}
+            isScrollUp={isScrollUp}
+            isOpen={isOpen}
+            light={light}
+            setIsOpen={setIsOpen}
+          />
         )}
       </div>
     </nav>

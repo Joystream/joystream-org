@@ -1,7 +1,8 @@
 import { sharedData } from '../../data/pages';
 
 const links = [
-  { to: '/lightpaper.pdf', label: 'navbar.lightpaper' },
+  // Language "en" is a workaround to disallow gatsby to route to language specific routes here (e.g. ru/lightpaper.pdf)
+  { to: '/lightpaper.pdf', label: 'navbar.lightpaper', language: 'en' },
   { to: '/about', label: 'navbar.about' },
   { to: '/community', label: 'navbar.community' },
   { to: '/token', label: 'navbar.token' },

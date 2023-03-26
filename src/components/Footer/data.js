@@ -7,7 +7,6 @@ import { sharedData } from '../../data/pages';
 const joystreamLinks = [
   { href: sharedData.links.blog, label: 'pages.blog' },
   { to: '/manifesto', label: 'pages.manifesto' },
-  { href: 'https://joystream.gitbook.io/testnet-workspace/usdjoy', label: 'pages.token' },
   { to: '/hydra', label: 'pages.hydra' },
 ];
 
