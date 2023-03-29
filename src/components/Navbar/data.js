@@ -8,6 +8,7 @@ const links = [
   { to: '/token', label: 'navbar.token' },
   { href: 'https://dao.joystream.org', label: 'navbar.pioneer' },
   { to: '/manifesto', label: 'navbar.manifesto' },
+  { href: 'https://handbook.joystream.org/', label: 'navbar.handbook' },
 ];
 
 export { links };

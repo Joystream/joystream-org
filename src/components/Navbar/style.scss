@@ -30,7 +30,6 @@
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    padding-right: 0;
     padding-left: 32px;
     background-color: inherit;
   }
@@ -279,6 +278,10 @@
 
     &--open {
       background-color: $c_blue-ribbon;
+    }
+
+    &__container {
+      padding-right: 0;
     }
 
     &__logo--open {

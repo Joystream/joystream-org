@@ -70,7 +70,7 @@ const Hero = ({ t }) => {
           />
         </h1>
         <p className="IndexPage__hero__subtitle">{t('landing.hero.subtitle')}</p>
-        <div className="IndexPage__hero__buttons">
+        {/* <div className="IndexPage__hero__buttons">
           <ArrowButton
             link="#apps-built-on-joystream"
             text={t('landing.hero.viewApps')}
@@ -80,7 +80,7 @@ const Hero = ({ t }) => {
           <Button href="#start-your-community" className="IndexPage__hero__community-button">
             {t('landing.hero.startYourCommunity')}
           </Button>
-        </div>
+        </div> */}
         <div className="IndexPage__hero__illustration">
           <img
             className="IndexPage__hero__illustration__background"
