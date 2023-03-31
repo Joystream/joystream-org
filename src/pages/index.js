@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../components/_layouts/Base';
 import SiteMetadata from '../components/SiteMetadata';
+import useAxios from '../utils/useAxios';
 
 // components
 import Hero from '../components/index-page/Hero';
@@ -22,6 +23,8 @@ const IndexPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
+  const [data, loading, error] = useAxios('http://localhost:8081/carousel-data');
+
   return (
     <BaseLayout t={t} mainnetReminder={true}>
       <SiteMetadata
@@ -30,23 +33,23 @@ const IndexPage = () => {
         description={t('landing.siteMetadata.description')}
       />
 
-      <Hero t={t}/>
+      <Hero t={t} />
 
-      <Ecosystem t={t}/>
+      <Ecosystem t={t} />
 
-      <Payouts t={t}/>
+      <Payouts t={t} />
 
-      <VideoNFTs t={t}/>
+      <VideoNFTs t={t} nftData={data} />
 
-      <CreatorTokens t={t}/>
+      <CreatorTokens t={t} />
 
       {/* <YoutubeSync t={t}/> */}
 
-      <Manifesto t={t}/>
+      <Manifesto t={t} />
 
-      <AvailableActivities t={t}/>
+      <AvailableActivities t={t} />
 
-      <JoystreamDAO t={t}/>
+      <JoystreamDAO t={t} />
 
       {/* <Jsgenesis t={t} /> */}
     </BaseLayout>
@@ -58,7 +61,7 @@ export default IndexPage;
 
 export const query = graphql`
   query($language: String!) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       ...LanguageQueryFields
     }
   }

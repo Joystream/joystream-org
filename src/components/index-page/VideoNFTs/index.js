@@ -48,54 +48,60 @@ const parallaxDataPopup = [
   },
 ];
 
-const CarouselItem = ({ nftTitle, channelName, joyAmount, time, setIsCarouselRunning, t }) => (
-  <div
-    className="IndexPage__video-nfts-carousel__item"
-    onMouseEnter={() => setIsCarouselRunning(true)}
-    onMouseLeave={() => setIsCarouselRunning(false)}
-  >
-    <div className="IndexPage__video-nfts-carousel__item__image"></div>
-    <div className="IndexPage__video-nfts-carousel__item__content">
-      <div className="IndexPage__video-nfts-carousel__item__content__title">
-        <Trans
-          i18nKey="landing.videoNFTs.carousel.item.title"
-          components={{
-            span: <span />,
-            nftTitle,
-            channelName,
-          }}
-        />
+const CarouselItem = ({ nftTitle, channelName, joyAmount, videoUrl, imageUrl, time, setIsCarouselRunning, t }) => (
+  <a href={videoUrl} target="_blank" rel="noreferrer">
+    <div
+      className="IndexPage__video-nfts-carousel__item"
+      onMouseEnter={() => setIsCarouselRunning(true)}
+      onMouseLeave={() => setIsCarouselRunning(false)}
+    >
+      <div className="IndexPage__video-nfts-carousel__item__image">
+        <img src={imageUrl} alt="" />
       </div>
-      <div className="IndexPage__video-nfts-carousel__item__content__price">
-        <div className="IndexPage__video-nfts-carousel__item__content__price__title">
-          {t('landing.videoNFTs.carousel.item.price.label')}
-        </div>
-        <div className="IndexPage__video-nfts-carousel__item__content__price__amount">
+      <div className="IndexPage__video-nfts-carousel__item__content">
+        <div className="IndexPage__video-nfts-carousel__item__content__title">
           <Trans
-            i18nKey="landing.videoNFTs.carousel.item.price.amount"
+            i18nKey="landing.videoNFTs.carousel.item.title"
             components={{
               span: <span />,
-              joyAmount,
+              nftTitle,
+              channelName,
             }}
           />
         </div>
-      </div>
-      <div className="IndexPage__video-nfts-carousel__item__content__time">
-        <ClockIcon className="IndexPage__video-nfts-carousel__item__content__time__icon" /> {time}
+        <div className="IndexPage__video-nfts-carousel__item__content__price">
+          <div className="IndexPage__video-nfts-carousel__item__content__price__title">
+            {t('landing.videoNFTs.carousel.item.price.label')}
+          </div>
+          <div className="IndexPage__video-nfts-carousel__item__content__price__amount">
+            <Trans
+              i18nKey="landing.videoNFTs.carousel.item.price.amount"
+              components={{
+                span: <span />,
+                joyAmount,
+              }}
+            />
+          </div>
+        </div>
+        <div className="IndexPage__video-nfts-carousel__item__content__time">
+          <ClockIcon className="IndexPage__video-nfts-carousel__item__content__time__icon" /> {time}
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 );
 
 const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
-  const items = itemsData.map(({ nftTitle, channelName, joyAmount, time }) => (
+  const items = itemsData.map(({ nftTitle, channelName, joyAmount, videoUrl, imageUrl, time }) => (
     <CarouselItem
       key={`${nftTitle}-${channelName}-${joyAmount}-${time}`}
       nftTitle={nftTitle}
       channelName={channelName}
       joyAmount={joyAmount}
+      videoUrl={videoUrl}
+      imageUrl={imageUrl}
       time={time}
       setIsCarouselRunning={setIsCarouselRunning}
       t={t}
@@ -103,7 +109,7 @@ const Carousel = ({ itemsData, t }) => {
   ));
 
   return (
-    <div className="IndexPage__video-nfts-carousel__items-wrapper">
+    <>
       <div
         className={cn('IndexPage__video-nfts-carousel__items', {
           'IndexPage__video-nfts-carousel__items--paused': isCarouselRunning,
@@ -119,11 +125,11 @@ const Carousel = ({ itemsData, t }) => {
       >
         {items}
       </div>
-    </div>
+    </>
   );
 };
 
-const VideoNFTs = ({ t }) => {
+const VideoNFTs = ({ t, nftData }) => {
   const { language } = useI18next();
   const videoNFTsCarouselInfoLabelRef = useRef();
   useRemoveElementFocusOnKeydown(videoNFTsCarouselInfoLabelRef, ['Escape']);
@@ -160,7 +166,7 @@ const VideoNFTs = ({ t }) => {
           <p className="IndexPage__video-nfts__content__subtitle">{t('landing.videoNFTs.subtitle')}</p>
         </div>
       </div>
-      {/* <section className="IndexPage__video-nfts-carousel">
+      <section className="IndexPage__video-nfts-carousel">
         <div className="IndexPage__video-nfts-carousel__title-and-info">
           <h3 className="IndexPage__video-nfts-carousel__title-and-info__title">
             {t('landing.videoNFTs.carousel.title')}
@@ -168,7 +174,7 @@ const VideoNFTs = ({ t }) => {
           <div className="IndexPage__video-nfts-carousel__title-and-info__info">
             <div
               className="IndexPage__video-nfts-carousel__title-and-info__info__label"
-              // TODO: Readd this line here eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+              // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
               tabIndex={0}
               aria-describedby="IndexPage__video-nfts-carousel__title-and-info__info__modal"
               ref={videoNFTsCarouselInfoLabelRef}
@@ -176,47 +182,27 @@ const VideoNFTs = ({ t }) => {
               {t('landing.videoNFTs.carousel.info.label')}
               <InfoIcon className="IndexPage__video-nfts-carousel__title-and-info__info__icon" />
             </div>
-            <div role="tooltip" id="IndexPage__video-nfts-carousel__title-and-info__info__modal" className="IndexPage__video-nfts-carousel__title-and-info__info__modal">
+            <div
+              role="tooltip"
+              id="IndexPage__video-nfts-carousel__title-and-info__info__modal"
+              className="IndexPage__video-nfts-carousel__title-and-info__info__modal"
+            >
               {t('landing.videoNFTs.carousel.info.text')}
             </div>
           </div>
         </div>
-        <Carousel
-          itemsData={[
-            {
-              nftTitle: 'Did An Alternate Reality Game Gone Wrong',
-              channelName: 'SCHISM',
-              joyAmount: '715',
-              time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
-            },
-            {
-              nftTitle: 'Know your Councils #02 (CheOmsk)',
-              channelName: 'Joystream movie',
-              joyAmount: '228',
-              time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
-            },
-            {
-              nftTitle: 'Phones controlling LN nodes',
-              channelName: 'kriptos',
-              joyAmount: '784',
-              time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
-            },
-            {
-              nftTitle: 'The MAGA Coup Did Not Happen',
-              channelName: 'SCHIZM',
-              joyAmount: '1613',
-              time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
-            },
-            {
-              nftTitle: 'Laura Live Workout',
-              channelName: 'LAURA LIVE',
-              joyAmount: '1081',
-              time: parseDateToRelativeTime(getDateHoursAgo(24 * 15), language),
-            },
-          ]}
-          t={t}
-        />
-      </section> */}
+        <div className="IndexPage__video-nfts-carousel__items-wrapper">
+          {nftData && nftData.length > 0 ? (
+            <Carousel
+              itemsData={nftData?.map(({ lastSaleDate, ...rest }) => ({
+                ...rest,
+                time: parseDateToRelativeTime(lastSaleDate, language),
+              }))}
+              t={t}
+            />
+          ) : null}
+        </div>
+      </section>
     </section>
   );
 };
