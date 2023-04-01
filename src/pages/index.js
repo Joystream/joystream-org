@@ -23,7 +23,7 @@ const IndexPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
-  const [data, loading, error] = useAxios('http://localhost:8081/carousel-data');
+  const [data, loading, error] = useAxios('https://status.joystream.org/carousel-data');
 
   return (
     <BaseLayout t={t} mainnetReminder={true}>
