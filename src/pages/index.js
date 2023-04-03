@@ -23,7 +23,7 @@ const IndexPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
-  const [data, loading, error] = useAxios('https://status.joystream.org/carousel-data');
+  const [data, loading, error] = useAxios('http://localhost:8081/carousel-data');
 
   return (
     <BaseLayout t={t} mainnetReminder={true}>
@@ -39,7 +39,7 @@ const IndexPage = () => {
 
       <Payouts t={t} />
 
-      <VideoNFTs t={t} nftData={data} />
+      <VideoNFTs t={t} nftData={data?.nfts} />
 
       <CreatorTokens t={t} />
 
@@ -49,7 +49,7 @@ const IndexPage = () => {
 
       <AvailableActivities t={t} />
 
-      <JoystreamDAO t={t} />
+      <JoystreamDAO t={t} proposalsData={data?.proposals} />
 
       {/* <Jsgenesis t={t} /> */}
     </BaseLayout>
