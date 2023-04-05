@@ -36,11 +36,11 @@ const SLASHED = 'slashed';
 const DECIDING = 'deciding';
 const GRACING = 'gracing';
 
-const CarouselItemDate = ({ date, showCountdown, t }) => {
+const CarouselItemDate = ({ date, timeLeftUntil, showCountdown, t }) => {
   if (showCountdown) {
     return (
       <Countdown
-        date={new Date(date)}
+        date={new Date(timeLeftUntil)}
         intervalDelay={0}
         precision={3}
         renderer={({ days, hours, minutes }) => {
@@ -53,7 +53,7 @@ const CarouselItemDate = ({ date, showCountdown, t }) => {
   return <>{date}</>;
 };
 
-const CarouselItem = ({ img, title, status, date, link, setIsCarouselRunning, t }) => {
+const CarouselItem = ({ img, title, status, date, link, setIsCarouselRunning, timeLeftUntil, t }) => {
   const isDeciding = status === DECIDING || status === GRACING;
   const isFailed = status === REJECTED || status === FAILED || status === SLASHED;
 
@@ -93,7 +93,7 @@ const CarouselItem = ({ img, title, status, date, link, setIsCarouselRunning, t 
               : t('landing.joystreamDAO.carousel.item.dateLabel')}
           </p>
           <p className="IndexPage__joystream-dao-carousel__item__info__date__value">
-            <CarouselItemDate date={date} showCountdown={isDeciding} t={t} />
+            <CarouselItemDate date={date} timeLeftUntil={timeLeftUntil} showCountdown={isDeciding} t={t} />
           </p>
         </div>
       </div>
@@ -108,7 +108,7 @@ const CarouselItem = ({ img, title, status, date, link, setIsCarouselRunning, t 
 const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
-  const items = itemsData.map(({ img, title, status, date, link }) => (
+  const items = itemsData.map(({ img, title, status, date, link, timeLeftUntil }) => (
     <CarouselItem
       key={`${title}-${status}-${date}`}
       img={img}
@@ -117,6 +117,7 @@ const Carousel = ({ itemsData, t }) => {
       date={date}
       link={link}
       setIsCarouselRunning={setIsCarouselRunning}
+      timeLeftUntil={timeLeftUntil}
       t={t}
     />
   ));
