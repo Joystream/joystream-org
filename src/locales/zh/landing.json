@@ -198,7 +198,15 @@
             "value": {
               "rejected": "Rejected",
               "executed": "Executed",
-              "deciding": "Deciding"
+              "deciding": "Deciding",
+              "expired": "Expired",
+              "gracing": "Gracing",
+              "dormant": "Dormant",
+              "vetoed": "Vetoed",
+              "executionFailed": "Failed",
+              "slashed": "Slashed",
+              "cancelled": "Cancelled",
+              "canceledByRuntime": "Cancelled"
             }
           },
           "dateLabel": "Date",
