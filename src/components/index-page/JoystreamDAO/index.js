@@ -3,6 +3,7 @@ import Plx from 'react-plx';
 import cn from 'classnames';
 import { Trans } from 'gatsby-plugin-react-i18next';
 import Countdown from 'react-countdown-now';
+import convertToCamelCase from '../../../utils/convertToCamelCase';
 
 import JoystreamDaoBackgroundImage from '../../../assets/images/landing/joystream-dao-background.webp';
 import JoystreamDaoForegroundImage from '../../../assets/images/landing/joystream-dao-foreground.webp';
@@ -30,13 +31,16 @@ const joystreamDaoForeground = [
 ];
 
 const REJECTED = 'rejected';
+const FAILED = 'executionFailed';
+const SLASHED = 'slashed';
 const DECIDING = 'deciding';
+const GRACING = 'gracing';
 
-const CarouselItemDate = ({ date, isStatusDeciding, t }) => {
-  if (isStatusDeciding) {
+const CarouselItemDate = ({ date, timeLeftUntil, showCountdown, t }) => {
+  if (showCountdown) {
     return (
       <Countdown
-        date={new Date(date)}
+        date={new Date(timeLeftUntil)}
         intervalDelay={0}
         precision={3}
         renderer={({ days, hours, minutes }) => {
@@ -49,11 +53,9 @@ const CarouselItemDate = ({ date, isStatusDeciding, t }) => {
   return <>{date}</>;
 };
 
-const CarouselItem = ({ img, proposalTitle, status, date, link, setIsCarouselRunning, t }) => {
-  const dateLabel =
-    status.toLowerCase() === DECIDING
-      ? t('landing.joystreamDAO.carousel.item.timeLeft')
-      : t('landing.joystreamDAO.carousel.item.dateLabel');
+const CarouselItem = ({ img, title, status, date, link, setIsCarouselRunning, timeLeftUntil, t }) => {
+  const isDeciding = status === DECIDING || status === GRACING;
+  const isFailed = status === REJECTED || status === FAILED || status === SLASHED;
 
   return (
     <div
@@ -70,7 +72,7 @@ const CarouselItem = ({ img, proposalTitle, status, date, link, setIsCarouselRun
           alt=""
         />
       </div>
-      <div className="IndexPage__joystream-dao-carousel__item__title">{proposalTitle}</div>
+      <div className="IndexPage__joystream-dao-carousel__item__title">{title}</div>
       <div className="IndexPage__joystream-dao-carousel__item__info">
         <div className="IndexPage__joystream-dao-carousel__item__info__status">
           <p className="IndexPage__joystream-dao-carousel__item__info__status__label">
@@ -78,17 +80,20 @@ const CarouselItem = ({ img, proposalTitle, status, date, link, setIsCarouselRun
           </p>
           <div
             className={cn('IndexPage__joystream-dao-carousel__item__info__status__value', {
-              'IndexPage__joystream-dao-carousel__item__info__status__value--rejected':
-                status.toLowerCase() === REJECTED,
+              'IndexPage__joystream-dao-carousel__item__info__status__value--rejected': isFailed,
             })}
           >
-            {t(`landing.joystreamDAO.carousel.item.status.value.${status.toLowerCase()}`)}
+            {t(`landing.joystreamDAO.carousel.item.status.value.${status}`)}
           </div>
         </div>
         <div className="IndexPage__joystream-dao-carousel__item__info__date">
-          <p className="IndexPage__joystream-dao-carousel__item__info__date__label">{dateLabel}</p>
+          <p className="IndexPage__joystream-dao-carousel__item__info__date__label">
+            {isDeciding
+              ? t('landing.joystreamDAO.carousel.item.timeLeft')
+              : t('landing.joystreamDAO.carousel.item.dateLabel')}
+          </p>
           <p className="IndexPage__joystream-dao-carousel__item__info__date__value">
-            <CarouselItemDate date={date} isStatusDeciding={status.toLowerCase() === DECIDING} t={t} />
+            <CarouselItemDate date={date} timeLeftUntil={timeLeftUntil} showCountdown={isDeciding} t={t} />
           </p>
         </div>
       </div>
@@ -103,21 +108,22 @@ const CarouselItem = ({ img, proposalTitle, status, date, link, setIsCarouselRun
 const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
-  const items = itemsData.map(({ img, proposalTitle, status, date, link }) => (
+  const items = itemsData.map(({ img, title, status, date, link, timeLeftUntil }) => (
     <CarouselItem
-      key={`${proposalTitle}-${status}-${date}`}
+      key={`${title}-${status}-${date}`}
       img={img}
-      proposalTitle={proposalTitle}
+      title={title}
       status={status}
       date={date}
       link={link}
       setIsCarouselRunning={setIsCarouselRunning}
+      timeLeftUntil={timeLeftUntil}
       t={t}
     />
   ));
 
   return (
-    <div className="IndexPage__joystream-dao-carousel__items-wrapper">
+    <>
       <div
         className={cn('IndexPage__joystream-dao-carousel__items', {
           'IndexPage__joystream-dao-carousel__items--paused': isCarouselRunning,
@@ -133,7 +139,7 @@ const Carousel = ({ itemsData, t }) => {
       >
         {items}
       </div>
-    </div>
+    </>
   );
 };
 
@@ -145,7 +151,9 @@ const getDateHoursInTheFuture = hours => {
   return date.toLocaleString('en-US', { timeZone: 'Europe/Oslo' });
 };
 
-const JoystreamDAO = ({ t }) => {
+const addSpacesToPascalCase = string => string.replace(/([A-Z])/g, ' $1').trim();
+
+const JoystreamDAO = ({ t, proposalsData }) => {
   const img = 'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true';
   return (
     <section className="IndexPage__joystream-dao-wrapper">
@@ -180,61 +188,25 @@ const JoystreamDAO = ({ t }) => {
           </Plx>
         </div>
       </div>
-      {/* <section className="IndexPage__joystream-dao-carousel">
+      <section className="IndexPage__joystream-dao-carousel">
         <div className="IndexPage__joystream-dao-carousel__title-section">
           <h3 className="IndexPage__joystream-dao-carousel__title-section__text">
             {t('landing.joystreamDAO.carousel.title')}
           </h3>
         </div>
-        <Carousel
-          itemsData={[
-            {
-              img,
-              proposalTitle: 'Rhodes Council #16 - Summary',
-              status: 'Executed',
-              date: '07/21/2022',
-              link: 'https://www.google.com',
-            },
-            {
-              img,
-              proposalTitle: 'BWG T16 Summary',
-              status: 'Rejected',
-              date: '07/23/2022',
-              link: 'https://www.google.com',
-            },
-            {
-              img,
-              proposalTitle: 'BWG T16 Summary (2nd Attempt)',
-              status: 'Executed',
-              date: '07/25/2022',
-              link: 'https://www.google.com',
-            },
-            {
-              img,
-              proposalTitle: 'Extra Hours HR Lead Bonus',
-              status: 'Executed',
-              date: '07/25/2022',
-              link: 'https://www.google.com',
-            },
-            {
-              img,
-              proposalTitle: 'Storage WG Report - 16 Term',
-              status: 'Deciding',
-              date: getDateHoursInTheFuture(74),
-              link: 'https://www.google.com',
-            },
-            {
-              img:
-                'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true',
-              proposalTitle: 'Update Content Working Group Budget',
-              status: 'Deciding',
-              date: getDateHoursInTheFuture(74),
-              link: 'https://www.google.com',
-            },
-          ]}
-          t={t}
-        />
-      </section> */}
+        <div className="IndexPage__joystream-dao-carousel__items-wrapper">
+          {proposalsData && proposalsData.length > 0 ? (
+            <Carousel
+              itemsData={proposalsData?.map(({ status, statusSetAtTime, ...rest }) => ({
+                status: convertToCamelCase(addSpacesToPascalCase(status)),
+                date: new Date(statusSetAtTime).toLocaleString().split(',')[0],
+                ...rest,
+              }))}
+              t={t}
+            />
+          ) : null}
+        </div>
+      </section>
     </section>
   );
 };
