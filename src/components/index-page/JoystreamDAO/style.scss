@@ -97,6 +97,7 @@
     &__items-wrapper {
       display: flex;
       max-width: 1440px;
+      min-height: 288px;
       margin: 0 auto;
       margin-top: 32px;
       overflow: hidden;
@@ -126,11 +127,13 @@
       &__image {
         width: 40px;
         height: 40px;
+        overflow: hidden;
         background-color: rgba(0, 0, 0, .3);
         border-radius: 50%;
 
         & > img {
           width: 100%;
+          height: 100%;
         }
       }
 
@@ -294,6 +297,10 @@
           margin: auto;
         }
       }
+    }
+
+    &__joystream-dao-carousel {
+      margin-top: 64px;
     }
   }
 

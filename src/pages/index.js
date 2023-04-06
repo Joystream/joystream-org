@@ -39,7 +39,7 @@ const IndexPage = () => {
 
       <Payouts t={t} />
 
-      <VideoNFTs t={t} nftData={data} />
+      <VideoNFTs t={t} nftData={data?.nfts} />
 
       <CreatorTokens t={t} />
 
@@ -49,7 +49,7 @@ const IndexPage = () => {
 
       <AvailableActivities t={t} />
 
-      <JoystreamDAO t={t} />
+      <JoystreamDAO t={t} proposalsData={data?.proposals} />
 
       {/* <Jsgenesis t={t} /> */}
     </BaseLayout>
