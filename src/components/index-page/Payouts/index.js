@@ -53,40 +53,42 @@ const parallaxDataForeground = [
   },
 ];
 
-const CarouselItem = ({ img, joyAmount, channelName, time, setIsCarouselRunning }) => (
-  <div
-    className="IndexPage__payouts-carousel__item"
-    onMouseEnter={() => setIsCarouselRunning(true)}
-    onMouseLeave={() => setIsCarouselRunning(false)}
-  >
-    <div className="IndexPage__payouts-carousel__item__image">
-      <img
-        src={img}
-        onError={e => {
-          e.currentTarget.src = PlaceholderIcon;
-        }}
-        alt=""
-      />
-    </div>
-    <div className="IndexPage__payouts-carousel__item__price">
-      <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
-      <div className="IndexPage__payouts-carousel__item__price__text">
-        <Trans i18nKey="landing.payouts.carousel.item.price" components={{ span: <span />, joyAmount }} />
+const CarouselItem = ({ img, joyAmount, channelName, time, setIsCarouselRunning, channelUrl }) => (
+  <a href={channelUrl} target="_blank" rel="noreferrer">
+    <div
+      className="IndexPage__payouts-carousel__item"
+      onMouseEnter={() => setIsCarouselRunning(true)}
+      onMouseLeave={() => setIsCarouselRunning(false)}
+    >
+      <div className="IndexPage__payouts-carousel__item__image">
+        <img
+          src={img}
+          onError={e => {
+            e.currentTarget.src = PlaceholderIcon;
+          }}
+          alt=""
+        />
+      </div>
+      <div className="IndexPage__payouts-carousel__item__price">
+        <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
+        <div className="IndexPage__payouts-carousel__item__price__text">
+          <Trans i18nKey="landing.payouts.carousel.item.price" components={{ span: <span />, joyAmount }} />
+        </div>
+      </div>
+      <div className="IndexPage__payouts-carousel__item__channel">
+        <Trans i18nKey="landing.payouts.carousel.item.channel" components={{ span: <span />, channelName }} />
+      </div>
+      <div className="IndexPage__payouts-carousel__item__time">
+        <ClockIcon className="IndexPage__payouts-carousel__item__time__icon" /> {time}
       </div>
     </div>
-    <div className="IndexPage__payouts-carousel__item__channel">
-      <Trans i18nKey="landing.payouts.carousel.item.channel" components={{ span: <span />, channelName }} />
-    </div>
-    <div className="IndexPage__payouts-carousel__item__time">
-      <ClockIcon className="IndexPage__payouts-carousel__item__time__icon" /> {time}
-    </div>
-  </div>
+  </a>
 );
 
 const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
-  const items = itemsData.map(({ img, joyAmount, channelName, time }) => (
+  const items = itemsData.map(({ img, joyAmount, channelName, time, channelUrl }) => (
     <CarouselItem
       key={`${joyAmount}-${channelName}-${time}`}
       img={img}
@@ -94,6 +96,7 @@ const Carousel = ({ itemsData, t }) => {
       channelName={channelName}
       time={time}
       setIsCarouselRunning={setIsCarouselRunning}
+      channelUrl={channelUrl}
       t={t}
     />
   ));

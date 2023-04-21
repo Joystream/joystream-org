@@ -233,6 +233,7 @@
 
       &__channel {
         @include base-5;
+        @include line-clamp(1);
 
         margin-top: 4px;
         color: $c_grayc-chateau;
