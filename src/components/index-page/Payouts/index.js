@@ -13,7 +13,7 @@ import PayoutsForeground from '../../../assets/images/landing/payouts-foreground
 import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
 import { ReactComponent as PlusIcon } from '../../../assets/svg/plus.svg';
-import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
+import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
 // import { ReactComponent as YoutubeLogo } from '../../../assets/svg/landing/youtube-logo.svg';
 // import { ReactComponent as ConnectionIcon } from '../../../assets/svg/landing/connection-icon.svg';
 // import { ReactComponent as JoystreamLogo } from '../../../assets/svg/logo-mark.svg';
@@ -53,40 +53,42 @@ const parallaxDataForeground = [
   },
 ];
 
-const CarouselItem = ({ img, joyAmount, channelName, time, setIsCarouselRunning }) => (
-  <div
-    className="IndexPage__payouts-carousel__item"
-    onMouseEnter={() => setIsCarouselRunning(true)}
-    onMouseLeave={() => setIsCarouselRunning(false)}
-  >
-    <div className="IndexPage__payouts-carousel__item__image">
-      <img
-        src={img}
-        onError={e => {
-          e.currentTarget.src = PlaceholderIcon;
-        }}
-        alt=""
-      />
-    </div>
-    <div className="IndexPage__payouts-carousel__item__price">
-      <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
-      <div className="IndexPage__payouts-carousel__item__price__text">
-        <Trans i18nKey="landing.payouts.carousel.item.price" components={{ span: <span />, joyAmount }} />
+const CarouselItem = ({ img, joyAmount, channelName, time, setIsCarouselRunning, channelUrl }) => (
+  <a href={channelUrl} target="_blank" rel="noreferrer">
+    <div
+      className="IndexPage__payouts-carousel__item"
+      onMouseEnter={() => setIsCarouselRunning(true)}
+      onMouseLeave={() => setIsCarouselRunning(false)}
+    >
+      <div className="IndexPage__payouts-carousel__item__image">
+        <img
+          src={img}
+          onError={e => {
+            e.currentTarget.src = PlaceholderIcon;
+          }}
+          alt=""
+        />
+      </div>
+      <div className="IndexPage__payouts-carousel__item__price">
+        <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
+        <div className="IndexPage__payouts-carousel__item__price__text">
+          <Trans i18nKey="landing.payouts.carousel.item.price" components={{ span: <span />, joyAmount }} />
+        </div>
+      </div>
+      <div className="IndexPage__payouts-carousel__item__channel">
+        <Trans i18nKey="landing.payouts.carousel.item.channel" components={{ span: <span />, channelName }} />
+      </div>
+      <div className="IndexPage__payouts-carousel__item__time">
+        <ClockIcon className="IndexPage__payouts-carousel__item__time__icon" /> {time}
       </div>
     </div>
-    <div className="IndexPage__payouts-carousel__item__channel">
-      <Trans i18nKey="landing.payouts.carousel.item.channel" components={{ span: <span />, channelName }} />
-    </div>
-    <div className="IndexPage__payouts-carousel__item__time">
-      <ClockIcon className="IndexPage__payouts-carousel__item__time__icon" /> {time}
-    </div>
-  </div>
+  </a>
 );
 
 const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
-  const items = itemsData.map(({ img, joyAmount, channelName, time }) => (
+  const items = itemsData.map(({ img, joyAmount, channelName, time, channelUrl }) => (
     <CarouselItem
       key={`${joyAmount}-${channelName}-${time}`}
       img={img}
@@ -94,12 +96,13 @@ const Carousel = ({ itemsData, t }) => {
       channelName={channelName}
       time={time}
       setIsCarouselRunning={setIsCarouselRunning}
+      channelUrl={channelUrl}
       t={t}
     />
   ));
 
   return (
-    <div className="IndexPage__payouts-carousel__items-wrapper">
+    <>
       <div
         className={cn('IndexPage__payouts-carousel__items', {
           'IndexPage__payouts-carousel__items--paused': isCarouselRunning,
@@ -115,11 +118,11 @@ const Carousel = ({ itemsData, t }) => {
       >
         {items}
       </div>
-    </div>
+    </>
   );
 };
 
-const Payouts = ({ t }) => {
+const Payouts = ({ t, payouts }) => {
   const { language } = useI18next();
   const payoutsCarouselInfoLabelRef = useRef();
   useRemoveElementFocusOnKeydown(payoutsCarouselInfoLabelRef, ['Escape']);
@@ -129,12 +132,10 @@ const Payouts = ({ t }) => {
     <section className="IndexPage__payouts-wrapper">
       <div className="IndexPage__payouts-atlas">
         <header>
-          <span className="IndexPage__payouts-atlas__section-title">{t("landing.payouts.atlas.sectionTitle")}</span>
-          <h2 className="IndexPage__payouts-atlas__title">{t("landing.payouts.atlas.title")}</h2>
+          <span className="IndexPage__payouts-atlas__section-title">{t('landing.payouts.atlas.sectionTitle')}</span>
+          <h2 className="IndexPage__payouts-atlas__title">{t('landing.payouts.atlas.title')}</h2>
         </header>
-        <p className="IndexPage__payouts-atlas__subtitle">
-          {t("landing.payouts.atlas.subtitle")}
-        </p>
+        <p className="IndexPage__payouts-atlas__subtitle">{t('landing.payouts.atlas.subtitle')}</p>
       </div>
       <div className="IndexPage__payouts" id="creator-payouts">
         <div className="IndexPage__payouts__content">
@@ -161,13 +162,13 @@ const Payouts = ({ t }) => {
           </Plx>
         </div>
       </div>
-      {/* <section className="IndexPage__payouts-carousel">
+      <section className="IndexPage__payouts-carousel">
         <div className="IndexPage__payouts-carousel__title-and-info">
           <h3 className="IndexPage__payouts-carousel__title-and-info__title">{t('landing.payouts.carousel.title')}</h3>
           <div className="IndexPage__payouts-carousel__title-and-info__info">
             <div
               className="IndexPage__payouts-carousel__title-and-info__info__label"
-              // TODO: Add this line here eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+              // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
               tabIndex={0}
               aria-describedby="IndexPage__payouts-carousel__title-and-info__info__modal"
               ref={payoutsCarouselInfoLabelRef}
@@ -184,49 +185,19 @@ const Payouts = ({ t }) => {
             </div>
           </div>
         </div>
-        <Carousel
-          itemsData={[
-            {
-              img,
-              joyAmount: '1365',
-              channelName: 'Top Project',
-              time: parseDateToRelativeTime(getDateHoursAgo(2), language),
-            },
-            {
-              img,
-              joyAmount: '245',
-              channelName: 'Света Василенко',
-              time: parseDateToRelativeTime(getDateHoursAgo(5), language),
-            },
-            {
-              img,
-              joyAmount: '668',
-              channelName: 'kriptos',
-              time: parseDateToRelativeTime(getDateHoursAgo(5), language),
-            },
-            {
-              img,
-              joyAmount: '1139',
-              channelName: 'Andrey_Miror',
-              time: parseDateToRelativeTime(getDateHoursAgo(5), language),
-            },
-            {
-              img,
-              joyAmount: '987',
-              channelName: 'Mary',
-              time: parseDateToRelativeTime(getDateHoursAgo(24), language),
-            },
-            {
-              img:
-                'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/nonexisting.png?raw=true',
-              joyAmount: '119',
-              channelName: 'kate',
-              time: parseDateToRelativeTime(getDateHoursAgo(48), language),
-            },
-          ]}
-          t={t}
-        />
-      </section> */}
+        <div className="IndexPage__payouts-carousel__items-wrapper">
+          {payouts && payouts.length > 0 ? (
+            <Carousel
+              itemsData={payouts?.map(({ createdAt, imageUrl, ...rest }) => ({
+                img: imageUrl,
+                time: parseDateToRelativeTime(createdAt, language),
+                ...rest,
+              }))}
+              t={t}
+            />
+          ) : null}
+        </div>
+      </section>
       {/* <div className="IndexPage__payouts-cta">
         <div className="IndexPage__payouts-cta__content">
           <div className="IndexPage__payouts-cta__content__logos">

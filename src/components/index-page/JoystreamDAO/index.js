@@ -9,7 +9,7 @@ import JoystreamDaoBackgroundImage from '../../../assets/images/landing/joystrea
 import JoystreamDaoForegroundImage from '../../../assets/images/landing/joystream-dao-foreground.webp';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
-import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
+import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
 
 import './style.scss';
 

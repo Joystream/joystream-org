@@ -4,7 +4,7 @@ import Loader from 'react-loader-spinner';
 import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
-import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
+import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
 import { ReactComponent as PlaceForYouIcon } from '../../../assets/svg/available-activities-icons/place-for-you.svg';
 
 import useWindowDimensions from '../../../utils/useWindowDimensions';
