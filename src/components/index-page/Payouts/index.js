@@ -13,7 +13,7 @@ import PayoutsForeground from '../../../assets/images/landing/payouts-foreground
 import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
 import { ReactComponent as PlusIcon } from '../../../assets/svg/plus.svg';
-import PlaceholderIcon from '../../../assets/svg/non-FM-leaderboard-placeholder.svg';
+import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
 // import { ReactComponent as YoutubeLogo } from '../../../assets/svg/landing/youtube-logo.svg';
 // import { ReactComponent as ConnectionIcon } from '../../../assets/svg/landing/connection-icon.svg';
 // import { ReactComponent as JoystreamLogo } from '../../../assets/svg/logo-mark.svg';
