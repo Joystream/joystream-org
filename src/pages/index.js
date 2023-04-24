@@ -37,7 +37,7 @@ const IndexPage = () => {
 
       <Ecosystem t={t} />
 
-      <Payouts t={t} />
+      <Payouts t={t} payouts={data?.payouts} />
 
       <VideoNFTs t={t} nftData={data?.nfts} />
 
