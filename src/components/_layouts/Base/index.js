@@ -18,7 +18,7 @@ const defaultTypes = {
 const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }) => {
   return (
     <ScrollProvider>
-      <div>
+      <div style={{ overflowX: 'clip' }}>
         <Navbar t={t} primer={primer} light={lightNavbar} />
         <main>{children}</main>
         <CookiesNotice t={t} />
