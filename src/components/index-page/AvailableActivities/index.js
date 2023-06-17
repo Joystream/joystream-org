@@ -71,7 +71,7 @@ const ActivityIcons = ({ isLoading, icons, numberOfWorkers }) => {
 
   if (numberOfWorkers === 0) return null;
 
-  const iconsToRender = icons.slice(0, 3);
+  const iconsToRender = icons?.slice(0, 3) ?? [];
   const placeholdersToRender = Array(3 - iconsToRender.length).fill(PlaceholderIcon);
   const others = numberOfWorkers - (iconsToRender.length + placeholdersToRender.length);
 
