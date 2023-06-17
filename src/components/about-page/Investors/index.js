@@ -5,7 +5,7 @@ import companyIcons from '../../../data/investors';
 
 import './style.scss';
 
-const companyIconsToRender = companyIcons.slice(0, 12);
+const companyIconsToRender = companyIcons?.slice(0, 12) ?? [];
 
 const Investors = () => {
   const { t } = useTranslation();
