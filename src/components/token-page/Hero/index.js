@@ -21,10 +21,13 @@ const TokenStatsItem = ({
   error,
   t,
 }) => {
+  let newValue = value === 'JOY' ? 'JOY' : '';
+
   if (Array.isArray(statusServerData) && statusServerData[0] && statusServerData[1] && !loading && !error) {
     const amount = Math.floor(statusServerData[0][value[0]] * statusServerData[1][value[1]]);
+    const formattedAmount = new Intl.NumberFormat('en-US').format(amount);
 
-    value = amount + ` ${denomination}`;
+    newValue = formattedAmount + ` ${denomination}`;
   }
 
   if (!Array.isArray(statusServerData) && statusServerData && !loading && !error) {
@@ -34,15 +37,19 @@ const TokenStatsItem = ({
       amount = amount.toFixed(6);
     }
 
-    value = amount + ` ${denomination}`;
+    if (denomination === 'JOY') {
+      amount = new Intl.NumberFormat('en-US').format(amount);
+    }
+
+    newValue = amount + ` ${denomination}`;
   }
 
   if (loading) {
-    value = t('token.hero.loading');
+    newValue = t('token.hero.loading');
   }
 
   if (error) {
-    value = t('token.hero.error');
+    newValue = t('token.hero.error');
   }
 
   return (
@@ -60,7 +67,7 @@ const TokenStatsItem = ({
         })}
       >
         {joyIcon && <JoyTokenIcon className="TokenPage__tokenstats__item__value__joy-icon" />}
-        {value}
+        {newValue}
       </div>
       {tooltip && (
         <div className="TokenPage__tokenstats__item__tooltip-wrapper">
@@ -114,7 +121,7 @@ const TokenHero = ({ t }) => {
               title={t('token.hero.tokenStats.fdv.title')}
               value={['totalIssuance', 'price']}
               statusServerData={[statusServerData, priceData]}
-              loading={loading && priceLoading}
+              loading={loading || priceLoading}
               denomination="USD"
               error={error || priceError}
               t={t}
