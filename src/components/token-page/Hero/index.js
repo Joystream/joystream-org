@@ -17,14 +17,32 @@ const TokenStatsItem = ({
   tooltip = '',
   loading = false,
   statusServerData = null,
-  t
+  denomination = 'JOY',
+  error,
+  t,
 }) => {
-  if (loading) {
-    value = t("token.hero.loading");
+  if (Array.isArray(statusServerData) && statusServerData[0] && statusServerData[1]) {
+    const amount = Math.floor(statusServerData[0][value[0]] * statusServerData[1][value[1]]);
+
+    value = amount + ` ${denomination}`;
   }
 
-  if (statusServerData && !loading) {
-    value = statusServerData[value] + ' JOY';
+  if (!Array.isArray(statusServerData) && statusServerData) {
+    let amount = statusServerData[value];
+
+    if (denomination === 'USD') {
+      amount = amount.toFixed(6);
+    }
+
+    value = amount + ` ${denomination}`;
+  }
+
+  if (loading) {
+    value = t('token.hero.loading');
+  }
+
+  if (error) {
+    value = t('token.hero.error');
   }
 
   return (
@@ -58,16 +76,15 @@ const TokenStatsItem = ({
 
 const TokenHero = ({ t }) => {
   const [statusServerData, loading, error] = useAxios('https://status.joystream.org/status');
+  const [priceData, priceLoading, priceError] = useAxios('https://status.joystream.org/price');
 
   return (
     <div className="TokenPage__hero-background">
       <div className="TokenPage__hero-wrapper">
         <div className="TokenPage__hero">
           <div className="TokenPage__hero__content">
-            <h2 className="TokenPage__hero__title">{t("token.hero.title")}</h2>
-            <p className="TokenPage__hero__text">
-              {t("token.hero.text")}
-            </p>
+            <h2 className="TokenPage__hero__title">{t('token.hero.title')}</h2>
+            <p className="TokenPage__hero__text">{t('token.hero.text')}</p>
           </div>
           <div className="TokenPage__hero__illustration">
             <img className="TokenPage__hero__illustration__image" alt="" src={Tokens} />
@@ -75,26 +92,31 @@ const TokenHero = ({ t }) => {
         </div>
         <div className="TokenPage__tokenstats-wrapper">
           <div className="TokenPage__tokenstats">
-            <TokenStatsItem title={t("token.hero.tokenStats.symbol.title")} value="JOY" joyIcon t={t} />
+            <TokenStatsItem title={t('token.hero.tokenStats.symbol.title')} value="JOY" joyIcon t={t} />
             <TokenStatsItem
               title={t('token.hero.tokenStats.supply.title')}
               value="totalIssuance"
               statusServerData={statusServerData}
               loading={loading}
+              error={error}
               t={t}
             />
             <TokenStatsItem
-              title={t("token.hero.tokenStats.price.title")}
-              value={t("token.hero.tokenStats.price.value")}
-              disabled
-              tooltip={t("token.hero.tokenStats.price.tooltip")}
+              title={t('token.hero.tokenStats.price.title')}
+              value="price"
+              statusServerData={priceData}
+              loading={priceLoading}
+              denomination="USD"
+              error={priceError}
               t={t}
             />
             <TokenStatsItem
-              title={t("token.hero.tokenStats.fdv.title")}
-              value={t("token.hero.tokenStats.fdv.value")}
-              disabled
-              tooltip={t("token.hero.tokenStats.fdv.tooltip")}
+              title={t('token.hero.tokenStats.fdv.title')}
+              value={['totalIssuance', 'price']}
+              statusServerData={[statusServerData, priceData]}
+              loading={loading && priceLoading}
+              denomination="USD"
+              error={error || priceError}
               t={t}
             />
           </div>
