@@ -21,13 +21,13 @@ const TokenStatsItem = ({
   error,
   t,
 }) => {
-  if (Array.isArray(statusServerData) && statusServerData[0] && statusServerData[1]) {
+  if (Array.isArray(statusServerData) && statusServerData[0] && statusServerData[1] && !loading && !error) {
     const amount = Math.floor(statusServerData[0][value[0]] * statusServerData[1][value[1]]);
 
     value = amount + ` ${denomination}`;
   }
 
-  if (!Array.isArray(statusServerData) && statusServerData) {
+  if (!Array.isArray(statusServerData) && statusServerData && !loading && !error) {
     let amount = statusServerData[value];
 
     if (denomination === 'USD') {
