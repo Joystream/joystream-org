@@ -5,6 +5,8 @@ import BaseLayout from '../components/_layouts/Base';
 import SiteMetadata from '../components/SiteMetadata';
 import useAxios from '../utils/useAxios';
 
+import { TokenStatsSection } from '../components/token-page/Hero';
+
 // components
 import Hero from '../components/index-page/Hero';
 import Payouts from '../components/index-page/Payouts';
@@ -34,6 +36,8 @@ const IndexPage = () => {
       />
 
       <Hero t={t} />
+
+      <TokenStatsSection t={t} isSeparate={true} />
 
       <Ecosystem t={t} />
 
