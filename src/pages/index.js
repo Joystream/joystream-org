@@ -5,8 +5,6 @@ import BaseLayout from '../components/_layouts/Base';
 import SiteMetadata from '../components/SiteMetadata';
 import useAxios from '../utils/useAxios';
 
-import { TokenStatsSection } from '../components/token-page/Hero';
-
 // components
 import Hero from '../components/index-page/Hero';
 import Payouts from '../components/index-page/Payouts';
@@ -18,6 +16,7 @@ import JoystreamDAO from '../components/index-page/JoystreamDAO';
 import Jsgenesis from '../components/index-page/Jsgenesis';
 import AvailableActivities from '../components/index-page/AvailableActivities';
 import Ecosystem from '../components/index-page/Ecosystem';
+import Tokenomics from '../components/index-page/Tokenomics';
 
 import './style.scss';
 
@@ -37,7 +36,7 @@ const IndexPage = () => {
 
       <Hero t={t} />
 
-      <TokenStatsSection t={t} isSeparate={true} />
+      <Tokenomics t={t} />
 
       <Ecosystem t={t} />
 

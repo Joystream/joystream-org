@@ -88,7 +88,7 @@
   }
 
   &__tokenstats-wrapper-separate {
-    padding: 0 10px 60px 10px;
+    padding: 64px 10px 0 10px;
     background-color: black;
   }
 
@@ -300,7 +300,7 @@
 
   @media (max-width: 725px) {
     &__tokenstats-wrapper-separate {
-      padding-top: 50px;
+      padding-top: 32px;
     }
   }
 
