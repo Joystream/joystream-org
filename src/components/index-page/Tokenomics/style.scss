@@ -1,0 +1,41 @@
+@import '../../../styles/main';
+@import '../../../pages/style';
+@import '../shared-styles';
+
+.IndexPage {
+  &__tokenomics-wrapper {
+    padding: 0 0 96px;
+    background-color: $c_black;
+  }
+
+  &__tokenomics {
+    & > header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__section-title {
+      @include section-title;
+
+      color: #6c6cff;
+    }
+
+    &__title {
+      @include h3;
+
+      margin-top: 4px;
+      color: $c_white;
+
+      & > br {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 725px) {
+    &__tokenomics-wrapper {
+      padding: 64px 0 64px;
+    }
+  }
+}

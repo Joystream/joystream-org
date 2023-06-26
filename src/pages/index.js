@@ -16,6 +16,7 @@ import JoystreamDAO from '../components/index-page/JoystreamDAO';
 import Jsgenesis from '../components/index-page/Jsgenesis';
 import AvailableActivities from '../components/index-page/AvailableActivities';
 import Ecosystem from '../components/index-page/Ecosystem';
+import Tokenomics from '../components/index-page/Tokenomics';
 
 import './style.scss';
 
@@ -34,6 +35,8 @@ const IndexPage = () => {
       />
 
       <Hero t={t} />
+
+      <Tokenomics t={t} />
 
       <Ecosystem t={t} />
 

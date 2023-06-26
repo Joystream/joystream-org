@@ -87,6 +87,11 @@
     }
   }
 
+  &__tokenstats-wrapper-separate {
+    padding: 64px 10px 0 10px;
+    background-color: black;
+  }
+
   &__tokenstats-wrapper {
     @extend %container;
 
@@ -98,10 +103,17 @@
     gap: 16px;
     grid-template-columns: repeat(auto-fit, 288px);
 
+    &--separate {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: black;
+    }
+
     &__item {
       position: relative;
       height: 108px;
-      padding: 20px 24px 20px 24px;
+      padding: 20px;
       overflow: hidden;
       background-color: #111316;
 
@@ -283,6 +295,12 @@
 
     &__tokenstats-wrapper {
       margin-top: 0;
+    }
+  }
+
+  @media (max-width: 725px) {
+    &__tokenstats-wrapper-separate {
+      padding-top: 32px;
     }
   }
 

@@ -17,14 +17,39 @@ const TokenStatsItem = ({
   tooltip = '',
   loading = false,
   statusServerData = null,
-  t
+  denomination = 'JOY',
+  error,
+  t,
 }) => {
-  if (loading) {
-    value = t("token.hero.loading");
+  let newValue = value === 'JOY' ? 'JOY' : '';
+
+  if (Array.isArray(statusServerData) && statusServerData[0] && statusServerData[1] && !loading && !error) {
+    const amount = Math.floor(statusServerData[0][value[0]] * statusServerData[1][value[1]]);
+    const formattedAmount = new Intl.NumberFormat('en-US').format(amount);
+
+    newValue = formattedAmount + ` ${denomination}`;
   }
 
-  if (statusServerData && !loading) {
-    value = statusServerData[value] + ' JOY';
+  if (!Array.isArray(statusServerData) && statusServerData && !loading && !error) {
+    let amount = statusServerData[value];
+
+    if (denomination === 'USD') {
+      amount = amount.toFixed(6);
+    }
+
+    if (denomination === 'JOY') {
+      amount = new Intl.NumberFormat('en-US').format(amount);
+    }
+
+    newValue = amount + ` ${denomination}`;
+  }
+
+  if (loading) {
+    newValue = t('token.hero.loading');
+  }
+
+  if (error) {
+    newValue = t('token.hero.error');
   }
 
   return (
@@ -42,7 +67,7 @@ const TokenStatsItem = ({
         })}
       >
         {joyIcon && <JoyTokenIcon className="TokenPage__tokenstats__item__value__joy-icon" />}
-        {value}
+        {newValue}
       </div>
       {tooltip && (
         <div className="TokenPage__tokenstats__item__tooltip-wrapper">
@@ -56,49 +81,68 @@ const TokenStatsItem = ({
   );
 };
 
-const TokenHero = ({ t }) => {
+export const TokenStatsSection = ({ t, isSeparate }) => {
   const [statusServerData, loading, error] = useAxios('https://status.joystream.org/status');
+  const [priceData, priceLoading, priceError] = useAxios('https://status.joystream.org/price');
 
+  return (
+    <div
+      className={cn('', {
+        'TokenPage__tokenstats-wrapper': !isSeparate,
+        'TokenPage__tokenstats-wrapper-separate': isSeparate,
+      })}
+    >
+      <div
+        className={cn('TokenPage__tokenstats', {
+          'TokenPage__tokenstats--separate': isSeparate,
+        })}
+      >
+        <TokenStatsItem title={t('token.hero.tokenStats.symbol.title')} value="JOY" joyIcon t={t} />
+        <TokenStatsItem
+          title={t('token.hero.tokenStats.supply.title')}
+          value="totalIssuance"
+          statusServerData={statusServerData}
+          loading={loading}
+          error={error}
+          t={t}
+        />
+        <TokenStatsItem
+          title={t('token.hero.tokenStats.price.title')}
+          value="price"
+          statusServerData={priceData}
+          loading={priceLoading}
+          denomination="USD"
+          error={priceError}
+          t={t}
+        />
+        <TokenStatsItem
+          title={t('token.hero.tokenStats.fdv.title')}
+          value={['totalIssuance', 'price']}
+          statusServerData={[statusServerData, priceData]}
+          loading={loading || priceLoading}
+          denomination="USD"
+          error={error || priceError}
+          t={t}
+        />
+      </div>
+    </div>
+  );
+};
+
+const TokenHero = ({ t }) => {
   return (
     <div className="TokenPage__hero-background">
       <div className="TokenPage__hero-wrapper">
         <div className="TokenPage__hero">
           <div className="TokenPage__hero__content">
-            <h2 className="TokenPage__hero__title">{t("token.hero.title")}</h2>
-            <p className="TokenPage__hero__text">
-              {t("token.hero.text")}
-            </p>
+            <h2 className="TokenPage__hero__title">{t('token.hero.title')}</h2>
+            <p className="TokenPage__hero__text">{t('token.hero.text')}</p>
           </div>
           <div className="TokenPage__hero__illustration">
             <img className="TokenPage__hero__illustration__image" alt="" src={Tokens} />
           </div>
         </div>
-        <div className="TokenPage__tokenstats-wrapper">
-          <div className="TokenPage__tokenstats">
-            <TokenStatsItem title={t("token.hero.tokenStats.symbol.title")} value="JOY" joyIcon t={t} />
-            <TokenStatsItem
-              title={t('token.hero.tokenStats.supply.title')}
-              value="totalIssuance"
-              statusServerData={statusServerData}
-              loading={loading}
-              t={t}
-            />
-            <TokenStatsItem
-              title={t("token.hero.tokenStats.price.title")}
-              value={t("token.hero.tokenStats.price.value")}
-              disabled
-              tooltip={t("token.hero.tokenStats.price.tooltip")}
-              t={t}
-            />
-            <TokenStatsItem
-              title={t("token.hero.tokenStats.fdv.title")}
-              value={t("token.hero.tokenStats.fdv.value")}
-              disabled
-              tooltip={t("token.hero.tokenStats.fdv.tooltip")}
-              t={t}
-            />
-          </div>
-        </div>
+        <TokenStatsSection t={t} />
       </div>
     </div>
   );

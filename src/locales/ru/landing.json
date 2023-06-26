@@ -30,6 +30,10 @@
         "subtitle": "Shared index of content, people and interactions. Content uploaded by creators in any app as well as channel's transactions and engagement are portable to any other app on the network."
       }
     },
+    "tokenomics": {
+      "sectionTitle": "TOKENOMICS",
+      "title": "Key Metrics"
+    },
     "ecosystem": {
       "sectionTitle": "ECOSYSTEM",
       "title": "One platform.<br/> Multiple apps.",
@@ -83,7 +87,7 @@
     "payouts": {
       "atlas": {
         "sectionTitle": "ATLAS",
-        "title" : "Open source codebase with rich feature set",
+        "title": "Open source codebase with rich feature set",
         "subtitle": "All apps built from the Atlas open source codebase can offer the full feature set encapsulating NFTs, Creator Rewards, Creator Tokens Minting from day one and benefit from regular updates with new features released."
       },
       "sectionTitle": "PAYOUTS",
@@ -187,7 +191,7 @@
     },
     "joystreamDAO": {
       "sectionTitle": "JOYSTREAM DAO",
-      "title" : "Have a hand in shaping the future of Joystream.<br /> Join our DAO.",
+      "title": "Have a hand in shaping the future of Joystream.<br /> Join our DAO.",
       "subtitle": "Pioneer is the place to participate in community governance and operation. Vote on elections, submit proposals or enter a paid role to support the platform growth.",
       "link": "Go to Pioneer",
       "carousel": {
