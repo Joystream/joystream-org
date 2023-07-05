@@ -5,6 +5,7 @@ import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
 
 import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
 import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
+import useImageFallback from '../../../utils/useImageFallback';
 
 import VideoNFTsBackgroundImage from '../../../assets/images/landing/video-nfts-background.webp';
 import VideoNFTsForegroundImage from '../../../assets/images/landing/video-nfts-foreground.webp';
@@ -48,48 +49,52 @@ const parallaxDataPopup = [
   },
 ];
 
-const CarouselItem = ({ nftTitle, channelName, joyAmount, videoUrl, imageUrl, time, setIsCarouselRunning, t }) => (
-  <a href={videoUrl} target="_blank" rel="noreferrer">
-    <div
-      className="IndexPage__video-nfts-carousel__item"
-      onMouseEnter={() => setIsCarouselRunning(true)}
-      onMouseLeave={() => setIsCarouselRunning(false)}
-    >
-      <div className="IndexPage__video-nfts-carousel__item__image">
-        <img src={imageUrl} alt="" />
-      </div>
-      <div className="IndexPage__video-nfts-carousel__item__content">
-        <div className="IndexPage__video-nfts-carousel__item__content__title">
-          <Trans
-            i18nKey="landing.videoNFTs.carousel.item.title"
-            components={{
-              span: <span />,
-              nftTitle,
-              channelName,
-            }}
-          />
+const CarouselItem = ({ nftTitle, channelName, joyAmount, videoUrl, imageUrls, time, setIsCarouselRunning, t }) => {
+  const [imgSrc, onError] = useImageFallback(imageUrls);
+
+  return (
+    <a href={videoUrl} target="_blank" rel="noreferrer">
+      <div
+        className="IndexPage__video-nfts-carousel__item"
+        onMouseEnter={() => setIsCarouselRunning(true)}
+        onMouseLeave={() => setIsCarouselRunning(false)}
+      >
+        <div className="IndexPage__video-nfts-carousel__item__image">
+          <img src={imgSrc} alt="" onError={e => onError(e)} />
         </div>
-        <div className="IndexPage__video-nfts-carousel__item__content__price">
-          <div className="IndexPage__video-nfts-carousel__item__content__price__title">
-            {t('landing.videoNFTs.carousel.item.price.label')}
-          </div>
-          <div className="IndexPage__video-nfts-carousel__item__content__price__amount">
+        <div className="IndexPage__video-nfts-carousel__item__content">
+          <div className="IndexPage__video-nfts-carousel__item__content__title">
             <Trans
-              i18nKey="landing.videoNFTs.carousel.item.price.amount"
+              i18nKey="landing.videoNFTs.carousel.item.title"
               components={{
                 span: <span />,
-                joyAmount,
+                nftTitle,
+                channelName,
               }}
             />
           </div>
-        </div>
-        <div className="IndexPage__video-nfts-carousel__item__content__time">
-          <ClockIcon className="IndexPage__video-nfts-carousel__item__content__time__icon" /> {time}
+          <div className="IndexPage__video-nfts-carousel__item__content__price">
+            <div className="IndexPage__video-nfts-carousel__item__content__price__title">
+              {t('landing.videoNFTs.carousel.item.price.label')}
+            </div>
+            <div className="IndexPage__video-nfts-carousel__item__content__price__amount">
+              <Trans
+                i18nKey="landing.videoNFTs.carousel.item.price.amount"
+                components={{
+                  span: <span />,
+                  joyAmount,
+                }}
+              />
+            </div>
+          </div>
+          <div className="IndexPage__video-nfts-carousel__item__content__time">
+            <ClockIcon className="IndexPage__video-nfts-carousel__item__content__time__icon" /> {time}
+          </div>
         </div>
       </div>
-    </div>
-  </a>
-);
+    </a>
+  );
+};
 
 const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
@@ -101,7 +106,7 @@ const Carousel = ({ itemsData, t }) => {
       channelName={channelName}
       joyAmount={joyAmount}
       videoUrl={videoUrl}
-      imageUrl={imageUrl}
+      imageUrls={imageUrl}
       time={time}
       setIsCarouselRunning={setIsCarouselRunning}
       t={t}

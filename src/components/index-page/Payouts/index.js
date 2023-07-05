@@ -5,6 +5,7 @@ import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
 
 import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
 import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
+import useImageFallback from '../../../utils/useImageFallback';
 
 // import { ArrowButton } from '../../ArrowButton';
 
@@ -53,37 +54,35 @@ const parallaxDataForeground = [
   },
 ];
 
-const CarouselItem = ({ img, joyAmount, channelName, time, setIsCarouselRunning, channelUrl }) => (
-  <a href={channelUrl} target="_blank" rel="noreferrer">
-    <div
-      className="IndexPage__payouts-carousel__item"
-      onMouseEnter={() => setIsCarouselRunning(true)}
-      onMouseLeave={() => setIsCarouselRunning(false)}
-    >
-      <div className="IndexPage__payouts-carousel__item__image">
-        <img
-          src={img}
-          onError={e => {
-            e.currentTarget.src = PlaceholderIcon;
-          }}
-          alt=""
-        />
-      </div>
-      <div className="IndexPage__payouts-carousel__item__price">
-        <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
-        <div className="IndexPage__payouts-carousel__item__price__text">
-          <Trans i18nKey="landing.payouts.carousel.item.price" components={{ span: <span />, joyAmount }} />
+const CarouselItem = ({ img, joyAmount, channelName, time, setIsCarouselRunning, channelUrl }) => {
+  const [imgSrc, onError] = useImageFallback(img, PlaceholderIcon);
+
+  return (
+    <a href={channelUrl} target="_blank" rel="noreferrer">
+      <div
+        className="IndexPage__payouts-carousel__item"
+        onMouseEnter={() => setIsCarouselRunning(true)}
+        onMouseLeave={() => setIsCarouselRunning(false)}
+      >
+        <div className="IndexPage__payouts-carousel__item__image">
+          <img src={imgSrc} onError={e => onError(e)} alt="" />
+        </div>
+        <div className="IndexPage__payouts-carousel__item__price">
+          <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
+          <div className="IndexPage__payouts-carousel__item__price__text">
+            <Trans i18nKey="landing.payouts.carousel.item.price" components={{ span: <span />, joyAmount }} />
+          </div>
+        </div>
+        <div className="IndexPage__payouts-carousel__item__channel">
+          <Trans i18nKey="landing.payouts.carousel.item.channel" components={{ span: <span />, channelName }} />
+        </div>
+        <div className="IndexPage__payouts-carousel__item__time">
+          <ClockIcon className="IndexPage__payouts-carousel__item__time__icon" /> {time}
         </div>
       </div>
-      <div className="IndexPage__payouts-carousel__item__channel">
-        <Trans i18nKey="landing.payouts.carousel.item.channel" components={{ span: <span />, channelName }} />
-      </div>
-      <div className="IndexPage__payouts-carousel__item__time">
-        <ClockIcon className="IndexPage__payouts-carousel__item__time__icon" /> {time}
-      </div>
-    </div>
-  </a>
-);
+    </a>
+  );
+};
 
 const Carousel = ({ itemsData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
