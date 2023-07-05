@@ -7,8 +7,6 @@ const useImageFallback = (imageList, placeholder) => {
   });
 
   const onError = e => {
-    console.log('Error happened!');
-
     if (imageList === undefined || imageList.length === 0 || imgData.index === imageList.length - 1) {
       if (placeholder) {
         e.currentTarget.src = placeholder;
