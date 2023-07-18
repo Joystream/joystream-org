@@ -145,7 +145,7 @@
     }
 
     &__items {
-      @include animate-carousel($carousel-gap, 25s);
+      // @include animate-carousel($carousel-gap, 25s);
 
       display: flex;
       flex-shrink: 0;
@@ -160,7 +160,7 @@
 
     &__item {
       width: 288px;
-      height: 354px;
+      height: 374px;
       background-color: $c_ebony-clay;
 
       &__image {
@@ -210,6 +210,13 @@
               text-align: left;
             }
           }
+        }
+
+        &__price-usd {
+          @include base-5;
+
+          margin-top: 4px;
+          color: $c_grayc-chateau;
         }
 
         &__time {

@@ -191,9 +191,13 @@
 
     &__item {
       width: 224px;
-      height: 200px;
+      height: 216px;
       padding: 24px;
       background-color: $c_ebony-clay;
+
+      &:hover {
+        background-color: rgba(red(#5c6475), green(#5c6475), blue(#5c6475), 25%);
+      }
 
       &__image {
         width: 40px;
@@ -209,7 +213,7 @@
 
       &__price {
         display: flex;
-        margin-top: 16px;
+        margin-top: 12px;
 
         &__icon {
           margin: auto 4px auto 0;
@@ -231,11 +235,18 @@
         }
       }
 
+      &__price-usd {
+        @include base-5;
+
+        margin-top: 4px;
+        color: $c_grayc-chateau;
+      }
+
       &__channel {
         @include base-5;
         @include line-clamp(1);
 
-        margin-top: 4px;
+        margin-top: 8px;
         color: $c_grayc-chateau;
 
         & > span {
@@ -248,7 +259,7 @@
 
         display: flex;
         align-items: center;
-        margin-top: 16px;
+        margin-top: 12px;
         color: $c_grayc-chateau;
 
         &__icon {

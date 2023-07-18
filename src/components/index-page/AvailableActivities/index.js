@@ -15,12 +15,13 @@ import useAxios from '../../../utils/useAxios';
 
 const ActivityListAmount = ({ mobile, amount, isWeekly, t }) => {
   let amountToRender = 0;
+  let amountInDollars = 0;
   if (amount) {
     amountToRender = Math.round(amount);
 
-    if (amount > 10000) {
-      amountToRender = `${Math.round(amount / 1000)}K`;
-    }
+    // if (amount > 10000) {
+    //   amountToRender = `${Math.round(amount / 1000)}K`;
+    // }
   }
 
   return (
@@ -30,8 +31,8 @@ const ActivityListAmount = ({ mobile, amount, isWeekly, t }) => {
       })}
     >
       <div className="IndexPage__available-activities__list-item__amount__value">
-        {amountToRender}
-        <span className="IndexPage__available-activities__list-item__amount__currency">JOY</span>
+        {amountToRender} JOY
+        <span>/ ${amountInDollars}</span>
       </div>
       {isWeekly && (
         <div className="IndexPage__available-activities__list-item__amount__weekly">

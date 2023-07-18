@@ -87,6 +87,7 @@ const CarouselItem = ({ nftTitle, channelName, joyAmount, videoUrl, imageUrls, t
               />
             </div>
           </div>
+          <p className="IndexPage__video-nfts-carousel__item__content__price-usd">$000000000</p>
           <div className="IndexPage__video-nfts-carousel__item__content__time">
             <ClockIcon className="IndexPage__video-nfts-carousel__item__content__time__icon" /> {time}
           </div>
