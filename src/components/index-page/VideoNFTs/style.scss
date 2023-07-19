@@ -145,7 +145,7 @@
     }
 
     &__items {
-      // @include animate-carousel($carousel-gap, 25s);
+      @include animate-carousel($carousel-gap, 25s);
 
       display: flex;
       flex-shrink: 0;

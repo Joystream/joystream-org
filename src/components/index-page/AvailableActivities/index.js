@@ -13,15 +13,20 @@ import { WORKER_ACTIVITIES } from '../../../data/pages';
 import './style.scss';
 import useAxios from '../../../utils/useAxios';
 
-const ActivityListAmount = ({ mobile, amount, isWeekly, t }) => {
+const ActivityListAmount = ({ mobile, amount, priceData, isWeekly, t }) => {
   let amountToRender = 0;
   let amountInDollars = 0;
   if (amount) {
     amountToRender = Math.round(amount);
+    amountInDollars = `${Math.round(priceData.price * amount)}`;
 
     // if (amount > 10000) {
     //   amountToRender = `${Math.round(amount / 1000)}K`;
     // }
+  }
+
+  if (priceData.error) {
+    amountInDollars = '';
   }
 
   return (
@@ -101,7 +106,7 @@ const ActivityIcons = ({ isLoading, icons, numberOfWorkers }) => {
   );
 };
 
-const Activity = ({ Icon, title, amount, isWeekly, icons, isLoading, t, numberOfWorkers }) => {
+const Activity = ({ Icon, title, amount, priceData, isWeekly, icons, isLoading, t, numberOfWorkers }) => {
   const itemContent = (
     <div className="IndexPage__available-activities__list-item">
       <div className="IndexPage__available-activities__list-item__top">
@@ -109,7 +114,7 @@ const Activity = ({ Icon, title, amount, isWeekly, icons, isLoading, t, numberOf
           <Icon className="IndexPage__available-activities__list-item__icon" />
         </div>
         <p className="IndexPage__available-activities__list-item__title">{title}</p>
-        <ActivityListAmount amount={amount} isWeekly={isWeekly} t={t} />
+        <ActivityListAmount amount={amount} priceData={priceData} isWeekly={isWeekly} t={t} />
         <ActivityArrowCTA mobile={true} t={t} />
       </div>
       <div className="IndexPage__available-activities__list-item__bottom">
@@ -124,7 +129,7 @@ const Activity = ({ Icon, title, amount, isWeekly, icons, isLoading, t, numberOf
             {t('landing.availableActivities.placeForYou')}
           </div>
         ) : null}
-        <ActivityListAmount mobile={true} amount={amount} isWeekly={isWeekly} t={t} />
+        <ActivityListAmount mobile={true} amount={amount} priceData={priceData} isWeekly={isWeekly} t={t} />
         <ActivityArrowCTA t={t} />
       </div>
     </div>
@@ -141,7 +146,7 @@ const Activity = ({ Icon, title, amount, isWeekly, icons, isLoading, t, numberOf
   );
 };
 
-const AvailableActivities = ({ t }) => {
+const AvailableActivities = ({ priceData, t }) => {
   const [data, loading, error] = useAxios('https://status.joystream.org/budgets');
   const [numberOfRenderedActivities, setNumberOfRenderedActivities] = useState(WORKER_ACTIVITIES.length);
   const { width } = useWindowDimensions();
@@ -170,6 +175,7 @@ const AvailableActivities = ({ t }) => {
                 Icon={WORKER_ACTIVITIES[activityKey].icon}
                 title={t(WORKER_ACTIVITIES[activityKey].title)}
                 amount={data?.[activityKey]?.weeklyEarnings}
+                priceData={priceData}
                 isWeekly={true}
                 icons={data?.[activityKey]?.icons}
                 numberOfWorkers={data?.[activityKey]?.numberOfWorkers}

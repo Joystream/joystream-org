@@ -49,8 +49,23 @@ const parallaxDataPopup = [
   },
 ];
 
-const CarouselItem = ({ nftTitle, channelName, joyAmount, videoUrl, imageUrls, time, setIsCarouselRunning, t }) => {
+const CarouselItem = ({
+  nftTitle,
+  channelName,
+  joyAmount,
+  priceData,
+  videoUrl,
+  imageUrls,
+  time,
+  setIsCarouselRunning,
+  t,
+}) => {
   const [imgSrc, onError] = useImageFallback(imageUrls);
+  let usdAmount = `$${(priceData.price * joyAmount).toFixed(2)}`;
+
+  if (priceData.error) {
+    usdAmount = 'Error';
+  }
 
   return (
     <a href={videoUrl} target="_blank" rel="noreferrer">
@@ -87,7 +102,7 @@ const CarouselItem = ({ nftTitle, channelName, joyAmount, videoUrl, imageUrls, t
               />
             </div>
           </div>
-          <p className="IndexPage__video-nfts-carousel__item__content__price-usd">$000000000</p>
+          <p className="IndexPage__video-nfts-carousel__item__content__price-usd">{usdAmount}</p>
           <div className="IndexPage__video-nfts-carousel__item__content__time">
             <ClockIcon className="IndexPage__video-nfts-carousel__item__content__time__icon" /> {time}
           </div>
@@ -97,7 +112,7 @@ const CarouselItem = ({ nftTitle, channelName, joyAmount, videoUrl, imageUrls, t
   );
 };
 
-const Carousel = ({ itemsData, t }) => {
+const Carousel = ({ itemsData, priceData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
   const items = itemsData.map(({ nftTitle, channelName, joyAmount, videoUrl, imageUrl, time }) => (
@@ -106,6 +121,7 @@ const Carousel = ({ itemsData, t }) => {
       nftTitle={nftTitle}
       channelName={channelName}
       joyAmount={joyAmount}
+      priceData={priceData}
       videoUrl={videoUrl}
       imageUrls={imageUrl}
       time={time}
@@ -135,7 +151,7 @@ const Carousel = ({ itemsData, t }) => {
   );
 };
 
-const VideoNFTs = ({ t, nftData }) => {
+const VideoNFTs = ({ t, nftData, priceData }) => {
   const { language } = useI18next();
   const videoNFTsCarouselInfoLabelRef = useRef();
   useRemoveElementFocusOnKeydown(videoNFTsCarouselInfoLabelRef, ['Escape']);
@@ -204,6 +220,7 @@ const VideoNFTs = ({ t, nftData }) => {
                 ...rest,
                 time: parseDateToRelativeTime(lastSaleDate, language),
               }))}
+              priceData={priceData}
               t={t}
             />
           ) : null}
