@@ -113,7 +113,7 @@
     "test": "jest",
     "fetch-assets-data": "node ./src/scripts/fetchAssetsData",
     "storybook": "NODE_ENV=production start-storybook -p 6006",
-    "build-storybook": "yarn build && NODE_ENV=production build-storybook -c .storybook --loglevel error --quiet"
+    "build-storybook": "yarn build && NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider build-storybook -c .storybook --loglevel error --quiet"
   },
   "pre-commit": [
     "lint",
