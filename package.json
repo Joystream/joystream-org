@@ -29,7 +29,7 @@
     "gatsby-plugin-polyfill-io": "^1.1.0",
     "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-react-i18next": "^1.1.1",
-    "gatsby-plugin-sass": "^2.1.0",
+    "gatsby-plugin-sass": "^5.25.0",
     "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-stylelint": "^3.2.0",
     "gatsby-plugin-svgr": "^2.0.2",
@@ -41,7 +41,7 @@
     "intersection-observer": "^0.7.0",
     "jest": "^24.8.0",
     "jsdom": "^15.1.1",
-    "node-sass": "^4.12.0",
+    "sass": "^1.56.1",
     "openpgp": "^4.10.10",
     "pre-commit": "^1.2.2",
     "prismjs": "^1.21.0",
@@ -67,7 +67,7 @@
     "react-spring": "^8.0.27",
     "react-waypoint": "^10.1.0",
     "recharts": "^2.0.9",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^10.4.1",
     "slick-carousel": "^1.8.1",
     "smoothscroll-polyfill": "^0.4.4",
     "stickybits": "^3.6.6",
@@ -105,19 +105,22 @@
     "stylelint": "stylelint \"src/**/*.scss\"",
     "stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
     "lint:all": "yarn lint && yarn stylelint --fix",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && gatsby build",
+    "develop": "export SET NODE_OPTIONS=--openssl-legacy-provider && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn develop",
-    "serve": "gatsby serve",
+    "serve": "export SET NODE_OPTIONS=--openssl-legacy-provider && gatsby serve",
     "test": "jest",
     "fetch-assets-data": "node ./src/scripts/fetchAssetsData",
     "storybook": "NODE_ENV=production start-storybook -p 6006",
-    "build-storybook": "gatsby build && NODE_ENV=production build-storybook -c .storybook --loglevel error --quiet"
+    "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && gatsby build && NODE_ENV=production build-storybook -c .storybook --loglevel error --quiet"
   },
   "pre-commit": [
     "lint",
     "stylelint",
     "test"
-  ]
+  ],
+  "engines": {
+    "node": "^18"
+  }
 }

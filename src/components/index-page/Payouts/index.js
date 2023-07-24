@@ -54,8 +54,13 @@ const parallaxDataForeground = [
   },
 ];
 
-const CarouselItem = ({ img, joyAmount, channelName, time, setIsCarouselRunning, channelUrl }) => {
+const CarouselItem = ({ img, joyAmount, priceData, channelName, time, setIsCarouselRunning, channelUrl }) => {
   const [imgSrc, onError] = useImageFallback(img, PlaceholderIcon);
+  let usdAmount = `$${(priceData.price * joyAmount).toFixed(2)}`;
+
+  if (priceData.error) {
+    usdAmount = 'Error';
+  }
 
   return (
     <a href={channelUrl} target="_blank" rel="noreferrer">
@@ -67,15 +72,16 @@ const CarouselItem = ({ img, joyAmount, channelName, time, setIsCarouselRunning,
         <div className="IndexPage__payouts-carousel__item__image">
           <img src={imgSrc} onError={e => onError(e)} alt="" />
         </div>
+        <div className="IndexPage__payouts-carousel__item__channel">
+          <Trans i18nKey="landing.payouts.carousel.item.channel" components={{ span: <span />, channelName }} />
+        </div>
         <div className="IndexPage__payouts-carousel__item__price">
           <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
           <div className="IndexPage__payouts-carousel__item__price__text">
             <Trans i18nKey="landing.payouts.carousel.item.price" components={{ span: <span />, joyAmount }} />
           </div>
         </div>
-        <div className="IndexPage__payouts-carousel__item__channel">
-          <Trans i18nKey="landing.payouts.carousel.item.channel" components={{ span: <span />, channelName }} />
-        </div>
+        <p className="IndexPage__payouts-carousel__item__price-usd">{usdAmount}</p>
         <div className="IndexPage__payouts-carousel__item__time">
           <ClockIcon className="IndexPage__payouts-carousel__item__time__icon" /> {time}
         </div>
@@ -84,7 +90,7 @@ const CarouselItem = ({ img, joyAmount, channelName, time, setIsCarouselRunning,
   );
 };
 
-const Carousel = ({ itemsData, t }) => {
+const Carousel = ({ itemsData, priceData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
   const items = itemsData.map(({ img, joyAmount, channelName, time, channelUrl }) => (
@@ -92,6 +98,7 @@ const Carousel = ({ itemsData, t }) => {
       key={`${joyAmount}-${channelName}-${time}`}
       img={img}
       joyAmount={joyAmount}
+      priceData={priceData}
       channelName={channelName}
       time={time}
       setIsCarouselRunning={setIsCarouselRunning}
@@ -121,12 +128,11 @@ const Carousel = ({ itemsData, t }) => {
   );
 };
 
-const Payouts = ({ t, payouts }) => {
+const Payouts = ({ t, payouts, priceData }) => {
   const { language } = useI18next();
   const payoutsCarouselInfoLabelRef = useRef();
   useRemoveElementFocusOnKeydown(payoutsCarouselInfoLabelRef, ['Escape']);
 
-  const img = 'https://github.com/Joystream/founding-members/blob/main/avatars/primary-avatar/15.png?raw=true';
   return (
     <section className="IndexPage__payouts-wrapper">
       <div className="IndexPage__payouts-atlas">
@@ -192,6 +198,7 @@ const Payouts = ({ t, payouts }) => {
                 time: parseDateToRelativeTime(createdAt, language),
                 ...rest,
               }))}
+              priceData={priceData}
               t={t}
             />
           ) : null}
