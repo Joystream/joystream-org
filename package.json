@@ -105,15 +105,15 @@
     "stylelint": "stylelint \"src/**/*.scss\"",
     "stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
     "lint:all": "yarn lint && yarn stylelint --fix",
-    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && gatsby build",
-    "develop": "export SET NODE_OPTIONS=--openssl-legacy-provider && gatsby develop",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
+    "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn develop",
-    "serve": "export SET NODE_OPTIONS=--openssl-legacy-provider && gatsby serve",
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider gatsby serve",
     "test": "jest",
     "fetch-assets-data": "node ./src/scripts/fetchAssetsData",
     "storybook": "NODE_ENV=production start-storybook -p 6006",
-    "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && gatsby build && NODE_ENV=production build-storybook -c .storybook --loglevel error --quiet"
+    "build-storybook": "yarn build && NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider build-storybook -c .storybook --loglevel error --quiet"
   },
   "pre-commit": [
     "lint",
