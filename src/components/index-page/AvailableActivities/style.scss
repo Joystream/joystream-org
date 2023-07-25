@@ -77,25 +77,19 @@
         }
 
         &__value {
-          font-family: $font-primary;
-          font-size: 28px;
-          font-weight: 700;
-          line-height: 36px;
-          letter-spacing: 0;
-          text-align: right;
-        }
-
-        &__currency {
           @include h7;
 
-          margin-left: 4px;
-          color: #a7aeb7;
+          & > span {
+            margin-left: 4px;
+            color: #a7aeb7;
+          }
         }
 
         &__weekly {
           @include h8;
 
           display: block;
+          margin-top: 4px;
           color: #a7aeb7;
           text-align: right;
         }
@@ -240,9 +234,14 @@
         color: $c_black;
       }
 
-      &:hover &__amount__currency,
       &:hover &__amount__weekly {
         color: #5c6475;
+      }
+
+      &:hover &__amount__value {
+        & > span {
+          color: #5c6475;
+        }
       }
 
       &:hover &__place-for-you {
@@ -322,6 +321,7 @@
       &__list-item {
         width: 335px;
         height: 158px;
+        padding: 16px;
 
         &__icon-wrapper {
           width: 48px;
@@ -394,20 +394,13 @@
           }
 
           &__value {
-            font-family: $font-primary;
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 28px;
-            letter-spacing: 0;
-            text-align: right;
-          }
-
-          &__currency {
-            @include h10;
+            @include h9;
           }
 
           &__weekly {
-            @include h10;
+            @include h9;
+
+            margin-top: 0;
           }
         }
       }

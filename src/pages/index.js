@@ -25,6 +25,12 @@ const IndexPage = () => {
   const { language } = useI18next();
 
   const [data, loading, error] = useAxios('https://status.joystream.org/carousel-data');
+  const [priceData, priceLoading, priceError] = useAxios('https://status.joystream.org/price');
+
+  const updatedPriceData = {
+    price: priceData?.price ?? 0,
+    error: priceError,
+  };
 
   return (
     <BaseLayout t={t} mainnetReminder={true}>
@@ -40,9 +46,9 @@ const IndexPage = () => {
 
       <Ecosystem t={t} />
 
-      <Payouts t={t} payouts={data?.payouts} />
+      <Payouts t={t} payouts={data?.payouts} priceData={updatedPriceData} />
 
-      <VideoNFTs t={t} nftData={data?.nfts} />
+      <VideoNFTs t={t} nftData={data?.nfts} priceData={updatedPriceData} />
 
       <CreatorTokens t={t} />
 
@@ -50,7 +56,7 @@ const IndexPage = () => {
 
       <Manifesto t={t} />
 
-      <AvailableActivities t={t} />
+      <AvailableActivities t={t} priceData={updatedPriceData} />
 
       <JoystreamDAO t={t} proposalsData={data?.proposals} />
 

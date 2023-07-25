@@ -15,8 +15,8 @@
 
         /* stylelint-disable-next-line */
         & > * {
-          width: calc(100% / #{$smCols} - #{ceil($smallSpacing - $smallSpacing / $smCols)});
-          @if #{$smCols} > 1 {
+          width: calc(100% / #{$smCols} - #{ceil($smallSpacing - calc($smallSpacing / $smCols))});
+          @if calc(#{$smCols} > 1) {
             margin-right: $smallSpacing;
           } @else {
             margin-right: 0;
@@ -30,7 +30,7 @@
 
       @media #{$screen-md} {
         & > * {
-          width: calc(100% / #{$i} - #{ceil($spacing - $spacing / $i)});
+          width: calc(100% / #{$i} - #{ceil($spacing - calc($spacing / $i))});
           margin-right: $spacing;
           margin-bottom: $spacing;
         }

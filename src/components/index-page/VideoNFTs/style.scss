@@ -160,8 +160,12 @@
 
     &__item {
       width: 288px;
-      height: 354px;
+      height: 374px;
       background-color: $c_ebony-clay;
+
+      &:hover {
+        background-color: rgba(red(#5c6475), green(#5c6475), blue(#5c6475), 25%);
+      }
 
       &__image {
         width: 100%;
@@ -210,6 +214,13 @@
               text-align: left;
             }
           }
+        }
+
+        &__price-usd {
+          @include base-5;
+
+          margin-top: 4px;
+          color: $c_grayc-chateau;
         }
 
         &__time {
