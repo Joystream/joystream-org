@@ -28,7 +28,7 @@
       animation-delay: .1s;
 
       span > div {
-        display: inline-block;
+        display: -webkit-inline-box;
       }
     }
 
@@ -279,8 +279,13 @@
     &__hero__title {
       max-width: 335px;
 
-      span > div {
+      span {
         display: block;
+        max-height: 48px;
+      }
+
+      span > div {
+        display: -webkit-inline-box;
       }
     }
   }
