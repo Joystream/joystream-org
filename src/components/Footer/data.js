@@ -2,6 +2,7 @@ import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
 import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
 import { ReactComponent as DiscordIcon } from '../../assets/svg/discord.svg';
 import { ReactComponent as SecurityIcon } from '../../assets/svg/security.svg';
+import { ReactComponent as TelegramIcon } from '../../assets/svg/telegram.svg';
 import { sharedData } from '../../data/pages';
 
 const joystreamLinks = [
@@ -24,6 +25,7 @@ const socialMedias = [
   { icon: TwitterIcon, href: sharedData.social.twitterLink, name: 'socials.twitter' },
   { icon: GithubIcon, href: sharedData.links.github, name: 'socials.github' },
   { icon: DiscordIcon, href: sharedData.social.discordLink, name: 'socials.discord' },
+  { icon: TelegramIcon, href: sharedData.social.telegramLink, name: 'socials.telegram' },
 ];
 
 export { joystreamLinks, githubLinks, usefulLinks, socialMedias };
