@@ -3,6 +3,7 @@ import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
 import { ReactComponent as DiscordIcon } from '../../assets/svg/discord.svg';
 import { ReactComponent as SecurityIcon } from '../../assets/svg/security.svg';
 import { ReactComponent as TelegramIcon } from '../../assets/svg/telegram.svg';
+import { ReactComponent as CMCIcon } from '../../assets/svg/coinmarketcap.svg';
 import { sharedData } from '../../data/pages';
 
 const joystreamLinks = [
@@ -26,6 +27,7 @@ const socialMedias = [
   { icon: GithubIcon, href: sharedData.links.github, name: 'socials.github' },
   { icon: DiscordIcon, href: sharedData.social.discordLink, name: 'socials.discord' },
   { icon: TelegramIcon, href: sharedData.social.telegramLink, name: 'socials.telegram' },
+  { icon: CMCIcon, href: sharedData.social.coinmarketcapLink, name: 'socials.coinmarketcap' },
 ];
 
 export { joystreamLinks, githubLinks, usefulLinks, socialMedias };
