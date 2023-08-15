@@ -1,0 +1,65 @@
+@import '../../styles/main';
+@import '../../pages/style.scss';
+
+.VerificationPage {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $c_black;
+
+  &__social-card {
+    display: flex;
+    width: 676px;
+    height: 98px;
+    margin-top: 24px;
+    padding: 24px;
+    background-color: rgba(red(#bcd5fa14), green(#bcd5fa14), blue(#bcd5fa14), 8%);
+    border-radius: 8px;
+
+    &__icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      background-color: rgba(red(#6f6f6f26), green(#6f6f6f26), blue(#6f6f6f26), 25%);
+      border-radius: 50%;
+      place-items: center;
+
+      &--twitter {
+        fill: #1da1f2;
+      }
+
+      &--discord {
+        transform: scale(1.5);
+        fill: #7984f6;
+      }
+
+      & > img,
+      & > svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+
+      &__title {
+        @include section-title-md;
+
+        color: #7b8a95;
+      }
+
+      &__value {
+        @include h6;
+
+        margin-top: 2px;
+        font-weight: 600;
+        color: #f4f6f8;
+      }
+    }
+  }
+}
