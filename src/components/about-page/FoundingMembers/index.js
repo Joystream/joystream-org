@@ -44,7 +44,7 @@ const FMCard = ({
         updatePreloadedImageCounter();
       }
     });
-  }, []);
+  }, [avatarUrl, updatePreloadedImageCounter]);
 
   if (updatePreloadedImageCounter && !shouldRenderOtherMembers) {
     return null;

@@ -51,12 +51,12 @@ const Button = ({ href, to, className, children, reversed, secondary, light, lar
     );
   }
 
-  if(href && href.startsWith("#")) {
+  if(href && href.startsWith('#')) {
     return (
       <Link {...props} className={classes} href={href}>
         {children}
       </Link>
-    )
+    );
   }
 
   if (href) {

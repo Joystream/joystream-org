@@ -35,10 +35,10 @@ const useQueryNodeData = () => {
       forumPosts: 0,
       proposals: 0,
       jobOpenings: 0,
-      currentWorkers: 0
+      currentWorkers: 0,
     },
     isLoading: true,
-    error: false
+    error: false,
   });
 
   useEffect(() => {
@@ -60,10 +60,10 @@ const useQueryNodeData = () => {
               forumPosts: data.forumPosts.length,
               proposals: data.proposals.length,
               jobOpenings: data.workingGroupOpenings.length,
-              currentWorkers: data.workers.length
+              currentWorkers: data.workers.length,
             },
             isLoading: false,
-            error: false
+            error: false,
           });
         }
       } catch (e) {

@@ -26,7 +26,7 @@ const useWorkingGroups = () => {
     storage: [],
     operations: [],
     content: [],
-    distribution: []
+    distribution: [],
   } });
 
   // fetch data
@@ -46,16 +46,16 @@ const useWorkingGroups = () => {
             groupId: worker.groupId,
             workerId: worker.id,
             memberId: worker.membership.id,
-            avatar: worker.membership.metadata.avatar.avatarUri
+            avatar: worker.membership.metadata.avatar.avatarUri,
           }));
 
-          const storage = mappedWorkers.filter(({ groupId }) => groupId === "storageWorkingGroup");
+          const storage = mappedWorkers.filter(({ groupId }) => groupId === 'storageWorkingGroup');
           const operations = mappedWorkers.filter(({ groupId }) =>
             ['operationsWorkingGroupAlpha', 'operationsWorkingGroupBeta', 'operationsWorkingGroupGamma'].includes(
               groupId
           ));
-          const content = mappedWorkers.filter(({ groupId }) => groupId === "contentWorkingGroup");
-          const distribution = mappedWorkers.filter(({ groupId }) => groupId === "distributionWorkingGroup");
+          const content = mappedWorkers.filter(({ groupId }) => groupId === 'contentWorkingGroup');
+          const distribution = mappedWorkers.filter(({ groupId }) => groupId === 'distributionWorkingGroup');
 
           console.log({ storage, operations, distribution, content });
 
@@ -66,9 +66,9 @@ const useWorkingGroups = () => {
               storage,
               operations,
               content,
-              distribution
-            }
-          })
+              distribution,
+            },
+          });
 
         }
       } catch (e) {

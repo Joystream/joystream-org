@@ -134,7 +134,8 @@
     display: flex;
     flex-direction: column;
     width: auto;
-    background-color: $c_white;
+    background-color: #1f252e;
+    border-radius: 4px;
     transform: translateY(-100%);
     transition: transform 400ms ease 0s;
 
@@ -144,6 +145,7 @@
   }
 
   &__dropdown-item {
+    width: 100%;
     padding: 16px 24px;
 
     &__text {
@@ -151,7 +153,11 @@
       font-size: 18px;
       line-height: 20px;
       letter-spacing: 0;
-      color: black;
+      color: #a7aeb7;
+    }
+
+    &:hover {
+      background: #5c647533;
     }
   }
 
@@ -409,8 +415,13 @@
 
       &__icon {
         @keyframes grow {
-          0% { clip-path: circle(10%); }
-          100% { clip-path: circle(100%); }
+          0% {
+            clip-path: circle(10%);
+          }
+
+          100% {
+            clip-path: circle(100%);
+          }
         }
 
         animation: grow;

@@ -1,0 +1,77 @@
+@import '../../../styles/_main';
+@import '../../../pages/style.scss';
+
+.RoadmapPage {
+  &__head-wrapper {
+    padding-top: 96px;
+    background-color: $c_catskill_white;
+  }
+
+  &__head {
+    @extend %container;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      max-width: 816px;
+      margin: 0 auto;
+
+      &__section-title {
+        @include section-title;
+
+        color: $c_blue-ribbon;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: #1a1a1a;
+        text-align: center;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        margin-top: 16px;
+        color: #3b3b3b;
+        text-align: center;
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__head {
+      &__header {
+        width: 585px;
+
+        &__title {
+          width: 450px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__head-wrapper {
+      padding-top: 80px;
+    }
+
+    &__head {
+      &__header {
+        max-width: 337px;
+
+        &__title {
+          @include h4;
+
+          width: unset;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+    }
+  }
+}

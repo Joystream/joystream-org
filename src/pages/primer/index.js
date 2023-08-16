@@ -7,7 +7,7 @@ import useScroll from '../../utils/useScroll';
 
 // components
 import ChooseYourOwnAdventure from '../../components/primer-page/ChooseYourOwnAdventure';
-import Header from '../../components/primer-page/Header'
+import Header from '../../components/primer-page/Header';
 import Governance from '../../components/primer-page/Governance';
 import WhyWeExist from '../../components/primer-page/WhyWeExist';
 import VideoPlatform from '../../components/primer-page/VideoPlatform';
@@ -17,7 +17,7 @@ import BusinessModel from '../../components/primer-page/BusinessModel';
 import './style.scss';
 
 export const CurrentPrimerSectionContext = createContext(null);
-export const sectionIDs = ["primer-header", "primer-future-of-video", "primer-why-we-exist", "primer-the-solution", "primer-governance", "primer-business-model", "primer-next-steps"];
+export const sectionIDs = ['primer-header', 'primer-future-of-video', 'primer-why-we-exist', 'primer-the-solution', 'primer-governance', 'primer-business-model', 'primer-next-steps'];
 
 const PrimerPage = () => {
   const { t } = useTranslation();
@@ -49,7 +49,7 @@ const PrimerPage = () => {
         }
       }
     }
-  }, [scrollPosition])
+  }, [scrollPosition]);
 
   return (
     <CurrentPrimerSectionContext.Provider value={currentSection}>
