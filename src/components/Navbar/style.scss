@@ -6,6 +6,8 @@
   position: relative;
   top: 0;
   z-index: 5;
+  align-items: center;
+  flex-direction: column;
   height: $navbar-height;
   background-color: $c_black;
   transition: top 400ms ease 0s;
