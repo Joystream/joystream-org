@@ -142,7 +142,9 @@
   "socials": {
     "twitter": "Twitter",
     "github": "GitHub",
-    "discord": "Discord"
+    "discord": "Discord",
+    "telegram": "Telegram",
+    "coinmarketcap": "CoinMarketCap"
   },
   "cookiesNotice": {
     "text": "This site uses cookies and external trackers to improve our services and your experience. By continuing to use our site, you agree to their use.",

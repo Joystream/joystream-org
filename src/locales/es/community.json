@@ -36,6 +36,10 @@
       "youtube": {
         "title": "YouTube",
         "subtitle": "Watch community calls"
+      },
+      "telegram": {
+        "title": "Telegram",
+        "subtitle": "Join the community"
       }
     }
   }
