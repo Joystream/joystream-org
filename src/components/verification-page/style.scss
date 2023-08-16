@@ -9,6 +9,49 @@
   min-height: 100vh;
   background-color: $c_black;
 
+  &__member-card {
+    position: relative;
+    display: flex;
+    width: 676px;
+    height: 128px;
+    margin-top: 32px;
+    padding: 24px;
+    background-color: rgba(red(#bcd5fa14), green(#bcd5fa14), blue(#bcd5fa14), 8%);
+    border-radius: 8px;
+
+    &__avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 24px;
+
+      &__name {
+        @include h4;
+
+        font-weight: 600;
+        color: #f4f6f8;
+      }
+
+      &__title {
+        @include h9;
+
+        margin-top: 4px;
+        color: #b5c1c9;
+      }
+    }
+  }
+
   &__social-card {
     display: flex;
     width: 676px;
