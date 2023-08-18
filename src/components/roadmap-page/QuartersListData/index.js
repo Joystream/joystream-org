@@ -7,7 +7,6 @@ import axios from 'axios';
 
 function QuartersListData({ fileName }) {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,7 +14,6 @@ function QuartersListData({ fileName }) {
         `https://raw.githubusercontent.com/${GIT_USER_NAME}/${GIT_REPOSITY}/main/${GIT_FOLDER}/${fileName}`
       );
       setData(response.data);
-      setLoading(false);
     };
 
     fetchData();
@@ -26,7 +24,7 @@ function QuartersListData({ fileName }) {
       {data.map((res, index) => {
         return (
           <QuarterPanel
-            loading={loading}
+            loading={false}
             data={res}
             key={index}
             language={'English'}
