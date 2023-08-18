@@ -5,3 +5,17 @@
 @function get($map, $key: 'default') {
   @return map-get($map, $key);
 }
+
+@mixin rotate-360 {
+  @keyframes rotate-360 {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  animation: rotate-360 30s linear infinite;
+}
