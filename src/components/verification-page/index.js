@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 import TelegramIcon from '../../assets/images/telegram.webp';
 import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
@@ -10,10 +11,12 @@ import { ReactComponent as VerifiedTickIcon } from '../../assets/svg/verified-ti
 import { ReactComponent as FlagIcon } from '../../assets/svg/flag.svg';
 import { ReactComponent as AllowedIcon } from '../../assets/svg/allowed.svg';
 import { ReactComponent as ForbiddenIcon } from '../../assets/svg/forbidden.svg';
+import { ReactComponent as DownIcon } from '../../assets/svg/down.svg';
 
-import foundingMembers from '../about-page/founding-members.json';
+import { verifiedMembers } from '../../data/pages/verification';
 
 import './style.scss';
+import { useTransition } from 'react';
 
 const MemberCard = ({ img, name, title }) => {
   return (
@@ -127,7 +130,49 @@ const SafetyCard = ({ name }) => {
   );
 };
 
-const freakstatic = foundingMembers[3];
+const OtherMembers = ({ otherMembers }) => {
+  const [shouldShowInitialMembers, setShouldShowInitialMembers] = useState(true);
+
+  const initialRenderedMembers = otherMembers.slice(0, 6);
+  const remainingMembersNumber = otherMembers.length - initialRenderedMembers.length;
+  const membersToRender = shouldShowInitialMembers ? initialRenderedMembers : otherMembers;
+
+  return (
+    <div className="VerificationPage__other-members-card">
+      <div className="VerificationPage__other-members-card__title">Other Members</div>
+      <div className="VerificationPage__other-members-card__subtitle">
+        Our team works all week long to create a thriving community of content creators - feel free to contact any
+        member to talk about the project.
+      </div>
+      <div className="VerificationPage__other-members-card__members">
+        {membersToRender.map((member, index) => (
+          <Link to={`/${member.memberHandle}`}>
+            <div className="VerificationPage__other-members-card__member">
+              <img className="VerificationPage__other-members-card__member__icon" src={member.avatarId} alt="" />
+              <div className="VerificationPage__other-members-card__member__name">@{member.memberHandle}</div>
+            </div>
+          </Link>
+        ))}
+      </div>
+      <button
+        className="VerificationPage__other-members-card__button"
+        onClick={() => setShouldShowInitialMembers(prev => !prev)}
+      >
+        <span className="VerificationPage__other-members-card__button__text">
+          {shouldShowInitialMembers ? `Show (13) more Members` : 'Hide members'}
+        </span>
+        <DownIcon
+          className={cn('VerificationPage__other-members-card__button__icon', {
+            'VerificationPage__other-members-card__button__icon--active': !shouldShowInitialMembers,
+          })}
+        />
+      </button>
+    </div>
+  );
+};
+
+const freakstatic = verifiedMembers[3];
+const otherMembers = verifiedMembers.filter(member => member.memberHandle !== freakstatic.memberHandle);
 
 const Verification = () => {
   return (
@@ -138,6 +183,7 @@ const Verification = () => {
       <SocialCard title="EMAIL" value="freak.staticaly@gmail.com" />
       <SocialCard title="DISCORD" value="@freakstatic" />
       <SafetyCard name={freakstatic.memberHandle} />
+      <OtherMembers otherMembers={otherMembers} />
     </div>
   );
 };
