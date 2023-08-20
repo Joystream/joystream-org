@@ -8,6 +8,15 @@
   overflow: hidden;
   background-color: #bcd5fa14;
   border-radius: 8px;
+
+  @media #{$screen-max-md} {
+    width: 632px;
+  }
+
+  @media #{$screen-max-sm} {
+    width: 100%;
+    padding: 16px;
+  }
 }
 
 .VerificationPage {
@@ -51,7 +60,7 @@
       }
 
       &__title {
-        @include h9;
+        @include base-3;
 
         margin-top: 4px;
         color: #b5c1c9;
@@ -60,7 +69,7 @@
 
     &__verified {
       &__circle {
-        @include rotate-360();
+        @include rotate-360-at-scale();
 
         position: absolute;
         top: -8px;
@@ -131,7 +140,6 @@
     @include verification-card;
 
     flex-direction: column;
-    height: 480px;
 
     &__top {
       display: flex;
@@ -154,6 +162,10 @@
         background-color: #bcd5fa14;
         border: 1px solid #bbd9f621;
         border-radius: 2px;
+
+        &--mobile {
+          display: none;
+        }
 
         &__text {
           @include base-5;
@@ -223,6 +235,7 @@
 
           margin-bottom: 8px;
           margin-left: 56px;
+          padding-left: 0;
           color: #f4f6f8;
           list-style-type: disc;
         }
@@ -312,6 +325,123 @@
 
         &--active {
           transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    padding: 32px;
+
+    &__member-card {
+      align-items: center;
+      height: 80px;
+
+      &__avatar {
+        width: 40px;
+        height: 40px;
+      }
+
+      &__content {
+        margin-left: 12px;
+
+        &__name {
+          @include h8;
+
+          font-weight: 600;
+        }
+
+        &__title {
+          @include base-4;
+        }
+      }
+
+      &__verified {
+        &__circle {
+          @include rotate-360-at-scale(.65);
+
+          top: -31px;
+          right: -16px;
+        }
+
+        &__tick {
+          right: 31px;
+          transform: scale(.7);
+        }
+      }
+    }
+
+    &__social-card {
+      align-items: center;
+      height: 74px;
+
+      &__icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      &__content {
+        &__value {
+          @include h8;
+
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__safety-card {
+      height: auto;
+
+      &__top {
+        &__title {
+          @include h8;
+
+          font-weight: 600;
+        }
+
+        &__report-button {
+          display: none;
+          width: 100%;
+          min-height: 32px;
+          margin-top: 16px;
+
+          &--mobile {
+            display: flex;
+          }
+        }
+      }
+
+      &__subtitle {
+        @include base-4;
+
+        margin-top: 8px;
+      }
+
+      &__list-container {
+        &__content {
+          &__top {
+            &__icon {
+              width: 32px;
+              height: 32px;
+              padding: 0;
+            }
+
+            &__title {
+              margin-left: 8px;
+              font-size: 16px;
+            }
+          }
+
+          & > ul {
+            margin-top: 8px;
+            padding-left: 0;
+          }
+
+          &__list-item {
+            @include base-4;
+
+            margin-left: 20px;
+          }
         }
       }
     }

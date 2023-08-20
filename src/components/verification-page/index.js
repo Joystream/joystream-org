@@ -108,6 +108,10 @@ const SafetyCard = ({ name }) => {
         We take the safety of everyone online seriously. If the person you have contact with acts suspicious please
         report it to us immidiatelly.
       </div>
+      <button className="VerificationPage__safety-card__top__report-button VerificationPage__safety-card__top__report-button--mobile">
+        <FlagIcon />
+        <span className="VerificationPage__safety-card__top__report-button__text">Report {name}</span>
+      </button>
       <SafetyCardListContainer
         name={name}
         isAllowed={false}
@@ -133,7 +137,7 @@ const SafetyCard = ({ name }) => {
 const OtherMembers = ({ otherMembers }) => {
   const [shouldShowInitialMembers, setShouldShowInitialMembers] = useState(true);
 
-  const initialRenderedMembers = otherMembers.slice(0, 6);
+  const initialRenderedMembers = otherMembers.slice(0, 5);
   const remainingMembersNumber = otherMembers.length - initialRenderedMembers.length;
   const membersToRender = shouldShowInitialMembers ? initialRenderedMembers : otherMembers;
 
