@@ -1,17 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
-import cn from 'classnames';
+import React, { useEffect, useRef, useState } from "react";
+import cn from "classnames";
 
-import { ReactComponent as PlayIcon } from '../../../assets/svg/icon-play.svg';
-import { ReactComponent as LinkIcon } from '../../../assets/svg/connect_disable.svg';
-import './style.scss';
+import { ReactComponent as PlayIcon } from "../../../assets/svg/icon-play.svg";
+import { ReactComponent as LinkIcon } from "../../../assets/svg/connect_disable.svg";
+import "./style.scss";
 
-const scrollOffset = 300;
-let bottom = 0;
+const offset = 600;
 function QuarterPanel({ data, loading, error, language }) {
-  const [windowHeight, setWindowHeight] = useState(0);
-  const [offsetTop, setOffsetTop] = useState(0);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const scrollElement = useRef(null);
+  const [activeItem, setActiveItem] = useState(0);
+  const [activeText, setActiveText] = useState(0);
+  const [activeTimeLine, setActiveTimeLine] = useState(false);
 
   const result = data.language === language ? data : false;
 
@@ -34,80 +32,104 @@ function QuarterPanel({ data, loading, error, language }) {
     );
   }
 
-  const getWindowHeight = () => {
-    setWindowHeight(
-      window.innerHeight || document.documentElement.clientHeight
+  useEffect(() => {
+    const timeLineItems = document.querySelectorAll(
+      ".QuarterPanel__main__line__dot"
     );
-  };
 
-  const getOffsetTop = () => {
-    setOffsetTop(scrollElement.current.getBoundingClientRect().top);
-  };
-
-  const elementInView = (el, offset = 0) => {
-    const elementTop = el.getBoundingClientRect().top;
-
-    return (
-      elementTop <=
-      (window.innerHeight || document.documentElement.clientHeight) - offset
+    const timeLinePanel = document.querySelectorAll(
+      ".QuarterPanel__main__panel"
     );
-  };
 
-  const handleScrollAnimation = () => {
-    if (elementInView(scrollElement.current, scrollOffset)) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
+    if (activeItem < timeLineItems.length) {
+      timeLineItems[activeItem].classList.add(
+        "QuarterPanel__main__line__dot--active"
+      );
+      timeLinePanel[activeItem].classList.add(
+        "QuarterPanel__main__panel--active"
+      );
     }
-  };
-  // useEffect(() => {
-  //   getWindowHeight();
-  //   getOffsetTop();
 
-  //   window.addEventListener('resize', getWindowHeight);
-  //   window.addEventListener('scroll', () => {
-  //     getOffsetTop();
-  //     handleScrollAnimation();
-  //   });
+    if (activeItem > 0) {
+      timeLinePanel[activeItem - 1].classList.remove(
+        "QuarterPanel__main__panel--active"
+      );
+    }
 
-  //   // // Cleanup function to remove the event listeners when the component unmounts
-  //   // return () => {
-  //   //   window.removeEventListener('resize', getWindowHeight);
-  //   //   window.removeEventListener('scroll', handleScrollAnimation);
-  //   // };
-  // }, [handleScrollAnimation]); // Empty array means this effect runs once on mount and cleanup on unmount
+    if (activeItem < timeLineItems.length - 1) {
+      timeLineItems[activeItem + 1].classList.remove(
+        "QuarterPanel__main__line__dot--active"
+      );
+      timeLinePanel[activeItem + 1].classList.remove(
+        "QuarterPanel__main__panel--active"
+      );
+    }
+  }, [activeItem]);
+
+  useEffect(() => {
+    const timeLineText = document.querySelectorAll(
+      ".QuarterPanel__main__title"
+    );
+    timeLineText[activeText].classList.add("QuarterPanel__main__title--active");
+    if (activeText > 0) {
+      timeLineText[activeText - 1].classList.remove(
+        "QuarterPanel__main__title--active"
+      );
+    }
+    if (activeText < timeLineText.length - 1) {
+      timeLineText[activeText + 1].classList.remove(
+        "QuarterPanel__main__title--active"
+      );
+    }
+  }, [activeText]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const timelineItems = document.querySelectorAll(".QuarterPanel__submain");
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+
+      timelineItems.forEach((item, index) => {
+        const itemTop = item.offsetTop;
+        if (scrollPosition > itemTop + offset - windowHeight - 5) {
+          setActiveItem(index);
+          setActiveTimeLine(true);
+        } else {
+          setActiveTimeLine(false);
+        }
+      });
+
+      const timelineText = document.querySelectorAll(
+        ".QuarterPanel__main__rigth"
+      );
+      timelineText.forEach((item, index) => {
+        const itemTop = item.offsetTop;
+        if (scrollPosition > itemTop - windowHeight + offset - 5) {
+          setActiveText(index);
+        }
+      });
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div>
       {result.quarters.map((res, index) => {
         return (
           <div className="QuarterPanel__main" key={index}>
-            <div className="QuarterPanel__main__title" ref={scrollElement}>
-              <div
-                className={cn('QuarterPanel__main__subtitle', {
-                  'QuarterPanel__main__subtitle--active': isScrolled,
-                })}
-              >
-                {data.year}
-              </div>
-              <div
-                className={cn('QuarterPanel__main__quarters', {
-                  'QuarterPanel__main__quarters--active': isScrolled,
-                })}
-              >
-                {res.id}
+            <div className="QuarterPanel__main__rigth">
+              <div className="QuarterPanel__main__title">
+                <div className="QuarterPanel__main__subtitle">{data.year}</div>
+                <div className="QuarterPanel__main__quarters">{res.id}</div>
               </div>
             </div>
             <div>
               {res.deliveryMilestones.map((milestones, k) => {
                 return (
-                  <div className="QuarterPanel__main" key={k + 'line'}>
+                  <div className="QuarterPanel__submain" key={k}>
                     <div className="QuarterPanel__main__timeline">
-                      <div
-                        className={cn('QuarterPanel__main__line__dot', {
-                          'QuarterPanel__main__line__dot--active': isScrolled,
-                        })}
-                      />
+                      <div className="QuarterPanel__main__line__dot" />
                       <div className="QuarterPanel__main__line" />
                     </div>
 

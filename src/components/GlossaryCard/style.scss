@@ -1,0 +1,30 @@
+@import "../../styles/_main";
+@import "../../styles/common/colors";
+@import "../../styles/common/variables";
+.GlossaryCard {
+  background-color: $c_ebony-clay;
+  max-width: (535px);
+  padding: 24px;
+  border-radius: 4px;
+  gap: 16px;
+  &__title {
+    //styleName: h7;
+    font-family: $font-primary;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: white;
+  }
+  &__content {
+    //styleName: Base 4;
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $c_grayc-chateau;
+  }
+}

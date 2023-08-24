@@ -1,0 +1,17 @@
+.TextSlider {
+  &__button {
+    border-radius: 50%;
+    &__icon {
+      &--forward {
+        text-align: center;
+        align-items: end;
+        margin-right: 10px;
+      }
+      &--backward {
+        transform: rotate(180deg);
+        align-items: end;
+        margin-left: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@import "../../../styles/_main";
+@import "../../../styles/common/colors";
+
+.GlossaryTeams {
+  background-color: $c_wood-smoke;
+  text-align: center;
+  padding: 80px 99px 80px 99px;
+  gap: 64px;
+
+  &__head__panel {
+    gap: 16px;
+    align-items: center;
+    grid-gap: 10px;
+    flex-direction: column;
+    display: flex;
+    max-width: 816px;
+    margin: 0 auto;
+    &__title {
+      color: white;
+      font-size: 40px;
+      font-family: $font-primary;
+      gap: 4px;
+    }
+    &__subtitle {
+      color: #cdcdcd;
+      font-size: 20px;
+      font-family: $font-secondary;
+      max-width: 450px;
+      line-height: 28px;
+      margin-top: 20px;
+    }
+  }
+  &__search__panel {
+    padding-top: 32px;
+    &__input {
+      max-width: (394px);
+      height: 56px;
+      padding: 16px 18px 16px 18px;
+      border-radius: 4px;
+      border: 2px;
+      gap: 8px;
+    }
+  }
+
+  &__slider__text {
+    font-size: 60px;
+    color: white;
+  }
+
+  &__body__slider {
+    margin-top: 32px;
+    gap: 32px;
+    display: grid;
+
+    justify-items: center;
+    &__cards {
+      gap: 32px;
+      display: grid;
+      flex-direction: column;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+
+    &__slide {
+      border-radius: 50%;
+      background-color: $c_wood-smoke;
+      color: white;
+      font-size: 24px;
+      line-height: 32px;
+    }
+    &__button {
+      //styleName: h7;
+      font-family: Px Grotesk;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #6c6cff;
+    }
+  }
+
+  @media #{$screen-max-sm} {
+  }
+
+  @media #{$screen-sm} {
+    padding: 46px 0;
+    background-position: bottom left;
+    background-repeat: repeat-x;
+  }
+
+  @media (max-width: 550px) {
+    padding: 16px 0;
+    gap: 16px;
+
+    &__options {
+      &-wrapper {
+        width: auto;
+      }
+
+      &__dropdown {
+        width: auto;
+        margin: 0 10px;
+      }
+    }
+
+    &__form {
+      flex-direction: column;
+
+      &__subtitle {
+        max-width: 315px;
+      }
+
+      &__select {
+        width: auto;
+      }
+
+      &__button {
+        width: -webkit-fill-available;
+        padding: 0 30px;
+        margin: 12px 10px;
+        color: $c_blue-ribbon;
+        border: 2px solid $c_blue-ribbon;
+      }
+    }
+  }
+}
