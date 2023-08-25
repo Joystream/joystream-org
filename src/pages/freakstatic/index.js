@@ -15,10 +15,10 @@ const FreakstaticPage = () => {
     <main>
       <SiteMetadata
         lang={language}
-        title={t('siteMetadata.title')}
-        description={t('landing.siteMetadata.description')}
+        title={t('verification.siteMetadata.title', { name: 'Freakstatic' })}
+        description={t('verification.siteMetadata.description')}
       />
-      <Verification />
+      <Verification t={t} />
     </main>
   );
 };

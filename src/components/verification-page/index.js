@@ -18,7 +18,7 @@ import { verifiedMembers } from '../../data/pages/verification';
 import './style.scss';
 import { useTransition } from 'react';
 
-const MemberCard = ({ img, name, title }) => {
+const MemberCard = ({ img, name, title, t }) => {
   return (
     <div className="VerificationPage__member-card">
       <div className="VerificationPage__member-card__avatar">
@@ -26,7 +26,7 @@ const MemberCard = ({ img, name, title }) => {
       </div>
       <div className="VerificationPage__member-card__content">
         <p className="VerificationPage__member-card__content__name">{name}</p>
-        <p className="VerificationPage__member-card__content__title">{title}</p>
+        <p className="VerificationPage__member-card__content__title">{t(title)}</p>
       </div>
       <div className="VerificationPage__member-card__verified">
         <VerifiedIcon className="VerificationPage__member-card__verified__circle" />
@@ -36,7 +36,7 @@ const MemberCard = ({ img, name, title }) => {
   );
 };
 
-const SocialCard = ({ title, value }) => {
+const SocialCard = ({ type, title, value }) => {
   if (!value) return null;
 
   const icon = {
@@ -44,7 +44,7 @@ const SocialCard = ({ title, value }) => {
     TWITTER: <TwitterIcon className="VerificationPage__social-card__icon--twitter" />,
     EMAIL: <EmailIcon className="VerificationPage__social-card__icon--email" />,
     DISCORD: <DiscordIcon className="VerificationPage__social-card__icon--discord" alt="" />,
-  }[title];
+  }[type];
 
   return (
     <div className="VerificationPage__social-card">
@@ -96,31 +96,35 @@ const SafetyCardListContainer = ({ name, isAllowed, items }) => {
   );
 };
 
-const SafetyCard = ({ name, safetyItems }) => {
+const SafetyCard = ({ name, safetyItems, t }) => {
+  const allowedItems = safetyItems.allowed.map(item => t(item));
+  const notAllowedItems = safetyItems.notAllowed.map(item => t(item));
+
   return (
     <div className="VerificationPage__safety-card">
       <div className="VerificationPage__safety-card__top">
-        <div className="VerificationPage__safety-card__top__title">Safety</div>
+        <div className="VerificationPage__safety-card__top__title">{t('verification.safety.title')}</div>
         <button className="VerificationPage__safety-card__top__report-button">
           <FlagIcon />
-          <p className="VerificationPage__safety-card__top__report-button__text">Report {name}</p>
+          <p className="VerificationPage__safety-card__top__report-button__text">
+            {t('verification.safety.reportButton', { name: 'freakstatic' })}
+          </p>
         </button>
       </div>
-      <div className="VerificationPage__safety-card__subtitle">
-        We take the safety of everyone online seriously. If the person you have contact with acts suspicious please
-        report it to us immidiatelly.
-      </div>
+      <div className="VerificationPage__safety-card__subtitle">{t('verification.safety.subtitle')}</div>
       <button className="VerificationPage__safety-card__top__report-button VerificationPage__safety-card__top__report-button--mobile">
         <FlagIcon />
-        <p className="VerificationPage__safety-card__top__report-button__text">Report {name}</p>
+        <p className="VerificationPage__safety-card__top__report-button__text">
+          {t('verification.safety.reportButton', { name: 'freakstatic' })}
+        </p>
       </button>
-      <SafetyCardListContainer name={name} isAllowed={false} items={safetyItems.notAllowed} />
-      <SafetyCardListContainer name={name} isAllowed={true} items={safetyItems.allowed} />
+      <SafetyCardListContainer name={name} isAllowed={false} items={notAllowedItems} t={t} />
+      <SafetyCardListContainer name={name} isAllowed={true} items={allowedItems} t={t} />
     </div>
   );
 };
 
-const OtherMembers = ({ otherMembers }) => {
+const OtherMembers = ({ otherMembers, t }) => {
   const [shouldShowInitialMembers, setShouldShowInitialMembers] = useState(true);
 
   const initialRenderedMembers = otherMembers.slice(0, 5);
@@ -129,11 +133,8 @@ const OtherMembers = ({ otherMembers }) => {
 
   return (
     <div className="VerificationPage__other-members-card">
-      <div className="VerificationPage__other-members-card__title">Other Members</div>
-      <div className="VerificationPage__other-members-card__subtitle">
-        Our team works all week long to create a thriving community of content creators - feel free to contact any
-        member to talk about the project.
-      </div>
+      <div className="VerificationPage__other-members-card__title">{t('verification.otherMembers.title')}</div>
+      <div className="VerificationPage__other-members-card__subtitle">{t('verification.otherMembers.subtitle')}</div>
       <div className="VerificationPage__other-members-card__members">
         {membersToRender.map((member, index) => (
           <Link to={`/${member.memberHandle}`}>
@@ -149,7 +150,9 @@ const OtherMembers = ({ otherMembers }) => {
         onClick={() => setShouldShowInitialMembers(prev => !prev)}
       >
         <span className="VerificationPage__other-members-card__button__text">
-          {shouldShowInitialMembers ? `Show (${remainingMembersNumber}) more Members` : 'Hide members'}
+          {shouldShowInitialMembers
+            ? t('verification.otherMembers.showMoreMembers', { memberNum: remainingMembersNumber })
+            : t('verification.otherMembers.hideMembers')}
         </span>
         <DownIcon
           className={cn('VerificationPage__other-members-card__button__icon', {
@@ -164,16 +167,32 @@ const OtherMembers = ({ otherMembers }) => {
 const freakstatic = verifiedMembers[3];
 const otherMembers = verifiedMembers.filter(member => member.memberHandle !== freakstatic.memberHandle);
 
-const Verification = () => {
+const Verification = ({ t }) => {
   return (
     <div className="VerificationPage">
-      <MemberCard img={freakstatic.avatarId} name={freakstatic.memberHandle} title={freakstatic.title} />
-      <SocialCard title="TELEGRAM" value={freakstatic.socials.telegram} />
-      <SocialCard title="TWITTER" value={freakstatic.socials.twitter} />
-      <SocialCard title="EMAIL" value={freakstatic.socials.email} />
-      <SocialCard title="DISCORD" value={freakstatic.socials.discord} />
-      <SafetyCard name={freakstatic.memberHandle} safetyItems={freakstatic.safety} />
-      <OtherMembers otherMembers={otherMembers} />
+      <MemberCard img={freakstatic.avatarId} name={freakstatic.memberHandle} title={freakstatic.title} t={t} />
+      <SocialCard
+        type="TELEGRAM"
+        title={t('verification.socialCardSectionTitle.telegram')}
+        value={freakstatic.socials.telegram}
+      />
+      <SocialCard
+        type="TWITTER"
+        title={t('verification.socialCardSectionTitle.twitter')}
+        value={freakstatic.socials.twitter}
+      />
+      <SocialCard
+        type="EMAIL"
+        title={t('verification.socialCardSectionTitle.email')}
+        value={freakstatic.socials.email}
+      />
+      <SocialCard
+        type="DISCORD"
+        title={t('verification.socialCardSectionTitle.discord')}
+        value={freakstatic.socials.discord}
+      />
+      <SafetyCard name={freakstatic.memberHandle} safetyItems={freakstatic.safety} t={t} />
+      <OtherMembers otherMembers={otherMembers} t={t} />
     </div>
   );
 };
