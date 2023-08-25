@@ -257,6 +257,7 @@
 
   &__other-members-card {
     @include verification-card;
+    @include animate-up(.7s);
 
     flex-direction: column;
 

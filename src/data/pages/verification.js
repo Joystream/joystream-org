@@ -15,6 +15,24 @@ export const verifiedMembers = [
     memberHandle: 'freakstatic',
     avatarId: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/3.png',
     title: 'User Acquirer',
+    socials: {
+      telegram: '@freakstat_ic',
+      twitter: '@freak_static',
+      email: 'freak.staticaly@gmail.com',
+      discord: '@freakstatic',
+    },
+    safety: {
+      notAllowed: [
+        'Ask for money transfers, or your credit card information',
+        'Ask for your personal information',
+        'Send you any software, or attachments, or ask you to install any program on your device',
+      ],
+      allowed: [
+        'Invite you to join gleev.xyz/ypp',
+        'Answer any questions you may have',
+        'Get feedback from you about interest or terms.',
+      ],
+    },
   },
   {
     memberHandle: 'l1dev',

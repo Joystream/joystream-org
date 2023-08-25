@@ -25,7 +25,7 @@ const MemberCard = ({ img, name, title }) => {
         <img src={img} alt="" />
       </div>
       <div className="VerificationPage__member-card__content">
-        <p className="VerificationPage__member-card__content__name">@{name}</p>
+        <p className="VerificationPage__member-card__content__name">{name}</p>
         <p className="VerificationPage__member-card__content__title">{title}</p>
       </div>
       <div className="VerificationPage__member-card__verified">
@@ -37,6 +37,8 @@ const MemberCard = ({ img, name, title }) => {
 };
 
 const SocialCard = ({ title, value }) => {
+  if (!value) return null;
+
   const icon = {
     TELEGRAM: <img src={TelegramIcon} alt="" />,
     TWITTER: <TwitterIcon className="VerificationPage__social-card__icon--twitter" />,
@@ -94,7 +96,7 @@ const SafetyCardListContainer = ({ name, isAllowed, items }) => {
   );
 };
 
-const SafetyCard = ({ name }) => {
+const SafetyCard = ({ name, safetyItems }) => {
   return (
     <div className="VerificationPage__safety-card">
       <div className="VerificationPage__safety-card__top">
@@ -112,24 +114,8 @@ const SafetyCard = ({ name }) => {
         <FlagIcon />
         <p className="VerificationPage__safety-card__top__report-button__text">Report {name}</p>
       </button>
-      <SafetyCardListContainer
-        name={name}
-        isAllowed={false}
-        items={[
-          'Ask for money transfers, or your credit card information',
-          'Ask for your personal information',
-          'Send you any software, or attachments, or ask you to install any program on your device',
-        ]}
-      />
-      <SafetyCardListContainer
-        name={name}
-        isAllowed={true}
-        items={[
-          'Invite you to join gleev.xyz/ypp',
-          'Answer any questions you may have',
-          'Get feedback from you about interest or terms.',
-        ]}
-      />
+      <SafetyCardListContainer name={name} isAllowed={false} items={safetyItems.notAllowed} />
+      <SafetyCardListContainer name={name} isAllowed={true} items={safetyItems.allowed} />
     </div>
   );
 };
@@ -163,7 +149,7 @@ const OtherMembers = ({ otherMembers }) => {
         onClick={() => setShouldShowInitialMembers(prev => !prev)}
       >
         <span className="VerificationPage__other-members-card__button__text">
-          {shouldShowInitialMembers ? `Show (13) more Members` : 'Hide members'}
+          {shouldShowInitialMembers ? `Show (${remainingMembersNumber}) more Members` : 'Hide members'}
         </span>
         <DownIcon
           className={cn('VerificationPage__other-members-card__button__icon', {
@@ -181,12 +167,12 @@ const otherMembers = verifiedMembers.filter(member => member.memberHandle !== fr
 const Verification = () => {
   return (
     <div className="VerificationPage">
-      <MemberCard img={freakstatic.avatarId} name={freakstatic.memberHandle} title="User Acquirer" />
-      <SocialCard title="TELEGRAM" value="@freakstat_ic" />
-      <SocialCard title="TWITTER" value="@freak_static" />
-      <SocialCard title="EMAIL" value="freak.staticaly@gmail.com" />
-      <SocialCard title="DISCORD" value="@freakstatic" />
-      <SafetyCard name={freakstatic.memberHandle} />
+      <MemberCard img={freakstatic.avatarId} name={freakstatic.memberHandle} title={freakstatic.title} />
+      <SocialCard title="TELEGRAM" value={freakstatic.socials.telegram} />
+      <SocialCard title="TWITTER" value={freakstatic.socials.twitter} />
+      <SocialCard title="EMAIL" value={freakstatic.socials.email} />
+      <SocialCard title="DISCORD" value={freakstatic.socials.discord} />
+      <SafetyCard name={freakstatic.memberHandle} safetyItems={freakstatic.safety} />
       <OtherMembers otherMembers={otherMembers} />
     </div>
   );
