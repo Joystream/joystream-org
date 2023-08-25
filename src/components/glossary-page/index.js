@@ -6,7 +6,7 @@ import GlossaryBody from "./Glossary_body";
 import "./style.scss";
 
 const Glossary = ({ data }) => {
-  if (!data) return <div>Loading...</div>;
+  if (!data) return <div className="Glossary">Loading...</div>;
   return (
     <div className="Glossary">
       <GlossaryHead head={data.title} />

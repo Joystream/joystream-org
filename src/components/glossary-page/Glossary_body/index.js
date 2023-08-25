@@ -49,6 +49,7 @@ function GlossaryBody({ data }) {
         })}
       </div>
       <div className="GlossaryBody__card">
+        <div className="GlossaryBody__card__title">Related Terms</div>
         {data.relatedTeams.map((item, key) => (
           <span key={key} className="GlossaryBody__card__item">
             {item}
