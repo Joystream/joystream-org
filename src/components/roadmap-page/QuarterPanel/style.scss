@@ -1,6 +1,6 @@
 @import "../../../styles/_main";
 
-$offsetTop: 600px;
+$offsetTop: 200px;
 
 * {
   margin: 0;
@@ -42,11 +42,11 @@ $offsetTop: 600px;
     flex-direction: column;
     text-align: right;
     opacity: 40%;
+    position: sticky;
+    top: $offsetTop;
 
     &--active {
       opacity: 100%;
-      position: fixed;
-      bottom: $offsetTop;
     }
   }
 
@@ -99,9 +99,12 @@ $offsetTop: 600px;
       border-radius: 50%;
 
       &--active {
-        position: fixed;
-        bottom: $offsetTop;
+        top: $offsetTop - 24;
+        position: sticky;
         background: #4038ff;
+      }
+      &--hide {
+        opacity: 0%;
       }
     }
   }

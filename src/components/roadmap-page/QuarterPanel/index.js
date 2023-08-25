@@ -5,7 +5,7 @@ import { ReactComponent as PlayIcon } from "../../../assets/svg/icon-play.svg";
 import { ReactComponent as LinkIcon } from "../../../assets/svg/connect_disable.svg";
 import "./style.scss";
 
-const offset = 600;
+const offset = 200;
 function QuarterPanel({ data, loading, error, language }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
@@ -45,12 +45,18 @@ function QuarterPanel({ data, loading, error, language }) {
       timeLineItems[activeItem].classList.add(
         "QuarterPanel__main__line__dot--active"
       );
+      timeLineItems[activeItem].classList.remove(
+        "QuarterPanel__main__line__dot--hide"
+      );
       timeLinePanel[activeItem].classList.add(
         "QuarterPanel__main__panel--active"
       );
     }
 
     if (activeItem > 0) {
+      timeLineItems[activeItem - 1].classList.add(
+        "QuarterPanel__main__line__dot--hide"
+      );
       timeLinePanel[activeItem - 1].classList.remove(
         "QuarterPanel__main__panel--active"
       );
@@ -91,7 +97,7 @@ function QuarterPanel({ data, loading, error, language }) {
 
       timelineItems.forEach((item, index) => {
         const itemTop = item.offsetTop;
-        if (scrollPosition > itemTop + offset - windowHeight - 5) {
+        if (scrollPosition > itemTop - offset) {
           setActiveItem(index);
           setActiveTimeLine(true);
         } else {
@@ -104,7 +110,7 @@ function QuarterPanel({ data, loading, error, language }) {
       );
       timelineText.forEach((item, index) => {
         const itemTop = item.offsetTop;
-        if (scrollPosition > itemTop - windowHeight + offset - 5) {
+        if (scrollPosition > itemTop - offset) {
           setActiveText(index);
         }
       });
