@@ -1,55 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import Input from '../../Input';
+import React, { useEffect, useState } from "react";
+import Input from "../../Input";
 
-import './style.scss';
-import { Slider } from '../../Slider';
-import importAll from '../../../utils/importAll';
+import "./style.scss";
+import importAll from "../../../utils/importAll";
 import {
   GIT_GLOSSARY_FOLDER,
   GIT_REPOSITY,
   GIT_USER_NAME,
-} from '../../../../gitconfig';
-import axios from 'axios';
-import TextSlider from '../../TextSlider';
-import GlossaryCard from '../../GlossaryCard';
+} from "../../../../gitconfig";
+import axios from "axios";
+import TextSlider from "../../TextSlider";
+import GlossaryCard from "../../GlossaryCard";
 
 const logoSlides = importAll(
-  require.context('../../../assets/images/slides/logo', false, /\.png$/)
+  require.context("../../../assets/images/slides/logo", false, /\.png$/)
 );
 
-function GlossaryTeams() {
-  const [glossary, setGlossary] = useState([]);
-  const [sliderText, setSliderText] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        `https://raw.githubusercontent.com/${GIT_USER_NAME}/${GIT_REPOSITY}/main/${GIT_GLOSSARY_FOLDER}/glossary.json`
-      );
-      setGlossary(response.data);
-    };
-
-    fetchData();
-  }, []);
-
-  const data = () => glossary.map((data) => data.title.charAt(0));
-
-  useEffect(() => {
-    const FristString = data();
-
-    let uniqueArr = FristString.reduce((acc, curr) => {
-      if (!acc.includes(curr)) {
-        acc.push(curr);
-      }
-      return acc;
-    }, []);
-
-    setSliderText(uniqueArr);
-  }, [data, glossary]);
-
-  console.log(sliderText);
-
-  const [searchText, setSearchText] = useState('');
+function GlossaryTeams({ glossary, sliderText }) {
+  const [searchText, setSearchText] = useState("");
   return (
     <div className="GlossaryTeams">
       <div>

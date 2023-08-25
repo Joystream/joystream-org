@@ -1,24 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { GIT_FOLDER, GIT_REPOSITY, GIT_USER_NAME } from '../../../../gitconfig';
+import React from "react";
 
-import './style.scss';
-import QuarterPanel from '../QuarterPanel';
-import axios from 'axios';
+import "./style.scss";
+import QuarterPanel from "../QuarterPanel";
 
-function QuartersListData({ fileName }) {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        `https://raw.githubusercontent.com/${GIT_USER_NAME}/${GIT_REPOSITY}/main/${GIT_FOLDER}/${fileName}`
-      );
-      setData(response.data);
-    };
-
-    fetchData();
-  }, [fileName]);
-
+function QuartersListData({ data }) {
   return (
     <div className="QuarterList_main">
       {data.map((res, index) => {
@@ -27,7 +12,7 @@ function QuartersListData({ fileName }) {
             loading={false}
             data={res}
             key={index}
-            language={'English'}
+            language={"English"}
           />
         );
       })}

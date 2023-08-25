@@ -1,7 +1,18 @@
-import React from 'react';
+import React from "react";
 
-function GlossaryPage() {
-  return <div>GlossaryPage</div>;
-}
+import GlossaryHead from "./Glosaary_head";
+import GlossaryBody from "./Glossary_body";
 
-export default GlossaryPage;
+import "./style.scss";
+
+const Glossary = ({ data }) => {
+  if (!data) return <div>Loading...</div>;
+  return (
+    <div className="Glossary">
+      <GlossaryHead head={data.title} />
+      <GlossaryBody data={data} />
+    </div>
+  );
+};
+
+export default Glossary;

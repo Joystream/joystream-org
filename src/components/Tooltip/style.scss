@@ -11,6 +11,15 @@
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity .3s ease-in-out;
+    clip-path:
+      polygon(
+        0% 0%,
+        100% 0%,
+        100% calc(100% - 6px),
+        100% 100%,
+        calc(100% - 8px) calc(100% - 6px),
+        0% calc(100% - 6px)
+      );
     justify-items: end;
 
     &.visible {
