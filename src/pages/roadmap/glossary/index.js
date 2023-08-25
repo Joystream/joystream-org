@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./style.scss";
+import './style.scss';
 
 function GlossaryPage({ data }) {
   return <div>GlossaryPage</div>;

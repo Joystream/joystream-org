@@ -1,43 +1,47 @@
-@import "../../../styles/_main";
-@import "../../../styles/common/colors";
+@import '../../../styles/_main';
+@import '../../../styles/common/colors';
 
 .GlossaryTeams {
-  background-color: $c_wood-smoke;
-  text-align: center;
   padding: 80px 99px 80px 99px;
+  text-align: center;
+  background-color: $c_wood-smoke;
   gap: 64px;
 
   &__head__panel {
-    gap: 16px;
-    align-items: center;
-    grid-gap: 10px;
-    flex-direction: column;
     display: flex;
+    align-items: center;
+    flex-direction: column;
     max-width: 816px;
     margin: 0 auto;
+    gap: 16px;
+    grid-gap: 10px;
+
     &__title {
-      color: white;
-      font-size: 40px;
       font-family: $font-primary;
+      font-size: 40px;
+      color: white;
       gap: 4px;
     }
+
     &__subtitle {
-      color: #cdcdcd;
-      font-size: 20px;
-      font-family: $font-secondary;
       max-width: 450px;
-      line-height: 28px;
       margin-top: 20px;
+      font-family: $font-secondary;
+      font-size: 20px;
+      line-height: 28px;
+      color: #cdcdcd;
     }
   }
+
   &__search__panel {
     padding-top: 32px;
+
     &__input {
-      max-width: (394px);
       height: 56px;
+      max-width: (394px);
       padding: 16px 18px 16px 18px;
-      border-radius: 4px;
       border: 2px;
+      border-radius: 4px;
       gap: 8px;
     }
   }
@@ -48,39 +52,37 @@
   }
 
   &__body__slider {
+    display: grid;
     margin-top: 32px;
     gap: 32px;
-    display: grid;
-
     justify-items: center;
+
     &__cards {
-      gap: 32px;
       display: grid;
-      flex-direction: column;
-      grid-template-columns: repeat(2, 1fr);
       align-items: center;
+      flex-direction: column;
+      gap: 32px;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     &__slide {
-      border-radius: 50%;
-      background-color: $c_wood-smoke;
-      color: white;
       font-size: 24px;
       line-height: 32px;
+      color: white;
+      background-color: $c_wood-smoke;
+      border-radius: 50%;
     }
+
     &__button {
       //styleName: h7;
-      font-family: Px Grotesk;
+      font-family: $font-primary;
       font-size: 20px;
       font-weight: 400;
       line-height: 28px;
-      letter-spacing: 0px;
-      text-align: left;
+      letter-spacing: 0;
       color: #6c6cff;
+      text-align: left;
     }
-  }
-
-  @media #{$screen-max-sm} {
   }
 
   @media #{$screen-sm} {
@@ -117,8 +119,8 @@
 
       &__button {
         width: -webkit-fill-available;
-        padding: 0 30px;
         margin: 12px 10px;
+        padding: 0 30px;
         color: $c_blue-ribbon;
         border: 2px solid $c_blue-ribbon;
       }

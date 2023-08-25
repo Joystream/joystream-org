@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function GlossaryHead() {
   return <div className="GlossaryHead">GlossaryHead</div>;

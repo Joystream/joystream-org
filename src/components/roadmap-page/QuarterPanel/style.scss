@@ -1,4 +1,4 @@
-@import "../../../styles/_main";
+@import '../../../styles/_main';
 
 $offsetTop: 200px;
 
@@ -37,13 +37,12 @@ $offsetTop: 200px;
 
   &__title {
     position: relative;
-
+    position: sticky;
+    top: $offsetTop;
     align-items: end;
     flex-direction: column;
     text-align: right;
     opacity: 40%;
-    position: sticky;
-    top: $offsetTop;
 
     &--active {
       opacity: 100%;
@@ -99,12 +98,17 @@ $offsetTop: 200px;
       border-radius: 50%;
 
       &--active {
+        position: fixed;
         top: $offsetTop - 24;
-        position: sticky;
         background: #4038ff;
       }
+
       &--hide {
         opacity: 0%;
+      }
+
+      &--sticky {
+        position: sticky;
       }
     }
   }
@@ -124,8 +128,9 @@ $offsetTop: 200px;
     padding: 24px;
     background: white;
     border-radius: 4px;
-    gap: 16px;
     opacity: 40%;
+    gap: 16px;
+
     &--active {
       opacity: 100%;
     }

@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Input from "../../Input";
+import React, { useEffect, useState } from 'react';
+import Input from '../../Input';
 
-import "./style.scss";
-import { Slider } from "../../Slider";
-import importAll from "../../../utils/importAll";
+import './style.scss';
+import { Slider } from '../../Slider';
+import importAll from '../../../utils/importAll';
 import {
   GIT_GLOSSARY_FOLDER,
   GIT_REPOSITY,
   GIT_USER_NAME,
-} from "../../../../gitconfig";
-import axios from "axios";
-import TextSlider from "../../TextSlider";
-import GlossaryCard from "../../GlossaryCard";
+} from '../../../../gitconfig';
+import axios from 'axios';
+import TextSlider from '../../TextSlider';
+import GlossaryCard from '../../GlossaryCard';
 
 const logoSlides = importAll(
-  require.context("../../../assets/images/slides/logo", false, /\.png$/)
+  require.context('../../../assets/images/slides/logo', false, /\.png$/)
 );
 
 function GlossaryTeams() {
@@ -45,11 +45,11 @@ function GlossaryTeams() {
     }, []);
 
     setSliderText(uniqueArr);
-  }, [glossary]);
+  }, [data, glossary]);
 
   console.log(sliderText);
 
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState('');
   return (
     <div className="GlossaryTeams">
       <div>

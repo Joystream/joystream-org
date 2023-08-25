@@ -1,5 +1,5 @@
-import React from "react";
-import "./style.scss";
+import React from 'react';
+import './style.scss';
 function GlossaryCard({ title, content }) {
   return (
     <div className="GlossaryCard">
