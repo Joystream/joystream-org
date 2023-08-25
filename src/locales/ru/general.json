@@ -102,7 +102,8 @@
     "about": "About",
     "token": "Token",
     "lightpaper": "Lightpaper",
-    "handbook": "Handbook"
+    "handbook": "Handbook",
+    "dashboard": "Dashboard"
   },
   "footer": {
     "title": "Следите за новостями",
