@@ -10,11 +10,12 @@
   border-radius: 8px;
 
   @media #{$screen-max-md} {
-    width: 632px;
+    width: 610px;
   }
 
   @media #{$screen-max-sm} {
     width: 100%;
+    max-width: 393px;
     padding: 16px;
   }
 }
@@ -31,13 +32,15 @@
 
   &__member-card {
     @include verification-card;
+    @include animate-up();
 
     position: relative;
-    height: 128px;
+    min-height: 128px;
 
     &__avatar {
       width: 80px;
       height: 80px;
+      margin: auto 0;
       border-radius: 50%;
 
       & > img {
@@ -48,9 +51,12 @@
 
     &__content {
       display: flex;
+      display: inline-block;
       flex-direction: column;
       justify-content: center;
+      max-width: 375px;
       margin-left: 24px;
+      word-break: break-word;
 
       &__name {
         @include h4;
@@ -72,8 +78,10 @@
         @include rotate-360-at-scale();
 
         position: absolute;
-        top: -8px;
+        top: 0;
         right: 7px;
+        bottom: 0;
+        margin: auto;
       }
 
       &__tick {
@@ -88,13 +96,16 @@
 
   &__social-card {
     @include verification-card;
+    @include animate-up(.4s);
 
-    height: 98px;
+    min-height: 98px;
 
     &__icon {
       display: grid;
       width: 48px;
       height: 48px;
+      min-width: 48px;
+      min-height: 48px;
       background-color: #6f6f6f26;
       border-radius: 50%;
       place-items: center;
@@ -138,6 +149,7 @@
 
   &__safety-card {
     @include verification-card;
+    @include animate-up(.55s);
 
     flex-direction: column;
 
@@ -330,12 +342,20 @@
     }
   }
 
+  @media #{$screen-max-md} {
+    &__member-card {
+      &__content {
+        max-width: 300px;
+      }
+    }
+  }
+
   @media #{$screen-max-sm} {
     padding: 32px;
 
     &__member-card {
       align-items: center;
-      height: 80px;
+      min-height: 80px;
 
       &__avatar {
         width: 40px;
@@ -343,6 +363,7 @@
       }
 
       &__content {
+        max-width: 205px;
         margin-left: 12px;
 
         &__name {
@@ -360,7 +381,6 @@
         &__circle {
           @include rotate-360-at-scale(.65);
 
-          top: -31px;
           right: -16px;
         }
 
@@ -373,11 +393,13 @@
 
     &__social-card {
       align-items: center;
-      height: 74px;
+      min-height: 74px;
 
       &__icon {
         width: 32px;
         height: 32px;
+        min-width: 32px;
+        min-height: 32px;
       }
 
       &__content {
@@ -442,6 +464,53 @@
 
             margin-left: 20px;
           }
+        }
+      }
+    }
+
+    &__other-members-card {
+      &__title {
+        @include h8;
+
+        font-weight: 600;
+      }
+
+      &__subtitle {
+        @include base-4;
+
+        margin-top: 8px;
+      }
+
+      &__members {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+
+      &__member {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__member-card {
+      &__verified {
+        &__circle {
+          right: -48px;
+        }
+
+        &__tick {
+          right: 0;
+        }
+      }
+    }
+
+    &__social-card {
+      &__content {
+        &__value {
+          display: inline-block;
+          word-break: break-word;
         }
       }
     }

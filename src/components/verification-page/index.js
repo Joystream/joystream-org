@@ -101,7 +101,7 @@ const SafetyCard = ({ name }) => {
         <div className="VerificationPage__safety-card__top__title">Safety</div>
         <button className="VerificationPage__safety-card__top__report-button">
           <FlagIcon />
-          <span className="VerificationPage__safety-card__top__report-button__text">Report {name}</span>
+          <p className="VerificationPage__safety-card__top__report-button__text">Report {name}</p>
         </button>
       </div>
       <div className="VerificationPage__safety-card__subtitle">
@@ -110,7 +110,7 @@ const SafetyCard = ({ name }) => {
       </div>
       <button className="VerificationPage__safety-card__top__report-button VerificationPage__safety-card__top__report-button--mobile">
         <FlagIcon />
-        <span className="VerificationPage__safety-card__top__report-button__text">Report {name}</span>
+        <p className="VerificationPage__safety-card__top__report-button__text">Report {name}</p>
       </button>
       <SafetyCardListContainer
         name={name}

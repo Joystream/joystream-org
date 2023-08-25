@@ -19,3 +19,19 @@
 
   animation: rotate-360 30s linear infinite;
 }
+
+@mixin animate-up($animation-length: .25s) {
+  @keyframes animate-up {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  animation: animate-up $animation-length ease-in;
+}
