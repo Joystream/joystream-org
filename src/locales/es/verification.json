@@ -1,0 +1,44 @@
+{
+  "verification": {
+    "siteMetadata": {
+      "title": "Verification: {{name}}",
+      "description": "This page verifies the significance and authenticity of the person that is presented on it."
+    },
+    "title": {
+      "userAcquirer": "User Acquirer"
+    },
+    "socialCardSectionTitle": {
+      "telegram": "TELEGRAM",
+      "twitter": "TWITTER",
+      "email": "EMAIL",
+      "discord": "DISCORD"
+    },
+    "safety": {
+      "title": "Safety",
+      "subtitle": "We take the safety of everyone online seriously. If the person you have contact with acts suspicious please report it to us immediately.",
+      "reportButton": "Report {{name}}",
+      "can": {
+        "title": "can",
+        "items": {
+          "invite": "Invite you to join gleev.xyz/ypp",
+          "answerQuestions": "Answer any questions you may have",
+          "getFeedback": "Get feedback from you about interest or terms."
+        }
+      },
+      "willNever": {
+        "title": "will never",
+        "items": {
+          "askForMoney": "Ask for money transfers, or your credit card information",
+          "askForPersonalInformation": "Ask for your personal information",
+          "sendAnythingDangerous": "Send you any software, or attachments, or ask you to install any program on your device"
+        }
+      }
+    },
+    "otherMembers": {
+      "title": "Other team members",
+      "subtitle": "Our team works all week long to create a thriving community of content creators - feel free to contact any member to talk about the project.",
+      "showMoreMembers": "Show ({{memberNum}}) more Members",
+      "hideMembers": "Hide members"
+    }
+  }
+}
