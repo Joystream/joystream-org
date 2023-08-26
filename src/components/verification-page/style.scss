@@ -134,6 +134,7 @@
       &__title {
         @include section-title-md;
 
+        letter-spacing: .75px;
         color: #7b8a95;
       }
 
@@ -158,7 +159,7 @@
       justify-content: space-between;
 
       &__title {
-        @include h5;
+        @include h6;
 
         font-weight: 600;
         color: #f4f6f8;
@@ -191,7 +192,7 @@
     }
 
     &__subtitle {
-      @include h9;
+      @include base-3;
 
       margin-top: 16px;
       color: #b5c1c9;
@@ -227,7 +228,6 @@
 
             margin-left: 16px;
             font-weight: 600;
-            letter-spacing: .5%;
             color: #f4f6f8;
 
             &__text {
@@ -243,13 +243,21 @@
         }
 
         &__list-item {
-          @include h9;
+          @include base-3;
 
-          margin-bottom: 8px;
+          margin-bottom: 0;
           margin-left: 56px;
           padding-left: 0;
           color: #f4f6f8;
           list-style-type: disc;
+
+          &:not(:first-child) {
+            margin-top: 8px;
+          }
+        }
+
+        & > ul {
+          padding-left: 22px;
         }
       }
     }
@@ -269,7 +277,7 @@
     }
 
     &__subtitle {
-      @include h9;
+      @include base-3;
 
       margin-top: 12px;
       color: #b5c1c9;
@@ -353,6 +361,7 @@
 
   @media #{$screen-max-sm} {
     padding: 32px;
+    gap: 16px;
 
     &__member-card {
       align-items: center;

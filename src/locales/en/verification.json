@@ -35,7 +35,7 @@
       }
     },
     "otherMembers": {
-      "title": "Other Members",
+      "title": "Other team members",
       "subtitle": "Our team works all week long to create a thriving community of content creators - feel free to contact any member to talk about the project.",
       "showMoreMembers": "Show ({{memberNum}}) more Members",
       "hideMembers": "Hide members"
