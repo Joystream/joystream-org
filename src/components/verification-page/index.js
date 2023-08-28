@@ -13,8 +13,6 @@ import { ReactComponent as AllowedIcon } from '../../assets/svg/allowed.svg';
 import { ReactComponent as ForbiddenIcon } from '../../assets/svg/forbidden.svg';
 import { ReactComponent as DownIcon } from '../../assets/svg/down.svg';
 
-import { verifiedMembers } from '../../data/pages/verification';
-
 import './style.scss';
 import { useTransition } from 'react';
 
@@ -127,7 +125,7 @@ const SafetyCard = ({ name, safetyItems, t }) => {
 const OtherMembers = ({ otherMembers, t }) => {
   const [shouldShowInitialMembers, setShouldShowInitialMembers] = useState(true);
 
-  const initialRenderedMembers = otherMembers.slice(0, 5);
+  const initialRenderedMembers = otherMembers.slice(0, 6);
   const remainingMembersNumber = otherMembers.length - initialRenderedMembers.length;
   const membersToRender = shouldShowInitialMembers ? initialRenderedMembers : otherMembers;
 
@@ -139,7 +137,7 @@ const OtherMembers = ({ otherMembers, t }) => {
         {membersToRender.map((member, index) => (
           <Link to={`/${member.memberHandle}`}>
             <div className="VerificationPage__other-members-card__member">
-              <img className="VerificationPage__other-members-card__member__icon" src={member.avatarId} alt="" />
+              <img className="VerificationPage__other-members-card__member__icon" src={member.avatarUrl} alt="" />
               <div className="VerificationPage__other-members-card__member__name">@{member.memberHandle}</div>
             </div>
           </Link>
@@ -164,34 +162,17 @@ const OtherMembers = ({ otherMembers, t }) => {
   );
 };
 
-const freakstatic = verifiedMembers[3];
-const otherMembers = verifiedMembers.filter(member => member.memberHandle !== freakstatic.memberHandle);
+const Verification = ({ user, otherMembers, t }) => {
+  const { socials, avatarUrl, memberHandle, title, safety } = user;
 
-const Verification = ({ t }) => {
   return (
     <div className="VerificationPage">
-      <MemberCard img={freakstatic.avatarId} name={freakstatic.memberHandle} title={freakstatic.title} t={t} />
-      <SocialCard
-        type="TELEGRAM"
-        title={t('verification.socialCardSectionTitle.telegram')}
-        value={freakstatic.socials.telegram}
-      />
-      <SocialCard
-        type="TWITTER"
-        title={t('verification.socialCardSectionTitle.twitter')}
-        value={freakstatic.socials.twitter}
-      />
-      <SocialCard
-        type="EMAIL"
-        title={t('verification.socialCardSectionTitle.email')}
-        value={freakstatic.socials.email}
-      />
-      <SocialCard
-        type="DISCORD"
-        title={t('verification.socialCardSectionTitle.discord')}
-        value={freakstatic.socials.discord}
-      />
-      <SafetyCard name={freakstatic.memberHandle} safetyItems={freakstatic.safety} t={t} />
+      <MemberCard img={avatarUrl} name={memberHandle} title={title} t={t} />
+      <SocialCard type="TELEGRAM" title={t('verification.socialCardSectionTitle.telegram')} value={socials.telegram} />
+      <SocialCard type="TWITTER" title={t('verification.socialCardSectionTitle.twitter')} value={socials.twitter} />
+      <SocialCard type="EMAIL" title={t('verification.socialCardSectionTitle.email')} value={socials.email} />
+      <SocialCard type="DISCORD" title={t('verification.socialCardSectionTitle.discord')} value={socials.discord} />
+      <SafetyCard name={memberHandle} safetyItems={safety} t={t} />
       <OtherMembers otherMembers={otherMembers} t={t} />
     </div>
   );
