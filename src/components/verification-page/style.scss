@@ -61,6 +61,7 @@
       &__name {
         @include h4;
 
+        font-family: $font-ibm-sans;
         font-weight: 600;
         color: #f4f6f8;
       }
@@ -134,6 +135,7 @@
       &__title {
         @include section-title-md;
 
+        font-family: $font-ibm-sans;
         letter-spacing: .75px;
         color: #7b8a95;
       }
@@ -142,6 +144,7 @@
         @include h6;
 
         margin-top: 2px;
+        font-family: $font-ibm-sans;
         font-weight: 600;
         color: #f4f6f8;
       }
@@ -161,6 +164,7 @@
       &__title {
         @include h6;
 
+        font-family: $font-ibm-sans;
         font-weight: 600;
         color: #f4f6f8;
       }
@@ -227,6 +231,7 @@
             @include h8;
 
             margin-left: 16px;
+            font-family: $font-ibm-sans;
             font-weight: 600;
             color: #f4f6f8;
 
@@ -272,6 +277,7 @@
     &__title {
       @include h6;
 
+      font-family: $font-ibm-sans;
       font-weight: 600;
       color: #f4f6f8;
     }
@@ -379,6 +385,7 @@
         &__name {
           @include h8;
 
+          font-family: $font-ibm-sans;
           font-weight: 600;
         }
 
@@ -416,6 +423,7 @@
         &__value {
           @include h8;
 
+          font-family: $font-ibm-sans;
           font-weight: 600;
         }
       }
@@ -428,6 +436,7 @@
         &__title {
           @include h8;
 
+          font-family: $font-ibm-sans;
           font-weight: 600;
         }
 
@@ -460,6 +469,7 @@
 
             &__title {
               margin-left: 8px;
+              font-family: $font-ibm-sans;
               font-size: 16px;
             }
           }
@@ -482,6 +492,7 @@
       &__title {
         @include h8;
 
+        font-family: $font-ibm-sans;
         font-weight: 600;
       }
 
