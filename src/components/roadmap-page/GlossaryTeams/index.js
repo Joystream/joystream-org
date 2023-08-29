@@ -1,14 +1,25 @@
-import React, { useState } from "react";
-import Input from "../../Input";
+import React, { useEffect, useState } from 'react';
+import Input from '../../Input';
 
-import "./style.scss";
+import './style.scss';
 
-import TextSlider from "../../TextSlider";
-import GlossaryCard from "../../GlossaryCard";
+import TextSlider from '../../TextSlider';
+import GlossaryCard from '../../GlossaryCard';
 
 function GlossaryTeams({ glossary, sliderText }) {
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState('');
   const [showAll, setShowAll] = useState(false);
+  const [filteredData, setFilteredData] = useState(sliderText);
+
+  const filterData = () => {
+    const filtered = glossary.filter((item) =>
+      item.title.toLowerCase().includes(searchText.toLowerCase()));
+    setFilteredData(filtered);
+  };
+
+  useEffect(() => {
+    filterData();
+  }, [filterData, searchText]);
 
   return (
     <div className="GlossaryTeams">
@@ -41,7 +52,7 @@ function GlossaryTeams({ glossary, sliderText }) {
             slideClassName="GlossaryTeams__body__slider__slide"
           />
           <div className="GlossaryTeams__body__slider__cards">
-            {glossary
+            {filteredData
               .slice(0, showAll ? glossary.length : 4)
               .map((res, index) => {
                 return (

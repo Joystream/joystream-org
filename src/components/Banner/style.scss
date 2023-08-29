@@ -1,41 +1,43 @@
-@import "../../styles/common/variables";
+@import '../../styles/common/variables';
 
 .Banner {
-  max-width: 818px;
-  padding: 24px;
-  gap: 16px;
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 818px;
+  padding: 24px;
+  background-color: #fff;
+  gap: 16px;
 
   &__head {
-    justify-items: center;
     display: flex;
     align-items: center;
+    justify-items: center;
   }
 
   &__title {
+    margin-top: 4px;
     //styleName: h7;
     font-family: $font-primary;
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
-    letter-spacing: 0px;
-    text-align: left;
+    letter-spacing: 0;
     color: #0b0c0f;
-    margin-top: 4px;
+    text-align: left;
   }
+
   &__content {
     //styleName: Base 4;
     font-family: $font-secondary;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0px;
-    text-align: left;
+    letter-spacing: 0;
     color: #5c6475;
+    text-align: left;
   }
+
   &__icon {
     display: -webkit-inline-box;
     width: 20px;

@@ -1,7 +1,7 @@
-import React from "react";
-import { ReactComponent as LeftArrow } from "../../../assets/svg/left_arrow.svg";
+import React from 'react';
+import { ReactComponent as LeftArrow } from '../../../assets/svg/left_arrow.svg';
 
-import "./style.scss";
+import './style.scss';
 
 function GlossaryHead({ head }) {
   return (
