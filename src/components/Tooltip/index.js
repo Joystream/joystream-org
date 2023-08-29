@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import './style.scss';
+import "./style.scss";
 
-function TooltipPanel({ children }) {
+function TooltipPanel({ children, text }) {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
@@ -11,9 +11,7 @@ function TooltipPanel({ children }) {
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
-      <div className={`tooltip ${showTooltip ? 'visible' : ''}`}>
-        This is a tooltip!
-      </div>
+      <div className={`tooltip ${showTooltip ? "visible" : ""}`}>{text}</div>
       {children}
     </div>
   );

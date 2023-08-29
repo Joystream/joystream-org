@@ -1,0 +1,45 @@
+@import "../../styles/common/variables";
+
+.Banner {
+  max-width: 818px;
+  padding: 24px;
+  gap: 16px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__head {
+    justify-items: center;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    //styleName: h7;
+    font-family: $font-primary;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #0b0c0f;
+    margin-top: 4px;
+  }
+  &__content {
+    //styleName: Base 4;
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #5c6475;
+  }
+  &__icon {
+    display: -webkit-inline-box;
+    width: 20px;
+    height: 20px;
+    margin: 8px;
+  }
+}

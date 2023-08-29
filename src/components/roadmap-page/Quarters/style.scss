@@ -1,4 +1,4 @@
-@import '../../../styles/_main';
+@import "../../../styles/_main";
 
 .Quarters {
   background-color: $c_catskill_white;
@@ -18,7 +18,7 @@
     display: initial;
     color: inherit;
     text-align: right;
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     &--active {
       transform: rotate(180deg);
@@ -53,7 +53,7 @@
       justify-content: flex-end;
       color: inherit;
       text-align: right;
-      transition: transform .3s;
+      transition: transform 0.3s;
     }
 
     &__dropdown {
@@ -127,7 +127,7 @@
       font-family: $font-secondary;
       font-size: 14px;
       line-height: 20px;
-      letter-spacing: -.4000000059604645px;
+      letter-spacing: -0.4000000059604645px;
       color: #a7aeb7;
       text-align: center;
     }
@@ -161,6 +161,15 @@
     &--active {
       display: block;
     }
+  }
+
+  &__bottom__banner {
+    margin-top: 96px;
+    gap: 16px;
+  }
+
+  &__top__banner {
+    border-left: solid 2px #ff3861;
   }
 
   @media #{$screen-max-sm} {

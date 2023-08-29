@@ -1,23 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Input from "../../Input";
 
 import "./style.scss";
-import importAll from "../../../utils/importAll";
-import {
-  GIT_GLOSSARY_FOLDER,
-  GIT_REPOSITY,
-  GIT_USER_NAME,
-} from "../../../../gitconfig";
-import axios from "axios";
+
 import TextSlider from "../../TextSlider";
 import GlossaryCard from "../../GlossaryCard";
 
-const logoSlides = importAll(
-  require.context("../../../assets/images/slides/logo", false, /\.png$/)
-);
-
 function GlossaryTeams({ glossary, sliderText }) {
   const [searchText, setSearchText] = useState("");
+  const [showAll, setShowAll] = useState(false);
+
   return (
     <div className="GlossaryTeams">
       <div>
@@ -49,19 +41,28 @@ function GlossaryTeams({ glossary, sliderText }) {
             slideClassName="GlossaryTeams__body__slider__slide"
           />
           <div className="GlossaryTeams__body__slider__cards">
-            {glossary.map((res, index) => {
-              return (
-                <GlossaryCard
-                  title={res.title}
-                  content={res.content}
-                  key={index}
-                />
-              );
-            })}
+            {glossary
+              .slice(0, showAll ? glossary.length : 4)
+              .map((res, index) => {
+                return (
+                  <GlossaryCard
+                    title={res.title}
+                    content={res.content}
+                    key={index}
+                  />
+                );
+              })}
           </div>
-          <button className="GlossaryTeams__body__slider__button">
-            Show all Glossary terms ({glossary.length})
-          </button>
+          {showAll ? (
+            <></>
+          ) : (
+            <button
+              className="GlossaryTeams__body__slider__button"
+              onClick={() => setShowAll(true)}
+            >
+              Show all Glossary terms ({glossary.length})
+            </button>
+          )}
         </div>
       </div>
     </div>

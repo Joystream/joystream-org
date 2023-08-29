@@ -1,19 +1,24 @@
-.TextSlider {
-  &__button {
-    border-radius: 50%;
-
-    &__icon {
-      &--forward {
-        align-items: end;
-        margin-right: 10px;
-        text-align: center;
-      }
-
-      &--backward {
-        align-items: end;
-        margin-left: 10px;
-        transform: rotate(180deg);
-      }
+.TextSlider__button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: -40px;
+  &__icon {
+    &--backward {
+      transform: rotate(180deg);
     }
+  }
+
+  &--backward {
+    left: 20px;
+  }
+
+  &--forward {
+    right: 20px;
   }
 }

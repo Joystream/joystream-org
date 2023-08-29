@@ -10,8 +10,12 @@ import { useGetFileName } from "../../../utils/useAxios";
 
 import { ReactComponent as Expand } from "../../../assets/svg/expand.svg";
 import { ReactComponent as Check } from "../../../assets/svg/optioncheck.svg";
+import { ReactComponent as Notic } from "../../../assets/svg/banner_warning_disable.svg";
+import { ReactComponent as NoticEnable } from "../../../assets/svg/banner_warning_enable.svg";
+
 import QuartersListData from "../QuartersListData";
 import TooltipPanel from "../../Tooltip";
+import Banner from "../../Banner";
 
 const SelectOptions = ({ options, sendData }) => {
   const [isActive, setIsActive] = useState(false);
@@ -90,7 +94,8 @@ const SelectOptions = ({ options, sendData }) => {
 };
 
 const Quarters = ({ names, gitLoading, gitError, data, file }) => {
-  // const [filename, setFileName] = useState("Select Terms");
+  const [oldVersionBanner, setOldVersionBanner] = useState(false);
+  const [bottomBanner, setBottomBanner] = useState(false);
 
   let quartersSelects = [];
 
@@ -110,24 +115,53 @@ const Quarters = ({ names, gitLoading, gitError, data, file }) => {
   return (
     <div className="Quarters">
       <div className="Quarters__form-wrapper">
-        <div className="Quarters__form">
-          {names && !gitLoading && !gitError ? (
-            <SelectOptions
-              className="Quarters__form__select"
-              options={quartersSelects}
-              sendData={getFileName}
-              t={t}
+        <div>
+          {oldVersionBanner ? (
+            <Banner
+              icon={<NoticEnable />}
+              className="Quarters__top__banner"
+              title={"You are previewing an old version of the roadmap"}
+              information={
+                "Roadmap gets updated frequently and the one you view right now is an old legacy version."
+              }
+              label={<a>Change to current version</a>}
             />
           ) : (
-            <div className="Quarters__options-wrapper">Loading ...</div>
+            <></>
           )}
-
-          <TooltipPanel>
+        </div>
+        <div className="Quarters__form">
+          <div>
+            {names && !gitLoading && !gitError ? (
+              <SelectOptions
+                className="Quarters__form__select"
+                options={quartersSelects}
+                sendData={getFileName}
+                t={t}
+              />
+            ) : (
+              <div className="Quarters__options-wrapper">Loading ...</div>
+            )}
+          </div>
+          <TooltipPanel text={"quartersSelects"}>
             <Button className="Quarters__form__button" name="subscribe">
               {t("roadmap.copysharinglink")}
               <CopyLink className="Quarters__form__linkicon" />
             </Button>
           </TooltipPanel>
+        </div>
+        <div className="Quarters__bottom__banner">
+          {bottomBanner ? (
+            <Banner
+              icon={<Notic />}
+              title={"Disclaimer"}
+              information={
+                "The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader's own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap."
+              }
+            />
+          ) : (
+            <></>
+          )}
         </div>
       </div>
       <QuartersListData data={data} />

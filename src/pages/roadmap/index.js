@@ -31,7 +31,7 @@ const RoadmapPage = () => {
   const [fileName, setFileName] = useState("");
   const [glossary, setGlossary] = useState([]);
   const [sliderText, setSliderText] = useState([]);
-  const [glossaryState, setGlossaryState] = useState(true);
+  const [glossaryState, setGlossaryState] = useState(false);
 
   const [data, setData] = useState([]);
 
@@ -47,6 +47,9 @@ const RoadmapPage = () => {
       setGlossary(response.data);
     };
     fetchGlossary();
+  }, []);
+
+  useEffect(() => {
     const FristString = glossary.map((data) => data.title.charAt(0));
 
     let uniqueArr = FristString.reduce((acc, curr) => {
@@ -57,7 +60,7 @@ const RoadmapPage = () => {
     }, []);
 
     setSliderText(uniqueArr);
-  }, []);
+  }, [glossary]);
 
   useEffect(() => {
     const fetchFileData = async () => {

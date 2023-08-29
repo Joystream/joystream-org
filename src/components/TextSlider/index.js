@@ -1,26 +1,27 @@
-import React, { createRef, useState } from 'react';
+import React, { createRef, useState } from "react";
 import {
   ButtonBack,
   ButtonNext,
   CarouselProvider,
   Slide,
   Slider,
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-import { ReactComponent as ArrowSvg } from '../../assets/svg/slider_left.svg';
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+import { ReactComponent as ArrowSvg } from "../../assets/svg/slider_left.svg";
 
-import './style.scss';
+import "./style.scss";
 
 const sizes = {
   small: [305, 171],
   default: [246, 152],
   large: [441, 300],
 };
+
 function TextSlider({
   className,
   withSpacing,
   slides,
-  size = 'default',
+  size = "default",
   sliderClassName,
   slideClassName,
 }) {
@@ -31,14 +32,14 @@ function TextSlider({
     const updateScreenWidth = () => setScreenWidth(window.innerWidth);
     updateScreenWidth();
 
-    window.addEventListener('resize', updateScreenWidth);
-    return () => window.removeEventListener('resize', updateScreenWidth);
+    window.addEventListener("resize", updateScreenWidth);
+    return () => window.removeEventListener("resize", updateScreenWidth);
   }, []);
 
   return (
     <CarouselProvider
       naturalSlideWidth={sizes[size][0] + (withSpacing ? 20 : 0)}
-      naturalSlideHeight="10"
+      naturalSlideHeight="500"
       totalSlides={slides.length + 1}
       className={className}
       visibleSlides={visibleSlides}
@@ -50,10 +51,10 @@ function TextSlider({
           </Slide>
         ))}
       </Slider>
-      <ButtonBack className="TextSlider__button">
+      <ButtonBack className="TextSlider__button TextSlider__button--backward">
         <ArrowSvg className="TextSlider__button__icon--backward" />
       </ButtonBack>
-      <ButtonNext className="TextSlider__button">
+      <ButtonNext className="TextSlider__button TextSlider__button--forward">
         <ArrowSvg className="TextSlider__button__icon--forward" />
       </ButtonNext>
     </CarouselProvider>
