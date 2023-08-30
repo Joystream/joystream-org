@@ -144,8 +144,6 @@ function QuarterPanel({ data, loading, error, language }) {
                       <div className="QuarterPanel__main__line" />
                     </div>
 
-                    {console.log(`panel${index}_${k}`)}
-
                     <div className="QuarterPanel__main__panel">
                       <div className="QuarterPanel__main__link">
                         <div className="QuarterPanel__main__playIcon">
