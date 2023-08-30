@@ -75,9 +75,9 @@ const RoadmapPage = () => {
   }, [fileName]);
 
   const onCard = (e) => {
-    console.log(e);
     setGlossaryIndex(e);
     setGlossaryState(true);
+    scrollTo(0, 0);
   };
   return (
     <BaseLayout t={t}>
