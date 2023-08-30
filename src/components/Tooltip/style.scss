@@ -3,7 +3,7 @@
 
   .tooltip {
     position: absolute;
-    width: -webkit-fill-available;
+    width: max-content;
     margin: 0 10px;
     padding: 10px;
     color: #fff;

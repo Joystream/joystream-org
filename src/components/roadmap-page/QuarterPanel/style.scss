@@ -1,4 +1,4 @@
-@import "../../../styles/_main";
+@import '../../../styles/_main';
 
 $offsetTop: 200px;
 
@@ -165,18 +165,19 @@ $offsetTop: 200px;
     display: flex;
     align-items: end;
     flex-direction: column;
-    padding: 10px 0;
+    // width: max-content;
     &__icon {
+      width: 48px;
+      height: 48px;
       // background-color: #4038ff;
-      background-image: url("../../../assets/svg/copylink.svg");
+      background-image: url('../../../assets/images/link_disable.png');
       background-repeat: no-repeat;
-      // background-size: cover;
+      background-size: cover;
       border-radius: 50%;
-      height: 30px;
-      width: 30px;
-      &:active {
-        background-image: url("../../../assets/svg/copylink.svg");
+
+      &:hover {
         background-color: #4038ff;
+        background-image: url('../../../assets/images/link_enable.png');
       }
     }
   }

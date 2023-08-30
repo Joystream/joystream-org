@@ -1,5 +1,5 @@
-import React from "react";
-import "./style.scss";
+import React from 'react';
+import './style.scss';
 function GlossaryCard({ title, content, onclick }) {
   return (
     <button className="GlossaryCard" onClick={onclick}>
