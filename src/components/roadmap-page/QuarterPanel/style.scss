@@ -2,12 +2,6 @@
 
 $offsetTop: 200px;
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
 .QuarterPanel__submain {
   display: grid;
   flex-direction: column;
@@ -128,11 +122,11 @@ $offsetTop: 200px;
     padding: 24px;
     background: white;
     border-radius: 4px;
-    opacity: 40%;
+    opacity: 0.4;
     gap: 16px;
 
     &--active {
-      opacity: 100%;
+      opacity: 1;
     }
 
     &__title {
