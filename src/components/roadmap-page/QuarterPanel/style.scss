@@ -36,7 +36,7 @@ $offsetTop: 200px;
     align-items: end;
     flex-direction: column;
     text-align: right;
-    opacity: 0.4;
+    opacity: .4;
 
     &--active {
       opacity: 1;
@@ -122,7 +122,7 @@ $offsetTop: 200px;
     padding: 24px;
     background: white;
     border-radius: 4px;
-    opacity: 0.4;
+    opacity: .4;
     gap: 16px;
 
     &--active {
