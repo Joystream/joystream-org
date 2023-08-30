@@ -34,15 +34,28 @@
   }
 
   &__search__panel {
-    padding-top: 32px;
+    position: relative;
+    display: -webkit-inline-box;
+    align-items: center;
+    max-width: 394px;
 
     &__input {
       height: 56px;
-      max-width: (394px);
-      padding: 16px 18px 16px 18px;
+      padding-top: 32px;
       border: 2px;
       border-radius: 4px;
       gap: 8px;
+    }
+
+    &__icon {
+      position: absolute;
+      left: 20px;
+      margin-top: 20px;
+    }
+
+    &__inputbox {
+      margin-left: 10px;
+      padding-left: 28px;
     }
   }
 

@@ -32,6 +32,7 @@ const RoadmapPage = () => {
   const [glossary, setGlossary] = useState([]);
   const [sliderText, setSliderText] = useState([]);
   const [glossaryState, setGlossaryState] = useState(false);
+  const [glossaryIndex, setGlossaryIndex] = useState(0);
 
   const [data, setData] = useState([]);
 
@@ -73,6 +74,11 @@ const RoadmapPage = () => {
     fetchFileData();
   }, [fileName]);
 
+  const onCard = (e) => {
+    console.log(e);
+    setGlossaryIndex(e);
+    setGlossaryState(true);
+  };
   return (
     <BaseLayout t={t}>
       <SiteMetadata
@@ -81,7 +87,10 @@ const RoadmapPage = () => {
         description={t('roadmap.siteMetadata.description')}
       />
       {glossaryState ? (
-        <Glossary data={glossary[0]} />
+        <Glossary
+          data={glossary[glossaryIndex]}
+          headClick={() => setGlossaryState(false)}
+        />
       ) : (
         <div>
           <section className="RoadmapPage__hero-wrapper">
@@ -108,7 +117,11 @@ const RoadmapPage = () => {
             file={getFileName}
             data={data}
           />
-          <GlossaryTeams glossary={glossary} sliderText={sliderText} />
+          <GlossaryTeams
+            glossary={glossary}
+            sliderText={sliderText}
+            cardOnClick={onCard}
+          />
         </div>
       )}
     </BaseLayout>

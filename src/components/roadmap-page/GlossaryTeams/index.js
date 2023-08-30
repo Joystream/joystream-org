@@ -1,32 +1,44 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Input from '../../Input';
+
+import { ReactComponent as SearchIcon } from '../../../assets/svg/Search.svg';
 
 import './style.scss';
 
 import TextSlider from '../../TextSlider';
 import GlossaryCard from '../../GlossaryCard';
 
-function GlossaryTeams({ glossary, sliderText }) {
+function GlossaryTeams({ glossary, sliderText, cardOnClick }) {
   const [searchText, setSearchText] = useState('');
   const [showAll, setShowAll] = useState(false);
-  const [filteredData, setFilteredData] = useState(sliderText);
+  const [filteredData, setFilteredData] = useState(glossary);
 
-  const filterData = () => {
+  const filterData = useCallback((search) => {
     const filtered = glossary.filter((item) =>
-      item.title.toLowerCase().includes(searchText.toLowerCase()));
+      item.title.toLowerCase().includes(search.toLowerCase()));
     setFilteredData(filtered);
+  });
+
+  const onSearchInput = (e) => {
+    filterData(e);
+    setSearchText(e);
+    if (filterData.length === glossary.length) setShowAll(true);
+    else setShowAll(false);
   };
 
   useEffect(() => {
-    filterData();
-  }, [filterData, searchText]);
+    filterData(searchText);
+  }, [filterData, glossary, searchText]);
 
+  const onSelectCarousel = (e) => {
+    filterData(e);
+  };
   return (
     <div className="GlossaryTeams">
       <div>
         <div className="GlossaryTeams__head__panel">
           <div className="GlossaryTeams__head__panel__title">
-            Glossary teams
+            Glossary terms
           </div>
           <div className="GlossaryTeams__head__panel__subtitle">
             You can access, learn and discover all terms related to all projects
@@ -34,21 +46,25 @@ function GlossaryTeams({ glossary, sliderText }) {
           </div>
         </div>
         <div className="GlossaryTeams__search__panel">
-          <Input
-            className="GlossaryTeams__search__panel__input"
-            placeholder="Find interesting words..."
-            type="text"
-            name="interesting_words"
-            required
-            onChange={(e) => setSearchText(e.target.value)}
-            value={searchText}
-          />
+          <div className="GlossaryTeams__search__panel__input">
+            <SearchIcon className="GlossaryTeams__search__panel__icon" />
+            <Input
+              className="GlossaryTeams__search__panel__inputbox"
+              placeholder="Find interesting words..."
+              type="text"
+              name="interesting_words"
+              required
+              onChange={(e) => onSearchInput(e.target.value)}
+              value={searchText}
+            />
+          </div>
         </div>
       </div>
       <div className="GlossaryTeams__body">
         <div className="GlossaryTeams__body__slider">
           <TextSlider
             slides={sliderText}
+            onclick={onSelectCarousel}
             slideClassName="GlossaryTeams__body__slider__slide"
           />
           <div className="GlossaryTeams__body__slider__cards">
@@ -57,6 +73,7 @@ function GlossaryTeams({ glossary, sliderText }) {
               .map((res, index) => {
                 return (
                   <GlossaryCard
+                    onclick={() => cardOnClick(index)}
                     title={res.title}
                     content={res.content}
                     key={index}

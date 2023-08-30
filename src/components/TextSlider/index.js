@@ -24,6 +24,7 @@ function TextSlider({
   size = 'default',
   sliderClassName,
   slideClassName,
+  onclick,
 }) {
   const [screenWidth, setScreenWidth] = useState();
   const visibleSlides = screenWidth < 768 ? 1 : 2;
@@ -46,7 +47,12 @@ function TextSlider({
     >
       <Slider className={sliderClassName}>
         {slides.map((tag, index) => (
-          <Slide index={index} className={slideClassName}>
+          <Slide
+            index={index}
+            className={slideClassName}
+            key={index}
+            onClick={() => onclick(tag)}
+          >
             {tag}
           </Slide>
         ))}
