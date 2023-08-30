@@ -1,4 +1,4 @@
-@import '../../../styles/_main';
+@import "../../../styles/_main";
 
 $offsetTop: 200px;
 
@@ -166,6 +166,19 @@ $offsetTop: 200px;
     align-items: end;
     flex-direction: column;
     padding: 10px 0;
+    &__icon {
+      // background-color: #4038ff;
+      background-image: url("../../../assets/svg/copylink.svg");
+      background-repeat: no-repeat;
+      // background-size: cover;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      &:active {
+        background-image: url("../../../assets/svg/copylink.svg");
+        background-color: #4038ff;
+      }
+    }
   }
 
   // @media #{$screen-max-sm} {

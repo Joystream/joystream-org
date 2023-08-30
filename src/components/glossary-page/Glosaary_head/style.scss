@@ -1,4 +1,4 @@
-@import '../../../styles/common/variables';
+@import "../../../styles/common/variables";
 
 .GlossaryHead {
   height: 44px;
@@ -16,6 +16,7 @@
     color: #5c6475;
     text-align: left;
     cursor: pointer;
+    margin-right: 10px;
   }
 
   &__content {

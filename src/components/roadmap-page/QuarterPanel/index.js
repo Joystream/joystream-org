@@ -1,102 +1,99 @@
-import React, { useEffect, useRef, useState } from 'react';
-import cn from 'classnames';
+import React, { useEffect, useRef, useState } from "react";
+import cn from "classnames";
 
-import { ReactComponent as PlayIcon } from '../../../assets/svg/icon-play.svg';
-import { ReactComponent as LinkIcon } from '../../../assets/svg/connect_disable.svg';
-import './style.scss';
+import { ReactComponent as PlayIcon } from "../../../assets/svg/icon-play.svg";
+import { ReactComponent as LinkIcon } from "../../../assets/svg/connect_disable.svg";
+import { ReactComponent as EnableLinkIcon } from "../../../assets/svg/copylink.svg";
+import "./style.scss";
 
 const offset = 200;
 function QuarterPanel({ data, loading, error, language }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
-  const [activeTimeLine, setActiveTimeLine] = useState(false);
 
   const result = data.language === language ? data : false;
 
   useEffect(() => {
     const timeLineItems = document.querySelectorAll(
-      '.QuarterPanel__main__line__dot'
+      ".QuarterPanel__main__line__dot"
     );
 
     const timeLinePanel = document.querySelectorAll(
-      '.QuarterPanel__main__panel'
+      ".QuarterPanel__main__panel"
     );
 
     if (activeItem < timeLineItems.length) {
       timeLineItems[activeItem].classList.add(
-        'QuarterPanel__main__line__dot--active'
+        "QuarterPanel__main__line__dot--active"
       );
       timeLineItems[activeItem].classList.remove(
-        'QuarterPanel__main__line__dot--hide'
+        "QuarterPanel__main__line__dot--hide"
       );
       timeLinePanel[activeItem].classList.add(
-        'QuarterPanel__main__panel--active'
+        "QuarterPanel__main__panel--active"
       );
     }
 
     if (activeItem > 0) {
       timeLineItems[activeItem - 1].classList.add(
-        'QuarterPanel__main__line__dot--hide'
+        "QuarterPanel__main__line__dot--hide"
       );
       timeLinePanel[activeItem - 1].classList.remove(
-        'QuarterPanel__main__panel--active'
+        "QuarterPanel__main__panel--active"
       );
     }
 
     if (activeItem < timeLineItems.length - 1) {
       timeLineItems[activeItem + 1].classList.remove(
-        'QuarterPanel__main__line__dot--active'
+        "QuarterPanel__main__line__dot--active"
       );
       timeLinePanel[activeItem + 1].classList.remove(
-        'QuarterPanel__main__panel--active'
+        "QuarterPanel__main__panel--active"
       );
     }
 
     if (activeItem === 0 || activeItem === timeLineItems.length - 1) {
       timeLineItems[activeItem].classList.add(
-        'QuarterPanel__main__line__dot--sticky'
+        "QuarterPanel__main__line__dot--sticky"
       );
     } else {
       timeLineItems[0].classList.remove(
-        'QuarterPanel__main__line__dot--sticky'
+        "QuarterPanel__main__line__dot--sticky"
       );
     }
   }, [activeItem]);
 
   useEffect(() => {
     const timeLineText = document.querySelectorAll(
-      '.QuarterPanel__main__title'
+      ".QuarterPanel__main__title"
     );
-    timeLineText[activeText].classList.add('QuarterPanel__main__title--active');
+    timeLineText[activeText].classList.add("QuarterPanel__main__title--active");
     if (activeText > 0) {
       timeLineText[activeText - 1].classList.remove(
-        'QuarterPanel__main__title--active'
+        "QuarterPanel__main__title--active"
       );
     }
     if (activeText < timeLineText.length - 1) {
       timeLineText[activeText + 1].classList.remove(
-        'QuarterPanel__main__title--active'
+        "QuarterPanel__main__title--active"
       );
     }
   }, [activeText]);
 
   useEffect(() => {
     const handleScroll = () => {
-      const timelineItems = document.querySelectorAll('.QuarterPanel__submain');
+      const timelineItems = document.querySelectorAll(".QuarterPanel__submain");
       const scrollPosition = window.scrollY;
 
       timelineItems.forEach((item, index) => {
         const itemTop = item.offsetTop;
         if (scrollPosition > itemTop - offset) {
           setActiveItem(index);
-          setActiveTimeLine(true);
-        } else {
-          setActiveTimeLine(false);
         }
       });
 
       const timelineText = document.querySelectorAll(
-        '.QuarterPanel__main__rigth'
+        ".QuarterPanel__main__rigth"
       );
       timelineText.forEach((item, index) => {
         const itemTop = item.offsetTop;
@@ -105,8 +102,8 @@ function QuarterPanel({ data, loading, error, language }) {
         }
       });
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   if (!result) return <></>;
@@ -153,7 +150,7 @@ function QuarterPanel({ data, loading, error, language }) {
                           <PlayIcon />
                         </div>
                         <div className="QuarterPanel__main__linkIcon">
-                          <LinkIcon />
+                          <div className="QuarterPanel__main__linkIcon__icon" />
                         </div>
                       </div>
                       <div className="QuarterPanel__main__panel__title">
