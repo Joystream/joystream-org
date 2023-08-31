@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../../Button';
 import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
+import ClipboardJS from 'clipboard';
 
 import './style.scss';
 
 import { ReactComponent as CopyLink } from '../../../assets/svg/copylink.svg';
-import { useGetFileName } from '../../../utils/useAxios';
-
 import { ReactComponent as Expand } from '../../../assets/svg/expand.svg';
 import { ReactComponent as Check } from '../../../assets/svg/optioncheck.svg';
 import { ReactComponent as Notic } from '../../../assets/svg/banner_warning_disable.svg';
@@ -16,14 +15,21 @@ import { ReactComponent as NoticEnable } from '../../../assets/svg/banner_warnin
 import QuartersListData from '../QuartersListData';
 import TooltipPanel from '../../Tooltip';
 import Banner from '../../Banner';
+import scrollToIdElement from '../../../utils/scrollToIdElement';
 
-const SelectOptions = ({ options, sendData }) => {
+const SelectOptions = ({ options, sendData, value }) => {
+
   const [isActive, setIsActive] = useState(false);
   const [isSelect, setIsSelect] = useState(0);
 
+  useEffect(() => {
+    if (value >0) {
+      setIsSelect(value);
+    }
+  },[value]);
+
   const onSelectQuarters = (index) => {
     setIsSelect(index);
-    // tooltip = options[index].name;
     sendData(options[index].period);
   };
 
@@ -93,10 +99,12 @@ const SelectOptions = ({ options, sendData }) => {
   );
 };
 
-const Quarters = ({ names, gitLoading, gitError, data, file }) => {
+const Quarters = ({ names, gitLoading, gitError, data, file , value }) => {
   const [oldVersionBanner, setOldVersionBanner] = useState(false);
   const [bottomBanner, setBottomBanner] = useState(false);
-
+  const [selectValue, setSelectValue] = useState(value);
+  const [idString, setIdString] = useState('');
+  
   let quartersSelects = [];
 
   if (names && !gitLoading && !gitError) {
@@ -108,13 +116,61 @@ const Quarters = ({ names, gitLoading, gitError, data, file }) => {
 
   const { t } = useTranslation();
 
+  const handleCopy = () => {
+    const clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', () => {
+      alert('Successfully!');
+      clipboard.destroy();
+    });
+    clipboard.on('error', () => {
+      alert('Failed to copy!');
+      clipboard.destroy();
+    });
+  };
+
   const getFileName = (res) => {
     file(res);
+    const index = quartersSelects.findIndex(item => item.period === res);
+
+    if (index === 0) {
+      setOldVersionBanner(false);
+    } else {
+      setOldVersionBanner(true);
+    }
+
+    setSelectValue(index);
+    setIdString(res);
   };
+
+  if (value>0) {    
+    scrollToIdElement('select_quater');
+  }
 
   return (
     <div className="Quarters">
       <div className="Quarters__form-wrapper">
+
+        <div className="Quarters__form" id="select_quater">
+          <div>
+            {names && !gitLoading && !gitError ? (
+              <SelectOptions
+                className="Quarters__form__select"
+                options={quartersSelects}
+                sendData={getFileName}
+                value={value}
+                t={t}
+              />
+            ) : (
+              <div className="Quarters__options-wrapper">Loading ...</div>
+            )}
+          </div>
+          <TooltipPanel text={`Link to Version ${selectValue+1} copied!`}>
+            <Button className="Quarters__form__button btn" data-clipboard-text={window.location.href} name="subscribe" onClick={handleCopy}>
+              {t('roadmap.copysharinglink')}
+              <CopyLink className="Quarters__form__linkicon" />
+            </Button>
+          </TooltipPanel>
+        </div>
         <div>
           {oldVersionBanner ? (
             <Banner
@@ -129,26 +185,6 @@ const Quarters = ({ names, gitLoading, gitError, data, file }) => {
           ) : (
             <></>
           )}
-        </div>
-        <div className="Quarters__form">
-          <div>
-            {names && !gitLoading && !gitError ? (
-              <SelectOptions
-                className="Quarters__form__select"
-                options={quartersSelects}
-                sendData={getFileName}
-                t={t}
-              />
-            ) : (
-              <div className="Quarters__options-wrapper">Loading ...</div>
-            )}
-          </div>
-          <TooltipPanel text={'quartersSelects'}>
-            <Button className="Quarters__form__button" name="subscribe">
-              {t('roadmap.copysharinglink')}
-              <CopyLink className="Quarters__form__linkicon" />
-            </Button>
-          </TooltipPanel>
         </div>
         <div className="Quarters__bottom__banner">
           {bottomBanner ? (

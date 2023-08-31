@@ -33,11 +33,16 @@ const RoadmapPage = () => {
   const [sliderText, setSliderText] = useState([]);
   const [glossaryState, setGlossaryState] = useState(false);
   const [glossaryIndex, setGlossaryIndex] = useState(0);
+  const [selectValue, setSelectValue] = useState(0);
 
   const [data, setData] = useState([]);
 
+  const initfileName = new URL(window.location.href);
+  const period = initfileName.hash.split('#')[1];
+
   const getFileName = (name) => {
     setFileName(name);
+    window.location.href = `#${fileName}`;
   };
 
   useEffect(() => {
@@ -47,8 +52,11 @@ const RoadmapPage = () => {
       );
       setGlossary(response.data);
     };
-    fetchGlossary();
-  }, []);
+    fetchGlossary();  
+
+    setFileName(period); 
+
+  }, [period]);
 
   useEffect(() => {
     const FristString = glossary.map((data) => data.title.charAt(0));
@@ -67,18 +75,27 @@ const RoadmapPage = () => {
     const fetchFileData = async () => {
       const filedata = await axios.get(
         `https://raw.githubusercontent.com/${GIT_USER_NAME}/${GIT_REPOSITY}/main/${GIT_FOLDER}/${fileName}`
-      );
+      );    
+     
       setData(filedata.data);
     };
 
     fetchFileData();
   }, [fileName]);
 
+  useEffect(() => {
+    if (names) {      
+      const index = names.fileNames.findIndex(item => item === period);
+      setSelectValue(index);
+    }
+  }, [names, period]);
+  
   const onCard = (e) => {
     setGlossaryIndex(e);
     setGlossaryState(true);
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
   };
+
   return (
     <BaseLayout t={t}>
       <SiteMetadata
@@ -116,6 +133,7 @@ const RoadmapPage = () => {
             gitLoading={gitLoading}
             file={getFileName}
             data={data}
+            value={selectValue}
           />
           <GlossaryTeams
             glossary={glossary}

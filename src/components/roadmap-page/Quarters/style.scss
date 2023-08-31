@@ -65,6 +65,7 @@
       transition: transform 400ms ease 0s;
 
       &--active {
+        z-index: 10;
         display: block;
         transform: translateY(75%);
       }
@@ -113,6 +114,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    margin-top: 30px;
 
     &__title {
       margin-bottom: 4px;
@@ -169,6 +171,7 @@
   }
 
   &__top__banner {
+    margin-top: 32px;
     border-left: solid 2px #ff3861;
   }
 

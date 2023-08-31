@@ -28,7 +28,7 @@ function GlossaryTeams({ glossary, sliderText, cardOnClick }) {
 
   useEffect(() => {
     filterData(searchText);
-  }, [glossary]);
+  }, [filterData, glossary, searchText]);
 
   const onSelectCarousel = (e) => {
     filterData(e);

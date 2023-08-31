@@ -17,6 +17,7 @@
     "babel-preset-gatsby": "^0.5.5",
     "bchaddrjs": "^0.5.2",
     "classnames": "^2.2.6",
+    "clipboard": "^2.0.11",
     "css-loader": "^3.0.0",
     "dotenv": "^16.3.1",
     "eslint-plugin-import": "^2.18.2",

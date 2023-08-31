@@ -1,17 +1,23 @@
 import React, { useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
+import ClipboardJS from 'clipboard';
 
 import { ReactComponent as PlayIcon } from '../../../assets/svg/icon-play.svg';
 
 import './style.scss';
 import TooltipPanel from '../../Tooltip';
+import scrollToIdElement from '../../../utils/scrollToIdElement';
 
 const offset = 200;
 function QuarterPanel({ data, loading, error, language }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
-
+const [text, setText] = useState('This is a sample text with an image: <img src="example.jpg">');
+  
   const result = data.language === language ? data : false;
+
+  const url = new URL(window.location.href);
+  const hash = url.hash.split('#')[2];
 
   useEffect(() => {
     const timeLineItems = document.querySelectorAll(
@@ -103,9 +109,37 @@ function QuarterPanel({ data, loading, error, language }) {
       });
     };
     window.addEventListener('scroll', handleScroll);
+      if (hash) {
+    scrollToIdElement(hash);
+  }
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [hash]);
+   
+  const getLink = (index, k) => {
+    
+    const url = new URL(window.location.href);
+    const period = url.hash.split('#')[2];
 
+    
+    
+    if (period) {
+      url.hash = `panel${index}_${k}`;
+      window.location.href = window.location.href.replace(period,`panel${index}_${k}` );
+    } else {
+      window.location.href = window.location.href + `#panel${index}_${k}`;
+    }
+
+    const clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', () => {
+      alert('Successfully!');
+      clipboard.destroy();
+    });
+    clipboard.on('error', () => {
+      alert('Failed to copy!');
+      clipboard.destroy();
+    });
+  };
+  
   if (!result) return <></>;
 
   if (loading) {
@@ -124,6 +158,8 @@ function QuarterPanel({ data, loading, error, language }) {
       </div>
     );
   }
+
+
   return (
     <div>
       {result.quarters.map((res, index) => {
@@ -151,7 +187,8 @@ function QuarterPanel({ data, loading, error, language }) {
                         </div>
                         <div className="QuarterPanel__main__linkIcon">
                           <TooltipPanel text={'Copy link to share'}>
-                            <div className="QuarterPanel__main__linkIcon__icon" />
+                            <button className="QuarterPanel__main__linkIcon__icon btn" data-clipboard-text={window.location.href}
+                              onClick={() => getLink(index, k)} /> 
                           </TooltipPanel>
                         </div>
                       </div>
@@ -166,6 +203,7 @@ function QuarterPanel({ data, loading, error, language }) {
                 );
               })}
             </div>
+
           </div>
         );
       })}
