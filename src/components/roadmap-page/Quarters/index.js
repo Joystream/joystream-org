@@ -186,10 +186,13 @@ const Quarters = ({ names, gitLoading, gitError, data, file , value }) => {
             <></>
           )}
         </div>
+      </div>
+      <QuartersListData data={data} />
         <div className="Quarters__bottom__banner">
           {bottomBanner ? (
             <Banner
-              icon={<Notic />}
+            icon={<Notic />}
+            className="Quarters__bottom__banner__item"
               title={'Disclaimer'}
               information={
                 'The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader\'s own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap.'
@@ -199,8 +202,6 @@ const Quarters = ({ names, gitLoading, gitError, data, file , value }) => {
             <></>
           )}
         </div>
-      </div>
-      <QuartersListData data={data} />
     </div>
   );
 };

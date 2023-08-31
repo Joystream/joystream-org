@@ -37,18 +37,22 @@ const RoadmapPage = () => {
   const [period, setPeriod] = useState("");
 
   const [data, setData] = useState([]);
-  if (typeof window !== 'undefined') {
-    const initfileName = new URL(window.location.href);
-    setPeriod(initfileName.hash.split('#')[1]);
-  }
-
-
+  
+  
   const getFileName = (name) => {
-    setFileName(name);
     if (typeof window !== 'undefined') {      
       window.location.href = `#${fileName}`;
     }
+    setFileName(name);
   };
+  
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const initfileName = new URL(window.location.href);
+      setPeriod(initfileName.hash.split('#')[1]);
+    }
+    
+  },[])
 
   useEffect(() => {
     const fetchGlossary = async () => {
@@ -98,7 +102,9 @@ const RoadmapPage = () => {
   const onCard = (e) => {
     setGlossaryIndex(e);
     setGlossaryState(true);
-    window.scrollTo(0,0);
+        if (typeof window!== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (

@@ -166,8 +166,15 @@
   }
 
   &__bottom__banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 96px;
     gap: 16px;
+    margin-bottom: 96px;
+    &__item{
+      border-left: solid 2px #A7AEB7;;
+    }
   }
 
   &__top__banner {
