@@ -343,15 +343,32 @@
 
         font-weight: 700;
         letter-spacing: normal;
-        color: #f4f6f8;
+        color: #b5c1c9;
       }
 
       &__icon {
         margin-left: 8px;
+        fill: #b5c1c9;
 
         &--active {
           transform: rotate(180deg);
         }
+      }
+
+      &:hover &__text {
+        color: #f4f6f8;
+      }
+
+      &:hover &__icon {
+        fill: #f4f6f8;
+      }
+
+      &:active &__text {
+        color: #b5c1c9;
+      }
+
+      &:active &__icon {
+        fill: #b5c1c9;
       }
     }
   }
