@@ -12,7 +12,6 @@ const offset = 200;
 function QuarterPanel({ data, loading, error, language }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
-const [text, setText] = useState('This is a sample text with an image: <img src="example.jpg">');
   
   const result = data.language === language ? data : false;
 
@@ -118,9 +117,7 @@ const [text, setText] = useState('This is a sample text with an image: <img src=
   const getLink = (index, k) => {
     
     const url = new URL(window.location.href);
-    const period = url.hash.split('#')[2];
-
-    
+    const period = url.hash.split('#')[2];    
     
     if (period) {
       url.hash = `panel${index}_${k}`;

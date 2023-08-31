@@ -34,15 +34,20 @@ const RoadmapPage = () => {
   const [glossaryState, setGlossaryState] = useState(false);
   const [glossaryIndex, setGlossaryIndex] = useState(0);
   const [selectValue, setSelectValue] = useState(0);
+  const [period, setPeriod] = useState("");
 
   const [data, setData] = useState([]);
+  if (typeof window !== 'undefined') {
+    const initfileName = new URL(window.location.href);
+    setPeriod(initfileName.hash.split('#')[1]);
+  }
 
-  const initfileName = new URL(window.location.href);
-  const period = initfileName.hash.split('#')[1];
 
   const getFileName = (name) => {
     setFileName(name);
-    window.location.href = `#${fileName}`;
+    if (typeof window !== 'undefined') {      
+      window.location.href = `#${fileName}`;
+    }
   };
 
   useEffect(() => {

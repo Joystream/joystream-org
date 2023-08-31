@@ -101,7 +101,7 @@ const SelectOptions = ({ options, sendData, value }) => {
 
 const Quarters = ({ names, gitLoading, gitError, data, file , value }) => {
   const [oldVersionBanner, setOldVersionBanner] = useState(false);
-  const [bottomBanner, setBottomBanner] = useState(false);
+  const [bottomBanner, setBottomBanner] = useState(true);
   const [selectValue, setSelectValue] = useState(value);
   const [idString, setIdString] = useState('');
   
@@ -165,7 +165,7 @@ const Quarters = ({ names, gitLoading, gitError, data, file , value }) => {
             )}
           </div>
           <TooltipPanel text={`Link to Version ${selectValue+1} copied!`}>
-            <Button className="Quarters__form__button btn" data-clipboard-text={window.location.href} name="subscribe" onClick={handleCopy}>
+            <Button className="Quarters__form__button btn" data-clipboard-text={(typeof window!== 'undefined')?window.location.href:""} name="subscribe" onClick={handleCopy}>
               {t('roadmap.copysharinglink')}
               <CopyLink className="Quarters__form__linkicon" />
             </Button>
