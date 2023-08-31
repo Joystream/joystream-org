@@ -59,7 +59,7 @@ const RoadmapPage = () => {
       const response = await axios.get(
         `https://raw.githubusercontent.com/${GIT_USER_NAME}/${GIT_REPOSITY}/main/${GIT_GLOSSARY_FOLDER}/glossary.json`
       );
-      setGlossary(response.data);
+      setGlossary(response.data[0].terms);
     };
     fetchGlossary();  
 
