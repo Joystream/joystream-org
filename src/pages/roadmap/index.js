@@ -93,7 +93,9 @@ const RoadmapPage = () => {
   const onCard = (e) => {
     setGlossaryIndex(e);
     setGlossaryState(true);
-    window.scrollTo(0, 0);
+     if (typeof window!== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
