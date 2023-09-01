@@ -1,4 +1,4 @@
-@import '../../../styles/_main';
+@import "../../../styles/_main";
 
 $offsetTop: 200px;
 
@@ -36,7 +36,7 @@ $offsetTop: 200px;
     align-items: end;
     flex-direction: column;
     text-align: right;
-    opacity: .4;
+    opacity: 0.4;
 
     &--active {
       opacity: 1;
@@ -122,7 +122,7 @@ $offsetTop: 200px;
     padding: 24px;
     background: white;
     border-radius: 4px;
-    opacity: .4;
+    opacity: 0.4;
     gap: 16px;
 
     &--active {
@@ -149,6 +149,37 @@ $offsetTop: 200px;
     }
   }
 
+  &__underline {
+    text-decoration: underline;
+    position: relative;
+    &__modal {
+      position: absolute;
+      width: 240px;
+      height: auto;
+      bottom: 0;
+      margin-bottom: 20px;
+      padding: 12px 12px 18px 12px;
+      color: $c_white;
+      background-color: #1f252e;
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0.3s linear, opacity 0.3s linear;
+      transition-delay: 0.1s;
+      &__button {
+        color: #6c6cff;
+        margin-top: 20px;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    &:hover &__modal {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   &__link {
     display: grid;
     grid-gap: 10px;
@@ -164,14 +195,14 @@ $offsetTop: 200px;
       width: 48px;
       height: 48px;
       // background-color: #4038ff;
-      background-image: url('../../../assets/images/link_disable.png');
+      background-image: url("../../../assets/images/link_disable.png");
       background-repeat: no-repeat;
       background-size: cover;
       border-radius: 50%;
 
       &:hover {
         background-color: #4038ff;
-        background-image: url('../../../assets/images/link_enable.png');
+        background-image: url("../../../assets/images/link_enable.png");
       }
     }
   }

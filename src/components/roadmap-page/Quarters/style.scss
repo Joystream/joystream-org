@@ -1,4 +1,4 @@
-@import '../../../styles/_main';
+@import "../../../styles/_main";
 
 .Quarters {
   background-color: $c_catskill_white;
@@ -18,7 +18,7 @@
     display: initial;
     color: inherit;
     text-align: right;
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     &--active {
       transform: rotate(180deg);
@@ -53,7 +53,7 @@
       justify-content: flex-end;
       color: inherit;
       text-align: right;
-      transition: transform .3s;
+      transition: transform 0.3s;
     }
 
     &__dropdown {
@@ -129,7 +129,7 @@
       font-family: $font-secondary;
       font-size: 14px;
       line-height: 20px;
-      letter-spacing: -.4000000059604645px;
+      letter-spacing: -0.4000000059604645px;
       color: #a7aeb7;
       text-align: center;
     }
@@ -147,6 +147,7 @@
 
       &:hover {
         background-color: $c_white;
+        border-width: 4px;
       }
     }
 
@@ -172,14 +173,28 @@
     margin-top: 96px;
     gap: 16px;
     margin-bottom: 96px;
-    &__item{
-      border-left: solid 2px #A7AEB7;;
+    &__item {
+      border-left: solid 2px #a7aeb7;
     }
   }
 
   &__top__banner {
     margin-top: 32px;
     border-left: solid 2px #ff3861;
+    &__button {
+      text-align: left;
+      //styleName: Base 2;
+      font-family: $font-secondary;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0px;
+      color: #7174ff;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   @media #{$screen-max-sm} {

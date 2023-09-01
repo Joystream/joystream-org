@@ -1,5 +1,5 @@
-@import '../../../styles/_main';
-@import '../../../styles/common/colors';
+@import "../../../styles/_main";
+@import "../../../styles/common/colors";
 
 .GlossaryTeams {
   padding: 80px 99px 80px 99px;
@@ -69,6 +69,12 @@
     margin-top: 32px;
     gap: 32px;
     justify-items: center;
+    width: 1242px;
+    &__body {
+      position: static;
+      margin-top: 64px;
+      margin-bottom: 32px;
+    }
 
     &__cards {
       display: grid;
@@ -78,7 +84,18 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    &__slider {
+      align-items: center;
+      text-align: center;
+      height: 50px;
+      margin: 40px;
+      padding: 10px;
+    }
     &__slide {
+      width: 50px;
+      height: 50px;
+      border: solid 1px #6c6cff;
+      border-radius: 50%;
       font-size: 24px;
       line-height: 32px;
       color: white;
@@ -104,10 +121,15 @@
     background-repeat: repeat-x;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 1024px) {
     padding: 16px 0;
     gap: 16px;
 
+    &__body__slider {
+      &__cards {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
     &__options {
       &-wrapper {
         width: auto;

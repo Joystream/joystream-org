@@ -1,34 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import { graphql } from 'gatsby';
-import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
+import React, { createContext, useEffect, useState } from "react";
+import { graphql } from "gatsby";
+import { useTranslation, useI18next } from "gatsby-plugin-react-i18next";
 
-import BaseLayout from '../../components/_layouts/Base';
-import SiteMetadata from '../../components/SiteMetadata';
+import BaseLayout from "../../components/_layouts/Base";
+import SiteMetadata from "../../components/SiteMetadata";
 
-import { ReactComponent as AcropolisBuilding } from '../../assets/svg/acropolis-building.svg';
-import { ReactComponent as CommunityBackground } from '../../assets/svg/community-background.svg';
+import { ReactComponent as AcropolisBuilding } from "../../assets/svg/acropolis-building.svg";
+import { ReactComponent as CommunityBackground } from "../../assets/svg/community-background.svg";
 
-import { useGetFileName } from '../../utils/useAxios';
-import RoadHead from '../../components/roadmap-page/RoadHead';
-import Quarters from '../../components/roadmap-page/Quarters';
-import GlossaryTeams from '../../components/roadmap-page/GlossaryTeams';
+import { useGetFileName } from "../../utils/useAxios";
+import RoadHead from "../../components/roadmap-page/RoadHead";
+import Quarters from "../../components/roadmap-page/Quarters";
+import GlossaryTeams from "../../components/roadmap-page/GlossaryTeams";
 
-import './style.scss';
-import axios from 'axios';
+import "./style.scss";
+import axios from "axios";
 import {
   GIT_FOLDER,
   GIT_GLOSSARY_FOLDER,
   GIT_REPOSITY,
   GIT_USER_NAME,
-} from '../../../gitconfig';
+} from "../../../gitconfig";
 
-import Glossary from '../../components/glossary-page';
+import Glossary from "../../components/glossary-page";
+import MyContext from "../../utils/useContext";
 
 const RoadmapPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
   const [names, gitLoading, gitError] = useGetFileName();
-  const [fileName, setFileName] = useState('');
+  const [fileName, setFileName] = useState("");
   const [glossary, setGlossary] = useState([]);
   const [sliderText, setSliderText] = useState([]);
   const [glossaryState, setGlossaryState] = useState(false);
@@ -37,22 +38,20 @@ const RoadmapPage = () => {
   const [period, setPeriod] = useState("");
 
   const [data, setData] = useState([]);
-  
-  
+
   const getFileName = (name) => {
-    if (typeof window !== 'undefined') {      
+    if (typeof window !== "undefined") {
       window.location.href = `#${fileName}`;
     }
     setFileName(name);
   };
-  
+
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const initfileName = new URL(window.location.href);
-      setPeriod(initfileName.hash.split('#')[1]);
+      setPeriod(initfileName.hash.split("#")[1]);
     }
-    
-  },[])
+  }, []);
 
   useEffect(() => {
     const fetchGlossary = async () => {
@@ -61,10 +60,9 @@ const RoadmapPage = () => {
       );
       setGlossary(response.data[0].terms);
     };
-    fetchGlossary();  
+    fetchGlossary();
 
-    setFileName(period); 
-
+    setFileName(period);
   }, [period]);
 
   useEffect(() => {
@@ -84,8 +82,8 @@ const RoadmapPage = () => {
     const fetchFileData = async () => {
       const filedata = await axios.get(
         `https://raw.githubusercontent.com/${GIT_USER_NAME}/${GIT_REPOSITY}/main/${GIT_FOLDER}/${fileName}`
-      );    
-     
+      );
+
       setData(filedata.data);
     };
 
@@ -93,67 +91,69 @@ const RoadmapPage = () => {
   }, [fileName]);
 
   useEffect(() => {
-    if (names) {      
-      const index = names.fileNames.findIndex(item => item === period);
+    if (names) {
+      const index = names.fileNames.findIndex((item) => item === period);
       setSelectValue(index);
     }
   }, [names, period]);
-  
+
   const onCard = (e) => {
     setGlossaryIndex(e);
     setGlossaryState(true);
-        if (typeof window!== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   return (
-    <BaseLayout t={t}>
-      <SiteMetadata
-        lang={language}
-        title={t('roadmap.siteMetadata.title')}
-        description={t('roadmap.siteMetadata.description')}
-      />
-      {glossaryState ? (
-        <Glossary
-          data={glossary[glossaryIndex]}
-          headClick={() => setGlossaryState(false)}
+    <MyContext.Provider value={glossary}>
+      <BaseLayout t={t}>
+        <SiteMetadata
+          lang={language}
+          title={t("roadmap.siteMetadata.title")}
+          description={t("roadmap.siteMetadata.description")}
         />
-      ) : (
-        <div>
-          <section className="RoadmapPage__hero-wrapper">
-            <div className="RoadmapPage__hero">
-              <div className="RoadmapPage__hero__content">
-                <h1 className="RoadmapPage__hero__content__title">
-                  {t('roadmap.main.title')}
-                </h1>
-                <p className="RoadmapPage__hero__content__subtitle">
-                  {t('roadmap.main.subtitle')}
-                </p>
-              </div>
-              <div className="RoadmapPage__hero__image">
-                <CommunityBackground className="RoadmapPage__hero__image__background" />
-                <AcropolisBuilding className="RoadmapPage__hero__image__foreground" />
-              </div>
-            </div>
-          </section>
-          <RoadHead />
-          <Quarters
-            names={names}
-            gitError={gitError}
-            gitLoading={gitLoading}
-            file={getFileName}
-            data={data}
-            value={selectValue}
+        {glossaryState ? (
+          <Glossary
+            data={glossary[glossaryIndex]}
+            headClick={() => setGlossaryState(false)}
           />
-          <GlossaryTeams
-            glossary={glossary}
-            sliderText={sliderText}
-            cardOnClick={onCard}
-          />
-        </div>
-      )}
-    </BaseLayout>
+        ) : (
+          <div>
+            <section className="RoadmapPage__hero-wrapper">
+              <div className="RoadmapPage__hero">
+                <div className="RoadmapPage__hero__content">
+                  <h1 className="RoadmapPage__hero__content__title">
+                    {t("roadmap.main.title")}
+                  </h1>
+                  <p className="RoadmapPage__hero__content__subtitle">
+                    {t("roadmap.main.subtitle")}
+                  </p>
+                </div>
+                <div className="RoadmapPage__hero__image">
+                  <CommunityBackground className="RoadmapPage__hero__image__background" />
+                  <AcropolisBuilding className="RoadmapPage__hero__image__foreground" />
+                </div>
+              </div>
+            </section>
+            <RoadHead />
+            <Quarters
+              names={names}
+              gitError={gitError}
+              gitLoading={gitLoading}
+              file={getFileName}
+              data={data}
+              value={selectValue}
+            />
+            <GlossaryTeams
+              glossary={glossary}
+              sliderText={sliderText}
+              cardOnClick={onCard}
+            />
+          </div>
+        )}
+      </BaseLayout>
+    </MyContext.Provider>
   );
 };
 

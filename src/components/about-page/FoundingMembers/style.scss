@@ -1,5 +1,5 @@
-@import '../../../styles/_main';
-@import '../../../pages/style.scss';
+@import "../../../styles/_main";
+@import "../../../pages/style.scss";
 
 .AboutPage {
   &__founding-members-wrapper {
@@ -62,7 +62,7 @@
           display: flex;
           align-items: center;
           color: #5c6475;
-          transition: color .3s linear;
+          transition: color 0.3s linear;
 
           &:hover {
             color: #1f252e;
@@ -70,7 +70,7 @@
 
           &__icon {
             margin-left: 6px;
-            transition: fill .3s linear;
+            transition: fill 0.3s linear;
             fill: #5c6475;
           }
 
@@ -89,17 +89,16 @@
             background-color: #1f252e;
             opacity: 0;
             visibility: hidden;
-            transition: visibility .3s linear, opacity .3s linear;
-            transition-delay: .1s;
-            clip-path:
-              polygon(
-                0% 0%,
-                100% 0%,
-                100% calc(100% - 6px),
-                100% 100%,
-                calc(100% - 8px) calc(100% - 6px),
-                0% calc(100% - 6px)
-              );
+            transition: visibility 0.3s linear, opacity 0.3s linear;
+            transition-delay: 0.1s;
+            clip-path: polygon(
+              0% 0%,
+              100% 0%,
+              100% calc(100% - 6px),
+              100% 100%,
+              calc(100% - 8px) calc(100% - 6px),
+              0% calc(100% - 6px)
+            );
           }
 
           &:hover &__modal {

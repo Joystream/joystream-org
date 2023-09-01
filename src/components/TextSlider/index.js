@@ -1,15 +1,15 @@
-import React, { createRef, useState } from 'react';
+import React, { createRef, useState } from "react";
 import {
   ButtonBack,
   ButtonNext,
   CarouselProvider,
   Slide,
   Slider,
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-import { ReactComponent as ArrowSvg } from '../../assets/svg/slider_left.svg';
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+import { ReactComponent as ArrowSvg } from "../../assets/svg/slider_left.svg";
 
-import './style.scss';
+import "./style.scss";
 
 const sizes = {
   small: [305, 171],
@@ -21,7 +21,7 @@ function TextSlider({
   className,
   withSpacing,
   slides,
-  size = 'default',
+  size = "default",
   sliderClassName,
   slideClassName,
   onclick,
@@ -33,8 +33,8 @@ function TextSlider({
     const updateScreenWidth = () => setScreenWidth(window.innerWidth);
     updateScreenWidth();
 
-    window.addEventListener('resize', updateScreenWidth);
-    return () => window.removeEventListener('resize', updateScreenWidth);
+    window.addEventListener("resize", updateScreenWidth);
+    return () => window.removeEventListener("resize", updateScreenWidth);
   }, []);
 
   return (

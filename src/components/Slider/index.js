@@ -1,5 +1,5 @@
-import cn from 'classnames';
-import { arrayOf, node, number, oneOf, oneOfType, shape } from 'prop-types';
+import cn from "classnames";
+import { arrayOf, node, number, oneOf, oneOfType, shape } from "prop-types";
 import {
   ButtonBack,
   ButtonNext,
@@ -7,13 +7,13 @@ import {
   DotGroup,
   Slide as ReactSlide,
   Slider as ReactSlider,
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-import React, { createRef, useState } from 'react';
-import { ReactComponent as ArrowSvg } from '../../assets/svg/arrow-down-small.svg';
-import './style.scss';
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+import React, { createRef, useState } from "react";
+import { ReactComponent as ArrowSvg } from "../../assets/svg/arrow-down-small.svg";
+import "./style.scss";
 
-const availableThemes = ['white', 'blue', 'black'];
+const availableThemes = ["white", "blue", "black"];
 
 const SliderThemeContext = React.createContext({});
 
@@ -21,7 +21,14 @@ export const ThemeSlide = ({ children, className, ...props }) => {
   const { selectedTheme } = React.useContext(SliderThemeContext);
 
   return (
-    <div className={cn('Slider__slide', `Slider__slide--${selectedTheme}`, className)} {...props}>
+    <div
+      className={cn(
+        "Slider__slide",
+        `Slider__slide--${selectedTheme}`,
+        className
+      )}
+      {...props}
+    >
       {children}
     </div>
   );
@@ -38,7 +45,7 @@ const sizes = {
 };
 
 const propTypes = {
-  size: oneOf(['small', 'default', 'large']),
+  size: oneOf(["small", "default", "large"]),
   themes: arrayOf(oneOf(availableThemes)),
   step: number,
   slides: oneOfType([
@@ -53,8 +60,14 @@ const propTypes = {
   ]),
 };
 
-export const Slider = ({ className, withSpacing, slides, themes = [], size = 'default' }) => {
-  const [selectedTheme, setTheme] = useState('white');
+export const Slider = ({
+  className,
+  withSpacing,
+  slides,
+  themes = [],
+  size = "default",
+}) => {
+  const [selectedTheme, setTheme] = useState("white");
   const containerRef = createRef();
   const [screenWidth, setScreenWidth] = useState();
   const visibleSlides = screenWidth < 768 ? 1 : 2;
@@ -63,8 +76,8 @@ export const Slider = ({ className, withSpacing, slides, themes = [], size = 'de
     const updateScreenWidth = () => setScreenWidth(window.innerWidth);
     updateScreenWidth();
 
-    window.addEventListener('resize', updateScreenWidth);
-    return () => window.removeEventListener('resize', updateScreenWidth);
+    window.addEventListener("resize", updateScreenWidth);
+    return () => window.removeEventListener("resize", updateScreenWidth);
   }, []);
 
   return (
@@ -74,10 +87,10 @@ export const Slider = ({ className, withSpacing, slides, themes = [], size = 'de
       totalSlides={slides.length}
       visibleSlides={visibleSlides}
       className={cn(
-        'Slider',
+        "Slider",
         {
-          'Slider--large': size === 'large',
-          'Slider--spaced': withSpacing,
+          "Slider--large": size === "large",
+          "Slider--spaced": withSpacing,
         },
         className
       )}
@@ -90,11 +103,18 @@ export const Slider = ({ className, withSpacing, slides, themes = [], size = 'de
             return (
               <ReactSlide
                 className="Slider__slide"
-                innerClassName={cn('Slider__slide-inner', withSpacing && 'Slider__slide-inner--spaced')}
+                innerClassName={cn(
+                  "Slider__slide-inner",
+                  withSpacing && "Slider__slide-inner--spaced"
+                )}
                 key={i}
                 index={i}
               >
-                {typeof themeSlide === 'string' ? <img alt="" src={themeSlide} /> : themeSlide}
+                {typeof themeSlide === "string" ? (
+                  <img alt="" src={themeSlide} />
+                ) : (
+                  themeSlide
+                )}
               </ReactSlide>
             );
           })}
@@ -111,7 +131,9 @@ export const Slider = ({ className, withSpacing, slides, themes = [], size = 'de
                   <div
                     className="Slider__indicator"
                     style={{
-                      width: `${(1 / (totalSlides - (visibleSlides === 2 ? 1 : 0))) * 100}%`,
+                      width: `${(1 /
+                        (totalSlides - (visibleSlides === 2 ? 1 : 0))) *
+                        100}%`,
                       transform: `translateX(${currentSlide * 100}%)`,
                     }}
                   />
@@ -125,13 +147,17 @@ export const Slider = ({ className, withSpacing, slides, themes = [], size = 'de
 
           {themes.length > 0 && (
             <div className="Slider__themes">
-              {themes.map(themeName => {
+              {themes.map((themeName) => {
                 return (
                   <button
                     key={themeName}
-                    className={cn('Slider__theme', `Slider__theme--${themeName}`, {
-                      'Slider__theme--selected': themeName === selectedTheme,
-                    })}
+                    className={cn(
+                      "Slider__theme",
+                      `Slider__theme--${themeName}`,
+                      {
+                        "Slider__theme--selected": themeName === selectedTheme,
+                      }
+                    )}
                     onClick={() => setTheme(themeName)}
                   />
                 );
