@@ -69,7 +69,6 @@
     margin-top: 32px;
     gap: 32px;
     justify-items: center;
-    width: 1242px;
     &__body {
       position: static;
       margin-top: 64px;
@@ -84,23 +83,13 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    &__slider {
-      align-items: center;
-      text-align: center;
-      height: 50px;
-      margin: 40px;
-      padding: 10px;
-    }
     &__slide {
-      width: 50px;
-      height: 50px;
-      border: solid 1px #6c6cff;
-      border-radius: 50%;
       font-size: 24px;
       line-height: 32px;
       color: white;
       background-color: $c_wood-smoke;
       border-radius: 50%;
+      width: 100px;
     }
 
     &__button {

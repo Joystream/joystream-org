@@ -69,7 +69,7 @@ function GlossaryTeams({ glossary, sliderText, cardOnClick }) {
       </div>
       <div className="GlossaryTeams__body">
         <div className="GlossaryTeams__body__slider">
-          <Slider
+          <TextSlider
             slides={sliderText}
             onclick={onSelectCarousel}
             className="GlossaryTeams__body__slider__body"
