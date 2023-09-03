@@ -27,12 +27,12 @@ export default function useAxios(url = defaultUrl) {
 export function useGetFileName() {
   const [response, loading, error] = usePromise(() => {
     return axios.get(
-      `https://api.github.com/repos/${GIT_USER_NAME}/${GIT_REPOSITY}/contents/${GIT_FOLDER}`,
-      {
-        headers: {
-          Authorization: `token ${ACCESS_TOKEN}`,
-        },
-      }
+      `https://api.github.com/repos/${GIT_USER_NAME}/${GIT_REPOSITY}/contents/${GIT_FOLDER}`
+      // {
+      //   headers: {
+      //     Authorization: `token ${ACCESS_TOKEN}`,
+      //   },
+      // }
     );
   });
 
