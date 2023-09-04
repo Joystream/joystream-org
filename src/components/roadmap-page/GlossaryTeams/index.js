@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Input from "../../Input";
+import cn from "classnames";
 
 import { ReactComponent as SearchIcon } from "../../../assets/svg/Search.svg";
 
@@ -7,16 +8,27 @@ import "./style.scss";
 
 import TextSlider from "../../TextSlider";
 import GlossaryCard from "../../GlossaryCard";
-import { Slider } from "../../Slider";
 
+const textSlider = (text) => {
+  return (
+    <div className="GlossaryTeams__body__slider__body">
+      {text.map((item, index) => (
+        <span key={index} className="GlossaryTeams__body__slider__slider">
+          {item}
+        </span>
+      ))}
+      {text.map((item, index) => (
+        <span key={index} className="GlossaryTeams__body__slider__slider">
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+};
 function GlossaryTeams({ glossary, sliderText, cardOnClick }) {
   const [searchText, setSearchText] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [filteredData, setFilteredData] = useState(glossary);
-
-  const textList = sliderText.map((str, index) => {
-    return <div key={index}>{str}</div>;
-  });
 
   const filterData = useCallback((search) => {
     const filtered = glossary.filter((item) =>
@@ -73,7 +85,7 @@ function GlossaryTeams({ glossary, sliderText, cardOnClick }) {
             slides={sliderText}
             onclick={onSelectCarousel}
             className="GlossaryTeams__body__slider__body"
-            slideClassName="GlossaryTeams__body__slider__slide"
+            slideClassName={cn("GlossaryTeams__body__slider__slide")}
             sliderClassName="GlossaryTeams__body__slider__slider"
           />
           <div className="GlossaryTeams__body__slider__cards">

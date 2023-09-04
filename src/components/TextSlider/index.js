@@ -1,69 +1,38 @@
-import React, { createRef, useState } from "react";
-import {
-  ButtonBack,
-  ButtonNext,
-  CarouselProvider,
-  Slide,
-  Slider,
-} from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
+import React, { useState } from "react";
 import { ReactComponent as ArrowSvg } from "../../assets/svg/slider_left.svg";
 
 import "./style.scss";
 
-const sizes = {
-  small: [305, 171],
-  default: [246, 152],
-  large: [441, 300],
-};
-
 function TextSlider({
   className,
-  withSpacing,
   slides,
-  size = "default",
   sliderClassName,
   slideClassName,
   onclick,
 }) {
-  const [screenWidth, setScreenWidth] = useState();
-  const visibleSlides = screenWidth < 768 ? 1 : 2;
-
-  React.useEffect(() => {
-    const updateScreenWidth = () => setScreenWidth(window.innerWidth);
-    updateScreenWidth();
-
-    window.addEventListener("resize", updateScreenWidth);
-    return () => window.removeEventListener("resize", updateScreenWidth);
-  }, []);
+  const [active, setActive] = useState([]);
 
   return (
-    <CarouselProvider
-      naturalSlideWidth={sizes[size][0] + (withSpacing ? 20 : 0)}
-      naturalSlideHeight="500"
-      totalSlides={slides.length + 1}
-      className={className}
-      visibleSlides={visibleSlides}
-    >
-      <Slider className={sliderClassName}>
+    <div className={className}>
+      <div className={sliderClassName}>
         {slides.map((tag, index) => (
-          <Slide
+          <span
             index={index}
             className={slideClassName}
             key={index}
             onClick={() => onclick(tag)}
           >
             {tag}
-          </Slide>
+          </span>
         ))}
-      </Slider>
-      <ButtonBack className="TextSlider__button TextSlider__button--backward">
+      </div>
+      <button className="TextSlider__button TextSlider__button--backward">
         <ArrowSvg className="TextSlider__button__icon--backward" />
-      </ButtonBack>
-      <ButtonNext className="TextSlider__button TextSlider__button--forward">
+      </button>
+      <button className="TextSlider__button TextSlider__button--forward">
         <ArrowSvg className="TextSlider__button__icon--forward" />
-      </ButtonNext>
-    </CarouselProvider>
+      </button>
+    </div>
   );
 }
 

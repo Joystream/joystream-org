@@ -66,13 +66,16 @@
 
   &__body__slider {
     display: grid;
-    margin-top: 32px;
+    margin: 64px 0 64px 0;
     gap: 32px;
     justify-items: center;
     &__body {
       position: static;
       margin-top: 64px;
       margin-bottom: 32px;
+      overflow-x: hidden;
+      white-space: nowrap;
+      overflow-y: hidden;
     }
 
     &__cards {
@@ -83,13 +86,27 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    &__slide {
-      font-size: 24px;
-      line-height: 32px;
-      color: white;
+    &__slider {
       background-color: $c_wood-smoke;
+      display: flex;
+      align-items: center;
+      height: 50px;
+    }
+
+    &__slide {
+      width: 48px;
+      height: 48px;
+      padding: 12px;
+      gap: 8px;
+      color: white;
+      font-size: 26px;
       border-radius: 50%;
-      width: 100px;
+      &:hover {
+        background: #5c6475;
+      }
+      &:active {
+        background: #4038ff;
+      }
     }
 
     &__button {
@@ -101,6 +118,9 @@
       letter-spacing: 0;
       color: #6c6cff;
       text-align: left;
+      &:hover {
+        background-color: #6c6cff;
+      }
     }
   }
 
