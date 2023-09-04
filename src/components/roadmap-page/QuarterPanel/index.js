@@ -24,7 +24,8 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
         new RegExp(char.title.toLowerCase(), "g"),
         `<span class= "QuarterPanel__main__underline">
           <div class = "QuarterPanel__main__underline__modal">
-            ${char.tooltip}
+            <div class = "QuarterPanel__main__underline__modal__title">${char.title}</div>
+            <div class = "QuarterPanel__main__underline__modal__body">${char.tooltip}</div>
             <button class="QuarterPanel__main__underline__modal__button" id="${i}">Click to learn more</button>
           </div>
           <span >${char.title}</span>
