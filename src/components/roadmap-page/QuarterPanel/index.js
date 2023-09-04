@@ -10,17 +10,11 @@ import scrollToIdElement from "../../../utils/scrollToIdElement";
 import MyContext from "../../../utils/useContext";
 
 const offset = 200;
-function QuarterPanel({ data, loading, error, language }) {
+function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
 
   const glossary = useContext(MyContext);
-
-  const onTooltipClick = (index) => {
-    console.log(
-      `Learn more about ${glossary[index].title}: ${glossary[index].tooltip}`
-    );
-  };
 
   const contentReplace = (search) => {
     let newStr = search;
@@ -31,13 +25,12 @@ function QuarterPanel({ data, loading, error, language }) {
         `<span class= "QuarterPanel__main__underline">
           <div class = "QuarterPanel__main__underline__modal">
             ${char.tooltip}
-            <button class="QuarterPanel__main__underline__modal__button" onclick="() => onTooltipClick(i)">Click to learn more</button>
+            <button class="QuarterPanel__main__underline__modal__button" id="${i}">Click to learn more</button>
           </div>
           <span >${char.title}</span>
         </span>`
       );
     });
-
     return newStr;
   };
 
@@ -141,6 +134,25 @@ function QuarterPanel({ data, loading, error, language }) {
     }
     return () => window.removeEventListener("scroll", handleScroll);
   }, [hash]);
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(
+      ".QuarterPanel__main__underline__modal__button"
+    );
+
+    const handleClick = (i) => {
+      const id = i.target.id;
+      glossaryPanel(id);
+    };
+    elements.forEach((element) => {
+      element.addEventListener("click", handleClick);
+    });
+    return () => {
+      elements.forEach((element) => {
+        element.removeEventListener("click", handleClick);
+      });
+    };
+  }, []);
 
   const getLink = (index, k) => {
     const url = new URL(window.location.href);

@@ -144,6 +144,7 @@ const RoadmapPage = () => {
               file={getFileName}
               data={data}
               value={selectValue}
+              selectGlossary={onCard}
             />
             <GlossaryTeams
               glossary={glossary}

@@ -98,7 +98,15 @@ const SelectOptions = ({ options, sendData, value }) => {
   );
 };
 
-const Quarters = ({ names, gitLoading, gitError, data, file, value }) => {
+const Quarters = ({
+  names,
+  gitLoading,
+  gitError,
+  data,
+  file,
+  value,
+  selectGlossary,
+}) => {
   const [oldVersionBanner, setOldVersionBanner] = useState(false);
   const [bottomBanner, setBottomBanner] = useState(true);
   const [selectValue, setSelectValue] = useState(value);
@@ -114,7 +122,6 @@ const Quarters = ({ names, gitLoading, gitError, data, file, value }) => {
 
   const { t } = useTranslation();
 
-  console.log(selectValue);
   const handleCopy = () => {
     const clipboard = new ClipboardJS(".btn");
     clipboard.on("success", () => {
@@ -206,7 +213,7 @@ const Quarters = ({ names, gitLoading, gitError, data, file, value }) => {
           )}
         </div>
       </div>
-      <QuartersListData data={data} />
+      <QuartersListData data={data} selectGlossary={selectGlossary} />
       <div className="Quarters__bottom__banner">
         {bottomBanner ? (
           <Banner
