@@ -114,14 +114,10 @@ const FoundingMembers = () => {
               i18nKey="about.foundingMembers.subtitle"
               components={{
                 linkOne: (
-<<<<<<< HEAD
                   <a
                     href="https://www.coindesk.com/business/2022/03/23/decentralized-creator-platform-joystream-raises-58m/"
                     target="_blank"
                   >
-=======
-                  <a href="https://www.coindesk.com/business/2022/03/23/decentralized-creator-platform-joystream-raises-58m/" target="_blank">
->>>>>>> origin/master
                     Jsgenesis
                   </a>
                 ),
