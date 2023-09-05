@@ -11,6 +11,7 @@ const offset = 300;
 function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
+  const [activeLinkIcon, setActiveLinkIcon] = useState(-1);
 
   const glossary = useContext(MyContext);
 
@@ -174,11 +175,13 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
     const clipboard = new ClipboardJS(".linkBtn");
     clipboard.on("success", () => {
-      alert("Successfully!");
+      setActiveLinkIcon(k);
+      setTimeout(() => {
+        setActiveLinkIcon(-1);
+      }, 2000);
       clipboard.destroy();
     });
     clipboard.on("error", () => {
-      alert("Failed to copy!");
       clipboard.destroy();
     });
   };
@@ -236,7 +239,11 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
                           )}
                         </div>
                         <div className="QuarterPanel__main__linkIcon">
-                          <TooltipPanel text={"Copy link to share"}>
+                          <TooltipPanel
+                            text={"Copy link to share"}
+                            activeState={k === activeLinkIcon}
+                            activeText={"Link copied to the clipboard!"}
+                          >
                             <button
                               className="QuarterPanel__main__linkIcon__icon linkBtn"
                               data-clipboard-text={window.location.href}

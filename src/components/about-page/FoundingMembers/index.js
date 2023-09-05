@@ -115,7 +115,7 @@ const FoundingMembers = () => {
               components={{
                 linkOne: (
                   <a
-                    href="https://joystream.gitbook.io/testnet-workspace/glossary#jsgenesis"
+                    href="https://www.coindesk.com/business/2022/03/23/decentralized-creator-platform-joystream-raises-58m/"
                     target="_blank"
                   >
                     Jsgenesis
