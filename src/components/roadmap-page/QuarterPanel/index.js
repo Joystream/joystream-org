@@ -2,14 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import cn from "classnames";
 import ClipboardJS from "clipboard";
 
-import { ReactComponent as PlayIcon } from "../../../assets/svg/icon-play.svg";
-
 import "./style.scss";
 import TooltipPanel from "../../Tooltip";
 import scrollToIdElement from "../../../utils/scrollToIdElement";
 import MyContext from "../../../utils/useContext";
 
-const offset = 200;
+const offset = 300;
 function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
@@ -84,7 +82,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
         "QuarterPanel__main__line__dot--sticky"
       );
     } else {
-      timeLineItems[0].classList.remove(
+      timeLineItems[activeItem].classList.remove(
         "QuarterPanel__main__line__dot--sticky"
       );
     }
@@ -104,6 +102,11 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       timeLineText[activeText + 1].classList.remove(
         "QuarterPanel__main__title--active"
       );
+      timeLineText[activeText].classList.remove(
+        "QuarterPanel__main__title--last"
+      );
+    } else {
+      timeLineText[activeText].classList.add("QuarterPanel__main__title--last");
     }
   }, [activeText]);
 
@@ -206,7 +209,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
           <div className="QuarterPanel__main" key={index}>
             <div className="QuarterPanel__main__rigth">
               <div className="QuarterPanel__main__title">
-                <div className="QuarterPanel__main__subtitle">{data.year}</div>
+                <div className="QuarterPanel__main__subtitle">{res.year}</div>
                 <div className="QuarterPanel__main__quarters">{res.id}</div>
               </div>
             </div>
@@ -220,13 +223,17 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
                   >
                     <div className="QuarterPanel__main__timeline">
                       <div className="QuarterPanel__main__line__dot" />
-                      <div className="QuarterPanel__main__line" />
+                      <div className="QuarterPanel__main__line__line" />
                     </div>
 
                     <div className="QuarterPanel__main__panel">
                       <div className="QuarterPanel__main__link">
                         <div className="QuarterPanel__main__playIcon">
-                          <PlayIcon />
+                          {milestones.icon ? (
+                            <img src={milestones.icon} alt="Mileston icon" />
+                          ) : (
+                            <></>
+                          )}
                         </div>
                         <div className="QuarterPanel__main__linkIcon">
                           <TooltipPanel text={"Copy link to share"}>

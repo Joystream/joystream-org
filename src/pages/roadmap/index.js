@@ -39,13 +39,6 @@ const RoadmapPage = () => {
 
   const [data, setData] = useState([]);
 
-  const getFileName = (name) => {
-    if (typeof window !== "undefined") {
-      window.location.href = `#${fileName}`;
-    }
-    setFileName(name);
-  };
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       const initfileName = new URL(window.location.href);
@@ -86,6 +79,13 @@ const RoadmapPage = () => {
 
       setData(filedata.data);
     };
+
+    if (typeof window !== "undefined") {
+      const url = window.location.href;
+      var newUrl = url.replace(url.split("#")[1], fileName);
+      console.log(newUrl);
+      window.location.href = `#${fileName}`;
+    }
 
     fetchFileData();
   }, [fileName]);
@@ -141,7 +141,7 @@ const RoadmapPage = () => {
               names={names}
               gitError={gitError}
               gitLoading={gitLoading}
-              file={getFileName}
+              file={setFileName}
               data={data}
               value={selectValue}
               selectGlossary={onCard}

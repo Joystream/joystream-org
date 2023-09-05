@@ -108,7 +108,6 @@ const Quarters = ({
   selectGlossary,
 }) => {
   const [oldVersionBanner, setOldVersionBanner] = useState(false);
-  const [bottomBanner, setBottomBanner] = useState(true);
   const [selectValue, setSelectValue] = useState(value);
   const [copyState, setCopyState] = useState(false);
   let quartersSelects = [];
@@ -200,7 +199,7 @@ const Quarters = ({
               }
               label={
                 <button
-                  onClick={() => setSelectValue(0)}
+                  onClick={() => selected(0)}
                   className="Quarters__top__banner__button"
                 >
                   Change to current version
@@ -215,19 +214,14 @@ const Quarters = ({
       </div>
       <QuartersListData data={data} selectGlossary={selectGlossary} />
       <div className="Quarters__bottom__banner">
-        {bottomBanner ? (
-          <Banner
-            icon={<Notic />}
-            className="Quarters__bottom__banner__item"
-            title={"Disclaimer"}
-            information={
-              "The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader's own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap."
-            }
-            close={() => setBottomBanner(false)}
-          />
-        ) : (
-          <></>
-        )}
+        <Banner
+          icon={<Notic />}
+          className="Quarters__bottom__banner__item"
+          title={"Disclaimer"}
+          information={
+            "The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader's own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap."
+          }
+        />
       </div>
     </div>
   );

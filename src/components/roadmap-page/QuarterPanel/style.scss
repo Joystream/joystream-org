@@ -1,6 +1,6 @@
 @import "../../../styles/_main";
 
-$offsetTop: 200px;
+$offsetTop: 300px;
 
 .QuarterPanel__submain {
   display: grid;
@@ -27,19 +27,24 @@ $offsetTop: 200px;
     width: 182px;
     margin-top: 20px;
     text-align: right;
+    background-color: #f2f5f9;
   }
 
   &__title {
-    position: relative;
     position: sticky;
     top: $offsetTop;
     align-items: end;
     flex-direction: column;
     text-align: right;
     opacity: 0.4;
-
+    background-color: #f2f5f9;
+    margin-bottom: -100px;
+    transition: opacity 0.3s ease-in-out;
     &--active {
       opacity: 1;
+    }
+    &--last {
+      margin-bottom: 0px;
     }
   }
 
@@ -76,15 +81,10 @@ $offsetTop: 200px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 136px;
   }
 
   &__line {
-    top: 1px;
-    left: 10px;
-    width: 4px;
-    height: -webkit-fill-available;
-    background-color: $c_neutral-200;
-
     &__dot {
       width: 24px;
       height: 24px;
@@ -105,6 +105,14 @@ $offsetTop: 200px;
         position: sticky;
       }
     }
+    &__line {
+      top: 1px;
+      left: 10px;
+      width: 4px;
+      height: -webkit-fill-available;
+      background-color: $c_neutral-200;
+      margin-top: -28px;
+    }
   }
 
   &__panel__loading {
@@ -118,12 +126,11 @@ $offsetTop: 200px;
 
   &__panel {
     width: 500px;
-    margin: 30px 0;
+    margin: 24px 0;
     padding: 24px;
     background: white;
     border-radius: 4px;
     opacity: 0.4;
-    gap: 16px;
 
     &--active {
       opacity: 1;
@@ -228,6 +235,12 @@ $offsetTop: 200px;
     }
   }
 
+  &__playIcon {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+  }
+
   // @media #{$screen-max-sm} {
   //   &__panel {
   //     gap: 1px;
@@ -266,29 +279,4 @@ $offsetTop: 200px;
   //     width: auto;
   //   }
   // }
-}
-
-.scroll-element {
-  position: relative;
-  overflow: hidden;
-}
-
-.scroll-element > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateY(0);
-  animation: scroll 10s linear infinite;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
 }

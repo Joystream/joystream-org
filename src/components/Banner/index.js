@@ -9,9 +9,13 @@ function Banner({ icon, title, information, label, className, close }) {
       <div className="Banner__head">
         <span className="Banner__icon">{icon}</span>
         <span className="Banner__title">{title}</span>
-        <button className="Banner__close" onClick={close}>
-          <Close className="Banner__icon" />
-        </button>
+        {close ? (
+          <button className="Banner__close" onClick={close}>
+            <Close className="Banner__icon" />
+          </button>
+        ) : (
+          <></>
+        )}
       </div>
       <div className="Banner__content">{information}</div>
       {label}
