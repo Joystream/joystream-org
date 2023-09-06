@@ -8,8 +8,8 @@ export const verifiedMembers = [
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/6.png',
   },
   {
-    memberHandle: 'enjoythefood',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/19.png',
+    memberHandle: 'l1dev',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/8.png',
   },
   {
     memberHandle: 'freakstatic',
@@ -35,8 +35,8 @@ export const verifiedMembers = [
     },
   },
   {
-    memberHandle: 'l1dev',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/8.png',
+    memberHandle: 'enjoythefood',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/19.png',
   },
   {
     memberHandle: 'cheomsk',

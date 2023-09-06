@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import cn from 'classnames';
 import { Link } from 'gatsby-plugin-react-i18next';
 
+import useWindowDimensions from '../../utils/useWindowDimensions';
+
 import TelegramIcon from '../../assets/images/telegram.webp';
 import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
 import { ReactComponent as EmailIcon } from '../../assets/svg/email.svg';
@@ -14,7 +16,6 @@ import { ReactComponent as ForbiddenIcon } from '../../assets/svg/forbidden.svg'
 import { ReactComponent as DownIcon } from '../../assets/svg/down.svg';
 
 import './style.scss';
-import { useTransition } from 'react';
 
 const MemberCard = ({ img, name, title, t }) => {
   return (
@@ -124,8 +125,9 @@ const SafetyCard = ({ name, safetyItems, t }) => {
 
 const OtherMembers = ({ otherMembers, t }) => {
   const [shouldShowInitialMembers, setShouldShowInitialMembers] = useState(true);
+  const { width } = useWindowDimensions();
 
-  const initialRenderedMembers = otherMembers.slice(0, 6);
+  const initialRenderedMembers = otherMembers.slice(0, width > 991 ? 6 : width > 767 ? 5 : 4);
   const remainingMembersNumber = otherMembers.length - initialRenderedMembers.length;
   const membersToRender = shouldShowInitialMembers ? initialRenderedMembers : otherMembers;
 
