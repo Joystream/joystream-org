@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Input from "../../Input";
-import cn from "classnames";
 
 import { ReactComponent as SearchIcon } from "../../../assets/svg/Search.svg";
 
@@ -49,7 +48,14 @@ function GlossaryTeams({ glossary, sliderText, cardOnClick }) {
   }, [glossary]);
 
   const onSelectCarousel = (e) => {
-    filterData(e);
+    const filtered = glossary.filter((item) =>
+      item.title
+        .toLowerCase()
+        .charAt(0)
+        .includes(e.toLowerCase())
+    );
+
+    setFilteredData(filtered);
   };
 
   return (
@@ -85,7 +91,7 @@ function GlossaryTeams({ glossary, sliderText, cardOnClick }) {
             slides={sliderText}
             onclick={onSelectCarousel}
             className="GlossaryTeams__body__slider__body"
-            slideClassName={cn("GlossaryTeams__body__slider__slide")}
+            slideClassName="GlossaryTeams__body__slider__slide"
             sliderClassName="GlossaryTeams__body__slider__slider"
           />
           <div className="GlossaryTeams__body__slider__cards">

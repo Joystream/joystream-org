@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ReactComponent as ArrowSvg } from "../../assets/svg/slider_left.svg";
+import cn from "classnames";
 
 import "./style.scss";
 
@@ -10,7 +11,7 @@ function TextSlider({
   slideClassName,
   onclick,
 }) {
-  const [active, setActive] = useState([]);
+  const [active, setActive] = useState(-1);
 
   return (
     <div className={className}>
@@ -18,9 +19,14 @@ function TextSlider({
         {slides.map((tag, index) => (
           <span
             index={index}
-            className={slideClassName}
+            className={cn(slideClassName, {
+              "TextSlider__button--active": index === active,
+            })}
             key={index}
-            onClick={() => onclick(tag)}
+            onClick={() => {
+              index === active ? onclick("") : onclick(tag);
+              index === active ? setActive(-1) : setActive(index);
+            }}
           >
             {tag}
           </span>

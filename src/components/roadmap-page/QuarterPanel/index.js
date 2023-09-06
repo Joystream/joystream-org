@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import cn from "classnames";
 import ClipboardJS from "clipboard";
 
 import "./style.scss";
@@ -7,7 +6,7 @@ import TooltipPanel from "../../Tooltip";
 import scrollToIdElement from "../../../utils/scrollToIdElement";
 import MyContext from "../../../utils/useContext";
 
-const offset = 300;
+export const offset = 300;
 function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
@@ -36,8 +35,8 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
   const result = data.language === language ? data : false;
 
-  const url = new URL(window.location.href);
-  const hash = url.hash.split("#")[2];
+  // const url = new URL(window.location.href);
+  // const hash = url.hash.split("#")[2];
 
   useEffect(() => {
     const timeLineItems = document.querySelectorAll(
@@ -134,17 +133,25 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       });
     };
     window.addEventListener("scroll", handleScroll);
-    if (hash) {
-      scrollToIdElement(hash);
-    }
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [hash]);
 
+  const url = new URL(window.location.href);
+  const hash = url.hash.split("#")[2];
   useEffect(() => {
+    if (hash) {
+      const target = document.getElementById(hash);
+      if (!target) return;
+      window.scrollTo({
+        top: target.offsetTop - offset + 30,
+        behavior: "smooth",
+      });
+    }
+
     const elements = document.querySelectorAll(
       ".QuarterPanel__main__underline__modal__button"
     );
-
     const handleClick = (i) => {
       const id = i.target.id;
       glossaryPanel(id);
@@ -159,18 +166,16 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     };
   }, []);
 
-  const getLink = (index, k) => {
+  const getLink = (k) => {
+    console.log(k);
     const url = new URL(window.location.href);
     const period = url.hash.split("#")[2];
 
     if (period) {
-      url.hash = `panel${index}_${k}`;
-      window.location.href = window.location.href.replace(
-        period,
-        `panel${index}_${k}`
-      );
+      url.hash = `panel$${k}`;
+      window.location.href = window.location.href.replace(period, `panel${k}`);
     } else {
-      window.location.href = window.location.href + `#panel${index}_${k}`;
+      window.location.href = window.location.href + `#panel${k}`;
     }
 
     const clipboard = new ClipboardJS(".linkBtn");
@@ -222,7 +227,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
                   <div
                     className="QuarterPanel__submain"
                     key={k}
-                    id={`panel${index}_${k}`}
+                    id={`panel${k + index * res.deliveryMilestones.length}`}
                   >
                     <div className="QuarterPanel__main__timeline">
                       <div className="QuarterPanel__main__line__dot" />
@@ -241,13 +246,20 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
                         <div className="QuarterPanel__main__linkIcon">
                           <TooltipPanel
                             text={"Copy link to share"}
-                            activeState={k === activeLinkIcon}
+                            activeState={
+                              k + index * res.deliveryMilestones.length ===
+                              activeLinkIcon
+                            }
                             activeText={"Link copied to the clipboard!"}
                           >
                             <button
                               className="QuarterPanel__main__linkIcon__icon linkBtn"
                               data-clipboard-text={window.location.href}
-                              onClick={() => getLink(index, k)}
+                              onClick={() =>
+                                getLink(
+                                  k + index * res.deliveryMilestones.length
+                                )
+                              }
                             />
                           </TooltipPanel>
                         </div>

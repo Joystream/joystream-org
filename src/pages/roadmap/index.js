@@ -83,7 +83,6 @@ const RoadmapPage = () => {
     if (typeof window !== "undefined") {
       const url = window.location.href;
       var newUrl = url.replace(url.split("#")[1], fileName);
-      console.log(newUrl);
       window.location.href = `#${fileName}`;
     }
 

@@ -9,6 +9,10 @@
   cursor: pointer;
   border-radius: 50%;
 
+  &--active {
+    background-color: #4038ff;
+  }
+
   &__icon {
     &--backward {
       transform: rotate(180deg);

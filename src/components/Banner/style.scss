@@ -10,9 +10,12 @@
   gap: 16px;
 
   &__head {
-    display: flex;
-    align-items: center;
-    justify-items: center;
+    display: grid;
+    flex-direction: column;
+    gap: 30px;
+    grid-gap: 8px;
+    grid-template-columns: 36px 650px 30px;
+    margin-top: -25px;
   }
 
   &__title {
@@ -25,7 +28,6 @@
     letter-spacing: 0;
     color: #0b0c0f;
     text-align: left;
-    width: 1500px;
   }
 
   &__content {
@@ -50,5 +52,17 @@
     width: -webkit-fill-available;
     height: 16px;
     align-items: end;
+    z-index: 5;
+  }
+  @media (max-width: 1020px) {
+    width: 335px;
+    padding: 24px;
+    gap: 16px;
+    &__head {
+      display: flex;
+    }
+    &__icon {
+      display: block;
+    }
   }
 }

@@ -5,19 +5,22 @@ $offsetTop: 300px;
 .QuarterPanel__submain {
   display: grid;
   flex-direction: column;
-  width: 818px;
   gap: 30px;
-  grid-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  grid-template-columns: 76px 500px;
+  @media (max-width: 1020px) {
+    width: 275px;
+    grid-template-columns: 40px 227px;
+  }
 }
 
 .QuarterPanel__main {
   display: grid;
   flex-direction: column;
-  width: 1000px;
+  width: 818px;
   gap: 30px;
   grid-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 182px 616px;
 
   &__rigth {
     position: relative;
@@ -81,7 +84,7 @@ $offsetTop: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 136px;
+    width: 136px px;
   }
 
   &__line {
@@ -153,6 +156,7 @@ $offsetTop: 300px;
       letter-spacing: 0;
       color: $c_panel_content;
       text-align: left;
+      margin-top: 4px;
     }
   }
 
@@ -241,42 +245,34 @@ $offsetTop: 300px;
     border-radius: 50%;
   }
 
-  // @media #{$screen-max-sm} {
-  //   &__panel {
-  //     gap: 1px;
-  //     width: 227px;
-  //   }
-  //   &__timeline {
-  //     width: 40px;
-  //   }
-  //   &__rigth {
-  //     width: auto;
-  //   }
-  // }
-
-  // @media #{$screen-sm} {
-  //   &__panel {
-  //     gap: 1px;
-  //     width: 227px;
-  //   }
-  //   &__timeline {
-  //     width: 40px;
-  //   }
-  //   &__rigth {
-  //     width: auto;
-  //   }
-  // }
-
-  // @media (max-width: 550px) {
-  //   &__panel {
-  //     gap: 1px;
-  //     width: 227px;
-  //   }
-  //   &__timeline {
-  //     width: 40px;
-  //   }
-  //   &__rigth {
-  //     width: auto;
-  //   }
-  // }
+  @media (max-width: 1020px) {
+    width: 355px;
+    grid-template-columns: 70px 245px;
+    grid-gap: 0px;
+    &__subtitle {
+      //styleName: h5;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 0px;
+    }
+    &__quarters {
+      //styleName: h6;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0px;
+    }
+    &__panel {
+      gap: 1px;
+      width: 227px;
+      padding: 16px;
+    }
+    &__timeline {
+      width: 40px;
+    }
+    &__rigth {
+      width: auto;
+    }
+  }
 }
