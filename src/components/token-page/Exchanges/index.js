@@ -21,7 +21,7 @@ const ExchangeSection = ({ exchangeIcon, exchangeName, exchangeDescription, exch
 
 const Exchanges = ({ t }) => {
   return (
-    <section className="TokenPage__exchanges-wrapper">
+    <section className="TokenPage__exchanges-wrapper" id="exchanges">
       <div className="TokenPage__exchanges">
         <header className="TokenPage__exchanges__header">
           <span className="TokenPage__exchanges__header__section-title">{t('token.exchanges.sectionTitle')}</span>
