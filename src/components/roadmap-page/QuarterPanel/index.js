@@ -135,7 +135,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [hash]);
+  });
 
   const url = new URL(window.location.href);
   const hash = url.hash.split("#")[2];
@@ -281,6 +281,20 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
           </div>
         );
       })}
+      <div className="QuarterPanel__main">
+        <div className="QuarterPanel__main__rigth__bottom"></div>
+        <div className="QuarterPanel__submain__bottom">
+          <div className="QuarterPanel__main__timeline__bottom">
+            <div className="QuarterPanel__main__line__line" />
+            <div className="QuarterPanel__main__line__dot__bottom" />
+          </div>
+          <div className="QuarterPanel__main__panel__bottom">
+            <div className="QuarterPanel__main__panel__content">
+              More plans will be announced over time.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

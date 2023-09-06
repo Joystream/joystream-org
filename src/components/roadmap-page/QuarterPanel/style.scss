@@ -8,9 +8,20 @@ $offsetTop: 300px;
   gap: 30px;
   grid-gap: 8px;
   grid-template-columns: 76px 500px;
+  &__bottom {
+    display: grid;
+    flex-direction: column;
+    gap: 30px;
+    grid-gap: 8px;
+    grid-template-columns: 76px 500px;
+  }
   @media (max-width: 1020px) {
     width: 275px;
     grid-template-columns: 40px 227px;
+    &__bottom {
+      width: 275px;
+      grid-template-columns: 40px 227px;
+    }
   }
 }
 
@@ -84,7 +95,12 @@ $offsetTop: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 136px px;
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   &__line {
@@ -93,6 +109,12 @@ $offsetTop: 300px;
       height: 24px;
       background-color: $c_neutral-200;
       border-radius: 50%;
+      &__bottom {
+        width: 24px;
+        height: 24px;
+        background-color: $c_neutral-200;
+        border-radius: 50%;
+      }
 
       &--active {
         position: fixed;
@@ -115,6 +137,15 @@ $offsetTop: 300px;
       height: -webkit-fill-available;
       background-color: $c_neutral-200;
       margin-top: -28px;
+
+      &__bottom {
+        top: 1px;
+        left: 10px;
+        width: 4px;
+        height: -webkit-fill-available;
+        background-color: $c_neutral-200;
+        margin-top: -28px;
+      }
     }
   }
 
@@ -139,6 +170,13 @@ $offsetTop: 300px;
       opacity: 1;
     }
 
+    &__bottom {
+      width: 500px;
+      margin: 24px 0;
+      padding: 24px;
+      background: white;
+      border-radius: 4px;
+    }
     &__title {
       //styleName: h7;
       font-size: 20px;
@@ -267,6 +305,10 @@ $offsetTop: 300px;
       gap: 1px;
       width: 227px;
       padding: 16px;
+      &__bottom {
+        width: 227px;
+        padding: 16px;
+      }
     }
     &__timeline {
       width: 40px;
