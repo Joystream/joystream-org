@@ -37,55 +37,15 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
   const result = data.language === language ? data : false;
 
-  useEffect(() => {
-    const timeLineItems = document.querySelectorAll(
-      ".QuarterPanel__main__line__dot"
-    );
+  const timeLineItems = document.querySelectorAll(
+    ".QuarterPanel__main__line__dot"
+  );
 
-    const timeLinePanel = document.querySelectorAll(
-      ".QuarterPanel__main__panel"
-    );
+  const timeLinePanel = document.querySelectorAll(".QuarterPanel__main__panel");
 
-    if (activeItem < timeLineItems.length) {
-      timeLineItems[activeItem].classList.add(
-        "QuarterPanel__main__line__dot--active"
-      );
-      timeLineItems[activeItem].classList.remove(
-        "QuarterPanel__main__line__dot--hide"
-      );
-      timeLinePanel[activeItem].classList.add(
-        "QuarterPanel__main__panel--active"
-      );
-    }
-
-    if (activeItem > 0) {
-      timeLineItems[activeItem - 1].classList.add(
-        "QuarterPanel__main__line__dot--hide"
-      );
-      timeLinePanel[activeItem - 1].classList.remove(
-        "QuarterPanel__main__panel--active"
-      );
-    }
-
-    if (activeItem < timeLineItems.length - 1) {
-      timeLineItems[activeItem + 1].classList.remove(
-        "QuarterPanel__main__line__dot--active"
-      );
-      timeLinePanel[activeItem + 1].classList.remove(
-        "QuarterPanel__main__panel--active"
-      );
-    }
-
-    if (activeItem === 0 || activeItem === timeLineItems.length - 1) {
-      timeLineItems[activeItem].classList.add(
-        "QuarterPanel__main__line__dot--sticky"
-      );
-    } else {
-      timeLineItems[activeItem].classList.remove(
-        "QuarterPanel__main__line__dot--sticky"
-      );
-    }
-  }, [activeItem]);
+  const lastItem = document.querySelector(
+    ".QuarterPanel__main__line__dotbottom"
+  );
 
   useEffect(() => {
     const timeLineText = document.querySelectorAll(
@@ -116,18 +76,17 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
       timelineItems.forEach((item, index) => {
         const itemTop = item.offsetTop;
-        const { bottom } = item.getBoundingClientRect();
-
-        if (
-          (index === 0 && scrollPosition < itemTop - offset) ||
-          (index === timelineItems.length - 1 &&
-            scrollPosition > itemTop - offset + 150)
+        const itemHight = item.offsetHeight;
+        if (index === 0 && scrollPosition < itemTop - offset) {
+          setDotActiveState(false);
+        } else if (
+          index === timelineItems.length - 1 &&
+          scrollPosition > itemTop - offset + itemHight
         ) {
-          console.log(bottom);
-          console.log(itemTop, scrollPosition);
-        }
-        if (scrollPosition > itemTop - offset) {
+          setDotActiveState(false);
+        } else if (scrollPosition > itemTop - offset) {
           setActiveItem(index);
+          setDotActiveState(true);
         }
       });
 
@@ -140,6 +99,31 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
           setActiveText(index);
         }
       });
+
+      console.log(
+        scrollPosition,
+        timelineText[activeText].offsetTop +
+          timelineText[activeText].offsetHeight
+      );
+      if (
+        scrollPosition >
+        timelineText[activeText].offsetTop +
+          timelineText[activeText].offsetHeight -
+          offset -
+          100
+      ) {
+        const opacity =
+          scrollPosition -
+          timelineText[activeText].offsetTop -
+          timelineText[activeText].offsetHeight -
+          100 -
+          offset;
+
+        console.log(-(opacity / 100 + 7));
+        timelineText[activeText].style.opacity = -opacity / 100 - 7;
+      } else {
+        timelineText[activeText].style.opacity = 1;
+      }
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -198,6 +182,62 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     });
   };
 
+  if (dotActiveState) {
+    timeLineItems[activeItem].classList.add(
+      "QuarterPanel__main__line__dot--active"
+    );
+    timeLinePanel[activeItem].classList.add(
+      "QuarterPanel__main__panel--active"
+    );
+
+    timeLineItems[activeItem].classList.remove(
+      "QuarterPanel__main__line__dot--hide"
+    );
+
+    if (activeItem > 0) {
+      timeLineItems[activeItem - 1].classList.add(
+        "QuarterPanel__main__line__dot--hide"
+      );
+      timeLinePanel[activeItem - 1].classList.remove(
+        "QuarterPanel__main__panel--active"
+      );
+    }
+    if (activeItem < timeLineItems.length - 1) {
+      timeLineItems[activeItem + 1].classList.remove(
+        "QuarterPanel__main__line__dot--active"
+      );
+      timeLinePanel[activeItem + 1].classList.remove(
+        "QuarterPanel__main__panel--active"
+      );
+    }
+    timeLineItems[activeItem].classList.remove(
+      "QuarterPanel__main__line__dot--stick"
+    );
+    lastItem.classList.remove("QuarterPanel__main__line__dot--stick");
+  } else {
+    if (timeLineItems.length !== 0 || timeLinePanel.length !== 0) {
+      for (let i = 0; i < timeLineItems.length; i++) {
+        timeLinePanel[i].classList.remove("QuarterPanel__main__panel--active");
+
+        timeLineItems[i].classList.remove(
+          "QuarterPanel__main__line__dot--active"
+        );
+      }
+
+      if (activeItem === 0) {
+        console.log("false");
+        timeLineItems[activeItem].classList.add(
+          "QuarterPanel__main__line__dot--stick"
+        );
+      } else if (activeItem + 1 === timeLineItems.length - 1) {
+        lastItem.classList.add("QuarterPanel__main__line__dot--stick");
+      }
+    }
+  }
+  if (timeLineItems.length !== 0)
+    timeLineItems[timeLineItems.length - 1].classList.add(
+      "QuarterPanel__main__line__dot--last"
+    );
   if (!result) return <></>;
 
   if (loading) {
@@ -289,7 +329,12 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
         );
       })}
       <div className="QuarterPanel__main">
-        <div className="QuarterPanel__main__rigth__bottom"></div>
+        <div className="QuarterPanel__main__rigth">
+          <div className="QuarterPanel__main__title">
+            <div className="QuarterPanel__main__subtitle"></div>
+            <div className="QuarterPanel__main__quarters"></div>
+          </div>
+        </div>
         <div className="QuarterPanel__submain">
           <div className="QuarterPanel__main__timeline">
             <div className="QuarterPanel__main__line__dot" />

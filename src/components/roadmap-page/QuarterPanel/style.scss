@@ -117,6 +117,7 @@ $offsetTop: 300px;
       border-radius: 50%;
 
       &--active {
+        width: 24px !important;
         position: fixed;
         top: $offsetTop - 24;
         background: #4038ff;
@@ -126,8 +127,13 @@ $offsetTop: 300px;
         opacity: 0%;
       }
 
-      &--sticky {
-        position: sticky;
+      &--stick {
+        position: relative;
+        background: #4038ff;
+      }
+
+      &--last {
+        width: 1px;
       }
     }
     &__line {
