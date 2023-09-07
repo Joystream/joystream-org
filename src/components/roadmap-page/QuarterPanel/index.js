@@ -5,12 +5,14 @@ import "./style.scss";
 import TooltipPanel from "../../Tooltip";
 import scrollToIdElement from "../../../utils/scrollToIdElement";
 import MyContext from "../../../utils/useContext";
+import scrollToActiveElement from "../../../utils/scrollToActiveElement";
 
 export const offset = 300;
 function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
   const [activeLinkIcon, setActiveLinkIcon] = useState(-1);
+  const [dotActiveState, setDotActiveState] = useState(false);
 
   const glossary = useContext(MyContext);
 
@@ -114,6 +116,16 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
       timelineItems.forEach((item, index) => {
         const itemTop = item.offsetTop;
+        const { bottom } = item.getBoundingClientRect();
+
+        if (
+          (index === 0 && scrollPosition < itemTop - offset) ||
+          (index === timelineItems.length - 1 &&
+            scrollPosition > itemTop - offset + 150)
+        ) {
+          console.log(bottom);
+          console.log(itemTop, scrollPosition);
+        }
         if (scrollPosition > itemTop - offset) {
           setActiveItem(index);
         }
@@ -134,17 +146,14 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     return () => window.removeEventListener("scroll", handleScroll);
   });
 
-  const url = new URL(window.location.href);
-  const hash = url.hash.split("#")[2];
-
   useEffect(() => {
+    const url = new URL(window.location.href);
+    const hash = url.hash.split("#")[2];
+
     if (hash) {
       const target = document.getElementById(hash);
       if (!target) return;
-      window.scrollTo({
-        top: target.offsetTop - offset + 30,
-        behavior: "smooth",
-      });
+      scrollToActiveElement(hash);
     }
 
     const handleClick = (i) => {
@@ -285,7 +294,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
           <div className="QuarterPanel__main__timeline">
             <div className="QuarterPanel__main__line__dot" />
             <div className="QuarterPanel__main__line__line" />
-            <div className="QuarterPanel__main__line__dot__bottom" />
+            <div className="QuarterPanel__main__line__dotbottom" />
           </div>
           <div className="QuarterPanel__main__panel">
             <div className="QuarterPanel__main__panel__content">

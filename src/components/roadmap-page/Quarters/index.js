@@ -15,7 +15,7 @@ import { ReactComponent as NoticEnable } from "../../../assets/svg/banner_warnin
 import QuartersListData from "../QuartersListData";
 import TooltipPanel from "../../Tooltip";
 import Banner from "../../Banner";
-import scrollToIdElement from "../../../utils/scrollToIdElement";
+import scrollToActiveElement from "../../../utils/scrollToActiveElement";
 
 const SelectOptions = ({ options, sendData, value }) => {
   const [isActive, setIsActive] = useState(false);
@@ -111,7 +111,7 @@ const Quarters = ({
   const [selectValue, setSelectValue] = useState(value);
   const [copyState, setCopyState] = useState(false);
   const [quartersSelects, setQuartersSelects] = useState([]);
-
+  const initfileName = new URL(window.location.href);
   const { t } = useTranslation();
 
   const handleCopy = () => {
@@ -144,12 +144,6 @@ const Quarters = ({
   };
 
   useEffect(() => {
-    if (value > 0) {
-      scrollToIdElement("select_quater");
-    }
-  }, []);
-
-  useEffect(() => {
     if (names && !gitLoading && !gitError) {
       setQuartersSelects(
         names.fileNames.reverse().map((name, index) => ({
@@ -159,10 +153,8 @@ const Quarters = ({
       );
     }
 
-    const initfileName = new URL(window.location.href);
-
     if (initfileName.hash.split("#")[1] === "undefined" && names) {
-      file(names.fileNames[0]); /// init value
+      if (names.fileNames[0]) file(names.fileNames[0]); /// init value
     }
   }, [names]);
 

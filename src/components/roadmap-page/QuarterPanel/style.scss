@@ -104,17 +104,17 @@ $offsetTop: 300px;
   }
 
   &__line {
+    &__dotbottom {
+      width: 24px;
+      height: 32px;
+      background-color: $c_neutral-200;
+      border-radius: 50%;
+    }
     &__dot {
       width: 24px;
       height: 24px;
       background-color: $c_neutral-200;
       border-radius: 50%;
-      &__bottom {
-        width: 24px;
-        height: 24px;
-        background-color: $c_neutral-200;
-        border-radius: 50%;
-      }
 
       &--active {
         position: fixed;
