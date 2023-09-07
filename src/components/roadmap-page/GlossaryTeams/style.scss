@@ -53,6 +53,14 @@
       margin-top: 20px;
     }
 
+    &__closeicon {
+      position: absolute;
+      right: 10px;
+      margin-top: -37px;
+      opacity: 0.4;
+      height: 15px;
+      width: 15px;
+    }
     &__inputbox {
       margin-left: 10px;
       padding-left: 28px;
@@ -120,7 +128,8 @@
       color: #6c6cff;
       text-align: left;
       &:hover {
-        background-color: #6c6cff;
+        border-bottom: solid 1px #6c6cff;
+        cursor: pointer;
       }
     }
   }

@@ -35,9 +35,6 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
   const result = data.language === language ? data : false;
 
-  // const url = new URL(window.location.href);
-  // const hash = url.hash.split("#")[2];
-
   useEffect(() => {
     const timeLineItems = document.querySelectorAll(
       ".QuarterPanel__main__line__dot"
@@ -139,6 +136,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
   const url = new URL(window.location.href);
   const hash = url.hash.split("#")[2];
+
   useEffect(() => {
     if (hash) {
       const target = document.getElementById(hash);
@@ -149,13 +147,13 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       });
     }
 
-    const elements = document.querySelectorAll(
-      ".QuarterPanel__main__underline__modal__button"
-    );
     const handleClick = (i) => {
       const id = i.target.id;
       glossaryPanel(id);
     };
+    const elements = document.querySelectorAll(
+      ".QuarterPanel__main__underline__modal__button"
+    );
     elements.forEach((element) => {
       element.addEventListener("click", handleClick);
     });
@@ -167,7 +165,6 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
   }, []);
 
   const getLink = (k) => {
-    console.log(k);
     const url = new URL(window.location.href);
     const period = url.hash.split("#")[2];
 
@@ -179,6 +176,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     }
 
     const clipboard = new ClipboardJS(".linkBtn");
+
     clipboard.on("success", () => {
       setActiveLinkIcon(k);
       setTimeout(() => {
@@ -283,12 +281,13 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       })}
       <div className="QuarterPanel__main">
         <div className="QuarterPanel__main__rigth__bottom"></div>
-        <div className="QuarterPanel__submain__bottom">
-          <div className="QuarterPanel__main__timeline__bottom">
+        <div className="QuarterPanel__submain">
+          <div className="QuarterPanel__main__timeline">
+            <div className="QuarterPanel__main__line__dot" />
             <div className="QuarterPanel__main__line__line" />
             <div className="QuarterPanel__main__line__dot__bottom" />
           </div>
-          <div className="QuarterPanel__main__panel__bottom">
+          <div className="QuarterPanel__main__panel">
             <div className="QuarterPanel__main__panel__content">
               More plans will be announced over time.
             </div>

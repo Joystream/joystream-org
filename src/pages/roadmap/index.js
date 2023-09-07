@@ -42,11 +42,10 @@ const RoadmapPage = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const initfileName = new URL(window.location.href);
-      setPeriod(initfileName.hash.split("#")[1]);
+      const file = initfileName.hash.split("#")[1];
+      const panel = initfileName.hash.split("#")[2];
+      setPeriod(file + "#" + panel);
     }
-  }, []);
-
-  useEffect(() => {
     const fetchGlossary = async () => {
       const response = await axios.get(
         `https://raw.githubusercontent.com/${GIT_USER_NAME}/${GIT_REPOSITY}/main/${GIT_GLOSSARY_FOLDER}/glossary.json`
@@ -54,7 +53,9 @@ const RoadmapPage = () => {
       setGlossary(response.data[0].terms);
     };
     fetchGlossary();
+  }, []);
 
+  useEffect(() => {
     setFileName(period);
   }, [period]);
 
@@ -81,8 +82,6 @@ const RoadmapPage = () => {
     };
 
     if (typeof window !== "undefined") {
-      const url = window.location.href;
-      var newUrl = url.replace(url.split("#")[1], fileName);
       window.location.href = `#${fileName}`;
     }
 
@@ -91,7 +90,8 @@ const RoadmapPage = () => {
 
   useEffect(() => {
     if (names) {
-      const index = names.fileNames.findIndex((item) => item === period);
+      const file = fileName.split("#")[0];
+      const index = names.fileNames.findIndex((item) => item === file);
       setSelectValue(index);
     }
   }, [names, period]);
@@ -144,6 +144,7 @@ const RoadmapPage = () => {
               data={data}
               value={selectValue}
               selectGlossary={onCard}
+              setSelect={setPeriod}
             />
             <GlossaryTeams
               glossary={glossary}

@@ -10,9 +10,8 @@ function TextSlider({
   sliderClassName,
   slideClassName,
   onclick,
+  select,
 }) {
-  const [active, setActive] = useState(-1);
-
   return (
     <div className={className}>
       <div className={sliderClassName}>
@@ -20,12 +19,11 @@ function TextSlider({
           <span
             index={index}
             className={cn(slideClassName, {
-              "TextSlider__button--active": index === active,
+              "TextSlider__button--active": index === select,
             })}
             key={index}
             onClick={() => {
-              index === active ? onclick("") : onclick(tag);
-              index === active ? setActive(-1) : setActive(index);
+              onclick(tag);
             }}
           >
             {tag}

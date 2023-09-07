@@ -19,12 +19,10 @@ import scrollToIdElement from "../../../utils/scrollToIdElement";
 
 const SelectOptions = ({ options, sendData, value }) => {
   const [isActive, setIsActive] = useState(false);
-  const [isSelect, setIsSelect] = useState(0);
+  const [isSelect, setIsSelect] = useState(value);
 
   useEffect(() => {
-    if (value > 0) {
-      setIsSelect(value);
-    }
+    setIsSelect(value);
   }, [value]);
 
   const onSelectQuarters = (index) => {
@@ -32,6 +30,7 @@ const SelectOptions = ({ options, sendData, value }) => {
     sendData(options[index].period);
   };
 
+  if (options.length === 0 || isSelect === -1) return <div>Loading...</div>;
   return (
     <>
       <div
@@ -106,30 +105,26 @@ const Quarters = ({
   file,
   value,
   selectGlossary,
+  setSelect,
 }) => {
   const [oldVersionBanner, setOldVersionBanner] = useState(false);
   const [selectValue, setSelectValue] = useState(value);
   const [copyState, setCopyState] = useState(false);
-  let quartersSelects = [];
-
-  if (names && !gitLoading && !gitError) {
-    quartersSelects = names.fileNames.reverse().map((name, index) => ({
-      name: "Version " + (index + 1).toString(),
-      period: name,
-    }));
-  }
+  const [quartersSelects, setQuartersSelects] = useState([]);
 
   const { t } = useTranslation();
 
   const handleCopy = () => {
     const clipboard = new ClipboardJS(".btn");
+
     clipboard.on("success", () => {
       setCopyState(true);
-      clipboard.destroy();
       setTimeout(() => {
         setCopyState(false);
       }, 2000);
+      clipboard.destroy();
     });
+
     clipboard.on("error", () => {
       clipboard.destroy();
     });
@@ -144,8 +139,8 @@ const Quarters = ({
     } else {
       setOldVersionBanner(true);
     }
-
     setSelectValue(index);
+    value = 0;
   };
 
   useEffect(() => {
@@ -153,6 +148,25 @@ const Quarters = ({
       scrollToIdElement("select_quater");
     }
   }, []);
+
+  useEffect(() => {
+    if (names && !gitLoading && !gitError) {
+      setQuartersSelects(
+        names.fileNames.reverse().map((name, index) => ({
+          name: "Version " + (names.fileNames.length - index).toString(),
+          period: name,
+        }))
+      );
+    }
+
+    const initfileName = new URL(window.location.href);
+
+    if (initfileName.hash.split("#")[1] === "undefined" && names) {
+      file(names.fileNames[0]); /// init value
+    }
+  }, [names]);
+
+  if (quartersSelects.length === 0) return <div>Loading...</div>;
 
   return (
     <div className="Quarters">
@@ -199,7 +213,10 @@ const Quarters = ({
               }
               label={
                 <button
-                  onClick={() => selected(0)}
+                  onClick={() => {
+                    getFileName(names.fileNames[0]);
+                    setSelect(names.fileNames[0]);
+                  }}
                   className="Quarters__top__banner__button"
                 >
                   Change to current version
