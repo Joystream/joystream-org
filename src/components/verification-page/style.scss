@@ -3,32 +3,31 @@
 
 @mixin verification-card {
   display: flex;
-  width: 676px;
+  width: 720px;
   padding: 24px;
   overflow: hidden;
   background-color: #bcd5fa14;
   border-radius: 8px;
 
-  @media #{$screen-max-md} {
-    width: 610px;
-  }
-
-  @media #{$screen-max-sm} {
+  @media (max-width: 1440px) {
     width: 100%;
-    max-width: 393px;
-    padding: 16px;
   }
 }
 
 .VerificationPage {
-  display: flex;
-  // justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
   min-height: 100vh;
   padding: 32px 0;
   background-color: $c_black;
-  gap: 24px;
+  grid-template-columns: 3fr 6fr 3fr;
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    grid-column: 2;
+  }
 
   &__member-card {
     @include verification-card;
@@ -373,7 +372,9 @@
     }
   }
 
-  @media #{$screen-max-md} {
+  @media (max-width: 1024px) {
+    grid-template-columns: 2fr 8fr 2fr;
+
     &__member-card {
       &__content {
         max-width: 300px;
@@ -382,8 +383,11 @@
   }
 
   @media #{$screen-max-sm} {
-    padding: 32px;
-    gap: 16px;
+    grid-template-columns: 1fr 10fr 1fr;
+
+    &__cards {
+      gap: 16px;
+    }
 
     &__member-card {
       align-items: center;

@@ -127,7 +127,7 @@ const OtherMembers = ({ otherMembers, t }) => {
   const [shouldShowInitialMembers, setShouldShowInitialMembers] = useState(true);
   const { width } = useWindowDimensions();
 
-  const initialRenderedMembers = otherMembers.slice(0, width > 991 ? 6 : width > 767 ? 5 : 4);
+  const initialRenderedMembers = otherMembers.slice(0, width > 1024 ? 6 : width > 767 ? 5 : 4);
   const remainingMembersNumber = otherMembers.length - initialRenderedMembers.length;
   const membersToRender = shouldShowInitialMembers ? initialRenderedMembers : otherMembers;
 
@@ -169,13 +169,19 @@ const Verification = ({ user, otherMembers, t }) => {
 
   return (
     <div className="VerificationPage">
-      <MemberCard img={avatarUrl} name={memberHandle} title={title} t={t} />
-      <SocialCard type="TELEGRAM" title={t('verification.socialCardSectionTitle.telegram')} value={socials.telegram} />
-      <SocialCard type="TWITTER" title={t('verification.socialCardSectionTitle.twitter')} value={socials.twitter} />
-      <SocialCard type="EMAIL" title={t('verification.socialCardSectionTitle.email')} value={socials.email} />
-      <SocialCard type="DISCORD" title={t('verification.socialCardSectionTitle.discord')} value={socials.discord} />
-      <SafetyCard name={memberHandle} safetyItems={safety} t={t} />
-      <OtherMembers otherMembers={otherMembers} t={t} />
+      <div className="VerificationPage__cards">
+        <MemberCard img={avatarUrl} name={memberHandle} title={title} t={t} />
+        <SocialCard
+          type="TELEGRAM"
+          title={t('verification.socialCardSectionTitle.telegram')}
+          value={socials.telegram}
+        />
+        <SocialCard type="TWITTER" title={t('verification.socialCardSectionTitle.twitter')} value={socials.twitter} />
+        <SocialCard type="EMAIL" title={t('verification.socialCardSectionTitle.email')} value={socials.email} />
+        <SocialCard type="DISCORD" title={t('verification.socialCardSectionTitle.discord')} value={socials.discord} />
+        <SafetyCard name={memberHandle} safetyItems={safety} t={t} />
+        <OtherMembers otherMembers={otherMembers} t={t} />
+      </div>
     </div>
   );
 };
