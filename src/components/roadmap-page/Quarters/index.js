@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import Button from '../../Button';
-import { useTranslation } from 'react-i18next';
-import cn from 'classnames';
-import ClipboardJS from 'clipboard';
+import React, { useEffect, useState } from "react";
+import Button from "../../Button";
+import { useTranslation } from "react-i18next";
+import cn from "classnames";
+import ClipboardJS from "clipboard";
 
-import './style.scss';
+import "./style.scss";
 
-import { ReactComponent as CopyLink } from '../../../assets/svg/copylink.svg';
-import { ReactComponent as Expand } from '../../../assets/svg/expand.svg';
-import { ReactComponent as Check } from '../../../assets/svg/optioncheck.svg';
-import { ReactComponent as Notic } from '../../../assets/svg/banner_warning_disable.svg';
-import { ReactComponent as NoticEnable } from '../../../assets/svg/banner_warning_enable.svg';
+import { ReactComponent as CopyLink } from "../../../assets/svg/copylink.svg";
+import { ReactComponent as Expand } from "../../../assets/svg/expand.svg";
+import { ReactComponent as Check } from "../../../assets/svg/optioncheck.svg";
+import { ReactComponent as Notic } from "../../../assets/svg/banner_warning_disable.svg";
+import { ReactComponent as NoticEnable } from "../../../assets/svg/banner_warning_enable.svg";
 
-import QuartersListData from '../QuartersListData';
-import TooltipPanel from '../../Tooltip';
-import Banner from '../../Banner';
-import scrollToActiveElement from '../../../utils/scrollToActiveElement';
+import QuartersListData from "../QuartersListData";
+import TooltipPanel from "../../Tooltip";
+import Banner from "../../Banner";
+import scrollToActiveElement from "../../../utils/scrollToActiveElement";
 
 const SelectOptions = ({ options, sendData, value }) => {
   const [isActive, setIsActive] = useState(false);
@@ -34,31 +34,31 @@ const SelectOptions = ({ options, sendData, value }) => {
   return (
     <>
       <div
-        className={cn('Quarters__options-wrapper', {
-          'Quarters__options-wrapper--active': isActive,
+        className={cn("Quarters__options-wrapper", {
+          "Quarters__options-wrapper--active": isActive,
         })}
         onClick={() => setIsActive((prev) => !prev)}
         role="presentation"
       >
-        <div className={'Quarters__options-item__label'}>
+        <div className={"Quarters__options-item__label"}>
           <div className="Quarters__options-item__name">
             {options[isSelect].name}
           </div>
           <div className="Quarters__options-item__period">
-            {options[isSelect].period.replace(/\.json/g, '')}
-            {isSelect === 0 ? ' (Current)' : ' (Old)'}
+            {options[isSelect].period.replace(/\.json/g, "")}
+            {isSelect === 0 ? " (Current)" : " (Old)"}
           </div>
         </div>
         <div className="Quarters__expand__icon">
           <Expand
-            className={cn('Quarters__expand-icon', {
-              'Quarters__expand-icon--active': isActive,
+            className={cn("Quarters__expand-icon", {
+              "Quarters__expand-icon--active": isActive,
             })}
           />
         </div>
         <div
-          className={cn('Quarters__options__dropdown', {
-            'Quarters__options__dropdown--active': isActive,
+          className={cn("Quarters__options__dropdown", {
+            "Quarters__options__dropdown--active": isActive,
           })}
         >
           {options.map((label, index) => {
@@ -66,9 +66,9 @@ const SelectOptions = ({ options, sendData, value }) => {
               <div
                 role="button"
                 key={index}
-                className={cn('Quarters__options-item', {
-                  'Quarters__options-item--light': index % 2 === 1,
-                  'Quarters__options-item--active': isSelect === index,
+                className={cn("Quarters__options-item", {
+                  "Quarters__options-item--light": index % 2 === 1,
+                  "Quarters__options-item--active": isSelect === index,
                 })}
                 onClick={() => onSelectQuarters(index)}
                 onKeyPress={() => onSelectQuarters(index)}
@@ -79,8 +79,8 @@ const SelectOptions = ({ options, sendData, value }) => {
                     {label.name}
                   </div>
                   <div className="Quarters__options-item__period">
-                    {label.period.replace(/\.json/g, '')}
-                    {index === 0 ? ' (Current)' : ' (Old)'}
+                    {label.period.replace(/\.json/g, "")}
+                    {index === 0 ? " (Current)" : " (Old)"}
                   </div>
                 </div>
                 {isSelect === index ? (
@@ -111,13 +111,13 @@ const Quarters = ({
   const [selectValue, setSelectValue] = useState(value);
   const [copyState, setCopyState] = useState(false);
   const [quartersSelects, setQuartersSelects] = useState([]);
-  const initfileName = new URL(window.location.href);
+
   const { t } = useTranslation();
 
   const handleCopy = () => {
-    const clipboard = new ClipboardJS('.btn');
+    const clipboard = new ClipboardJS(".btn");
 
-    clipboard.on('success', () => {
+    clipboard.on("success", () => {
       setCopyState(true);
       setTimeout(() => {
         setCopyState(false);
@@ -125,7 +125,7 @@ const Quarters = ({
       clipboard.destroy();
     });
 
-    clipboard.on('error', () => {
+    clipboard.on("error", () => {
       clipboard.destroy();
     });
   };
@@ -144,16 +144,20 @@ const Quarters = ({
   };
 
   useEffect(() => {
+    let initfileName;
+    if (typeof window !== "undefined") {
+      initfileName = new URL(window.location.href);
+    }
     if (names && !gitLoading && !gitError) {
       setQuartersSelects(
         names.fileNames.reverse().map((name, index) => ({
-          name: 'Version ' + (names.fileNames.length - index).toString(),
+          name: "Version " + (names.fileNames.length - index).toString(),
           period: name,
         }))
       );
     }
 
-    if (initfileName.hash.split('#')[1] === 'undefined' && names) {
+    if (initfileName.hash.split("#")[1] === "undefined" && names) {
       if (names.fileNames[0]) file(names.fileNames[0]); /// init value
     }
   }, [file, gitError, gitLoading, initfileName.hash, names]);
@@ -184,12 +188,12 @@ const Quarters = ({
             <Button
               className="Quarters__form__button btn"
               data-clipboard-text={
-                typeof window !== 'undefined' ? window.location.href : ''
+                typeof window !== "undefined" ? window.location.href : ""
               }
               name="subscribe"
               onClick={handleCopy}
             >
-              {t('roadmap.copysharinglink')}
+              {t("roadmap.copysharinglink")}
               <CopyLink className="Quarters__form__linkicon" />
             </Button>
           </TooltipPanel>
@@ -199,9 +203,9 @@ const Quarters = ({
             <Banner
               icon={<NoticEnable />}
               className="Quarters__top__banner"
-              title={'You are previewing an old version of the roadmap'}
+              title={"You are previewing an old version of the roadmap"}
               information={
-                'Roadmap gets updated frequently and the one you view right now is an old legacy version.'
+                "Roadmap gets updated frequently and the one you view right now is an old legacy version."
               }
               label={
                 <button
@@ -226,9 +230,9 @@ const Quarters = ({
         <Banner
           icon={<Notic />}
           className="Quarters__bottom__banner__item"
-          title={'Disclaimer'}
+          title={"Disclaimer"}
           information={
-            'The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader\'s own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap.'
+            "The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader's own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap."
           }
         />
       </div>
