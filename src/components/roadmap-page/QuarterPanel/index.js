@@ -68,7 +68,6 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
   useEffect(() => {
     const handleScroll = () => {
       const timelineItems = document.querySelectorAll(".QuarterPanel__submain");
-      // your code that uses the window object
       const scrollPosition = window.scrollY;
 
       timelineItems.forEach((item, index) => {
@@ -195,12 +194,14 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     );
 
     if (activeItem > 0) {
-      timeLineItems[activeItem - 1].classList.add(
-        "QuarterPanel__main__line__dot--hide"
-      );
-      timeLinePanel[activeItem - 1].classList.remove(
-        "QuarterPanel__main__panel--active"
-      );
+      for (let i = 1; i < activeItem - 1; i++) {
+        timeLineItems[i - 1].classList.add(
+          "QuarterPanel__main__line__dot--hide"
+        );
+        timeLinePanel[i - 1].classList.remove(
+          "QuarterPanel__main__panel--active"
+        );
+      }
     }
     if (activeItem < timeLineItems.length - 1) {
       timeLineItems[activeItem + 1].classList.remove(

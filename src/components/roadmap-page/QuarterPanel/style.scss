@@ -16,6 +16,15 @@ $offsetTop: 300px;
     grid-template-columns: 76px 500px;
   }
   @media (max-width: 1020px) {
+    width: 475px;
+    grid-template-columns: 40px 427px;
+    grid-gap:30px;
+    &__bottom {
+      width: 475px;
+      grid-template-columns: 40px 427px;
+    }
+  }
+  @media(max-width:750px){
     width: 275px;
     grid-template-columns: 40px 227px;
     &__bottom {
@@ -290,6 +299,40 @@ $offsetTop: 300px;
   }
 
   @media (max-width: 1020px) {
+    width: 455px;
+    grid-template-columns: 70px 445px;
+    grid-gap: 20px;
+    &__subtitle {
+      //styleName: h5;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 0px;
+    }
+    &__quarters {
+      //styleName: h6;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0px;
+    }
+    &__panel {
+      gap: 1px;
+      width: 368px;
+      padding: 16px;
+      &__bottom {
+        width: 368px;
+        padding: 16px;
+      }
+    }
+    &__timeline {
+      width: 40px;
+    }
+    &__rigth {
+      width: auto;
+    }
+  }
+  @media (max-width: 750px) {
     width: 355px;
     grid-template-columns: 70px 245px;
     grid-gap: 0px;

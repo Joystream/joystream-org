@@ -55,6 +55,17 @@
     z-index: 5;
   }
   @media (max-width: 1020px) {
+    width: 600px;
+    padding: 24px;
+    gap: 16px;
+    &__head {
+      display: flex;
+    }
+    &__icon {
+      display: block;
+    }
+  }
+  @media (max-width: 750px) {
     width: 335px;
     padding: 24px;
     gap: 16px;
