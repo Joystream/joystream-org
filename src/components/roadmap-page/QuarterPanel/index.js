@@ -158,7 +158,6 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     const url = new URL(window.location.href);
     const period = url.hash.split("#")[2];
     if (typeof window !== "undefined") {
-      // your code that uses the window object
       if (period) {
         url.hash = `panel$${k}`;
         window.location.href = window.location.href.replace(
