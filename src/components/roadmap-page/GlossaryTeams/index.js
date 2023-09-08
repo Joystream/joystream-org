@@ -1,13 +1,13 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import Input from '../../Input';
+import React, { useCallback, useEffect, useState } from "react";
+import Input from "../../Input";
 
-import { ReactComponent as SearchIcon } from '../../../assets/svg/Search.svg';
-import { ReactComponent as CloseIcon } from '../../../assets/svg/postponed.svg';
+import { ReactComponent as SearchIcon } from "../../../assets/svg/Search.svg";
+import { ReactComponent as CloseIcon } from "../../../assets/svg/postponed.svg";
 
-import './style.scss';
+import "./style.scss";
 
-import TextSlider from '../../TextSlider';
-import GlossaryCard from '../../GlossaryCard';
+import TextSlider from "../../TextSlider";
+import GlossaryCard from "../../GlossaryCard";
 
 const textSlider = (text) => {
   return (
@@ -26,7 +26,7 @@ const textSlider = (text) => {
   );
 };
 function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [filteredData, setFilteredData] = useState(glossary);
   const [filter, setFilter] = useState(false);
@@ -35,7 +35,8 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
 
   const filterData = useCallback((search) => {
     const filtered = glossary.filter((item) =>
-      item.title.toLowerCase().includes(search.toLowerCase()));
+      item.title.toLowerCase().includes(search.toLowerCase())
+    );
     setFilteredData(filtered);
   });
 
@@ -53,14 +54,15 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
 
   useEffect(() => {
     filterData(searchText);
-  }, [filterData, glossary, searchText]);
+  }, [glossary]);
 
   const onSelectCarousel = (e) => {
     const filtered = glossary.filter((item) =>
       item.title
         .toLowerCase()
         .charAt(0)
-        .includes(e.toLowerCase()));
+        .includes(e.toLowerCase())
+    );
     const index = sliderText.indexOf(e);
     setSelect(index);
     setFilter(true);
@@ -76,10 +78,11 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
       item.title
         .toLowerCase()
         .charAt(0)
-        .includes(''));
+        .includes("")
+    );
     setFilteredData(filtered);
     setInputClear(false);
-    setSearchText('');
+    setSearchText("");
     setSelect(-1);
   };
 

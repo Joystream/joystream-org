@@ -64,66 +64,65 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     }
   }, [activeText]);
 
+  console.log(activeItem);
   useEffect(() => {
     const handleScroll = () => {
       const timelineItems = document.querySelectorAll(".QuarterPanel__submain");
-      if (typeof window !== "undefined") {
-        // your code that uses the window object
-        const scrollPosition = window.scrollY;
+      // your code that uses the window object
+      const scrollPosition = window.scrollY;
 
-        timelineItems.forEach((item, index) => {
-          const itemTop = item.offsetTop;
-          const itemHight = item.offsetHeight;
-          if (index === 0 && scrollPosition < itemTop - offset) {
-            setDotActiveState(false);
-          } else if (
-            index === timelineItems.length - 1 &&
-            scrollPosition > itemTop - offset + itemHight
-          ) {
-            setDotActiveState(false);
-          } else if (scrollPosition > itemTop - offset) {
-            setActiveItem(index);
-            setDotActiveState(true);
-          }
-        });
-
-        console.log(activeItem);
-
-        const timelineText = document.querySelectorAll(
-          ".QuarterPanel__main__rigth"
-        );
-        timelineText.forEach((item, index) => {
-          const itemTop = item.offsetTop;
-          if (scrollPosition > itemTop - offset) {
-            setActiveText(index);
-          }
-        });
-
-        if (
-          scrollPosition >
-            timelineText[activeText].offsetTop +
-              timelineText[activeText].offsetHeight -
-              offset -
-              100 &&
-          activeText < timelineText.length - 2
+      timelineItems.forEach((item, index) => {
+        const itemTop = item.offsetTop;
+        const itemHight = item.offsetHeight;
+        if (index === 0 && scrollPosition < itemTop - offset) {
+          setDotActiveState(false);
+        } else if (
+          index === timelineItems.length - 1 &&
+          scrollPosition > itemTop - offset + itemHight
         ) {
-          const opacity =
-            scrollPosition -
-            timelineText[activeText].offsetTop -
-            timelineText[activeText].offsetHeight -
-            100 -
-            offset;
-
-          timelineText[activeText].style.opacity = -opacity / 100 - 7;
-        } else {
-          timelineText[activeText].style.opacity = 1;
+          setDotActiveState(false);
+        } else if (scrollPosition > itemTop - offset) {
+          setActiveItem(index);
+          setDotActiveState(true);
         }
+      });
 
-        if (activeText === timelineText.length - 1)
-          timelineText[activeText].style.opacity = 0;
+      console.log(activeItem);
+
+      const timelineText = document.querySelectorAll(
+        ".QuarterPanel__main__rigth"
+      );
+      timelineText.forEach((item, index) => {
+        const itemTop = item.offsetTop;
+        if (scrollPosition > itemTop - offset) {
+          setActiveText(index);
+        }
+      });
+
+      if (
+        scrollPosition >
+          timelineText[activeText].offsetTop +
+            timelineText[activeText].offsetHeight -
+            offset -
+            100 &&
+        activeText < timelineText.length - 2
+      ) {
+        const opacity =
+          scrollPosition -
+          timelineText[activeText].offsetTop -
+          timelineText[activeText].offsetHeight -
+          100 -
+          offset;
+
+        timelineText[activeText].style.opacity = -opacity / 100 - 7;
+      } else {
+        timelineText[activeText].style.opacity = 1;
       }
-      window.addEventListener("scroll", handleScroll);
+
+      if (activeText === timelineText.length - 1)
+        timelineText[activeText].style.opacity = 0;
     };
+    window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
 

@@ -160,7 +160,7 @@ const Quarters = ({
     if (initfileName.hash.split("#")[1] === "undefined" && names) {
       if (names.fileNames[0]) file(names.fileNames[0]); /// init value
     }
-  }, [file, gitError, gitLoading, initfileName.hash, names]);
+  }, [names]);
 
   if (quartersSelects.length === 0) return <div>Loading...</div>;
 
