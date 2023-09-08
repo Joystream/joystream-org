@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import "./style.scss";
-function GlossaryBody({ data }) {
+import './style.scss';
+function GlossaryBody({ data, selectCard }) {
   return (
     <div className="GlossaryBody">
       <div className="GlossaryBody__main">
@@ -51,7 +51,14 @@ function GlossaryBody({ data }) {
       <div className="GlossaryBody__card">
         <div className="GlossaryBody__card__title">Related Terms</div>
         {data.relatedTerms.map((item, key) => (
-          <span key={key} className="GlossaryBody__card__item">
+          <span
+            key={key}
+            className="GlossaryBody__card__item"
+            onClick={() => selectCard(item)}
+            onKeyPress={() => selectCard(item)}
+            tabIndex={0}
+            role="button"
+          >
             {item}
           </span>
         ))}

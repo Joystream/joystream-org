@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import "./style.scss";
+import './style.scss';
 
 function TooltipPanel({ children, text, state, activeText, activeState }) {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -12,13 +12,13 @@ function TooltipPanel({ children, text, state, activeText, activeState }) {
       onMouseLeave={() => setShowTooltip(false)}
     >
       {activeState ? (
-        <div className={`tooltip ${activeState ? "visible" : ""}`}>
+        <div className={`tooltip ${activeState ? 'visible' : ''}`}>
           {activeText}
         </div>
       ) : state !== undefined ? (
-        <div className={`tooltip ${state ? "visible" : ""}`}>{text}</div>
+        <div className={`tooltip ${state ? 'visible' : ''}`}>{text}</div>
       ) : (
-        <div className={`tooltip ${showTooltip ? "visible" : ""}`}>{text}</div>
+        <div className={`tooltip ${showTooltip ? 'visible' : ''}`}>{text}</div>
       )}
 
       {children}

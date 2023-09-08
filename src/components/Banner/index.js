@@ -1,11 +1,11 @@
-import React from "react";
-import cn from "classnames";
-import { ReactComponent as Close } from "../../assets/svg/postponed.svg";
+import React from 'react';
+import cn from 'classnames';
+import { ReactComponent as Close } from '../../assets/svg/postponed.svg';
 
-import "./style.scss";
+import './style.scss';
 function Banner({ icon, title, information, label, className, close }) {
   return (
-    <div className={cn("Banner", className)}>
+    <div className={cn('Banner', className)}>
       <div className="Banner__close">
         {close ? (
           <button onClick={close}>

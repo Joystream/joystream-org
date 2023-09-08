@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useTranslation, Trans } from "gatsby-plugin-react-i18next";
+import React, { useEffect, useState } from 'react';
+import { useTranslation, Trans } from 'gatsby-plugin-react-i18next';
 
-import employees from "../employee-data.json";
-import foundingMembers from "../founding-members.json";
-import { ReactComponent as InfoIcon } from "../../../assets/svg/info.svg";
+import employees from '../employee-data.json';
+import foundingMembers from '../founding-members.json';
+import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 
-import "./style.scss";
+import './style.scss';
 
 // const INITIAL_RENDER_EMPLOYEES = employees.slice(0, 8);
 // const OTHER_EMPLOYEES = employees.slice(8);
@@ -25,7 +25,7 @@ const FMCard = ({
   avatarUrl,
   memberHandle,
   memberId,
-  type = "jsgenesis",
+  type = 'jsgenesis',
   onlyRenderPlaceholder = false,
   updatePreloadedImageCounter = null,
   shouldRenderOtherMembers,
@@ -54,7 +54,7 @@ const FMCard = ({
     return (
       <div
         className={`${baseClassName} ${
-          onlyRenderPlaceholder ? placeholderClass : ""
+          onlyRenderPlaceholder ? placeholderClass : ''
         } ${baseClassName}--loading`}
       >
         <div
@@ -104,10 +104,10 @@ const FoundingMembers = () => {
       <div className="AboutPage__founding-members">
         <header className="AboutPage__founding-members__header">
           <span className="AboutPage__founding-members__header__section-title">
-            {t("about.foundingMembers.sectionTitle")}
+            {t('about.foundingMembers.sectionTitle')}
           </span>
           <h2 className="AboutPage__founding-members__header__title">
-            {t("about.foundingMembers.title")}
+            {t('about.foundingMembers.title')}
           </h2>
           <p className="AboutPage__founding-members__header__subtitle">
             <Trans
@@ -136,13 +136,13 @@ const FoundingMembers = () => {
         <div className="AboutPage__founding-members__jsgenesis">
           <div className="AboutPage__founding-members__jsgenesis__title-section">
             <h3 className="AboutPage__founding-members__jsgenesis__title-section__title">
-              {t("about.foundingMembers.jsgenesis.title")}
+              {t('about.foundingMembers.jsgenesis.title')}
             </h3>
             <div className="AboutPage__founding-members__jsgenesis__title-section__info">
-              {t("about.foundingMembers.jsgenesis.info")}
+              {t('about.foundingMembers.jsgenesis.info')}
               <InfoIcon className="AboutPage__founding-members__jsgenesis__title-section__info__icon" />
               <div className="AboutPage__founding-members__jsgenesis__title-section__info__modal">
-                {t("about.foundingMembers.jsgenesis.modal")}
+                {t('about.foundingMembers.jsgenesis.modal')}
               </div>
             </div>
           </div>
@@ -160,13 +160,13 @@ const FoundingMembers = () => {
         <div className="AboutPage__founding-members__community">
           <div className="AboutPage__founding-members__community__title-section">
             <h3 className="AboutPage__founding-members__community__title-section__title">
-              {t("about.foundingMembers.community.title")}
+              {t('about.foundingMembers.community.title')}
             </h3>
             <div className="AboutPage__founding-members__community__title-section__info">
-              {t("about.foundingMembers.community.info")}
+              {t('about.foundingMembers.community.info')}
               <InfoIcon className="AboutPage__founding-members__community__title-section__info__icon" />
               <div className="AboutPage__founding-members__jsgenesis__title-section__info__modal">
-                {t("about.foundingMembers.community.modal")}
+                {t('about.foundingMembers.community.modal')}
               </div>
             </div>
           </div>
@@ -214,7 +214,7 @@ const FoundingMembers = () => {
               className="AboutPage__founding-members__community__show-all"
               onClick={() => setShouldRenderAllCommunityMembers(true)}
             >
-              {t("about.foundingMembers.community.showAll", {
+              {t('about.foundingMembers.community.showAll', {
                 numberOfCommunityMembers: foundingMembers.length,
               })}
             </button>

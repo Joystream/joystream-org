@@ -5,12 +5,12 @@ import GlossaryBody from './Glossary_body';
 
 import './style.scss';
 
-const Glossary = ({ data, headClick }) => {
+const Glossary = ({ data, headClick, cardSelect }) => {
   if (!data) return <div className="Glossary">Loading...</div>;
   return (
     <div className="Glossary">
       <GlossaryHead head={data.title} onclick={headClick} />
-      <GlossaryBody data={data} />
+      <GlossaryBody data={data} selectCard={cardSelect} />
     </div>
   );
 };

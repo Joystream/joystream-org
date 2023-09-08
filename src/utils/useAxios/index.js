@@ -1,14 +1,14 @@
-import axios from "axios";
-import usePromise from "../usePromise";
-import { func } from "prop-types";
+import axios from 'axios';
+import usePromise from '../usePromise';
+import { func } from 'prop-types';
 import {
   ACCESS_TOKEN,
   GIT_FOLDER,
   GIT_REPOSITY,
   GIT_USER_NAME,
-} from "../../../gitconfig";
+} from '../../../gitconfig';
 
-const defaultUrl = process.env.GATSBY_API_URL || "https://status.joystream.app";
+const defaultUrl = process.env.GATSBY_API_URL || 'https://status.joystream.app';
 
 export default function useAxios(url = defaultUrl) {
   const [response, loading, error] = usePromise(() => axios.get(url));
@@ -42,10 +42,10 @@ export function useGetFileName() {
     return [null, false, null];
   }
 
-  const files = response.data.filter((file) => file.type === "file");
+  const files = response.data.filter((file) => file.type === 'file');
 
   const fileNames = files
-    .filter((file) => file.type === "file")
+    .filter((file) => file.type === 'file')
     .map((file) => file.name);
 
   const result = { fileNames };

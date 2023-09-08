@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { ReactComponent as ArrowSvg } from "../../assets/svg/slider_left.svg";
-import cn from "classnames";
+import React, { useState } from 'react';
+import { ReactComponent as ArrowSvg } from '../../assets/svg/slider_left.svg';
+import cn from 'classnames';
 
-import "./style.scss";
+import './style.scss';
 
 function TextSlider({
   className,
@@ -19,12 +19,17 @@ function TextSlider({
           <span
             index={index}
             className={cn(slideClassName, {
-              "TextSlider__button--active": index === select,
+              'TextSlider__button--active': index === select,
             })}
             key={index}
             onClick={() => {
               onclick(tag);
             }}
+            onKeyPress={() => {
+              onclick(tag);
+            }}
+            role="button"
+            tabIndex={0}
           >
             {tag}
           </span>

@@ -40,7 +40,7 @@ class CookiesNotice extends React.Component {
 
     return (
       <div className={cn('CookiesNotice', { 'CookiesNotice--visible': visible })}>
-        <div className='CookiesNotice__container'>
+        <div className="CookiesNotice__container">
           <div className="CookiesNotice__content">
             <span className="CookiesNotice__text">{this.props.t('cookiesNotice.text')}</span>
             {' '}

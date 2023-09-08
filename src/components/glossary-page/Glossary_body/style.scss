@@ -1,9 +1,9 @@
-@import '../../../styles/common/variables';
+@import "../../../styles/common/variables";
 
 .GlossaryBody {
   display: grid;
   gap: 30px;
-  grid-template-columns: 1fr .4fr;
+  grid-template-columns: 1fr 0.4fr;
 
   &__main {
     &__title {
@@ -146,6 +146,7 @@
       text-align: left;
       background: #5c6475;
       border-radius: 8px;
+      cursor: pointer;
     }
   }
   @media (max-width: 1024px) {
