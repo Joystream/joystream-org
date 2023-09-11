@@ -6,7 +6,7 @@ $offsetTop: 300px;
   display: grid;
   flex-direction: column;
   gap: 30px;
-  grid-gap: 8px;
+  grid-gap: 30px;
   grid-template-columns: 76px 500px;
   &__bottom {
     display: grid;
@@ -39,7 +39,7 @@ $offsetTop: 300px;
   flex-direction: column;
   width: 818px;
   gap: 30px;
-  grid-gap: 10px;
+  grid-gap: 30px;
   grid-template-columns: 182px 616px;
 
   &__rigth {
@@ -48,7 +48,6 @@ $offsetTop: 300px;
     align-items: end;
     flex-direction: column;
     width: 182px;
-    margin-top: 20px;
     text-align: right;
     background-color: #f2f5f9;
   }
@@ -115,7 +114,7 @@ $offsetTop: 300px;
   &__line {
     &__dotbottom {
       width: 24px;
-      height: 32px;
+      height: 47px;
       background-color: $c_neutral-200;
       border-radius: 50%;
     }
@@ -128,7 +127,7 @@ $offsetTop: 300px;
       &--active {
         width: 24px !important;
         position: fixed;
-        top: $offsetTop - 24;
+        top: $offsetTop ;
         background: #4038ff;
       }
 
@@ -142,7 +141,7 @@ $offsetTop: 300px;
       }
 
       &--last {
-        width: 1px;
+        width: 4px;
       }
     }
     &__line {
@@ -151,7 +150,7 @@ $offsetTop: 300px;
       width: 4px;
       height: -webkit-fill-available;
       background-color: $c_neutral-200;
-      margin-top: -28px;
+
 
       &__bottom {
         top: 1px;
@@ -175,7 +174,7 @@ $offsetTop: 300px;
 
   &__panel {
     width: 500px;
-    margin: 24px 0;
+    margin-bottom: 48px;
     padding: 24px;
     background: white;
     border-radius: 4px;
@@ -185,14 +184,18 @@ $offsetTop: 300px;
       opacity: 1;
     }
 
+    &--laster{
+      margin-bottom: 0px;
+    }
+
     &__bottom {
       width: 500px;
-      margin: 24px 0;
       padding: 24px;
       background: white;
       border-radius: 4px;
     }
     &__title {
+      margin-top: 16px;
       //styleName: h7;
       font-size: 20px;
       font-weight: 400;

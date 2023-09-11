@@ -3,7 +3,6 @@
 
 .RoadmapPage {
   &__hero-wrapper {
-    padding-bottom: 28px;
     background-color: black;
   }
 
@@ -131,8 +130,6 @@
 
   @media #{$screen-max-md} {
     &__hero {
-      padding: 0 20px;
-
       &__content {
         &__title {
           @include h3;

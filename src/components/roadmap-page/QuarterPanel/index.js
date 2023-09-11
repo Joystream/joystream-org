@@ -86,8 +86,6 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
         }
       });
 
-      console.log(activeItem);
-
       const timelineText = document.querySelectorAll(
         ".QuarterPanel__main__rigth"
       );
@@ -234,10 +232,15 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       }
     }
   }
-  if (timeLineItems.length !== 0)
+  if (timeLineItems.length !== 0) {
+    timeLinePanel[timeLinePanel.length - 1].classList.add(
+      "QuarterPanel__main__panel--laster"
+    );
+
     timeLineItems[timeLineItems.length - 1].classList.add(
       "QuarterPanel__main__line__dot--last"
     );
+  }
   if (!result) return <></>;
 
   if (loading) {
