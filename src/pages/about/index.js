@@ -8,6 +8,7 @@ import Hero from '../../components/about-page/Hero';
 import FoundingMembers from '../../components/about-page/FoundingMembers';
 import Investors from '../../components/about-page/Investors';
 import Auditors from '../../components/about-page/Auditors';
+import Press from '../../components/about-page/Press';
 
 import './style.scss';
 
@@ -28,6 +29,8 @@ const AboutPage = () => {
       <FoundingMembers />
 
       <Investors />
+
+      <Press />
 
       <Auditors />
     </BaseLayout>
