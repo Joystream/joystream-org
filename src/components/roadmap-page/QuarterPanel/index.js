@@ -7,12 +7,13 @@ import scrollToIdElement from "../../../utils/scrollToIdElement";
 import MyContext from "../../../utils/useContext";
 import scrollToActiveElement from "../../../utils/scrollToActiveElement";
 
-export const offset = 300;
+export let offset = 300;
 function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
   const [activeLinkIcon, setActiveLinkIcon] = useState(-1);
   const [dotActiveState, setDotActiveState] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const glossary = useContext(MyContext);
 
@@ -28,7 +29,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
             <div class = "QuarterPanel__main__underline__modal__body">${char.tooltip}</div>
             <button class="QuarterPanel__main__underline__modal__button" id="${i}">Click to learn more</button>
           </div>
-          <span >${char.title}</span>
+          <span  class="QuarterPanel__main__underline__modal__context" id="${i}">${char.title}</span>
         </span>`
       );
     });
@@ -46,6 +47,23 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const lastItem = document.querySelector(
     ".QuarterPanel__main__line__dotbottom"
   );
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as per your requirements
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  if (isMobile) {
+    offset = 200;
+  } else {
+    offset = 300;
+  }
 
   useEffect(() => {
     const timeLineText = document.querySelectorAll(
@@ -139,12 +157,24 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     const elements = document.querySelectorAll(
       ".QuarterPanel__main__underline__modal__button"
     );
+
+    const element2 = document.querySelectorAll(
+      ".QuarterPanel__main__underline__modal__context"
+    );
+
     elements.forEach((element) => {
+      element.addEventListener("click", handleClick);
+    });
+
+    element2.forEach((element) => {
       element.addEventListener("click", handleClick);
     });
     return () => {
       elements.forEach((element) => {
         element.removeEventListener("click", handleClick);
+      });
+      element2.forEach((element) => {
+        element.addEventListener("click", handleClick);
       });
     };
   }, [glossaryPanel]);
@@ -234,6 +264,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       }
     }
   }
+
   if (timeLineItems.length !== 0) {
     timeLinePanel[timeLinePanel.length - 1].classList.add(
       "QuarterPanel__main__panel--laster"

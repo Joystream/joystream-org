@@ -1,7 +1,7 @@
 @import "../../../styles/_main";
 
 $offsetTop: 300px;
-
+$offsetTopMobile: 200px;
 .QuarterPanel__submain {
   display: grid;
   flex-direction: column;
@@ -251,6 +251,7 @@ $offsetTop: 300px;
           cursor: pointer;
         }
       }
+
       &__body {
         //styleName: Base 5;
         font-family: $font-secondary;
@@ -370,6 +371,9 @@ $offsetTop: 300px;
         padding: 16px;
       }
     }
+    &__title{
+      top: $offsetTopMobile;
+    }
     &__timeline {
       width: 40px;
     }
@@ -379,6 +383,11 @@ $offsetTop: 300px;
     &__line{
       &__dotbottom{
         height: 47px;
+      }
+      &__dot{
+        &--active{
+          top:$offsetTopMobile;
+        }
       }
     }
   }
