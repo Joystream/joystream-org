@@ -15,16 +15,14 @@ const PressStory = ({ t }) => (
   >
     <div className="AboutPage__press__story">
       <div className="AboutPage__press__story__about">
-        <div className="AboutPage__press__story__about__section-title">FEATURED ON</div>
+        <div className="AboutPage__press__story__about__section-title">{t('about.press.story.sectionTitle')}</div>
         <div className="AboutPage__press__story__about__logo-wrapper">
           <img className="AboutPage__press__story__about__logo" src={CoindeskLogo} alt="coindesk logo" />
         </div>
-        <h4 className="AboutPage__press__story__about__title">Decentralized Creator Platform Joystream Raises $5.8M</h4>
-        <p className="AboutPage__press__story__about__platform-description">
-          The Polkadot-based platform allows creators to sell their videos as NFTs and turn their channels into tokens.
-        </p>
+        <h4 className="AboutPage__press__story__about__title">{t('about.press.story.title')}</h4>
+        <p className="AboutPage__press__story__about__platform-description">{t('about.press.story.description')}</p>
         <p className="AboutPage__press__story__about__link">
-          Read article
+          {t('about.press.story.readArticle')}
           <ArrowIcon className="AboutPage__press__story__about__link__icon" />
         </p>
       </div>
@@ -47,8 +45,8 @@ const Press = () => {
     <section className="AboutPage__press-wrapper">
       <div className="AboutPage__press">
         <header className="AboutPage__press__header">
-          <span className="AboutPage__press__header__section-title">PRESS</span>
-          <h2 className="AboutPage__press__header__title">Learn more about us through media stories</h2>
+          <span className="AboutPage__press__header__section-title">{t('about.press.sectionTitle')}</span>
+          <h2 className="AboutPage__press__header__title">{t('about.press.title')}</h2>
         </header>
         <PressStory t={t} />
       </div>
