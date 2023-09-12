@@ -16,7 +16,6 @@ import QuartersListData from "../QuartersListData";
 import TooltipPanel from "../../Tooltip";
 import Banner from "../../Banner";
 import scrollToActiveElement from "../../../utils/scrollToActiveElement";
-import scrollToIdElement from "../../../utils/scrollToIdElement";
 
 const SelectOptions = ({ options, sendData, value }) => {
   const [isActive, setIsActive] = useState(false);
@@ -165,6 +164,19 @@ const Quarters = ({
     }
   }, [names]);
 
+  const onGetNowURL = () => {
+    let result = "";
+    if (typeof window !== "undefined") {
+      const originalURL = window.location.href;
+      const modifiedURL = originalURL.substring(
+        0,
+        originalURL.lastIndexOf("#")
+      );
+      result = modifiedURL;
+    }
+    return result;
+  };
+
   if (quartersSelects.length === 0) return <div>Loading...</div>;
 
   return (
@@ -191,7 +203,7 @@ const Quarters = ({
             <Button
               className="Quarters__form__button btn"
               data-clipboard-text={
-                typeof window !== "undefined" ? window.location.href : ""
+                typeof window !== "undefined" ? onGetNowURL() : ""
               }
               name="subscribe"
               onClick={handleCopy}
