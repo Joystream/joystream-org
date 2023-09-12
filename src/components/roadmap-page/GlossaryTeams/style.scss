@@ -14,7 +14,7 @@
     max-width: 816px;
     margin: 0 auto;
     gap: 16px;
-    grid-gap: 10px;
+    grid-gap: 16px;
 
     &__title {
       font-family: $font-primary;
@@ -25,7 +25,6 @@
 
     &__subtitle {
       max-width: 450px;
-      margin-top: 20px;
       font-family: $font-secondary;
       font-size: 20px;
       line-height: 28px;
@@ -41,10 +40,11 @@
 
     &__input {
       height: 56px;
-      padding-top: 32px;
+      margin-top: 32px;
       border: 2px;
       border-radius: 4px;
       gap: 8px;
+      width: 394px;
     }
 
     &__icon {
@@ -62,8 +62,7 @@
       width: 15px;
     }
     &__inputbox {
-      margin-left: 10px;
-      padding-left: 28px;
+      padding-left: 48px;
     }
   }
 
@@ -74,7 +73,7 @@
 
   &__body__slider {
     display: grid;
-    margin: 64px 0 64px 0;
+    margin: 64px 0 0px 0;
     gap: 32px;
     justify-items: center;
     &__body {
@@ -135,13 +134,13 @@
   }
 
   @media #{$screen-sm} {
-    padding: 46px 0;
+    padding: 80px 99px ;
     background-position: bottom left;
     background-repeat: repeat-x;
   }
 
   @media (max-width: 1024px) {
-    padding: 16px 0;
+    padding: 80px 20px 80px 20px;
     gap: 16px;
 
     &__body__slider {

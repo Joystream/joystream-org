@@ -7,14 +7,12 @@
   max-width: 818px;
   padding: 24px;
   background-color: #fff;
-  gap: 16px;
+  gap: 8px;
 
   &__head {
     display: grid;
     flex-direction: column;
-    gap: 30px;
-    grid-gap: 8px;
-    grid-template-columns: 36px 650px 30px;
+    grid-template-columns: 36px 650px ;
     margin-top: -25px;
   }
 
@@ -33,12 +31,13 @@
   &__content {
     //styleName: Base 4;
     font-family: $font-secondary;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0;
     color: #5c6475;
     text-align: left;
+
   }
 
   &__icon {

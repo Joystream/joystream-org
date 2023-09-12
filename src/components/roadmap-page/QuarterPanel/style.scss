@@ -225,7 +225,7 @@ $offsetTop: 300px;
       height: auto;
       bottom: 0;
       margin-bottom: 20px;
-      padding: 12px 12px 18px 12px;
+      padding: 8px;
       color: $c_white;
       background-color: #1f252e;
       opacity: 0;
@@ -233,6 +233,7 @@ $offsetTop: 300px;
       visibility: hidden;
       transition: visibility 0.3s linear, opacity 0.3s linear;
       transition-delay: 0.1s;
+      
       &__title {
         //styleName: h10;
         font-family: $font-primary;
@@ -244,7 +245,7 @@ $offsetTop: 300px;
       }
       &__button {
         color: #6c6cff;
-        margin-top: 20px;
+        margin-top: 8px;
         &:hover {
           text-decoration: underline;
           cursor: pointer;
@@ -260,6 +261,8 @@ $offsetTop: 300px;
         text-align: left;
         color: #a7aeb7;
         margin: 4px 0 4px 0;
+        max-height: 4em;
+        overflow: hidden;
       }
     }
     &:hover &__modal {
@@ -334,6 +337,11 @@ $offsetTop: 300px;
     &__rigth {
       width: auto;
     }
+    &__line{
+      &__dotbottom{
+        height: 32.5px;
+      }
+    }
   }
   @media (max-width: 750px) {
     width: 355px;
@@ -367,6 +375,11 @@ $offsetTop: 300px;
     }
     &__rigth {
       width: auto;
+    }
+    &__line{
+      &__dotbottom{
+        height: 47px;
+      }
     }
   }
 }

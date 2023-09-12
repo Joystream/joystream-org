@@ -80,7 +80,8 @@
       grid-gap: 10px;
       grid-template-columns: repeat(2, 1fr);
       justify-items: center;
-
+      background-color: white;
+      cursor: pointer;
       &__label {
         display: inline-table;
         width: 190px;
@@ -99,8 +100,9 @@
         font-size: 12px;
       }
 
-      &--light {
+      &:hover {
         background-color: white;
+        background-color: $c_catskill_white;
       }
 
       &--active {
@@ -136,14 +138,14 @@
     &__button {
       width: 232px;
       height: 60px;
-      margin: 0 10px;
+
       padding: 0 0;
       color: $c_blue-ribbon;
       background: $c_catskill_white;
       border: 2px solid $c_blue-ribbon;
       border-radius: 2px;
       gap: 8px;
-
+      margin-left: 6px;
       &:hover {
         background-color: $c_white;
         border-width: 4px;

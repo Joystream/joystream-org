@@ -30,5 +30,7 @@
     letter-spacing: 0;
     color: $c_grayc-chateau;
     text-align: left;
+    max-height: 4em;
+    overflow: hidden;
   }
 }

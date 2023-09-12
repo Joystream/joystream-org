@@ -9,22 +9,6 @@ import "./style.scss";
 import TextSlider from "../../TextSlider";
 import GlossaryCard from "../../GlossaryCard";
 
-const textSlider = (text) => {
-  return (
-    <div className="GlossaryTeams__body__slider__body">
-      {text.map((item, index) => (
-        <span key={index} className="GlossaryTeams__body__slider__slider">
-          {item}
-        </span>
-      ))}
-      {text.map((item, index) => (
-        <span key={index} className="GlossaryTeams__body__slider__slider">
-          {item}
-        </span>
-      ))}
-    </div>
-  );
-};
 function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
   const [searchText, setSearchText] = useState("");
   const [showAll, setShowAll] = useState(false);
