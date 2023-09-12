@@ -64,7 +64,6 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     }
   }, [activeText]);
 
-  console.log(activeItem);
   useEffect(() => {
     const handleScroll = () => {
       const timelineItems = document.querySelectorAll(".QuarterPanel__submain");

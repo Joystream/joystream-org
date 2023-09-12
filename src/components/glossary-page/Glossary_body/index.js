@@ -29,9 +29,12 @@ function GlossaryBody({ data, selectCard }) {
             <div key={index}>
               <div className="GlossaryBody__others__title">{d.title}</div>
               {d.subtitle ? (
-                <div className="GlossaryBody__others__subtitle">
-                  {d.subtitle}
-                </div>
+                <div
+                  className="GlossaryBody__others__subtitle"
+                  dangerouslySetInnerHTML={{
+                    __html: d.subtitle,
+                  }}
+                ></div>
               ) : (
                 <></>
               )}
