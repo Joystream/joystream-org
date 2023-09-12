@@ -3,8 +3,8 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 
-import CoindeskArticleScreenshot from '../../../assets/images/coindesk-article-screenshot.png';
-import CoindeskLogo from '../../../assets/images/coindesk-logo.png';
+import CoindeskArticleScreenshot from '../../../assets/images/coindesk-article-screenshot.webp';
+import CoindeskLogo from '../../../assets/images/coindesk-logo.webp';
 
 import './style.scss';
 
