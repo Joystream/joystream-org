@@ -159,7 +159,7 @@ const Quarters = ({
 
     if (initfileName.hash.split("#")[1] === "undefined" && names) {
       if (names.fileNames[0]) file(names.fileNames[0]); /// init value
-    } else if (initfileName.hash.split("#")[2] === "undefined" && names) {
+    } else if (initfileName.hash.split("#")[2] === "undefined") {
       scrollToActiveElement("select_quater");
     }
   }, [names]);
@@ -170,7 +170,7 @@ const Quarters = ({
       const originalURL = window.location.href;
       const modifiedURL = originalURL.substring(
         0,
-        originalURL.lastIndexOf("#")
+        originalURL.lastIndexOf(".json") + 5
       );
       result = modifiedURL;
     }
