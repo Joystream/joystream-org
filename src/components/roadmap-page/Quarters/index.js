@@ -172,7 +172,7 @@ const Quarters = ({
         0,
         originalURL.lastIndexOf(".json") + 5
       );
-      result = modifiedURL;
+      result = modifiedURL + "#undefined  ";
     }
     return result;
   };
