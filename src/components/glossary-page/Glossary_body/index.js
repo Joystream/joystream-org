@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './style.scss';
+import "./style.scss";
 function GlossaryBody({ data, selectCard }) {
   return (
     <div className="GlossaryBody">
@@ -15,11 +15,11 @@ function GlossaryBody({ data, selectCard }) {
               <div className="GlossaryBody__node__content__title">
                 {d.title}
               </div>
-              <div className="GlossaryBody__node__content__item">
+              <ul className="GlossaryBody__node__content__item">
                 {d.content.map((k, key) => (
                   <li key={key}> {k}</li>
                 ))}
-              </div>
+              </ul>
             </div>
           );
         })}
@@ -36,11 +36,11 @@ function GlossaryBody({ data, selectCard }) {
                 <></>
               )}
               {d.content ? (
-                <div className="GlossaryBody__node__content__item">
+                <ul className="GlossaryBody__node__content__item">
                   {d.content.map((item, key) => (
                     <li key={key}>{item}</li>
                   ))}
-                </div>
+                </ul>
               ) : (
                 <></>
               )}
