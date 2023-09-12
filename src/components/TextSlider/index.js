@@ -52,10 +52,10 @@ function TextSlider({
             })}
             key={index}
             onClick={() => {
-              onclick(tag);
+              index === select ? onclick("") : onclick(tag);
             }}
             onKeyPress={() => {
-              onclick(tag);
+              index === select ? onclick("") : onclick(tag);
             }}
             role="button"
             tabIndex={0}

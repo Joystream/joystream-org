@@ -34,6 +34,11 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
       setInputClear(false);
       setShowAll(false);
     }
+    setSelect(-1);
+    if (e.key === "Enter") {
+      setSearchText("");
+      console.log("enter");
+    }
   };
 
   useEffect(() => {
@@ -53,6 +58,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
 
     setShowAll(true);
     setFilteredData(filtered);
+    setSearchText("");
   };
 
   const onFilterClear = () => {
@@ -93,6 +99,9 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
               required
               onChange={(e) => onSearchInput(e.target.value)}
               value={searchText}
+              onKeyPress={(e) => {
+                if (e.key === "Enter") onFilterClear();
+              }}
             />
             {!inputClear ? (
               <></>

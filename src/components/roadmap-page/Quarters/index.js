@@ -16,6 +16,7 @@ import QuartersListData from "../QuartersListData";
 import TooltipPanel from "../../Tooltip";
 import Banner from "../../Banner";
 import scrollToActiveElement from "../../../utils/scrollToActiveElement";
+import scrollToIdElement from "../../../utils/scrollToIdElement";
 
 const SelectOptions = ({ options, sendData, value }) => {
   const [isActive, setIsActive] = useState(false);
@@ -159,15 +160,17 @@ const Quarters = ({
 
     if (initfileName.hash.split("#")[1] === "undefined" && names) {
       if (names.fileNames[0]) file(names.fileNames[0]); /// init value
+    } else if (initfileName.hash.split("#")[2] === "undefined" && names) {
+      scrollToActiveElement("select_quater");
     }
   }, [names]);
 
   if (quartersSelects.length === 0) return <div>Loading...</div>;
 
   return (
-    <div className="Quarters">
+    <div className="Quarters" id="select_quater">
       <div className="Quarters__form-wrapper">
-        <div className="Quarters__form" id="select_quater">
+        <div className="Quarters__form">
           <div>
             {names && !gitLoading && !gitError ? (
               <SelectOptions

@@ -199,6 +199,9 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
           "QuarterPanel__main__panel--active"
         );
       }
+      timeLinePanel[activeItem - 1].classList.remove(
+        "QuarterPanel__main__panel--active"
+      );
     }
     if (activeItem < timeLineItems.length - 1) {
       timeLineItems[activeItem + 1].classList.remove(
