@@ -10,8 +10,9 @@ import './style.scss';
 
 const PressStory = ({ t }) => (
   <a
-    href="ttps://www.coindesk.com/business/2022/03/23/decentralized-creator-platform-joystream-raises-58m/"
+    href="https://www.coindesk.com/business/2022/03/23/decentralized-creator-platform-joystream-raises-58m/"
     target="_blank"
+    className="AboutPage__press__story-link"
   >
     <div className="AboutPage__press__story">
       <div className="AboutPage__press__story__about">
