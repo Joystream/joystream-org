@@ -54,11 +54,14 @@
       }
     }
 
+    &__story-link {
+      margin-top: 80px;
+    }
+
     &__story {
       display: flex;
       width: 1242px;
       height: 484px;
-      margin-top: 80px;
       padding: 48px 0 0 48px;
       overflow: hidden;
       background-color: #111316;
@@ -188,11 +191,14 @@
 
   @media (max-width: 1050px) {
     &__press {
+      &__story-link {
+        margin-top: 64px;
+      }
+
       &__story {
         flex-direction: column;
         height: auto;
         max-width: 600px;
-        margin-top: 64px;
 
         &__about {
           max-width: 400px;
@@ -223,12 +229,16 @@
         &__about {
           max-width: 400px;
           padding-right: 24px;
+
+          &__title {
+            margin-top: 32px;
+          }
         }
 
         &__visual {
           width: 100%;
           height: 300px;
-          transform: translateY(12px);
+          transform: translateY(16px);
 
           &__image {
             position: absolute;
@@ -239,7 +249,7 @@
 
         &:hover {
           .AboutPage__press__story__visual {
-            transform: translateY(8px);
+            transform: translateY(12px);
           }
         }
       }
