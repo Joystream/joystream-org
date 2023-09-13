@@ -153,17 +153,14 @@ const Quarters = ({
       );
     }
   }, [names]);
-  let initfileName;
   if (typeof window !== "undefined") {
-    initfileName = new URL(window.location.href);
+    const initfileName = new URL(window.location.href);
+    if (initfileName.hash.split("#")[1] === "undefined" && names) {
+      if (names.fileNames[0]) file(names.fileNames[0]); /// init value
+    } else if (initfileName.hash.split("#")[2] === "undefined") {
+      scrollToActiveElement("select_quater");
+    }
   }
-  if (initfileName.hash.split("#")[1] === "undefined" && names) {
-    if (names.fileNames[0]) file(names.fileNames[0]); /// init value
-  } else if (initfileName.hash.split("#")[2] === "undefined") {
-    console.log("object");
-    scrollToActiveElement("select_quater");
-  }
-  console.log(initfileName.hash.split("#")[1], initfileName.hash.split("#")[2]);
 
   const onGetNowURL = () => {
     let result = "";

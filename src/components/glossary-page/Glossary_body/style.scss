@@ -146,6 +146,9 @@
       background: #5c6475;
       border-radius: 8px;
       cursor: pointer;
+      &:hover{
+        background-color: #A7AEB7;
+      }
     }
   }
   @media (max-width: 1024px) {
