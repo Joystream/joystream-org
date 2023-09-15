@@ -36,7 +36,7 @@ const RoadmapPage = () => {
   const [glossaryIndex, setGlossaryIndex] = useState(0);
   const [selectValue, setSelectValue] = useState(0);
   const [period, setPeriod] = useState("");
-
+  const [scrollPosition, setScrollPosition] = useState("");
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -111,6 +111,15 @@ const RoadmapPage = () => {
     }
   };
 
+  const onGlossaryState = () => {
+    setGlossaryState(false);
+    window.scrollTo({
+      top: Number(scrollPosition),
+      behavior: "smooth",
+    });
+    console.log(scrollPosition);
+  };
+
   return (
     <MyContext.Provider value={glossary}>
       <BaseLayout t={t}>
@@ -122,7 +131,9 @@ const RoadmapPage = () => {
         {glossaryState ? (
           <Glossary
             data={glossary[glossaryIndex]}
-            headClick={() => setGlossaryState(false)}
+            headClick={() => {
+              onGlossaryState();
+            }}
             cardSelect={onCardSelect}
           />
         ) : (
@@ -158,6 +169,7 @@ const RoadmapPage = () => {
               glossary={glossary}
               sliderText={sliderText}
               cardOnClick={onCard}
+              scrollPosition={setScrollPosition}
             />
           </div>
         )}

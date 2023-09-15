@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Input from "../../Input";
 
 import { ReactComponent as SearchIcon } from "../../../assets/svg/Search.svg";
@@ -9,7 +9,9 @@ import "./style.scss";
 import TextSlider from "../../TextSlider";
 import GlossaryCard from "../../GlossaryCard";
 
-function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
+function GlossaryTerms({ glossary, sliderText, cardOnClick, scrollPosition }) {
+  const inputRef = useRef(null);
+
   const [searchText, setSearchText] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [filteredData, setFilteredData] = useState(glossary);
@@ -54,7 +56,6 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
     );
     const index = sliderText.indexOf(e);
     setSelect(index);
-    setFilter(true);
 
     setShowAll(true);
     setFilteredData(filtered);
@@ -62,7 +63,6 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
   };
 
   const onFilterClear = () => {
-    setFilter(false);
     setShowAll(false);
     const filtered = glossary.filter((item) =>
       item.title
@@ -76,6 +76,13 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
     setSelect(-1);
   };
 
+  useEffect(() => {
+    if (searchText === "" && select === -1) {
+      setFilter(false);
+    } else {
+      setFilter(true);
+    }
+  }, [searchText, select]);
   return (
     <div className="GlossaryTeams">
       <div>
@@ -100,8 +107,11 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
               onChange={(e) => onSearchInput(e.target.value)}
               value={searchText}
               onKeyPress={(e) => {
-                if (e.key === "Enter") onFilterClear();
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                }
               }}
+              ref={inputRef}
             />
             {!inputClear ? (
               <></>
@@ -132,7 +142,11 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
               .map((res, index) => {
                 return (
                   <GlossaryCard
-                    onclick={() => cardOnClick(index)}
+                    onclick={() => {
+                      const scrollY = window.scrollY || window.pageYOffset;
+                      scrollPosition(scrollY);
+                      cardOnClick(index);
+                    }}
                     title={res.title}
                     content={res.content}
                     key={index}

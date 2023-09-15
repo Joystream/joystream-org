@@ -115,32 +115,25 @@ const Quarters = ({
   const { t } = useTranslation();
 
   const handleCopy = () => {
-    const clipboard = new ClipboardJS(".btn");
-
-    clipboard.on("success", () => {
-      setCopyState(true);
-      setTimeout(() => {
-        setCopyState(false);
-      }, 2000);
-      clipboard.destroy();
-    });
-
-    clipboard.on("error", () => {
-      clipboard.destroy();
-    });
+    if (typeof window !== "undefined") {
+      const originalURL = window.location.href;
+      const modifiedURL = originalURL.substring(
+        0,
+        originalURL.lastIndexOf(".json") + 5
+      );
+      navigator.clipboard.writeText(modifiedURL + "#undefined");
+    }
+    setCopyState(true);
+    setTimeout(() => {
+      setCopyState(false);
+    }, 2000);
   };
 
   const getFileName = (res) => {
     file(res);
     const index = quartersSelects.findIndex((item) => item.period === res);
 
-    if (index === 0) {
-      setOldVersionBanner(false);
-    } else {
-      setOldVersionBanner(true);
-    }
     setSelectValue(index);
-    value = 0;
   };
 
   useEffect(() => {
@@ -151,29 +144,23 @@ const Quarters = ({
           period: name,
         }))
       );
+
+      if (value === 0) {
+        setOldVersionBanner(false);
+      } else {
+        setOldVersionBanner(true);
+      }
     }
   }, [names]);
+
   if (typeof window !== "undefined") {
     const initfileName = new URL(window.location.href);
     if (initfileName.hash.split("#")[1] === "undefined" && names) {
-      if (names.fileNames[0]) file(names.fileNames[0]); /// init value
+      if (names.fileNames[0]) file(names.fileNames[names.fileNames.length - 1]); /// init value
     } else if (initfileName.hash.split("#")[2] === "undefined") {
-      scrollToActiveElement("select_quater");
+      // scrollToActiveElement("select_quater");
     }
   }
-
-  const onGetNowURL = () => {
-    let result = "";
-    if (typeof window !== "undefined") {
-      const originalURL = window.location.href;
-      const modifiedURL = originalURL.substring(
-        0,
-        originalURL.lastIndexOf(".json") + 5
-      );
-      result = modifiedURL + "#undefined  ";
-    }
-    return result;
-  };
 
   if (quartersSelects.length === 0) return <div>Loading...</div>;
 
@@ -200,11 +187,8 @@ const Quarters = ({
           >
             <Button
               className="Quarters__form__button btn"
-              data-clipboard-text={
-                typeof window !== "undefined" ? onGetNowURL() : ""
-              }
               name="subscribe"
-              onClick={handleCopy}
+              onClick={() => handleCopy()}
             >
               {t("roadmap.copysharinglink")}
               <CopyLink className="Quarters__form__linkicon" />

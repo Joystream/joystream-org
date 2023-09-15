@@ -1,19 +1,21 @@
 import React, { useContext, useEffect, useState } from "react";
 import ClipboardJS from "clipboard";
+import cn from "classnames";
 
 import "./style.scss";
 import TooltipPanel from "../../Tooltip";
-import scrollToIdElement from "../../../utils/scrollToIdElement";
 import MyContext from "../../../utils/useContext";
 import scrollToActiveElement from "../../../utils/scrollToActiveElement";
 
 export let offset = 300;
+
 function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
   const [activeLinkIcon, setActiveLinkIcon] = useState(-1);
   const [dotActiveState, setDotActiveState] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [activeLink, setActiveLink] = useState(-1);
 
   const glossary = useContext(MyContext);
 
@@ -22,14 +24,14 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
     glossary.forEach((char, i) => {
       newStr = newStr.replace(
-        new RegExp(char.title.toLowerCase(), "g"),
+        new RegExp(char.title, "g"),
         `<span class= "QuarterPanel__main__underline">
-          <div class = "QuarterPanel__main__underline__modal">
+          <span  class="QuarterPanel__main__underline__modal__context" id="${i}">${char.title}</span>
+          <span class = "QuarterPanel__main__underline__modal">
             <div class = "QuarterPanel__main__underline__modal__title">${char.title}</div>
             <div class = "QuarterPanel__main__underline__modal__body">${char.tooltip}</div>
             <button class="QuarterPanel__main__underline__modal__button" id="${i}">Click to learn more</button>
-          </div>
-          <span  class="QuarterPanel__main__underline__modal__context" id="${i}">${char.title}</span>
+          </span>
         </span>`
       );
     });
@@ -77,6 +79,11 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     }
     if (activeText < timeLineText.length - 1) {
       timeLineText[activeText + 1].classList.remove(
+        "QuarterPanel__main__title--active"
+      );
+    }
+    if (activeText === timeLineText.length - 1) {
+      timeLineText[activeText - 1].classList.add(
         "QuarterPanel__main__title--active"
       );
     }
@@ -147,65 +154,54 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     if (hash) {
       const target = document.getElementById(hash);
       if (!target) return;
-      scrollToActiveElement(hash);
+      // scrollToActiveElement(hash);
+
+      const hashtoindex = Number(hash.replace("panel", ""));
+
+      setActiveLink(hashtoindex);
     }
-
-    const handleClick = (i) => {
-      const id = i.target.id;
-      glossaryPanel(id);
-    };
-    const elements = document.querySelectorAll(
-      ".QuarterPanel__main__underline__modal__button"
-    );
-
-    const element2 = document.querySelectorAll(
-      ".QuarterPanel__main__underline__modal__context"
-    );
-
-    elements.forEach((element) => {
-      element.addEventListener("click", handleClick);
-    });
-
-    element2.forEach((element) => {
-      element.addEventListener("click", handleClick);
-    });
-    return () => {
-      elements.forEach((element) => {
-        element.removeEventListener("click", handleClick);
-      });
-      element2.forEach((element) => {
-        element.addEventListener("click", handleClick);
-      });
-    };
   }, [glossaryPanel]);
 
+  const handleClick = (i) => {
+    const id = i.target.id;
+    glossaryPanel(id);
+  };
+
+  const elements = document.querySelectorAll(
+    ".QuarterPanel__main__underline__modal__button"
+  );
+
+  const element2 = document.querySelectorAll(
+    ".QuarterPanel__main__underline__modal__context"
+  );
+
+  elements.forEach((element) => {
+    element.addEventListener("click", handleClick);
+  });
+
+  element2.forEach((element) => {
+    element.addEventListener("click", handleClick);
+  });
+
   const getLink = (k) => {
-    const url = new URL(window.location.href);
-    const period = url.hash.split("#")[2];
     if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      const period = url.hash.split("#")[2];
       if (period) {
         url.hash = `panel$${k}`;
-        window.location.href = window.location.href.replace(
-          period,
-          `panel${k}`
+        navigator.clipboard.writeText(
+          window.location.href.replace(period, `panel${k}`)
         );
       } else {
-        window.location.href = window.location.href + `#panel${k}`;
+        navigator.clipboard.writeText(window.location.href + `#panel${k}`);
       }
     }
 
-    const clipboard = new ClipboardJS(".linkBtn");
-
-    clipboard.on("success", () => {
-      setActiveLinkIcon(k);
-      setTimeout(() => {
-        setActiveLinkIcon(-1);
-      }, 2000);
-      clipboard.destroy();
-    });
-    clipboard.on("error", () => {
-      clipboard.destroy();
-    });
+    setActiveLink(k);
+    setActiveLinkIcon(k);
+    setTimeout(() => {
+      setActiveLinkIcon(-1);
+    }, 2000);
   };
 
   if (dotActiveState) {
@@ -233,6 +229,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
         "QuarterPanel__main__panel--active"
       );
     }
+
     if (activeItem < timeLineItems.length - 1) {
       timeLineItems[activeItem + 1].classList.remove(
         "QuarterPanel__main__line__dot--active"
@@ -244,6 +241,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     timeLineItems[activeItem].classList.remove(
       "QuarterPanel__main__line__dot--stick"
     );
+
     lastItem.classList.remove("QuarterPanel__main__line__dot--stick");
   } else {
     if (timeLineItems.length !== 0 || timeLinePanel.length !== 0) {
@@ -261,6 +259,12 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
         );
       } else if (activeItem + 1 === timeLineItems.length - 1) {
         lastItem.classList.add("QuarterPanel__main__line__dot--stick");
+      }
+
+      if (activeItem === timeLineItems.length - 2) {
+        timeLinePanel[activeItem + 1].classList.add(
+          "QuarterPanel__main__panel--active"
+        );
       }
     }
   }
@@ -336,8 +340,15 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
                             activeText={"Link copied to the clipboard!"}
                           >
                             <button
-                              className="QuarterPanel__main__linkIcon__icon linkBtn"
-                              data-clipboard-text={window.location.href}
+                              className={cn(
+                                "QuarterPanel__main__linkIcon__icon linkBtn",
+                                {
+                                  "QuarterPanel__main__linkIcon__icon--active":
+                                    k +
+                                      index * res.deliveryMilestones.length ===
+                                    activeLink,
+                                }
+                              )}
                               onClick={() =>
                                 getLink(
                                   k + index * res.deliveryMilestones.length

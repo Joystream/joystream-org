@@ -219,6 +219,7 @@ $offsetTopMobile: 200px;
   &__underline {
     text-decoration: underline;
     position: relative;
+    display: inline-block;
     &__modal {
       position: absolute;
       width: 240px;
@@ -233,7 +234,9 @@ $offsetTopMobile: 200px;
       visibility: hidden;
       transition: visibility 0.3s linear, opacity 0.3s linear;
       transition-delay: 0.1s;
-      
+      left: 50%;
+      margin-bottom: 22px;
+      margin-left: -120px;
       &__title {
         //styleName: h10;
         font-family: $font-primary;
@@ -284,24 +287,27 @@ $offsetTopMobile: 200px;
     flex-direction: column;
     // width: max-content;
     &__icon {
-      width: 48px;
-      height: 48px;
+      width: 40px;
+      height: 40px;
       // background-color: #4038ff;
-      background-image: url("../../../assets/svg/Goal card icon button.svg");
+      background-image: url("../../../assets/images/Qlinkicon.png");
       background-repeat: no-repeat;
       background-size: cover;
       border-radius: 50%;
 
       &:hover {
-        background-color: #4038ff;
-        background-image: url("../../../assets/images/link_enable.png");
+        background-color: #F2F5F9;
+        background-image: url("../../../assets/images/Qlinkicon_hover.png");
+      }
+      &--active{
+        background-image: url("../../../assets/images/Qlinkicon_active.png");
       }
     }
   }
 
   &__playIcon {
-    height: 48px;
-    width: 48px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
   }
 
