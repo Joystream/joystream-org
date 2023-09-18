@@ -83,6 +83,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick, scrollPosition }) {
       setFilter(true);
     }
   }, [searchText, select]);
+
   return (
     <div className="GlossaryTeams">
       <div>

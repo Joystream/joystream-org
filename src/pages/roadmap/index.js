@@ -99,9 +99,6 @@ const RoadmapPage = () => {
   const onCard = (e) => {
     setGlossaryIndex(e);
     setGlossaryState(true);
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
   };
 
   const onCardSelect = (e) => {
@@ -113,11 +110,12 @@ const RoadmapPage = () => {
 
   const onGlossaryState = () => {
     setGlossaryState(false);
-    window.scrollTo({
-      top: Number(scrollPosition),
-      behavior: "smooth",
-    });
-    console.log(scrollPosition);
+    setTimeout(() => {
+      window.scrollTo({
+        top: Number(scrollPosition),
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   return (
@@ -163,6 +161,7 @@ const RoadmapPage = () => {
               data={data}
               value={selectValue}
               selectGlossary={onCard}
+              scrollPosition={setScrollPosition}
               setSelect={setPeriod}
             />
             <GlossaryTerms

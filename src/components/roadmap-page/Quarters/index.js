@@ -106,6 +106,7 @@ const Quarters = ({
   value,
   selectGlossary,
   setSelect,
+  scrollPosition,
 }) => {
   const [oldVersionBanner, setOldVersionBanner] = useState(false);
   const [selectValue, setSelectValue] = useState(value);
@@ -121,7 +122,7 @@ const Quarters = ({
         0,
         originalURL.lastIndexOf(".json") + 5
       );
-      navigator.clipboard.writeText(modifiedURL + "#undefined");
+      navigator.clipboard.writeText(modifiedURL + "#head");
     }
     setCopyState(true);
     setTimeout(() => {
@@ -157,8 +158,8 @@ const Quarters = ({
     const initfileName = new URL(window.location.href);
     if (initfileName.hash.split("#")[1] === "undefined" && names) {
       if (names.fileNames[0]) file(names.fileNames[names.fileNames.length - 1]); /// init value
-    } else if (initfileName.hash.split("#")[2] === "undefined") {
-      // scrollToActiveElement("select_quater");
+    } else if (initfileName.hash.split("#")[2] === "head") {
+      scrollToActiveElement("select_quater");
     }
   }
 
@@ -222,7 +223,11 @@ const Quarters = ({
           )}
         </div>
       </div>
-      <QuartersListData data={data} selectGlossary={selectGlossary} />
+      <QuartersListData
+        data={data}
+        selectGlossary={selectGlossary}
+        scrollPosition={scrollPosition}
+      />
       <div className="Quarters__bottom__banner">
         <Banner
           icon={<Notic />}

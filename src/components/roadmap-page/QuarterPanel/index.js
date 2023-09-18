@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import ClipboardJS from "clipboard";
 import cn from "classnames";
 
 import "./style.scss";
@@ -9,7 +8,13 @@ import scrollToActiveElement from "../../../utils/scrollToActiveElement";
 
 export let offset = 300;
 
-function QuarterPanel({ data, loading, language, glossaryPanel }) {
+function QuarterPanel({
+  data,
+  loading,
+  language,
+  glossaryPanel,
+  scrollPosition,
+}) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
   const [activeLinkIcon, setActiveLinkIcon] = useState(-1);
@@ -92,19 +97,19 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
   useEffect(() => {
     const handleScroll = () => {
       const timelineItems = document.querySelectorAll(".QuarterPanel__submain");
-      const scrollPosition = window.scrollY;
+      const scroll = window.scrollY;
 
       timelineItems.forEach((item, index) => {
         const itemTop = item.offsetTop;
         const itemHight = item.offsetHeight;
-        if (index === 0 && scrollPosition < itemTop - offset) {
+        if (index === 0 && scroll < itemTop - offset) {
           setDotActiveState(false);
         } else if (
           index === timelineItems.length - 1 &&
-          scrollPosition > itemTop - offset + itemHight
+          scroll > itemTop - offset + itemHight
         ) {
           setDotActiveState(false);
-        } else if (scrollPosition > itemTop - offset) {
+        } else if (scroll > itemTop - offset) {
           setActiveItem(index);
           setDotActiveState(true);
         }
@@ -115,13 +120,13 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       );
       timelineText.forEach((item, index) => {
         const itemTop = item.offsetTop;
-        if (scrollPosition > itemTop - offset) {
+        if (scroll > itemTop - offset) {
           setActiveText(index);
         }
       });
 
       if (
-        scrollPosition >
+        scroll >
           timelineText[activeText].offsetTop +
             timelineText[activeText].offsetHeight -
             offset -
@@ -129,7 +134,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
         activeText < timelineText.length - 2
       ) {
         const opacity =
-          scrollPosition -
+          scroll -
           timelineText[activeText].offsetTop -
           timelineText[activeText].offsetHeight -
           100 -
@@ -154,7 +159,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     if (hash) {
       const target = document.getElementById(hash);
       if (!target) return;
-      // scrollToActiveElement(hash);
+      scrollToActiveElement(hash);
 
       const hashtoindex = Number(hash.replace("panel", ""));
 
@@ -163,25 +168,37 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
   }, [glossaryPanel]);
 
   const handleClick = (i) => {
+    const scrollY = window.scrollY;
+    scrollPosition(scrollY);
     const id = i.target.id;
     glossaryPanel(id);
   };
+  useEffect(() => {
+    const elements = document.querySelectorAll(
+      ".QuarterPanel__main__underline__modal__button"
+    );
+    const element2 = document.querySelectorAll(
+      ".QuarterPanel__main__underline__modal__context"
+    );
 
-  const elements = document.querySelectorAll(
-    ".QuarterPanel__main__underline__modal__button"
-  );
+    elements.forEach((element) => {
+      element.addEventListener("click", handleClick);
+    });
 
-  const element2 = document.querySelectorAll(
-    ".QuarterPanel__main__underline__modal__context"
-  );
+    element2.forEach((element) => {
+      element.addEventListener("click", handleClick);
+    });
 
-  elements.forEach((element) => {
-    element.addEventListener("click", handleClick);
-  });
+    return () => {
+      elements.forEach((element) => {
+        element.removeEventListener("click", handleClick);
+      });
 
-  element2.forEach((element) => {
-    element.addEventListener("click", handleClick);
-  });
+      element2.forEach((element) => {
+        element.removeEventListener("click", handleClick);
+      });
+    };
+  }, []);
 
   const getLink = (k) => {
     if (typeof window !== "undefined") {
@@ -215,6 +232,16 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     timeLineItems[activeItem].classList.remove(
       "QuarterPanel__main__line__dot--hide"
     );
+
+    if (activeItem + 1 === timeLineItems.length - 1) {
+      console.log("object");
+      timeLinePanel[activeItem + 1].classList.remove(
+        "QuarterPanel__main__line__dot--active"
+      );
+      timeLinePanel[activeItem + 1].classList.add(
+        "QuarterPanel__main__line__dot--stick"
+      );
+    }
 
     if (activeItem > 0) {
       for (let i = 1; i < activeItem - 1; i++) {
