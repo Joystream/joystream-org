@@ -43,7 +43,8 @@ const RoadmapPage = () => {
     if (typeof window !== "undefined") {
       const initfileName = new URL(window.location.href);
       const file = initfileName.hash.split("#")[1];
-      const panel = initfileName.hash.split("#")[2];
+      let panel = initfileName.hash.split("#")[2];
+      if (panel === undefined) panel = "";
       setPeriod(file + "#" + panel);
     }
     const fetchGlossary = async () => {

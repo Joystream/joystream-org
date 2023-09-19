@@ -67,7 +67,7 @@
       font-size: 20px;
       line-height: 24px;
       &::placeholder {
-        color:#A7AEB7;
+        color: #a7aeb7;
       }
     }
   }
@@ -117,6 +117,7 @@
       border-radius: 50%;
       &:hover {
         background: #5c6475;
+        cursor: pointer;
       }
       &:active {
         background: #4038ff;
@@ -140,7 +141,7 @@
   }
 
   @media #{$screen-sm} {
-    padding: 80px 99px ;
+    padding: 80px 99px;
     background-position: bottom left;
     background-repeat: repeat-x;
   }

@@ -264,7 +264,10 @@ function QuarterPanel({
   } else {
     if (timeLineItems.length !== 0 || timeLinePanel.length !== 0) {
       for (let i = 0; i < timeLineItems.length; i++) {
-        timeLinePanel[i].classList.remove("QuarterPanel__main__panel--active");
+        if (i !== 0)
+          timeLinePanel[i].classList.remove(
+            "QuarterPanel__main__panel--active"
+          );
 
         timeLineItems[i].classList.remove(
           "QuarterPanel__main__line__dot--active"
@@ -272,6 +275,9 @@ function QuarterPanel({
       }
 
       if (activeItem === 0) {
+        timeLinePanel[activeItem].classList.add(
+          "QuarterPanel__main__panel--active"
+        );
         timeLineItems[activeItem].classList.add(
           "QuarterPanel__main__line__dot--stick"
         );

@@ -1,6 +1,6 @@
-@import '../../styles/_main';
-@import '../../styles/common/colors';
-@import '../../styles/common/variables';
+@import "../../styles/_main";
+@import "../../styles/common/colors";
+@import "../../styles/common/variables";
 
 .GlossaryCard {
   max-width: (535px);
@@ -8,6 +8,7 @@
   background-color: $c_ebony-clay;
   border-radius: 4px;
   gap: 16px;
+  cursor: pointer;
 
   &__title {
     //styleName: h7;

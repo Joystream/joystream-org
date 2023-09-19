@@ -134,7 +134,7 @@ const Quarters = ({
     file(res);
     const index = quartersSelects.findIndex((item) => item.period === res);
 
-    setSelectValue(index);
+    setSelectValue(quartersSelects.length - index);
   };
 
   useEffect(() => {
@@ -183,7 +183,7 @@ const Quarters = ({
             )}
           </div>
           <TooltipPanel
-            text={`Link to Version ${selectValue + 1} copied!`}
+            text={`Link to Version ${selectValue} copied!`}
             state={copyState}
           >
             <Button
