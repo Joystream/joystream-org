@@ -5,7 +5,9 @@
       "description": "This page verifies the significance and authenticity of the person that is presented on it."
     },
     "title": {
-      "userAcquirer": "User Acquirer"
+      "userAcquirer": "User Acquirer",
+      "marketingLead": "Marketing Lead",
+      "outreachSpecialist": "Outreach Specialist"
     },
     "socialCardSectionTitle": {
       "telegram": "TELEGRAM",
@@ -22,7 +24,8 @@
         "items": {
           "invite": "Invite you to join gleev.xyz/ypp",
           "answerQuestions": "Answer any questions you may have",
-          "getFeedback": "Get feedback from you about interest or terms."
+          "getFeedback": "Get feedback from you about interest or terms.",
+          "inviteToYpp": "Invite you to join Youtube Partner Program on Gleev"
         }
       },
       "willNever": {
@@ -30,7 +33,9 @@
         "items": {
           "askForMoney": "Ask for money transfers, or your credit card information",
           "askForPersonalInformation": "Ask for your personal information",
-          "sendAnythingDangerous": "Send you any software, or attachments, or ask you to install any program on your device"
+          "sendAnythingDangerous": "Send you any software, or attachments, or ask you to install any program on your device",
+          "askForPasswordsOrSensitiveInformation": "Ask for passwords or any sensitive information",
+          "askToVisitLinks": "Ask to visit any links except Gleev.xyz or <0>Joystream.org</0>"
         }
       }
     },

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
-import { Link } from 'gatsby-plugin-react-i18next';
+import { Link, Trans } from 'gatsby-plugin-react-i18next';
 
 import useWindowDimensions from '../../utils/useWindowDimensions';
 
@@ -96,8 +96,8 @@ const SafetyCardListContainer = ({ name, isAllowed, items }) => {
 };
 
 const SafetyCard = ({ name, safetyItems, t }) => {
-  const allowedItems = safetyItems.allowed.map(item => t(item));
-  const notAllowedItems = safetyItems.notAllowed.map(item => t(item));
+  const allowedItems = safetyItems.allowed.map(item => item?.components ? <Trans i18nKey={item.text} components={item.components} /> : t(item.text));
+  const notAllowedItems = safetyItems.notAllowed.map(item => item?.components ? <Trans i18nKey={item.text} components={item.components} /> : t(item.text));
 
   return (
     <div className="VerificationPage__safety-card">
@@ -106,7 +106,7 @@ const SafetyCard = ({ name, safetyItems, t }) => {
         <button className="VerificationPage__safety-card__top__report-button">
           <FlagIcon />
           <p className="VerificationPage__safety-card__top__report-button__text">
-            {t('verification.safety.reportButton', { name: 'freakstatic' })}
+            {t('verification.safety.reportButton', { name })}
           </p>
         </button>
       </div>
@@ -114,7 +114,7 @@ const SafetyCard = ({ name, safetyItems, t }) => {
       <button className="VerificationPage__safety-card__top__report-button VerificationPage__safety-card__top__report-button--mobile">
         <FlagIcon />
         <p className="VerificationPage__safety-card__top__report-button__text">
-          {t('verification.safety.reportButton', { name: 'freakstatic' })}
+          {t('verification.safety.reportButton', { name })}
         </p>
       </button>
       <SafetyCardListContainer name={name} isAllowed={false} items={notAllowedItems} t={t} />
@@ -137,7 +137,7 @@ const OtherMembers = ({ otherMembers, t }) => {
       <div className="VerificationPage__other-members-card__subtitle">{t('verification.otherMembers.subtitle')}</div>
       <div className="VerificationPage__other-members-card__members">
         {membersToRender.map((member, index) => (
-          <Link to={`/${member.memberHandle}`}>
+          <Link to={`/${member?.substituteUserRoute ? member.substituteUserRoute : member.memberHandle}`}>
             <div className="VerificationPage__other-members-card__member">
               <img className="VerificationPage__other-members-card__member__icon" src={member.avatarUrl} alt="" />
               <div className="VerificationPage__other-members-card__member__name">@{member.memberHandle}</div>
@@ -145,21 +145,23 @@ const OtherMembers = ({ otherMembers, t }) => {
           </Link>
         ))}
       </div>
-      <button
-        className="VerificationPage__other-members-card__button"
-        onClick={() => setShouldShowInitialMembers(prev => !prev)}
-      >
-        <span className="VerificationPage__other-members-card__button__text">
-          {shouldShowInitialMembers
-            ? t('verification.otherMembers.showMoreMembers', { memberNum: remainingMembersNumber })
-            : t('verification.otherMembers.hideMembers')}
-        </span>
-        <DownIcon
-          className={cn('VerificationPage__other-members-card__button__icon', {
-            'VerificationPage__other-members-card__button__icon--active': !shouldShowInitialMembers,
-          })}
-        />
-      </button>
+      {otherMembers.length > 4 && (
+        <button
+          className="VerificationPage__other-members-card__button"
+          onClick={() => setShouldShowInitialMembers(prev => !prev)}
+        >
+          <span className="VerificationPage__other-members-card__button__text">
+            {shouldShowInitialMembers
+              ? t('verification.otherMembers.showMoreMembers', { memberNum: remainingMembersNumber })
+              : t('verification.otherMembers.hideMembers')}
+          </span>
+          <DownIcon
+            className={cn('VerificationPage__other-members-card__button__icon', {
+              'VerificationPage__other-members-card__button__icon--active': !shouldShowInitialMembers,
+            })}
+          />
+        </button>
+      )}
     </div>
   );
 };

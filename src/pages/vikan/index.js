@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
-import BaseLayout from '../../components/_layouts/Base';
 import SiteMetadata from '../../components/SiteMetadata';
 
 import { verifiedMembers } from '../../data/pages/verification';
@@ -9,10 +8,10 @@ import { verifiedMembers } from '../../data/pages/verification';
 // components
 import Verification from '../../components/verification-page';
 
-const freakstatic = verifiedMembers[3];
-const otherMembers = verifiedMembers.filter(member => member.memberHandle !== freakstatic.memberHandle);
+const vikan = verifiedMembers[1];
+const otherMembers = verifiedMembers.filter(member => member.memberHandle !== vikan.memberHandle);
 
-const FreakstaticPage = () => {
+const VikanPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
@@ -20,16 +19,16 @@ const FreakstaticPage = () => {
     <main>
       <SiteMetadata
         lang={language}
-        title={t('verification.siteMetadata.title', { name: 'Freakstatic' })}
+        title={t('verification.siteMetadata.title', { name: 'vikan' })}
         description={t('verification.siteMetadata.description')}
       />
-      <Verification user={freakstatic} otherMembers={otherMembers} t={t} />
+      <Verification user={vikan} otherMembers={otherMembers} t={t} />
     </main>
   );
 };
 
-export { FreakstaticPage };
-export default FreakstaticPage;
+export { VikanPage };
+export default VikanPage;
 
 export const query = graphql`
   query($language: String!) {

@@ -1,77 +1,51 @@
+import React from 'react';
+
 export const verifiedMembers = [
   {
-    memberHandle: 'tomato',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/31.png',
-  },
-  {
-    memberHandle: 'nexusfallout',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/6.png',
-  },
-  {
-    memberHandle: 'l1dev',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/8.png',
-  },
-  {
-    memberHandle: 'freakstatic',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/3.png',
-    title: 'verification.title.userAcquirer',
+    memberHandle: 'leet_joy',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/42.png',
+    title: 'verification.title.marketingLead',
     socials: {
-      telegram: '@freakstat_ic',
-      twitter: '@freak_static',
-      email: 'freak.staticaly@gmail.com',
-      discord: '@freakstatic',
+      telegram: '@el33t',
+      twitter: '@leet_joy',
+      email: 'leet@joy.stream',
+      discord: '@joystream',
     },
     safety: {
       notAllowed: [
-        'verification.safety.willNever.items.askForMoney',
-        'verification.safety.willNever.items.askForPersonalInformation',
-        'verification.safety.willNever.items.sendAnythingDangerous',
+        { text: 'verification.safety.willNever.items.askForMoney' },
+        { text: 'verification.safety.willNever.items.askForPasswordsOrSensitiveInformation' },
+        { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
+        {
+          text: 'verification.safety.willNever.items.askToVisitLinks',
+          components: [<a href="https://www.joystream.org">Joystream.org</a>],
+        },
       ],
-      allowed: [
-        'verification.safety.can.items.invite',
-        'verification.safety.can.items.answerQuestions',
-        'verification.safety.can.items.getFeedback',
-      ],
+      allowed: [{ text: 'verification.safety.can.items.inviteToYpp' }],
     },
   },
   {
-    memberHandle: 'enjoythefood',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/19.png',
-  },
-  {
-    memberHandle: 'cheomsk',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/2.png',
-  },
-  {
-    memberHandle: 'lopegor',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/39.png',
-  },
-  {
-    memberHandle: 'andybut',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/1.png',
-  },
-  {
-    memberHandle: 'gryhail',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/40.png',
-  },
-  {
-    memberHandle: 'xandrell',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/9.png',
-  },
-  {
-    memberHandle: 'joystreamenthusiast',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/37.png',
-  },
-  {
-    memberHandle: 'dapplooker',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/44.png',
-  },
-  {
-    memberHandle: 'igrex',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/49.png',
-  },
-  {
-    memberHandle: 'maxlevush',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/29.png',
+    memberHandle: 'vikan#4315',
+    substituteUserRoute: 'vikan',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/90.png',
+    title: 'verification.title.outreachSpecialist',
+    socials: {
+      telegram: '@vikan393',
+      twitter: '@jvikan1',
+      email: 'vikan4joystream@gmail.com',
+      discord: '@v.i.k.a.n',
+    },
+    safety: {
+      notAllowed: [
+        { text: 'verification.safety.willNever.items.askForMoney' },
+        { text: 'verification.safety.willNever.items.askForPasswordsOrSensitiveInformation' },
+        { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
+        {
+          text: 'verification.safety.willNever.items.askToVisitLinks',
+          components: [<a href="https://www.joystream.org">Joystream.org</a>],
+        },
+      ],
+      allowed: [{ text: 'verification.safety.can.items.inviteToYpp' }],
+    },
   },
 ];
