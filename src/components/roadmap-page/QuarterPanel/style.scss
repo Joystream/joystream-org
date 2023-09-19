@@ -18,13 +18,13 @@ $offsetTopMobile: 200px;
   @media (max-width: 1020px) {
     width: 475px;
     grid-template-columns: 40px 427px;
-    grid-gap:30px;
+    grid-gap: 30px;
     &__bottom {
       width: 475px;
       grid-template-columns: 40px 427px;
     }
   }
-  @media(max-width:750px){
+  @media (max-width: 750px) {
     width: 275px;
     grid-template-columns: 40px 227px;
     &__bottom {
@@ -127,7 +127,7 @@ $offsetTopMobile: 200px;
       &--active {
         width: 24px !important;
         position: fixed;
-        top: $offsetTop ;
+        top: $offsetTop;
         background: #4038ff;
       }
 
@@ -150,7 +150,6 @@ $offsetTopMobile: 200px;
       width: 4px;
       height: -webkit-fill-available;
       background-color: $c_neutral-200;
-
 
       &__bottom {
         top: 1px;
@@ -184,7 +183,7 @@ $offsetTopMobile: 200px;
       opacity: 1;
     }
 
-    &--laster{
+    &--laster {
       margin-bottom: 0px;
     }
 
@@ -296,10 +295,10 @@ $offsetTopMobile: 200px;
       border-radius: 50%;
 
       &:hover {
-        background-color: #F2F5F9;
+        background-color: #f2f5f9;
         background-image: url("../../../assets/images/Qlinkicon_hover.png");
       }
-      &--active{
+      &--active {
         background-image: url("../../../assets/images/Qlinkicon_active.png");
       }
     }
@@ -309,6 +308,14 @@ $offsetTopMobile: 200px;
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    background-color: #dee3e9;
+    border: solid 1px #a3c3f230;
+    display: inherit;
+    align-items: center;
+    justify-items: center;
+    &--active {
+      background-color: #4038ff26;
+    }
   }
 
   @media (max-width: 1020px) {
@@ -344,8 +351,8 @@ $offsetTopMobile: 200px;
     &__rigth {
       width: auto;
     }
-    &__line{
-      &__dotbottom{
+    &__line {
+      &__dotbottom {
         height: 32.5px;
       }
     }
@@ -377,7 +384,7 @@ $offsetTopMobile: 200px;
         padding: 16px;
       }
     }
-    &__title{
+    &__title {
       top: $offsetTopMobile;
     }
     &__timeline {
@@ -386,15 +393,22 @@ $offsetTopMobile: 200px;
     &__rigth {
       width: auto;
     }
-    &__line{
-      &__dotbottom{
+    &__line {
+      &__dotbottom {
         height: 47px;
       }
-      &__dot{
-        &--active{
-          top:$offsetTopMobile;
+      &__dot {
+        &--active {
+          top: $offsetTopMobile;
         }
       }
     }
+  }
+}
+.mileston__icon {
+  &--active {
+    /* filter configuration comes from CSS filter generator - check NOTE below */
+    filter: invert(12%) sepia(63%) saturate(6234%) hue-rotate(222deg)
+      brightness(87%) contrast(156%);
   }
 }

@@ -103,13 +103,16 @@ function QuarterPanel({
         const itemTop = item.offsetTop;
         const itemHight = item.offsetHeight;
         if (index === 0 && scroll < itemTop - offset) {
+          console.log("true");
           setDotActiveState(false);
         } else if (
           index === timelineItems.length - 1 &&
           scroll > itemTop - offset + itemHight
         ) {
+          console.log("false");
           setDotActiveState(false);
         } else if (scroll > itemTop - offset) {
+          console.log("active");
           setActiveItem(index);
           setDotActiveState(true);
         }
@@ -173,6 +176,7 @@ function QuarterPanel({
     const id = i.target.id;
     glossaryPanel(id);
   };
+
   useEffect(() => {
     const elements = document.querySelectorAll(
       ".QuarterPanel__main__underline__modal__button"
@@ -232,16 +236,6 @@ function QuarterPanel({
     timeLineItems[activeItem].classList.remove(
       "QuarterPanel__main__line__dot--hide"
     );
-
-    if (activeItem + 1 === timeLineItems.length - 1) {
-      console.log("object");
-      timeLinePanel[activeItem + 1].classList.remove(
-        "QuarterPanel__main__line__dot--active"
-      );
-      timeLinePanel[activeItem + 1].classList.add(
-        "QuarterPanel__main__line__dot--stick"
-      );
-    }
 
     if (activeItem > 0) {
       for (let i = 1; i < activeItem - 1; i++) {
@@ -350,9 +344,29 @@ function QuarterPanel({
 
                     <div className="QuarterPanel__main__panel">
                       <div className="QuarterPanel__main__link">
-                        <div className="QuarterPanel__main__playIcon">
+                        <div
+                          className={cn("QuarterPanel__main__playIcon", {
+                            "QuarterPanel__main__playIcon--active":
+                              k +
+                                index *
+                                  result.quarters[index > 0 ? index - 1 : 0]
+                                    .deliveryMilestones.length ===
+                              activeItem,
+                          })}
+                        >
                           {milestones.icon ? (
-                            <img src={milestones.icon} alt="Mileston icon" />
+                            <img
+                              className={cn("mileston__icon", {
+                                "mileston__icon--active":
+                                  k +
+                                    index *
+                                      result.quarters[index > 0 ? index - 1 : 0]
+                                        .deliveryMilestones.length ===
+                                  activeItem,
+                              })}
+                              src={milestones.icon}
+                              alt="Mileston icon"
+                            />
                           ) : (
                             <></>
                           )}
