@@ -103,16 +103,13 @@ function QuarterPanel({
         const itemTop = item.offsetTop;
         const itemHight = item.offsetHeight;
         if (index === 0 && scroll < itemTop - offset) {
-          console.log("true");
           setDotActiveState(false);
         } else if (
           index === timelineItems.length - 1 &&
           scroll > itemTop - offset + itemHight
         ) {
-          console.log("false");
           setDotActiveState(false);
         } else if (scroll > itemTop - offset) {
-          console.log("active");
           setActiveItem(index);
           setDotActiveState(true);
         }
