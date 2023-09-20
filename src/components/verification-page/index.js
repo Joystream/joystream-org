@@ -103,20 +103,20 @@ const SafetyCard = ({ name, safetyItems, t }) => {
     <div className="VerificationPage__safety-card">
       <div className="VerificationPage__safety-card__top">
         <div className="VerificationPage__safety-card__top__title">{t('verification.safety.title')}</div>
-        <button className="VerificationPage__safety-card__top__report-button">
+        <a href="mailto:report@jsgenesis.com" className="VerificationPage__safety-card__top__report-button">
           <FlagIcon />
           <p className="VerificationPage__safety-card__top__report-button__text">
             {t('verification.safety.reportButton', { name })}
           </p>
-        </button>
+        </a>
       </div>
       <div className="VerificationPage__safety-card__subtitle">{t('verification.safety.subtitle')}</div>
-      <button className="VerificationPage__safety-card__top__report-button VerificationPage__safety-card__top__report-button--mobile">
+      <a href="mailto:report@jsgenesis.com" className="VerificationPage__safety-card__top__report-button VerificationPage__safety-card__top__report-button--mobile">
         <FlagIcon />
         <p className="VerificationPage__safety-card__top__report-button__text">
           {t('verification.safety.reportButton', { name })}
         </p>
-      </button>
+      </a>
       <SafetyCardListContainer name={name} isAllowed={false} items={notAllowedItems} t={t} />
       <SafetyCardListContainer name={name} isAllowed={true} items={allowedItems} t={t} />
     </div>
