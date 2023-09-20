@@ -22,7 +22,6 @@ import {
   GIT_USER_NAME,
 } from "../../../gitconfig";
 
-import Glossary from "../../components/glossary-page";
 import MyContext from "../../utils/useContext";
 
 const RoadmapPage = () => {
@@ -32,11 +31,8 @@ const RoadmapPage = () => {
   const [fileName, setFileName] = useState("");
   const [glossary, setGlossary] = useState([]);
   const [sliderText, setSliderText] = useState([]);
-  const [glossaryState, setGlossaryState] = useState(false);
-  const [glossaryIndex, setGlossaryIndex] = useState(0);
   const [selectValue, setSelectValue] = useState(0);
   const [period, setPeriod] = useState("");
-  const [scrollPosition, setScrollPosition] = useState("");
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -54,6 +50,18 @@ const RoadmapPage = () => {
       setGlossary(response.data[0].terms);
     };
     fetchGlossary();
+    var scrollPosition = localStorage.getItem("scrollPosition");
+
+    if (scrollPosition !== 0 || scrollPosition) {
+      setTimeout(() => {
+        window.scrollTo({
+          top: Number(scrollPosition),
+          behavior: "smooth",
+        });
+
+        localStorage.setItem("scrollPosition", 0);
+      }, 1000);
+    }
   }, []);
 
   useEffect(() => {
@@ -98,25 +106,11 @@ const RoadmapPage = () => {
   }, [fileName, names, period]);
 
   const onCard = (e) => {
-    setGlossaryIndex(e);
-    setGlossaryState(true);
-  };
-
-  const onCardSelect = (e) => {
-    const index = glossary.findIndex((item) => item.title === e);
-    if (index !== -1) {
-      setGlossaryIndex(index);
-    }
-  };
-
-  const onGlossaryState = () => {
-    setGlossaryState(false);
-    setTimeout(() => {
-      window.scrollTo({
-        top: Number(scrollPosition),
-        behavior: "smooth",
-      });
-    }, 100);
+    let originalURL = window.location.href;
+    let modifiedURL =
+      originalURL.slice(0, originalURL.indexOf("/roadmap")) +
+      `/glossary/#${glossary[e].title}`;
+    window.location.href = modifiedURL;
   };
 
   return (
@@ -127,52 +121,41 @@ const RoadmapPage = () => {
           title={t("roadmap.siteMetadata.title")}
           description={t("roadmap.siteMetadata.description")}
         />
-        {glossaryState ? (
-          <Glossary
-            data={glossary[glossaryIndex]}
-            headClick={() => {
-              onGlossaryState();
-            }}
-            cardSelect={onCardSelect}
-          />
-        ) : (
-          <div>
-            <section className="RoadmapPage__hero-wrapper">
-              <div className="RoadmapPage__hero">
-                <div className="RoadmapPage__hero__content">
-                  <h1 className="RoadmapPage__hero__content__title">
-                    {t("roadmap.main.title")}
-                  </h1>
-                  <p className="RoadmapPage__hero__content__subtitle">
-                    {t("roadmap.main.subtitle")}
-                  </p>
-                </div>
-                <div className="RoadmapPage__hero__image">
-                  <CommunityBackground className="RoadmapPage__hero__image__background" />
-                  <AcropolisBuilding className="RoadmapPage__hero__image__foreground" />
-                </div>
+
+        <div>
+          <section className="RoadmapPage__hero-wrapper">
+            <div className="RoadmapPage__hero">
+              <div className="RoadmapPage__hero__content">
+                <h1 className="RoadmapPage__hero__content__title">
+                  {t("roadmap.main.title")}
+                </h1>
+                <p className="RoadmapPage__hero__content__subtitle">
+                  {t("roadmap.main.subtitle")}
+                </p>
               </div>
-            </section>
-            <RoadHead />
-            <Quarters
-              names={names}
-              gitError={gitError}
-              gitLoading={gitLoading}
-              file={setFileName}
-              data={data}
-              value={selectValue}
-              selectGlossary={onCard}
-              scrollPosition={setScrollPosition}
-              setSelect={setPeriod}
-            />
-            <GlossaryTerms
-              glossary={glossary}
-              sliderText={sliderText}
-              cardOnClick={onCard}
-              scrollPosition={setScrollPosition}
-            />
-          </div>
-        )}
+              <div className="RoadmapPage__hero__image">
+                <CommunityBackground className="RoadmapPage__hero__image__background" />
+                <AcropolisBuilding className="RoadmapPage__hero__image__foreground" />
+              </div>
+            </div>
+          </section>
+          <RoadHead />
+          <Quarters
+            names={names}
+            gitError={gitError}
+            gitLoading={gitLoading}
+            file={setFileName}
+            data={data}
+            value={selectValue}
+            selectGlossary={onCard}
+            setSelect={setPeriod}
+          />
+          <GlossaryTerms
+            glossary={glossary}
+            sliderText={sliderText}
+            cardOnClick={onCard}
+          />
+        </div>
       </BaseLayout>
     </MyContext.Provider>
   );

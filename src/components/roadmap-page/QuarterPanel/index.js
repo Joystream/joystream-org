@@ -5,16 +5,11 @@ import "./style.scss";
 import TooltipPanel from "../../Tooltip";
 import MyContext from "../../../utils/useContext";
 import scrollToActiveElement from "../../../utils/scrollToActiveElement";
+import { setScrollPositoin } from "../../../pages/glossary";
 
 export let offset = 300;
 
-function QuarterPanel({
-  data,
-  loading,
-  language,
-  glossaryPanel,
-  scrollPosition,
-}) {
+function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
   const [activeLinkIcon, setActiveLinkIcon] = useState(-1);
@@ -169,7 +164,8 @@ function QuarterPanel({
 
   const handleClick = (i) => {
     const scrollY = window.scrollY;
-    scrollPosition(scrollY);
+    localStorage.setItem("scrollPosition", scrollY);
+    localStorage.setItem("href", window.location.href);
     const id = i.target.id;
     glossaryPanel(id);
   };

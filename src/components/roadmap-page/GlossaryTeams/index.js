@@ -9,7 +9,7 @@ import "./style.scss";
 import TextSlider from "../../TextSlider";
 import GlossaryCard from "../../GlossaryCard";
 
-function GlossaryTerms({ glossary, sliderText, cardOnClick, scrollPosition }) {
+function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
   const inputRef = useRef(null);
 
   const [searchText, setSearchText] = useState("");
@@ -39,7 +39,6 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick, scrollPosition }) {
     setSelect(-1);
     if (e.key === "Enter") {
       setSearchText("");
-      console.log("enter");
     }
   };
 
@@ -144,8 +143,9 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick, scrollPosition }) {
                 return (
                   <GlossaryCard
                     onclick={() => {
-                      const scrollY = window.scrollY || window.pageYOffset;
-                      scrollPosition(scrollY);
+                      const scrollY = window.scrollY;
+                      localStorage.setItem("scrollPosition", scrollY);
+                      localStorage.setItem("href", window.location.href);
                       cardOnClick(index);
                     }}
                     title={res.title}
