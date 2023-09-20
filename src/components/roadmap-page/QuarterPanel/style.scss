@@ -49,6 +49,7 @@ $offsetTopMobile: 200px;
     flex-direction: column;
     width: 182px;
     text-align: right;
+    margin-bottom: -100px;
     background-color: #f2f5f9;
   }
 
@@ -60,7 +61,6 @@ $offsetTopMobile: 200px;
     text-align: right;
     opacity: 0.4;
     background-color: #f2f5f9;
-    margin-bottom: -100px;
     transition: opacity 0.3s ease-in-out;
     &--active {
       opacity: 1;

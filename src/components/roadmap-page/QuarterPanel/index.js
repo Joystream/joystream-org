@@ -130,17 +130,17 @@ function QuarterPanel({
           timelineText[activeText].offsetTop +
             timelineText[activeText].offsetHeight -
             offset -
-            100 &&
+            200 &&
         activeText < timelineText.length - 2
       ) {
         const opacity =
           scroll -
           timelineText[activeText].offsetTop -
           timelineText[activeText].offsetHeight -
-          100 -
+          200 -
           offset;
 
-        timelineText[activeText].style.opacity = -opacity / 100 - 7;
+        timelineText[activeText].style.opacity = -opacity / 100 - 9;
       } else {
         timelineText[activeText].style.opacity = 1;
       }
