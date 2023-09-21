@@ -416,7 +416,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
         );
       })}
       <div className="QuarterPanel__main">
-        <div className="QuarterPanel__main__rigth">
+        <div className="QuarterPanel__main__rigth" style={{ opacity: 0 }}>
           <div className="QuarterPanel__main__title">
             <div className="QuarterPanel__main__subtitle"></div>
             <div className="QuarterPanel__main__quarters"></div>

@@ -52,7 +52,7 @@ const RoadmapPage = () => {
     fetchGlossary();
     var scrollPosition = localStorage.getItem("scrollPosition");
 
-    if (scrollPosition !== 0 || scrollPosition) {
+    if (scrollPosition !== 0 && Number(scrollPosition) > 0) {
       setTimeout(() => {
         window.scrollTo({
           top: Number(scrollPosition),
