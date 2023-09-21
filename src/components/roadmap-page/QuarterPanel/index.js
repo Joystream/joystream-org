@@ -93,7 +93,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     const handleScroll = () => {
       const timelineItems = document.querySelectorAll(".QuarterPanel__submain");
       const scroll = window.scrollY;
-
+      const MOVING_CIRCLE_HEIGHT = 24;
       timelineItems.forEach((item, index) => {
         const itemTop = item.offsetTop;
         const itemHight = item.offsetHeight;
@@ -101,7 +101,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
           setDotActiveState(false);
         } else if (
           index === timelineItems.length - 1 &&
-          scroll > itemTop - offset + itemHight
+          scroll > itemTop - offset + itemHight - MOVING_CIRCLE_HEIGHT
         ) {
           setDotActiveState(false);
         } else if (scroll > itemTop - offset) {

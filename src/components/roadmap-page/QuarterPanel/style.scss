@@ -114,7 +114,8 @@ $offsetTopMobile: 200px;
   &__line {
     &__dotbottom {
       width: 24px;
-      height: 47px;
+      height: 24px;
+      min-height: 24px;
       background-color: $c_neutral-200;
       border-radius: 50%;
     }
@@ -354,7 +355,8 @@ $offsetTopMobile: 200px;
     }
     &__line {
       &__dotbottom {
-        height: 32.5px;
+        height: 24px;
+        min-height: 24px;
       }
     }
   }
@@ -396,7 +398,8 @@ $offsetTopMobile: 200px;
     }
     &__line {
       &__dotbottom {
-        height: 47px;
+        height: 24px;
+        min-height: 24px;
       }
       &__dot {
         &--active {
