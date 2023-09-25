@@ -1,33 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { ReactComponent as ArrowSvg } from "../../assets/svg/slider_left.svg";
-import cn from "classnames";
+import React, { useEffect, useState } from 'react';
+import { ReactComponent as ArrowSvg } from '../../assets/svg/slider_left.svg';
+import cn from 'classnames';
 
-import "./style.scss";
+import './style.scss';
 
-function TextSlider({
-  className,
-  slides,
-  sliderClassName,
-  slideClassName,
-  onclick,
-  select,
-}) {
+function TextSlider({ slides, slideClassName, onclick, select }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isBackwardVisible, setIsBackwardVisible] = useState(false);
   const [isForwardVisible, setIsForwardVisible] = useState(false);
 
-  const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? items.length - 1 : prevIndex - 1
-    );
-  };
-  const handleNextClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === items.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  const handlePrevClick = () => {};
+  const handleNextClick = () => {};
   const handleResize = () => {
-    const tagWidth = document.getElementById("my-tag").offsetWidth;
+    const tagWidth = document.getElementById('my-tag').offsetWidth;
     if (tagWidth > 600) {
       setIsForwardVisible(true);
     } else {
@@ -36,9 +21,9 @@ function TextSlider({
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
   return (
@@ -48,14 +33,14 @@ function TextSlider({
           <span
             index={index}
             className={cn(slideClassName, {
-              "TextSlider__button--active": index === select,
+              'TextSlider__button--active': index === select,
             })}
             key={index}
             onClick={() => {
-              index === select ? onclick("") : onclick(tag);
+              index === select ? onclick('') : onclick(tag);
             }}
             onKeyPress={() => {
-              index === select ? onclick("") : onclick(tag);
+              index === select ? onclick('') : onclick(tag);
             }}
             role="button"
             tabIndex={0}

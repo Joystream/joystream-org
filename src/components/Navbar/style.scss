@@ -136,11 +136,12 @@
     display: flex;
     flex-direction: column;
     width: auto;
+    margin-left: -25px;
     background-color: #1f252e;
     border-radius: 4px;
     transform: translateY(-100%);
     transition: transform 400ms ease 0s;
-    margin-left: -25px;
+
     &--active {
       transform: translateY(0%);
     }
@@ -378,9 +379,10 @@
       z-index: unset;
       display: none;
       margin-top: 10px;
+      margin-left: 0;
       background-color: #2f2ff4;
       transform: unset;
-      margin-left: 0px;
+
       &--active {
         display: flex;
       }

@@ -1,9 +1,9 @@
-@import "../../../styles/common/variables";
+@import '../../../styles/common/variables';
 
 .GlossaryBody {
   display: grid;
   gap: 30px;
-  grid-template-columns: 1fr 0.4fr;
+  grid-template-columns: 1fr .4fr;
 
   &__main {
     &__title {
@@ -143,11 +143,12 @@
       letter-spacing: 0;
       color: #dee3e9;
       text-align: left;
+      cursor: pointer;
       background: #5c6475;
       border-radius: 8px;
-      cursor: pointer;
-      &:hover{
-        background-color: #A7AEB7;
+
+      &:hover {
+        background-color: #a7aeb7;
       }
     }
   }

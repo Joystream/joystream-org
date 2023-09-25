@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import "./style.scss";
-import QuarterPanel from "../QuarterPanel";
+import './style.scss';
+import QuarterPanel from '../QuarterPanel';
 
 function QuartersListData({ data, selectGlossary, scrollPosition }) {
   return (
@@ -12,7 +12,7 @@ function QuartersListData({ data, selectGlossary, scrollPosition }) {
             loading={false}
             data={res}
             key={index}
-            language={"English"}
+            language={'English'}
             glossaryPanel={selectGlossary}
             scrollPosition={scrollPosition}
           />

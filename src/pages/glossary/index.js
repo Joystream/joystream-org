@@ -1,19 +1,19 @@
-import React, { createContext, useEffect, useState } from "react";
-import { graphql } from "gatsby";
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next";
+import React, { createContext, useEffect, useState } from 'react';
+import { graphql } from 'gatsby';
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 
-import BaseLayout from "../../components/_layouts/Base";
-import SiteMetadata from "../../components/SiteMetadata";
+import BaseLayout from '../../components/_layouts/Base';
+import SiteMetadata from '../../components/SiteMetadata';
 
-import axios from "axios";
+import axios from 'axios';
 import {
   GIT_GLOSSARY_FOLDER,
   GIT_REPOSITY,
   GIT_USER_NAME,
-} from "../../../gitconfig";
+} from '../../../gitconfig';
 
-import Glossary from "../../components/glossary-page";
-import MyContext from "../../utils/useContext";
+import Glossary from '../../components/glossary-page';
+import MyContext from '../../utils/useContext';
 
 const GlossaryPage = () => {
   const { t } = useTranslation();
@@ -22,10 +22,10 @@ const GlossaryPage = () => {
   const [glossaryIndex, setGlossaryIndex] = useState(0);
 
   useEffect(() => {
-    let item = "";
-    if (typeof window !== "undefined") {
+    let item = '';
+    if (typeof window !== 'undefined') {
       const initfileName = new URL(window.location.href);
-      item = initfileName.hash.split("#")[1];
+      item = initfileName.hash.split('#')[1];
     }
     const fetchGlossary = async () => {
       const response = await axios.get(
@@ -59,11 +59,10 @@ const GlossaryPage = () => {
   };
 
   const onGlossaryState = () => {
-    var href = localStorage.getItem("href");
+    var href = localStorage.getItem('href');
     if (href) {
-      if (typeof window !== "undefined") {
+      if (typeof window !== 'undefined') {
         window.location.href = href;
-        console.log(window.location.href);
       }
     }
   };
@@ -73,8 +72,8 @@ const GlossaryPage = () => {
       <BaseLayout t={t}>
         <SiteMetadata
           lang={language}
-          title={t("roadmap.siteMetadata.title")}
-          description={t("roadmap.siteMetadata.description")}
+          title={t('roadmap.siteMetadata.title')}
+          description={t('roadmap.siteMetadata.description')}
         />
 
         <Glossary

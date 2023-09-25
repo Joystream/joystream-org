@@ -1,13 +1,15 @@
-@import "../../../styles/_main";
+@import '../../../styles/_main';
 
 $offsetTop: 300px;
 $offsetTopMobile: 200px;
+
 .QuarterPanel__submain {
   display: grid;
   flex-direction: column;
   gap: 30px;
   grid-gap: 30px;
   grid-template-columns: 76px 500px;
+
   &__bottom {
     display: grid;
     flex-direction: column;
@@ -17,8 +19,9 @@ $offsetTopMobile: 200px;
   }
   @media (max-width: 1020px) {
     width: 475px;
-    grid-template-columns: 40px 427px;
     grid-gap: 30px;
+    grid-template-columns: 40px 427px;
+
     &__bottom {
       width: 475px;
       grid-template-columns: 40px 427px;
@@ -27,6 +30,7 @@ $offsetTopMobile: 200px;
   @media (max-width: 750px) {
     width: 275px;
     grid-template-columns: 40px 227px;
+
     &__bottom {
       width: 275px;
       grid-template-columns: 40px 227px;
@@ -48,8 +52,8 @@ $offsetTopMobile: 200px;
     align-items: end;
     flex-direction: column;
     width: 182px;
-    text-align: right;
     margin-bottom: -100px;
+    text-align: right;
     background-color: #f2f5f9;
   }
 
@@ -59,14 +63,16 @@ $offsetTopMobile: 200px;
     align-items: end;
     flex-direction: column;
     text-align: right;
-    opacity: 0.4;
     background-color: #f2f5f9;
-    transition: opacity 0.3s ease-in-out;
+    opacity: .4;
+    transition: opacity .3s ease-in-out;
+
     &--active {
       opacity: 1;
     }
+
     &--last {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 
@@ -119,6 +125,7 @@ $offsetTopMobile: 200px;
       background-color: $c_neutral-200;
       border-radius: 50%;
     }
+
     &__dot {
       width: 24px;
       height: 24px;
@@ -126,9 +133,9 @@ $offsetTopMobile: 200px;
       border-radius: 50%;
 
       &--active {
-        width: 24px !important;
         position: fixed;
         top: $offsetTop;
+        width: 24px !important;
         background: #4038ff;
       }
 
@@ -145,6 +152,7 @@ $offsetTopMobile: 200px;
         width: 4px;
       }
     }
+
     &__line {
       top: 1px;
       left: 10px;
@@ -157,8 +165,8 @@ $offsetTopMobile: 200px;
         left: 10px;
         width: 4px;
         height: -webkit-fill-available;
-        background-color: $c_neutral-200;
         margin-top: -28px;
+        background-color: $c_neutral-200;
       }
     }
   }
@@ -178,14 +186,14 @@ $offsetTopMobile: 200px;
     padding: 24px;
     background: white;
     border-radius: 4px;
-    opacity: 0.4;
+    opacity: .4;
 
     &--active {
       opacity: 1;
     }
 
     &--laster {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     &__bottom {
@@ -194,6 +202,7 @@ $offsetTopMobile: 200px;
       background: white;
       border-radius: 4px;
     }
+
     &__title {
       margin-top: 16px;
       //styleName: h7;
@@ -205,6 +214,7 @@ $offsetTopMobile: 200px;
     }
 
     &__content {
+      margin-top: 4px;
       //styleName: Base 4;
       font-size: 14px;
       font-weight: 400;
@@ -212,44 +222,47 @@ $offsetTopMobile: 200px;
       letter-spacing: 0;
       color: $c_panel_content;
       text-align: left;
-      margin-top: 4px;
     }
   }
 
   &__underline {
-    text-decoration: underline;
     position: relative;
     display: inline-block;
+    text-decoration: underline;
     cursor: pointer;
+
     &__modal {
       position: absolute;
+      bottom: 0;
+      left: 50%;
       width: 240px;
       height: auto;
-      bottom: 0;
       margin-bottom: 20px;
+      margin-bottom: 22px;
+      margin-left: -120px;
       padding: 8px;
       color: $c_white;
       background-color: #1f252e;
-      opacity: 0;
       border-radius: 2px;
+      opacity: 0;
       visibility: hidden;
-      transition: visibility 0.3s linear, opacity 0.3s linear;
-      transition-delay: 0.1s;
-      left: 50%;
-      margin-bottom: 22px;
-      margin-left: -120px;
+      transition: visibility .3s linear, opacity .3s linear;
+      transition-delay: .1s;
+
       &__title {
         //styleName: h10;
         font-family: $font-primary;
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
-        letter-spacing: 0px;
+        letter-spacing: 0;
         text-align: left;
       }
+
       &__button {
-        color: #6c6cff;
         margin-top: 8px;
+        color: #6c6cff;
+
         &:hover {
           text-decoration: underline;
           cursor: pointer;
@@ -257,19 +270,20 @@ $offsetTopMobile: 200px;
       }
 
       &__body {
+        max-height: 4em;
+        margin: 4px 0 4px 0;
+        overflow: hidden;
         //styleName: Base 5;
         font-family: $font-secondary;
         font-size: 12px;
         font-weight: 500;
         line-height: 16px;
-        letter-spacing: 0.25px;
-        text-align: left;
+        letter-spacing: .25px;
         color: #a7aeb7;
-        margin: 4px 0 4px 0;
-        max-height: 4em;
-        overflow: hidden;
+        text-align: left;
       }
     }
+
     &:hover &__modal {
       opacity: 1;
       visibility: visible;
@@ -291,30 +305,32 @@ $offsetTopMobile: 200px;
       width: 40px;
       height: 40px;
       // background-color: #4038ff;
-      background-image: url("../../../assets/images/Qlinkicon.png");
+      background-image: url('../../../assets/images/Qlinkicon.png');
       background-repeat: no-repeat;
       background-size: cover;
       border-radius: 50%;
 
       &:hover {
         background-color: #f2f5f9;
-        background-image: url("../../../assets/images/Qlinkicon_hover.png");
+        background-image: url('../../../assets/images/Qlinkicon_hover.png');
       }
+
       &--active {
-        background-image: url("../../../assets/images/Qlinkicon_active.png");
+        background-image: url('../../../assets/images/Qlinkicon_active.png');
       }
     }
   }
 
   &__playIcon {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: #dee3e9;
-    border: solid 1px #a3c3f230;
     display: inherit;
     align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #dee3e9;
+    border: solid 1px #a3c3f230;
+    border-radius: 50%;
     justify-items: center;
+
     &--active {
       background-color: #4038ff26;
     }
@@ -322,37 +338,44 @@ $offsetTopMobile: 200px;
 
   @media (max-width: 1020px) {
     width: 455px;
-    grid-template-columns: 70px 445px;
     grid-gap: 20px;
+    grid-template-columns: 70px 445px;
+
     &__subtitle {
       //styleName: h5;
       font-size: 28px;
       font-weight: 400;
       line-height: 36px;
-      letter-spacing: 0px;
+      letter-spacing: 0;
     }
+
     &__quarters {
       //styleName: h6;
       font-size: 24px;
       font-weight: 400;
       line-height: 32px;
-      letter-spacing: 0px;
+      letter-spacing: 0;
     }
+
     &__panel {
-      gap: 1px;
       width: 368px;
       padding: 16px;
+      gap: 1px;
+
       &__bottom {
         width: 368px;
         padding: 16px;
       }
     }
+
     &__timeline {
       width: 40px;
     }
+
     &__rigth {
       width: auto;
     }
+
     &__line {
       &__dotbottom {
         height: 24px;
@@ -362,45 +385,54 @@ $offsetTopMobile: 200px;
   }
   @media (max-width: 750px) {
     width: 355px;
+    grid-gap: 0;
     grid-template-columns: 70px 245px;
-    grid-gap: 0px;
+
     &__subtitle {
       //styleName: h5;
       font-size: 28px;
       font-weight: 400;
       line-height: 36px;
-      letter-spacing: 0px;
+      letter-spacing: 0;
     }
+
     &__quarters {
       //styleName: h6;
       font-size: 24px;
       font-weight: 400;
       line-height: 32px;
-      letter-spacing: 0px;
+      letter-spacing: 0;
     }
+
     &__panel {
-      gap: 1px;
       width: 227px;
       padding: 16px;
+      gap: 1px;
+
       &__bottom {
         width: 227px;
         padding: 16px;
       }
     }
+
     &__title {
       top: $offsetTopMobile;
     }
+
     &__timeline {
       width: 40px;
     }
+
     &__rigth {
       width: auto;
     }
+
     &__line {
       &__dotbottom {
         height: 24px;
         min-height: 24px;
       }
+
       &__dot {
         &--active {
           top: $offsetTopMobile;
@@ -409,10 +441,12 @@ $offsetTopMobile: 200px;
     }
   }
 }
+
 .mileston__icon {
   &--active {
     /* filter configuration comes from CSS filter generator - check NOTE below */
-    filter: invert(12%) sepia(63%) saturate(6234%) hue-rotate(222deg)
+    filter:
+      invert(12%) sepia(63%) saturate(6234%) hue-rotate(222deg)
       brightness(87%) contrast(156%);
   }
 }

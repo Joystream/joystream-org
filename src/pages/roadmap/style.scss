@@ -1,5 +1,5 @@
-@import "../../styles/_main.scss";
-@import "../style.scss";
+@import '../../styles/_main.scss';
+@import '../style.scss';
 
 .RoadmapPage {
   &__hero-wrapper {
@@ -20,6 +20,7 @@
 
       &__title {
         @include h1;
+
         color: $c_white;
       }
 
@@ -67,7 +68,7 @@
     padding: 24px;
     cursor: pointer;
     background-color: $c_white;
-    transition: all 0.3s;
+    transition: all .3s;
 
     &:hover {
       transform: translate(-7.2px, -8px);

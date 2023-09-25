@@ -1,23 +1,23 @@
-import React, { useContext, useState, useEffect } from "react";
-import cn from "classnames";
-import { bool, array } from "prop-types";
+import React, { useContext, useState, useEffect } from 'react';
+import cn from 'classnames';
+import { bool, array } from 'prop-types';
 
-import { ScrollContext } from "../_enhancers/ScrollContext";
-import Link from "../Link";
-import { CurrentPrimerSectionContext, sectionIDs } from "../../pages/primer";
+import { ScrollContext } from '../_enhancers/ScrollContext';
+import Link from '../Link';
+import { CurrentPrimerSectionContext, sectionIDs } from '../../pages/primer';
 
-import { ReactComponent as Logo } from "../../assets/svg/logo-white.svg";
-import { ReactComponent as Arrow } from "../../assets/svg/arrow-down-small.svg";
-import { ReactComponent as Expand } from "../../assets/svg/expand.svg";
-import { ReactComponent as LinkIcon } from "../../assets/svg/link.svg";
-import { ReactComponent as NavClose } from "../../assets/svg/navbar-close.svg";
-import { ReactComponent as NavHamburger } from "../../assets/svg/navbar-hamburger.svg";
+import { ReactComponent as Logo } from '../../assets/svg/logo-white.svg';
+import { ReactComponent as Arrow } from '../../assets/svg/arrow-down-small.svg';
+import { ReactComponent as Expand } from '../../assets/svg/expand.svg';
+import { ReactComponent as LinkIcon } from '../../assets/svg/link.svg';
+import { ReactComponent as NavClose } from '../../assets/svg/navbar-close.svg';
+import { ReactComponent as NavHamburger } from '../../assets/svg/navbar-hamburger.svg';
 
-import useWindowDimensions from "../../utils/useWindowDimensions";
+import useWindowDimensions from '../../utils/useWindowDimensions';
 
-import { links as defaultLinks } from "./data";
+import { links as defaultLinks } from './data';
 
-import "./style.scss";
+import './style.scss';
 
 const Dropdown = ({ label, links, isScrollUp, t }) => {
   const [isActive, setIsActive] = useState(false);
@@ -35,17 +35,17 @@ const Dropdown = ({ label, links, isScrollUp, t }) => {
   useEffect(() => {
     const listener = (e) => setYOffset(document.body.getBoundingClientRect().y);
 
-    window.addEventListener("scroll", listener);
+    window.addEventListener('scroll', listener);
     return () => {
-      window.removeEventListener("scroll", listener);
+      window.removeEventListener('scroll', listener);
     };
   });
 
   return (
     <>
       <div
-        className={cn("Navbar__link-wrapper", {
-          "Navbar__link-wrapper--active":
+        className={cn('Navbar__link-wrapper', {
+          'Navbar__link-wrapper--active':
             isActive && (firstRender || isScrollUp || width <= 1200),
         })}
         onClick={() => setIsActive((prev) => !prev)}
@@ -53,14 +53,14 @@ const Dropdown = ({ label, links, isScrollUp, t }) => {
       >
         <p className="Navbar__link">{t(label)}</p>
         <Expand
-          className={cn("Navbar__expand-icon", {
-            "Navbar__expand-icon--active":
+          className={cn('Navbar__expand-icon', {
+            'Navbar__expand-icon--active':
               isActive && (firstRender || isScrollUp || width <= 1200),
           })}
         />
         <div
-          className={cn("Navbar__dropdown", {
-            "Navbar__dropdown--active":
+          className={cn('Navbar__dropdown', {
+            'Navbar__dropdown--active':
               isActive && (firstRender || isScrollUp || width <= 1200),
           })}
         >
@@ -99,9 +99,9 @@ const NavbarLinksSection = ({
   return (
     <>
       <div
-        className={cn("Navbar__links", {
-          "Navbar__links--open": isOpen,
-          "Navbar__links--light": light,
+        className={cn('Navbar__links', {
+          'Navbar__links--open': isOpen,
+          'Navbar__links--light': light,
         })}
       >
         {links.map(
@@ -120,8 +120,8 @@ const NavbarLinksSection = ({
 
             let children = (
               <div
-                className={cn("Navbar__link-wrapper", {
-                  "Navbar__link-wrapper--light": light,
+                className={cn('Navbar__link-wrapper', {
+                  'Navbar__link-wrapper--light': light,
                 })}
               >
                 <p className="Navbar__link">{t(label)}</p>
@@ -131,8 +131,8 @@ const NavbarLinksSection = ({
             if (isButton) {
               children = (
                 <div
-                  className={cn("Navbar__button", {
-                    "Navbar__button--light": light,
+                  className={cn('Navbar__button', {
+                    'Navbar__button--light': light,
                   })}
                 >
                   <p className="Navbar__button-text">{t(label)}</p>
@@ -151,8 +151,8 @@ const NavbarLinksSection = ({
       </div>
 
       <div
-        className={cn("Navbar__trigger", {
-          "Navbar__trigger--active": isOpen,
+        className={cn('Navbar__trigger', {
+          'Navbar__trigger--active': isOpen,
         })}
         onClick={() => setIsOpen(!isOpen)}
         role="presentation"
@@ -172,7 +172,7 @@ const NavbarPrimerSection = ({ t }) => {
 
   function goToSection(sectionIdName) {
     document.getElementById(sectionIdName).scrollIntoView({
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }
 
@@ -186,42 +186,42 @@ const NavbarPrimerSection = ({ t }) => {
           role="presentation"
           onClick={() => goToSection(sectionIDs[1])}
         >
-          {t("primer.navbar.futureOfVideo")}
+          {t('primer.navbar.futureOfVideo')}
         </p>
         <p
           className="Navbar__primer-section__section-item"
           role="presentation"
           onClick={() => goToSection(sectionIDs[2])}
         >
-          {t("primer.navbar.whyWeExist")}
+          {t('primer.navbar.whyWeExist')}
         </p>
         <p
           className="Navbar__primer-section__section-item"
           role="presentation"
           onClick={() => goToSection(sectionIDs[3])}
         >
-          {t("primer.navbar.theSolution")}
+          {t('primer.navbar.theSolution')}
         </p>
         <p
           className="Navbar__primer-section__section-item"
           role="presentation"
           onClick={() => goToSection(sectionIDs[4])}
         >
-          {t("primer.navbar.governance")}
+          {t('primer.navbar.governance')}
         </p>
         <p
           className="Navbar__primer-section__section-item"
           role="presentation"
           onClick={() => goToSection(sectionIDs[5])}
         >
-          {t("primer.navbar.businessModel")}
+          {t('primer.navbar.businessModel')}
         </p>
         <p
           className="Navbar__primer-section__section-item"
           role="presentation"
           onClick={() => goToSection(sectionIDs[6])}
         >
-          {t("primer.navbar.nextSteps")}
+          {t('primer.navbar.nextSteps')}
         </p>
       </div>
       <div
@@ -241,21 +241,21 @@ const Navbar = ({ light, links, t, primer }) => {
 
   return (
     <nav
-      className={cn("Navbar", {
-        "Navbar--hidden": !isScrollUp,
-        "Navbar--light": light,
-        "Navbar--open": isOpen,
-        "Navbar--primer": primer,
+      className={cn('Navbar', {
+        'Navbar--hidden': !isScrollUp,
+        'Navbar--light': light,
+        'Navbar--open': isOpen,
+        'Navbar--primer': primer,
       })}
     >
       <div
-        className={cn("Navbar__container", {
-          "Navbar__container--primer": primer,
+        className={cn('Navbar__container', {
+          'Navbar__container--primer': primer,
         })}
       >
         <Link to="/">
           <Logo
-            className={cn("Navbar__logo", { "Navbar__logo--open": isOpen })}
+            className={cn('Navbar__logo', { 'Navbar__logo--open': isOpen })}
           />
         </Link>
 
@@ -291,30 +291,30 @@ const SubDropdown = ({ label, links, isScrollup, t }) => {
   useEffect(() => {
     const listener = (e) => setYOffset(document.body.getBoundingClientRect().y);
 
-    window.addEventListener("scroll", listener);
+    window.addEventListener('scroll', listener);
     return () => {
-      window.removeEventListener("scroll", listener);
+      window.removeEventListener('scroll', listener);
     };
   });
 
   return (
     <>
       <div
-        className={cn("Navbar__link-wrapper", {
-          "Navbar__link-wrapper--active": isActive,
+        className={cn('Navbar__link-wrapper', {
+          'Navbar__link-wrapper--active': isActive,
         })}
         onClick={() => setIsActive((prev) => !prev)}
         role="presentation"
       >
         <p className="Navbar__link">{t(label)}</p>
         <Expand
-          className={cn("Navbar__expand-icon", {
-            "Navbar__expand-icon--active": isActive,
+          className={cn('Navbar__expand-icon', {
+            'Navbar__expand-icon--active': isActive,
           })}
         />
         <div
-          className={cn("Navbar__dropdown", {
-            "Navbar__dropdown--active": isActive,
+          className={cn('Navbar__dropdown', {
+            'Navbar__dropdown--active': isActive,
           })}
         >
           {links.map(({ label, href, to }) => (

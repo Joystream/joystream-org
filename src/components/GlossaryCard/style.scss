@@ -1,14 +1,14 @@
-@import "../../styles/_main";
-@import "../../styles/common/colors";
-@import "../../styles/common/variables";
+@import '../../styles/_main';
+@import '../../styles/common/colors';
+@import '../../styles/common/variables';
 
 .GlossaryCard {
   max-width: (535px);
   padding: 24px;
+  cursor: pointer;
   background-color: $c_ebony-clay;
   border-radius: 4px;
   gap: 16px;
-  cursor: pointer;
 
   &__title {
     //styleName: h7;
@@ -22,7 +22,9 @@
   }
 
   &__content {
+    max-height: 4em;
     margin-top: 8px;
+    overflow: hidden;
     //styleName: Base 4;
     font-family: $font-secondary;
     font-size: 14px;
@@ -31,7 +33,5 @@
     letter-spacing: 0;
     color: $c_grayc-chateau;
     text-align: left;
-    max-height: 4em;
-    overflow: hidden;
   }
 }

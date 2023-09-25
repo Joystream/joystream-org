@@ -1,5 +1,5 @@
-@import "../../../styles/_main";
-@import "../../../styles/common/colors";
+@import '../../../styles/_main';
+@import '../../../styles/common/colors';
 
 .GlossaryTeams {
   padding: 80px 99px 80px 99px;
@@ -39,12 +39,12 @@
     max-width: 394px;
 
     &__input {
+      width: 394px;
       height: 56px;
       margin-top: 32px;
       border: 2px;
       border-radius: 4px;
       gap: 8px;
-      width: 394px;
     }
 
     &__icon {
@@ -56,16 +56,18 @@
     &__closeicon {
       position: absolute;
       right: 10px;
-      margin-top: 23px;
-      opacity: 0.4;
-      height: 15px;
       width: 15px;
+      height: 15px;
+      margin-top: 23px;
+      opacity: .4;
     }
+
     &__inputbox {
       padding: 16px 18px;
       padding-left: 48px;
       font-size: 20px;
       line-height: 24px;
+
       &::placeholder {
         color: #a7aeb7;
       }
@@ -79,16 +81,17 @@
 
   &__body__slider {
     display: grid;
-    margin: 64px 0 0px 0;
+    margin: 64px 0 0 0;
     gap: 32px;
     justify-items: center;
+
     &__body {
       position: static;
       margin-top: 64px;
       margin-bottom: 32px;
       overflow-x: hidden;
-      white-space: nowrap;
       overflow-y: hidden;
+      white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
 
@@ -101,24 +104,26 @@
     }
 
     &__slider {
-      background-color: $c_wood-smoke;
       display: flex;
       align-items: center;
       height: 50px;
+      background-color: $c_wood-smoke;
     }
 
     &__slide {
       width: 48px;
       height: 48px;
       padding: 12px;
-      gap: 8px;
-      color: white;
       font-size: 26px;
+      color: white;
       border-radius: 50%;
+      gap: 8px;
+
       &:hover {
-        background: #5c6475;
         cursor: pointer;
+        background: #5c6475;
       }
+
       &:active {
         background: #4038ff;
       }
@@ -133,9 +138,10 @@
       letter-spacing: 0;
       color: #6c6cff;
       text-align: left;
+
       &:hover {
-        border-bottom: solid 1px #6c6cff;
         cursor: pointer;
+        border-bottom: solid 1px #6c6cff;
       }
     }
   }
@@ -155,6 +161,7 @@
         grid-template-columns: repeat(1, 1fr);
       }
     }
+
     &__options {
       &-wrapper {
         width: auto;

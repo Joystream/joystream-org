@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
-import cn from "classnames";
+import React, { useContext, useEffect, useState } from 'react';
+import cn from 'classnames';
 
-import "./style.scss";
-import TooltipPanel from "../../Tooltip";
-import MyContext from "../../../utils/useContext";
-import scrollToActiveElement from "../../../utils/scrollToActiveElement";
-import { setScrollPositoin } from "../../../pages/glossary";
+import './style.scss';
+import TooltipPanel from '../../Tooltip';
+import MyContext from '../../../utils/useContext';
+import scrollToActiveElement from '../../../utils/scrollToActiveElement';
+import { setScrollPositoin } from '../../../pages/glossary';
 
 export let offset = 300;
 
@@ -24,7 +24,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
     glossary.forEach((char, i) => {
       newStr = newStr.replace(
-        new RegExp(char.title, "g"),
+        new RegExp(char.title, 'g'),
         `<span class= "QuarterPanel__main__underline">
           <span  class="QuarterPanel__main__underline__modal__context" id="${i}">${char.title}</span>
           <span class = "QuarterPanel__main__underline__modal">
@@ -41,23 +41,23 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const result = data.language === language ? data : false;
 
   const timeLineItems = document.querySelectorAll(
-    ".QuarterPanel__main__line__dot"
+    '.QuarterPanel__main__line__dot'
   );
 
-  const timeLinePanel = document.querySelectorAll(".QuarterPanel__main__panel");
+  const timeLinePanel = document.querySelectorAll('.QuarterPanel__main__panel');
 
   const lastItem = document.querySelector(
-    ".QuarterPanel__main__line__dotbottom"
+    '.QuarterPanel__main__line__dotbottom'
   );
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as per your requirements
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     handleResize();
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -69,29 +69,29 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
   useEffect(() => {
     const timeLineText = document.querySelectorAll(
-      ".QuarterPanel__main__title"
+      '.QuarterPanel__main__title'
     );
-    timeLineText[activeText].classList.add("QuarterPanel__main__title--active");
+    timeLineText[activeText].classList.add('QuarterPanel__main__title--active');
     if (activeText > 0) {
       timeLineText[activeText - 1].classList.remove(
-        "QuarterPanel__main__title--active"
+        'QuarterPanel__main__title--active'
       );
     }
     if (activeText < timeLineText.length - 1) {
       timeLineText[activeText + 1].classList.remove(
-        "QuarterPanel__main__title--active"
+        'QuarterPanel__main__title--active'
       );
     }
     if (activeText === timeLineText.length - 1) {
       timeLineText[activeText - 1].classList.add(
-        "QuarterPanel__main__title--active"
+        'QuarterPanel__main__title--active'
       );
     }
   }, [activeText]);
 
   useEffect(() => {
     const handleScroll = () => {
-      const timelineItems = document.querySelectorAll(".QuarterPanel__submain");
+      const timelineItems = document.querySelectorAll('.QuarterPanel__submain');
       const scroll = window.scrollY;
       const MOVING_CIRCLE_HEIGHT = 24;
       timelineItems.forEach((item, index) => {
@@ -111,7 +111,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       });
 
       const timelineText = document.querySelectorAll(
-        ".QuarterPanel__main__rigth"
+        '.QuarterPanel__main__rigth'
       );
       timelineText.forEach((item, index) => {
         const itemTop = item.offsetTop;
@@ -143,20 +143,20 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       if (activeText === timelineText.length - 1)
         timelineText[activeText].style.opacity = 0;
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   });
 
   useEffect(() => {
     const url = new URL(window.location.href);
-    const hash = url.hash.split("#")[2];
+    const hash = url.hash.split('#')[2];
 
     if (hash) {
       const target = document.getElementById(hash);
       if (!target) return;
       scrollToActiveElement(hash);
 
-      const hashtoindex = Number(hash.replace("panel", ""));
+      const hashtoindex = Number(hash.replace('panel', ''));
 
       setActiveLink(hashtoindex);
     }
@@ -164,43 +164,43 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
   const handleClick = (i) => {
     const scrollY = window.scrollY;
-    localStorage.setItem("scrollPosition", scrollY);
-    localStorage.setItem("href", window.location.href);
+    localStorage.setItem('scrollPosition', scrollY);
+    localStorage.setItem('href', window.location.href);
     const id = i.target.id;
     glossaryPanel(id);
   };
 
   useEffect(() => {
     const elements = document.querySelectorAll(
-      ".QuarterPanel__main__underline__modal__button"
+      '.QuarterPanel__main__underline__modal__button'
     );
     const element2 = document.querySelectorAll(
-      ".QuarterPanel__main__underline__modal__context"
+      '.QuarterPanel__main__underline__modal__context'
     );
 
     elements.forEach((element) => {
-      element.addEventListener("click", handleClick);
+      element.addEventListener('click', handleClick);
     });
 
     element2.forEach((element) => {
-      element.addEventListener("click", handleClick);
+      element.addEventListener('click', handleClick);
     });
 
     return () => {
       elements.forEach((element) => {
-        element.removeEventListener("click", handleClick);
+        element.removeEventListener('click', handleClick);
       });
 
       element2.forEach((element) => {
-        element.removeEventListener("click", handleClick);
+        element.removeEventListener('click', handleClick);
       });
     };
-  }, []);
+  }, [handleClick]);
 
   const getLink = (k) => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
-      const period = url.hash.split("#")[2];
+      const period = url.hash.split('#')[2];
       if (period) {
         url.hash = `panel$${k}`;
         navigator.clipboard.writeText(
@@ -220,70 +220,70 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
   if (dotActiveState) {
     timeLineItems[activeItem].classList.add(
-      "QuarterPanel__main__line__dot--active"
+      'QuarterPanel__main__line__dot--active'
     );
     timeLinePanel[activeItem].classList.add(
-      "QuarterPanel__main__panel--active"
+      'QuarterPanel__main__panel--active'
     );
 
     timeLineItems[activeItem].classList.remove(
-      "QuarterPanel__main__line__dot--hide"
+      'QuarterPanel__main__line__dot--hide'
     );
 
     if (activeItem > 0) {
       for (let i = 1; i < activeItem - 1; i++) {
         timeLineItems[i - 1].classList.add(
-          "QuarterPanel__main__line__dot--hide"
+          'QuarterPanel__main__line__dot--hide'
         );
         timeLinePanel[i - 1].classList.remove(
-          "QuarterPanel__main__panel--active"
+          'QuarterPanel__main__panel--active'
         );
       }
       timeLinePanel[activeItem - 1].classList.remove(
-        "QuarterPanel__main__panel--active"
+        'QuarterPanel__main__panel--active'
       );
     }
 
     if (activeItem < timeLineItems.length - 1) {
       timeLineItems[activeItem + 1].classList.remove(
-        "QuarterPanel__main__line__dot--active"
+        'QuarterPanel__main__line__dot--active'
       );
       timeLinePanel[activeItem + 1].classList.remove(
-        "QuarterPanel__main__panel--active"
+        'QuarterPanel__main__panel--active'
       );
     }
     timeLineItems[activeItem].classList.remove(
-      "QuarterPanel__main__line__dot--stick"
+      'QuarterPanel__main__line__dot--stick'
     );
 
-    lastItem.classList.remove("QuarterPanel__main__line__dot--stick");
+    lastItem.classList.remove('QuarterPanel__main__line__dot--stick');
   } else {
     if (timeLineItems.length !== 0 || timeLinePanel.length !== 0) {
       for (let i = 0; i < timeLineItems.length; i++) {
         if (i !== 0)
           timeLinePanel[i].classList.remove(
-            "QuarterPanel__main__panel--active"
+            'QuarterPanel__main__panel--active'
           );
 
         timeLineItems[i].classList.remove(
-          "QuarterPanel__main__line__dot--active"
+          'QuarterPanel__main__line__dot--active'
         );
       }
 
       if (activeItem === 0) {
         timeLinePanel[activeItem].classList.add(
-          "QuarterPanel__main__panel--active"
+          'QuarterPanel__main__panel--active'
         );
         timeLineItems[activeItem].classList.add(
-          "QuarterPanel__main__line__dot--stick"
+          'QuarterPanel__main__line__dot--stick'
         );
       } else if (activeItem + 1 === timeLineItems.length - 1) {
-        lastItem.classList.add("QuarterPanel__main__line__dot--stick");
+        lastItem.classList.add('QuarterPanel__main__line__dot--stick');
       }
 
       if (activeItem === timeLineItems.length - 2) {
         timeLinePanel[activeItem + 1].classList.add(
-          "QuarterPanel__main__panel--active"
+          'QuarterPanel__main__panel--active'
         );
       }
     }
@@ -291,11 +291,11 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
   if (timeLineItems.length !== 0) {
     timeLinePanel[timeLinePanel.length - 1].classList.add(
-      "QuarterPanel__main__panel--laster"
+      'QuarterPanel__main__panel--laster'
     );
 
     timeLineItems[timeLineItems.length - 1].classList.add(
-      "QuarterPanel__main__line__dot--last"
+      'QuarterPanel__main__line__dot--last'
     );
   }
   if (!result) return <></>;
@@ -344,8 +344,8 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
                     <div className="QuarterPanel__main__panel">
                       <div className="QuarterPanel__main__link">
                         <div
-                          className={cn("QuarterPanel__main__playIcon", {
-                            "QuarterPanel__main__playIcon--active":
+                          className={cn('QuarterPanel__main__playIcon', {
+                            'QuarterPanel__main__playIcon--active':
                               k +
                                 index *
                                   result.quarters[index > 0 ? index - 1 : 0]
@@ -355,8 +355,8 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
                         >
                           {milestones.icon ? (
                             <img
-                              className={cn("mileston__icon", {
-                                "mileston__icon--active":
+                              className={cn('mileston__icon', {
+                                'mileston__icon--active':
                                   k +
                                     index *
                                       result.quarters[index > 0 ? index - 1 : 0]
@@ -372,18 +372,18 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
                         </div>
                         <div className="QuarterPanel__main__linkIcon">
                           <TooltipPanel
-                            text={"Copy link to share"}
+                            text={'Copy link to share'}
                             activeState={
                               k + index * res.deliveryMilestones.length ===
                               activeLinkIcon
                             }
-                            activeText={"Link copied to the clipboard!"}
+                            activeText={'Link copied to the clipboard!'}
                           >
                             <button
                               className={cn(
-                                "QuarterPanel__main__linkIcon__icon linkBtn",
+                                'QuarterPanel__main__linkIcon__icon linkBtn',
                                 {
-                                  "QuarterPanel__main__linkIcon__icon--active":
+                                  'QuarterPanel__main__linkIcon__icon--active':
                                     k +
                                       index * res.deliveryMilestones.length ===
                                     activeLink,

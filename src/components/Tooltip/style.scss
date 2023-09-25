@@ -3,23 +3,24 @@
 
   .tooltip {
     position: absolute;
+    right: 0;
     width: max-content;
-    margin: -5px 0px;
+    margin: -5px 0;
     padding: 15px 15px 18px 15px;
     color: #fff;
     background-color: #333;
     opacity: 0;
     transform: translateY(-100%);
-    transition: opacity 0.3s ease-in-out;
-    clip-path: polygon(
-      0% 0%,
-      100% 0%,
-      100% calc(100% - 6px),
-      100% 100%,
-      calc(100% - 8px) calc(100% - 6px),
-      0% calc(100% - 6px)
-    );
-    right: 0;
+    transition: opacity .3s ease-in-out;
+    clip-path:
+      polygon(
+        0% 0%,
+        100% 0%,
+        100% calc(100% - 6px),
+        100% 100%,
+        calc(100% - 8px) calc(100% - 6px),
+        0% calc(100% - 6px)
+      );
 
     &.visible {
       opacity: 1;
@@ -29,6 +30,5 @@
   .content {
     padding: 20px;
     background-color: #f5f5f5;
-    
   }
 }
