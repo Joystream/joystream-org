@@ -8,7 +8,7 @@ import './style.scss';
 export const ArrowButton = ({ link, text, className, textClassname, onClick, state, to, style, ...props }) => {
   const children = (
     <div className="ArrowButton">
-      <span className={`ArrowButton__text ${textClassname ?? ''}`}> {text} </span>
+      <span className={`ArrowButton__text ${textClassname ?? ""}`}> {text} </span>
       <Arrow className="ArrowButton__arrow" />
     </div>
   );

@@ -14,63 +14,63 @@ const roles = {
       image: ContentCreatorImage,
       title: 'Content Creator',
       key: 'contentCreatorsCount',
-      to: '#',
-      hasLabel: false,
+      to: "#",
+      hasLabel: false
     },
     {
       image: ContentCuratorImage,
       title: 'Content Curator',
       key: 'contentCuratorsCount',
-      to: '#',
-      hasLabel: false,
+      to: "#",
+      hasLabel: false
     },
     {
       image: ValidatorImage,
       title: 'Validator',
       key: 'validatorsCount',
-      to: '#',
-      hasLabel: false,
+      to: "#",
+      hasLabel: false
     },
     {
       image: CouncilMemberImage,
       title: 'Council Member',
       key: 'councilMembersCount',
-      to: '#',
-      hasLabel: false,
+      to: "#",
+      hasLabel: false
     },
     {
       image: StorageProviderImage,
       title: 'Storage Provider',
       key: 'storageProviders',
-      to: '#',
-      hasLabel: false,
+      to: "#",
+      hasLabel: false
     },
     { 
       image: BuilderImage, 
       title: 'Builder',
       key: 'builders',
-      to: '#',
-      hasLabel: false,
+      to: "#",
+      hasLabel: false
     },
     { 
       image: BandwidthProviderImage, 
       title: 'Bandwidth Provider',
       key: 'bandwidthProviders',
-      to: '#',
+      to: "#",
       hasLabel: false,
     },
     {
       image: MembershipCuratorImage,
       title: 'Membership Curator',
       key: 'membershipCurators',
-      to: '#',
+      to: "#",
       hasLabel: false,
     },
     {
       image: CommunicationModeratorImage,
       title: 'Communication Moderator',
       key: 'communicationModerators',
-      to: '#',
+      to: "#",
       hasLabel: false,
     },
   ],

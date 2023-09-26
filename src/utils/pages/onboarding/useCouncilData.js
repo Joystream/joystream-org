@@ -21,14 +21,14 @@ const getCouncilPeriodLength = (api) => {
   const revealingStagePeriodLength = api.consts.referendum.revealStageDuration.toNumber();
 
   return idlePeriodLength + announcingStagePeriodLength + votingStagePeriodLength + revealingStagePeriodLength;
-};
+}
 
 const parseBlockLengthInDays = (blockLength) => {
   const AVERAGE_BLOCK_DURATION_IN_SECONDS = 6;
   const ONE_SECOND_IN_DAYS = 1 / (60 * 60 * 24);
 
   return (AVERAGE_BLOCK_DURATION_IN_SECONDS * blockLength) * ONE_SECOND_IN_DAYS;
-};
+}
 
 const useCouncilData = () => {
   const [Api, setApi] = useState();

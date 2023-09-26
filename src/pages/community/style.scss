@@ -87,10 +87,6 @@
         width: 32px;
       }
 
-      & > img {
-        width: 32px;
-      }
-
       &--twitter {
         background-color: rgba(29, 155, 240, .15);
 
@@ -123,10 +119,6 @@
 
       &--handbook {
         background-color: rgba(54, 129, 252, .1);
-      }
-
-      &--telegram {
-        background-color: rgba(29, 155, 240, .15);
       }
 
       &--element {
@@ -282,10 +274,6 @@
       &__icon {
         width: 40px;
         height: 40px;
-
-        & > img {
-          width: 28px;
-        }
       }
     }
   }

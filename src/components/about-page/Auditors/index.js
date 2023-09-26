@@ -16,8 +16,8 @@ const Auditors = () => {
     <section className="AboutPage__auditors-wrapper">
       <div className="AboutPage__auditors">
         <header className="AboutPage__auditors__header">
-          <span className="AboutPage__auditors__header__section-title">{t('about.auditors.sectionTitle')}</span>
-          <h2 className="AboutPage__auditors__header__title">{t('about.auditors.title')}</h2>
+          <span className="AboutPage__auditors__header__section-title">{t("about.auditors.sectionTitle")}</span>
+          <h2 className="AboutPage__auditors__header__title">{t("about.auditors.title")}</h2>
         </header>
         <div className="AboutPage__auditors__list">
           <div className="AboutPage__auditors__list-item">
@@ -38,7 +38,7 @@ const Auditors = () => {
               target="_blank"
             >
               <div className="AboutPage__auditors__list-item__link">
-                {t('about.auditors.report')}
+                {t("about.auditors.report")}
                 <LinkIcon className="AboutPage__auditors__list-item__link__icon" />
               </div>
             </a>
@@ -61,7 +61,7 @@ const Auditors = () => {
               target="_blank"
             >
               <div className="AboutPage__auditors__list-item__link">
-                {t('about.auditors.report')}
+                {t("about.auditors.report")}
                 <LinkIcon className="AboutPage__auditors__list-item__link__icon" />
               </div>
             </a>

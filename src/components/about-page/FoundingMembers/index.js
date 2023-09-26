@@ -44,7 +44,7 @@ const FMCard = ({
         updatePreloadedImageCounter();
       }
     });
-  }, [avatarUrl, updatePreloadedImageCounter]);
+  }, []);
 
   if (updatePreloadedImageCounter && !shouldRenderOtherMembers) {
     return null;
@@ -52,20 +52,10 @@ const FMCard = ({
 
   if (onlyRenderPlaceholder || showPlaceholder) {
     return (
-      <div
-        className={`${baseClassName} ${
-          onlyRenderPlaceholder ? placeholderClass : ''
-        } ${baseClassName}--loading`}
-      >
-        <div
-          className={`${baseClassName}__icon ${baseClassName}__icon--loading`}
-        />
-        <div
-          className={`${baseClassName}__handle ${baseClassName}__handle--loading`}
-        ></div>
-        <div
-          className={`${baseClassName}__id ${baseClassName}__id--loading`}
-        ></div>
+      <div className={`${baseClassName} ${onlyRenderPlaceholder ? placeholderClass : ''} ${baseClassName}--loading`}>
+        <div className={`${baseClassName}__icon ${baseClassName}__icon--loading`} />
+        <div className={`${baseClassName}__handle ${baseClassName}__handle--loading`}></div>
+        <div className={`${baseClassName}__id ${baseClassName}__id--loading`}></div>
       </div>
     );
   }
@@ -82,22 +72,14 @@ const FMCard = ({
 const FoundingMembers = () => {
   const { t } = useTranslation();
 
-  const [
-    shouldRenderAllCommunityMembers,
-    setShouldRenderAllCommunityMembers,
-  ] = useState(false);
-  const [
-    numberOfPreloadedCommunityMemberImages,
-    setNumberOfPreloadedCommunityMemberImages,
-  ] = useState(0);
+  const [shouldRenderAllCommunityMembers, setShouldRenderAllCommunityMembers] = useState(false);
+  const [numberOfPreloadedCommunityMemberImages, setNumberOfPreloadedCommunityMemberImages] = useState(0);
 
   // Derived state
   const shouldRenderOtherCommunityMembers =
-    shouldRenderAllCommunityMembers &&
-    numberOfPreloadedCommunityMemberImages == OTHER_FOUNDING_MEMBERS.length;
+    shouldRenderAllCommunityMembers && numberOfPreloadedCommunityMemberImages == OTHER_FOUNDING_MEMBERS.length;
   const shouldShowTemporaryCommunityMemberPlaceholders =
-    shouldRenderAllCommunityMembers &&
-    numberOfPreloadedCommunityMemberImages != OTHER_FOUNDING_MEMBERS.length;
+    shouldRenderAllCommunityMembers && numberOfPreloadedCommunityMemberImages != OTHER_FOUNDING_MEMBERS.length;
 
   return (
     <section className="AboutPage__founding-members-wrapper">
@@ -106,26 +88,18 @@ const FoundingMembers = () => {
           <span className="AboutPage__founding-members__header__section-title">
             {t('about.foundingMembers.sectionTitle')}
           </span>
-          <h2 className="AboutPage__founding-members__header__title">
-            {t('about.foundingMembers.title')}
-          </h2>
+          <h2 className="AboutPage__founding-members__header__title">{t('about.foundingMembers.title')}</h2>
           <p className="AboutPage__founding-members__header__subtitle">
             <Trans
               i18nKey="about.foundingMembers.subtitle"
               components={{
                 linkOne: (
-                  <a
-                    href="https://www.coindesk.com/business/2022/03/23/decentralized-creator-platform-joystream-raises-58m/"
-                    target="_blank"
-                  >
+                  <a href="https://joystream.gitbook.io/testnet-workspace/glossary#jsgenesis" target="_blank">
                     Jsgenesis
                   </a>
                 ),
                 linkTwo: (
-                  <a
-                    href="https://joystream.gitbook.io/testnet-workspace/founding-member-program"
-                    target="_blank"
-                  >
+                  <a href="https://joystream.gitbook.io/testnet-workspace/founding-member-program" target="_blank">
                     founding member program
                   </a>
                 ),
@@ -148,12 +122,7 @@ const FoundingMembers = () => {
           </div>
           <div className="AboutPage__founding-members__jsgenesis__cards">
             {employees.map(({ avatarId, memberHandle, memberId }) => (
-              <FMCard
-                key={memberHandle}
-                avatarUrl={avatarId}
-                memberHandle={memberHandle}
-                memberId={memberId}
-              />
+              <FMCard key={memberHandle} avatarUrl={avatarId} memberHandle={memberHandle} memberId={memberId} />
             ))}
           </div>
         </div>
@@ -171,52 +140,38 @@ const FoundingMembers = () => {
             </div>
           </div>
           <div className="AboutPage__founding-members__community__cards">
-            {INITIAL_RENDER_FOUNDING_MEMBERS.map(
-              ({ avatarId, memberHandle, memberId }) => (
+            {INITIAL_RENDER_FOUNDING_MEMBERS.map(({ avatarId, memberHandle, memberId }) => (
+              <FMCard
+                key={memberHandle}
+                avatarUrl={avatarId}
+                memberHandle={memberHandle}
+                memberId={memberId}
+                type="community"
+              />
+            ))}
+            {shouldShowTemporaryCommunityMemberPlaceholders &&
+              Array.from({ length: 6 }, (_, index) => (
+                <FMCard key={`placeholder-${index}`} onlyRenderPlaceholder={true} type="community" />
+              ))}
+            {shouldRenderAllCommunityMembers &&
+              OTHER_FOUNDING_MEMBERS.map(({ avatarId, memberHandle, memberId }) => (
                 <FMCard
                   key={memberHandle}
                   avatarUrl={avatarId}
                   memberHandle={memberHandle}
                   memberId={memberId}
-                  type="community"
-                />
-              )
-            )}
-            {shouldShowTemporaryCommunityMemberPlaceholders &&
-              Array.from({ length: 6 }, (_, index) => (
-                <FMCard
-                  key={`placeholder-${index}`}
-                  onlyRenderPlaceholder={true}
+                  updatePreloadedImageCounter={() => setNumberOfPreloadedCommunityMemberImages(prev => prev + 1)}
+                  shouldRenderOtherMembers={shouldRenderOtherCommunityMembers}
                   type="community"
                 />
               ))}
-            {shouldRenderAllCommunityMembers &&
-              OTHER_FOUNDING_MEMBERS.map(
-                ({ avatarId, memberHandle, memberId }) => (
-                  <FMCard
-                    key={memberHandle}
-                    avatarUrl={avatarId}
-                    memberHandle={memberHandle}
-                    memberId={memberId}
-                    updatePreloadedImageCounter={() =>
-                      setNumberOfPreloadedCommunityMemberImages(
-                        (prev) => prev + 1
-                      )
-                    }
-                    shouldRenderOtherMembers={shouldRenderOtherCommunityMembers}
-                    type="community"
-                  />
-                )
-              )}
           </div>
           {!shouldRenderAllCommunityMembers && (
             <button
               className="AboutPage__founding-members__community__show-all"
               onClick={() => setShouldRenderAllCommunityMembers(true)}
             >
-              {t('about.foundingMembers.community.showAll', {
-                numberOfCommunityMembers: foundingMembers.length,
-              })}
+              {t('about.foundingMembers.community.showAll', { numberOfCommunityMembers: foundingMembers.length })}
             </button>
           )}
         </div>

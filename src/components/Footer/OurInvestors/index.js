@@ -11,9 +11,7 @@ const OurInvestors = ({ t }) => {
   return (
     <div className="Footer__our-investors-wrapper">
       <div className="Footer__our-investors">
-        <h2 className="Footer__our-investors__title">
-          {t('footer.ourInvestors')}
-        </h2>
+        <h2 className="Footer__our-investors__title">{t('footer.ourInvestors')}</h2>
         <div className="Footer__our-investors__carousel">
           <div
             className={cn('Footer__our-investors__carousel__content', {

@@ -8,7 +8,7 @@ import './style.scss';
 
 export const SidebarContext = React.createContext({});
 
-export const SidebarProvider = (props) => {
+export const SidebarProvider = props => {
   const [currentElement, setCurrentElement] = useState('');
   const [currentSubElement, setCurrentSubElement] = useState('');
 
@@ -51,11 +51,7 @@ const BrandSidebar = ({ data, light, activeSectionId, onSectionClick }) => {
         'BrandSidebar--light': light,
       })}
     >
-      <div
-        className="BrandSidebar__trigger"
-        onClick={() => setIsOpen(!isOpen)}
-        role="presentation"
-      >
+      <div className="BrandSidebar__trigger" onClick={() => setIsOpen(!isOpen)} role="presentation">
         <div className="BrandSidebar__trigger-icon">{'<-'}</div>
       </div>
 
@@ -88,8 +84,7 @@ const BrandSidebar = ({ data, light, activeSectionId, onSectionClick }) => {
                       return (
                         <button
                           className={cn('BrandSidebar__sub-link', {
-                            'BrandSidebar__sub-link--active':
-                              currentSubElement === id,
+                            'BrandSidebar__sub-link--active': currentSubElement === id,
                           })}
                           key={id}
                           onClick={() => {

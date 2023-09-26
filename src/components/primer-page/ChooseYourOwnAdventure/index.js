@@ -23,21 +23,21 @@ const CTA = ({ Image, title, buttonText, href, to }) => {
       </div>
       <div className="PrimerPage__choose-your-adventure__list-item__bottom">
         <div className="PrimerPage__choose-your-adventure__list-item__cta">
-          <span className="PrimerPage__choose-your-adventure__list-item__cta__text">{buttonText}</span>
+          <span className='PrimerPage__choose-your-adventure__list-item__cta__text'>{buttonText}</span>
           <div className="PrimerPage__choose-your-adventure__list-item__cta__arrow-wrapper">
             <ArrowIcon className="PrimerPage__choose-your-adventure__list-item__cta__arrow" />
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 
   if(to) {
-    return <Link to={to}>{children}</Link>;
+    return <Link to={to}>{children}</Link>
   }
 
   if(href) {
-    return <a href={href}>{children}</a>;
+    return <a href={href}>{children}</a>
   }
 
   return children;

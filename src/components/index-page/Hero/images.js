@@ -182,4 +182,4 @@ export default [
   HeroFrame88,
   // HeroFrame89,
   HeroFrame90,
-];
+]

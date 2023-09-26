@@ -14,20 +14,12 @@ const FooterSection = ({ title, links }) => {
       <h6 className="Footer__section-title">{title}</h6>
       {links.map(({ label, icon: Icon, ...link }) => {
         const LinkComponent = link.to ? Link : 'a';
-        const props = link.to
-          ? link
-          : { ...link, target: '_blank', rel: 'noopener noreferrer' };
+        const props = link.to ? link : { ...link, target: '_blank', rel: 'noopener noreferrer' };
 
-        const iconComponent = Icon ? (
-          <Icon className="Footer__section-icon" />
-        ) : null;
+        const iconComponent = Icon ? <Icon className="Footer__section-icon"  /> : null;
 
         return (
-          <LinkComponent
-            key={label}
-            className="Footer__section-link"
-            {...props}
-          >
+          <LinkComponent key={label} className="Footer__section-link" {...props}>
             {label}
             {iconComponent}
           </LinkComponent>
@@ -43,10 +35,7 @@ const LinkSection = ({ t }) => (
     <div className="Footer__layout">
       <FooterSection
         title={t('joystream')}
-        links={joystreamLinks.map(({ label, ...rest }) => ({
-          label: t(label),
-          ...rest,
-        }))}
+        links={joystreamLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
       />
       {/* <FooterSection
         title={t('socials.github')}
@@ -54,16 +43,11 @@ const LinkSection = ({ t }) => (
         /> */}
       <FooterSection
         title={t('footer.usefulLinks.title')}
-        links={usefulLinks.map(({ label, ...rest }) => ({
-          label: t(label),
-          ...rest,
-        }))}
+        links={usefulLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
       />
 
       <div className="Footer__section Footer__section--socials">
-        <h6 className="Footer__section-title Footer__section-title--socials">
-          {t('footer.followUs')}
-        </h6>
+        <h6 className="Footer__section-title Footer__section-title--socials">{t('footer.followUs')}</h6>
 
         <div className="Footer__socials">
           {socialMedias.map(({ icon: Icon, name, href }) => (
@@ -100,14 +84,10 @@ const Footer = ({ t, primer }) => {
             type="email"
             name="EMAIL"
             required
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
             value={email}
           />
-          <Button
-            className="Footer__form__button"
-            type="submit"
-            name="subscribe"
-          >
+          <Button className="Footer__form__button" type="submit" name="subscribe">
             {t('footer.joinNewsletter')}
           </Button>
         </form>

@@ -11,8 +11,8 @@ import PioneerIllustration from '../../../assets/images/token/pioneer-illustrati
 import './style.scss';
 
 const FeaturedPlatform = ({ image, platformName, platformDescription, link, illustration, isPioneer , t }) => (
-  <div className={cn('TokenPage__faucets__apps__main', {
-    'TokenPage__faucets__apps__main--pioneer': isPioneer,
+  <div className={cn("TokenPage__faucets__apps__main", {
+    "TokenPage__faucets__apps__main--pioneer": isPioneer
   })}>
     <div className="TokenPage__faucets__apps__main__about">
       <div className="TokenPage__faucets__apps__main__about__logo-wrapper">
@@ -23,12 +23,12 @@ const FeaturedPlatform = ({ image, platformName, platformDescription, link, illu
         />
       </div>
       <div className="TokenPage__faucets__apps__main__about__section-title">
-        {t('token.faucets.featured')}
+        {t("token.faucets.featured")}
       </div>
       <h4 className="TokenPage__faucets__apps__main__about__platform-name">{platformName}</h4>
       <p className="TokenPage__faucets__apps__main__about__platform-description">{platformDescription}</p>
 
-      <ArrowLink className="TokenPage__faucets__apps__main__about__link" text={t('token.faucets.visit')} href={link} />
+      <ArrowLink className="TokenPage__faucets__apps__main__about__link" text={t("token.faucets.visit")} href={link} />
     </div>
     <div className="TokenPage__faucets__apps__main__visual">
       <img
@@ -42,29 +42,29 @@ const FeaturedPlatform = ({ image, platformName, platformDescription, link, illu
 
 const Faucets = ({ t }) => {
   return (
-    <section className="TokenPage__faucets-wrapper">
-      <div className="TokenPage__faucets">
+    <section className='TokenPage__faucets-wrapper'>
+      <div className='TokenPage__faucets'>
         <header className="TokenPage__faucets__header">
-          <span className="TokenPage__faucets__header__section-title">{t('token.faucets.sectionTitle')}</span>
-          <h2 className="TokenPage__faucets__header__title">{t('token.faucets.title')}</h2>
+          <span className="TokenPage__faucets__header__section-title">{t("token.faucets.sectionTitle")}</span>
+          <h2 className="TokenPage__faucets__header__title">{t("token.faucets.title")}</h2>
           <p className="TokenPage__faucets__header__subtitle">
-            {t('token.faucets.subtitle')}
+            {t("token.faucets.subtitle")}
           </p>
         </header>
 
-        <div className="TokenPage__faucets__apps">
+        <div className='TokenPage__faucets__apps'>
           <FeaturedPlatform
             image={GleevLogo}
-            platformName={t('token.faucets.gleev.name')}
-            platformDescription={t('token.faucets.gleev.description')}
+            platformName={t("token.faucets.gleev.name")}
+            platformDescription={t("token.faucets.gleev.description")}
             link="https://gleev.xyz"
             illustration={GleevIllustration}
             t={t}
           />
           <FeaturedPlatform
             image={PioneerLogo}
-            platformName={t('token.faucets.pioneer.name')}
-            platformDescription={t('token.faucets.pioneer.description')}
+            platformName={t("token.faucets.pioneer.name")}
+            platformDescription={t("token.faucets.pioneer.description")}
             link="https://pioneerapp.xyz/"
             illustration={PioneerIllustration}
             isPioneer
@@ -73,7 +73,7 @@ const Faucets = ({ t }) => {
         </div>
       </div>
     </section>
-  );
+  )
 };
 
 export default Faucets;

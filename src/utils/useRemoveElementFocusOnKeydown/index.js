@@ -14,8 +14,8 @@ const useRemoveElementFocusOnKeydown = (elementRef, keyArray) => {
 
     return () => {
       global.removeEventListener('keydown', eventListener);
-    };
-  }, [elementRef, keyArray]);
-};
+    }
+  }, []);
+}
 
 export default useRemoveElementFocusOnKeydown;
