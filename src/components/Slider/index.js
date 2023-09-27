@@ -21,14 +21,7 @@ export const ThemeSlide = ({ children, className, ...props }) => {
   const { selectedTheme } = React.useContext(SliderThemeContext);
 
   return (
-    <div
-      className={cn(
-        'Slider__slide',
-        `Slider__slide--${selectedTheme}`,
-        className
-      )}
-      {...props}
-    >
+    <div className={cn('Slider__slide', `Slider__slide--${selectedTheme}`, className)} {...props}>
       {children}
     </div>
   );
@@ -60,13 +53,7 @@ const propTypes = {
   ]),
 };
 
-export const Slider = ({
-  className,
-  withSpacing,
-  slides,
-  themes = [],
-  size = 'default',
-}) => {
+export const Slider = ({ className, withSpacing, slides, themes = [], size = 'default' }) => {
   const [selectedTheme, setTheme] = useState('white');
   const containerRef = createRef();
   const [screenWidth, setScreenWidth] = useState();
@@ -103,18 +90,11 @@ export const Slider = ({
             return (
               <ReactSlide
                 className="Slider__slide"
-                innerClassName={cn(
-                  'Slider__slide-inner',
-                  withSpacing && 'Slider__slide-inner--spaced'
-                )}
+                innerClassName={cn('Slider__slide-inner', withSpacing && 'Slider__slide-inner--spaced')}
                 key={i}
                 index={i}
               >
-                {typeof themeSlide === 'string' ? (
-                  <img alt="" src={themeSlide} />
-                ) : (
-                  themeSlide
-                )}
+                {typeof themeSlide === 'string' ? <img alt="" src={themeSlide} /> : themeSlide}
               </ReactSlide>
             );
           })}
@@ -131,9 +111,7 @@ export const Slider = ({
                   <div
                     className="Slider__indicator"
                     style={{
-                      width: `${(1 /
-                        (totalSlides - (visibleSlides === 2 ? 1 : 0))) *
-                        100}%`,
+                      width: `${(1 / (totalSlides - (visibleSlides === 2 ? 1 : 0))) * 100}%`,
                       transform: `translateX(${currentSlide * 100}%)`,
                     }}
                   />
@@ -147,17 +125,13 @@ export const Slider = ({
 
           {themes.length > 0 && (
             <div className="Slider__themes">
-              {themes.map((themeName) => {
+              {themes.map(themeName => {
                 return (
                   <button
                     key={themeName}
-                    className={cn(
-                      'Slider__theme',
-                      `Slider__theme--${themeName}`,
-                      {
-                        'Slider__theme--selected': themeName === selectedTheme,
-                      }
-                    )}
+                    className={cn('Slider__theme', `Slider__theme--${themeName}`, {
+                      'Slider__theme--selected': themeName === selectedTheme,
+                    })}
                     onClick={() => setTheme(themeName)}
                   />
                 );

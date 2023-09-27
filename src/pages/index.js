@@ -24,12 +24,8 @@ const IndexPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
-  const [data, loading, error] = useAxios(
-    'https://status.joystream.org/carousel-data'
-  );
-  const [priceData, priceLoading, priceError] = useAxios(
-    'https://status.joystream.org/price'
-  );
+  const [data, loading, error] = useAxios('https://status.joystream.org/carousel-data');
+  const [priceData, priceLoading, priceError] = useAxios('https://status.joystream.org/price');
 
   const updatedPriceData = {
     price: priceData?.price ?? 0,

@@ -110,7 +110,7 @@ const ManifestoPage = () => {
               <span className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue">{t('manifesto.wedge.text.blockchainTokens')}</span>
             </div>
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
-              <Trans i18nKey="manifesto.wedge.text.initialHurdle" components={{ reference: <div className="ManifestoPage__reference"></div> }} />
+              <Trans i18nKey="manifesto.wedge.text.initialHurdle" components={{ reference: <div className='ManifestoPage__reference'></div> }} />
             </div>
           </div>
 
@@ -127,7 +127,7 @@ const ManifestoPage = () => {
             </div>
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
               <span className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue">
-                <Trans i18nKey="manifesto.accountability.text.twoWays" components={{ reference: <div className="ManifestoPage__reference ManifestoPage__reference--bold"></div> }} />
+                <Trans i18nKey="manifesto.accountability.text.twoWays" components={{ reference: <div className='ManifestoPage__reference ManifestoPage__reference--bold'></div> }} />
               </span>
             </div>
           </div>
@@ -166,7 +166,7 @@ const ManifestoPage = () => {
             </div>
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
               <span className="ManifestoPage__text-highlight ManifestoPage__text-highlight--light-blue">
-                <Trans i18nKey="manifesto.exit.text.competition" components={{ reference: <div className="ManifestoPage__reference ManifestoPage__reference--bold"></div> }} />
+                <Trans i18nKey="manifesto.exit.text.competition" components={{ reference: <div className='ManifestoPage__reference ManifestoPage__reference--bold'></div> }} />
               </span>
             </div>
             <div className="ManifestoPage__paragraph ManifestoPage__paragraph--black">
@@ -181,24 +181,24 @@ const ManifestoPage = () => {
           <h2 className="ManifestoPage__references__title">{t('manifesto.references.title')}</h2>
           <div className="ManifestoPage__references__items">
             <div className="ManifestoPage__references__item">
-              <div className="ManifestoPage__references__item__number">1.</div>
-              <div className="ManifestoPage__references__item__text">{t('manifesto.references.one')}</div>
+              <div className='ManifestoPage__references__item__number'>1.</div>
+              <div className='ManifestoPage__references__item__text'>{t('manifesto.references.one')}</div>
             </div>
             <div className="ManifestoPage__references__item">
-              <div className="ManifestoPage__references__item__number">2.</div>
-              <div className="ManifestoPage__references__item__text">{t('manifesto.references.two')}</div>
+              <div className='ManifestoPage__references__item__number'>2.</div>
+              <div className='ManifestoPage__references__item__text'>{t('manifesto.references.two')}</div>
             </div>
             <div className="ManifestoPage__references__item">
-              <div className="ManifestoPage__references__item__number">3.</div>
-              <div className="ManifestoPage__references__item__text">{t('manifesto.references.three')}</div>
+              <div className='ManifestoPage__references__item__number'>3.</div>
+              <div className='ManifestoPage__references__item__text'>{t('manifesto.references.three')}</div>
             </div>
             <div className="ManifestoPage__references__item">
-              <div className="ManifestoPage__references__item__number">4.</div>
-              <div className="ManifestoPage__references__item__text">{t('manifesto.references.four')}</div>
+              <div className='ManifestoPage__references__item__number'>4.</div>
+              <div className='ManifestoPage__references__item__text'>{t('manifesto.references.four')}</div>
             </div>
             <div className="ManifestoPage__references__item">
-              <div className="ManifestoPage__references__item__number">5.</div>
-              <div className="ManifestoPage__references__item__text">{t('manifesto.references.five')}</div>
+              <div className='ManifestoPage__references__item__number'>5.</div>
+              <div className='ManifestoPage__references__item__text'>{t('manifesto.references.five')}</div>
             </div>
           </div>
         </div>
