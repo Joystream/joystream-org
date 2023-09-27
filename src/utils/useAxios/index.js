@@ -1,12 +1,6 @@
 import axios from 'axios';
 import usePromise from '../usePromise';
 import { func } from 'prop-types';
-import {
-  ACCESS_TOKEN,
-  GIT_FOLDER,
-  GIT_REPOSITY,
-  GIT_USER_NAME,
-} from '../../../gitconfig';
 
 const defaultUrl = process.env.GATSBY_API_URL || 'https://status.joystream.app';
 
@@ -26,14 +20,7 @@ export default function useAxios(url = defaultUrl) {
 
 export function useGetFileName() {
   const [response, loading, error] = usePromise(() => {
-    return axios.get(
-      `https://api.github.com/repos/${GIT_USER_NAME}/${GIT_REPOSITY}/contents/${GIT_FOLDER}`
-      // {
-      //   headers: {
-      //     Authorization: `token ${ACCESS_TOKEN}`,
-      //   },
-      // }
-    );
+    return axios.get(`https://api.github.com/repos/HeinrichOlfert/Joystream_term_json_data/contents/goals`);
   });
 
   if (loading && !error) {
@@ -42,11 +29,9 @@ export function useGetFileName() {
     return [null, false, null];
   }
 
-  const files = response.data.filter((file) => file.type === 'file');
+  const files = response.data.filter(file => file.type === 'file');
 
-  const fileNames = files
-    .filter((file) => file.type === 'file')
-    .map((file) => file.name);
+  const fileNames = files.filter(file => file.type === 'file').map(file => file.name);
 
   const result = { fileNames };
 

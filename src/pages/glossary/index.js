@@ -6,12 +6,6 @@ import BaseLayout from '../../components/_layouts/Base';
 import SiteMetadata from '../../components/SiteMetadata';
 
 import axios from 'axios';
-import {
-  GIT_GLOSSARY_FOLDER,
-  GIT_REPOSITY,
-  GIT_USER_NAME,
-} from '../../../gitconfig';
-
 import Glossary from '../../components/glossary-page';
 import MyContext from '../../utils/useContext';
 
@@ -29,14 +23,14 @@ const GlossaryPage = () => {
     }
     const fetchGlossary = async () => {
       const response = await axios.get(
-        `https://raw.githubusercontent.com/${GIT_USER_NAME}/${GIT_REPOSITY}/main/${GIT_GLOSSARY_FOLDER}/glossary.json`
+        `https://raw.githubusercontent.com/HeinrichOlfert/Joystream_term_json_data/main/glossary/glossary.json`
       );
 
       setGlossary(response.data[0].terms);
 
       if (item) {
         let decodedString = decodeURIComponent(item);
-        const index = response.data[0].terms.findIndex((res) => {
+        const index = response.data[0].terms.findIndex(res => {
           return res.title === decodedString;
         });
         if (index !== -1) {
@@ -51,8 +45,8 @@ const GlossaryPage = () => {
     fetchGlossary();
   }, []);
 
-  const onCardSelect = (e) => {
-    const index = glossary.findIndex((item) => item.title === e);
+  const onCardSelect = e => {
+    const index = glossary.findIndex(item => item.title === e);
     if (index !== -1) {
       setGlossaryIndex(index);
     }
