@@ -4,7 +4,12 @@ import './style.scss';
 import QuarterPanel from '../QuarterPanel';
 
 function QuartersListData({ data, selectGlossary, scrollPosition, isLoading }) {
-  if (isLoading) return <QuarterPanel loading={true} language={'English'} />;
+  if (isLoading)
+    return (
+      <div className="QuarterList_main">
+        <QuarterPanel loading={true} language={'English'} />;
+      </div>
+    );
   return (
     <div className="QuarterList_main">
       {data.map((res, index) => {

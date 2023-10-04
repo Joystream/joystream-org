@@ -42,7 +42,7 @@ const RoadmapPage = () => {
     }
     const fetchGlossary = async () => {
       const response = await axios.get(
-        `https://raw.githubusercontent.com/HeinrichOlfert/Joystream_term_json_data/main/glossary/glossary.json`
+        `https://raw.githubusercontent.com/HeinrichOlfert/joystream-org/main/storydata/glossary/glossary.json`
       );
       setGlossary(response.data[0].terms);
     };
@@ -81,7 +81,7 @@ const RoadmapPage = () => {
   useEffect(() => {
     const fetchFileData = async () => {
       const filedata = await axios.get(
-        `https://raw.githubusercontent.com/HeinrichOlfert/Joystream_term_json_data/main/goals/${fileName}`
+        `https://raw.githubusercontent.com/HeinrichOlfert/joystream-org/main/storydata/goals/${fileName}`
       );
 
       setData(filedata.data);

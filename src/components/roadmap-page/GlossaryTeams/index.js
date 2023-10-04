@@ -148,7 +148,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
               );
             })}
           </div>
-          \
+
           {glossary.length <= 4 || filter ? (
             <></>
           ) : showAll ? (

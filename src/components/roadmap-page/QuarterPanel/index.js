@@ -61,7 +61,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
   }
 
   useEffect(() => {
-    if (!loading) {
+    if (!loading && typeof document !== 'undefined') {
       const timeLineText = document.querySelectorAll('.QuarterPanel__main__title');
       timeLineText[activeText].classList.add('QuarterPanel__main__title--active');
       if (activeText > 0) {
@@ -176,8 +176,8 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       <div className="QuarterPanel__main">
         <div className="QuarterPanel__main__rigth">
           <div className="QuarterPanel__main__title">
-            <div className="QuarterPanel__main__subtitle">2023</div>
-            <div className="QuarterPanel__main__quarters">Q1</div>
+            <div className="QuarterPanel__main__subtitle__loading"></div>
+            <div className="QuarterPanel__main__quarters__loading"></div>
           </div>
         </div>
         <div className="QuarterPanel__submain">

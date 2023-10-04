@@ -30,7 +30,21 @@ const SelectOptions = ({ options, sendData, value }) => {
     sendData(options[index].period);
   };
 
-  if (options.length === 0 || isSelect === -1) return <div>Loading...</div>;
+  if (options.length === 0 || isSelect === -1)
+    return (
+      <>
+        <div className={cn('Quarters__options-wrapper', {})} role="presentation">
+          <div className={'Quarters__options-item__label'}>
+            <div className="Quarters__options-item__name">Version 6</div>
+            <div className="Quarters__options-item__period">Loading ....</div>
+          </div>
+          <div className="Quarters__expand__icon">
+            <Expand className="Quarters__expand-icon" />
+          </div>
+          <div className="Quarters__options__dropdown"></div>
+        </div>
+      </>
+    );
   return (
     <>
       <div
@@ -164,16 +178,10 @@ const Quarters = ({ names, gitLoading, gitError, data, file, value, selectGlossa
                 t={t}
               />
             </div>
-            <TooltipPanel
-              text={`Link to Version ${quartersSelects.length - selectValue} copied!`}
-              state={copyState}
-              style={{ marginRight: '10px' }}
-            >
-              <Button className="Quarters__form__button btn" name="subscribe" onClick={() => handleCopy()}>
-                {t('roadmap.copysharinglink')}
-                <CopyLink className="Quarters__form__linkicon" />
-              </Button>
-            </TooltipPanel>
+            <Button className="Quarters__form__button btn" name="subscribe">
+              Loading ...
+              <CopyLink className="Quarters__form__linkicon" />
+            </Button>
           </div>
           <div></div>
           <Banner
@@ -184,6 +192,16 @@ const Quarters = ({ names, gitLoading, gitError, data, file, value, selectGlossa
           />
         </div>
         <QuartersListData isLoading={true} />
+        <div className="Quarters__bottom__banner">
+          <Banner
+            icon={<Notic />}
+            className="Quarters__bottom__banner__item"
+            title={'Disclaimer'}
+            information={
+              "The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader's own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap."
+            }
+          />
+        </div>
       </div>
     );
 
