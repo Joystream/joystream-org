@@ -1,32 +1,30 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import Input from "../../Input";
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import Input from '../../Input';
 
-import { ReactComponent as SearchIcon } from "../../../assets/svg/Search.svg";
-import { ReactComponent as CloseIcon } from "../../../assets/svg/postponed.svg";
+import { ReactComponent as SearchIcon } from '../../../assets/svg/Search.svg';
+import { ReactComponent as CloseIcon } from '../../../assets/svg/postponed.svg';
 
-import "./style.scss";
+import './style.scss';
 
-import TextSlider from "../../TextSlider";
-import GlossaryCard from "../../GlossaryCard";
+import TextSlider from '../../TextSlider';
+import GlossaryCard from '../../GlossaryCard';
 
 function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
   const inputRef = useRef(null);
 
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState('');
   const [showAll, setShowAll] = useState(false);
   const [filteredData, setFilteredData] = useState(glossary);
   const [filter, setFilter] = useState(false);
   const [select, setSelect] = useState(-1);
   const [inputClear, setInputClear] = useState(false);
 
-  const filterData = useCallback((search) => {
-    const filtered = glossary.filter((item) =>
-      item.title.toLowerCase().includes(search.toLowerCase())
-    );
+  const filterData = useCallback(search => {
+    const filtered = glossary.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
     setFilteredData(filtered);
   });
 
-  const onSearchInput = (e) => {
+  const onSearchInput = e => {
     filterData(e);
     setSearchText(e);
     if (e.length !== 0) {
@@ -37,8 +35,8 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
       setShowAll(false);
     }
     setSelect(-1);
-    if (e.key === "Enter") {
-      setSearchText("");
+    if (e.key === 'Enter') {
+      setSearchText('');
     }
   };
 
@@ -46,8 +44,8 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
     filterData(searchText);
   }, [glossary]);
 
-  const onSelectCarousel = (e) => {
-    const filtered = glossary.filter((item) =>
+  const onSelectCarousel = e => {
+    const filtered = glossary.filter(item =>
       item.title
         .toLowerCase()
         .charAt(0)
@@ -58,25 +56,25 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
 
     setShowAll(true);
     setFilteredData(filtered);
-    setSearchText("");
+    setSearchText('');
   };
 
   const onFilterClear = () => {
     setShowAll(false);
-    const filtered = glossary.filter((item) =>
+    const filtered = glossary.filter(item =>
       item.title
         .toLowerCase()
         .charAt(0)
-        .includes("")
+        .includes('')
     );
     setFilteredData(filtered);
     setInputClear(false);
-    setSearchText("");
+    setSearchText('');
     setSelect(-1);
   };
 
   useEffect(() => {
-    if (searchText === "" && select === -1) {
+    if (searchText === '' && select === -1) {
       setFilter(false);
     } else {
       setFilter(true);
@@ -87,12 +85,9 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
     <div className="GlossaryTeams">
       <div>
         <div className="GlossaryTeams__head__panel">
-          <div className="GlossaryTeams__head__panel__title">
-            Glossary terms
-          </div>
+          <div className="GlossaryTeams__head__panel__title">Glossary terms</div>
           <div className="GlossaryTeams__head__panel__subtitle">
-            You can access, learn and discover all terms related to all projects
-            here
+            You can access, learn and discover all terms related to all projects here
           </div>
         </div>
         <div className="GlossaryTeams__search__panel">
@@ -104,10 +99,10 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
               type="text"
               name="interesting_words"
               required
-              onChange={(e) => onSearchInput(e.target.value)}
+              onChange={e => onSearchInput(e.target.value)}
               value={searchText}
-              onKeyPress={(e) => {
-                if (e.key === "Enter") {
+              onKeyPress={e => {
+                if (e.key === 'Enter') {
                   e.preventDefault();
                 }
               }}
@@ -137,26 +132,34 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
             select={select}
           />
           <div className="GlossaryTeams__body__slider__cards">
-            {filteredData
-              .slice(0, showAll ? glossary.length : 4)
-              .map((res, index) => {
-                return (
-                  <GlossaryCard
-                    onclick={() => {
-                      const scrollY = window.scrollY;
-                      localStorage.setItem("scrollPosition", scrollY);
-                      localStorage.setItem("href", window.location.href);
-                      cardOnClick(index);
-                    }}
-                    title={res.title}
-                    content={res.content}
-                    key={index}
-                  />
-                );
-              })}
+            {filteredData.slice(0, showAll ? glossary.length : 4).map((res, index) => {
+              return (
+                <GlossaryCard
+                  onclick={() => {
+                    const scrollY = window.scrollY;
+                    localStorage.setItem('scrollPosition', scrollY);
+                    localStorage.setItem('href', window.location.href);
+                    cardOnClick(index);
+                  }}
+                  title={res.title}
+                  content={res.content}
+                  key={index}
+                />
+              );
+            })}
           </div>
-          {showAll ? (
+          \
+          {glossary.length <= 4 || filter ? (
             <></>
+          ) : showAll ? (
+            <button
+              className="GlossaryTeams__body__slider__button"
+              onClick={() => {
+                setShowAll(false);
+              }}
+            >
+              Hide all Glossary terms
+            </button>
           ) : (
             <button
               className="GlossaryTeams__body__slider__button"

@@ -17,6 +17,10 @@
     color: #5c6475;
     text-align: left;
     cursor: pointer;
+
+    &:hover {
+      color: white;
+    }
   }
 
   &__content {

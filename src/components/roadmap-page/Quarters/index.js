@@ -25,7 +25,7 @@ const SelectOptions = ({ options, sendData, value }) => {
     setIsSelect(value);
   }, [value]);
 
-  const onSelectQuarters = (index) => {
+  const onSelectQuarters = index => {
     setIsSelect(index);
     sendData(options[index].period);
   };
@@ -37,13 +37,11 @@ const SelectOptions = ({ options, sendData, value }) => {
         className={cn('Quarters__options-wrapper', {
           'Quarters__options-wrapper--active': isActive,
         })}
-        onClick={() => setIsActive((prev) => !prev)}
+        onClick={() => setIsActive(prev => !prev)}
         role="presentation"
       >
         <div className={'Quarters__options-item__label'}>
-          <div className="Quarters__options-item__name">
-            {options[isSelect].name}
-          </div>
+          <div className="Quarters__options-item__name">{options[isSelect].name}</div>
           <div className="Quarters__options-item__period">
             {options[isSelect].period.replace(/\.json/g, '')}
             {isSelect === 0 ? ' (Current)' : ' (Old)'}
@@ -75,9 +73,7 @@ const SelectOptions = ({ options, sendData, value }) => {
                 tabIndex={0}
               >
                 <div className="Quarters__options-item__label">
-                  <div className="Quarters__options-item__name">
-                    {label.name}
-                  </div>
+                  <div className="Quarters__options-item__name">{label.name}</div>
                   <div className="Quarters__options-item__period">
                     {label.period.replace(/\.json/g, '')}
                     {index === 0 ? ' (Current)' : ' (Old)'}
@@ -97,17 +93,7 @@ const SelectOptions = ({ options, sendData, value }) => {
   );
 };
 
-const Quarters = ({
-  names,
-  gitLoading,
-  gitError,
-  data,
-  file,
-  value,
-  selectGlossary,
-  setSelect,
-  scrollPosition,
-}) => {
+const Quarters = ({ names, gitLoading, gitError, data, file, value, selectGlossary, setSelect, scrollPosition }) => {
   const [oldVersionBanner, setOldVersionBanner] = useState(false);
   const [selectValue, setSelectValue] = useState(value);
   const [copyState, setCopyState] = useState(false);
@@ -119,10 +105,7 @@ const Quarters = ({
     if (typeof window !== 'undefined') {
       const originalURL = window.location.href;
       if (originalURL.lastIndexOf('.json') !== -1) {
-        const modifiedURL = originalURL.substring(
-          0,
-          originalURL.lastIndexOf('.json') + 5
-        );
+        const modifiedURL = originalURL.substring(0, originalURL.lastIndexOf('.json') + 5);
         navigator.clipboard.writeText(modifiedURL + '#head');
       } else {
         navigator.clipboard.writeText(originalURL);
@@ -134,9 +117,9 @@ const Quarters = ({
     }, 2000);
   };
 
-  const getFileName = (res) => {
+  const getFileName = res => {
     file(res);
-    const index = quartersSelects.findIndex((item) => item.period === res);
+    const index = quartersSelects.findIndex(item => item.period === res);
 
     setSelectValue(index);
   };
@@ -167,7 +150,42 @@ const Quarters = ({
     }
   }
 
-  if (quartersSelects.length === 0) return <div>Loading...</div>;
+  if (quartersSelects.length === 0)
+    return (
+      <div className="Quarters" id="select_quater">
+        <div className="Quarters__form-wrapper">
+          <div className="Quarters__form">
+            <div>
+              <SelectOptions
+                className="Quarters__form__select"
+                options={quartersSelects}
+                sendData={getFileName}
+                value={value}
+                t={t}
+              />
+            </div>
+            <TooltipPanel
+              text={`Link to Version ${quartersSelects.length - selectValue} copied!`}
+              state={copyState}
+              style={{ marginRight: '10px' }}
+            >
+              <Button className="Quarters__form__button btn" name="subscribe" onClick={() => handleCopy()}>
+                {t('roadmap.copysharinglink')}
+                <CopyLink className="Quarters__form__linkicon" />
+              </Button>
+            </TooltipPanel>
+          </div>
+          <div></div>
+          <Banner
+            className="Quarters__top__banner"
+            title={'You are previewing an old version of the roadmap'}
+            information={'Roadmap gets updated frequently and the one you view right now is an old legacy version.'}
+            icon={<NoticEnable />}
+          />
+        </div>
+        <QuartersListData isLoading={true} />
+      </div>
+    );
 
   return (
     <div className="Quarters" id="select_quater">
@@ -187,15 +205,11 @@ const Quarters = ({
             )}
           </div>
           <TooltipPanel
-            text={`Link to Version ${quartersSelects.length -
-              selectValue} copied!`}
+            text={`Link to Version ${quartersSelects.length - selectValue} copied!`}
             state={copyState}
+            style={{ marginRight: '10px' }}
           >
-            <Button
-              className="Quarters__form__button btn"
-              name="subscribe"
-              onClick={() => handleCopy()}
-            >
+            <Button className="Quarters__form__button btn" name="subscribe" onClick={() => handleCopy()}>
               {t('roadmap.copysharinglink')}
               <CopyLink className="Quarters__form__linkicon" />
             </Button>
@@ -207,9 +221,7 @@ const Quarters = ({
               icon={<NoticEnable />}
               className="Quarters__top__banner"
               title={'You are previewing an old version of the roadmap'}
-              information={
-                'Roadmap gets updated frequently and the one you view right now is an old legacy version.'
-              }
+              information={'Roadmap gets updated frequently and the one you view right now is an old legacy version.'}
               label={
                 <button
                   onClick={() => {
@@ -228,18 +240,14 @@ const Quarters = ({
           )}
         </div>
       </div>
-      <QuartersListData
-        data={data}
-        selectGlossary={selectGlossary}
-        scrollPosition={scrollPosition}
-      />
+      <QuartersListData data={data} selectGlossary={selectGlossary} scrollPosition={scrollPosition} />
       <div className="Quarters__bottom__banner">
         <Banner
           icon={<Notic />}
           className="Quarters__bottom__banner__item"
           title={'Disclaimer'}
           information={
-            'The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader\'s own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap.'
+            "The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader's own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap."
           }
         />
       </div>

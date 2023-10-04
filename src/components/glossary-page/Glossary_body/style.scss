@@ -6,6 +6,9 @@
   grid-template-columns: 1fr .4fr;
 
   &__main {
+    display: grid;
+    gap: 16px;
+
     &__title {
       padding: 0 0 16px 0;
       //styleName: h3;
@@ -159,4 +162,9 @@
 
 li {
   margin-left: 8px;
+}
+
+.real__button {
+  color: #b4bbff;
+  border-bottom: solid 1px #b4bbff;
 }

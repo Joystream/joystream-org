@@ -55,11 +55,18 @@
 
     &__closeicon {
       position: absolute;
-      right: 10px;
-      width: 15px;
-      height: 15px;
-      margin-top: 23px;
+      right: 14px;
+      width: 30px;
+      height: 30px;
+      margin-top: 16px;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 50%;
       opacity: .4;
+
+      &:hover {
+        background: #bbdaf6;
+      }
     }
 
     &__inputbox {
@@ -67,9 +74,15 @@
       padding-left: 48px;
       font-size: 20px;
       line-height: 24px;
+      border: solid 2px #dee3e9;
+      border-radius: 2px;
 
       &::placeholder {
         color: #a7aeb7;
+      }
+
+      &:active {
+        border-color: #4038ff;
       }
     }
   }
@@ -158,6 +171,7 @@
 
     &__body__slider {
       &__cards {
+        gap: 16px;
         grid-template-columns: repeat(1, 1fr);
       }
     }

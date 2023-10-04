@@ -34,4 +34,8 @@
     color: $c_grayc-chateau;
     text-align: left;
   }
+
+  &:hover {
+    border: solid 1px #81858d;
+  }
 }

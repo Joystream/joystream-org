@@ -3,7 +3,8 @@ import React from 'react';
 import './style.scss';
 import QuarterPanel from '../QuarterPanel';
 
-function QuartersListData({ data, selectGlossary, scrollPosition }) {
+function QuartersListData({ data, selectGlossary, scrollPosition, isLoading }) {
+  if (isLoading) return <QuarterPanel loading={true} language={'English'} />;
   return (
     <div className="QuarterList_main">
       {data.map((res, index) => {

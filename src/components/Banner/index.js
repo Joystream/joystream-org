@@ -9,7 +9,7 @@ function Banner({ icon, title, information, label, className, close }) {
       <div className="Banner__close">
         {close ? (
           <button onClick={close}>
-            <Close className="Banner__icon" />
+            <Close className="Banner__icon__close" />
           </button>
         ) : (
           <></>
