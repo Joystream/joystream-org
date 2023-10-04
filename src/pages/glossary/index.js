@@ -23,7 +23,7 @@ const GlossaryPage = () => {
     }
     const fetchGlossary = async () => {
       const response = await axios.get(
-        `https://raw.githubusercontent.com/HeinrichOlfert/joystream-org/main/storydata/glossary/glossary.json`
+        `https://raw.githubusercontent.com/HeinrichOlfert/joystream-org/main/quartes&terms/glossary/glossary.json`
       );
 
       setGlossary(response.data[0].terms);

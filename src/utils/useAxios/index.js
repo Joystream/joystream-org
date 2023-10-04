@@ -20,7 +20,7 @@ export default function useAxios(url = defaultUrl) {
 
 export function useGetFileName() {
   const [response, loading, error] = usePromise(() => {
-    return axios.get(`https://api.github.com/repos/HeinrichOlfert/joystream-org/contents/storydata/goals`);
+    return axios.get(`https://api.github.com/repos/HeinrichOlfert/joystream-org/contents/quartes&terms/goals`);
   });
 
   if (loading && !error) {
