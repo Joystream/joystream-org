@@ -189,6 +189,32 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
           </div>
           <div className="QuarterPanel__main__panel__loading"></div>
         </div>
+        <div className="QuarterPanel__main__rigth">
+          <div className="QuarterPanel__main__title">
+            <div className="QuarterPanel__main__subtitle__loading"></div>
+            <div className="QuarterPanel__main__quarters__loading"></div>
+          </div>
+        </div>
+        <div className="QuarterPanel__submain">
+          <div className="QuarterPanel__main__timeline">
+            <div className="QuarterPanel__main__line__dot__loading" />
+            <div className="QuarterPanel__main__line__line" />
+          </div>
+          <div className="QuarterPanel__main__panel__loading"></div>
+        </div>
+        <div className="QuarterPanel__main__rigth">
+          <div className="QuarterPanel__main__title">
+            <div className="QuarterPanel__main__subtitle__loading"></div>
+            <div className="QuarterPanel__main__quarters__loading"></div>
+          </div>
+        </div>
+        <div className="QuarterPanel__submain">
+          <div className="QuarterPanel__main__timeline">
+            <div className="QuarterPanel__main__line__dot__loading" />
+            <div className="QuarterPanel__main__line__line" />
+          </div>
+          <div className="QuarterPanel__main__panel__loading"></div>
+        </div>
       </div>
     );
   }

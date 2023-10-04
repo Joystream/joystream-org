@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { ReactComponent as Close } from '../../assets/svg/postponed.svg';
+import { ReactComponent as Close } from '../../assets/svg/close_banner.svg';
 
 import './style.scss';
 function Banner({ icon, title, information, label, className, close }) {

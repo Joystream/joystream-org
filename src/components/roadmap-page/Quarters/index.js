@@ -35,7 +35,7 @@ const SelectOptions = ({ options, sendData, value }) => {
       <>
         <div className={cn('Quarters__options-wrapper', {})} role="presentation">
           <div className={'Quarters__options-item__label'}>
-            <div className="Quarters__options-item__name">Version 6</div>
+            <div className="Quarters__options-item__name"></div>
             <div className="Quarters__options-item__period">Loading ....</div>
           </div>
           <div className="Quarters__expand__icon">
@@ -184,12 +184,6 @@ const Quarters = ({ names, gitLoading, gitError, data, file, value, selectGlossa
             </Button>
           </div>
           <div></div>
-          <Banner
-            className="Quarters__top__banner"
-            title={'You are previewing an old version of the roadmap'}
-            information={'Roadmap gets updated frequently and the one you view right now is an old legacy version.'}
-            icon={<NoticEnable />}
-          />
         </div>
         <QuartersListData isLoading={true} />
         <div className="Quarters__bottom__banner">

@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Input from '../../Input';
 
 import { ReactComponent as SearchIcon } from '../../../assets/svg/Search.svg';
-import { ReactComponent as CloseIcon } from '../../../assets/svg/postponed.svg';
+import { ReactComponent as CloseIcon } from '../../../assets/svg/close_banner.svg';
 
 import './style.scss';
 

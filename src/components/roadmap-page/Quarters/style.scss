@@ -43,9 +43,12 @@
       grid-gap: 10px;
       grid-template-columns: repeat(2, 1fr);
       justify-items: center;
-
+      cursor: pointer;
       &--active {
-        border-color: $c_blue-ribbon;
+        border-color: $c_blue-ribbon !important;
+      }
+      &:hover {
+        border-color: #a7aeb7;
       }
     }
 
