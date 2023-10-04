@@ -37,7 +37,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     return newStr;
   };
 
-  if (typeof document === 'undefined') return;
+  if (typeof document === 'undefined') return <></>;
 
   const timeLineItems = document.querySelectorAll('.QuarterPanel__main__line__dot');
 
