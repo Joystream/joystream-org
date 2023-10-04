@@ -29,7 +29,7 @@ const ExplanationSection = ({ Icon, title, subtitle, href = null, to = null, t }
 
 const Earn = ({ t }) => {
   return (
-    <section className="TokenPage__earn-wrapper">
+    <section className="TokenPage__earn-wrapper" id="earn">
       <div className="TokenPage__earn">
         <header className="TokenPage__earn__header">
           <span className="TokenPage__earn__header__section-title">{t("token.earn.sectionTitle")}</span>
