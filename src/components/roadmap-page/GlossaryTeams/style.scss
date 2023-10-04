@@ -62,7 +62,7 @@
       padding: 5px;
       cursor: pointer;
       border-radius: 50%;
-      opacity: .4;
+      opacity: 0.4;
 
       &:hover {
         background: #bbdaf6;
@@ -204,6 +204,15 @@
         padding: 0 30px;
         color: $c_blue-ribbon;
         border: 2px solid $c_blue-ribbon;
+      }
+    }
+
+    &__search__panel {
+      &__input {
+        width: auto;
+      }
+      &__inputbox {
+        width: auto;
       }
     }
   }

@@ -317,10 +317,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
                             activeText={'Link copied to the clipboard!'}
                           >
                             <button
-                              className={cn('QuarterPanel__main__linkIcon__icon linkBtn', {
-                                'QuarterPanel__main__linkIcon__icon--active':
-                                  k + index * res.deliveryMilestones.length === activeLink,
-                              })}
+                              className="QuarterPanel__main__linkIcon__icon linkBtn"
                               onClick={() => getLink(k + index * res.deliveryMilestones.length)}
                             />
                           </TooltipPanel>
