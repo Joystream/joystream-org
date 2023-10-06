@@ -45,7 +45,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
   const lastItem = document.querySelector('.QuarterPanel__main__line__dotbottom');
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as per your requirements
+    setIsMobile(window.innerWidth < 568); // Adjust the breakpoint as per your requirements
   };
 
   useEffect(() => {
