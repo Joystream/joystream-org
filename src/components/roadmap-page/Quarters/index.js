@@ -227,7 +227,7 @@ const Quarters = ({ names, gitLoading, gitError, data, file, value, selectGlossa
             </Button>
           </TooltipPanel>
         </div>
-        <div>
+        <div className="Quarters__top">
           {oldVersionBanner ? (
             <Banner
               icon={<NoticEnable />}
@@ -253,15 +253,19 @@ const Quarters = ({ names, gitLoading, gitError, data, file, value, selectGlossa
         </div>
       </div>
       <QuartersListData data={data} selectGlossary={selectGlossary} scrollPosition={scrollPosition} />
-      <div className="Quarters__bottom__banner">
-        <Banner
-          icon={<Notic />}
-          className="Quarters__bottom__banner__item"
-          title={'Disclaimer'}
-          information={
-            "The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader's own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap."
-          }
-        />
+      <div className="Quarters__form-wrapper">
+        <div className="Quarters__form">
+          <div className="Quarters__bottom__banner">
+            <Banner
+              icon={<Notic />}
+              className="Quarters__bottom__banner__item"
+              title={'Disclaimer'}
+              information={
+                "The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader's own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap."
+              }
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

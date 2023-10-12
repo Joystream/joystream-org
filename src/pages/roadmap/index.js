@@ -117,7 +117,7 @@ const RoadmapPage = () => {
           description={t('roadmap.siteMetadata.description')}
         />
 
-        <div>
+        <div className="RoadmapPage">
           <section className="RoadmapPage__hero-wrapper">
             <div className="RoadmapPage__hero">
               <div className="RoadmapPage__hero__content">
@@ -130,17 +130,21 @@ const RoadmapPage = () => {
               </div>
             </div>
           </section>
-          <RoadHead />
-          <Quarters
-            names={names}
-            gitError={gitError}
-            gitLoading={gitLoading}
-            file={setFileName}
-            data={data}
-            value={selectValue}
-            selectGlossary={onCard}
-            setSelect={setPeriod}
-          />
+          <div className="RoadmapPage__body">
+            <div className="RoadmapPage__body__goal">
+              <RoadHead />
+              <Quarters
+                names={names}
+                gitError={gitError}
+                gitLoading={gitLoading}
+                file={setFileName}
+                data={data}
+                value={selectValue}
+                selectGlossary={onCard}
+                setSelect={setPeriod}
+              />
+            </div>
+          </div>
           <GlossaryTerms glossary={glossary} sliderText={sliderText} cardOnClick={onCard} />
         </div>
       </BaseLayout>

@@ -2,10 +2,19 @@
 @import '../style.scss';
 
 .RoadmapPage {
+  background-color: $c_catskill_white;
   &__hero-wrapper {
     background-color: black;
   }
 
+  &__body {
+    display: grid;
+    justify-items: center;
+    width: auto;
+    &__goal {
+      max-width: 816px;
+    }
+  }
   &__hero {
     @extend %container;
 
@@ -68,7 +77,7 @@
     padding: 24px;
     cursor: pointer;
     background-color: $c_white;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &:hover {
       transform: translate(-7.2px, -8px);

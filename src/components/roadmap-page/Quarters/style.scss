@@ -42,7 +42,7 @@
       border: 2px solid $c_neutral-200;
       grid-gap: 10px;
       grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
+
       cursor: pointer;
       &--active {
         border-color: $c_blue-ribbon !important;
@@ -184,8 +184,11 @@
     }
   }
 
+  &__top {
+    width: 100%;
+  }
   &__top__banner {
-    margin-top: 32px;
+    margin-top: 32px !important;
     border-left: solid 2px #ff3861;
 
     &__button {

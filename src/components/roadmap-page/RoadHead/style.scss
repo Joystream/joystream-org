@@ -44,8 +44,6 @@
   @media #{$screen-max-md} {
     &__head {
       &__header {
-        width: 585px;
-
         &__title {
           width: 450px;
         }
@@ -60,8 +58,6 @@
 
     &__head {
       &__header {
-        max-width: 337px;
-
         &__title {
           @include h4;
 
