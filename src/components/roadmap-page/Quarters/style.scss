@@ -18,7 +18,7 @@
     display: initial;
     color: inherit;
     text-align: right;
-    transition: transform 0.3s;
+    transition: transform .3s;
 
     &--active {
       transform: rotate(180deg);
@@ -38,15 +38,16 @@
       height: 60px;
       margin: 0 10px;
       padding: 10px 16px 10px 16px;
+      cursor: pointer;
       background: white;
       border: 2px solid $c_neutral-200;
       grid-gap: 10px;
       grid-template-columns: repeat(2, 1fr);
 
-      cursor: pointer;
       &--active {
         border-color: $c_blue-ribbon !important;
       }
+
       &:hover {
         border-color: #a7aeb7;
       }
@@ -56,7 +57,7 @@
       justify-content: flex-end;
       color: inherit;
       text-align: right;
-      transition: transform 0.3s;
+      transition: transform .3s;
     }
 
     &__dropdown {
@@ -134,7 +135,7 @@
       font-family: $font-secondary;
       font-size: 14px;
       line-height: 20px;
-      letter-spacing: -0.4000000059604645px;
+      letter-spacing: -.4000000059604645px;
       color: #a7aeb7;
       text-align: center;
     }
@@ -187,6 +188,7 @@
   &__top {
     width: 100%;
   }
+
   &__top__banner {
     margin-top: 32px !important;
     border-left: solid 2px #ff3861;

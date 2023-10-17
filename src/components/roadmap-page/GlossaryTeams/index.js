@@ -49,8 +49,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
       item.title
         .toLowerCase()
         .charAt(0)
-        .includes(e.toLowerCase())
-    );
+        .includes(e.toLowerCase()));
     const index = sliderText.indexOf(e);
     setSelect(index);
 
@@ -65,8 +64,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
       item.title
         .toLowerCase()
         .charAt(0)
-        .includes('')
-    );
+        .includes(''));
     setFilteredData(filtered);
     setInputClear(false);
     setSearchText('');

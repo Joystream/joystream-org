@@ -150,8 +150,8 @@
       letter-spacing: 0;
       color: #6c6cff;
       text-align: left;
-      border-bottom: solid 1px #6c6cff00;
       cursor: pointer;
+      border-bottom: solid 1px #6c6cff00;
 
       &:hover {
         border-bottom: solid 1px #6c6cff;
@@ -211,6 +211,7 @@
       &__input {
         width: auto;
       }
+
       &__inputbox {
         width: auto;
       }

@@ -34,7 +34,6 @@ import { ReactComponent as DistributorIcon } from '../../assets/svg/available-ac
 import { ReactComponent as DistributorLeadIcon } from '../../assets/svg/available-activities-icons/distributor-lead.svg';
 import { ReactComponent as ValidatorIcon } from '../../assets/svg/available-activities-icons/validator.svg';
 
-
 export const sharedData = {
   defaultEmail: 'hello@jsgenesis.com',
   social: {
@@ -42,6 +41,7 @@ export const sharedData = {
     redditLink: 'https://www.reddit.com/r/JoyStream/',
     twitterLink: 'https://twitter.com/JoystreamDAO',
     discordLink: 'https://discord.gg/NaNzysB5YZ',
+    coinmarketcapLink: 'https://coinmarketcap.com/currencies/joystream/',
   },
   links: {
     blog: 'https://blog.joystream.org/',
