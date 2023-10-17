@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
+import axios from 'axios';
 
 import BaseLayout from '../../components/_layouts/Base';
 import SiteMetadata from '../../components/SiteMetadata';
@@ -8,45 +9,37 @@ import SiteMetadata from '../../components/SiteMetadata';
 import { ReactComponent as AcropolisBuilding } from '../../assets/svg/Group 15.svg';
 import { ReactComponent as CommunityBackground } from '../../assets/svg/patterns.svg';
 
-import { useGetFileName } from '../../utils/useAxios';
 import RoadHead from '../../components/roadmap-page/RoadHead';
 import Quarters from '../../components/roadmap-page/Quarters';
 import GlossaryTerms from '../../components/roadmap-page/GlossaryTeams';
 
-import './style.scss';
-import axios from 'axios';
-
 import MyContext from '../../utils/useContext';
+
+import './style.scss';
+
+import roadmapData from '../../data/quarters';
+import glossaryData from '../../data/glossary/glossary.json';
+
+const FILE_NAMES = roadmapData.map(datapoint => datapoint.name);
+const NEWEST_ROADMAP_FILENAME = roadmapData.find(item => item.isNewest === true).name;
 
 const RoadmapPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
-  const [names, gitLoading, gitError] = useGetFileName();
-  const [fileName, setFileName] = useState('');
+  const [fileName, setFileName] = useState(
+    new URL(window.location.href).searchParams.get('filename') ?? NEWEST_ROADMAP_FILENAME
+  );
   const [glossary, setGlossary] = useState([]);
   const [sliderText, setSliderText] = useState([]);
-  const [selectValue, setSelectValue] = useState(0);
-  const [period, setPeriod] = useState('');
   const [data, setData] = useState([]);
 
+  const updateFileName = filename => {
+    console.log('Updating file name with:' + filename);
+    setFileName(filename);
+  };
+
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const initfileName = new URL(window.location.href);
-      const file = initfileName.hash.split('#')[1];
-      let panel = initfileName.hash.split('#')[2];
-      if (panel === undefined) {
-        setPeriod(file);
-      } else {
-        setPeriod(file + '#' + panel);
-      }
-    }
-    const fetchGlossary = async () => {
-      const response = await axios.get(
-        `https://raw.githubusercontent.com/HeinrichOlfert/Joystream_term_json_data/main/glossary/glossary.json`
-      );
-      setGlossary(response.data[0].terms);
-    };
-    fetchGlossary();
+    setGlossary(glossaryData[0].terms);
     var scrollPosition = localStorage.getItem('scrollPosition');
 
     if (scrollPosition !== 0 && Number(scrollPosition) > 0) {
@@ -62,10 +55,6 @@ const RoadmapPage = () => {
   }, []);
 
   useEffect(() => {
-    setFileName(period);
-  }, [period]);
-
-  useEffect(() => {
     const FristString = glossary.map(data => data.title.charAt(0));
 
     let uniqueArr = FristString.reduce((acc, curr) => {
@@ -79,28 +68,11 @@ const RoadmapPage = () => {
   }, [glossary]);
 
   useEffect(() => {
-    const fetchFileData = async () => {
-      const filedata = await axios.get(
-        `https://raw.githubusercontent.com/HeinrichOlfert/Joystream_term_json_data/main/goals/${fileName}`
-      );
-
-      setData(filedata.data);
-    };
-
-    if (typeof window !== 'undefined') {
-      window.location.href = `#${fileName}`;
-    }
-
-    fetchFileData();
+    // TODO: Fix the following issue.
+    console.log(window.location.href);
+    window.history.replaceState(null, null, `?filename=${fileName}`);
+    setData(roadmapData.find(datapoint => datapoint.name === fileName).value);
   }, [fileName]);
-
-  useEffect(() => {
-    if (names && fileName) {
-      const file = fileName.split('#')[0];
-      const index = names.fileNames.findIndex(item => item === file);
-      setSelectValue(index);
-    }
-  }, [fileName, names, period]);
 
   const onCard = e => {
     let originalURL = window.location.href;
@@ -134,14 +106,14 @@ const RoadmapPage = () => {
             <div className="RoadmapPage__body__goal">
               <RoadHead />
               <Quarters
-                names={names}
-                gitError={gitError}
-                gitLoading={gitLoading}
-                file={setFileName}
+                currentFilename={fileName}
+                names={FILE_NAMES}
+                roadmapData={roadmapData}
+                gitError={false}
+                gitLoading={false}
+                updateFileName={updateFileName}
                 data={data}
-                value={selectValue}
                 selectGlossary={onCard}
-                setSelect={setPeriod}
               />
             </div>
           </div>

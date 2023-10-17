@@ -12,7 +12,7 @@ function QuartersListData({ data, selectGlossary, scrollPosition, isLoading }) {
     );
   return (
     <div className="QuarterList_main">
-      {data.map((res, index) => {
+      {data?.map((res, index) => {
         return (
           <QuarterPanel
             loading={false}
