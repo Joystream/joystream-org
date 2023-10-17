@@ -62,9 +62,11 @@
       display: flex;
       justify-content: center;
       margin-top: 80px;
+      gap: 30px;
     }
 
     &__item {
+      position: relative;
       width: 394px;
       height: 320px;
       padding: 32px;
@@ -101,7 +103,8 @@
       }
 
       &__link {
-        margin-top: 32px;
+        position: absolute;
+        bottom: 32px;
       }
     }
   }
@@ -141,8 +144,9 @@
       }
 
       &__item {
-        height: 252px;
+        height: auto;
         max-width: 335px;
+        min-height: 232px;
         padding: 24px;
 
         &__image-wrapper {
@@ -155,8 +159,18 @@
           margin-top: 24px;
         }
 
+        &__description {
+          @include base-4;
+
+          margin-top: 4px;
+        }
+
         &__link {
           @include h9;
+
+          position: relative;
+          bottom: 0;
+          margin-top: 24px;
         }
       }
     }
