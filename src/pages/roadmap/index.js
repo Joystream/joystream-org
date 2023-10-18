@@ -1,7 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
-import axios from 'axios';
 
 import BaseLayout from '../../components/_layouts/Base';
 import SiteMetadata from '../../components/SiteMetadata';
@@ -77,7 +76,7 @@ const RoadmapPage = () => {
 
   const onCard = e => {
     let originalURL = window.location.href;
-    let modifiedURL = originalURL.slice(0, originalURL.indexOf('/roadmap')) + `/glossary/#${glossary[e].title}`;
+    let modifiedURL = originalURL.slice(0, originalURL.indexOf('/roadmap')) + `/glossary?item=${glossary[e].title}`;
     window.location.href = modifiedURL;
   };
 

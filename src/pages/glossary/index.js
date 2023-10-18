@@ -5,44 +5,29 @@ import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next';
 import BaseLayout from '../../components/_layouts/Base';
 import SiteMetadata from '../../components/SiteMetadata';
 
-import axios from 'axios';
 import Glossary from '../../components/glossary-page';
 import MyContext from '../../utils/useContext';
+
+import glossaryData from '../../data/glossary/glossary.json';
 
 const GlossaryPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
-  const [glossary, setGlossary] = useState([]);
   const [glossaryIndex, setGlossaryIndex] = useState(0);
 
+  const glossary = glossaryData[0].terms;
+
   useEffect(() => {
-    let item = '';
-    if (typeof window !== 'undefined') {
-      const initfileName = new URL(window.location.href);
-      item = initfileName.hash.split('#')[1];
+    const glossaryItemParam = new URL(window.location.href).searchParams.get('item');
+    if (glossaryItemParam) {
+      const index = glossary.findIndex(res => {
+        return res.title === glossaryItemParam;
+      });
+
+      setGlossaryIndex(index >= 1 ? index : 0);
+    } else {
+      setGlossaryIndex(0);
     }
-    const fetchGlossary = async () => {
-      const response = await axios.get(
-        `https://raw.githubusercontent.com/HeinrichOlfert/Joystream_term_json_data/main/glossary/glossary.json`
-      );
-
-      setGlossary(response.data[0].terms);
-
-      if (item) {
-        let decodedString = decodeURIComponent(item);
-        const index = response.data[0].terms.findIndex(res => {
-          return res.title === decodedString;
-        });
-        if (index !== -1) {
-          setGlossaryIndex(index);
-        } else {
-          setGlossaryIndex(0);
-        }
-      } else {
-        setGlossaryIndex(0);
-      }
-    };
-    fetchGlossary();
   }, []);
 
   const onCardSelect = e => {
