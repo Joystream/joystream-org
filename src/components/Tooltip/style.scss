@@ -39,4 +39,8 @@
       margin: -1px 0;
     }
   }
+
+  @media (max-width: 550px) {
+    padding: 0 10px;
+  }
 }

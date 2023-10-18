@@ -10,8 +10,6 @@ import TextSlider from '../../TextSlider';
 import GlossaryCard from '../../GlossaryCard';
 
 function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
-  const inputRef = useRef(null);
-
   const [searchText, setSearchText] = useState('');
   const [showAll, setShowAll] = useState(false);
   const [filteredData, setFilteredData] = useState(glossary);
@@ -104,7 +102,6 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
                   e.preventDefault();
                 }
               }}
-              ref={inputRef}
             />
             {!inputClear ? (
               <></>

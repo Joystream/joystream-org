@@ -33,7 +33,6 @@ const RoadmapPage = () => {
   const [data, setData] = useState([]);
 
   const updateFileName = filename => {
-    console.log('Updating file name with:' + filename);
     setFileName(filename);
   };
 

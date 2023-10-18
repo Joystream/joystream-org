@@ -144,10 +144,7 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
               label={
                 <button
                   onClick={() => {
-                    console.log('HEYYO2');
                     const itemIndex = roadmapData.findIndex(item => item.isNewest === true);
-                    console.log(roadmapData[itemIndex]);
-                    console.log(itemIndex);
                     updateFileName(roadmapData[itemIndex].name);
                     setIsSelect(itemIndex);
                   }}
