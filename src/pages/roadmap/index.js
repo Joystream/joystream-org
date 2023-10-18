@@ -16,7 +16,7 @@ import MyContext from '../../utils/useContext';
 
 import './style.scss';
 
-import roadmapData from '../../data/quarters';
+import roadmapData, { iconMap } from '../../data/quarters';
 import glossaryData from '../../data/glossary/glossary.json';
 
 const FILE_NAMES = roadmapData.map(datapoint => datapoint.name);

@@ -6,6 +6,8 @@ import TooltipPanel from '../../Tooltip';
 import MyContext from '../../../utils/useContext';
 import scrollToActiveElement from '../../../utils/scrollToActiveElement';
 
+import { iconMap } from '../../../data/quarters';
+
 export let offset = 300;
 
 function QuarterPanel({ data, loading, language, glossaryPanel }) {
@@ -267,19 +269,15 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
                               activeItem,
                           })}
                         >
-                          {milestones.icon ? (
-                            <img
-                              className={cn('mileston__icon', {
-                                'mileston__icon--active':
-                                  k + index * result.quarters[index > 0 ? index - 1 : 0].deliveryMilestones.length ===
-                                  activeItem,
-                              })}
-                              src={milestones.icon}
-                              alt="Mileston icon"
-                            />
-                          ) : (
-                            <></>
-                          )}
+                          <img
+                            className={cn('mileston__icon', {
+                              'mileston__icon--active':
+                                k + index * result.quarters[index > 0 ? index - 1 : 0].deliveryMilestones.length ===
+                                activeItem,
+                            })}
+                            src={iconMap[milestones.icon]}
+                            alt="Mileston icon"
+                          />
                         </div>
                         <div className="QuarterPanel__main__linkIcon">
                           <TooltipPanel
