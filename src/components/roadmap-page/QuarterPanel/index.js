@@ -229,7 +229,6 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     timeLineItems[timeLineItems.length - 1].classList.add('QuarterPanel__main__line__dot--last');
   }
 
-  // TODO:
   if (typeof document === 'undefined') return <></>;
 
   const result = data.language === language ? data : false;

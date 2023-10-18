@@ -67,8 +67,6 @@ const RoadmapPage = () => {
   }, [glossary]);
 
   useEffect(() => {
-    // TODO: Fix the following issue.
-    console.log(window.location.href);
     const URLHash = new URL(window.location.href).hash;
     window.history.replaceState(null, null, `?filename=${fileName}${URLHash}`);
     setData(roadmapData.find(datapoint => datapoint.name === fileName).value);
