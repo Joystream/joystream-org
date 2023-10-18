@@ -29,7 +29,7 @@ export const iconMap = {
 };
 
 export default [
-  { select: { title: 'Version 1', subtitle: '2023-2024 (Old)' }, name: '2023-2024', value: quarters23_24 },
-  { select: { title: 'Version 2', subtitle: '2024-2025 (Old)' }, name: '2024-2025', value: quarters24_25 },
   { select: { title: 'Version 3', subtitle: '2025 (Current)' }, name: '2025', value: quarters25, isNewest: true },
+  { select: { title: 'Version 2', subtitle: '2024-2025 (Old)' }, name: '2024-2025', value: quarters24_25 },
+  { select: { title: 'Version 1', subtitle: '2023-2024 (Old)' }, name: '2023-2024', value: quarters23_24 },
 ];

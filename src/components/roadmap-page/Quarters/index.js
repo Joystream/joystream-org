@@ -124,7 +124,7 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
             />
           </div>
           <TooltipPanel
-            text={`Link to Version ${isSelect + 1} copied!`}
+            text={`Link to Version ${roadmapData.length - isSelect} copied!`}
             state={shouldShowCopyMessage}
             style={{ marginRight: '10px' }}
           >
