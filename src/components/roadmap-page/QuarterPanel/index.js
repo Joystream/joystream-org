@@ -14,7 +14,6 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
   const [activeLinkIcon, setActiveLinkIcon] = useState(-1);
   const [dotActiveState, setDotActiveState] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [activeLink, setActiveLink] = useState(-1);
 
   const glossary = useContext(MyContext);
 
@@ -127,18 +126,11 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
 
   useEffect(() => {
     const url = new URL(window.location.href);
-    const hash = url.hash.split('#')[2];
-
-    if (hash) {
-      const target = document.getElementById(hash);
-      if (!target) return;
-      scrollToActiveElement(hash);
-
-      const hashtoindex = Number(hash.replace('panel', ''));
-
-      setActiveLink(hashtoindex);
+    if (url.hash.includes('panel')) {
+      const panel = url.hash.substring(1);
+      scrollToActiveElement(panel);
     }
-  }, [glossaryPanel]);
+  }, []);
 
   const handleClick = i => {
     const scrollY = window.scrollY;
@@ -171,56 +163,10 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
     };
   }, [handleClick]);
 
-  if (loading) {
-    return (
-      <div className="QuarterPanel__main">
-        <div className="QuarterPanel__main__rigth">
-          <div className="QuarterPanel__main__title">
-            <div className="QuarterPanel__main__subtitle__loading"></div>
-            <div className="QuarterPanel__main__quarters__loading"></div>
-          </div>
-        </div>
-        <div className="QuarterPanel__submain">
-          <div className="QuarterPanel__main__timeline">
-            <div className="QuarterPanel__main__line__dot__loading" />
-            <div className="QuarterPanel__main__line__line" />
-          </div>
-          <div className="QuarterPanel__main__panel__loading"></div>
-        </div>
-        <div className="QuarterPanel__main__rigth">
-          <div className="QuarterPanel__main__title">
-            <div className="QuarterPanel__main__subtitle__loading"></div>
-            <div className="QuarterPanel__main__quarters__loading"></div>
-          </div>
-        </div>
-        <div className="QuarterPanel__submain">
-          <div className="QuarterPanel__main__timeline">
-            <div className="QuarterPanel__main__line__dot__loading" />
-            <div className="QuarterPanel__main__line__line" />
-          </div>
-          <div className="QuarterPanel__main__panel__loading"></div>
-        </div>
-        <div className="QuarterPanel__main__rigth">
-          <div className="QuarterPanel__main__title">
-            <div className="QuarterPanel__main__subtitle__loading"></div>
-            <div className="QuarterPanel__main__quarters__loading"></div>
-          </div>
-        </div>
-        <div className="QuarterPanel__submain">
-          <div className="QuarterPanel__main__timeline">
-            <div className="QuarterPanel__main__line__dot__loading" />
-            <div className="QuarterPanel__main__line__line" />
-          </div>
-          <div className="QuarterPanel__main__panel__loading"></div>
-        </div>
-      </div>
-    );
-  }
-
   const getLink = k => {
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
-      const period = url.hash.split('#')[2];
+      const period = url.hash.substring(1);
       if (period) {
         url.hash = `panel$${k}`;
         navigator.clipboard.writeText(window.location.href.replace(period, `panel${k}`));
@@ -229,7 +175,6 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
       }
     }
 
-    setActiveLink(k);
     setActiveLinkIcon(k);
     setTimeout(() => {
       setActiveLinkIcon(-1);

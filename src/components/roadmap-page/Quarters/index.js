@@ -82,33 +82,31 @@ const SelectOptions = ({ options, updateFileName, isSelect, setIsSelect, setShou
 };
 
 const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGlossary, scrollPosition }) => {
-  const [copyState, setCopyState] = useState(false);
+  const [shouldShowCopyMessage, setShouldShowCopyMessage] = useState(false);
   const [isSelect, setIsSelect] = useState(roadmapData.findIndex(item => item.name === currentFilename));
   const [shouldBannerShow, setShouldBannerShow] = useState(true);
 
   const { t } = useTranslation();
 
-  const handleCopy = () => {
-    if (typeof window !== 'undefined') {
-      const originalURL = window.location.href;
-      if (new URL(originalURL).hash === '') {
-        navigator.clipboard.writeText(originalURL + '#head');
-      } else {
-        navigator.clipboard.writeText(originalURL);
-      }
-    }
-    setCopyState(true);
-    setTimeout(() => {
-      setCopyState(false);
-    }, 2000);
-  };
-
-  if (typeof window !== 'undefined') {
-    const initfileName = new URL(window.location.href);
-    if (initfileName.hash.split('#')[2] === 'head') {
+  useEffect(() => {
+    if (new URL(window.location.href).hash === '#head') {
       scrollToActiveElement('select_quater');
     }
-  }
+  }, []);
+
+  const handleCopy = () => {
+    const originalURL = window.location.href;
+    if (new URL(originalURL).hash === '') {
+      navigator.clipboard.writeText(originalURL + '#head');
+    } else {
+      navigator.clipboard.writeText(originalURL);
+    }
+
+    setShouldShowCopyMessage(true);
+    setTimeout(() => {
+      setShouldShowCopyMessage(false);
+    }, 2000);
+  };
 
   return (
     <div className="Quarters" id="select_quater">
@@ -127,7 +125,7 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
           </div>
           <TooltipPanel
             text={`Link to Version ${isSelect + 1} copied!`}
-            state={copyState}
+            state={shouldShowCopyMessage}
             style={{ marginRight: '10px' }}
           >
             <Button className="Quarters__form__button btn" name="subscribe" onClick={() => handleCopy()}>
