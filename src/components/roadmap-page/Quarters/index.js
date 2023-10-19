@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import Button from '../../Button';
-import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 
 import { ReactComponent as CopyLink } from '../../../assets/svg/copylink.svg';
@@ -81,12 +81,10 @@ const SelectOptions = ({ options, updateFileName, isSelect, setIsSelect, setShou
   );
 };
 
-const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGlossary, scrollPosition }) => {
+const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGlossary, scrollPosition, t }) => {
   const [shouldShowCopyMessage, setShouldShowCopyMessage] = useState(false);
   const [isSelect, setIsSelect] = useState(roadmapData.findIndex(item => item.name === currentFilename));
   const [shouldBannerShow, setShouldBannerShow] = useState(true);
-
-  const { t } = useTranslation();
 
   useEffect(() => {
     if (new URL(window.location.href).hash === '#head') {
@@ -124,7 +122,7 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
             />
           </div>
           <TooltipPanel
-            text={`Link to Version ${roadmapData.length - isSelect} copied!`}
+            text={<Trans i18nKey="roadmap.linkToVersionCopied" components={{ versionNumber:roadmapData.length - isSelect  }} />}
             state={shouldShowCopyMessage}
             style={{ marginRight: '10px' }}
           >
@@ -139,8 +137,8 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
             <Banner
               icon={<NoticEnable />}
               className="Quarters__top__banner"
-              title={'You are previewing an old version of the roadmap'}
-              information={'Roadmap gets updated frequently and the one you view right now is an old legacy version.'}
+              title={t("roadmap.topBanner.title")}
+              information={t("roadmap.topBanner.subtitle")}
               label={
                 <button
                   onClick={() => {
@@ -150,7 +148,7 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
                   }}
                   className="Quarters__top__banner__button"
                 >
-                  Change to current version
+                  {t("roadmap.topBanner.changeVersion")}
                 </button>
               }
               close={() => {
@@ -160,17 +158,15 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
           ) : null}
         </div>
       </div>
-      <QuartersListData data={data} selectGlossary={selectGlossary} scrollPosition={scrollPosition} />
+      <QuartersListData data={data} selectGlossary={selectGlossary} scrollPosition={scrollPosition} t={t} />
       <div className="Quarters__form-wrapper">
         <div className="Quarters__form">
           <div className="Quarters__bottom__banner">
             <Banner
               icon={<Notic />}
               className="Quarters__bottom__banner__item"
-              title={'Disclaimer'}
-              information={
-                "The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader's own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap."
-              }
+              title={t("roadmap.disclaimer.title")}
+              information={t("roadmap.disclaimer.subtitle")}
             />
           </div>
         </div>

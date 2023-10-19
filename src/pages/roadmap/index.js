@@ -111,10 +111,11 @@ const RoadmapPage = () => {
                 updateFileName={updateFileName}
                 data={data}
                 selectGlossary={onCard}
+                t={t}
               />
             </div>
           </div>
-          <GlossaryTerms glossary={glossary} sliderText={sliderText} cardOnClick={onCard} />
+          <GlossaryTerms glossary={glossary} sliderText={sliderText} cardOnClick={onCard} t={t} />
         </div>
       </BaseLayout>
     </MyContext.Provider>

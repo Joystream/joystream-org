@@ -3,7 +3,7 @@ import React from 'react';
 import './style.scss';
 import QuarterPanel from '../QuarterPanel';
 
-function QuartersListData({ data, selectGlossary, scrollPosition, isLoading }) {
+function QuartersListData({ data, selectGlossary, scrollPosition, isLoading, t }) {
   if (isLoading)
     return (
       <div className="QuarterList_main">
@@ -21,6 +21,7 @@ function QuartersListData({ data, selectGlossary, scrollPosition, isLoading }) {
             language={'English'}
             glossaryPanel={selectGlossary}
             scrollPosition={scrollPosition}
+            t={t}
           />
         );
       })}

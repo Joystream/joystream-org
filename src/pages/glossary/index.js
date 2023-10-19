@@ -51,8 +51,8 @@ const GlossaryPage = () => {
       <BaseLayout t={t}>
         <SiteMetadata
           lang={language}
-          title={t('roadmap.siteMetadata.title')}
-          description={t('roadmap.siteMetadata.description')}
+          title={t('glossary.siteMetadata.title')}
+          description={t('glossary.siteMetadata.description')}
         />
 
         <Glossary
@@ -61,6 +61,7 @@ const GlossaryPage = () => {
             onGlossaryState();
           }}
           cardSelect={onCardSelect}
+          t={t}
         />
       </BaseLayout>
     </MyContext.Provider>

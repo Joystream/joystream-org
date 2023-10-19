@@ -5,18 +5,17 @@ import GlossaryBody from './Glossary_body';
 
 import './style.scss';
 
-const Glossary = ({ data, headClick, cardSelect }) => {
+const Glossary = ({ data, headClick, cardSelect, t }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, []);
-  if (!data) return <div className="Glossary">Loading...</div>;
   return (
     <div className="Glossary">
       <div className="Glossary__body">
-        <GlossaryHead head={data.title} onclick={headClick} />
-        <GlossaryBody data={data} selectCard={cardSelect} />
+        <GlossaryHead head={data.title} onclick={headClick} t={t} />
+        <GlossaryBody data={data} selectCard={cardSelect} t={t} />
       </div>
     </div>
   );

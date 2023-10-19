@@ -10,7 +10,7 @@ import { iconMap } from '../../../data/quarters';
 
 export let offset = 300;
 
-function QuarterPanel({ data, loading, language, glossaryPanel }) {
+function QuarterPanel({ data, loading, language, glossaryPanel, t }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
   const [activeLinkIcon, setActiveLinkIcon] = useState(-1);
@@ -30,7 +30,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
           <span class = "QuarterPanel__main__underline__modal">
             <div class = "QuarterPanel__main__underline__modal__title">${char.title}</div>
             <div class = "QuarterPanel__main__underline__modal__body">${char.tooltip}</div>
-            <button class="QuarterPanel__main__underline__modal__button" id="${i}">Click to learn more</button>
+            <button class="QuarterPanel__main__underline__modal__button" id="${i}">${t("roadmap.clickToLearnMore")}</button>
           </span>
         </span>`
       );
@@ -321,7 +321,7 @@ function QuarterPanel({ data, loading, language, glossaryPanel }) {
             <div className="QuarterPanel__main__line__dotbottom" />
           </div>
           <div className="QuarterPanel__main__panel">
-            <div className="QuarterPanel__main__panel__content">More plans will be announced over time.</div>
+            <div className="QuarterPanel__main__panel__content">{t("roadmap.morePlans")}</div>
           </div>
         </div>
       </div>

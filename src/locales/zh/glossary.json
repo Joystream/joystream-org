@@ -1,0 +1,15 @@
+{
+  "glossary": {
+    "siteMetadata": {
+      "title": "Roadmap",
+      "description": "Roadmap"
+    },
+    "header": {
+      "roadmap": "Roadmap"
+    },
+    "body": {
+      "node": "Node",
+      "relatedTerms": "Related Terms"
+    }
+  }
+}
