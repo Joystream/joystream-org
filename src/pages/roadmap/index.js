@@ -22,12 +22,24 @@ import glossaryData from '../../data/glossary/glossary.json';
 const FILE_NAMES = roadmapData.map(datapoint => datapoint.name);
 const NEWEST_ROADMAP_FILENAME = roadmapData.find(item => item.isNewest === true).name;
 
+const parseURLFilename = () => {
+  const url = new URL(window.location.href);
+  const filename = url.searchParams.get('filename');
+
+  if(!filename)
+    return NEWEST_ROADMAP_FILENAME;
+
+  if (!FILE_NAMES.includes(filename)) {
+    return NEWEST_ROADMAP_FILENAME;
+  }
+
+  return filename;
+}
+
 const RoadmapPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
-  const [fileName, setFileName] = useState(
-    new URL(window.location.href).searchParams.get('filename') ?? NEWEST_ROADMAP_FILENAME
-  );
+  const [fileName, setFileName] = useState(parseURLFilename());
   const [glossary, setGlossary] = useState([]);
   const [sliderText, setSliderText] = useState([]);
   const [data, setData] = useState([]);
@@ -35,6 +47,8 @@ const RoadmapPage = () => {
   const updateFileName = filename => {
     setFileName(filename);
   };
+
+  console.log(parseURLFilename())
 
   useEffect(() => {
     setGlossary(glossaryData[0].terms);

@@ -18,15 +18,23 @@ const GlossaryPage = () => {
   const glossary = glossaryData[0].terms;
 
   useEffect(() => {
-    const glossaryItemParam = new URL(window.location.href).searchParams.get('item');
+    const url = new URL(window.location.href);
+    const urlHash = url.hash;
+    const glossaryItemParam = url.searchParams.get('item');
     if (glossaryItemParam) {
       const index = glossary.findIndex(res => {
         return res.title === glossaryItemParam;
       });
 
-      setGlossaryIndex(index >= 1 ? index : 0);
+      if(index <= 0) {
+        setGlossaryIndex(0);
+        window.history.replaceState(null, null, `?item=${glossary[0].title}${urlHash}`);
+      }else {
+        setGlossaryIndex(index);
+      }
     } else {
       setGlossaryIndex(0);
+      window.history.replaceState(null, null, `?item=${glossary[0].title}${urlHash}`);
     }
   }, []);
 
