@@ -10,7 +10,7 @@ import { iconMap } from '../../../data/quarters';
 
 export let offset = 300;
 
-function QuarterPanel({ data, loading, language, glossaryPanel, t }) {
+function QuarterPanel({ data, loading, glossaryPanel, t }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
   const [activeLinkIcon, setActiveLinkIcon] = useState(-1);
@@ -231,14 +231,9 @@ function QuarterPanel({ data, loading, language, glossaryPanel, t }) {
     timeLineItems[timeLineItems.length - 1].classList.add('QuarterPanel__main__line__dot--last');
   }
 
-  if (typeof document === 'undefined') return <></>;
-
-  const result = data.language === language ? data : false;
-  if (!result) return <></>;
-
   return (
     <div>
-      {result.quarters.map((res, index) => {
+      {data.quarters.map((res, index) => {
         return (
           <div className="QuarterPanel__main" key={index}>
             <div className="QuarterPanel__main__rigth">
@@ -265,14 +260,14 @@ function QuarterPanel({ data, loading, language, glossaryPanel, t }) {
                         <div
                           className={cn('QuarterPanel__main__playIcon', {
                             'QuarterPanel__main__playIcon--active':
-                              k + index * result.quarters[index > 0 ? index - 1 : 0].deliveryMilestones.length ===
+                              k + index * data.quarters[index > 0 ? index - 1 : 0].deliveryMilestones.length ===
                               activeItem,
                           })}
                         >
                           <img
                             className={cn('mileston__icon', {
                               'mileston__icon--active':
-                                k + index * result.quarters[index > 0 ? index - 1 : 0].deliveryMilestones.length ===
+                                k + index * data.quarters[index > 0 ? index - 1 : 0].deliveryMilestones.length ===
                                 activeItem,
                             })}
                             src={iconMap[milestones.icon]}

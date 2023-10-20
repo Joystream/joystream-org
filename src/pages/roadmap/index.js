@@ -48,8 +48,6 @@ const RoadmapPage = () => {
     setFileName(filename);
   };
 
-  console.log(parseURLFilename())
-
   useEffect(() => {
     setGlossary(glossaryData[0].terms);
     var scrollPosition = localStorage.getItem('scrollPosition');
