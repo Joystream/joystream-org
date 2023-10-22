@@ -1,12 +1,57 @@
 @import '../../../styles/main';
 @import '../../../pages/style';
 
+$animation-name: null;
+
+@mixin animate-background () {
+  $animation-name: unique-id() !global;
+
+  @keyframes #{$animation-name} {
+    0% {
+      transform: rotate(60deg);
+    }
+
+    100% {
+      transform: rotate(420deg);
+    }
+  }
+
+  animation: 30s linear 0s infinite normal none running $animation-name;
+}
+
 .IndexPage {
   &__hero-wrapper {
-    min-height: 1294px;
-    padding: 96px 100px;
-    overflow: hidden;
+    padding: 32px 32px 96px 32px;
     background-color: black;
+  }
+
+  &__hero-animation-wrapper {
+    position: relative;
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  &__background-animation {
+    @include animate-background;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    transform: translate(-50%, -50%);
+
+    &__inner {
+      position: absolute;
+      top: -1212px;
+      display: block;
+      width: 2000px;
+      height: 2000px;
+      background: radial-gradient(circle, rgb(20, 52, 146) 70%, transparent 100%);
+      border-radius: 50%;
+      filter: blur(400px);
+    }
   }
 
   &__hero {
