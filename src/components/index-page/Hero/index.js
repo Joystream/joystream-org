@@ -8,34 +8,34 @@ import Button from '../../Button';
 
 import AtlasHeroBackgroundImage from '../../../assets/images/landing/atlas-hero-background.webp';
 import AtlasHeroForegroundImage from '../../../assets/images/landing/atlas-hero-foreground.webp';
-import AtlasHeroButtonImage from '../../../assets/images/landing/atlas-hero-button.webp';
+import AtlasHeroHoldersImage from '../../../assets/images/landing/glass-mockup-holder.webp';
 
 import './style.scss';
 
-const parallaxDataForeground = [
+const parallaxDataBackground = [
   {
     start: 0,
-    duration: 1400,
+    duration: 1600,
     easing: 'easeIn',
     properties: [
       {
-        startValue: -700,
-        endValue: -900,
+        startValue: 0,
+        endValue: 200,
         property: 'translateY',
       },
     ],
   },
 ];
 
-const parallaxDataButton = [
+const parallaxDataForeground = [
   {
     start: 0,
-    end: 1400,
+    duration: 2000,
     easing: 'easeIn',
     properties: [
       {
-        startValue: -685,
-        endValue: -985,
+        startValue: -800,
+        endValue: -1200,
         property: 'translateY',
       },
     ],
@@ -74,32 +74,40 @@ const Hero = ({ t }) => {
             />
           </h1>
           <p className="IndexPage__hero__subtitle">{t('landing.hero.subtitle')}</p>
-          {/* <div className="IndexPage__hero__illustration">
-          <img
-            className="IndexPage__hero__illustration__background"
-            src={AtlasHeroBackgroundImage}
-            alt="video playing on atlas"
-          />
-          <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
-            <img
-              className="IndexPage__hero__illustration__foreground"
-              src={AtlasHeroForegroundImage}
-              alt="bid section for the associated video NFT"
+          <div className="IndexPage__hero__buttons">
+            <ArrowButton
+              link="#apps-built-on-joystream"
+              text="Explore project dashboard"
+              className="IndexPage__hero__button"
+              textClassname="IndexPage__hero__button-text"
             />
-          </Plx>
-          <Plx
-            parallaxData={parallaxDataButton}
-            animateWhenNotInViewport={true}
-            className="IndexPage__hero__illustration__button-plx"
-          >
-            <img
-              className="IndexPage__hero__illustration__button"
-              src={AtlasHeroButtonImage}
-              alt="place bid on NFT button"
-            />
-          </Plx>
-        </div> */}
-          {/* <div className="IndexPage__hero__overlay"></div> */}
+            {/* <Button href="#start-your-community" className="IndexPage__hero__community-button">
+              {t('landing.hero.startYourCommunity')}
+            </Button> */}
+          </div>
+          <div className="IndexPage__hero__illustration">
+            <Plx parallaxData={parallaxDataBackground} animateWhenNotInViewport={true}>
+              <img
+                className="IndexPage__hero__illustration__background"
+                src={AtlasHeroBackgroundImage}
+                alt="video playing on atlas"
+              />
+            </Plx>
+            <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
+              <img
+                className="IndexPage__hero__illustration__foreground"
+                src={AtlasHeroForegroundImage}
+                alt="bid section for the associated video NFT"
+              />
+            </Plx>
+            <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
+              <img
+                className="IndexPage__hero__illustration__holders"
+                src={AtlasHeroHoldersImage}
+                alt="holders of a CRT"
+              />
+            </Plx>
+          </div>
         </div>
       </div>
     </div>
