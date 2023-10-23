@@ -34,8 +34,8 @@ const parallaxDataForeground = [
     easing: 'easeIn',
     properties: [
       {
-        startValue: -800,
-        endValue: -1200,
+        startValue: 0,
+        endValue: -400,
         property: 'translateY',
       },
     ],

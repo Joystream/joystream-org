@@ -11,6 +11,15 @@
   text-align: center;
 }
 
+@mixin h1000 {
+  font-family: $font-ibm-sans;
+  font-size: 73px;
+  font-weight: 600;
+  line-height: 80px;
+  letter-spacing: -.01em;
+  text-align: center;
+}
+
 @mixin h900 {
   font-family: $font-ibm-sans;
   font-size: 63px;

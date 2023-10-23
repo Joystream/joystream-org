@@ -28,7 +28,7 @@ $animation-name: null;
   &__hero-animation-wrapper {
     position: relative;
     min-height: 1376px;
-    padding: 72px 0;
+    padding: 72px 32px;
     overflow: hidden;
     border-radius: 32px;
   }
@@ -59,8 +59,7 @@ $animation-name: null;
     position: relative;
     display: grid;
     justify-content: center;
-    // Znaci, ide od 1 do 13..
-    column-gap: 32px;
+    column-gap: 24px;
     grid-template-columns: repeat(12, 1fr);
 
     &__title {
@@ -116,6 +115,7 @@ $animation-name: null;
     &__button {
       width: 304px;
       height: 64px;
+      min-width: 304px;
       padding: 20px 32px !important;
       border-radius: 8px;
 
@@ -137,7 +137,11 @@ $animation-name: null;
         // TODO: Using drop-shadow results in graphical problems in firefox and that is why it is commented out.
         // This functionality should be reinstated as soon as that is fixed on their end.
         // filter: drop-shadow(0 33px 100px rgba(0, 0, 0, .22)) drop-shadow(0 7.37098px 22.3363px rgba(0, 0, 0, .131144)) drop-shadow(0 2.19453px 6.6501px rgba(0, 0, 0, .0888564));
+        position: absolute;
+        right: 0;
+        left: 0;
         width: 100%;
+        margin: auto;
         // max-width: 1060px;
         opacity: 0;
         animation: animateLandingHeroImage .75s forwards ease;
@@ -146,7 +150,10 @@ $animation-name: null;
 
       &__foreground {
         position: absolute;
+        right: 0;
+        left: 0;
         width: 100%;
+        margin: auto;
         opacity: 0;
         animation: animateLandingNftWidget .75s forwards ease;
         animation-delay: .3s;
@@ -154,7 +161,10 @@ $animation-name: null;
 
       &__holders {
         position: absolute;
+        right: 0;
+        left: 0;
         width: 100%;
+        margin: auto;
         opacity: 0;
         animation: animateLandingNftWidget .75s forwards ease;
         animation-delay: .3s;
@@ -162,151 +172,127 @@ $animation-name: null;
     }
   }
 
-  @media (max-width: 1420px) {
-    &__hero-wrapper {
-      min-height: 1136.5px;
-      padding: 96px 0;
+  @media (max-width: 1440px) {
+    &__hero-animation-wrapper {
+      min-height: 1065px;
+      padding-top: 32px;
     }
 
     &__hero {
-      &__illustration {
-        &__background {
-          width: 900px;
-        }
-
-        &__foreground {
-          top: 233px;
-          right: -15px;
-          width: 300px;
-        }
-      }
-    }
-  }
-
-  @media #{$screen-max-md} {
-    &__hero-wrapper {
-      min-height: unset;
-      padding: 80px 0;
-    }
-
-    &__hero {
-      &__title,
-      &__typewriter-title {
-        @include h2;
-      }
-
       &__title {
-        max-width: 700px;
+        @include h1000;
+
+        max-width: 896px;
+        margin: 0 auto;
+        grid-column: 1 / 13;
       }
 
-      &__title,
-      &__subtitle,
-      &__buttons {
-        opacity: 1;
-        animation: none;
-      }
-
-      &__illustration {
-        &__background {
-          width: 680px;
-        }
-
-        &__foreground {
-          top: -375px;
-          right: -2px;
-          width: 220px;
-        }
-
-        &__background,
-        &__foreground {
-          opacity: 1;
-          animation: none;
-        }
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__hero {
-      &__title,
       &__typewriter-title {
-        @include h3;
-      }
-
-      &__title {
-        max-width: 550px;
+        @include h1000;
       }
 
       &__subtitle {
-        @include base-3;
-
-        max-width: 335px;
-        margin-top: 12px;
-      }
-
-      &__buttons {
-        margin-top: 24px;
+        margin-right: auto;
+        margin-left: auto;
+        grid-column: 1 / 13;
       }
 
       &__illustration {
-        margin-top: 64px;
+        margin-top: 48px;
+        grid-column: 1 / 13;
       }
     }
   }
 
-  @media (max-width: 725px) {
-    &__hero-wrapper {
-      padding-bottom: 0;
+  @media (max-width: 1024px) {
+    &__hero-animation-wrapper {
+      min-height: 927px;
+      padding: 16px;
     }
 
     &__hero {
-      &__illustration {
-        &__background {
-          width: 500px;
+      column-gap: 16px;
+
+      &__title {
+        @include h900;
+
+        max-width: 650px;
+        min-height: 216px;
+
+        & > span {
+          display: block;
         }
-
-        &__foreground {
-          top: -277px;
-          right: -8px;
-          width: 165px;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 560px) {
-    &__hero__title {
-      max-width: 335px;
-
-      span {
-        display: block;
-        max-height: 48px;
       }
 
-      span > div {
-        display: -webkit-inline-box;
+      &__typewriter-title {
+        @include h900;
       }
-    }
-  }
 
-  @media (max-width: 540px) {
-    &__hero {
       &__buttons {
-        align-items: center;
-        flex-direction: column;
+        margin-top: 32px;
       }
 
       &__illustration {
-        &__background {
-          width: 100%;
-        }
+        margin-top: 56px;
+      }
+    }
+  }
 
-        &__foreground {
-          top: unset;
-          right: -10px;
-          bottom: -11px;
-          width: 33%;
-        }
+  @media (max-width: 768px) {
+    &__hero-animation-wrapper {
+      min-height: 678px;
+    }
+
+    &__hero {
+      &__title {
+        @include h700;
+
+        max-width: 322.5px;
+        min-height: 192px;
+      }
+
+      &__typewriter-title {
+        @include h700;
+      }
+
+      &__subtitle {
+        @include t300;
+
+        text-align: center;
+      }
+
+      &__illustration {
+        margin-top: 48px;
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__hero-animation-wrapper {
+      min-height: 574px;
+    }
+
+    &__hero {
+      &__title {
+        @include h600;
+
+        max-width: 279px;
+        min-height: 160px;
+        text-align: center;
+      }
+
+      &__typewriter-title {
+        @include h600;
+      }
+
+      &__button {
+        width: 256px;
+        min-width: 256px;
+        padding: 20px 16px !important;
+      }
+
+      &__button-text {
+        @include t200;
       }
     }
   }
