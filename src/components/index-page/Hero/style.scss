@@ -173,6 +173,13 @@ $animation-name: null;
     }
   }
 
+  @media (min-width: 1920px) {
+    &__hero {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+  }
+
   @media (max-width: 1440px) {
     &__hero-animation-wrapper {
       min-height: 1065px;
