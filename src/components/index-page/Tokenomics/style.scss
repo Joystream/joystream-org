@@ -4,31 +4,71 @@
 
 .IndexPage {
   &__tokenomics-wrapper {
-    padding: 0 0 96px;
-    background-color: $c_black;
+    padding: 96px 0;
+    background-color: #111316;
   }
 
   &__tokenomics {
-    & > header {
+    display: grid;
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+
+    &__header {
       display: flex;
       align-items: center;
       flex-direction: column;
+      grid-column: 5 / 9;
+
+      &__section-title {
+        @include h400;
+
+        color: #6c6cff;
+      }
+
+      &__title {
+        @include h900;
+
+        margin-top: 4px;
+        color: $c_white;
+      }
     }
 
-    &__section-title {
-      @include section-title;
+    &__metrics {
+      display: grid;
+      margin-top: 72px;
+      gap: 24px;
+      grid-column: 2 / 12;
+      grid-template-areas:
+        'price market-cap          total-supply'
+        'price circulating-supply  fdv         ';
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 1fr);
 
-      color: #6c6cff;
-    }
+      &__container {
+        padding: 32px;
+        background: rgba(188, 213, 250, .08);
+        border: 1px solid rgba(82, 97, 107, 1);
+        border-radius: 10px;
 
-    &__title {
-      @include h3;
+        &--price {
+          grid-area: price;
+        }
 
-      margin-top: 4px;
-      color: $c_white;
+        &--market-cap {
+          grid-area: market-cap;
+        }
 
-      & > br {
-        display: none;
+        &--total-supply {
+          grid-area: total-supply;
+        }
+
+        &--circulating-supply {
+          grid-area: circulating-supply;
+        }
+
+        &--fdv {
+          grid-area: fdv;
+        }
       }
     }
   }
