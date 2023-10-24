@@ -95,6 +95,7 @@ $animation-name: null;
 
       margin-top: 16px;
       color: #a7aeb7;
+      text-align: center;
       opacity: 0;
       animation: animateLandingContent .75s forwards ease;
       animation-delay: .1s;
@@ -257,8 +258,6 @@ $animation-name: null;
 
       &__subtitle {
         @include t300;
-
-        text-align: center;
       }
 
       &__illustration {
@@ -278,7 +277,6 @@ $animation-name: null;
 
         max-width: 279px;
         min-height: 160px;
-        text-align: center;
       }
 
       &__typewriter-title {

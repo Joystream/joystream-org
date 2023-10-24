@@ -8,7 +8,6 @@
   font-weight: 700;
   line-height: 112px;
   letter-spacing: -.01em;
-  text-align: center;
 }
 
 @mixin h1000 {
@@ -17,7 +16,6 @@
   font-weight: 600;
   line-height: 80px;
   letter-spacing: -.01em;
-  text-align: center;
 }
 
 @mixin h900 {
@@ -26,7 +24,6 @@
   font-weight: 600;
   line-height: 72px;
   letter-spacing: -.01em;
-  text-align: center;
 }
 
 @mixin h800 {
@@ -35,7 +32,6 @@
   font-weight: 600;
   line-height: 64px;
   letter-spacing: -.005em;
-  text-align: center;
 }
 
 @mixin h700 {
@@ -44,7 +40,6 @@
   font-weight: 600;
   line-height: 48px;
   letter-spacing: 0;
-  text-align: center;
 }
 
 @mixin h600 {
@@ -53,7 +48,6 @@
   font-weight: 600;
   line-height: 40px;
   letter-spacing: 0;
-  text-align: left;
 }
 
 @mixin h500 {
@@ -62,7 +56,6 @@
   font-weight: 600;
   line-height: 32px;
   letter-spacing: 0;
-  text-align: left;
 }
 
 @mixin h400 {
@@ -71,7 +64,6 @@
   font-weight: 600;
   line-height: 24px;
   letter-spacing: .005em;
-  text-align: center;
 }
 
 @mixin h100 {
@@ -80,7 +72,6 @@
   font-weight: 700;
   line-height: 16px;
   letter-spacing: .07em;
-  text-align: left;
 }
 
 // *==============*
@@ -93,7 +84,6 @@
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0;
-  text-align: center;
 }
 
 @mixin t300 {
@@ -102,7 +92,6 @@
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0;
-  text-align: left;
 }
 
 @mixin t200 {
@@ -111,7 +100,6 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: .005em;
-  text-align: left;
 }
 
 @mixin t100 {
@@ -120,5 +108,4 @@
   font-weight: 500;
   line-height: 16px;
   letter-spacing: .01em;
-  text-align: left;
 }
