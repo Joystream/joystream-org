@@ -42,7 +42,7 @@
         'price market-cap          total-supply'
         'price circulating-supply  fdv         ';
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(1, 1fr);
+      grid-template-rows: repeat(2, 152px);
 
       &__container {
         padding: 32px;
@@ -68,6 +68,54 @@
 
         &--fdv {
           grid-area: fdv;
+        }
+
+        &__title {
+          @include t400;
+
+          display: flex;
+          align-items: center;
+          color: #b5c1c9;
+
+          &__info {
+            margin-left: 12px;
+            fill: #b5c1c9;
+
+            &:hover {
+              fill: $c_white;
+            }
+          }
+        }
+
+        &__content {
+          &__simple-value {
+            @include h700;
+
+            margin-top: 8px;
+            color: $c_white;
+          }
+
+          &__price {
+            margin-top: 17.5px;
+
+            &__value {
+              @include h800;
+
+              color: $c_white;
+            }
+
+            &__change {
+              @include t400;
+
+              margin-top: 5px;
+              color: #b5c1c9;
+            }
+
+            &__graph {
+              width: 100%;
+              margin-top: 17.5px;
+            }
+          }
         }
       }
     }

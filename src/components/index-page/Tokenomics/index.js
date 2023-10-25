@@ -1,9 +1,22 @@
 import React from 'react';
-import { Trans } from 'react-i18next';
+// import { Trans } from 'react-i18next';
 
-import { TokenStatsSection } from '../../token-page/Hero/index.js';
+import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
+import { ReactComponent as GraphIllustration } from '../../../assets/svg/landing/graph.svg';
 
 import './style.scss';
+
+const Container = ({ title, type, children }) => {
+  return (
+    <div className={`IndexPage__tokenomics__metrics__container IndexPage__tokenomics__metrics__container--${type}`}>
+      <div className="IndexPage__tokenomics__metrics__container__title">
+        {title}
+        <InfoIcon className="IndexPage__tokenomics__metrics__container__title__info" />
+      </div>
+      <div className="IndexPage__tokenomics__metrics__container__content">{children}</div>
+    </div>
+  );
+};
 
 const Tokenomics = ({ t }) => {
   return (
@@ -14,21 +27,37 @@ const Tokenomics = ({ t }) => {
           <h2 className="IndexPage__tokenomics__header__title">Token Metrics</h2>
         </header>
         <div className="IndexPage__tokenomics__metrics">
-          <div className="IndexPage__tokenomics__metrics__container IndexPage__tokenomics__metrics__container--price">
-            Price
-          </div>
-          <div className="IndexPage__tokenomics__metrics__container IndexPage__tokenomics__metrics__container--market-cap">
-            Market cap
-          </div>
-          <div className="IndexPage__tokenomics__metrics__container IndexPage__tokenomics__metrics__container--total-supply">
-            Total supply
-          </div>
-          <div className="IndexPage__tokenomics__metrics__container IndexPage__tokenomics__metrics__container--circulating-supply">
-            Circulating supply
-          </div>
-          <div className="IndexPage__tokenomics__metrics__container IndexPage__tokenomics__metrics__container--fdv">
-            FDV
-          </div>
+          <Container
+            title="Price"
+            type="price"
+            children={
+              <div className="IndexPage__tokenomics__metrics__container__content__price">
+                <p className="IndexPage__tokenomics__metrics__container__content__price__value">$0.005452</p>
+                <p className="IndexPage__tokenomics__metrics__container__content__price__change">+2% Last week</p>
+                <GraphIllustration className="IndexPage__tokenomics__metrics__container__content__price__graph" />
+              </div>
+            }
+          />
+          <Container
+            title="Market cap"
+            type="market-cap"
+            children={<p className="IndexPage__tokenomics__metrics__container__content__simple-value">1 001 002 450</p>}
+          />
+          <Container
+            title="Total supply"
+            type="total-supply"
+            children={<p className="IndexPage__tokenomics__metrics__container__content__simple-value">1 022 914 460</p>}
+          />
+          <Container
+            title="Circulating supply"
+            type="circulating-supply"
+            children={<p className="IndexPage__tokenomics__metrics__container__content__simple-value">284 999 234</p>}
+          />
+          <Container
+            title="FDV"
+            type="fdv"
+            children={<p className="IndexPage__tokenomics__metrics__container__content__simple-value">$5 577 184</p>}
+          />
         </div>
       </div>
     </section>
