@@ -17,6 +17,7 @@ import Jsgenesis from '../components/index-page/Jsgenesis';
 import AvailableActivities from '../components/index-page/AvailableActivities';
 import Ecosystem from '../components/index-page/Ecosystem';
 import Tokenomics from '../components/index-page/Tokenomics';
+import Video from '../components/index-page/Video';
 
 import './style.scss';
 
@@ -41,6 +42,8 @@ const IndexPage = () => {
       />
 
       <Hero t={t} />
+
+      <Video t={t} />
 
       <Tokenomics t={t} />
 
