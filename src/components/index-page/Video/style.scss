@@ -10,6 +10,8 @@
   &__video {
     @include grid;
 
+    position: relative;
+
     &__title {
       @include h900;
 
@@ -25,6 +27,28 @@
       color: #a7aeb7;
       text-align: center;
       grid-column: 3 / 11;
+    }
+
+    &__modal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      width: 89%;
+      overflow: hidden;
+      border-radius: 12.71px;
+      outline: none;
+      transform: translate(-50%, -50%);
+      /* stylelint-disable */
+      aspect-ratio: 16 / 9;
+      /* stylelint-enable */
+
+      &__overlay {
+        position: fixed;
+        z-index: 2;
+        background-color: rgba(#101214bf, .75);
+        inset: 0;
+      }
     }
 
     &__player {
