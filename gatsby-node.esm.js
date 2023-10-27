@@ -7,7 +7,6 @@
 // You can delete this file if you're not using it
 
 import path from 'path';
-// const data = require('./src/data/pages/verification.js');
 import { verifiedMembers } from './src/data/pages/verification.js';
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
