@@ -1,0 +1,79 @@
+@import '../../../styles/main';
+@import '../../../pages/style';
+
+.IndexPage {
+  &__traction-wrapper {
+    padding: 96px 32px;
+    background-color: black;
+  }
+
+  &__traction {
+    @include grid;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      grid-column: 1 / 13;
+
+      &__section-title {
+        @include h400;
+
+        color: #6c6cff;
+      }
+
+      &__title {
+        @include h900;
+
+        margin-top: 4px;
+        color: $c_white;
+      }
+    }
+
+    &__cards {
+      display: grid;
+      margin-top: 72px;
+      gap: 24px;
+      grid-column: 2 / 12;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    &__card {
+      height: 416px;
+      padding: 32px;
+      background-color: rgba(188, 213, 250, .08);
+      border: 1px solid rgba(82, 97, 107, 1);
+      border-radius: 8px;
+
+      &:nth-child(2) {
+        margin-top: 48px;
+      }
+
+      &:nth-child(4),
+      &:nth-child(6) {
+        margin-top: -48px;
+      }
+
+      &__change {
+        @include t400;
+
+        color: #7b8a95;
+      }
+
+      &__value {
+        @include h800;
+
+        margin-top: 4px;
+        color: $c_white;
+      }
+
+      &__visual {
+        display: grid;
+        height: 200px;
+        max-height: 200px;
+        place-items: center;
+      }
+    }
+  }
+}

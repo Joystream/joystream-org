@@ -6,4 +6,9 @@
   @media (max-width: 1024px) {
     column-gap: 16px;
   }
+
+  @media (min-width: 1920px) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
