@@ -6,29 +6,5 @@
 
 // You can delete this file if you're not using it
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  let rules = [
-      {
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: 'javascript/auto',
-      },
-  ];
-  if(stage === 'build-html'){
-    rules.push({
-      test: /openpgp/,
-      use: loaders.null(),
-    });
-  }
-
-  actions.setWebpackConfig({
-    resolve: {
-      extensions: ['*', '.mjs', '.jsx', '.js', '.json'],
-    },
-    module: {
-      rules: [
-        ...rules,
-      ],
-    },
-  });
-};
+require = require('esm')(module);
+module.exports = require('./gatsby-node.esm.js');
