@@ -32,6 +32,7 @@
 
     &__cards {
       display: grid;
+      max-height: 920px;
       margin-top: 72px;
       gap: 24px;
       grid-column: 2 / 12;
@@ -47,18 +48,34 @@
       border-radius: 8px;
 
       &:nth-child(2) {
-        margin-top: 48px;
+        margin-top: 64px;
       }
 
       &:nth-child(4),
       &:nth-child(6) {
-        margin-top: -48px;
+        margin-top: -64px;
+      }
+
+      &__visual {
+        display: grid;
+        height: 200px;
+        max-height: 200px;
+        place-items: center;
       }
 
       &__change {
         @include t400;
 
+        margin-top: 16px;
         color: #7b8a95;
+      }
+
+      &:hover {
+        background-color: rgba(187, 217, 246, .13);
+      }
+
+      &:hover &__change {
+        color: #7174ff;
       }
 
       &__value {
@@ -68,11 +85,164 @@
         color: $c_white;
       }
 
-      &__visual {
-        display: grid;
-        height: 200px;
-        max-height: 200px;
-        place-items: center;
+      &__info {
+        @include t400;
+
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        color: #7b8a95;
+
+        &__icon {
+          position: relative;
+          display: inline-block;
+          min-width: 32px;
+          min-height: 32px;
+          margin-left: 4px;
+          border-radius: 50%;
+
+          & > svg {
+            position: absolute;
+            margin: auto;
+            fill: #7b8a95;
+            inset: 0;
+          }
+
+          &:hover {
+            background-color: rgba(255, 255, 255, .2);
+
+            & > svg {
+              fill: $c_white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &__traction {
+      &__header {
+        grid-column: 2 / 12;
+
+        &__title {
+          @include h800;
+        }
+      }
+
+      &__cards {
+        grid-column: 1 / 13;
+      }
+
+      &__card {
+        height: 384px;
+        padding: 24px;
+
+        &__value {
+          @include h700;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__traction-wrapper {
+      padding: 64px 16px 56px 16px;
+    }
+
+    &__traction {
+      &__header {
+        &__title {
+          @include h700;
+        }
+      }
+
+      &__cards {
+        max-height: 1248px;
+        margin-top: 56px;
+        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+
+      &__card {
+        height: 384px;
+
+        &:nth-child(2) {
+          margin-top: 64px;
+        }
+
+        &:nth-child(4),
+        &:nth-child(6) {
+          margin-top: 0;
+        }
+
+        &:nth-child(3) {
+          margin-top: -64px;
+        }
+
+        &:nth-child(5) {
+          margin-top: -64px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__traction-wrapper {
+      padding-bottom: 48px;
+    }
+
+    &__traction {
+      &__header {
+        grid-column: 1 / 13;
+
+        &__title {
+          @include h600;
+        }
+      }
+
+      &__cards {
+        display: flex;
+        flex-direction: column;
+        max-height: unset;
+        margin-top: 48px;
+      }
+
+      &__card {
+        width: 100%;
+        height: auto;
+        padding: 16px;
+        overflow: hidden;
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(5) {
+          margin-top: 0;
+        }
+
+        &__change,
+        &__info {
+          @include t300;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__traction {
+      &__header {
+        &__title {
+          @include h500;
+
+          text-align: center;
+        }
+      }
+
+      &__card {
+        &__value {
+          @include h600;
+        }
       }
     }
   }
