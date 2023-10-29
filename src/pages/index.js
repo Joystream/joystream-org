@@ -19,6 +19,7 @@ import Ecosystem from '../components/index-page/Ecosystem';
 import Tokenomics from '../components/index-page/Tokenomics';
 import Video from '../components/index-page/Video';
 import Traction from '../components/index-page/Traction';
+import Upcoming from '../components/index-page/Upcoming';
 
 import './style.scss';
 
@@ -57,6 +58,8 @@ const IndexPage = () => {
       <VideoNFTs t={t} nftData={data?.nfts} priceData={updatedPriceData} />
 
       <CreatorTokens t={t} />
+
+      <Upcoming t={t} />
 
       {/* <YoutubeSync t={t}/> */}
 
