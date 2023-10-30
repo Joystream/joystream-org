@@ -21,6 +21,9 @@ const TractionCard = ({ change, value, infoText, icon }) => {
           {infoText}
           <div className="IndexPage__traction__card__info__icon">
             <InfoIcon />
+            <div className="IndexPage__traction__card__info__icon__modal">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies.
+            </div>
           </div>
         </div>
       </div>

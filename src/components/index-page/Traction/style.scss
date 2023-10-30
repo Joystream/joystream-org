@@ -108,6 +108,30 @@
           margin-left: 4px;
           border-radius: 50%;
 
+          &__modal {
+            @include t100;
+
+            position: absolute;
+            right: -53px;
+            bottom: 36px;
+            z-index: 2000;
+            width: 139px;
+            margin: auto;
+            padding: 8px;
+            color: $c_white;
+            background-color: #343d44;
+            border-radius: 2px;
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility .3s linear, opacity .3s linear;
+            transition-delay: .1s;
+          }
+
+          &:hover &__modal {
+            opacity: 1;
+            visibility: visible;
+          }
+
           & > svg {
             position: absolute;
             margin: auto;
@@ -116,7 +140,7 @@
           }
 
           &:hover {
-            background-color: rgba(255, 255, 255, .2);
+            background-color: rgba(187, 217, 246, .13);
 
             & > svg {
               fill: $c_white;
@@ -155,12 +179,30 @@
     }
   }
 
+  @media (max-width: 1065px) {
+    &__traction__card {
+      padding: 24px 12px 24px 24px;
+
+      &__visual {
+        padding-right: 12px;
+      }
+    }
+  }
+
   @media (max-width: 1024px) {
     &__traction-wrapper {
       padding: 64px 16px 56px 16px;
     }
 
     &__traction {
+      &__card {
+        padding: 24px;
+
+        &__visual {
+          padding-right: 0;
+        }
+      }
+
       &__header {
         &__title {
           @include h700;
@@ -230,7 +272,10 @@
 
       &__card {
         padding: 16px;
-        overflow: hidden;
+
+        &__visual {
+          overflow: hidden;
+        }
 
         &__change,
         &__info {
