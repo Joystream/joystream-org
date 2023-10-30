@@ -8,43 +8,6 @@
     background-color: #111316;
   }
 
-  &__payouts-atlas {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    max-width: 816px;
-    margin: 0 auto;
-    padding: 0 10px;
-
-    & > header {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-    }
-
-    &__section-title {
-      @include section-title;
-
-      color: #6c6cff;
-    }
-
-    &__title {
-      @include h3;
-
-      margin-top: 4px;
-      color: $c_white;
-      text-align: center;
-    }
-
-    &__subtitle {
-      @include base-1;
-
-      margin-top: 16px;
-      color: #a7aeb7;
-      text-align: center;
-    }
-  }
-
   &__payouts {
     @extend %container;
 
@@ -341,10 +304,6 @@
   }
 
   @media #{$screen-max-md} {
-    &__payouts-atlas {
-      max-width: 650px;
-    }
-
     &__payouts {
       display: flex;
       flex-direction: column-reverse;
@@ -396,18 +355,6 @@
   @media #{$screen-max-sm} {
     &__payouts-wrapper {
       padding-top: 80px;
-    }
-
-    &__payouts-atlas {
-      max-width: 500px;
-
-      &__title {
-        @include h4;
-      }
-
-      &__subtitle {
-        @include base-3;
-      }
     }
 
     &__payouts {
