@@ -12,14 +12,16 @@ import './style.scss';
 
 const TractionCard = ({ change, value, infoText, icon }) => {
   return (
-    <div className="IndexPage__traction__card">
-      <div className="IndexPage__traction__card__visual">{icon}</div>
-      <div className="IndexPage__traction__card__change">+{change}% Last week</div>
-      <div className="IndexPage__traction__card__value">{value}</div>
-      <div className="IndexPage__traction__card__info">
-        {infoText}
-        <div className="IndexPage__traction__card__info__icon">
-          <InfoIcon />
+    <div className="IndexPage__traction__card-wrapper">
+      <div className="IndexPage__traction__card">
+        <div className="IndexPage__traction__card__visual">{icon}</div>
+        <div className="IndexPage__traction__card__change">+{change}% Last week</div>
+        <div className="IndexPage__traction__card__value">{value}</div>
+        <div className="IndexPage__traction__card__info">
+          {infoText}
+          <div className="IndexPage__traction__card__info__icon">
+            <InfoIcon />
+          </div>
         </div>
       </div>
     </div>
