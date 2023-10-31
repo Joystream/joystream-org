@@ -82,11 +82,50 @@
           color: #b5c1c9;
 
           &__info {
-            margin-left: 12px;
-            fill: #b5c1c9;
+            position: relative;
+            display: inline-block;
+            min-width: 32px;
+            min-height: 32px;
+            margin-left: 4px;
+            border-radius: 50%;
+
+            &__modal {
+              @include t100;
+
+              position: absolute;
+              right: -53px;
+              bottom: 36px;
+              z-index: 2000;
+              width: 139px;
+              margin: auto;
+              padding: 8px;
+              color: $c_white;
+              background-color: #343d44;
+              border-radius: 2px;
+              opacity: 0;
+              visibility: hidden;
+              transition: visibility .3s linear, opacity .3s linear;
+              transition-delay: .1s;
+            }
+
+            &:hover &__modal {
+              opacity: 1;
+              visibility: visible;
+            }
+
+            & > svg {
+              position: absolute;
+              margin: auto;
+              fill: #7b8a95;
+              inset: 0;
+            }
 
             &:hover {
-              fill: $c_white;
+              background-color: rgba(187, 217, 246, .13);
+
+              & > svg {
+                fill: $c_white;
+              }
             }
           }
         }

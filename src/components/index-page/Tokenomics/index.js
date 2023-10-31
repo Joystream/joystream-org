@@ -14,7 +14,12 @@ const Container = ({ title, type, children }) => {
       <div className="IndexPage__tokenomics__metrics__container">
         <div className="IndexPage__tokenomics__metrics__container__title">
           {title}
-          <InfoIcon className="IndexPage__tokenomics__metrics__container__title__info" />
+          <div className="IndexPage__tokenomics__metrics__container__title__info">
+            <InfoIcon />
+            <div className="IndexPage__tokenomics__metrics__container__title__info__modal">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies.
+            </div>
+          </div>
         </div>
         <div className="IndexPage__tokenomics__metrics__container__content">{children}</div>
       </div>
