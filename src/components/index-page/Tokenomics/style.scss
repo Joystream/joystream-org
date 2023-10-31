@@ -4,20 +4,18 @@
 
 .IndexPage {
   &__tokenomics-wrapper {
-    padding: 96px 0;
+    padding: 96px 32px;
     background-color: #111316;
   }
 
   &__tokenomics {
-    display: grid;
-    column-gap: 24px;
-    grid-template-columns: repeat(12, 1fr);
+    @include grid;
 
     &__header {
       display: flex;
       align-items: center;
       flex-direction: column;
-      grid-column: 5 / 9;
+      grid-column: 3 / 11;
 
       &__section-title {
         @include h400;
@@ -44,10 +42,9 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 152px);
 
-      &__container {
-        padding: 32px;
-        background: rgba(188, 213, 250, .08);
-        border: 1px solid rgba(82, 97, 107, 1);
+      &__container-wrapper {
+        padding: 1px;
+        background: linear-gradient(180deg, #52616b 0%, rgba(82, 97, 107, 0) 100%);
         border-radius: 10px;
 
         &--price {
@@ -69,6 +66,13 @@
         &--fdv {
           grid-area: fdv;
         }
+      }
+
+      &__container {
+        padding: 32px;
+        background: rgba(188, 213, 250, .08);
+        background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), .08, rgba(17, 19, 22, 1));
+        border-radius: 10px;
 
         &__title {
           @include t400;
@@ -121,9 +125,169 @@
     }
   }
 
-  @media (max-width: 725px) {
+  @media (max-width: 1440px) {
+    &__tokenomics {
+      &__header {
+        grid-column: 1 / 13;
+
+        &__title {
+          @include h800;
+        }
+      }
+
+      &__metrics {
+        grid-column: 1 / 13;
+
+        &__container {
+          &__content {
+            &__simple-value {
+              @include h600;
+            }
+
+            &__price__value {
+              @include h700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
     &__tokenomics-wrapper {
-      padding: 64px 0 64px;
+      padding: 64px 16px;
+    }
+
+    &__tokenomics {
+      &__header {
+        &__title {
+          @include h700;
+        }
+      }
+
+      &__metrics {
+        margin-top: 56px;
+        gap: 16px;
+        grid-template-areas: unset;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 309px 144px 144px;
+
+        &__container-wrapper {
+          &--price {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+          }
+
+          &--market-cap {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+          }
+
+          &--circulating-supply {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+          }
+
+          &--total-supply {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+          }
+
+          &--fdv {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__tokenomics {
+      &__header {
+        &__title {
+          @include h600;
+        }
+      }
+
+      &__metrics {
+        margin-top: 48px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 277px repeat(4, 112px);
+
+        &__container {
+          height: 100%;
+          padding: 16px;
+
+          &__content {
+            &__price {
+              margin-top: 16px;
+
+              &__graph {
+                margin-top: 16px;
+              }
+            }
+          }
+        }
+
+        &__container-wrapper {
+          &--price {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+          }
+
+          &--market-cap {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+          }
+
+          &--circulating-supply {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+          }
+
+          &--total-supply {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+          }
+
+          &--fdv {
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__tokenomics {
+      &__header {
+        &__title {
+          @include h500;
+        }
+      }
+
+      &__metrics {
+        grid-template-rows: 269px repeat(4, 104px);
+
+        &__container {
+          height: 100%;
+          padding: 16px;
+
+          &__content {
+            &__simple-value {
+              @include h500;
+            }
+
+            &__price {
+              &__value {
+                @include h600;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

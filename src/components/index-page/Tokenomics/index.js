@@ -8,12 +8,16 @@ import './style.scss';
 
 const Container = ({ title, type, children }) => {
   return (
-    <div className={`IndexPage__tokenomics__metrics__container IndexPage__tokenomics__metrics__container--${type}`}>
-      <div className="IndexPage__tokenomics__metrics__container__title">
-        {title}
-        <InfoIcon className="IndexPage__tokenomics__metrics__container__title__info" />
+    <div
+      className={`IndexPage__tokenomics__metrics__container-wrapper IndexPage__tokenomics__metrics__container-wrapper--${type}`}
+    >
+      <div className="IndexPage__tokenomics__metrics__container">
+        <div className="IndexPage__tokenomics__metrics__container__title">
+          {title}
+          <InfoIcon className="IndexPage__tokenomics__metrics__container__title__info" />
+        </div>
+        <div className="IndexPage__tokenomics__metrics__container__content">{children}</div>
       </div>
-      <div className="IndexPage__tokenomics__metrics__container__content">{children}</div>
     </div>
   );
 };
