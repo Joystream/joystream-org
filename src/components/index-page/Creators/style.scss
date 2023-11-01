@@ -4,13 +4,15 @@
 
 .IndexPage {
   &__creators-wrapper {
-    padding: 96px 32px;
+    padding: 96px 0;
     background-color: black;
   }
 
   &__creators {
     $carousel-gap: 24px;
     @include grid;
+
+    padding: 0 32px;
 
     &__title-and-info {
       display: flex;
@@ -134,81 +136,66 @@
     }
 
     &__item {
-      width: 224px;
-      height: 216px;
-      padding: 24px;
-      background-color: $c_ebony-clay;
+      display: flex;
+      flex-direction: column;
+      width: 249px;
+      height: 196px;
+      padding: 32px;
+      background-color: rgba(188, 213, 250, .08);
+      border-radius: 8px;
 
       &:hover {
-        background-color: rgba(red(#5c6475), green(#5c6475), blue(#5c6475), 25%);
+        background-color: rgba(187, 217, 246, .13);
       }
 
-      &__image {
-        width: 40px;
-        height: 40px;
-        overflow: hidden;
-        background: rgba(0, 0, 0, .3);
-        border-radius: 50%;
-
-        & > img {
-          width: 100%;
-        }
-      }
-
-      &__price {
+      &__channel {
         display: flex;
-        margin-top: 12px;
+        gap: 16px;
 
-        &__icon {
-          margin: auto 4px auto 0;
+        &__image {
+          width: 40px;
+          height: 40px;
+          margin: auto 0;
+          overflow: hidden;
+          background: rgba(0, 0, 0, .3);
+          border-radius: 50%;
+
+          & > img {
+            width: 100%;
+          }
         }
 
-        &__text {
-          @include h7;
+        &__info {
+          display: flex;
+          flex-direction: column;
 
-          color: $c_grayc-chateau;
+          &__name {
+            @include h400;
+            @include line-clamp(1);
 
-          & > span {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 40px;
-            letter-spacing: 0;
-            color: $c_white;
-            text-align: left;
+            color: #f4f6f8;
+          }
+
+          &__followers {
+            @include t300;
+
+            color: #7b8a95;
           }
         }
       }
 
-      &__price-usd {
-        @include base-5;
+      &__earned {
+        @include t300;
+
+        margin-top: 16px;
+        color: #7b8a95;
+      }
+
+      &__price {
+        @include h600;
 
         margin-top: 4px;
-        color: $c_grayc-chateau;
-      }
-
-      &__channel {
-        @include base-5;
-        @include line-clamp(1);
-
-        margin-top: 8px;
-        color: $c_grayc-chateau;
-
-        & > span {
-          color: $c_white;
-        }
-      }
-
-      &__time {
-        @include base-5;
-
-        display: flex;
-        align-items: center;
-        margin-top: 12px;
-        color: $c_grayc-chateau;
-
-        &__icon {
-          margin-right: 6px;
-        }
+        color: #f4f6f8;
       }
     }
   }
@@ -223,10 +210,12 @@
 
   @media (max-width: 1024px) {
     &__creators-wrapper {
-      padding: 56px 16px;
+      padding: 56px 0;
     }
 
     &__creators {
+      padding: 0 16px;
+
       &__title-and-info {
         &__title {
           @include h400;
@@ -237,7 +226,7 @@
 
   @media (max-width: 768px) {
     &__creators-wrapper {
-      padding: 48px 16px;
+      padding: 48px 0;
     }
 
     &__creators {

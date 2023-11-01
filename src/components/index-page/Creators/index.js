@@ -13,7 +13,16 @@ import { ReactComponent as PlusIcon } from '../../../assets/svg/plus.svg';
 
 import './style.scss';
 
-const CarouselItem = ({ img, joyAmount, priceData, channelName, time, setIsCarouselRunning, channelUrl }) => {
+const CarouselItem = ({
+  img,
+  joyAmount,
+  priceData,
+  channelName,
+  time,
+  setIsCarouselRunning,
+  channelUrl,
+  followersCount,
+}) => {
   const [imgSrc, onError] = useImageFallback(img, PlaceholderIcon);
   let usdAmount = `$${(priceData.price * joyAmount).toFixed(2)}`;
 
@@ -24,26 +33,21 @@ const CarouselItem = ({ img, joyAmount, priceData, channelName, time, setIsCarou
   return (
     <a href={channelUrl} target="_blank" rel="noreferrer">
       <div
-        className="IndexPage__payouts-carousel__item"
+        className="IndexPage__creators__item"
         onMouseEnter={() => setIsCarouselRunning(true)}
         onMouseLeave={() => setIsCarouselRunning(false)}
       >
-        <div className="IndexPage__payouts-carousel__item__image">
-          <img src={imgSrc} onError={e => onError(e)} alt="" />
-        </div>
-        <div className="IndexPage__payouts-carousel__item__channel">
-          <Trans i18nKey="landing.payouts.carousel.item.channel" components={{ span: <span />, channelName }} />
-        </div>
-        <div className="IndexPage__payouts-carousel__item__price">
-          <PlusIcon className="IndexPage__payouts-carousel__item__price__icon" />
-          <div className="IndexPage__payouts-carousel__item__price__text">
-            <Trans i18nKey="landing.payouts.carousel.item.price" components={{ span: <span />, joyAmount }} />
+        <div className="IndexPage__creators__item__channel">
+          <div className="IndexPage__creators__item__channel__image">
+            <img src={imgSrc} onError={e => onError(e)} alt="" />
+          </div>
+          <div className="IndexPage__creators__item__channel__info">
+            <div className="IndexPage__creators__item__channel__info__name">{channelName}</div>
+            <div className="IndexPage__creators__item__channel__info__followers">2 560 followers</div>
           </div>
         </div>
-        <p className="IndexPage__payouts-carousel__item__price-usd">{usdAmount}</p>
-        <div className="IndexPage__payouts-carousel__item__time">
-          <ClockIcon className="IndexPage__payouts-carousel__item__time__icon" /> {time}
-        </div>
+        <div className="IndexPage__creators__item__earned">Earned:</div>
+        <div className="IndexPage__creators__item__price">$120</div>
       </div>
     </a>
   );
@@ -69,15 +73,15 @@ const Carousel = ({ itemsData, priceData, t }) => {
   return (
     <>
       <div
-        className={cn('IndexPage__payouts-carousel__items', {
-          'IndexPage__payouts-carousel__items--paused': isCarouselRunning,
+        className={cn('IndexPage__creators__items', {
+          'IndexPage__creators__items--paused': isCarouselRunning,
         })}
       >
         {items}
       </div>
       <div
-        className={cn('IndexPage__payouts-carousel__items', {
-          'IndexPage__payouts-carousel__items--paused': isCarouselRunning,
+        className={cn('IndexPage__creators__items', {
+          'IndexPage__creators__items--paused': isCarouselRunning,
         })}
         aria-hidden="true"
       >
@@ -119,19 +123,19 @@ const Creators = ({ payouts, t, priceData }) => {
             </div>
           </div>
         </div>
-        <div className="IndexPage__creators__items-wrapper">
-          {payouts && payouts.length > 0 ? (
-            <Carousel
-              itemsData={payouts?.map(({ createdAt, imageUrl, ...rest }) => ({
-                img: imageUrl,
-                time: parseDateToRelativeTime(createdAt, language),
-                ...rest,
-              }))}
-              priceData={priceData}
-              t={t}
-            />
-          ) : null}
-        </div>
+      </div>
+      <div className="IndexPage__creators__items-wrapper">
+        {payouts && payouts.length > 0 ? (
+          <Carousel
+            itemsData={payouts?.map(({ createdAt, imageUrl, ...rest }) => ({
+              img: imageUrl,
+              time: parseDateToRelativeTime(createdAt, language),
+              ...rest,
+            }))}
+            priceData={priceData}
+            t={t}
+          />
+        ) : null}
       </div>
     </section>
   );
