@@ -203,7 +203,9 @@
     &__item {
       width: 288px;
       height: 374px;
+      overflow: hidden;
       background-color: $c_ebony-clay;
+      border-radius: 8px;
 
       &:hover {
         background-color: rgba(red(#5c6475), green(#5c6475), blue(#5c6475), 25%);
@@ -219,10 +221,11 @@
         padding: 24px;
 
         &__title {
-          @include base-5;
+          @include t100;
           @include line-clamp(2);
 
           min-height: 32px;
+          font-weight: 500;
           color: rgba(129, 133, 141, 1);
 
           & > span {
@@ -236,22 +239,21 @@
           margin-top: 16px;
 
           &__title {
-            @include base-5;
+            @include t100;
 
+            font-weight: 500;
             color: #a7aeb7;
           }
 
           &__amount {
-            @include h7;
+            @include t400;
 
             margin-top: 4px;
             color: $c_grayc-chateau;
 
             & > span {
-              font-size: 32px;
-              font-weight: 700;
-              line-height: 40px;
-              letter-spacing: 0;
+              @include h600;
+
               color: $c_white;
               text-align: left;
             }
@@ -259,14 +261,14 @@
         }
 
         &__price-usd {
-          @include base-5;
+          @include t100;
 
           margin-top: 4px;
           color: $c_grayc-chateau;
         }
 
         &__time {
-          @include base-5;
+          @include t100;
 
           display: flex;
           align-items: center;
