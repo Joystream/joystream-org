@@ -2,11 +2,11 @@ import React from 'react';
 
 import { ArrowButton } from '../../ArrowButton';
 
-import BuilderIcon1 from '../../../assets/images/landing/builder-icon-1.png';
-import BuilderIcon2 from '../../../assets/images/landing/builder-icon-2.png';
-import BuilderIcon3 from '../../../assets/images/landing/builder-icon-3.png';
-import BuilderIcon4 from '../../../assets/images/landing/builder-icon-4.png';
-import BuilderIcon5 from '../../../assets/images/landing/builder-icon-5.png';
+import BuilderIcon1 from '../../../assets/images/landing/builder-icon-1.webp';
+import BuilderIcon2 from '../../../assets/images/landing/builder-icon-2.webp';
+import BuilderIcon3 from '../../../assets/images/landing/builder-icon-3.webp';
+import BuilderIcon4 from '../../../assets/images/landing/builder-icon-4.webp';
+import BuilderIcon5 from '../../../assets/images/landing/builder-icon-5.webp';
 
 import './style.scss';
 

@@ -44,7 +44,26 @@
       align-items: center;
       justify-content: center;
       margin-top: 48px;
-      grid-column: 5 / 9;
+      gap: 24px;
+      grid-column: 2 / 12;
+    }
+
+    &__builder {
+      width: 56px;
+      height: 56px;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow: 0 0 32px 0 #ffffff38;
+
+      &:nth-child(1),
+      &:nth-child(5) {
+        opacity: 50%;
+      }
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &__button {
@@ -84,7 +103,7 @@
       }
 
       &__builders {
-        grid-column: 4 / 10;
+        grid-column: 1 / 13;
       }
     }
   }
@@ -146,6 +165,12 @@
         &__title {
           @include h500;
         }
+      }
+
+      &__builders {
+        min-width: 393px;
+        margin-right: -100px;
+        margin-left: -100px;
       }
     }
   }
