@@ -20,6 +20,7 @@ import Tokenomics from '../components/index-page/Tokenomics';
 import Video from '../components/index-page/Video';
 import Traction from '../components/index-page/Traction';
 import Upcoming from '../components/index-page/Upcoming';
+import Creators from '../components/index-page/Creators';
 
 import './style.scss';
 
@@ -48,6 +49,8 @@ const IndexPage = () => {
       <Video t={t} />
 
       <Traction t={t} />
+
+      <Creators t={t} payouts={data?.payouts} priceData={updatedPriceData} />
 
       <Tokenomics t={t} />
 
