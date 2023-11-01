@@ -1,0 +1,22 @@
+.Glossary {
+  display: grid;
+  padding: 80px 0px;
+  color: white;
+  background: #0b0c0f;
+  justify-items: center;
+  gap: 64px;
+  &__body {
+    max-width: 1464px;
+    padding: 0 32px;
+  }
+  @media (max-width: 1024px) {
+    padding: 80px 20px 80px 20px;
+    gap: 40px;
+  }
+  @media (max-width: 992px) {
+    max-width: 1440px;
+    &__body {
+      padding: 0px;
+    }
+  }
+}

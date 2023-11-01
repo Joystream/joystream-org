@@ -1,0 +1,42 @@
+@import '../../styles/_main';
+@import '../../styles/common/colors';
+@import '../../styles/common/variables';
+
+.GlossaryCard {
+  max-width: (535px);
+  padding: 24px;
+  cursor: pointer;
+  background-color: $c_ebony-clay;
+  border-radius: 4px;
+  gap: 16px;
+
+  &__title {
+    //styleName: h7;
+    font-family: $font-primary;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: white;
+    text-align: left;
+  }
+
+  &__content {
+    max-height: 4em;
+    margin-top: 8px;
+    overflow: hidden;
+    //styleName: Base 4;
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: $c_grayc-chateau;
+    text-align: left;
+  }
+  border: solid 1px;
+
+  &:hover {
+    border: solid 1px #81858d;
+  }
+}

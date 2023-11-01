@@ -94,7 +94,7 @@ const FoundingMembers = () => {
               i18nKey="about.foundingMembers.subtitle"
               components={{
                 linkOne: (
-                  <a href="https://www.coindesk.com/business/2022/03/23/decentralized-creator-platform-joystream-raises-58m/" target="_blank">
+                  <a href="https://joystream.gitbook.io/testnet-workspace/glossary#jsgenesis" target="_blank">
                     Jsgenesis
                   </a>
                 ),
