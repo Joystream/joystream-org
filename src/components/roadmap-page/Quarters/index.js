@@ -16,6 +16,28 @@ import scrollToActiveElement from '../../../utils/scrollToActiveElement';
 
 import './style.scss';
 
+const parseQuarters = data => {
+  if (data.length === 0) return [];
+
+  let index = 0;
+
+  return data.map(roadmapData => {
+    roadmapData.quarters = roadmapData.quarters.map(quarter => {
+      quarter.deliveryMilestones = quarter.deliveryMilestones.map(milestone => {
+        milestone.generalIndex = index;
+
+        index++;
+
+        return milestone;
+      });
+
+      return quarter;
+    });
+
+    return roadmapData;
+  });
+};
+
 const SelectOptions = ({ options, updateFileName, isSelect, setIsSelect, setShouldBannerShow }) => {
   const [isActive, setIsActive] = useState(false);
 
@@ -122,7 +144,12 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
             />
           </div>
           <TooltipPanel
-            text={<Trans i18nKey="roadmap.linkToVersionCopied" components={{ versionNumber:roadmapData.length - isSelect  }} />}
+            text={
+              <Trans
+                i18nKey="roadmap.linkToVersionCopied"
+                components={{ versionNumber: roadmapData.length - isSelect }}
+              />
+            }
             state={shouldShowCopyMessage}
             style={{ marginRight: '10px' }}
           >
@@ -137,8 +164,8 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
             <Banner
               icon={<NoticEnable />}
               className="Quarters__top__banner"
-              title={t("roadmap.topBanner.title")}
-              information={t("roadmap.topBanner.subtitle")}
+              title={t('roadmap.topBanner.title')}
+              information={t('roadmap.topBanner.subtitle')}
               label={
                 <button
                   onClick={() => {
@@ -148,7 +175,7 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
                   }}
                   className="Quarters__top__banner__button"
                 >
-                  {t("roadmap.topBanner.changeVersion")}
+                  {t('roadmap.topBanner.changeVersion')}
                 </button>
               }
               close={() => {
@@ -158,15 +185,20 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
           ) : null}
         </div>
       </div>
-      <QuartersListData data={data} selectGlossary={selectGlossary} scrollPosition={scrollPosition} t={t} />
+      <QuartersListData
+        data={parseQuarters(data)}
+        selectGlossary={selectGlossary}
+        scrollPosition={scrollPosition}
+        t={t}
+      />
       <div className="Quarters__form-wrapper">
         <div className="Quarters__form">
           <div className="Quarters__bottom__banner">
             <Banner
               icon={<Notic />}
               className="Quarters__bottom__banner__item"
-              title={t("roadmap.disclaimer.title")}
-              information={t("roadmap.disclaimer.subtitle")}
+              title={t('roadmap.disclaimer.title')}
+              information={t('roadmap.disclaimer.subtitle')}
             />
           </div>
         </div>
