@@ -13,6 +13,7 @@ import Quarters from '../../components/roadmap-page/Quarters';
 import GlossaryTerms from '../../components/roadmap-page/GlossaryTeams';
 
 import MyContext from '../../utils/useContext';
+import isBrowser from '../../utils/isBrowser';
 
 import './style.scss';
 
@@ -23,18 +24,19 @@ const FILE_NAMES = roadmapData.map(datapoint => datapoint.name);
 const NEWEST_ROADMAP_FILENAME = roadmapData.find(item => item.isNewest === true).name;
 
 const parseURLFilename = () => {
+  if (!isBrowser) return NEWEST_ROADMAP_FILENAME;
+
   const url = new URL(window.location.href);
   const filename = url.searchParams.get('filename');
 
-  if(!filename)
-    return NEWEST_ROADMAP_FILENAME;
+  if (!filename) return NEWEST_ROADMAP_FILENAME;
 
   if (!FILE_NAMES.includes(filename)) {
     return NEWEST_ROADMAP_FILENAME;
   }
 
   return filename;
-}
+};
 
 const RoadmapPage = () => {
   const { t } = useTranslation();
