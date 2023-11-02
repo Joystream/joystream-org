@@ -1,20 +1,18 @@
 import React from 'react';
 
 import './style.scss';
-function GlossaryBody({ data, selectCard }) {
+function GlossaryBody({ data, selectCard, t }) {
   return (
     <div className="GlossaryBody">
       <div className="GlossaryBody__main">
         <div className="GlossaryBody__main__title">{data.title}</div>
         <div className="GlossaryBody__main__content">{data.content}</div>
         <div className="GlossaryBody__main__line"></div>
-        <div className="GlossaryBody__node__title">Node</div>
+        <div className="GlossaryBody__node__title">{t('glossary.body.node')}</div>
         {data.nodes.map((d, index) => {
           return (
             <div key={index}>
-              <div className="GlossaryBody__node__content__title">
-                {d.title}
-              </div>
+              <div className="GlossaryBody__node__content__title">{d.title}</div>
               <ul className="GlossaryBody__node__content__item">
                 {d.content.map((k, key) => (
                   <li key={key}> {k}</li>
@@ -52,7 +50,7 @@ function GlossaryBody({ data, selectCard }) {
         })}
       </div>
       <div className="GlossaryBody__card">
-        <div className="GlossaryBody__card__title">Related Terms</div>
+        <div className="GlossaryBody__card__title">{t('glossary.body.relatedTerms')}</div>
         {data.relatedTerms.map((item, key) => (
           <span
             key={key}

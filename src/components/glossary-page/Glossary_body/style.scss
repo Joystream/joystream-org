@@ -7,11 +7,11 @@
 
   &__main {
     display: grid;
+    margin-top: 64px;
     gap: 16px;
 
     &__title {
       padding: 0 0 16px 0;
-      //styleName: h3;
       font-family: $font-primary;
       font-size: 40px;
       font-weight: 400;
@@ -116,11 +116,12 @@
 
   &__card {
     height: fit-content;
+    margin-top: 64px;
     padding: 24px;
     background: #1f252e;
     border-radius: 4px;
     gap: 16px;
-    // grid-template-areas: ;
+
     &__title {
       margin: 8px;
       //styleName: h7;
@@ -157,6 +158,16 @@
   }
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 768px) {
+    &__main {
+      margin-top: 40px;
+    }
+
+    &__card {
+      margin-top: 0;
+    }
   }
 }
 

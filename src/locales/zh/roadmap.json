@@ -1,12 +1,37 @@
 {
   "roadmap": {
-    "hero": {
+    "main": {
       "title": "Project roadmap",
       "subtitle": "Explore our roadmap towards a boundless, innovative future. This timeline should help you understand the project's progress and expected completion date."
     },
     "siteMetadata": {
-      "title": "Team",
-      "description": "We don't just offer great compensation and flexibility, but the perfect mission, team and timing for you to build something that changes everything."
+      "title": "Roadmap",
+      "description": "Roadmap"
+    },
+    "ahead": {
+      "title": "What is ahead of us?",
+      "subtitle": "ROADMAP",
+      "description": "Please be aware that the roadmap is high-level concept, and not a guarantee. Roadmap will change over time, that is why you can preview both old and current versions. To read more look at <linkOne>{external link}</linkOne>"
+    },
+    "linkToVersionCopied": "Link to Version {{versionNumber}} copied!",
+    "topBanner": {
+      "title": "You are previewing an old version of the roadmap",
+      "subtitle": "Roadmap gets updated frequently and the one you view right now is an old legacy version.",
+      "changeVersion": "Change to current version"
+    },
+    "clickToLearnMore": "Click to learn more",
+    "morePlans": "More plans will be announced over time.",
+    "copysharinglink": "Copy sharing link",
+    "disclaimer": {
+      "title": "Disclaimer",
+      "subtitle": "The information provided in the roadmap document is for illustrative and informational purposes only, and it does not constitute a legally binding agreement. The content presented in the roadmap is subject to change without notice, and any reliance on its accuracy or completeness is at the reader's own risk. The organization and its representatives shall not be held liable for any damages or losses arising from the use or interpretation of the roadmap."
+    },
+    "glossary": {
+      "title": "Glossary terms",
+      "subtitle": "You can access, learn and discover all terms related to all projects here",
+      "hideAll": "Hide all Glossary terms",
+      "showAll": "Show all Glossary terms ({{glossaryLength}})",
+      "clearAll": "Clear all filters"
     }
   }
 }

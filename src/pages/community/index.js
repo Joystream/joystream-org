@@ -16,6 +16,7 @@ import { ReactComponent as Handbook } from '../../assets/svg/handbook-icon.svg';
 import { ReactComponent as Element } from '../../assets/svg/element-icon.svg';
 import { ReactComponent as Youtube } from '../../assets/svg/youtube-icon.svg';
 import { ReactComponent as ExternalLinkIcon } from '../../assets/svg/link.svg';
+import TelegramIcon from '../../assets/images/telegram.webp';
 
 
 import './style.scss';
@@ -71,6 +72,7 @@ const CommunityPage = () => {
             <LinkCard icon={<Handbook />} title={t("community.links.handbook.title")} subtitle={t("community.links.handbook.subtitle")} link="https://joystream.gitbook.io/testnet-workspace/"/>
             <LinkCard icon={<Element />} title={t("community.links.element.title")} subtitle={t("community.links.element.subtitle")} link="https://app.element.io/#/room/#js-general:matrix.org"/>
             <LinkCard icon={<Youtube />} title={t("community.links.youtube.title")} subtitle={t("community.links.youtube.subtitle")} link="https://www.youtube.com/@joystream8627"/>
+            <LinkCard icon={<img src={TelegramIcon} alt=""/>} title={t("community.links.telegram.title")} subtitle={t("community.links.telegram.subtitle")} link="https://t.me/JoyStreamOfficial"/>
           </div>
         </div>
       </section>

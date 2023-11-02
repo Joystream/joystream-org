@@ -20,9 +20,7 @@ module.exports = {
       options: {
         exclude: /(hydra-hero.svg)$/,
         svgoConfig: {
-          plugins: [
-            { removeViewBox: false },
-          ],
+          plugins: [{ removeViewBox: false }],
         },
       },
     },
@@ -39,6 +37,12 @@ module.exports = {
         theme_color: '#000000',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.png',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-5KK7B9CV',
       },
     },
     {

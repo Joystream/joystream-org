@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { Trans } from 'gatsby-plugin-react-i18next';
 import Input from '../../Input';
 
 import { ReactComponent as SearchIcon } from '../../../assets/svg/Search.svg';
@@ -9,9 +10,7 @@ import './style.scss';
 import TextSlider from '../../TextSlider';
 import GlossaryCard from '../../GlossaryCard';
 
-function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
-  const inputRef = useRef(null);
-
+function GlossaryTerms({ glossary, sliderText, cardOnClick, t }) {
   const [searchText, setSearchText] = useState('');
   const [showAll, setShowAll] = useState(false);
   const [filteredData, setFilteredData] = useState(glossary);
@@ -49,8 +48,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
       item.title
         .toLowerCase()
         .charAt(0)
-        .includes(e.toLowerCase())
-    );
+        .includes(e.toLowerCase()));
     const index = sliderText.indexOf(e);
     setSelect(index);
 
@@ -65,8 +63,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
       item.title
         .toLowerCase()
         .charAt(0)
-        .includes('')
-    );
+        .includes(''));
     setFilteredData(filtered);
     setInputClear(false);
     setSearchText('');
@@ -85,9 +82,9 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
     <div className="GlossaryTeams">
       <div>
         <div className="GlossaryTeams__head__panel">
-          <div className="GlossaryTeams__head__panel__title">Glossary terms</div>
+          <div className="GlossaryTeams__head__panel__title">{t("roadmap.glossary.title")}</div>
           <div className="GlossaryTeams__head__panel__subtitle">
-            You can access, learn and discover all terms related to all projects here
+            {t("roadmap.glossary.subtitle")}
           </div>
         </div>
         <div className="GlossaryTeams__search__panel">
@@ -106,7 +103,6 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
                   e.preventDefault();
                 }
               }}
-              ref={inputRef}
             />
             {!inputClear ? (
               <></>
@@ -158,7 +154,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
                 setShowAll(false);
               }}
             >
-              Hide all Glossary terms
+              {t("roadmap.glossary.hideAll")}
             </button>
           ) : (
             <button
@@ -167,7 +163,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
                 setShowAll(true);
               }}
             >
-              Show all Glossary terms ({glossary.length})
+              <Trans i18nKey="roadmap.glossary.showAll" components={{ glossaryLength: glossary.length }} />
             </button>
           )}
           {!filter ? (
@@ -179,7 +175,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick }) {
                 onFilterClear(true);
               }}
             >
-              Clear all filters
+              {t("roadmap.glossary.clearAll")}
             </button>
           )}
         </div>
