@@ -18,7 +18,7 @@ export const verifiedMembers = [
         { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
         {
           text: 'verification.safety.willNever.items.askToVisitLinks',
-          components: [<a href="https://www.joystream.org">Joystream.org</a>],
+          components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
         },
       ],
       allowed: [{ text: 'verification.safety.can.items.inviteToYpp' }],
@@ -42,7 +42,7 @@ export const verifiedMembers = [
         { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
         {
           text: 'verification.safety.willNever.items.askToVisitLinks',
-          components: [<a href="https://www.joystream.org">Joystream.org</a>],
+          components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
         },
       ],
       allowed: [{ text: 'verification.safety.can.items.inviteToYpp' }],

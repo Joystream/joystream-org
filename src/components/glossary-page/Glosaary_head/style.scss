@@ -1,0 +1,36 @@
+@import '../../../styles/common/variables';
+
+.GlossaryHead {
+  height: 44px;
+  padding: 0 0 16px 0;
+  color: white;
+  border-bottom: 1px solid #5c6475;
+  gap: 8px;
+
+  &__roadmap {
+    margin-right: 10px;
+    font-family: $font-secondary;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #5c6475;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__content {
+    margin-left: 8px;
+    //styleName: Base 1;
+    font-family: $font-secondary;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+}

@@ -17,6 +17,14 @@ import { ReactComponent as DownIcon } from '../../assets/svg/down.svg';
 
 import './style.scss';
 
+const parseComponents = components => {
+  return components.map((component, index) => {
+    if (component?.link) {
+      return <a href={component.link}>{component.text}</a>;
+    }
+  });
+};
+
 const MemberCard = ({ img, name, title, t }) => {
   return (
     <div className="VerificationPage__member-card">
@@ -96,8 +104,10 @@ const SafetyCardListContainer = ({ name, isAllowed, items }) => {
 };
 
 const SafetyCard = ({ name, safetyItems, t }) => {
-  const allowedItems = safetyItems.allowed.map(item => item?.components ? <Trans i18nKey={item.text} components={item.components} /> : t(item.text));
-  const notAllowedItems = safetyItems.notAllowed.map(item => item?.components ? <Trans i18nKey={item.text} components={item.components} /> : t(item.text));
+  const allowedItems = safetyItems.allowed.map(item =>
+    item?.components ? <Trans i18nKey={item.text} components={parseComponents(item.components)} /> : t(item.text));
+  const notAllowedItems = safetyItems.notAllowed.map(item =>
+    item?.components ? <Trans i18nKey={item.text} components={parseComponents(item.components)} /> : t(item.text));
 
   return (
     <div className="VerificationPage__safety-card">
@@ -111,7 +121,10 @@ const SafetyCard = ({ name, safetyItems, t }) => {
         </a>
       </div>
       <div className="VerificationPage__safety-card__subtitle">{t('verification.safety.subtitle')}</div>
-      <a href="mailto:report@jsgenesis.com" className="VerificationPage__safety-card__top__report-button VerificationPage__safety-card__top__report-button--mobile">
+      <a
+        href="mailto:report@jsgenesis.com"
+        className="VerificationPage__safety-card__top__report-button VerificationPage__safety-card__top__report-button--mobile"
+      >
         <FlagIcon />
         <p className="VerificationPage__safety-card__top__report-button__text">
           {t('verification.safety.reportButton', { name })}
@@ -137,7 +150,10 @@ const OtherMembers = ({ otherMembers, t }) => {
       <div className="VerificationPage__other-members-card__subtitle">{t('verification.otherMembers.subtitle')}</div>
       <div className="VerificationPage__other-members-card__members">
         {membersToRender.map((member, index) => (
-          <Link to={`/${member?.substituteUserRoute ? member.substituteUserRoute : member.memberHandle}`}>
+          <Link
+            key={`${member.memberHandle}-${index}`}
+            to={`/${member?.substituteUserRoute ? member.substituteUserRoute : member.memberHandle}`}
+          >
             <div className="VerificationPage__other-members-card__member">
               <img className="VerificationPage__other-members-card__member__icon" src={member.avatarUrl} alt="" />
               <div className="VerificationPage__other-members-card__member__name">@{member.memberHandle}</div>
