@@ -4,7 +4,7 @@
 
 .IndexPage {
   &__video-nfts-wrapper {
-    padding: 96px 0;
+    padding: 96px 0 0 0;
     background-color: #111316;
   }
 
@@ -318,7 +318,7 @@
 
   @media (max-width: 1024px) {
     &__video-nfts-wrapper {
-      padding: 64px 0;
+      padding: 64px 0 0 0;
     }
 
     &__video-nfts {

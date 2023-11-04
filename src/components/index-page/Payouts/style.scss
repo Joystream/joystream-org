@@ -14,7 +14,6 @@
     display: grid;
     height: 486px;
     min-height: 486px;
-    margin-top: 96px;
     gap: 30px;
     grid-template-columns: 500px auto;
 
@@ -359,7 +358,6 @@
 
     &__payouts {
       max-width: 534px;
-      margin-top: 64px;
 
       &__illustration {
         width: 534px;

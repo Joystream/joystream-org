@@ -155,25 +155,6 @@ const CreatorTokens = ({ t }) => {
           </section>
         </div>
       </div>
-      <div className="IndexPage__atlas-cta">
-        <figure>
-          <blockquote className="IndexPage__atlas-cta__title">
-            <Trans i18nKey="landing.videoNFTs.cta.title" components={{ br: <br /> }} />
-          </blockquote>
-          <figcaption className="IndexPage__atlas-cta__caption">
-            <p className="IndexPage__atlas-cta__caption__about">{t('landing.videoNFTs.cta.about')}</p>
-            <cite>
-              <p className="IndexPage__atlas-cta__caption__podcast">{t('landing.videoNFTs.cta.podcast')}</p>
-            </cite>
-          </figcaption>
-        </figure>
-        {/* <ArrowButton
-          className="IndexPage__atlas-cta__button"
-          text={t('landing.videoNFTs.cta.button')}
-          textClassname="IndexPage__atlas-cta__button-text"
-          link="https://play.joystream.org/studio/"
-        /> */}
-      </div>
     </section>
   );
 };

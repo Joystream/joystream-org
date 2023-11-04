@@ -10,10 +10,7 @@ import Hero from '../components/index-page/Hero';
 import Payouts from '../components/index-page/Payouts';
 import VideoNFTs from '../components/index-page/VideoNFTs';
 import CreatorTokens from '../components/index-page/CreatorTokens';
-import YoutubeSync from '../components/index-page/YoutubeSync';
-import Manifesto from '../components/index-page/Manifesto';
 import JoystreamDAO from '../components/index-page/JoystreamDAO';
-import Jsgenesis from '../components/index-page/Jsgenesis';
 import AvailableActivities from '../components/index-page/AvailableActivities';
 import Ecosystem from '../components/index-page/Ecosystem';
 import Tokenomics from '../components/index-page/Tokenomics';
@@ -64,15 +61,9 @@ const IndexPage = () => {
 
       <Upcoming t={t} />
 
-      {/* <YoutubeSync t={t}/> */}
-
-      <Manifesto t={t} />
-
       <AvailableActivities t={t} priceData={updatedPriceData} />
 
       <JoystreamDAO t={t} proposalsData={data?.proposals} />
-
-      {/* <Jsgenesis t={t} /> */}
     </BaseLayout>
   );
 };
