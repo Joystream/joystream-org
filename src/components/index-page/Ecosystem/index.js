@@ -92,15 +92,17 @@ const Ecosystem = ({ t }) => {
   return (
     <section className="IndexPage__ecosystem-wrapper">
       <div className="IndexPage__ecosystem">
-        <div className="IndexPage__ecosystem__hero">
-          <header>
-            <span className="IndexPage__ecosystem__hero__section-title">{t('landing.ecosystem.sectionTitle')}</span>
-            <h2 className="IndexPage__ecosystem__hero__title">
-              <Trans i18nKey="landing.ecosystem.title" components={{ br: <br /> }} />
-            </h2>
-          </header>
-          <p className="IndexPage__ecosystem__hero__subtitle">{t('landing.ecosystem.subtitle')}</p>
-        </div>
+        <header className="IndexPage__ecosystem__header">
+          <span className="IndexPage__ecosystem__header__section-title">{t('landing.ecosystem.sectionTitle')}</span>
+          <h2 className="IndexPage__ecosystem__header__title">
+            One Protocol,
+            <br /> a Universe of Applications
+          </h2>
+        </header>
+        <p className="IndexPage__ecosystem__subtitle">
+          Joystream is an open-source platform built on blockchain. It supports multiple video streaming apps at once.
+          Videos uploaded on any Joystream app can be seen by users of other apps, helping creators grow their audience.
+        </p>
         <div className="IndexPage__ecosystem__browsers">
           <BrowserImage className="IndexPage__ecosystem__browsers__second-alt" variant={1} imageSrc={Browser3} />
           <BrowserImage className="IndexPage__ecosystem__browsers__second-alt" variant={2} imageSrc={Browser3} />
@@ -109,11 +111,11 @@ const Ecosystem = ({ t }) => {
           <img className="IndexPage__ecosystem__browsers__main" alt="" src={Browser1} />
           <img className="IndexPage__ecosystem__browsers__video-player" alt="" src={VideoPlayer} />
         </div>
-        <div className="IndexPage__ecosystem__apps" id="apps-built-on-joystream">
+        {/* <div className="IndexPage__ecosystem__apps" id="apps-built-on-joystream">
           <h3 className="IndexPage__ecosystem__apps__title">
-            {t('landing.ecosystem.appsBuiltOnJoystream.title')}{' '}
-            {/* TODO: This will need to be made dynamic alogn with the rest of the content in the carousel. */}
-            <div className="IndexPage__ecosystem__apps__title__app-count">2</div>
+            {t('landing.ecosystem.appsBuiltOnJoystream.title')}{' '} */}
+        {/* TODO: This will need to be made dynamic alogn with the rest of the content in the carousel. */}
+        {/* <div className="IndexPage__ecosystem__apps__title__app-count">2</div>
           </h3>
           <FeaturedPlatform
             image={GleevLogo}
@@ -132,8 +134,8 @@ const Ecosystem = ({ t }) => {
             link="https://l1.media/"
             illustration={L1MediaIllustration}
             t={t}
-          />
-          {/* <div className="IndexPage__ecosystem__apps__carousel">
+          /> */}
+        {/* <div className="IndexPage__ecosystem__apps__carousel">
             <CarouselItem
               logo={L1MediaLogo}
               name={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
@@ -146,13 +148,13 @@ const Ecosystem = ({ t }) => {
             <CarouselPlaceholder />
             <CarouselPlaceholder />
           </div> */}
-          <div className="IndexPage__ecosystem__apps__info">
+        {/* <div className="IndexPage__ecosystem__apps__info">
             <InfoIcon className="IndexPage__ecosystem__apps__info__icon" />
             <p className="IndexPage__ecosystem__apps__info__text">{t('landing.ecosystem.appsBuiltOnJoystream.info')}</p>
           </div>
-        </div>
+        </div> */}
 
-        <div className="IndexPage__ecosystem__developers" id="start-your-community">
+        {/* <div className="IndexPage__ecosystem__developers" id="start-your-community">
           <div className="IndexPage__ecosystem__developers__main">
             <div className="IndexPage__ecosystem__developers__main__about">
               <div className="IndexPage__ecosystem__developers__main__about__section-title">
@@ -173,11 +175,11 @@ const Ecosystem = ({ t }) => {
               <CodeWindowControls />
               <pre className="IndexPage__ecosystem__developers__main__visual__code">
                 <span>1</span>
-                {/* This line is rendered on desktop: */}
+                This line is rendered on desktop:
                 <code className="IndexPage__ecosystem__developers__main__visual__code__full-line">
                   git clone https://github.com/Joystream/atlas
                 </code>
-                {/* This line is rendered on mobile: */}
+                This line is rendered on mobile:
                 <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line">
                   git clone https://
                 </code>
@@ -197,14 +199,14 @@ const Ecosystem = ({ t }) => {
                 <span>5</span>
                 {'\n'}
                 <span>6</span>
-                {/* This line is rendered on desktop: */}
+                This line is rendered on desktop:
                 <code className="IndexPage__ecosystem__developers__main__visual__code__full-line">
                   {t('landing.developers.commentPartOne')} {t('landing.developers.commentPartTwo')}{' '}
                   <span role="img" aria-label="rocketship emoji">
                     🚀
                   </span>
                 </code>
-                {/* This line is rendered on mobile: */}
+                This line is rendered on mobile:
                 <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line">
                   {t('landing.developers.commentPartOne')}
                 </code>
@@ -245,7 +247,7 @@ const Ecosystem = ({ t }) => {
               subtitle={t('landing.developers.stepFour.subtitle')}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
