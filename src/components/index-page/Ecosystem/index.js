@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Trans } from 'react-i18next';
 import cn from 'classnames';
 
 import GleevLogo from '../../../assets/images/landing/ecosystem-app-icons/gleev.webp';
-import GleevIllustration from '../../../assets/images/landing/gleev-illustration.webp';
+import GleevIllustration from '../../../assets/images/landing/browser-mockup-container.webp';
 import Browser1 from '../../../assets/images/landing/hero/browser-1.webp';
 import Browser2 from '../../../assets/images/landing/hero/browser-2.webp';
 import Browser3 from '../../../assets/images/landing/hero/browser-3.webp';
 import VideoPlayer from '../../../assets/images/landing/hero/illustration-ecosystem-l1.webp';
 import L1MediaLogo from '../../../assets/images/landing/ecosystem-app-icons/l1-media.webp';
-import L1MediaIllustration from '../../../assets/images/landing/l1-media-illustration.webp';
+import PioneerLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon-3.webp';
+import JoyStatsLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon.webp';
+import JScanLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon-1.webp';
+import JoyUtilsLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon-2.webp';
 
 import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
@@ -52,6 +55,95 @@ const CarouselPlaceholder = () => (
     <CarouselItemPlaceholder />
   </div>
 );
+
+const Carousel = ({ t }) => {
+  const MAX_SCROLL = 374;
+  const [activeCarouselControlItem, setActiveCarouselControlItem] = useState('left');
+  const carouselRef = useRef(null);
+
+  const scroll = direction => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: {
+          left: -MAX_SCROLL,
+          right: MAX_SCROLL,
+        }[direction],
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  return (
+    <>
+      <div
+        onScroll={() => {
+          if (carouselRef.current) {
+            setActiveCarouselControlItem(carouselRef.current.scrollLeft === MAX_SCROLL ? 'right' : 'left');
+          }
+        }}
+        ref={carouselRef}
+        className="IndexPage__ecosystem__apps__carousel"
+      >
+        <CarouselItem
+          logo={L1MediaLogo}
+          name={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
+          description="For education, news, science, entertainment beyond borders."
+          platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
+          link="https://l1.media/"
+          t={t}
+        />
+        <CarouselItem
+          logo={PioneerLogo}
+          name="Pioneer"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          platforms="Web"
+          link="https://pioneerapp.xyz/"
+          t={t}
+        />
+        <CarouselItem
+          logo={JoyStatsLogo}
+          name="JoyStats"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          platforms="Web"
+          link="https://joystreamstats.live/"
+          t={t}
+        />
+        <CarouselItem
+          logo={JScanLogo}
+          name="JScan"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          platforms="Web"
+          link="https://jscan.io/"
+          t={t}
+        />
+        <CarouselItem
+          logo={JoyUtilsLogo}
+          name="JoyUtils"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          platforms="Web"
+          link="https://joyutils.org/"
+          t={t}
+        />
+      </div>
+      <div className="IndexPage__ecosystem__apps__carousel-controls">
+        <div
+          role="presentation"
+          onClick={() => scroll('left')}
+          className={cn('IndexPage__ecosystem__apps__carousel-controls__item', {
+            'IndexPage__ecosystem__apps__carousel-controls__item--active': activeCarouselControlItem === 'left',
+          })}
+        ></div>
+        <div
+          role="presentation"
+          onClick={() => scroll('right')}
+          className={cn('IndexPage__ecosystem__apps__carousel-controls__item', {
+            'IndexPage__ecosystem__apps__carousel-controls__item--active': activeCarouselControlItem === 'right',
+          })}
+        ></div>
+      </div>
+    </>
+  );
+};
 
 const FeaturedPlatform = ({ image, platformName, platformDescription, platforms, link, illustration, t }) => (
   <div className="IndexPage__ecosystem__apps__main">
@@ -111,11 +203,11 @@ const Ecosystem = ({ t }) => {
           <img className="IndexPage__ecosystem__browsers__main" alt="" src={Browser1} />
           <img className="IndexPage__ecosystem__browsers__video-player" alt="" src={VideoPlayer} />
         </div>
-        {/* <div className="IndexPage__ecosystem__apps" id="apps-built-on-joystream">
+        <div className="IndexPage__ecosystem__apps" id="apps-built-on-joystream">
           <h3 className="IndexPage__ecosystem__apps__title">
-            {t('landing.ecosystem.appsBuiltOnJoystream.title')}{' '} */}
-        {/* TODO: This will need to be made dynamic alogn with the rest of the content in the carousel. */}
-        {/* <div className="IndexPage__ecosystem__apps__title__app-count">2</div>
+            {t('landing.ecosystem.appsBuiltOnJoystream.title')}{' '}
+            {/* TODO: This will need to be made dynamic alogn with the rest of the content in the carousel. */}
+            <div className="IndexPage__ecosystem__apps__title__app-count">6</div>
           </h3>
           <FeaturedPlatform
             image={GleevLogo}
@@ -126,33 +218,12 @@ const Ecosystem = ({ t }) => {
             illustration={GleevIllustration}
             t={t}
           />
-          <FeaturedPlatform
-            image={L1MediaLogo}
-            platformName={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
-            platformDescription={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.description')}
-            platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
-            link="https://l1.media/"
-            illustration={L1MediaIllustration}
-            t={t}
-          /> */}
-        {/* <div className="IndexPage__ecosystem__apps__carousel">
-            <CarouselItem
-              logo={L1MediaLogo}
-              name={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
-              description={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.description')}
-              platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
-              link="https://l1.media/"
-              t={t}
-            />
-            <CarouselPlaceholder />
-            <CarouselPlaceholder />
-            <CarouselPlaceholder />
-          </div> */}
-        {/* <div className="IndexPage__ecosystem__apps__info">
+          <Carousel t={t} />
+          {/* <div className="IndexPage__ecosystem__apps__info">
             <InfoIcon className="IndexPage__ecosystem__apps__info__icon" />
             <p className="IndexPage__ecosystem__apps__info__text">{t('landing.ecosystem.appsBuiltOnJoystream.info')}</p>
-          </div>
-        </div> */}
+          </div> */}
+        </div>
 
         {/* <div className="IndexPage__ecosystem__developers" id="start-your-community">
           <div className="IndexPage__ecosystem__developers__main">
