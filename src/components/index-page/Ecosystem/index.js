@@ -22,11 +22,13 @@ import { ReactComponent as CarouselItemPlaceholder } from '../../../assets/svg/l
 import './styles.scss';
 
 const DevelopmentStep = ({ stepNumber, sectionTitle, title, subtitle }) => (
-  <div className="IndexPage__ecosystem__developers__steps__item">
-    <p className="IndexPage__ecosystem__developers__steps__item__number">{stepNumber}</p>
-    <p className="IndexPage__ecosystem__developers__steps__item__section-title">{sectionTitle}</p>
-    <p className="IndexPage__ecosystem__developers__steps__item__title">{title}</p>
-    <p className="IndexPage__ecosystem__developers__steps__item__subtitle">{subtitle}</p>
+  <div className="IndexPage__ecosystem__developers__steps__item-wrapper">
+    <div className="IndexPage__ecosystem__developers__steps__item">
+      <p className="IndexPage__ecosystem__developers__steps__item__number">{stepNumber}</p>
+      <p className="IndexPage__ecosystem__developers__steps__item__section-title">{sectionTitle}</p>
+      <p className="IndexPage__ecosystem__developers__steps__item__title">{title}</p>
+      <p className="IndexPage__ecosystem__developers__steps__item__subtitle">{subtitle}</p>
+    </div>
   </div>
 );
 
@@ -58,15 +60,23 @@ const CarouselPlaceholder = () => (
 
 const Carousel = ({ t }) => {
   const MAX_SCROLL = 374;
+  const MAX_CLIENT_WIDTH = 1142;
   const [activeCarouselControlItem, setActiveCarouselControlItem] = useState('left');
   const carouselRef = useRef(null);
+
+  const getScrollAmount = ref => {
+    // Care that ref current check is made before calling function
+    const offset = MAX_CLIENT_WIDTH - ref.current.clientWidth;
+
+    return MAX_SCROLL + offset;
+  };
 
   const scroll = direction => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
         left: {
-          left: -MAX_SCROLL,
-          right: MAX_SCROLL,
+          left: -getScrollAmount(carouselRef),
+          right: getScrollAmount(carouselRef),
         }[direction],
         behavior: 'smooth',
       });
@@ -78,7 +88,23 @@ const Carousel = ({ t }) => {
       <div
         onScroll={() => {
           if (carouselRef.current) {
-            setActiveCarouselControlItem(carouselRef.current.scrollLeft === MAX_SCROLL ? 'right' : 'left');
+            const scrollLeft = carouselRef.current.scrollLeft;
+            const scrollTop = carouselRef.current.scrollTop;
+            const scrollWidth = carouselRef.current.scrollWidth;
+            const scrollHeight = carouselRef.current.scrollHeight;
+            const clientWidth = carouselRef.current.clientWidth;
+            const clientHeight = carouselRef.current.clientHeight;
+            console.log({
+              scrollLeft,
+              scrollTop,
+              scrollWidth,
+              scrollHeight,
+              clientWidth,
+              clientHeight,
+            });
+            setActiveCarouselControlItem(
+              carouselRef.current.scrollLeft === getScrollAmount(carouselRef) ? 'right' : 'left'
+            );
           }
         }}
         ref={carouselRef}
@@ -219,25 +245,25 @@ const Ecosystem = ({ t }) => {
             t={t}
           />
           <Carousel t={t} />
-          {/* <div className="IndexPage__ecosystem__apps__info">
+          <div className="IndexPage__ecosystem__apps__info">
             <InfoIcon className="IndexPage__ecosystem__apps__info__icon" />
             <p className="IndexPage__ecosystem__apps__info__text">{t('landing.ecosystem.appsBuiltOnJoystream.info')}</p>
-          </div> */}
+          </div>
         </div>
 
-        {/* <div className="IndexPage__ecosystem__developers" id="start-your-community">
+        <div className="IndexPage__ecosystem__developers" id="start-your-community">
           <div className="IndexPage__ecosystem__developers__main">
             <div className="IndexPage__ecosystem__developers__main__about">
               <div className="IndexPage__ecosystem__developers__main__about__section-title">
                 {t('landing.developers.sectionTitle')}
               </div>
-              <h3 className="IndexPage__ecosystem__developers__main__about__title">{t('landing.developers.title')}</h3>
+              <h3 className="IndexPage__ecosystem__developers__main__about__title">Launch your own video app</h3>
               <p className="IndexPage__ecosystem__developers__main__about__subtitle">
                 {t('landing.developers.subtitle')}
               </p>
               <a href="https://github.com/Joystream/atlas" target="_blank">
                 <div className="IndexPage__ecosystem__developers__main__about__link">
-                  {t('landing.developers.link')}
+                  Launch your own video app
                   <ArrowIcon className="IndexPage__ecosystem__developers__main__about__link__icon" />
                 </div>
               </a>
@@ -246,16 +272,20 @@ const Ecosystem = ({ t }) => {
               <CodeWindowControls />
               <pre className="IndexPage__ecosystem__developers__main__visual__code">
                 <span>1</span>
-                This line is rendered on desktop:
+                {/* This line is rendered on desktop: */}
                 <code className="IndexPage__ecosystem__developers__main__visual__code__full-line">
                   git clone https://github.com/Joystream/atlas
                 </code>
-                This line is rendered on mobile:
+                {/* This line is rendered on mobile: */}
                 <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line">
                   git clone https://
                 </code>
                 <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line IndexPage__ecosystem__developers__main__visual__code__broken-line--newline">
-                  github.com/Joystream/atlas
+                  github.com/Joystream/
+                  <span>atlas</span>
+                </code>
+                <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line IndexPage__ecosystem__developers__main__visual__code__broken-line--newline">
+                  atlas
                 </code>
                 {'\n'}
                 <span>2</span>
@@ -270,14 +300,14 @@ const Ecosystem = ({ t }) => {
                 <span>5</span>
                 {'\n'}
                 <span>6</span>
-                This line is rendered on desktop:
+                {/* This line is rendered on desktop: */}
                 <code className="IndexPage__ecosystem__developers__main__visual__code__full-line">
                   {t('landing.developers.commentPartOne')} {t('landing.developers.commentPartTwo')}{' '}
                   <span role="img" aria-label="rocketship emoji">
                     🚀
                   </span>
                 </code>
-                This line is rendered on mobile:
+                {/* This line is rendered on mobile: */}
                 <code className="IndexPage__ecosystem__developers__main__visual__code__broken-line">
                   {t('landing.developers.commentPartOne')}
                 </code>
@@ -318,7 +348,7 @@ const Ecosystem = ({ t }) => {
               subtitle={t('landing.developers.stepFour.subtitle')}
             />
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
