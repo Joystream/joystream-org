@@ -37,13 +37,9 @@ const ActivityListAmount = ({ mobile, amount, priceData, isWeekly, t }) => {
     >
       <div className="IndexPage__available-activities__list-item__amount__value">
         {amountToRender} JOY
-        <span>/ ${amountInDollars}</span>
+        <span>(${amountInDollars})</span>
       </div>
-      {isWeekly && (
-        <div className="IndexPage__available-activities__list-item__amount__weekly">
-          {t('landing.availableActivities.weekly')}
-        </div>
-      )}
+      {isWeekly && <div className="IndexPage__available-activities__list-item__amount__weekly">Per week</div>}
     </div>
   );
 };
@@ -160,10 +156,8 @@ const AvailableActivities = ({ priceData, t }) => {
   return (
     <section className="IndexPage__available-activities-wrapper">
       <div className="IndexPage__available-activities">
-        <header>
-          <h2 className="IndexPage__available-activities__title">
-            <Trans i18nKey="landing.availableActivities.title" components={{ br: <br /> }} />
-          </h2>
+        <header className="IndexPage__available-activities__header">
+          <h2 className="IndexPage__available-activities__header__title">Build The Future With Us</h2>
         </header>
         <p className="IndexPage__available-activities__subtitle">{t('landing.availableActivities.subtitle')}</p>
         <div className="IndexPage__available-activities__list">

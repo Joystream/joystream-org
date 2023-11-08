@@ -3,45 +3,47 @@
 
 .IndexPage {
   &__available-activities-wrapper {
-    background-color: $c_black;
+    padding: 96px 32px;
+    background-color: #f2f5f9;
   }
 
   &__available-activities {
-    @extend %container;
+    @include grid;
 
-    padding: 96px 0;
+    &__header {
+      grid-column: 2 / 12;
 
-    &__title {
-      font-family: $font-primary;
-      font-size: 48px;
-      line-height: 56px;
-      color: $c_white;
-      text-align: center;
+      &__title {
+        @include h900;
+
+        color: $c_black;
+        text-align: center;
+      }
     }
 
     &__subtitle {
-      max-width: 818px;
+      @include t400;
+
       margin: 0 auto;
       margin-top: 16px;
-      font-family: $font-secondary;
-      font-size: 20px;
-      line-height: 28px;
-      letter-spacing: 0;
-      color: $c_grayc-chateau;
+      color: #5c6475;
       text-align: center;
+      grid-column: 3 / 11;
     }
 
     &__list {
       display: grid;
-      margin-top: 80px;
-      gap: 30px;
+      margin-top: 64px;
+      gap: 24px;
+      grid-column: 2 / 12;
       grid-template-columns: 1fr 1fr;
     }
 
     &__list-item {
-      height: 188px;
+      height: 172px;
       padding: 20px;
-      background-color: #111316;
+      background-color: $c_white;
+      border-radius: 8px;
       transition: all .2s;
 
       &__top {
@@ -53,44 +55,46 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 80px;
-        height: 80px;
-        background-color: #4038ff33;
-        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        background-color: #e0e1ff;
+        border-radius: 8px;
+
+        & > svg {
+          transform: scale(.85);
+        }
       }
 
       &__title {
+        @include t400;
+
         margin-left: 16px;
-        font-family: $font-primary;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: 0;
-        color: $c_white;
+        font-weight: 600;
+        color: #1f252e;
       }
 
       &__amount {
         margin-left: auto;
-        color: $c_white;
+        color: #1f252e;
 
         &--mobile {
           display: none;
         }
 
         &__value {
-          @include h7;
+          @include t400;
 
           & > span {
             margin-left: 4px;
-            color: #a7aeb7;
+            color: #81858d;
           }
         }
 
         &__weekly {
-          @include h8;
+          @include t400;
 
           display: block;
-          margin-top: 4px;
-          color: #a7aeb7;
+          color: #81858d;
           text-align: right;
         }
       }
@@ -108,12 +112,11 @@
       }
 
       &__member-icon {
-        width: 50px;
-        height: 50px;
-        background-color: $c_ebony-clay;
-        // padding-right: 10px;
+        width: 48px;
+        height: 48px;
+        background-color: $c_white;
         border-radius: 50%;
-        box-shadow: 0 0 0 3px $c_ebony-clay;
+        box-shadow: 0 0 0 2px $c_white;
 
         &:not(:first-child) {
           margin-left: -10px;
@@ -136,16 +139,16 @@
         }
 
         img {
-          width: 50px;
-          height: 50px;
+          width: 48px;
+          height: 48px;
           border-radius: 50%;
         }
       }
 
       &__number-icon {
         display: grid;
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
         margin-left: -10px;
         font-family: $font-secondary;
         font-size: 15px;
@@ -166,14 +169,13 @@
       }
 
       &__cta {
+        @include t400;
+
         display: flex;
         align-items: center;
         flex-direction: row;
         margin-left: auto;
-        font-family: $font-primary;
-        font-size: 20px;
-        line-height: 28px;
-        letter-spacing: 0;
+        font-weight: 600;
         color: $c_blue-ribbon;
         opacity: 0;
 
@@ -222,14 +224,6 @@
         color: $c_black;
       }
 
-      &:hover &__icon-wrapper {
-        background-color: $c_blue-ribbon;
-      }
-
-      &:hover &__icon {
-        color: $c_white;
-      }
-
       &:hover &__amount {
         color: $c_black;
       }
@@ -259,6 +253,7 @@
       letter-spacing: 0;
       color: $c_blue-ribbon;
       cursor: pointer;
+      grid-column: 1 / 13;
 
       &__arrow-icon {
         margin-bottom: -3px;
