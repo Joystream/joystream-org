@@ -176,6 +176,7 @@
         font-weight: 600;
         color: $c_blue-ribbon;
         opacity: 0;
+        transition: all .2s;
 
         &--mobile {
           display: none;
