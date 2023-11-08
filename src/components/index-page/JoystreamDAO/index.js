@@ -17,12 +17,12 @@ const joystreamDaoForeground = [
   {
     start: 'self',
     startOffset: -200,
-    duration: 1400,
+    duration: 1200,
     easing: 'easeIn',
     properties: [
       {
-        startValue: 510,
-        endValue: 400,
+        startValue: 50,
+        endValue: -150,
         property: 'translateY',
         unit: 'px',
       },
@@ -158,21 +158,17 @@ const JoystreamDAO = ({ t, proposalsData }) => {
   return (
     <section className="IndexPage__joystream-dao-wrapper">
       <div className="IndexPage__joystream-dao">
-        <div className="IndexPage__joystream-dao__content">
-          <header>
-            <span className="IndexPage__joystream-dao__content__section-title">
-              {t('landing.joystreamDAO.sectionTitle')}
-            </span>
-            <h2 className="IndexPage__joystream-dao__content__title">
-              <Trans i18nKey="landing.joystreamDAO.title" components={{ br: <br /> }} />
-            </h2>
-          </header>
-          <p className="IndexPage__joystream-dao__content__subtitle">{t('landing.joystreamDAO.subtitle')}</p>
-          <a href="https://dao.joystream.org/" className="IndexPage__joystream-dao__content__link">
-            {t('landing.joystreamDAO.link')}
-            <ArrowIcon className="IndexPage__joystream-dao__content__link__arrow" />
-          </a>
-        </div>
+        <header className="IndexPage__joystream-dao__header">
+          <span className="IndexPage__joystream-dao__header__section-title">
+            {t('landing.joystreamDAO.sectionTitle')}
+          </span>
+          <h2 className="IndexPage__joystream-dao__header__title">Join our DAO.</h2>
+        </header>
+        <p className="IndexPage__joystream-dao__subtitle">{t('landing.joystreamDAO.subtitle')}</p>
+        <a href="https://dao.joystream.org/" className="IndexPage__joystream-dao__link">
+          {t('landing.joystreamDAO.link')}
+          <ArrowIcon className="IndexPage__joystream-dao__link__arrow" />
+        </a>
         <div className="IndexPage__joystream-dao__illustration">
           <img
             src={JoystreamDaoBackgroundImage}
@@ -188,7 +184,7 @@ const JoystreamDAO = ({ t, proposalsData }) => {
           </Plx>
         </div>
       </div>
-      <section className="IndexPage__joystream-dao-carousel">
+      {/* <section className="IndexPage__joystream-dao-carousel">
         <div className="IndexPage__joystream-dao-carousel__title-section">
           <h3 className="IndexPage__joystream-dao-carousel__title-section__text">
             {t('landing.joystreamDAO.carousel.title')}
@@ -206,7 +202,7 @@ const JoystreamDAO = ({ t, proposalsData }) => {
             />
           ) : null}
         </div>
-      </section>
+      </section> */}
     </section>
   );
 };

@@ -61,9 +61,9 @@ const IndexPage = () => {
 
       <Upcoming t={t} />
 
-      <AvailableActivities t={t} priceData={updatedPriceData} />
-
       <JoystreamDAO t={t} proposalsData={data?.proposals} />
+
+      <AvailableActivities t={t} priceData={updatedPriceData} />
     </BaseLayout>
   );
 };
