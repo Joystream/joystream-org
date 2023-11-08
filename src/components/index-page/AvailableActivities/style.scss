@@ -59,10 +59,10 @@
         height: 64px;
         background-color: #e0e1ff;
         border-radius: 8px;
+      }
 
-        & > svg {
-          transform: scale(.85);
-        }
+      &__icon {
+        transform: scale(.85);
       }
 
       &__title {
@@ -164,8 +164,6 @@
       &__loader {
         width: 45px;
         height: 45px;
-        margin-top: 3px;
-        margin-left: 10px;
       }
 
       &__cta {
@@ -263,59 +261,27 @@
     }
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1440px) {
     &__available-activities {
-      &__list {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-      }
+      &__header {
+        grid-column: 1 / 13;
 
-      &__list-item {
-        width: 606px;
-      }
-    }
-  }
-
-  @media #{$screen-max-md} {
-    &__available-activities {
-      padding: 110px 0;
-
-      &__title {
-        padding: 0 20px;
+        &__title {
+          @include h800;
+        }
       }
 
       &__subtitle {
-        padding: 0 40px;
-      }
-    }
-  }
-
-  @media (max-width: 650px) {
-    &__available-activities {
-      padding: 80px 0;
-
-      &__title {
-        font-size: 32px;
-        line-height: 40px;
-      }
-
-      &__subtitle {
-        padding: 0 20px;
-        font-size: 16px;
-        line-height: 24px;
+        max-width: 910px;
+        grid-column: 1 / 13;
       }
 
       &__list {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 64px;
+        grid-column: 1 / 13;
       }
 
       &__list-item {
-        width: 335px;
-        height: 158px;
+        height: 148px;
         padding: 16px;
 
         &__icon-wrapper {
@@ -323,19 +289,12 @@
           height: 48px;
         }
 
-        &__icon {
-          transform: scale(.68);
-        }
-
         &__title {
-          font-size: 20px;
-          line-height: 28px;
+          @include h400;
         }
 
-        &__loader {
-          width: 35px;
-          height: 35px;
-          margin-left: 5px;
+        &__icon {
+          transform: scale(.6);
         }
 
         &__cta {
@@ -351,19 +310,20 @@
           }
         }
 
-        &__place-for-you {
-          font-size: 14px;
-          line-height: 20px;
+        &__amount {
+          display: none;
 
-          &__icon {
-            margin-right: 0;
-            margin-left: -8px;
-            transform: scale(.68);
+          &--mobile {
+            display: block;
           }
-        }
 
-        &__bottom {
-          margin-top: 29px;
+          &__value {
+            @include t300;
+          }
+
+          &__weekly {
+            @include t300;
+          }
         }
 
         &__member-icon {
@@ -379,24 +339,97 @@
         &__number-icon {
           width: 40px;
           height: 40px;
+          font-size: 12.5px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__available-activities-wrapper {
+      padding: 64px 16px;
+    }
+
+    &__available-activities {
+      &__header {
+        &__title {
+          @include h700;
+        }
+      }
+
+      &__list {
+        margin-top: 56px;
+        gap: 16px;
+      }
+
+      &__list-item {
+        &__title {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__available-activities {
+      &__header {
+        &__title {
+          @include h600;
+        }
+      }
+
+      &__subtitle {
+        @include t300;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 48px;
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__available-activities {
+      &__header {
+        &__title {
+          @include h500;
+        }
+      }
+
+      &__list-item {
+        &__title {
+          @include h300;
         }
 
         &__amount {
-          display: none;
-
-          &--mobile {
-            display: block;
-          }
-
           &__value {
-            @include h9;
+            @include t200;
           }
+        }
 
-          &__weekly {
-            @include h9;
+        &__member-icon {
+          width: 32px;
+          height: 32px;
 
-            margin-top: 0;
+          img {
+            width: 32px;
+            height: 32px;
           }
+        }
+
+        &__number-icon {
+          width: 32px;
+          height: 32px;
+          font-size: 10px;
+          line-height: 16px;
+        }
+
+        &__loader {
+          width: 32px;
+          height: 32px;
         }
       }
     }

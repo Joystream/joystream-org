@@ -7,7 +7,7 @@ import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-smal
 import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
 import { ReactComponent as PlaceForYouIcon } from '../../../assets/svg/available-activities-icons/place-for-you.svg';
 
-import useWindowDimensions from '../../../utils/useWindowDimensions';
+// import useWindowDimensions from '../../../utils/useWindowDimensions';
 import { WORKER_ACTIVITIES } from '../../../data/pages';
 
 import './style.scss';
@@ -145,13 +145,13 @@ const Activity = ({ Icon, title, amount, priceData, isWeekly, icons, isLoading, 
 const AvailableActivities = ({ priceData, t }) => {
   const [data, loading, error] = useAxios('https://status.joystream.org/budgets');
   const [numberOfRenderedActivities, setNumberOfRenderedActivities] = useState(WORKER_ACTIVITIES.length);
-  const { width } = useWindowDimensions();
+  // const { width } = useWindowDimensions();
 
-  useEffect(() => {
-    if (width) {
-      setNumberOfRenderedActivities(width < 1400 ? 3 : WORKER_ACTIVITIES.length);
-    }
-  }, [width]);
+  // useEffect(() => {
+  //   if (width) {
+  //     setNumberOfRenderedActivities(width < 768 ? 3 : WORKER_ACTIVITIES.length);
+  //   }
+  // }, [width]);
 
   return (
     <section className="IndexPage__available-activities-wrapper">
@@ -178,7 +178,7 @@ const AvailableActivities = ({ priceData, t }) => {
               />
             ))}
         </div>
-        {width < 1400 && numberOfRenderedActivities < Object.keys(WORKER_ACTIVITIES).length ? (
+        {/* {width < 768 && numberOfRenderedActivities < Object.keys(WORKER_ACTIVITIES).length ? (
           <div
             className="IndexPage__available-activities__show-more"
             onClick={() => setNumberOfRenderedActivities(prev => prev + 1)}
@@ -187,7 +187,7 @@ const AvailableActivities = ({ priceData, t }) => {
             {t('landing.availableActivities.showMore')}{' '}
             <ArrowIcon className="IndexPage__available-activities__show-more__arrow-icon" />
           </div>
-        ) : null}
+        ) : null} */}
       </div>
     </section>
   );
