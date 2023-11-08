@@ -119,6 +119,7 @@ $animation-name: null;
       min-width: 304px;
       padding: 20px 32px !important;
       border-radius: 8px;
+      transition: all .35s;
 
       &:hover {
         background-color: #261ee4;
@@ -127,6 +128,8 @@ $animation-name: null;
 
     &__button-text {
       @include t300;
+
+      font-weight: 600;
     }
 
     &__illustration {
@@ -302,6 +305,8 @@ $animation-name: null;
 
       &__button-text {
         @include t200;
+
+        font-weight: 600;
       }
     }
   }
