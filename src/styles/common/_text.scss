@@ -66,6 +66,14 @@
   letter-spacing: .005em;
 }
 
+@mixin h300 {
+  font-family: $font-ibm-sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: .01em;
+}
+
 @mixin h100 {
   font-family: $font-ibm-sans;
   font-size: 12px;

@@ -183,13 +183,10 @@ const JoystreamDAO = ({ t, proposalsData }) => {
             />
           </Plx>
         </div>
+
+        <h3 className="IndexPage__joystream-dao__carousel-title">{t('landing.joystreamDAO.carousel.title')}</h3>
       </div>
-      {/* <section className="IndexPage__joystream-dao-carousel">
-        <div className="IndexPage__joystream-dao-carousel__title-section">
-          <h3 className="IndexPage__joystream-dao-carousel__title-section__text">
-            {t('landing.joystreamDAO.carousel.title')}
-          </h3>
-        </div>
+      <section className="IndexPage__joystream-dao-carousel">
         <div className="IndexPage__joystream-dao-carousel__items-wrapper">
           {proposalsData && proposalsData.length > 0 ? (
             <Carousel
@@ -202,7 +199,7 @@ const JoystreamDAO = ({ t, proposalsData }) => {
             />
           ) : null}
         </div>
-      </section> */}
+      </section>
     </section>
   );
 };
