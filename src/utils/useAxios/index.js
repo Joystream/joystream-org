@@ -1,5 +1,6 @@
 import axios from 'axios';
 import usePromise from '../usePromise';
+import { func } from 'prop-types';
 
 const defaultUrl = process.env.GATSBY_API_URL || 'https://status.joystream.app';
 

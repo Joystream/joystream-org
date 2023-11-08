@@ -28,8 +28,10 @@ $c_raspberry: #e50158;
 $c_rose: #ff0161;
 $c_pippin: #ffdede;
 $c_mauve: #d09dff;
+$c_gray_500: #757575;
 
 $c_neutral-200: #dee3e9;
+$c_panel_content: #5c6475;
 
 @function get-color-from-opaque-and-background($color1, $opacity1, $color2) {
   $r1: red($color1);

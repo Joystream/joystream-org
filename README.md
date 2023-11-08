@@ -79,3 +79,59 @@ Assets refresh script:
 ```sh
 yarn fetch-assets-data
 ```
+
+## Roadmap data
+
+Roadmap data can be found in the following file(s): `src/data/quarters/${roadmap-data-name}.json`
+
+To update the data, just directly edit the file you want to change the data for.
+
+To add a new version of the roadmap, you can follow these steps:
+- Add new file in the aforementioned folder (e.g., `src/data/quarters/2024-2025.json`)
+- The roadmap file should follow this structure:
+  - ```js
+      [{
+          "language",
+          "quarters": [{
+            "year",
+            "id",
+            "deliveryMilestones": [{
+              "icon",
+              "title",
+              "Content"
+            }]
+          }]
+        }]
+    ```
+  - In case of doubts and to also get a better idea for how this data should look exactly, you can consult one of the roadmap files that are already there.
+  - As for the "icon" values, these values represent icons that can be found in the assets of the project. More specifically, for the map of "key" (i.e., in this case the icon string value) to the "value" (i.e., the icon itself) you can consult the `iconMap` object in the following file: `src/data/quarters/index.js`.
+- As the final step, the exported array within the `src/data/quarters/index.js` file needs to be expanded with an object following this structure: `{ "select": { "title", "subtitle" }, "name", "value", "isNewest" }`
+  - Note: Only one object should have the `"isNewest"` property set to `true`.
+
+## Glossary data
+
+Glossary data can be found in the following file: `src/data/glossary/glossary.json`
+
+When updating the glossary or adding new terms to it, this structure should be followed:
+```js
+  [{
+    "language":
+    "terms": [{
+      "title",
+      "tooltip",
+      "content",
+      "nodes": [{
+        "title",
+        "content": [""]
+      }],
+      "others": [{
+        "title",
+        "subtitle",
+        "content": [""]
+      }],
+      "relatedTerms": [""]
+    }]
+  }]
+```
+
+Important note: The glossary is automatically populated into the roadmap at runtime. The way this is done is that the term title is checked for in the content of a roadmap item and replaced with an underlined item with a tooltip. It is therefore important to make sure that the spelling of each title term is correct.

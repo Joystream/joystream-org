@@ -1,0 +1,181 @@
+@import '../../../styles/common/variables';
+
+.GlossaryBody {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr .4fr;
+
+  &__main {
+    display: grid;
+    margin-top: 64px;
+    gap: 16px;
+
+    &__title {
+      padding: 0 0 16px 0;
+      font-family: $font-primary;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
+      letter-spacing: 0;
+      color: #f2f5f9;
+      text-align: left;
+    }
+
+    &__content {
+      font-family: $font-secondary;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #a7aeb7;
+      text-align: left;
+    }
+
+    &__line {
+      height: 1px;
+      margin: 16px 0 16px 0;
+      background: #5c6475;
+    }
+  }
+
+  &__node {
+    &__title {
+      margin: 16px 0 8px 0;
+      //styleName: h5;
+      font-family: $font-secondary;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    &__content {
+      &__title {
+        margin: 16px 0 8px 0;
+        //styleName: h7;
+        font-family: $font-primary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0;
+        color: #f2f5f9;
+        text-align: left;
+      }
+
+      &__item {
+        margin: 16px 0 8px 0;
+        //styleName: Base 2;
+        font-family: $font-secondary;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: #a7aeb7;
+        text-align: left;
+      }
+    }
+  }
+
+  &__others {
+    &__title {
+      margin: 16px 0 8px 0;
+      //styleName: h7;
+      font-family: $font-primary;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    &__subtitle {
+      margin: 0 0 16px 0;
+      //styleName: Base 2;
+      font-family: $font-secondary;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #a7aeb7;
+      text-align: left;
+    }
+
+    &__content {
+      margin: 0 0 4px 0;
+      //styleName: Base 2;
+      font-family: $font-secondary;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #a7aeb7;
+      text-align: left;
+    }
+  }
+
+  &__card {
+    height: fit-content;
+    margin-top: 64px;
+    padding: 24px;
+    background: #1f252e;
+    border-radius: 4px;
+    gap: 16px;
+
+    &__title {
+      margin: 8px;
+      //styleName: h7;
+      font-family: $font-primary;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    &__item {
+      display: inline-block;
+      width: fit-content;
+      height: fit-content;
+      margin: 4px;
+      padding: 8px 16px 8px 16px;
+      //styleName: Base 2;
+      font-family: $font-secondary;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #dee3e9;
+      text-align: left;
+      cursor: pointer;
+      background: #5c6475;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: #a7aeb7;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 768px) {
+    &__main {
+      margin-top: 40px;
+    }
+
+    &__card {
+      margin-top: 0;
+    }
+  }
+}
+
+li {
+  margin-left: 8px;
+}
+
+.real__button {
+  color: #b4bbff;
+  border-bottom: solid 1px #b4bbff;
+}

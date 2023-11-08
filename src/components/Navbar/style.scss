@@ -6,6 +6,8 @@
   position: relative;
   top: 0;
   z-index: 5;
+  align-items: center;
+  flex-direction: column;
   height: $navbar-height;
   background-color: $c_black;
   transition: top 400ms ease 0s;
@@ -134,7 +136,9 @@
     display: flex;
     flex-direction: column;
     width: auto;
-    background-color: $c_white;
+    margin-left: -25px;
+    background-color: #1f252e;
+    border-radius: 4px;
     transform: translateY(-100%);
     transition: transform 400ms ease 0s;
 
@@ -144,6 +148,7 @@
   }
 
   &__dropdown-item {
+    width: 100%;
     padding: 16px 24px;
 
     &__text {
@@ -151,7 +156,11 @@
       font-size: 18px;
       line-height: 20px;
       letter-spacing: 0;
-      color: black;
+      color: #a7aeb7;
+    }
+
+    &:hover {
+      background: #5c647533;
     }
   }
 
@@ -370,6 +379,7 @@
       z-index: unset;
       display: none;
       margin-top: 10px;
+      margin-left: 0;
       background-color: #2f2ff4;
       transform: unset;
 
@@ -409,8 +419,13 @@
 
       &__icon {
         @keyframes grow {
-          0% { clip-path: circle(10%); }
-          100% { clip-path: circle(100%); }
+          0% {
+            clip-path: circle(10%);
+          }
+
+          100% {
+            clip-path: circle(100%);
+          }
         }
 
         animation: grow;

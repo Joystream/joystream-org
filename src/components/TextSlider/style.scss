@@ -1,0 +1,46 @@
+.TextSlider {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 8px;
+  }
+}
+
+.TextSlider__button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  &--active {
+    background-color: #4038ff;
+  }
+
+  &__icon {
+    &--backward {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--backward {
+    left: 50px;
+    transform: translateX(-100%);
+  }
+
+  &--forward {
+    right: 50px;
+    transform: translateX(100%);
+  }
+}
