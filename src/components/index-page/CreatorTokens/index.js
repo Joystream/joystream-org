@@ -16,13 +16,14 @@ import './style.scss';
 
 const parallaxDataForeground = [
   {
+    startOffset: -250,
     start: 'self',
-    duration: 1400,
+    duration: 1200,
     easing: 'easeIn',
     properties: [
       {
-        startValue: 250,
-        endValue: 0,
+        startValue: -200,
+        endValue: -450,
         property: 'translateY',
         unit: 'px',
       },
@@ -51,7 +52,7 @@ const CreatorTokens = ({ t }) => {
   return (
     <section className="IndexPage__creator-tokens-wrapper" id="creator-tokens">
       <div className="IndexPage__creator-tokens">
-        {/* <div className="IndexPage__creator-tokens__main">
+        <div className="IndexPage__creator-tokens__main">
           <div className="IndexPage__creator-tokens__main__content">
             <span className="IndexPage__creator-tokens__main__content__section-title">
               {t('landing.creatorTokens.hero.sectionTitle')}
@@ -86,7 +87,7 @@ const CreatorTokens = ({ t }) => {
             </Plx>
             <div className="IndexPage__creator-tokens__main__overlay"></div>
           </div>
-        </div> */}
+        </div>
         <div className="IndexPage__creator-tokens__grid">
           <GridItem
             image={Fundraising}
