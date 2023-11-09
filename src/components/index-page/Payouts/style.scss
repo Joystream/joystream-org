@@ -4,78 +4,75 @@
 
 .IndexPage {
   &__payouts-wrapper {
-    padding-top: 96px;
+    padding: 96px 32px 0 32px;
     background-color: #111316;
   }
 
   &__payouts {
-    @extend %container;
+    @include grid;
 
-    display: grid;
-    height: 486px;
-    min-height: 486px;
-    gap: 30px;
-    grid-template-columns: 500px auto;
+    &__main {
+      display: grid;
+      height: 512px;
+      gap: 24px;
+      grid-column: 2 / 12;
+      grid-template-columns: auto 676px;
 
-    &__content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-      &__section-title {
-        @include section-title;
+        &__section-title {
+          @include h400;
 
-        color: #6c6cff;
+          color: #6c6cff;
+        }
+
+        &__title {
+          @include h600;
+
+          margin-top: 4px;
+          color: $c_white;
+        }
+
+        &__subtitle {
+          @include t400;
+
+          margin-top: 16px;
+          color: #a7aeb7;
+        }
       }
 
-      &__title {
-        @include h3;
+      &__illustration {
+        position: relative;
 
-        margin-top: 4px;
-        color: $c_white;
-      }
+        &__background {
+          width: 100%;
+        }
 
-      &__subtitle {
-        @include base-1;
-
-        margin-top: 16px;
-        color: $c_grayc-chateau;
+        &__foreground {
+          position: absolute;
+          top: -350px;
+          left: 0;
+        }
       }
     }
 
-    &__illustration {
-      position: relative;
-      height: 486px;
-
-      &__background {
-        position: absolute;
-      }
-
-      &__foreground {
-        position: absolute;
-      }
-    }
-  }
-
-  &__payouts-carousel {
-    $carousel-gap: 24px;
-
-    margin-top: 64px;
-
-    &__title-and-info {
-      @extend %container;
-
+    &__carousel-title-and-info {
       display: flex;
       justify-content: space-between;
+      margin-top: 72px;
+      grid-column: 2 / 12;
 
       &__title {
-        @include h6;
+        @include h500;
 
         color: $c_white;
       }
 
       &__info {
-        @include base-5;
+        @include t100;
 
         position: relative;
         display: flex;
@@ -126,6 +123,12 @@
         }
       }
     }
+  }
+
+  &__payouts-carousel {
+    $carousel-gap: 24px;
+
+    margin: 0 -32px;
 
     &__items-wrapper {
       display: flex;
@@ -155,10 +158,12 @@
       width: 224px;
       height: 216px;
       padding: 24px;
-      background-color: $c_ebony-clay;
+      background-color: rgba(188, 213, 250, .08);
+      border-radius: 8px;
 
       &:hover {
-        background-color: rgba(red(#5c6475), green(#5c6475), blue(#5c6475), 25%);
+        background-color: rgba(187, 217, 246, .13);
+        border: 1px solid rgba(203, 224, 241, .27);
       }
 
       &__image {
@@ -182,15 +187,13 @@
         }
 
         &__text {
-          @include h7;
+          @include t300;
 
           color: $c_grayc-chateau;
 
           & > span {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 40px;
-            letter-spacing: 0;
+            @include h600;
+
             color: $c_white;
             text-align: left;
           }
@@ -198,14 +201,14 @@
       }
 
       &__price-usd {
-        @include base-5;
+        @include t100;
 
         margin-top: 4px;
         color: $c_grayc-chateau;
       }
 
       &__channel {
-        @include base-5;
+        @include t100;
         @include line-clamp(1);
 
         margin-top: 8px;
@@ -217,7 +220,7 @@
       }
 
       &__time {
-        @include base-5;
+        @include t100;
 
         display: flex;
         align-items: center;
@@ -231,183 +234,118 @@
     }
   }
 
-  &__payouts-cta {
-    @extend %container;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 256px;
-    margin-top: 96px;
-    background-color: $c_ebony-clay;
-    background-image: url('../../../assets/svg/landing/payouts-cta-background.svg');
-    background-position: right 0;
-    background-repeat: no-repeat;
-    border-left: 4px solid $c_blue-ribbon;
-    box-shadow: 0 8px 32px 0 rgba(26, 26, 26, .24);
-
-    &__content {
-      max-width: 500px;
-
-      &__logos {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-
-        &__joystream {
-          height: 40px;
-          color: $c_white;
-        }
-      }
-
-      &__title {
-        @include h6;
-
-        margin-top: 24px;
-        color: $c_white;
-      }
-    }
-
-    &__link {
-      width: 220px;
-      height: 60px;
-      padding: 18px !important;
-    }
-
-    &__link-text {
-      @include landing-page-button-text;
-    }
-  }
-
-  @media (max-width: 1300px) {
-    &__payouts-cta {
-      margin-right: 20px;
-      margin-left: 20px;
-    }
-  }
-
-  @media #{$screen-max-lg} {
+  @media (max-width: 1440px) {
     &__payouts {
-      grid-template-columns: auto 500px;
+      &__main {
+        height: 417px;
+        grid-column: 1 / 13;
+        grid-template-columns: auto 550px;
 
-      &__illustration {
-        &__background {
-          top: 60px;
-        }
-
-        &__foreground {
-          top: 60px;
-        }
-      }
-    }
-  }
-
-  @media #{$screen-max-md} {
-    &__payouts {
-      display: flex;
-      flex-direction: column-reverse;
-      height: auto;
-      max-width: 730px;
-      min-height: auto;
-      gap: 32px;
-
-      &__illustration {
-        &__background {
-          top: unset;
-        }
-
-        &__foreground {
-          top: unset;
-        }
-      }
-    }
-
-    &__payouts-cta {
-      padding: 0 32px;
-    }
-  }
-
-  @media (max-width: 870px) {
-    &__payouts-cta {
-      align-items: unset;
-      flex-direction: column;
-      justify-content: center;
-      height: 380px;
-      background-image: url('../../../assets/svg/landing/payouts-cta-background-mobile.svg');
-      background-position: right 0;
-      background-repeat: no-repeat;
-
-      &__content {
-        &__title {
-          @include h7;
-        }
-      }
-
-      &__link {
-        width: 271px;
-        height: 48px;
-        margin-top: 32px;
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
-    &__payouts-wrapper {
-      padding-top: 80px;
-    }
-
-    &__payouts {
-      max-width: 534px;
-
-      &__illustration {
-        width: 534px;
-        height: 365px;
-        overflow: hidden;
-      }
-
-      &__content {
-        &__title {
-          @include h4;
-        }
-
-        &__subtitle {
-          @include base-3;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 800px) {
-    &__payouts-carousel {
-      &__title-and-info {
-        flex-direction: column;
-
-        &__info {
-          margin-top: 8px;
-
-          &__modal {
-            right: unset;
-            bottom: 20px;
-            left: 80px;
-            clip-path:
-              polygon(
-                0% 0%,
-                0% calc(100% - 6px),
-                100% calc(100% - 6px),
-                100% 0%
-              );
+        &__illustration {
+          &__foreground {
+            position: absolute;
+            top: -235px;
           }
         }
       }
+
+      &__carousel-title-and-info {
+        grid-column: 1 / 13;
+      }
+    }
+
+    &__payouts-carousel-title-and-info {
+      grid-column: 1 / 13;
     }
   }
 
-  @media (max-width: 500px) {
-    &__payouts-cta {
-      &__content {
+  @media (max-width: 1024px) {
+    &__payouts-wrapper {
+      padding: 64px 16px 0 16px;
+    }
+
+    &__payouts {
+      &__main {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+
+        &__content {
+          &__title {
+            @include h500;
+
+            & > br {
+              display: none;
+            }
+          }
+        }
+
+        &__illustration {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+
+          & > div:first-of-type {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            -webkit-transform: none !important;
+            transform: none !important;
+            inset: 0;
+          }
+
+          &__foreground {
+            top: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &__carousel-title-and-info {
         &__title {
-          & > br {
-            display: none;
+          @include h400;
+        }
+      }
+    }
+
+    &__payouts-carousel {
+      margin: 0 -16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__payouts {
+      &__main {
+        &__content {
+          &__title {
+            @include h500;
+          }
+
+          &__subtitle {
+            @include t300;
+          }
+        }
+      }
+
+      &__carousel-title-and-info {
+        display: flex;
+        flex-direction: column;
+
+        &__info {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__payouts {
+      &__main {
+        &__content {
+          &__title {
+            @include h400;
           }
         }
       }

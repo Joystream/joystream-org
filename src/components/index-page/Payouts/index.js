@@ -21,32 +21,16 @@ import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
 
 import './style.scss';
 
-const parallaxDataBackground = [
-  {
-    start: 'self',
-    duration: 1400,
-    easing: 'easeInOut',
-    properties: [
-      {
-        startValue: 100,
-        endValue: -50,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-];
-
 const parallaxDataForeground = [
   {
+    startOffset: -300,
     start: 'self',
-    startOffset: -100,
-    duration: 1500,
-    easing: 'easeInOut',
+    duration: 1200,
+    easing: 'easeIn',
     properties: [
       {
-        startValue: 175,
-        endValue: -75,
+        startValue: 0,
+        endValue: -350,
         property: 'translateY',
         unit: 'px',
       },
@@ -136,53 +120,55 @@ const Payouts = ({ t, payouts, priceData }) => {
   return (
     <section className="IndexPage__payouts-wrapper">
       <div className="IndexPage__payouts" id="creator-payouts">
-        <div className="IndexPage__payouts__content">
-          <span className="IndexPage__payouts__content__section-title">{t('landing.payouts.sectionTitle')}</span>
-          <h3 className="IndexPage__payouts__content__title">
-            <Trans i18nKey="landing.payouts.title" components={{ br: <br /> }} />
-          </h3>
-          <p className="IndexPage__payouts__content__subtitle">{t('landing.payouts.subtitle')}</p>
-        </div>
-        <div className="IndexPage__payouts__illustration">
-          <Plx parallaxData={parallaxDataBackground} animateWhenNotInViewport={true}>
+        <div className="IndexPage__payouts__main" id="creator-payouts">
+          <div className="IndexPage__payouts__main__content">
+            <span className="IndexPage__payouts__main__content__section-title">
+              {t('landing.payouts.sectionTitle')}
+            </span>
+            <h3 className="IndexPage__payouts__main__content__title">
+              Rewards for <br /> publishing videos
+            </h3>
+            <p className="IndexPage__payouts__main__content__subtitle">{t('landing.payouts.subtitle')}</p>
+          </div>
+          <div className="IndexPage__payouts__main__illustration">
             <img
               src={PayoutsBackgroundImage}
-              className="IndexPage__payouts__illustration__background"
+              className="IndexPage__payouts__main__illustration__background"
               alt="my payments tab in atlas studio"
             />
-          </Plx>
-          <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
-            <img
-              src={PayoutsForeground}
-              className="IndexPage__payouts__illustration__foreground"
-              alt="claim payout popup, in front of the my payments tab"
-            />
-          </Plx>
+            <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
+              <img
+                src={PayoutsForeground}
+                className="IndexPage__payouts__main__illustration__foreground"
+                alt="claim payout popup, in front of the my payments tab"
+              />
+            </Plx>
+          </div>
         </div>
-      </div>
-      <section className="IndexPage__payouts-carousel">
-        <div className="IndexPage__payouts-carousel__title-and-info">
-          <h3 className="IndexPage__payouts-carousel__title-and-info__title">{t('landing.payouts.carousel.title')}</h3>
-          <div className="IndexPage__payouts-carousel__title-and-info__info">
+        <div className="IndexPage__payouts__carousel-title-and-info">
+          <h3 className="IndexPage__payouts__carousel-title-and-info__title">{t('landing.payouts.carousel.title')}</h3>
+          <div className="IndexPage__payouts__carousel-title-and-info__info">
             <div
-              className="IndexPage__payouts-carousel__title-and-info__info__label"
+              className="IndexPage__payouts__carousel-title-and-info__info__label"
               // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
               tabIndex={0}
-              aria-describedby="IndexPage__payouts-carousel__title-and-info__info__modal"
+              aria-describedby="IndexPage__payouts__carousel-title-and-info__info__modal"
               ref={payoutsCarouselInfoLabelRef}
             >
               {t('landing.payouts.carousel.info.label')}
-              <InfoIcon className="IndexPage__payouts-carousel__title-and-info__info__icon" />
+              <InfoIcon className="IndexPage__payouts__carousel-title-and-info__info__icon" />
             </div>
             <div
               role="tooltip"
-              id="IndexPage__payouts-carousel__title-and-info__info__modal"
-              className="IndexPage__payouts-carousel__title-and-info__info__modal"
+              id="IndexPage__payouts__carousel-title-and-info__info__modal"
+              className="IndexPage__payouts__carousel-title-and-info__info__modal"
             >
               {t('landing.payouts.carousel.info.text')}
             </div>
           </div>
         </div>
+      </div>
+      <section className="IndexPage__payouts-carousel">
         <div className="IndexPage__payouts-carousel__items-wrapper">
           {payouts && payouts.length > 0 ? (
             <Carousel
