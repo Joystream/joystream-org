@@ -30,11 +30,28 @@ const parallaxDataForeground = [
   },
 ];
 
+const GridItem = ({ image, sectionTitle, title, subtitle }) => (
+  <section className="IndexPage__creator-tokens__grid-item">
+    <div className="IndexPage__creator-tokens__grid-item__illustration">
+      <img
+        src={image}
+        className="IndexPage__creator-tokens__grid-item__illustration__image"
+        alt="popup allowing you to buy/sell creator token"
+      />
+    </div>
+    <div className="IndexPage__creator-tokens__grid-item__content">
+      <span className="IndexPage__creator-tokens__grid-item__content__section-title">{sectionTitle}</span>
+      <h3 className="IndexPage__creator-tokens__grid-item__content__title">{title}</h3>
+      <p className="IndexPage__creator-tokens__grid-item__content__subtitle">{subtitle}</p>
+    </div>
+  </section>
+);
+
 const CreatorTokens = ({ t }) => {
   return (
     <section className="IndexPage__creator-tokens-wrapper" id="creator-tokens">
       <div className="IndexPage__creator-tokens">
-        <div className="IndexPage__creator-tokens__main">
+        {/* <div className="IndexPage__creator-tokens__main">
           <div className="IndexPage__creator-tokens__main__content">
             <span className="IndexPage__creator-tokens__main__content__section-title">
               {t('landing.creatorTokens.hero.sectionTitle')}
@@ -69,90 +86,32 @@ const CreatorTokens = ({ t }) => {
             </Plx>
             <div className="IndexPage__creator-tokens__main__overlay"></div>
           </div>
-        </div>
+        </div> */}
         <div className="IndexPage__creator-tokens__grid">
-          <section className="IndexPage__creator-tokens__fundraising">
-            <div className="IndexPage__creator-tokens__fundraising__illustration">
-              <img
-                src={Fundraising}
-                className="IndexPage__creator-tokens__fundraising__illustration__image"
-                alt="popup allowing you to buy/sell creator token"
-              />
-            </div>
-            <div className="IndexPage__creator-tokens__fundraising__content">
-              <span className="IndexPage__creator-tokens__fundraising__content__section-title">
-                {t('landing.creatorTokens.fundraising.sectionTitle')}
-              </span>
-              <h3 className="IndexPage__creator-tokens__fundraising__content__title">
-                <Trans i18nKey="landing.creatorTokens.fundraising.title" components={{ br: <br /> }} />
-              </h3>
-              <p className="IndexPage__creator-tokens__fundraising__content__subtitle">
-                {t('landing.creatorTokens.fundraising.subtitle')}
-              </p>
-            </div>
-          </section>
-          <section className="IndexPage__creator-tokens__stable-income">
-            <div className="IndexPage__creator-tokens__stable-income__illustration">
-              <img
-                src={StableIncome}
-                className="IndexPage__creator-tokens__stable-income__illustration__image"
-                alt="patronage (how many tokens you wish to receive based on the supply of your tokens on the market) slider popup that goes from 0% to 30%"
-              />
-            </div>
-            <div className="IndexPage__creator-tokens__stable-income__content">
-              <span className="IndexPage__creator-tokens__stable-income__content__section-title">
-                {t('landing.creatorTokens.stableIncome.sectionTitle')}
-              </span>
-              <h3 className="IndexPage__creator-tokens__stable-income__content__title">
-                {t('landing.creatorTokens.stableIncome.title')}
-              </h3>
-              <p className="IndexPage__creator-tokens__stable-income__content__subtitle">
-                {t('landing.creatorTokens.stableIncome.subtitle')}
-              </p>
-            </div>
-          </section>
-          <section className="IndexPage__creator-tokens__secure-listing">
-            <div className="IndexPage__creator-tokens__secure-listing__illustration">
-              <img
-                src={SecureListing}
-                className="IndexPage__creator-tokens__secure-listing__illustration__image"
-                alt={
-                  'in the foreground: popup with graph of some asset and on top it says: "Buy $TRS", in the background: second part of the same popup, allows you to buy the asset'
-                }
-              />
-            </div>
-            <div className="IndexPage__creator-tokens__secure-listing__content">
-              <span className="IndexPage__creator-tokens__secure-listing__content__section-title">
-                {t('landing.creatorTokens.secureListing.sectionTitle')}
-              </span>
-              <h3 className="IndexPage__creator-tokens__secure-listing__content__title">
-                <Trans i18nKey="landing.creatorTokens.secureListing.title" components={{ br: <br /> }} />
-              </h3>
-              <p className="IndexPage__creator-tokens__secure-listing__content__subtitle">
-                {t('landing.creatorTokens.secureListing.subtitle')}
-              </p>
-            </div>
-          </section>
-          <section className="IndexPage__creator-tokens__share-upside">
-            <div className="IndexPage__creator-tokens__share-upside__illustration">
-              <img
-                src={ShareUpside}
-                className="IndexPage__creator-tokens__share-upside__illustration__image"
-                alt={'shows active revenue split popup with a counter and button with the title "stake"'}
-              />
-            </div>
-            <div className="IndexPage__creator-tokens__share-upside__content">
-              <span className="IndexPage__creator-tokens__share-upside__content__section-title">
-                {t('landing.creatorTokens.shareUpside.sectionTitle')}
-              </span>
-              <h3 className="IndexPage__creator-tokens__share-upside__content__title">
-                <Trans i18nKey="landing.creatorTokens.shareUpside.title" components={{ br: <br /> }} />
-              </h3>
-              <p className="IndexPage__creator-tokens__share-upside__content__subtitle">
-                {t('landing.creatorTokens.shareUpside.subtitle')}
-              </p>
-            </div>
-          </section>
+          <GridItem
+            image={Fundraising}
+            sectionTitle={t('landing.creatorTokens.fundraising.sectionTitle')}
+            title={<Trans i18nKey="landing.creatorTokens.fundraising.title" components={{ br: <br /> }} />}
+            subtitle={t('landing.creatorTokens.fundraising.subtitle')}
+          />
+          <GridItem
+            image={StableIncome}
+            sectionTitle={t('landing.creatorTokens.stableIncome.sectionTitle')}
+            title={<Trans i18nKey="landing.creatorTokens.stableIncome.title" components={{ br: <br /> }} />}
+            subtitle={t('landing.creatorTokens.stableIncome.subtitle')}
+          />
+          <GridItem
+            image={SecureListing}
+            sectionTitle={t('landing.creatorTokens.secureListing.sectionTitle')}
+            title={<Trans i18nKey="landing.creatorTokens.secureListing.title" components={{ br: <br /> }} />}
+            subtitle={t('landing.creatorTokens.secureListing.subtitle')}
+          />
+          <GridItem
+            image={ShareUpside}
+            sectionTitle={t('landing.creatorTokens.shareUpside.sectionTitle')}
+            title={<Trans i18nKey="landing.creatorTokens.shareUpside.title" components={{ br: <br /> }} />}
+            subtitle={t('landing.creatorTokens.shareUpside.subtitle')}
+          />
         </div>
       </div>
     </section>
