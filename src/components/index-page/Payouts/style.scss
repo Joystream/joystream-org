@@ -72,7 +72,7 @@
       }
 
       &__info {
-        @include t100;
+        @include base-5;
 
         position: relative;
         display: flex;
@@ -81,23 +81,46 @@
         fill: $c_grayc-chateau;
 
         &__icon {
-          margin-left: 6px;
-          fill: inherit;
+          position: relative;
+          display: inline-block;
+          min-width: 32px;
+          min-height: 32px;
+          margin-left: 4px;
+          border-radius: 50%;
+
+          & > svg {
+            position: absolute;
+            margin: auto;
+            fill: #7b8a95;
+            inset: 0;
+          }
+
+          &:hover {
+            background-color: rgba(187, 217, 246, .13);
+
+            & > svg {
+              fill: $c_white;
+            }
+          }
         }
 
         &__modal {
+          @include t100;
+
           position: absolute;
-          right: 0;
-          bottom: 30px;
-          width: 240px;
-          height: auto;
-          padding: 12px 12px 18px 12px;
-          color: $c_ebony-clay;
-          background-color: $c_neutral-200;
+          right: -108px;
+          bottom: 36px;
+          z-index: 2000;
+          width: 280px;
+          margin: auto;
+          padding: 8px;
+          color: $c_white;
+          background-color: #343d44;
+          border-radius: 2px;
           opacity: 0;
           visibility: hidden;
-          transition: visibility .2s linear, opacity .2s linear;
-          clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 6px), 100% 100%, calc(100% - 8px) calc(100% - 6px), 0% calc(100% - 6px));
+          transition: visibility .3s linear, opacity .3s linear;
+          transition-delay: .1s;
         }
 
         &__label {
@@ -115,6 +138,14 @@
         &__label:focus {
           color: $c_white;
           fill: $c_white;
+        }
+
+        &:hover &__icon {
+          background-color: rgba(187, 217, 246, .13);
+
+          & > svg {
+            fill: $c_white;
+          }
         }
 
         &:hover &__modal {
@@ -251,6 +282,12 @@
 
       &__carousel-title-and-info {
         grid-column: 1 / 13;
+
+        &__info {
+          &__modal {
+            right: 0;
+          }
+        }
       }
     }
 
@@ -335,6 +372,11 @@
 
         &__info {
           margin-top: 6px;
+
+          &__modal {
+            right: unset;
+            left: 10px;
+          }
         }
       }
     }

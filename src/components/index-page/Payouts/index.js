@@ -156,7 +156,9 @@ const Payouts = ({ t, payouts, priceData }) => {
               ref={payoutsCarouselInfoLabelRef}
             >
               {t('landing.payouts.carousel.info.label')}
-              <InfoIcon className="IndexPage__payouts__carousel-title-and-info__info__icon" />
+              <div className="IndexPage__payouts__carousel-title-and-info__info__icon">
+                <InfoIcon />
+              </div>
             </div>
             <div
               role="tooltip"

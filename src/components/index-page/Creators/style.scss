@@ -205,6 +205,12 @@
     &__creators {
       &__title-and-info {
         grid-column: 1 / 13;
+
+        &__info {
+          &__modal {
+            right: 0;
+          }
+        }
       }
     }
   }
@@ -237,6 +243,11 @@
         &__info {
           max-width: 264px;
           margin-top: 4px;
+
+          &__modal {
+            right: unset;
+            left: 10px;
+          }
         }
       }
     }

@@ -218,7 +218,9 @@ const VideoNFTs = ({ t, nftData, priceData }) => {
               ref={videoNFTsCarouselInfoLabelRef}
             >
               {t('landing.videoNFTs.carousel.info.label')}
-              <InfoIcon className="IndexPage__video-nfts__carousel-title-and-info__info__icon" />
+              <div className="IndexPage__video-nfts__carousel-title-and-info__info__icon">
+                <InfoIcon />
+              </div>
             </div>
             <div
               role="tooltip"
