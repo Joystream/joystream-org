@@ -251,6 +251,11 @@
 
       &__illustration {
         margin-top: 56px;
+
+        & > div {
+          -webkit-transform: none !important;
+          transform: none !important;
+        }
       }
 
       &__carousel-title {
