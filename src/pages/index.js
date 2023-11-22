@@ -25,12 +25,11 @@ const IndexPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
-  const [data, loading, error] = useAxios('https://status.joystream.org/carousel-data');
-  const [priceData, priceLoading, priceError] = useAxios('https://status.joystream.org/price');
+  const [data, loading, error] = useAxios('http://localhost:8083/landing-page-data');
 
   const updatedPriceData = {
-    price: priceData?.price ?? 0,
-    error: priceError,
+    price: data?.price ?? 0,
+    error: error,
   };
 
   return (
@@ -45,25 +44,25 @@ const IndexPage = () => {
 
       <Video t={t} />
 
-      <Traction t={t} />
+      <Traction t={t} tractionData={data} priceData={updatedPriceData} />
 
-      <Creators t={t} payouts={data?.payouts} priceData={updatedPriceData} />
+      <Creators t={t} creators={data?.carouselData.creators} priceData={updatedPriceData} />
 
-      <Tokenomics t={t} />
+      <Tokenomics t={t} tokenomicsData={data} priceData={updatedPriceData} />
 
       <Ecosystem t={t} />
 
-      <VideoNFTs t={t} nftData={data?.nfts} priceData={updatedPriceData} />
+      <VideoNFTs t={t} nftData={data?.carouselData.nfts} priceData={updatedPriceData} />
 
-      <Payouts t={t} payouts={data?.payouts} priceData={updatedPriceData} />
+      <Payouts t={t} payouts={data?.carouselData.payouts} priceData={updatedPriceData} />
 
       <CreatorTokens t={t} />
 
       <Upcoming t={t} />
 
-      <JoystreamDAO t={t} proposalsData={data?.proposals} />
+      <JoystreamDAO t={t} proposalsData={data?.carouselData.proposals} />
 
-      <AvailableActivities t={t} priceData={updatedPriceData} />
+      <AvailableActivities t={t} budgets={data?.budgets} loading={loading} priceData={updatedPriceData} />
     </BaseLayout>
   );
 };

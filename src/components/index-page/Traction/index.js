@@ -31,7 +31,30 @@ const TractionCard = ({ change, value, infoText, icon }) => {
   );
 };
 
-const Traction = ({ t }) => {
+const parseChangeValue = value => {
+  if (!value) return '0';
+
+  return `${value}`;
+};
+
+const parseMainValue = (value, price = undefined) => {
+  if (!value) return '0';
+
+  if (price && price === 0) {
+    return '0';
+  }
+
+  let options = {};
+  if (price) {
+    value = Math.round(value * price);
+    options = { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 };
+  }
+
+  const intlNumber = new Intl.NumberFormat('en-US', options).formatToParts(value);
+  return intlNumber.map(part => (part.value === ',' ? ' ' : part.value)).join('');
+};
+
+const Traction = ({ tractionData, priceData, t }) => {
   return (
     <div className="IndexPage__traction-wrapper">
       <div className="IndexPage__traction">
@@ -40,17 +63,42 @@ const Traction = ({ t }) => {
           <h2 className="IndexPage__traction__header__title">Growth and Engagement</h2>
         </header>
         <div className="IndexPage__traction__cards">
-          <TractionCard change="12" value="2 134 321" infoText="Videos uploaded" icon={<VideosMetric />} />
           <TractionCard
-            change="5"
-            value="3 545"
+            change={parseChangeValue(tractionData?.numberOfVideosChange)}
+            value={parseMainValue(tractionData?.numberOfVideos)}
+            infoText="Videos uploaded"
+            icon={<VideosMetric />}
+          />
+          <TractionCard
+            change={parseChangeValue(tractionData?.numberOfCommentsAndReactionsChange)}
+            value={parseMainValue(tractionData?.numberOfCommentsAndReactions)}
             infoText="Comments & Reactions"
             icon={<CommentsAndReactionsMetric />}
           />
-          <TractionCard change="7" value="1 530" infoText="Channels" icon={<ChannelsMetric />} />
-          <TractionCard change="5" value="5 432" infoText="All followers" icon={<FollowersMetric />} />
-          <TractionCard change="2" value="954" infoText="Profiles" icon={<ProfilesMetric />} />
-          <TractionCard change="9" value="$25 323" infoText="Creator Rewards" icon={<CreatorRewardsMetric />} />
+          <TractionCard
+            change={parseChangeValue(tractionData?.numberOfChannelsChange)}
+            value={parseMainValue(tractionData?.numberOfChannels)}
+            infoText="Channels"
+            icon={<ChannelsMetric />}
+          />
+          <TractionCard
+            change={parseChangeValue(tractionData?.numberOfFollowersChange)}
+            value={parseMainValue(tractionData?.numberOfFollowers)}
+            infoText="All followers"
+            icon={<FollowersMetric />}
+          />
+          <TractionCard
+            change={parseChangeValue(tractionData?.numberOfMembershipsChange)}
+            value={parseMainValue(tractionData?.numberOfMemberships)}
+            infoText="Profiles"
+            icon={<ProfilesMetric />}
+          />
+          <TractionCard
+            change={parseChangeValue(tractionData?.totalPayoutsChange)}
+            value={parseMainValue(tractionData?.totalPayouts, priceData.price)}
+            infoText="Creator Rewards"
+            icon={<CreatorRewardsMetric />}
+          />
         </div>
       </div>
     </div>

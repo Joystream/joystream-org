@@ -15,16 +15,19 @@ import './style.scss';
 
 const CarouselItem = ({
   img,
-  joyAmount,
+  joyAmount = undefined,
   priceData,
   channelName,
-  time,
   setIsCarouselRunning,
   channelUrl,
   followersCount,
 }) => {
   const [imgSrc, onError] = useImageFallback(img, PlaceholderIcon);
-  let usdAmount = `$${(priceData.price * joyAmount).toFixed(2)}`;
+  let usdAmount = `$0`;
+
+  if (priceData.price && joyAmount !== undefined) {
+    usdAmount = `$${Math.round(priceData.price * joyAmount)}`;
+  }
 
   if (priceData.error) {
     usdAmount = 'Error';
@@ -43,11 +46,11 @@ const CarouselItem = ({
           </div>
           <div className="IndexPage__creators__item__channel__info">
             <div className="IndexPage__creators__item__channel__info__name">{channelName}</div>
-            <div className="IndexPage__creators__item__channel__info__followers">2 560 followers</div>
+            <div className="IndexPage__creators__item__channel__info__followers">{followersCount} followers</div>
           </div>
         </div>
         <div className="IndexPage__creators__item__earned">Earned:</div>
-        <div className="IndexPage__creators__item__price">$120</div>
+        <div className="IndexPage__creators__item__price">{usdAmount}</div>
       </div>
     </a>
   );
@@ -56,16 +59,16 @@ const CarouselItem = ({
 const Carousel = ({ itemsData, priceData, t }) => {
   const [isCarouselRunning, setIsCarouselRunning] = useState(false);
 
-  const items = itemsData.map(({ img, joyAmount, channelName, time, channelUrl }) => (
+  const items = itemsData.map(({ img, amount, title, channelUrl, followsNum }) => (
     <CarouselItem
-      key={`${joyAmount}-${channelName}-${time}`}
+      key={`${amount}-${title}`}
       img={img}
-      joyAmount={joyAmount}
+      joyAmount={amount}
       priceData={priceData}
-      channelName={channelName}
-      time={time}
+      channelName={title}
       setIsCarouselRunning={setIsCarouselRunning}
       channelUrl={channelUrl}
+      followersCount={followsNum}
       t={t}
     />
   ));
@@ -91,7 +94,7 @@ const Carousel = ({ itemsData, priceData, t }) => {
   );
 };
 
-const Creators = ({ payouts, t, priceData }) => {
+const Creators = ({ creators, t, priceData }) => {
   const { language } = useI18next();
   const payoutsCarouselInfoLabelRef = useRef();
   useRemoveElementFocusOnKeydown(payoutsCarouselInfoLabelRef, ['Escape']);
@@ -125,11 +128,11 @@ const Creators = ({ payouts, t, priceData }) => {
         </div>
       </div>
       <div className="IndexPage__creators__items-wrapper">
-        {payouts && payouts.length > 0 ? (
+        {creators && creators.length > 0 ? (
           <Carousel
-            itemsData={payouts?.map(({ createdAt, imageUrl, ...rest }) => ({
+            itemsData={creators?.map(({ imageUrl, ...rest }) => ({
               img: imageUrl,
-              time: parseDateToRelativeTime(createdAt, language),
+              // time: parseDateToRelativeTime(createdAt, language),
               ...rest,
             }))}
             priceData={priceData}

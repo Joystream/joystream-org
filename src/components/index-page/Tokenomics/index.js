@@ -27,7 +27,24 @@ const Container = ({ title, type, children }) => {
   );
 };
 
-const Tokenomics = ({ t }) => {
+const parseValue = (value, price = undefined) => {
+  if (!value) return '0';
+
+  if (price && price === 0) {
+    return '0';
+  }
+
+  let options = {};
+  if (price) {
+    value = Math.round(value * price);
+    options = { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 };
+  }
+
+  const intlNumber = new Intl.NumberFormat('en-US', options).formatToParts(value);
+  return intlNumber.map(part => (part.value === ',' ? ' ' : part.value)).join('');
+};
+
+const Tokenomics = ({ tokenomicsData, priceData, t }) => {
   return (
     <section className="IndexPage__tokenomics-wrapper">
       <div className="IndexPage__tokenomics">
@@ -41,7 +58,9 @@ const Tokenomics = ({ t }) => {
             type="price"
             children={
               <div className="IndexPage__tokenomics__metrics__container__content__price">
-                <p className="IndexPage__tokenomics__metrics__container__content__price__value">$0.005452</p>
+                <p className="IndexPage__tokenomics__metrics__container__content__price__value">
+                  ${priceData.price.toFixed(6)}
+                </p>
                 <p className="IndexPage__tokenomics__metrics__container__content__price__change">+2% Last week</p>
                 <GraphIllustration className="IndexPage__tokenomics__metrics__container__content__price__graph" />
               </div>
@@ -50,22 +69,38 @@ const Tokenomics = ({ t }) => {
           <Container
             title="Market cap"
             type="market-cap"
-            children={<p className="IndexPage__tokenomics__metrics__container__content__simple-value">1 001 002 450</p>}
+            children={
+              <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
+                {parseValue(tokenomicsData?.circulatingSupply, priceData.price)}
+              </p>
+            }
           />
           <Container
             title="Total supply"
             type="total-supply"
-            children={<p className="IndexPage__tokenomics__metrics__container__content__simple-value">1 022 914 460</p>}
+            children={
+              <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
+                {parseValue(tokenomicsData?.totalSupply)}
+              </p>
+            }
           />
           <Container
             title="Circulating supply"
             type="circulating-supply"
-            children={<p className="IndexPage__tokenomics__metrics__container__content__simple-value">284 999 234</p>}
+            children={
+              <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
+                {parseValue(tokenomicsData?.circulatingSupply)}
+              </p>
+            }
           />
           <Container
             title="FDV"
             type="fdv"
-            children={<p className="IndexPage__tokenomics__metrics__container__content__simple-value">$5 577 184</p>}
+            children={
+              <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
+                {parseValue(tokenomicsData?.totalSupply, priceData.price)}
+              </p>
+            }
           />
         </div>
       </div>

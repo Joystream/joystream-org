@@ -142,8 +142,7 @@ const Activity = ({ Icon, title, amount, priceData, isWeekly, icons, isLoading, 
   );
 };
 
-const AvailableActivities = ({ priceData, t }) => {
-  const [data, loading, error] = useAxios('https://status.joystream.org/budgets');
+const AvailableActivities = ({ budgets, loading, priceData, t }) => {
   const [numberOfRenderedActivities, setNumberOfRenderedActivities] = useState(WORKER_ACTIVITIES.length);
   // const { width } = useWindowDimensions();
 
@@ -168,11 +167,11 @@ const AvailableActivities = ({ priceData, t }) => {
                 key={activityKey}
                 Icon={WORKER_ACTIVITIES[activityKey].icon}
                 title={t(WORKER_ACTIVITIES[activityKey].title)}
-                amount={data?.[activityKey]?.weeklyEarnings}
+                amount={budgets?.[activityKey]?.weeklyEarnings}
                 priceData={priceData}
                 isWeekly={true}
-                icons={data?.[activityKey]?.icons}
-                numberOfWorkers={data?.[activityKey]?.numberOfWorkers}
+                icons={budgets?.[activityKey]?.icons}
+                numberOfWorkers={budgets?.[activityKey]?.numberOfWorkers}
                 isLoading={loading}
                 t={t}
               />
