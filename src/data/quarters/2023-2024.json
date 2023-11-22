@@ -33,11 +33,6 @@
           },
           {
             "icon": "gear",
-            "title": "Infographics & Educational Content",
-            "Content": "Design & creation of infographics and educational content to provide easier and more varied ways for new users to learn about the platform."
-          },
-          {
-            "icon": "gear",
             "title": "Stablecoin Treasury",
             "Content": "Building a stablecoin treasury that is managed by a multisig group of representatives that Joystream’s council have elected. This stablecoin treasury will allow for the DAO to pay 3rd parties for infrastructure services and exchange listings and more."
           },
