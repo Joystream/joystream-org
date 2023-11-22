@@ -69,6 +69,7 @@
       }
 
       &__container {
+        height: 100%;
         padding: 32px;
         background: rgba(188, 213, 250, .08);
         background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), .08, rgba(17, 19, 22, 1));
@@ -155,8 +156,9 @@
             }
 
             &__graph {
-              width: 100%;
-              margin-top: 17.5px;
+              width: calc(100% + 64px);
+              height: 120px;
+              margin: 17.5px -32px -32px -32px;
             }
           }
         }

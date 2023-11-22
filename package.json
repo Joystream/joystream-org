@@ -81,7 +81,8 @@
     "stylelint-scss": "^3.8.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "typewriter-effect": "^2.19.0",
-    "url-loader": "^2.1.0"
+    "url-loader": "^2.1.0",
+    "victory": "^36.6.12"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
