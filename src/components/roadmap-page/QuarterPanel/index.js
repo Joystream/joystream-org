@@ -9,10 +9,12 @@ import scrollToActiveElement from '../../../utils/scrollToActiveElement';
 import { iconMap } from '../../../data/quarters';
 
 export let offset = 300;
+let PANEL_HIGHLIGHT_OFFSET = 60;
 
 function QuarterPanel({ data, glossaryPanel, t }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
+  const [isNextItemActive, setIsNextItemActive] = useState(false);
   const [dotActiveState, setDotActiveState] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -62,11 +64,14 @@ function QuarterPanel({ data, glossaryPanel, t }) {
 
   if (isMobile) {
     offset = 200;
+    // PANEL_HIGHLIGHT_OFFSET = 30;
   } else {
     offset = 300;
+    PANEL_HIGHLIGHT_OFFSET = 60;
   }
 
-  const activeItemsData = useRef([false, 0]);
+  // The following useRef represents: [activeDot, dotActiveState, activeItem]
+  const activeItemsData = useRef([false, false, 0]);
   const activeTextIndex = useRef(0);
 
   useEffect(() => {
@@ -78,11 +83,21 @@ function QuarterPanel({ data, glossaryPanel, t }) {
         const itemTop = item.offsetTop;
         const itemHight = item.offsetHeight;
         if (index === 0 && scroll < itemTop - offset) {
-          activeItemsData.current = [false, activeItemsData.current[1]];
+          activeItemsData.current = [false, false, activeItemsData.current[2]];
         } else if (index === timelineItems.length - 1 && scroll > itemTop - offset + itemHight - MOVING_CIRCLE_HEIGHT) {
-          activeItemsData.current = [false, activeItemsData.current[1]];
+          activeItemsData.current = [false, false, activeItemsData.current[2]];
         } else if (scroll > itemTop - offset) {
-          activeItemsData.current = [true, index];
+          if (timelineItems.length - 1 > index) {
+            if (timelineItems[index + 1].offsetTop - offset - PANEL_HIGHLIGHT_OFFSET < scroll) {
+              activeItemsData.current = [true, activeItemsData.current[1], index];
+            }
+
+            if (timelineItems[index + 1].offsetTop - offset - PANEL_HIGHLIGHT_OFFSET > scroll) {
+              activeItemsData.current = [false, activeItemsData.current[1], index];
+            }
+          }
+
+          activeItemsData.current = [activeItemsData.current[0], true, index];
         }
       });
 
@@ -95,8 +110,9 @@ function QuarterPanel({ data, glossaryPanel, t }) {
         }
       });
 
-      setDotActiveState(activeItemsData.current[0]);
-      setActiveItem(activeItemsData.current[1]);
+      setIsNextItemActive(activeItemsData.current[0]);
+      setDotActiveState(activeItemsData.current[1]);
+      setActiveItem(activeItemsData.current[2]);
       setActiveText(activeTextIndex.current);
 
       if (
@@ -164,11 +180,16 @@ function QuarterPanel({ data, glossaryPanel, t }) {
   }, 0);
 
   const isPanelAndRelatedActive = milestone =>
-    (milestone.generalIndex === activeItem && dotActiveState) ||
-    (activeItem === 0 && !dotActiveState && milestone.generalIndex === 0);
+    (milestone?.generalIndex === activeItem && dotActiveState) ||
+    (activeItem === 0 && !dotActiveState && milestone?.generalIndex === 0);
 
-  console.log('RENDER');
-  console.log('====================================');
+  const isPanelActive = (allMilestones, milestoneIndex, currentMilestone) =>
+    (isPanelAndRelatedActive(currentMilestone) && !isNextItemActive) ||
+    (isPanelAndRelatedActive(allMilestones[milestoneIndex - 1]) && isNextItemActive);
+
+  console.log(numberOfItems, activeItem, isNextItemActive);
+  // numberOfItems === activeItem ||
+  // (activeItem >= 0 && !dotActiveState),
 
   return (
     <div>
@@ -208,18 +229,30 @@ function QuarterPanel({ data, glossaryPanel, t }) {
 
                     <div
                       className={cn('QuarterPanel__main__panel', {
-                        'QuarterPanel__main__panel--active': isPanelAndRelatedActive(milestone),
+                        'QuarterPanel__main__panel--active': isPanelActive(
+                          res.deliveryMilestones,
+                          deliveryMilestoneIndex,
+                          milestone
+                        ),
                       })}
                     >
                       <div className="QuarterPanel__main__link">
                         <div
                           className={cn('QuarterPanel__main__playIcon', {
-                            'QuarterPanel__main__playIcon--active': isPanelAndRelatedActive(milestone),
+                            'QuarterPanel__main__playIcon--active': isPanelActive(
+                              res.deliveryMilestones,
+                              deliveryMilestoneIndex,
+                              milestone
+                            ),
                           })}
                         >
                           <img
                             className={cn('mileston__icon', {
-                              'mileston__icon--active': isPanelAndRelatedActive(milestone),
+                              'mileston__icon--active': isPanelActive(
+                                res.deliveryMilestones,
+                                deliveryMilestoneIndex,
+                                milestone
+                              ),
                             })}
                             src={iconMap[milestone.icon]}
                             alt="Mileston icon"
@@ -273,7 +306,10 @@ function QuarterPanel({ data, glossaryPanel, t }) {
           </div>
           <div
             className={cn('QuarterPanel__main__panel', {
-              'QuarterPanel__main__panel--active': numberOfItems === activeItem || (activeItem >= 0 && !dotActiveState),
+              'QuarterPanel__main__panel--active':
+                (numberOfItems === activeItem + 1 && isNextItemActive) ||
+                numberOfItems === activeItem ||
+                (activeItem >= 0 && !dotActiveState),
             })}
           >
             <div className="QuarterPanel__main__panel__content">{t('roadmap.morePlans')}</div>
