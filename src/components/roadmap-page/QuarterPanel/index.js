@@ -64,13 +64,10 @@ function QuarterPanel({ data, glossaryPanel, t }) {
 
   if (isMobile) {
     offset = 200;
-    // PANEL_HIGHLIGHT_OFFSET = 30;
   } else {
     offset = 300;
-    PANEL_HIGHLIGHT_OFFSET = 60;
   }
 
-  // The following useRef represents: [activeDot, dotActiveState, activeItem]
   const activeItemsData = useRef([false, false, 0]);
   const activeTextIndex = useRef(0);
 
@@ -105,7 +102,6 @@ function QuarterPanel({ data, glossaryPanel, t }) {
       timelineText.forEach((item, index) => {
         const itemTop = item.offsetTop;
         if (scroll > itemTop - offset) {
-          // setActiveText(index);
           activeTextIndex.current = index;
         }
       });
@@ -188,8 +184,6 @@ function QuarterPanel({ data, glossaryPanel, t }) {
     (isPanelAndRelatedActive(allMilestones[milestoneIndex - 1]) && isNextItemActive);
 
   console.log(numberOfItems, activeItem, isNextItemActive);
-  // numberOfItems === activeItem ||
-  // (activeItem >= 0 && !dotActiveState),
 
   return (
     <div>
