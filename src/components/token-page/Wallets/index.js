@@ -2,20 +2,22 @@ import React from 'react';
 
 import ArrowLink from '../../ArrowLink';
 
-import PolkadotIcon from '../../../assets/images/token/polkadot-wallet.webp';
+import NovaIcon from '../../../assets/images/token/nova-wallet.webp';
 import SubWalletIcon from '../../../assets/images/token/sub-wallet.webp';
 import TalismanIcon from '../../../assets/images/token/talisman.webp';
 import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 
 import './style.scss';
 
-const WalletSection = ({ walletIcon, walletName, walletLink, t }) => {
+const WalletSection = ({ walletIcon, walletName, walletLink, platforms, t }) => {
   return (
     <div className="TokenPage__wallets__item">
       <div className="TokenPage__wallets__item__image-wrapper">
         <img src={walletIcon} className="TokenPage__wallets__item__image" alt="" />
       </div>
       <p className="TokenPage__wallets__item__name">{walletName}</p>
+      <p className="TokenPage__wallets__item__platforms-title">{t('token.wallets.platforms')}</p>
+      <p className="TokenPage__wallets__item__platforms">{platforms}</p>
       <ArrowLink href={walletLink} className="TokenPage__wallets__item__link" text={t('token.wallets.learnMore')} />
     </div>
   );
@@ -33,21 +35,24 @@ const Wallets = ({ t }) => {
 
         <div className="TokenPage__wallets__items">
           <WalletSection
-            walletIcon={PolkadotIcon}
-            walletName={t('token.wallets.polkadot')}
-            walletLink="https://polkadot.js.org/extension/"
+            walletIcon={NovaIcon}
+            walletName={t('token.wallets.nova')}
+            walletLink="https://novawallet.io/"
+            platforms={t('token.wallets.novaPlatforms')}
             t={t}
           />
           <WalletSection
             walletIcon={TalismanIcon}
             walletName={t('token.wallets.talisman')}
             walletLink="https://www.talisman.xyz/"
+            platforms={t('token.wallets.talismanPlatforms')}
             t={t}
           />
           <WalletSection
             walletIcon={SubWalletIcon}
             walletName={t('token.wallets.subwallet')}
             walletLink="https://subwallet.app/"
+            platforms={t('token.wallets.subwalletPlatforms')}
             t={t}
           />
         </div>
