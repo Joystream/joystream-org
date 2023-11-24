@@ -33,28 +33,18 @@
           },
           {
             "icon": "gear",
-            "title": "Infographics & Educational Content",
-            "Content": "Design & creation of infographics and educational content to provide easier and more varied ways for new users to learn about the platform."
-          },
-          {
-            "icon": "gear",
-            "title": "Discord Tip Bot",
-            "Content": "Discord bot that will enable users within the Joystream Discord community to send tips."
-          },
-          {
-            "icon": "gear",
             "title": "Stablecoin Treasury",
-            "Content": "Building a stablecoin treasury that is managed by a multisig group of representatives that Joystream’s council have elected."
+            "Content": "Building a stablecoin treasury that is managed by a multisig group of representatives that Joystream’s council have elected. This stablecoin treasury will allow for the DAO to pay 3rd parties for infrastructure services and exchange listings and more."
           },
           {
             "icon": "gear",
             "title": "Bounties Program",
-            "Content": "Creation and management of bounties encompassing a variety of interest areas to get new users involved with the project."
+            "Content": "Creation and management of bounties encompassing a variety of interest areas such as marketing, development, research and range in scope and are a great way to get new users involved with the project."
           },
           {
             "icon": "gear",
             "title": "Creator Ambassador Program",
-            "Content": "Creation and management of bounties encompassing a variety of interest areas to get new users involved with the project."
+            "Content": "The creation and management of the Ambassador program will empower influencers to leverage their platforms, amplifying awareness about the Joystream protocol, and driving engagement and adoption"
           },
           {
             "icon": "gear",
@@ -109,13 +99,8 @@
           },
           {
             "icon": "gear",
-            "title": "Subscan Block Explorer Improvements - V1",
-            "Content": "The first set of improvements to increase the functionality of our block explorer to include data from our governance and working group modules"
-          },
-          {
-            "icon": "gear",
             "title": "Pioneer Financials Page - V1",
-            "Content": "A new module for Pioneer that will show the current financials of the DAO, which will include spending and accounting for the council and all working groups."
+            "Content": "A new module for Pioneer that will show the current financials of the DAO, which will show data for spending and accounting for the council and all working groups."
           },
           {
             "icon": "gear",
@@ -212,7 +197,7 @@
           {
             "icon": "gear",
             "title": "Bounties Module",
-            "Content": "Development & deployment of an on-chain bounty management module that will enable bounties to be posted and crowdfunded by users including oracle selection and reward splitting. The council will also have the unique feature of being able to fund bounties that it selects for being of benefit to the platform."
+            "Content": "Development & deployment of an on-chain bounty management module that will enable bounties to be posted and crowdfunded by users including oracle selection and reward splitting. The council will also have the unique feature of being able to fund bounties that it selects for being of benefit to the platform via the council treasury."
           },
           {
             "icon": "gear",
@@ -249,11 +234,6 @@
             "icon": "monitor",
             "title": "Transcoding & Adaptive Streaming",
             "Content": "Users access content across a wide range of browser, devices, applications and also under heterogeneous and dynamic bandwidth constraints. As it stands, only a single version of each media asset is represented in our metadata standards and backend node software. This means have now way to represent a broad range of encodings and resolutions for media assets, let alone produce all of these. Introducing server-side transcoding in Orion will unlock this, and many other future benefits that come from server-side post-processing (thumbnail extractions, auto-subtitling, etc.). It will also unlock the ability to do adaptive streaming, where a user with a dynamic connection can more quickly see asset resolve and play, and also be able to watch videos under suboptimal circumstances."
-          },
-          {
-            "icon": "gear",
-            "title": "Video Communities / No-tech App creation",
-            "Content": "This feature will allow for users to more easily create app-like experiences on the Joystream platform and not require specialist server or developer expertise."
           },
           {
             "icon": "gear",
