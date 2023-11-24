@@ -155,10 +155,32 @@
               color: #b5c1c9;
             }
 
-            &__graph {
-              width: calc(100% + 64px);
+            &__graph-wrapper {
+              width: 100%;
               height: 120px;
-              margin: 17.5px -32px -32px -32px;
+              margin-top: 17.5px;
+            }
+
+            &__graph {
+              width: 100%;
+              height: 100%;
+              // margin: 17.5px -32px -32px -32px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &__tokenomics {
+      &__metrics {
+        &__container {
+          &__content {
+            &__price {
+              &__graph-wrapper {
+                height: 90px;
+              }
             }
           }
         }
@@ -187,6 +209,12 @@
 
             &__price__value {
               @include h700;
+            }
+
+            &__price {
+              &__graph-wrapper {
+                height: 120px;
+              }
             }
           }
         }
@@ -237,6 +265,16 @@
           &--fdv {
             grid-column: 2 / 3;
             grid-row: 3 / 4;
+          }
+        }
+
+        &__container {
+          &__content {
+            &__price {
+              &__graph-wrapper {
+                height: 90px;
+              }
+            }
           }
         }
       }

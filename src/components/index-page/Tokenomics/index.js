@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { VictoryChart, VictoryTheme, VictoryLine } from 'victory';
 // import { Trans } from 'react-i18next';
 
@@ -46,7 +46,54 @@ const parseValue = (value, price = undefined) => {
   return intlNumber.map(part => (part.value === ',' ? ' ' : part.value)).join('');
 };
 
+const Graph = ({ data }) => {
+  const graphWrapperRef = useRef(null);
+  const [{ width, height }, setDimensions] = useState({ width: 600, height: 120 });
+  const updateDimensions = () => {
+    if (graphWrapperRef.current) {
+      setDimensions({
+        width: graphWrapperRef.current.offsetWidth,
+        height: graphWrapperRef.current.offsetHeight,
+      });
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateDimensions);
+
+    updateDimensions();
+    return () => {
+      window.removeEventListener('resize', updateDimensions);
+    };
+  }, [graphWrapperRef.current]);
+
+  return (
+    <div ref={graphWrapperRef} className="IndexPage__tokenomics__metrics__container__content__price__graph-wrapper">
+      <div className="IndexPage__tokenomics__metrics__container__content__price__graph">
+        <svg viewBox={'0 0' + ' ' + width + ' ' + height} preserveAspectRatio="none" width="100%">
+          <VictoryLine
+            height={height}
+            width={width}
+            style={{
+              data: { stroke: 'rgba(12, 152, 70, 1)', strokeWidth: '4px' },
+            }}
+            domainPadding={{ x: [0, 0], y: [2, 2] }}
+            data={data}
+            padding={{ top: 0, bottom: 0, left: 0, right: 0 }}
+            standalone={false}
+          />
+        </svg>
+      </div>
+    </div>
+  );
+};
+
 const Tokenomics = ({ tokenomicsData, priceData, t }) => {
+  const graphData = tokenomicsData?.tokenPrices
+    ? tokenomicsData.tokenPrices.map((item, index) => ({ x: index + 1, y: Number(item.price) }))
+    : [{ x: 0, y: 0 }];
+  const lastWeekChange = tokenomicsData?.lastWeekChange ?? 0;
+
   return (
     <section className="IndexPage__tokenomics-wrapper">
       <div className="IndexPage__tokenomics">
@@ -63,43 +110,10 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
                 <p className="IndexPage__tokenomics__metrics__container__content__price__value">
                   ${priceData.price.toFixed(6)}
                 </p>
-                <p className="IndexPage__tokenomics__metrics__container__content__price__change">+2% Last week</p>
-                {/* <GraphIllustration className="IndexPage__tokenomics__metrics__container__content__price__graph" /> */}
-                <div className="IndexPage__tokenomics__metrics__container__content__price__graph">
-                  <VictoryLine
-                    height={220}
-                    width={600}
-                    style={{
-                      data: { stroke: 'rgba(12, 152, 70, 1)', strokeWidth: '4px' },
-                    }}
-                    domainPadding={{ y: [2, 2] }}
-                    data={[
-                      { x: 1, y: 0.0533692591 },
-                      { x: 2, y: 0.0544436229 },
-                      { x: 3, y: 0.0530284464 },
-                      { x: 4, y: 0.0545367403 },
-                      { x: 5, y: 0.0540234854 },
-                      { x: 6, y: 0.0486381801 },
-                      { x: 7, y: 0.0455625053 },
-                      { x: 8, y: 0.0459339375 },
-                      { x: 9, y: 0.0470466089 },
-                      { x: 10, y: 0.0469815991 },
-                      { x: 11, y: 0.044788736 },
-                      { x: 12, y: 0.0441737527 },
-                      { x: 13, y: 0.0454796688 },
-                      { x: 14, y: 0.046046341 },
-                      { x: 15, y: 0.0465706289 },
-                      { x: 16, y: 0.0468192073 },
-                      { x: 17, y: 0.0452967397 },
-                      { x: 18, y: 0.0457203189 },
-                      { x: 19, y: 0.0447609392 },
-                      { x: 20, y: 0.04371067 },
-                      { x: 21, y: 0.0422706662 },
-                      { x: 22, y: 0.042132806 },
-                      { x: 23, y: 0.0418618022 },
-                    ]}
-                  />
-                </div>
+                <p className="IndexPage__tokenomics__metrics__container__content__price__change">
+                  {Math.round(lastWeekChange)}% Last week
+                </p>
+                <Graph data={graphData} />
               </div>
             }
           />
