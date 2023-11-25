@@ -58,28 +58,73 @@ const CarouselPlaceholder = () => (
   </div>
 );
 
+const CarouselControl = ({ scroll, isActive }) => {
+  return (
+    <div
+      role="presentation"
+      onClick={() => scroll()}
+      className={cn('IndexPage__ecosystem__apps__carousel-controls__item', {
+        'IndexPage__ecosystem__apps__carousel-controls__item--active': isActive,
+      })}
+    ></div>
+  );
+};
+
 const Carousel = ({ t }) => {
-  const MAX_SCROLL = 374;
-  const MAX_CLIENT_WIDTH = 1142;
-  const [activeCarouselControlItem, setActiveCarouselControlItem] = useState('left');
+  const NUMBER_OF_CONTROLS = 5;
+  const MAX_CAROUSEL_WIDTH = 1516;
+  const BASE_SCROLL_AMOUNT = MAX_CAROUSEL_WIDTH / NUMBER_OF_CONTROLS;
+  const [activeCarouselControlItem, setActiveCarouselControlItem] = useState(0);
+  const [numberOfControlItems, setNumberOfControlItems] = useState(0);
   const carouselRef = useRef(null);
 
-  const getScrollAmount = ref => {
-    // Care that ref current check is made before calling function
-    const offset = MAX_CLIENT_WIDTH - ref.current.clientWidth;
+  useEffect(() => {
+    function handleResize() {
+      if (carouselRef.current) {
+        const scrollableAmount = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+        const timesFits = Math.ceil(scrollableAmount / BASE_SCROLL_AMOUNT);
 
-    return MAX_SCROLL + offset;
-  };
+        console.log({
+          scrollableAmount,
+          timesFits,
+          BASE_SCROLL_AMOUNT,
+        });
 
-  const scroll = direction => {
+        setNumberOfControlItems(timesFits + 1);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const scroll = index => {
     if (carouselRef.current) {
+      const currentScrollPosition = carouselRef.current.scrollLeft;
+      const newScrollPosition = BASE_SCROLL_AMOUNT * index;
+
       carouselRef.current.scrollBy({
-        left: {
-          left: -getScrollAmount(carouselRef),
-          right: getScrollAmount(carouselRef),
-        }[direction],
+        left: Math.floor(newScrollPosition - currentScrollPosition),
         behavior: 'smooth',
       });
+    }
+  };
+
+  const getCarouselItemByScrollPosition = () => {
+    const currentScrollPosition = carouselRef.current.scrollLeft;
+
+    if (currentScrollPosition === 0) return 0;
+
+    for (let i = 0; i < NUMBER_OF_CONTROLS - 1; i++) {
+      const lowerAmount = BASE_SCROLL_AMOUNT * i;
+      const upperAmount = BASE_SCROLL_AMOUNT * (i + 1);
+
+      if (currentScrollPosition >= lowerAmount && currentScrollPosition < upperAmount) {
+        return i + 1;
+      }
     }
   };
 
@@ -88,23 +133,7 @@ const Carousel = ({ t }) => {
       <div
         onScroll={() => {
           if (carouselRef.current) {
-            const scrollLeft = carouselRef.current.scrollLeft;
-            const scrollTop = carouselRef.current.scrollTop;
-            const scrollWidth = carouselRef.current.scrollWidth;
-            const scrollHeight = carouselRef.current.scrollHeight;
-            const clientWidth = carouselRef.current.clientWidth;
-            const clientHeight = carouselRef.current.clientHeight;
-            console.log({
-              scrollLeft,
-              scrollTop,
-              scrollWidth,
-              scrollHeight,
-              clientWidth,
-              clientHeight,
-            });
-            setActiveCarouselControlItem(
-              carouselRef.current.scrollLeft === getScrollAmount(carouselRef) ? 'right' : 'left'
-            );
+            setActiveCarouselControlItem(getCarouselItemByScrollPosition());
           }
         }}
         ref={carouselRef}
@@ -152,20 +181,14 @@ const Carousel = ({ t }) => {
         />
       </div>
       <div className="IndexPage__ecosystem__apps__carousel-controls">
-        <div
-          role="presentation"
-          onClick={() => scroll('left')}
-          className={cn('IndexPage__ecosystem__apps__carousel-controls__item', {
-            'IndexPage__ecosystem__apps__carousel-controls__item--active': activeCarouselControlItem === 'left',
-          })}
-        ></div>
-        <div
-          role="presentation"
-          onClick={() => scroll('right')}
-          className={cn('IndexPage__ecosystem__apps__carousel-controls__item', {
-            'IndexPage__ecosystem__apps__carousel-controls__item--active': activeCarouselControlItem === 'right',
-          })}
-        ></div>
+        {Array.from({ length: numberOfControlItems }).map((_, index) => (
+          <CarouselControl
+            key={index}
+            currentActiveItem={activeCarouselControlItem}
+            scroll={() => scroll(index)}
+            isActive={index === activeCarouselControlItem}
+          />
+        ))}
       </div>
     </>
   );

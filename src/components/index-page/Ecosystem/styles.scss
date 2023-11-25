@@ -638,6 +638,10 @@
           &__about {
             max-width: 100%;
             padding: 24px 16px;
+
+            &__section-title {
+              margin-top: 40px;
+            }
           }
 
           &__visual {
