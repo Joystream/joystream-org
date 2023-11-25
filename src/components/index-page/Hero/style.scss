@@ -184,6 +184,15 @@ $animation-name: null;
     }
   }
 
+  @media (max-width: 1500px) {
+    &__hero {
+      &__title {
+        max-width: 950px;
+        margin: 0 auto;
+      }
+    }
+  }
+
   @media (max-width: 1440px) {
     &__hero-animation-wrapper {
       min-height: 1065px;
@@ -289,6 +298,7 @@ $animation-name: null;
   @media (max-width: 425px) {
     &__hero-animation-wrapper {
       min-height: 574px;
+      border-radius: 24px;
     }
 
     &__hero {

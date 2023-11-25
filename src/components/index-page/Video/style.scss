@@ -164,10 +164,6 @@
 
       &__player {
         margin-top: 48px;
-
-        &__play-button {
-          transform: scale(.765);
-        }
       }
     }
   }
@@ -176,10 +172,6 @@
     &__video {
       &__title {
         @include h500;
-      }
-
-      &__player__play-button {
-        transform: scale(.6525);
       }
     }
   }
