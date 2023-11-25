@@ -85,6 +85,7 @@ $animation-name: null;
     }
 
     &__typewriter-cursor {
+      font-weight: 400;
       color: #6c6cff;
       animation: animateTextCaret 1s ease-out;
       animation-iteration-count: infinite;
@@ -176,7 +177,7 @@ $animation-name: null;
     }
   }
 
-  @media (min-width: 1920px) {
+  @media (min-width: 1440px) {
     &__hero {
       max-width: 1440px;
       margin: 0 auto;

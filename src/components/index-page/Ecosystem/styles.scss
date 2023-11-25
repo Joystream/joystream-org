@@ -595,15 +595,6 @@
         &__steps {
           &__item-wrapper {
             max-height: 316px;
-
-            &:nth-child(2),
-            &:nth-child(4) {
-              max-height: 292px;
-
-              & > div {
-                height: 292px;
-              }
-            }
           }
 
           &__item {
