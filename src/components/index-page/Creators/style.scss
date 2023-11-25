@@ -252,4 +252,10 @@
       }
     }
   }
+
+  @media (max-width: 425px) {
+    &__creators-wrapper {
+      padding-bottom: 64px;
+    }
+  }
 }

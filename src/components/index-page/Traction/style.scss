@@ -3,7 +3,7 @@
 
 .IndexPage {
   &__traction-wrapper {
-    padding: 96px 32px;
+    padding: 96px 32px 0 32px;
     background-color: black;
   }
 
@@ -162,6 +162,7 @@
       }
 
       &__cards {
+        max-height: 856px;
         grid-column: 1 / 13;
       }
 
@@ -191,7 +192,7 @@
 
   @media (max-width: 1024px) {
     &__traction-wrapper {
-      padding: 64px 16px 56px 16px;
+      padding: 64px 16px 0 16px;
     }
 
     &__traction {
@@ -239,10 +240,6 @@
   }
 
   @media (max-width: 768px) {
-    &__traction-wrapper {
-      padding-bottom: 48px;
-    }
-
     &__traction {
       &__header {
         grid-column: 1 / 13;
