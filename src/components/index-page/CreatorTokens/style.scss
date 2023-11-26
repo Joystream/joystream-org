@@ -155,18 +155,7 @@
         &__illustration {
           position: relative;
           width: 100%;
-          height: 360px;
           overflow: hidden;
-
-          &__image {
-            position: absolute;
-            right: -50%;
-            left: -50%;
-            width: 605px;
-            min-width: 605px;
-            margin: auto;
-            inset: 0;
-          }
         }
 
         &__content {
@@ -226,15 +215,16 @@
       }
 
       &__grid-item {
-        max-width: 736px;
-
         &__illustration {
+          height: 360px;
+
           &__image {
             position: absolute;
             top: -50%;
             bottom: -50%;
             width: 100%;
             min-width: unset;
+            margin: auto;
             inset: 0;
           }
         }

@@ -594,12 +594,15 @@
         }
 
         &__steps {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+
           &__item-wrapper {
             max-height: 316px;
           }
 
           &__item {
-            width: 222px;
+            width: 100%;
             height: 316px;
           }
         }
