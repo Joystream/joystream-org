@@ -72,7 +72,7 @@ const CarouselControl = ({ scroll, isActive }) => {
 
 const Carousel = ({ t }) => {
   const NUMBER_OF_CONTROLS = 5;
-  const MAX_CAROUSEL_WIDTH = 1516;
+  let MAX_CAROUSEL_WIDTH = 1516;
   const BASE_SCROLL_AMOUNT = MAX_CAROUSEL_WIDTH / NUMBER_OF_CONTROLS;
   const [activeCarouselControlItem, setActiveCarouselControlItem] = useState(0);
   const [numberOfControlItems, setNumberOfControlItems] = useState(0);
@@ -80,6 +80,10 @@ const Carousel = ({ t }) => {
 
   useEffect(() => {
     function handleResize() {
+      if (typeof window !== undefined && window.innerWidth < 1024) {
+        MAX_CAROUSEL_WIDTH = 1484;
+      }
+
       if (carouselRef.current) {
         const scrollableAmount = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
         const timesFits = Math.ceil(scrollableAmount / BASE_SCROLL_AMOUNT);
