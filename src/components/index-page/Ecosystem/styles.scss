@@ -339,7 +339,6 @@
     }
 
     &__developers {
-      max-width: 1142px;
       margin: 0 auto;
       margin-top: 96px;
       grid-column: 2 / 12;
@@ -563,14 +562,16 @@
       }
 
       &__developers {
-        max-width: 960px;
+        width: 100%;
         grid-column: 1 / 13;
 
         &__main {
           overflow: hidden;
-          grid-template-columns: 468px 584px;
+          grid-template-columns: minmax(468px, 1fr) 1fr;
 
           &__visual {
+            width: 100%;
+
             &__code {
               &__full-line {
                 display: none;
@@ -661,7 +662,6 @@
 
       &__developers {
         width: 100%;
-        max-width: 736px;
 
         &__main {
           display: flex;
