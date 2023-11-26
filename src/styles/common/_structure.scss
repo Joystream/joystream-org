@@ -8,7 +8,7 @@
   }
 
   @media (min-width: 1440px) {
-    max-width: 1440px;
+    max-width: calc(1440px - 64px);
     margin: 0 auto;
   }
 }
