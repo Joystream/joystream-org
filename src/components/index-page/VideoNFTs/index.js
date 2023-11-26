@@ -19,12 +19,12 @@ const parallaxDataForeground = [
   {
     start: 'self',
     startOffset: -350,
-    duration: 1900,
+    duration: 2000,
     easing: 'easeIn',
     properties: [
       {
-        startValue: -300,
-        endValue: -650,
+        startValue: 75,
+        endValue: -225,
         property: 'translateY',
         unit: 'px',
       },
@@ -36,12 +36,12 @@ const parallaxDataPopup = [
   {
     start: 'self',
     startOffset: -200,
-    duration: 1350,
+    duration: 1400,
     easing: 'easeIn',
     properties: [
       {
-        startValue: -300,
-        endValue: -600,
+        startValue: 75,
+        endValue: -225,
         property: 'translateY',
         unit: 'px',
       },
@@ -167,44 +167,44 @@ const VideoNFTs = ({ t, nftData, priceData }) => {
           All apps built from the Atlas open source codebase offer new tools built into Joystream blockchain that helps
           99.9% of creators not served by ad-model.
         </p>
-        <div className="IndexPage__video-nfts__content-section">
-          <div className="IndexPage__video-nfts__content-section__illustration">
-            <img
-              src={VideoNFTsBackgroundImage}
-              className="IndexPage__video-nfts__content-section__illustration__background"
-              alt="row of nfts"
-            />
-            <div className="IndexPage__video-nfts__content-section__illustration__foreground-wrapper">
-              <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
-                <img
-                  src={VideoNFTsForegroundImage}
-                  className="IndexPage__video-nfts__content-section__illustration__foreground"
-                  alt="one nft in the middle, highlighted"
-                />
-              </Plx>
-            </div>
-            <div className="IndexPage__video-nfts__content-section__illustration__popup-wrapper">
-              <Plx parallaxData={parallaxDataPopup} animateWhenNotInViewport={true}>
-                <img
-                  src={VideoNFTsPopupImage}
-                  className="IndexPage__video-nfts__content-section__illustration__popup"
-                  alt="nft settings popup"
-                />
-              </Plx>
-            </div>
+      </div>
+      <div className="IndexPage__video-nfts__content-section">
+        <div className="IndexPage__video-nfts__content-section__illustration">
+          <img
+            src={VideoNFTsBackgroundImage}
+            className="IndexPage__video-nfts__content-section__illustration__background"
+            alt="row of nfts"
+          />
+          <div className="IndexPage__video-nfts__content-section__illustration__foreground-wrapper">
+            <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
+              <img
+                src={VideoNFTsForegroundImage}
+                className="IndexPage__video-nfts__content-section__illustration__foreground"
+                alt="one nft in the middle, highlighted"
+              />
+            </Plx>
           </div>
-          <div className="IndexPage__video-nfts__content-section__content">
-            <header>
-              <span className="IndexPage__video-nfts__content-section__content__section-title">
-                {t('landing.videoNFTs.sectionTitle')}
-              </span>
-              <h2 className="IndexPage__video-nfts__content-section__content__title">{t('landing.videoNFTs.title')}</h2>
-            </header>
-            <p className="IndexPage__video-nfts__content-section__content__subtitle">
-              {t('landing.videoNFTs.subtitle')}
-            </p>
+          <div className="IndexPage__video-nfts__content-section__illustration__popup-wrapper">
+            <Plx parallaxData={parallaxDataPopup} animateWhenNotInViewport={true}>
+              <img
+                src={VideoNFTsPopupImage}
+                className="IndexPage__video-nfts__content-section__illustration__popup"
+                alt="nft settings popup"
+              />
+            </Plx>
           </div>
         </div>
+        <div className="IndexPage__video-nfts__content-section__content">
+          <header>
+            <span className="IndexPage__video-nfts__content-section__content__section-title">
+              {t('landing.videoNFTs.sectionTitle')}
+            </span>
+            <h2 className="IndexPage__video-nfts__content-section__content__title">{t('landing.videoNFTs.title')}</h2>
+          </header>
+          <p className="IndexPage__video-nfts__content-section__content__subtitle">{t('landing.videoNFTs.subtitle')}</p>
+        </div>
+      </div>
+      <div className="IndexPage__video-nfts__carousel-title-and-info-wrapper">
         <div className="IndexPage__video-nfts__carousel-title-and-info">
           <h3 className="IndexPage__video-nfts__carousel-title-and-info__title">
             {t('landing.videoNFTs.carousel.title')}

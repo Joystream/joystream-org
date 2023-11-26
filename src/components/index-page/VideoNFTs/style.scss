@@ -45,28 +45,30 @@
     }
 
     &__content-section {
-      display: grid;
-      // max-width: 1142px;
+      @include grid(12, 1440px);
+
+      max-width: 1440px;
       min-height: 413px;
       margin-top: 96px;
+      padding: 0 32px;
       gap: 32px;
-      grid-column: 2 / 12;
-      grid-template-columns: 670px auto;
 
       &__illustration {
         position: relative;
+        grid-column: 2 / 8;
+
+        &__background {
+          position: absolute;
+          width: 100%;
+        }
 
         &__foreground {
           position: absolute;
-          // inset: 0;
-          // margin: auto;
           width: 100%;
         }
 
         &__popup {
           position: absolute;
-          // inset: 0;
-          // margin: auto;
           width: 100%;
         }
       }
@@ -75,6 +77,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        grid-column: 8 / 12;
 
         &__section-title {
           @include h400;
@@ -97,6 +100,13 @@
           white-space: pre-line;
         }
       }
+    }
+
+    &__carousel-title-and-info-wrapper {
+      @include grid(12, 1440px);
+
+      max-width: 1440px;
+      padding: 0 32px;
     }
 
     &__carousel-title-and-info {
@@ -321,10 +331,9 @@
       }
 
       &__content-section {
-        grid-column: 1 / 13;
-        grid-template-columns: 550px auto;
-
         &__illustration {
+          grid-column: 1 / 8;
+
           &__foreground {
             top: 50px;
           }
@@ -332,6 +341,10 @@
           &__popup {
             top: 50px;
           }
+        }
+
+        &__content {
+          grid-column: 8 / 13;
         }
       }
 
@@ -365,10 +378,16 @@
         display: flex;
         flex-direction: column;
         margin-top: 64px;
+        padding: 0 16px;
         gap: 24px;
 
         &__illustration {
           margin: 0 auto;
+
+          &__background {
+            position: unset;
+            // width: 100%;
+          }
 
           &__foreground-wrapper,
           &__popup-wrapper {
@@ -403,6 +422,10 @@
             @include h500;
           }
         }
+      }
+
+      &__carousel-title-and-info-wrapper {
+        padding: 0 16px;
       }
 
       &__carousel-title-and-info {
