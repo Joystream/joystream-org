@@ -18,12 +18,12 @@ const parallaxDataForeground = [
   {
     startOffset: -250,
     start: 'self',
-    duration: 1200,
+    duration: 1500,
     easing: 'easeIn',
     properties: [
       {
-        startValue: -200,
-        endValue: -450,
+        startValue: 300,
+        endValue: 50,
         property: 'translateY',
         unit: 'px',
       },
@@ -51,43 +51,43 @@ const GridItem = ({ image, sectionTitle, title, subtitle }) => (
 const CreatorTokens = ({ t }) => {
   return (
     <section className="IndexPage__creator-tokens-wrapper" id="creator-tokens">
-      <div className="IndexPage__creator-tokens">
-        <div className="IndexPage__creator-tokens__main">
-          <div className="IndexPage__creator-tokens__main__content">
-            <span className="IndexPage__creator-tokens__main__content__section-title">
-              {t('landing.creatorTokens.hero.sectionTitle')}
-            </span>
-            <h2 className="IndexPage__creator-tokens__main__content__title">
-              <Trans i18nKey="landing.creatorTokens.hero.title" components={{ br: <br /> }} />
-            </h2>
-            <p className="IndexPage__creator-tokens__main__content__subtitle">
-              {t('landing.creatorTokens.hero.subtitle')}
-            </p>
-            <a
-              href="https://forms.gle/soSRzZHq6Pg1yxG2A"
-              target="_blank"
-              className="IndexPage__creator-tokens__main__content__link"
-            >
-              {t('landing.creatorTokens.hero.link')}
-              <ArrowIcon className="IndexPage__creator-tokens__main__content__link__arrow" />
-            </a>
-          </div>
-          <div className="IndexPage__creator-tokens__main__illustration">
-            <img
-              src={CreatorTokensBackground}
-              className="IndexPage__creator-tokens__main__illustration__background"
-              alt="(creator) token tab on atlas, showing a video and the status of your token (right)"
-            />
-            <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
-              <img
-                src={CreatorTokensForeground}
-                className="IndexPage__creator-tokens__main__illustration__foreground"
-                alt="token holders list popup"
-              />
-            </Plx>
-            <div className="IndexPage__creator-tokens__main__overlay"></div>
-          </div>
+      <div className="IndexPage__creator-tokens__main">
+        <div className="IndexPage__creator-tokens__main__content">
+          <span className="IndexPage__creator-tokens__main__content__section-title">
+            {t('landing.creatorTokens.hero.sectionTitle')}
+          </span>
+          <h2 className="IndexPage__creator-tokens__main__content__title">
+            <Trans i18nKey="landing.creatorTokens.hero.title" components={{ br: <br /> }} />
+          </h2>
+          <p className="IndexPage__creator-tokens__main__content__subtitle">
+            {t('landing.creatorTokens.hero.subtitle')}
+          </p>
+          <a
+            href="https://forms.gle/soSRzZHq6Pg1yxG2A"
+            target="_blank"
+            className="IndexPage__creator-tokens__main__content__link"
+          >
+            {t('landing.creatorTokens.hero.link')}
+            <ArrowIcon className="IndexPage__creator-tokens__main__content__link__arrow" />
+          </a>
         </div>
+        <div className="IndexPage__creator-tokens__main__illustration">
+          <img
+            src={CreatorTokensBackground}
+            className="IndexPage__creator-tokens__main__illustration__background"
+            alt="(creator) token tab on atlas, showing a video and the status of your token (right)"
+          />
+          <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
+            <img
+              src={CreatorTokensForeground}
+              className="IndexPage__creator-tokens__main__illustration__foreground"
+              alt="token holders list popup"
+            />
+          </Plx>
+          <div className="IndexPage__creator-tokens__main__overlay"></div>
+        </div>
+      </div>
+      <div className="IndexPage__creator-tokens">
         <div className="IndexPage__creator-tokens__grid">
           <GridItem
             image={Fundraising}

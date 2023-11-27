@@ -11,16 +11,15 @@
     @include grid;
 
     &__main {
-      display: grid;
+      @include grid;
+
       height: 512px;
-      gap: 24px;
-      grid-column: 2 / 12;
-      grid-template-columns: auto 676px;
 
       &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        grid-column: 2 / 6;
 
         &__section-title {
           @include h400;
@@ -60,8 +59,10 @@
       &__illustration {
         position: relative;
         overflow: hidden;
+        grid-column: 6 / 12;
 
         &__background {
+          position: absolute;
           width: 100%;
         }
 
@@ -136,10 +137,14 @@
 
       &__main {
         height: 417px;
-        grid-column: 1 / 13;
-        grid-template-columns: auto 550px;
+
+        &__content {
+          grid-column: 1 / 6;
+        }
 
         &__illustration {
+          grid-column: 6 / 13;
+
           &__foreground {
             position: absolute;
             top: 65px;
@@ -172,6 +177,7 @@
         display: flex;
         flex-direction: column-reverse;
         height: auto;
+        gap: 24px;
 
         &__content {
           &__title {
@@ -192,6 +198,10 @@
             -webkit-transform: none !important;
             transform: none !important;
             inset: 0;
+          }
+
+          &__background {
+            position: unset;
           }
 
           &__foreground {
