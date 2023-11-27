@@ -11,17 +11,14 @@
   &__payouts {
     @include grid;
 
-    &__main {
-      display: grid;
-      height: 512px;
-      gap: 24px;
-      grid-column: 2 / 12;
-      grid-template-columns: auto 676px;
+    min-height: 486px;
 
+    &__main {
       &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        grid-column: 2 / 6;
 
         &__section-title {
           @include h400;
@@ -46,17 +43,23 @@
 
       &__illustration {
         position: relative;
+        grid-column: 6 / 12;
 
         &__background {
+          position: absolute;
           width: 100%;
         }
 
         &__foreground {
           position: absolute;
-          top: -350px;
+          top: 0;
           left: 0;
         }
       }
+    }
+
+    &__carousel-title-and-info-wrapper {
+      @include grid;
     }
 
     &__carousel-title-and-info {
@@ -272,11 +275,12 @@
         grid-column: 1 / 13;
         grid-template-columns: auto 550px;
 
+        &__content {
+          grid-column: 1 / 6;
+        }
+
         &__illustration {
-          &__foreground {
-            position: absolute;
-            top: -235px;
-          }
+          grid-column: 6 / 13;
         }
       }
 
@@ -302,11 +306,12 @@
     }
 
     &__payouts {
-      &__main {
-        display: flex;
-        flex-direction: column-reverse;
-        height: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+      gap: 24px;
 
+      &__main {
         &__content {
           &__title {
             @include h500;
@@ -330,6 +335,10 @@
             -webkit-transform: none !important;
             transform: none !important;
             inset: 0;
+          }
+
+          &__background {
+            position: unset;
           }
 
           &__foreground {
@@ -369,6 +378,7 @@
       &__carousel-title-and-info {
         display: flex;
         flex-direction: column;
+        margin-top: 56px;
 
         &__info {
           margin-top: 6px;

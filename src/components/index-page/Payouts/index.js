@@ -23,13 +23,13 @@ import './style.scss';
 
 const parallaxDataForeground = [
   {
-    startOffset: -300,
+    startOffset: -100,
     start: 'self',
-    duration: 1200,
+    duration: 1500,
     easing: 'easeIn',
     properties: [
       {
-        startValue: 0,
+        startValue: 200,
         endValue: -350,
         property: 'translateY',
         unit: 'px',
@@ -120,31 +120,29 @@ const Payouts = ({ t, payouts, priceData }) => {
   return (
     <section className="IndexPage__payouts-wrapper">
       <div className="IndexPage__payouts" id="creator-payouts">
-        <div className="IndexPage__payouts__main" id="creator-payouts">
-          <div className="IndexPage__payouts__main__content">
-            <span className="IndexPage__payouts__main__content__section-title">
-              {t('landing.payouts.sectionTitle')}
-            </span>
-            <h3 className="IndexPage__payouts__main__content__title">
-              Rewards for <br /> publishing videos
-            </h3>
-            <p className="IndexPage__payouts__main__content__subtitle">{t('landing.payouts.subtitle')}</p>
-          </div>
-          <div className="IndexPage__payouts__main__illustration">
-            <img
-              src={PayoutsBackgroundImage}
-              className="IndexPage__payouts__main__illustration__background"
-              alt="my payments tab in atlas studio"
-            />
-            <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
-              <img
-                src={PayoutsForeground}
-                className="IndexPage__payouts__main__illustration__foreground"
-                alt="claim payout popup, in front of the my payments tab"
-              />
-            </Plx>
-          </div>
+        <div className="IndexPage__payouts__main__content">
+          <span className="IndexPage__payouts__main__content__section-title">{t('landing.payouts.sectionTitle')}</span>
+          <h3 className="IndexPage__payouts__main__content__title">
+            Rewards for <br /> publishing videos
+          </h3>
+          <p className="IndexPage__payouts__main__content__subtitle">{t('landing.payouts.subtitle')}</p>
         </div>
+        <div className="IndexPage__payouts__main__illustration">
+          <img
+            src={PayoutsBackgroundImage}
+            className="IndexPage__payouts__main__illustration__background"
+            alt="my payments tab in atlas studio"
+          />
+          <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
+            <img
+              src={PayoutsForeground}
+              className="IndexPage__payouts__main__illustration__foreground"
+              alt="claim payout popup, in front of the my payments tab"
+            />
+          </Plx>
+        </div>
+      </div>
+      <div className="IndexPage__payouts__carousel-title-and-info-wrapper">
         <div className="IndexPage__payouts__carousel-title-and-info">
           <h3 className="IndexPage__payouts__carousel-title-and-info__title">{t('landing.payouts.carousel.title')}</h3>
           <div className="IndexPage__payouts__carousel-title-and-info__info">
