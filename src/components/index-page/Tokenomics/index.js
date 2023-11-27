@@ -8,7 +8,7 @@ import { ReactComponent as GraphIllustration } from '../../../assets/svg/landing
 import './style.scss';
 import { color } from 'd3-color';
 
-const Container = ({ title, type, children }) => {
+const Container = ({ title, type, children, t }) => {
   return (
     <div
       className={`IndexPage__tokenomics__metrics__container-wrapper IndexPage__tokenomics__metrics__container-wrapper--${type}`}
@@ -19,7 +19,7 @@ const Container = ({ title, type, children }) => {
           <div className="IndexPage__tokenomics__metrics__container__title__info">
             <InfoIcon />
             <div className="IndexPage__tokenomics__metrics__container__title__info__modal">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies.
+              {t('landing.tokenomics.modalText')}
             </div>
           </div>
         </div>
@@ -779,11 +779,11 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
       <div className="IndexPage__tokenomics">
         <header className="IndexPage__tokenomics__header">
           <span className="IndexPage__tokenomics__header__section-title">{t('landing.tokenomics.sectionTitle')}</span>
-          <h2 className="IndexPage__tokenomics__header__title">Token Metrics</h2>
+          <h2 className="IndexPage__tokenomics__header__title">{t('landing.tokenomics.title')}</h2>
         </header>
         <div className="IndexPage__tokenomics__metrics">
           <Container
-            title="Price"
+            title={t('landing.tokenomics.price')}
             type="price"
             children={
               <div className="IndexPage__tokenomics__metrics__container__content__price">
@@ -791,47 +791,52 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
                   ${priceData.price.toFixed(6)}
                 </p>
                 <p className="IndexPage__tokenomics__metrics__container__content__price__change">
-                  {Math.round(lastWeekChange)}% Last week
+                  {Math.round(lastWeekChange)}% {t('landing.tokenomics.lastWeek')}
                 </p>
                 <Graph data={graphData} />
               </div>
             }
+            t={t}
           />
           <Container
-            title="Market cap"
+            title={t('landing.tokenomics.marketCap')}
             type="market-cap"
             children={
               <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
                 {parseValue(tokenomicsData?.circulatingSupply, priceData.price)}
               </p>
             }
+            t={t}
           />
           <Container
-            title="Total supply"
+            title={t('landing.tokenomics.totalSupply')}
             type="total-supply"
             children={
               <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
                 {parseValue(tokenomicsData?.totalSupply)}
               </p>
             }
+            t={t}
           />
           <Container
-            title="Circulating supply"
+            title={t('landing.tokenomics.circulatingSupply')}
             type="circulating-supply"
             children={
               <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
                 {parseValue(tokenomicsData?.circulatingSupply)}
               </p>
             }
+            t={t}
           />
           <Container
-            title="FDV"
+            title={t('landing.tokenomics.fdv')}
             type="fdv"
             children={
               <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
                 {parseValue(tokenomicsData?.totalSupply, priceData.price)}
               </p>
             }
+            t={t}
           />
         </div>
       </div>

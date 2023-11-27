@@ -21,6 +21,7 @@ const CarouselItem = ({
   setIsCarouselRunning,
   channelUrl,
   followersCount,
+  t,
 }) => {
   const [imgSrc, onError] = useImageFallback(img, PlaceholderIcon);
   let usdAmount = `$0`;
@@ -46,10 +47,12 @@ const CarouselItem = ({
           </div>
           <div className="IndexPage__creators__item__channel__info">
             <div className="IndexPage__creators__item__channel__info__name">{channelName}</div>
-            <div className="IndexPage__creators__item__channel__info__followers">{followersCount} followers</div>
+            <div className="IndexPage__creators__item__channel__info__followers">
+              {followersCount} {t('landing.creators.followers')}
+            </div>
           </div>
         </div>
-        <div className="IndexPage__creators__item__earned">Earned:</div>
+        <div className="IndexPage__creators__item__earned">{t('landing.creators.earned')}</div>
         <div className="IndexPage__creators__item__price">{usdAmount}</div>
       </div>
     </a>
@@ -261,7 +264,7 @@ const Creators = ({ creators, t, priceData }) => {
     <section className="IndexPage__creators-wrapper">
       <div className="IndexPage__creators">
         <div className="IndexPage__creators__title-and-info">
-          <h3 className="IndexPage__creators__title-and-info__title">Joystream Creators</h3>
+          <h3 className="IndexPage__creators__title-and-info__title">{t('landing.creators.title')}</h3>
           <div className="IndexPage__creators__title-and-info__info">
             <div
               className="IndexPage__creators__title-and-info__info__label"
@@ -270,7 +273,7 @@ const Creators = ({ creators, t, priceData }) => {
               aria-describedby="IndexPage__creators__title-and-info__info__modal"
               ref={payoutsCarouselInfoLabelRef}
             >
-              {t('landing.payouts.carousel.info.label')}
+              {t('landing.creators.info.label')}
               <div className="IndexPage__creators__title-and-info__info__icon">
                 <InfoIcon />
               </div>
@@ -280,7 +283,7 @@ const Creators = ({ creators, t, priceData }) => {
               id="IndexPage__creators__title-and-info__info__modal"
               className="IndexPage__creators__title-and-info__info__modal"
             >
-              {t('landing.payouts.carousel.info.text')}
+              {t('landing.creators.info.text')}
             </div>
           </div>
         </div>

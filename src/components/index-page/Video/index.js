@@ -27,10 +27,8 @@ const Video = ({ t }) => {
   return (
     <div className="IndexPage__video-wrapper">
       <div className="IndexPage__video">
-        <h2 className="IndexPage__video__title">Our Vision</h2>
-        <p className="IndexPage__video__subtitle">
-          Everything you need to know about the project in less than 3 minutes!
-        </p>
+        <h2 className="IndexPage__video__title">{t('landing.ourVision.title')}</h2>
+        <p className="IndexPage__video__subtitle">{t('landing.ourVision.subtitle')}</p>
         <div className="IndexPage__video__player">
           <img
             className={cn('IndexPage__video__player__thumbnail', {

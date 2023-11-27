@@ -11,28 +11,43 @@
         "users": "users"
       },
       "subtitle": "Built on and operated by the Joystream blockchain and DAO.",
-      "viewApps": "View apps",
-      "startYourCommunity": "Start your community",
-      "stepOne": {
-        "title": "Application",
-        "subtitle": "Each app brings its own discovery algorithms, terms of user policy, form factor and possible vertical focus."
+      "button": "Explore project dashboard"
+    },
+    "ourVision": {
+      "title": "Our Vision",
+      "subtitle": "Everything you need to know about the project in less than 3 minutes!"
+    },
+    "traction": {
+      "sectionTitle": "TRACTION",
+      "title": "Growth and Engagement",
+      "lastWeek": "Last week",
+      "videosUploaded": "Videos uploaded",
+      "commentsAndReactions": "Comments & Reactions",
+      "channels": "Channels",
+      "allFollowers": "All followers",
+      "profiles": "Profiles",
+      "creatorRewards": "Creator Rewards",
+      "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies."
+    },
+    "creators": {
+      "title": "Joystream Creators",
+      "info": {
+        "label": "Payments are made in JOY tokens",
+        "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees. We are in the process of getting the JOY token listed on popular exchanges, so you can buy or sell JOYs for FIAT currencies, such as USD."
       },
-      "stepTwo": {
-        "title": "Storage system",
-        "subtitle": "All the video, images and assets in the system are stored on community run and incentived infrastructure."
-      },
-      "stepThree": {
-        "title": "Content delivery",
-        "subtitle": "All videos, images, and asset in the system are delivered through a community run and incentivised low latency content delivery network."
-      },
-      "stepFour": {
-        "title": "Public Blockchain Layer",
-        "subtitle": "Shared index of content, people and interactions. Content uploaded by creators in any app as well as channel's transactions and engagement are portable to any other app on the network."
-      }
+      "followers": "followers",
+      "earned": "Earned:"
     },
     "tokenomics": {
       "sectionTitle": "TOKENOMICS",
-      "title": "Key Metrics"
+      "title": "Token Metrics",
+      "price": "Price",
+      "marketCap": "Market cap",
+      "totalSupply": "Total supply",
+      "circulatingSupply": "Circulating supply",
+      "fdv": "FDV",
+      "lastWeek": "Last week",
+      "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies."
     },
     "ecosystem": {
       "sectionTitle": "ECOSYSTEM",
