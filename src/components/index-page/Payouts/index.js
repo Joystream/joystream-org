@@ -123,7 +123,7 @@ const Payouts = ({ t, payouts, priceData }) => {
         <div className="IndexPage__payouts__main__content">
           <span className="IndexPage__payouts__main__content__section-title">{t('landing.payouts.sectionTitle')}</span>
           <h3 className="IndexPage__payouts__main__content__title">
-            Rewards for <br /> publishing videos
+            <Trans i18nKey="landing.payouts.title" components={{ br: <br /> }} />
           </h3>
           <p className="IndexPage__payouts__main__content__subtitle">{t('landing.payouts.subtitle')}</p>
         </div>

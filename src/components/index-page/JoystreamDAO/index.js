@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Plx from 'react-plx';
 import cn from 'classnames';
-import { Trans } from 'gatsby-plugin-react-i18next';
 import Countdown from 'react-countdown-now';
 import convertToCamelCase from '../../../utils/convertToCamelCase';
 
@@ -162,7 +161,7 @@ const JoystreamDAO = ({ t, proposalsData }) => {
           <span className="IndexPage__joystream-dao__header__section-title">
             {t('landing.joystreamDAO.sectionTitle')}
           </span>
-          <h2 className="IndexPage__joystream-dao__header__title">Join our DAO.</h2>
+          <h2 className="IndexPage__joystream-dao__header__title">{t('landing.joystreamDAO.title')}</h2>
         </header>
         <p className="IndexPage__joystream-dao__subtitle">{t('landing.joystreamDAO.subtitle')}</p>
         <a href="https://dao.joystream.org/" className="IndexPage__joystream-dao__link">

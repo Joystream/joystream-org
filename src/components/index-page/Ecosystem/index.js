@@ -146,40 +146,40 @@ const Carousel = ({ t }) => {
         <CarouselItem
           logo={L1MediaLogo}
           name={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
-          description="For education, news, science, entertainment beyond borders."
+          description={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.description')}
           platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
           link="https://l1.media/"
           t={t}
         />
         <CarouselItem
           logo={PioneerLogo}
-          name="Pioneer"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          platforms="Web"
+          name={t('landing.ecosystem.appsBuiltOnJoystream.pioneer.name')}
+          description={t('landing.ecosystem.appsBuiltOnJoystream.pioneer.description')}
+          platforms={t('landing.ecosystem.appsBuiltOnJoystream.pioneer.platforms')}
           link="https://pioneerapp.xyz/"
           t={t}
         />
         <CarouselItem
           logo={JoyStatsLogo}
-          name="JoyStats"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          platforms="Web"
+          name={t('landing.ecosystem.appsBuiltOnJoystream.joystats.name')}
+          description={t('landing.ecosystem.appsBuiltOnJoystream.joystats.description')}
+          platforms={t('landing.ecosystem.appsBuiltOnJoystream.joystats.platforms')}
           link="https://joystreamstats.live/"
           t={t}
         />
         <CarouselItem
           logo={JScanLogo}
-          name="JScan"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          platforms="Web"
+          name={t('landing.ecosystem.appsBuiltOnJoystream.jscan.name')}
+          description={t('landing.ecosystem.appsBuiltOnJoystream.jscan.description')}
+          platforms={t('landing.ecosystem.appsBuiltOnJoystream.jscan.platforms')}
           link="https://jscan.io/"
           t={t}
         />
         <CarouselItem
           logo={JoyUtilsLogo}
-          name="JoyUtils"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          platforms="Web"
+          name={t('landing.ecosystem.appsBuiltOnJoystream.joyutils.name')}
+          description={t('landing.ecosystem.appsBuiltOnJoystream.joyutils.description')}
+          platforms={t('landing.ecosystem.appsBuiltOnJoystream.joyutils.platforms')}
           link="https://joyutils.org/"
           t={t}
         />
@@ -240,14 +240,10 @@ const Ecosystem = ({ t }) => {
         <header className="IndexPage__ecosystem__header">
           <span className="IndexPage__ecosystem__header__section-title">{t('landing.ecosystem.sectionTitle')}</span>
           <h2 className="IndexPage__ecosystem__header__title">
-            One Protocol,
-            <br /> a Universe of Applications
+            <Trans i18nKey="landing.ecosystem.title" components={{ br: <br /> }} />
           </h2>
         </header>
-        <p className="IndexPage__ecosystem__subtitle">
-          Joystream is an open-source platform built on blockchain. It supports multiple video streaming apps at once.
-          Videos uploaded on any Joystream app can be seen by users of other apps, helping creators grow their audience.
-        </p>
+        <p className="IndexPage__ecosystem__subtitle">{t('landing.ecosystem.subtitle')}</p>
         <div className="IndexPage__ecosystem__browsers">
           <BrowserImage className="IndexPage__ecosystem__browsers__second-alt" variant={1} imageSrc={Browser3} />
           <BrowserImage className="IndexPage__ecosystem__browsers__second-alt" variant={2} imageSrc={Browser3} />
@@ -284,13 +280,13 @@ const Ecosystem = ({ t }) => {
               <div className="IndexPage__ecosystem__developers__main__about__section-title">
                 {t('landing.developers.sectionTitle')}
               </div>
-              <h3 className="IndexPage__ecosystem__developers__main__about__title">Launch your own video app</h3>
+              <h3 className="IndexPage__ecosystem__developers__main__about__title">{t('landing.developers.title')}</h3>
               <p className="IndexPage__ecosystem__developers__main__about__subtitle">
                 {t('landing.developers.subtitle')}
               </p>
               <a href="https://github.com/Joystream/atlas" target="_blank">
                 <div className="IndexPage__ecosystem__developers__main__about__link">
-                  Launch your own video app
+                  {t('landing.developers.link')}
                   <ArrowIcon className="IndexPage__ecosystem__developers__main__about__link__icon" />
                 </div>
               </a>

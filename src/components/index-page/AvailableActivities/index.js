@@ -19,10 +19,6 @@ const ActivityListAmount = ({ mobile, amount, priceData, isWeekly, t }) => {
   if (amount) {
     amountToRender = Math.round(amount);
     amountInDollars = `${Math.round(priceData.price * amount)}`;
-
-    // if (amount > 10000) {
-    //   amountToRender = `${Math.round(amount / 1000)}K`;
-    // }
   }
 
   if (priceData.error) {
@@ -39,7 +35,11 @@ const ActivityListAmount = ({ mobile, amount, priceData, isWeekly, t }) => {
         {amountToRender} JOY
         <span>(${amountInDollars})</span>
       </div>
-      {isWeekly && <div className="IndexPage__available-activities__list-item__amount__weekly">Per week</div>}
+      {isWeekly && (
+        <div className="IndexPage__available-activities__list-item__amount__weekly">
+          {t('landing.availableActivities.weekly')}
+        </div>
+      )}
     </div>
   );
 };
@@ -131,10 +131,6 @@ const Activity = ({ Icon, title, amount, priceData, isWeekly, icons, isLoading, 
     </div>
   );
 
-  // if(!isLoading && icons?.toRender?.length === 0 && icons?.others === 0) {
-  //   return null;
-  // }
-
   return (
     <a href="https://discord.gg/jq5VtcSuqj" target="_blank">
       {itemContent}
@@ -144,19 +140,12 @@ const Activity = ({ Icon, title, amount, priceData, isWeekly, icons, isLoading, 
 
 const AvailableActivities = ({ budgets, loading, priceData, t }) => {
   const [numberOfRenderedActivities, setNumberOfRenderedActivities] = useState(WORKER_ACTIVITIES.length);
-  // const { width } = useWindowDimensions();
-
-  // useEffect(() => {
-  //   if (width) {
-  //     setNumberOfRenderedActivities(width < 768 ? 3 : WORKER_ACTIVITIES.length);
-  //   }
-  // }, [width]);
 
   return (
     <section className="IndexPage__available-activities-wrapper">
       <div className="IndexPage__available-activities">
         <header className="IndexPage__available-activities__header">
-          <h2 className="IndexPage__available-activities__header__title">Build The Future With Us</h2>
+          <h2 className="IndexPage__available-activities__header__title">{t('landing.availableActivities.title')}</h2>
         </header>
         <p className="IndexPage__available-activities__subtitle">{t('landing.availableActivities.subtitle')}</p>
         <div className="IndexPage__available-activities__list">
@@ -177,16 +166,6 @@ const AvailableActivities = ({ budgets, loading, priceData, t }) => {
               />
             ))}
         </div>
-        {/* {width < 768 && numberOfRenderedActivities < Object.keys(WORKER_ACTIVITIES).length ? (
-          <div
-            className="IndexPage__available-activities__show-more"
-            onClick={() => setNumberOfRenderedActivities(prev => prev + 1)}
-            role="presentation"
-          >
-            {t('landing.availableActivities.showMore')}{' '}
-            <ArrowIcon className="IndexPage__available-activities__show-more__arrow-icon" />
-          </div>
-        ) : null} */}
       </div>
     </section>
   );

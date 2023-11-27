@@ -160,13 +160,12 @@ const VideoNFTs = ({ t, nftData, priceData }) => {
     <section className="IndexPage__video-nfts-wrapper" id="video-nfts">
       <div className="IndexPage__video-nfts">
         <header className="IndexPage__video-nfts__header">
-          <span className="IndexPage__video-nfts__header__section-title">CREATOR MONETIZATION</span>
-          <h2 className="IndexPage__video-nfts__header__title">Powerful New Value Capture Tools </h2>
+          <span className="IndexPage__video-nfts__header__section-title">
+            {t('landing.videoNFTs.header.sectionTitle')}
+          </span>
+          <h2 className="IndexPage__video-nfts__header__title">{t('landing.videoNFTs.header.title')} </h2>
         </header>
-        <p className="IndexPage__video-nfts__subtitle">
-          All apps built from the Atlas open source codebase offer new tools built into Joystream blockchain that helps
-          99.9% of creators not served by ad-model.
-        </p>
+        <p className="IndexPage__video-nfts__subtitle">{t('landing.videoNFTs.header.subtitle')}</p>
       </div>
       <div className="IndexPage__video-nfts__content-section">
         <div className="IndexPage__video-nfts__content-section__illustration">

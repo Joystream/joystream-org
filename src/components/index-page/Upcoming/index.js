@@ -15,11 +15,9 @@ const Upcoming = ({ t }) => {
     <div className="IndexPage__upcoming-wrapper">
       <div className="IndexPage__upcoming">
         <header className="IndexPage__upcoming__header">
-          <span className="IndexPage__upcoming__header__section-title">UPCOMING</span>
-          <h2 className="IndexPage__upcoming__header__title">Builders Grant Program</h2>
-          <p className="IndexPage__upcoming__header__subtitle">
-            If you are a developer - you can get a grant, development support, business model support and more.
-          </p>
+          <span className="IndexPage__upcoming__header__section-title">{t('landing.upcoming.sectionTitle')}</span>
+          <h2 className="IndexPage__upcoming__header__title">{t('landing.upcoming.title')}</h2>
+          <p className="IndexPage__upcoming__header__subtitle">{t('landing.upcoming.subtitle')}</p>
         </header>
         <div className="IndexPage__upcoming__builders">
           <div className="IndexPage__upcoming__builder">
@@ -40,7 +38,7 @@ const Upcoming = ({ t }) => {
         </div>
         <ArrowButton
           link=""
-          text="Sign up for program"
+          text={t('landing.upcoming.button')}
           className="IndexPage__upcoming__button"
           textClassname="IndexPage__upcoming__button-text"
         />
