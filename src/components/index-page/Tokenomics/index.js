@@ -1,12 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { VictoryChart, VictoryTheme, VictoryLine } from 'victory';
-// import { Trans } from 'react-i18next';
+import { VictoryLine } from 'victory';
 
 import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
-import { ReactComponent as GraphIllustration } from '../../../assets/svg/landing/graph.svg';
 
 import './style.scss';
-import { color } from 'd3-color';
 
 const Container = ({ title, type, children, t }) => {
   return (
