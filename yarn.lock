@@ -3320,6 +3320,14 @@
     semver "^7.3.2"
     tsutils "^3.17.1"
 
+"@vimeo/player@^2.20.1":
+  version "2.20.1"
+  resolved "https://registry.npmjs.org/@vimeo/player/-/player-2.20.1.tgz#b2db8651cfed71009475528019977bf8e8c3dadf"
+  integrity sha512-eoKkqsMY33RQn8lFtlUbb3uo+xDL3V8PTN01SdrJ1E9PI+5pLyqNGh/GO/2EyX9Vr6antLm0/v36ABF2rcwXIQ==
+  dependencies:
+    native-promise-only "0.8.1"
+    weakmap-polyfill "2.0.4"
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
@@ -13366,6 +13374,11 @@ napi-build-utils@^1.0.1:
   resolved "https://registry.yarnpkg.com/napi-build-utils/-/napi-build-utils-1.0.2.tgz#b1fddc0b2c46e380a0b7a76f984dd47c41a13806"
   integrity sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==
 
+native-promise-only@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.npmjs.org/native-promise-only/-/native-promise-only-0.8.1.tgz#20a318c30cb45f71fe7adfbf7b21c99c1472ef11"
+  integrity sha512-zkVhZUA3y8mbz652WrL5x0fB0ehrBkulWT3TomAQ9iDtyXZvzKeEA6GPxAItBYeNYl5yngKRX612qHOhvMkDeg==
+
 native-url@^0.2.6:
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/native-url/-/native-url-0.2.6.tgz#ca1258f5ace169c716ff44eccbddb674e10399ae"
@@ -19871,6 +19884,11 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
   dependencies:
     minimalistic-assert "^1.0.0"
+
+weakmap-polyfill@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.npmjs.org/weakmap-polyfill/-/weakmap-polyfill-2.0.4.tgz#bcc301e4c8eb4eda3e406f08f1a691093e407884"
+  integrity sha512-ZzxBf288iALJseijWelmECm/1x7ZwQn3sMYIkDr2VvZp7r6SEKuT8D0O9Wiq6L9Nl5mazrOMcmiZE/2NCenaxw==
 
 web-vitals@^1.1.2:
   version "1.1.2"

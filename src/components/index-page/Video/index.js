@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import cn from 'classnames';
-import Modal from 'react-modal';
+import Player from '@vimeo/player';
 
 import VideoThumbnail from '../../../assets/images/landing/video-future-thumbnail.webp';
 import { ReactComponent as PlayIcon } from '../../../assets/svg/simple-play.svg';
@@ -8,20 +8,15 @@ import { ReactComponent as PlayIcon } from '../../../assets/svg/simple-play.svg'
 import './style.scss';
 
 const Video = ({ t }) => {
+  const vimeoVideoIframeRef = useRef(null);
   const [shouldShowVideo, setShouldShowVideo] = useState(false);
 
   useEffect(() => {
-    const body = document.body;
-
-    if (!body) {
-      return;
+    if (shouldShowVideo) {
+      const player = new Player(vimeoVideoIframeRef.current);
+      player.play();
+      player.disableTextTrack();
     }
-
-    body.style.overflowY = shouldShowVideo ? 'hidden' : 'scroll';
-
-    return () => {
-      body.style.overflowY = 'scroll';
-    };
   }, [shouldShowVideo]);
 
   return (
@@ -48,23 +43,14 @@ const Video = ({ t }) => {
           >
             <PlayIcon className="IndexPage__video__player__play-button__icon" />
           </div>
-          <Modal
-            isOpen={shouldShowVideo}
-            className="IndexPage__video__modal"
-            overlayClassName="IndexPage__video__modal__overlay"
-            contentLabel="modal"
-            closeTimeoutMS={200}
-            onRequestClose={() => setShouldShowVideo(false)}
-          >
-            <iframe
-              title="Joystream Vision Video"
-              src="https://player.vimeo.com/video/875953807?app_id=58479&autoplay=1"
-              width="640"
-              height="480"
-              allow="autoplay"
-              className="IndexPage__video__player__main"
-            ></iframe>
-          </Modal>
+          <iframe
+            ref={vimeoVideoIframeRef}
+            title="Joystream Vision Video"
+            src="https://player.vimeo.com/video/888678724?h=1e85bf9838&autoplay=1&autopause=0"
+            allow="autoplay"
+            className="IndexPage__video__player__main"
+            loading="eager"
+          ></iframe>
         </div>
       </div>
     </div>
