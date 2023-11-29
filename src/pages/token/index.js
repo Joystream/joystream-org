@@ -36,9 +36,9 @@ const TokensPage = () => {
 
       <Wallets t={t} />
 
-      <Faucets t={t} />
+      {/* <Faucets t={t} /> */}
 
-      <Exchanges  t={t}/>
+      <Exchanges t={t} />
 
       <Earn t={t} />
 
