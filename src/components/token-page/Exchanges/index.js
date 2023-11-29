@@ -4,6 +4,7 @@ import ArrowLink from '../../ArrowLink';
 
 import MEXC from '../../../assets/images/token/mexc-logo.webp';
 import Bitget from '../../../assets/images/token/bitget-logo.webp';
+import Bitmart from '../../../assets/images/token/bitmart-logo.webp';
 
 import './style.scss';
 
@@ -43,6 +44,13 @@ const Exchanges = ({ t }) => {
             exchangeName={t('token.exchanges.bitget.name')}
             exchangeDescription={t('token.exchanges.bitget.description')}
             exchangeLink="https://www.bitget.com/spot/JOYUSDT"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={Bitmart}
+            exchangeName={t('token.exchanges.bitmart.name')}
+            exchangeDescription={t('token.exchanges.bitmart.description')}
+            exchangeLink=""
             t={t}
           />
         </div>
