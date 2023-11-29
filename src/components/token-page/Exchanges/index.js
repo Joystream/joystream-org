@@ -50,7 +50,7 @@ const Exchanges = ({ t }) => {
             exchangeIcon={Bitmart}
             exchangeName={t('token.exchanges.bitmart.name')}
             exchangeDescription={t('token.exchanges.bitmart.description')}
-            exchangeLink=""
+            exchangeLink="https://www.bitmart.com/trade/en-US?symbol=JOY_USDT&layout=pro"
             t={t}
           />
         </div>
