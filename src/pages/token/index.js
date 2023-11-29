@@ -46,13 +46,13 @@ const TokensPage = () => {
 
       <Supply t={t} />
 
-      <TokenInformation
+      {/* <TokenInformation
         tokenQuestions={tokenQuestions.map(({ title, text }) => ({
           title: t(title),
           text: text?.isModular ? <Trans i18nKey={text?.key} components={text?.components} /> : t(text),
         }))}
         t={t}
-      />
+      /> */}
     </BaseLayout>
   );
 };
