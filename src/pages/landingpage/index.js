@@ -9,7 +9,7 @@ import './style.scss';
 const LandingPage = () => {
   return (
     <div className="landingpage">
-        <Header />
+      <Header />
       <div className="container-wrapper">
         <Hero />
         <Token />

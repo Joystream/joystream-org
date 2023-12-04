@@ -9,7 +9,7 @@ const Token = () => {
   return (
     <div className="token">
       <div className="title">
-        <label>Token</label>
+        <div>Token</div>
         <button>
           Copy link to this section
           <LinkIcon />
@@ -73,7 +73,10 @@ const Token = () => {
       </div>
 
       <div>
-        <div className='title'>Where to buy and sell JOY?<InformationIcon /></div>
+        <div className="title">
+          Where to buy and sell JOY?
+          <InformationIcon />
+        </div>
         <div className="flex">
           <div className="itemCard"></div>
           <div className="itemCard"></div>

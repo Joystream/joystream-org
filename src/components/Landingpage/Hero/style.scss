@@ -2,27 +2,30 @@
   display: flex;
   align-items: center;
   padding: 96px 32px 160px;
+
   div {
     flex: 1;
   }
+
   h2 {
+    max-width: 560px;
+    font-family: $font-ibm-sans;
     font-size: 63px;
     font-style: normal;
     font-weight: 600;
     line-height: 72px; /* 114.286% */
-    letter-spacing: -0.63px;
-    font-family: IBM Plex Sans;
+    letter-spacing: -.63px;
     color: white;
-    max-width: 560px;
   }
+
   p {
-    margin-top: 24px;
     max-width: 560px;
-    font-family: Inter;
+    margin-top: 24px;
+    font-family: $font-secondary;
     font-size: 21px;
     font-style: normal;
     font-weight: 400;
     line-height: 32px; /* 152.381% */
-    color: var(--text-default-default, #B5C1C9);
+    color: var(--text-default-default, #b5c1c9);
   }
 }

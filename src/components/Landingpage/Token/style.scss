@@ -5,71 +5,78 @@
     display: flex;
     justify-content: space-between;
 
-    label {
-      font-family: IBM Plex Sans;
+    div {
+      font-family: $font-ibm-sans;
       font-size: 42px;
       font-style: normal;
       font-weight: 600;
       line-height: 48px; /* 114.286% */
     }
+
     button {
       display: flex;
-      padding: 12px 20px;
-      justify-content: center;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      padding: 12px 20px;
       color: white;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
       border-radius: 2px;
-      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, 0.13));
-      background: var(--background-default-muted-alpha, rgba(188, 213, 250, 0.08));
+      gap: 8px;
     }
   }
+
   hr {
     margin: 24px 0;
-    border-bottom: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, 0.27));
+    border-bottom: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, .27));
   }
+
   .flex {
     display: flex;
+
     .chart {
       flex: 2;
     }
+
     .info {
-      flex: 1;
       display: flex;
+      flex: 1;
       flex-direction: column;
       gap: 24px;
     }
   }
+
   .itemCard {
-    border-radius: 8px;
-    background: var(--background-default-muted-alpha, rgba(188, 213, 250, 0.08));
-    padding: 32px;
-    padding: 32px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
     display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 32px;
+    background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+    border-radius: 8px;
+    gap: 16px;
 
     .title {
-      color: var(--text-default-strong, #f4f6f8);
-      font-family: IBM Plex Sans;
+      display: flex;
+      align-items: center;
+      font-family: $font-ibm-sans;
       font-size: 18px;
       font-style: normal;
       font-weight: 600;
       line-height: 24px; /* 133.333% */
-      letter-spacing: 0.09px;
-      display: flex;
-      align-items: center;
+      letter-spacing: .09px;
+      color: var(--text-default-strong, #f4f6f8);
     }
+
     .value {
-      font-family: IBM Plex Sans;
+      font-family: $font-ibm-sans;
       font-size: 42px;
       font-style: normal;
       font-weight: 600;
       line-height: 48px;
     }
+
     .percent {
-      font-family: Inter;
+      font-family: $font-secondary;
       font-size: 21px;
       font-style: normal;
       font-weight: 400;
@@ -81,46 +88,46 @@
   .supply {
     .flex {
       .title {
-        color: var(--text-default-default, #b5c1c9);
-        text-align: center;
-        font-feature-settings: 'clig' off, 'liga' off;
-
         /* Desktop/Text/T400 Regular */
-        font-family: Inter;
+        font-family: $font-secondary;
         font-size: 21px;
         font-style: normal;
         font-weight: 400;
         line-height: 32px; /* 152.381% */
-      }
-      button {
-        display: flex;
-        padding: 12px 20px;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 2px;
-        border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, 0.13));
-        background: var(--background-default-muted-alpha, rgba(188, 213, 250, 0.08));
-        color: var(--text-default-strong, #f4f6f8);
+        color: var(--text-default-default, #b5c1c9);
         text-align: center;
         font-feature-settings: 'clig' off, 'liga' off;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px;
 
         /* Desktop/Text/T300 Strong */
-        font-family: Inter;
+        font-family: $font-secondary;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
         line-height: 24px; /* 150% */
-        span {
-          color: var(--text-default-default, #b5c1c9);
-          font-feature-settings: 'clig' off, 'liga' off;
+        color: var(--text-default-strong, #f4f6f8);
+        text-align: center;
+        background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+        border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
+        border-radius: 2px;
+        font-feature-settings: 'clig' off, 'liga' off;
+        gap: 8px;
 
+        span {
           /* Desktop/Text/T300 Strong */
-          font-family: Inter;
+          font-family: $font-secondary;
           font-size: 16px;
           font-style: normal;
           font-weight: 600;
           line-height: 24px;
+          color: var(--text-default-default, #b5c1c9);
+          font-feature-settings: 'clig' off, 'liga' off;
         }
       }
     }
@@ -129,12 +136,15 @@
   .mt-24 {
     margin-top: 24px;
   }
+
   .mt-8 {
     margin-top: 8px;
   }
+
   .w-100 {
     width: 100%;
   }
+
   .justify-between {
     justify-content: space-between;
   }
