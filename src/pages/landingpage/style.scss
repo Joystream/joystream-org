@@ -1,0 +1,16 @@
+@import '../../styles/main';
+
+.landingpage {
+  background-color: black;
+  color: white;
+  & .container-wrapper {
+    margin: auto;
+    max-width: 1440px;
+  }
+
+  & .primary-button {
+    border-radius: 4px;
+    border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, 0.13));
+    color: white;
+  }
+}
