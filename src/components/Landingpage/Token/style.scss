@@ -135,12 +135,182 @@
     }
   }
 
+  .table {
+    .tr,
+    .td {
+      display: flex;
+      padding-right: 32px;
+      padding-left: 32px;
+
+      /* Divider/Bottom */
+      box-shadow: 0 -1px 0 0 rgba(187, 217, 246, .13) inset;
+
+      div {
+        display: flex;
+        align-items: center;
+        flex: 1 0 0;
+        padding: 16px 8px;
+
+        /* Desktop / Heading / H100 */
+        font-family: $font-secondary;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px; /* 133.333% */
+        letter-spacing: .12px;
+        color: var(--text-default-default, #b5c1c9);
+        font-feature-settings: 'clig' off, 'liga' off;
+      }
+    }
+
+    .th {
+      display: flex;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      div{
+        font-weight: 700;
+        letter-spacing: .84px;
+        /* Divider/Bottom */
+      }
+      box-shadow: 0 -1px 0 0 rgba(187, 217, 246, .13) inset;
+    }
+  }
+
+  .buy_and_sell {
+    .buy_and_sell_title {
+      display: inline-flex;
+      align-items: center;
+
+      /* Desktop / Heading / H400 */
+      font-family: $font-ibm-sans;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px; /* 133.333% */
+      letter-spacing: .09px;
+      color: var(--solid-white, #fff);
+      font-feature-settings: 'clig' off, 'liga' off;
+      gap: 8px;
+    }
+
+    .flex {
+      justify-content: space-between;
+      gap: 24px;
+
+      .itemCard {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px 20px;
+
+          /* Desktop/Text/T300 Strong */
+          font-family: $font-secondary;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px; /* 150% */
+          color: var(--text-default-strong, #f4f6f8);
+          text-align: center;
+          background: var(--background-primary-default, #4038ff);
+          border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
+          border-radius: 2px;
+          font-feature-settings: 'clig' off, 'liga' off;
+          gap: 8px;
+        }
+
+        div {
+          display: flex;
+
+          /* Desktop / Heading / H600 */
+          font-family: $font-ibm-sans;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 40px; /* 125% */
+          color: var(--text-default-strong, #f4f6f8);
+          text-align: center;
+          font-feature-settings: 'clig' off, 'liga' off;
+          gap: 8px;
+
+          button {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+
+            /* Desktop/Text/T100 Regular */
+            font-family: $font-secondary;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px; /* 133.333% */
+            letter-spacing: .12px;
+            color: var(--text-default-strong, #f4f6f8);
+            background: var(--background-default-strong-default, #272d33);
+            border-radius: 4px;
+            font-feature-settings: 'clig' off, 'liga' off;
+            gap: 8px;
+            gap: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .staking {
+    .value {
+      /* Desktop / Heading / H800 */
+      font-family: $font-ibm-sans;
+      font-size: 55px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 64px; /* 116.364% */
+      letter-spacing: -.275px;
+      color: var(--solid-white, #fff);
+      text-align: center;
+      font-feature-settings: 'clig' off, 'liga' off;
+    }
+  }
+
+
+
+  .mt-8 {
+    margin-top: 8px;
+  }
+
   .mt-24 {
     margin-top: 24px;
   }
 
-  .mt-8 {
-    margin-top: 8px;
+  .mt-28 {
+    margin-top: 28px;
+  }
+
+  .px-0 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .px-32 {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .flex-2 {
+    flex: 2;
+  }
+
+  .gap-24 {
+    gap: 24px;
   }
 
   .w-100 {
@@ -149,5 +319,9 @@
 
   .justify-between {
     justify-content: space-between;
+  }
+
+  .justify-end{
+    justify-content: end;
   }
 }
