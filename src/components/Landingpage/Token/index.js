@@ -7,6 +7,7 @@ import { ReactComponent as ChangeIcon } from '../../../assets/svg/Change_price.s
 import { ReactComponent as CancelIcon } from '../../../assets/svg/Cancel.svg';
 import Mexc from '../../../assets/images/mexc.png';
 import Bitget from '../../../assets/images/bitget.png';
+import HighChart from '../Highchart';
 
 import './style.scss';
 
@@ -16,13 +17,13 @@ const Token = () => {
       <div className="title">
         <div>Token</div>
         <button>
-          Copy link to divis section
+          Copy link to this section
           <LinkIcon />
         </button>
       </div>
       <hr />
       <div className="flex">
-        <div className="chart"></div>
+        <div className="chart"><HighChart /></div>
         <div className="info">
           <div className="itemCard">
             <div className="title">
