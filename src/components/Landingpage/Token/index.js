@@ -8,6 +8,8 @@ import { ReactComponent as CancelIcon } from '../../../assets/svg/Cancel.svg';
 import Mexc from '../../../assets/images/mexc.png';
 import Bitget from '../../../assets/images/bitget.png';
 import HighChart from '../Highchart';
+import PieChart from '../Piechart';
+import AreaChart from '../Areachart'
 
 import './style.scss';
 
@@ -123,7 +125,9 @@ const Token = () => {
         </div>
       </div>
 
-      <div className="itemCard mt-24"></div>
+      <div className="itemCard mt-24">
+        <AreaChart />
+      </div>
 
       <div className="mt-24 flex gap-24">
         <div className="itemCard px-0 flex-1">
@@ -158,7 +162,13 @@ const Token = () => {
             </div>
           </div>
         </div>
-        <div className="itemCard px-0 flex-1"></div>
+        <div className="itemCard px-0 flex-1">
+          <div className='flex justify-between w-100 items-center px-32'>
+            <div className='flex justify-between items-center'>Minting <InformationIcon /></div>
+            <div className='flex justify-between items-center'>Annual inflation: 2%<InformationIcon /></div>
+          </div>
+          <PieChart />
+        </div>
       </div>
 
       <div className="staking flex mt-24 gap-24">
