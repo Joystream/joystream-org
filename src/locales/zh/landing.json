@@ -21,13 +21,30 @@
       "sectionTitle": "TRACTION",
       "title": "Growth and Engagement",
       "lastWeek": "Last week",
-      "videosUploaded": "Videos uploaded",
-      "commentsAndReactions": "Comments & Reactions",
-      "channels": "Channels",
-      "allFollowers": "All followers",
-      "profiles": "Profiles",
-      "creatorRewards": "Creator Rewards",
-      "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies."
+      "videosUploaded": {
+        "title": "Videos uploaded",
+        "description": "The total number of videos uploaded to the platform along with a percentage showing their relative increase within the last week."
+      },
+      "commentsAndReactions": {
+        "title": "Comments & Reactions",
+        "description": "The total number of comments and reactions made on the platform along with a percentage showing their relative increase within the last week."
+      },
+      "channels": {
+        "title": "Channels",
+        "description": "The total number created channels on the platform along with a percentage showing their relative increase within the last week."
+      },
+      "allFollowers": {
+        "title": "All followers",
+        "description": "The total number of followers on the platform along with a percentage showing their relative increase within the last week."
+      },
+      "profiles": {
+        "title": "Profiles",
+        "description": "The total number of profiles on the platform along with a percentage showing their relative increase within the last week."
+      },
+      "creatorRewards": {
+        "title": "Creator Rewards",
+        "description": "The total number of rewards on the platform along with a percentage showing their relative increase within the last week."
+      }
     },
     "creators": {
       "title": "Joystream Creators",
@@ -41,11 +58,26 @@
     "tokenomics": {
       "sectionTitle": "TOKENOMICS",
       "title": "Token Metrics",
-      "price": "Price",
-      "marketCap": "Market cap",
-      "totalSupply": "Total supply",
-      "circulatingSupply": "Circulating supply",
-      "fdv": "FDV",
+      "price": {
+        "title": "Price",
+        "description": "Current trading price of the token with a trend chart and percentage change from the previous week."
+      },
+      "marketCap": {
+        "title": "Market cap",
+        "description": "Total market capitalization, calculated as the current price multiplied by the circulating supply of tokens."
+      },
+      "totalSupply": {
+        "title": "Total supply",
+        "description": "The total amount of tokens that exist in the market, including those not currently circulating."
+      },
+      "circulatingSupply": {
+        "title": "Circulating supply",
+        "description": "The total number of tokens currently in circulation in the market."
+      },
+      "fdv": {
+        "title": "FDV",
+        "description": "The theoretical market capitalization if the total supply of tokens were in circulation, calculated as the current price times the total supply."
+      },
       "lastWeek": "Last week",
       "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies."
     },
@@ -71,22 +103,22 @@
         },
         "pioneer": {
           "name": "Pioneer",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "description": "Governance hub for community insights and decision-making.",
           "platforms": "Web"
         },
         "joystats": {
           "name": "JoyStats",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "description": "Analytics overview of platform performance and engagement.",
           "platforms": "Web"
         },
         "jscan": {
           "name": "JScan",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "description": "Council dashboard for proposal monitoring and voting.",
           "platforms": "Web"
         },
         "joyutils": {
           "name": "JoyUtils",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "description": "Essential utilities for common, everyday platform functions.",
           "platforms": "Web"
         }
       }

@@ -66,49 +66,49 @@ const Traction = ({ tractionData, priceData, t }) => {
           <TractionCard
             change={parseChangeValue(tractionData?.numberOfVideosChange)}
             value={parseMainValue(tractionData?.numberOfVideos)}
-            infoText={t('landing.traction.videosUploaded')}
+            infoText={t('landing.traction.videosUploaded.title')}
             icon={<VideosMetric />}
-            modalText={t('landing.traction.modalText')}
+            modalText={t('landing.traction.videosUploaded.description')}
             t={t}
           />
           <TractionCard
             change={parseChangeValue(tractionData?.numberOfCommentsAndReactionsChange)}
             value={parseMainValue(tractionData?.numberOfCommentsAndReactions)}
-            infoText={t('landing.traction.commentsAndReactions')}
+            infoText={t('landing.traction.commentsAndReactions.title')}
             icon={<CommentsAndReactionsMetric />}
-            modalText={t('landing.traction.modalText')}
+            modalText={t('landing.traction.commentsAndReactions.description')}
             t={t}
           />
           <TractionCard
             change={parseChangeValue(tractionData?.numberOfChannelsChange)}
             value={parseMainValue(tractionData?.numberOfChannels)}
-            infoText={t('landing.traction.channels')}
+            infoText={t('landing.traction.channels.title')}
             icon={<ChannelsMetric />}
-            modalText={t('landing.traction.modalText')}
+            modalText={t('landing.traction.channels.description')}
             t={t}
           />
           <TractionCard
             change={parseChangeValue(tractionData?.numberOfFollowersChange)}
             value={parseMainValue(tractionData?.numberOfFollowers)}
-            infoText={t('landing.traction.allFollowers')}
+            infoText={t('landing.traction.allFollowers.title')}
             icon={<FollowersMetric />}
-            modalText={t('landing.traction.modalText')}
+            modalText={t('landing.traction.allFollowers.description')}
             t={t}
           />
           <TractionCard
             change={parseChangeValue(tractionData?.numberOfMembershipsChange)}
             value={parseMainValue(tractionData?.numberOfMemberships)}
-            infoText={t('landing.traction.profiles')}
+            infoText={t('landing.traction.profiles.title')}
             icon={<ProfilesMetric />}
-            modalText={t('landing.traction.modalText')}
+            modalText={t('landing.traction.profiles.description')}
             t={t}
           />
           <TractionCard
             change={parseChangeValue(tractionData?.totalPayoutsChange)}
             value={parseMainValue(tractionData?.totalPayouts, priceData.price)}
-            infoText={t('landing.traction.creatorRewards')}
+            infoText={t('landing.traction.creatorRewards.title')}
             icon={<CreatorRewardsMetric />}
-            modalText={t('landing.traction.modalText')}
+            modalText={t('landing.traction.creatorRewards.description')}
             t={t}
           />
         </div>

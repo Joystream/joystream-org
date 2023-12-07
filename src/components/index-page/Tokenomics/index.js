@@ -5,7 +5,7 @@ import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 
 import './style.scss';
 
-const Container = ({ title, type, children, t }) => {
+const Container = ({ title, type, modalText, children, t }) => {
   return (
     <div
       className={`IndexPage__tokenomics__metrics__container-wrapper IndexPage__tokenomics__metrics__container-wrapper--${type}`}
@@ -15,9 +15,7 @@ const Container = ({ title, type, children, t }) => {
           {title}
           <div className="IndexPage__tokenomics__metrics__container__title__info">
             <InfoIcon />
-            <div className="IndexPage__tokenomics__metrics__container__title__info__modal">
-              {t('landing.tokenomics.modalText')}
-            </div>
+            <div className="IndexPage__tokenomics__metrics__container__title__info__modal">{modalText}</div>
           </div>
         </div>
         <div className="IndexPage__tokenomics__metrics__container__content">{children}</div>
@@ -780,8 +778,9 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
         </header>
         <div className="IndexPage__tokenomics__metrics">
           <Container
-            title={t('landing.tokenomics.price')}
+            title={t('landing.tokenomics.price.title')}
             type="price"
+            modalText={t('landing.tokenomics.price.description')}
             children={
               <div className="IndexPage__tokenomics__metrics__container__content__price">
                 <p className="IndexPage__tokenomics__metrics__container__content__price__value">
@@ -796,8 +795,9 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
             t={t}
           />
           <Container
-            title={t('landing.tokenomics.marketCap')}
+            title={t('landing.tokenomics.marketCap.title')}
             type="market-cap"
+            modalText={t('landing.tokenomics.marketCap.description')}
             children={
               <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
                 {parseValue(tokenomicsData?.circulatingSupply, priceData.price)}
@@ -806,8 +806,9 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
             t={t}
           />
           <Container
-            title={t('landing.tokenomics.totalSupply')}
+            title={t('landing.tokenomics.totalSupply.title')}
             type="total-supply"
+            modalText={t('landing.tokenomics.totalSupply.description')}
             children={
               <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
                 {parseValue(tokenomicsData?.totalSupply)}
@@ -816,8 +817,9 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
             t={t}
           />
           <Container
-            title={t('landing.tokenomics.circulatingSupply')}
+            title={t('landing.tokenomics.circulatingSupply.title')}
             type="circulating-supply"
+            modalText={t('landing.tokenomics.circulatingSupply.description')}
             children={
               <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
                 {parseValue(tokenomicsData?.circulatingSupply)}
@@ -826,8 +828,9 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
             t={t}
           />
           <Container
-            title={t('landing.tokenomics.fdv')}
+            title={t('landing.tokenomics.fdv.title')}
             type="fdv"
+            modalText={t('landing.tokenomics.fdv.description')}
             children={
               <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
                 {parseValue(tokenomicsData?.totalSupply, priceData.price)}

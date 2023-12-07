@@ -27,7 +27,7 @@ $animation-name: null;
 
   &__hero-animation-wrapper {
     position: relative;
-    min-height: 1376px;
+    min-height: 1264px;
     padding: 72px 32px;
     overflow: hidden;
     border-radius: 32px;
@@ -195,7 +195,7 @@ $animation-name: null;
 
   @media (max-width: 1440px) {
     &__hero-animation-wrapper {
-      min-height: 1065px;
+      min-height: 953px;
       padding-top: 32px;
     }
 
@@ -227,7 +227,7 @@ $animation-name: null;
 
   @media (max-width: 1024px) {
     &__hero-animation-wrapper {
-      min-height: 927px;
+      min-height: 831px;
       padding: 16px;
     }
 
@@ -270,7 +270,7 @@ $animation-name: null;
 
   @media (max-width: 768px) {
     &__hero-animation-wrapper {
-      min-height: 678px;
+      min-height: 582px;
     }
 
     &__hero {
@@ -297,7 +297,7 @@ $animation-name: null;
 
   @media (max-width: 425px) {
     &__hero-animation-wrapper {
-      min-height: 574px;
+      min-height: 478px;
       border-radius: 24px;
     }
 

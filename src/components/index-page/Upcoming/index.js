@@ -37,7 +37,7 @@ const Upcoming = ({ t }) => {
           </div>
         </div>
         <ArrowButton
-          link=""
+          link="https://forms.gle/3zdwuuraM39eqtU2A"
           text={t('landing.upcoming.button')}
           className="IndexPage__upcoming__button"
           textClassname="IndexPage__upcoming__button-text"
