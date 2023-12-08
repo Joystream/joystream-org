@@ -1,0 +1,187 @@
+@import '../../../styles/main';
+
+.traction {
+  margin-top: 160px;
+  padding: 0 32px;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      font-family: $font-ibm-sans;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 48px; /* 114.286% */
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      color: white;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
+      border-radius: 2px;
+      gap: 8px;
+    }
+  }
+
+  .first-title {
+    /* Desktop / Heading / H400 */
+    font-family: $font-ibm-sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: .09px;
+    color: var(--text-default-strong, #f4f6f8);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+  }
+
+  .value {
+    /* Desktop / Heading / H800 */
+    font-family: $font-ibm-sans;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 64px; /* 116.364% */
+    letter-spacing: -.275px;
+    color: var(--solid-white, #fff);
+    font-feature-settings: 'clig' off, 'liga' off;
+  }
+
+  .percent {
+    /* Desktop/Text/T400 Regular */
+    font-family: $font-secondary;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 152.381% */
+    color: var(--text-default-default, #b5c1c9);
+    font-feature-settings: 'clig' off, 'liga' off;
+  }
+
+  .second-title {
+    /* Desktop/Text/T400 Regular */
+    font-family: $font-secondary;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 152.381% */
+    color: var(--text-default-strong, #f4f6f8);
+    font-feature-settings: 'clig' off, 'liga' off;
+  }
+
+  .metrics {
+    .title {
+      //styleName: Desktop/Text/T400 Regular;
+      font-family: $font-secondary;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0;
+      color: #b5c1c9;
+    }
+
+    .value {
+      //styleName: Desktop/Heading/H700;
+      font-family: $font-ibm-sans;
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 48px;
+      letter-spacing: 0;
+    }
+
+    .percent {
+      //styleName: Desktop/Text/T400 Regular;
+      font-family: $font-secondary;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0;
+      color: #b5c1c9;
+    }
+  }
+
+  hr {
+    margin: 24px 0;
+    border-bottom: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, .27));
+  }
+
+  .border-background {
+    background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+    border-radius: 8px;
+  }
+
+  .highcharts-credits {
+    display: none;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-column {
+    flex-direction: column;
+  }
+
+  .justify-start {
+    justify-content: flex-start;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .justify-between {
+    justify-content: space-between;
+  }
+
+  .items-start {
+    align-items: flex-start;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .flex-2 {
+    flex: 2;
+  }
+
+  .gap-16 {
+    gap: 16px;
+  }
+
+  .gap-24 {
+    gap: 24px;
+  }
+
+  .p-32 {
+    padding: 32px;
+  }
+
+  .mt-8 {
+    margin-top: 8px;
+  }
+
+  .mt-16 {
+    margin-top: 16px;
+  }
+
+  .mt-24 {
+    margin-top: 24px;
+  }
+
+  .h-100 {
+    height: 100%;
+  }
+}

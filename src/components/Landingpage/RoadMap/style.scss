@@ -1,6 +1,7 @@
 @import '../../../styles/main';
 
 .roadMap {
+  margin-top: 160px;
   padding: 0 32px;
 
   .title {
@@ -74,7 +75,7 @@
 
       span {
         /* Desktop/Text/T300 Strong */
-        // font-family: Inter;
+        font-family: $font-secondary;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
@@ -114,7 +115,7 @@
       overflow: hidden;
 
       /* Desktop/Text/T200 Regular */
-      // font-family: Inter;
+      font-family: $font-secondary;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
