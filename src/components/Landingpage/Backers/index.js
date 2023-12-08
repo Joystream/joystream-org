@@ -30,14 +30,14 @@ const Backers = () => {
         </div>
         <div className="flex ">
           <div className="flex-2 flex gap-24">
-            <img src={Backer1} />
-            <img src={Backer2} />
-            <img src={Backer3} />
-            <img src={Backer4} />
+            <img src={Backer1} alt='backer' />
+            <img src={Backer2} alt='backer' />
+            <img src={Backer3} alt='backer' />
+            <img src={Backer4} alt='backer' />
           </div>
           <div className="flex-1 flex gap-24">
-            <img src={Backer5} />
-            <img src={Backer6} />
+            <img src={Backer5} alt='backer' />
+            <img src={Backer6} alt='backer' />
           </div>
         </div>
       </div>
