@@ -22,7 +22,7 @@ const Icon = ({ avatarSrc, iconIndex }) => {
     img.onload = () => {
       setShowPlaceholder(false);
     };
-  }, []);
+  }, [avatarSrc]);
 
   if (showPlaceholder) {
     return <img src={EmptyIcon} className={`AboutPage__hero__background__employee-icon${iconIndex + 1}`} alt="" />;

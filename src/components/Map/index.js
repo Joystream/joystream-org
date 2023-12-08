@@ -42,7 +42,7 @@ const maps = {
   giza: gizaImage,
   olympia: olympiaImage,
   rhodes: rhodesImage,
-  carthage: carthageImage
+  carthage: carthageImage,
 };
 
 const Map = ({ location, className, ...props }) => {

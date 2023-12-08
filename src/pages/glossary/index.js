@@ -36,7 +36,7 @@ const GlossaryPage = () => {
       setGlossaryIndex(0);
       window.history.replaceState(null, null, `?item=${glossary[0].title}${urlHash}`);
     }
-  }, []);
+  }, [glossary]);
 
   const onCardSelect = e => {
     const index = glossary.findIndex(item => item.title === e);

@@ -39,7 +39,7 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div className='navbarlist'>
+      <div className="navbarlist">
         {
           Navbarlist.map((item, idx) => (
             <button className="primary-button" key={idx}>{item}</button>

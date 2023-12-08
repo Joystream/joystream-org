@@ -22,10 +22,10 @@ const Utility = ({ t }) => {
       <div className="TokenPage__utility-background-wrapper">
         <div className="TokenPage__utility">
           <header className="TokenPage__utility__header">
-            <span className="TokenPage__utility__header__section-title">{t("token.utility.sectionTitle")}</span>
-            <h2 className="TokenPage__utility__header__title">{t("token.utility.title")}</h2>
+            <span className="TokenPage__utility__header__section-title">{t('token.utility.sectionTitle')}</span>
+            <h2 className="TokenPage__utility__header__title">{t('token.utility.title')}</h2>
             <p className="TokenPage__utility__header__subtitle">
-              {t("token.utility.subtitle")}
+              {t('token.utility.subtitle')}
             </p>
           </header>
 
@@ -35,9 +35,9 @@ const Utility = ({ t }) => {
                 <WorkingGroupIcon className="TokenPage__utility__grid__working-group__icon" />
               </div>
               <div className="TokenPage__utility__grid__working-group__info">
-                <h3 className="TokenPage__utility__grid__working-group__info__title">{t("token.utility.workingGroup.title")}</h3>
+                <h3 className="TokenPage__utility__grid__working-group__info__title">{t('token.utility.workingGroup.title')}</h3>
                 <h3 className="TokenPage__utility__grid__working-group__info__subtitle">
-                  {t("token.utility.workingGroup.subtitle")}
+                  {t('token.utility.workingGroup.subtitle')}
                 </h3>
               </div>
             </div>
@@ -47,9 +47,9 @@ const Utility = ({ t }) => {
                 <InvestIcon className="TokenPage__utility__grid__creators__icon" />
               </div>
               <div className="TokenPage__utility__grid__creators__info">
-                <h3 className="TokenPage__utility__grid__creators__info__title">{t("token.utility.creators.title")}</h3>
+                <h3 className="TokenPage__utility__grid__creators__info__title">{t('token.utility.creators.title')}</h3>
                 <h3 className="TokenPage__utility__grid__creators__info__subtitle">
-                  {t("token.utility.creators.subtitle")}
+                  {t('token.utility.creators.subtitle')}
                 </h3>
               </div>
               <img
@@ -74,9 +74,9 @@ const Utility = ({ t }) => {
                 <VideosIcon className="TokenPage__utility__grid__videos__icon" />
               </div>
               <div className="TokenPage__utility__grid__videos__info">
-                <h3 className="TokenPage__utility__grid__videos__info__title">{t("token.utility.videos.title")}</h3>
+                <h3 className="TokenPage__utility__grid__videos__info__title">{t('token.utility.videos.title')}</h3>
                 <h3 className="TokenPage__utility__grid__videos__info__subtitle">
-                  {t("token.utility.videos.subtitle")}
+                  {t('token.utility.videos.subtitle')}
                 </h3>
               </div>
               <img src={VideosIllustration} className="TokenPage__utility__grid__videos__illustration" alt="" />
@@ -87,9 +87,9 @@ const Utility = ({ t }) => {
                 <NominateValidatorsIcon className="TokenPage__utility__grid__validators__icon" />
               </div>
               <div className="TokenPage__utility__grid__validators__info">
-                <h3 className="TokenPage__utility__grid__validators__info__title">{t("token.utility.validators.title")}</h3>
+                <h3 className="TokenPage__utility__grid__validators__info__title">{t('token.utility.validators.title')}</h3>
                 <h3 className="TokenPage__utility__grid__validators__info__subtitle">
-                  {t("token.utility.validators.subtitle")}
+                  {t('token.utility.validators.subtitle')}
                 </h3>
               </div>
             </div>
@@ -99,9 +99,9 @@ const Utility = ({ t }) => {
                 <ElectionsIcon className="TokenPage__utility__grid__election__icon" />
               </div>
               <div className="TokenPage__utility__grid__election__info">
-                <h3 className="TokenPage__utility__grid__election__info__title">{t("token.utility.elections.title")}</h3>
+                <h3 className="TokenPage__utility__grid__election__info__title">{t('token.utility.elections.title')}</h3>
                 <h3 className="TokenPage__utility__grid__election__info__subtitle">
-                  {t("token.utility.elections.subtitle")}
+                  {t('token.utility.elections.subtitle')}
                 </h3>
               </div>
             </div>
@@ -111,9 +111,9 @@ const Utility = ({ t }) => {
                 <InteractIcon className="TokenPage__utility__grid__interact__icon" />
               </div>
               <div className="TokenPage__utility__grid__interact__info">
-                <h3 className="TokenPage__utility__grid__interact__info__title">{t("token.utility.interact.title")}</h3>
+                <h3 className="TokenPage__utility__grid__interact__info__title">{t('token.utility.interact.title')}</h3>
                 <h3 className="TokenPage__utility__grid__interact__info__subtitle">
-                  {t("token.utility.interact.subtitle")}
+                  {t('token.utility.interact.subtitle')}
                 </h3>
               </div>
               <img src={InteractIllustration} className="TokenPage__utility__grid__interact__illustration" alt="" />
@@ -124,9 +124,9 @@ const Utility = ({ t }) => {
                 <ProposalsIcon className="TokenPage__utility__grid__proposals__icon" />
               </div>
               <div className="TokenPage__utility__grid__proposals__info">
-                <h3 className="TokenPage__utility__grid__proposals__info__title">{t("token.utility.proposals.title")}</h3>
+                <h3 className="TokenPage__utility__grid__proposals__info__title">{t('token.utility.proposals.title')}</h3>
                 <h3 className="TokenPage__utility__grid__proposals__info__subtitle">
-                  {t("token.utility.proposals.subtitle")}
+                  {t('token.utility.proposals.subtitle')}
                 </h3>
               </div>
             </div>

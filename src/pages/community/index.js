@@ -49,9 +49,9 @@ const CommunityPage = () => {
       <section className="CommunityPage__hero-wrapper">
         <div className="CommunityPage__hero">
           <div className="CommunityPage__hero__content">
-            <h1 className="CommunityPage__hero__content__title">{t("community.hero.title")}</h1>
+            <h1 className="CommunityPage__hero__content__title">{t('community.hero.title')}</h1>
             <p className="CommunityPage__hero__content__subtitle">
-              {t("community.hero.subtitle")}
+              {t('community.hero.subtitle')}
             </p>
           </div>
           <div className="CommunityPage__hero__image">
@@ -64,15 +64,15 @@ const CommunityPage = () => {
       <section className="CommunityPage__links-wrapper">
         <div className="CommunityPage__links-section">
           <div className="CommunityPage__links">
-            <LinkCard icon={<Twitter />} title={t("community.links.twitter.title")} subtitle={t("community.links.twitter.subtitle")} link="https://twitter.com/JoystreamDAO/" />
-            <LinkCard icon={<Discord />} title={t("community.links.discord.title")} subtitle={t("community.links.discord.subtitle")} link="https://discord.gg/NaNzysB5YZ" />
-            <LinkCard icon={<Gleev />} title={t("community.links.gleev.title")} subtitle={t("community.links.gleev.subtitle")} link="https://gleev.xyz/"/>
-            <LinkCard icon={<Reddit />} title={t("community.links.reddit.title")} subtitle={t("community.links.reddit.subtitle")} link="https://www.reddit.com/r/joystream_dao/"/>
-            <LinkCard icon={<GitHub />} title={t("community.links.github.title")} subtitle={t("community.links.github.subtitle")} link="https://github.com/Joystream"/>
-            <LinkCard icon={<Handbook />} title={t("community.links.handbook.title")} subtitle={t("community.links.handbook.subtitle")} link="https://joystream.gitbook.io/testnet-workspace/"/>
-            <LinkCard icon={<Element />} title={t("community.links.element.title")} subtitle={t("community.links.element.subtitle")} link="https://app.element.io/#/room/#js-general:matrix.org"/>
-            <LinkCard icon={<Youtube />} title={t("community.links.youtube.title")} subtitle={t("community.links.youtube.subtitle")} link="https://www.youtube.com/@joystream8627"/>
-            <LinkCard icon={<img src={TelegramIcon} alt=""/>} title={t("community.links.telegram.title")} subtitle={t("community.links.telegram.subtitle")} link="https://t.me/JoyStreamOfficial"/>
+            <LinkCard icon={<Twitter />} title={t('community.links.twitter.title')} subtitle={t('community.links.twitter.subtitle')} link="https://twitter.com/JoystreamDAO/" />
+            <LinkCard icon={<Discord />} title={t('community.links.discord.title')} subtitle={t('community.links.discord.subtitle')} link="https://discord.gg/NaNzysB5YZ" />
+            <LinkCard icon={<Gleev />} title={t('community.links.gleev.title')} subtitle={t('community.links.gleev.subtitle')} link="https://gleev.xyz/"/>
+            <LinkCard icon={<Reddit />} title={t('community.links.reddit.title')} subtitle={t('community.links.reddit.subtitle')} link="https://www.reddit.com/r/joystream_dao/"/>
+            <LinkCard icon={<GitHub />} title={t('community.links.github.title')} subtitle={t('community.links.github.subtitle')} link="https://github.com/Joystream"/>
+            <LinkCard icon={<Handbook />} title={t('community.links.handbook.title')} subtitle={t('community.links.handbook.subtitle')} link="https://joystream.gitbook.io/testnet-workspace/"/>
+            <LinkCard icon={<Element />} title={t('community.links.element.title')} subtitle={t('community.links.element.subtitle')} link="https://app.element.io/#/room/#js-general:matrix.org"/>
+            <LinkCard icon={<Youtube />} title={t('community.links.youtube.title')} subtitle={t('community.links.youtube.subtitle')} link="https://www.youtube.com/@joystream8627"/>
+            <LinkCard icon={<img src={TelegramIcon} alt=""/>} title={t('community.links.telegram.title')} subtitle={t('community.links.telegram.subtitle')} link="https://t.me/JoyStreamOfficial"/>
           </div>
         </div>
       </section>

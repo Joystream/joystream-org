@@ -63,11 +63,200 @@
       border-radius: 2px;
       gap: 8px;
     }
+
+    .view_btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
+      border-radius: 2px;
+      gap: 8px;
+    }
+  }
+
+  .council_plan {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 32px;
+    background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+    border-radius: 8px;
+    gap: 16px;
+
+    .progress_bg {
+      width: 100%;
+      height: 20px;
+      background: var(--background-default-default-alpha, rgba(187, 217, 246, .13));
+      border-radius: 4px;
+    }
+
+    .progress_bar {
+      position: absolute;
+      width: 60%;
+      height: 20px;
+      background: var(--core-blue-200, #8890ff);
+      border-radius: 4px;
+    }
+
+    .plan_view_btn {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: center;
+      padding: 12px 20px;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
+      border-radius: 2px;
+      gap: 8px;
+    }
+  }
+
+  .info_style {
+    display: flex;
+    align-items: center;
+    padding: 4px 6px;
+    background: var(--background-default-strong-default, #272d33);
+    border-radius: 4px;
+    gap: 4px;
+  }
+
+  .card_info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      z-index: 1;
+      margin-top: -70px;
+    }
+
+    .info_style {
+      display: flex;
+      align-items: center;
+      padding: 4px 6px;
+      background: var(--background-default-strong-default, #272d33);
+      border-radius: 4px;
+      gap: 4px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 32px;
+      gap: 8px;
+    }
+  }
+
+  .card {
+    background: var(--background-default-muted-default, #0f1114);
+    border-radius: 8px;
+
+    .overlay {
+      height: 155px;
+      background: var(--background-default-overlay, rgba(16, 18, 20, .75));
+
+      img {
+        width: 100%;
+        height: 100%;
+        opacity: 15%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .groups_box {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 32px;
+    background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+    border: 1px solid #52616b;
+    border-radius: 8px;
+    gap: 16px;
+  }
+
+  .group_card {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    height: 400px;
+    background: #0f1114;
+    border: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, .27));
+    border-radius: 8px;
+
+    .overlay {
+      height: 80px;
+      background: var(--background-default-overlay, rgba(16, 18, 20, .75));
+
+      img {
+        width: 100%;
+        height: 100%;
+        opacity: 15%;
+        object-fit: cover;
+      }
+    }
+
+    .storage_img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -29px;
+    }
+
+    .group_info {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 32px 32px 32px;
+      gap: 16px;
+
+      .avatar_img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .avatar {
+        display: flex;
+        align-items: center;
+        padding: 4px 8px;
+        background: var(--background-default-strong-default, #272d33);
+        border-radius: 4px;
+        gap: 6px;
+      }
+    }
+  }
+
+  .member_Card_Des {
+    width: 100%;
+    padding: 32px;
+    background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+    border: 1px solid #52616b;
+    border-radius: 8px;
+  }
+
+  .member_Card {
+    padding: 32px;
+    background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+    border-radius: 8px;
+  }
+
+  .relative {
+    position: relative;
   }
 
   hr {
     margin: 24px 0;
     border-bottom: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, .27));
+  }
+
+  .display-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .flex-column {
@@ -78,20 +267,40 @@
     display: flex;
   }
 
-  .fs-55 {
-    font-size: 55px;
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .fs-12 {
+    font-size: 12px;
   }
 
   .fs-14 {
     font-size: 14px;
   }
 
+  .fs-16 {
+    font-size: 16px;
+  }
+
   .fs-21 {
     font-size: 21px;
   }
 
+  .fs-24 {
+    font-size: 24px;
+  }
+
+  .fs-32 {
+    font-size: 32px;
+  }
+
   .fs-42 {
     font-size: 42px;
+  }
+
+  .fs-55 {
+    font-size: 55px;
   }
 
   .fw-600 {
@@ -100,6 +309,10 @@
 
   .fw-400 {
     font-weight: 400;
+  }
+
+  .fw-500 {
+    font-weight: 500;
   }
 
   .fc-F4F6F8 {
@@ -114,6 +327,10 @@
     color: var(--solid-white, #fff);
   }
 
+  .fc-6C6CFF {
+    color: var(--accent-300, #6c6cff);
+  }
+
   .mt-8 {
     margin-top: 8px;
   }
@@ -126,14 +343,26 @@
     margin-top: 28px;
   }
 
+  .mb-8 {
+    margin-bottom: 8px;
+  }
+
   .px-0 {
     padding-right: 0;
     padding-left: 0;
   }
 
+  .px-12 {
+    padding: 12px 0;
+  }
+
   .px-32 {
     padding-right: 32px;
     padding-left: 32px;
+  }
+
+  .py-20 {
+    padding: 0 20px;
   }
 
   .p-32 {
@@ -148,8 +377,28 @@
     flex: 2;
   }
 
+  .gap-4 {
+    gap: 4px;
+  }
+
+  .gap-8 {
+    gap: 8px;
+  }
+
+  .gap-12 {
+    gap: 12px;
+  }
+
+  .gap-16 {
+    gap: 16px;
+  }
+
   .gap-24 {
     gap: 24px;
+  }
+
+  .gap-40 {
+    gap: 40px;
   }
 
   .gap-80 {
@@ -160,8 +409,32 @@
     width: 100%;
   }
 
+  .w-80 {
+    width: 80%;
+  }
+
+  .w-60 {
+    width: 60%;
+  }
+
+  .w-70 {
+    width: 70%;
+  }
+
+  .w-40 {
+    width: 40%;
+  }
+
+  .h-100 {
+    height: 100%;
+  }
+
   .justify-between {
     justify-content: space-between;
+  }
+
+  .justify-center {
+    justify-content: center;
   }
 
   .justify-end {
@@ -170,5 +443,13 @@
 
   .item-center {
     align-items: center;
+  }
+
+  .item-end {
+    align-items: end;
+  }
+
+  .text-center {
+    text-align: center;
   }
 }

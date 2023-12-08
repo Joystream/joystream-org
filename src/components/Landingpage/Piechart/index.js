@@ -46,22 +46,22 @@ const options = {
         {
           y: 25,
           name: 'Creator payouts',
-          color: '#6C6CFF'
+          color: '#6C6CFF',
         },
         {
           y: 21,
           name: 'Spending proposals',
-          color: '#ACACFA'
+          color: '#ACACFA',
         },
         {
           y: 19,
           name: 'Workers rewards',
-          color: '#9B9CF9'
+          color: '#9B9CF9',
         },
         {
           y: 35,
           name: 'Validator rewards',
-          color: '#7D7EF8'
+          color: '#7D7EF8',
         },
       ],
     },
@@ -69,21 +69,21 @@ const options = {
   legend: {
     enabled: true,
     itemStyle: {
-      color: "#fff",
-      fontSize: "14px",
-      fontWeight: "400"
+      color: '#fff',
+      fontSize: '14px',
+      fontWeight: '400',
     },
     itemHoverStyle: {
-      color: "#f0f"
+      color: '#f0f',
     },
     symbol: 'square',
-    symbolRadius: 2
+    symbolRadius: 2,
   },
 };
 
 const PiechartApp = () => {
   return (
-    <div className='flex justify-center w-100 items-center'>
+    <div className="flex justify-center w-100 items-center">
       <PieChart highcharts={Highcharts} options={options} />
     </div>
   );

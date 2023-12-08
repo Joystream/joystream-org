@@ -40,7 +40,7 @@ const Hightchart = () => {
       selected: 1,
     },
     title: {
-      text: `Bitcoin stock price`,
+      text: 'Bitcoin stock price',
     },
     chart: {
       height: 600,

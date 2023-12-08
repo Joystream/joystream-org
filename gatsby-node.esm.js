@@ -36,7 +36,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const verificationTemplate = path.resolve(`src/templates/verification.js`);
+  const verificationTemplate = path.resolve('src/templates/verification.js');
 
   verifiedMembers.forEach(user => {
     const { substituteUserRoute, memberHandle } = user;

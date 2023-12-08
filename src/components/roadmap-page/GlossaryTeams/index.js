@@ -41,7 +41,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick, t }) {
 
   useEffect(() => {
     filterData(searchText);
-  }, [glossary]);
+  }, [filterData, glossary, searchText]);
 
   const onSelectCarousel = e => {
     const filtered = glossary.filter(item =>
@@ -82,9 +82,9 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick, t }) {
     <div className="GlossaryTeams">
       <div>
         <div className="GlossaryTeams__head__panel">
-          <div className="GlossaryTeams__head__panel__title">{t("roadmap.glossary.title")}</div>
+          <div className="GlossaryTeams__head__panel__title">{t('roadmap.glossary.title')}</div>
           <div className="GlossaryTeams__head__panel__subtitle">
-            {t("roadmap.glossary.subtitle")}
+            {t('roadmap.glossary.subtitle')}
           </div>
         </div>
         <div className="GlossaryTeams__search__panel">
@@ -154,7 +154,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick, t }) {
                 setShowAll(false);
               }}
             >
-              {t("roadmap.glossary.hideAll")}
+              {t('roadmap.glossary.hideAll')}
             </button>
           ) : (
             <button
@@ -175,7 +175,7 @@ function GlossaryTerms({ glossary, sliderText, cardOnClick, t }) {
                 onFilterClear(true);
               }}
             >
-              {t("roadmap.glossary.clearAll")}
+              {t('roadmap.glossary.clearAll')}
             </button>
           )}
         </div>

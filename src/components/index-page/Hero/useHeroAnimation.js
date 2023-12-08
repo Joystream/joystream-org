@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from 'react';
 
 import sourceImages from './images';
 import StepsImage1 from '../../../assets/images/landing/hero/main-sequence-layer1.webp';
@@ -22,8 +22,8 @@ const drawImage = (canvasRef, image, drawOver = false, options) => {
     } else {
       context.drawImage(img, 0, 0);
     }
-  }
-}
+  };
+};
 
 const INITIAL_ANIMATION_FRACTION = 0.175;
 const STEPS_ANIMATION_FRACTION = 0.13;
@@ -34,41 +34,41 @@ const STEPS_ANIMATION_FRAMES = [StepsImage1, StepsImage2, StepsImage3, StepsImag
 // HELPER FUNCTIONS
 const calculateFrameIndex = (scrollFraction, numberOfFrames) => {
   return Math.min(numberOfFrames - 1, Math.floor(scrollFraction * numberOfFrames));
-}
+};
 
 const preloadImages = (images) => {
   for(let image of images) {
     const img = new Image();
     img.src = image;
   }
-}
+};
 
 export default function useHeroAnimation(canvasRef, illustrationWrapperRef, animationInfo, setIsAnimationDone, setMessageToShow) {
   const lastRenderedImageIndex = useRef();
 
   const isStepAnimationAfter = (nextCacheValue) => {
-    let previousFrameIndex = Number(lastRenderedImageIndex.current.split("-")[3]);
-    const nextFrameIndex = Number(nextCacheValue.split("-")[3]);
+    let previousFrameIndex = Number(lastRenderedImageIndex.current.split('-')[3]);
+    const nextFrameIndex = Number(nextCacheValue.split('-')[3]);
 
     if(isNaN(previousFrameIndex)) {
       previousFrameIndex = 0;
     }
 
     return nextFrameIndex >= previousFrameIndex;
-  }
+  };
 
   const isValueInCache = (value) => lastRenderedImageIndex.current === value;
 
   const setCacheValue = (value) => {
-    console.log("Cache value updated with: ", value);
-    lastRenderedImageIndex.current = value
+    console.log('Cache value updated with: ', value);
+    lastRenderedImageIndex.current = value;
   };
 
   useEffect(() => {
     // preload images
     preloadImages(sourceImages);
     preloadImages(STEPS_ANIMATION_FRAMES);
-  }, [])
+  }, []);
 
   useEffect(() => {
     if(animationInfo && illustrationWrapperRef.current) {
@@ -153,5 +153,5 @@ export default function useHeroAnimation(canvasRef, illustrationWrapperRef, anim
         }
       }
     }
-  }, [animationInfo]);
+  }, [animationInfo, canvasRef, illustrationWrapperRef, setIsAnimationDone, setMessageToShow]);
 }

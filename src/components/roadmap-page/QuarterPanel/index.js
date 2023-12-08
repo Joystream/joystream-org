@@ -128,7 +128,7 @@ function QuarterPanel({ data, glossaryPanel, t }) {
     handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [activeText]);
 
   const handleClick = i => {
     const scrollY = window.scrollY;
