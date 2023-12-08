@@ -1,0 +1,116 @@
+@import '../../../styles/main';
+
+.history {
+  padding: 0 32px;
+
+  hr {
+    margin: 24px 0;
+    border-bottom: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, .27));
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      font-family: $font-ibm-sans;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 48px; /* 114.286% */
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      color: white;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
+      border-radius: 2px;
+      gap: 8px;
+    }
+  }
+
+  .history-info {
+    display: flex;
+    flex-direction: column;
+    width: 326px;
+    background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+    border-radius: 8px;
+
+    .history-img {
+      height: 183.38px;
+      background: rgba(99, 99, 251, .61);
+      border-radius: 8px;
+
+      .img {
+        opacity: .3;
+      }
+    }
+
+    .history-body {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      gap: 24px;
+
+      .text {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        min-height: 128px;
+        gap: 8px;
+
+        .date {
+          overflow: hidden;
+          font-family: $font-ibm-sans;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          color: var(--solid-white, #fff);
+          text-overflow: ellipsis;
+          font-feature-settings: 'clig' off, 'liga' off;
+          // line-height: 32px; /* 133.333% */
+        }
+
+        .desc {
+          margin-top: 8px;
+          // font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px; /* 150% */
+          color: var(--text-default-default, #b5c1c9);
+          font-feature-settings: 'clig' off, 'liga' off;
+        }
+      }
+
+      .read {
+        display: flex;
+        gap: 8px;
+
+        .other-font {
+          display: flex;
+          align-items: center;
+
+          /* Desktop/Text/T300 Strong */
+          // font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px; /* 150% */
+          color: var(--accent-300, #6c6cff);
+          font-feature-settings: 'clig' off, 'liga' off;
+        }
+
+        .arrow {
+          padding: 5px;
+          color: var(--accent-300, #6c6cff);
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
