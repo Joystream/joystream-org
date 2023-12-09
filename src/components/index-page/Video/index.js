@@ -46,7 +46,7 @@ const Video = ({ t }) => {
           <iframe
             ref={vimeoVideoIframeRef}
             title="Joystream Vision Video"
-            src="https://player.vimeo.com/video/888678724?h=1e85bf9838&autoplay=1&autopause=0"
+            src="https://player.vimeo.com/video/888678724?h=1e85bf9838"
             allow="autoplay"
             className="IndexPage__video__player__main"
             loading="eager"
