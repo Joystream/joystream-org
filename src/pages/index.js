@@ -25,7 +25,7 @@ const IndexPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
-  const [data, loading, error] = useAxios('http://localhost:8083/landing-page-data');
+  const [data, loading, error] = useAxios('https://status.joystream.org/landing-page-data');
 
   const updatedPriceData = {
     price: data?.price ?? 0,
