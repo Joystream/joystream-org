@@ -1,0 +1,15 @@
+@mixin grid ($column_number: 12, $max-width: calc(1440px - 64px)) {
+  display: grid;
+  column-gap: 24px;
+  grid-template-columns: repeat($column_number, 1fr);
+
+  @media (max-width: 1024px) {
+    column-gap: 16px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: $max-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

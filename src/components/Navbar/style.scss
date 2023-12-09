@@ -282,7 +282,7 @@
     }
   }
 
-  @media #{$screen-max-lg} {
+  @media (max-width: 1024px) {
     background-color: $c_black;
 
     &--open {
@@ -291,6 +291,7 @@
 
     &__container {
       padding-right: 0;
+      padding-left: 16px;
     }
 
     &__logo--open {
@@ -409,7 +410,7 @@
       justify-content: center;
       width: 64px;
       height: 64px;
-      margin: 8px 8px 0 0;
+      margin: 8px 16px 0 0;
       cursor: pointer;
       background-color: $c_blue-ribbon;
 

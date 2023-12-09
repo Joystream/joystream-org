@@ -4,40 +4,87 @@
       "description": "Joystream is a video platform controlled, owned, and operated by its users."
     },
     "hero": {
-      "title": "The streaming platform empowering<span><typewriter/></span>",
+      "title": "A video platform protocol empowering<span><typewriter/></span>",
       "typewriterOptions": {
         "creators": "creators",
         "builders": "builders",
         "users": "users"
       },
       "subtitle": "Built on and operated by the Joystream blockchain and DAO.",
-      "viewApps": "View apps",
-      "startYourCommunity": "Start your community",
-      "stepOne": {
-        "title": "Application",
-        "subtitle": "Each app brings its own discovery algorithms, terms of user policy, form factor and possible vertical focus."
+      "button": "Explore project dashboard"
+    },
+    "ourVision": {
+      "title": "Our Vision",
+      "subtitle": "Everything you need to know about the project in less than 3 minutes!"
+    },
+    "traction": {
+      "sectionTitle": "TRACTION",
+      "title": "Growth and Engagement",
+      "lastWeek": "Last week",
+      "videosUploaded": {
+        "title": "Videos uploaded",
+        "description": "The total number of videos uploaded to the platform along with a percentage showing their relative increase within the last week."
       },
-      "stepTwo": {
-        "title": "Storage system",
-        "subtitle": "All the video, images and assets in the system are stored on community run and incentived infrastructure."
+      "commentsAndReactions": {
+        "title": "Comments & Reactions",
+        "description": "The total number of comments and reactions made on the platform along with a percentage showing their relative increase within the last week."
       },
-      "stepThree": {
-        "title": "Content delivery",
-        "subtitle": "All videos, images, and asset in the system are delivered through a community run and incentivised low latency content delivery network."
+      "channels": {
+        "title": "Channels",
+        "description": "The total number created channels on the platform along with a percentage showing their relative increase within the last week."
       },
-      "stepFour": {
-        "title": "Public Blockchain Layer",
-        "subtitle": "Shared index of content, people and interactions. Content uploaded by creators in any app as well as channel's transactions and engagement are portable to any other app on the network."
+      "allFollowers": {
+        "title": "All followers",
+        "description": "The total number of followers on the platform along with a percentage showing their relative increase within the last week."
+      },
+      "profiles": {
+        "title": "Profiles",
+        "description": "The total number of profiles on the platform along with a percentage showing their relative increase within the last week."
+      },
+      "creatorRewards": {
+        "title": "Creator Rewards",
+        "description": "The total number of rewards on the platform along with a percentage showing their relative increase within the last week."
       }
+    },
+    "creators": {
+      "title": "Joystream Creators",
+      "info": {
+        "label": "Payments are made in JOY tokens",
+        "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees. We are in the process of getting the JOY token listed on popular exchanges, so you can buy or sell JOYs for FIAT currencies, such as USD."
+      },
+      "followers": "followers",
+      "earned": "Earned:"
     },
     "tokenomics": {
       "sectionTitle": "TOKENOMICS",
-      "title": "Key Metrics"
+      "title": "Token Metrics",
+      "price": {
+        "title": "Price",
+        "description": "Current trading price of the token with a trend chart and percentage change from the previous week."
+      },
+      "marketCap": {
+        "title": "Market cap",
+        "description": "Total market capitalization, calculated as the current price multiplied by the circulating supply of tokens."
+      },
+      "totalSupply": {
+        "title": "Total supply",
+        "description": "The total amount of tokens that exist in the market, including those not currently circulating."
+      },
+      "circulatingSupply": {
+        "title": "Circulating supply",
+        "description": "The total number of tokens currently in circulation in the market."
+      },
+      "fdv": {
+        "title": "FDV",
+        "description": "The theoretical market capitalization if the total supply of tokens were in circulation, calculated as the current price times the total supply."
+      },
+      "lastWeek": "Last week",
+      "modalText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies."
     },
     "ecosystem": {
       "sectionTitle": "ECOSYSTEM",
-      "title": "One platform.<br/> Multiple apps.",
-      "subtitle": "Joystream is an open source platform, with an open blockchain at its core, powering multiple video streaming Apps at once. Videos uploaded via any app built on Joystream can reach consumers of other apps on the network, allowing creators to expand their audience with the single account without extra effort.",
+      "title": "One Protocol,<br /> a Universe of Applications",
+      "subtitle": "Joystream is an open-source platform built on blockchain. It supports multiple video streaming apps at once. Videos uploaded on any Joystream app can be seen by users of other apps, helping creators grow their audience.",
       "appsBuiltOnJoystream": {
         "title": "Check out apps built on Joystream",
         "sectionTitle": "FEATURED",
@@ -51,16 +98,36 @@
         },
         "l1Media": {
           "name": "l1.media",
-          "description": "For education, news, science, entertainment beyond borders. First community-run gateway by founding members implementing new features and funding models to empower creators.",
+          "description": "For education, news, science, entertainment beyond borders.",
+          "platforms": "Web"
+        },
+        "pioneer": {
+          "name": "Pioneer",
+          "description": "Governance hub for community insights and decision-making.",
+          "platforms": "Web"
+        },
+        "joystats": {
+          "name": "JoyStats",
+          "description": "Analytics overview of platform performance and engagement.",
+          "platforms": "Web"
+        },
+        "jscan": {
+          "name": "JScan",
+          "description": "Council dashboard for proposal monitoring and voting.",
+          "platforms": "Web"
+        },
+        "joyutils": {
+          "name": "JoyUtils",
+          "description": "Essential utilities for common, everyday platform functions.",
           "platforms": "Web"
         }
       }
     },
     "developers": {
       "sectionTitle": "DEVELOPERS",
-      "title": "How about starting your own video community?",
+      "title": "Launch your own video app",
       "subtitle": "Spinning up your very own app was never easier before. Configurable feature set, no-code approach, and support from the DAO lowers the set up barriers and lets you focus on your mission instead.",
-      "link": "Start your community",
+      "link": "Launch your own video app",
       "commentPartOne": "// this is where you're",
       "commentPartTwo": "stepping in",
       "stepOne": {
@@ -85,13 +152,8 @@
       }
     },
     "payouts": {
-      "atlas": {
-        "sectionTitle": "ATLAS",
-        "title": "Open source codebase with rich feature set",
-        "subtitle": "All apps built from the Atlas open source codebase can offer the full feature set encapsulating NFTs, Creator Rewards, Creator Tokens Minting from day one and benefit from regular updates with new features released."
-      },
       "sectionTitle": "PAYOUTS",
-      "title": "Rewards for <br/> publishing your videos",
+      "title": "Rewards for <br/> publishing videos",
       "subtitle": "Publishing videos can get creators cash rewards from the Joystream DAO council on a regular basis. More popular videos receive greater rewards.",
       "carousel": {
         "title": "Recent rewards from the Joystream DAO",
@@ -106,15 +168,14 @@
       }
     },
     "videoNFTs": {
+      "header": {
+        "sectionTitle": "CREATOR MONETIZATION",
+        "title": "Powerful New Value Capture Tools",
+        "subtitle": "All apps built from the Atlas open source codebase offer new tools built into Joystream blockchain that helps 99.9% of creators not served by ad-model."
+      },
       "sectionTitle": "VIDEO NFTS",
       "title": "Video monetisation with NFT sales and royalties",
       "subtitle": "Videos can be turned into NFT minted on the Joystream network and put up for sale.\n\nCreators can choose between fixed price, open auction, and timed auction. With royalties, creators can get a cut every time their NFT is sold again on any app in the network.",
-      "cta": {
-        "title": "“This should be the greatest time <br /> in history for creative people. And I think we might have finally figured it out.”",
-        "about": "Chris Dixon, entrepreneur and investor",
-        "podcast": "The Tim Ferris Show podcast",
-        "button": "Claim your channel"
-      },
       "carousel": {
         "title": "Recently sold NFTs on the Joystream blockchain",
         "info": {
@@ -154,12 +215,18 @@
       },
       "shareUpside": {
         "sectionTitle": "SHARE UPSIDE WITH THE COMMUNITY",
-        "title": "Support favourites and earn together.<br/>Scout for future starts.",
+        "title": "Support favourites and earn together. <br/>Scout for future starts.",
         "subtitle": "Everyone can support creators to receive a portion of their revenue. Creators can reward their audience by sharing some of their channel's earnings."
       }
     },
+    "upcoming": {
+      "sectionTitle": "UPCOMING",
+      "title": "Builders Grant Program",
+      "subtitle": "If you are a developer - you can get a grant, development support, business model support and more.",
+      "button": "Sign up for program"
+    },
     "availableActivities": {
-      "title": "Not a creator?<br/> Help build the future with us",
+      "title": "Build The Future With Us",
       "subtitle": "Joystream is a video platform managed by DAO, which means there are all sorts of ways you can join and earn by contributing to the project.",
       "activityTitles": {
         "referral": "Refer a friend",
@@ -179,19 +246,13 @@
         "distributorLead": "Distributor Lead",
         "validator": "Validator"
       },
-      "weekly": "(Per week)",
+      "weekly": "Per week",
       "placeForYou": "Place for you?",
-      "chatWithIntegrator": "Chat with Integrator",
-      "showMore": "Show more activities"
-    },
-    "whatWeDo": {
-      "sectionTitle": "MANIFESTO",
-      "title": "Due to network effects, economies of scale, regulations and political interests, we are today left with a handful of massive institutions.",
-      "link": "Read our manifesto"
+      "chatWithIntegrator": "Chat with Integrator"
     },
     "joystreamDAO": {
       "sectionTitle": "JOYSTREAM DAO",
-      "title": "Have a hand in shaping the future of Joystream.<br /> Join our DAO.",
+      "title": "Join our DAO.",
       "subtitle": "Pioneer is the place to participate in community governance and operation. Vote on elections, submit proposals or enter a paid role to support the platform growth.",
       "link": "Go to Pioneer",
       "carousel": {
@@ -219,11 +280,6 @@
           "viewDiscussion": "View discussion"
         }
       }
-    },
-    "jsgenesis": {
-      "sectionTitle": "JSGENESIS",
-      "title": "We’re building<br/>Joystream to set it free",
-      "link": "Meet the team"
     }
   }
 }
