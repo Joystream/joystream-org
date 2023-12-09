@@ -16,7 +16,7 @@ const FooterSection = ({ title, links }) => {
         const LinkComponent = link.to ? Link : 'a';
         const props = link.to ? link : { ...link, target: '_blank', rel: 'noopener noreferrer' };
 
-        const iconComponent = Icon ? <Icon className="Footer__section-icon"  /> : null;
+        const iconComponent = Icon ? <Icon className="Footer__section-icon" /> : null;
 
         return (
           <LinkComponent key={label} className="Footer__section-link" {...props}>
@@ -32,30 +32,32 @@ const FooterSection = ({ title, links }) => {
 const LinkSection = ({ t }) => (
   <>
     {/* <OurInvestors t={t} /> */}
-    <div className="Footer__layout">
-      <FooterSection
-        title={t('joystream')}
-        links={joystreamLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
-      />
-      {/* <FooterSection
+    <div className="Footer__layout-wrapper">
+      <div className="Footer__layout">
+        <FooterSection
+          title={t('joystream')}
+          links={joystreamLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
+        />
+        {/* <FooterSection
         title={t('socials.github')}
         links={githubLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
         /> */}
-      <FooterSection
-        title={t('footer.usefulLinks.title')}
-        links={usefulLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
-      />
+        <FooterSection
+          title={t('footer.usefulLinks.title')}
+          links={usefulLinks.map(({ label, ...rest }) => ({ label: t(label), ...rest }))}
+        />
 
-      <div className="Footer__section Footer__section--socials">
-        <h6 className="Footer__section-title Footer__section-title--socials">{t('footer.followUs')}</h6>
+        <div className="Footer__section Footer__section--socials">
+          <h6 className="Footer__section-title Footer__section-title--socials">{t('footer.followUs')}</h6>
 
-        <div className="Footer__socials">
-          {socialMedias.map(({ icon: Icon, name, href }) => (
-            <a href={href} className="Footer__social-link" key={name}>
-              <Icon className="Footer__social-icon" />
-              <p className="Footer__social-name">{t(name)}</p>
-            </a>
-          ))}
+          <div className="Footer__socials">
+            {socialMedias.map(({ icon: Icon, name, href }) => (
+              <a href={href} className="Footer__social-link" key={name}>
+                <Icon className="Footer__social-icon" />
+                <p className="Footer__social-name">{t(name)}</p>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -68,8 +70,8 @@ const Footer = ({ t, primer }) => {
   return (
     <footer className="Footer">
       <div className="Footer__form-wrapper">
-        <h2 className="Footer__form__title">{t('footer.title')}</h2>
-        <p className="Footer__form__subtitle">{t('footer.subtitle')}</p>
+        <h2 className="Footer__form-title">{t('footer.title')}</h2>
+        <p className="Footer__form-subtitle">{t('footer.subtitle')}</p>
         <form
           method="post"
           action="https://joystream.us11.list-manage.com/subscribe/post?u=932de577aec9616d4516b4e0f&amp;id=459ba8d1da"

@@ -7,7 +7,7 @@ import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-smal
 import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
 import { ReactComponent as PlaceForYouIcon } from '../../../assets/svg/available-activities-icons/place-for-you.svg';
 
-import useWindowDimensions from '../../../utils/useWindowDimensions';
+// import useWindowDimensions from '../../../utils/useWindowDimensions';
 import { WORKER_ACTIVITIES } from '../../../data/pages';
 
 import './style.scss';
@@ -19,10 +19,6 @@ const ActivityListAmount = ({ mobile, amount, priceData, isWeekly, t }) => {
   if (amount) {
     amountToRender = Math.round(amount);
     amountInDollars = `${Math.round(priceData.price * amount)}`;
-
-    // if (amount > 10000) {
-    //   amountToRender = `${Math.round(amount / 1000)}K`;
-    // }
   }
 
   if (priceData.error) {
@@ -37,7 +33,7 @@ const ActivityListAmount = ({ mobile, amount, priceData, isWeekly, t }) => {
     >
       <div className="IndexPage__available-activities__list-item__amount__value">
         {amountToRender} JOY
-        <span>/ ${amountInDollars}</span>
+        <span>(${amountInDollars})</span>
       </div>
       {isWeekly && (
         <div className="IndexPage__available-activities__list-item__amount__weekly">
@@ -135,10 +131,6 @@ const Activity = ({ Icon, title, amount, priceData, isWeekly, icons, isLoading, 
     </div>
   );
 
-  // if(!isLoading && icons?.toRender?.length === 0 && icons?.others === 0) {
-  //   return null;
-  // }
-
   return (
     <a href="https://discord.gg/jq5VtcSuqj" target="_blank">
       {itemContent}
@@ -146,24 +138,14 @@ const Activity = ({ Icon, title, amount, priceData, isWeekly, icons, isLoading, 
   );
 };
 
-const AvailableActivities = ({ priceData, t }) => {
-  const [data, loading, error] = useAxios('https://status.joystream.org/budgets');
+const AvailableActivities = ({ budgets, loading, priceData, t }) => {
   const [numberOfRenderedActivities, setNumberOfRenderedActivities] = useState(WORKER_ACTIVITIES.length);
-  const { width } = useWindowDimensions();
-
-  useEffect(() => {
-    if (width) {
-      setNumberOfRenderedActivities(width < 1400 ? 3 : WORKER_ACTIVITIES.length);
-    }
-  }, [width]);
 
   return (
     <section className="IndexPage__available-activities-wrapper">
       <div className="IndexPage__available-activities">
-        <header>
-          <h2 className="IndexPage__available-activities__title">
-            <Trans i18nKey="landing.availableActivities.title" components={{ br: <br /> }} />
-          </h2>
+        <header className="IndexPage__available-activities__header">
+          <h2 className="IndexPage__available-activities__header__title">{t('landing.availableActivities.title')}</h2>
         </header>
         <p className="IndexPage__available-activities__subtitle">{t('landing.availableActivities.subtitle')}</p>
         <div className="IndexPage__available-activities__list">
@@ -174,26 +156,16 @@ const AvailableActivities = ({ priceData, t }) => {
                 key={activityKey}
                 Icon={WORKER_ACTIVITIES[activityKey].icon}
                 title={t(WORKER_ACTIVITIES[activityKey].title)}
-                amount={data?.[activityKey]?.weeklyEarnings}
+                amount={budgets?.[activityKey]?.weeklyEarnings}
                 priceData={priceData}
                 isWeekly={true}
-                icons={data?.[activityKey]?.icons}
-                numberOfWorkers={data?.[activityKey]?.numberOfWorkers}
+                icons={budgets?.[activityKey]?.icons}
+                numberOfWorkers={budgets?.[activityKey]?.numberOfWorkers}
                 isLoading={loading}
                 t={t}
               />
             ))}
         </div>
-        {width < 1400 && numberOfRenderedActivities < Object.keys(WORKER_ACTIVITIES).length ? (
-          <div
-            className="IndexPage__available-activities__show-more"
-            onClick={() => setNumberOfRenderedActivities(prev => prev + 1)}
-            role="presentation"
-          >
-            {t('landing.availableActivities.showMore')}{' '}
-            <ArrowIcon className="IndexPage__available-activities__show-more__arrow-icon" />
-          </div>
-        ) : null}
       </div>
     </section>
   );

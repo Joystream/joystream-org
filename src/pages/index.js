@@ -10,13 +10,14 @@ import Hero from '../components/index-page/Hero';
 import Payouts from '../components/index-page/Payouts';
 import VideoNFTs from '../components/index-page/VideoNFTs';
 import CreatorTokens from '../components/index-page/CreatorTokens';
-import YoutubeSync from '../components/index-page/YoutubeSync';
-import Manifesto from '../components/index-page/Manifesto';
 import JoystreamDAO from '../components/index-page/JoystreamDAO';
-import Jsgenesis from '../components/index-page/Jsgenesis';
 import AvailableActivities from '../components/index-page/AvailableActivities';
 import Ecosystem from '../components/index-page/Ecosystem';
 import Tokenomics from '../components/index-page/Tokenomics';
+import Video from '../components/index-page/Video';
+import Traction from '../components/index-page/Traction';
+import Upcoming from '../components/index-page/Upcoming';
+import Creators from '../components/index-page/Creators';
 
 import './style.scss';
 
@@ -24,12 +25,11 @@ const IndexPage = () => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
-  const [data, loading, error] = useAxios('https://status.joystream.org/carousel-data');
-  const [priceData, priceLoading, priceError] = useAxios('https://status.joystream.org/price');
+  const [data, loading, error] = useAxios('https://status.joystream.org/landing-page-data');
 
   const updatedPriceData = {
-    price: priceData?.price ?? 0,
-    error: priceError,
+    price: data?.price ?? 0,
+    error: error,
   };
 
   return (
@@ -42,25 +42,27 @@ const IndexPage = () => {
 
       <Hero t={t} />
 
-      <Tokenomics t={t} />
+      <Video t={t} />
+
+      <Traction t={t} tractionData={data} priceData={updatedPriceData} />
+
+      <Creators t={t} creators={data?.carouselData.creators} priceData={updatedPriceData} />
+
+      <Tokenomics t={t} tokenomicsData={data} priceData={updatedPriceData} />
 
       <Ecosystem t={t} />
 
-      <Payouts t={t} payouts={data?.payouts} priceData={updatedPriceData} />
+      <VideoNFTs t={t} nftData={data?.carouselData.nfts} priceData={updatedPriceData} />
 
-      <VideoNFTs t={t} nftData={data?.nfts} priceData={updatedPriceData} />
+      <Payouts t={t} payouts={data?.carouselData.payouts} priceData={updatedPriceData} />
 
       <CreatorTokens t={t} />
 
-      {/* <YoutubeSync t={t}/> */}
+      <Upcoming t={t} />
 
-      <Manifesto t={t} />
+      <JoystreamDAO t={t} proposalsData={data?.carouselData.proposals} />
 
-      <AvailableActivities t={t} priceData={updatedPriceData} />
-
-      <JoystreamDAO t={t} proposalsData={data?.proposals} />
-
-      {/* <Jsgenesis t={t} /> */}
+      <AvailableActivities t={t} budgets={data?.budgets} loading={loading} priceData={updatedPriceData} />
     </BaseLayout>
   );
 };

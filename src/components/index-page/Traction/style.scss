@@ -1,0 +1,302 @@
+@import '../../../styles/main';
+@import '../../../pages/style';
+
+.IndexPage {
+  &__traction-wrapper {
+    padding: 96px 32px 0 32px;
+    background-color: black;
+  }
+
+  &__traction {
+    @include grid;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      grid-column: 1 / 13;
+
+      &__section-title {
+        @include h400;
+
+        color: #6c6cff;
+      }
+
+      &__title {
+        @include h900;
+
+        margin-top: 4px;
+        color: $c_white;
+      }
+    }
+
+    &__cards {
+      display: grid;
+      max-height: 920px;
+      margin-top: 72px;
+      gap: 24px;
+      grid-column: 2 / 12;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    &__card-wrapper {
+      height: 416px;
+      padding: 1px;
+      background: linear-gradient(180deg, #52616b 0%, rgba(82, 97, 107, 0) 100%);
+      border-radius: 8px;
+
+      &:nth-child(2) {
+        margin-top: 64px;
+      }
+
+      &:nth-child(4),
+      &:nth-child(6) {
+        margin-top: -64px;
+      }
+    }
+
+    &__card {
+      width: 100%;
+      height: 100%;
+      padding: 32px;
+      background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), .08, $c_black);
+      border-radius: 8px;
+
+      &__visual {
+        display: grid;
+        height: 200px;
+        max-height: 200px;
+        place-items: center;
+      }
+
+      &__change {
+        @include t400;
+
+        margin-top: 16px;
+        color: #7b8a95;
+      }
+
+      &:hover {
+        background-color: get-color-from-opaque-and-background(rgb(187, 217, 246), .13, $c_black);
+      }
+
+      &:hover &__change {
+        color: #7174ff;
+      }
+
+      &__value {
+        @include h800;
+
+        margin-top: 4px;
+        color: $c_white;
+      }
+
+      &__info {
+        @include t400;
+
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        color: #7b8a95;
+
+        &__icon {
+          position: relative;
+          display: inline-block;
+          min-width: 32px;
+          min-height: 32px;
+          margin-left: 4px;
+          border-radius: 50%;
+
+          &__modal {
+            @include t100;
+
+            position: absolute;
+            right: -53px;
+            bottom: 36px;
+            z-index: 2000;
+            width: 139px;
+            margin: auto;
+            padding: 8px;
+            color: $c_white;
+            background-color: #343d44;
+            border-radius: 2px;
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility .3s linear, opacity .3s linear;
+            transition-delay: .1s;
+          }
+
+          &:hover &__modal {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          & > svg {
+            position: absolute;
+            margin: auto;
+            fill: #7b8a95;
+            inset: 0;
+          }
+
+          &:hover {
+            background-color: rgba(187, 217, 246, .13);
+
+            & > svg {
+              fill: $c_white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &__traction {
+      &__header {
+        grid-column: 2 / 12;
+
+        &__title {
+          @include h800;
+        }
+      }
+
+      &__cards {
+        max-height: 856px;
+        grid-column: 1 / 13;
+      }
+
+      &__card-wrapper {
+        height: 384px;
+      }
+
+      &__card {
+        padding: 24px;
+
+        &__value {
+          @include h700;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1065px) {
+    &__traction__card {
+      padding: 24px 12px 24px 24px;
+
+      &__visual {
+        padding-right: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__traction-wrapper {
+      padding: 64px 16px 0 16px;
+    }
+
+    &__traction {
+      &__card {
+        padding: 24px;
+
+        &__visual {
+          padding-right: 0;
+        }
+      }
+
+      &__header {
+        &__title {
+          @include h700;
+        }
+      }
+
+      &__cards {
+        max-height: 1248px;
+        margin-top: 56px;
+        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+
+      &__card-wrapper {
+        &:nth-child(2) {
+          margin-top: 64px;
+        }
+
+        &:nth-child(4),
+        &:nth-child(6) {
+          margin-top: 0;
+        }
+
+        &:nth-child(3) {
+          margin-top: -64px;
+        }
+
+        &:nth-child(5) {
+          margin-top: -64px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__traction {
+      &__header {
+        grid-column: 1 / 13;
+
+        &__title {
+          @include h600;
+        }
+      }
+
+      &__cards {
+        display: flex;
+        flex-direction: column;
+        max-height: unset;
+        margin-top: 48px;
+      }
+
+      &__card-wrapper {
+        width: 100%;
+        height: auto;
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(5) {
+          margin-top: 0;
+        }
+      }
+
+      &__card {
+        padding: 16px;
+
+        &__visual {
+          overflow: hidden;
+        }
+
+        &__change,
+        &__info {
+          @include t300;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__traction {
+      &__header {
+        &__title {
+          @include h500;
+
+          text-align: center;
+        }
+      }
+
+      &__card {
+        &__value {
+          @include h600;
+        }
+      }
+    }
+  }
+}
