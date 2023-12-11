@@ -1,12 +1,30 @@
 @import '../../styles/main';
 
 .landingpage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   color: white;
   background-color: black;
 
   & .container-wrapper {
+    display: flex;
+    flex-direction: column;
     max-width: 1440px;
-    margin: auto;
+    padding: 96px 32px;
+    gap: 160px;
+    @media (max-width: 768px) {
+      padding: 64px 16px;
+      gap: 128px;
+    }
+    @media (max-width: 425px) {
+      padding: 56px 16px;
+      gap: 96px;
+    }
+    @media (max-width: 320px) {
+      padding: 56px 16px;
+      gap: 96px;
+    }
   }
 
   & .primary-button {
@@ -17,5 +35,16 @@
 
   .highcharts-credits {
     display: none;
+  }
+}
+
+.widget {
+  display: flex;
+  padding: 32px;
+  background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+  border-radius: 8px;
+  gap: 24px;
+  @media (max-width: 768px) {
+    gap: 16px;
   }
 }

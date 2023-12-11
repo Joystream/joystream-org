@@ -29,6 +29,7 @@ const LandingPage = () => {
         <Community1 />
         <Community/>
         <RoadMap />
+        <RoadMap />
       </div>
     </div>
   );
