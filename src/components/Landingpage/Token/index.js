@@ -24,8 +24,17 @@ const Token = () => {
         </button>
       </div>
       <hr />
-      <div className="flex">
-        <div className="chart"><HighChart /></div>
+      <div className="flex gap-24">
+        <div className="chart">
+          <div className="itemCard">
+            <div className="title">
+              Price <InformationIcon />
+            </div>
+            <div className="value">$0.041267</div>
+            <div className="percent">+2% Last week</div>
+            <HighChart />
+          </div>
+        </div>
         <div className="info">
           <div className="itemCard">
             <div className="title">
@@ -126,6 +135,10 @@ const Token = () => {
       </div>
 
       <div className="itemCard mt-24">
+        <div className="title px-32">
+          Release schedule
+          <InformationIcon />
+        </div>
         <AreaChart />
       </div>
 
@@ -164,8 +177,13 @@ const Token = () => {
         </div>
         <div className="itemCard px-0 flex-1">
           <div className="flex justify-between w-100 items-center px-32">
-            <div className="flex justify-between items-center">Minting <InformationIcon /></div>
-            <div className="flex justify-between items-center">Annual inflation: 2%<InformationIcon /></div>
+            <div className="flex justify-between items-center">
+              Minting <InformationIcon />
+            </div>
+            <div className="flex justify-between items-center">
+              Annual inflation: 2%
+              <InformationIcon />
+            </div>
           </div>
           <PieChart />
         </div>

@@ -14,4 +14,8 @@
     border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
     border-radius: 4px;
   }
+
+  .highcharts-credits {
+    display: none;
+  }
 }

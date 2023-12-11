@@ -10,14 +10,14 @@ const Hightchart = () => {
     yAxis: [
       {
         offset: 20,
-
+        gridLineColor: '#7B8A95',
         labels: {
           formatter: function() {
             return numberFormat.format(this.value);
           },
           x: -15,
           style: {
-            color: '#000',
+            color: '#7B8A95',
             position: 'absolute',
           },
           align: 'left',
@@ -40,10 +40,12 @@ const Hightchart = () => {
       selected: 1,
     },
     title: {
-      text: 'Bitcoin stock price',
+      text: '',
     },
     chart: {
-      height: 600,
+      // height: 600,
+      with: '100%',
+      backgroundColor: 'transparent',
     },
 
     credits: {
@@ -55,35 +57,14 @@ const Hightchart = () => {
     },
     xAxis: {
       type: 'date',
+      labels: {
+        style: {
+          color: '#7B8A95', // Set the color for X-axis labels
+        },
+      },
     },
     rangeSelector: {
-      buttons: [
-        {
-          type: 'day',
-          count: 1,
-          text: '1d',
-        },
-        {
-          type: 'day',
-          count: 7,
-          text: '7d',
-        },
-        {
-          type: 'month',
-          count: 1,
-          text: '1m',
-        },
-        {
-          type: 'month',
-          count: 3,
-          text: '3m',
-        },
-        {
-          type: 'all',
-          text: 'All',
-        },
-      ],
-      selected: 4,
+      enabled: false,
     },
     series: [
       {
@@ -96,12 +77,15 @@ const Hightchart = () => {
         },
       },
     ],
+    legend: {
+      enabled: false, // Disable the legend
+    },
   };
 
   return (
-    <>
+    <div style={{ width: '100%' }}>
       <ReactHighcharts config={configPrice}></ReactHighcharts>
-    </>
+    </div>
   );
 };
 
