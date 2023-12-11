@@ -3,7 +3,6 @@
 .hero {
   display: flex;
   align-items: center;
-  padding: 96px 32px 160px;
 
   div {
     flex: 1;
@@ -18,6 +17,16 @@
     line-height: 72px; /* 114.286% */
     letter-spacing: -.63px;
     color: white;
+    @media (max-width: 1024px) {
+      font-size: 55px;
+      line-height: 64px;
+    }
+    @media (max-width: 768px) {
+      max-width: unset;
+      font-size: 42px;
+      line-height: 48px; /* 114.286% */
+      text-align: center;
+    }
   }
 
   p {
@@ -29,5 +38,30 @@
     font-weight: 400;
     line-height: 32px; /* 152.381% */
     color: var(--text-default-default, #b5c1c9);
+    @media (max-width: 768px) {
+      max-width: unset;
+      font-size: 21px;
+      text-align: center;
+    }
+  }
+
+  img {
+    border-radius: 12.707px;
+    box-shadow: 0 1.743px 5.281px 0 rgba(0, 0, 0, .09), 0 5.854px 17.739px 0 rgba(0, 0, 0, .13), 0 26.208px 79.417px 0 rgba(0, 0, 0, .22);
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 610px;
+    gap: 24px;
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+  }
+  @media (max-width: 320px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
   }
 }

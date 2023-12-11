@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 12px 32px;
 
   & a {
@@ -45,19 +46,32 @@
 }
 
 .navbarlist {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   padding: 8px 32px;
   background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
-  gap: 16px;
 
-  & button {
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+      max-width: 760px;
+      overflow: scroll;
+      scroll-behavior: smooth;
+    }
+  }
+
+  button {
     padding: 8px 10px;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: .12px;
+  }
+  @media (max-width: 768px) {
+    padding: 8px 16px;
   }
 }

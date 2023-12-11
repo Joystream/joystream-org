@@ -1,52 +1,32 @@
 @import '../../../styles/main';
 
 .token {
-  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
-  .title {
+  .price_section {
     display: flex;
-    justify-content: space-between;
-
-    div {
-      font-family: $font-ibm-sans;
-      font-size: 42px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 48px; /* 114.286% */
-    }
-
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 20px;
-      color: white;
-      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
-      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
-      border-radius: 2px;
-      gap: 8px;
-    }
-  }
-
-  hr {
-    margin: 24px 0;
-    border-bottom: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, .27));
-  }
-
-  .flex {
-    display: flex;
-
-    .chart {
-      flex: 2;
-    }
-
-    .info {
-      display: flex;
-      flex: 1;
+    gap: 24px;
+    @media (max-width: 768px) {
       flex-direction: column;
-      gap: 24px;
+      gap: 16px;
     }
   }
+  // .flex {
+  //   display: flex;
+
+  //   .chart {
+  //     flex: 2;
+  //   }
+
+  //   .info {
+  //     display: flex;
+  //     flex: 1;
+  //     flex-direction: column;
+  //     gap: 24px;
+  //   }
+  // }
 
   .itemCard {
     display: flex;

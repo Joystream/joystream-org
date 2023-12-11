@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactComponent as LinkIcon } from '../../../assets/svg/linkIcon.svg';
 import { ReactComponent as InformationIcon } from '../../../assets/svg/Information.svg';
 import { ReactComponent as PlayIcon } from '../../../assets/svg/play_1.svg';
 import { ReactComponent as CheckIcon } from '../../../assets/svg/Check.svg';
@@ -10,22 +9,15 @@ import Bitget from '../../../assets/images/bitget.png';
 import HighChart from '../Highchart';
 import PieChart from '../Piechart';
 import AreaChart from '../Areachart';
-
+import SectionTitle from '../SectionTitle';
 import './style.scss';
 
 const Token = () => {
   return (
     <div className="token">
-      <div className="title">
-        <div>Token</div>
-        <button>
-          Copy link to this section
-          <LinkIcon />
-        </button>
-      </div>
-      <hr />
-      <div className="flex">
-        <div className="chart"><HighChart /></div>
+      <SectionTitle title="Token"/>
+      <div className="price_section">
+        <div className="widget"><HighChart /></div>
         <div className="info">
           <div className="itemCard">
             <div className="title">
@@ -51,7 +43,7 @@ const Token = () => {
         </div>
       </div>
 
-      <div className="itemCard mt-24 supply">
+      <div className="itemCard supply">
         <div className="title">
           Supply
           <InformationIcon />
@@ -129,7 +121,7 @@ const Token = () => {
         <AreaChart />
       </div>
 
-      <div className="mt-24 flex gap-24">
+      <div className="flex gap-24">
         <div className="itemCard px-0 flex-1">
           <div className="title px-32">
             Token allocation
@@ -171,7 +163,7 @@ const Token = () => {
         </div>
       </div>
 
-      <div className="staking flex mt-24 gap-24">
+      <div className="staking flex gap-24">
         <div className="itemCard flex-1">
           <div className="title">
             Supply staked for validation <InformationIcon />
@@ -186,7 +178,7 @@ const Token = () => {
         </div>
       </div>
 
-      <div className="mt-24 flex gap-24">
+      <div className="flex gap-24">
         <div className="itemCard px-0 flex-1">
           <div className="title px-32">
             Return on investment (ROI)
