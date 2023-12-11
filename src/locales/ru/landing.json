@@ -22,11 +22,11 @@
       "title": "Growth and Engagement",
       "lastWeek": "Last week",
       "videosUploaded": {
-        "title": "Videos uploaded",
+        "title": "Videos",
         "description": "The total number of videos uploaded to the platform along with a percentage showing their relative increase within the last week."
       },
       "commentsAndReactions": {
-        "title": "Comments & Reactions",
+        "title": "User Engagement",
         "description": "The total number of comments and reactions made on the platform along with a percentage showing their relative increase within the last week."
       },
       "channels": {
@@ -34,7 +34,7 @@
         "description": "The total number created channels on the platform along with a percentage showing their relative increase within the last week."
       },
       "allFollowers": {
-        "title": "All followers",
+        "title": "All",
         "description": "The total number of followers on the platform along with a percentage showing their relative increase within the last week."
       },
       "profiles": {
