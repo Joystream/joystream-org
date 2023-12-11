@@ -10,10 +10,9 @@ import { ReactComponent as ArrowAfter } from '../../../assets/svg/arrow-after.sv
 import avatar from '../../../assets/images/avatar1.png';
 import todayBackground from '../../../../public/today-background.png';
 
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './style.scss';
-import { key } from 'openpgp';
 
 const peopelData = [
   {
