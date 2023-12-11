@@ -52,6 +52,10 @@ $animation-name: null;
       background: radial-gradient(circle, rgb(20, 52, 146) 70%, transparent 100%);
       border-radius: 50%;
       filter: blur(400px);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
   }
 
