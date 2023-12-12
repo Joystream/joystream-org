@@ -125,7 +125,7 @@ const Team = () => {
   }, [windowWidth]);
 
   return (
-    <div className="community">
+    <div className="team">
       <div className="title">
         <div>Team</div>
         <button className="hidden">

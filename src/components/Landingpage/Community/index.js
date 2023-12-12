@@ -229,7 +229,7 @@ const Community = () => {
             showIndicators={false}
             centerMode={true}
             centerSlidePercentage={28}
-            width={1300}
+            width={1370}
           >
             {peopelData.map((item, index) => (
               <PersonInfo item={item} key={index} />
