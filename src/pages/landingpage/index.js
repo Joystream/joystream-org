@@ -7,9 +7,9 @@ import Token from '../../components/Landingpage/Token';
 import Backers from '../../components/Landingpage/Backers';
 import Traction from '../../components/Landingpage/Traction';
 import RoadMap from '../../components/Landingpage/RoadMap';
-import Community from '../../components/Landingpage/Community';
+import Team from '../../components/Landingpage/Team';
 
-import Community1 from '../../components/Landingpage/Community1';
+import Community from '../../components/Landingpage/Community';
 import Enginerring from '../../components/Landingpage/Engineering';
 import Comparison from '../../components/Landingpage/Comparison';
 import History from '../../components/Landingpage/History';
@@ -23,16 +23,12 @@ const LandingPage = () => {
         <Hero />
         <Token />
         <Backers />
+        <History />
         <Traction />
-        {/* <Community />
-        <History /> */}
         <Enginerring />
-        <Comparison />
-        {/* <Community1 />
-        
-        <Community/>
+        <Community />
+        <Team/>
         <RoadMap />
-        <RoadMap /> */}
       </div>
     </div>
   );

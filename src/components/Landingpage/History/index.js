@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ReactComponent as InformationIcon } from '../../../assets/svg/Information.svg';
 import { ReactComponent as LinkIcon } from '../../../assets/svg/linkIcon.svg';
 import historyBackground from '../../../../public/history-background.png';
@@ -80,28 +80,35 @@ const historyData = [
 ];
 
 const History = () => {
+
   return (
     <div className="history">
       <div className="title">
         <div>History</div>
-        <button>
+        <button className='hidden'>
+          Copy link
+          <LinkIcon />
+        </button>
+        <button className='show'>
           Copy link to this section
           <LinkIcon />
         </button>
       </div>
-      <hr />
-      <Carousel
-        autoPlay={true}
-        infiniteLoop={true}
-        showStatus={false}
-        showIndicators={false}
-        centerMode={true}
-        centerSlidePercentage={25}
-      >
-        {historyData.map((item, index) => (
-          <HistoryBox item={item} key={index} />
-        ))}
-      </Carousel>
+      <div className='history-carousel'>
+        <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          showStatus={false}
+          showIndicators={false}
+          centerMode={true}
+          centerSlidePercentage={25}
+          width={1440}
+          >
+          {historyData.map((item, index) => (
+            <HistoryBox item={item} key={index} />
+            ))}
+        </Carousel>
+      </div>
     </div>
   );
 };

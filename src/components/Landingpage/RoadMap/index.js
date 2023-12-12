@@ -9,7 +9,11 @@ const RoadMap = () => {
     <div className="roadMap">
       <div className="title">
         <div>RoadMap</div>
-        <button>
+        <button className='hidden'>
+          Copy link
+          <LinkIcon />
+        </button>
+        <button className='show'>
           Copy link to this section
           <LinkIcon />
         </button>

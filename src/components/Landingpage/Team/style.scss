@@ -1,0 +1,817 @@
+@import '../../../styles/main';
+
+.community {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      font-family: $font-ibm-sans;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 48px; /* 114.286% */
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      color: white;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
+      border-radius: 2px;
+      gap: 8px;
+
+      &.show {
+        display: flex;
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  .subtitle2 {
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--text-default-default, #b5c1c9);
+  }
+
+  .subBody2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .council {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 32px;
+    background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+    border: 1px solid #52616b;
+    border-radius: 8px;
+
+    .council-left {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .council-left-subtitle {
+        font-size: 55px;
+        font-weight: 600;
+        color: #f4f6f8;
+      }
+
+      .council_des {
+        width: 450px;
+        overflow: hidden;
+
+        /* Desktop/Text/T200 Regular */
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: .07px;
+        color: var(--text-default-default, #b5c1c9);
+        text-overflow: ellipsis;
+        font-feature-settings: 'clig' off, 'liga' off;
+      }
+    }
+
+    .council-right {
+      display: flex;
+      align-items: end;
+      flex-direction: column;
+      gap: 40px;
+
+      .top {
+        display: flex;
+        gap: 24px;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .view_council {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
+      border-radius: 2px;
+      gap: 8px;
+    }
+
+    .view_btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
+      border-radius: 2px;
+      gap: 8px;
+    }
+  }
+
+  .info_style {
+    display: flex;
+    align-items: center;
+    padding: 4px 6px;
+    background: var(--background-default-strong-default, #272d33);
+    border-radius: 4px;
+    gap: 4px;
+  }
+
+  .card_info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      z-index: 1;
+      margin-top: -70px;
+    }
+
+    .info_style {
+      display: flex;
+      align-items: center;
+      padding: 4px 6px;
+      background: var(--background-default-strong-default, #272d33);
+      border-radius: 4px;
+      gap: 4px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 32px;
+      gap: 8px;
+    }
+  }
+
+  .council_plan {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 32px;
+    background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+    border-radius: 8px;
+    gap: 16px;
+
+    .council_plan-body {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      & > div {
+        width: 100%;
+      }
+    }
+
+    .progress_bg {
+      width: 100%;
+      height: 20px;
+      background: var(--background-default-default-alpha, rgba(187, 217, 246, .13));
+      border-radius: 4px;
+    }
+
+    .progress_bar {
+      position: absolute;
+      width: 60%;
+      height: 20px;
+      background: var(--core-blue-200, #8890ff);
+      border-radius: 4px;
+    }
+
+    .plan_view_btn {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: center;
+      padding: 12px 20px;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
+      border-radius: 2px;
+      gap: 8px;
+    }
+  }
+
+  .card {
+    background: var(--background-default-muted-default, #0f1114);
+    border-radius: 8px;
+
+    .overlay {
+      height: 155px;
+      background: var(--background-default-overlay, rgba(16, 18, 20, .75));
+
+      img {
+        width: 100%;
+        height: 100%;
+        opacity: 15%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+
+    .groups_box {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 32px;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid #52616b;
+      border-radius: 8px;
+      gap: 16px;
+    }
+
+    .carousel-1 {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .group_card {
+      display: flex;
+      flex-direction: column;
+      width: 560px;
+      // height: 400px;
+      background: #0f1114;
+      border: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, .27));
+      border-radius: 8px;
+
+      .overlay {
+        height: 80px;
+        background: var(--background-default-overlay, rgba(16, 18, 20, .75));
+        // background: no-repeat;
+        background-size: cover;
+        opacity: .3;
+      }
+
+      .storage_img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -29px;
+
+        img {
+          width: 10%;
+        }
+      }
+
+      .group_info {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 32px 32px 32px;
+        gap: 16px;
+
+        .flex {
+          align-items: flex-start;
+        }
+
+        .lead {
+          display: flex;
+          width: 100%;
+        }
+
+        .avatar_img {
+          width: 24px;
+          height: 24px;
+        }
+
+        .avatar {
+          display: flex;
+          align-items: center;
+          padding: 4px 8px;
+          background: var(--background-default-strong-default, #272d33);
+          border-radius: 4px;
+          gap: 6px;
+        }
+      }
+    }
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .display-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+
+    .c-card {
+      display: flex;
+    }
+
+    .c-card-1024 {
+      display: none;
+    }
+  }
+
+  .members {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    .member_Card_Des {
+      width: 100%;
+      padding: 32px;
+      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+      border: 1px solid #52616b;
+      border-radius: 8px;
+    }
+
+    .members-cards {
+      display: flex;
+      gap: 24px;
+
+      .member_Card {
+        padding: 32px;
+        background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .flex-column {
+    flex-direction: column;
+  }
+
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .fs-12 {
+    font-size: 12px;
+  }
+
+  .fs-14 {
+    font-size: 14px;
+  }
+
+  .fs-16 {
+    font-size: 16px;
+  }
+
+  .fs-21 {
+    font-size: 21px;
+  }
+
+  .fs-24 {
+    font-size: 24px;
+  }
+
+  .fs-32 {
+    font-size: 32px;
+  }
+
+  .fs-42 {
+    font-size: 42px;
+  }
+
+  .fs-55 {
+    font-size: 55px;
+  }
+
+  .fw-600 {
+    font-weight: 600;
+  }
+
+  .fw-400 {
+    font-weight: 400;
+  }
+
+  .fw-500 {
+    font-weight: 500;
+  }
+
+  .fc-F4F6F8 {
+    color: var(--text-default-strong, #f4f6f8);
+  }
+
+  .fc-B5C1C9 {
+    color: var(--text-default-default, #b5c1c9);
+  }
+
+  .fc-FFF {
+    color: var(--solid-white, #fff);
+  }
+
+  .fc-6C6CFF {
+    color: var(--accent-300, #6c6cff);
+  }
+
+  .mt-8 {
+    margin-top: 8px;
+  }
+
+  .mt-24 {
+    margin-top: 24px;
+  }
+
+  .mt-28 {
+    margin-top: 28px;
+  }
+
+  .mb-8 {
+    margin-bottom: 8px;
+  }
+
+  .px-0 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .px-12 {
+    padding: 12px 0;
+  }
+
+  .px-32 {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .py-20 {
+    padding: 0 20px;
+  }
+
+  .p-32 {
+    padding: 32px;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .flex-2 {
+    flex: 2;
+  }
+
+  .gap-4 {
+    gap: 4px;
+  }
+
+  .gap-8 {
+    gap: 8px;
+  }
+
+  .gap-12 {
+    gap: 12px;
+  }
+
+  .gap-16 {
+    gap: 16px;
+  }
+
+  .gap-24 {
+    gap: 24px;
+  }
+
+  .gap-40 {
+    gap: 40px;
+  }
+
+  .gap-80 {
+    gap: 80px;
+  }
+
+  .gap-x-24 {
+    gap: 0 24px;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+
+  .w-90 {
+    width: 90%;
+  }
+
+  .w-80 {
+    width: 80%;
+  }
+
+  .w-60 {
+    width: 60%;
+  }
+
+  .w-70 {
+    width: 70%;
+  }
+
+  .w-40 {
+    width: 40%;
+  }
+
+  .h-100 {
+    height: 100%;
+  }
+
+  .justify-between {
+    justify-content: space-between;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .justify-end {
+    justify-content: end;
+  }
+
+  .item-center {
+    align-items: center;
+  }
+
+  .item-end {
+    align-items: end;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .display-grid {
+      display: flex;
+      flex-direction: column;
+
+      .council_plan-body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        & > div {
+          width: 47%;
+        }
+      }
+
+      .c-card {
+        display: none;
+      }
+
+      .c-card-1024 {
+        display: flex;
+        gap: 24px;
+      }
+    }
+
+    .group {
+      width: 960px;
+    }
+
+    .members {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .title {
+      button {
+        &.show {
+          display: none;
+        }
+
+        &.hidden {
+          display: flex;
+        }
+      }
+    }
+
+    .subBody2 {
+      font-size: 32px;
+    }
+
+    .council {
+      flex-direction: column;
+      gap: 40px;
+
+      .council-left {
+        .council-left-subtitle {
+          font-size: 42px;
+        }
+
+        .council_des {
+          width: auto;
+        }
+      }
+
+      .council-right {
+        align-items: flex-start;
+        flex-direction: row;
+
+        .top {
+          .item {
+            .fs-42 {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    .display-grid {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      .council_plan {
+        width: 48%;
+      }
+
+      .council_plan-body {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        & > div {
+          width: 100%;
+        }
+      }
+
+      .c-card {
+        display: flex;
+        width: 48%;
+      }
+
+      .c-card-1024 {
+        display: none;
+      }
+
+      .fs-32 {
+        font-size: 24px;
+      }
+    }
+
+    .group {
+      width: 730px;
+
+      .group_card {
+        width: 360px;
+
+        .lead {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          .flex {
+            align-items: flex-start;
+          }
+        }
+
+        .fs-32 {
+          font-size: 24px;
+        }
+
+        .fs-24 {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .groups_box {
+      .fs-55 {
+        font-size: 42px;
+      }
+
+      .carousel-1 {
+        max-width: 768px;
+        overflow: hidden;
+      }
+    }
+
+    .members {
+      .member_Card_Des {
+        .fs-55 {
+          font-size: 42px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .council {
+      .council-left {
+        .council-left-subtitle {
+          font-size: 32px;
+        }
+      }
+
+      .council-right {
+        flex-direction: column;
+
+        .top {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .display-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .council_plan {
+        width: 100%;
+      }
+
+      .council_plan-body {
+        & > div {
+          width: 100%;
+        }
+      }
+
+      .c-card {
+        width: 100%;
+      }
+    }
+
+    .group {
+      width: 390px;
+
+      .group_card {
+        width: 272px;
+      }
+    }
+
+    .groups_box {
+      .fs-55 {
+        font-size: 32px;
+      }
+
+      span {
+        width: 100%;
+      }
+    }
+
+    .members {
+      .member_Card_Des {
+        .w-70 {
+          width: 90%;
+        }
+
+        .fs-55 {
+          font-size: 32px;
+        }
+      }
+
+      .members-cards {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .subtitle2 {
+      font-size: 16px;
+    }
+
+    .subBody2 {
+      font-size: 24px;
+    }
+
+    .council {
+      .council-left {
+        .council-left-subtitle {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .group {
+      width: 280px;
+
+      .group_card {
+        width: 260px;
+      }
+    }
+  }
+}

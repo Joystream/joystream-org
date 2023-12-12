@@ -1,9 +1,6 @@
 @import '../../../styles/main';
 
 .roadMap {
-  margin-top: 160px;
-  padding: 0 32px;
-
   .title {
     display: flex;
     justify-content: space-between;
@@ -184,5 +181,77 @@
 
   .justify-end {
     justify-content: end;
+  }
+
+  @media #{$screen-max-sm} {
+    padding: 0;
+
+    .title {
+      button {
+        &.show {
+          display: none;
+        }
+
+        &.hidden {
+          display: flex;
+        }
+      }
+    }
+
+    .display-grid {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      gap: 16px;
+    }
+
+    .duration_time {
+      padding: 16px;
+
+      span {
+        font-size: 24px;
+      }
+    }
+
+    .description {
+      padding: 16px;
+    }
+  }
+  @media #{$screen-sm} {
+    .title {
+      button {
+        &.show {
+          display: flex;
+        }
+
+        &.hidden {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) and (min-width: 425px) {
+    .title {
+      div {
+        font-size: 32px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .title {
+      div {
+        font-size: 24px;
+      }
+    }
+
+    .duration_time {
+      button {
+        span {
+          display: none;
+        }
+      }
+    }
   }
 }
