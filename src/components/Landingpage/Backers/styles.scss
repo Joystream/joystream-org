@@ -1,34 +1,6 @@
 @import '../../../styles/main';
 
 .backers {
-  margin-top: 160px;
-  padding: 0 32px;
-
-  .title {
-    display: flex;
-    justify-content: space-between;
-
-    div {
-      font-family: $font-ibm-sans;
-      font-size: 42px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 48px; /* 114.286% */
-    }
-
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 20px;
-      color: white;
-      background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
-      border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
-      border-radius: 2px;
-      gap: 8px;
-    }
-  }
-
   hr {
     margin: 24px 0;
     border-bottom: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, .27));
@@ -48,16 +20,17 @@
       color: var(--text-default-strong, #f4f6f8);
     }
 
-    div.flex {
-      display: flex;
-      justify-content: space-between;
+    div.grid {
+      display: grid;
       gap: 24px;
+      grid-template-columns: repeat(6, auto);
 
       img {
         flex: 1;
         padding: 8px;
         background: var(--background-default-muted-default, #0f1114);
         border-radius: 8px;
+        justify-self: stretch;
       }
     }
   }
@@ -218,5 +191,29 @@
 
   .h-100 {
     height: 100%;
+  }
+
+  @media (max-width: 1023px) {
+    .including-grid {
+      grid-template-columns: repeat(3, auto) !important;
+    }
+
+    .coindesk {
+      flex-direction: column-reverse;
+    }
+  }
+  @media (max-width: 767px) {
+    .including-grid {
+      grid-template-columns: repeat(2, auto) !important;
+    }
+
+    .coindesk .left {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 424px) {
+    .including-grid {
+      grid-template-columns: auto !important;
+    }
   }
 }

@@ -19,15 +19,16 @@
     }
     @media (max-width: 425px) {
       padding: 56px 16px;
-      gap: 96px;
+      gap: 80px;
     }
     @media (max-width: 320px) {
-      padding: 56px 16px;
-      gap: 96px;
+      // padding: 56px 16px;
+      // gap: 96px;
     }
   }
 
   & .primary-button {
+    line-height: 16px;
     color: white;
     border: 1px solid var(--border-default-muted-alpha, rgba(187, 217, 246, .13));
     border-radius: 4px;
@@ -35,6 +36,25 @@
 
   .highcharts-credits {
     display: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: block;
+    width: 3px;
+    height: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-right: none;
+    border-left: none;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
   }
 }
 

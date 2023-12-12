@@ -3,6 +3,8 @@ import { ReactComponent as InformationIcon } from '../../../assets/svg/Informati
 import { ReactComponent as LinkIcon } from '../../../assets/svg/linkIcon.svg';
 import './style.scss';
 import avatar from '../../../assets/images/avatar1.png';
+import SectionTitle from '../SectionTitle';
+import LineChart from '../Linechart';
 
 const Grid_box = props => {
   return (
@@ -138,15 +140,8 @@ const Enginerring = () => {
   const [openShow, setOpenShow] = useState(false);
   return (
     <div className="engineering">
-      <div className="title">
-        <div>Enginerring</div>
-        <button>
-          Copy link to this section
-          <LinkIcon />
-        </button>
-      </div>
-      <hr />
-      <div className="flex flex-column gap-24">
+      <SectionTitle title="Enginerring" />
+      <div className="flex flex-column gap-24 mt-24">
         <div className="flex gap-24">
           <div className="eng_info flex-3">
             <div className="subtitle">
@@ -171,12 +166,17 @@ const Enginerring = () => {
             </div>
           </div>
         </div>
-        <div>test 2</div>
+        <div className="border-background contribution">
+          <div className="subtitle">
+            Contributions <InformationIcon />
+          </div>
+          <LineChart />
+        </div>
         <div className="flex flex-column">
           <div className="subtitle mt-12">
             Contributors(17) <InformationIcon />
           </div>
-          <div className="flex flex-wrap gap-24">
+          <div className="contributors grid">
             {openShow
               ? contributors.map((contributor, index) => <ContributorBox item={contributor} key={index} />)
               : contributors

@@ -11,6 +11,7 @@ import Community from '../../components/Landingpage/Community';
 
 import Community1 from '../../components/Landingpage/Community1';
 import Enginerring from '../../components/Landingpage/Engineering';
+import Comparison from '../../components/Landingpage/Comparison';
 import History from '../../components/Landingpage/History';
 import './style.scss';
 
@@ -23,13 +24,15 @@ const LandingPage = () => {
         <Token />
         <Backers />
         <Traction />
-        <Community />
-        <History />
+        {/* <Community />
+        <History /> */}
         <Enginerring />
-        <Community1 />
+        <Comparison />
+        {/* <Community1 />
+        
         <Community/>
         <RoadMap />
-        <RoadMap />
+        <RoadMap /> */}
       </div>
     </div>
   );

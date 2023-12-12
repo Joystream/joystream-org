@@ -1,31 +1,42 @@
 @import '../../../styles/main';
 
-.title {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, .27));
-
-  div {
-    font-family: $font-ibm-sans;
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 48px; /* 114.286% */
-  }
-
-  button {
+.section-title {
+  .title {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    gap: 8px;
-  }
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-default-default-alpha, rgba(203, 224, 241, .27));
 
-  @media (max-width: 768px) {
-    padding: 16px;
+    div {
+      font-family: $font-ibm-sans;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 48px; /* 114.286% */
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      gap: 8px;
+    }
+
+    @media (max-width: 1023px) {
+      div {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+    @media (max-width: 424px) {
+      div {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
   }
 }

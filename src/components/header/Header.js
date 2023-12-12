@@ -27,7 +27,9 @@ const Header = () => {
       <div className="header">
         <Link className="" to="/">
           <BackIcon />
-          Back to joystrem.org
+          <span className="hidden_320">
+            Back <span className="hidden_425">to joystrem.org</span>
+          </span>
         </Link>
         <div>
           <img src={Gleev} alt="logo" />
@@ -35,19 +37,19 @@ const Header = () => {
         </div>
         <div>
           <button className="primary-button">
-            Chat with Joystream team <img src={Avatar} alt="avatar" />
+            <span>Chat</span> <span className="hidden_320 hidden_425">with Joystream team</span>{' '}
+            <img className="hidden_320" src={Avatar} alt="avatar" />
           </button>
         </div>
       </div>
       <div className="navbarlist">
         <div>
-          {
-            Navbarlist.map((item, idx) => (
-              <button className="primary-button" key={idx}>{item}</button>
-            ))
-          }
+          {Navbarlist.map((item, idx) => (
+            <button className="primary-button" key={idx}>
+              {item}
+            </button>
+          ))}
         </div>
-    
       </div>
     </>
   );

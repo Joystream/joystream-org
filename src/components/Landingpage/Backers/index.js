@@ -12,33 +12,24 @@ import Backer6 from '../../../assets/images/backer6.png';
 import preview from '../../../assets/images/preview.png';
 import coinDesk from '../../../assets/images/coindesk.png';
 import './styles.scss';
+import SectionTitle from '../SectionTitle';
 
 const Backers = () => {
   return (
     <div className="backers">
-      <div className="title">
-        <div>Backers</div>
-        <button>
-          Copy link to this section
-          <LinkIcon />
-        </button>
-      </div>
-      <hr />
+      <SectionTitle title="Backers" />
+
       <div className="cardList">
         <div className="title">
           Including <InformationIcon />
         </div>
-        <div className="flex ">
-          <div className="flex-2 flex gap-24">
-            <img src={Backer1} alt='backer' />
-            <img src={Backer2} alt='backer' />
-            <img src={Backer3} alt='backer' />
-            <img src={Backer4} alt='backer' />
-          </div>
-          <div className="flex-1 flex gap-24">
-            <img src={Backer5} alt='backer' />
-            <img src={Backer6} alt='backer' />
-          </div>
+        <div className="grid including-grid">
+          <img src={Backer1} alt="backer" />
+          <img src={Backer2} alt="backer" />
+          <img src={Backer3} alt="backer" />
+          <img src={Backer4} alt="backer" />
+          <img src={Backer5} alt="backer" />
+          <img src={Backer6} alt="backer" />
         </div>
       </div>
       <div className="flex coindesk gap-24 mt-24">
@@ -56,7 +47,10 @@ const Backers = () => {
                 The Polkadot-based platform allows creators to sell their videos as NFTs and turn their channels into
                 tokens.
               </div>
-              <div className="mt-24 flex items-center read-detail">Read article<Arrow/></div>
+              <div className="mt-24 flex items-center read-detail">
+                Read article
+                <Arrow />
+              </div>
             </div>
           </div>
           <div className="flex-1">

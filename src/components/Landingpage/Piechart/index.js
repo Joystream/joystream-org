@@ -83,7 +83,7 @@ const options = {
 
 const PiechartApp = () => {
   return (
-    <div className="flex justify-center w-100 items-center">
+    <div className="chart-container" style={{ width: '100%' }}>
       <PieChart highcharts={Highcharts} options={options} />
     </div>
   );

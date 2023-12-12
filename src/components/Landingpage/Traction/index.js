@@ -3,21 +3,15 @@ import React from 'react';
 import { ReactComponent as InformationIcon } from '../../../assets/svg/Information.svg';
 import { ReactComponent as LinkIcon } from '../../../assets/svg/linkIcon.svg';
 import BarChart from '../BarChart';
+import SectionTitle from '../SectionTitle';
 
 import './styles.scss';
 
 const Traction = () => {
   return (
     <div className="traction">
-      <div className="title">
-        <div>Traction</div>
-        <button>
-          Copy link to this section
-          <LinkIcon />
-        </button>
-      </div>
-      <hr />
-      <div className="flex gap-24">
+      <SectionTitle title="Traction" />
+      <div className="flex mt-24 gap-24 content-video-comment">
         <div className="flex-1 border-background p-32">
           <div className="title flex justify-start items-center first-title">
             Content creators <InformationIcon />
@@ -86,7 +80,7 @@ const Traction = () => {
           </div>
         </div>
       </div>
-      <div className="flex mt-24 gap-24">
+      <div className="flex mt-24 gap-24 nft-token">
         <div className="flex-1 border-background p-32">
           <div className="title flex justify-start items-center first-title">
             NFTs <InformationIcon />
