@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ReactComponent as InformationIcon } from '../../../assets/svg/Information.svg';
 import { ReactComponent as LinkIcon } from '../../../assets/svg/linkIcon.svg';
-import historyBackground from '../../../../public/history-background.png';
+import historyBackground from '../../../assets/images/history-background.png';
 import { ReactComponent as ArrowDown } from '../../../assets/svg/arrow-down-small.svg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';

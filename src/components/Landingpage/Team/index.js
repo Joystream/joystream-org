@@ -13,7 +13,7 @@ import council_icon from '../../../assets/images/council_icon.png';
 import storage_img from '../../../assets/images/storage_img.png';
 import avatar_img from '../../../assets/images/avatar_img.png';
 import member_avatar from '../../../assets/images/member_avatar.png';
-import back_storage_img from '../../../../public/storage_img.png';
+import back_storage_img from '../../../assets/images/storage_img.png';
 
 import './style.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';

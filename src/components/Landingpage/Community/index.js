@@ -8,7 +8,7 @@ import { ReactComponent as ArrowDown } from '../../../assets/svg/arrow-down-smal
 import { ReactComponent as SoundOn } from '../../../assets/svg/sound-on.svg';
 import { ReactComponent as ArrowAfter } from '../../../assets/svg/arrow-after.svg';
 import avatar from '../../../assets/images/avatar1.png';
-import todayBackground from '../../../../public/today-background.png';
+import todayBackground from '../../../assets/images/today-background.png';
 import SectionTitle from '../SectionTitle';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';

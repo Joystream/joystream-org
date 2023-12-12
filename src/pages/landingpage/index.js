@@ -20,12 +20,12 @@ const LandingPage = () => {
     <div className="landingpage">
       <Header />
       <div className="container-wrapper">
-        {/* <Hero /> */}
-        {/* <Token /> */}
-        {/* <Backers /> */}
+        <Hero />
+        <Token />
+        <Backers />
         <History />
-        {/* <Traction /> */}
-        {/* <Enginerring /> */}
+        <Traction />
+        <Enginerring />
         <Community />
         <Team/>
         <RoadMap />
