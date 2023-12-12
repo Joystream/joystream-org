@@ -9,6 +9,7 @@ import { ReactComponent as SoundOn } from '../../../assets/svg/sound-on.svg';
 import { ReactComponent as ArrowAfter } from '../../../assets/svg/arrow-after.svg';
 import avatar from '../../../assets/images/avatar1.png';
 import todayBackground from '../../../../public/today-background.png';
+import SectionTitle from '../SectionTitle';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
@@ -168,17 +169,7 @@ const Community = () => {
   }, [windowWidth]);
   return (
     <div className="community">
-      <div className="title">
-        <div>Community</div>
-        <button className="hidden">
-          Copy link
-          <LinkIcon />
-        </button>
-        <button className="show">
-          Copy link to this section
-          <LinkIcon />
-        </button>
-      </div>
+      <SectionTitle title="Community" />
       <div className="flex flex-column gap-28">
         <div className="community-1">
           <div className="twitter-discord">
