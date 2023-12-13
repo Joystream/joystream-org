@@ -70,29 +70,36 @@ const CarouselControl = ({ scroll, isActive }) => {
   );
 };
 
+const NUMBER_OF_CONTROLS = 4;
+
 const Carousel = ({ t }) => {
-  const NUMBER_OF_CONTROLS = 5;
-  let MAX_CAROUSEL_WIDTH = 1516;
-  const BASE_SCROLL_AMOUNT = MAX_CAROUSEL_WIDTH / NUMBER_OF_CONTROLS;
   const [activeCarouselControlItem, setActiveCarouselControlItem] = useState(0);
   const [numberOfControlItems, setNumberOfControlItems] = useState(0);
   const carouselRef = useRef(null);
+  const carouselMetadata = useRef({
+    maxCarouselWidth: 1264,
+    baseScrollAmount: 1264 / NUMBER_OF_CONTROLS,
+  });
 
   useEffect(() => {
     function handleResize() {
-      if (typeof window !== undefined && window.innerWidth < 1024) {
-        MAX_CAROUSEL_WIDTH = 1484;
+      if (typeof window !== undefined && carouselMetadata.current) {
+        if (window.innerWidth < 1024) {
+          carouselMetadata.current = {
+            maxCarouselWidth: 1184,
+            baseScrollAmount: 1184 / NUMBER_OF_CONTROLS,
+          };
+        } else {
+          carouselMetadata.current = {
+            maxCarouselWidth: 1264,
+            baseScrollAmount: 1264 / NUMBER_OF_CONTROLS,
+          };
+        }
       }
 
-      if (carouselRef.current) {
+      if (carouselRef.current && carouselMetadata.current) {
         const scrollableAmount = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
-        const timesFits = Math.ceil(scrollableAmount / BASE_SCROLL_AMOUNT);
-
-        console.log({
-          scrollableAmount,
-          timesFits,
-          BASE_SCROLL_AMOUNT,
-        });
+        const timesFits = Math.ceil(scrollableAmount / carouselMetadata.current.baseScrollAmount);
 
         setNumberOfControlItems(timesFits + 1);
       }
@@ -106,9 +113,9 @@ const Carousel = ({ t }) => {
   }, []);
 
   const scroll = index => {
-    if (carouselRef.current) {
+    if (carouselRef.current && carouselMetadata.current) {
       const currentScrollPosition = carouselRef.current.scrollLeft;
-      const newScrollPosition = BASE_SCROLL_AMOUNT * index;
+      const newScrollPosition = carouselMetadata.current.baseScrollAmount * index;
 
       carouselRef.current.scrollBy({
         left: Math.floor(newScrollPosition - currentScrollPosition),
@@ -120,13 +127,13 @@ const Carousel = ({ t }) => {
   const getCarouselItemByScrollPosition = () => {
     const currentScrollPosition = carouselRef.current.scrollLeft;
 
-    if (currentScrollPosition === 0) return 0;
+    if (currentScrollPosition === 0 || !carouselMetadata.current) return 0;
 
-    for (let i = 0; i < NUMBER_OF_CONTROLS - 1; i++) {
-      const lowerAmount = BASE_SCROLL_AMOUNT * i;
-      const upperAmount = BASE_SCROLL_AMOUNT * (i + 1);
+    for (let i = 0; i < NUMBER_OF_CONTROLS; i++) {
+      const lowerAmount = carouselMetadata.current.baseScrollAmount * i;
+      const upperAmount = carouselMetadata.current.baseScrollAmount * (i + 1);
 
-      if (currentScrollPosition >= lowerAmount && currentScrollPosition < upperAmount) {
+      if (currentScrollPosition >= lowerAmount && currentScrollPosition < upperAmount + 1) {
         return i + 1;
       }
     }
@@ -143,14 +150,14 @@ const Carousel = ({ t }) => {
         ref={carouselRef}
         className="IndexPage__ecosystem__apps__carousel"
       >
-        <CarouselItem
+        {/* <CarouselItem
           logo={L1MediaLogo}
           name={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
           description={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.description')}
           platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
           link="https://l1.media/"
           t={t}
-        />
+        /> */}
         <CarouselItem
           logo={PioneerLogo}
           name={t('landing.ecosystem.appsBuiltOnJoystream.pioneer.name')}
@@ -256,7 +263,7 @@ const Ecosystem = ({ t }) => {
           <h3 className="IndexPage__ecosystem__apps__title">
             {t('landing.ecosystem.appsBuiltOnJoystream.title')}{' '}
             {/* TODO: This will need to be made dynamic alogn with the rest of the content in the carousel. */}
-            <div className="IndexPage__ecosystem__apps__title__app-count">6</div>
+            <div className="IndexPage__ecosystem__apps__title__app-count">5</div>
           </h3>
           <FeaturedPlatform
             image={GleevLogo}

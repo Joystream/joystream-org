@@ -62,14 +62,14 @@ const CreatorTokens = ({ t }) => {
           <p className="IndexPage__creator-tokens__main__content__subtitle">
             {t('landing.creatorTokens.hero.subtitle')}
           </p>
-          <a
+          {/* <a
             href="https://forms.gle/soSRzZHq6Pg1yxG2A"
             target="_blank"
             className="IndexPage__creator-tokens__main__content__link"
           >
             {t('landing.creatorTokens.hero.link')}
             <ArrowIcon className="IndexPage__creator-tokens__main__content__link__arrow" />
-          </a>
+          </a> */}
         </div>
         <div className="IndexPage__creator-tokens__main__illustration">
           <img
