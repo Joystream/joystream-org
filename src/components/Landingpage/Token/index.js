@@ -21,9 +21,11 @@ const Token = () => {
           <div className="title">
             Price <InformationIcon />
           </div>
-          <div className="value">$0.041267</div>
-          <div className="percent">+2% Last week</div>
-          <HighChart />
+          <div>
+            <div className="value">$0.041267</div>
+            <div className="percent">+2% Last week</div>
+          </div>
+          {/* <HighChart /> */}
         </div>
         <div className="info">
           <div className="itemCard">
@@ -129,12 +131,12 @@ const Token = () => {
           Release schedule
           <InformationIcon />
         </div>
-        <AreaChart />
+        {/* <AreaChart /> */}
       </div>
 
       <div className="flex gap-24 md-flex-column">
         <div className="itemCard px-0 flex-1">
-          <div className="title px-32">
+          <div className="title">
             Token allocation
             <InformationIcon />
           </div>
@@ -177,7 +179,7 @@ const Token = () => {
               <InformationIcon />
             </div>
           </div>
-          <PieChart />
+          {/* <PieChart /> */}
         </div>
       </div>
 
@@ -196,63 +198,63 @@ const Token = () => {
         </div>
       </div>
 
-      <div className="flex gap-24 md-flex-column">
+      <div className="flex gap-16 md-flex-column">
         <div className="itemCard px-0 flex-1">
-          <div className="title px-32">
+          <div className="title">
             Return on investment (ROI)
             <InformationIcon />
           </div>
-          <div className="table-div" style={{ overflowX: 'auto' }}>
-            <div className="table">
-              <div className="tr th">
-                <div>TIME</div>
-                <div>RETURN</div>
-              </div>
-              <div className="tr">
-                <div>1 hour</div>
-                <div>+4.19%</div>
-              </div>
-              <div className="tr">
-                <div>1 hour</div>
-                <div>+4.19%</div>
-              </div>
+          {/* <div className="table-div"> */}
+          <div className="table">
+            <div className="tr th">
+              <div>TIME</div>
+              <div>RETURN</div>
+            </div>
+            <div className="tr">
+              <div>1 hour</div>
+              <div>+4.19%</div>
+            </div>
+            <div className="tr">
+              <div>1 hour</div>
+              <div>+4.19%</div>
             </div>
           </div>
+          {/* </div> */}
         </div>
         <div className="itemCard px-0 flex-2">
-          <div className="title px-32">
+          <div className="title">
             Supply distribution
             <InformationIcon />
           </div>
-          <div className="table-div" style={{ overflowX: 'auto' }}>
-            <div className="table">
-              <div className="tr th">
-                <div>TYPE</div>
-                <div>SUPPLY</div>
-                <div>% of circulating supply</div>
-              </div>
-              <div className="tr">
-                <div>Supply in Top 1$ Address</div>
-                <div>21 2189 609</div>
-                <div>10%</div>
-              </div>
-              <div className="tr">
-                <div>Supply in Top 1$ Address</div>
-                <div>21 2189 609</div>
-                <div>10%</div>
-              </div>
-              <div className="tr">
-                <div>Supply in Top 1$ Address</div>
-                <div>21 2189 609</div>
-                <div>10%</div>
-              </div>
-              <div className="tr">
-                <div>Supply in Top 1$ Address</div>
-                <div>21 2189 609</div>
-                <div>10%</div>
-              </div>
+          {/* <div className="table-div" style={{ overflowX: 'auto' }}> */}
+          <div className="table">
+            <div className="tr th">
+              <div>TYPE</div>
+              <div>SUPPLY</div>
+              <div>% of circulating supply</div>
+            </div>
+            <div className="tr">
+              <div>Supply in Top 1$ Address</div>
+              <div>21 2189 609</div>
+              <div>10%</div>
+            </div>
+            <div className="tr">
+              <div>Supply in Top 1$ Address</div>
+              <div>21 2189 609</div>
+              <div>10%</div>
+            </div>
+            <div className="tr">
+              <div>Supply in Top 1$ Address</div>
+              <div>21 2189 609</div>
+              <div>10%</div>
+            </div>
+            <div className="tr">
+              <div>Supply in Top 1$ Address</div>
+              <div>21 2189 609</div>
+              <div>10%</div>
             </div>
           </div>
+          {/* </div> */}
         </div>
       </div>
     </div>

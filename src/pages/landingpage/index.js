@@ -22,13 +22,13 @@ const LandingPage = () => {
       <div className="container-wrapper">
         <Hero />
         <Token />
-        <Backers />
+        {/* <Backers />
         <History />
         <Traction />
         <Enginerring />
         <Community />
         <Team/>
-        <RoadMap />
+        <RoadMap /> */}
       </div>
     </div>
   );

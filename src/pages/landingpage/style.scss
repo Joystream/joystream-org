@@ -63,8 +63,5 @@
   padding: 32px;
   background: var(--background-default-muted-alpha, rgba(188, 213, 250, .08));
   border-radius: 8px;
-  gap: 24px;
-  @media (max-width: 768px) {
-    gap: 16px;
-  }
+  gap: 16px;
 }
