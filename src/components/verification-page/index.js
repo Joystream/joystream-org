@@ -5,7 +5,7 @@ import { Link, Trans } from 'gatsby-plugin-react-i18next';
 import useWindowDimensions from '../../utils/useWindowDimensions';
 
 import TelegramIcon from '../../assets/images/telegram.webp';
-import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
+import { ReactComponent as TwitterIcon } from '../../assets/svg/x-logo.svg';
 import { ReactComponent as EmailIcon } from '../../assets/svg/email.svg';
 import { ReactComponent as DiscordIcon } from '../../assets/svg/discord-icon.svg';
 import { ReactComponent as VerifiedIcon } from '../../assets/svg/verified.svg';
