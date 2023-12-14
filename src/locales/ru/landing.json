@@ -50,7 +50,7 @@
       "title": "Joystream Creators",
       "info": {
         "label": "Payments are made in JOY tokens",
-        "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees. We are in the process of getting the JOY token listed on popular exchanges, so you can buy or sell JOYs for FIAT currencies, such as USD."
+        "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees. You can buy JOY on these <exchanges>exchanges</exchanges>."
       },
       "followers": "followers",
       "earned": "Earned:"
@@ -159,7 +159,7 @@
         "title": "Recent rewards from the Joystream DAO",
         "info": {
           "label": "Payments are made in JOY tokens",
-          "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees. We are in the process of getting the JOY token listed on popular exchanges, so you can buy or sell JOYs for FIAT currencies, such as USD."
+          "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees. You can buy JOY on these <exchanges>exchanges</exchanges>."
         },
         "item": {
           "price": "<span><joyAmount/></span> JOY",
@@ -180,7 +180,7 @@
         "title": "Recently sold NFTs on the Joystream blockchain",
         "info": {
           "label": "NFTs can be sold for JOY tokens",
-          "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees. We are in the process of getting the JOY token listed on popular exchanges, so you can buy or sell JOYs for FIAT currencies, such as USD."
+          "text": "JOY token is a native crypto asset of Joystream blockchain. It is used for platform governance, purchasing NFTs, trading creator tokens, and covering the blockchain processing fees. You can buy JOY on these <exchanges>exchanges</exchanges>."
         },
         "item": {
           "title": "<span><nftTitle/></span> by <span><channelName/></span>",

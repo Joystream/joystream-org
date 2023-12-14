@@ -1,4 +1,5 @@
-import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
+// import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
+import { ReactComponent as TwitterIcon } from '../../assets/svg/x-logo.svg';
 import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
 import { ReactComponent as DiscordIcon } from '../../assets/svg/discord.svg';
 import { ReactComponent as SecurityIcon } from '../../assets/svg/security.svg';
@@ -17,7 +18,7 @@ const githubLinks = [{ href: sharedData.links.repository, label: 'footer.github.
 const usefulLinks = [
   { href: 'https://joystream.gitbook.io/testnet-workspace/security', label: 'footer.security', icon: SecurityIcon },
   { href: 'https://polkadot.js.org/apps/?rpc=wss://rpc.joystream.org:9944#/explorer', label: 'footer.chainDashboard' },
-  { href: 'https://joystream.stg.subscan.io/', label: 'footer.blockExplorer' },
+  { href: 'https://joystream.subscan.io/', label: 'footer.blockExplorer' },
   { to: '/brand/guides', label: 'footer.usefulLinks.brandGuidance' },
   { to: '/privacy-policy', label: 'footer.usefulLinks.privacyPolicy' },
 ];
