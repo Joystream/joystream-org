@@ -1,4 +1,5 @@
-import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
+// import { ReactComponent as TwitterIcon } from '../../assets/svg/twitter.svg';
+import { ReactComponent as TwitterIcon } from '../../assets/svg/x-logo.svg';
 import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
 import { ReactComponent as DiscordIcon } from '../../assets/svg/discord.svg';
 import { ReactComponent as SecurityIcon } from '../../assets/svg/security.svg';

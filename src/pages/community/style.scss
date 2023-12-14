@@ -91,12 +91,12 @@
         width: 32px;
       }
 
-      &--twitter {
-        background-color: rgba(29, 155, 240, .15);
+      &--x {
+        background-color: rgba(92, 100, 117, .15);
 
         & > svg {
           width: 21px;
-          fill: rgba(29, 155, 240, 1);
+          fill: $c_black;
         }
       }
 
