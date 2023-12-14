@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import cn from 'classnames';
 import Plx from 'react-plx';
-import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
+import { Trans, useI18next, Link } from 'gatsby-plugin-react-i18next';
 
 import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
 import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
@@ -163,7 +163,7 @@ const Payouts = ({ t, payouts, priceData }) => {
               id="IndexPage__payouts__carousel-title-and-info__info__modal"
               className="IndexPage__payouts__carousel-title-and-info__info__modal"
             >
-              {t('landing.payouts.carousel.info.text')}
+              <Trans i18nKey={'landing.payouts.carousel.info.text'} components={{ exchanges: <Link to="/token#exchanges" /> } } />
             </div>
           </div>
         </div>

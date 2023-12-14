@@ -76,6 +76,10 @@
           visibility: hidden;
           transition: visibility .3s linear, opacity .3s linear;
           transition-delay: .1s;
+
+          & > a {
+            color: #6c6cff;
+          }
         }
 
         &__label {

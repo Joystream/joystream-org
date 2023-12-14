@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import cn from 'classnames';
-import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
+import { Link, Trans, useI18next } from 'gatsby-plugin-react-i18next';
 
 import { parseDateToRelativeTime } from '../../../utils/pages/landing/parseDateToRelativeTime';
 import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
@@ -125,7 +125,7 @@ const Creators = ({ creators, t, priceData }) => {
               id="IndexPage__creators__title-and-info__info__modal"
               className="IndexPage__creators__title-and-info__info__modal"
             >
-              {t('landing.creators.info.text')}
+              <Trans i18nKey={'landing.creators.info.text'} components={{ exchanges: <Link to="/token#exchanges" /> } } />
             </div>
           </div>
         </div>
