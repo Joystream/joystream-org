@@ -10,7 +10,6 @@ import { sharedData } from '../../data/pages';
 const joystreamLinks = [
   { href: sharedData.links.blog, label: 'pages.blog' },
   { to: '/manifesto', label: 'pages.manifesto' },
-  { to: '/hydra', label: 'pages.hydra' },
 ];
 
 const githubLinks = [{ href: sharedData.links.repository, label: 'footer.github.repository' }];
