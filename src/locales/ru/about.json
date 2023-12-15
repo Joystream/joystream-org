@@ -2,7 +2,7 @@
   "about": {
     "siteMetadata": {
       "title": "Team",
-      "description": "Мы предлагаем не только отличную заработную плату и гибкие условия, но и прекрасную миссию, команду и время на создание чего-то принципиально нового."
+      "description": "Meet the team behind Joystream, consisting of Jsgenesis workers and a committed community of DAO members. With over 40 investors on board and a strong technical background, the team's journey is as compelling as the platform itself."
     },
     "hero": {
       "title": "Мы создаем Joystream, чтобы дать ему свободу",
@@ -28,6 +28,16 @@
     "investors": {
       "sectionTitle": "INVESTORS",
       "title": "A team effort recognized and trusted by over 40 investors, including"
+    },
+    "press": {
+      "sectionTitle": "PRESS",
+      "title": "Learn more about us through media stories",
+      "story": {
+        "sectionTitle": "FEATURED ON",
+        "title": "Decentralized Creator Platform Joystream Raises $5.8M",
+        "description": "The Polkadot-based platform allows creators to sell their videos as NFTs and turn their channels into tokens.",
+        "readArticle": "Read article"
+      }
     },
     "auditors": {
       "sectionTitle": "SAFETY & SECURITY",

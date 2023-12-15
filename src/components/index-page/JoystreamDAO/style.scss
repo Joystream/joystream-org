@@ -4,102 +4,94 @@
 
 .IndexPage {
   &__joystream-dao-wrapper {
-    padding: 96px 0;
+    padding: 96px 32px 0 32px;
     background-color: #f2f5f9;
   }
 
   &__joystream-dao {
-    @extend %container;
+    @include grid;
 
-    display: grid;
-    gap: 30px;
-    grid-template-columns: 500px auto;
-
-    &__content {
+    &__header {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      grid-column: 2 / 12;
 
       &__section-title {
-        @include section-title;
+        @include h400;
 
         color: $c_blue-ribbon;
+        text-align: center;
       }
 
       &__title {
-        @include h3;
+        @include h900;
 
         margin-top: 4px;
         color: $c_black;
+        text-align: center;
       }
+    }
 
-      &__subtitle {
-        @include base-1;
+    &__subtitle {
+      @include t400;
 
-        margin-top: 16px;
-        margin-bottom: 32px;
-        color: #5c6475;
-      }
+      margin-top: 16px;
+      color: #5c6475;
+      text-align: center;
+      grid-column: 3 / 11;
+    }
 
-      &__link {
-        font-family: $font-primary;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0;
-        color: $c_blue-ribbon;
+    &__link {
+      @include t400;
 
-        &__arrow {
-          margin-bottom: -3px;
-          margin-left: 10px;
-          transform: rotate(-90deg) scale(.8);
-        }
+      margin: 32px auto 0 auto;
+      font-weight: 600;
+      color: $c_blue-ribbon;
+      grid-column: 1 / 13;
+
+      &__arrow {
+        margin-bottom: -3px;
+        margin-left: 10px;
+        transform: rotate(-90deg) scale(.8);
       }
     }
 
     &__illustration {
       position: relative;
-      height: 440px;
+      margin-top: 72px;
+      grid-column: 2 / 12;
 
       &__background {
-        position: absolute;
-        right: 0;
-        bottom: 18%;
-        width: 86%;
-        border-radius: 8px;
-        box-shadow: 0 0 18px rgba(3, 0, 65, .1), 0 0 4.02054px rgba(3, 0, 65, .0596107), 0 0 1.19702px rgba(3, 0, 65, .0403893);
+        width: 100%;
       }
 
       &__foreground {
         position: absolute;
-        bottom: 35px;
-        left: 15px;
-        width: 95%;
-        border-radius: 8px;
-        box-shadow: 0 0 18px rgba(3, 0, 65, .1), 0 0 4.02054px rgba(3, 0, 65, .0596107), 0 0 1.19702px rgba(3, 0, 65, .0403893);
+        bottom: 0;
+        left: 0;
+        width: 100%;
       }
+    }
+
+    &__carousel-title {
+      @include h500;
+
+      margin-top: 96px;
+      grid-column: 2 / 12;
     }
   }
 
   &__joystream-dao-carousel {
     $carousel-gap: 24px;
 
-    margin-top: 96px;
-
-    &__title-section {
-      @extend %container;
-
-      &__text {
-        @include h6;
-      }
-    }
-
     &__items-wrapper {
       display: flex;
       max-width: 1440px;
       min-height: 288px;
       margin: 0 auto;
-      margin-top: 32px;
+      margin-top: 27px;
+      padding-top: 5px;
       overflow: hidden;
       gap: $carousel-gap;
     }
@@ -123,12 +115,21 @@
       height: 288px;
       padding: 24px;
       background-color: $c_white;
+      border-radius: 8px;
+      transition: all .2s;
+
+      &:hover {
+        background-color: $c_white;
+        transform: translate(-5px, -5px);
+        box-shadow: 8px 8px 0 -2px $c_blue-ribbon;
+      }
 
       &__image {
         width: 40px;
         height: 40px;
         overflow: hidden;
         background-color: rgba(0, 0, 0, .3);
+        border: 2px solid $c_black;
         border-radius: 50%;
 
         & > img {
@@ -138,11 +139,12 @@
       }
 
       &__title {
-        @include h6;
+        @include h400;
         @include line-clamp(2);
 
         min-height: 64px;
         margin-top: 24px;
+        line-height: 29px;
       }
 
       &__info {
@@ -154,13 +156,13 @@
           min-width: 108px;
 
           &__label {
-            @include base-5;
+            @include t100;
 
             color: #81858d;
           }
 
           &__value {
-            @include base-5;
+            @include t100;
 
             display: grid;
             width: 72px;
@@ -179,13 +181,13 @@
 
         &__date {
           &__label {
-            @include base-5;
+            @include t100;
 
             color: #81858d;
           }
 
           &__value {
-            @include h9;
+            @include t300;
 
             margin-top: 4px;
           }
@@ -193,7 +195,7 @@
       }
 
       &__link {
-        @include h9;
+        @include t300;
 
         display: block;
         display: flex;
@@ -201,6 +203,7 @@
         justify-content: space-between;
         width: 149px;
         margin-top: 24px;
+        font-weight: 600;
 
         &__icon {
           margin-top: 3px;
@@ -210,116 +213,97 @@
     }
   }
 
-  @media #{$screen-max-lg} {
+  @media (max-width: 1440px) {
     &__joystream-dao {
-      display: flex;
-      flex-direction: column-reverse;
+      &__header {
+        grid-column: 1 / 13;
 
-      &__content {
         &__title {
-          & > br {
-            display: none;
-          }
+          @include h800;
         }
       }
 
+      &__subtitle {
+        grid-column: 1 / 13;
+      }
+
       &__illustration {
-        width: 700px;
-        margin: 0 auto;
+        grid-column: 1 / 13;
+      }
 
-        &__background {
-          top: 0;
-        }
-
-        &__foreground {
-          bottom: 20px;
-          width: 88%;
-        }
+      &__carousel-title {
+        grid-column: 1 / 13;
       }
     }
   }
 
-  @media #{$screen-max-md} {
-    &__joystream-dao {
-      &__content {
-        padding: 0 22px;
-      }
-
-      &__illustration {
-        transform: scale(1.25);
-        transform-origin: left;
-
-        &__background {
-          bottom: unset;
-          left: 20px;
-        }
-
-        &__foreground {
-          bottom: -375px;
-          left: 10px;
-        }
-      }
-    }
-  }
-
-  @media #{$screen-max-sm} {
+  @media (max-width: 1024px) {
     &__joystream-dao-wrapper {
-      padding: 80px 0;
+      padding: 64px 16px 0 16px;
     }
 
     &__joystream-dao {
-      &__content {
-        padding: 0 10px;
-
+      &__header {
         &__title {
-          @include h4;
-        }
-
-        &__subtitle {
-          @include base-3;
+          @include h700;
         }
       }
 
       &__illustration {
-        width: 100%;
-        height: 280px;
-        margin-bottom: 50px;
+        margin-top: 56px;
 
-        &__background {
-          left: 70px;
-          width: 400px;
+        & > div {
+          -webkit-transform: none !important;
+          transform: none !important;
         }
+      }
 
-        &__foreground {
-          bottom: -283px;
-          left: 50px;
-          width: 380px;
-          margin: auto;
-        }
+      &__carousel-title {
+        @include h400;
+
+        margin-top: 64px;
       }
     }
 
     &__joystream-dao-carousel {
-      margin-top: 64px;
+      margin: 0 -16px;
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     &__joystream-dao {
+      &__header {
+        &__title {
+          @include h600;
+        }
+      }
+
+      &__subtitle {
+        @include t300;
+      }
+
       &__illustration {
-        height: 250px;
-        transform: scale(1.5);
+        margin-top: 48px;
+      }
+    }
+  }
 
-        &__background {
-          left: 30px;
-          width: 301px;
+  @media (max-width: 425px) {
+    &__joystream-dao {
+      &__header {
+        &__title {
+          @include h500;
         }
+      }
 
-        &__foreground {
-          bottom: -212px;
-          left: 15px;
-          width: 298px;
-        }
+      &__link {
+        @include t300;
+
+        font-weight: 600;
+      }
+
+      &__carousel-title {
+        @include h300;
       }
     }
   }

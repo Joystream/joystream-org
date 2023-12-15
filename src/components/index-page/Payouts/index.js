@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import cn from 'classnames';
 import Plx from 'react-plx';
-import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
+import { Trans, useI18next, Link } from 'gatsby-plugin-react-i18next';
 
 import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
 import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
@@ -21,32 +21,16 @@ import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
 
 import './style.scss';
 
-const parallaxDataBackground = [
-  {
-    start: 'self',
-    duration: 1400,
-    easing: 'easeInOut',
-    properties: [
-      {
-        startValue: 100,
-        endValue: -50,
-        property: 'translateY',
-        unit: 'px',
-      },
-    ],
-  },
-];
-
 const parallaxDataForeground = [
   {
-    start: 'self',
     startOffset: -100,
+    start: 'self',
     duration: 1500,
-    easing: 'easeInOut',
+    easing: 'easeIn',
     properties: [
       {
-        startValue: 175,
-        endValue: -75,
+        startValue: 200,
+        endValue: -350,
         property: 'translateY',
         unit: 'px',
       },
@@ -135,61 +119,56 @@ const Payouts = ({ t, payouts, priceData }) => {
 
   return (
     <section className="IndexPage__payouts-wrapper">
-      <div className="IndexPage__payouts-atlas">
-        <header>
-          <span className="IndexPage__payouts-atlas__section-title">{t('landing.payouts.atlas.sectionTitle')}</span>
-          <h2 className="IndexPage__payouts-atlas__title">{t('landing.payouts.atlas.title')}</h2>
-        </header>
-        <p className="IndexPage__payouts-atlas__subtitle">{t('landing.payouts.atlas.subtitle')}</p>
-      </div>
       <div className="IndexPage__payouts" id="creator-payouts">
-        <div className="IndexPage__payouts__content">
-          <span className="IndexPage__payouts__content__section-title">{t('landing.payouts.sectionTitle')}</span>
-          <h3 className="IndexPage__payouts__content__title">
+        <div className="IndexPage__payouts__main__content">
+          <span className="IndexPage__payouts__main__content__section-title">{t('landing.payouts.sectionTitle')}</span>
+          <h3 className="IndexPage__payouts__main__content__title">
             <Trans i18nKey="landing.payouts.title" components={{ br: <br /> }} />
           </h3>
-          <p className="IndexPage__payouts__content__subtitle">{t('landing.payouts.subtitle')}</p>
+          <p className="IndexPage__payouts__main__content__subtitle">{t('landing.payouts.subtitle')}</p>
         </div>
-        <div className="IndexPage__payouts__illustration">
-          <Plx parallaxData={parallaxDataBackground} animateWhenNotInViewport={true}>
-            <img
-              src={PayoutsBackgroundImage}
-              className="IndexPage__payouts__illustration__background"
-              alt="my payments tab in atlas studio"
-            />
-          </Plx>
+        <div className="IndexPage__payouts__main__illustration">
+          <img
+            src={PayoutsBackgroundImage}
+            className="IndexPage__payouts__main__illustration__background"
+            alt="my payments tab in atlas studio"
+          />
           <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
             <img
               src={PayoutsForeground}
-              className="IndexPage__payouts__illustration__foreground"
+              className="IndexPage__payouts__main__illustration__foreground"
               alt="claim payout popup, in front of the my payments tab"
             />
           </Plx>
         </div>
       </div>
-      <section className="IndexPage__payouts-carousel">
-        <div className="IndexPage__payouts-carousel__title-and-info">
-          <h3 className="IndexPage__payouts-carousel__title-and-info__title">{t('landing.payouts.carousel.title')}</h3>
-          <div className="IndexPage__payouts-carousel__title-and-info__info">
+      <div className="IndexPage__payouts__carousel-title-and-info-wrapper">
+        <div className="IndexPage__payouts__carousel-title-and-info">
+          <h3 className="IndexPage__payouts__carousel-title-and-info__title">{t('landing.payouts.carousel.title')}</h3>
+          <div className="IndexPage__payouts__carousel-title-and-info__info">
             <div
-              className="IndexPage__payouts-carousel__title-and-info__info__label"
+              className="IndexPage__payouts__carousel-title-and-info__info__label"
               // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
               tabIndex={0}
-              aria-describedby="IndexPage__payouts-carousel__title-and-info__info__modal"
+              aria-describedby="IndexPage__payouts__carousel-title-and-info__info__modal"
               ref={payoutsCarouselInfoLabelRef}
             >
               {t('landing.payouts.carousel.info.label')}
-              <InfoIcon className="IndexPage__payouts-carousel__title-and-info__info__icon" />
+              <div className="IndexPage__payouts__carousel-title-and-info__info__icon">
+                <InfoIcon />
+              </div>
             </div>
             <div
               role="tooltip"
-              id="IndexPage__payouts-carousel__title-and-info__info__modal"
-              className="IndexPage__payouts-carousel__title-and-info__info__modal"
+              id="IndexPage__payouts__carousel-title-and-info__info__modal"
+              className="IndexPage__payouts__carousel-title-and-info__info__modal"
             >
-              {t('landing.payouts.carousel.info.text')}
+              <Trans i18nKey={'landing.payouts.carousel.info.text'} components={{ exchanges: <Link to="/token#exchanges" /> } } />
             </div>
           </div>
         </div>
+      </div>
+      <section className="IndexPage__payouts-carousel">
         <div className="IndexPage__payouts-carousel__items-wrapper">
           {payouts && payouts.length > 0 ? (
             <Carousel
@@ -204,25 +183,6 @@ const Payouts = ({ t, payouts, priceData }) => {
           ) : null}
         </div>
       </section>
-      {/* <div className="IndexPage__payouts-cta">
-        <div className="IndexPage__payouts-cta__content">
-          <div className="IndexPage__payouts-cta__content__logos">
-            <YoutubeLogo className="IndexPage__payouts-cta__content__logos__youtube" />
-            <ConnectionIcon className="IndexPage__payouts-cta__content__logos__connection-icon" />
-            <JoystreamLogo className="IndexPage__payouts-cta__content__logos__joystream" />
-          </div>
-          <p className="IndexPage__payouts-cta__content__title">
-            Have a YouTube channel already? <br />
-            Reupload your videos to receive a guaranteed payout in the YouTube Partner Program.
-          </p>
-        </div>
-        <ArrowButton
-          link="#"
-          className="IndexPage__payouts-cta__link"
-          text="Learn more"
-          textClassname="IndexPage__payouts-cta__link-text"
-        />
-      </div> */}
     </section>
   );
 };

@@ -28,5 +28,23 @@ $c_raspberry: #e50158;
 $c_rose: #ff0161;
 $c_pippin: #ffdede;
 $c_mauve: #d09dff;
+$c_gray_500: #757575;
 
 $c_neutral-200: #dee3e9;
+$c_panel_content: #5c6475;
+
+@function get-color-from-opaque-and-background($color1, $opacity1, $color2) {
+  $r1: red($color1);
+  $g1: green($color1);
+  $b1: blue($color1);
+
+  $r2: red($color2);
+  $g2: green($color2);
+  $b2: blue($color2);
+
+  $r3: $r2 + ($r1 - $r2)*$opacity1;
+  $g3: $g2 + ($g1 - $g2)*$opacity1;
+  $b3: $b2 + ($b1 - $b2)*$opacity1;
+
+  @return rgb($r3, $g3, $b3);
+}

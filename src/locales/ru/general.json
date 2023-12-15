@@ -102,7 +102,8 @@
     "about": "About",
     "token": "Token",
     "lightpaper": "Lightpaper",
-    "handbook": "Handbook"
+    "handbook": "Handbook",
+    "roadmap": "Roadmap"
   },
   "footer": {
     "title": "Следите за новостями",
@@ -140,7 +141,7 @@
     "overview": "Обзор"
   },
   "socials": {
-    "twitter": "Twitter",
+    "twitter": "X",
     "github": "GitHub",
     "discord": "Discord",
     "telegram": "Telegram",

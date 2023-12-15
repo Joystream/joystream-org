@@ -3,45 +3,47 @@
 
 .IndexPage {
   &__available-activities-wrapper {
-    background-color: $c_black;
+    padding: 96px 32px;
+    background-color: #f2f5f9;
   }
 
   &__available-activities {
-    @extend %container;
+    @include grid;
 
-    padding: 96px 0;
+    &__header {
+      grid-column: 2 / 12;
 
-    &__title {
-      font-family: $font-primary;
-      font-size: 48px;
-      line-height: 56px;
-      color: $c_white;
-      text-align: center;
+      &__title {
+        @include h900;
+
+        color: $c_black;
+        text-align: center;
+      }
     }
 
     &__subtitle {
-      max-width: 818px;
+      @include t400;
+
       margin: 0 auto;
       margin-top: 16px;
-      font-family: $font-secondary;
-      font-size: 20px;
-      line-height: 28px;
-      letter-spacing: 0;
-      color: $c_grayc-chateau;
+      color: #5c6475;
       text-align: center;
+      grid-column: 3 / 11;
     }
 
     &__list {
       display: grid;
-      margin-top: 80px;
-      gap: 30px;
+      margin-top: 64px;
+      gap: 24px;
+      grid-column: 2 / 12;
       grid-template-columns: 1fr 1fr;
     }
 
     &__list-item {
-      height: 188px;
+      height: 172px;
       padding: 20px;
-      background-color: #111316;
+      background-color: $c_white;
+      border-radius: 8px;
       transition: all .2s;
 
       &__top {
@@ -53,44 +55,46 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 80px;
-        height: 80px;
-        background-color: #4038ff33;
-        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        background-color: #e0e1ff;
+        border-radius: 8px;
+      }
+
+      &__icon {
+        transform: scale(.85);
       }
 
       &__title {
+        @include t400;
+
         margin-left: 16px;
-        font-family: $font-primary;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: 0;
-        color: $c_white;
+        font-weight: 600;
+        color: #1f252e;
       }
 
       &__amount {
         margin-left: auto;
-        color: $c_white;
+        color: #1f252e;
 
         &--mobile {
           display: none;
         }
 
         &__value {
-          @include h7;
+          @include t400;
 
           & > span {
             margin-left: 4px;
-            color: #a7aeb7;
+            color: #81858d;
           }
         }
 
         &__weekly {
-          @include h8;
+          @include t400;
 
           display: block;
-          margin-top: 4px;
-          color: #a7aeb7;
+          color: #81858d;
           text-align: right;
         }
       }
@@ -108,12 +112,11 @@
       }
 
       &__member-icon {
-        width: 50px;
-        height: 50px;
-        background-color: $c_ebony-clay;
-        // padding-right: 10px;
+        width: 48px;
+        height: 48px;
+        background-color: $c_white;
         border-radius: 50%;
-        box-shadow: 0 0 0 3px $c_ebony-clay;
+        box-shadow: 0 0 0 2px $c_white;
 
         &:not(:first-child) {
           margin-left: -10px;
@@ -136,16 +139,16 @@
         }
 
         img {
-          width: 50px;
-          height: 50px;
+          width: 48px;
+          height: 48px;
           border-radius: 50%;
         }
       }
 
       &__number-icon {
         display: grid;
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
         margin-left: -10px;
         font-family: $font-secondary;
         font-size: 15px;
@@ -161,21 +164,19 @@
       &__loader {
         width: 45px;
         height: 45px;
-        margin-top: 3px;
-        margin-left: 10px;
       }
 
       &__cta {
+        @include t400;
+
         display: flex;
         align-items: center;
         flex-direction: row;
         margin-left: auto;
-        font-family: $font-primary;
-        font-size: 20px;
-        line-height: 28px;
-        letter-spacing: 0;
+        font-weight: 600;
         color: $c_blue-ribbon;
         opacity: 0;
+        transition: all .2s;
 
         &--mobile {
           display: none;
@@ -222,14 +223,6 @@
         color: $c_black;
       }
 
-      &:hover &__icon-wrapper {
-        background-color: $c_blue-ribbon;
-      }
-
-      &:hover &__icon {
-        color: $c_white;
-      }
-
       &:hover &__amount {
         color: $c_black;
       }
@@ -259,6 +252,7 @@
       letter-spacing: 0;
       color: $c_blue-ribbon;
       cursor: pointer;
+      grid-column: 1 / 13;
 
       &__arrow-icon {
         margin-bottom: -3px;
@@ -268,59 +262,27 @@
     }
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1440px) {
     &__available-activities {
-      &__list {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-      }
+      &__header {
+        grid-column: 1 / 13;
 
-      &__list-item {
-        width: 606px;
-      }
-    }
-  }
-
-  @media #{$screen-max-md} {
-    &__available-activities {
-      padding: 110px 0;
-
-      &__title {
-        padding: 0 20px;
+        &__title {
+          @include h800;
+        }
       }
 
       &__subtitle {
-        padding: 0 40px;
-      }
-    }
-  }
-
-  @media (max-width: 650px) {
-    &__available-activities {
-      padding: 80px 0;
-
-      &__title {
-        font-size: 32px;
-        line-height: 40px;
-      }
-
-      &__subtitle {
-        padding: 0 20px;
-        font-size: 16px;
-        line-height: 24px;
+        max-width: 910px;
+        grid-column: 1 / 13;
       }
 
       &__list {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 64px;
+        grid-column: 1 / 13;
       }
 
       &__list-item {
-        width: 335px;
-        height: 158px;
+        height: 148px;
         padding: 16px;
 
         &__icon-wrapper {
@@ -328,19 +290,12 @@
           height: 48px;
         }
 
-        &__icon {
-          transform: scale(.68);
-        }
-
         &__title {
-          font-size: 20px;
-          line-height: 28px;
+          @include h400;
         }
 
-        &__loader {
-          width: 35px;
-          height: 35px;
-          margin-left: 5px;
+        &__icon {
+          transform: scale(.6);
         }
 
         &__cta {
@@ -356,19 +311,20 @@
           }
         }
 
-        &__place-for-you {
-          font-size: 14px;
-          line-height: 20px;
+        &__amount {
+          display: none;
 
-          &__icon {
-            margin-right: 0;
-            margin-left: -8px;
-            transform: scale(.68);
+          &--mobile {
+            display: block;
           }
-        }
 
-        &__bottom {
-          margin-top: 29px;
+          &__value {
+            @include t300;
+          }
+
+          &__weekly {
+            @include t300;
+          }
         }
 
         &__member-icon {
@@ -384,24 +340,97 @@
         &__number-icon {
           width: 40px;
           height: 40px;
+          font-size: 12.5px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__available-activities-wrapper {
+      padding: 64px 16px;
+    }
+
+    &__available-activities {
+      &__header {
+        &__title {
+          @include h700;
+        }
+      }
+
+      &__list {
+        margin-top: 56px;
+        gap: 16px;
+      }
+
+      &__list-item {
+        &__title {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__available-activities {
+      &__header {
+        &__title {
+          @include h600;
+        }
+      }
+
+      &__subtitle {
+        @include t300;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 48px;
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__available-activities {
+      &__header {
+        &__title {
+          @include h500;
+        }
+      }
+
+      &__list-item {
+        &__title {
+          @include h300;
         }
 
         &__amount {
-          display: none;
-
-          &--mobile {
-            display: block;
-          }
-
           &__value {
-            @include h9;
+            @include t200;
           }
+        }
 
-          &__weekly {
-            @include h9;
+        &__member-icon {
+          width: 32px;
+          height: 32px;
 
-            margin-top: 0;
+          img {
+            width: 32px;
+            height: 32px;
           }
+        }
+
+        &__number-icon {
+          width: 32px;
+          height: 32px;
+          font-size: 10px;
+          line-height: 16px;
+        }
+
+        &__loader {
+          width: 32px;
+          height: 32px;
         }
       }
     }

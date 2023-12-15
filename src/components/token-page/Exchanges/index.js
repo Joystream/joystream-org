@@ -3,6 +3,8 @@ import React from 'react';
 import ArrowLink from '../../ArrowLink';
 
 import MEXC from '../../../assets/images/token/mexc-logo.webp';
+import Bitget from '../../../assets/images/token/bitget-logo.webp';
+import Bitmart from '../../../assets/images/token/bitmart-logo.webp';
 
 import './style.scss';
 
@@ -34,7 +36,21 @@ const Exchanges = ({ t }) => {
             exchangeIcon={MEXC}
             exchangeName={t('token.exchanges.mexc.name')}
             exchangeDescription={t('token.exchanges.mexc.description')}
-            exchangeLink="https://www.mexc.com/"
+            exchangeLink="https://www.mexc.com/exchange/JOYSTREAM_USDT?_from=market"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={Bitget}
+            exchangeName={t('token.exchanges.bitget.name')}
+            exchangeDescription={t('token.exchanges.bitget.description')}
+            exchangeLink="https://www.bitget.com/spot/JOYUSDT"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={Bitmart}
+            exchangeName={t('token.exchanges.bitmart.name')}
+            exchangeDescription={t('token.exchanges.bitmart.description')}
+            exchangeLink="https://www.bitmart.com/trade/en-US?symbol=JOY_USDT&layout=pro"
             t={t}
           />
         </div>

@@ -36,9 +36,9 @@ const TokensPage = () => {
 
       <Wallets t={t} />
 
-      <Faucets t={t} />
+      {/* <Faucets t={t} /> */}
 
-      <Exchanges  t={t}/>
+      <Exchanges t={t} />
 
       <Earn t={t} />
 
@@ -46,13 +46,13 @@ const TokensPage = () => {
 
       <Supply t={t} />
 
-      <TokenInformation
+      {/* <TokenInformation
         tokenQuestions={tokenQuestions.map(({ title, text }) => ({
           title: t(title),
           text: text?.isModular ? <Trans i18nKey={text?.key} components={text?.components} /> : t(text),
         }))}
         t={t}
-      />
+      /> */}
     </BaseLayout>
   );
 };

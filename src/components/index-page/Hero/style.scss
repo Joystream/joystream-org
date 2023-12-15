@@ -1,31 +1,80 @@
 @import '../../../styles/main';
 @import '../../../pages/style';
 
+$animation-name: null;
+
+@mixin animate-background () {
+  $animation-name: unique-id() !global;
+
+  @keyframes #{$animation-name} {
+    0% {
+      transform: rotate(60deg);
+    }
+
+    100% {
+      transform: rotate(420deg);
+    }
+  }
+
+  animation: 30s linear 0s infinite normal none running $animation-name;
+}
+
 .IndexPage {
   &__hero-wrapper {
-    min-height: 1294px;
-    padding: 96px 100px;
-    overflow: hidden;
+    padding: 32px 32px 96px 32px;
     background-color: black;
   }
 
-  &__hero {
-    @extend %largeContainer;
-
+  &__hero-animation-wrapper {
     position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    min-height: 1264px;
+    padding: 72px 32px;
+    overflow: hidden;
+    border-radius: 32px;
+  }
+
+  &__background-animation {
+    @include animate-background;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    transform: translate(-50%, -50%);
+
+    &__inner {
+      position: absolute;
+      top: -1212px;
+      display: block;
+      width: 2000px;
+      height: 2000px;
+      background: radial-gradient(circle, rgb(20, 52, 146) 70%, transparent 100%);
+      border-radius: 50%;
+      filter: blur(400px);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+  }
+
+  &__hero {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
 
     &__title {
-      @include h1;
+      @include h1100;
 
-      max-width: 818px;
       color: $c_white;
       text-align: center;
       opacity: 0;
       animation: animateLandingContent .75s forwards ease;
       animation-delay: .1s;
+      grid-column: 2 / 12;
 
       span > div {
         display: -webkit-inline-box;
@@ -33,296 +82,251 @@
     }
 
     &__typewriter-title {
-      @include h1;
+      @include h1100;
 
       margin-left: 12px;
       color: #6c6cff;
     }
 
     &__typewriter-cursor {
+      font-weight: 400;
       color: #6c6cff;
       animation: animateTextCaret 1s ease-out;
       animation-iteration-count: infinite;
     }
 
     &__subtitle {
-      @include base-1;
+      @include t400;
 
-      margin-top: 24px;
+      margin-top: 16px;
       color: #a7aeb7;
       text-align: center;
       opacity: 0;
       animation: animateLandingContent .75s forwards ease;
       animation-delay: .1s;
+      grid-column: 4 / 10;
     }
 
     &__buttons {
       display: flex;
+      justify-content: center;
       margin-top: 48px;
       opacity: 0;
       animation: animateLandingContent .75s forwards ease;
       animation-delay: .1s;
       gap: 16px;
+      grid-column: 5 / 9;
     }
 
     &__button {
-      width: 157px;
-      height: 60px;
-      padding: 18px 15px !important;
-    }
-
-    &__community-button {
-      width: 214px;
-      height: 60px;
-      padding: 18px 16px;
-      background-color: $c_black;
-      border: 2px solid #5c6475;
+      width: 304px;
+      height: 64px;
+      min-width: 304px;
+      padding: 20px 32px !important;
+      border-radius: 8px;
+      transition: all .35s;
 
       &:hover {
-        background-color: $c_black;
+        background-color: #261ee4;
       }
     }
 
     &__button-text {
-      @include landing-page-button-text;
+      @include t300;
+
+      font-weight: 600;
     }
 
     &__illustration {
       position: relative;
-      margin-top: 80px;
+      margin-top: 72px;
+      grid-column: 2 / 12;
 
       &__background {
-        max-width: 1152px;
-        opacity: 0;
         // TODO: Using drop-shadow results in graphical problems in firefox and that is why it is commented out.
         // This functionality should be reinstated as soon as that is fixed on their end.
         // filter: drop-shadow(0 33px 100px rgba(0, 0, 0, .22)) drop-shadow(0 7.37098px 22.3363px rgba(0, 0, 0, .131144)) drop-shadow(0 2.19453px 6.6501px rgba(0, 0, 0, .0888564));
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 100%;
+        margin: auto;
+        // max-width: 1060px;
+        opacity: 0;
         animation: animateLandingHeroImage .75s forwards ease;
         animation-delay: .3s;
       }
 
       &__foreground {
         position: absolute;
-        top: 90px;
-        right: -45px;
-        max-width: 404px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        margin: auto;
         opacity: 0;
         animation: animateLandingNftWidget .75s forwards ease;
         animation-delay: .3s;
       }
 
-      &__button {
+      &__holders {
         position: absolute;
-        top: 400px;
-        right: -21px;
-        max-width: 356px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        margin: auto;
         opacity: 0;
-        animation: animateLandingButton 1s .75s forwards ease;
+        animation: animateLandingNftWidget .75s forwards ease;
         animation-delay: .3s;
       }
     }
+  }
 
-    &__overlay {
-      position: absolute;
-      bottom: -100px;
-      width: 100%;
-      height: 400px;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+  @media (min-width: 1440px) {
+    &__hero {
+      max-width: 1440px;
+      margin: 0 auto;
     }
   }
 
-  @media (max-width: 1420px) {
-    &__hero-wrapper {
-      min-height: 1136.5px;
-      padding: 96px 0;
-    }
-
+  @media (max-width: 1500px) {
     &__hero {
-      &__illustration {
-        &__background {
-          width: 900px;
-        }
-
-        &__foreground {
-          top: 233px;
-          right: -15px;
-          width: 300px;
-        }
-
-        &__button {
-          top: 455px;
-          right: 0;
-          width: 270px;
-        }
-      }
-
-      &__overlay {
-        height: 360px;
-      }
-    }
-  }
-
-  @media #{$screen-max-md} {
-    &__hero-wrapper {
-      min-height: unset;
-      padding: 80px 0;
-    }
-
-    &__hero {
-      &__title,
-      &__typewriter-title {
-        @include h2;
-      }
-
       &__title {
-        max-width: 700px;
-      }
-
-      &__title,
-      &__subtitle,
-      &__buttons {
-        opacity: 1;
-        animation: none;
-      }
-
-      &__illustration {
-        &__background {
-          width: 680px;
-        }
-
-        &__foreground {
-          top: -375px;
-          right: -2px;
-          width: 220px;
-        }
-
-        &__button {
-          top: -210px;
-          right: 10px;
-          width: 200px;
-        }
-
-        &__background,
-        &__foreground,
-        &__button {
-          opacity: 1;
-          animation: none;
-        }
-      }
-
-      &__overlay {
-        bottom: -20px;
-        height: 200px;
+        max-width: 950px;
+        margin: 0 auto;
       }
     }
   }
 
-  @media #{$screen-max-sm} {
+  @media (max-width: 1440px) {
+    &__hero-animation-wrapper {
+      min-height: 953px;
+      padding-top: 32px;
+    }
+
     &__hero {
-      &__title,
-      &__typewriter-title {
-        @include h3;
+      &__title {
+        @include h1000;
+
+        max-width: 896px;
+        margin: 0 auto;
+        grid-column: 1 / 13;
       }
 
-      &__title {
-        max-width: 550px;
+      &__typewriter-title {
+        @include h1000;
       }
 
       &__subtitle {
-        @include base-3;
-
-        max-width: 335px;
-        margin-top: 12px;
-      }
-
-      &__buttons {
-        margin-top: 24px;
+        margin-right: auto;
+        margin-left: auto;
+        grid-column: 1 / 13;
       }
 
       &__illustration {
-        margin-top: 64px;
+        margin-top: 48px;
+        grid-column: 1 / 13;
       }
     }
   }
 
-  @media (max-width: 725px) {
+  @media (max-width: 1024px) {
+    &__hero-animation-wrapper {
+      min-height: 831px;
+      padding: 16px;
+    }
+
     &__hero-wrapper {
-      padding-bottom: 0;
+      padding: 16px 16px 64px 16px;
     }
 
     &__hero {
-      &__illustration {
-        &__background {
-          width: 500px;
-        }
+      column-gap: 16px;
 
-        &__foreground {
-          top: -277px;
-          right: -8px;
-          width: 165px;
-        }
+      &__title {
+        @include h900;
 
-        &__button {
-          top: -155px;
-          right: -1px;
-          width: 150px;
+        max-width: 650px;
+        min-height: 216px;
+
+        & > span {
+          display: block;
         }
       }
 
-      &__overlay {
-        height: 150px;
-      }
-    }
-  }
-
-  @media (max-width: 560px) {
-    &__hero__title {
-      max-width: 335px;
-
-      span {
-        display: block;
-        max-height: 48px;
+      &__typewriter-title {
+        @include h900;
       }
 
-      span > div {
-        display: -webkit-inline-box;
-      }
-    }
-  }
-
-  @media (max-width: 540px) {
-    &__hero {
       &__buttons {
-        align-items: center;
-        flex-direction: column;
+        margin-top: 32px;
       }
 
       &__illustration {
-        &__background {
-          width: 100%;
-        }
+        margin-top: 56px;
 
-        &__foreground {
-          top: unset;
-          right: -10px;
-          bottom: -11px;
-          width: 33%;
-        }
-
-        &__button {
-          top: 51%;
-          right: -4px;
-          width: calc(33% - 12px);
-        }
-
-        &__button-plx {
-          // override will-change: transform applied by Plx to not create a new stacking context
-          will-change: width !important;
+        & > div {
+          -webkit-transform: none !important;
+          transform: none !important;
         }
       }
+    }
+  }
 
-      &__overlay {
-        height: 105px;
+  @media (max-width: 768px) {
+    &__hero-animation-wrapper {
+      min-height: 582px;
+    }
+
+    &__hero {
+      &__title {
+        @include h700;
+
+        max-width: 322.5px;
+        min-height: 192px;
+      }
+
+      &__typewriter-title {
+        @include h700;
+      }
+
+      &__subtitle {
+        @include t300;
+      }
+
+      &__illustration {
+        margin-top: 48px;
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__hero-animation-wrapper {
+      min-height: 478px;
+      border-radius: 24px;
+    }
+
+    &__hero {
+      &__title {
+        @include h600;
+
+        max-width: 279px;
+        min-height: 160px;
+      }
+
+      &__typewriter-title {
+        @include h600;
+      }
+
+      &__button {
+        width: 256px;
+        min-width: 256px;
+        padding: 20px 16px !important;
+      }
+
+      &__button-text {
+        @include t200;
+
+        font-weight: 600;
       }
     }
   }

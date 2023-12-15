@@ -5,3 +5,33 @@
 @function get($map, $key: 'default') {
   @return map-get($map, $key);
 }
+
+@mixin rotate-360-at-scale($scale: 1) {
+  @keyframes rotate-360 {
+    0% {
+      transform: rotate(0deg) scale($scale);
+    }
+
+    100% {
+      transform: rotate(360deg) scale($scale);
+    }
+  }
+
+  animation: rotate-360 30s linear infinite;
+}
+
+@mixin animate-up($animation-length: .25s) {
+  @keyframes animate-up {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  animation: animate-up $animation-length ease-in;
+}
