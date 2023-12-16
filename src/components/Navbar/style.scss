@@ -29,6 +29,8 @@
   &__container {
     @extend %largeContainer;
 
+    position: relative;
+    z-index: 5;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -54,6 +56,10 @@
 
     &--light {
       background-color: $c_blue-ribbon;
+    }
+
+    &--mobile {
+      display: none;
     }
   }
 
@@ -313,8 +319,17 @@
       transition: transform 400ms ease 0s;
 
       &--open {
+        z-index: 1;
         visibility: visible;
         transform: translateY(100%);
+      }
+
+      &--mobile {
+        display: flex;
+      }
+
+      &--desktop {
+        display: none;
       }
     }
 
