@@ -32,7 +32,7 @@ const Dropdown = ({ label, links, isScrollUp, t }) => {
   }, [yOffset]);
 
   useEffect(() => {
-    const listener = (e) => setYOffset(document.body.getBoundingClientRect().y);
+    const listener = e => setYOffset(document.body.getBoundingClientRect().y);
 
     window.addEventListener('scroll', listener);
     return () => {
@@ -44,23 +44,20 @@ const Dropdown = ({ label, links, isScrollUp, t }) => {
     <>
       <div
         className={cn('Navbar__link-wrapper', {
-          'Navbar__link-wrapper--active':
-            isActive && (firstRender || isScrollUp || width <= 1200),
+          'Navbar__link-wrapper--active': isActive && (firstRender || isScrollUp || width <= 1200),
         })}
-        onClick={() => setIsActive((prev) => !prev)}
+        onClick={() => setIsActive(prev => !prev)}
         role="presentation"
       >
         <p className="Navbar__link">{t(label)}</p>
         <Expand
           className={cn('Navbar__expand-icon', {
-            'Navbar__expand-icon--active':
-              isActive && (firstRender || isScrollUp || width <= 1200),
+            'Navbar__expand-icon--active': isActive && (firstRender || isScrollUp || width <= 1200),
           })}
         />
         <div
           className={cn('Navbar__dropdown', {
-            'Navbar__dropdown--active':
-              isActive && (firstRender || isScrollUp || width <= 1200),
+            'Navbar__dropdown--active': isActive && (firstRender || isScrollUp || width <= 1200),
           })}
         >
           {links.map(({ label, href, to }) => (
@@ -87,81 +84,79 @@ const defaultProps = {
   links: defaultLinks,
 };
 
-const NavbarLinksSection = ({
-  t,
-  links,
-  isScrollUp,
-  isOpen,
-  light,
-  setIsOpen,
-}) => {
+const NavbarLink = ({ label, isButton, isDropdown, links, href, to, language, light, isScrollUp, t }) => {
+  if (isDropdown) {
+    return <Dropdown key={label} t={t} label={t(label)} links={links} isScrollUp={isScrollUp} />;
+  }
+
+  let children = (
+    <div
+      className={cn('Navbar__link-wrapper', {
+        'Navbar__link-wrapper--light': light,
+      })}
+    >
+      <p className="Navbar__link">{t(label)}</p>
+    </div>
+  );
+
+  if (isButton) {
+    children = (
+      <div
+        className={cn('Navbar__button', {
+          'Navbar__button--light': light,
+        })}
+      >
+        <p className="Navbar__button-text">{t(label)}</p>
+        <Arrow className="Navbar__button-arrow" />
+      </div>
+    );
+  }
+
+  return (
+    <Link key={label} to={to} href={href} language={language}>
+      {children}
+    </Link>
+  );
+};
+
+const NavbarLinksSection = ({ t, links, isScrollUp, isOpen, light, setIsOpen, isDesktop }) => {
   return (
     <>
       <div
         className={cn('Navbar__links', {
           'Navbar__links--open': isOpen,
           'Navbar__links--light': light,
+          'Navbar__links--desktop': isDesktop,
+          'Navbar__links--mobile': !isDesktop,
         })}
       >
-        {links.map(
-          ({ label, isButton, isDropdown, links, href, to, language }) => {
-            if (isDropdown) {
-              return (
-                <Dropdown
-                  key={label}
-                  t={t}
-                  label={t(label)}
-                  links={links}
-                  isScrollUp={isScrollUp}
-                />
-              );
-            }
-
-            let children = (
-              <div
-                className={cn('Navbar__link-wrapper', {
-                  'Navbar__link-wrapper--light': light,
-                })}
-              >
-                <p className="Navbar__link">{t(label)}</p>
-              </div>
-            );
-
-            if (isButton) {
-              children = (
-                <div
-                  className={cn('Navbar__button', {
-                    'Navbar__button--light': light,
-                  })}
-                >
-                  <p className="Navbar__button-text">{t(label)}</p>
-                  <Arrow className="Navbar__button-arrow" />
-                </div>
-              );
-            }
-
-            return (
-              <Link key={label} to={to} href={href} language={language}>
-                {children}
-              </Link>
-            );
-          }
-        )}
+        {links.map(({ label, isButton, isDropdown, links, href, to, language }) => (
+          <NavbarLink
+            label={label}
+            isBUtton={isButton}
+            isDropdown={isDropdown}
+            links={links}
+            href={href}
+            to={to}
+            language={language}
+            light={light}
+            isScrollUp={isScrollUp}
+            t={t}
+          />
+        ))}
       </div>
 
-      <div
-        className={cn('Navbar__trigger', {
-          'Navbar__trigger--active': isOpen,
-        })}
-        onClick={() => setIsOpen(!isOpen)}
-        role="presentation"
-      >
-        {isOpen ? (
-          <NavClose className="Navbar__trigger__icon" />
-        ) : (
-          <NavHamburger className="Navbar__trigger__icon" />
-        )}
-      </div>
+      {isDesktop ? (
+        <div
+          className={cn('Navbar__trigger', {
+            'Navbar__trigger--active': isOpen,
+          })}
+          onClick={() => setIsOpen(!isOpen)}
+          role="presentation"
+        >
+          {isOpen ? <NavClose className="Navbar__trigger__icon" /> : <NavHamburger className="Navbar__trigger__icon" />}
+        </div>
+      ) : null}
     </>
   );
 };
@@ -180,11 +175,9 @@ const Navbar = ({ light, links, t }) => {
         'Navbar--open': isOpen,
       })}
     >
-      <div className='Navbar__container'>
+      <div className="Navbar__container">
         <Link to="/">
-          <Logo
-            className={cn('Navbar__logo', { 'Navbar__logo--open': isOpen })}
-          />
+          <Logo className={cn('Navbar__logo', { 'Navbar__logo--open': isOpen })} />
         </Link>
 
         <NavbarLinksSection
@@ -194,66 +187,77 @@ const Navbar = ({ light, links, t }) => {
           isOpen={isOpen}
           light={light}
           setIsOpen={setIsOpen}
+          isDesktop={true}
         />
       </div>
+
+      <NavbarLinksSection
+        t={t}
+        links={links}
+        isScrollUp={isScrollUp}
+        isOpen={isOpen}
+        light={light}
+        setIsOpen={setIsOpen}
+        isDesktop={false}
+      />
     </nav>
   );
 };
 
-const SubDropdown = ({ label, links, isScrollup, t }) => {
-  const [isActive, setIsActive] = useState(false);
-  const [firstRender, setFirstRender] = useState(true);
-  const [yOffset, setYOffset] = useState();
-  const { width } = useWindowDimensions();
+// const SubDropdown = ({ label, links, isScrollup, t }) => {
+//   const [isActive, setIsActive] = useState(false);
+//   const [firstRender, setFirstRender] = useState(true);
+//   const [yOffset, setYOffset] = useState();
+//   const { width } = useWindowDimensions();
 
-  useEffect(() => {
-    if (yOffset !== undefined) {
-      setFirstRender(false);
-    }
-  }, [yOffset]);
+//   useEffect(() => {
+//     if (yOffset !== undefined) {
+//       setFirstRender(false);
+//     }
+//   }, [yOffset]);
 
-  useEffect(() => {
-    const listener = (e) => setYOffset(document.body.getBoundingClientRect().y);
+//   useEffect(() => {
+//     const listener = (e) => setYOffset(document.body.getBoundingClientRect().y);
 
-    window.addEventListener('scroll', listener);
-    return () => {
-      window.removeEventListener('scroll', listener);
-    };
-  });
+//     window.addEventListener('scroll', listener);
+//     return () => {
+//       window.removeEventListener('scroll', listener);
+//     };
+//   });
 
-  return (
-    <>
-      <div
-        className={cn('Navbar__link-wrapper', {
-          'Navbar__link-wrapper--active': isActive,
-        })}
-        onClick={() => setIsActive((prev) => !prev)}
-        role="presentation"
-      >
-        <p className="Navbar__link">{t(label)}</p>
-        <Expand
-          className={cn('Navbar__expand-icon', {
-            'Navbar__expand-icon--active': isActive,
-          })}
-        />
-        <div
-          className={cn('Navbar__dropdown', {
-            'Navbar__dropdown--active': isActive,
-          })}
-        >
-          {links.map(({ label, href, to }) => (
-            <Link key={label} href={href} to={to}>
-              <div className="Navbar__dropdown-item">
-                <p className="Navbar__dropdown-item__text">{t(label)}</p>
-                {href ? <LinkIcon className="Navbar__link-icon" /> : null}
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </>
-  );
-};
+//   return (
+//     <>
+//       <div
+//         className={cn('Navbar__link-wrapper', {
+//           'Navbar__link-wrapper--active': isActive,
+//         })}
+//         onClick={() => setIsActive((prev) => !prev)}
+//         role="presentation"
+//       >
+//         <p className="Navbar__link">{t(label)}</p>
+//         <Expand
+//           className={cn('Navbar__expand-icon', {
+//             'Navbar__expand-icon--active': isActive,
+//           })}
+//         />
+//         <div
+//           className={cn('Navbar__dropdown', {
+//             'Navbar__dropdown--active': isActive,
+//           })}
+//         >
+//           {links.map(({ label, href, to }) => (
+//             <Link key={label} href={href} to={to}>
+//               <div className="Navbar__dropdown-item">
+//                 <p className="Navbar__dropdown-item__text">{t(label)}</p>
+//                 {href ? <LinkIcon className="Navbar__link-icon" /> : null}
+//               </div>
+//             </Link>
+//           ))}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
 
 Navbar.propTypes = propTypes;
 Navbar.defaultProps = defaultProps;
