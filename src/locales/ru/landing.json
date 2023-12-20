@@ -34,7 +34,7 @@
         "description": "The total number created channels on the platform along with a percentage showing their relative increase within the last week."
       },
       "allFollowers": {
-        "title": "All",
+        "title": "Followers",
         "description": "The total number of followers on the platform along with a percentage showing their relative increase within the last week."
       },
       "profiles": {
