@@ -15,7 +15,7 @@
     },
     "ourVision": {
       "title": "Our Vision",
-      "subtitle": "Everything you need to know about the project in less than 3 minutes!"
+      "subtitle": "Everything you need to know about the project in 60 seconds!"
     },
     "traction": {
       "sectionTitle": "TRACTION",
@@ -34,7 +34,7 @@
         "description": "The total number created channels on the platform along with a percentage showing their relative increase within the last week."
       },
       "allFollowers": {
-        "title": "All",
+        "title": "Followers",
         "description": "The total number of followers on the platform along with a percentage showing their relative increase within the last week."
       },
       "profiles": {
