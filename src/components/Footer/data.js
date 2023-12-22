@@ -5,6 +5,7 @@ import { ReactComponent as DiscordIcon } from '../../assets/svg/discord.svg';
 import { ReactComponent as SecurityIcon } from '../../assets/svg/security.svg';
 import { ReactComponent as TelegramIcon } from '../../assets/svg/telegram.svg';
 import { ReactComponent as CMCIcon } from '../../assets/svg/coinmarketcap.svg';
+import { ReactComponent as CoinGeckoIcon } from '../../assets/svg/coingecko.svg';
 import { sharedData } from '../../data/pages';
 
 const joystreamLinks = [
@@ -28,6 +29,7 @@ const socialMedias = [
   { icon: DiscordIcon, href: sharedData.social.discordLink, name: 'socials.discord' },
   { icon: TelegramIcon, href: sharedData.social.telegramLink, name: 'socials.telegram' },
   { icon: CMCIcon, href: sharedData.social.coinmarketcapLink, name: 'socials.coinmarketcap' },
+  { icon: CoinGeckoIcon, href: sharedData.social.coingeckoLink, name: 'socials.coingecko' },
 ];
 
 export { joystreamLinks, githubLinks, usefulLinks, socialMedias };

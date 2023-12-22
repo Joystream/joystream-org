@@ -42,6 +42,7 @@ export const sharedData = {
     twitterLink: 'https://twitter.com/JoystreamDAO',
     discordLink: 'https://discord.gg/NaNzysB5YZ',
     coinmarketcapLink: 'https://coinmarketcap.com/currencies/joystream/',
+    coingeckoLink: 'https://www.coingecko.com/en/coins/joystream',
   },
   links: {
     blog: 'https://blog.joystream.org/',

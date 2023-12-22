@@ -145,7 +145,8 @@
     "github": "GitHub",
     "discord": "Discord",
     "telegram": "Telegram",
-    "coinmarketcap": "CoinMarketCap"
+    "coinmarketcap": "CoinMarketCap",
+    "coingecko": "CoinGecko"
   },
   "cookiesNotice": {
     "text": "This site uses cookies and external trackers to improve our services and your experience. By continuing to use our site, you agree to their use.",
