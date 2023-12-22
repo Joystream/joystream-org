@@ -5,6 +5,7 @@ import ArrowLink from '../../ArrowLink';
 import MEXC from '../../../assets/images/token/mexc-logo.webp';
 import Bitget from '../../../assets/images/token/bitget-logo.webp';
 import Bitmart from '../../../assets/images/token/bitmart-logo.webp';
+import GateIO from '../../../assets/images/token/gateio.webp';
 
 import './style.scss';
 
@@ -32,6 +33,13 @@ const Exchanges = ({ t }) => {
         </header>
 
         <div className="TokenPage__exchanges__items">
+          <ExchangeSection
+            exchangeIcon={GateIO}
+            exchangeName={t('token.exchanges.gateio.name')}
+            exchangeDescription={t('token.exchanges.gateio.description')}
+            exchangeLink=""
+            t={t}
+          />
           <ExchangeSection
             exchangeIcon={MEXC}
             exchangeName={t('token.exchanges.mexc.name')}
