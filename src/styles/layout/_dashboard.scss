@@ -14,7 +14,6 @@ $dashboard-breakpoints: (
 
 // media
 
-$screen-min-dashboard-xxs: media-min-width('xxs', $dashboard-breakpoints);
 $screen-min-dashboard-xs: media-min-width('xs', $dashboard-breakpoints);
 $screen-min-dashboard-sm: media-min-width('sm', $dashboard-breakpoints);
 $screen-min-dashboard-md: media-min-width('md', $dashboard-breakpoints);
@@ -28,6 +27,9 @@ $dashboard-header-background-color: #000000;
 $dashboard-navbar-background-color: #bcd5fa14;
 $dashboard-header-border-bottom-color: #bbd9f621;
 $dashboard-header-navbar-border-bottom-color: #cbe0f145;
+$dashboard-hero-video-player-modal-border-color: #7174ff;
+$dashboard-hero-video-player-modal-background-color: #181c20;
+$dashboard-hero-video-player-modal-overlay-color: #101214bf;
 
 // buttons background colors (with borders)
 
@@ -38,6 +40,8 @@ $dashboard-header-buttons-pressed-background-color: #bcd5fa14;
 $dashboard-header-navbar-buttons-border-color: #bbd9f621;
 $dahboard-header-navbar-buttons-states-background-color: #c2e0ff33;
 $dashboard-header-navbar-buttons-states-border-color: #dce1e56b;
+$dashboard-hero-play-video-button-background-color: rgba(0, 0, 0, 0.6);
+$dashboard-hero-play-video-button-hover-background-color: rgba(0, 0, 0, 0.7);
 
 // buttons colors
 
@@ -45,7 +49,27 @@ $dashboard-header-buttons-color: #f4f6f8;
 $dashboard-header-navbar-buttons-color: #b5c1c9;
 $dashboard-header-navbar-buttons-states-color: #f4f6f8;
 
+// text colors
+
+$dashboard-base-white-text-color: #ffffff;
+$dashboard-base-gray-text-color: #b5c1c9;
+
 // transition func and duration
 
 $dashboard-transition-timing: cubic-bezier(0, 0, 0.3, 1);
 $dashboard-transition-duration: 150ms;
+
+// mixins
+
+@mixin dashboard-container {
+  padding-inline: 16px;
+
+  @media #{$screen-min-dashboard-md} {
+    padding-inline: 32px;
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}

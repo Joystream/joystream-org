@@ -3,7 +3,10 @@ import { useI18next } from 'gatsby-plugin-react-i18next';
 
 import SiteMetadata from '../../components/SiteMetadata';
 import DashboardHeader from '../../components/DashboardHeader';
+import DashboardHero from '../../components/DashboardHero';
+
 import { anchors } from '../../components/DashboardHeader/data';
+
 import './style.scss';
 
 const Dashboard = () => {
@@ -23,7 +26,9 @@ const Dashboard = () => {
 
       <DashboardHeader activeAnchor={activeAnchor} onAnchorClick={setActiveAnchor} />
 
-      <main></main>
+      <main>
+        <DashboardHero />
+      </main>
       <footer></footer>
     </>
   );

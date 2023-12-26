@@ -1,0 +1,132 @@
+@import '../../styles/main';
+
+.dashboard-hero {
+  padding-block: 56px 40px;
+
+  &__container {
+    @include dashboard-container;
+    display: grid;
+    gap: 24px;
+  }
+
+  &__title {
+    @include h600;
+    font-feature-settings: 'clig' off, 'liga' off;
+    margin-bottom: 8px;
+    color: $dashboard-base-white-text-color;
+    text-align: center;
+  }
+
+  &__description {
+    @include t300;
+    font-feature-settings: 'clig' off, 'liga' off;
+    color: $dashboard-base-gray-text-color;
+    text-align: center;
+  }
+
+  &__video-wrapper {
+    position: relative;
+    cursor: pointer;
+    filter: blur(0.19854368269443512px);
+
+    &:hover > .dashboard-hero__button-play-video {
+      background-color: $dashboard-hero-play-video-button-hover-background-color;
+    }
+  }
+
+  &__video-overlay {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  &__button-play-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dashboard-hero-play-video-button-background-color;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+  }
+
+  &__video-player-modal {
+    position: absolute;
+    inset: 40px;
+    border: 1px dashed $dashboard-hero-video-player-modal-border-color;
+    background-color: $dashboard-hero-video-player-modal-background-color;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+  }
+
+  &__video-player-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: $dashboard-hero-video-player-modal-overlay-color;
+  }
+
+  @media #{$screen-min-dashboard-xs} {
+    & {
+      padding-bottom: 48px;
+    }
+
+    &__title {
+      @include h700;
+      margin-bottom: 16px;
+    }
+
+    &__description {
+      @include t400;
+    }
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    & {
+      padding-block: 64px;
+    }
+
+    &__container {
+      padding-inline: 80px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    & {
+      padding-block: 96px 80px;
+    }
+
+    &__container {
+      padding-inline: 32px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+      @include h800;
+      text-align: start;
+    }
+
+    &__description {
+      text-align: start;
+    }
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    &__container {
+      gap: 140px;
+      grid-template-columns: 40.5% 49%;
+    }
+    &__title {
+      @include h900;
+    }
+  }
+}
