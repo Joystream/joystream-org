@@ -51,8 +51,18 @@
     align-items: center;
     background-color: $dashboard-hero-play-video-button-background-color;
     border-radius: 4px;
-    backdrop-filter: blur(4px);
     cursor: pointer;
+    // backdrop-filter: blur(4px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(4px);
+    }
   }
 
   &__video-player-modal {

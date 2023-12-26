@@ -73,6 +73,11 @@
     border-top: 1px solid $dashboard-header-border-bottom-color;
     border-bottom: 1px solid $dashboard-header-navbar-border-bottom-color;
     overflow-x: auto;
+
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__nav-list {
