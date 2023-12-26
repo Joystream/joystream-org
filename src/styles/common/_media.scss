@@ -6,13 +6,13 @@ $breakpoints: (
   xl: 1400px,
 );
 
-@function media-min-width($screen-sizes-name) {
-  $breakpoint: map-get($breakpoints, $screen-sizes-name);
+@function media-min-width($screen-sizes-name, $custom-breakpoints: $breakpoints) {
+  $breakpoint: map-get($custom-breakpoints, $screen-sizes-name);
   @return ('only screen and (min-width: #{if($breakpoint, $breakpoint, $screen-sizes-name)})');
 }
 
-@function media-max-width($screen-sizes-name) {
-  $breakpoint: map-get($breakpoints, $screen-sizes-name);
+@function media-max-width($screen-sizes-name, $custom-breakpoints: $breakpoints) {
+  $breakpoint: map-get($custom-breakpoints, $screen-sizes-name);
   @return ('only screen and (max-width: #{if($breakpoint, $breakpoint, $screen-sizes-name) - 1px})');
 }
 

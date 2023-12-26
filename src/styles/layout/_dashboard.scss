@@ -1,0 +1,51 @@
+@import '../common/media';
+
+// vars
+
+$dashboard-breakpoints: (
+  xxs: 320px,
+  xs: 425px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1440px,
+  xl: 1920px,
+  xxl: 2560px,
+);
+
+// media
+
+$screen-min-dashboard-xxs: media-min-width('xxs', $dashboard-breakpoints);
+$screen-min-dashboard-xs: media-min-width('xs', $dashboard-breakpoints);
+$screen-min-dashboard-sm: media-min-width('sm', $dashboard-breakpoints);
+$screen-min-dashboard-md: media-min-width('md', $dashboard-breakpoints);
+$screen-min-dashboard-lg: media-min-width('lg', $dashboard-breakpoints);
+$screen-min-dashboard-xl: media-min-width('xl', $dashboard-breakpoints);
+$screen-min-dashboard-xxl: media-min-width('xxl', $dashboard-breakpoints);
+
+// layout bakground colors (with borders)
+
+$dashboard-header-background-color: #000000;
+$dashboard-navbar-background-color: #bcd5fa14;
+$dashboard-header-border-bottom-color: #bbd9f621;
+$dashboard-header-navbar-border-bottom-color: #cbe0f145;
+
+// buttons background colors (with borders)
+
+$dashboard-header-chat-button-background-color: #bcd5fa14;
+$dashboard-header-buttons-border-color: #bbd9f621;
+$dashboard-header-buttons-hover-background-color: #bbd9f621;
+$dashboard-header-buttons-pressed-background-color: #bcd5fa14;
+$dashboard-header-navbar-buttons-border-color: #bbd9f621;
+$dahboard-header-navbar-buttons-states-background-color: #c2e0ff33;
+$dashboard-header-navbar-buttons-states-border-color: #dce1e56b;
+
+// buttons colors
+
+$dashboard-header-buttons-color: #f4f6f8;
+$dashboard-header-navbar-buttons-color: #b5c1c9;
+$dashboard-header-navbar-buttons-states-color: #f4f6f8;
+
+// transition func and duration
+
+$dashboard-transition-timing: cubic-bezier(0, 0, 0.3, 1);
+$dashboard-transition-duration: 150ms;

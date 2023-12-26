@@ -1,0 +1,181 @@
+@import '../../styles/_main.scss';
+
+.dashboard-header {
+  background-color: $dashboard-header-background-color;
+
+  &__container {
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.07px;
+
+    color: $dashboard-header-buttons-color;
+    cursor: pointer;
+    transition: background-color $dashboard-transition-duration $dashboard-transition-timing;
+
+    &:hover,
+    &:focus {
+      background-color: $dashboard-header-buttons-hover-background-color;
+    }
+
+    &:active {
+      background-color: $dashboard-header-buttons-pressed-background-color;
+      transition-duration: 0ms;
+    }
+  }
+
+  &__button-back {
+    padding: 12px;
+    opacity: 0.5;
+    border-radius: 20px;
+
+    &_short-text {
+      margin-left: 8px;
+      display: none;
+    }
+
+    &_text {
+      margin-left: 8px;
+      display: none;
+    }
+  }
+
+  &__button-chat {
+    padding: 8px 16px;
+    background-color: $dashboard-header-chat-button-background-color;
+
+    border: 1px solid $dashboard-header-buttons-border-color;
+    border-radius: 2px;
+
+    &_text {
+      display: none;
+    }
+
+    &_icon {
+      margin-left: 8px;
+      display: none;
+    }
+  }
+
+  &__nav {
+    padding: 8px 16px;
+    background-color: $dashboard-navbar-background-color;
+    border-top: 1px solid $dashboard-header-border-bottom-color;
+    border-bottom: 1px solid $dashboard-header-navbar-border-bottom-color;
+    overflow-x: auto;
+  }
+
+  &__nav-list {
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+  }
+
+  &__nav-list-item {
+    margin: 0;
+    padding: 0;
+
+    &:not(:last-of-type) {
+      margin-right: 16px;
+    }
+  }
+
+  &__nav-button {
+    padding: 8px 10px;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.12px;
+
+    background-color: transparent;
+    color: $dashboard-header-navbar-buttons-color;
+    border: 1px solid $dashboard-header-navbar-buttons-border-color;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all $dashboard-transition-duration $dashboard-transition-timing;
+
+    &:hover,
+    &:focus {
+      color: $dashboard-header-navbar-buttons-states-color;
+      border-color: $dashboard-header-navbar-buttons-states-border-color;
+    }
+
+    &.active {
+      background-color: $dahboard-header-navbar-buttons-states-background-color;
+      color: $dashboard-header-navbar-buttons-states-color;
+      border-color: $dashboard-header-navbar-buttons-states-border-color;
+    }
+  }
+
+  @media #{$screen-min-dashboard-xs} {
+    &__button-back {
+      padding: 10px 16px;
+      border-radius: 2px;
+      &_short-text {
+        display: block;
+      }
+    }
+
+    &__button-chat {
+      &_icon {
+        display: block;
+      }
+    }
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__button-back {
+      opacity: 1;
+
+      &_short-text {
+        display: none;
+      }
+
+      &_text {
+        display: block;
+      }
+    }
+
+    &__button-chat {
+      &_short-text {
+        display: none;
+      }
+
+      &_text {
+        display: block;
+      }
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__container {
+      padding-inline: 32px;
+    }
+
+    &__nav {
+      padding-inline: 32px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media #{$screen-min-dashboard-xl} {
+    &__container {
+      margin: 0 auto;
+      width: 1920px;
+    }
+  }
+}
