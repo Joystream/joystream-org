@@ -1,23 +1,29 @@
 import React from 'react';
 
-import ArrowLink from '../../ArrowLink';
+import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 
 import MEXC from '../../../assets/images/token/mexc-logo.webp';
 import Bitget from '../../../assets/images/token/bitget-logo.webp';
 import Bitmart from '../../../assets/images/token/bitmart-logo.webp';
+import GateIO from '../../../assets/images/token/gateio.webp';
 
 import './style.scss';
 
 const ExchangeSection = ({ exchangeIcon, exchangeName, exchangeDescription, exchangeLink, t }) => {
   return (
-    <div className="TokenPage__exchanges__item">
-      <div className="TokenPage__exchanges__item__image-wrapper">
-        <img src={exchangeIcon} className="TokenPage__exchanges__item__image" alt="" />
+    <a href={exchangeLink} target="_blank" rel="noopener noreferrer">
+      <div className="TokenPage__exchanges__item">
+        <div className="TokenPage__exchanges__item__image-wrapper">
+          <img src={exchangeIcon} className="TokenPage__exchanges__item__image" alt="" />
+        </div>
+        <p className="TokenPage__exchanges__item__name">{exchangeName}</p>
+        <p className="TokenPage__exchanges__item__description">{exchangeDescription}</p>
+        <div className="ArrowLink TokenPage__exchanges__item__link">
+          {t('token.exchanges.visit')}
+          <Arrow className="ArrowLink__arrow" />
+        </div>
       </div>
-      <p className="TokenPage__exchanges__item__name">{exchangeName}</p>
-      <p className="TokenPage__exchanges__item__description">{exchangeDescription}</p>
-      <ArrowLink href={exchangeLink} className="TokenPage__exchanges__item__link" text={t('token.exchanges.visit')} />
-    </div>
+    </a>
   );
 };
 
@@ -32,6 +38,13 @@ const Exchanges = ({ t }) => {
         </header>
 
         <div className="TokenPage__exchanges__items">
+          <ExchangeSection
+            exchangeIcon={GateIO}
+            exchangeName={t('token.exchanges.gateio.name')}
+            exchangeDescription={t('token.exchanges.gateio.description')}
+            exchangeLink="https://www.gate.io/trade/JOYSTREAM_USDT"
+            t={t}
+          />
           <ExchangeSection
             exchangeIcon={MEXC}
             exchangeName={t('token.exchanges.mexc.name')}
