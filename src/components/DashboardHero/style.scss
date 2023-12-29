@@ -11,7 +11,7 @@
 
   &__title {
     @include h600;
-    font-feature-settings: 'clig' off, 'liga' off;
+    font-feature-settings: $dashboard-font-feature-settings;
     margin-bottom: 8px;
     color: $dashboard-base-white-text-color;
     text-align: center;
@@ -19,7 +19,7 @@
 
   &__description {
     @include t300;
-    font-feature-settings: 'clig' off, 'liga' off;
+    font-feature-settings: $dashboard-font-feature-settings;
     color: $dashboard-base-gray-text-color;
     text-align: center;
   }

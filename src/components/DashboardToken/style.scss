@@ -1,0 +1,9 @@
+@import '../../styles/main';
+
+.dashboard-token {
+  @include dashboard-section;
+
+  &__container {
+    @include dashboard-container;
+  }
+}

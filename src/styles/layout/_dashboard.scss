@@ -26,17 +26,19 @@ $screen-min-dashboard-xxl: media-min-width('xxl', $dashboard-breakpoints);
 $dashboard-header-background-color: #000000;
 $dashboard-navbar-background-color: #bcd5fa14;
 $dashboard-header-border-bottom-color: #bbd9f621;
-$dashboard-header-navbar-border-bottom-color: #cbe0f145;
+$dashboard-base-border-color: #cbe0f145;
 $dashboard-hero-video-player-modal-border-color: #7174ff;
 $dashboard-hero-video-player-modal-background-color: #181c20;
 $dashboard-hero-video-player-modal-overlay-color: #101214bf;
+$dashboard-section-header-tooltip-background-color: #343d44;
+$dashboard-charts-custom-tooltip-background-color: #272d33;
 
 // buttons background colors (with borders)
 
 $dashboard-header-chat-button-background-color: #bcd5fa14;
 $dashboard-header-buttons-border-color: #bbd9f621;
-$dashboard-header-buttons-hover-background-color: #bbd9f621;
-$dashboard-header-buttons-pressed-background-color: #bcd5fa14;
+$dashboard-buttons-base-hover-background-color: #bbd9f621;
+$dashboard-buttons-base-pressed-background-color: #bcd5fa14;
 $dashboard-header-navbar-buttons-border-color: #bbd9f621;
 $dahboard-header-navbar-buttons-states-background-color: #c2e0ff33;
 $dashboard-header-navbar-buttons-states-border-color: #dce1e56b;
@@ -49,10 +51,16 @@ $dashboard-header-buttons-color: #f4f6f8;
 $dashboard-header-navbar-buttons-color: #b5c1c9;
 $dashboard-header-navbar-buttons-states-color: #f4f6f8;
 
+// text
+
+$dashboard-font-feature-settings: 'clig' off, 'liga' off;
+
 // text colors
 
 $dashboard-base-white-text-color: #ffffff;
 $dashboard-base-gray-text-color: #b5c1c9;
+$dashboard-content-base-text-color: #f4f6f8;
+$dashboard-charts-base-tick-color: #7b8a95;
 
 // transition func and duration
 
@@ -60,6 +68,22 @@ $dashboard-transition-timing: cubic-bezier(0, 0, 0.3, 1);
 $dashboard-transition-duration: 150ms;
 
 // mixins
+
+@mixin dashboard-section {
+  padding-block: 40px;
+
+  @media #{$screen-min-dashboard-xs} {
+    padding-block: 48px;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    padding-block: 64px;
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    padding-block: 80px;
+  }
+}
 
 @mixin dashboard-container {
   padding-inline: 16px;
@@ -71,5 +95,19 @@ $dashboard-transition-duration: 150ms;
   @media #{$screen-min-dashboard-lg} {
     width: 1440px;
     margin: 0 auto;
+  }
+}
+
+@mixin dashboard-buttons-states {
+  transition: background-color $dashboard-transition-duration $dashboard-transition-timing;
+
+  &:hover,
+  &:focus {
+    background-color: $dashboard-buttons-base-hover-background-color;
+  }
+
+  &:active {
+    background-color: $dashboard-buttons-base-pressed-background-color;
+    transition-duration: 0ms;
   }
 }

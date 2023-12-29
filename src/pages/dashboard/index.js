@@ -4,6 +4,7 @@ import { useI18next } from 'gatsby-plugin-react-i18next';
 import SiteMetadata from '../../components/SiteMetadata';
 import DashboardHeader from '../../components/DashboardHeader';
 import DashboardHero from '../../components/DashboardHero';
+import DashboardToken from '../../components/DashboardToken';
 
 import { anchors } from '../../components/DashboardHeader/data';
 
@@ -28,6 +29,7 @@ const Dashboard = () => {
 
       <main>
         <DashboardHero />
+        <DashboardToken />
       </main>
       <footer></footer>
     </>

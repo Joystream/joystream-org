@@ -14,24 +14,11 @@
     display: flex;
     align-items: center;
 
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing: 0.07px;
+    @include t200;
 
     color: $dashboard-header-buttons-color;
     cursor: pointer;
-    transition: background-color $dashboard-transition-duration $dashboard-transition-timing;
-
-    &:hover,
-    &:focus {
-      background-color: $dashboard-header-buttons-hover-background-color;
-    }
-
-    &:active {
-      background-color: $dashboard-header-buttons-pressed-background-color;
-      transition-duration: 0ms;
-    }
+    @include dashboard-buttons-states;
   }
 
   &__button-back {
@@ -71,7 +58,7 @@
     padding: 8px 16px;
     background-color: $dashboard-navbar-background-color;
     border-top: 1px solid $dashboard-header-border-bottom-color;
-    border-bottom: 1px solid $dashboard-header-navbar-border-bottom-color;
+    border-bottom: 1px solid $dashboard-base-border-color;
     overflow-x: auto;
 
     scrollbar-width: none;
@@ -99,11 +86,7 @@
   &__nav-button {
     padding: 8px 10px;
 
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: 0.12px;
+    @include t100;
 
     background-color: transparent;
     color: $dashboard-header-navbar-buttons-color;
