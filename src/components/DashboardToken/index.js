@@ -1,7 +1,12 @@
 import React from 'react';
 
 import DashboardSectionHeader from '../DashboardSectionHeader';
-import DashboardTokenPriceChart from '../DashboardTokenPriceChart';
+import DashboardTokenPriceChartWidget from '../DashboardTokenPriceChartWidget';
+import DashboardStatsWidget from '../DashboardStatsWidget';
+import DashboardTokenSupplyWidget from '../DashboardTokenSupplyWidget';
+import DashboardJoyCarousel from '../DashboardJoyCarousel';
+
+import { tokenPriceMetrics } from './data';
 
 import './style.scss';
 
@@ -10,9 +15,21 @@ const DashboardToken = () => {
     <section className="dashboard-token">
       <div className="dashboard-token__container">
         <DashboardSectionHeader sectionId="token" sectionHeading="Token" />
-        <div style={{ marginTop: '16px', padding: '32px', backgroundColor: '#BCD5FA14', borderRadius: '8px' }}>
-          <DashboardTokenPriceChart />
+        <div className="dashboard-token__price-metrics-grid">
+          <DashboardTokenPriceChartWidget widgetCn="dashboard-token__price-chart-widget" />
+          {tokenPriceMetrics.map((tokenPriceStats, index) => {
+            return (
+              <DashboardStatsWidget
+                key={index}
+                heading={tokenPriceStats.figure}
+                text={tokenPriceStats.rate}
+                helperText={tokenPriceStats.growthRate}
+              />
+            );
+          })}
         </div>
+        <DashboardTokenSupplyWidget />
+        <DashboardJoyCarousel />
       </div>
     </section>
   );

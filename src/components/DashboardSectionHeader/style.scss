@@ -1,6 +1,7 @@
 @import '../../styles/main';
 
 .dashboard-section-header {
+  margin-bottom: 16px;
   padding-bottom: 16px;
   position: relative;
   display: flex;
@@ -78,6 +79,7 @@
 
   @media #{$screen-min-dashboard-md} {
     & {
+      margin-bottom: 24px;
       padding-bottom: 24px;
     }
 

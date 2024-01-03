@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import {
   ResponsiveContainer,
   ComposedChart,
@@ -11,26 +11,24 @@ import {
   ReferenceLine,
   Tooltip,
 } from 'recharts';
+import { arrayOf, shape, instanceOf, number } from 'prop-types';
 
-import {
-  generateChartMockData,
-  formatXAxisTick,
-  renderCustomDot,
-  formatDateToShowInTooltip,
-  renderCustomActiveDot,
-} from './utils';
+import { formatXAxisTick, renderCustomDot, formatDateToShowInTooltip, renderCustomActiveDot } from './utils';
 
 import './style.scss';
 
-const DashboardTokenPriceChart = () => {
-  const [data] = useState(() => generateChartMockData());
+const propTypes = {
+  data: arrayOf(shape({ date: instanceOf(Date).isRequired, price: number.isRequired, volume: number.isRequired })),
+};
+
+const DashboardTokenPriceChart = ({ data }) => {
   const maxBarSize = 20;
 
   const cartesianGridRef = useRef(null);
   const chartWidth = cartesianGridRef.current?.props.offset.width || 0;
 
   return (
-    <ResponsiveContainer width="100%" minHeight={265}>
+    <ResponsiveContainer width="100%" minHeight={265} maxHeight={368}>
       <ComposedChart data={data}>
         <CartesianGrid ref={cartesianGridRef} vertical={false} stroke="#bbd9f621" />
 
@@ -69,6 +67,8 @@ const DashboardTokenPriceChart = () => {
           }}
         />
         <YAxis
+          // width experimental to reduce gap between yAxis and container
+          width={10}
           padding={{ bottom: maxBarSize }}
           stroke="#bbd9f621"
           strokeDasharray="4 0.5 4 16"
@@ -120,6 +120,8 @@ const DashboardTokenPriceChart = () => {
     </ResponsiveContainer>
   );
 };
+
+DashboardTokenPriceChart.propTypes = propTypes;
 
 function CustomTooltip(tooltipContentProps) {
   const { active, payload } = tooltipContentProps;

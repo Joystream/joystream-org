@@ -32,6 +32,7 @@ $dashboard-hero-video-player-modal-background-color: #181c20;
 $dashboard-hero-video-player-modal-overlay-color: #101214bf;
 $dashboard-section-header-tooltip-background-color: #343d44;
 $dashboard-charts-custom-tooltip-background-color: #272d33;
+$dashboard-widget-tags-background-color: #272d33;
 
 // buttons background colors (with borders)
 
@@ -44,6 +45,18 @@ $dahboard-header-navbar-buttons-states-background-color: #c2e0ff33;
 $dashboard-header-navbar-buttons-states-border-color: #dce1e56b;
 $dashboard-hero-play-video-button-background-color: rgba(0, 0, 0, 0.6);
 $dashboard-hero-play-video-button-hover-background-color: rgba(0, 0, 0, 0.7);
+$dashboard-widget-base-background-color: #bcd5fa14;
+$dashboard-widget-base-info-icon-fill: #7b8a95;
+$dashboard-widget-base-info-icon-states-fill: #f4f6f8;
+$dashboard-widget-base-info-states-background-color: #bbd9f621;
+$dashboard-widget-info-modal-background-color: #343d44;
+$dashboard-widget-base-borders-color: #bbd9f621;
+$dashboard-widget-accent-background-color: #4038ff;
+$dashboard-widget-accent-hover-background-color: #5a58ff;
+$dashboard-widget-accent-active-background-color: #342ecf;
+$dashboard-carousel-buttons-background-color: #c2e0ff33;
+$dashboard-carousel-buttons-hover-background-color: #bbd9f621;
+$dashboard-carousel-buttons-pressed-background-color: #c2e0ff33;
 
 // buttons colors
 
@@ -109,5 +122,45 @@ $dashboard-transition-duration: 150ms;
   &:active {
     background-color: $dashboard-buttons-base-pressed-background-color;
     transition-duration: 0ms;
+  }
+}
+
+@mixin dashboard-widget {
+  padding: 16px;
+  background-color: $dashboard-widget-base-background-color;
+  border-radius: 8px;
+
+  @media #{$screen-min-dashboard-sm} {
+    padding: 32px;
+  }
+}
+
+@mixin dashboard-widget-heading {
+  @include h400;
+  color: $dashboard-content-base-text-color;
+  font-feature-settings: $dashboard-font-feature-settings;
+}
+
+@mixin dashboard-widget-text {
+  @include h500;
+  color: $dashboard-base-white-text-color;
+  font-feature-settings: $dashboard-font-feature-settings;
+
+  @media #{$screen-min-dashboard-xs} {
+    @include h600;
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    @include h700;
+  }
+}
+
+@mixin dashboard-widget-helper-text {
+  @include t300;
+  color: $dashboard-base-gray-text-color;
+  font-feature-settings: $dashboard-font-feature-settings;
+
+  @media #{$screen-min-dashboard-xs} {
+    @include t400;
   }
 }

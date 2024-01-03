@@ -1,0 +1,66 @@
+@import '../../styles/main';
+
+.dashboard-carousel {
+  position: relative;
+
+  &__button {
+    padding: 16px;
+    background-color: $dashboard-carousel-buttons-background-color;
+    border: 1px solid $dashboard-widget-base-borders-color;
+    border-radius: 2px;
+    backdrop-filter: blur(2px);
+    transition: all $dashboard-transition-duration $dashboard-transition-timing;
+
+    visibility: hidden;
+    opacity: 0;
+
+    &.is-button-visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $dashboard-carousel-buttons-hover-background-color;
+    }
+
+    &:active {
+      background-color: $dashboard-carousel-buttons-pressed-background-color;
+      transition-duration: 0ms;
+    }
+  }
+
+  &__button-prev-slide {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    & > svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__button-next-slide {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  & li {
+    padding-left: 0;
+  }
+}
+
+.focusRing___1airF.carousel__slide-focus-ring {
+  outline: none !important;
+}
+
+.dashboard-joy-carousel__slide {
+  padding-right: 8px;
+
+  @media #{$screen-min-dashboard-xs} {
+    padding-right: 16px;
+  }
+}

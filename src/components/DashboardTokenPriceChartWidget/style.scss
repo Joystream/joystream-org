@@ -1,0 +1,21 @@
+@import '../../styles/main';
+
+.dashboard-token-price-chart-widget {
+  @include dashboard-widget;
+  padding-right: 0;
+
+  &__current-price {
+    @include dashboard-widget-text;
+  }
+
+  &__growth-rate {
+    @include dashboard-widget-helper-text;
+    margin-bottom: 16px;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    & {
+      padding-right: 0px;
+    }
+  }
+}

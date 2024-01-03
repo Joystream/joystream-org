@@ -1,0 +1,17 @@
+@import '../../styles/main';
+
+.dashboard-stats-widget {
+  @include dashboard-widget;
+
+  &__heading {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    @include dashboard-widget-text;
+  }
+
+  &__helper-text {
+    @include dashboard-widget-helper-text;
+  }
+}
