@@ -67,7 +67,6 @@ export const formatDateToShowInTooltip = (datestr, locale = 'en-US') => {
 };
 
 export const renderCustomActiveDot = (areaChartActiveDotProps, chartWidth) => {
-  console.log(areaChartActiveDotProps.payload.price, 'areaChartActiveDotProps');
   return (
     <g>
       <line

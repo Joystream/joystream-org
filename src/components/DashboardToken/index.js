@@ -5,6 +5,10 @@ import DashboardTokenPriceChartWidget from '../DashboardTokenPriceChartWidget';
 import DashboardStatsWidget from '../DashboardStatsWidget';
 import DashboardTokenSupplyWidget from '../DashboardTokenSupplyWidget';
 import DashboardJoyCarousel from '../DashboardJoyCarousel';
+// import DashboardTokenReleaseScheduleChartWidget from '../DashboardTokenReleaseScheduleChartWidget';
+// import DashboardTable from '../DashboardTable';
+
+import DashboardTokenReleaseScheduleChart from '../DashboardTokenReleaseScheduleChart';
 
 import { tokenPriceMetrics } from './data';
 
@@ -28,8 +32,15 @@ const DashboardToken = () => {
             );
           })}
         </div>
+
         <DashboardTokenSupplyWidget />
+
         <DashboardJoyCarousel />
+
+        <DashboardTokenReleaseScheduleChart />
+
+        {/* <DashboardTokenReleaseScheduleChartWidget /> */}
+        {/* <DashboardTable /> */}
       </div>
     </section>
   );

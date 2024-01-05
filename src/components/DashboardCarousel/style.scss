@@ -58,9 +58,9 @@
 }
 
 .dashboard-joy-carousel__slide {
-  padding-right: 8px;
+  padding-right: 6px;
 
-  @media #{$screen-min-dashboard-xs} {
+  @media #{$screen-min-dashboard-sm} {
     padding-right: 16px;
   }
 }
