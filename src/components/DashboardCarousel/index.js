@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import cn from 'classnames';
 import { CarouselProvider, Slider, ButtonBack, ButtonNext } from 'pure-react-carousel';
@@ -16,6 +16,7 @@ const propTypes = {
 const DashboardCarousel = ({ children }) => {
   const totalSlides = children.length;
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentBreakpoints, setCurrentBreakpoints] = useState('xxs');
 
   const isXxs = useMediaQuery({ maxWidth: 424 });
   const isXs = useMediaQuery({ minWidth: 425, maxWidth: 767 });
@@ -24,16 +25,43 @@ const DashboardCarousel = ({ children }) => {
   const isLg = useMediaQuery({ minWidth: 1440, maxWidth: 1919 });
   const isXl = useMediaQuery({ minWidth: 1920 });
 
-  const visibleSlides = useMemo(() => (isXxs ? 1.05 : isXs ? 1.45 : isSm ? 2 : isMd ? 3 : isLg ? 4 : isXl ? 2 : 2), [
-    isXxs,
-    isXs,
-    isSm,
-    isMd,
-    isLg,
-    isXl,
-  ]);
+  useEffect(() => {
+    if (isXs) {
+      setCurrentBreakpoints('xs');
+    } else if (isSm) {
+      setCurrentBreakpoints('sm');
+    } else if (isMd) {
+      setCurrentBreakpoints('md');
+    } else if (isLg) {
+      setCurrentBreakpoints('lg');
+    } else if (isXl) {
+      setCurrentBreakpoints('xl');
+    }
+  }, [isXs, isSm, isMd, isLg, isXl]);
 
-  const largeScreens = isSm || isMd || isLg || isXl;
+  const visibleSlides = useMemo(
+    () =>
+      currentBreakpoints === 'xxs'
+        ? 1.05
+        : currentBreakpoints === 'xs'
+        ? 1.45
+        : currentBreakpoints === 'sm'
+        ? 2
+        : currentBreakpoints === 'md'
+        ? 3
+        : currentBreakpoints === 'lg'
+        ? 4
+        : currentBreakpoints === 'xl'
+        ? 2
+        : 2,
+    [currentBreakpoints]
+  );
+
+  const largeScreens =
+    currentBreakpoints === 'sm' ||
+    currentBreakpoints === 'md' ||
+    currentBreakpoints === 'lg' ||
+    currentBreakpoints === 'xl';
 
   const isButtonPrevSlideVisible = currentSlide > 0 && largeScreens;
   const isButtonNextSlideVisible =
