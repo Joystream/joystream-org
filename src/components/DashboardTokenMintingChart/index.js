@@ -59,8 +59,6 @@ const DashboardTokenMintingChart = () => {
 };
 
 function renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim) {
-  console.log(pieLabelProps, 'pieLabelProps');
-
   return (
     <g onMouseOver={() => setActiveCellName(pieLabelProps.name)} onMouseLeave={() => setActiveCellName('')}>
       <text

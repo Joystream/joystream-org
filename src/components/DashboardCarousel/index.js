@@ -39,6 +39,19 @@ const DashboardCarousel = ({ children }) => {
   const isButtonNextSlideVisible =
     visibleSlides < totalSlides && totalSlides - visibleSlides > currentSlide && largeScreens;
 
+  console.log({
+    totalSlides,
+    isXxs,
+    isXs,
+    isSm,
+    isMd,
+    isLg,
+    isXl,
+    largeScreens,
+    isButtonNextSlideVisible,
+    isButtonPrevSlideVisible,
+  });
+
   return (
     <CarouselProvider
       className="dashboard-carousel"
@@ -46,7 +59,7 @@ const DashboardCarousel = ({ children }) => {
       visibleSlides={visibleSlides}
       isIntrinsicHeight
       currentSlide={currentSlide}
-      dragEnabled={false}
+      // dragEnabled={false}
     >
       <Slider>{children}</Slider>
       <ButtonBack
