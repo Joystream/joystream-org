@@ -1,0 +1,32 @@
+@import '../../styles/main';
+
+.dashboard-token-allocation-table-widget {
+  @include dashboard-widget;
+  @include reset-dashboard-widget-padding;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__heading {
+    @include dashboard-widget-heading-padding;
+    margin-bottom: 16px;
+
+    & .dashboard-widget-heading__info-wrapper {
+      top: 36px;
+      bottom: auto;
+    }
+  }
+
+  &__table {
+    min-width: 584px;
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__table {
+      min-width: auto;
+    }
+  }
+}

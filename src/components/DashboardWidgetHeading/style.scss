@@ -35,7 +35,7 @@
 
   &__info-wrapper {
     position: absolute;
-    right: -53px;
+    right: 0px;
     bottom: 36px;
     z-index: 2000;
     width: 139px;
@@ -52,5 +52,33 @@
   &__info {
     @include t100;
     color: $dashboard-base-white-text-color;
+  }
+
+  &__wrapper {
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: $dashboard-widget-base-background-color;
+    border-radius: 4px;
+  }
+
+  &__label {
+    @include t300;
+    color: $dashboard-base-gray-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__value {
+    @include t300;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  @media #{$screen-min-dashboard-xs} {
+    &__info-wrapper {
+      right: -53px;
+    }
   }
 }

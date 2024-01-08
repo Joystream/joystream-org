@@ -165,3 +165,17 @@ $dashboard-transition-duration: 150ms;
     @include t400;
   }
 }
+
+@mixin dashboard-widget-heading-padding {
+  padding: 16px 16px 0px;
+  @media #{$screen-min-dashboard-sm} {
+    padding: 32px 32px 0px;
+  }
+}
+
+@mixin reset-dashboard-widget-padding {
+  padding: 0;
+  @media #{$screen-min-dashboard-sm} {
+    padding: 0;
+  }
+}

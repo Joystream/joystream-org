@@ -7,11 +7,6 @@
     @include dashboard-container;
   }
 
-  &__price-metrics-grid {
-    display: grid;
-    gap: 16px;
-  }
-
   @media #{$screen-min-dashboard-sm} {
     &__price-metrics-grid {
       grid-template-columns: repeat(3, 1fr);
@@ -19,6 +14,10 @@
 
     &__price-chart-widget {
       grid-column: 1 / span 3;
+    }
+
+    &__percentage-widgets-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -32,5 +31,38 @@
       grid-row: 1 / span 3;
       grid-column: 1 / span 2;
     }
+
+    &__allocation-minting-grid {
+      gap: 24px;
+      grid-template-columns: minmax(550px, 1fr) 1fr;
+    }
+
+    &__percentage-widgets-grid {
+      gap: 24px;
+    }
+
+    &__stats-tables-grid {
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+
+      & > .dashboard-token-roi-table-widget {
+        grid-column: 1 / span 1;
+      }
+
+      & > .dashboard-token-supply-distribution-table-widget {
+        grid-column: 2 / span 2;
+      }
+    }
+  }
+}
+
+.grid-indents {
+  margin-top: 16px;
+
+  display: grid;
+  gap: 16px;
+
+  @media #{$screen-min-dashboard-md} {
+    margin-top: 24px;
   }
 }
