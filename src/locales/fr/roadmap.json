@@ -11,7 +11,7 @@
     "ahead": {
       "title": "What is ahead of us?",
       "subtitle": "ROADMAP",
-      "description": "Please be aware that the roadmap is high-level concept, and not a guarantee. Roadmap will change over time, that is why you can preview both old and current versions. To read more look at <linkOne>{external link}</linkOne>"
+      "description": "Please be aware that the roadmap is high-level concept, and not a guarantee. Roadmap will change over time, that is why you can preview both old and current versions. To read more look at <linkOne>our Handbook</linkOne>."
     },
     "linkToVersionCopied": "Link to Version {{versionNumber}} copied!",
     "topBanner": {

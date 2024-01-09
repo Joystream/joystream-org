@@ -126,17 +126,6 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
             t={t}
           />
           <Container
-            title={t('landing.tokenomics.totalSupply.title')}
-            type="total-supply"
-            modalText={t('landing.tokenomics.totalSupply.description')}
-            children={
-              <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
-                {parseValue(tokenomicsData?.totalSupply)}
-              </p>
-            }
-            t={t}
-          />
-          <Container
             title={t('landing.tokenomics.circulatingSupply.title')}
             type="circulating-supply"
             modalText={t('landing.tokenomics.circulatingSupply.description')}
@@ -154,6 +143,17 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
             children={
               <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
                 {parseValue(tokenomicsData?.totalSupply, priceData.price)}
+              </p>
+            }
+            t={t}
+          />
+          <Container
+            title={t('landing.tokenomics.totalSupply.title')}
+            type="total-supply"
+            modalText={t('landing.tokenomics.totalSupply.description')}
+            children={
+              <p className="IndexPage__tokenomics__metrics__container__content__simple-value">
+                {parseValue(tokenomicsData?.totalSupply)}
               </p>
             }
             t={t}
