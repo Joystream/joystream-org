@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { useI18next } from 'gatsby-plugin-react-i18next';
+import { graphql } from 'gatsby';
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 
 import SiteMetadata from '../../components/SiteMetadata';
 import DashboardHeader from '../../components/DashboardHeader';
 import DashboardHero from '../../components/DashboardHero';
 import DashboardToken from '../../components/DashboardToken';
+import DashboardBackers from '../../components/DashboardBackers';
 
 import { anchors } from '../../components/DashboardHeader/data';
 
@@ -13,6 +15,7 @@ import './style.scss';
 const Dashboard = () => {
   // TODO: Add dashboard.json to locales/[locale] so that t func with appropriate keys can be used
   const { language } = useI18next();
+  const { t } = useTranslation();
 
   const [activeAnchor, setActiveAnchor] = useState(() => anchors[0]);
 
@@ -30,6 +33,7 @@ const Dashboard = () => {
       <main>
         <DashboardHero />
         <DashboardToken />
+        <DashboardBackers t={t} />
       </main>
       <footer></footer>
     </>
@@ -37,3 +41,11 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      ...LanguageQueryFields
+    }
+  }
+`;

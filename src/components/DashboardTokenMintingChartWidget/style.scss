@@ -2,6 +2,7 @@
 
 .dashboard-token-minting-chart-widget {
   @include dashboard-widget;
+  overflow-x: hidden;
 
   &__heading {
     display: flex;

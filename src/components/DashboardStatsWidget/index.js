@@ -15,8 +15,10 @@ const DashboardStatsWidget = ({ heading, text, helperText }) => {
   return (
     <div className="dashboard-stats-widget">
       <DashboardWidgetHeading heading={heading} headingWrapperCn="dashboard-stats-widget__heading" />
-      <p className="dashboard-stats-widget__text">{text}</p>
-      {!!helperText && <p className="dashboard-stats-widget__helper-text">{helperText}</p>}
+      <div className="dashboard-stats-widget__text-wrapper">
+        <p className="dashboard-stats-widget__text">{text}</p>
+        {!!helperText && <p className="dashboard-stats-widget__helper-text">{helperText}</p>}
+      </div>
     </div>
   );
 };

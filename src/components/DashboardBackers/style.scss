@@ -1,0 +1,209 @@
+@import '../../styles/main';
+
+.dashboard-backers {
+  @include dashboard-section;
+
+  &__container {
+    @include dashboard-container;
+  }
+
+  &__heading {
+    margin-bottom: 8px;
+  }
+
+  &__backers-list {
+    margin-bottom: 16px;
+    display: grid;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__backers-list-item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__backer {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dashboard-backer-widget-background-color;
+    border-radius: 8px;
+  }
+
+  &__backer-icon--inactive {
+    display: none;
+  }
+
+  &__coindesk-widgets-wrapper {
+    display: grid;
+    gap: 16px;
+  }
+
+  &__coindesk-story-link {
+    margin: 0;
+    border-radius: 12px;
+    transition: outline 0.25s ease-out;
+
+    &:hover {
+      outline: 1px solid $dashboard-press-story-hover-border-color;
+    }
+
+    & .AboutPage__press__story {
+      width: 100%;
+      max-width: none;
+      padding: 16px 0 0 16px;
+      gap: 16px;
+    }
+
+    & .AboutPage__press__story__about__section-title {
+      @include h100;
+      font-feature-settings: $dashboard-font-feature-settings;
+      letter-spacing: 0.84px;
+    }
+
+    & .AboutPage__press__story__about {
+      max-width: none;
+      padding-right: 16px;
+    }
+
+    & .AboutPage__press__story__about__title {
+      margin-top: 24px;
+      @include h500;
+      font-weight: 600;
+      font-feature-settings: $dashboard-font-feature-settings;
+    }
+
+    & .AboutPage__press__story__about__platform-description {
+      @include t300;
+    }
+
+    & .AboutPage__press__story__about__link {
+      @include t300;
+    }
+
+    & .AboutPage__press__story__visual {
+      max-width: none;
+      height: 260px;
+    }
+
+    & .AboutPage__press__story__visual__image {
+      width: 720px;
+      max-width: 720px;
+      border-radius: 12px;
+    }
+
+    & .AboutPage__press__story__visual__bottom-gradient {
+      transition-timing-function: ease-out;
+    }
+  }
+
+  @media #{$screen-min-dashboard-xs} {
+    &__backers-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__coindesk-story-link {
+      & .AboutPage__press__story__about__title {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    & .dashboard-stats-widget__text-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__backers-list {
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__coindesk-story-link {
+      & {
+        width: 100%;
+        height: 424px;
+        overflow: hidden;
+      }
+
+      & .AboutPage__press__story {
+        padding: 0;
+        flex-direction: row;
+        gap: 0;
+      }
+
+      & .AboutPage__press__story__about {
+        padding: 32px;
+        width: 50%;
+        flex-shrink: 0;
+      }
+
+      & .AboutPage__press__story__about__title {
+        margin-top: 48px;
+      }
+
+      & .AboutPage__press__story__visual {
+        height: 424px;
+        padding-left: 48px;
+        transform: translateY(48px);
+      }
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__backers-list {
+      margin-bottom: 24px;
+      gap: 24px;
+    }
+
+    &__coindesk-widgets-wrapper {
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+
+      & .dashboard-stats-widget {
+        order: 1;
+        grid-column: 3 / span 1;
+      }
+    }
+
+    &__coindesk-story-link {
+      height: 448px;
+      order: -1;
+      grid-column: 1 / span 2;
+
+      & .AboutPage__press__story__visual {
+        height: 448px;
+      }
+    }
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    &__backers-list {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__coindesk-widgets-wrapper {
+      grid-template-columns: repeat(6, 1fr);
+
+      & .dashboard-stats-widget {
+        grid-column: 5 / span 2;
+      }
+    }
+
+    &__coindesk-story-link {
+      height: 392px;
+      grid-column: 1 / span 4;
+
+      & .AboutPage__press__story__visual {
+        height: 392px;
+      }
+    }
+  }
+}
