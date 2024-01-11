@@ -1,0 +1,106 @@
+@import '../../styles/main';
+
+.dashboard-history {
+  @include dashboard-section;
+
+  &__container {
+    @include dashboard-container;
+  }
+
+  &__stage {
+    width: 272px;
+    height: 391px;
+    display: flex;
+    flex-direction: column;
+    background-color: $dashboard-widget-base-background-color;
+    border: 1px solid $dashboard-widget-base-background-color;
+    border-radius: 8px;
+
+    &.card-interactive {
+      cursor: pointer;
+
+      &:hover {
+        border-color: $dashboard-base-border-color;
+
+        & .dashboard-history__stage-img-overlay {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  &__stage-img-wrapper {
+    position: relative;
+  }
+
+  &__stage-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: #6363fb9c;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    opacity: 1;
+    visibility: visible;
+    transition: all $dashboard-transition-duration $dashboard-transition-timing;
+  }
+
+  &__stage-img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  &__stage-descr-wrapper {
+    flex-grow: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__stage-date {
+    margin-bottom: 8px;
+    @include h500;
+    color: $dashboard-base-white-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    text-overflow: ellipsis;
+  }
+
+  &__stage-descr {
+    @include t300;
+    color: $dashboard-base-gray-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__button-read-more {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include t300;
+    font-weight: 600;
+    color: $dashboard-history-stages-buttons-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    cursor: pointer;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__stage {
+      width: 304px;
+      height: 407px;
+    }
+
+    &__stage-descr-wrapper {
+      padding: 24px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    &__stage {
+      width: 326px;
+    }
+  }
+}

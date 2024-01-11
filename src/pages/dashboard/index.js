@@ -7,6 +7,7 @@ import DashboardHeader from '../../components/DashboardHeader';
 import DashboardHero from '../../components/DashboardHero';
 import DashboardToken from '../../components/DashboardToken';
 import DashboardBackers from '../../components/DashboardBackers';
+import DashboardHistory from '../../components/DashboardHistory';
 
 import { anchors } from '../../components/DashboardHeader/data';
 
@@ -34,6 +35,7 @@ const Dashboard = () => {
         <DashboardHero />
         <DashboardToken />
         <DashboardBackers t={t} />
+        <DashboardHistory />
       </main>
       <footer></footer>
     </>
