@@ -13,7 +13,13 @@ import {
 } from 'recharts';
 import { arrayOf, shape, instanceOf, number } from 'prop-types';
 
-import { formatXAxisTick, renderCustomDot, formatDateToShowInTooltip, renderCustomActiveDot } from './utils';
+import {
+  formatXAxisTick,
+  renderCustomDot,
+  formatDateToShowInTooltip,
+  formatTimeToShowInTooltip,
+  renderCustomActiveDot,
+} from './utils';
 
 import './style.scss';
 
@@ -113,7 +119,7 @@ const DashboardTokenPriceChart = ({ data }) => {
           interval={0}
           domain={[0, 'dataMax + 600']}
         />
-        <Bar yAxisId="volumeAxis" dataKey="volume" fill="#B5C1C9" maxBarSize={maxBarSize} />
+        <Bar yAxisId="volumeAxis" dataKey="scaledVolume" fill="#B5C1C9" maxBarSize={maxBarSize} />
 
         <ReferenceLine yAxisId="priceAxis" y={0} stroke="#959494" strokeDasharray="2 16" />
       </ComposedChart>
@@ -131,7 +137,7 @@ function CustomTooltip(tooltipContentProps) {
       <div className="custom-tooltip">
         <div className="custom-tooltip__header">
           <p className="custom-tooltip__accent-text">{formatDateToShowInTooltip(payload[0].payload.date)}</p>
-          <p className="custom-tooltip__accent-text">00:00:00 AM</p>
+          <p className="custom-tooltip__accent-text">{formatTimeToShowInTooltip(payload[0].payload.date)}</p>
         </div>
         <ul className="custom-tooltip__payload-list">
           <li className="custom-tooltip__payload-list-item">
@@ -140,7 +146,7 @@ function CustomTooltip(tooltipContentProps) {
           </li>
           <li className="custom-tooltip__payload-list-item">
             <p className="custom-tooltip__text">Vol 24h:</p>
-            <p className="custom-tooltip__accent-text">&#36;{`${Number(payload[0].payload.volume).toFixed(2)}M`}</p>
+            <p className="custom-tooltip__accent-text">&#36;{Number(payload[0].payload.volume).toFixed(2)}</p>
           </li>
         </ul>
       </div>
@@ -190,7 +196,7 @@ function CustomCursor(tooltipCursorProps) {
         textAnchor="left"
         className="custom-cursor-text"
       >
-        00:00:00 AM
+        {formatTimeToShowInTooltip(tooltipCursorProps.payload[0].payload.date)}
       </text>
     </g>
   );

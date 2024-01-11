@@ -1,5 +1,24 @@
 import React from 'react';
 
+import prices from './prices.json';
+import volume from './volume.json';
+
+export const generateCoinMarketCapStats = () => {
+  const data = [];
+
+  // num of price points is equal to num of volume points (equal timeframes)
+  for (let i = 0; i < prices.length; i += 1) {
+    data.push({
+      date: new Date(prices[i][0]),
+      price: prices[i][1],
+      volume: volume[i][1],
+      scaledVolume: volume[i][1] / 20,
+    });
+  }
+
+  return data;
+};
+
 export const generateChartMockData = () => {
   const mockData = [];
   // Dates generated from 1 Jul to 11 Oct
@@ -64,6 +83,10 @@ export const formatDateToShowInTooltip = (datestr, locale = 'en-US') => {
   const year = date.toLocaleString(locale, { year: 'numeric' });
 
   return `${day} ${month} ${year}`;
+};
+
+export const formatTimeToShowInTooltip = (datestr, locale = 'en-US') => {
+  return datestr.toLocaleTimeString(locale);
 };
 
 export const renderCustomActiveDot = (areaChartActiveDotProps, chartWidth) => {
