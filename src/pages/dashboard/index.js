@@ -31,6 +31,8 @@ const Dashboard = pageProps => {
     scrollTo(`#${activeAnchor.toLowerCase()}`);
   };
 
+  console.log({ withScrollInitiallyUp, hash: pageProps.location.hash, pageProps }, 'withScrollInitiallyUp');
+
   return (
     <>
       {/* TODO: Remove later (for demonstration purposes) */}

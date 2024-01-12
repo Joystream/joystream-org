@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect, useMemo } from 'react';
 import { Link } from 'gatsby';
 import cn from 'classnames';
 import { string, func } from 'prop-types';
@@ -20,6 +20,12 @@ const propTypes = {
 const DashboardHeader = ({ activeAnchor, onAnchorClick }) => {
   const scrollContext = useContext(ScrollContext);
   const { isScrollUp } = scrollContext;
+
+  const [isClient, setClient] = useState(false);
+  useEffect(() => {
+    setClient(true);
+  }, []);
+  const key = useMemo(() => (isClient ? 'client' : 'server'), [isClient]);
 
   const onButtonBackClick = () => {};
   const onButtonChatClick = () => {};
@@ -45,7 +51,7 @@ const DashboardHeader = ({ activeAnchor, onAnchorClick }) => {
       </div>
       {/* TODO: Nav to be hidden on scroll down and shown on scroll up */}
 
-      <nav className={cn('dashboard-header__nav', { 'nav-hidden': !isScrollUp })}>
+      <nav className={cn('dashboard-header__nav', { 'nav-hidden': !isScrollUp })} key={key}>
         <ul className="dashboard-header__nav-list">
           {anchors.map(anchor => (
             <li key={anchor} className="dashboard-header__nav-list-item">
