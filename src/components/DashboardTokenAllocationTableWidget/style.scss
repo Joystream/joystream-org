@@ -4,11 +4,7 @@
   @include dashboard-widget;
   @include reset-dashboard-widget-padding;
 
-  overflow-x: auto;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  overflow-x: hidden;
 
   &__heading {
     @include dashboard-widget-heading-padding;
@@ -17,6 +13,14 @@
     & .dashboard-widget-heading__info-wrapper {
       top: 36px;
       bottom: auto;
+    }
+  }
+
+  &__table-wrapper {
+    overflow-x: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 

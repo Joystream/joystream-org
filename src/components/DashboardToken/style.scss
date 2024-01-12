@@ -64,5 +64,28 @@
 
   @media #{$screen-min-dashboard-md} {
     margin-top: 24px;
+    gap: 24px;
   }
 }
+
+// color: var(--Solid-White, #FFF);
+// text-align: center;
+// font-feature-settings: 'clig' off, 'liga' off;
+
+// /* Desktop / Heading / H600 */
+// font-family: IBM Plex Sans;
+// font-size: 32px;
+// font-style: normal;
+// font-weight: 600;
+// line-height: 40px; /* 125% */
+
+// color: var(--Solid-White, #FFF);
+// text-align: center;
+// font-feature-settings: 'clig' off, 'liga' off;
+
+// /* Desktop / Heading / H500 */
+// font-family: IBM Plex Sans;
+// font-size: 24px;
+// font-style: normal;
+// font-weight: 600;
+// line-height: 32px; /* 133.333% */

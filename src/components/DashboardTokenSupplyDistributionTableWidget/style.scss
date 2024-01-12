@@ -10,6 +10,9 @@
   }
 
   &__table {
+    & th {
+      width: 33.33%;
+    }
     & th:nth-of-type(3n) {
       @include t100;
       color: $dashboard-content-base-text-color;

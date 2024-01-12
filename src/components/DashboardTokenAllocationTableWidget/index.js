@@ -14,7 +14,9 @@ const DashboardTokenAllocationTableWidget = () => {
         heading="Token allocation"
         headingWrapperCn="dashboard-token-allocation-table-widget__heading"
       />
-      <DashboardTable columns={columns} data={data} tableCn="dashboard-token-allocation-table-widget__table" />
+      <div className="dashboard-token-allocation-table-widget__table-wrapper">
+        <DashboardTable columns={columns} data={data} tableCn="dashboard-token-allocation-table-widget__table" />
+      </div>
     </div>
   );
 };

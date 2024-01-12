@@ -55,8 +55,8 @@ const DashboardToken = ({ shouldAddScrollOffset }) => {
         </div>
 
         <div className="dashboard-token__percentage-widgets-grid grid-indents">
-          <DashboardStatsWidget heading="Supply staked for validation" text="25%" />
-          <DashboardStatsWidget heading="APR on staking" text="2.5%" />
+          <DashboardStatsWidget heading="Supply staked for validation" text="25%" withTextSizeIncreasedFromMd />
+          <DashboardStatsWidget heading="APR on staking" text="2.5%" withTextSizeIncreasedFromMd />
         </div>
 
         <div className="dashboard-token__stats-tables-grid grid-indents">
