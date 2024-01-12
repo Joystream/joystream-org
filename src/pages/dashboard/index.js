@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import scrollTo from 'gatsby-plugin-smoothscroll';
@@ -15,11 +15,12 @@ import { anchors } from '../../components/DashboardHeader/data';
 
 import './style.scss';
 
-const Dashboard = () => {
+const Dashboard = pageProps => {
   // TODO: Add dashboard.json to locales/[locale] so that t func with appropriate keys can be used
   const { language } = useI18next();
   const { t } = useTranslation();
 
+  const [withScrollInitiallyUp] = useState(() => !pageProps.location.hash);
   const [shouldAddScrollOffset, setShouldAddScrollOffset] = useState(false);
 
   const [activeAnchor, setActiveAnchor] = useState(() => anchors[0]);
@@ -37,7 +38,7 @@ const Dashboard = () => {
 
       <SiteMetadata lang={language} title={'Dashboard'} />
 
-      <ScrollProvider minScrollDeltaThreshold={150} withScrollInitiallyUp>
+      <ScrollProvider minScrollDeltaThreshold={150} withScrollInitiallyUp={withScrollInitiallyUp}>
         <DashboardHeader activeAnchor={activeAnchor} onAnchorClick={onAnchorClick} />
 
         <main>

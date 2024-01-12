@@ -14,6 +14,10 @@
 
   &.scroll-offset {
     padding-top: calc(32px + $dashboard-header-sum-of-heights);
+
+    & .dashboard-section-header__tooltip {
+      bottom: calc(100% - 24px - $dashboard-header-sum-of-heights);
+    }
   }
 
   &__heading {
