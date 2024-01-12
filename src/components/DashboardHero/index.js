@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Player from '@vimeo/player';
 import ReactModal from 'react-modal';
-import { string } from 'prop-types';
+import cn from 'classnames';
+import { string, bool } from 'prop-types';
 
 import DashboardHeroVideoOverlay from '../../assets/images/dashboard/dashboard-hero-video-overlay.png';
 import { ReactComponent as DashboardPlayVideoIcon } from '../../assets/svg/dashboard/dashboard-play-video-icon.svg';
@@ -12,13 +13,14 @@ ReactModal.setAppElement('#___gatsby');
 
 const propTypes = {
   introVideoSrc: string,
+  shouldAddScrollOffset: bool,
 };
 
 const defaultProps = {
   introVideoSrc: 'https://player.vimeo.com/video/888678724?h=1e85bf9838',
 };
 
-const DashboardHero = ({ introVideoSrc }) => {
+const DashboardHero = ({ introVideoSrc, shouldAddScrollOffset }) => {
   const vimeoVideoIframeRef = useRef(null);
 
   const [videoPlayerOpen, setVideoPlayerOpen] = useState(false);
@@ -41,7 +43,7 @@ const DashboardHero = ({ introVideoSrc }) => {
 
   return (
     <>
-      <section className="dashboard-hero">
+      <section id="introduction" className={cn('dashboard-hero', { 'scroll-offset': shouldAddScrollOffset })}>
         <div className="dashboard-hero__container">
           <div className="dashboard-hero__text-wrapper">
             <h1 className="dashboard-hero__title">Everything you ever wanted to know in one place</h1>

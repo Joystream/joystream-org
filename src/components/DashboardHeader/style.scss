@@ -1,7 +1,16 @@
 @import '../../styles/_main.scss';
 
 .dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   background-color: $dashboard-header-background-color;
+
+  &__wrapper {
+    height: $dashboard-header-height;
+    border-bottom: 1px solid $dashboard-header-border-bottom-color;
+  }
 
   &__container {
     padding: 12px 16px;
@@ -55,6 +64,7 @@
   }
 
   &__nav {
+    height: $dashboard-header-nav-height;
     padding: 8px 16px;
     background-color: $dashboard-navbar-background-color;
     border-top: 1px solid $dashboard-header-border-bottom-color;
@@ -63,6 +73,10 @@
 
     scrollbar-width: none;
     &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &.nav-hidden {
       display: none;
     }
   }
@@ -84,6 +98,7 @@
   }
 
   &__nav-button {
+    height: 32px;
     padding: 8px 10px;
 
     @include t100;

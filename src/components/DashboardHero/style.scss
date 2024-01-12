@@ -3,6 +3,11 @@
 .dashboard-hero {
   padding-block: 56px 40px;
 
+  &.scroll-offset {
+    margin-top: -($dashboard-header-sum-of-heights);
+    padding-top: calc(56px + $dashboard-header-sum-of-heights);
+  }
+
   &__container {
     @include dashboard-container;
     display: grid;
@@ -99,6 +104,10 @@
   @media #{$screen-min-dashboard-sm} {
     & {
       padding-block: 64px;
+      &.scroll-offset {
+        margin-top: -($dashboard-header-sum-of-heights);
+        padding-top: calc(64px + $dashboard-header-sum-of-heights);
+      }
     }
 
     &__container {
@@ -113,6 +122,10 @@
   @media #{$screen-min-dashboard-md} {
     & {
       padding-block: 96px 80px;
+      &.scroll-offset {
+        margin-top: -($dashboard-header-sum-of-heights);
+        padding-top: calc(96px + $dashboard-header-sum-of-heights);
+      }
     }
 
     &__container {

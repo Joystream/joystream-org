@@ -1,4 +1,5 @@
 import React from 'react';
+import { bool } from 'prop-types';
 
 import DashboardSectionHeader from '../DashboardSectionHeader';
 import DashboardTokenPriceChartWidget from '../DashboardTokenPriceChartWidget';
@@ -15,11 +16,19 @@ import { tokenPriceMetrics } from './data';
 
 import './style.scss';
 
-const DashboardToken = () => {
+const propTypes = {
+  shouldAddScrollOffset: bool,
+};
+
+const DashboardToken = ({ shouldAddScrollOffset }) => {
   return (
     <section className="dashboard-token">
       <div className="dashboard-token__container">
-        <DashboardSectionHeader sectionId="token" sectionHeading="Token" />
+        <DashboardSectionHeader
+          sectionId="token"
+          sectionHeading="Token"
+          shouldAddScrollOffset={shouldAddScrollOffset}
+        />
         <div className="dashboard-token__price-metrics-grid grid-indents">
           <DashboardTokenPriceChartWidget widgetCn="dashboard-token__price-chart-widget" />
           {tokenPriceMetrics.map((tokenPriceStats, index) => {
@@ -58,5 +67,7 @@ const DashboardToken = () => {
     </section>
   );
 };
+
+DashboardToken.propTypes = propTypes;
 
 export default DashboardToken;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 
 import { ReactComponent as CopyLinkIcon } from '../../assets/svg/dashboard/copy-link-icon.svg';
 
@@ -9,15 +9,19 @@ import './style.scss';
 const propTypes = {
   sectionId: string.isRequired,
   sectionHeading: string.isRequired,
+  shouldAddScrollOffset: bool,
 };
 
 const timeLinkCopiedTooltipVisibleFor = 3000; // in ms
 
-const DashboardSectionHeader = ({ sectionId, sectionHeading }) => {
+const DashboardSectionHeader = ({ sectionId, sectionHeading, shouldAddScrollOffset }) => {
   const [isLinkCopiedTooltipVisible, setIsLinkCopiedTooltipVisible] = useState(false);
 
   const onButtonCopyLinkClick = async () => {
-    await navigator.clipboard.writeText(`${window.location.href}#${sectionId}`);
+    const location = window.location.href;
+    const noHash = location.replace(/#.*/gm, '');
+    await navigator.clipboard.writeText(`${noHash}#${sectionId}`);
+
     if (isLinkCopiedTooltipVisible) {
       return;
     }
@@ -37,7 +41,7 @@ const DashboardSectionHeader = ({ sectionId, sectionHeading }) => {
   }, [isLinkCopiedTooltipVisible]);
 
   return (
-    <div className="dashboard-section-header">
+    <div id={sectionId} className={cn('dashboard-section-header', { 'scroll-offset': shouldAddScrollOffset })}>
       <h2 className="dashboard-section-header__heading">{sectionHeading}</h2>
       <button className="dashboard-section-header__button-copy-link" onClick={onButtonCopyLinkClick}>
         <span className="dashboard-section-header__button-copy-link_short-text">Copy link</span>

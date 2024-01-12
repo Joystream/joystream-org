@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
+import { ScrollProvider } from '../../components/_enhancers/ScrollContext';
 import SiteMetadata from '../../components/SiteMetadata';
 import DashboardHeader from '../../components/DashboardHeader';
 import DashboardHero from '../../components/DashboardHero';
@@ -18,26 +20,34 @@ const Dashboard = () => {
   const { language } = useI18next();
   const { t } = useTranslation();
 
+  const [shouldAddScrollOffset, setShouldAddScrollOffset] = useState(false);
+
   const [activeAnchor, setActiveAnchor] = useState(() => anchors[0]);
+  const onAnchorClick = activeAnchor => {
+    setActiveAnchor(activeAnchor);
+    setShouldAddScrollOffset(true);
+
+    scrollTo(`#${activeAnchor.toLowerCase()}`);
+  };
 
   return (
     <>
       {/* TODO: Remove later (for demonstration purposes) */}
       <div className="black-overlay"></div>
 
-      {/* TODO: Scroll Provider to be added */}
-
       <SiteMetadata lang={language} title={'Dashboard'} />
 
-      <DashboardHeader activeAnchor={activeAnchor} onAnchorClick={setActiveAnchor} />
+      <ScrollProvider minScrollDeltaThreshold={150} withScrollInitiallyUp>
+        <DashboardHeader activeAnchor={activeAnchor} onAnchorClick={onAnchorClick} />
 
-      <main>
-        <DashboardHero />
-        <DashboardToken />
-        <DashboardBackers t={t} />
-        {/* <DashboardHistory /> */}
-      </main>
-      <footer></footer>
+        <main>
+          <DashboardHero shouldAddScrollOffset={shouldAddScrollOffset} />
+          <DashboardToken shouldAddScrollOffset={shouldAddScrollOffset} />
+          <DashboardBackers t={t} shouldAddScrollOffset={shouldAddScrollOffset} />
+          {/* <DashboardHistory /> */}
+        </main>
+        <footer></footer>
+      </ScrollProvider>
     </>
   );
 };
