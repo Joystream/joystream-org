@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ResponsiveContainer,
   AreaChart,
@@ -10,6 +10,8 @@ import {
   ReferenceLine,
   Tooltip,
 } from 'recharts';
+import cn from 'classnames';
+import { useMediaQuery } from 'react-responsive';
 import { arrayOf, objectOf, string } from 'prop-types';
 
 import {
@@ -27,10 +29,18 @@ const DashboardTokenReleaseScheduleChart = () => {
   const [mockData] = useState(() => generateChartMockData());
   const areas = Object.keys(mockData[0]).filter(key => key !== 'month');
 
+  const [activeAreaName, setActiveAreaName] = useState('');
+
+  const [isXxsScreen, setIsXxsScreen] = useState(false);
+  const isXxs = useMediaQuery({ maxWidth: 424 });
+  useEffect(() => {
+    setIsXxsScreen(isXxs);
+  }, [isXxs]);
+
   return (
     <div style={{ marginTop: '24px' }}>
       <ResponsiveContainer minHeight={180}>
-        <AreaChart data={mockData}>
+        <AreaChart data={mockData} onMouseLeave={() => setActiveAreaName('')}>
           <CartesianGrid vertical={false} stroke="#BBD9F621" />
           <XAxis
             dataKey="month"
@@ -62,20 +72,38 @@ const DashboardTokenReleaseScheduleChart = () => {
             return (
               <Area
                 key={area}
+                name={area}
+                className={cn({ dim: !!activeAreaName && area !== activeAreaName })}
                 stackId="tokenReleaseScheduleStack"
                 dataKey={area}
                 fill={areasPalette[area]}
                 stroke={areasPalette[area]}
+                strokeOpacity={!!activeAreaName && area !== activeAreaName ? 0.4 : 1}
                 fillOpacity={1}
                 activeDot={null}
+                onMouseEnter={area => {
+                  setActiveAreaName(area.name);
+                }}
               />
             );
           })}
           <ReferenceLine x={12} stroke="#f4f6f8" strokeDasharray="4px 4px" label={renderCustomLabel} />
-          <Tooltip offset={20} content={<CustomTooltip />} cursor={<CustomCursor />} wrapperStyle={{ top: '-75px' }} />
+          <Tooltip
+            offset={20}
+            content={tooltipContentProps => <CustomTooltip {...tooltipContentProps} activeAreaName={activeAreaName} />}
+            cursor={<CustomCursor />}
+            wrapperStyle={{ top: '-75px' }}
+            position={isXxsScreen ? { x: 0 } : undefined}
+          />
         </AreaChart>
       </ResponsiveContainer>
-      <CustomLegend areas={areas} areasLabels={areasLabels} areasPalette={areasPalette} />
+      <CustomLegend
+        areas={areas}
+        areasLabels={areasLabels}
+        areasPalette={areasPalette}
+        activeAreaName={activeAreaName}
+        setActiveAreaName={setActiveAreaName}
+      />
     </div>
   );
 };
@@ -86,6 +114,8 @@ function CustomTooltip(tooltipContentProps) {
   if (active && payload && payload.length) {
     const innerPayload = payload[0].payload;
     const innerPayloadAreasKeys = Object.keys(innerPayload).filter(key => key !== 'month');
+
+    const activeAreaName = tooltipContentProps.activeAreaName;
 
     return (
       <div className="token-release-schedule-chart-tooltip">
@@ -101,7 +131,11 @@ function CustomTooltip(tooltipContentProps) {
                 // eslint-disable-next-line max-len
                 className="token-release-schedule-chart-tooltip__areas-list-item token-release-schedule-chart__areas-list-item"
               >
-                <div className="token-release-schedule-chart-tooltip__area area">
+                <div
+                  className={cn('token-release-schedule-chart-tooltip__area area', {
+                    dim: !!activeAreaName && areaKey !== activeAreaName,
+                  })}
+                >
                   <div
                     style={{ backgroundColor: areasPalette[areaKey] }}
                     className="token-release-schedule-chart-legend__area-bg"
@@ -177,7 +211,7 @@ const customLegendPropTypes = {
   areasPalette: objectOf(string).isRequired,
 };
 
-function CustomLegend({ areas, areasLabels, areasPalette }) {
+function CustomLegend({ areas, areasLabels, areasPalette, activeAreaName, setActiveAreaName }) {
   return (
     <div className="token-release-schedule-chart-legend">
       <div className="token-release-schedule-chart-legend__notice">
@@ -192,7 +226,13 @@ function CustomLegend({ areas, areasLabels, areasPalette }) {
               // eslint-disable-next-line max-len
               className="token-release-schedule-chart-legend__areas-list-item token-release-schedule-chart__areas-list-item"
             >
-              <div className="token-release-schedule-chart-legend__area area">
+              <div
+                className={cn('token-release-schedule-chart-legend__area area', {
+                  dim: !!activeAreaName && area !== activeAreaName,
+                })}
+                onMouseEnter={() => setActiveAreaName(area)}
+                onMouseLeave={() => setActiveAreaName('')}
+              >
                 <div
                   style={{ backgroundColor: areasPalette[area] }}
                   className="token-release-schedule-chart-legend__area-bg"

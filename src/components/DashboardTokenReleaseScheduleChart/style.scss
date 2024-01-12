@@ -20,6 +20,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
+  &.dim {
+    opacity: 0.4;
+  }
 }
 
 .token-release-schedule-chart-legend {
@@ -69,7 +73,7 @@
 
 .token-release-schedule-chart-tooltip {
   padding: 8px;
-  width: 256px;
+  // width: 256px;
   background-color: $dashboard-charts-custom-tooltip-background-color;
   border-radius: 8px;
 

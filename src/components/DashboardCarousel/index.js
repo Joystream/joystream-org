@@ -18,7 +18,7 @@ const DashboardCarousel = ({ children }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentBreakpoints, setCurrentBreakpoints] = useState('xxs');
 
-  const isXxs = useMediaQuery({ maxWidth: 424 });
+  // const isXxs = useMediaQuery({ maxWidth: 424 });
   const isXs = useMediaQuery({ minWidth: 425, maxWidth: 767 });
   const isSm = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isMd = useMediaQuery({ minWidth: 1024, maxWidth: 1439 });
