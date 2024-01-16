@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { string, bool, func, number, arrayOf, shape } from 'prop-types';
 
 import DashboardSectionHeader from '../DashboardSectionHeader';
+import DashboardCarousel from '../DashboardCarousel';
 import Markdown from './Markdown';
 
 import { ReactComponent as AccentPointer } from '../../assets/svg/dashboard/accent-pointer.svg';
@@ -153,17 +154,17 @@ const DashboardHistory = ({ shouldAddScrollOffset }) => {
   return (
     <>
       <section className="dashboard-history">
-        <div style={{ overflowX: 'hidden' }} className="dashboard-history__container">
+        <div className="dashboard-history__container">
           <DashboardSectionHeader
             sectionId="history"
             sectionHeading="History"
             shouldAddScrollOffset={shouldAddScrollOffset}
           />
-          <div style={{ display: 'flex', gap: '24px' }}>
+          <DashboardCarousel>
             {historyStages.map((historyStage, index) => {
               return <DashboardHistoryStage key={index} {...historyStage} onClick={() => onModalOpen(historyStage)} />;
             })}
-          </div>
+          </DashboardCarousel>
         </div>
       </section>
       <ReactModal

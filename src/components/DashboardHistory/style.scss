@@ -16,6 +16,10 @@
     border: 1px solid $dashboard-widget-base-background-color;
     border-radius: 8px;
 
+    &:not(:last-of-type) {
+      margin-right: 16px;
+    }
+
     &.card-interactive {
       cursor: pointer;
 
@@ -223,6 +227,10 @@
     &__stage {
       width: 304px;
       height: 407px;
+
+      &:not(:last-of-type) {
+        margin-right: 24px;
+      }
     }
 
     &__stage-descr-wrapper {

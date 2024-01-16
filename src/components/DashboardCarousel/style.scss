@@ -10,6 +10,7 @@
     border-radius: 2px;
     backdrop-filter: blur(2px);
     transition: all $dashboard-transition-duration $dashboard-transition-timing;
+    z-index: 1;
 
     visibility: hidden;
     opacity: 0;
@@ -50,6 +51,33 @@
 
   & li {
     padding-left: 0;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    width: 130px;
+    height: 100%;
+    z-index: 0;
+    transition: all 0.25s ease-out;
+
+    visibility: hidden;
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__next-overlay {
+    right: 0;
+    background: linear-gradient(270deg, #000 26.56%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  &__prev-overlay {
+    left: 0;
+    background: linear-gradient(90deg, #000 26.56%, rgba(0, 0, 0, 0) 100%);
   }
 }
 

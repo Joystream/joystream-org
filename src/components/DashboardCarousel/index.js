@@ -52,7 +52,8 @@ const DashboardCarousel = ({ children }) => {
         : currentBreakpoints === 'lg'
         ? 4
         : currentBreakpoints === 'xl'
-        ? 2
+        ? // ? 2
+          4
         : 2,
     [currentBreakpoints]
   );
@@ -66,6 +67,8 @@ const DashboardCarousel = ({ children }) => {
   const isButtonPrevSlideVisible = currentSlide > 0 && largeScreens;
   const isButtonNextSlideVisible =
     visibleSlides < totalSlides && totalSlides - visibleSlides > currentSlide && largeScreens;
+
+  console.log(totalSlides);
 
   return (
     <CarouselProvider
@@ -93,6 +96,16 @@ const DashboardCarousel = ({ children }) => {
       >
         <ChevronRight />
       </ButtonNext>
+      <div
+        className={cn('dashboard-carousel__prev-overlay dashboard-carousel__overlay', {
+          visible: isButtonPrevSlideVisible,
+        })}
+      ></div>
+      <div
+        className={cn('dashboard-carousel__next-overlay dashboard-carousel__overlay', {
+          visible: isButtonNextSlideVisible,
+        })}
+      ></div>
     </CarouselProvider>
   );
 };
