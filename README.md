@@ -99,3 +99,37 @@ When updating the glossary or adding new terms to it, this structure should be f
 ```
 
 Important note: The glossary is automatically populated into the roadmap at runtime. The way this is done is that the term title is checked for in the content of a roadmap item and replaced with an underlined item with a tooltip. It is therefore important to make sure that the spelling of each title term is correct.
+
+## Verification data
+
+Verification data can be found in the following file: `src/data/pages/verification.js`.
+
+Within this file is an array with the name of `verifiedMembers`. To add new members one needs to expand the array with an object of the following structure:
+
+```js
+{
+  memberHandle: 'leet_joy',
+  avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/42.png',
+  title: 'verification.title.marketingLead',
+  socials: {
+    telegram: '@el33t',
+    twitter: '@leet_joy',
+    email: 'leet@joy.stream',
+    discord: '@joystream',
+  },
+  safety: {
+    notAllowed: [
+      { text: 'verification.safety.willNever.items.askForMoney' },
+      { text: 'verification.safety.willNever.items.askForPasswordsOrSensitiveInformation' },
+      { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
+      {
+        text: 'verification.safety.willNever.items.askToVisitLinks',
+        components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
+      },
+    ],
+    allowed: [{ text: 'verification.safety.can.items.inviteToYpp' }],
+  },
+},
+```
+
+To edit members, one just needs to update the objects that are already there to the new desired values.
