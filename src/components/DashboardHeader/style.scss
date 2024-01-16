@@ -3,7 +3,7 @@
 .dashboard-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: $dashboard-header-z-index;
 
   background-color: $dashboard-header-background-color;
 

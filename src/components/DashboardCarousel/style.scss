@@ -6,7 +6,7 @@
   &__button {
     padding: 16px;
     background-color: $dashboard-carousel-buttons-background-color;
-    border: 1px solid $dashboard-widget-base-borders-color;
+    border: 1px solid $dashboard-base-borders-color;
     border-radius: 2px;
     backdrop-filter: blur(2px);
     transition: all $dashboard-transition-duration $dashboard-transition-timing;

@@ -29,11 +29,14 @@ $dashboard-header-border-bottom-color: #bbd9f621;
 $dashboard-base-border-color: #cbe0f145;
 $dashboard-hero-video-player-modal-border-color: #7174ff;
 $dashboard-hero-video-player-modal-background-color: #181c20;
-$dashboard-hero-video-player-modal-overlay-color: #101214bf;
+$dashboard-modals-overlay-color: #101214bf;
 $dashboard-section-header-tooltip-background-color: #343d44;
 $dashboard-charts-custom-tooltip-background-color: #272d33;
 $dashboard-widget-tags-background-color: #272d33;
 $dashboard-backer-widget-background-color: #0f1114;
+$dashboard-history-modal-background-color: #272d33;
+$dashboard-custom-scrollbar-track-background: #bbd9f621;
+$dashboard-custom-scrollbar-thumb-background: #c2e0ff33;
 
 // buttons background colors (with borders)
 
@@ -51,7 +54,7 @@ $dashboard-widget-base-info-icon-fill: #7b8a95;
 $dashboard-widget-base-info-icon-states-fill: #f4f6f8;
 $dashboard-widget-base-info-states-background-color: #bbd9f621;
 $dashboard-widget-info-modal-background-color: #343d44;
-$dashboard-widget-base-borders-color: #bbd9f621;
+$dashboard-base-borders-color: #bbd9f621;
 $dashboard-widget-accent-background-color: #4038ff;
 $dashboard-widget-accent-hover-background-color: #5a58ff;
 $dashboard-widget-accent-active-background-color: #342ecf;
@@ -59,6 +62,7 @@ $dashboard-carousel-buttons-background-color: #c2e0ff33;
 $dashboard-carousel-buttons-hover-background-color: #bbd9f621;
 $dashboard-carousel-buttons-pressed-background-color: #c2e0ff33;
 $dashboard-press-story-hover-border-color: #dce1e56b;
+$dashboard-history-modal-buttons-background-color: #c2e0ff33;
 
 // buttons colors
 
@@ -78,6 +82,7 @@ $dashboard-base-gray-text-color: #b5c1c9;
 $dashboard-content-base-text-color: #f4f6f8;
 $dashboard-charts-base-tick-color: #7b8a95;
 $dashboard-charts-tooltip-gray-color: #7b8a95;
+$dashboard-markdown-anchor-color: #7174ff;
 
 // transition func and duration
 
@@ -89,6 +94,8 @@ $dashboard-transition-duration: 150ms;
 $dashboard-header-height: 65px;
 $dashboard-header-nav-height: 50px;
 $dashboard-header-sum-of-heights: calc($dashboard-header-height + $dashboard-header-nav-height);
+
+$dashboard-header-z-index: 1000;
 
 // mixins
 

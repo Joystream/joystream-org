@@ -20,7 +20,7 @@
     display: block;
     margin-bottom: 16px;
     width: 88px;
-    border: 1px solid $dashboard-widget-base-borders-color;
+    border: 1px solid $dashboard-base-borders-color;
     border-radius: 8px;
   }
 
@@ -74,7 +74,7 @@
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
     background-color: $dashboard-widget-accent-background-color;
-    border: 1px solid $dashboard-widget-base-borders-color;
+    border: 1px solid $dashboard-base-borders-color;
     border-radius: 2px;
     cursor: pointer;
     transition: all $dashboard-transition-duration $dashboard-transition-timing;

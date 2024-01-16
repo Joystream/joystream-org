@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import scrollTo from 'gatsby-plugin-smoothscroll';
@@ -9,7 +9,7 @@ import DashboardHeader from '../../components/DashboardHeader';
 import DashboardHero from '../../components/DashboardHero';
 import DashboardToken from '../../components/DashboardToken';
 import DashboardBackers from '../../components/DashboardBackers';
-// import DashboardHistory from '../../components/DashboardHistory';
+import DashboardHistory from '../../components/DashboardHistory';
 
 import { anchors } from '../../components/DashboardHeader/data';
 
@@ -31,8 +31,6 @@ const Dashboard = pageProps => {
     scrollTo(`#${activeAnchor.toLowerCase()}`);
   };
 
-  console.log({ withScrollInitiallyUp, hash: pageProps.location.hash, pageProps }, 'withScrollInitiallyUp');
-
   return (
     <>
       {/* TODO: Remove later (for demonstration purposes) */}
@@ -47,7 +45,7 @@ const Dashboard = pageProps => {
           <DashboardHero shouldAddScrollOffset={shouldAddScrollOffset} />
           <DashboardToken shouldAddScrollOffset={shouldAddScrollOffset} />
           <DashboardBackers t={t} shouldAddScrollOffset={shouldAddScrollOffset} />
-          {/* <DashboardHistory /> */}
+          <DashboardHistory shouldAddScrollOffset={shouldAddScrollOffset} />
         </main>
         <footer></footer>
       </ScrollProvider>
