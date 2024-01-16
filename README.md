@@ -108,14 +108,15 @@ Within this file is an array with the name of `verifiedMembers`. To add new memb
 
 ```js
 {
-  memberHandle: 'leet_joy',
-  avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/42.png',
-  title: 'verification.title.marketingLead',
+  memberHandle: 'vikan#4315',
+  substituteUserRoute: 'vikan',
+  avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/90.png',
+  title: 'verification.title.outreachSpecialist',
   socials: {
-    telegram: '@el33t',
-    twitter: '@leet_joy',
-    email: 'leet@joy.stream',
-    discord: '@joystream',
+    telegram: '@vikan393',
+    twitter: '@jvikan1',
+    email: 'vikan4joystream@gmail.com',
+    discord: '@v.i.k.a.n',
   },
   safety: {
     notAllowed: [
@@ -133,3 +134,7 @@ Within this file is an array with the name of `verifiedMembers`. To add new memb
 ```
 
 To edit members, one just needs to update the objects that are already there to the new desired values.
+
+Things to keep note of:
+- The verification page will use the `memberHandle` object property value as the route on the website for this specific profile. If that value is not a valid path value then the `substituteUserRoute` value is used instead. This should be removed when not in use.
+- The safety list items and title have special strings as text (e.g., `verification.title.outreachSpecialist`). These strings are used to allow for internationalization and are replaced based off of the language set by the user with correct translations. To reference those that are already pre-written/available, you can find the translations for this page on here: `src/locales/en/verification.json` under `safety.can...` and `safety.willNever...`. If there isn't a translation that matches one that you want to add, you are free to create one with regular english language sentences and these translations will be created by the dev during the PR process.
