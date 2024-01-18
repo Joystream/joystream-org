@@ -1,5 +1,6 @@
 @import '../../styles/main';
 @import '../../pages/style.scss';
+@import '../index-page/shared-styles.scss';
 
 @mixin verification-card {
   display: flex;
@@ -40,6 +41,7 @@
       width: 80px;
       height: 80px;
       margin: auto 0;
+      overflow: hidden;
       border-radius: 50%;
 
       & > img {
@@ -173,6 +175,7 @@
         justify-content: center;
         width: 157px;
         height: 32px;
+        padding: 0 4px;
         cursor: pointer;
         background-color: #bcd5fa14;
         border: 1px solid #bbd9f621;
@@ -186,9 +189,14 @@
           @include base-5;
 
           margin-left: 8px;
+          overflow: hidden;
           font-weight: 700;
           letter-spacing: normal;
           color: #f4f6f8;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
         }
       }
     }
