@@ -21,9 +21,10 @@ const propTypes = {
       3: number.isRequired,
     })
   ),
+  chartHeight: number,
 };
 
-const ChartWidget = ({ heading, valueOfIndicatorInThousands, growthRate, indicator, chartData }) => {
+const ChartWidget = ({ heading, valueOfIndicatorInThousands, growthRate, indicator, chartData, chartHeight }) => {
   const growthRateWithSign = growthRate > 0 ? `+${growthRate}` : growthRate < 0 ? `-${growthRate}` : growthRate;
 
   return (
@@ -32,7 +33,7 @@ const ChartWidget = ({ heading, valueOfIndicatorInThousands, growthRate, indicat
       <p className="dashboard-traction-chart-widget__indicator-value">{`${valueOfIndicatorInThousands}K`}</p>
       <p className="dashboard-traction-chart-widget__growth-rate">{`${growthRateWithSign}% Changes`}</p>
       <h4 className="dashboard-traction-chart-widget__indicator">{`${indicator} per week`}</h4>
-      <Chart data={chartData} />
+      <Chart data={chartData} chartHeight={chartHeight} />
     </div>
   );
 };

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { bool } from 'prop-types';
 
 import DashboardSectionHeader from '../../DashboardSectionHeader';
 import ChartWidget from './ChartWidget';
 import DashboardWidgetHeading from '../../DashboardWidgetHeading';
 import Metrics from './Metrics';
+
+import useDashboardMedia from '../../../utils/useDashboardMedia/index.js';
 
 import { chartMockData, metrics } from './data.js';
 
@@ -15,6 +17,11 @@ const propTypes = {
 };
 
 const Traction = ({ shouldAddScrollOffset }) => {
+  const { currentBreakpoints } = useDashboardMedia();
+  const commentsAndReactionsChartHeight = useMemo(() => (currentBreakpoints === 'md' ? 314 : 250), [
+    currentBreakpoints,
+  ]);
+
   return (
     <section className="dashboard-traction">
       <div className="dashboard-traction__container">
@@ -44,6 +51,7 @@ const Traction = ({ shouldAddScrollOffset }) => {
             growthRate={12}
             indicator="Comments & reactions"
             chartData={chartMockData}
+            chartHeight={commentsAndReactionsChartHeight}
           />
           <div className="dashboard-traction__metrics">
             <DashboardWidgetHeading heading="Chain metrics" />

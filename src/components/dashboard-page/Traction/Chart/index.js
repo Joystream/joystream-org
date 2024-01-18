@@ -15,9 +15,10 @@ const propTypes = {
       3: number.isRequired,
     })
   ),
+  chartHeight: number,
 };
 
-const Chart = ({ withBarGapExtended, data }) => {
+const Chart = ({ withBarGapExtended, data, chartHeight }) => {
   const { currentBreakpoints } = useDashboardMedia();
   const barGap = useMemo(() => {
     switch (currentBreakpoints) {
@@ -37,10 +38,8 @@ const Chart = ({ withBarGapExtended, data }) => {
     }
   }, [currentBreakpoints, withBarGapExtended]);
 
-  // rework chart's height
-
   return (
-    <ResponsiveContainer height={250} maxHeight={312}>
+    <ResponsiveContainer height={chartHeight}>
       <BarChart className="dashboard-traction-chart" data={data} barGap={barGap} barCategoryGap={1}>
         <CartesianGrid vertical={false} stroke="#BBD9F621" />
         <XAxis
@@ -73,5 +72,8 @@ const Chart = ({ withBarGapExtended, data }) => {
 };
 
 Chart.propTypes = propTypes;
+Chart.defaultProps = {
+  chartHeight: 250,
+};
 
 export default Chart;
