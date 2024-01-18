@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 
 import { ReactComponent as InfoIcon } from '../../assets/svg/dashboard/info-icon.svg';
 
@@ -10,6 +10,7 @@ const propTypes = {
   heading: string.isRequired,
   info: string,
   headingWrapperCn: string,
+  isDim: bool,
 };
 
 const defaultProps = {
@@ -19,10 +20,10 @@ const defaultProps = {
   headingWrapperCn: 'base-margin',
 };
 
-const DashboardWidgetHeading = ({ heading, info, headingWrapperCn }) => {
+const DashboardWidgetHeading = ({ heading, info, headingWrapperCn, isDim }) => {
   return (
-    <div className={cn('dashboard-widget-heading', { [headingWrapperCn]: headingWrapperCn })}>
-      <h3 className="dashboard-widget-heading__heading">{heading}</h3>
+    <div className={cn('dashboard-widget-heading', { 'dim-heading': isDim, [headingWrapperCn]: headingWrapperCn })}>
+      <h3 className={cn('dashboard-widget-heading__heading', { 'dim-heading': isDim })}>{heading}</h3>
       {info && (
         <div className="dashboard-widget-heading__icon-wrapper">
           <InfoIcon />

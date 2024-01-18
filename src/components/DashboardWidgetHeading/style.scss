@@ -8,8 +8,16 @@
     margin-bottom: 16px;
   }
 
+  &.dim-heading {
+    margin-bottom: 0;
+  }
+
   &__heading {
     @include dashboard-widget-heading;
+
+    &.dim-heading {
+      @include dashboard-widget-helper-text;
+    }
   }
 
   &__icon-wrapper {

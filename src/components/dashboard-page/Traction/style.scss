@@ -1,0 +1,69 @@
+@import '../../../styles/main';
+
+.dashboard-traction {
+  @include dashboard-section;
+
+  &__container {
+    @include dashboard-container;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  &__metrics {
+    @include dashboard-widget;
+  }
+
+  &__metrics-wrapper {
+    display: grid;
+    gap: 40px;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__metrics-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__grid {
+      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: min-content;
+    }
+
+    &__metrics-wrapper {
+      gap: 16px;
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content;
+    }
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    &__grid {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, min-content);
+
+      & .dashboard-traction-chart-widget {
+        grid-column: span 2;
+
+        &:nth-last-child(-n + 2) {
+          grid-column: span 3;
+        }
+      }
+    }
+
+    &__metrics {
+      grid-column: 1 / span 6;
+    }
+
+    &__metrics-wrapper {
+      gap: 0;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+    }
+  }
+}

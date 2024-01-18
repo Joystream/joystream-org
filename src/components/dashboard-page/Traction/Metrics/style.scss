@@ -1,0 +1,11 @@
+@import '../../../../styles/main';
+
+.dashboard-traction-metrics {
+  &__value {
+    @include dashboard-widget-text;
+  }
+
+  &__growth-rate {
+    @include dashboard-widget-helper-text;
+  }
+}
