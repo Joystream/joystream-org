@@ -23,7 +23,7 @@ export const verifiedMembers = [
       ],
       allowed: [
         { text: 'verification.safety.can.items.inviteToYpp' },
-        { text: 'Offer support on marketing-related discussions, proposals, and collaborations' },
+        { text: 'verification.safety.can.items.offerMarketingSupport' },
       ],
     },
   },
@@ -73,7 +73,7 @@ export const verifiedMembers = [
       ],
       allowed: [
         { text: 'verification.safety.can.items.inviteToYpp' },
-        { text: 'Offer support on marketing-related discussions, proposals, and collaborations' },
+        { text: 'verification.safety.can.items.offerMarketingSupport' },
       ],
     },
   },
@@ -103,7 +103,7 @@ export const verifiedMembers = [
   },
   {
     memberHandle: 'Jenny',
-    avatarUrl: 'https://atlas-services.joystream.org/avatars/4d05d8c0-55fd-4f2a-8cac-bb904a0b8fe3.webp',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/48.png',
     title: 'Marketer',
     socials: {
       telegram: '@jen48632',
@@ -121,12 +121,12 @@ export const verifiedMembers = [
           components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
         },
       ],
-      allowed: [{ text: 'Offer support on marketing-related discussions, proposals, and collaborations' }],
+      allowed: [{ text: 'verification.safety.can.items.offerMarketingSupport' }],
     },
   },
   {
     memberHandle: 'bythekingmaker',
-    avatarUrl: 'https://atlas-services.joystream.org/avatars/9e72404e-e5c0-4495-b31d-b6b486f6ab2a.webp',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/106.png',
     title: 'Head of Content (Marketing)',
     socials: {
       telegram: '@bythekingmaker',
@@ -143,12 +143,12 @@ export const verifiedMembers = [
           components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
         },
       ],
-      allowed: [{ text: 'Offer support on marketing-related discussions, proposals, and collaborations' }],
+      allowed: [{ text: 'verification.safety.can.items.offerMarketingSupport' }],
     },
   },
   {
     memberHandle: 'spat_sochi',
-    avatarUrl: 'https://atlas-services.joystream.org/avatars/4f06c97b-b6e5-4994-98a1-2560d0a62fa8.webp',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/59.png',
     title: 'Community Support',
     socials: {
       telegram: '@spat_sochi',
@@ -167,14 +167,14 @@ export const verifiedMembers = [
         },
       ],
       allowed: [
-        { text: 'Answer your questions regarding opportunities, issues, or Joystream-related inquiries' },
-        { text: 'Promote governance activities, available job openings and DAO events' },
+        { text: 'verification.safety.can.items.answerJoystreamRelatedInquiries' },
+        { text: 'verification.safety.can.items.promoteGovernance' },
       ],
     },
   },
   {
     memberHandle: 'Genius',
-    avatarUrl: 'https://atlas-services.joystream.org/avatars/migrated/4215.webp',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/203.png',
     title: 'Community Support',
     socials: {
       telegram: '@Genius7148',
@@ -193,14 +193,14 @@ export const verifiedMembers = [
         },
       ],
       allowed: [
-        { text: 'Answer your questions regarding opportunities, issues, or Joystream-related inquiries' },
-        { text: 'Promote governance activities, available job openings and DAO events' },
+        { text: 'verification.safety.can.items.answerJoystreamRelatedInquiries' },
+        { text: 'verification.safety.can.items.promoteGovernance' },
       ],
     },
   },
   {
     memberHandle: 'Codefikeyz',
-    avatarUrl: 'https://atlas-services.joystream.org/avatars/7b663638-8a00-40f6-8ebb-4f370ba7ff46.webp',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/57.png',
     title: 'HR Lead',
     socials: {
       telegram: '@codefikeys',
@@ -219,14 +219,14 @@ export const verifiedMembers = [
         },
       ],
       allowed: [
-        { text: 'Answer your questions regarding opportunities, issues, or Joystream-related inquiries' },
-        { text: 'Promote governance activities, available job openings and DAO events' },
+        { text: 'verification.safety.can.items.answerJoystreamRelatedInquiries' },
+        { text: 'verification.safety.can.items.promoteGovernance' },
       ],
     },
   },
   {
     memberHandle: 'tomato',
-    avatarUrl: 'https://atlas-services.joystream.org/avatars/migrated/2.webp',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/31.png',
     title: 'Membership Lead',
     socials: {
       telegram: '@tomato_js',
@@ -245,16 +245,16 @@ export const verifiedMembers = [
         },
       ],
       allowed: [
-        { text: 'Help users with membership creation' },
-        { text: 'Verify and unverify channels' },
-        { text: 'Verify and unverify Validators' },
-        { text: 'Ask users to verify ownership of 3rd party accounts (such as a YouTube channel)' },
+        { text: 'verification.safety.can.items.helpWithMembershipCreation' },
+        { text: 'verification.safety.can.items.verifyChannels' },
+        { text: 'verification.safety.can.items.verifyValidators' },
+        { text: 'verification.safety.can.items.askToVerifyOwnership' },
       ],
     },
   },
   {
     memberHandle: '0x2bc',
-    avatarUrl: 'https://atlas-services.joystream.org/avatars/migrated/2098.webp',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/28.png',
     title: 'Distribution & Storage Worker',
     socials: {
       telegram: '@nullx2bc',
@@ -271,14 +271,12 @@ export const verifiedMembers = [
           components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
         },
       ],
-      allowed: [
-        { text: 'Assist users with questions and concerns related to the Storage and Distribution working groups' },
-      ],
+      allowed: [{ text: 'verification.safety.can.items.assistWithStorageAndDistribution' }],
     },
   },
   {
     memberHandle: 'mr_bovo',
-    avatarUrl: 'https://atlas-services.joystream.org/avatars/ece4f236-2c51-46da-8f9d-40b5c2de88fc.webp',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/98.png',
     title: 'Distribution Lead',
     socials: {
       telegram: '@mrbovo',
@@ -295,9 +293,7 @@ export const verifiedMembers = [
           components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
         },
       ],
-      allowed: [
-        { text: 'Assist users with questions and concerns related to the Storage and Distribution working groups' },
-      ],
+      allowed: [{ text: 'verification.safety.can.items.assistWithStorageAndDistribution' }],
     },
   },
   {
@@ -319,14 +315,12 @@ export const verifiedMembers = [
           components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
         },
       ],
-      allowed: [
-        { text: 'Assist users with questions and concerns related to the Storage and Distribution working groups' },
-      ],
+      allowed: [{ text: 'verification.safety.can.items.assistWithStorageAndDistribution' }],
     },
   },
   {
     memberHandle: 'klaudiusz.eth',
-    avatarUrl: 'https://atlas-services.joystream.org/avatars/11605754-50a7-41bd-b6da-c1c757595e4a.webp',
+    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/71.png',
     title: 'Builders Lead',
     socials: {
       twitter: '@0xKlaudiusz',
@@ -343,8 +337,8 @@ export const verifiedMembers = [
         },
       ],
       allowed: [
-        { text: 'Assist users with questions and concerns related to Builders working group' },
-        { text: 'Assist users with questions anc concernes related to Apps working group' },
+        { text: 'verification.safety.can.items.assistWithBuilders' },
+        { text: 'verification.safety.can.items.assistWithApps' },
       ],
     },
   },
