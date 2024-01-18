@@ -7,7 +7,16 @@
     "title": {
       "userAcquirer": "User Acquirer",
       "marketingLead": "Marketing Lead",
-      "outreachSpecialist": "Outreach Specialist"
+      "outreachSpecialist": "Outreach Specialist",
+      "marketer": "Marketer",
+      "headOfContent": "Head of Content (Marketing)",
+      "communitySupport": "Community Support",
+      "hrLead": "HR Lead",
+      "membershipLead": "Membership Lead",
+      "distributionAndStorageWorker": "Distribution & Storage Worker",
+      "distributionLead": "Distribution Lead",
+      "storageLead": "Storage Lead",
+      "buildersLead": "Builders Lead"
     },
     "socialCardSectionTitle": {
       "telegram": "TELEGRAM",

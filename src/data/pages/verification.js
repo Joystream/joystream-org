@@ -104,7 +104,7 @@ export const verifiedMembers = [
   {
     memberHandle: 'Jenny',
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/48.png',
-    title: 'Marketer',
+    title: 'verification.title.marketer',
     socials: {
       telegram: '@jen48632',
       twitter: '@JennyChizh',
@@ -127,7 +127,7 @@ export const verifiedMembers = [
   {
     memberHandle: 'bythekingmaker',
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/106.png',
-    title: 'Head of Content (Marketing)',
+    title: 'verification.title.headOfContent',
     socials: {
       telegram: '@bythekingmaker',
       twitter: '@bythekingmaker',
@@ -149,7 +149,7 @@ export const verifiedMembers = [
   {
     memberHandle: 'spat_sochi',
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/59.png',
-    title: 'Community Support',
+    title: 'verification.title.communitySupport',
     socials: {
       telegram: '@spat_sochi',
       twitter: '@spat_sochi',
@@ -175,7 +175,7 @@ export const verifiedMembers = [
   {
     memberHandle: 'Genius',
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/203.png',
-    title: 'Community Support',
+    title: 'verification.title.communitySupport',
     socials: {
       telegram: '@Genius7148',
       twitter: '@Genius_sacky',
@@ -201,7 +201,7 @@ export const verifiedMembers = [
   {
     memberHandle: 'Codefikeyz',
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/57.png',
-    title: 'HR Lead',
+    title: 'verification.title.hrLead',
     socials: {
       telegram: '@codefikeys',
       twitter: '@codefikeyz',
@@ -227,7 +227,7 @@ export const verifiedMembers = [
   {
     memberHandle: 'tomato',
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/31.png',
-    title: 'Membership Lead',
+    title: 'verification.title.membershipLead',
     socials: {
       telegram: '@tomato_js',
       twitter: '@abcxyz_tomato',
@@ -255,7 +255,7 @@ export const verifiedMembers = [
   {
     memberHandle: '0x2bc',
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/28.png',
-    title: 'Distribution & Storage Worker',
+    title: 'verification.title.distributionAndStorageWorker',
     socials: {
       telegram: '@nullx2bc',
       twitter: '@nullx2bc',
@@ -277,7 +277,7 @@ export const verifiedMembers = [
   {
     memberHandle: 'mr_bovo',
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/98.png',
-    title: 'Distribution Lead',
+    title: 'verification.title.distributionLead',
     socials: {
       telegram: '@mrbovo',
       email: 'mrbovo402@gmail.com',
@@ -299,7 +299,7 @@ export const verifiedMembers = [
   {
     memberHandle: 'yyagi',
     avatarUrl: 'https://atlas-services.joystream.org/avatars/migrated/3098.webp',
-    title: 'Storage Lead',
+    title: 'verification.title.storageLead',
     socials: {
       twitter: '@yasir_yagi',
       email: 'yyagiteam@gmail.com',
@@ -321,7 +321,7 @@ export const verifiedMembers = [
   {
     memberHandle: 'klaudiusz.eth',
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/71.png',
-    title: 'Builders Lead',
+    title: 'verification.title.buildersLead',
     socials: {
       twitter: '@0xKlaudiusz',
       discord: '@klaudiusz.eth',
