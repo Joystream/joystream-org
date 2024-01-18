@@ -14,7 +14,7 @@
   &__backers-list {
     margin-bottom: 16px;
     display: grid;
-    gap: 15px;
+    gap: 16px;
     padding: 0;
     list-style: none;
   }
@@ -26,6 +26,7 @@
   }
 
   &__backer {
+    height: 96px;
     padding: 8px;
     display: flex;
     justify-content: center;
@@ -116,14 +117,15 @@
 
   @media #{$screen-min-dashboard-sm} {
     & .dashboard-stats-widget__text-wrapper {
-      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+    }
+
+    & .dashboard-stats-widget__text {
+      @include h700;
     }
 
     &__backers-list {
-      gap: 16px;
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -159,6 +161,15 @@
   }
 
   @media #{$screen-min-dashboard-md} {
+    & .dashboard-stats-widget__text-wrapper {
+      height: 100%;
+      justify-content: center;
+    }
+
+    & .dashboard-stats-widget__text {
+      @include h800;
+    }
+
     &__backers-list {
       margin-bottom: 24px;
       gap: 24px;

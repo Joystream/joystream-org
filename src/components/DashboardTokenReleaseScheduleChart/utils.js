@@ -40,8 +40,8 @@ export const generateChartMockData = () => {
   return mockData;
 };
 
-export const formatXAxisTick = num => {
-  return num % 5 === 0 ? num : '';
+export const formatXAxisTick = (num, isLast) => {
+  return num % 5 === 0 || isLast ? num : '';
 };
 
 export const formatYAxisTick = num => {

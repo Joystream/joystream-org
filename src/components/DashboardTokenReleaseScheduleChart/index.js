@@ -37,21 +37,26 @@ const DashboardTokenReleaseScheduleChart = () => {
     setIsXxsScreen(isXxs);
   }, [isXxs]);
 
+  const xAxisDataKey = 'month';
+  const xAxisValues = mockData.map(val => val.month);
+
   return (
     <div style={{ marginTop: '24px' }}>
       <ResponsiveContainer minHeight={180}>
         <AreaChart data={mockData} onMouseLeave={() => setActiveAreaName('')}>
           <CartesianGrid vertical={false} stroke="#BBD9F621" />
           <XAxis
-            dataKey="month"
+            dataKey={xAxisDataKey}
             tick={tickProps => {
-              const formattedTick = formatXAxisTick(tickProps.payload.value);
+              const isLast = xAxisValues.indexOf(tickProps.payload.value) === xAxisValues.length - 1;
+              const formattedTick = formatXAxisTick(tickProps.payload.value, isLast);
               return (
                 <Text {...tickProps} className="custom-axis-tick">
                   {formattedTick}
                 </Text>
               );
             }}
+            interval={0}
             tickLine={false}
             tickMargin={16}
           />
