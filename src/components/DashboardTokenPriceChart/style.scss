@@ -23,6 +23,10 @@
   background-color: $dashboard-charts-custom-tooltip-background-color;
   border-radius: 8px;
 
+  &.width-reduced {
+    width: fit-content;
+  }
+
   &__header {
     margin-bottom: 12px;
     display: flex;
@@ -45,6 +49,12 @@
     &:first-of-type {
       margin-bottom: 8px;
     }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 
   &__text {

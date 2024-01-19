@@ -161,6 +161,11 @@
   }
 
   @media #{$screen-min-dashboard-md} {
+    & .dashboard-stats-widget {
+      display: flex;
+      flex-direction: column;
+    }
+
     & .dashboard-stats-widget__text-wrapper {
       height: 100%;
       justify-content: center;

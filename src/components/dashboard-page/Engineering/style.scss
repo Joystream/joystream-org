@@ -1,0 +1,70 @@
+@import '../../../styles/main';
+
+.dashboard-engineering {
+  @include dashboard-section;
+
+  &__container {
+    @include dashboard-container;
+  }
+
+  &__stats-wrapper {
+    display: grid;
+    gap: 16px;
+  }
+
+  &__github-stats {
+    @include dashboard-widget;
+    display: grid;
+    gap: 40px;
+  }
+
+  & .dashboard-stats-widget__text {
+    @include h600;
+  }
+
+  & .dashboard-stats-widget__helper-text {
+    @include t400;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__github-stats {
+      gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    & .dashboard-stats-widget__text {
+      @include h700;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__stats-wrapper {
+      gap: 24px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__github-stats {
+      grid-column: span 3;
+    }
+
+    & .dashboard-stats-widget {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .dashboard-stats-widget__text-wrapper {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    & .dashboard-stats-widget__helper-text {
+      margin-left: -6px;
+    }
+
+    & .dashboard-stats-widget__text {
+      @include h800;
+    }
+  }
+}

@@ -56,8 +56,8 @@ const Traction = ({ shouldAddScrollOffset }) => {
           <div className="dashboard-traction__metrics">
             <DashboardWidgetHeading heading="Chain metrics" />
             <div className="dashboard-traction__metrics-wrapper">
-              {metrics.map(m => (
-                <Metrics {...m} />
+              {metrics.map((m, i) => (
+                <Metrics key={i} {...m} />
               ))}
             </div>
           </div>
