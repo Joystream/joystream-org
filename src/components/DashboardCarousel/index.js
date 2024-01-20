@@ -48,8 +48,6 @@ const DashboardCarousel = ({ children }) => {
   const isButtonNextSlideVisible =
     visibleSlides < totalSlides && totalSlides - visibleSlides > currentSlide && largeScreens;
 
-  console.log(totalSlides);
-
   return (
     <CarouselProvider
       className="dashboard-carousel"

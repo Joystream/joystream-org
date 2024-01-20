@@ -5,8 +5,10 @@ import DashboardSectionHeader from '../../DashboardSectionHeader';
 import GithubStats from './GithubStats';
 import DashboardStatsWidget from '../../DashboardStatsWidget';
 import ChartWidget from './ChartWidget';
+import DashboardWidgetHeading from '../../DashboardWidgetHeading';
+import Contributors from './Contributors';
 
-import { generateChartMockData, githubStats } from './data';
+import { generateChartMockData, githubStats, contributors } from './data';
 
 import './style.scss';
 
@@ -34,6 +36,13 @@ const Engineering = ({ shouldAddScrollOffset }) => {
           <DashboardStatsWidget heading="Followers" text="590" helperText="+2% Last month" />
         </div>
         <ChartWidget chartData={chartData} />
+        <div className="dashboard-engineering__contributors">
+          <DashboardWidgetHeading
+            heading="Contributors"
+            headingWrapperCn="dashboard-engineering__contributors-heading"
+          />
+          <Contributors contributors={contributors} />
+        </div>
       </div>
     </section>
   );

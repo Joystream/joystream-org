@@ -26,6 +26,14 @@
     @include t400;
   }
 
+  &__contributors {
+    margin-top: 16px;
+  }
+
+  &__contributors-heading {
+    margin-bottom: 8px;
+  }
+
   @media #{$screen-min-dashboard-sm} {
     &__github-stats {
       gap: 16px;
@@ -65,6 +73,10 @@
 
     & .dashboard-stats-widget__text {
       @include h800;
+    }
+
+    &__contributors {
+      margin-top: 24px;
     }
   }
 }

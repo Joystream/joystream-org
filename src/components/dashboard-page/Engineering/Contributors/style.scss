@@ -1,0 +1,112 @@
+@import '../../../../styles/main';
+
+.dashboard-engineering-contributors {
+  &__list {
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    gap: 16px;
+  }
+
+  &__list-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__contributor {
+    height: 140px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background-color: $dashboard-contibutor-widget-background-color;
+    border: 1px solid $dashboard-contibutor-widget-background-color;
+    border-radius: 8px;
+
+    &:hover {
+      border-color: $dashboard-contibutor-widget-border-color;
+      cursor: pointer;
+    }
+  }
+
+  &__contributor-avatar {
+    width: 56px;
+    border-radius: 50%;
+  }
+
+  &__contributor-name {
+    @include t300;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+
+    max-width: 145px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__contributor-username {
+    @include t200;
+    color: $dashboard-base-gray-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    text-overflow: ellipsis;
+  }
+
+  &__button-toggle-shown {
+    display: block;
+    margin: 16px auto 0;
+    // width: 226px;
+    height: 48px;
+    padding: 12px 20px;
+    @include t300;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    background-color: $dashboard-widget-base-background-color;
+    border: 1px solid $dashboard-base-borders-color;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color $dashboard-transition-duration $dashboard-transition-timing;
+
+    &:hover,
+    &:focus {
+      background-color: $dashboard-buttons-base-hover-background-color;
+    }
+
+    &:active {
+      background-color: $dashboard-buttons-base-pressed-background-color;
+      transition-duration: 0ms;
+    }
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__contributor {
+      height: 172px;
+      padding: 32px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__list {
+      gap: 24px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__button-toggle-shown {
+      margin-top: 24px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
