@@ -4,8 +4,9 @@ import { bool } from 'prop-types';
 import DashboardSectionHeader from '../../DashboardSectionHeader';
 import SocialMedia from './SocialMedia';
 import Followers from './Followers';
+import OpenEvents from './OpenEvents';
 
-import { followers } from './data';
+import { followers, openEvents } from './utils';
 
 import './style.scss';
 
@@ -24,6 +25,7 @@ const Community = ({ shouldAddScrollOffset }) => {
         />
         <SocialMedia />
         <Followers followers={followers} />
+        <OpenEvents events={openEvents} />
       </div>
     </section>
   );

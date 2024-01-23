@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import cn from 'classnames';
 import { CarouselProvider, Slider, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { arrayOf, node } from 'prop-types';
+import { arrayOf, node, bool, string } from 'prop-types';
 
 import useDashboardMedia from '../../utils/useDashboardMedia';
 
@@ -12,9 +12,15 @@ import './style.scss';
 
 const propTypes = {
   children: arrayOf(node),
+  withLgSlides: bool,
+  carouselCn: string,
 };
 
-const DashboardCarousel = ({ children }) => {
+const defaultProps = {
+  withLgSlides: false,
+};
+
+const DashboardCarousel = ({ children, withLgSlides, carouselCn }) => {
   const totalSlides = children.length;
   const [currentSlide, setCurrentSlide] = useState(0);
   const { currentBreakpoints } = useDashboardMedia();
@@ -28,14 +34,19 @@ const DashboardCarousel = ({ children }) => {
         : currentBreakpoints === 'sm'
         ? 2
         : currentBreakpoints === 'md'
-        ? 3
+        ? withLgSlides
+          ? 2
+          : 3
         : currentBreakpoints === 'lg'
-        ? 4
+        ? withLgSlides
+          ? 3
+          : 4
         : currentBreakpoints === 'xl'
-        ? // ? 2
-          4
+        ? withLgSlides
+          ? 3
+          : 4
         : 2,
-    [currentBreakpoints]
+    [currentBreakpoints, withLgSlides]
   );
 
   const largeScreens =
@@ -50,7 +61,7 @@ const DashboardCarousel = ({ children }) => {
 
   return (
     <CarouselProvider
-      className="dashboard-carousel"
+      className={cn('dashboard-carousel', { [carouselCn]: !!carouselCn })}
       totalSlides={totalSlides}
       visibleSlides={visibleSlides}
       isIntrinsicHeight
@@ -89,5 +100,6 @@ const DashboardCarousel = ({ children }) => {
 };
 
 DashboardCarousel.propTypes = propTypes;
+DashboardCarousel.defaultProps = defaultProps;
 
 export default DashboardCarousel;

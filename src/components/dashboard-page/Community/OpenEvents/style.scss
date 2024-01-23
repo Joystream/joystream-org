@@ -1,0 +1,122 @@
+@import '../../../../styles/main';
+@import '../../../index-page/shared-styles';
+
+.dashboard-community-open-events {
+  margin-top: 16px;
+
+  &__heading {
+    margin-bottom: 0;
+  }
+
+  &__carousel {
+    padding-top: 88px;
+    overflow-x: hidden;
+
+    & .horizontalSlider___281Ls {
+      overflow: visible;
+    }
+  }
+
+  &__event {
+    width: 272px;
+    flex-shrink: 0;
+    background-color: $dashboard-widget-base-background-color;
+    border-radius: 8px;
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    position: relative;
+  }
+
+  &__event-date-label {
+    height: 64px;
+    background-color: $dashboard-open-event-widget-label-background-color;
+    border: 1px solid $dashboard-base-borders-color;
+    border-radius: 8px;
+
+    position: absolute;
+    bottom: calc(100% + 16px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > p {
+      @include t400;
+      color: $dashboard-content-base-text-color;
+      font-feature-settings: $dashboard-font-feature-settings;
+    }
+  }
+
+  &__event-picture {
+    height: 177px;
+  }
+
+  &__event-descr-container {
+    padding: 24px;
+  }
+
+  &__event-descr-wrapper {
+    margin-bottom: 24px;
+    height: 128px;
+  }
+
+  &__event-name {
+    margin-bottom: 4px;
+    @include h400;
+    color: $dashboard-base-white-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    @include line-clamp(1);
+  }
+
+  &__event-date {
+    margin-bottom: 8px;
+    @include t200;
+    color: $dashboard-open-events-gray-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__event-descr {
+    @include t200;
+    color: $dashboard-base-gray-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    @include line-clamp(3);
+  }
+
+  &__event-discord-descr {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__event-discord-voice {
+    @include t200;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__event {
+      width: 360px;
+    }
+
+    &__event-name {
+      @include h500;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    & {
+      margin-top: 24px;
+    }
+
+    &__event {
+      width: 443px;
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+}
