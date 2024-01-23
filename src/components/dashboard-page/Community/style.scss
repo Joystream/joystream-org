@@ -1,0 +1,9 @@
+@import '../../../styles/main';
+
+.dashboard-community {
+  @include dashboard-section;
+
+  &__container {
+    @include dashboard-container;
+  }
+}

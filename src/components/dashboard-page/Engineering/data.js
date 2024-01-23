@@ -1,21 +1,21 @@
 import getRandomInt from '../../../utils/getRandomInt';
 
-import attemkaAvatar from '../../../assets/images/dashboard/avatars/Attemka.png';
-import bedehoAvatar from '../../../assets/images/dashboard/avatars/bedeho.png';
-import bwhmAvatar from '../../../assets/images/dashboard/avatars/bwhm.png';
-import chrlschwbAvatar from '../../../assets/images/dashboard/avatars/chrlschwb.png';
-import dzhideXAvatar from '../../../assets/images/dashboard/avatars/DzhideX.png';
-import freakstaticAvatar from '../../../assets/images/dashboard/avatars/freakstatic.png';
-import ignazioBovoAvatar from '../../../assets/images/dashboard/avatars/ignazio-bovo.png';
-import kdemblerAvatar from '../../../assets/images/dashboard/avatars/kdembler.png';
-import kubaMikolajczykAvatar from '../../../assets/images/dashboard/avatars/KubaMikolajczyk.png';
-import mnaamaniAvatar from '../../../assets/images/dashboard/avatars/mnaamani.png';
-import polikosiAvatar from '../../../assets/images/dashboard/avatars/Polikosi.png';
-import rchrdcstroAvatar from '../../../assets/images/dashboard/avatars/rchrdcstro.png';
-import thesanAvatar from '../../../assets/images/dashboard/avatars/thesan.png';
-import traumschuleAvatar from '../../../assets/images/dashboard/avatars/traumschule.png';
-import wRadoslawAvatar from '../../../assets/images/dashboard/avatars/WRadoslaw.png';
-import zeeshanakram3Avatar from '../../../assets/images/dashboard/avatars/zeeshanakram3.png';
+import attemkaAvatar from '../../../assets/images/dashboard/contributors/Attemka.png';
+import bedehoAvatar from '../../../assets/images/dashboard/contributors/bedeho.png';
+import bwhmAvatar from '../../../assets/images/dashboard/contributors/bwhm.png';
+import chrlschwbAvatar from '../../../assets/images/dashboard/contributors/chrlschwb.png';
+import dzhideXAvatar from '../../../assets/images/dashboard/contributors/DzhideX.png';
+import freakstaticAvatar from '../../../assets/images/dashboard/contributors/freakstatic.png';
+import ignazioBovoAvatar from '../../../assets/images/dashboard/contributors/ignazio-bovo.png';
+import kdemblerAvatar from '../../../assets/images/dashboard/contributors/kdembler.png';
+import kubaMikolajczykAvatar from '../../../assets/images/dashboard/contributors/KubaMikolajczyk.png';
+import mnaamaniAvatar from '../../../assets/images/dashboard/contributors/mnaamani.png';
+import polikosiAvatar from '../../../assets/images/dashboard/contributors/Polikosi.png';
+import rchrdcstroAvatar from '../../../assets/images/dashboard/contributors/rchrdcstro.png';
+import thesanAvatar from '../../../assets/images/dashboard/contributors/thesan.png';
+import traumschuleAvatar from '../../../assets/images/dashboard/contributors/traumschule.png';
+import wRadoslawAvatar from '../../../assets/images/dashboard/contributors/WRadoslaw.png';
+import zeeshanakram3Avatar from '../../../assets/images/dashboard/contributors/zeeshanakram3.png';
 
 export const githubStats = [
   {

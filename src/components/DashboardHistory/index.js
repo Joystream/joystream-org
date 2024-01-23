@@ -6,8 +6,8 @@ import { string, bool, func, number, arrayOf, shape } from 'prop-types';
 import DashboardSectionHeader from '../DashboardSectionHeader';
 import DashboardCarousel from '../DashboardCarousel';
 import Markdown from './Markdown';
+import ArrowButton from '../dashboard-page/ArrowButton';
 
-import { ReactComponent as AccentPointer } from '../../assets/svg/dashboard/accent-pointer.svg';
 import { ReactComponent as WhiteCrossIcon } from '../../assets/svg/dashboard/white-cross.svg';
 import { ReactComponent as PrevStoryPointer } from '../../assets/svg/dashboard/prev-story-pointer.svg';
 import { ReactComponent as NextStoryPointer } from '../../assets/svg/dashboard/next-story-pointer.svg';
@@ -45,12 +45,7 @@ const DashboardHistoryStage = ({ img, date, shortDescr, longDescr, onClick }) =>
           <h4 className="dashboard-history__stage-date">{date}</h4>
           <p className="dashboard-history__stage-descr">{shortDescr}</p>
         </div>
-        {!!longDescr && (
-          <button className="dashboard-history__button-read-more">
-            Read more
-            <AccentPointer />
-          </button>
-        )}
+        {!!longDescr && <ArrowButton text="Read more" buttonCn="dashboard-history__button-read-more" />}
       </div>
     </div>
   );

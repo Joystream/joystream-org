@@ -12,6 +12,7 @@ import DashboardBackers from '../../components/DashboardBackers';
 import DashboardHistory from '../../components/DashboardHistory';
 import DashboardTraction from '../../components/dashboard-page/Traction';
 import DashboardEngineering from '../../components/dashboard-page/Engineering';
+import DashboardCommunity from '../../components/dashboard-page/Community';
 
 import { anchors } from '../../components/DashboardHeader/data';
 
@@ -50,6 +51,7 @@ const Dashboard = pageProps => {
           <DashboardHistory shouldAddScrollOffset={shouldAddScrollOffset} />
           <DashboardTraction shouldAddScrollOffset={shouldAddScrollOffset} />
           <DashboardEngineering shouldAddScrollOffset={shouldAddScrollOffset} />
+          <DashboardCommunity shouldAddScrollOffset={shouldAddScrollOffset} />
         </main>
         <footer></footer>
       </ScrollProvider>
