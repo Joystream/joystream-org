@@ -5,6 +5,9 @@ import melt_demAvatar from '../../../assets/images/dashboard/followers/melt_dem.
 import fehrsamAvatar from '../../../assets/images/dashboard/followers/fehrsam.png';
 import joonianAvatar from '../../../assets/images/dashboard/followers/joonian.png';
 
+import specificEventPicture from '../../../assets/images/dashboard/specific-event-picture.png';
+import genericEventPicture from '../../../assets/images/dashboard/generic-event-picture.png';
+
 export const followers = [
   {
     avatar: barrysilbertAvatar,
@@ -64,6 +67,8 @@ export const isSameDate = (date, anotherDate) => new Date(date).toDateString() =
 
 export const openEvents = [
   {
+    link: 'https://discord.com',
+    picture: specificEventPicture,
     name: 'DAO Daily Standup',
     date: new Date(),
     description:
@@ -71,6 +76,8 @@ export const openEvents = [
     discordVoice: 'Discord - voice_2',
   },
   {
+    link: 'https://discord.com',
+    picture: genericEventPicture,
     name: '23rd Council Mid-term Meeting',
     date: new Date(new Date().getTime() + msInDay),
     description:
@@ -78,13 +85,17 @@ export const openEvents = [
     discordVoice: 'Discord - voice_2',
   },
   {
+    link: 'https://discord.com',
     name: 'DAO Daily Standup',
+    picture: specificEventPicture,
     date: new Date(new Date(new Date().getTime() + msInDay)),
     description:
       'Experience our daily standups, where our vibrant community comes together to share updates, network, and stay informed about the latest happenings in our DAO.',
     discordVoice: 'Discord - voice_2',
   },
   {
+    link: 'https://discord.com',
+    picture: genericEventPicture,
     name: '23rd Council Mid-term Meeting',
     date: new Date(new Date().getTime() + msInDay * 2),
     description:

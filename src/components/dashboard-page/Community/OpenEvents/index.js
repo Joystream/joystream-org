@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import cn from 'classnames';
 import { string, instanceOf, arrayOf, shape, bool, number } from 'prop-types';
 
 import DashboardWigetHeading from '../../../DashboardWidgetHeading';
@@ -12,15 +13,28 @@ import { eventsDateTimeFormat, eventsShortDateTimeFormat, isToday, isTomorrow, i
 import './style.scss';
 
 const eventPropTypes = {
+  link: string.isRequired,
+  picture: string.isRequired,
   name: string.isRequired,
   date: instanceOf(Date).isRequired,
   description: string.isRequired,
   discordVoice: string.isRequired,
   withDateLabel: bool,
   eventsOnDateCount: number,
+  withLgPicture: bool,
 };
 
-const Event = ({ name, date, description, discordVoice, withDateLabel, eventsOnDateCount }) => {
+const Event = ({
+  link,
+  picture,
+  name,
+  date,
+  description,
+  discordVoice,
+  withDateLabel,
+  eventsOnDateCount,
+  withLgPicture,
+}) => {
   const { currentBreakpoints } = useDashboardMedia();
   const gap = useMemo(() => {
     switch (currentBreakpoints) {
@@ -39,39 +53,46 @@ const Event = ({ name, date, description, discordVoice, withDateLabel, eventsOnD
   const formattedShortDate = eventsShortDateTimeFormat.format(date);
 
   return (
-    <div className="dashboard-community-open-events__event">
-      <div className="dashboard-community-open-events__event-picture"></div>
-      <div className="dashboard-community-open-events__event-descr-container">
-        <div className="dashboard-community-open-events__event-descr-wrapper">
-          <h4 className="dashboard-community-open-events__event-name">{name}</h4>
-          <p className="dashboard-community-open-events__event-date">{formattedDateLabel}</p>
-          <p className="dashboard-community-open-events__event-descr">{description}</p>
-        </div>
-        <div className="dashboard-community-open-events__event-discord-descr">
-          <SoundIcon />
-          <p className="dashboard-community-open-events__event-discord-voice">{discordVoice}</p>
-        </div>
-      </div>
-      {withDateLabel && (
+    <a href={link} target="_blank" rel="noreferrer" className="dashboard-community-open-events__event-link">
+      <div className="dashboard-community-open-events__event">
         <div
-          className="dashboard-community-open-events__event-date-label"
-          style={
-            eventsOnDateCount > 1
-              ? { width: `calc(${eventsOnDateCount * 100}% + ${(eventsOnDateCount - 1) * gap}px)` }
-              : {}
-          }
-        >
-          <p>{isToday(date) ? 'Today' : isTomorrow(date) ? 'Tomorrow' : formattedShortDate}</p>
+          className={cn('dashboard-community-open-events__event-picture', { 'with-lg-pic': withLgPicture })}
+          style={{ backgroundImage: `url(${picture})` }}
+        ></div>
+        <div className="dashboard-community-open-events__event-descr-container">
+          <div className="dashboard-community-open-events__event-descr-wrapper">
+            <h4 className="dashboard-community-open-events__event-name">{name}</h4>
+            <p className="dashboard-community-open-events__event-date">{formattedDateLabel}</p>
+            <p className="dashboard-community-open-events__event-descr">{description}</p>
+          </div>
+          <div className="dashboard-community-open-events__event-discord-descr">
+            <SoundIcon />
+            <p className="dashboard-community-open-events__event-discord-voice">{discordVoice}</p>
+          </div>
         </div>
-      )}
-    </div>
+        {withDateLabel && (
+          <div
+            className="dashboard-community-open-events__event-date-label"
+            style={
+              eventsOnDateCount > 1
+                ? { width: `calc(${eventsOnDateCount * 100}% + ${(eventsOnDateCount - 1) * gap}px)` }
+                : {}
+            }
+          >
+            <p>{isToday(date) ? 'Today' : isTomorrow(date) ? 'Tomorrow' : formattedShortDate}</p>
+          </div>
+        )}
+      </div>
+    </a>
   );
 };
 
 Event.propTypes = eventPropTypes;
 
+const { withDateLabel, eventsOnDateCount, withLgPicture, ...eventRequiredPropTypes } = eventPropTypes;
+
 const openEventsPropTypes = {
-  events: arrayOf(shape(eventPropTypes)),
+  events: arrayOf(shape(eventRequiredPropTypes)),
 };
 
 const OpenEvents = ({ events }) => {
@@ -89,6 +110,7 @@ const OpenEvents = ({ events }) => {
               {...e}
               withDateLabel={index === firstEventOnDateIdx}
               eventsOnDateCount={eventsOnDateCount}
+              withLgPicture={index % 2 !== 0}
             />
           );
         })}
