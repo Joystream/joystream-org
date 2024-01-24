@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-import cn from 'classnames';
 import { string, instanceOf, arrayOf, shape, bool, number } from 'prop-types';
 
 import DashboardWigetHeading from '../../../DashboardWidgetHeading';
@@ -21,20 +20,9 @@ const eventPropTypes = {
   discordVoice: string.isRequired,
   withDateLabel: bool,
   eventsOnDateCount: number,
-  withLgPicture: bool,
 };
 
-const Event = ({
-  link,
-  picture,
-  name,
-  date,
-  description,
-  discordVoice,
-  withDateLabel,
-  eventsOnDateCount,
-  withLgPicture,
-}) => {
+const Event = ({ link, picture, name, date, description, discordVoice, withDateLabel, eventsOnDateCount }) => {
   const { currentBreakpoints } = useDashboardMedia();
   const gap = useMemo(() => {
     switch (currentBreakpoints) {
@@ -56,7 +44,7 @@ const Event = ({
     <a href={link} target="_blank" rel="noreferrer" className="dashboard-community-open-events__event-link">
       <div className="dashboard-community-open-events__event">
         <div
-          className={cn('dashboard-community-open-events__event-picture', { 'with-lg-pic': withLgPicture })}
+          className="dashboard-community-open-events__event-picture"
           style={{ backgroundImage: `url(${picture})` }}
         ></div>
         <div className="dashboard-community-open-events__event-descr-container">
@@ -89,7 +77,7 @@ const Event = ({
 
 Event.propTypes = eventPropTypes;
 
-const { withDateLabel, eventsOnDateCount, withLgPicture, ...eventRequiredPropTypes } = eventPropTypes;
+const { withDateLabel, eventsOnDateCount, ...eventRequiredPropTypes } = eventPropTypes;
 
 const openEventsPropTypes = {
   events: arrayOf(shape(eventRequiredPropTypes)),
@@ -110,7 +98,6 @@ const OpenEvents = ({ events }) => {
               {...e}
               withDateLabel={index === firstEventOnDateIdx}
               eventsOnDateCount={eventsOnDateCount}
-              withLgPicture={index % 2 !== 0}
             />
           );
         })}

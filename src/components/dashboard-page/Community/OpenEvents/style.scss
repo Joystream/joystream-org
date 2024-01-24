@@ -59,14 +59,10 @@
   &__event-picture {
     height: 177px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-
-    &.with-lg-pic {
-      background-size: cover;
-    }
   }
 
   &__event-descr-container {
