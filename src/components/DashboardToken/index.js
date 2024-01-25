@@ -6,7 +6,7 @@ import DashboardTokenPriceChartWidget from '../DashboardTokenPriceChartWidget';
 import DashboardStatsWidget from '../DashboardStatsWidget';
 import DashboardTokenSupplyWidget from '../DashboardTokenSupplyWidget';
 // import DashboardJoyCarousel from '../DashboardJoyCarousel';
-// import Exchange from '../dashboard-page/Token/Exchange';
+import Exchange from '../dashboard-page/Token/Exchange';
 import DashboardTokenReleaseScheduleChartWidget from '../DashboardTokenReleaseScheduleChartWidget';
 import DashboardTokenAllocationTableWidget from '../DashboardTokenAllocationTableWidget';
 import DashboardTokenMintingChartWidget from '../DashboardTokenMintingChartWidget';
@@ -48,7 +48,7 @@ const DashboardToken = ({ shouldAddScrollOffset }) => {
 
         {/* <DashboardJoyCarousel /> */}
 
-        {/* <Exchange /> */}
+        <Exchange />
 
         <DashboardTokenReleaseScheduleChartWidget />
 

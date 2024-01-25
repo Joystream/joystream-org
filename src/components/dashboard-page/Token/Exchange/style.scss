@@ -94,6 +94,37 @@
     backdrop-filter: blur(2px);
   }
 
+  &__button-toggle-shown-options {
+    height: 48px;
+    margin: 16px auto 0;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include t300;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    background-color: $dashboard-exchange-button-background-color;
+    border: 1px solid $dashboard-base-borders-color;
+    border-radius: 2px;
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    transition: all $dashboard-transition-duration $dashboard-transition-timing;
+
+    &.options-expanded > svg {
+      transform: rotate(180deg);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $dashboard-buttons-base-hover-background-color;
+    }
+    &:active {
+      background-color: $dashboard-buttons-base-pressed-background-color;
+    }
+  }
+
   @media #{$screen-min-dashboard-xs} {
     &__options {
       grid-template-columns: repeat(2, 1fr);
