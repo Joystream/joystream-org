@@ -29,9 +29,19 @@
     }
   }
 
-  @media #{$screen-min-dashboard-sm} {
+  @media #{$screen-min-dashboard-md} {
+    & {
+      max-width: 468px;
+    }
+
     &__indicator-value {
       @include h800;
+    }
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    & {
+      max-width: none;
     }
   }
 }

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Text, Bar } from 'recharts';
 import { bool, arrayOf, shape, string, number } from 'prop-types';
 
@@ -20,21 +20,21 @@ const propTypes = {
 
 const Chart = ({ withBarGapExtended, data, chartHeight }) => {
   const { currentBreakpoints } = useDashboardMedia();
-  const barGap = useMemo(() => {
+  const [barGap, setBarGap] = useState(1);
+
+  useEffect(() => {
     switch (currentBreakpoints) {
-      case 'xxs':
-        return 1;
       case 'xs':
-        return 1.6;
+        return setBarGap(1.6);
       case 'sm':
-        return 3;
+        return setBarGap(3);
       case 'md':
-        return 1.8;
+        return setBarGap(1.8);
       case 'lg':
       case 'xl':
-        return withBarGapExtended ? 2.8 : 1.6;
+        return setBarGap(withBarGapExtended ? 2.8 : 1.6);
       default:
-        return 1;
+        return setBarGap(1);
     }
   }, [currentBreakpoints, withBarGapExtended]);
 
