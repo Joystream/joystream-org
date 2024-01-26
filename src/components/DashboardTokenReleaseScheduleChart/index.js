@@ -89,6 +89,8 @@ const DashboardTokenReleaseScheduleChart = () => {
                 onMouseEnter={area => {
                   setActiveAreaName(area.name);
                 }}
+                isAnimationActive={false}
+                animationDuration={0}
               />
             );
           })}

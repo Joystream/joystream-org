@@ -15,6 +15,10 @@
   &__heading {
     @include dashboard-widget-heading;
 
+    & > span {
+      color: $dashboard-base-gray-text-color;
+    }
+
     &.dim-heading {
       @include dashboard-widget-helper-text;
     }

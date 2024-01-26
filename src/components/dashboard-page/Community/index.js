@@ -1,5 +1,4 @@
 import React from 'react';
-import { bool } from 'prop-types';
 
 import DashboardSectionHeader from '../../DashboardSectionHeader';
 import SocialMedia from './SocialMedia';
@@ -10,19 +9,11 @@ import { followers, openEvents } from './utils';
 
 import './style.scss';
 
-const propTypes = {
-  shouldAddScrollOffset: bool,
-};
-
-const Community = ({ shouldAddScrollOffset }) => {
+const Community = () => {
   return (
     <section className="dashboard-community">
       <div className="dashboard-community__container">
-        <DashboardSectionHeader
-          sectionId="community"
-          sectionHeading="Community"
-          shouldAddScrollOffset={shouldAddScrollOffset}
-        />
+        <DashboardSectionHeader sectionId="community" sectionHeading="Community" />
         <SocialMedia />
         <Followers followers={followers} />
         <OpenEvents events={openEvents} />
@@ -30,7 +21,5 @@ const Community = ({ shouldAddScrollOffset }) => {
     </section>
   );
 };
-
-Community.propTypes = propTypes;
 
 export default Community;

@@ -25,7 +25,7 @@ const propTypes = {
 };
 
 const ChartWidget = ({ heading, valueOfIndicatorInThousands, growthRate, indicator, chartData, chartHeight }) => {
-  const growthRateWithSign = growthRate > 0 ? `+${growthRate}` : growthRate < 0 ? `-${growthRate}` : growthRate;
+  const growthRateWithSign = growthRate > 0 ? `+${growthRate}` : growthRate;
 
   return (
     <div className="dashboard-traction-chart-widget">

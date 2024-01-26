@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-import { bool } from 'prop-types';
 
 import DashboardSectionHeader from '../../DashboardSectionHeader';
 import ChartWidget from './ChartWidget';
@@ -12,11 +11,7 @@ import { chartMockData, metrics } from './data.js';
 
 import './style.scss';
 
-const propTypes = {
-  shouldAddScrollOffset: bool,
-};
-
-const Traction = ({ shouldAddScrollOffset }) => {
+const Traction = () => {
   const { currentBreakpoints } = useDashboardMedia();
   const commentsAndReactionsChartHeight = useMemo(() => (currentBreakpoints === 'md' ? 314 : 250), [
     currentBreakpoints,
@@ -25,11 +20,7 @@ const Traction = ({ shouldAddScrollOffset }) => {
   return (
     <section className="dashboard-traction">
       <div className="dashboard-traction__container">
-        <DashboardSectionHeader
-          sectionId="traction"
-          sectionHeading="Traction"
-          shouldAddScrollOffset={shouldAddScrollOffset}
-        />
+        <DashboardSectionHeader sectionId="traction" sectionHeading="Traction" />
         <div className="dashboard-traction__grid">
           <ChartWidget
             heading="Content creators"
@@ -80,7 +71,5 @@ const Traction = ({ shouldAddScrollOffset }) => {
     </section>
   );
 };
-
-Traction.propTypes = propTypes;
 
 export default Traction;

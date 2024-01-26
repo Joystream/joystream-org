@@ -2,6 +2,9 @@
 
 .dashboard-traction-chart-widget {
   @include dashboard-widget;
+  $tick-height-overlapped-by-padding: 8px;
+
+  padding-bottom: 16px + $tick-height-overlapped-by-padding;
 
   &__indicator-value {
     @include dashboard-widget-text;
@@ -20,6 +23,10 @@
   }
 
   @media #{$screen-min-dashboard-sm} {
+    & {
+      padding-bottom: 32px + $tick-height-overlapped-by-padding;
+    }
+
     &__indicator-value {
       @include h700;
     }
@@ -30,18 +37,8 @@
   }
 
   @media #{$screen-min-dashboard-md} {
-    & {
-      max-width: 468px;
-    }
-
     &__indicator-value {
       @include h800;
-    }
-  }
-
-  @media #{$screen-min-dashboard-lg} {
-    & {
-      max-width: none;
     }
   }
 }

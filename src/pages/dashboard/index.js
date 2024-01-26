@@ -24,13 +24,10 @@ const Dashboard = pageProps => {
   const { t } = useTranslation();
 
   const [withScrollInitiallyUp] = useState(() => !pageProps.location.hash);
-  const [shouldAddScrollOffset, setShouldAddScrollOffset] = useState(false);
 
   const [activeAnchor, setActiveAnchor] = useState(() => anchors[0]);
   const onAnchorClick = activeAnchor => {
     setActiveAnchor(activeAnchor);
-    setShouldAddScrollOffset(true);
-
     scrollTo(`#${activeAnchor.toLowerCase()}`);
   };
 
@@ -45,13 +42,13 @@ const Dashboard = pageProps => {
         <DashboardHeader activeAnchor={activeAnchor} onAnchorClick={onAnchorClick} />
 
         <main>
-          <DashboardHero shouldAddScrollOffset={shouldAddScrollOffset} />
-          <DashboardToken shouldAddScrollOffset={shouldAddScrollOffset} />
-          <DashboardBackers t={t} shouldAddScrollOffset={shouldAddScrollOffset} />
-          <DashboardHistory shouldAddScrollOffset={shouldAddScrollOffset} />
-          <DashboardTraction shouldAddScrollOffset={shouldAddScrollOffset} />
-          <DashboardEngineering shouldAddScrollOffset={shouldAddScrollOffset} />
-          <DashboardCommunity shouldAddScrollOffset={shouldAddScrollOffset} />
+          <DashboardHero />
+          <DashboardToken />
+          <DashboardBackers t={t} />
+          <DashboardHistory />
+          <DashboardTraction />
+          <DashboardEngineering />
+          <DashboardCommunity />
         </main>
         <footer></footer>
       </ScrollProvider>

@@ -23,7 +23,7 @@ const Chart = ({ chartData }) => {
   const chartOffsetLeft = cartesianGridRef.current?.props.offset.left || 0;
 
   return (
-    <ResponsiveContainer height={208}>
+    <ResponsiveContainer width="99%" height={208}>
       <AreaChart data={chartData}>
         <CartesianGrid ref={cartesianGridRef} vertical={false} stroke="#BBD9F621" />
         <XAxis
@@ -62,6 +62,8 @@ const Chart = ({ chartData }) => {
           activeDot={areaChartActiveDotProps => {
             return renderCustomActiveDot(areaChartActiveDotProps, chartWidth, chartOffsetLeft);
           }}
+          isAnimationActive={false}
+          animationDuration={0}
         />
         <Tooltip
           cursor={<CustomCursor />}

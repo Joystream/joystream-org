@@ -35,6 +35,7 @@ const DashboardTokenMintingChart = () => {
             label={pieLabelProps => renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim)}
             labelLine={false}
             isAnimationActive={false}
+            animationDuration={0}
           >
             {data.map((entry, index) => {
               return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { func, bool } from 'prop-types';
+import { func } from 'prop-types';
 
 import DashboardSectionHeader from '../DashboardSectionHeader';
 import DashboardWidgetHeading from '../DashboardWidgetHeading';
@@ -12,18 +12,13 @@ import './style.scss';
 
 const propTypes = {
   t: func.isRequired,
-  shouldAddScrollOffset: bool,
 };
 
-const DashboardBackers = ({ t, shouldAddScrollOffset }) => {
+const DashboardBackers = ({ t }) => {
   return (
     <section className="dashboard-backers">
       <div className="dashboard-backers__container">
-        <DashboardSectionHeader
-          sectionId="backers"
-          sectionHeading="Backers"
-          shouldAddScrollOffset={shouldAddScrollOffset}
-        />
+        <DashboardSectionHeader sectionId="backers" sectionHeading="Backers" />
         <DashboardWidgetHeading heading="Including" headingWrapperCn="dashboard-backers__heading" />
         <ul className="dashboard-backers__backers-list">
           {backers.map(({ key, Icon }) => {

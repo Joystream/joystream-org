@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactModal from 'react-modal';
 import cn from 'classnames';
-import { string, bool, func, number, arrayOf, shape } from 'prop-types';
+import { string, func, number, arrayOf, shape } from 'prop-types';
 
 import DashboardSectionHeader from '../DashboardSectionHeader';
 import DashboardCarousel from '../DashboardCarousel';
@@ -123,11 +123,7 @@ const DashboardHistoryModalContent = ({ onModalClose, stages, stageIdx }) => {
 
 DashboardHistoryModalContent.propTypes = dashboardHistoryModalContentPropTypes;
 
-const dashboardHistoryPropTypes = {
-  shouldAddScrollOffset: bool,
-};
-
-const DashboardHistory = ({ shouldAddScrollOffset }) => {
+const DashboardHistory = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [interactiveStageIdx, setInteractiveStageIdx] = useState(0);
 
@@ -150,11 +146,7 @@ const DashboardHistory = ({ shouldAddScrollOffset }) => {
     <>
       <section className="dashboard-history">
         <div className="dashboard-history__container">
-          <DashboardSectionHeader
-            sectionId="history"
-            sectionHeading="History"
-            shouldAddScrollOffset={shouldAddScrollOffset}
-          />
+          <DashboardSectionHeader sectionId="history" sectionHeading="History" />
           <DashboardCarousel>
             {historyStages.map((historyStage, index) => {
               return <DashboardHistoryStage key={index} {...historyStage} onClick={() => onModalOpen(historyStage)} />;
@@ -180,7 +172,5 @@ const DashboardHistory = ({ shouldAddScrollOffset }) => {
     </>
   );
 };
-
-DashboardHistory.propTypes = dashboardHistoryPropTypes;
 
 export default DashboardHistory;

@@ -109,23 +109,17 @@ $dashboard-header-z-index: 1000;
 
 @mixin dashboard-section {
   padding-block: 40px;
-  padding-top: 8px;
-
-  margin-top: -($dashboard-header-sum-of-heights);
 
   @media #{$screen-min-dashboard-xs} {
     padding-block: 48px;
-    padding-top: 16px;
   }
 
   @media #{$screen-min-dashboard-sm} {
     padding-block: 64px;
-    padding-top: 32px;
   }
 
   @media #{$screen-min-dashboard-md} {
     padding-block: 80px;
-    padding-top: 48px;
   }
 }
 

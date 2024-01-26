@@ -12,8 +12,11 @@
     gap: 16px;
   }
 
-  &__github-stats {
+  &__github-stats-widget {
     @include dashboard-widget;
+  }
+
+  &__github-stats {
     display: grid;
     gap: 40px;
   }
@@ -51,7 +54,7 @@
       grid-template-columns: repeat(4, 1fr);
     }
 
-    &__github-stats {
+    &__github-stats-widget {
       grid-column: span 3;
     }
 

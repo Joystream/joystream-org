@@ -11,6 +11,7 @@ const propTypes = {
   info: string,
   headingWrapperCn: string,
   isDim: bool,
+  helperText: string,
 };
 
 const defaultProps = {
@@ -20,10 +21,17 @@ const defaultProps = {
   headingWrapperCn: 'base-margin',
 };
 
-const DashboardWidgetHeading = ({ heading, info, headingWrapperCn, isDim }) => {
+const DashboardWidgetHeading = ({ heading, info, headingWrapperCn, isDim, helperText }) => {
   return (
     <div className={cn('dashboard-widget-heading', { 'dim-heading': isDim, [headingWrapperCn]: headingWrapperCn })}>
-      <h3 className={cn('dashboard-widget-heading__heading', { 'dim-heading': isDim })}>{heading}</h3>
+      <h3 className={cn('dashboard-widget-heading__heading', { 'dim-heading': isDim })}>
+        {heading}
+        {!!helperText && (
+          <>
+            &nbsp;<span>{helperText}</span>
+          </>
+        )}
+      </h3>
       {info && (
         <div className="dashboard-widget-heading__icon-wrapper">
           <InfoIcon />

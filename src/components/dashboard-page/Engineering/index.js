@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { bool } from 'prop-types';
 
 import DashboardSectionHeader from '../../DashboardSectionHeader';
 import GithubStats from './GithubStats';
@@ -12,26 +11,21 @@ import { generateChartMockData, githubStats, contributors } from './data';
 
 import './style.scss';
 
-const propTypes = {
-  shouldAddScrollOffset: bool,
-};
-
-const Engineering = ({ shouldAddScrollOffset }) => {
+const Engineering = () => {
   const [chartData] = useState(() => generateChartMockData());
 
   return (
     <section className="dashboard-engineering">
       <div className="dashboard-engineering__container">
-        <DashboardSectionHeader
-          sectionId="engineering"
-          sectionHeading="Engineering"
-          shouldAddScrollOffset={shouldAddScrollOffset}
-        />
+        <DashboardSectionHeader sectionId="engineering" sectionHeading="Engineering" />
         <div className="dashboard-engineering__stats-wrapper">
-          <div className="dashboard-engineering__github-stats">
-            {githubStats.map((stats, index) => (
-              <GithubStats key={index} {...stats} />
-            ))}
+          <div className="dashboard-engineering__github-stats-widget">
+            <DashboardWidgetHeading heading="Github stats" />
+            <div className="dashboard-engineering__github-stats">
+              {githubStats.map((stats, index) => (
+                <GithubStats key={index} {...stats} />
+              ))}
+            </div>
           </div>
           <DashboardStatsWidget heading="Followers" text="590" helperText="+2% Last month" />
         </div>
@@ -39,6 +33,7 @@ const Engineering = ({ shouldAddScrollOffset }) => {
         <div className="dashboard-engineering__contributors">
           <DashboardWidgetHeading
             heading="Contributors"
+            helperText={`(${contributors.length})`}
             headingWrapperCn="dashboard-engineering__contributors-heading"
           />
           <Contributors contributors={contributors} />
@@ -47,7 +42,5 @@ const Engineering = ({ shouldAddScrollOffset }) => {
     </section>
   );
 };
-
-Engineering.propTypes = propTypes;
 
 export default Engineering;

@@ -3,17 +3,7 @@
 .dashboard-community {
   @include dashboard-section;
 
-  margin-top: -($dashboard-header-sum-of-heights) + 48px;
-
   &__container {
     @include dashboard-container;
-  }
-
-  & .dashboard-section-header {
-    padding-top: calc(32px + $dashboard-header-height) - 48px;
-  }
-
-  & .dashboard-section-header.scroll-offset {
-    padding-top: calc(32px + $dashboard-header-sum-of-heights) - 48px;
   }
 }

@@ -1,8 +1,7 @@
 @import '../../styles/main';
 
 .dashboard-section-header {
-  // padding-top: calc(32px + $dashboard-header-sum-of-heights);
-  padding-top: calc(32px + $dashboard-header-height);
+  scroll-margin-top: calc(32px + $dashboard-header-height);
 
   margin-bottom: 16px;
   padding-bottom: 16px;
@@ -11,14 +10,6 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid $dashboard-base-border-color;
-
-  &.scroll-offset {
-    padding-top: calc(32px + $dashboard-header-sum-of-heights);
-
-    & .dashboard-section-header__tooltip {
-      bottom: calc(100% - 24px - $dashboard-header-sum-of-heights);
-    }
-  }
 
   &__heading {
     @include h500;
@@ -49,7 +40,7 @@
   &__tooltip {
     padding: 8px;
     position: absolute;
-    bottom: calc(100% - 24px - $dashboard-header-height);
+    bottom: calc(100% + 8px);
     right: 0;
     background-color: $dashboard-section-header-tooltip-background-color;
     border-radius: 2px;

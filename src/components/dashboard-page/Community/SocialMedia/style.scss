@@ -2,7 +2,7 @@
 
 .dashboard-community-social-media {
   display: grid;
-  gap: 24px;
+  gap: 16px;
 
   &__primary-stats-block {
     height: 360px;
@@ -114,7 +114,6 @@
 
   @media #{$screen-min-dashboard-sm} {
     & {
-      gap: 16px;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, min-content);
     }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import cn from 'classnames';
-import { string, bool } from 'prop-types';
+import { string } from 'prop-types';
 
 import { ReactComponent as CopyLinkIcon } from '../../assets/svg/dashboard/copy-link-icon.svg';
 
@@ -9,12 +9,11 @@ import './style.scss';
 const propTypes = {
   sectionId: string.isRequired,
   sectionHeading: string.isRequired,
-  shouldAddScrollOffset: bool,
 };
 
 const timeLinkCopiedTooltipVisibleFor = 3000; // in ms
 
-const DashboardSectionHeader = ({ sectionId, sectionHeading, shouldAddScrollOffset }) => {
+const DashboardSectionHeader = ({ sectionId, sectionHeading }) => {
   const [isLinkCopiedTooltipVisible, setIsLinkCopiedTooltipVisible] = useState(false);
 
   const onButtonCopyLinkClick = async () => {
@@ -41,7 +40,7 @@ const DashboardSectionHeader = ({ sectionId, sectionHeading, shouldAddScrollOffs
   }, [isLinkCopiedTooltipVisible]);
 
   return (
-    <div id={sectionId} className={cn('dashboard-section-header', { 'scroll-offset': shouldAddScrollOffset })}>
+    <div id={sectionId} className="dashboard-section-header">
       <h2 className="dashboard-section-header__heading">{sectionHeading}</h2>
       <button className="dashboard-section-header__button-copy-link" onClick={onButtonCopyLinkClick}>
         <span className="dashboard-section-header__button-copy-link_short-text">Copy link</span>

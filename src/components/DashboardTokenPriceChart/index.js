@@ -34,7 +34,7 @@ const DashboardTokenPriceChart = ({ data }) => {
   const chartWidth = cartesianGridRef.current?.props.offset.width || 0;
 
   return (
-    <ResponsiveContainer width="100%" minHeight={265} maxHeight={368}>
+    <ResponsiveContainer width="99%" minHeight={265} maxHeight={368}>
       <ComposedChart data={data}>
         <CartesianGrid ref={cartesianGridRef} vertical={false} stroke="#bbd9f621" />
 
@@ -110,6 +110,7 @@ const DashboardTokenPriceChart = ({ data }) => {
             return renderCustomActiveDot(areaChartActiveDotProps, chartWidth);
           }}
           isAnimationActive={false}
+          animationDuration={0}
         />
         <YAxis
           yAxisId="volumeAxis"
@@ -119,7 +120,14 @@ const DashboardTokenPriceChart = ({ data }) => {
           interval={0}
           domain={[0, 'dataMax + 600']}
         />
-        <Bar yAxisId="volumeAxis" dataKey="scaledVolume" fill="#B5C1C9" maxBarSize={maxBarSize} />
+        <Bar
+          yAxisId="volumeAxis"
+          dataKey="scaledVolume"
+          fill="#B5C1C9"
+          maxBarSize={maxBarSize}
+          isAnimationActive={false}
+          animationDuration={0}
+        />
 
         <ReferenceLine yAxisId="priceAxis" y={0} stroke="#959494" strokeDasharray="2 16" />
       </ComposedChart>

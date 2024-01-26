@@ -55,7 +55,6 @@ const DashboardHeader = ({ activeAnchor, onAnchorClick }) => {
         <ul className="dashboard-header__nav-list">
           {anchors.map(anchor => (
             <li key={anchor} className="dashboard-header__nav-list-item">
-              {/* TODO: AnchorLink to be added to wrap a button */}
               <button
                 className={cn('dashboard-header__nav-button', { active: anchor === activeAnchor })}
                 onClick={() => onAnchorClick(anchor)}
