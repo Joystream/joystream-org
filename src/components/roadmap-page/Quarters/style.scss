@@ -31,6 +31,7 @@
 
   &__options {
     &-wrapper {
+      position: relative;
       z-index: 1;
       display: grid;
       align-items: center;
@@ -62,6 +63,8 @@
 
     &__dropdown {
       position: absolute;
+      bottom: -2px;
+      left: -2px;
       display: none;
       width: 260px;
       border-radius: 4px;
@@ -71,7 +74,6 @@
       &--active {
         z-index: 10;
         display: block;
-        transform: translate(-18px, 60px);
       }
     }
 
@@ -236,13 +238,7 @@
       }
 
       &__dropdown {
-        width: 100%;
-        margin: 0 10px;
-        padding: 0 10px;
-
-        &--active {
-          transform: translate(-38px, 60px);
-        }
+        width: calc(100% + 4px);
       }
     }
 
