@@ -11,7 +11,7 @@ import { iconMap } from '../../../data/quarters';
 export let offset = 300;
 let PANEL_HIGHLIGHT_OFFSET = 60;
 
-function QuarterPanel({ data, glossaryPanel, t }) {
+function QuarterPanel({ data, glossaryPanel, isSelect, t }) {
   const [activeItem, setActiveItem] = useState(0);
   const [activeText, setActiveText] = useState(0);
   const [isNextItemActive, setIsNextItemActive] = useState(false);
@@ -128,7 +128,7 @@ function QuarterPanel({ data, glossaryPanel, t }) {
     handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isSelect]);
 
   const handleClick = i => {
     const scrollY = window.scrollY;
