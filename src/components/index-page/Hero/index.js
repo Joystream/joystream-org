@@ -3,8 +3,6 @@ import TypeWriter from 'typewriter-effect';
 import Plx from 'react-plx';
 import { Trans } from 'gatsby-plugin-react-i18next';
 
-import { ArrowButton } from '../../ArrowButton';
-
 import AtlasHeroBackgroundImage from '../../../assets/images/landing/atlas-hero-background.webp';
 import AtlasHeroForegroundImage from '../../../assets/images/landing/atlas-hero-foreground.webp';
 import AtlasHeroHoldersImage from '../../../assets/images/landing/glass-mockup-holder.webp';
@@ -87,6 +85,7 @@ const Hero = ({ t }) => {
                 className="IndexPage__hero__illustration__background"
                 src={AtlasHeroBackgroundImage}
                 alt="video playing on atlas"
+                fetchPriority="high"
               />
             </Plx>
             <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
@@ -94,6 +93,7 @@ const Hero = ({ t }) => {
                 className="IndexPage__hero__illustration__foreground"
                 src={AtlasHeroForegroundImage}
                 alt="bid section for the associated video NFT"
+                fetchPriority="high"
               />
             </Plx>
             <Plx parallaxData={parallaxDataForeground} animateWhenNotInViewport={true}>
@@ -101,6 +101,7 @@ const Hero = ({ t }) => {
                 className="IndexPage__hero__illustration__holders"
                 src={AtlasHeroHoldersImage}
                 alt="holders of a CRT"
+                fetchPriority="high"
               />
             </Plx>
           </div>
