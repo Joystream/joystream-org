@@ -39,11 +39,11 @@ const DashboardCarousel = ({ children, withLgSlides, carouselCn }) => {
           : 3
         : currentBreakpoints === 'lg'
         ? withLgSlides
-          ? 3
+          ? 2.8
           : 4
         : currentBreakpoints === 'xl'
         ? withLgSlides
-          ? 3
+          ? 2.8
           : 4
         : 2,
     [currentBreakpoints, withLgSlides]

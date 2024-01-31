@@ -13,6 +13,7 @@ import DashboardHistory from '../../components/DashboardHistory';
 import DashboardTraction from '../../components/dashboard-page/Traction';
 import DashboardEngineering from '../../components/dashboard-page/Engineering';
 import DashboardCommunity from '../../components/dashboard-page/Community';
+import DashboardTeam from '../../components/dashboard-page/Team';
 
 import { anchors } from '../../components/DashboardHeader/data';
 
@@ -49,6 +50,7 @@ const Dashboard = pageProps => {
           <DashboardTraction />
           <DashboardEngineering />
           <DashboardCommunity />
+          <DashboardTeam />
         </main>
         <footer></footer>
       </ScrollProvider>

@@ -1,0 +1,79 @@
+@import '../../../../styles/main';
+
+.dashboard-team-current-council {
+  @include dashboard-widget;
+
+  &__container {
+    display: grid;
+    gap: 40px;
+  }
+
+  &__info-label {
+    @include t400;
+    color: $dashboard-base-gray-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+
+    & > span {
+      font-weight: 600;
+      color: $dashboard-content-base-text-color;
+    }
+  }
+
+  &__info {
+    @include h500;
+    color: $dashboard-base-white-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__progress-bar {
+    position: relative;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 20px;
+    background-color: $dashboard-progress-bar-color;
+    border-radius: 4px;
+  }
+
+  &__progress-bar-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    background-color: #8890ff;
+    border-radius: 4px;
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    & {
+      grid-column: 1 / span 3;
+    }
+
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    &__info {
+      @include h600;
+    }
+
+    &__progress-bar {
+      max-width: 192px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    & {
+      grid-column: 1;
+    }
+
+    &__container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    &__progress-bar {
+      max-width: none;
+    }
+  }
+}
