@@ -71,14 +71,6 @@ const Hero = ({ t }) => {
             />
           </h1>
           <p className="IndexPage__hero__subtitle">{t('landing.hero.subtitle')}</p>
-          {/* <div className="IndexPage__hero__buttons">
-            <ArrowButton
-              link="#apps-built-on-joystream"
-              text={t('landing.hero.button')}
-              className="IndexPage__hero__button"
-              textClassname="IndexPage__hero__button-text"
-            />
-          </div> */}
           <div className="IndexPage__hero__illustration">
             <Plx parallaxData={parallaxDataBackground} animateWhenNotInViewport={true}>
               <img
