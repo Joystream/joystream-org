@@ -17,12 +17,6 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       type: 'javascript/auto',
     },
   ];
-  if (stage === 'build-html') {
-    rules.push({
-      test: /openpgp/,
-      use: loaders.null(),
-    });
-  }
 
   actions.setWebpackConfig({
     resolve: {

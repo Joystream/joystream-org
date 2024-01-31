@@ -14,7 +14,6 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@600;700&display=swap"
           rel="stylesheet"
         />
-        <meta name="debank-cloud-site-verification" content="75782758ba83c6220f4c1885bcc1ff42" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
