@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { ResponsiveContainer, AreaChart, CartesianGrid, XAxis, Text, YAxis, Area, Tooltip } from 'recharts';
 import { arrayOf, shape, instanceOf, number } from 'prop-types';
 
-import { formatDateToShowInTooltip } from '../../../DashboardTokenPriceChart/utils';
+import { formatDateToShowInTooltip } from '../../Token/PriceChart/utils';
 import { formatXAxisTick, renderCustomActiveDot } from './utils';
 
 const propTypes = {
