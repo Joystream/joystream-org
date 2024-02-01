@@ -1,0 +1,111 @@
+@import '../../styles/main.scss';
+
+.Pane {
+  $_r: &;
+
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  width: 100%;
+  border: 2px solid $c_han_purple;
+  border-radius: 3px;
+  transition: background-color $duration;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: $c_han_purple;
+  }
+
+  &__img {
+    width: 126px;
+    height: 112px;
+    color: $c_white;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 6px;
+    font-size: get($font-sizes, 't6');
+    font-weight: 700;
+    color: $c_han_purple;
+    transition: color $duration;
+  }
+
+  &__paragraph {
+    font-size: 14px;
+    line-height: 22px;
+    color: $c-black;
+    transition: color $duration;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $c_blue-ribbon;
+
+    #{$_r}__title,
+    #{$_r}__paragraph {
+      color: $c_white;
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    border: 2px solid $c_catskill_white;
+
+    #{$_r}__img {
+      color: rgba($c_ebony-clay, .3);
+    }
+
+    #{$_r}__wrapper,
+    #{$_r}__content {
+      background-color: $c_catskill_white;
+    }
+
+    #{$_r}__title,
+    #{$_r}__paragraph {
+      color: rgba($c_ebony-clay, .3);
+    }
+  }
+}
+
+@media #{$screen-sm} {
+  .Pane {
+    flex-direction: row;
+
+    &__wrapper {
+      padding: 20px;
+    }
+
+    &__content {
+      padding: 0 20px;
+      text-align: left;
+    }
+
+    &__title {
+      font-size: get($font-sizes, 't5');
+    }
+
+    &__paragraph {
+      font-size: get($font-sizes);
+    }
+  }
+}
+
+@media #{$screen-md} {
+  .Pane {
+    &__content {
+      padding-left: 30px;
+    }
+  }
+}

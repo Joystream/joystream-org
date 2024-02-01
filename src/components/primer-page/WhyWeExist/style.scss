@@ -1,0 +1,173 @@
+@import '../../../styles/main';
+
+.PrimerPage {
+  &__why-we-exist-wrapper {
+    background-color: $c_blue-ribbon;
+  }
+
+  &__why-we-exist {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 115px 40px 108px 40px;
+    background: url('../../../assets/svg/primer/backgrounds/youtube-logo-desktop.svg'), url('../../../assets/svg/primer/backgrounds/lock-icon-desktop.svg');
+    background-position: left 35px top -33px, right 40px bottom 45px;
+    background-repeat: no-repeat, no-repeat;
+
+    &__section-title {
+      font-family: $font-secondary;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+      letter-spacing: .04em;
+      color: $c_white;
+      text-align: left;
+    }
+
+    &__title {
+      max-width: 616px;
+      margin-top: 24px;
+      font-family: $font-primary;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 56px;
+      letter-spacing: 0;
+      color: $c_white;
+      text-align: left;
+    }
+
+    &__section {
+      display: flex;
+      flex-direction: row;
+      gap: 139px;
+
+      &--reverse {
+        flex-direction: row-reverse;
+      }
+
+      &--lock {
+        margin-top: 250px;
+        gap: 183px;
+      }
+
+      &__text {
+        &__title {
+          max-width: 692px;
+          font-family: $font-primary;
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 40px;
+          letter-spacing: 0;
+          color: $c_white;
+          text-align: left;
+        }
+
+        &__paragraph {
+          max-width: 692.5px;
+          margin-top: 24px;
+          font-family: $font-secondary;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: 0;
+          color: $c_white;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__why-we-exist {
+      padding: 115px 40px 108px 40px;
+      background-position: left 40px top 3px, right 30px bottom 95px;
+      background-size: 380px, 225px;
+
+      &__title {
+        font-size: 38px;
+        line-height: 41px;
+      }
+
+      &__section {
+        gap: 40px;
+
+        &--lock {
+          margin-top: 125px;
+          gap: 60px;
+        }
+
+        &__image {
+          transform: scale(.88);
+        }
+
+        &__text {
+          &__title {
+            font-size: 28px;
+            line-height: 36px;
+          }
+
+          &__paragraph {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__why-we-exist {
+      padding: 56px 24px 56px 24px;
+      background: url('../../../assets/svg/primer/backgrounds/youtube-logo-mobile.svg'), url('../../../assets/svg/primer/backgrounds/lock-icon-mobile.svg');
+      background-position: center top 43px, center top 520px;
+      background-repeat: no-repeat, no-repeat;
+
+      &__title {
+        margin-top: 16px;
+        font-size: 28px;
+        line-height: 34px;
+      }
+
+      &__section {
+        flex-direction: column;
+
+        &--reverse {
+          flex-direction: column;
+        }
+
+        &--lock {
+          margin-top: 51px;
+        }
+
+        &__image {
+          margin: 0 auto;
+          transform: scale(.75);
+        }
+
+        &__text {
+          max-width: 616px;
+
+          &__title {
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -.005em;
+          }
+
+          &__paragraph {
+            margin-top: 16px;
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__why-we-exist {
+      background-position: center top 43px, center top 580px;
+    }
+  }
+}

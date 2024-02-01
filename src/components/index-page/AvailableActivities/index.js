@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 import Loader from 'react-loader-spinner';
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
 import { ReactComponent as PlaceForYouIcon } from '../../../assets/svg/available-activities-icons/place-for-you.svg';
 
+// import useWindowDimensions from '../../../utils/useWindowDimensions';
 import { WORKER_ACTIVITIES } from '../../../data/pages';
 
 import './style.scss';
+import useAxios from '../../../utils/useAxios';
 
 const ActivityListAmount = ({ mobile, amount, priceData, isWeekly, t }) => {
   let amountToRender = 0;

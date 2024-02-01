@@ -8,6 +8,8 @@ import useImageFallback from '../../../utils/useImageFallback';
 
 import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
 import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
+import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
+import { ReactComponent as PlusIcon } from '../../../assets/svg/plus.svg';
 
 import './style.scss';
 
@@ -123,10 +125,7 @@ const Creators = ({ creators, t, priceData }) => {
               id="IndexPage__creators__title-and-info__info__modal"
               className="IndexPage__creators__title-and-info__info__modal"
             >
-              <Trans
-                i18nKey={'landing.creators.info.text'}
-                components={{ exchanges: <Link to="/token#exchanges" /> }}
-              />
+              <Trans i18nKey={'landing.creators.info.text'} components={{ exchanges: <Link to="/token#exchanges" /> } } />
             </div>
           </div>
         </div>
@@ -136,6 +135,7 @@ const Creators = ({ creators, t, priceData }) => {
           <Carousel
             itemsData={creators?.map(({ imageUrl, ...rest }) => ({
               img: imageUrl,
+              // time: parseDateToRelativeTime(createdAt, language),
               ...rest,
             }))}
             priceData={priceData}

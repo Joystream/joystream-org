@@ -1,0 +1,149 @@
+@import '../../../styles/main';
+
+.PrimerPage {
+  &__governance-wrapper {
+    color: #f3f5f9;
+  }
+
+  &__governance {
+    @extend %container;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__section-title {
+      font-family: $font-secondary;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+      letter-spacing: .04em;
+      color: #5c6475;
+      text-align: left;
+    }
+
+    &__title {
+      margin-top: 24px;
+      font-family: $font-primary;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 56px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    &__pioneer {
+      margin-top: 80px;
+
+      &__title {
+        font-family: $font-primary;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 56px;
+        letter-spacing: 0;
+        text-align: left;
+      }
+
+      &__text {
+        margin-top: 24px;
+        font-family: $font-secondary;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0;
+        color: #5c6475;
+        text-align: left;
+      }
+
+      &__image {
+        width: 100%;
+        margin-top: 80px;
+      }
+    }
+
+    &__quote {
+      max-width: 902px;
+      margin: 0 auto;
+      margin-top: 120px;
+      font-family: $font-primary;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+  }
+
+  // TODO: Do md part!
+
+  @media #{$screen-max-md} {
+    &__governance {
+      padding: 68px 40px;
+
+      &__title {
+        margin-top: 16px;
+      }
+
+      &__pioneer {
+        margin-top: 60px;
+
+        &__title {
+          font-size: 38px;
+          line-height: 42px;
+        }
+
+        &__text {
+          margin-top: 16px;
+          font-size: 22px;
+          line-height: 30px;
+        }
+
+        &__image {
+          margin-top: 60px;
+        }
+      }
+
+      &__quote {
+        margin-top: 60px;
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__governance {
+      padding: 56px 24px;
+
+      &__title {
+        font-size: 28px;
+        line-height: 34px;
+      }
+
+      &__pioneer {
+        margin-top: 40px;
+
+        &__title {
+          font-size: 28px;
+          line-height: 34px;
+        }
+
+        &__text {
+          margin-top: 8px;
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        &__image {
+          margin-top: 40px;
+        }
+      }
+
+      &__quote {
+        margin-top: 40px;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -.005em;
+      }
+    }
+  }
+}

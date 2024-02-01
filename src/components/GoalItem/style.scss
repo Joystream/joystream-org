@@ -1,0 +1,115 @@
+@import '../../styles/_main';
+
+.GoalItem {
+  $_r: &;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: $border-radius;
+  transition: background-color $duration;
+
+  &:hover {
+    background-color: $c_catskill_white;
+
+    #{$_r}__status {
+      opacity: 1;
+    }
+
+    #{$_r}__icon-container {
+      background-color: $c_blue-ribbon;
+
+      &--postponed {
+        background-color: $c_raspberry;
+      }
+    }
+
+    #{$_r}__icon {
+      color: $c_white;
+      transform: translateY(-12px);
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &__icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 118px;
+    min-width: 118px;
+    margin-bottom: 20px;
+    background-color: $c_catskill_white;
+    transition: background-color $duration;
+
+    &--postponed {
+      background-color: $c_grayc-chateau;
+
+      & > #{$_r}__icon {
+        color: $c_white;
+      }
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    color: $c_blue-ribbon;
+    transition: transform $duration, color $duration;
+  }
+
+  &__status {
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 20px;
+    color: $c_white;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity $duration;
+  }
+
+  &__content {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $c_black;
+  }
+
+  @media #{$screen-sm} {
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 40px;
+    text-align: left;
+
+    &__icon-container {
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+
+    &__content {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../styles/_main';
+
+.TitleWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 38px;
+    color: $c_blue-ribbon;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media #{$screen-md} {
+    padding-top: 150px;
+
+    &__title {
+      margin-bottom: 80px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+  }
+}

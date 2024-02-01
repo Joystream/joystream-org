@@ -1,0 +1,202 @@
+@import '../../../styles/main';
+
+.GetStarted {
+  &__howto-wrapper {
+    padding: 150px 0;
+    background-color: white;
+  }
+
+  &__howto {
+    @extend %container;
+
+    &__title {
+      font-family: $font-primary;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: 0;
+    }
+
+    &__number-steps-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 80px;
+    }
+
+    &__number-steps {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      &--animated {
+        & > div:nth-child(1) {
+          animation: animate-circle 1s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(2) {
+          animation: animate-separator 1s;
+          animation-delay: 1s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(3) {
+          animation: animate-circle 1s;
+          animation-delay: 2s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(4) {
+          animation: animate-separator 1s;
+          animation-delay: 3s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(5) {
+          animation: animate-circle 1s;
+          animation-delay: 4s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(6) {
+          animation: animate-separator 1s;
+          animation-delay: 5s;
+          animation-fill-mode: forwards;
+        }
+
+        & > div:nth-child(7) {
+          animation: animate-circle 1s;
+          animation-delay: 6s;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+
+    &__number-step {
+      display: grid;
+      width: 64px;
+      height: 64px;
+      font-family: $font-primary;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0;
+      color: $c_blue-ribbon;
+      background-color: #e0e1ff;
+      border-radius: 50%;
+      place-items: center;
+
+      &--active {
+        color: white;
+        background-color: $c_blue-ribbon;
+      }
+    }
+
+    &__number-step-separator {
+      width: 190px;
+      height: 2px;
+      margin: 0 32px;
+      // background-color: #dee3e9;
+      background: linear-gradient(to left, #dee3e9 50%, $c_blue-ribbon 50%) right;
+      background-size: 200%;
+    }
+
+    &__text-steps {
+      display: grid;
+      margin-top: 32px;
+      column-gap: 30px;
+      grid-template-columns: repeat(4, 290px);
+    }
+
+    &__text-step {
+      font-family: $font-primary;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: 0;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__howto-wrapper {
+      padding: 80px 0;
+    }
+
+    &__howto {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &__title {
+        width: 420px;
+      }
+
+      &__number-steps-wrapper {
+        flex-direction: row;
+        margin-top: 40px;
+      }
+
+      &__number-steps {
+        flex-direction: column;
+
+        & > div:first-of-type {
+          margin-top: 0;
+        }
+
+        & > div:last-of-type {
+          margin-bottom: 10px;
+        }
+      }
+
+      &__number-step {
+        width: 40px;
+        height: 40px;
+        margin: 50px 0;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__number-step-separator {
+        width: 80px;
+        margin: 0;
+        transform: rotate(90deg);
+      }
+
+      &__text-steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0;
+      }
+
+      &__text-step {
+        padding-bottom: 15px;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__howto {
+      &__title {
+        width: 100%;
+        padding-left: 25px;
+      }
+
+      &__text-step {
+        padding: 5px 0 0 0;
+      }
+    }
+  }
+}
+
+@keyframes animate-separator {
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes animate-circle {
+  100% {
+    color: white;
+    background-color: $c_blue-ribbon;
+  }
+}
