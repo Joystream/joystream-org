@@ -3,11 +3,9 @@ import cn from 'classnames';
 import Plx from 'react-plx';
 import { Trans, useI18next, Link } from 'gatsby-plugin-react-i18next';
 
-import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
+import { parseDateToRelativeTime } from '../../../utils/pages/landing/parseDateToRelativeTime';
 import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
 import useImageFallback from '../../../utils/useImageFallback';
-
-// import { ArrowButton } from '../../ArrowButton';
 
 import PayoutsBackgroundImage from '../../../assets/images/landing/payouts-background.webp';
 import PayoutsForeground from '../../../assets/images/landing/payouts-foreground.webp';
@@ -15,9 +13,6 @@ import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 import { ReactComponent as ClockIcon } from '../../../assets/svg/landing/clock.svg';
 import { ReactComponent as PlusIcon } from '../../../assets/svg/plus.svg';
 import PlaceholderIcon from '../../../assets/svg/empty-avatar.svg';
-// import { ReactComponent as YoutubeLogo } from '../../../assets/svg/landing/youtube-logo.svg';
-// import { ReactComponent as ConnectionIcon } from '../../../assets/svg/landing/connection-icon.svg';
-// import { ReactComponent as JoystreamLogo } from '../../../assets/svg/logo-mark.svg';
 
 import './style.scss';
 
@@ -163,7 +158,10 @@ const Payouts = ({ t, payouts, priceData }) => {
               id="IndexPage__payouts__carousel-title-and-info__info__modal"
               className="IndexPage__payouts__carousel-title-and-info__info__modal"
             >
-              <Trans i18nKey={'landing.payouts.carousel.info.text'} components={{ exchanges: <Link to="/token#exchanges" /> } } />
+              <Trans
+                i18nKey={'landing.payouts.carousel.info.text'}
+                components={{ exchanges: <Link to="/token#exchanges" /> }}
+              />
             </div>
           </div>
         </div>
