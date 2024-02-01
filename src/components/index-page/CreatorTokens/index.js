@@ -2,15 +2,12 @@ import React from 'react';
 import Plx from 'react-plx';
 import { Trans } from 'gatsby-plugin-react-i18next';
 
-import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import CreatorTokensBackground from '../../../assets/images/landing/creator-tokens-background.webp';
 import CreatorTokensForeground from '../../../assets/images/landing/creator-tokens-foreground.webp';
 import Fundraising from '../../../assets/images/landing/creator-tokens-fundraising.webp';
 import StableIncome from '../../../assets/images/landing/creator-tokens-stable-income.webp';
 import SecureListing from '../../../assets/images/landing/creator-tokens-secure-listing.webp';
 import ShareUpside from '../../../assets/images/landing/creator-tokens-share-upside.webp';
-
-import { ArrowButton } from '../../ArrowButton';
 
 import './style.scss';
 
@@ -62,14 +59,6 @@ const CreatorTokens = ({ t }) => {
           <p className="IndexPage__creator-tokens__main__content__subtitle">
             {t('landing.creatorTokens.hero.subtitle')}
           </p>
-          {/* <a
-            href="https://forms.gle/soSRzZHq6Pg1yxG2A"
-            target="_blank"
-            className="IndexPage__creator-tokens__main__content__link"
-          >
-            {t('landing.creatorTokens.hero.link')}
-            <ArrowIcon className="IndexPage__creator-tokens__main__content__link__arrow" />
-          </a> */}
         </div>
         <div className="IndexPage__creator-tokens__main__illustration">
           <img
