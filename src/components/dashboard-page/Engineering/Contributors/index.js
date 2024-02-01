@@ -56,8 +56,8 @@ const Contributors = ({ contributors }) => {
   return (
     <div className="dashboard-engineering-contributors">
       <ul className="dashboard-engineering-contributors__list">
-        {shownContributors.map(contributor => (
-          <li className="dashboard-engineering-contributors__list-item">
+        {shownContributors.map((contributor, index) => (
+          <li key={index} className="dashboard-engineering-contributors__list-item">
             <a href={`https://github.com/${getUnifiedUsername(contributor)}`} target="_blank" rel="noreferrer">
               <div className="dashboard-engineering-contributors__contributor">
                 <img

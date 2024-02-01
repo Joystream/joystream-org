@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, arrayOf, shape, oneOf, number } from 'prop-types';
 
-import DashboardWidgetHeading from '../../../DashboardWidgetHeading';
+import WidgetHeading from '../../WidgetHeading';
 
 import { renderSocialMediaLogo } from '../utils';
 
@@ -13,7 +13,7 @@ const propTypes = {
   avatar: string.isRequired,
   socialMediaUsernames: arrayOf(
     shape({
-      socialMedia: oneOf(['emai', 'twitter', 'telegram', 'discord']).isRequired,
+      socialMedia: oneOf(['email', 'twitter', 'telegram', 'discord']).isRequired,
       username: string.isRequired,
     })
   ).isRequired,
@@ -42,7 +42,7 @@ const PastCouncil = ({ linkToPioneerProfile, username, avatar, socialMediaUserna
           </div>
 
           <div className="dashboard-team-past-council__times-served-box">
-            <DashboardWidgetHeading heading="Times served" isDim />
+            <WidgetHeading heading="Times served" isDim />
             <p className="dashboard-team-past-council__times-served">{timesServed}</p>
           </div>
         </div>

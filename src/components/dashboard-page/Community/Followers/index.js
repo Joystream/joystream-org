@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import cn from 'classnames';
 import { string, func, arrayOf, shape } from 'prop-types';
 
-import DashboardWidgetHeading from '../../../DashboardWidgetHeading';
+import WidgetHeading from '../../WidgetHeading';
 
 import './style.scss';
 
@@ -36,8 +36,10 @@ const Follower = ({ avatar, name, username, followersQuantity, setIsCarouselRunn
 
 Follower.propTypes = followerPropTypes;
 
+const { setIsCarouselRunning, ...followersRelatedPropTypes } = followerPropTypes;
+
 const followersPropTypes = {
-  followers: arrayOf(shape(followerPropTypes)),
+  followers: arrayOf(shape(followersRelatedPropTypes)),
 };
 
 const Followers = ({ followers }) => {
@@ -63,7 +65,7 @@ const Followers = ({ followers }) => {
 
   return (
     <div className="dashboard-community-followers">
-      <DashboardWidgetHeading heading="Featured followers" headingWrapperCn="dashboard-community-followers__heading" />
+      <WidgetHeading heading="Featured followers" headingWrapperCn="dashboard-community-followers__heading" />
       <div className={cn('dashboard-community-followers__grid', { 'as-carousel': shouldRenderAsCarousel })}>
         {renderFollowersList({ setIsCarouselRunning })}
         {shouldRenderAsCarousel && renderFollowersList({ setIsCarouselRunning })}

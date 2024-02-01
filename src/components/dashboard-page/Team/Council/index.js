@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DashboardWidgetHeading from '../../../DashboardWidgetHeading';
+import WidgetHeading from '../../WidgetHeading';
 import ActionButton from '../ActionButton';
 
 import './style.scss';
@@ -21,11 +21,11 @@ const Council = () => {
           <div className="dashboard-team-council__terms-actions-wrapper">
             <ul className="dashboard-team-council__terms-list">
               <li className="dashboard-team-council__terms-list-item">
-                <DashboardWidgetHeading heading="Current term" isDim />
+                <WidgetHeading heading="Current term" isDim />
                 <p className="dashboard-team-council__term">10</p>
               </li>
               <li className="dashboard-team-council__terms-list-item">
-                <DashboardWidgetHeading heading="Term length" isDim />
+                <WidgetHeading heading="Term length" isDim />
                 <p className="dashboard-team-council__term">30 days</p>
               </li>
             </ul>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, number } from 'prop-types';
 
-import DashboardWidgetHeading from '../../../DashboardWidgetHeading';
+import WidgetHeading from '../../WidgetHeading';
 
 import './style.scss';
 
@@ -14,7 +14,7 @@ const propTypes = {
 const Metrics = ({ indicator, value, growthRate }) => {
   return (
     <div className="dashboard-traction-metrics">
-      <DashboardWidgetHeading heading={indicator} isDim />
+      <WidgetHeading heading={indicator} isDim />
       <p className="dashboard-traction-metrics__value">{value}</p>
       {!!growthRate && <p className="dashboard-traction-metrics__growth-rate">{`+${growthRate}% Last week`}</p>}
     </div>

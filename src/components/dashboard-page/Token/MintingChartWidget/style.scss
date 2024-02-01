@@ -1,0 +1,14 @@
+@import '../../../../styles/main';
+
+.dashboard-token-minting-chart-widget {
+  @include dashboard-widget;
+  overflow-x: hidden;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

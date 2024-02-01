@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import DashboardSectionHeader from '../../DashboardSectionHeader';
+import SectionHeader from '../SectionHeader';
 import GithubStats from './GithubStats';
-import DashboardStatsWidget from '../../DashboardStatsWidget';
+import StatsWidget from '../StatsWidget';
 import ChartWidget from './ChartWidget';
-import DashboardWidgetHeading from '../../DashboardWidgetHeading';
+import WidgetHeading from '../WidgetHeading';
 import Contributors from './Contributors';
 
 import { generateChartMockData, githubStats, contributors } from './data';
@@ -17,21 +17,21 @@ const Engineering = () => {
   return (
     <section className="dashboard-engineering">
       <div className="dashboard-engineering__container">
-        <DashboardSectionHeader sectionId="engineering" sectionHeading="Engineering" />
+        <SectionHeader sectionId="engineering" sectionHeading="Engineering" />
         <div className="dashboard-engineering__stats-wrapper">
           <div className="dashboard-engineering__github-stats-widget">
-            <DashboardWidgetHeading heading="Github stats" />
+            <WidgetHeading heading="Github stats" />
             <div className="dashboard-engineering__github-stats">
               {githubStats.map((stats, index) => (
                 <GithubStats key={index} {...stats} />
               ))}
             </div>
           </div>
-          <DashboardStatsWidget heading="Followers" text="590" helperText="+2% Last month" />
+          <StatsWidget heading="Followers" text="590" helperText="+2% Last month" />
         </div>
         <ChartWidget chartData={chartData} />
         <div className="dashboard-engineering__contributors">
-          <DashboardWidgetHeading
+          <WidgetHeading
             heading="Contributors"
             helperText={`(${contributors.length})`}
             headingWrapperCn="dashboard-engineering__contributors-heading"

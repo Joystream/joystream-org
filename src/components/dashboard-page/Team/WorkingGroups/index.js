@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, shape, arrayOf } from 'prop-types';
 
-import DashboardCarousel from '../../../DashboardCarousel';
+import Carousel from '../../Carousel';
 
 import { ReactComponent as EmptyAvatar } from '../../../../assets/svg/dashboard/empty-avatar.svg';
 
@@ -92,7 +92,7 @@ const WorkingGroup = ({ name, logo, link, lead, currentBudget, workers }) => {
 WorkingGroup.propTypes = workingGroupPropTypes;
 
 const workingGroupsPropTypes = {
-  groups: arrayOf(workingGroupPropTypes).isRequired,
+  groups: arrayOf(shape(workingGroupPropTypes)).isRequired,
 };
 
 const WorkingGroups = ({ groups }) => {
@@ -108,11 +108,11 @@ const WorkingGroups = ({ groups }) => {
           </p>
         </div>
       </div>
-      <DashboardCarousel withLgSlides>
+      <Carousel withLgSlides>
         {groups.map((group, index) => {
           return <WorkingGroup key={`${group.name}-${index}`} {...group} />;
         })}
-      </DashboardCarousel>
+      </Carousel>
     </div>
   );
 };

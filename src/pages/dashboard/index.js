@@ -5,17 +5,19 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { ScrollProvider } from '../../components/_enhancers/ScrollContext';
 import SiteMetadata from '../../components/SiteMetadata';
-import DashboardHeader from '../../components/DashboardHeader';
-import DashboardHero from '../../components/DashboardHero';
-import DashboardToken from '../../components/DashboardToken';
-import DashboardBackers from '../../components/DashboardBackers';
-import DashboardHistory from '../../components/DashboardHistory';
-import DashboardTraction from '../../components/dashboard-page/Traction';
-import DashboardEngineering from '../../components/dashboard-page/Engineering';
-import DashboardCommunity from '../../components/dashboard-page/Community';
-import DashboardTeam from '../../components/dashboard-page/Team';
 
-import { anchors } from '../../components/DashboardHeader/data';
+import Header from '../../components/dashboard-page/Header';
+import Hero from '../../components/dashboard-page/Hero';
+import Token from '../../components/dashboard-page/Token';
+import Backers from '../../components/dashboard-page/Backers';
+import History from '../../components/dashboard-page/History';
+import Traction from '../../components/dashboard-page/Traction';
+import Engineering from '../../components/dashboard-page/Engineering';
+import Community from '../../components/dashboard-page/Community';
+import Team from '../../components/dashboard-page/Team';
+import Comparison from '../../components/dashboard-page/Comparison';
+
+import { anchors } from '../../components/dashboard-page/Header/data';
 
 import './style.scss';
 
@@ -40,17 +42,26 @@ const Dashboard = pageProps => {
       <SiteMetadata lang={language} title={'Dashboard'} />
 
       <ScrollProvider minScrollDeltaThreshold={150} withScrollInitiallyUp={withScrollInitiallyUp}>
-        <DashboardHeader activeAnchor={activeAnchor} onAnchorClick={onAnchorClick} />
+        <Header activeAnchor={activeAnchor} onAnchorClick={onAnchorClick} />
 
         <main>
-          <DashboardHero />
-          <DashboardToken />
-          <DashboardBackers t={t} />
-          <DashboardHistory />
-          <DashboardTraction />
-          <DashboardEngineering />
-          <DashboardCommunity />
-          <DashboardTeam />
+          <Hero />
+
+          <Token />
+
+          <Backers t={t} />
+
+          <History />
+
+          <Traction />
+
+          <Engineering />
+
+          <Community />
+
+          <Team />
+
+          <Comparison />
         </main>
         <footer></footer>
       </ScrollProvider>

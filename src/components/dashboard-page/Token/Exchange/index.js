@@ -2,7 +2,7 @@ import React, { useMemo, useEffect, useState } from 'react';
 import cn from 'classnames';
 import { string, number } from 'prop-types';
 
-import DashboardWigetHeading from '../../../DashboardWidgetHeading';
+import WidgetHeading from '../../WidgetHeading';
 import useDashboardMedia from '../../../../utils/useDashboardMedia';
 
 import { ReactComponent as ToggleButtonChevron } from '../../../../assets/svg/dashboard/toggle-button-chevron.svg';
@@ -95,13 +95,10 @@ const Exchange = () => {
 
   return (
     <div className="dashboard-token-exchange">
-      <DashboardWigetHeading
-        heading="Where to buy and sell JOY?"
-        headingWrapperCn="dashboard-token-exchange__heading"
-      />
+      <WidgetHeading heading="Where to buy and sell JOY?" headingWrapperCn="dashboard-token-exchange__heading" />
       <div className="dashboard-token-exchange__options">
         {shownExchangeOptions.map((exchangeOption, index) => {
-          return <ExchangeOption key={`${exchangeOption.name}-${index}`} {...exchangeOption} />;
+          return <ExchangeOption key={index} {...exchangeOption} />;
         })}
         {exchangeOptionsExpanded &&
           Array.from({ length: placeholdersCount }, (_, i) => {

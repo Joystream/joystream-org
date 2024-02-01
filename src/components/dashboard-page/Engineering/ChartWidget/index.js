@@ -1,7 +1,7 @@
 import React from 'react';
 import { arrayOf, shape, instanceOf, number } from 'prop-types';
 
-import DashboardWidgetHeading from '../../../DashboardWidgetHeading';
+import WidgetHeading from '../../WidgetHeading';
 import Chart from '../Chart';
 
 import './style.scss';
@@ -18,7 +18,7 @@ const propTypes = {
 const ChartWidget = ({ chartData }) => {
   return (
     <div className="dashboard-engineering-chart-widget">
-      <DashboardWidgetHeading heading="Contributions" />
+      <WidgetHeading heading="Contributions" />
       <Chart chartData={chartData} />
     </div>
   );

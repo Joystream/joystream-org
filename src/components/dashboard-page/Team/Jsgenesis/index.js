@@ -12,7 +12,7 @@ const founderPropTypes = {
   avatar: string.isRequired,
   socialMediaUsernames: arrayOf(
     shape({
-      socialMedia: oneOf(['emai', 'twitter', 'telegram', 'discord']).isRequired,
+      socialMedia: oneOf(['email', 'twitter', 'telegram', 'discord']).isRequired,
       username: string.isRequired,
     })
   ).isRequired,
@@ -45,7 +45,7 @@ const Founder = ({ name, avatar, socialMediaUsernames }) => {
 Founder.propTypes = founderPropTypes;
 
 const jsgenesisPropTypes = {
-  founders: arrayOf(founderPropTypes).isRequired,
+  founders: arrayOf(shape(founderPropTypes)).isRequired,
 };
 
 const Jsgenesis = ({ founders }) => {

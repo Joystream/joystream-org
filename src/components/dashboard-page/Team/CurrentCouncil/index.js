@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DashboardWidgetHeading from '../../../DashboardWidgetHeading';
+import WidgetHeading from '../../WidgetHeading';
 import ActionButton from '../ActionButton';
 
 import { getDaysLeftToNextElection } from './utils';
@@ -17,7 +17,7 @@ const CurrentCouncil = () => {
 
   return (
     <div className="dashboard-team-current-council">
-      <DashboardWidgetHeading heading="Current council" />
+      <WidgetHeading heading="Current council" />
       <div className="dashboard-team-current-council__container">
         <div>
           <h4 className="dashboard-team-current-council__info-label">Elected on</h4>

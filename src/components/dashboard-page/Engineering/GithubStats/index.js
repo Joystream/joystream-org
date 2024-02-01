@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 
-import DashboardWidgetHeading from '../../../DashboardWidgetHeading';
+import WidgetHeading from '../../WidgetHeading';
 
 import './style.scss';
 
@@ -13,7 +13,7 @@ const propTypes = {
 export const GithubStats = ({ metrics, value }) => {
   return (
     <div className="dashboard-engineering-github-stats">
-      <DashboardWidgetHeading heading={metrics} isDim />
+      <WidgetHeading heading={metrics} isDim />
       <p className="dashboard-engineering-github-stats__value">{value}</p>
     </div>
   );

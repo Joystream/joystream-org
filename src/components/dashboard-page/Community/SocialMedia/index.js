@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import { func, string, oneOf } from 'prop-types';
 
-import DashboardWidgetHeading from '../../../DashboardWidgetHeading';
+import WidgetHeading from '../../WidgetHeading';
 import ArrowButton from '../../ArrowButton';
 
 import { ReactComponent as TwitterLogo } from '../../../../assets/svg/dashboard/twitter-logo.svg';
@@ -17,7 +17,7 @@ const primaryStatsPropTypes = {
   socialMediaName: string.isRequired,
   mainStats: string.isRequired,
   supplementalStats: string.isRequired,
-  statsBlockBgColor: oneOf(['blue-bg, purple-bg']),
+  statsBlockBgColor: oneOf(['blue-bg', 'purple-bg']),
 };
 
 const PrimaryStats = ({ SocialMediaLogo, socialMediaName, mainStats, supplementalStats, statsBlockBgColor }) => {
@@ -78,7 +78,7 @@ const SocialMedia = () => {
                 alt="tweetscout-logo"
                 className="dashboard-community-social-media__extra-stats-social-media-logo"
               />
-              <DashboardWidgetHeading heading="Tweetscout score" headingWrapperCn="" />
+              <WidgetHeading heading="Tweetscout score" headingWrapperCn="" />
             </div>
             <div className="dashboard-community-social-media__stats">
               <p className="dashboard-community-social-media__main-stats">411</p>

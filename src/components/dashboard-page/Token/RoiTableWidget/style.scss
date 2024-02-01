@@ -1,0 +1,15 @@
+@import '../../../../styles/main';
+
+.dashboard-token-roi-table-widget {
+  @include dashboard-widget;
+  @include reset-dashboard-widget-padding;
+
+  &__heading {
+    @include dashboard-widget-heading-padding;
+    margin-bottom: 16px;
+
+    @media #{$screen-min-dashboard-md} {
+      padding-right: 0;
+    }
+  }
+}

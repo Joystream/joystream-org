@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DashboardSectionHeader from '../../DashboardSectionHeader';
+import SectionHeader from '../SectionHeader';
 import Council from './Council';
 import CurrentCouncil from './CurrentCouncil';
 import PastCouncil from './PastCouncil';
@@ -15,7 +15,7 @@ const Team = () => {
   return (
     <section className="dashboard-team">
       <div className="dashboard-team__container">
-        <DashboardSectionHeader sectionId="team" sectionHeading="Team" />
+        <SectionHeader sectionId="team" sectionHeading="Team" />
         <Council />
         <div className="dashboard-team__councils">
           <CurrentCouncil />

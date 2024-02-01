@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, number, arrayOf, shape } from 'prop-types';
 
-import DashboardWidgetHeading from '../../../DashboardWidgetHeading';
+import WidgetHeading from '../../WidgetHeading';
 
 import Chart from '../Chart';
 
@@ -29,7 +29,7 @@ const ChartWidget = ({ heading, valueOfIndicatorInThousands, growthRate, indicat
 
   return (
     <div className="dashboard-traction-chart-widget">
-      <DashboardWidgetHeading heading={heading} />
+      <WidgetHeading heading={heading} />
       <p className="dashboard-traction-chart-widget__indicator-value">{`${valueOfIndicatorInThousands}K`}</p>
       <p className="dashboard-traction-chart-widget__growth-rate">{`${growthRateWithSign}% Changes`}</p>
       <h4 className="dashboard-traction-chart-widget__indicator">{`${indicator} per week`}</h4>

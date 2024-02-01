@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { string, instanceOf, arrayOf, shape, bool, number } from 'prop-types';
 
-import DashboardWigetHeading from '../../../DashboardWidgetHeading';
-import DashboardCarousel from '../../../DashboardCarousel';
+import WidgetHeading from '../../WidgetHeading';
+import Carousel from '../../Carousel';
 import useDashboardMedia from '../../../../utils/useDashboardMedia';
 
 import { ReactComponent as SoundIcon } from '../../../../assets/svg/dashboard/sound.svg';
@@ -86,8 +86,8 @@ const openEventsPropTypes = {
 const OpenEvents = ({ events }) => {
   return (
     <div className="dashboard-community-open-events">
-      <DashboardWigetHeading heading="Open events" headingWrapperCn="dashboard-community-open-events__heading" />
-      <DashboardCarousel withLgSlides carouselCn="dashboard-community-open-events__carousel">
+      <WidgetHeading heading="Open events" headingWrapperCn="dashboard-community-open-events__heading" />
+      <Carousel withLgSlides carouselCn="dashboard-community-open-events__carousel">
         {events.map((e, index) => {
           const firstEventOnDateIdx = events.findIndex(openEvent => isSameDate(openEvent.date, e.date));
           const eventsOnDateCount = events.filter(openEvent => isSameDate(openEvent.date, e.date)).length;
@@ -101,7 +101,7 @@ const OpenEvents = ({ events }) => {
             />
           );
         })}
-      </DashboardCarousel>
+      </Carousel>
     </div>
   );
 };

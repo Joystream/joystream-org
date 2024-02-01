@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DashboardSectionHeader from '../../DashboardSectionHeader';
+import SectionHeader from '../SectionHeader';
 import SocialMedia from './SocialMedia';
 import Followers from './Followers';
 import OpenEvents from './OpenEvents';
@@ -13,7 +13,7 @@ const Community = () => {
   return (
     <section className="dashboard-community">
       <div className="dashboard-community__container">
-        <DashboardSectionHeader sectionId="community" sectionHeading="Community" />
+        <SectionHeader sectionId="community" sectionHeading="Community" />
         <SocialMedia />
         <Followers followers={followers} />
         <OpenEvents events={openEvents} />
