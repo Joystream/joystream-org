@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { Link } from 'gatsby';
 import { string, arrayOf, shape, number } from 'prop-types';
 
 import SectionHeader from '../SectionHeader';
@@ -25,29 +26,24 @@ const quarterPropTypes = {
 };
 
 const Quarter = ({ year, id, deliveryMilestones, roadmapDataFilename }) => {
-  const onOpenRoadmap = () => {
-    const url = `${window.origin}/roadmap?filename=${roadmapDataFilename}#head`;
-    return window.open(url, '_blank');
-  };
-
   return (
     <div className="dashboard-roadmap__quarter">
       <div className="dashboard-roadmap__quarter-header-wrapper">
         <div className="dashboard-roadmap__quarter-header">
           <h3 className="dashboard-roadmap__quarter-heading">{`${year} ${id}`}</h3>
-          <button className="dashboard-roadmap__button-open-roadmap" onClick={onOpenRoadmap}>
-            <span>Open roadmap</span>
-            <NewTabIcon />
-          </button>
+          <Link to={`/roadmap?filename=${roadmapDataFilename}#head`}>
+            <button className="dashboard-roadmap__button-open-roadmap">
+              <span>Open roadmap</span>
+              <NewTabIcon />
+            </button>
+          </Link>
         </div>
       </div>
       {deliveryMilestones.map((deliveryMilestone, index) => {
         return (
-          <a
+          <Link
             key={deliveryMilestone.generalIndex}
-            href={`${window.origin}/roadmap?filename=${roadmapDataFilename}#panel${deliveryMilestone.generalIndex}`}
-            target="_blank"
-            rel="noreferrer"
+            to={`/roadmap?filename=${roadmapDataFilename}#panel${deliveryMilestone.generalIndex}`}
           >
             <div className="dashboard-roadmap__delivery-milestone">
               <div className="dashboard-roadmap__delivery-milestone-icon-wrapper">
@@ -62,7 +58,7 @@ const Quarter = ({ year, id, deliveryMilestones, roadmapDataFilename }) => {
               }`}</h4>
               <p className="dashboard-roadmap__delivery-milestone-description">{deliveryMilestone.Content}</p>
             </div>
-          </a>
+          </Link>
         );
       })}
     </div>
