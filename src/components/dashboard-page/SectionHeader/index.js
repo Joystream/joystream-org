@@ -13,7 +13,7 @@ const propTypes = {
 
 const timeLinkCopiedTooltipVisibleFor = 3000; // in ms
 
-const DashboardSectionHeader = ({ sectionId, sectionHeading }) => {
+const SectionHeader = ({ sectionId, sectionHeading }) => {
   const [isLinkCopiedTooltipVisible, setIsLinkCopiedTooltipVisible] = useState(false);
 
   const onButtonCopyLinkClick = async () => {
@@ -59,6 +59,6 @@ const DashboardSectionHeader = ({ sectionId, sectionHeading }) => {
   );
 };
 
-DashboardSectionHeader.propTypes = propTypes;
+SectionHeader.propTypes = propTypes;
 
-export default DashboardSectionHeader;
+export default SectionHeader;

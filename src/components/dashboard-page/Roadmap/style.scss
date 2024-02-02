@@ -1,0 +1,144 @@
+@import '../../../styles/main';
+@import '../../index-page/shared-styles';
+
+.dashboard-roadmap {
+  @include dashboard-section;
+
+  &__container {
+    @include dashboard-container;
+  }
+
+  &__quarter {
+    display: grid;
+    gap: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__quarter-header-wrapper {
+    padding: 1px;
+    background: linear-gradient(180deg, #52616b 0%, rgba(82, 97, 107, 0) 100%);
+    border-radius: 8px;
+  }
+
+  &__quarter-header {
+    @include dashboard-widget;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), 0.08, $c_black);
+  }
+
+  &__quarter-heading {
+    @include h500;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__button-open-roadmap {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include t300;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    border-radius: 50%;
+    cursor: pointer;
+    @include dashboard-buttons-states;
+
+    & > span {
+      display: none;
+    }
+  }
+
+  &__delivery-milestone {
+    @include dashboard-widget;
+    height: 184px;
+    background-color: $dashboard-secondary-widget-background-color;
+    border: 1px solid $dashboard-secondary-widget-background-color;
+
+    &:hover {
+      border: 1px solid #dce1e56b;
+    }
+  }
+
+  &__delivery-milestone-icon-wrapper {
+    position: relative;
+    margin-bottom: 12px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #716bff26;
+    border: 1px solid #a3c3f230;
+    border-radius: 50%;
+  }
+
+  &__delivery-milestone-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(32%) sepia(47%) saturate(5519%) hue-rotate(235deg) brightness(99%)
+      contrast(104%);
+  }
+
+  &__delivery-milestone-title {
+    margin-bottom: 8px;
+    @include line-clamp(1);
+    @include h400;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__delivery-milestone-description {
+    @include line-clamp(3);
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: 20px;
+    color: $dashboard-base-gray-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  @media #{$screen-min-dashboard-xs} {
+    &__button-open-roadmap {
+      padding: 12px 20px;
+      border-radius: 2px;
+
+      & > span {
+        display: block;
+      }
+    }
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__quarter {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__quarter-header-wrapper {
+      grid-column: 1 / span 2;
+    }
+
+    &__quarter-heading {
+      @include h600;
+    }
+
+    &__delivery-milestone {
+      height: 216px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__quarter {
+      gap: 24px;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

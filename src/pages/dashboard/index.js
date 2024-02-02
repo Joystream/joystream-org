@@ -16,6 +16,7 @@ import Engineering from '../../components/dashboard-page/Engineering';
 import Community from '../../components/dashboard-page/Community';
 import Team from '../../components/dashboard-page/Team';
 import Comparison from '../../components/dashboard-page/Comparison';
+import Roadmap from '../../components/dashboard-page/Roadmap';
 
 import { anchors } from '../../components/dashboard-page/Header/data';
 
@@ -62,6 +63,8 @@ const Dashboard = pageProps => {
           <Team />
 
           <Comparison />
+
+          <Roadmap />
         </main>
         <footer></footer>
       </ScrollProvider>
