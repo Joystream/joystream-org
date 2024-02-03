@@ -84,9 +84,10 @@ const Graph = ({ data }) => {
 };
 
 const Tokenomics = ({ tokenomicsData, priceData, t }) => {
-  const graphData = tokenomicsData?.tokenPrices
-    ? tokenomicsData.tokenPrices.map((item, index) => ({ x: index + 1, y: Number(item.price) }))
-    : [{ x: 0, y: 0 }];
+  const graphData =
+    tokenomicsData?.tokenPrices?.length > 0
+      ? tokenomicsData.tokenPrices.map((item, index) => ({ x: index + 1, y: Number(item.price) }))
+      : [{ x: 0, y: 0 }];
   const lastWeekChange = tokenomicsData?.lastWeekChange ?? 0;
 
   return (
