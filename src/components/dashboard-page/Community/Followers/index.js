@@ -44,7 +44,7 @@ const followersPropTypes = {
 
 const Followers = ({ followers }) => {
   const shouldRenderAsCarousel = followers.length > 4;
-  const [isCarouselRunning, setIsCarouselRunning] = useState(() => shouldRenderAsCarousel);
+  const [isCarouselRunning, setIsCarouselRunning] = useState(true);
 
   const renderFollowersList = ({ setIsCarouselRunning }) => {
     return (

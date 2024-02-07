@@ -1,12 +1,12 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, object } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 
 import { ReactComponent as WarningIcon } from '../../../../assets/svg/dashboard/warning-icon.svg';
 import { ReactComponent as PlayAltIcon } from '../../../../assets/svg/dashboard/play-alt-icon.svg';
 
-import { tokenSupplyMetrics } from './data';
+import { getTokenSupplyMetrics } from './data';
 
 import './style.scss';
 
@@ -26,7 +26,15 @@ const SupplyStats = ({ figure, tokenRate, rate }) => {
   );
 };
 
-const SupplyWidget = () => {
+SupplyStats.propTypes = dashboardTokenSupplyStatsPropTypes;
+
+const supplyWidgetPropTypes = {
+  data: object,
+};
+
+const SupplyWidget = ({ data }) => {
+  const tokenSupplyMetrics = getTokenSupplyMetrics(data);
+
   return (
     <div className="dashboard-token-supply-widget">
       <WidgetHeading heading="Supply" />
@@ -49,6 +57,6 @@ const SupplyWidget = () => {
   );
 };
 
-SupplyStats.propTypes = dashboardTokenSupplyStatsPropTypes;
+SupplyWidget.propTypes = supplyWidgetPropTypes;
 
 export default SupplyWidget;

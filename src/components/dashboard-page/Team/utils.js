@@ -31,6 +31,8 @@ import { ReactComponent as TwitterLogo } from '../../../assets/svg/dashboard/twi
 import { ReactComponent as TelegramLogo } from '../../../assets/svg/dashboard/telegram-logo.svg';
 import { ReactComponent as DiscordLogo } from '../../../assets/svg/dashboard/discord-logo.svg';
 
+import getRandomInt from '../../../utils/getRandomInt';
+
 export const pastCouncils = [
   {
     linkToPioneerProfile: 'https://#',
@@ -277,4 +279,77 @@ export const renderSocialMediaLogo = socialMedia => {
     default:
       return null;
   }
+};
+
+export const parseCouncilTermLength = (data = {}) => `${data?.termLength} days`;
+
+const desiredSocialMediaOrder = {
+  email: 0,
+  twitter: 1,
+  telegram: 2,
+  discord: 3,
+};
+
+export const parsePastCouncils = (councils = []) =>
+  councils.map(c => ({
+    linkToPioneerProfile: '#',
+    username: c.handle,
+    avatar: c.avatar,
+    socialMediaUsernames: c.socials
+      .map(social => ({
+        socialMedia: social.type.toLowerCase(),
+        username: social.value,
+      }))
+      .sort((a, b) => desiredSocialMediaOrder[a.socialMedia] - desiredSocialMediaOrder[b.socialMedia]),
+    timesServed: c.timesServed,
+  }));
+
+const getWorkingGroupName = key => {
+  const groupName = key.replace(/workingGroup/gi, '');
+  // Assuming there is single uppercase char (e.g. operationsAlpha), so not using g flag
+  const caps = groupName.match(/[A-Z]/);
+  const hasUppercase = !caps;
+
+  if (hasUppercase) {
+    return groupName;
+  }
+
+  const capsPart = groupName.substring(groupName.indexOf(caps[0]));
+  return groupName.replace(capsPart, ` ${capsPart}`);
+};
+
+const workingGroupsLogos = {
+  0: storageWorkingGroupLogo,
+  1: contentWorkingGroupLogo,
+  2: membershipWorkingGroupLogo,
+};
+
+const getWorkingGroupLead = (workers = []) => {
+  const lead = workers.find(w => w.isLead);
+  return {
+    avatar: lead?.avatar,
+    username: lead?.handle,
+  };
+};
+
+export const parseWorkingGroups = (workingGroups = {}) => {
+  const parsed = [];
+  const keys = Object.keys(workingGroups);
+  for (const key of keys) {
+    const group = workingGroups[key];
+    parsed.push({
+      link: '#',
+      name: getWorkingGroupName(key),
+      logo: workingGroupsLogos[getRandomInt(0, 2)],
+      // French locale uses space as a separator
+      currentBudget: `${Math.round(group.budget).toLocaleString('fr-FR')} JOY`,
+      lead: getWorkingGroupLead(group.workers),
+      workers: group.workers.map(w => ({
+        avatar: w.avatar,
+        username: w.handle,
+      })),
+    });
+  }
+
+  return parsed;
 };

@@ -141,3 +141,58 @@ export const contributors = [
     username: 'zeeshanakram3',
   },
 ];
+
+export const parseGithubStats = (data = {}) => [
+  {
+    metrics: 'Stars',
+    value: data.numberOfStars,
+  },
+  {
+    metrics: 'Commits',
+    value: `${Math.round(data.numberOfCommits / 1000)}K`,
+  },
+  {
+    metrics: 'Commits this week',
+    value: data.totalNumberOfCommitsThisWeek,
+  },
+  {
+    metrics: 'Open PRs',
+    value: data.numberOfOpenPRs,
+  },
+  {
+    metrics: 'Open issues',
+    value: data.numberOfOpenIssues,
+  },
+  {
+    metrics: 'Repositories',
+    value: data.numberOfRepositories,
+  },
+];
+
+export const parseFollowersCount = (data = {}) => data.numberOfFollowers || '';
+
+export const parseContributions = (commits = {}) => {
+  const data = [];
+  const months = Object.keys(commits);
+  for (const month of months) {
+    const commitsForMonth = commits[month];
+    const days = Object.keys(commitsForMonth);
+
+    for (const day of days) {
+      const commitsForDay = commitsForMonth[day];
+      data.push({
+        date: new Date(2023, Number(month) - 1, Number(day)),
+        contributions: commitsForDay,
+      });
+    }
+  }
+
+  return data.sort((a, b) => a.date - b.date);
+};
+
+export const parseContributors = (contributors = []) =>
+  contributors.map(c => ({
+    avatar: c.avatar,
+    name: c.name || c.id,
+    username: !!c.name ? c.id : null,
+  }));

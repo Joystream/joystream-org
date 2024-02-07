@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
+import useAxios from '../../utils/useAxios';
 import { ScrollProvider } from '../../components/_enhancers/ScrollContext';
 import SiteMetadata from '../../components/SiteMetadata';
 
@@ -27,6 +28,8 @@ const Dashboard = pageProps => {
   const { language } = useI18next();
   const { t } = useTranslation();
 
+  const [data] = useAxios('https://dao-services.joyutils.org/status/dashboard-data');
+
   const [withScrollInitiallyUp] = useState(() => !pageProps.location.hash);
 
   const [activeAnchor, setActiveAnchor] = useState(() => anchors[0]);
@@ -34,6 +37,8 @@ const Dashboard = pageProps => {
     setActiveAnchor(activeAnchor);
     scrollTo(`#${activeAnchor.toLowerCase()}`);
   };
+
+  console.log(data, 'data');
 
   return (
     <>
@@ -48,19 +53,19 @@ const Dashboard = pageProps => {
         <main>
           <Hero />
 
-          <Token />
+          <Token data={data?.token} />
 
           <Backers t={t} />
 
           <History />
 
-          <Traction />
+          <Traction data={data?.traction} />
 
-          <Engineering />
+          <Engineering data={data?.engineering} />
 
-          <Community />
+          <Community data={data?.community} />
 
-          <Team />
+          <Team data={data?.team} />
 
           <Comparison />
 

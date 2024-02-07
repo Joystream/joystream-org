@@ -105,6 +105,7 @@
     color: $dashboard-base-white-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
     text-align: center;
+    text-transform: capitalize;
   }
 
   &__group-lead-and-budget {

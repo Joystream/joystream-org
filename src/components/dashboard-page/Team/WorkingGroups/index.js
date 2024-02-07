@@ -12,9 +12,9 @@ const workingGroupPropTypes = {
   logo: string.isRequired,
   link: string.isRequired,
   lead: shape({
-    avatar: string.isRequired,
-    username: string.isRequired,
-  }).isRequired,
+    avatar: string,
+    username: string,
+  }),
   currentBudget: string.isRequired,
   workers: arrayOf(
     shape({
@@ -48,9 +48,9 @@ const WorkingGroup = ({ name, logo, link, lead, currentBudget, workers }) => {
               <div className="dashboard-team-working-groups__group-lead-avatar-name-wrapper">
                 <div
                   className="dashboard-team-working-groups__group-lead-avatar"
-                  style={{ backgroundImage: `url(${lead.avatar})` }}
+                  style={{ backgroundImage: `url(${lead?.avatar})` }}
                 ></div>
-                <p className="dashboard-team-working-groups__group-lead-username">{lead.username}</p>
+                <p className="dashboard-team-working-groups__group-lead-username">{lead?.username}</p>
               </div>
             </div>
 
@@ -64,9 +64,12 @@ const WorkingGroup = ({ name, logo, link, lead, currentBudget, workers }) => {
             {/* eslint-disable-next-line max-len */}
             <h4 className="dashboard-team-working-groups__group-labels with-margin-bottom-increased">{`Workers (${workers.length})`}</h4>
             <ul className="dashboard-team-working-groups__group-workers-list">
-              {workers.map(worker => {
+              {workers.map((worker, index) => {
                 return (
-                  <li key={worker.username} className="dashboard-team-working-groups__group-workers-list-item">
+                  <li
+                    key={`${worker.username}-${index}`}
+                    className="dashboard-team-working-groups__group-workers-list-item"
+                  >
                     <div className="dashboard-team-working-groups__group-worker-tag">
                       {!!worker.avatar ? (
                         <div

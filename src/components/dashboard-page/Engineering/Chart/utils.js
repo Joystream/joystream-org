@@ -1,13 +1,9 @@
 import React from 'react';
 
-export const formatXAxisTick = (datestr, isLastTick, locale = 'en-US') => {
+export const formatXAxisTick = (datestr, locale = 'en-US') => {
   const date = new Date(datestr);
   const day = date.getDate().toString();
   const daysToShow = ['3', '5', '8', '12', '15', '19', '22', '25', '27'];
-
-  if (isLastTick) {
-    return 'Today';
-  }
 
   if (day === '1') {
     return date.toLocaleString(locale, { month: 'short' });

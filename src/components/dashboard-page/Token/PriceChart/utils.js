@@ -1,9 +1,9 @@
 import React from 'react';
 
-import prices from './prices.json';
-import volume from './volume.json';
+import fallbackPrices from './prices.json';
+import fallbackVolume from './volume.json';
 
-export const generateCoinMarketCapStats = () => {
+export const generateCoinMarketCapStats = (prices = fallbackPrices, volume = fallbackVolume) => {
   const data = [];
 
   // num of price points is equal to num of volume points (equal timeframes)
@@ -127,4 +127,12 @@ export const renderCustomActiveDot = (areaChartActiveDotProps, chartWidth) => {
       </text>
     </g>
   );
+};
+
+export const parsePriceWeeklyChange = price => {
+  const roundedPiceWeeklyChange = Math.round(price);
+  const roundedPiceWeeklyChangeWithSign =
+    roundedPiceWeeklyChange > 0 ? `+${roundedPiceWeeklyChange}%` : `${roundedPiceWeeklyChange}%`;
+
+  return `${roundedPiceWeeklyChangeWithSign} Last week`;
 };

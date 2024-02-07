@@ -28,7 +28,7 @@ const PastCouncil = ({ linkToPioneerProfile, username, avatar, socialMediaUserna
         <div className="dashboard-team-past-council__inner-bg-overlay"></div>
 
         <div className="dashboard-team-past-council__container">
-          <img className="dashboard-team-past-council__avatar" src={avatar} alt="past-council-avatar" />
+          <div className="dashboard-team-past-council__avatar" style={{ backgroundImage: `url(${avatar})` }}></div>
           <h4 className="dashboard-team-past-council__username">{username}</h4>
           <div className="dashboard-team-past-council__social-media-usernames">
             {socialMediaUsernames.map((sm, idx) => {

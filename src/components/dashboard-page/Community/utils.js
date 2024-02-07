@@ -103,3 +103,53 @@ export const openEvents = [
     discordVoice: 'Discord - voice_2',
   },
 ];
+
+export const parseSocialMediaMemberCount = (data, key) => {
+  const socialMediaMemberCount = data[key];
+  if (!socialMediaMemberCount) {
+    return '';
+  }
+
+  const socialMediaMemberCountInThousands = socialMediaMemberCount / 1000;
+
+  return `${socialMediaMemberCountInThousands.toFixed(1)}K`;
+};
+
+export const parseSocialMediaMemberCountMonthlyChange = (data, key) => {
+  const socialMediaMemberCountMonthlyChange = data[key];
+  if (!socialMediaMemberCountMonthlyChange) {
+    return '';
+  }
+
+  const roundedSocialMediaMemberCountMonthlyChange = Math.round(socialMediaMemberCountMonthlyChange);
+  const socialMediaMemberCountMonthlyChangeWithSign =
+    roundedSocialMediaMemberCountMonthlyChange > 0
+      ? `+${roundedSocialMediaMemberCountMonthlyChange}%`
+      : `${roundedSocialMediaMemberCountMonthlyChange}%`;
+
+  return `${socialMediaMemberCountMonthlyChangeWithSign} Last month`;
+};
+
+export const parseTweetscoutScore = data => Math.round(data.tweetscoutScore) || '';
+
+export const parseTweetscoutLevel = data => `Level ${data.tweetscoutLevel}` ?? '';
+
+export const parseFollowers = (followers = []) =>
+  followers.map(follower => ({
+    avatar: follower.avatar,
+    name: follower.name,
+    username: follower.screenName,
+    followersQuantity: `${Math.round(follower.followersCount / 1000)} K`,
+  }));
+
+export const parseDiscrordEvents = (events = []) =>
+  events
+    .map(e => ({
+      link: '#',
+      date: new Date(e.scheduledStartTime),
+      name: e.name,
+      description: e.description,
+      picture: e.image || genericEventPicture,
+      discordVoice: `Discord - ${e.location}`,
+    }))
+    .sort((eventA, eventB) => eventA.date - eventB.date);

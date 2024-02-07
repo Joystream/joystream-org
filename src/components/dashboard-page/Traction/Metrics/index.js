@@ -16,7 +16,7 @@ const Metrics = ({ indicator, value, growthRate }) => {
     <div className="dashboard-traction-metrics">
       <WidgetHeading heading={indicator} isDim />
       <p className="dashboard-traction-metrics__value">{value}</p>
-      {!!growthRate && <p className="dashboard-traction-metrics__growth-rate">{`+${growthRate}% Last week`}</p>}
+      {!!growthRate && <p className="dashboard-traction-metrics__growth-rate">{growthRate}</p>}
     </div>
   );
 };

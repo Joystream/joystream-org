@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { object } from 'prop-types';
 
 import SectionHeader from '../SectionHeader';
 import GithubStats from './GithubStats';
@@ -7,12 +8,20 @@ import ChartWidget from './ChartWidget';
 import WidgetHeading from '../WidgetHeading';
 import Contributors from './Contributors';
 
-import { generateChartMockData, githubStats, contributors } from './data';
+import { parseGithubStats, parseFollowersCount, parseContributions, parseContributors } from './data';
 
 import './style.scss';
 
-const Engineering = () => {
-  const [chartData] = useState(() => generateChartMockData());
+const propTypes = {
+  data: object,
+};
+
+const Engineering = ({ data }) => {
+  const parsedGithubStats = parseGithubStats(data);
+
+  const parsedContributions = parseContributions(data?.commits);
+
+  const parsedContributors = parseContributors(data?.contributors);
 
   return (
     <section className="dashboard-engineering">
@@ -22,25 +31,27 @@ const Engineering = () => {
           <div className="dashboard-engineering__github-stats-widget">
             <WidgetHeading heading="Github stats" />
             <div className="dashboard-engineering__github-stats">
-              {githubStats.map((stats, index) => (
+              {parsedGithubStats.map((stats, index) => (
                 <GithubStats key={index} {...stats} />
               ))}
             </div>
           </div>
-          <StatsWidget heading="Followers" text="590" helperText="+2% Last month" />
+          <StatsWidget heading="Followers" text={parseFollowersCount(data)} helperText="+2% Last month" />
         </div>
-        <ChartWidget chartData={chartData} />
+        <ChartWidget chartData={parsedContributions} />
         <div className="dashboard-engineering__contributors">
           <WidgetHeading
             heading="Contributors"
-            helperText={`(${contributors.length})`}
+            helperText={`(${parsedContributors.length})`}
             headingWrapperCn="dashboard-engineering__contributors-heading"
           />
-          <Contributors contributors={contributors} />
+          <Contributors contributors={parsedContributors} />
         </div>
       </div>
     </section>
   );
 };
+
+Engineering.propTypes = propTypes;
 
 export default Engineering;

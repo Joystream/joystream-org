@@ -19,3 +19,17 @@ export const data = [
   { time: '3 years', return: '+25.2%' },
   { time: '10 years', return: '+50.5%' },
 ];
+
+export const parseData = (data = {}) => {
+  const result = [];
+  const keys = Object.keys(data);
+  for (const key of keys) {
+    const numericPart = key.match(/\d/g)?.join('');
+    result.push({
+      time: key.replace(numericPart, `${numericPart} `),
+      return: `${data[key] > 0 ? '+' : ''}${data[key]?.toFixed(2)}%`,
+    });
+  }
+
+  return result;
+};

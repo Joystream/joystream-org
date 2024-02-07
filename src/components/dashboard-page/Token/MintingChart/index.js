@@ -3,12 +3,20 @@ import cn from 'classnames';
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { arrayOf, shape, string, number, func } from 'prop-types';
 
-import { generateChartMockData } from './utils';
-
 import './style.scss';
 
-const DashboardTokenMintingChart = () => {
-  const [data] = useState(() => generateChartMockData());
+const dashboardTokenMintingChartPropTypes = {
+  data: arrayOf(
+    shape({
+      pie: string,
+      value: number,
+      label: string,
+      fill: string,
+    })
+  ),
+};
+
+const DashboardTokenMintingChart = ({ data }) => {
   const [activeCellName, setActiveCellName] = useState('');
 
   const onCellMouseEnter = event => {
@@ -59,12 +67,34 @@ const DashboardTokenMintingChart = () => {
   );
 };
 
+DashboardTokenMintingChart.propTypes = dashboardTokenMintingChartPropTypes;
+
 function renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim) {
+  const getX = pieLabelProps => {
+    switch (pieLabelProps.name) {
+      case 'workersRewards':
+        return pieLabelProps.x - 40;
+      default:
+        return pieLabelProps.x;
+    }
+  };
+
+  const getY = pieLabelProps => {
+    switch (pieLabelProps.name) {
+      case 'validatorRewards':
+        return pieLabelProps.y - 10;
+      case 'spendingProposals':
+        return pieLabelProps.y + 12;
+      default:
+        return pieLabelProps.y;
+    }
+  };
+
   return (
     <g onMouseOver={() => setActiveCellName(pieLabelProps.name)} onMouseLeave={() => setActiveCellName('')}>
       <text
-        x={pieLabelProps.x - 10}
-        y={pieLabelProps.y}
+        x={getX(pieLabelProps)}
+        y={getY(pieLabelProps)}
         className={cn('dashboard-token-mintning-chart-custom-label', {
           dim: shouldBeDim(pieLabelProps),
         })}

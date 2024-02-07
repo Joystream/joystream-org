@@ -1,4 +1,5 @@
 import React from 'react';
+import { object } from 'prop-types';
 
 import SectionHeader from '../SectionHeader';
 import Council from './Council';
@@ -7,27 +8,37 @@ import PastCouncil from './PastCouncil';
 import WorkingGroups from './WorkingGroups';
 import Jsgenesis from './Jsgenesis';
 
-import { pastCouncils, workingGroups, founders } from './utils';
+import { parsePastCouncils, parseWorkingGroups, founders } from './utils';
 
 import './style.scss';
 
-const Team = () => {
+const propTypes = {
+  data: object,
+};
+
+const Team = ({ data }) => {
+  const parsedPastCouncils = parsePastCouncils(data?.council?.currentCouncil);
+
+  const parsedWorkingGroups = parseWorkingGroups(data?.workingGroups);
+
   return (
     <section className="dashboard-team">
       <div className="dashboard-team__container">
         <SectionHeader sectionId="team" sectionHeading="Team" />
-        <Council />
+        <Council data={data?.council} />
         <div className="dashboard-team__councils">
-          <CurrentCouncil />
-          {pastCouncils.map((pastCouncil, idx) => {
+          <CurrentCouncil data={data?.council} />
+          {parsedPastCouncils.map((pastCouncil, idx) => {
             return <PastCouncil key={idx} {...pastCouncil} />;
           })}
         </div>
-        <WorkingGroups groups={workingGroups} />
+        <WorkingGroups groups={parsedWorkingGroups} />
         <Jsgenesis founders={founders} />
       </div>
     </section>
   );
 };
+
+Team.propTypes = propTypes;
 
 export default Team;

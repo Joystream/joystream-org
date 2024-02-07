@@ -1,5 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, oneOfType, number } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 
@@ -7,7 +7,7 @@ import './style.scss';
 
 const propTypes = {
   metrics: string.isRequired,
-  value: string.isRequired,
+  value: oneOfType([string, number]),
 };
 
 export const GithubStats = ({ metrics, value }) => {

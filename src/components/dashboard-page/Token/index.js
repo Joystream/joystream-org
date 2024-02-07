@@ -1,4 +1,5 @@
 import React from 'react';
+import { object } from 'prop-types';
 
 import SectionHeader from '../SectionHeader';
 import PriceChartWidget from './PriceChartWidget';
@@ -12,17 +13,26 @@ import MintingChartWidget from './MintingChartWidget';
 import RoiTableWidget from './RoiTableWidget';
 import SupplyDistributionTableWidget from './SupplyDistributionTableWidget';
 
-import { tokenPriceMetrics } from './data';
+import { getTokenPriceMetrics, parsePercentage } from './utils';
 
 import './style.scss';
 
-const Token = () => {
+const propTypes = {
+  data: object,
+};
+
+const Token = ({ data }) => {
+  const tokenPriceMetrics = getTokenPriceMetrics(data);
+
+  const supplyStakedForValidation = parsePercentage(data?.percentSupplyStakedForValidation);
+  const aprOnStaking = parsePercentage(data?.apr);
+
   return (
     <section className="dashboard-token">
       <div className="dashboard-token__container">
         <SectionHeader sectionId="token" sectionHeading="Token" />
         <div className="dashboard-token__price-metrics-grid grid-indents">
-          <PriceChartWidget widgetCn="dashboard-token__price-chart-widget" />
+          <PriceChartWidget widgetCn="dashboard-token__price-chart-widget" data={data} />
           {tokenPriceMetrics.map((tokenPriceStats, index) => {
             return (
               <StatsWidget
@@ -35,7 +45,7 @@ const Token = () => {
           })}
         </div>
 
-        <SupplyWidget />
+        <SupplyWidget data={data} />
 
         {/* <DashboardJoyCarousel /> */}
 
@@ -45,21 +55,27 @@ const Token = () => {
 
         <div className="dashboard-token__allocation-minting-grid grid-indents">
           <AllocationTableWidget />
-          <MintingChartWidget />
+          <MintingChartWidget data={data} />
         </div>
 
         <div className="dashboard-token__percentage-widgets-grid grid-indents">
-          <StatsWidget heading="Supply staked for validation" text="25%" withTextSizeIncreasedFromMd />
-          <StatsWidget heading="APR on staking" text="2.5%" withTextSizeIncreasedFromMd />
+          <StatsWidget
+            heading="Supply staked for validation"
+            text={supplyStakedForValidation}
+            withTextSizeIncreasedFromMd
+          />
+          <StatsWidget heading="APR on staking" text={aprOnStaking} withTextSizeIncreasedFromMd />
         </div>
 
         <div className="dashboard-token__stats-tables-grid grid-indents">
-          <RoiTableWidget />
-          <SupplyDistributionTableWidget />
+          <RoiTableWidget data={data?.roi} />
+          <SupplyDistributionTableWidget data={data?.supplyDistribution} />
         </div>
       </div>
     </section>
   );
 };
+
+Token.propTypes = propTypes;
 
 export default Token;

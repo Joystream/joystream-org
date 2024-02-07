@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import cn from 'classnames';
-import { string } from 'prop-types';
+import { string, object } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 import PriceChart from '../PriceChart';
 
-import { generateCoinMarketCapStats } from '../PriceChart/utils';
+import { generateCoinMarketCapStats, parsePriceWeeklyChange } from '../PriceChart/utils';
 
 import './style.scss';
 
 const propTypes = {
   widgetCn: string,
+  data: object,
 };
 
-const PriceChartWidget = ({ widgetCn }) => {
-  const [data] = useState(() => generateCoinMarketCapStats());
-
-  const currentPrice = Number(data.at(-1).price).toFixed(6);
+const PriceChartWidget = ({ widgetCn, data }) => {
+  const chartData = generateCoinMarketCapStats(data?.longTermPriceData, data?.longTermVolumeData);
+  const currentPrice = Number(chartData.at(-1)?.price)?.toFixed(6);
   const currentPriceWithCurrency = `$${currentPrice}`;
-  const growthRate = '+2% Last week';
+  const growthRate = parsePriceWeeklyChange(data?.priceWeeklyChange);
 
   return (
     <div
@@ -29,7 +29,7 @@ const PriceChartWidget = ({ widgetCn }) => {
       <WidgetHeading heading="Price" />
       <p className="dashboard-token-price-chart-widget__current-price">{currentPriceWithCurrency}</p>
       <p className="dashboard-token-price-chart-widget__growth-rate">{growthRate}</p>
-      <PriceChart data={data} />
+      <PriceChart data={chartData} />
     </div>
   );
 };

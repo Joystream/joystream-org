@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { func, string, oneOf } from 'prop-types';
+import { func, string, oneOf, object } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 import ArrowButton from '../../ArrowButton';
@@ -9,6 +9,13 @@ import { ReactComponent as TwitterLogo } from '../../../../assets/svg/dashboard/
 import { ReactComponent as DiscordLogo } from '../../../../assets/svg/dashboard/discord-logo.svg';
 import { ReactComponent as TelegramLogo } from '../../../../assets/svg/dashboard/telegram-logo.svg';
 import tweetScoutLogo from '../../../../assets/images/dashboard/tweetscout-logo.png';
+
+import {
+  parseSocialMediaMemberCount,
+  parseSocialMediaMemberCountMonthlyChange,
+  parseTweetscoutScore,
+  parseTweetscoutLevel,
+} from '../utils';
 
 import './style.scss';
 
@@ -41,13 +48,17 @@ PrimaryStats.propTypes = primaryStatsPropTypes;
 
 const tweetScoutLink = 'https://tweetscout.io/';
 
-const SocialMedia = () => {
+const socialMediaPropTypes = {
+  data: object,
+};
+
+const SocialMedia = ({ data }) => {
   return (
     <div className="dashboard-community-social-media">
       <PrimaryStats
         SocialMediaLogo={TwitterLogo}
         socialMediaName="Twitter / X"
-        mainStats="57.2K"
+        mainStats={parseSocialMediaMemberCount(data, 'twitterFollowerCount')}
         supplementalStats="+2% Last month"
         statsBlockBgColor="blue-bg"
       />
@@ -55,8 +66,8 @@ const SocialMedia = () => {
       <PrimaryStats
         SocialMediaLogo={DiscordLogo}
         socialMediaName="Discord"
-        mainStats="57.2K"
-        supplementalStats="+2% Last month"
+        mainStats={parseSocialMediaMemberCount(data, 'discordMemberCount')}
+        supplementalStats={parseSocialMediaMemberCountMonthlyChange(data, 'discordMemberCountMonthlyChange')}
         statsBlockBgColor="purple-bg"
       />
 
@@ -64,7 +75,9 @@ const SocialMedia = () => {
         <div className="dashboard-community-social-media__secondary-stats-container">
           <TelegramLogo />
           <h4 className="dashboard-community-social-media__name">Telegram</h4>
-          <p className="dashboard-community-social-media__main-stats">26.2K</p>
+          <p className="dashboard-community-social-media__main-stats">
+            {parseSocialMediaMemberCount(data, 'telegramMemberCount')}
+          </p>
           <p className="dashboard-community-social-media__supplemental-stats">+2% Last month</p>
         </div>
       </div>
@@ -81,8 +94,8 @@ const SocialMedia = () => {
               <WidgetHeading heading="Tweetscout score" headingWrapperCn="" />
             </div>
             <div className="dashboard-community-social-media__stats">
-              <p className="dashboard-community-social-media__main-stats">411</p>
-              <p className="dashboard-community-social-media__supplemental-stats">Level 2</p>
+              <p className="dashboard-community-social-media__main-stats">{parseTweetscoutScore(data)}</p>
+              <p className="dashboard-community-social-media__supplemental-stats">{parseTweetscoutLevel(data)}</p>
             </div>
             <ArrowButton text="Open tweetscout" />
           </div>
@@ -91,5 +104,7 @@ const SocialMedia = () => {
     </div>
   );
 };
+
+SocialMedia.propTypes = socialMediaPropTypes;
 
 export default SocialMedia;

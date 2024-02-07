@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { string, bool } from 'prop-types';
+import { string, bool, oneOfType, number } from 'prop-types';
 
 import WidgetHeading from '../WidgetHeading';
 
@@ -8,7 +8,7 @@ import './style.scss';
 
 const propTypes = {
   heading: string.isRequired,
-  text: string.isRequired,
+  text: oneOfType([string, number]).isRequired,
   helperText: string,
   withTextSizeIncreasedFromMd: bool,
 };

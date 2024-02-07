@@ -15,12 +15,11 @@ const propTypes = {
 };
 
 const Chart = ({ chartData }) => {
-  const dates = chartData.map(data => data.date);
-  const isLastEntryDate = datestr => datestr === dates.at(-1);
-
   const cartesianGridRef = useRef(null);
   const chartWidth = cartesianGridRef.current?.props.offset.width || 0;
   const chartOffsetLeft = cartesianGridRef.current?.props.offset.left || 0;
+
+  const maxCommitsCount = Math.max(...chartData.map(val => val.contributions));
 
   return (
     <ResponsiveContainer width="99%" height={208}>
@@ -30,10 +29,9 @@ const Chart = ({ chartData }) => {
           dataKey="date"
           interval={0}
           tick={tickProps => {
-            const isLastTick = isLastEntryDate(tickProps.payload.value);
             return (
               <Text {...tickProps} className="custom-axis-tick">
-                {formatXAxisTick(tickProps.payload.value, isLastTick)}
+                {formatXAxisTick(tickProps.payload.value)}
               </Text>
             );
           }}
@@ -43,8 +41,9 @@ const Chart = ({ chartData }) => {
         />
         <YAxis
           dataKey="contributions"
-          domain={[0, 10]}
-          ticks={[0, 2, 4, 6, 8, 10]}
+          domain={[0, maxCommitsCount]}
+          // Given that maxCommitsCount >= 20
+          ticks={[0, 6, 12, 18, maxCommitsCount]}
           tick={tickProps => (
             <Text {...tickProps} className="custom-axis-tick">
               {tickProps.payload.value}

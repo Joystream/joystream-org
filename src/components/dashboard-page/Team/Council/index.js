@@ -1,11 +1,18 @@
 import React from 'react';
+import { object } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 import ActionButton from '../ActionButton';
 
+import { parseCouncilTermLength } from '../utils';
+
 import './style.scss';
 
-const Council = () => {
+const propTypes = {
+  data: object,
+};
+
+const Council = ({ data }) => {
   return (
     <div className="dashboard-team-council-wrapper">
       <div className="dashboard-team-council">
@@ -22,11 +29,11 @@ const Council = () => {
             <ul className="dashboard-team-council__terms-list">
               <li className="dashboard-team-council__terms-list-item">
                 <WidgetHeading heading="Current term" isDim />
-                <p className="dashboard-team-council__term">10</p>
+                <p className="dashboard-team-council__term">{data?.currentTerm}</p>
               </li>
               <li className="dashboard-team-council__terms-list-item">
                 <WidgetHeading heading="Term length" isDim />
-                <p className="dashboard-team-council__term">30 days</p>
+                <p className="dashboard-team-council__term">{parseCouncilTermLength(data)}</p>
               </li>
             </ul>
             <ActionButton text="View past councils" buttonCn="dashboard-team-council__action-button" />
@@ -36,5 +43,7 @@ const Council = () => {
     </div>
   );
 };
+
+Council.propTypes = propTypes;
 
 export default Council;
