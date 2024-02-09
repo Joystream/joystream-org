@@ -22,3 +22,8 @@ export const getTokenSupplyMetrics = (data = {}) => [
     rate: convertJoyValToUsDollarsMils(data, 'totalSupply'),
   },
 ];
+
+export const learWhyVideo = {
+  source: 'https://gleev.xyz/video/329910',
+  duration: '9:12min',
+};

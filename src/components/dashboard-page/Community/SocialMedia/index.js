@@ -46,7 +46,7 @@ const PrimaryStats = ({ SocialMediaLogo, socialMediaName, mainStats, supplementa
 
 PrimaryStats.propTypes = primaryStatsPropTypes;
 
-const tweetScoutLink = 'https://tweetscout.io/';
+const tweetScoutLink = 'https://tweetscout.io/search?q=joystreamdao';
 
 const socialMediaPropTypes = {
   data: object,

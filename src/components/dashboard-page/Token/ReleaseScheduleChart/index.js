@@ -15,19 +15,23 @@ import { useMediaQuery } from 'react-responsive';
 import { arrayOf, objectOf, string } from 'prop-types';
 
 import {
-  generateChartMockData,
+  // _generateChartData,
+  generateChartData,
   formatXAxisTick,
   formatYAxisTick,
   renderCustomLabel,
   areasLabels,
   areasPalette,
+  getMonthsSinceLaunch,
+  getHighlightedDate,
 } from './utils';
 
 import './style.scss';
 
 const ReleaseScheduleChart = () => {
-  const [mockData] = useState(() => generateChartMockData());
-  const areas = Object.keys(mockData[0]).filter(key => key !== 'month');
+  // const [chartData] = useState(() => _generateChartData());
+  const [chartData] = useState(() => generateChartData());
+  const areas = Object.keys(chartData[0]).filter(key => key !== 'month');
 
   const [activeAreaName, setActiveAreaName] = useState('');
 
@@ -38,12 +42,15 @@ const ReleaseScheduleChart = () => {
   }, [isXxs]);
 
   const xAxisDataKey = 'month';
-  const xAxisValues = mockData.map(val => val.month);
+  const xAxisValues = chartData.map(val => val.month);
+
+  const monthsSinceLaunch = getMonthsSinceLaunch();
+  const maxXAxisVal = 24;
 
   return (
     <div style={{ marginTop: '24px' }}>
       <ResponsiveContainer minHeight={180}>
-        <AreaChart data={mockData} onMouseLeave={() => setActiveAreaName('')}>
+        <AreaChart data={chartData} onMouseLeave={() => setActiveAreaName('')}>
           <CartesianGrid vertical={false} stroke="#BBD9F621" />
           <XAxis
             dataKey={xAxisDataKey}
@@ -69,6 +76,8 @@ const ReleaseScheduleChart = () => {
                 </Text>
               );
             }}
+            ticks={[0, 25, 50, 75, 100]}
+            domain={[0, 100]}
             tickLine={false}
             tickMargin={28}
             axisLine={{ stroke: '#BBD9F621' }}
@@ -94,7 +103,9 @@ const ReleaseScheduleChart = () => {
               />
             );
           })}
-          <ReferenceLine x={12} stroke="#f4f6f8" strokeDasharray="4px 4px" label={renderCustomLabel} />
+          {monthsSinceLaunch <= maxXAxisVal && (
+            <ReferenceLine x={monthsSinceLaunch} stroke="#f4f6f8" strokeDasharray="4px 4px" label={renderCustomLabel} />
+          )}
           <Tooltip
             offset={20}
             content={tooltipContentProps => <CustomTooltip {...tooltipContentProps} activeAreaName={activeAreaName} />}
@@ -127,7 +138,7 @@ function CustomTooltip(tooltipContentProps) {
     return (
       <div className="token-release-schedule-chart-tooltip">
         <div className="token-release-schedule-chart-tooltip__header">
-          <p className="token-release-schedule-chart-tooltip__text accent">Sep 2023</p>
+          <p className="token-release-schedule-chart-tooltip__text accent">{getHighlightedDate(innerPayload.month)}</p>
           <p className="token-release-schedule-chart-tooltip__text accent">{`${innerPayload.month}th month`}</p>
         </div>
         <ul className="token-release-schedule-chart__areas-list">
@@ -197,7 +208,7 @@ function CustomCursor(tooltipCursorProps) {
         textAnchor="center"
         className="custom-cursor-text"
       >
-        Sep 2023
+        {getHighlightedDate(innerPayload.month)}
       </text>
       <text
         x={points1.x + 75 - 75}

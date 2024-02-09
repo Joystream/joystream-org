@@ -13,6 +13,8 @@ const propTypes = {
   data: object,
 };
 
+const readCouncilPlanLink = 'https://pioneerapp.xyz/#/forum/category/7';
+
 const CurrentCouncil = ({ data }) => {
   const parsedElectionDate = parseElectedOnDate(data?.electedOnDate);
 
@@ -47,7 +49,9 @@ const CurrentCouncil = ({ data }) => {
           <h4 className="dashboard-team-current-council__info-label">Weekly councilor salary</h4>
           <p className="dashboard-team-current-council__info">{parsedWeeklySalaryInJoy}</p>
         </div>
-        <ActionButton text="Read council plan" />
+        <a href={readCouncilPlanLink} target="_blank" rel="noreferrer">
+          <ActionButton text="Read council plan" />
+        </a>
       </div>
     </div>
   );

@@ -1,13 +1,13 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import cn from 'classnames';
-import { string, number } from 'prop-types';
+import { string, number, object } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 import useDashboardMedia from '../../../../utils/useDashboardMedia';
 
 import { ReactComponent as ToggleButtonChevron } from '../../../../assets/svg/dashboard/toggle-button-chevron.svg';
 
-import { exchangeOptions, formatNumberWithCommas } from './utils';
+import { parseExchangeOptions, formatNumberWithCommas } from './utils';
 
 import './style.scss';
 
@@ -51,7 +51,13 @@ export const ExchangeOption = ({ logo, name, volume, depthUp2, depthDown2 }) => 
 
 ExchangeOption.propTypes = exchangeOptionPropTypes;
 
-const Exchange = () => {
+const exchangePropTypes = {
+  data: object,
+};
+
+const Exchange = ({ data }) => {
+  const parsedExchangeOptions = parseExchangeOptions(data);
+
   const { currentBreakpoints } = useDashboardMedia();
   const columnsCount = useMemo(() => {
     switch (currentBreakpoints) {
@@ -69,10 +75,12 @@ const Exchange = () => {
     if (columnsCount === 1) {
       return 0;
     }
-    return exchangeOptions.length % columnsCount === 0 ? 0 : columnsCount - (exchangeOptions.length % columnsCount);
-  }, [columnsCount]);
+    return parsedExchangeOptions.length % columnsCount === 0
+      ? 0
+      : columnsCount - (parsedExchangeOptions.length % columnsCount);
+  }, [parsedExchangeOptions, columnsCount]);
 
-  const totalCount = exchangeOptions.length;
+  const totalCount = parsedExchangeOptions.length;
   const initShownCount = useMemo(() => {
     switch (currentBreakpoints) {
       case 'xxs':
@@ -90,7 +98,10 @@ const Exchange = () => {
   const [shownCount, setShownCount] = useState(initShownCount);
   const toggleShownCount = () =>
     setShownCount(prevShownCount => (prevShownCount === initShownCount ? totalCount : initShownCount));
-  const shownExchangeOptions = useMemo(() => exchangeOptions.slice(0, shownCount), [shownCount]);
+  const shownExchangeOptions = useMemo(() => parsedExchangeOptions.slice(0, shownCount), [
+    shownCount,
+    parsedExchangeOptions,
+  ]);
   const exchangeOptionsExpanded = useMemo(() => shownCount === totalCount, [shownCount, totalCount]);
 
   return (
@@ -105,17 +116,21 @@ const Exchange = () => {
             return <div className="dashboard-token-exchange__option-placeholder"></div>;
           })}
       </div>
-      <button
-        className={cn('dashboard-token-exchange__button-toggle-shown-options', {
-          'options-expanded': exchangeOptionsExpanded,
-        })}
-        onClick={toggleShownCount}
-      >
-        {`${exchangeOptionsExpanded ? 'Hide' : 'Show'} more exchanges`}
-        <ToggleButtonChevron />
-      </button>
+      {totalCount > initShownCount && (
+        <button
+          className={cn('dashboard-token-exchange__button-toggle-shown-options', {
+            'options-expanded': exchangeOptionsExpanded,
+          })}
+          onClick={toggleShownCount}
+        >
+          {`${exchangeOptionsExpanded ? 'Hide' : 'Show'} more exchanges`}
+          <ToggleButtonChevron />
+        </button>
+      )}
     </div>
   );
 };
+
+Exchange.propTypes = exchangePropTypes;
 
 export default Exchange;

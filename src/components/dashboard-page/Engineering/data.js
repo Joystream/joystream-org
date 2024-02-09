@@ -171,9 +171,18 @@ export const parseGithubStats = (data = {}) => [
 
 export const parseFollowersCount = (data = {}) => data.numberOfFollowers || '';
 
+export const desiredContributionsMonthsOrder = {
+  '12': 0,
+  '01': 1,
+  '02': 2,
+};
+
 export const parseContributions = (commits = {}) => {
   const data = [];
-  const months = Object.keys(commits);
+  const months = Object.keys(commits).sort(
+    (a, b) => desiredContributionsMonthsOrder[a] - desiredContributionsMonthsOrder[b]
+  );
+
   for (const month of months) {
     const commitsForMonth = commits[month];
     const days = Object.keys(commitsForMonth);
@@ -187,7 +196,7 @@ export const parseContributions = (commits = {}) => {
     }
   }
 
-  return data.sort((a, b) => a.date - b.date);
+  return data;
 };
 
 export const parseContributors = (contributors = []) =>

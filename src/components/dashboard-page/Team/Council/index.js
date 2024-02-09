@@ -12,6 +12,8 @@ const propTypes = {
   data: object,
 };
 
+const viewPastCouncilsLink = 'https://pioneerapp.xyz/#/council/past-councils';
+
 const Council = ({ data }) => {
   return (
     <div className="dashboard-team-council-wrapper">
@@ -36,7 +38,9 @@ const Council = ({ data }) => {
                 <p className="dashboard-team-council__term">{parseCouncilTermLength(data)}</p>
               </li>
             </ul>
-            <ActionButton text="View past councils" buttonCn="dashboard-team-council__action-button" />
+            <a href={viewPastCouncilsLink} target="_blank" rel="noreferrer">
+              <ActionButton text="View past councils" buttonCn="dashboard-team-council__action-button" />
+            </a>
           </div>
         </div>
       </div>

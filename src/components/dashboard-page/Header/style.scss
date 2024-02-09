@@ -5,10 +5,9 @@
   top: 0;
   z-index: $dashboard-header-z-index;
 
-  background-color: $dashboard-header-background-color;
-
   &__wrapper {
     height: $dashboard-header-height;
+    background-color: $dashboard-header-background-color;
     border-bottom: 1px solid $dashboard-header-border-bottom-color;
   }
 
@@ -63,6 +62,10 @@
     }
   }
 
+  &__nav-wrapper {
+    background-color: $dashboard-header-background-color;
+  }
+
   &__nav {
     height: $dashboard-header-nav-height;
     padding: 8px 16px;
@@ -73,10 +76,6 @@
 
     scrollbar-width: none;
     &::-webkit-scrollbar {
-      display: none;
-    }
-
-    &.nav-hidden {
       display: none;
     }
   }

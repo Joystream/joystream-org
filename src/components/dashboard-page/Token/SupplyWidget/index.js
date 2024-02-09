@@ -6,7 +6,7 @@ import WidgetHeading from '../../WidgetHeading';
 import { ReactComponent as WarningIcon } from '../../../../assets/svg/dashboard/warning-icon.svg';
 import { ReactComponent as PlayAltIcon } from '../../../../assets/svg/dashboard/play-alt-icon.svg';
 
-import { getTokenSupplyMetrics } from './data';
+import { getTokenSupplyMetrics, learWhyVideo } from './data';
 
 import './style.scss';
 
@@ -47,10 +47,12 @@ const SupplyWidget = ({ data }) => {
             <WarningIcon />
             <p className="dashboard-token-supply-widget__notice-text">Joy tokens does not have max supply</p>
           </div>
-          <button className="dashboard-token-supply-widget__notice-button">
-            <PlayAltIcon />
-            Learn why&nbsp;<span>(2:30min)</span>
-          </button>
+          <a href={learWhyVideo.source} target="_blank" rel="noreferrer">
+            <button className="dashboard-token-supply-widget__notice-button">
+              <PlayAltIcon />
+              Learn why&nbsp;<span>{`(${learWhyVideo.duration})`}</span>
+            </button>
+          </a>
         </div>
       </div>
     </div>

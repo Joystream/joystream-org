@@ -3,6 +3,8 @@ import cn from 'classnames';
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { arrayOf, shape, string, number, func } from 'prop-types';
 
+import ChartWrapper from '../../ChartWrapper';
+
 import './style.scss';
 
 const dashboardTokenMintingChartPropTypes = {
@@ -31,8 +33,8 @@ const DashboardTokenMintingChart = ({ data }) => {
   const shouldBeDim = entry => !!activeCellName && entry.pie !== activeCellName;
 
   return (
-    <div>
-      <ResponsiveContainer minHeight={280}>
+    <ChartWrapper chartHeight={280}>
+      <ResponsiveContainer width="99%" height={280}>
         <PieChart>
           <Pie
             data={data}
@@ -63,7 +65,7 @@ const DashboardTokenMintingChart = ({ data }) => {
         </PieChart>
       </ResponsiveContainer>
       <CustomLegend data={data} setActiveCellName={setActiveCellName} shouldBeDim={shouldBeDim} />
-    </div>
+    </ChartWrapper>
   );
 };
 

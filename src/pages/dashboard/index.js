@@ -38,8 +38,6 @@ const Dashboard = pageProps => {
     scrollTo(`#${activeAnchor.toLowerCase()}`);
   };
 
-  console.log(data, 'data');
-
   return (
     <>
       {/* TODO: Remove later (for demonstration purposes) */}
@@ -47,7 +45,7 @@ const Dashboard = pageProps => {
 
       <SiteMetadata lang={language} title={'Dashboard'} />
 
-      <ScrollProvider minScrollDeltaThreshold={150} withScrollInitiallyUp={withScrollInitiallyUp}>
+      <ScrollProvider minScrollDeltaThreshold={130} withScrollInitiallyUp={withScrollInitiallyUp}>
         <Header activeAnchor={activeAnchor} onAnchorClick={onAnchorClick} />
 
         <main>

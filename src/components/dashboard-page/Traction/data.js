@@ -106,7 +106,7 @@ export const parseChartData = (data = []) => {
 
     for (let j = 0; j < monthData.length; j += 1) {
       const amount = monthData[j].amount;
-      parsedMonthData[j] = !!amount ? monthData[j].numberOfItems * amount : monthData[j].numberOfItems;
+      parsedMonthData[j] = !!amount ? amount : monthData[j].numberOfItems;
     }
 
     result.push(parsedMonthData);

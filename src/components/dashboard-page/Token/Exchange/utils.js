@@ -41,3 +41,35 @@ export const exchangeOptions = [
 ];
 
 export const formatNumberWithCommas = num => num.toLocaleString('en-US');
+
+const exchangeOptionsLogos = {
+  bitget: bitgetLogo,
+  gate: gateIoLogo,
+  // FIXME: Replace bitgetLogo with BitMart's one
+  bitmart: bitgetLogo,
+  mxc: mexcLogo,
+};
+
+const exchangeOptionsLabels = {
+  bitget: 'Bitget',
+  gate: 'GateIO',
+  bitmart: 'BitMart',
+  mxc: 'MEXC',
+};
+
+export const parseExchangeOptions = (data = {}) => {
+  const exchangeOptions = [];
+
+  const keys = Object.keys(data);
+  for (const key of keys) {
+    exchangeOptions.push({
+      logo: exchangeOptionsLogos[key],
+      name: exchangeOptionsLabels[key],
+      volume: data[key].volume,
+      depthUp2: Math.round(data[key].plus2PercentDepth),
+      depthDown2: Math.round(data[key].minus2PercentDepth),
+    });
+  }
+
+  return exchangeOptions;
+};

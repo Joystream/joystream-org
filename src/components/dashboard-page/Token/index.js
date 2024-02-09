@@ -49,7 +49,7 @@ const Token = ({ data }) => {
 
         {/* <DashboardJoyCarousel /> */}
 
-        <Exchange />
+        <Exchange data={data?.exchanges} />
 
         <ReleaseScheduleChartWidget />
 
