@@ -6,6 +6,8 @@ import MEXC from '../../../assets/images/token/mexc-logo.webp';
 import Bitget from '../../../assets/images/token/bitget-logo.webp';
 import Bitmart from '../../../assets/images/token/bitmart-logo.webp';
 import GateIO from '../../../assets/images/token/gateio.webp';
+import XT from '../../../assets/images/token/xt-logo.webp';
+import Biconomy from '../../../assets/images/token/biconomy-logo.webp';
 
 import './style.scss';
 
@@ -64,6 +66,21 @@ const Exchanges = ({ t }) => {
             exchangeName={t('token.exchanges.bitmart.name')}
             exchangeDescription={t('token.exchanges.bitmart.description')}
             exchangeLink="https://www.bitmart.com/trade/en-US?symbol=JOY_USDT&layout=pro"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={XT}
+            exchangeName={t('token.exchanges.xt.name')}
+            exchangeDescription={t('token.exchanges.xt.description')}
+            exchangeLink="https://www.xt.com/en/trade/joy_usdt"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={Biconomy}
+            exchangeName={t('token.exchanges.biconomy.name')}
+            exchangeDescription={t('token.exchanges.biconomy.description')}
+            // exchangeLink="https://www.biconomy.com/exchange/JOY_USDT"
+            exchangeLink=""
             t={t}
           />
         </div>
