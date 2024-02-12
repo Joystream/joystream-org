@@ -62,6 +62,7 @@ const Supply = ({ t }) => {
             <ChangeEvent isEventMint={false} title={t("token.supply.burned.nftSold.title")} subtitle={t("token.supply.burned.nftSold.subtitle")} />
             <ChangeEvent isEventMint={false} title={t("token.supply.burned.appFee.title")} subtitle={t("token.supply.burned.appFee.subtitle")} />
             <ChangeEvent isEventMint={false} title={t("token.supply.burned.contentPublished.title")} subtitle={t("token.supply.burned.contentPublished.subtitle")} />
+            <ChangeEvent isEventMint={false} title={t("token.supply.burned.transactionFeeBurning.title")} subtitle={t("token.supply.burned.transactionFeeBurning.subtitle")} />
           </div>
         </div>
       </div>
