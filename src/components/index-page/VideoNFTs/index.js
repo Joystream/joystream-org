@@ -3,7 +3,7 @@ import Plx from 'react-plx';
 import cn from 'classnames';
 import { Trans, useI18next, Link } from 'gatsby-plugin-react-i18next';
 
-import { parseDateToRelativeTime, getDateHoursAgo } from '../../../utils/pages/landing/parseDateToRelativeTime';
+import { parseDateToRelativeTime } from '../../../utils/pages/landing/parseDateToRelativeTime';
 import useRemoveElementFocusOnKeydown from '../../../utils/useRemoveElementFocusOnKeydown';
 import useImageFallback from '../../../utils/useImageFallback';
 
@@ -226,7 +226,10 @@ const VideoNFTs = ({ t, nftData, priceData }) => {
               id="IndexPage__video-nfts__carousel-title-and-info__info__modal"
               className="IndexPage__video-nfts__carousel-title-and-info__info__modal"
             >
-              <Trans i18nKey={'landing.videoNFTs.carousel.info.text'} components={{ exchanges: <Link to="/token#exchanges" /> } } />
+              <Trans
+                i18nKey={'landing.videoNFTs.carousel.info.text'}
+                components={{ exchanges: <Link to="/token#exchanges" /> }}
+              />
             </div>
           </div>
         </div>

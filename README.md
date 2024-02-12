@@ -99,3 +99,42 @@ When updating the glossary or adding new terms to it, this structure should be f
 ```
 
 Important note: The glossary is automatically populated into the roadmap at runtime. The way this is done is that the term title is checked for in the content of a roadmap item and replaced with an underlined item with a tooltip. It is therefore important to make sure that the spelling of each title term is correct.
+
+## Verification data
+
+Verification data can be found in the following file: `src/data/pages/verification.js`.
+
+Within this file is an array with the name of `verifiedMembers`. To add new members one needs to expand the array with an object of the following structure:
+
+```js
+{
+  memberHandle: 'vikan#4315',
+  substituteUserRoute: 'vikan',
+  avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/90.png',
+  title: 'verification.title.outreachSpecialist',
+  socials: {
+    telegram: '@vikan393',
+    twitter: '@jvikan1',
+    email: 'vikan4joystream@gmail.com',
+    discord: '@v.i.k.a.n',
+  },
+  safety: {
+    notAllowed: [
+      { text: 'verification.safety.willNever.items.askForMoney' },
+      { text: 'verification.safety.willNever.items.askForPasswordsOrSensitiveInformation' },
+      { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
+      {
+        text: 'verification.safety.willNever.items.askToVisitLinks',
+        components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
+      },
+    ],
+    allowed: [{ text: 'verification.safety.can.items.inviteToYpp' }],
+  },
+},
+```
+
+To edit members, one just needs to update the objects that are already there to the new desired values.
+
+Things to keep note of:
+- The verification page will use the `memberHandle` object property value as the route on the website for this specific profile. If that value is not a valid path value then the `substituteUserRoute` value is used instead. This should be removed when not in use.
+- The safety list items and title have special strings as text (e.g., `verification.title.outreachSpecialist`). These strings are used to allow for internationalization and are replaced based off of the language set by the user with correct translations. To reference those that are already pre-written/available, you can find the translations for this page on here: `src/locales/en/verification.json` under `safety.can...` and `safety.willNever...`. If there isn't a translation that matches one that you want to add, you are free to create one with regular english language sentences and these translations will be created by the dev during the PR process.

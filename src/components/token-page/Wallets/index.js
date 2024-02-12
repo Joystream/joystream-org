@@ -1,7 +1,8 @@
 import React from 'react';
 
-import ArrowLink from '../../ArrowLink';
+import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 
+import OneKeyIcon from '../../../assets/images/token/onekey.png';
 import NovaIcon from '../../../assets/images/token/nova-wallet.webp';
 import SubWalletIcon from '../../../assets/images/token/sub-wallet.webp';
 import TalismanIcon from '../../../assets/images/token/talisman.webp';
@@ -11,15 +12,20 @@ import './style.scss';
 
 const WalletSection = ({ walletIcon, walletName, walletLink, platforms, t }) => {
   return (
-    <div className="TokenPage__wallets__item">
-      <div className="TokenPage__wallets__item__image-wrapper">
-        <img src={walletIcon} className="TokenPage__wallets__item__image" alt="" />
+    <a href={walletLink} target="_blank" rel="noopener noreferrer">
+      <div className="TokenPage__wallets__item">
+        <div className="TokenPage__wallets__item__image-wrapper">
+          <img src={walletIcon} className="TokenPage__wallets__item__image" alt="" />
+        </div>
+        <p className="TokenPage__wallets__item__name">{walletName}</p>
+        <p className="TokenPage__wallets__item__platforms-title">{t('token.wallets.platforms')}</p>
+        <p className="TokenPage__wallets__item__platforms">{platforms}</p>
+        <div className="ArrowLink TokenPage__wallets__item__link">
+          {t('token.wallets.learnMore')}
+          <Arrow className="ArrowLink__arrow" />
+        </div>
       </div>
-      <p className="TokenPage__wallets__item__name">{walletName}</p>
-      <p className="TokenPage__wallets__item__platforms-title">{t('token.wallets.platforms')}</p>
-      <p className="TokenPage__wallets__item__platforms">{platforms}</p>
-      <ArrowLink href={walletLink} className="TokenPage__wallets__item__link" text={t('token.wallets.learnMore')} />
-    </div>
+    </a>
   );
 };
 
@@ -34,6 +40,13 @@ const Wallets = ({ t }) => {
         </header>
 
         <div className="TokenPage__wallets__items">
+          <WalletSection
+            walletIcon={OneKeyIcon}
+            walletName={t('token.wallets.onekey')}
+            walletLink="https://onekey.so/"
+            platforms={t('token.wallets.onekeyPlatforms')}
+            t={t}
+          />
           <WalletSection
             walletIcon={NovaIcon}
             walletName={t('token.wallets.nova')}

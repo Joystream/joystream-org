@@ -37,8 +37,8 @@
       gap: 24px;
       grid-column: 2 / 12;
       grid-template-areas:
-        'price market-cap          total-supply'
-        'price circulating-supply  fdv         ';
+        'price market-cap circulating-supply'
+        'price fdv        total-supply';
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 152px);
 

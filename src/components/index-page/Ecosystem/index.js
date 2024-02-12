@@ -8,7 +8,6 @@ import Browser1 from '../../../assets/images/landing/hero/browser-1.webp';
 import Browser2 from '../../../assets/images/landing/hero/browser-2.webp';
 import Browser3 from '../../../assets/images/landing/hero/browser-3.webp';
 import VideoPlayer from '../../../assets/images/landing/hero/illustration-ecosystem-l1.webp';
-import L1MediaLogo from '../../../assets/images/landing/ecosystem-app-icons/l1-media.webp';
 import PioneerLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon-3.webp';
 import JoyStatsLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon.webp';
 import JScanLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon-1.webp';
@@ -17,7 +16,6 @@ import JoyUtilsLogo from '../../../assets/images/landing/ecosystem-app-icons/app
 import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 import { ReactComponent as CodeWindowControls } from '../../../assets/svg/landing/code-window-controls.svg';
-import { ReactComponent as CarouselItemPlaceholder } from '../../../assets/svg/landing/carousel-item-placeholder.svg';
 
 import './styles.scss';
 
@@ -50,12 +48,6 @@ const CarouselItem = ({ logo, name, description, platforms, link, t }) => (
       <p className="IndexPage__ecosystem__apps__carousel__item__platforms">{platforms}</p>
     </div>
   </a>
-);
-
-const CarouselPlaceholder = () => (
-  <div className="IndexPage__ecosystem__apps__carousel__item IndexPage__ecosystem__apps__carousel__item--placeholder">
-    <CarouselItemPlaceholder />
-  </div>
 );
 
 const CarouselControl = ({ scroll, isActive }) => {
@@ -150,14 +142,6 @@ const Carousel = ({ t }) => {
         ref={carouselRef}
         className="IndexPage__ecosystem__apps__carousel"
       >
-        {/* <CarouselItem
-          logo={L1MediaLogo}
-          name={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
-          description={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.description')}
-          platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
-          link="https://l1.media/"
-          t={t}
-        /> */}
         <CarouselItem
           logo={PioneerLogo}
           name={t('landing.ecosystem.appsBuiltOnJoystream.pioneer.name')}

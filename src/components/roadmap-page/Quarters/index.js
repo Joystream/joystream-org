@@ -189,6 +189,7 @@ const Quarters = ({ roadmapData, currentFilename, data, updateFileName, selectGl
         data={parseQuarters(data)}
         selectGlossary={selectGlossary}
         scrollPosition={scrollPosition}
+        isSelect={isSelect}
         t={t}
       />
       <div className="Quarters__form-wrapper">
