@@ -32,6 +32,7 @@ const Positioning = () => {
               ...(cellData < 100
                 ? {
                     paddingBlock: 0,
+                    alignItems: 'center',
                   }
                 : {}),
             }}

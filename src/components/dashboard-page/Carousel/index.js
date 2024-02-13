@@ -28,7 +28,9 @@ const DashboardCarousel = ({ children, withLgSlides, carouselCn }) => {
   const visibleSlides = useMemo(
     () =>
       currentBreakpoints === 'xxs'
-        ? 1.05
+        ? withLgSlides
+          ? 1
+          : 1.05
         : currentBreakpoints === 'xs'
         ? 1.45
         : currentBreakpoints === 'sm'
@@ -58,6 +60,8 @@ const DashboardCarousel = ({ children, withLgSlides, carouselCn }) => {
   const isButtonPrevSlideVisible = currentSlide > 0 && largeScreens;
   const isButtonNextSlideVisible =
     visibleSlides < totalSlides && totalSlides - visibleSlides > currentSlide && largeScreens;
+
+  console.log(currentBreakpoints);
 
   return (
     <CarouselProvider

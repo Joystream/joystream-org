@@ -13,9 +13,7 @@
 
   &__alt-heading {
     & .dashboard-widget-heading__info-wrapper {
-      @media #{$screen-min-dashboard-xs} {
-        right: 0;
-      }
+      right: 0;
 
       @media #{$screen-min-dashboard-md} {
         right: -53px;

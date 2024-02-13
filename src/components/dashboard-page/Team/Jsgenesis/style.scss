@@ -120,6 +120,10 @@
   }
 
   @media #{$screen-min-dashboard-md} {
+    & {
+      gap: 24px;
+    }
+
     &__description-widget-heading {
       @include h800;
     }
