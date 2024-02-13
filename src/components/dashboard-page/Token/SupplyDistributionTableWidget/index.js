@@ -20,6 +20,7 @@ const SupplyDistributionTableWidget = ({ data }) => {
       <WidgetHeading
         heading="Supply distribution"
         headingWrapperCn="dashboard-token-supply-distribution-table-widget__heading"
+        termDefinitionKey="supplyDistribution"
       />
       <Table columns={columns} data={parsedData} tableCn="dashboard-token-supply-distribution-table-widget__table" />
     </div>

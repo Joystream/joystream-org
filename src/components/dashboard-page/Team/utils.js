@@ -4,9 +4,15 @@ import chaos77Avatar from '../../../assets/images/dashboard/past-councils/chaos7
 import jen4phAvatar from '../../../assets/images/dashboard/past-councils/jen4ph.png';
 import tomatoAvatar from '../../../assets/images/dashboard/past-councils/tomato.png';
 
-import storageWorkingGroupLogo from '../../../assets/images/dashboard/storage-working-group.png';
-import contentWorkingGroupLogo from '../../../assets/images/dashboard/content-working-group.png';
-import membershipWorkingGroupLogo from '../../../assets/images/dashboard/membership-working-group.png';
+import storageWorkingGroupLogo from '../../../assets/images/dashboard/working-groups/storage.png';
+import contentWorkingGroupLogo from '../../../assets/images/dashboard/working-groups/content.png';
+import membershipWorkingGroupLogo from '../../../assets/images/dashboard/working-groups/membership.png';
+import appsWorkingGroupLogo from '../../../assets/images/dashboard/working-groups/apps.png';
+import buildersWorkingGroupLogo from '../../../assets/images/dashboard/working-groups/builders.png';
+import distributionWorkingGroupLogo from '../../../assets/images/dashboard/working-groups/distribution.png';
+import forumWorkingGroupLogo from '../../../assets/images/dashboard/working-groups/forum.png';
+import hrWorkingGroupLogo from '../../../assets/images/dashboard/working-groups/hr.png';
+import marketingWorkingGroupLogo from '../../../assets/images/dashboard/working-groups/marketing.png';
 
 import yyagiAvatar from '../../../assets/images/dashboard/workers/yyagi.png';
 import adovrnAvatar from '../../../assets/images/dashboard/workers/adovrn.png';
@@ -30,8 +36,6 @@ import { ReactComponent as MailIcon } from '../../../assets/svg/dashboard/mail.s
 import { ReactComponent as TwitterLogo } from '../../../assets/svg/dashboard/twitter-logo.svg';
 import { ReactComponent as TelegramLogo } from '../../../assets/svg/dashboard/telegram-logo.svg';
 import { ReactComponent as DiscordLogo } from '../../../assets/svg/dashboard/discord-logo.svg';
-
-import getRandomInt from '../../../utils/getRandomInt';
 
 export const pastCouncils = [
   {
@@ -292,7 +296,7 @@ const desiredSocialMediaOrder = {
 
 export const parsePastCouncils = (councils = []) =>
   councils.map(c => ({
-    linkToPioneerProfile: '#',
+    linkToPioneerProfile: c.link,
     username: c.handle,
     avatar: c.avatar,
     socialMediaUsernames: c.socials
@@ -304,7 +308,7 @@ export const parsePastCouncils = (councils = []) =>
     timesServed: c.timesServed,
   }));
 
-const getWorkingGroupName = key => {
+export const getWorkingGroupName = key => {
   const groupName = key.replace(/workingGroup/gi, '');
   // Assuming there is single uppercase char (e.g. operationsAlpha), so not using g flag
   const caps = groupName.match(/[A-Z]/);
@@ -319,9 +323,15 @@ const getWorkingGroupName = key => {
 };
 
 const workingGroupsLogos = {
-  0: storageWorkingGroupLogo,
-  1: contentWorkingGroupLogo,
-  2: membershipWorkingGroupLogo,
+  appWorkingGroup: appsWorkingGroupLogo,
+  contentWorkingGroup: contentWorkingGroupLogo,
+  distributionWorkingGroup: distributionWorkingGroupLogo,
+  forumWorkingGroup: forumWorkingGroupLogo,
+  membershipWorkingGroup: membershipWorkingGroupLogo,
+  operationsWorkingGroupAlpha: buildersWorkingGroupLogo,
+  operationsWorkingGroupBeta: hrWorkingGroupLogo,
+  operationsWorkingGroupGamma: marketingWorkingGroupLogo,
+  storageWorkingGroup: storageWorkingGroupLogo,
 };
 
 const getWorkingGroupLead = (workers = []) => {
@@ -338,9 +348,11 @@ export const parseWorkingGroups = (workingGroups = {}) => {
   for (const key of keys) {
     const group = workingGroups[key];
     parsed.push({
-      link: '#',
-      name: getWorkingGroupName(key),
-      logo: workingGroupsLogos[getRandomInt(0, 2)],
+      link: `https://pioneerapp.xyz/#/working-groups/${
+        group.name === 'Human Resources' ? 'hr' : group.name.toLowerCase()
+      }`,
+      name: group.name,
+      logo: workingGroupsLogos[key],
       // French locale uses space as a separator
       currentBudget: `${Math.round(group.budget).toLocaleString('fr-FR')} JOY`,
       lead: getWorkingGroupLead(group.workers),

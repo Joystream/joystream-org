@@ -26,7 +26,7 @@ const PriceChartWidget = ({ widgetCn, data }) => {
         [widgetCn]: widgetCn,
       })}
     >
-      <WidgetHeading heading="Price" />
+      <WidgetHeading heading="Price" termDefinitionKey="price" />
       <p className="dashboard-token-price-chart-widget__current-price">{currentPriceWithCurrency}</p>
       <p className="dashboard-token-price-chart-widget__growth-rate">{growthRate}</p>
       <PriceChart data={chartData} />

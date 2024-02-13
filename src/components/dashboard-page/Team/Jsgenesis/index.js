@@ -4,6 +4,7 @@ import { string, arrayOf, shape, oneOf } from 'prop-types';
 import ArrowButton from '../../ArrowButton';
 
 import { renderSocialMediaLogo } from '../utils';
+import { termDefinitions } from '../../../../data/pages/dashboard/termDefinitions';
 
 import './style.scss';
 
@@ -55,11 +56,7 @@ const Jsgenesis = ({ founders }) => {
         <div className="dashboard-team-jsgenesis__description-widget">
           <h3 className="dashboard-team-jsgenesis__description-widget-heading">Jsgenesis</h3>
           <div className="dashboard-team-jsgenesis__description-button-wrapper">
-            <p className="dashboard-team-jsgenesis__description">
-              Lorem ipsum dolor sit amet consectetur. Parturient urna massa arcu mi. Habitant sagittis adipiscing tempus
-              integer risus vel gravida adipiscing. Nec ipsum diam varius augue odio magna pharetra orci. Malesuada
-              luctus sit volutpat faucibus.
-            </p>
+            <p className="dashboard-team-jsgenesis__description">{termDefinitions.jsgenesis}</p>
             <ArrowButton text="Read more" buttonCn="dashboard-team-jsgenesis__button-read-more" />
           </div>
         </div>

@@ -50,7 +50,7 @@
       & .dashboard-traction-chart-widget {
         grid-column: span 2;
 
-        &:nth-last-child(-n + 2) {
+        &.with-feature-enabled:nth-last-child(-n + 2) {
           grid-column: span 3;
         }
       }

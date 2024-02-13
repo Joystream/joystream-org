@@ -19,7 +19,11 @@ const DashboardBackers = ({ t }) => {
     <section className="dashboard-backers">
       <div className="dashboard-backers__container">
         <SectionHeader sectionId="backers" sectionHeading="Backers" />
-        <WidgetHeading heading="Including" headingWrapperCn="dashboard-backers__heading" />
+        <WidgetHeading
+          heading="Including"
+          headingWrapperCn="dashboard-backers__heading"
+          termDefinitionKey="including"
+        />
         <ul className="dashboard-backers__backers-list">
           {backers.map(({ key, Icon }) => {
             return (
@@ -32,7 +36,12 @@ const DashboardBackers = ({ t }) => {
           })}
         </ul>
         <div className="dashboard-backers__coindesk-widgets-wrapper">
-          <StatsWidget heading="Final venture round" text="$60M" helperText="FDV Valuation | Q1 2021" />
+          <StatsWidget
+            heading="Final venture round"
+            text="$60M"
+            helperText="FDV Valuation | Q1 2021"
+            termDefinitionKey="finalVentureRound"
+          />
           <PressStory t={t} pressStoryLinkCn="dashboard-backers__coindesk-story-link" withAltArticleScreenshot />
         </div>
       </div>

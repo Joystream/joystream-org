@@ -19,8 +19,13 @@ const MintingChartWidget = ({ data }) => {
   return (
     <div className="dashboard-token-minting-chart-widget">
       <div className="dashboard-token-minting-chart-widget__heading">
-        <WidgetHeading heading="Minting" headingWrapperCn="" />
-        <DashboardWidgetAltHeading headingLabel="Annual inflation" headingValue={parsedJoyAnnualInflation} />
+        <WidgetHeading heading="Minting" headingWrapperCn="" termDefinitionKey="minting" />
+        <DashboardWidgetAltHeading
+          headingLabel="Annual inflation"
+          headingValue={parsedJoyAnnualInflation}
+          termDefinitionKey="annualInflation"
+          headingWrapperCn="dashboard-token-minting-chart-widget__alt-heading"
+        />
       </div>
       <MintingChart data={chartData} />
     </div>

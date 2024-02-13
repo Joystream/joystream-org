@@ -7,6 +7,16 @@
     @include dashboard-container;
   }
 
+  &__widget-tooltip-alt-placement {
+    & .dashboard-widget-heading__info-wrapper {
+      right: 0;
+
+      @media #{$screen-min-dashboard-xs} {
+        right: -53px;
+      }
+    }
+  }
+
   @media #{$screen-min-dashboard-sm} {
     &__price-metrics-grid {
       grid-template-columns: repeat(3, 1fr);

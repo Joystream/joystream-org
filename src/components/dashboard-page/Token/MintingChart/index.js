@@ -33,39 +33,41 @@ const DashboardTokenMintingChart = ({ data }) => {
   const shouldBeDim = entry => !!activeCellName && entry.pie !== activeCellName;
 
   return (
-    <ChartWrapper chartHeight={280}>
-      <ResponsiveContainer width="99%" height={280}>
-        <PieChart>
-          <Pie
-            data={data}
-            cx="50%"
-            cy="50%"
-            outerRadius={80}
-            dataKey="value"
-            label={pieLabelProps => renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim)}
-            labelLine={false}
-            isAnimationActive={false}
-            animationDuration={0}
-          >
-            {data.map((entry, index) => {
-              return (
-                <Cell
-                  key={index}
-                  className={cn({ dim: shouldBeDim(entry) })}
-                  name={entry.pie}
-                  fill={entry.fill}
-                  stroke={entry.fill}
-                  strokeOpacity={shouldBeDim(entry) ? 0.4 : 1}
-                  onMouseEnter={onCellMouseEnter}
-                  onMouseLeave={onCellMouseLeave}
-                />
-              );
-            })}
-          </Pie>
-        </PieChart>
-      </ResponsiveContainer>
+    <>
+      <ChartWrapper chartHeight={280}>
+        <ResponsiveContainer width="99%" height={280}>
+          <PieChart>
+            <Pie
+              data={data}
+              cx="50%"
+              cy="50%"
+              outerRadius={80}
+              dataKey="value"
+              label={pieLabelProps => renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim)}
+              labelLine={false}
+              isAnimationActive={false}
+              animationDuration={0}
+            >
+              {data.map((entry, index) => {
+                return (
+                  <Cell
+                    key={index}
+                    className={cn({ dim: shouldBeDim(entry) })}
+                    name={entry.pie}
+                    fill={entry.fill}
+                    stroke={entry.fill}
+                    strokeOpacity={shouldBeDim(entry) ? 0.4 : 1}
+                    onMouseEnter={onCellMouseEnter}
+                    onMouseLeave={onCellMouseLeave}
+                  />
+                );
+              })}
+            </Pie>
+          </PieChart>
+        </ResponsiveContainer>
+      </ChartWrapper>
       <CustomLegend data={data} setActiveCellName={setActiveCellName} shouldBeDim={shouldBeDim} />
-    </ChartWrapper>
+    </>
   );
 };
 
@@ -101,7 +103,7 @@ function renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim) {
           dim: shouldBeDim(pieLabelProps),
         })}
       >
-        {`${pieLabelProps.percent * 100}%`}
+        {`${(pieLabelProps.percent * 100)?.toFixed(2)}%`}
       </text>
     </g>
   );

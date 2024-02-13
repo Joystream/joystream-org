@@ -73,27 +73,31 @@ export const parseStats = (data = {}) => [
   {
     indicator: 'Average block time',
     value: `${data.averageBlockTime} sec`,
+    termDefinitionKey: 'averageBlockTime',
   },
   {
     indicator: 'Transactions',
     value: numAddSeparators(data.totalNumberOfTransactions),
     growthRate: roundWeeklyRateWithSign(data.totalNumberOfTransactionsWeeklyChange),
+    termDefinitionKey: 'transactions',
   },
   {
     indicator: 'Holders',
     value: numAddSeparators(data.totalNumberOfAccountHolders),
     growthRate: roundWeeklyRateWithSign(data.totalNumberOfAccountHoldersWeeklyChange),
+    termDefinitionKey: 'holders',
   },
   {
     indicator: 'Daily active accounts',
     value: numAddSeparators(data.numberOfDailyActiveAccounts),
     growthRate: roundWeeklyRateWithSign(data.numberOfDailyActiveAccountsWeeklyChange),
+    termDefinitionKey: 'dailyActiveAccounts',
   },
 ];
 
 export const parseNumToThsdWith1Dec = num => (num / 1000)?.toFixed(1);
 
-export const parseChartData = (data = []) => {
+export const parseChartData = (data = [], tokenPriceInUsd = 1) => {
   const monthSpan = 4;
   const result = [];
 
@@ -106,7 +110,7 @@ export const parseChartData = (data = []) => {
 
     for (let j = 0; j < monthData.length; j += 1) {
       const amount = monthData[j].amount;
-      parsedMonthData[j] = !!amount ? amount : monthData[j].numberOfItems;
+      parsedMonthData[j] = !!amount ? amount * tokenPriceInUsd : monthData[j].numberOfItems;
     }
 
     result.push(parsedMonthData);

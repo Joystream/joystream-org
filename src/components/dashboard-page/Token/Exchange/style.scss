@@ -5,6 +5,14 @@
 
   &__heading {
     margin-bottom: 8px;
+
+    & .dashboard-widget-heading__info-wrapper {
+      right: 0;
+
+      @media #{$screen-min-dashboard-xs} {
+        right: -53px;
+      }
+    }
   }
 
   &__options {

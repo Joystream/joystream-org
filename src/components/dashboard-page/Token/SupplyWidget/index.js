@@ -37,7 +37,7 @@ const SupplyWidget = ({ data }) => {
 
   return (
     <div className="dashboard-token-supply-widget">
-      <WidgetHeading heading="Supply" />
+      <WidgetHeading heading="Supply" termDefinitionKey="supply" />
       <div className="dashboard-token-supply-widget__content">
         {tokenSupplyMetrics.map((tokenSupplyStats, index) => {
           return <SupplyStats key={index} {...tokenSupplyStats} />;

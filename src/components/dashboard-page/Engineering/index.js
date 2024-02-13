@@ -29,14 +29,14 @@ const Engineering = ({ data }) => {
         <SectionHeader sectionId="engineering" sectionHeading="Engineering" />
         <div className="dashboard-engineering__stats-wrapper">
           <div className="dashboard-engineering__github-stats-widget">
-            <WidgetHeading heading="Github stats" />
+            <WidgetHeading heading="Github stats" termDefinitionKey="githubStats" />
             <div className="dashboard-engineering__github-stats">
               {parsedGithubStats.map((stats, index) => (
                 <GithubStats key={index} {...stats} />
               ))}
             </div>
           </div>
-          <StatsWidget heading="Followers" text={parseFollowersCount(data)} helperText="+2% Last month" />
+          <StatsWidget heading="Followers" text={parseFollowersCount(data)} termDefinitionKey="followers" />
         </div>
         <ChartWidget chartData={parsedContributions} />
         <div className="dashboard-engineering__contributors">
@@ -44,6 +44,7 @@ const Engineering = ({ data }) => {
             heading="Contributors"
             helperText={`(${parsedContributors.length})`}
             headingWrapperCn="dashboard-engineering__contributors-heading"
+            termDefinitionKey="contributors"
           />
           <Contributors contributors={parsedContributors} />
         </div>

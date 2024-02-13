@@ -40,6 +40,7 @@ const Token = ({ data }) => {
                 heading={tokenPriceStats.figure}
                 text={tokenPriceStats.rate}
                 helperText={tokenPriceStats.growthRate}
+                termDefinitionKey={tokenPriceStats.termDefinitionKey}
               />
             );
           })}
@@ -63,8 +64,15 @@ const Token = ({ data }) => {
             heading="Supply staked for validation"
             text={supplyStakedForValidation}
             withTextSizeIncreasedFromMd
+            termDefinitionKey="supplyStakedForValidation"
+            headingWrapperCn="dashboard-token__widget-tooltip-alt-placement"
           />
-          <StatsWidget heading="APR on staking" text={aprOnStaking} withTextSizeIncreasedFromMd />
+          <StatsWidget
+            heading="APR on staking"
+            text={aprOnStaking}
+            withTextSizeIncreasedFromMd
+            termDefinitionKey="apr"
+          />
         </div>
 
         <div className="dashboard-token__stats-tables-grid grid-indents">

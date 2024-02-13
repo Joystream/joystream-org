@@ -11,12 +11,25 @@ const propTypes = {
   text: oneOfType([string, number]).isRequired,
   helperText: string,
   withTextSizeIncreasedFromMd: bool,
+  termDefinitionKey: string,
+  headingWrapperCn: string,
 };
 
-const DashboardStatsWidget = ({ heading, text, helperText, withTextSizeIncreasedFromMd }) => {
+const DashboardStatsWidget = ({
+  heading,
+  text,
+  helperText,
+  withTextSizeIncreasedFromMd,
+  termDefinitionKey,
+  headingWrapperCn,
+}) => {
   return (
     <div className="dashboard-stats-widget">
-      <WidgetHeading heading={heading} headingWrapperCn="dashboard-stats-widget__heading" />
+      <WidgetHeading
+        heading={heading}
+        headingWrapperCn={cn('dashboard-stats-widget__heading', { [headingWrapperCn]: !!headingWrapperCn })}
+        termDefinitionKey={termDefinitionKey}
+      />
       <div className="dashboard-stats-widget__text-wrapper">
         <p
           className={cn('dashboard-stats-widget__text', {

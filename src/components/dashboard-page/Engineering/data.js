@@ -146,26 +146,32 @@ export const parseGithubStats = (data = {}) => [
   {
     metrics: 'Stars',
     value: data.numberOfStars,
+    termDefinitionKey: 'stars',
   },
   {
     metrics: 'Commits',
     value: `${Math.round(data.numberOfCommits / 1000)}K`,
+    termDefinitionKey: 'commits',
   },
   {
     metrics: 'Commits this week',
     value: data.totalNumberOfCommitsThisWeek,
+    termDefinitionKey: 'commitsThisWeek',
   },
   {
     metrics: 'Open PRs',
     value: data.numberOfOpenPRs,
+    termDefinitionKey: 'openPrs',
   },
   {
     metrics: 'Open issues',
     value: data.numberOfOpenIssues,
+    termDefinitionKey: 'openIssues',
   },
   {
     metrics: 'Repositories',
     value: data.numberOfRepositories,
+    termDefinitionKey: 'repositories',
   },
 ];
 

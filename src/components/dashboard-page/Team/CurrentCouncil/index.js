@@ -28,7 +28,7 @@ const CurrentCouncil = ({ data }) => {
 
   return (
     <div className="dashboard-team-current-council">
-      <WidgetHeading heading="Current council" />
+      <WidgetHeading heading="Current council" termDefinitionKey="currentCouncil" />
       <div className="dashboard-team-current-council__container">
         <div>
           <h4 className="dashboard-team-current-council__info-label">Elected on</h4>

@@ -9105,17 +9105,17 @@ gatsby-plugin-sharp@^2.14.4:
     svgo "1.3.2"
     uuid "3.4.0"
 
-gatsby-plugin-split-css@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/gatsby-plugin-split-css/-/gatsby-plugin-split-css-2.0.3.tgz#843c0121b846c08e2e5418ee56ca55c972ee296b"
-  integrity sha512-1QG2Yt9mj47vLF8tKSNEeHrHa3taeVc4YqUwPHM1h2Qk30QIbht+8M30p4/5tYw0kUhyorho3SnkDCtVGgCbOg==
-
 gatsby-plugin-smoothscroll@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-smoothscroll/-/gatsby-plugin-smoothscroll-1.2.0.tgz#249c0ad660e167043652b34277f44d16ca2bf4b6"
   integrity sha512-wfIK06xwbNx91nHVg1YJwlLUJc0EmfWqV8KgvlNr6gFa9pqMx5Mprdp5jDRloAi3+9K0dVCybPO8FfaZ0i4HgA==
   dependencies:
     smoothscroll-polyfill "^0.4.4"
+
+gatsby-plugin-split-css@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/gatsby-plugin-split-css/-/gatsby-plugin-split-css-2.0.3.tgz#843c0121b846c08e2e5418ee56ca55c972ee296b"
+  integrity sha512-1QG2Yt9mj47vLF8tKSNEeHrHa3taeVc4YqUwPHM1h2Qk30QIbht+8M30p4/5tYw0kUhyorho3SnkDCtVGgCbOg==
 
 gatsby-plugin-stylelint@^3.2.0:
   version "3.2.0"
@@ -15850,22 +15850,15 @@ react-loader-spinner@^3.1.14:
     babel-runtime "^6.26.0"
     prop-types "^15.7.2"
 
-react-lottie@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/react-lottie/-/react-lottie-1.2.3.tgz#8544b96939e088658072eea5e12d912cdaa3acc1"
-  integrity sha512-qLCERxUr8M+4mm1LU0Ruxw5Y5Fn/OmYkGfnA+JDM/dZb3oKwVAJCjwnjkj9TMHtzR2U6sMEUD3ZZ1RaHagM7kA==
-  dependencies:
-    babel-runtime "^6.26.0"
-    lottie-web "^5.1.3"
-
-react-markdown@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-4.1.0.tgz#7fdf840ecbabc803f28156f7411c726b58f25a73"
-  integrity sha512-EOHsEAN+aoP8UVz7vTHx6Z63GJfhrO9KItKlfsiBtVVS9tmSWtUaBTw73+2SObrWiOiE2Cs9qUBL7ORsvVhOrA==
+react-markdown@^4.1.0:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-4.3.1.tgz#39f0633b94a027445b86c9811142d05381300f2f"
+  integrity sha512-HQlWFTbDxTtNY6bjgp3C3uv1h2xcjCSi1zAEzfBW9OwJJvENSYiLXWNXN5hHLsoqai7RnZiiHzcnWdXk2Splzw==
   dependencies:
     html-to-react "^1.3.4"
     mdast-add-list-metadata "1.0.1"
     prop-types "^15.7.2"
+    react-is "^16.8.6"
     remark-parse "^5.0.0"
     unified "^6.1.5"
     unist-util-visit "^1.3.0"

@@ -142,10 +142,13 @@ export const parseFollowers = (followers = []) =>
     followersQuantity: `${Math.round(follower.followersCount / 1000)} K`,
   }));
 
+const defaultEventLink = 'https://discord.gg/NaNzysB5YZ';
+
 export const parseDiscrordEvents = (events = []) =>
   events
+    .filter(e => new Date(e.scheduledStartTime).getTime() >= new Date().getTime())
     .map(e => ({
-      link: '#',
+      link: defaultEventLink,
       date: new Date(e.scheduledStartTime),
       name: e.name,
       description: e.description,

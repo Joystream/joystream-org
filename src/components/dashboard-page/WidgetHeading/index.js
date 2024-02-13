@@ -4,24 +4,23 @@ import { string, bool } from 'prop-types';
 
 import { ReactComponent as InfoIcon } from '../../../assets/svg/dashboard/info-icon.svg';
 
+import { termDefinitions } from '../../../data/pages/dashboard/termDefinitions';
+
 import './style.scss';
 
 const propTypes = {
   heading: string.isRequired,
-  info: string,
+  termDefinitionKey: string,
   headingWrapperCn: string,
   isDim: bool,
   helperText: string,
 };
 
 const defaultProps = {
-  info:
-    // eslint-disable-next-line max-len
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia elit sem, condimentum malesuada dolor imperdiet sit amet.',
   headingWrapperCn: 'base-margin',
 };
 
-const DashboardWidgetHeading = ({ heading, info, headingWrapperCn, isDim, helperText }) => {
+const DashboardWidgetHeading = ({ heading, termDefinitionKey, headingWrapperCn, isDim, helperText }) => {
   return (
     <div className={cn('dashboard-widget-heading', { 'dim-heading': isDim, [headingWrapperCn]: headingWrapperCn })}>
       <h3 className={cn('dashboard-widget-heading__heading', { 'dim-heading': isDim })}>
@@ -32,11 +31,11 @@ const DashboardWidgetHeading = ({ heading, info, headingWrapperCn, isDim, helper
           </>
         )}
       </h3>
-      {info && (
+      {termDefinitionKey && !!termDefinitions[termDefinitionKey] && (
         <div className="dashboard-widget-heading__icon-wrapper">
           <InfoIcon />
           <div className="dashboard-widget-heading__info-wrapper">
-            <p className="dashboard-widget-heading__info">{info}</p>
+            <p className="dashboard-widget-heading__info">{termDefinitions[termDefinitionKey]}</p>
           </div>
         </div>
       )}
@@ -52,18 +51,24 @@ const altDefaultProps = {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia elit sem, condimentum malesuada dolor imperdiet sit amet.',
 };
 
-export const DashboardWidgetAltHeading = ({ headingLabel, headingValue, info, headingWrapperCn }) => {
+export const DashboardWidgetAltHeading = ({
+  headingLabel,
+  headingValue,
+  info,
+  headingWrapperCn,
+  termDefinitionKey,
+}) => {
   return (
     <div className={cn('dashboard-widget-heading', { [headingWrapperCn]: headingWrapperCn })}>
       <div className="dashboard-widget-heading__wrapper">
         <h2 className="dashboard-widget-heading__label">{`${headingLabel}:`}</h2>
         <p className="dashboard-widget-heading__value">{headingValue}</p>
       </div>
-      {info && (
+      {!!termDefinitionKey && !!termDefinitions[termDefinitionKey] && (
         <div className="dashboard-widget-heading__icon-wrapper">
           <InfoIcon />
           <div className="dashboard-widget-heading__info-wrapper">
-            <p className="dashboard-widget-heading__info">{info}</p>
+            <p className="dashboard-widget-heading__info">{termDefinitions[termDefinitionKey]}</p>
           </div>
         </div>
       )}

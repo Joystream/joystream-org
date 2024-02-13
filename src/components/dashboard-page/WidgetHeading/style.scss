@@ -47,7 +47,7 @@
 
   &__info-wrapper {
     position: absolute;
-    right: 0px;
+    right: -53px;
     bottom: 36px;
     z-index: 2000;
     width: 139px;
@@ -88,9 +88,9 @@
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
-  @media #{$screen-min-dashboard-xs} {
-    &__info-wrapper {
-      right: -53px;
-    }
-  }
+  // @media #{$screen-min-dashboard-xs} {
+  //   &__info-wrapper {
+  //     right: -53px;
+  //   }
+  // }
 }

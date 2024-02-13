@@ -95,6 +95,16 @@
     gap: 16px;
   }
 
+  &__extra-stats-heading {
+    & .dashboard-widget-heading__info-wrapper {
+      right: 0;
+
+      @media #{$screen-min-dashboard-xs} {
+        right: -53px;
+      }
+    }
+  }
+
   &__extra-stats-social-media-logo {
     width: 33px;
     border-radius: 50%;

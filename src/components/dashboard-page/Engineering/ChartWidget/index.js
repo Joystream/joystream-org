@@ -18,7 +18,7 @@ const propTypes = {
 const ChartWidget = ({ chartData }) => {
   return (
     <div className="dashboard-engineering-chart-widget">
-      <WidgetHeading heading="Contributions" />
+      <WidgetHeading heading="Contributions" termDefinitionKey="contributions" />
       <Chart chartData={chartData} />
     </div>
   );

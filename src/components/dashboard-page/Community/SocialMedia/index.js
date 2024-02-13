@@ -4,6 +4,7 @@ import { func, string, oneOf, object } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 import ArrowButton from '../../ArrowButton';
+import Feature from '../../../Feature';
 
 import { ReactComponent as TwitterLogo } from '../../../../assets/svg/dashboard/twitter-logo.svg';
 import { ReactComponent as DiscordLogo } from '../../../../assets/svg/dashboard/discord-logo.svg';
@@ -23,7 +24,7 @@ const primaryStatsPropTypes = {
   SocialMediaLogo: func.isRequired,
   socialMediaName: string.isRequired,
   mainStats: string.isRequired,
-  supplementalStats: string.isRequired,
+  supplementalStats: string,
   statsBlockBgColor: oneOf(['blue-bg', 'purple-bg']),
 };
 
@@ -38,7 +39,9 @@ const PrimaryStats = ({ SocialMediaLogo, socialMediaName, mainStats, supplementa
         <SocialMediaLogo />
         <h4 className="dashboard-community-social-media__name">{socialMediaName}</h4>
         <p className="dashboard-community-social-media__main-stats font-size-increased">{mainStats}</p>
-        <p className="dashboard-community-social-media__supplemental-stats">{supplementalStats}</p>
+        {!!supplementalStats && (
+          <p className="dashboard-community-social-media__supplemental-stats">{supplementalStats}</p>
+        )}
       </div>
     </div>
   );
@@ -59,7 +62,6 @@ const SocialMedia = ({ data }) => {
         SocialMediaLogo={TwitterLogo}
         socialMediaName="Twitter / X"
         mainStats={parseSocialMediaMemberCount(data, 'twitterFollowerCount')}
-        supplementalStats="+2% Last month"
         statsBlockBgColor="blue-bg"
       />
 
@@ -78,7 +80,10 @@ const SocialMedia = ({ data }) => {
           <p className="dashboard-community-social-media__main-stats">
             {parseSocialMediaMemberCount(data, 'telegramMemberCount')}
           </p>
-          <p className="dashboard-community-social-media__supplemental-stats">+2% Last month</p>
+
+          <Feature disabled>
+            <p className="dashboard-community-social-media__supplemental-stats">+2% Last month</p>
+          </Feature>
         </div>
       </div>
 
@@ -91,7 +96,11 @@ const SocialMedia = ({ data }) => {
                 alt="tweetscout-logo"
                 className="dashboard-community-social-media__extra-stats-social-media-logo"
               />
-              <WidgetHeading heading="Tweetscout score" headingWrapperCn="" />
+              <WidgetHeading
+                heading="Tweetscout score"
+                headingWrapperCn="dashboard-community-social-media__extra-stats-heading"
+                termDefinitionKey="tweetScout"
+              />
             </div>
             <div className="dashboard-community-social-media__stats">
               <p className="dashboard-community-social-media__main-stats">{parseTweetscoutScore(data)}</p>

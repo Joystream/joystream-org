@@ -42,7 +42,7 @@ const PastCouncil = ({ linkToPioneerProfile, username, avatar, socialMediaUserna
           </div>
 
           <div className="dashboard-team-past-council__times-served-box">
-            <WidgetHeading heading="Times served" isDim />
+            <WidgetHeading heading="Times served" isDim termDefinitionKey="timesServed" />
             <p className="dashboard-team-past-council__times-served">{timesServed}</p>
           </div>
         </div>

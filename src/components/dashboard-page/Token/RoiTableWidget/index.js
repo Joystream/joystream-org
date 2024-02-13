@@ -20,6 +20,7 @@ const RoiTableWidget = ({ data }) => {
       <WidgetHeading
         heading="Return on investment (ROI)"
         headingWrapperCn="dashboard-token-roi-table-widget__heading"
+        termDefinitionKey="roi"
       />
       <Table columns={columns} data={parsedData} />
     </div>

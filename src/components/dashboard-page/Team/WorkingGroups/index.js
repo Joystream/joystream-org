@@ -5,6 +5,8 @@ import Carousel from '../../Carousel';
 
 import { ReactComponent as EmptyAvatar } from '../../../../assets/svg/dashboard/empty-avatar.svg';
 
+import { termDefinitions } from '../../../../data/pages/dashboard/termDefinitions';
+
 import './style.scss';
 
 const workingGroupPropTypes = {
@@ -104,11 +106,7 @@ const WorkingGroups = ({ groups }) => {
       <div className="dashboard-team-working-groups__description-widget-wrapper">
         <div className="dashboard-team-working-groups__description-widget">
           <h3 className="dashboard-team-working-groups__description-widget-heading">Working groups</h3>
-          <p className="dashboard-team-working-groups__description">
-            Lorem ipsum dolor sit amet consectetur. Parturient urna massa arcu mi. Habitant sagittis adipiscing tempus
-            integer risus vel gravida adipiscing. Nec ipsum diam varius augue odio magna pharetra orci. Malesuada luctus
-            sit volutpat faucibus.
-          </p>
+          <p className="dashboard-team-working-groups__description">{termDefinitions.workingGroups}</p>
         </div>
       </div>
       <Carousel withLgSlides>

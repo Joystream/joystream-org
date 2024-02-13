@@ -38,6 +38,8 @@ const Dashboard = pageProps => {
     scrollTo(`#${activeAnchor.toLowerCase()}`);
   };
 
+  console.log(data);
+
   return (
     <>
       {/* TODO: Remove later (for demonstration purposes) */}
@@ -57,7 +59,7 @@ const Dashboard = pageProps => {
 
           <History />
 
-          <Traction data={data?.traction} />
+          <Traction data={data} />
 
           <Engineering data={data?.engineering} />
 

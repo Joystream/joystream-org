@@ -5,6 +5,7 @@ import WidgetHeading from '../../WidgetHeading';
 import ActionButton from '../ActionButton';
 
 import { parseCouncilTermLength } from '../utils';
+import { termDefinitions } from '../../../../data/pages/dashboard/termDefinitions';
 
 import './style.scss';
 
@@ -21,20 +22,16 @@ const Council = ({ data }) => {
         <div className="dashboard-team-council__container">
           <div className="dashboard-team-council__description-wrapper">
             <h2 className="dashboard-team-council__heading">Council</h2>
-            <p className="dashboard-team-council__role-description">
-              Lorem ipsum dolor sit amet consectetur. Parturient urna massa arcu mi. Habitant sagittis adipiscing tempus
-              integer risus vel gravida adipiscing. Nec ipsum diam varius augue odio magna pharetra orci. Malesuada
-              luctus sit volutpat faucibus.
-            </p>
+            <p className="dashboard-team-council__role-description">{termDefinitions.council}</p>
           </div>
           <div className="dashboard-team-council__terms-actions-wrapper">
             <ul className="dashboard-team-council__terms-list">
               <li className="dashboard-team-council__terms-list-item">
-                <WidgetHeading heading="Current term" isDim />
+                <WidgetHeading heading="Current term" isDim termDefinitionKey="currentTerm" />
                 <p className="dashboard-team-council__term">{data?.currentTerm}</p>
               </li>
               <li className="dashboard-team-council__terms-list-item">
-                <WidgetHeading heading="Term length" isDim />
+                <WidgetHeading heading="Term length" isDim termDefinitionKey="termLength" />
                 <p className="dashboard-team-council__term">{parseCouncilTermLength(data)}</p>
               </li>
             </ul>

@@ -86,7 +86,11 @@ const openEventsPropTypes = {
 const OpenEvents = ({ events }) => {
   return (
     <div className="dashboard-community-open-events">
-      <WidgetHeading heading="Open events" headingWrapperCn="dashboard-community-open-events__heading" />
+      <WidgetHeading
+        heading="Open events"
+        headingWrapperCn="dashboard-community-open-events__heading"
+        termDefinitionKey="openEvents"
+      />
       <Carousel withLgSlides carouselCn="dashboard-community-open-events__carousel">
         {events.map((e, index) => {
           const firstEventOnDateIdx = events.findIndex(openEvent => isSameDate(openEvent.date, e.date));

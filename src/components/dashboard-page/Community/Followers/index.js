@@ -65,7 +65,11 @@ const Followers = ({ followers }) => {
 
   return (
     <div className="dashboard-community-followers">
-      <WidgetHeading heading="Featured followers" headingWrapperCn="dashboard-community-followers__heading" />
+      <WidgetHeading
+        heading="Featured followers"
+        headingWrapperCn="dashboard-community-followers__heading"
+        termDefinitionKey="featuredFollowers"
+      />
       <div className={cn('dashboard-community-followers__grid', { 'as-carousel': shouldRenderAsCarousel })}>
         {renderFollowersList({ setIsCarouselRunning })}
         {shouldRenderAsCarousel && renderFollowersList({ setIsCarouselRunning })}

@@ -15,15 +15,18 @@ export const getTokenPriceMetrics = (data = {}) => [
     figure: 'Marketcap',
     rate: parseNumToMil(data, 'marketCap'),
     growthRate: parseMetricsWeeklyChange(data, 'marketCapWeeklyChange'),
+    termDefinitionKey: 'marketcap',
   },
   {
     figure: 'Volume (24h)',
     rate: parseNumToMil(data, 'volume'),
     growthRate: parseMetricsWeeklyChange(data, 'volumeWeeklyChange'),
+    termDefinitionKey: 'volume',
   },
   {
     figure: 'FDV',
     rate: parseNumToMil(data, 'fullyDilutedValue'),
+    termDefinitionKey: 'fdv',
   },
 ];
 

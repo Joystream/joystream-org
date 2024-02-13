@@ -8,7 +8,7 @@ import './style.scss';
 const ReleaseScheduleChartWidget = () => {
   return (
     <div className="dashboard-token-release-schedule-chart-widget">
-      <WidgetHeading heading="Release schedule" />
+      <WidgetHeading heading="Release schedule" termDefinitionKey="releaseSchedule" />
       <ReleaseScheduleChart />
     </div>
   );

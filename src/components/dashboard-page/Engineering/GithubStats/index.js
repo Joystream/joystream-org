@@ -8,12 +8,13 @@ import './style.scss';
 const propTypes = {
   metrics: string.isRequired,
   value: oneOfType([string, number]),
+  termDefinitionKey: string,
 };
 
-export const GithubStats = ({ metrics, value }) => {
+export const GithubStats = ({ metrics, value, termDefinitionKey }) => {
   return (
     <div className="dashboard-engineering-github-stats">
-      <WidgetHeading heading={metrics} isDim />
+      <WidgetHeading heading={metrics} isDim termDefinitionKey={termDefinitionKey} />
       <p className="dashboard-engineering-github-stats__value">{value}</p>
     </div>
   );

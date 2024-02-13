@@ -46,7 +46,7 @@ const Positioning = () => {
 
   return (
     <div className="dashboard-comparison-positioning">
-      <WidgetHeading heading="Positioning" />
+      <WidgetHeading heading="Positioning" termDefinitionKey="positioning" />
       <div className="dashboard-comparison-positioning__table-wrapper">
         <table className="dashboard-comparison-positioning__table">
           <thead className="__head">

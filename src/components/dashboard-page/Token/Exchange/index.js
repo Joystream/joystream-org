@@ -106,7 +106,11 @@ const Exchange = ({ data }) => {
 
   return (
     <div className="dashboard-token-exchange">
-      <WidgetHeading heading="Where to buy and sell JOY?" headingWrapperCn="dashboard-token-exchange__heading" />
+      <WidgetHeading
+        heading="Where to buy and sell JOY?"
+        headingWrapperCn="dashboard-token-exchange__heading"
+        termDefinitionKey="whereToBuyJoy"
+      />
       <div className="dashboard-token-exchange__options">
         {shownExchangeOptions.map((exchangeOption, index) => {
           return <ExchangeOption key={index} {...exchangeOption} />;
