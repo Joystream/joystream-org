@@ -38,7 +38,7 @@ const Dashboard = pageProps => {
     scrollTo(`#${activeAnchor.toLowerCase()}`);
   };
 
-  const embedded = pageProps.location.pathname === '/';
+  const embedded = !pageProps.location.pathname.includes('/dashboard');
 
   return (
     <>
