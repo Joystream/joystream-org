@@ -1,6 +1,9 @@
 import mexcLogo from '../../../../assets/images/dashboard/mexc-logo.png';
 import bitgetLogo from '../../../../assets/images/dashboard/bitget-logo.png';
 import gateIoLogo from '../../../../assets/images/dashboard/gatel-o-logo.png';
+import bitmartLogo from '../../../../assets/images/dashboard/bitmart-logo.png';
+import biconomyLogo from '../../../../assets/images/dashboard/biconomy-logo.png';
+import xtLogo from '../../../../assets/images/dashboard/xt-logo.png';
 
 export const exchangeOptions = [
   {
@@ -45,9 +48,10 @@ export const formatNumberWithCommas = num => num.toLocaleString('en-US');
 const exchangeOptionsLogos = {
   bitget: bitgetLogo,
   gate: gateIoLogo,
-  // FIXME: Replace bitgetLogo with BitMart's one
-  bitmart: bitgetLogo,
+  bitmart: bitmartLogo,
   mxc: mexcLogo,
+  biconomy: biconomyLogo,
+  xt: xtLogo,
 };
 
 const exchangeOptionsLabels = {

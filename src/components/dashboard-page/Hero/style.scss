@@ -14,6 +14,15 @@
     gap: 24px;
   }
 
+  &__embedded-section-title {
+    margin-bottom: 4px;
+    @include h400;
+    color: #6c6cff;
+    font-feature-settings: $dashboard-font-feature-settings;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   &__title {
     @include h600;
     font-feature-settings: $dashboard-font-feature-settings;
@@ -132,15 +141,27 @@
     &__container {
       padding-inline: 32px;
       grid-template-columns: repeat(2, 1fr);
+
+      &.embedded {
+        grid-template-columns: 1fr;
+      }
     }
 
     &__title {
       @include h800;
       text-align: start;
+
+      &.embedded {
+        text-align: center;
+      }
     }
 
     &__description {
       text-align: start;
+
+      &.embedded {
+        text-align: center;
+      }
     }
   }
 

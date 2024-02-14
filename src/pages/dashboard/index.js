@@ -38,20 +38,20 @@ const Dashboard = pageProps => {
     scrollTo(`#${activeAnchor.toLowerCase()}`);
   };
 
-  console.log(data);
+  const embedded = pageProps.location.pathname === '/';
 
   return (
     <>
       {/* TODO: Remove later (for demonstration purposes) */}
       <div className="black-overlay"></div>
 
-      <SiteMetadata lang={language} title={'Dashboard'} />
+      {!embedded && <SiteMetadata lang={language} title={'Dashboard'} />}
 
       <ScrollProvider minScrollDeltaThreshold={130} withScrollInitiallyUp={withScrollInitiallyUp}>
-        <Header activeAnchor={activeAnchor} onAnchorClick={onAnchorClick} />
+        {!embedded && <Header activeAnchor={activeAnchor} onAnchorClick={onAnchorClick} />}
 
         <main>
-          <Hero />
+          <Hero embedded={embedded} />
 
           <Token data={data?.token} />
 

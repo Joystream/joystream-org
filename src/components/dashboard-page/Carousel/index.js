@@ -61,8 +61,6 @@ const DashboardCarousel = ({ children, withLgSlides, carouselCn }) => {
   const isButtonNextSlideVisible =
     visibleSlides < totalSlides && totalSlides - visibleSlides > currentSlide && largeScreens;
 
-  console.log(currentBreakpoints);
-
   return (
     <CarouselProvider
       className={cn('dashboard-carousel', { [carouselCn]: !!carouselCn })}

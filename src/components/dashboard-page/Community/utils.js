@@ -153,6 +153,6 @@ export const parseDiscrordEvents = (events = []) =>
       name: e.name,
       description: e.description,
       picture: e.image || genericEventPicture,
-      discordVoice: `Discord - ${e.location}`,
+      discordVoice: !!e.location ? `Discord - ${e.location}` : 'Discord',
     }))
     .sort((eventA, eventB) => eventA.date - eventB.date);
