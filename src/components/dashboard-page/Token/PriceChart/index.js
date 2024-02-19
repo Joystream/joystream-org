@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   ResponsiveContainer,
   ComposedChart,
@@ -35,7 +35,10 @@ const PriceChart = ({ data }) => {
   const cartesianGridRef = useRef(null);
   const chartWidth = cartesianGridRef.current?.props.offset.width || 0;
 
-  console.log({ cartesianGridRef: cartesianGridRef.current, chartWidth });
+  /**
+   * Triggering re-render to obtain CartesianGrid ref value which is null on the first render.
+   */
+  const [key, setKey] = useState('0');
 
   return (
     <ChartWrapper chartHeight={368}>
@@ -45,7 +48,7 @@ const PriceChart = ({ data }) => {
         // maxHeight={368}
         height={368}
       >
-        <ComposedChart data={data}>
+        <ComposedChart data={data} key={key}>
           <CartesianGrid ref={cartesianGridRef} vertical={false} stroke="#bbd9f621" />
 
           <defs>
@@ -119,7 +122,8 @@ const PriceChart = ({ data }) => {
             activeDot={areaChartActiveDotProps => {
               return renderCustomActiveDot(areaChartActiveDotProps, chartWidth);
             }}
-            isAnimationActive={false}
+            // isAnimationActive={false}
+            onAnimationEnd={() => setKey('1')}
             animationDuration={0}
           />
           <YAxis

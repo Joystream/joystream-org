@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { ResponsiveContainer, AreaChart, CartesianGrid, XAxis, Text, YAxis, Area, Tooltip } from 'recharts';
 import { arrayOf, shape, instanceOf, number } from 'prop-types';
 
@@ -21,8 +21,13 @@ const Chart = ({ chartData }) => {
 
   const maxCommitsCount = Math.max(...chartData.map(val => val.contributions));
 
+  /**
+   * Triggering re-render to obtain CartesianGrid ref value which is null on the first render.
+   */
+  const [key, setKey] = useState('0');
+
   return (
-    <ResponsiveContainer width="99%" height={208}>
+    <ResponsiveContainer width="99%" height={208} key={key}>
       <AreaChart data={chartData}>
         <CartesianGrid ref={cartesianGridRef} vertical={false} stroke="#BBD9F621" />
         <XAxis
@@ -61,8 +66,9 @@ const Chart = ({ chartData }) => {
           activeDot={areaChartActiveDotProps => {
             return renderCustomActiveDot(areaChartActiveDotProps, chartWidth, chartOffsetLeft);
           }}
-          isAnimationActive={false}
+          // isAnimationActive={false}
           animationDuration={0}
+          onAnimationEnd={() => setKey('1')}
         />
         <Tooltip
           cursor={<CustomCursor />}
