@@ -79,8 +79,7 @@ const Exchanges = ({ t }) => {
             exchangeIcon={Biconomy}
             exchangeName={t('token.exchanges.biconomy.name')}
             exchangeDescription={t('token.exchanges.biconomy.description')}
-            // exchangeLink="https://www.biconomy.com/exchange/JOY_USDT"
-            exchangeLink=""
+            exchangeLink="https://www.biconomy.com/exchange/JOY_USDT"
             t={t}
           />
         </div>
