@@ -35,6 +35,8 @@ const PriceChart = ({ data }) => {
   const cartesianGridRef = useRef(null);
   const chartWidth = cartesianGridRef.current?.props.offset.width || 0;
 
+  console.log({ cartesianGridRef: cartesianGridRef.current, chartWidth });
+
   return (
     <ChartWrapper chartHeight={368}>
       <ResponsiveContainer

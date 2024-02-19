@@ -52,6 +52,12 @@
       & > td {
         height: 1px;
       }
+
+      @-moz-document url-prefix() {
+        & > td {
+          height: 100%;
+        }
+      }
     }
   }
 

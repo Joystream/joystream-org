@@ -1,0 +1,65 @@
+@import '../../../../styles/main';
+
+.stats-block-skeleton {
+  display: grid;
+  gap: 16px;
+
+  &__github-stats {
+    width: 100%;
+    height: 600px;
+  }
+
+  &__followers {
+    width: 100%;
+    height: 120px;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__github-stats {
+      height: 360px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    & {
+      gap: 24px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__github-stats {
+      grid-column: 1 / span 3;
+    }
+
+    &__followers {
+      height: auto;
+    }
+  }
+}
+
+.chart-block-skeleton {
+  margin-top: 16px;
+  width: 100%;
+  height: 288px;
+
+  @media #{$screen-min-dashboard-sm} {
+    & {
+      height: 320px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    & {
+      margin-top: 24px;
+    }
+  }
+}
+
+.contributors-block-skeleton {
+  margin-top: 16px;
+  width: 100%;
+  height: 400px;
+
+  @media #{$screen-min-dashboard-md} {
+    margin-top: 24px;
+  }
+}

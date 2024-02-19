@@ -1,8 +1,9 @@
 import React, { useMemo, useEffect, useState } from 'react';
 import cn from 'classnames';
-import { string, number, object } from 'prop-types';
+import { string, number, object, bool } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
+import { ExchangeBlockSkeleton } from '../Skeletons';
 import useDashboardMedia from '../../../../utils/useDashboardMedia';
 
 import { ReactComponent as ToggleButtonChevron } from '../../../../assets/svg/dashboard/toggle-button-chevron.svg';
@@ -53,9 +54,10 @@ ExchangeOption.propTypes = exchangeOptionPropTypes;
 
 const exchangePropTypes = {
   data: object,
+  loading: bool,
 };
 
-const Exchange = ({ data }) => {
+const Exchange = ({ data, loading }) => {
   const parsedExchangeOptions = parseExchangeOptions(data);
 
   const { currentBreakpoints } = useDashboardMedia();
@@ -111,25 +113,32 @@ const Exchange = ({ data }) => {
         headingWrapperCn="dashboard-token-exchange__heading"
         termDefinitionKey="whereToBuyJoy"
       />
-      <div className="dashboard-token-exchange__options">
-        {shownExchangeOptions.map((exchangeOption, index) => {
-          return <ExchangeOption key={index} {...exchangeOption} />;
-        })}
-        {exchangeOptionsExpanded &&
-          Array.from({ length: placeholdersCount }, (_, i) => {
-            return <div className="dashboard-token-exchange__option-placeholder"></div>;
-          })}
-      </div>
-      {totalCount > initShownCount && (
-        <button
-          className={cn('dashboard-token-exchange__button-toggle-shown-options', {
-            'options-expanded': exchangeOptionsExpanded,
-          })}
-          onClick={toggleShownCount}
-        >
-          {`${exchangeOptionsExpanded ? 'Hide' : 'Show'} more exchanges`}
-          <ToggleButtonChevron />
-        </button>
+
+      {loading ? (
+        <ExchangeBlockSkeleton />
+      ) : (
+        <>
+          <div className="dashboard-token-exchange__options">
+            {shownExchangeOptions.map((exchangeOption, index) => {
+              return <ExchangeOption key={index} {...exchangeOption} />;
+            })}
+            {exchangeOptionsExpanded &&
+              Array.from({ length: placeholdersCount }, (_, i) => {
+                return <div className="dashboard-token-exchange__option-placeholder"></div>;
+              })}
+          </div>
+          {totalCount > initShownCount && (
+            <button
+              className={cn('dashboard-token-exchange__button-toggle-shown-options', {
+                'options-expanded': exchangeOptionsExpanded,
+              })}
+              onClick={toggleShownCount}
+            >
+              {`${exchangeOptionsExpanded ? 'Hide' : 'Show'} more exchanges`}
+              <ToggleButtonChevron />
+            </button>
+          )}
+        </>
       )}
     </div>
   );

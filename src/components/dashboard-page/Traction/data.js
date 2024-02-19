@@ -101,7 +101,7 @@ export const parseChartData = (data = [], tokenPriceInUsd = 1) => {
   const monthSpan = 4;
   const result = [];
 
-  for (let i = 0; i < data.length; i += monthSpan) {
+  for (let i = 0; i < data?.length; i += monthSpan) {
     const monthData = data.slice(i, i + 4);
 
     const parsedMonthData = {

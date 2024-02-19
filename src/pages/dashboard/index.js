@@ -18,6 +18,7 @@ import Community from '../../components/dashboard-page/Community';
 import Team from '../../components/dashboard-page/Team';
 import Comparison from '../../components/dashboard-page/Comparison';
 import Roadmap from '../../components/dashboard-page/Roadmap';
+import Feature from '../../components/Feature';
 
 import { anchors } from '../../components/dashboard-page/Header/data';
 
@@ -28,7 +29,7 @@ const Dashboard = pageProps => {
   const { language } = useI18next();
   const { t } = useTranslation();
 
-  const [data] = useAxios('https://dao-services.joyutils.org/status/dashboard-data');
+  const [data, loading] = useAxios('https://dao-services.joyutils.org/status/dashboard-data');
 
   const [withScrollInitiallyUp] = useState(() => !pageProps.location.hash);
 
@@ -39,6 +40,9 @@ const Dashboard = pageProps => {
   };
 
   const embedded = !pageProps.location.pathname.includes('/dashboard');
+  const historyHidden = true;
+
+  console.log({ data, loading });
 
   return (
     <>
@@ -48,24 +52,28 @@ const Dashboard = pageProps => {
       {!embedded && <SiteMetadata lang={language} title={'Dashboard'} />}
 
       <ScrollProvider minScrollDeltaThreshold={130} withScrollInitiallyUp={withScrollInitiallyUp}>
-        {!embedded && <Header activeAnchor={activeAnchor} onAnchorClick={onAnchorClick} />}
+        {!embedded && (
+          <Header activeAnchor={activeAnchor} onAnchorClick={onAnchorClick} historyHidden={historyHidden} />
+        )}
 
         <main>
           <Hero embedded={embedded} />
 
-          <Token data={data?.token} />
+          <Token data={data?.token} loading={loading} />
 
           <Backers t={t} />
 
-          <History />
+          <Feature disabled={historyHidden}>
+            <History />
+          </Feature>
 
-          <Traction data={data} />
+          <Traction data={data} loading={loading} />
 
-          <Engineering data={data?.engineering} />
+          <Engineering data={data?.engineering} loading={loading} />
 
-          <Community data={data?.community} />
+          <Community data={data?.community} loading={loading} />
 
-          <Team data={data?.team} />
+          <Team data={data?.team} loading={loading} />
 
           <Comparison />
 

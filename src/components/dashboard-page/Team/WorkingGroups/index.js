@@ -1,7 +1,8 @@
 import React from 'react';
-import { string, shape, arrayOf } from 'prop-types';
+import { string, shape, arrayOf, bool } from 'prop-types';
 
 import Carousel from '../../Carousel';
+import { WorkingGroupsBlockSkeleton } from '../Skeletons';
 
 import { ReactComponent as EmptyAvatar } from '../../../../assets/svg/dashboard/empty-avatar.svg';
 
@@ -98,9 +99,10 @@ WorkingGroup.propTypes = workingGroupPropTypes;
 
 const workingGroupsPropTypes = {
   groups: arrayOf(shape(workingGroupPropTypes)).isRequired,
+  loading: bool,
 };
 
-const WorkingGroups = ({ groups }) => {
+const WorkingGroups = ({ groups, loading }) => {
   return (
     <div className="dashboard-team-working-groups">
       <div className="dashboard-team-working-groups__description-widget-wrapper">
@@ -109,11 +111,16 @@ const WorkingGroups = ({ groups }) => {
           <p className="dashboard-team-working-groups__description">{termDefinitions.workingGroups}</p>
         </div>
       </div>
-      <Carousel withLgSlides>
-        {groups.map((group, index) => {
-          return <WorkingGroup key={`${group.name}-${index}`} {...group} />;
-        })}
-      </Carousel>
+
+      {loading ? (
+        <WorkingGroupsBlockSkeleton />
+      ) : (
+        <Carousel withLgSlides>
+          {groups.map((group, index) => {
+            return <WorkingGroup key={`${group.name}-${index}`} {...group} />;
+          })}
+        </Carousel>
+      )}
     </div>
   );
 };

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
-import { string, func, arrayOf, shape } from 'prop-types';
+import { string, func, arrayOf, shape, bool } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
+import { FollowersBlockSkeleton } from '../Skeletons';
 
 import './style.scss';
 
@@ -40,9 +41,10 @@ const { setIsCarouselRunning, ...followersRelatedPropTypes } = followerPropTypes
 
 const followersPropTypes = {
   followers: arrayOf(shape(followersRelatedPropTypes)),
+  loading: bool,
 };
 
-const Followers = ({ followers }) => {
+const Followers = ({ followers, loading }) => {
   const shouldRenderAsCarousel = followers.length > 4;
   const [isCarouselRunning, setIsCarouselRunning] = useState(true);
 
@@ -70,10 +72,14 @@ const Followers = ({ followers }) => {
         headingWrapperCn="dashboard-community-followers__heading"
         termDefinitionKey="featuredFollowers"
       />
-      <div className={cn('dashboard-community-followers__grid', { 'as-carousel': shouldRenderAsCarousel })}>
-        {renderFollowersList({ setIsCarouselRunning })}
-        {shouldRenderAsCarousel && renderFollowersList({ setIsCarouselRunning })}
-      </div>
+      {loading ? (
+        <FollowersBlockSkeleton />
+      ) : (
+        <div className={cn('dashboard-community-followers__grid', { 'as-carousel': shouldRenderAsCarousel })}>
+          {renderFollowersList({ setIsCarouselRunning })}
+          {shouldRenderAsCarousel && renderFollowersList({ setIsCarouselRunning })}
+        </div>
+      )}
     </div>
   );
 };

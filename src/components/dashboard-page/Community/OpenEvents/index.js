@@ -3,6 +3,7 @@ import { string, instanceOf, arrayOf, shape, bool, number } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 import Carousel from '../../Carousel';
+import { OpenEventsBlockSkeleton } from '../Skeletons';
 import useDashboardMedia from '../../../../utils/useDashboardMedia';
 
 import { ReactComponent as SoundIcon } from '../../../../assets/svg/dashboard/sound.svg';
@@ -81,9 +82,10 @@ const { withDateLabel, eventsOnDateCount, ...eventRequiredPropTypes } = eventPro
 
 const openEventsPropTypes = {
   events: arrayOf(shape(eventRequiredPropTypes)),
+  loading: bool,
 };
 
-const OpenEvents = ({ events }) => {
+const OpenEvents = ({ events, loading }) => {
   return (
     <div className="dashboard-community-open-events">
       <WidgetHeading
@@ -91,21 +93,26 @@ const OpenEvents = ({ events }) => {
         headingWrapperCn="dashboard-community-open-events__heading"
         termDefinitionKey="openEvents"
       />
-      <Carousel withLgSlides carouselCn="dashboard-community-open-events__carousel">
-        {events.map((e, index) => {
-          const firstEventOnDateIdx = events.findIndex(openEvent => isSameDate(openEvent.date, e.date));
-          const eventsOnDateCount = events.filter(openEvent => isSameDate(openEvent.date, e.date)).length;
 
-          return (
-            <Event
-              key={index}
-              {...e}
-              withDateLabel={index === firstEventOnDateIdx}
-              eventsOnDateCount={eventsOnDateCount}
-            />
-          );
-        })}
-      </Carousel>
+      {loading ? (
+        <OpenEventsBlockSkeleton />
+      ) : (
+        <Carousel withLgSlides carouselCn="dashboard-community-open-events__carousel">
+          {events.map((e, index) => {
+            const firstEventOnDateIdx = events.findIndex(openEvent => isSameDate(openEvent.date, e.date));
+            const eventsOnDateCount = events.filter(openEvent => isSameDate(openEvent.date, e.date)).length;
+
+            return (
+              <Event
+                key={index}
+                {...e}
+                withDateLabel={index === firstEventOnDateIdx}
+                eventsOnDateCount={eventsOnDateCount}
+              />
+            );
+          })}
+        </Carousel>
+      )}
     </div>
   );
 };

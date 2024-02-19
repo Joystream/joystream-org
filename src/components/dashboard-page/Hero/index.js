@@ -45,7 +45,7 @@ const DashboardHero = ({ introVideoSrc, embedded }) => {
     <>
       <section id="introduction" className="dashboard-hero">
         <div className={cn('dashboard-hero__container', { embedded })}>
-          <div className="dashboard-hero__text-wrapper">
+          <div className={cn('dashboard-hero__text-wrapper', { embedded })}>
             {embedded && <h3 className="dashboard-hero__embedded-section-title">DASHBOARD</h3>}
             <h1 className={cn('dashboard-hero__title', { embedded })}>
               Everything you ever wanted to know in one place

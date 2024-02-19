@@ -1,5 +1,5 @@
 import React from 'react';
-import { object } from 'prop-types';
+import { bool, object } from 'prop-types';
 
 import SectionHeader from '../SectionHeader';
 import PriceChartWidget from './PriceChartWidget';
@@ -12,6 +12,13 @@ import AllocationTableWidget from './AllocationTableWidget';
 import MintingChartWidget from './MintingChartWidget';
 import RoiTableWidget from './RoiTableWidget';
 import SupplyDistributionTableWidget from './SupplyDistributionTableWidget';
+import {
+  PriceBlockSkeleton,
+  SupplyBlockSkeleton,
+  AllocationMintingBlockSkeleton,
+  SupplyAprBlockSkeleton,
+  RoiSupplyBlockSkeleton,
+} from './Skeletons';
 
 import { getTokenPriceMetrics, parsePercentage } from './utils';
 
@@ -19,9 +26,10 @@ import './style.scss';
 
 const propTypes = {
   data: object,
+  loading: bool,
 };
 
-const Token = ({ data }) => {
+const Token = ({ data, loading }) => {
   const tokenPriceMetrics = getTokenPriceMetrics(data);
 
   const supplyStakedForValidation = parsePercentage(data?.percentSupplyStakedForValidation);
@@ -31,54 +39,71 @@ const Token = ({ data }) => {
     <section className="dashboard-token">
       <div className="dashboard-token__container">
         <SectionHeader sectionId="token" sectionHeading="Token" />
-        <div className="dashboard-token__price-metrics-grid grid-indents">
-          <PriceChartWidget widgetCn="dashboard-token__price-chart-widget" data={data} />
-          {tokenPriceMetrics.map((tokenPriceStats, index) => {
-            return (
-              <StatsWidget
-                key={index}
-                heading={tokenPriceStats.figure}
-                text={tokenPriceStats.rate}
-                helperText={tokenPriceStats.growthRate}
-                termDefinitionKey={tokenPriceStats.termDefinitionKey}
-              />
-            );
-          })}
-        </div>
 
-        <SupplyWidget data={data} />
+        {loading ? (
+          <PriceBlockSkeleton />
+        ) : (
+          <div className="dashboard-token__price-metrics-grid grid-indents">
+            <PriceChartWidget widgetCn="dashboard-token__price-chart-widget" data={data} />
+            {tokenPriceMetrics.map((tokenPriceStats, index) => {
+              return (
+                <StatsWidget
+                  key={index}
+                  heading={tokenPriceStats.figure}
+                  text={tokenPriceStats.rate}
+                  helperText={tokenPriceStats.growthRate}
+                  termDefinitionKey={tokenPriceStats.termDefinitionKey}
+                />
+              );
+            })}
+          </div>
+        )}
+
+        {loading ? <SupplyBlockSkeleton /> : <SupplyWidget data={data} />}
 
         {/* <DashboardJoyCarousel /> */}
 
-        <Exchange data={data?.exchanges} />
+        <Exchange data={data?.exchanges} loading={loading} />
 
         <ReleaseScheduleChartWidget />
 
-        <div className="dashboard-token__allocation-minting-grid grid-indents">
-          <AllocationTableWidget />
-          <MintingChartWidget data={data} />
-        </div>
+        {loading ? (
+          <AllocationMintingBlockSkeleton />
+        ) : (
+          <div className="dashboard-token__allocation-minting-grid grid-indents">
+            <AllocationTableWidget />
+            <MintingChartWidget data={data} />
+          </div>
+        )}
 
-        <div className="dashboard-token__percentage-widgets-grid grid-indents">
-          <StatsWidget
-            heading="Supply staked for validation"
-            text={supplyStakedForValidation}
-            withTextSizeIncreasedFromMd
-            termDefinitionKey="supplyStakedForValidation"
-            headingWrapperCn="dashboard-token__widget-tooltip-alt-placement"
-          />
-          <StatsWidget
-            heading="APR on staking"
-            text={aprOnStaking}
-            withTextSizeIncreasedFromMd
-            termDefinitionKey="apr"
-          />
-        </div>
+        {loading ? (
+          <SupplyAprBlockSkeleton />
+        ) : (
+          <div className="dashboard-token__percentage-widgets-grid grid-indents">
+            <StatsWidget
+              heading="Supply staked for validation"
+              text={supplyStakedForValidation}
+              withTextSizeIncreasedFromMd
+              termDefinitionKey="supplyStakedForValidation"
+              headingWrapperCn="dashboard-token__widget-tooltip-alt-placement"
+            />
+            <StatsWidget
+              heading="APR on staking"
+              text={aprOnStaking}
+              withTextSizeIncreasedFromMd
+              termDefinitionKey="apr"
+            />
+          </div>
+        )}
 
-        <div className="dashboard-token__stats-tables-grid grid-indents">
-          <RoiTableWidget data={data?.roi} />
-          <SupplyDistributionTableWidget data={data?.supplyDistribution} />
-        </div>
+        {loading ? (
+          <RoiSupplyBlockSkeleton />
+        ) : (
+          <div className="dashboard-token__stats-tables-grid grid-indents">
+            <RoiTableWidget data={data?.roi} />
+            <SupplyDistributionTableWidget data={data?.supplyDistribution} />
+          </div>
+        )}
       </div>
     </section>
   );

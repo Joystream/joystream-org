@@ -59,6 +59,8 @@ const exchangeOptionsLabels = {
   gate: 'GateIO',
   bitmart: 'BitMart',
   mxc: 'MEXC',
+  xt: 'XT',
+  biconomy: 'Biconomy',
 };
 
 export const parseExchangeOptions = (data = {}) => {

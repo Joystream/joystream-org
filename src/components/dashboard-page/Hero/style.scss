@@ -147,11 +147,18 @@
       }
     }
 
+    &__text-wrapper.embedded {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     &__title {
       @include h800;
       text-align: start;
 
       &.embedded {
+        max-width: 909px;
         text-align: center;
       }
     }
