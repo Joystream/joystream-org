@@ -28,30 +28,6 @@ export const verifiedMembers = [
     },
   },
   {
-    memberHandle: 'vikan#4315',
-    substituteUserRoute: 'vikan',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/90.png',
-    title: 'verification.title.outreachSpecialist',
-    socials: {
-      telegram: '@vikan393',
-      twitter: '@jvikan1',
-      email: 'vikan4joystream@gmail.com',
-      discord: '@v.i.k.a.n',
-    },
-    safety: {
-      notAllowed: [
-        { text: 'verification.safety.willNever.items.askForMoney' },
-        { text: 'verification.safety.willNever.items.askForPasswordsOrSensitiveInformation' },
-        { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
-        {
-          text: 'verification.safety.willNever.items.askToVisitLinks',
-          components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
-        },
-      ],
-      allowed: [{ text: 'verification.safety.can.items.inviteToYpp' }],
-    },
-  },
-  {
     memberHandle: 'zhsojib2020',
     avatarUrl: 'https://atlas-services.joystream.org/avatars/384efba7-8c21-4262-bc9d-105672a83f4e.webp',
     title: 'verification.title.outreachSpecialist',
@@ -75,75 +51,6 @@ export const verifiedMembers = [
         { text: 'verification.safety.can.items.inviteToYpp' },
         { text: 'verification.safety.can.items.offerMarketingSupport' },
       ],
-    },
-  },
-  {
-    memberHandle: 'Umar Chike',
-    substituteUserRoute: 'umar_chike',
-    avatarUrl: 'https://atlas-services.joystream.org/avatars/cc8b93ad-6e6f-49a4-aa63-2fbd4e391842.webp',
-    title: 'verification.title.outreachSpecialist',
-    socials: {
-      telegram: '@Umarchike0',
-      twitter: '@faruqdaniyan',
-      email: 'faruqdaniyan@gmail.com',
-      discord: '@.umarchike',
-    },
-    safety: {
-      notAllowed: [
-        { text: 'verification.safety.willNever.items.askForMoney' },
-        { text: 'verification.safety.willNever.items.askForPasswordsOrSensitiveInformation' },
-        { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
-        {
-          text: 'verification.safety.willNever.items.askToVisitLinks',
-          components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
-        },
-      ],
-      allowed: [{ text: 'verification.safety.can.items.inviteToYpp' }],
-    },
-  },
-  {
-    memberHandle: 'Jenny',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/48.png',
-    title: 'verification.title.marketer',
-    socials: {
-      telegram: '@jen48632',
-      twitter: '@JennyChizh',
-      email: '@jen4ph@gmail.com',
-      discord: '@jen4ph',
-    },
-    safety: {
-      notAllowed: [
-        { text: 'verification.safety.willNever.items.askForMoney' },
-        { text: 'verification.safety.willNever.items.askForPasswordsOrSensitiveInformation' },
-        { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
-        {
-          text: 'verification.safety.willNever.items.askToVisitLinks',
-          components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
-        },
-      ],
-      allowed: [{ text: 'verification.safety.can.items.offerMarketingSupport' }],
-    },
-  },
-  {
-    memberHandle: 'bythekingmaker',
-    avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/106.png',
-    title: 'verification.title.headOfContent',
-    socials: {
-      telegram: '@bythekingmaker',
-      twitter: '@bythekingmaker',
-      discord: '@bythekingmaker',
-    },
-    safety: {
-      notAllowed: [
-        { text: 'verification.safety.willNever.items.askForMoney' },
-        { text: 'verification.safety.willNever.items.askForPasswordsOrSensitiveInformation' },
-        { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
-        {
-          text: 'verification.safety.willNever.items.askToVisitLinks',
-          components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
-        },
-      ],
-      allowed: [{ text: 'verification.safety.can.items.offerMarketingSupport' }],
     },
   },
   {
