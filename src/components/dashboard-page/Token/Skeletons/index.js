@@ -22,10 +22,11 @@ export const SupplyBlockSkeleton = () => {
   return <Skeleton skeletonCn="supply-block-skeleton" />;
 };
 
-export const ExchangeBlockSkeleton = () => {
+export const ExchangeBlockSkeleton = bps => {
+  const skeletonsQuantity = bps === 'xxs' || bps === 'xs' || bps === 'sm' ? 4 : 8;
   return (
     <div className="exchange-block-skeleton">
-      {Array.from({ length: 4 }, (_, i) => {
+      {Array.from({ length: skeletonsQuantity }, (_, i) => {
         return <Skeleton key={i} skeletonCn="exchange-block-skeleton__option" />;
       })}
     </div>

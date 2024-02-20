@@ -6,6 +6,7 @@ import ActionButton from '../ActionButton';
 
 import { parseCouncilTermLength } from '../utils';
 import { termDefinitions } from '../../../../data/pages/dashboard/termDefinitions';
+import { withFallbackNumVal } from '../../../../utils/withFallbackVal';
 
 import './style.scss';
 
@@ -28,7 +29,7 @@ const Council = ({ data }) => {
             <ul className="dashboard-team-council__terms-list">
               <li className="dashboard-team-council__terms-list-item">
                 <WidgetHeading heading="Current term" isDim termDefinitionKey="currentTerm" />
-                <p className="dashboard-team-council__term">{data?.currentTerm}</p>
+                <p className="dashboard-team-council__term">{withFallbackNumVal(data?.currentTerm)}</p>
               </li>
               <li className="dashboard-team-council__terms-list-item">
                 <WidgetHeading heading="Term length" isDim termDefinitionKey="termLength" />

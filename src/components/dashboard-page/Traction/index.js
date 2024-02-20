@@ -11,7 +11,14 @@ import { TractionContentSkeleton } from './Skeletons';
 
 import useDashboardMedia from '../../../utils/useDashboardMedia/index.js';
 
-import { chartMockData, parseStats, parseNumToThsdWith1Dec, roundWeeklyRate, parseChartData } from './data.js';
+import {
+  chartMockData,
+  parseStats,
+  parseNumToThsdWith1Dec,
+  roundWeeklyRate,
+  parseChartData,
+  withFallbackValues,
+} from './data.js';
 
 import './style.scss';
 
@@ -53,7 +60,7 @@ const Traction = ({ data, loading }) => {
               valueOfIndicatorInThousands={parseNumToThsdWith1Dec(data?.traction?.totalNumberOfChannels)}
               growthRate={roundWeeklyRate(data?.traction?.totalNumberOfChannelsWeeklyChange)}
               indicator="Signs up"
-              chartData={parsedWeeklyChannelData}
+              chartData={withFallbackValues(parsedWeeklyChannelData)}
             />
             <ChartWidget
               heading="Videos uploaded"
@@ -61,7 +68,7 @@ const Traction = ({ data, loading }) => {
               valueOfIndicatorInThousands={parseNumToThsdWith1Dec(data?.traction?.totalNumberOfVideos)}
               growthRate={roundWeeklyRate(data?.traction?.totalNumberOfVideosWeeklyChange)}
               indicator="Uploads"
-              chartData={parsedWeeklyVideoData}
+              chartData={withFallbackValues(parsedWeeklyVideoData)}
             />
             <ChartWidget
               heading="Comments & reactions"
@@ -69,7 +76,7 @@ const Traction = ({ data, loading }) => {
               valueOfIndicatorInThousands={parseNumToThsdWith1Dec(data?.traction?.totalNumberOfCommentsAndReactions)}
               growthRate={roundWeeklyRate(data?.traction?.totalNumberOfCommentsAndReactionsWeeklyChange)}
               indicator="Comments & reactions"
-              chartData={parsedWeeklyCommentsAndReactionsData}
+              chartData={withFallbackValues(parsedWeeklyCommentsAndReactionsData)}
               chartHeight={commentsAndReactionsChartHeight}
             />
             <div className="dashboard-traction__metrics">

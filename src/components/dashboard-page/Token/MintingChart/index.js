@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
-import { arrayOf, shape, string, number, func } from 'prop-types';
+import { arrayOf, shape, string, number, func, bool } from 'prop-types';
 
 import ChartWrapper from '../../ChartWrapper';
 
@@ -16,9 +16,10 @@ const dashboardTokenMintingChartPropTypes = {
       fill: string,
     })
   ),
+  withLabelsHidden: bool,
 };
 
-const DashboardTokenMintingChart = ({ data }) => {
+const DashboardTokenMintingChart = ({ data, withLabelsHidden }) => {
   const [activeCellName, setActiveCellName] = useState('');
 
   const onCellMouseEnter = event => {
@@ -43,7 +44,9 @@ const DashboardTokenMintingChart = ({ data }) => {
               cy="50%"
               outerRadius={80}
               dataKey="value"
-              label={pieLabelProps => renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim)}
+              label={pieLabelProps =>
+                withLabelsHidden ? null : renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim)
+              }
               labelLine={false}
               isAnimationActive={false}
               animationDuration={0}

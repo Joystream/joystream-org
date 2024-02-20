@@ -126,7 +126,7 @@ const Exchange = ({ data, loading }) => {
       />
 
       {loading ? (
-        <ExchangeBlockSkeleton />
+        <ExchangeBlockSkeleton bps={currentBreakpoints} />
       ) : (
         <>
           <div className="dashboard-token-exchange__options">

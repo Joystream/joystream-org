@@ -16,12 +16,12 @@ const propTypes = {
 const readCouncilPlanLink = 'https://pioneerapp.xyz/#/forum/category/7';
 
 const CurrentCouncil = ({ data }) => {
-  const parsedElectionDate = parseElectedOnDate(data?.electedOnDate);
+  const parsedElectionDate = parseElectedOnDate(data?.electedOnDate || new Date());
 
   const parsedWeeklySalaryInJoy = parseWeeklySalaryInJOY(data?.weeklySalaryInJOY);
 
   const daysInService = data?.termLength;
-  const nextElectionDate = data?.nextElectionDate;
+  const nextElectionDate = data?.nextElectionDate || new Date();
 
   const daysLeftToNextElection = getDaysLeftToNextElection(nextElectionDate);
   const remainingDaysInServicePercentage = Math.round((daysLeftToNextElection / daysInService) * 100);

@@ -18,6 +18,7 @@ import { ReactComponent as TwitterLogo } from '../../../assets/svg/dashboard/twi
 import { ReactComponent as TelegramLogo } from '../../../assets/svg/dashboard/telegram-logo.svg';
 import { ReactComponent as DiscordLogo } from '../../../assets/svg/dashboard/discord-logo.svg';
 
+import { withFallbackNumVal } from '../../../utils/withFallbackVal';
 
 export const founders = [
   {
@@ -81,7 +82,7 @@ export const renderSocialMediaLogo = socialMedia => {
   }
 };
 
-export const parseCouncilTermLength = (data = {}) => `${data?.termLength} days`;
+export const parseCouncilTermLength = (data = {}) => `${withFallbackNumVal(data?.termLength)} days`;
 
 const desiredSocialMediaOrder = {
   email: 0,

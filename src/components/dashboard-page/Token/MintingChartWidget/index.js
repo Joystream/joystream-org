@@ -16,6 +16,9 @@ const MintingChartWidget = ({ data }) => {
   const parsedJoyAnnualInflation = parseInflationPercentage(data?.joyAnnualInflation);
   const chartData = generateChartData(data?.tokenMintingData);
 
+  // When no tokenMintingData is provided labels are hidden because fallback values are inaccurate
+  const withLabelsHidden = Object.values(data?.tokenMintingData).some(pie => !pie);
+
   return (
     <div className="dashboard-token-minting-chart-widget">
       <div className="dashboard-token-minting-chart-widget__heading">
@@ -27,7 +30,7 @@ const MintingChartWidget = ({ data }) => {
           headingWrapperCn="dashboard-token-minting-chart-widget__alt-heading"
         />
       </div>
-      <MintingChart data={chartData} />
+      <MintingChart data={chartData} withLabelsHidden={withLabelsHidden} />
     </div>
   );
 };
