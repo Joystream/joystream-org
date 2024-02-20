@@ -4,6 +4,7 @@ import { string, number, object, bool } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 import { ExchangeBlockSkeleton } from '../Skeletons';
+import Feature from '../../../Feature';
 import useDashboardMedia from '../../../../utils/useDashboardMedia';
 
 import { ReactComponent as ToggleButtonChevron } from '../../../../assets/svg/dashboard/toggle-button-chevron.svg';
@@ -58,6 +59,8 @@ const exchangePropTypes = {
 };
 
 const Exchange = ({ data, loading }) => {
+  const toggleOptionsVisibilityEnabled = false;
+
   const parsedExchangeOptions = parseExchangeOptions(data);
 
   const { currentBreakpoints } = useDashboardMedia();
@@ -84,6 +87,9 @@ const Exchange = ({ data, loading }) => {
 
   const totalCount = parsedExchangeOptions.length;
   const initShownCount = useMemo(() => {
+    if (!toggleOptionsVisibilityEnabled) {
+      return totalCount;
+    }
     switch (currentBreakpoints) {
       case 'xxs':
       case 'sm':
@@ -91,7 +97,7 @@ const Exchange = ({ data, loading }) => {
       default:
         return 4;
     }
-  }, [currentBreakpoints]);
+  }, [toggleOptionsVisibilityEnabled, totalCount, currentBreakpoints]);
 
   useEffect(() => {
     setShownCount(initShownCount);
@@ -104,7 +110,12 @@ const Exchange = ({ data, loading }) => {
     shownCount,
     parsedExchangeOptions,
   ]);
-  const exchangeOptionsExpanded = useMemo(() => shownCount === totalCount, [shownCount, totalCount]);
+
+  const exchangeOptionsExpanded = useMemo(() => (toggleOptionsVisibilityEnabled ? shownCount === totalCount : true), [
+    toggleOptionsVisibilityEnabled,
+    shownCount,
+    totalCount,
+  ]);
 
   return (
     <div className="dashboard-token-exchange">
@@ -127,17 +138,20 @@ const Exchange = ({ data, loading }) => {
                 return <div className="dashboard-token-exchange__option-placeholder"></div>;
               })}
           </div>
-          {totalCount > initShownCount && (
-            <button
-              className={cn('dashboard-token-exchange__button-toggle-shown-options', {
-                'options-expanded': exchangeOptionsExpanded,
-              })}
-              onClick={toggleShownCount}
-            >
-              {`${exchangeOptionsExpanded ? 'Hide' : 'Show'} more exchanges`}
-              <ToggleButtonChevron />
-            </button>
-          )}
+
+          <Feature disabled={!toggleOptionsVisibilityEnabled}>
+            {totalCount > initShownCount && (
+              <button
+                className={cn('dashboard-token-exchange__button-toggle-shown-options', {
+                  'options-expanded': exchangeOptionsExpanded,
+                })}
+                onClick={toggleShownCount}
+              >
+                {`${exchangeOptionsExpanded ? 'Hide' : 'Show'} more exchanges`}
+                <ToggleButtonChevron />
+              </button>
+            )}
+          </Feature>
         </>
       )}
     </div>

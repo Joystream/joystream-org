@@ -42,8 +42,6 @@ const Dashboard = pageProps => {
   const embedded = !pageProps.location.pathname.includes('/dashboard');
   const historyHidden = true;
 
-  console.log({ data, loading });
-
   return (
     <>
       {/* TODO: Remove later (for demonstration purposes) */}
