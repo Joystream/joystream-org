@@ -15,7 +15,6 @@ import { useMediaQuery } from 'react-responsive';
 import { arrayOf, objectOf, string } from 'prop-types';
 
 import {
-  // _generateChartData,
   generateChartData,
   formatXAxisTick,
   formatYAxisTick,
@@ -29,7 +28,6 @@ import {
 import './style.scss';
 
 const ReleaseScheduleChart = () => {
-  // const [chartData] = useState(() => _generateChartData());
   const [chartData] = useState(() => generateChartData());
   const areas = Object.keys(chartData[0]).filter(key => key !== 'month');
 

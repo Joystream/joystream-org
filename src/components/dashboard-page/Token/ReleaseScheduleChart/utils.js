@@ -20,26 +20,6 @@ export const areasPalette = {
   jsgenesisFoundingMembers: '#6C6CFF',
 };
 
-export const _generateChartData = () => {
-  const mockData = [];
-
-  for (let i = 0; i < 30; i += 1) {
-    // increasing percentage for each area
-    mockData.push({
-      month: i,
-      communityFoundingMembers: i,
-      reserved1: i + 1,
-      reserved2: i + 1.75,
-      strategicPartners: i + 3.5,
-      membershipAirdrop: i + 5,
-      investors: i + 5.75,
-      jsgenesisFoundingMembers: i + 15,
-    });
-  }
-
-  return mockData;
-};
-
 export const formatXAxisTick = (num, isLast) => {
   return num % 5 === 0 || isLast ? num : '';
 };

@@ -19,22 +19,6 @@ export const generateCoinMarketCapStats = (prices = fallbackPrices, volume = fal
   return data;
 };
 
-export const generateChartMockData = () => {
-  const mockData = [];
-  // Dates generated from 1 Jul to 11 Oct
-  for (let i = 0; i < 103; i += 1) {
-    mockData.push({
-      // 100 subsequent days after 1 Jul
-      date: new Date(new Date(2023, 6, 1).getTime() + i * 24 * 60 * 60 * 1000),
-      // vals from 0 to 1
-      price: Math.random(),
-      // min volume $5M and max volume is $50M
-      volume: Math.random() * (50 - 5) + 5,
-    });
-  }
-  return mockData;
-};
-
 export const formatXAxisTick = (datestr, locale = 'en-US') => {
   const date = new Date(datestr);
   const day = date.getDate();
