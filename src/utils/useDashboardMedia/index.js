@@ -4,6 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 export default function useDashboardMedia() {
   const [currentBreakpoints, setCurrentBreakpoints] = useState('xxs');
 
+  const isXxs = useMediaQuery({ maxWidth: 424 });
   const isXs = useMediaQuery({ minWidth: 425, maxWidth: 767 });
   const isSm = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isMd = useMediaQuery({ minWidth: 1024, maxWidth: 1439 });
@@ -11,7 +12,9 @@ export default function useDashboardMedia() {
   const isXl = useMediaQuery({ minWidth: 1920 });
 
   useEffect(() => {
-    if (isXs) {
+    if (isXxs) {
+      setCurrentBreakpoints('xxs');
+    } else if (isXs) {
       setCurrentBreakpoints('xs');
     } else if (isSm) {
       setCurrentBreakpoints('sm');
@@ -22,7 +25,7 @@ export default function useDashboardMedia() {
     } else if (isXl) {
       setCurrentBreakpoints('xl');
     }
-  }, [isXs, isSm, isMd, isLg, isXl]);
+  }, [isXxs, isXs, isSm, isMd, isLg, isXl]);
 
   return { currentBreakpoints };
 }

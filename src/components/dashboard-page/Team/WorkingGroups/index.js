@@ -115,7 +115,7 @@ const WorkingGroups = ({ groups, loading }) => {
       {loading ? (
         <WorkingGroupsBlockSkeleton />
       ) : (
-        <Carousel withLgSlides>
+        <Carousel withLgSlides withExtraItem>
           {groups.map((group, index) => {
             return <WorkingGroup key={`${group.name}-${index}`} {...group} />;
           })}

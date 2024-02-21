@@ -9,7 +9,7 @@ import './style.scss';
 
 const propTypes = {
   heading: string.isRequired,
-  valueOfIndicatorInThousands: number.isRequired,
+  valueOfIndicator: string.isRequired,
   growthRate: number.isRequired,
   indicator: string.isRequired,
   chartData: arrayOf(
@@ -27,7 +27,7 @@ const propTypes = {
 
 const ChartWidget = ({
   heading,
-  valueOfIndicatorInThousands,
+  valueOfIndicator,
   growthRate,
   indicator,
   chartData,
@@ -39,7 +39,7 @@ const ChartWidget = ({
   return (
     <div className="dashboard-traction-chart-widget">
       <WidgetHeading heading={heading} termDefinitionKey={termDefinitionKey} />
-      <p className="dashboard-traction-chart-widget__indicator-value">{`${valueOfIndicatorInThousands}K`}</p>
+      <p className="dashboard-traction-chart-widget__indicator-value">{valueOfIndicator}</p>
       <p className="dashboard-traction-chart-widget__growth-rate">{`${growthRateWithSign}% Changes`}</p>
       <h4 className="dashboard-traction-chart-widget__indicator">{`${indicator} per week`}</h4>
       <Chart data={chartData} chartHeight={chartHeight} />

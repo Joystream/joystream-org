@@ -56,12 +56,12 @@ export const parseContributions = (commits = {}) => {
 
   for (const month of months) {
     const commitsForMonth = commits[month];
-    const days = Object.keys(commitsForMonth);
+    const days = Object.keys(commitsForMonth).sort((a, b) => a - b);
 
     for (const day of days) {
       const commitsForDay = commitsForMonth[day];
       data.push({
-        date: new Date(2023, Number(month) - 1, Number(day)),
+        date: new Date(month === '12' ? 2023 : 2024, Number(month) - 1, Number(day)),
         contributions: commitsForDay,
       });
     }

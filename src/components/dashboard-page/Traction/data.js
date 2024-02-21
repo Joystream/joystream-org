@@ -75,7 +75,14 @@ export const parseStats = (data = {}) => [
   },
 ];
 
-export const parseNumToThsdWith1Dec = num => (num / 1000)?.toFixed(1);
+export const parseNumToThsdWith1Dec = num => {
+  const quotient = num / 1000;
+  if (quotient < 1000) {
+    return `${quotient.toFixed(1)}K`;
+  }
+
+  return `${(quotient / 1000).toFixed(1)}M`;
+};
 
 export const parseChartData = (data = [], tokenPriceInUsd = 1) => {
   const monthSpan = 4;

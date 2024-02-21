@@ -144,6 +144,12 @@ export const parseWorkingGroups = (workingGroups = {}) => {
   const keys = Object.keys(workingGroups);
   for (const key of keys) {
     const group = workingGroups[key];
+    const lead = getWorkingGroupLead(group.workers);
+
+    if (!group.budget || !group.workers.length || !lead.username) {
+      continue;
+    }
+
     parsed.push({
       link: `https://pioneerapp.xyz/#/working-groups/${
         group.name === 'Human Resources' ? 'hr' : group.name.toLowerCase()
@@ -152,7 +158,7 @@ export const parseWorkingGroups = (workingGroups = {}) => {
       logo: workingGroupsLogos[key],
       // French locale uses space as a separator
       currentBudget: `${Math.round(group.budget).toLocaleString('fr-FR')} JOY`,
-      lead: getWorkingGroupLead(group.workers),
+      lead,
       workers: group.workers.map(w => ({
         avatar: w.avatar,
         username: w.handle,

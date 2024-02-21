@@ -57,7 +57,7 @@ const Traction = ({ data, loading }) => {
             <ChartWidget
               heading="Content creators"
               termDefinitionKey="contentCreators"
-              valueOfIndicatorInThousands={parseNumToThsdWith1Dec(data?.traction?.totalNumberOfChannels)}
+              valueOfIndicator={parseNumToThsdWith1Dec(data?.traction?.totalNumberOfChannels)}
               growthRate={roundWeeklyRate(data?.traction?.totalNumberOfChannelsWeeklyChange)}
               indicator="Signs up"
               chartData={withFallbackValues(parsedWeeklyChannelData)}
@@ -65,7 +65,7 @@ const Traction = ({ data, loading }) => {
             <ChartWidget
               heading="Videos uploaded"
               termDefinitionKey="videos"
-              valueOfIndicatorInThousands={parseNumToThsdWith1Dec(data?.traction?.totalNumberOfVideos)}
+              valueOfIndicator={parseNumToThsdWith1Dec(data?.traction?.totalNumberOfVideos)}
               growthRate={roundWeeklyRate(data?.traction?.totalNumberOfVideosWeeklyChange)}
               indicator="Uploads"
               chartData={withFallbackValues(parsedWeeklyVideoData)}
@@ -73,7 +73,7 @@ const Traction = ({ data, loading }) => {
             <ChartWidget
               heading="Comments & reactions"
               termDefinitionKey="commentsAndReactions"
-              valueOfIndicatorInThousands={parseNumToThsdWith1Dec(data?.traction?.totalNumberOfCommentsAndReactions)}
+              valueOfIndicator={parseNumToThsdWith1Dec(data?.traction?.totalNumberOfCommentsAndReactions)}
               growthRate={roundWeeklyRate(data?.traction?.totalNumberOfCommentsAndReactionsWeeklyChange)}
               indicator="Comments & reactions"
               chartData={withFallbackValues(parsedWeeklyCommentsAndReactionsData)}
@@ -92,7 +92,7 @@ const Traction = ({ data, loading }) => {
               <ChartWidget
                 heading="NFTs"
                 termDefinitionKey="nfts"
-                valueOfIndicatorInThousands={parseNumToThsdWith1Dec(data?.traction?.totalVolumeOfSoldNFTs)}
+                valueOfIndicator={parseNumToThsdWith1Dec(data?.traction?.totalVolumeOfSoldNFTs)}
                 growthRate={roundWeeklyRate(data?.traction?.totalVolumeOfSoldNFTsWeeklyChange)}
                 indicator="Traded volume"
                 chartData={parsedWeeklyVolumeOfSoldNFTs}
@@ -100,7 +100,7 @@ const Traction = ({ data, loading }) => {
               <ChartWidget
                 heading="Creator tokens"
                 termDefinitionKey="crts"
-                valueOfIndicatorInThousands={260}
+                valueOfIndicator="260K"
                 growthRate={5}
                 indicator="Traded volume"
                 chartData={chartMockData}

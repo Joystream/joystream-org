@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import cn from 'classnames';
 import { CarouselProvider, Slider, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { useMediaQuery } from 'react-responsive';
 import { arrayOf, node, bool, string } from 'prop-types';
 
 import useDashboardMedia from '../../../utils/useDashboardMedia';
@@ -13,6 +14,7 @@ import './style.scss';
 const propTypes = {
   children: arrayOf(node),
   withLgSlides: bool,
+  withExtraItem: bool,
   carouselCn: string,
 };
 
@@ -20,8 +22,10 @@ const defaultProps = {
   withLgSlides: false,
 };
 
-const DashboardCarousel = ({ children, withLgSlides, carouselCn }) => {
-  const totalSlides = children.length;
+const DashboardCarousel = ({ children, withLgSlides, withExtraItem, carouselCn }) => {
+  const extraItemFits = useMediaQuery({ maxWidth: 1024 });
+
+  const totalSlides = withExtraItem && extraItemFits ? children.length + 1 : children.length;
   const [currentSlide, setCurrentSlide] = useState(0);
   const { currentBreakpoints } = useDashboardMedia();
 
