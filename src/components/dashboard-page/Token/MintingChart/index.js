@@ -4,6 +4,7 @@ import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { arrayOf, shape, string, number, func, bool } from 'prop-types';
 
 import ChartWrapper from '../../ChartWrapper';
+import useDashboardMedia from '../../../../utils/useDashboardMedia';
 
 import './style.scss';
 
@@ -20,6 +21,7 @@ const dashboardTokenMintingChartPropTypes = {
 };
 
 const DashboardTokenMintingChart = ({ data, withLabelsHidden }) => {
+  const { currentBreakpoints } = useDashboardMedia();
   const [activeCellName, setActiveCellName] = useState('');
 
   const onCellMouseEnter = event => {
@@ -37,7 +39,7 @@ const DashboardTokenMintingChart = ({ data, withLabelsHidden }) => {
     <>
       <ChartWrapper chartHeight={280}>
         <ResponsiveContainer width="99%" height={280}>
-          <PieChart>
+          <PieChart height={280}>
             <Pie
               data={data}
               cx="50%"
@@ -45,7 +47,9 @@ const DashboardTokenMintingChart = ({ data, withLabelsHidden }) => {
               outerRadius={80}
               dataKey="value"
               label={pieLabelProps =>
-                withLabelsHidden ? null : renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim)
+                withLabelsHidden
+                  ? null
+                  : renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim, currentBreakpoints)
               }
               labelLine={false}
               isAnimationActive={false}
@@ -76,11 +80,13 @@ const DashboardTokenMintingChart = ({ data, withLabelsHidden }) => {
 
 DashboardTokenMintingChart.propTypes = dashboardTokenMintingChartPropTypes;
 
-function renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim) {
+function renderCustomLabel(pieLabelProps, setActiveCellName, shouldBeDim, currentBreakpoints) {
+  const isXxs = currentBreakpoints === 'xxs';
+
   const getX = pieLabelProps => {
     switch (pieLabelProps.name) {
       case 'workersRewards':
-        return pieLabelProps.x - 40;
+        return pieLabelProps.x - (isXxs ? 35 : 40);
       default:
         return pieLabelProps.x;
     }

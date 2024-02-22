@@ -47,6 +47,11 @@
 
   &__supplemental-stats {
     @include dashboard-widget-helper-text;
+
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   &__secondary-stats-block {

@@ -73,7 +73,7 @@ const Dashboard = pageProps => {
 
           <Team data={data?.team} loading={loading} />
 
-          <Comparison />
+          <Comparison data={data} loading={loading} />
 
           <Roadmap />
         </main>

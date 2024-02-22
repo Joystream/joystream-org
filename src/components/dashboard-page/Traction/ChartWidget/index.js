@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number, arrayOf, shape } from 'prop-types';
+import { string, number, arrayOf, shape, bool } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 
@@ -23,6 +23,7 @@ const propTypes = {
   ),
   chartHeight: number,
   termDefinitionKey: string,
+  withYAxisMarginReduced: bool,
 };
 
 const ChartWidget = ({
@@ -33,6 +34,7 @@ const ChartWidget = ({
   chartData,
   chartHeight,
   termDefinitionKey,
+  withYAxisMarginReduced,
 }) => {
   const growthRateWithSign = growthRate > 0 ? `+${growthRate}` : growthRate;
 
@@ -42,7 +44,7 @@ const ChartWidget = ({
       <p className="dashboard-traction-chart-widget__indicator-value">{valueOfIndicator}</p>
       <p className="dashboard-traction-chart-widget__growth-rate">{`${growthRateWithSign}% Changes`}</p>
       <h4 className="dashboard-traction-chart-widget__indicator">{`${indicator} per week`}</h4>
-      <Chart data={chartData} chartHeight={chartHeight} />
+      <Chart data={chartData} chartHeight={chartHeight} withYAxisMarginReduced={withYAxisMarginReduced} />
     </div>
   );
 };

@@ -2,8 +2,13 @@
 
 .dashboard-token-mintning-chart-custom-label {
   @include t200;
+  font-size: 12px;
   fill: $dashboard-content-base-text-color;
   font-feature-settings: $dashboard-font-feature-settings;
+
+  @media #{$screen-min-dashboard-xs} {
+    font-size: 14px;
+  }
 }
 
 .dim {
@@ -42,5 +47,11 @@
     @include t200;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    & {
+      margin-top: auto;
+    }
   }
 }

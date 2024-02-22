@@ -29,10 +29,10 @@ export const columns = [
   },
 ];
 
-export const data = [
+export const getData = (dynamicData = {}) => [
   {
     indicator: 'FDV',
-    joystream: 400.4,
+    joystream: Number((dynamicData?.token?.fullyDilutedValue / 1000000).toFixed(1)) || 400.4,
     youTube: 200,
     lbry: 150,
     rumble: 334,

@@ -36,12 +36,12 @@ const PrimaryStats = ({ SocialMediaLogo, socialMediaName, mainStats, supplementa
       })}
     >
       <div className="dashboard-community-social-media__stats-container">
-        <SocialMediaLogo />
+        <SocialMediaLogo height="40px" />
         <h4 className="dashboard-community-social-media__name">{socialMediaName}</h4>
         <p className="dashboard-community-social-media__main-stats font-size-increased">{mainStats}</p>
-        {!!supplementalStats && (
-          <p className="dashboard-community-social-media__supplemental-stats">{supplementalStats}</p>
-        )}
+        <p className={cn('dashboard-community-social-media__supplemental-stats', { hidden: !supplementalStats })}>
+          {supplementalStats || ' Last month'}
+        </p>
       </div>
     </div>
   );

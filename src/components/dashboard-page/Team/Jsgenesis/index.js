@@ -3,7 +3,7 @@ import { string, arrayOf, shape, oneOf } from 'prop-types';
 
 import ArrowButton from '../../ArrowButton';
 
-import { renderSocialMediaLogo } from '../utils';
+import { renderSocialMediaLogo, jsgenesisLink } from '../utils';
 import { termDefinitions } from '../../../../data/pages/dashboard/termDefinitions';
 
 import './style.scss';
@@ -51,20 +51,22 @@ const jsgenesisPropTypes = {
 
 const Jsgenesis = ({ founders }) => {
   return (
-    <div className="dashboard-team-jsgenesis">
-      <div className="dashboard-team-jsgenesis__description-widget-wrapper">
-        <div className="dashboard-team-jsgenesis__description-widget">
-          <h3 className="dashboard-team-jsgenesis__description-widget-heading">Jsgenesis</h3>
-          <div className="dashboard-team-jsgenesis__description-button-wrapper">
-            <p className="dashboard-team-jsgenesis__description">{termDefinitions.jsgenesis}</p>
-            <ArrowButton text="Read more" buttonCn="dashboard-team-jsgenesis__button-read-more" />
+    <a href={jsgenesisLink} target="_blank" rel="noreferrer">
+      <div className="dashboard-team-jsgenesis">
+        <div className="dashboard-team-jsgenesis__description-widget-wrapper">
+          <div className="dashboard-team-jsgenesis__description-widget">
+            <h3 className="dashboard-team-jsgenesis__description-widget-heading">Jsgenesis</h3>
+            <div className="dashboard-team-jsgenesis__description-button-wrapper">
+              <p className="dashboard-team-jsgenesis__description">{termDefinitions.jsgenesis}</p>
+              <ArrowButton text="Read more" buttonCn="dashboard-team-jsgenesis__button-read-more" />
+            </div>
           </div>
         </div>
+        {founders.map((founder, idx) => {
+          return <Founder key={idx} {...founder} />;
+        })}
       </div>
-      {founders.map((founder, idx) => {
-        return <Founder key={idx} {...founder} />;
-      })}
-    </div>
+    </a>
   );
 };
 

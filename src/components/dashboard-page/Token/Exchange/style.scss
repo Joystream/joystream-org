@@ -141,7 +141,8 @@
     &__option {
       height: 248px;
       //   padding: 16px;
-      padding: 13px;
+      padding-block: 16px;
+      padding-inline: 13px;
     }
 
     &__option-volume {
@@ -154,6 +155,12 @@
 
     &__option-placeholder {
       height: 248px;
+    }
+  }
+
+  @media only screen and (min-width: 435px) {
+    &__option {
+      padding-inline: 16px;
     }
   }
 

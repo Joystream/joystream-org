@@ -168,3 +168,5 @@ export const parseWorkingGroups = (workingGroups = {}) => {
 
   return parsed;
 };
+
+export const jsgenesisLink = 'http://www.jsgenesis.com/';

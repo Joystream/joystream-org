@@ -81,10 +81,6 @@
       grid-column: 1 / span 2;
       grid-template-columns: repeat(2, 1fr);
     }
-
-    &__action-button {
-      justify-self: end;
-    }
   }
 
   @media #{$screen-min-dashboard-md} {
@@ -114,8 +110,9 @@
       grid-column: unset;
     }
 
-    &__action-button {
+    &__action-button-link {
       align-self: self-end;
+      justify-self: flex-end;
     }
   }
 }

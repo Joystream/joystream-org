@@ -6,7 +6,7 @@ import useDashboardMedia from '../../../../utils/useDashboardMedia';
 import './style.scss';
 
 const propTypes = {
-  contributors: arrayOf(
+  topContributors: arrayOf(
     shape({
       avatar: string,
       name: string.isRequired,
@@ -15,10 +15,10 @@ const propTypes = {
   ).isRequired,
 };
 
-const Contributors = ({ contributors }) => {
+const Contributors = ({ topContributors }) => {
   const { currentBreakpoints } = useDashboardMedia();
 
-  const totalCount = contributors.length;
+  const totalCount = topContributors.length;
   const initShownCount = useMemo(() => {
     switch (currentBreakpoints) {
       case 'xxs':
@@ -43,10 +43,10 @@ const Contributors = ({ contributors }) => {
   const toggleShownCount = () =>
     setShownCount(prevShownCount => (prevShownCount === initShownCount ? totalCount : initShownCount));
 
-  const shownContributors = useMemo(() => contributors.slice(0, shownCount), [contributors, shownCount]);
+  const shownContributors = useMemo(() => topContributors.slice(0, shownCount), [topContributors, shownCount]);
   const toggleButtonText = useMemo(() => {
     if (shownCount === initShownCount) {
-      return `Show all ${totalCount} contributors`;
+      return `Show ${totalCount} top contributors`;
     }
     return `Hide ${initHiddenCount} contributors`;
   }, [initHiddenCount, initShownCount, totalCount, shownCount]);

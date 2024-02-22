@@ -17,9 +17,10 @@ const propTypes = {
     })
   ),
   chartHeight: number,
+  withYAxisMarginReduced: bool,
 };
 
-const Chart = ({ withBarGapExtended, data, chartHeight }) => {
+const Chart = ({ withBarGapExtended, data, chartHeight, withYAxisMarginReduced }) => {
   const { currentBreakpoints } = useDashboardMedia();
   const [barGap, setBarGap] = useState(1);
 
@@ -38,6 +39,10 @@ const Chart = ({ withBarGapExtended, data, chartHeight }) => {
         return setBarGap(1);
     }
   }, [currentBreakpoints, withBarGapExtended]);
+
+  const isYAxisMarginReduced =
+    withYAxisMarginReduced &&
+    (currentBreakpoints === 'xxs' || currentBreakpoints === 'xs' || currentBreakpoints === 'sm');
 
   return (
     <ChartWrapper chartHeight={chartHeight}>
@@ -64,7 +69,7 @@ const Chart = ({ withBarGapExtended, data, chartHeight }) => {
               </Text>
             )}
             tickLine={false}
-            tickMargin={28}
+            tickMargin={isYAxisMarginReduced ? 10 : 28}
           />
           {Array.from({ length: 4 }, (_, i) => {
             return (

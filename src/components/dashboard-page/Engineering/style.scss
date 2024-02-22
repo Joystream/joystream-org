@@ -82,4 +82,10 @@
       margin-top: 24px;
     }
   }
+
+  @media #{$screen-min-dashboard-lg} {
+    &__github-stats {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }

@@ -2,6 +2,8 @@
 
 .dashboard-token-minting-chart-widget {
   @include dashboard-widget;
+  display: flex;
+  flex-direction: column;
 
   &__heading {
     display: flex;

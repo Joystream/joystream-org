@@ -54,11 +54,11 @@ const Engineering = ({ data, loading }) => {
           <div className="dashboard-engineering__contributors">
             <WidgetHeading
               heading="Contributors"
-              helperText={`(${parsedContributors.length})`}
+              helperText={`(${data?.totalNumberOfContributors})`}
               headingWrapperCn="dashboard-engineering__contributors-heading"
               termDefinitionKey="contributors"
             />
-            <Contributors contributors={parsedContributors} />
+            <Contributors topContributors={parsedContributors} />
           </div>
         )}
       </div>

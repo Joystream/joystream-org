@@ -3,6 +3,7 @@
 .custom-axis-tick {
   @include t100;
   color: $dashboard-charts-base-tick-color;
+  fill: $dashboard-charts-base-tick-color;
   font-feature-settings: $dashboard-font-feature-settings;
 }
 

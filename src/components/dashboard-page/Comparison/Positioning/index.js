@@ -1,17 +1,25 @@
 /* eslint-disable max-len */
 
 import React from 'react';
+import { object } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
+import Feature from '../../../Feature';
 
 import { ReactComponent as SuccessIcon } from '../../../../assets/svg/dashboard/success.svg';
 import { ReactComponent as ErrorIcon } from '../../../../assets/svg/dashboard/error.svg';
 
-import { columns, data } from './data';
+import { columns, getData } from './data';
 
 import './style.scss';
 
-const Positioning = () => {
+const propTypes = {
+  dynamicData: object,
+};
+
+const Positioning = ({ dynamicData }) => {
+  const data = getData(dynamicData);
+
   const fdvsRowData = data.find(val => val.indicator === 'FDV');
   const fdvs = Object.values(fdvsRowData || {}).filter(val => typeof val === 'number');
   const maxFdv = Math.max(...fdvs);
@@ -47,7 +55,9 @@ const Positioning = () => {
 
   return (
     <div className="dashboard-comparison-positioning">
-      <WidgetHeading heading="Positioning" termDefinitionKey="positioning" />
+      <Feature disabled>
+        <WidgetHeading heading="Positioning" termDefinitionKey="positioning" />
+      </Feature>
       <div className="dashboard-comparison-positioning__table-wrapper">
         <table className="dashboard-comparison-positioning__table">
           <thead className="__head">
@@ -83,5 +93,7 @@ const Positioning = () => {
     </div>
   );
 };
+
+Positioning.propTypes = propTypes;
 
 export default Positioning;

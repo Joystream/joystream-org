@@ -36,7 +36,12 @@ const Council = ({ data }) => {
                 <p className="dashboard-team-council__term">{parseCouncilTermLength(data)}</p>
               </li>
             </ul>
-            <a href={viewPastCouncilsLink} target="_blank" rel="noreferrer">
+            <a
+              href={viewPastCouncilsLink}
+              target="_blank"
+              rel="noreferrer"
+              className="dashboard-team-council__action-button-link"
+            >
               <ActionButton text="View past councils" buttonCn="dashboard-team-council__action-button" />
             </a>
           </div>

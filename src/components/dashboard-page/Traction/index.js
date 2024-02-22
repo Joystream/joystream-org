@@ -69,6 +69,7 @@ const Traction = ({ data, loading }) => {
               growthRate={roundWeeklyRate(data?.traction?.totalNumberOfVideosWeeklyChange)}
               indicator="Uploads"
               chartData={withFallbackValues(parsedWeeklyVideoData)}
+              withYAxisMarginReduced
             />
             <ChartWidget
               heading="Comments & reactions"
