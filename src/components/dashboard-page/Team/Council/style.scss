@@ -81,6 +81,11 @@
       grid-column: 1 / span 2;
       grid-template-columns: repeat(2, 1fr);
     }
+
+    &__action-button-link > .dashboard-team-action-button {
+      width: fit-content;
+      min-width: 210px;
+    }
   }
 
   @media #{$screen-min-dashboard-md} {

@@ -23,9 +23,16 @@ const defaultProps = {
 };
 
 const DashboardCarousel = ({ children, withLgSlides, withExtraItem, carouselCn }) => {
-  const extraItemFits = useMediaQuery({ maxWidth: 1024 });
+  const isMd = useMediaQuery({ minWidth: 1024, maxWidth: 1279 });
+  const extraItems = useMemo(() => {
+    if (isMd) {
+      return 2;
+    }
 
-  const totalSlides = withExtraItem && extraItemFits ? children.length + 1 : children.length;
+    return 1;
+  }, [isMd]);
+
+  const totalSlides = withExtraItem ? children.length + extraItems : children.length;
   const [currentSlide, setCurrentSlide] = useState(0);
   const { currentBreakpoints } = useDashboardMedia();
 
