@@ -39,9 +39,7 @@
 
   &__table-head-cell {
     padding: 12px 4px;
-    font-weight: 600;
-    font-size: 8px;
-    letter-spacing: 0.08px;
+    @include t200;
     text-align: start;
   }
 
@@ -51,6 +49,12 @@
 
       & > td {
         height: 1px;
+      }
+
+      & > td > div {
+        font-size: 10px;
+        line-height: 1.6;
+        letter-spacing: 0.1px;
       }
 
       @-moz-document url-prefix() {
@@ -64,9 +68,7 @@
   &__table-body-cell {
     padding: 16px 4px;
     vertical-align: bottom;
-    font-size: 10px;
-    line-height: 1.6;
-    letter-spacing: 0.1px;
+    @include t200;
   }
 
   &__bar {

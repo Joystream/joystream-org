@@ -38,7 +38,7 @@ const CurrentCouncil = ({ data }) => {
           <div className="dashboard-team-current-council__progress-bar">
             <div
               className="dashboard-team-current-council__progress-bar-content"
-              style={{ width: `${remainingDaysInServicePercentage}%` }}
+              style={{ width: `${100 - remainingDaysInServicePercentage}%` }}
             ></div>
           </div>
           <h4 className="dashboard-team-current-council__info-label">
