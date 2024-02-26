@@ -9,7 +9,7 @@ import Browser2 from '../../../assets/images/landing/hero/browser-2.webp';
 import Browser3 from '../../../assets/images/landing/hero/browser-3.webp';
 import VideoPlayer from '../../../assets/images/landing/hero/illustration-ecosystem-l1.webp';
 import PioneerLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon-3.webp';
-import JoyStatsLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon.webp';
+// import JoyStatsLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon.webp';
 import JScanLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon-1.webp';
 import JoyUtilsLogo from '../../../assets/images/landing/ecosystem-app-icons/app-icon-2.webp';
 
@@ -150,14 +150,14 @@ const Carousel = ({ t }) => {
           link="https://pioneerapp.xyz/"
           t={t}
         />
-        <CarouselItem
+        {/* <CarouselItem
           logo={JoyStatsLogo}
           name={t('landing.ecosystem.appsBuiltOnJoystream.joystats.name')}
           description={t('landing.ecosystem.appsBuiltOnJoystream.joystats.description')}
           platforms={t('landing.ecosystem.appsBuiltOnJoystream.joystats.platforms')}
           link="https://joystreamstats.live/"
           t={t}
-        />
+        /> */}
         <CarouselItem
           logo={JScanLogo}
           name={t('landing.ecosystem.appsBuiltOnJoystream.jscan.name')}
@@ -175,16 +175,18 @@ const Carousel = ({ t }) => {
           t={t}
         />
       </div>
-      <div className="IndexPage__ecosystem__apps__carousel-controls">
-        {Array.from({ length: numberOfControlItems }).map((_, index) => (
-          <CarouselControl
-            key={index}
-            currentActiveItem={activeCarouselControlItem}
-            scroll={() => scroll(index)}
-            isActive={index === activeCarouselControlItem}
-          />
-        ))}
-      </div>
+      {numberOfControlItems > 1 ? (
+        <div className="IndexPage__ecosystem__apps__carousel-controls">
+          {Array.from({ length: numberOfControlItems }).map((_, index) => (
+            <CarouselControl
+              key={index}
+              currentActiveItem={activeCarouselControlItem}
+              scroll={() => scroll(index)}
+              isActive={index === activeCarouselControlItem}
+            />
+          ))}
+        </div>
+      ) : null}
     </>
   );
 };
@@ -247,7 +249,7 @@ const Ecosystem = ({ t }) => {
           <h3 className="IndexPage__ecosystem__apps__title">
             {t('landing.ecosystem.appsBuiltOnJoystream.title')}{' '}
             {/* TODO: This will need to be made dynamic alogn with the rest of the content in the carousel. */}
-            <div className="IndexPage__ecosystem__apps__title__app-count">5</div>
+            <div className="IndexPage__ecosystem__apps__title__app-count">4</div>
           </h3>
           <FeaturedPlatform
             image={GleevLogo}
