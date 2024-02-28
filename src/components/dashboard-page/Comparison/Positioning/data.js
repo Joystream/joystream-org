@@ -25,14 +25,16 @@ export const columns = [
   },
 ];
 
+const getFDV = (val, fallbackVal = 0) => Number((val / 1000000).toFixed(1)) || fallbackVal;
+
 export const getData = (dynamicData = {}) => [
   {
     indicator: 'FDV',
-    joystream: Number((dynamicData?.token?.fullyDilutedValue / 1000000).toFixed(1)) || 400.4,
-    lbry: 150,
-    rumble: 334,
-    deso: 102,
-    theta: 54,
+    joystream: getFDV(dynamicData?.token?.fullyDilutedValue),
+    lbry: getFDV(dynamicData?.token?.fdvs?.lbc),
+    rumble: getFDV(dynamicData?.token?.fdvs?.rum),
+    deso: getFDV(dynamicData?.token?.fdvs?.deso),
+    theta: getFDV(dynamicData?.token?.fdvs?.theta),
   },
   {
     indicator: 'Open social graph',

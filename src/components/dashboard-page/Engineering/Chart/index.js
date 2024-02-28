@@ -87,8 +87,8 @@ function CustomCursor(tooltipCursorProps) {
   return (
     <g>
       <line
-        x1={points1.x}
-        x2={points1.x}
+        x1={points1?.x}
+        x2={points1?.x}
         y1={0}
         y2={lineHeight}
         stroke="#B5C1C9"
@@ -96,15 +96,15 @@ function CustomCursor(tooltipCursorProps) {
         strokeDasharray="2 2"
         style={{ zIndex: -1 }}
       />
-      <rect x={points1.x - 45} y={lineHeight} width="90" height="32" fill="#272D33" rx={8} ry={8}></rect>
+      <rect x={points1?.x - 45} y={lineHeight} width="90" height="32" fill="#272D33" rx={8} ry={8}></rect>
       <text
-        x={points1.x - 45 + 8}
+        x={points1?.x - 45 + 8}
         y={tooltipCursorProps.height + 32}
         fill="#F4F6F8"
         textAnchor="center"
         className="custom-cursor-text"
       >
-        {formatDateToShowInTooltip(tooltipCursorProps.payload[0].payload.date)}
+        {formatDateToShowInTooltip((tooltipCursorProps.payload || [])[0]?.payload.date)}
       </text>
     </g>
   );

@@ -1,4 +1,10 @@
+import { isNaN } from '../../../../utils/withFallbackVal';
+
 export const parseInflationPercentage = val => {
+  if (isNaN(val)) {
+    return '0%';
+  }
+
   return `${Math.round(val)}%`;
 };
 

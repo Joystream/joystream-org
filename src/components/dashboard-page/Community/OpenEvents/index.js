@@ -94,7 +94,7 @@ const OpenEvents = ({ events, loading }) => {
         termDefinitionKey="openEvents"
       />
 
-      {loading ? (
+      {loading || !events.length ? (
         <OpenEventsBlockSkeleton />
       ) : (
         <Carousel withLgSlides carouselCn="dashboard-community-open-events__carousel">

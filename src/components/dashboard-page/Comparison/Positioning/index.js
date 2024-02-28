@@ -22,9 +22,25 @@ const Positioning = ({ dynamicData }) => {
 
   const fdvsRowData = data.find(val => val.indicator === 'FDV');
   const fdvs = Object.values(fdvsRowData || {}).filter(val => typeof val === 'number');
-  const maxFdv = Math.max(...fdvs);
 
-  const getFdvBarHeight = fdv => Math.round((fdv / maxFdv) * 100);
+  const getFdvBarHeight = fdv => {
+    const range = fdv >= 1000 ? 'over1B' : fdv >= 100 ? 'between100MAnd1B' : 'under100M';
+    const fdvsInRange = fdvs.filter(fdv => {
+      switch (range) {
+        case 'over1B':
+          return fdv >= 1000;
+        case 'between100MAnd1B':
+          return fdv >= 100 && fdv < 1000;
+        default:
+          return fdv < 100;
+      }
+    });
+    const maxFdvInRange = Math.max(...fdvsInRange);
+    // Assume vals > 1B max-height: 100%; 100M <= vals < 1B max-height: 50% and vals < 100M max-height: 25%
+    const rangeMaxPercentage = range === 'over1B' ? 100 : range === 'between100MAnd1B' ? 50 : 25;
+
+    return (fdv * rangeMaxPercentage) / maxFdvInRange;
+  };
 
   const renderCell = cellData => {
     switch (typeof cellData) {
@@ -44,7 +60,9 @@ const Positioning = ({ dynamicData }) => {
                   }
                 : {}),
             }}
-          >{`$${cellData}M`}</div>
+          >
+            {cellData > 1000 ? `$${Math.round(cellData / 1000)}B` : `$${cellData}M`}
+          </div>
         );
       case 'boolean':
         return cellData ? <SuccessIcon /> : <ErrorIcon />;

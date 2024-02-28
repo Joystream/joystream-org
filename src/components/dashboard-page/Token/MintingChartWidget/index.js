@@ -17,7 +17,8 @@ const MintingChartWidget = ({ data }) => {
   const chartData = generateChartData(data?.tokenMintingData);
 
   // When no tokenMintingData is provided labels are hidden because fallback values are inaccurate
-  const withLabelsHidden = Object.values(data?.tokenMintingData).some(pie => !pie);
+  const values = Object.values(data?.tokenMintingData || {});
+  const withLabelsHidden = !values.length || values.some(pie => !pie);
 
   return (
     <div className="dashboard-token-minting-chart-widget">

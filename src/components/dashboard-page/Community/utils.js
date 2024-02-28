@@ -29,7 +29,7 @@ export const isSameDate = (date, anotherDate) => new Date(date).toDateString() =
 export const parseSocialMediaMemberCount = (data, key) => {
   const socialMediaMemberCount = data[key];
   if (!socialMediaMemberCount) {
-    return '';
+    return '0K';
   }
 
   const socialMediaMemberCountInThousands = socialMediaMemberCount / 1000;
@@ -40,7 +40,7 @@ export const parseSocialMediaMemberCount = (data, key) => {
 export const parseSocialMediaMemberCountMonthlyChange = (data, key) => {
   const socialMediaMemberCountMonthlyChange = data[key];
   if (!socialMediaMemberCountMonthlyChange) {
-    return '';
+    return '0% Last month';
   }
 
   const roundedSocialMediaMemberCountMonthlyChange = Math.round(socialMediaMemberCountMonthlyChange);
@@ -52,9 +52,9 @@ export const parseSocialMediaMemberCountMonthlyChange = (data, key) => {
   return `${socialMediaMemberCountMonthlyChangeWithSign} Last month`;
 };
 
-export const parseTweetscoutScore = data => Math.round(data.tweetscoutScore) || '';
+export const parseTweetscoutScore = data => Math.round(data.tweetscoutScore) || 0;
 
-export const parseTweetscoutLevel = data => `Level ${data.tweetscoutLevel}` ?? '';
+export const parseTweetscoutLevel = data => `Level ${data.tweetscoutLevel || 0}`;
 
 export const parseFollowers = (followers = []) =>
   followers.map(follower => ({

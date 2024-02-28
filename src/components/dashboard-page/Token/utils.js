@@ -1,10 +1,18 @@
+import { isNaN } from '../../../utils/withFallbackVal';
+
 const parseNumToMil = (data = {}, key) => {
   const metrics = data[key];
+  if (isNaN(metrics)) {
+    return '$0M';
+  }
   return `$${(metrics / 1000000).toFixed(1)}M`;
 };
 
 const parseMetricsWeeklyChange = (data = {}, key) => {
   const metrics = data[key];
+  if (isNaN(metrics)) {
+    return '0%';
+  }
   const roundedMetrics = Math.round(metrics);
   const metricsWithSign = roundedMetrics > 0 ? `+${roundedMetrics}` : roundedMetrics;
   return `${metricsWithSign}%`;
@@ -32,5 +40,8 @@ export const getTokenPriceMetrics = (data = {}) => [
 
 export const parsePercentage = val => {
   const shouldReturnInt = val?.toFixed(1)?.includes('.0');
+  if (isNaN(val)) {
+    return '0%';
+  }
   return `${val?.toFixed(shouldReturnInt ? 0 : 1)}%`;
 };

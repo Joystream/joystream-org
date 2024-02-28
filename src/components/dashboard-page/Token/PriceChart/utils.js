@@ -3,6 +3,8 @@ import React from 'react';
 import fallbackPrices from './prices.json';
 import fallbackVolume from './volume.json';
 
+import { isNaN } from '../../../../utils/withFallbackVal';
+
 export const generateCoinMarketCapStats = (prices = fallbackPrices, volume = fallbackVolume) => {
   const data = [];
 
@@ -114,6 +116,10 @@ export const renderCustomActiveDot = (areaChartActiveDotProps, chartWidth) => {
 };
 
 export const parsePriceWeeklyChange = price => {
+  if (isNaN(price)) {
+    return '0% Last week';
+  }
+
   const roundedPiceWeeklyChange = Math.round(price);
   const roundedPiceWeeklyChangeWithSign =
     roundedPiceWeeklyChange > 0 ? `+${roundedPiceWeeklyChange}%` : `${roundedPiceWeeklyChange}%`;

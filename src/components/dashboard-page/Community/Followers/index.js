@@ -72,7 +72,7 @@ const Followers = ({ followers, loading }) => {
         headingWrapperCn="dashboard-community-followers__heading"
         termDefinitionKey="featuredFollowers"
       />
-      {loading ? (
+      {loading || !followers.length ? (
         <FollowersBlockSkeleton />
       ) : (
         <div className={cn('dashboard-community-followers__grid', { 'as-carousel': shouldRenderAsCarousel })}>

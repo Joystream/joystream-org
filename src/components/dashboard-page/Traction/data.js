@@ -1,3 +1,5 @@
+import { isNaN, withFallbackNumVal } from '../../../utils/withFallbackVal';
+
 export const chartMockData = [
   {
     month: 'Jan',
@@ -45,14 +47,29 @@ export const chartMockData = [
 
 export const withFallbackValues = chartData => (!!chartData.length ? chartData : chartMockData);
 
-const numAddSeparators = num => num?.toLocaleString('fr-FR');
-export const roundWeeklyRate = num => Math.round(num);
-const roundWeeklyRateWithSign = num => `${num > 0 ? '+' : ''}${Math.round(num)}% Last week`;
+const numAddSeparators = num => {
+  if (isNaN(num)) {
+    return 0;
+  }
+  return num?.toLocaleString('fr-FR');
+};
+export const roundWeeklyRate = num => {
+  if (isNaN(num)) {
+    return 0;
+  }
+  return Math.round(num);
+};
+const roundWeeklyRateWithSign = num => {
+  if (isNaN(num)) {
+    return '0% Last week';
+  }
+  return `${num > 0 ? '+' : ''}${Math.round(num)}% Last week`;
+};
 
 export const parseStats = (data = {}) => [
   {
     indicator: 'Average block time',
-    value: `${data.averageBlockTime} sec`,
+    value: `${withFallbackNumVal(data.averageBlockTime)} sec`,
     termDefinitionKey: 'averageBlockTime',
   },
   {
@@ -76,6 +93,10 @@ export const parseStats = (data = {}) => [
 ];
 
 export const parseNumToThsdWith1Dec = num => {
+  if (isNaN(num)) {
+    return '0K';
+  }
+
   const quotient = num / 1000;
   if (quotient < 1000) {
     return `${quotient.toFixed(1)}K`;

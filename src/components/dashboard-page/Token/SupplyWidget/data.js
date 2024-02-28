@@ -1,11 +1,22 @@
+import { isNaN } from '../../../../utils/withFallbackVal';
+
 const parseNumWithCommaAsSeparator = (data = {}, key) => {
   const num = data[key];
+
+  if (isNaN(num)) {
+    return '0 JOY';
+  }
+
   return `${num?.toLocaleString('en-US')} JOY`;
 };
 
 const convertJoyValToUsDollarsMils = (data = {}, key) => {
   const val = data[key];
   const price = data?.price;
+
+  if (isNaN(val) || isNaN(price)) {
+    return '$0M';
+  }
 
   return `$${((val * price) / 1000000).toFixed(1)}M`;
 };

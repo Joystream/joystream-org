@@ -1,37 +1,39 @@
+import { withFallbackNumVal } from '../../../utils/withFallbackVal';
+
 export const parseGithubStats = (data = {}) => [
   {
     metrics: 'Stars',
-    value: data.numberOfStars,
+    value: withFallbackNumVal(data.numberOfStars),
     termDefinitionKey: 'stars',
   },
   {
     metrics: 'Commits',
-    value: `${Math.round(data.numberOfCommits / 1000)}K`,
+    value: `${Math.round(withFallbackNumVal(data.numberOfCommits) / 1000)}K`,
     termDefinitionKey: 'commits',
   },
   {
     metrics: 'Commits this week',
-    value: data.totalNumberOfCommitsThisWeek,
+    value: withFallbackNumVal(data.totalNumberOfCommitsThisWeek),
     termDefinitionKey: 'commitsThisWeek',
   },
   {
     metrics: 'Open PRs',
-    value: data.numberOfOpenPRs,
+    value: withFallbackNumVal(data.numberOfOpenPRs),
     termDefinitionKey: 'openPrs',
   },
   {
     metrics: 'Open issues',
-    value: data.numberOfOpenIssues,
+    value: withFallbackNumVal(data.numberOfOpenIssues),
     termDefinitionKey: 'openIssues',
   },
   {
     metrics: 'Repositories',
-    value: data.numberOfRepositories,
+    value: withFallbackNumVal(data.numberOfRepositories),
     termDefinitionKey: 'repositories',
   },
 ];
 
-export const parseFollowersCount = (data = {}) => data.numberOfFollowers || '';
+export const parseFollowersCount = (data = {}) => data.numberOfFollowers || 0;
 
 export const desiredContributionsMonthsOrder = {
   '12': 0,

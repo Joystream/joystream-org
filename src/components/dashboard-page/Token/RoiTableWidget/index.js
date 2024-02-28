@@ -3,6 +3,7 @@ import { object } from 'prop-types';
 
 import WidgetHeading from '../../WidgetHeading';
 import Table from '../../Table';
+import Skeleton from '../../Skeleton';
 
 import { columns, parseData } from './data';
 
@@ -14,6 +15,10 @@ const propTypes = {
 
 const RoiTableWidget = ({ data }) => {
   const parsedData = parseData(data);
+
+  if (!data) {
+    return <Skeleton skeletonCn="roi-supply-block-skeleton__roi height-auto" />;
+  }
 
   return (
     <div className="dashboard-token-roi-table-widget">

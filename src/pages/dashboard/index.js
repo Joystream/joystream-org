@@ -29,7 +29,7 @@ const Dashboard = pageProps => {
   const { language } = useI18next();
   const { t } = useTranslation();
 
-  const [data, loading] = useAxios('https://dao-services.joyutils.org/status/dashboard-data');
+  const [data, loading] = useAxios('https://status.joystream.org/dashboard-data');
 
   const [withScrollInitiallyUp] = useState(() => !pageProps.location.hash);
 

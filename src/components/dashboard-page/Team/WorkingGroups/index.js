@@ -112,7 +112,7 @@ const WorkingGroups = ({ groups, loading }) => {
         </div>
       </div>
 
-      {loading ? (
+      {loading || !groups.length ? (
         <WorkingGroupsBlockSkeleton />
       ) : (
         <Carousel withLgSlides withExtraItem>

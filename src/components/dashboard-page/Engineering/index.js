@@ -46,9 +46,13 @@ const Engineering = ({ data, loading }) => {
           </div>
         )}
 
-        {loading ? <ChartBlockSkeleton /> : <ChartWidget chartData={parsedContributions} />}
+        {loading || !parsedContributions.length ? (
+          <ChartBlockSkeleton />
+        ) : (
+          <ChartWidget chartData={parsedContributions} />
+        )}
 
-        {loading ? (
+        {loading || !parsedContributors.length ? (
           <ContributorsBlockSkeleton />
         ) : (
           <div className="dashboard-engineering__contributors">

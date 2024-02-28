@@ -35,6 +35,8 @@ const Token = ({ data, loading }) => {
   const supplyStakedForValidation = parsePercentage(data?.percentSupplyStakedForValidation);
   const aprOnStaking = parsePercentage(data?.apr);
 
+  console.log({ roi: data?.roi, sd: data?.supplyDistribution });
+
   return (
     <section className="dashboard-token">
       <div className="dashboard-token__container">
@@ -96,7 +98,7 @@ const Token = ({ data, loading }) => {
           </div>
         )}
 
-        {loading ? (
+        {loading || (!data?.roi && !data?.supplyDistribution) ? (
           <RoiSupplyBlockSkeleton />
         ) : (
           <div className="dashboard-token__stats-tables-grid grid-indents">
