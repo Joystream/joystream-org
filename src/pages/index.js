@@ -18,10 +18,11 @@ import Video from '../components/index-page/Video';
 import Traction from '../components/index-page/Traction';
 import Upcoming from '../components/index-page/Upcoming';
 import Creators from '../components/index-page/Creators';
+import Dashboard from './dashboard';
 
 import './style.scss';
 
-const IndexPage = () => {
+const IndexPage = pageProps => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
@@ -63,6 +64,8 @@ const IndexPage = () => {
       <JoystreamDAO t={t} proposalsData={data?.carouselData.proposals} />
 
       <AvailableActivities t={t} budgets={data?.budgets} loading={loading} priceData={updatedPriceData} />
+
+      <Dashboard {...pageProps} />
     </BaseLayout>
   );
 };

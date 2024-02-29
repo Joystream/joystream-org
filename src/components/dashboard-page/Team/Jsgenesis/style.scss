@@ -1,0 +1,142 @@
+@import '../../../../styles/main';
+
+.dashboard-team-jsgenesis {
+  display: grid;
+  gap: 16px;
+
+  &__description-widget-wrapper {
+    padding: 1px;
+    background: linear-gradient(180deg, #52616b 0%, rgba(82, 97, 107, 0) 100%);
+    border-radius: 8px;
+  }
+
+  &__description-widget {
+    @include dashboard-widget;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), 0.08, $c_black);
+  }
+
+  &__description-widget-heading {
+    @include h600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__description {
+    @include t200;
+    color: $dashboard-base-gray-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__button-read-more {
+    margin-top: 8px;
+  }
+
+  &__founder {
+    @include dashboard-widget;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+  }
+
+  &__founder-avatar {
+    width: 123px;
+    height: 123px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  &__founder-role-name-wrapper {
+    text-align: center;
+  }
+
+  &__founder-role {
+    @include t100;
+    font-weight: 700;
+    color: $dashboard-base-gray-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__founder-name {
+    @include t400;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__founder-social-media-usernames-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 326px;
+    padding-inline: 33px;
+  }
+
+  &__founder-social-media-tag {
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #272d33;
+    border-radius: 4px;
+
+    & > svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__founder-social-media-username {
+    @include t100;
+    font-weight: 500;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__description-widget-wrapper {
+      grid-column: 1 / span 2;
+    }
+
+    &__description-widget-heading {
+      @include h700;
+    }
+
+    &__description {
+      max-width: 450px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    & {
+      gap: 24px;
+    }
+
+    &__description-widget-heading {
+      @include h800;
+    }
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    & {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__description-widget {
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+}

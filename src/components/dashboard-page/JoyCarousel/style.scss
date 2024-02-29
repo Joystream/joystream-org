@@ -1,0 +1,116 @@
+@import '../../../styles/main';
+
+.dashboard-joy-carousel {
+  margin-top: 16px;
+
+  &__heading {
+    margin-bottom: 8px;
+  }
+
+  &__item {
+    @include dashboard-widget;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $dashboard-base-border-color;
+  }
+
+  &__item-logo {
+    display: block;
+    margin-bottom: 16px;
+    width: 88px;
+    border: 1px solid $dashboard-base-borders-color;
+    border-radius: 8px;
+  }
+
+  &__item-heading {
+    margin-bottom: 16px;
+    @include h500;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__tags {
+    margin-bottom: 32px;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__tags-item {
+    margin: 0;
+    padding: 0;
+
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__tag {
+    padding: 8px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    background-color: $dashboard-widget-tags-background-color;
+    border-radius: 4px;
+  }
+
+  &__tag-text {
+    margin-left: 6px;
+    @include t100;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__button-how-to-buy {
+    padding: 12px 20px;
+    @include t300;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    background-color: $dashboard-widget-accent-background-color;
+    border: 1px solid $dashboard-base-borders-color;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all $dashboard-transition-duration $dashboard-transition-timing;
+
+    &:hover,
+    &:focus {
+      background-color: $dashboard-widget-accent-hover-background-color;
+      border-color: $dashboard-base-border-color;
+    }
+
+    &:active {
+      background-color: $dashboard-widget-accent-active-background-color;
+      transition-duration: 0ms;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    & {
+      margin-top: 24px;
+    }
+
+    &__item-heading {
+      @include h600;
+    }
+  }
+
+  @media #{$screen-min-dashboard-xl} {
+    &__tags {
+      flex-direction: row;
+    }
+
+    &__tags-item {
+      &:not(:last-of-type) {
+        margin-bottom: 0;
+        margin-right: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../../../styles/main';
+
+.dashboard-engineering-chart-widget {
+  @include dashboard-widget;
+  margin-top: 16px;
+
+  @media #{$screen-min-dashboard-md} {
+    & {
+      margin-top: 24px;
+    }
+  }
+}

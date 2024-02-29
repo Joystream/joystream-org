@@ -1,0 +1,39 @@
+@import '../../../styles/main';
+
+.dashboard-team {
+  @include dashboard-section;
+
+  &__container {
+    @include dashboard-container;
+  }
+
+  &__councils {
+    margin-top: 16px;
+    margin-bottom: 64px;
+
+    display: grid;
+    gap: 16px;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__councils {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__councils {
+      margin-top: 24px;
+      margin-bottom: 80px;
+
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    &__councils {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

@@ -1,18 +1,21 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import cn from 'classnames';
 
 import { ReactComponent as ArrowIcon } from '../../../assets/svg/arrow-down-small.svg';
 
 import CoindeskArticleScreenshot from '../../../assets/images/coindesk-article-screenshot.webp';
+import CoindeskArticleAltScreenshot from '../../../assets/images/dashboard/coindesk-article-alt-screenshot.png';
 import CoindeskLogo from '../../../assets/images/coindesk-logo.webp';
 
 import './style.scss';
 
-const PressStory = ({ t }) => (
+export const PressStory = ({ t, pressStoryLinkCn, withAltArticleScreenshot }) => (
   <a
     href="https://www.coindesk.com/business/2022/03/23/decentralized-creator-platform-joystream-raises-58m/"
     target="_blank"
-    className="AboutPage__press__story-link"
+    rel="noreferrer"
+    className={cn('AboutPage__press__story-link', { [pressStoryLinkCn]: pressStoryLinkCn })}
   >
     <div className="AboutPage__press__story">
       <div className="AboutPage__press__story__about">
@@ -30,7 +33,7 @@ const PressStory = ({ t }) => (
       <div className="AboutPage__press__story__visual">
         <img
           className="AboutPage__press__story__visual__image"
-          src={CoindeskArticleScreenshot}
+          src={withAltArticleScreenshot ? CoindeskArticleAltScreenshot : CoindeskArticleScreenshot}
           alt="coindesk article screenshot"
         />
         <div className="AboutPage__press__story__visual__bottom-gradient"></div>

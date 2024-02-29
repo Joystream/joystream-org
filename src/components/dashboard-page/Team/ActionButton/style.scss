@@ -1,0 +1,35 @@
+@import '../../../../styles/main';
+
+.dashboard-team-action-button {
+  width: 100%;
+  height: 48px;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  @include t300;
+  font-weight: 600;
+  color: $dashboard-content-base-text-color;
+  font-feature-settings: $dashboard-font-feature-settings;
+  background-color: $dashboard-widget-base-background-color;
+  border: 1px solid $dashboard-base-borders-color;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all $dashboard-transition-duration $dashboard-transition-timing;
+
+  &:hover,
+  &:focus {
+    border-color: $dashboard-base-border-color;
+    background-color: $dashboard-widget-base-info-states-background-color;
+  }
+
+  &:active {
+    background-color: $dashboard-widget-base-background-color;
+    transition-duration: 0ms;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    width: 210px;
+  }
+}

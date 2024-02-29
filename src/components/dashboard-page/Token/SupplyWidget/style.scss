@@ -1,0 +1,101 @@
+@import '../../../../styles/main';
+
+.dashboard-token-supply-widget {
+  @include dashboard-widget;
+  margin-top: 16px;
+
+  &__content {
+    display: grid;
+    gap: 40px;
+  }
+
+  &__notice-text-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  &__notice-text {
+    @include dashboard-widget-helper-text;
+    margin-left: 8px;
+  }
+
+  &__notice-button {
+    width: 100%;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include t300;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    background-color: $dashboard-widget-base-background-color;
+    border: 1px solid $dashboard-base-borders-color;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all $dashboard-transition-duration $dashboard-transition-timing;
+
+    & > svg {
+      margin-right: 8px;
+    }
+
+    & > span {
+      color: $dashboard-base-gray-text-color;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $dashboard-base-border-color;
+      background-color: $dashboard-widget-base-info-states-background-color;
+    }
+
+    &:active {
+      background-color: $dashboard-widget-base-background-color;
+      transition-duration: 0ms;
+    }
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__content {
+      grid-template-rows: repeat(2, auto);
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__notice {
+      grid-column: 1 / span 2;
+    }
+
+    &__notice-button {
+      width: fit-content;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    & {
+      margin-top: 24px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    &__content {
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__notice {
+      grid-column: 3 / 3;
+    }
+  }
+}
+
+.dashboard-token-supply-stats {
+  &__figure,
+  &__rate {
+    @include dashboard-widget-helper-text;
+  }
+
+  &__token-rate {
+    @include dashboard-widget-text;
+  }
+}

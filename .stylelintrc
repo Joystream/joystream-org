@@ -220,6 +220,9 @@
         "speak"
       ],
       { "unspecified": "bottomAlphabetical" }
-    ]
+    ],
+    "declaration-block-trailing-semicolon": null,
+    "length-zero-no-unit": null,
+    "declaration-block-single-line-max-declarations": null
   }
 }

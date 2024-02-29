@@ -1,0 +1,208 @@
+@import '../common/media';
+
+// vars
+
+$dashboard-breakpoints: (
+  xxs: 320px,
+  xs: 425px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1440px,
+  xl: 1920px,
+  xxl: 2560px,
+);
+
+// media
+
+$screen-min-dashboard-xs: media-min-width('xs', $dashboard-breakpoints);
+$screen-min-dashboard-sm: media-min-width('sm', $dashboard-breakpoints);
+$screen-min-dashboard-md: media-min-width('md', $dashboard-breakpoints);
+$screen-min-dashboard-lg: media-min-width('lg', $dashboard-breakpoints);
+$screen-min-dashboard-xl: media-min-width('xl', $dashboard-breakpoints);
+$screen-min-dashboard-xxl: media-min-width('xxl', $dashboard-breakpoints);
+
+// layout bakground colors (with borders)
+
+$dashboard-header-background-color: #000000;
+$dashboard-navbar-background-color: #bcd5fa14;
+$dashboard-header-border-bottom-color: #bbd9f621;
+$dashboard-base-border-color: #cbe0f145;
+$dashboard-hero-video-player-modal-border-color: #7174ff;
+$dashboard-hero-video-player-modal-background-color: #181c20;
+$dashboard-modals-overlay-color: #101214bf;
+$dashboard-section-header-tooltip-background-color: #343d44;
+$dashboard-charts-custom-tooltip-background-color: #272d33;
+$dashboard-widget-tags-background-color: #272d33;
+$dashboard-backer-widget-background-color: #0f1114;
+$dashboard-history-modal-background-color: #272d33;
+$dashboard-custom-scrollbar-track-background: #bbd9f621;
+$dashboard-custom-scrollbar-thumb-background: #c2e0ff33;
+$dashboard-contibutor-widget-background-color: #0f1114;
+$dashboard-contibutor-widget-border-color: #dce1e56b;
+$dashboard-follower-widget-background-color: #0f1114;
+$dashboard-follower-widget-hover-border-color: #dce1e56b;
+$dashboard-open-event-widget-label-background-color: #0f1114;
+
+$dashboard-secondary-widget-background-color: #0f1114;
+
+// buttons background colors (with borders)
+
+$dashboard-header-chat-button-background-color: #bcd5fa14;
+$dashboard-header-buttons-border-color: #bbd9f621;
+$dashboard-buttons-base-hover-background-color: #bbd9f621;
+$dashboard-buttons-base-pressed-background-color: #bcd5fa14;
+$dashboard-header-navbar-buttons-border-color: #bbd9f621;
+$dahboard-header-navbar-buttons-states-background-color: #c2e0ff33;
+$dashboard-header-navbar-buttons-states-border-color: #dce1e56b;
+$dashboard-hero-play-video-button-background-color: rgba(0, 0, 0, 0.6);
+$dashboard-hero-play-video-button-hover-background-color: rgba(0, 0, 0, 0.7);
+$dashboard-widget-base-background-color: #bcd5fa14;
+$dashboard-widget-base-info-icon-fill: #7b8a95;
+$dashboard-widget-base-info-icon-states-fill: #f4f6f8;
+$dashboard-widget-base-info-states-background-color: #bbd9f621;
+$dashboard-widget-info-modal-background-color: #343d44;
+$dashboard-base-borders-color: #bbd9f621;
+$dashboard-widget-accent-background-color: #4038ff;
+$dashboard-widget-accent-hover-background-color: #5a58ff;
+$dashboard-widget-accent-active-background-color: #342ecf;
+$dashboard-carousel-buttons-background-color: #c2e0ff33;
+$dashboard-carousel-buttons-hover-background-color: #bbd9f621;
+$dashboard-carousel-buttons-pressed-background-color: #c2e0ff33;
+$dashboard-press-story-hover-border-color: #dce1e56b;
+$dashboard-history-modal-buttons-background-color: #c2e0ff33;
+$dashboard-exchange-button-background-color: #c2e0ff33;
+$dashboard-progress-bar-color: #bbd9f621;
+
+// buttons colors
+
+$dashboard-header-buttons-color: #f4f6f8;
+$dashboard-header-navbar-buttons-color: #b5c1c9;
+$dashboard-header-navbar-buttons-states-color: #f4f6f8;
+$dashboard-history-stages-buttons-color: #6c6cff;
+
+// text
+
+$dashboard-font-feature-settings: 'clig' off, 'liga' off;
+
+// text colors
+
+$dashboard-base-white-text-color: #ffffff;
+$dashboard-base-gray-text-color: #b5c1c9;
+$dashboard-content-base-text-color: #f4f6f8;
+$dashboard-charts-base-tick-color: #7b8a95;
+$dashboard-charts-tooltip-gray-color: #7b8a95;
+$dashboard-markdown-anchor-color: #7174ff;
+$dashboard-followers-gray-text-color: #7b8a95;
+$dashboard-open-events-gray-text-color: #7b8a95;
+
+// transition func and duration
+
+$dashboard-transition-timing: cubic-bezier(0, 0, 0.3, 1);
+$dashboard-transition-duration: 150ms;
+
+// sizes
+
+$dashboard-header-height: 65px;
+$dashboard-header-nav-height: 50px;
+$dashboard-header-sum-of-heights: calc($dashboard-header-height + $dashboard-header-nav-height);
+
+$dashboard-header-z-index: 1000;
+
+// mixins
+
+@mixin dashboard-section {
+  padding-block: 40px;
+
+  @media #{$screen-min-dashboard-xs} {
+    padding-block: 48px;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    padding-block: 64px;
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    padding-block: 80px;
+  }
+}
+
+@mixin dashboard-container {
+  padding-inline: 16px;
+
+  @media #{$screen-min-dashboard-md} {
+    padding-inline: 32px;
+  }
+
+  @media #{$screen-min-dashboard-lg} {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@mixin dashboard-buttons-states {
+  transition: background-color $dashboard-transition-duration $dashboard-transition-timing;
+
+  &:hover,
+  &:focus {
+    background-color: $dashboard-buttons-base-hover-background-color;
+  }
+
+  &:active {
+    background-color: $dashboard-buttons-base-pressed-background-color;
+    transition-duration: 0ms;
+  }
+}
+
+@mixin dashboard-widget {
+  padding: 16px;
+  background-color: $dashboard-widget-base-background-color;
+  border-radius: 8px;
+
+  @media #{$screen-min-dashboard-sm} {
+    padding: 32px;
+  }
+}
+
+@mixin dashboard-widget-heading {
+  @include h400;
+  color: $dashboard-content-base-text-color;
+  font-feature-settings: $dashboard-font-feature-settings;
+}
+
+@mixin dashboard-widget-text {
+  @include h500;
+  color: $dashboard-base-white-text-color;
+  font-feature-settings: $dashboard-font-feature-settings;
+
+  @media #{$screen-min-dashboard-xs} {
+    @include h600;
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    @include h700;
+  }
+}
+
+@mixin dashboard-widget-helper-text {
+  @include t300;
+  color: $dashboard-base-gray-text-color;
+  font-feature-settings: $dashboard-font-feature-settings;
+
+  @media #{$screen-min-dashboard-xs} {
+    @include t400;
+  }
+}
+
+@mixin dashboard-widget-heading-padding {
+  padding: 16px 16px 0px;
+  @media #{$screen-min-dashboard-sm} {
+    padding: 32px 32px 0px;
+  }
+}
+
+@mixin reset-dashboard-widget-padding {
+  padding: 0;
+  @media #{$screen-min-dashboard-sm} {
+    padding: 0;
+  }
+}

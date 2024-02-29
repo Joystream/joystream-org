@@ -138,3 +138,33 @@ To edit members, one just needs to update the objects that are already there to 
 Things to keep note of:
 - The verification page will use the `memberHandle` object property value as the route on the website for this specific profile. If that value is not a valid path value then the `substituteUserRoute` value is used instead. This should be removed when not in use.
 - The safety list items and title have special strings as text (e.g., `verification.title.outreachSpecialist`). These strings are used to allow for internationalization and are replaced based off of the language set by the user with correct translations. To reference those that are already pre-written/available, you can find the translations for this page on here: `src/locales/en/verification.json` under `safety.can...` and `safety.willNever...`. If there isn't a translation that matches one that you want to add, you are free to create one with regular english language sentences and these translations will be created by the dev during the PR process.
+
+------------
+
+This section outlines the steps to control the visibility of the "History" section on the dashboard page.
+
+#### Functionality:
+
+- toggling the `historyHidden` flag, located in `/pages/dashboard/index.js`, controls the visibility of the "History" section on the dashboard;
+- when the flag is set to `true`, the section is hidden, and the corresponding "History" anchor is removed from the navigation;
+- conversely, setting the flag to `false` displays the section and adds the "History" anchor back to the navigation.
+
+------------
+
+This section details the process of populating the "History" section on the dashboard page with data retrieved from an API.
+
+#### Data Parsing:
+
+- `DashboardHistory` component expects data to be passed through the data prop;
+- create a dedicated utility function within `src/components/dashboard-page/History/data.js` to handle API data parsing;
+- this function should transform the raw API response into an array of objects structured as follows:
+ 	- `img` - URL of the image associated with the history entry;
+	- `date`  -  Date of the history entry;
+	- `shortDescr` - Short description of the history entry;
+	- `longDescr` - Optional longer description of the history entry;
+- import the parsing function into `src/components/dashboard-page/History/data.js`;
+- pass the fetched API data as an argument to the parsing function.
+
+The function will return the processed data in the required format.
+
+------------
