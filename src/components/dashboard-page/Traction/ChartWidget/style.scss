@@ -1,0 +1,44 @@
+@import '../../../../styles/main';
+
+.dashboard-traction-chart-widget {
+  @include dashboard-widget;
+  $tick-height-overlapped-by-padding: 8px;
+
+  padding-bottom: 16px + $tick-height-overlapped-by-padding;
+
+  &__indicator-value {
+    @include dashboard-widget-text;
+  }
+
+  &__growth-rate {
+    margin-bottom: 16px;
+    @include dashboard-widget-helper-text;
+  }
+
+  &__indicator {
+    margin-bottom: 8px;
+    @include t300;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    & {
+      padding-bottom: 32px + $tick-height-overlapped-by-padding;
+    }
+
+    &__indicator-value {
+      @include h700;
+    }
+
+    &__indicator {
+      @include t400;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__indicator-value {
+      @include h800;
+    }
+  }
+}

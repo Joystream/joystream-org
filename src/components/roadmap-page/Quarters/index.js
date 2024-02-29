@@ -16,7 +16,7 @@ import scrollToActiveElement from '../../../utils/scrollToActiveElement';
 
 import './style.scss';
 
-const parseQuarters = data => {
+export const parseQuarters = data => {
   if (data.length === 0) return [];
 
   let index = 0;

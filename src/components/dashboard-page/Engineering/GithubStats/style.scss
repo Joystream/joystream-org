@@ -1,0 +1,12 @@
+@import '../../../../styles/main';
+
+.dashboard-engineering-github-stats {
+  & .dashboard-widget-heading__heading.dim-heading {
+    @include t400;
+  }
+
+  &__value {
+    @include dashboard-widget-text;
+    @include h600;
+  }
+}

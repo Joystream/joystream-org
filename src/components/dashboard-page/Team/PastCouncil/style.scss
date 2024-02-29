@@ -1,0 +1,116 @@
+@import '../../../../styles/main';
+
+.dashboard-team-past-council {
+  position: relative;
+  height: 484px;
+  padding-block: 112px 32px;
+  background-color: $dashboard-secondary-widget-background-color;
+  border: 1px solid $dashboard-secondary-widget-background-color;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+
+  &:hover {
+    border: 1px solid #dce1e56b;
+  }
+
+  &__inner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 181px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 115%;
+    filter: blur(10px);
+    clip-path: border-box;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    z-index: -1;
+  }
+
+  &__inner-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 181px;
+    background-color: #101214bf;
+    z-index: -1;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__avatar {
+    margin-bottom: 4px;
+    display: block;
+    width: 123px;
+    height: 123px;
+    background-color: #0f1114;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  &__username {
+    margin-bottom: 8px;
+    @include t400;
+    font-weight: 600;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__social-media-usernames {
+    padding-inline: 32px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__social-media-tag {
+    padding: 4px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background-color: $dashboard-widget-tags-background-color;
+    border-radius: 4px;
+
+    & > svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__social-media-username {
+    @include t100;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__times-served-box {
+    margin-top: auto;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .dashboard-widget-heading__heading {
+      @include t300;
+    }
+  }
+
+  &__times-served {
+    @include h500;
+    color: $dashboard-base-white-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+}

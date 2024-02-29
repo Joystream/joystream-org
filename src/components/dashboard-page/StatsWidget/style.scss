@@ -1,0 +1,29 @@
+@import '../../../styles/main';
+
+.dashboard-stats-widget {
+  @include dashboard-widget;
+
+  &__heading {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    @include dashboard-widget-text;
+  }
+
+  &__helper-text {
+    @include dashboard-widget-helper-text;
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__text.with-text-size-increased-from-md {
+      @include h700;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__text.with-text-size-increased-from-md {
+      @include h800;
+    }
+  }
+}

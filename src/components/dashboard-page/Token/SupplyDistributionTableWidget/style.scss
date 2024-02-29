@@ -1,0 +1,23 @@
+@import '../../../../styles/main';
+
+.dashboard-token-supply-distribution-table-widget {
+  @include dashboard-widget;
+  @include reset-dashboard-widget-padding;
+
+  &__heading {
+    @include dashboard-widget-heading-padding;
+    margin-bottom: 16px;
+  }
+
+  &__table {
+    & th {
+      width: 33.33%;
+    }
+    & th:nth-of-type(3n) {
+      @include t100;
+      color: $dashboard-content-base-text-color;
+      font-feature-settings: $dashboard-font-feature-settings;
+      text-transform: none;
+    }
+  }
+}

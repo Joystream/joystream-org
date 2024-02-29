@@ -1,0 +1,73 @@
+@import '../../../../styles//main';
+
+.custom-axis-tick {
+  @include t100;
+  color: $dashboard-charts-base-tick-color;
+  fill: $dashboard-charts-base-tick-color;
+  font-feature-settings: $dashboard-font-feature-settings;
+}
+
+.custom-dot-text {
+  @include t100;
+  fill: #ffffff;
+  font-feature-settings: $dashboard-font-feature-settings;
+}
+
+.custom-cursor-text {
+  @include t100;
+  font-feature-settings: $dashboard-font-feature-settings;
+}
+
+.custom-tooltip {
+  padding: 8px;
+  width: 225px;
+  background-color: $dashboard-charts-custom-tooltip-background-color;
+  border-radius: 8px;
+
+  &.width-reduced {
+    width: fit-content;
+  }
+
+  &__header {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__payload-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__payload-list-item {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    &:first-of-type {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__text {
+    @include t100;
+    color: $dashboard-charts-base-tick-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+    margin-right: 4px;
+  }
+
+  &__accent-text {
+    @include t100;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+}

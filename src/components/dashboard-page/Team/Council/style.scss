@@ -1,0 +1,123 @@
+@import '../../../../styles/main';
+
+.dashboard-team-council-wrapper {
+  padding: 1px;
+  background: linear-gradient(180deg, #52616b 0%, rgba(82, 97, 107, 0) 100%);
+  border-radius: 8px;
+}
+
+.dashboard-team-council {
+  @include dashboard-widget;
+  background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), 0.08, $c_black);
+
+  &__container {
+    display: grid;
+    gap: 40px;
+  }
+
+  &__heading {
+    margin-bottom: 16px;
+    @include h500;
+    color: $dashboard-content-base-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__role-description {
+    @include t200;
+    color: $dashboard-base-gray-text-color;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__terms-actions-wrapper {
+    display: grid;
+    gap: 40px;
+  }
+
+  &__terms-list {
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    gap: 24px;
+  }
+
+  &__terms-list-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__term {
+    @include dashboard-widget-text;
+  }
+
+  @media #{$screen-min-dashboard-xs} {
+    &__heading {
+      @include h600;
+    }
+  }
+
+  @media #{$screen-min-dashboard-sm} {
+    &__container {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, min-content);
+    }
+
+    &__description-wrapper {
+      grid-column: 1 / span 2;
+    }
+
+    &__heading {
+      margin-bottom: 24px;
+      @include h700;
+    }
+
+    &__terms-actions-wrapper {
+      grid-row: 2;
+      grid-column: 1 / span 3;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__terms-list {
+      grid-column: 1 / span 2;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__action-button-link > .dashboard-team-action-button {
+      width: fit-content;
+      min-width: 210px;
+    }
+  }
+
+  @media #{$screen-min-dashboard-md} {
+    &__heading {
+      @include h800;
+    }
+
+    &__container {
+      gap: unset;
+      grid-template-rows: unset;
+      grid-template-columns: 450px 424px;
+      justify-content: space-between;
+    }
+
+    &__description-wrapper {
+      grid-column: unset;
+    }
+
+    &__terms-actions-wrapper {
+      grid-row: unset;
+      grid-column: unset;
+      grid-template-columns: unset;
+      gap: unset;
+    }
+
+    &__terms-list {
+      grid-column: unset;
+    }
+
+    &__action-button-link {
+      align-self: self-end;
+      justify-self: flex-end;
+    }
+  }
+}

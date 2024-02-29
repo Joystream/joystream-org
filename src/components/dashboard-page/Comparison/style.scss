@@ -1,0 +1,9 @@
+@import '../../../styles/main';
+
+.dashboard-comparison {
+  @include dashboard-section;
+
+  &__container {
+    @include dashboard-container;
+  }
+}

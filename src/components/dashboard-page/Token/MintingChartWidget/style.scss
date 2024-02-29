@@ -1,0 +1,25 @@
+@import '../../../../styles/main';
+
+.dashboard-token-minting-chart-widget {
+  @include dashboard-widget;
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__alt-heading {
+    & .dashboard-widget-heading__info-wrapper {
+      right: 0;
+
+      @media #{$screen-min-dashboard-md} {
+        right: -53px;
+      }
+    }
+  }
+}

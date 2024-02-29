@@ -1,0 +1,94 @@
+@import '../../../styles/main';
+
+.dashboard-carousel {
+  position: relative;
+
+  &__button {
+    padding: 16px;
+    background-color: $dashboard-carousel-buttons-background-color;
+    border: 1px solid $dashboard-base-borders-color;
+    border-radius: 2px;
+    backdrop-filter: blur(2px);
+    transition: all $dashboard-transition-duration $dashboard-transition-timing;
+    z-index: 1;
+
+    visibility: hidden;
+    opacity: 0;
+
+    &.is-button-visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $dashboard-carousel-buttons-hover-background-color;
+    }
+
+    &:active {
+      background-color: $dashboard-carousel-buttons-pressed-background-color;
+      transition-duration: 0ms;
+    }
+  }
+
+  &__button-prev-slide {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    & > svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__button-next-slide {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  & li {
+    padding-left: 0;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    width: 130px;
+    height: 100%;
+    z-index: 0;
+    transition: all 0.25s ease-out;
+
+    visibility: hidden;
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__next-overlay {
+    right: 0;
+    background: linear-gradient(270deg, #000 26.56%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  &__prev-overlay {
+    left: 0;
+    background: linear-gradient(90deg, #000 26.56%, rgba(0, 0, 0, 0) 100%);
+  }
+}
+
+.focusRing___1airF.carousel__slide-focus-ring {
+  outline: none !important;
+}
+
+.dashboard-joy-carousel__slide {
+  padding-right: 6px;
+
+  @media #{$screen-min-dashboard-sm} {
+    padding-right: 16px;
+  }
+}
