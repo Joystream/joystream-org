@@ -11,7 +11,7 @@ import Payouts from '../components/index-page/Payouts';
 import VideoNFTs from '../components/index-page/VideoNFTs';
 import CreatorTokens from '../components/index-page/CreatorTokens';
 import JoystreamDAO from '../components/index-page/JoystreamDAO';
-import AvailableActivities from '../components/index-page/AvailableActivities';
+// import AvailableActivities from '../components/index-page/AvailableActivities';
 import Ecosystem from '../components/index-page/Ecosystem';
 import Tokenomics from '../components/index-page/Tokenomics';
 import Video from '../components/index-page/Video';
@@ -49,8 +49,6 @@ const IndexPage = pageProps => {
 
       <Creators t={t} creators={data?.carouselData.creators} priceData={updatedPriceData} />
 
-      <Tokenomics t={t} tokenomicsData={data} priceData={updatedPriceData} />
-
       <Ecosystem t={t} />
 
       <VideoNFTs t={t} nftData={data?.carouselData.nfts} priceData={updatedPriceData} />
@@ -63,7 +61,7 @@ const IndexPage = pageProps => {
 
       <JoystreamDAO t={t} proposalsData={data?.carouselData.proposals} />
 
-      <AvailableActivities t={t} budgets={data?.budgets} loading={loading} priceData={updatedPriceData} />
+      {/* <AvailableActivities t={t} budgets={data?.budgets} loading={loading} priceData={updatedPriceData} /> */}
 
       <Dashboard {...pageProps} />
     </BaseLayout>

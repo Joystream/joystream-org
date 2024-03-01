@@ -20,7 +20,7 @@
 
 .IndexPage {
   &__ecosystem-wrapper {
-    padding: 96px 32px;
+    padding: 0 32px 96px 32px;
     background-color: $c_black;
   }
 
@@ -612,7 +612,7 @@
 
   @media (max-width: 1024px) {
     &__ecosystem-wrapper {
-      padding: 64px 16px;
+      padding: 0px 16px 64px 16px;
     }
 
     &__ecosystem {
