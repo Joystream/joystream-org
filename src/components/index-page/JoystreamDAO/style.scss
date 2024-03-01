@@ -4,7 +4,7 @@
 
 .IndexPage {
   &__joystream-dao-wrapper {
-    padding: 96px 32px 0 32px;
+    padding: 96px 32px;
     background-color: #f2f5f9;
   }
 
@@ -239,7 +239,7 @@
 
   @media (max-width: 1024px) {
     &__joystream-dao-wrapper {
-      padding: 64px 16px 0 16px;
+      padding: 64px 16px;
     }
 
     &__joystream-dao {

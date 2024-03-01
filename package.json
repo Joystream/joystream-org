@@ -106,7 +106,7 @@
     "stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
     "lint:all": "yarn lint && yarn stylelint --fix",
     "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
-    "develop": "cross-env NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
+    "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn develop",
     "serve": "NODE_OPTIONS=--openssl-legacy-provider gatsby serve",
