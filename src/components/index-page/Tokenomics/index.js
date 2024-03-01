@@ -93,10 +93,10 @@ const Tokenomics = ({ tokenomicsData, priceData, t }) => {
   return (
     <section className="IndexPage__tokenomics-wrapper">
       <div className="IndexPage__tokenomics">
-        <header className="IndexPage__tokenomics__header">
+        {/* <header className="IndexPage__tokenomics__header">
           <span className="IndexPage__tokenomics__header__section-title">{t('landing.tokenomics.sectionTitle')}</span>
           <h2 className="IndexPage__tokenomics__header__title">{t('landing.tokenomics.title')}</h2>
-        </header>
+        </header> */}
         <div className="IndexPage__tokenomics__metrics">
           <Container
             title={t('landing.tokenomics.price.title')}
