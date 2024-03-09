@@ -20,6 +20,18 @@ import { ReactComponent as DiscordLogo } from '../../../assets/svg/dashboard/dis
 
 import { withFallbackNumVal } from '../../../utils/withFallbackVal';
 
+const WORKING_GROUP_ORDER = [
+  'operationsWorkingGroupAlpha',
+  'storageWorkingGroup',
+  'distributionWorkingGroup',
+  'appWorkingGroup',
+  'operationsWorkingGroupGamma',
+  'contentWorkingGroup',
+  'operationsWorkingGroupBeta',
+  'membershipWorkingGroup',
+  'forumWorkingGroup',
+];
+
 export const founders = [
   {
     name: 'Bedeho Mender',
@@ -141,7 +153,10 @@ const getWorkingGroupLead = (workers = []) => {
 
 export const parseWorkingGroups = (workingGroups = {}) => {
   const parsed = [];
-  const keys = Object.keys(workingGroups);
+  const keys = Object.keys(workingGroups).sort(
+    (a, b) => WORKING_GROUP_ORDER.indexOf(a) - WORKING_GROUP_ORDER.indexOf(b)
+  );
+
   for (const key of keys) {
     const group = workingGroups[key];
     const lead = getWorkingGroupLead(group.workers);
@@ -154,7 +169,7 @@ export const parseWorkingGroups = (workingGroups = {}) => {
       link: `https://pioneerapp.xyz/#/working-groups/${
         group.name === 'Human Resources' ? 'hr' : group.name.toLowerCase()
       }`,
-      name: group.name,
+      name: key === 'distributionWorkingGroup' ? 'Content Delivery' : group.name,
       logo: workingGroupsLogos[key],
       // French locale uses space as a separator
       currentBudget: `${Math.round(group.budget).toLocaleString('fr-FR')} JOY`,
