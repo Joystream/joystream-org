@@ -146,7 +146,7 @@ export const parseWorkingGroups = (workingGroups = {}) => {
     const group = workingGroups[key];
     const lead = getWorkingGroupLead(group.workers);
 
-    if (!group.budget || !group.workers.length || !lead.username) {
+    if (!group.budget && !group.workers.length && !lead.username) {
       continue;
     }
 
