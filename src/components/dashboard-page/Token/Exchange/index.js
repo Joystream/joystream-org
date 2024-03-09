@@ -8,6 +8,7 @@ import Feature from '../../../Feature';
 import useDashboardMedia from '../../../../utils/useDashboardMedia';
 
 import { ReactComponent as ToggleButtonChevron } from '../../../../assets/svg/dashboard/toggle-button-chevron.svg';
+import { ReactComponent as ExchangePlaceholderIcon } from '../../../../assets/svg/dashboard/exchange-placeholder-icon.svg';
 
 import { parseExchangeOptions, formatNumberWithCommas } from './utils';
 
@@ -47,6 +48,15 @@ export const ExchangeOption = ({ logo, name, volume, depthUp2, depthDown2 }) => 
           <p className="dashboard-token-exchange__option-depth">&#36;{formatNumberWithCommas(depthDown2)}</p>
         </li>
       </ul>
+    </div>
+  );
+};
+
+const ExchangePlaceholder = () => {
+  return (
+    <div className="dashboard-token-exchange__option-placeholder">
+      <ExchangePlaceholderIcon />
+      <p className="dashboard-token-exchange__option-placeholder__text">Coming soon...</p>
     </div>
   );
 };
@@ -134,9 +144,7 @@ const Exchange = ({ data, loading }) => {
               return <ExchangeOption key={index} {...exchangeOption} />;
             })}
             {exchangeOptionsExpanded &&
-              Array.from({ length: placeholdersCount }, (_, i) => {
-                return <div className="dashboard-token-exchange__option-placeholder"></div>;
-              })}
+              Array.from({ length: placeholdersCount }, (_, i) => <ExchangePlaceholder key={i} />)}
           </div>
 
           <Feature disabled={!toggleOptionsVisibilityEnabled}>
