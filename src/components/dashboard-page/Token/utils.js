@@ -15,7 +15,7 @@ const parseMetricsWeeklyChange = (data = {}, key) => {
   }
   const roundedMetrics = Math.round(metrics);
   const metricsWithSign = roundedMetrics > 0 ? `+${roundedMetrics}` : roundedMetrics;
-  return `${metricsWithSign}%`;
+  return `${metricsWithSign}% Last week`;
 };
 
 export const getTokenPriceMetrics = (data = {}) => [
