@@ -24,22 +24,7 @@ const Positioning = ({ dynamicData }) => {
   const fdvs = Object.values(fdvsRowData || {}).filter(val => typeof val === 'number');
 
   const getFdvBarHeight = fdv => {
-    const range = fdv >= 1000 ? 'over1B' : fdv >= 100 ? 'between100MAnd1B' : 'under100M';
-    const fdvsInRange = fdvs.filter(fdv => {
-      switch (range) {
-        case 'over1B':
-          return fdv >= 1000;
-        case 'between100MAnd1B':
-          return fdv >= 100 && fdv < 1000;
-        default:
-          return fdv < 100;
-      }
-    });
-    const maxFdvInRange = Math.max(...fdvsInRange);
-    // Assume vals > 1B max-height: 100%; 100M <= vals < 1B max-height: 50% and vals < 100M max-height: 25%
-    const rangeMaxPercentage = range === 'over1B' ? 100 : range === 'between100MAnd1B' ? 50 : 25;
-
-    return (fdv * rangeMaxPercentage) / maxFdvInRange;
+    return fdv >= 2000 ? 100 : fdv >= 1000 ? 75 : fdv >= 400 ? 50 : 25;
   };
 
   const renderCell = cellData => {
