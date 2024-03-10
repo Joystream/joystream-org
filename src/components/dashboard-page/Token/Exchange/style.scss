@@ -165,6 +165,11 @@
       @include t200;
     }
 
+    &__option-depths-list {
+      gap: 0;
+      justify-content: space-between;
+    }
+
     &__option-placeholder {
       height: 248px;
     }
@@ -173,6 +178,13 @@
   @media only screen and (min-width: 445px) {
     &__option {
       padding-inline: 16px;
+    }
+  }
+
+  @media only screen and (min-width: 460px) {
+    &__option-depths-list {
+      gap: 32px;
+      justify-content: unset;
     }
   }
 
