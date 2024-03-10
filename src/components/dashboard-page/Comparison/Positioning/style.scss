@@ -6,6 +6,7 @@
   &__table-wrapper {
     overflow-x: auto;
     scrollbar-width: none;
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -23,7 +24,6 @@
 
   &__table-cell {
     min-height: 1px;
-
     font-family: $font-secondary;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
@@ -38,8 +38,9 @@
   }
 
   &__table-head-cell {
-    padding: 12px 4px;
     @include t200;
+
+    padding: 12px 4px;
     text-align: start;
   }
 
@@ -54,7 +55,7 @@
       & > td > div {
         font-size: 10px;
         line-height: 1.6;
-        letter-spacing: 0.1px;
+        letter-spacing: .1px;
       }
 
       @-moz-document url-prefix() {
@@ -66,16 +67,17 @@
   }
 
   &__table-body-cell {
+    @include t200;
+
     padding: 16px 4px;
     vertical-align: bottom;
-    @include t200;
   }
 
   &__bar {
-    min-height: 20px;
-    padding: 4px;
     display: flex;
     align-items: end;
+    min-height: 20px;
+    padding: 4px;
     background-color: #bbd9f621;
     border-radius: 4px;
   }

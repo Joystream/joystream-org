@@ -15,8 +15,8 @@
   }
 
   @media #{$screen-min-dashboard-sm} {
-    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
   }
 
   @media #{$screen-min-dashboard-md} {
@@ -47,20 +47,21 @@
 }
 
 .open-events-block-skeleton {
-  margin-top: 8px;
   display: flex;
   flex-wrap: nowrap;
-  gap: 16px;
+  margin-top: 8px;
   overflow-x: auto;
+  gap: 16px;
   scrollbar-width: none;
+
   &::-webkit-scrollbar {
     display: none;
   }
 
   &__event {
+    flex-shrink: 0;
     width: 272px;
     height: 390px;
-    flex-shrink: 0;
   }
 
   @media #{$screen-min-dashboard-sm} {

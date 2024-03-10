@@ -1,8 +1,9 @@
 @import '../../../../styles/main';
 
 .paragraph {
-  margin-bottom: 16px;
   @include t300;
+
+  margin-bottom: 16px;
   color: $dashboard-base-gray-text-color;
   font-feature-settings: $dashboard-font-feature-settings;
 
@@ -11,21 +12,22 @@
   }
 
   & > em > strong {
-    font-weight: 400;
     font-style: normal;
+    font-weight: 400;
     text-decoration: line-through;
   }
 }
 
 .heading {
-  margin-block: 16px 8px;
   color: $dashboard-content-base-text-color;
   font-feature-settings: $dashboard-font-feature-settings;
+  margin-block: 16px 8px;
 }
 
 .heading1 {
-  margin-top: 0px;
   @include h400;
+
+  margin-top: 0px;
 }
 
 .heading2 {
@@ -34,14 +36,16 @@
 
 .heading3 {
   @include h100;
+
   text-transform: uppercase;
 }
 
 .anchor {
   @include t300;
-  font-feature-settings: $dashboard-font-feature-settings;
+
   color: $dashboard-markdown-anchor-color;
   text-decoration: underline;
+  font-feature-settings: $dashboard-font-feature-settings;
 }
 
 .ordered-list {
@@ -50,5 +54,6 @@
 
 .list-item {
   @extend .paragraph;
+
   margin-bottom: 4px;
 }

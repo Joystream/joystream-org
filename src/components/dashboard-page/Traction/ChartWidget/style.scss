@@ -1,8 +1,8 @@
 @import '../../../../styles/main';
 
 .dashboard-traction-chart-widget {
-  @include dashboard-widget;
   $tick-height-overlapped-by-padding: 8px;
+  @include dashboard-widget;
 
   padding-bottom: 16px + $tick-height-overlapped-by-padding;
 
@@ -11,13 +11,15 @@
   }
 
   &__growth-rate {
-    margin-bottom: 16px;
     @include dashboard-widget-helper-text;
+
+    margin-bottom: 16px;
   }
 
   &__indicator {
-    margin-bottom: 8px;
     @include t300;
+
+    margin-bottom: 8px;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }

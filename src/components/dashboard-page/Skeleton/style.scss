@@ -2,6 +2,7 @@
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }
@@ -18,16 +19,17 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(
-      104deg,
-      rgba(183, 200, 250, 0) 15%,
-      rgba(183, 200, 250, 0.06) 30%,
-      rgba(187, 217, 246, 0.13) 48%,
-      rgba(187, 217, 246, 0.13) 52%,
-      rgba(183, 200, 250, 0.06) 67%,
-      rgba(183, 200, 250, 0) 70%,
-      rgba(183, 200, 250, 0) 85%
-    );
-    animation: wave 2s cubic-bezier(0, 0.1, 0.2, 1) infinite;
+    background:
+      linear-gradient(
+        104deg,
+        rgba(183, 200, 250, 0) 15%,
+        rgba(183, 200, 250, .06) 30%,
+        rgba(187, 217, 246, .13) 48%,
+        rgba(187, 217, 246, .13) 52%,
+        rgba(183, 200, 250, .06) 67%,
+        rgba(183, 200, 250, 0) 70%,
+        rgba(183, 200, 250, 0) 85%
+      );
+    animation: wave 2s cubic-bezier(0, .1, .2, 1) infinite;
   }
 }

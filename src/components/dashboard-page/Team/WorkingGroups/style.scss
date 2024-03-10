@@ -12,19 +12,22 @@
 
   &__description-widget {
     @include dashboard-widget;
-    background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), 0.08, $c_black);
+
+    background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), .08, $c_black);
   }
 
   &__description-widget-heading {
-    margin-bottom: 16px;
     @include h600;
+
+    margin-bottom: 16px;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__description {
-    max-width: 450px;
     @include t200;
+
+    max-width: 450px;
     color: $dashboard-base-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
@@ -39,10 +42,10 @@
     position: relative;
     width: 272px;
     height: 100%;
+    overflow: hidden;
     background-color: $dashboard-widget-base-background-color;
     border: 1px solid $dashboard-widget-base-background-color;
     border-radius: 8px;
-    overflow: hidden;
 
     &:hover {
       border: 1px solid #dce1e56b;
@@ -53,47 +56,47 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: 80px;
-    background-color: #ffffff;
-    background-repeat: no-repeat;
+    background-color: #fff;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(10px);
-    clip-path: border-box;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-    z-index: -1;
+    filter: blur(10px);
+    clip-path: border-box;
   }
 
   &__group-inner-bg-overlay {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: 80px;
     background-color: #101214bf;
-    z-index: -1;
   }
 
   &__group-content-container {
-    padding: 52px 16px 16px;
     display: flex;
     flex-direction: column;
+    padding: 52px 16px 16px;
     gap: 16px;
   }
 
   &__group-logo-wrapper {
-    margin-bottom: 8px;
-    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 56px;
     height: 56px;
+    margin-bottom: 8px;
     padding: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #dae2eb;
     border-radius: 8px;
+    margin-inline: auto;
   }
 
   &__group-logo {
@@ -103,10 +106,11 @@
 
   &__group-name {
     @include h500;
+
     color: $dashboard-base-white-text-color;
-    font-feature-settings: $dashboard-font-feature-settings;
     text-align: center;
     text-transform: capitalize;
+    font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__group-lead-and-budget {
@@ -116,8 +120,9 @@
   }
 
   &__group-labels {
-    margin-bottom: 4px;
     @include t300;
+
+    margin-bottom: 4px;
     color: $dashboard-base-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
 
@@ -136,9 +141,9 @@
     width: 32px;
     height: 32px;
     background-color: #0f1114;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     border: 1px solid #bcd5fa14;
     border-radius: 50%;
 
@@ -150,22 +155,23 @@
 
   &__group-lead-username {
     @include h400;
+
     color: $dashboard-base-white-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__group-budget-value {
     @extend .dashboard-team-working-groups__group-lead-username;
+
     color: #fcfcfc;
   }
 
   &__group-workers-list {
-    padding: 0;
-    list-style: none;
-
-    margin-top: 4px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 4px;
+    padding: 0;
+    list-style: none;
     gap: 8px;
   }
 
@@ -175,12 +181,12 @@
   }
 
   &__group-worker-tag {
-    padding: 4px 8px;
     display: flex;
     align-items: center;
-    gap: 6px;
+    padding: 4px 8px;
     background-color: #272d33;
     border-radius: 4px;
+    gap: 6px;
 
     & > svg {
       border-radius: 50%;
@@ -189,6 +195,7 @@
 
   &__group-worker-username {
     @include t100;
+
     font-weight: 500;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
@@ -196,8 +203,9 @@
 
   @media #{$screen-min-dashboard-sm} {
     &__description-widget-heading {
-      margin-bottom: 24px;
       @include h700;
+
+      margin-bottom: 24px;
     }
 
     &__group {
@@ -209,8 +217,9 @@
     }
 
     &__group-lead-and-budget {
-      gap: 0;
       flex-direction: row;
+      gap: 0;
+
       & > div {
         width: 50%;
       }

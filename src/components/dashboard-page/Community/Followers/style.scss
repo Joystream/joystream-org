@@ -10,9 +10,9 @@
 
   &__grid {
     display: flex;
-
     overflow: auto;
     scrollbar-width: none;
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -24,10 +24,9 @@
   }
 
   &__list {
+    display: flex;
     padding: 0;
     list-style: none;
-
-    display: flex;
     gap: 16px;
 
     &.in-carousel {
@@ -45,15 +44,15 @@
   }
 
   &__follower {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 272px;
     padding: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
     background-color: $dashboard-follower-widget-background-color;
     border: 1px solid $dashboard-follower-widget-background-color;
     border-radius: 8px;
+    gap: 4px;
 
     &:hover {
       border-color: $dashboard-follower-widget-hover-border-color;
@@ -68,6 +67,7 @@
   &__follower-name {
     @include line-clamp(1);
     @include t400;
+
     font-weight: 600;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
@@ -75,12 +75,14 @@
 
   &__follower-username {
     @include t300;
+
     color: $dashboard-followers-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__follower-subscribers {
     @extend .dashboard-community-followers__follower-username;
+
     & > span {
       color: $dashboard-content-base-text-color;
     }

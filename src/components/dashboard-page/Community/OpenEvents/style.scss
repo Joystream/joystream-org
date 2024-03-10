@@ -24,12 +24,12 @@
   }
 
   &__event {
-    width: 272px;
+    position: relative;
     flex-shrink: 0;
+    width: 272px;
     background-color: $dashboard-widget-base-background-color;
     border: 1px solid $dashboard-widget-base-background-color;
     border-radius: 8px;
-    position: relative;
 
     &:hover {
       border-color: $dashboard-base-border-color;
@@ -37,20 +37,20 @@
   }
 
   &__event-date-label {
+    position: absolute;
+    bottom: calc(100% + 16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 64px;
     background-color: $dashboard-open-event-widget-label-background-color;
     border: 1px solid $dashboard-base-borders-color;
     border-radius: 8px;
 
-    position: absolute;
-    bottom: calc(100% + 16px);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     & > p {
       @include t400;
+
       color: $dashboard-content-base-text-color;
       font-feature-settings: $dashboard-font-feature-settings;
     }
@@ -59,10 +59,10 @@
   &__event-picture {
     height: 177px;
     background-position: left;
-    background-size: cover;
     background-repeat: no-repeat;
-    border-top-left-radius: 8px;
+    background-size: cover;
     border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
   }
 
   &__event-descr-container {
@@ -70,30 +70,33 @@
   }
 
   &__event-descr-wrapper {
-    margin-bottom: 24px;
     height: 128px;
+    margin-bottom: 24px;
   }
 
   &__event-name {
-    margin-bottom: 4px;
     @include h400;
+    @include line-clamp(1);
+
+    margin-bottom: 4px;
     color: $dashboard-base-white-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
-    @include line-clamp(1);
   }
 
   &__event-date {
-    margin-bottom: 8px;
     @include t200;
+
+    margin-bottom: 8px;
     color: $dashboard-open-events-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__event-descr {
     @include t200;
+    @include line-clamp(3);
+
     color: $dashboard-base-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
-    @include line-clamp(3);
   }
 
   &__event-discord-descr {
@@ -104,6 +107,7 @@
 
   &__event-discord-voice {
     @include t200;
+
     font-weight: 600;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;

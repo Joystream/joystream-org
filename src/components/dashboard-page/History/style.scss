@@ -8,10 +8,10 @@
   }
 
   &__stage {
-    width: 272px;
-    height: 391px;
     display: flex;
     flex-direction: column;
+    width: 272px;
+    height: 391px;
     background-color: $dashboard-widget-base-background-color;
     border: 1px solid $dashboard-widget-base-background-color;
     border-radius: 8px;
@@ -45,36 +45,38 @@
     width: 100%;
     height: 99%;
     background-color: #6363fb9c;
-    border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
     opacity: 1;
     visibility: visible;
     transition: all $dashboard-transition-duration $dashboard-transition-timing;
   }
 
   &__stage-img {
-    border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
   }
 
   &__stage-descr-wrapper {
-    flex-grow: 1;
-    padding: 16px;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     justify-content: space-between;
+    padding: 16px;
   }
 
   &__stage-date {
-    margin-bottom: 8px;
     @include h500;
+
+    margin-bottom: 8px;
     color: $dashboard-base-white-text-color;
-    font-feature-settings: $dashboard-font-feature-settings;
     text-overflow: ellipsis;
+    font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__stage-descr {
     @include t300;
+
     color: $dashboard-base-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
@@ -85,37 +87,37 @@
 
   &__modal {
     position: absolute;
-    inset: 80px 16px;
     max-width: 800px;
-    margin-inline: auto;
     background-color: $dashboard-history-modal-background-color;
-    outline: none;
     border-radius: 8px;
+    outline: none;
+    inset: 80px 16px;
+    margin-inline: auto;
   }
 
   &__modal-overlay {
     position: fixed;
-    inset: 0;
-    background-color: $dashboard-modals-overlay-color;
     z-index: calc($dashboard-header-z-index + 1);
+    background-color: $dashboard-modals-overlay-color;
+    inset: 0;
   }
 
   &__modal-content {
-    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   &__modal-img-wrapper {
     height: 200px;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__modal-long-descr-wrapper {
-    padding: 24px;
     flex: 1 1 auto;
+    padding: 24px;
     overflow-y: auto;
     scrollbar-color: $dashboard-custom-scrollbar-track-background $dashboard-custom-scrollbar-thumb-background;
 
@@ -140,8 +142,9 @@
   }
 
   &__modal-long-descr-title {
-    margin-bottom: 16px;
     @include h400;
+
+    margin-bottom: 16px;
     font-weight: 600;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
@@ -152,11 +155,12 @@
   }
 
   &__button {
+    cursor: pointer;
     background-color: $dashboard-history-modal-buttons-background-color;
     border: 1px solid $dashboard-base-borders-color;
     border-radius: 2px;
-    cursor: pointer;
     transition: all $dashboard-transition-timing $dashboard-transition-duration;
+
     &:hover:enabled,
     &:focus:enabled {
       background-color: $dashboard-buttons-base-hover-background-color;
@@ -178,37 +182,40 @@
   }
 
   &__modal-actions {
-    padding: 24px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 1px 0px 0px rgba(187, 217, 246, 0.13) inset;
+    justify-content: space-between;
+    padding: 24px;
+    box-shadow: 0px 1px 0px 0px rgba(187, 217, 246, .13) inset;
   }
 
   &__button-modal-action {
+    @include t200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 157px;
     height: 40px;
     padding: 10px 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    @include t200;
     font-weight: 600;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
+    gap: 8px;
 
     &:disabled {
-      border-color: $dashboard-history-modal-buttons-background-color;
-      opacity: 0.5;
       cursor: auto;
+      border-color: $dashboard-history-modal-buttons-background-color;
+      opacity: .5;
     }
   }
 
   &__stages-count {
     @include t300;
+
     color: $dashboard-base-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
+
     &_current {
       font-weight: 600;
       color: $dashboard-content-base-text-color;

@@ -2,6 +2,7 @@
 
 .dashboard-token-supply-widget {
   @include dashboard-widget;
+
   margin-top: 16px;
 
   &__content {
@@ -17,24 +18,26 @@
 
   &__notice-text {
     @include dashboard-widget-helper-text;
+
     margin-left: 8px;
   }
 
   &__notice-button {
+    @include t300;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 12px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include t300;
     font-weight: 600;
     color: $dashboard-content-base-text-color;
-    font-feature-settings: $dashboard-font-feature-settings;
+    cursor: pointer;
     background-color: $dashboard-widget-base-background-color;
     border: 1px solid $dashboard-base-borders-color;
     border-radius: 2px;
-    cursor: pointer;
     transition: all $dashboard-transition-duration $dashboard-transition-timing;
+    font-feature-settings: $dashboard-font-feature-settings;
 
     & > svg {
       margin-right: 8px;
@@ -46,8 +49,8 @@
 
     &:hover,
     &:focus {
-      border-color: $dashboard-base-border-color;
       background-color: $dashboard-widget-base-info-states-background-color;
+      border-color: $dashboard-base-border-color;
     }
 
     &:active {
@@ -58,8 +61,8 @@
 
   @media #{$screen-min-dashboard-sm} {
     &__content {
-      grid-template-rows: repeat(2, auto);
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
     }
 
     &__notice {
@@ -79,8 +82,8 @@
 
   @media #{$screen-min-dashboard-lg} {
     &__content {
-      grid-template-rows: 1fr;
       grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
     }
 
     &__notice {

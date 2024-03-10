@@ -37,9 +37,9 @@
 }
 
 .chart-block-skeleton {
-  margin-top: 16px;
   width: 100%;
   height: 288px;
+  margin-top: 16px;
 
   @media #{$screen-min-dashboard-sm} {
     & {
@@ -55,9 +55,9 @@
 }
 
 .contributors-block-skeleton {
-  margin-top: 16px;
   width: 100%;
   height: 400px;
+  margin-top: 16px;
 
   @media #{$screen-min-dashboard-md} {
     margin-top: 24px;

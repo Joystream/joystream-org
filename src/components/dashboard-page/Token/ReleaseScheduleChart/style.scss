@@ -22,7 +22,7 @@
   gap: 8px;
 
   &.dim {
-    opacity: 0.4;
+    opacity: .4;
   }
 }
 
@@ -30,17 +30,18 @@
   margin-top: 8px;
 
   &__notice {
-    padding: 4px 8px;
-    margin-bottom: 32px;
-    margin-inline: auto;
     width: fit-content;
+    margin-bottom: 32px;
+    padding: 4px 8px;
     text-align: center;
     background-color: $dashboard-widget-base-background-color;
     border-radius: 4px;
+    margin-inline: auto;
   }
 
   &__notice-text {
     @include t100;
+
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
@@ -60,6 +61,7 @@
 
   &__area-label {
     @include t200;
+
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
@@ -67,6 +69,7 @@
 
 .reference-line-custom-label {
   @include t100;
+
   fill: $dashboard-content-base-text-color;
   font-feature-settings: $dashboard-font-feature-settings;
 }
@@ -78,10 +81,10 @@
   border-radius: 8px;
 
   &__header {
-    margin-bottom: 16px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
   }
 
   &__areas-list-item {
@@ -92,6 +95,7 @@
 
   &__text {
     @include t100;
+
     color: $dashboard-charts-tooltip-gray-color;
     font-feature-settings: $dashboard-font-feature-settings;
 

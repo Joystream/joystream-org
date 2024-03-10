@@ -8,10 +8,9 @@
   }
 
   &__councils {
+    display: grid;
     margin-top: 16px;
     margin-bottom: 64px;
-
-    display: grid;
     gap: 16px;
   }
 
@@ -25,7 +24,6 @@
     &__councils {
       margin-top: 24px;
       margin-bottom: 80px;
-
       gap: 24px;
       grid-template-columns: repeat(3, 1fr);
     }

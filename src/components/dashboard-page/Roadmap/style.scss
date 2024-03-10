@@ -25,30 +25,33 @@
 
   &__quarter-header {
     @include dashboard-widget;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), 0.08, $c_black);
+    justify-content: space-between;
+    background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), .08, $c_black);
   }
 
   &__quarter-heading {
     @include h500;
+
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__button-open-roadmap {
-    padding: 16px;
+    @include t300;
+    @include dashboard-buttons-states;
+
     display: flex;
     align-items: center;
-    gap: 8px;
-    @include t300;
+    padding: 16px;
     font-weight: 600;
     color: $dashboard-content-base-text-color;
-    font-feature-settings: $dashboard-font-feature-settings;
-    border-radius: 50%;
     cursor: pointer;
-    @include dashboard-buttons-states;
+    border-radius: 50%;
+    font-feature-settings: $dashboard-font-feature-settings;
+    gap: 8px;
 
     & > span {
       display: none;
@@ -57,6 +60,7 @@
 
   &__delivery-milestone {
     @include dashboard-widget;
+
     height: 184px;
     background-color: $dashboard-secondary-widget-background-color;
     border: 1px solid $dashboard-secondary-widget-background-color;
@@ -68,12 +72,12 @@
 
   &__delivery-milestone-icon-wrapper {
     position: relative;
-    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 48px;
     height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 12px;
     background-color: #716bff26;
     border: 1px solid #a3c3f230;
     border-radius: 50%;
@@ -82,20 +86,23 @@
   &__delivery-milestone-icon {
     width: 24px;
     height: 24px;
-    filter: brightness(0) saturate(100%) invert(32%) sepia(47%) saturate(5519%) hue-rotate(235deg) brightness(99%)
+    filter:
+      brightness(0) saturate(100%) invert(32%) sepia(47%) saturate(5519%) hue-rotate(235deg) brightness(99%)
       contrast(104%);
   }
 
   &__delivery-milestone-title {
-    margin-bottom: 8px;
     @include line-clamp(1);
     @include h400;
+
+    margin-bottom: 8px;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__delivery-milestone-description {
     @include line-clamp(3);
+
     font-family: $font-secondary;
     font-size: 14px;
     line-height: 20px;
