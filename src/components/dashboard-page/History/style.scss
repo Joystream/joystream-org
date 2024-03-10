@@ -7,6 +7,20 @@
     @include dashboard-container;
   }
 
+  &__stage-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: #6363fb9c;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    opacity: 1;
+    visibility: visible;
+    transition: all $dashboard-transition-duration $dashboard-transition-timing;
+  }
+
   &__stage {
     display: flex;
     flex-direction: column;
@@ -36,20 +50,6 @@
 
   &__stage-img-wrapper {
     position: relative;
-  }
-
-  &__stage-img-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 99%;
-    background-color: #6363fb9c;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    opacity: 1;
-    visibility: visible;
-    transition: all $dashboard-transition-duration $dashboard-transition-timing;
   }
 
   &__stage-img {

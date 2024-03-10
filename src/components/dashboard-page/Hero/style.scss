@@ -42,21 +42,6 @@
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
-  &__video-wrapper {
-    position: relative;
-    cursor: pointer;
-    filter: blur(.19854368269443512px);
-
-    &:hover > .dashboard-hero__button-play-video {
-      background-color: $dashboard-hero-play-video-button-hover-background-color;
-    }
-  }
-
-  &__video-overlay {
-    width: 100%;
-    border-radius: 12px;
-  }
-
   &__button-play-video {
     position: absolute;
     top: 50%;
@@ -81,6 +66,21 @@
       content: '';
       filter: blur(4px);
     }
+  }
+
+  &__video-wrapper {
+    position: relative;
+    cursor: pointer;
+    filter: blur(.19854368269443512px);
+
+    &:hover > .dashboard-hero__button-play-video {
+      background-color: $dashboard-hero-play-video-button-hover-background-color;
+    }
+  }
+
+  &__video-overlay {
+    width: 100%;
+    border-radius: 12px;
   }
 
   &__video-player-modal {

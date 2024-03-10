@@ -24,6 +24,24 @@
     }
   }
 
+  // as TractionCard modal
+
+  &__info-wrapper {
+    position: absolute;
+    right: -53px;
+    bottom: 36px;
+    z-index: 2000;
+    width: 139px;
+    margin: auto;
+    padding: 8px;
+    background-color: #343d44;
+    border-radius: 2px;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .3s linear, opacity .3s linear;
+    transition-delay: .1s;
+  }
+
   &__icon-wrapper {
     position: relative;
     max-height: 32px;
@@ -41,24 +59,6 @@
         visibility: visible;
       }
     }
-  }
-
-  // as TractionCard modal
-
-  &__info-wrapper {
-    position: absolute;
-    right: -53px;
-    bottom: 36px;
-    z-index: 2000;
-    width: 139px;
-    margin: auto;
-    padding: 8px;
-    background-color: #343d44;
-    border-radius: 2px;
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility .3s linear, opacity .3s linear;
-    transition-delay: .1s;
   }
 
   &__info {

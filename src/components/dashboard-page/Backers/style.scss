@@ -132,11 +132,11 @@
     }
 
     &__coindesk-story-link {
-      & {
-        width: 100%;
-        height: 424px;
-        overflow: hidden;
-      }
+      width: 100%;
+      height: 424px;
+      overflow: hidden;
+      // & {
+      // }
 
       & .AboutPage__press__story {
         flex-direction: row;
