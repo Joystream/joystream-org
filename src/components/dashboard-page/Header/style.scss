@@ -12,43 +12,42 @@
   }
 
   &__container {
-    padding: 12px 16px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
   }
 
   &__button {
-    display: flex;
-    align-items: center;
 
     @include t200;
+    @include dashboard-buttons-states;
 
+    display: flex;
+    align-items: center;
     color: $dashboard-header-buttons-color;
     cursor: pointer;
-    @include dashboard-buttons-states;
   }
 
   &__button-back {
     padding: 12px;
-    opacity: 0.5;
     border-radius: 20px;
+    opacity: .5;
 
     &_short-text {
-      margin-left: 8px;
       display: none;
+      margin-left: 8px;
     }
 
     &_text {
-      margin-left: 8px;
       display: none;
+      margin-left: 8px;
     }
   }
 
   &__button-chat {
     padding: 8px 16px;
     background-color: $dashboard-header-chat-button-background-color;
-
     border: 1px solid $dashboard-header-buttons-border-color;
     border-radius: 2px;
 
@@ -57,8 +56,8 @@
     }
 
     &_icon {
-      margin-left: 8px;
       display: none;
+      margin-left: 8px;
     }
   }
 
@@ -69,22 +68,21 @@
   &__nav {
     height: $dashboard-header-nav-height;
     padding: 8px 16px;
+    overflow-x: auto;
     background-color: $dashboard-navbar-background-color;
     border-top: 1px solid $dashboard-header-border-bottom-color;
     border-bottom: 1px solid $dashboard-base-border-color;
-    overflow-x: auto;
-
     scrollbar-width: none;
+
     &::-webkit-scrollbar {
       display: none;
     }
   }
 
   &__nav-list {
+    display: flex;
     padding: 0;
     list-style: none;
-
-    display: flex;
   }
 
   &__nav-list-item {
@@ -97,16 +95,16 @@
   }
 
   &__nav-button {
-    height: 32px;
-    padding: 8px 10px;
 
     @include t100;
 
-    background-color: transparent;
+    height: 32px;
+    padding: 8px 10px;
     color: $dashboard-header-navbar-buttons-color;
+    cursor: pointer;
+    background-color: transparent;
     border: 1px solid $dashboard-header-navbar-buttons-border-color;
     border-radius: 4px;
-    cursor: pointer;
     transition: all $dashboard-transition-duration $dashboard-transition-timing;
 
     &:hover,
@@ -116,8 +114,8 @@
     }
 
     &.active {
-      background-color: $dahboard-header-navbar-buttons-states-background-color;
       color: $dashboard-header-navbar-buttons-states-color;
+      background-color: $dahboard-header-navbar-buttons-states-background-color;
       border-color: $dashboard-header-navbar-buttons-states-border-color;
     }
   }
@@ -126,6 +124,7 @@
     &__button-back {
       padding: 10px 16px;
       border-radius: 2px;
+
       &_short-text {
         display: block;
       }
@@ -168,16 +167,16 @@
     }
 
     &__nav {
-      padding-inline: 32px;
       display: flex;
       justify-content: center;
+      padding-inline: 32px;
     }
   }
 
   @media #{$screen-min-dashboard-xl} {
     &__container {
-      margin: 0 auto;
       width: 1920px;
+      margin: 0 auto;
     }
   }
 }

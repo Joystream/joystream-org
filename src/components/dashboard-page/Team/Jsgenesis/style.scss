@@ -12,21 +12,24 @@
 
   &__description-widget {
     @include dashboard-widget;
-    height: 100%;
+
     display: flex;
     flex-direction: column;
+    height: 100%;
+    background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), .08, $c_black);
     gap: 16px;
-    background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), 0.08, $c_black);
   }
 
   &__description-widget-heading {
     @include h600;
+
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__description {
     @include t200;
+
     color: $dashboard-base-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
@@ -37,11 +40,12 @@
 
   &__founder {
     @include dashboard-widget;
+
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    flex-direction: column;
     overflow: hidden;
+    gap: 12px;
   }
 
   &__founder-avatar {
@@ -59,6 +63,7 @@
 
   &__founder-role {
     @include t100;
+
     font-weight: 700;
     color: $dashboard-base-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
@@ -66,6 +71,7 @@
 
   &__founder-name {
     @include t400;
+
     font-weight: 600;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
@@ -73,20 +79,20 @@
 
   &__founder-social-media-usernames-wrapper {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
+    justify-content: center;
     width: 326px;
+    gap: 8px;
     padding-inline: 33px;
   }
 
   &__founder-social-media-tag {
-    padding: 4px 6px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    padding: 4px 6px;
     background-color: #272d33;
     border-radius: 4px;
+    gap: 4px;
 
     & > svg {
       width: 16px;
@@ -96,6 +102,7 @@
 
   &__founder-social-media-username {
     @include t100;
+
     font-weight: 500;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
@@ -135,8 +142,8 @@
     }
 
     &__description-widget {
-      gap: 0;
       justify-content: space-between;
+      gap: 0;
     }
   }
 }

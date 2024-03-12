@@ -8,7 +8,8 @@
 
 .dashboard-team-council {
   @include dashboard-widget;
-  background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), 0.08, $c_black);
+
+  background-color: get-color-from-opaque-and-background(rgb(188, 213, 250), .08, $c_black);
 
   &__container {
     display: grid;
@@ -16,14 +17,16 @@
   }
 
   &__heading {
-    margin-bottom: 16px;
     @include h500;
+
+    margin-bottom: 16px;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__role-description {
     @include t200;
+
     color: $dashboard-base-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
@@ -34,10 +37,9 @@
   }
 
   &__terms-list {
+    display: grid;
     padding: 0;
     list-style: none;
-
-    display: grid;
     gap: 24px;
   }
 
@@ -67,13 +69,14 @@
     }
 
     &__heading {
-      margin-bottom: 24px;
       @include h700;
+
+      margin-bottom: 24px;
     }
 
     &__terms-actions-wrapper {
-      grid-row: 2;
       grid-column: 1 / span 3;
+      grid-row: 2;
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -94,10 +97,10 @@
     }
 
     &__container {
-      gap: unset;
-      grid-template-rows: unset;
-      grid-template-columns: 450px 424px;
       justify-content: space-between;
+      gap: unset;
+      grid-template-columns: 450px 424px;
+      grid-template-rows: unset;
     }
 
     &__description-wrapper {
@@ -105,10 +108,10 @@
     }
 
     &__terms-actions-wrapper {
-      grid-row: unset;
-      grid-column: unset;
-      grid-template-columns: unset;
       gap: unset;
+      grid-column: unset;
+      grid-row: unset;
+      grid-template-columns: unset;
     }
 
     &__terms-list {

@@ -4,20 +4,19 @@
   position: relative;
 
   &__button {
+    z-index: 1;
     padding: 16px;
     background-color: $dashboard-carousel-buttons-background-color;
     border: 1px solid $dashboard-base-borders-color;
     border-radius: 2px;
-    backdrop-filter: blur(2px);
-    transition: all $dashboard-transition-duration $dashboard-transition-timing;
-    z-index: 1;
-
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
+    transition: all $dashboard-transition-duration $dashboard-transition-timing;
+    backdrop-filter: blur(2px);
 
     &.is-button-visible {
-      visibility: visible;
       opacity: 1;
+      visibility: visible;
     }
 
     &:hover,
@@ -33,8 +32,8 @@
 
   &__button-prev-slide {
     position: absolute;
-    left: 0;
     top: 50%;
+    left: 0;
     transform: translateY(-50%);
 
     & > svg {
@@ -44,8 +43,8 @@
 
   &__button-next-slide {
     position: absolute;
-    right: 0;
     top: 50%;
+    right: 0;
     transform: translateY(-50%);
   }
 
@@ -56,13 +55,12 @@
   &__overlay {
     position: absolute;
     top: 0;
+    z-index: 0;
     width: 130px;
     height: 100%;
-    z-index: 0;
-    transition: all 0.25s ease-out;
-
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
+    transition: all .25s ease-out;
 
     &.visible {
       opacity: 1;

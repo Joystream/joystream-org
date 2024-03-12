@@ -24,25 +24,6 @@
     }
   }
 
-  &__icon-wrapper {
-    position: relative;
-    margin-left: 4px;
-    padding: 8px;
-    max-height: 32px;
-    border-radius: 50%;
-    color: $dashboard-widget-base-info-icon-fill;
-
-    &:hover {
-      color: $dashboard-widget-base-info-icon-states-fill;
-      background-color: $dashboard-widget-base-info-states-background-color;
-
-      & .dashboard-widget-heading__info-wrapper {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
-
   // as TractionCard modal
 
   &__info-wrapper {
@@ -57,32 +38,54 @@
     border-radius: 2px;
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0.3s linear, opacity 0.3s linear;
-    transition-delay: 0.1s;
+    transition: visibility .3s linear, opacity .3s linear;
+    transition-delay: .1s;
+  }
+
+  &__icon-wrapper {
+    position: relative;
+    max-height: 32px;
+    margin-left: 4px;
+    padding: 8px;
+    color: $dashboard-widget-base-info-icon-fill;
+    border-radius: 50%;
+
+    &:hover {
+      color: $dashboard-widget-base-info-icon-states-fill;
+      background-color: $dashboard-widget-base-info-states-background-color;
+
+      & .dashboard-widget-heading__info-wrapper {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
   &__info {
     @include t100;
+
     color: $dashboard-base-white-text-color;
   }
 
   &__wrapper {
-    padding: 4px 12px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    padding: 4px 12px;
     background-color: $dashboard-widget-base-background-color;
     border-radius: 4px;
+    gap: 4px;
   }
 
   &__label {
     @include t300;
+
     color: $dashboard-base-gray-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__value {
     @include t300;
+
     font-weight: 600;
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;

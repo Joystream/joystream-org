@@ -2,14 +2,15 @@
 
 .dashboard-token-minting-chart-widget {
   @include dashboard-widget;
+
   display: flex;
   flex-direction: column;
 
   &__heading {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 16px;
   }
 

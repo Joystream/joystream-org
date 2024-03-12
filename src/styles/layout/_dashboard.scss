@@ -23,7 +23,7 @@ $screen-min-dashboard-xxl: media-min-width('xxl', $dashboard-breakpoints);
 
 // layout bakground colors (with borders)
 
-$dashboard-header-background-color: #000000;
+$dashboard-header-background-color: #000;
 $dashboard-navbar-background-color: #bcd5fa14;
 $dashboard-header-border-bottom-color: #bbd9f621;
 $dashboard-base-border-color: #cbe0f145;
@@ -54,8 +54,8 @@ $dashboard-buttons-base-pressed-background-color: #bcd5fa14;
 $dashboard-header-navbar-buttons-border-color: #bbd9f621;
 $dahboard-header-navbar-buttons-states-background-color: #c2e0ff33;
 $dashboard-header-navbar-buttons-states-border-color: #dce1e56b;
-$dashboard-hero-play-video-button-background-color: rgba(0, 0, 0, 0.6);
-$dashboard-hero-play-video-button-hover-background-color: rgba(0, 0, 0, 0.7);
+$dashboard-hero-play-video-button-background-color: rgba(0, 0, 0, .6);
+$dashboard-hero-play-video-button-hover-background-color: rgba(0, 0, 0, .7);
 $dashboard-widget-base-background-color: #bcd5fa14;
 $dashboard-widget-base-info-icon-fill: #7b8a95;
 $dashboard-widget-base-info-icon-states-fill: #f4f6f8;
@@ -86,7 +86,7 @@ $dashboard-font-feature-settings: 'clig' off, 'liga' off;
 
 // text colors
 
-$dashboard-base-white-text-color: #ffffff;
+$dashboard-base-white-text-color: #fff;
 $dashboard-base-gray-text-color: #b5c1c9;
 $dashboard-content-base-text-color: #f4f6f8;
 $dashboard-charts-base-tick-color: #7b8a95;
@@ -97,7 +97,7 @@ $dashboard-open-events-gray-text-color: #7b8a95;
 
 // transition func and duration
 
-$dashboard-transition-timing: cubic-bezier(0, 0, 0.3, 1);
+$dashboard-transition-timing: cubic-bezier(0, 0, .3, 1);
 $dashboard-transition-duration: 150ms;
 
 // sizes
@@ -165,12 +165,14 @@ $dashboard-header-z-index: 1000;
 
 @mixin dashboard-widget-heading {
   @include h400;
+
   color: $dashboard-content-base-text-color;
   font-feature-settings: $dashboard-font-feature-settings;
 }
 
 @mixin dashboard-widget-text {
   @include h500;
+
   color: $dashboard-base-white-text-color;
   font-feature-settings: $dashboard-font-feature-settings;
 
@@ -185,6 +187,7 @@ $dashboard-header-z-index: 1000;
 
 @mixin dashboard-widget-helper-text {
   @include t300;
+
   color: $dashboard-base-gray-text-color;
   font-feature-settings: $dashboard-font-feature-settings;
 

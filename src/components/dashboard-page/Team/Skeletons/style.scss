@@ -1,9 +1,9 @@
 @import '../../../../styles/main';
 
 .councils-block-skeleton {
-  margin-bottom: 64px;
   width: 100%;
   height: 740px;
+  margin-bottom: 64px;
 
   @media #{$screen-min-dashboard-md} {
     margin-bottom: 80px;

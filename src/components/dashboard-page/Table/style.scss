@@ -2,13 +2,16 @@
 
 .dashboard-table {
   width: 100%;
+  overflow: hidden;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 
   &__head {
     background-color: $dashboard-widget-base-background-color;
   }
 
   &__row {
-    box-shadow: 0px -1px 0px 0px rgba(187, 217, 246, 0.13) inset;
+    box-shadow: 0px -1px 0px 0px rgba(187, 217, 246, .13) inset;
   }
 
   & th {
@@ -38,14 +41,16 @@
 
   &__head-cell {
     @include h100;
+
     color: $dashboard-base-gray-text-color;
-    font-feature-settings: $dashboard-font-feature-settings;
     text-align: start;
     text-transform: uppercase;
+    font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__body-cell {
     @include t100;
+
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }

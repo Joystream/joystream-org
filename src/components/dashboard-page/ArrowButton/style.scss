@@ -1,12 +1,13 @@
 @import '../../../styles/main';
 
 .arrow-button {
+  @include t300;
+
   display: flex;
   align-items: center;
-  gap: 8px;
-  @include t300;
   font-weight: 600;
   color: $dashboard-history-stages-buttons-color;
-  font-feature-settings: $dashboard-font-feature-settings;
   cursor: pointer;
+  font-feature-settings: $dashboard-font-feature-settings;
+  gap: 8px;
 }
