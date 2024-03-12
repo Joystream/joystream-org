@@ -6,6 +6,7 @@
 
   &__heading {
     @include dashboard-widget-heading-padding;
+
     margin-bottom: 16px;
 
     & .dashboard-widget-heading__info-wrapper {

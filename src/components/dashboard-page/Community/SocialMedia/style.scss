@@ -5,10 +5,10 @@
   gap: 16px;
 
   &__primary-stats-block {
-    height: 360px;
-    padding: 32px;
     display: flex;
     flex-direction: column;
+    height: 360px;
+    padding: 32px;
     border: 1px solid $dashboard-base-border-color;
     border-radius: 8px;
 
@@ -23,9 +23,9 @@
 
   &__stats-container {
     display: flex;
+    align-items: center;
     flex: 1;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     gap: 4px;
   }
@@ -41,6 +41,7 @@
 
   &__main-stats {
     @include h600;
+
     color: $dashboard-base-white-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
@@ -55,9 +56,9 @@
   }
 
   &__secondary-stats-block {
-    padding: 32px;
     display: flex;
     flex-direction: column;
+    padding: 32px;
     background-color: $dashboard-widget-base-background-color;
     border: 1px solid $dashboard-widget-base-background-color;
     border-radius: 8px;
@@ -65,14 +66,16 @@
 
   &__secondary-stats-container {
     @extend .dashboard-community-social-media__stats-container;
+
     gap: 8px;
   }
 
   &__extra-stats-block {
     @extend .dashboard-community-social-media__secondary-stats-block;
-    padding-right: 21px;
+
     display: flex;
     flex-direction: column;
+    padding-right: 21px;
     cursor: pointer;
 
     &:hover {
@@ -81,15 +84,15 @@
   }
 
   &__extra-stats-container {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 16px;
   }
 
   &__stats {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
   }

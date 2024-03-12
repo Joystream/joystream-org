@@ -1,32 +1,33 @@
 @import '../../../styles/main';
 
 .dashboard-section-header {
-  scroll-margin-top: calc(32px + $dashboard-header-height);
-
-  margin-bottom: 16px;
-  padding-bottom: 16px;
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid $dashboard-base-border-color;
+  scroll-margin-top: calc(32px + $dashboard-header-height);
 
   &__heading {
     @include h500;
+
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__button-copy-link {
-    padding: 12px 20px;
+    @include t300;
+    @include dashboard-buttons-states;
+
     display: flex;
     align-items: center;
-    @include t300;
+    padding: 12px 20px;
     color: $dashboard-content-base-text-color;
-    font-feature-settings: $dashboard-font-feature-settings;
-    border-radius: 2px;
     cursor: pointer;
-    @include dashboard-buttons-states;
+    border-radius: 2px;
+    font-feature-settings: $dashboard-font-feature-settings;
 
     &_text {
       display: none;
@@ -38,17 +39,17 @@
   }
 
   &__tooltip {
-    padding: 8px;
     position: absolute;
-    bottom: calc(100% + 8px);
     right: 0;
+    bottom: calc(100% + 8px);
+    padding: 8px;
     background-color: $dashboard-section-header-tooltip-background-color;
     border-radius: 2px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0.3s linear, opacity 0.3s linear;
-    transition-delay: 0.1s;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .12), 0px 4px 4px 0px rgba(0, 0, 0, .1);
+    transition: visibility .3s linear, opacity .3s linear;
+    transition-delay: .1s;
 
     &.is-link-copied-tooltip-visible {
       opacity: 1;
@@ -58,6 +59,7 @@
 
   &__tooltip-text {
     @include t100;
+
     color: $dashboard-content-base-text-color;
     font-feature-settings: $dashboard-font-feature-settings;
   }
@@ -73,6 +75,7 @@
       &_short-text {
         display: none;
       }
+
       &_text {
         display: block;
       }

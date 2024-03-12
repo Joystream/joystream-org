@@ -10,38 +10,68 @@
 
   &__container {
     @include dashboard-container;
+
     display: grid;
     gap: 24px;
   }
 
   &__embedded-section-title {
-    margin-bottom: 4px;
     @include h400;
+
+    margin-bottom: 4px;
     color: #6c6cff;
-    font-feature-settings: $dashboard-font-feature-settings;
     text-align: center;
     text-transform: uppercase;
+    font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__title {
     @include h600;
-    font-feature-settings: $dashboard-font-feature-settings;
+
     margin-bottom: 8px;
     color: $dashboard-base-white-text-color;
     text-align: center;
+    font-feature-settings: $dashboard-font-feature-settings;
   }
 
   &__description {
     @include t300;
-    font-feature-settings: $dashboard-font-feature-settings;
+
     color: $dashboard-base-gray-text-color;
     text-align: center;
+    font-feature-settings: $dashboard-font-feature-settings;
+  }
+
+  &__button-play-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 40px;
+    cursor: pointer;
+    background-color: $dashboard-hero-play-video-button-background-color;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    // backdrop-filter: blur(4px);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      filter: blur(4px);
+    }
   }
 
   &__video-wrapper {
     position: relative;
     cursor: pointer;
-    filter: blur(0.19854368269443512px);
+    filter: blur(.19854368269443512px);
 
     &:hover > .dashboard-hero__button-play-video {
       background-color: $dashboard-hero-play-video-button-hover-background-color;
@@ -53,47 +83,21 @@
     border-radius: 12px;
   }
 
-  &__button-play-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 64px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $dashboard-hero-play-video-button-background-color;
-    border-radius: 4px;
-    cursor: pointer;
-    // backdrop-filter: blur(4px);
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      filter: blur(4px);
-    }
-  }
-
   &__video-player-modal {
     position: absolute;
-    inset: 40px;
-    border: 1px dashed $dashboard-hero-video-player-modal-border-color;
+    padding: 20px;
     background-color: $dashboard-hero-video-player-modal-background-color;
+    border: 1px dashed $dashboard-hero-video-player-modal-border-color;
     border-radius: 4px;
     outline: none;
-    padding: 20px;
+    inset: 40px;
   }
 
   &__video-player-modal-overlay {
     position: fixed;
-    inset: 0;
-    background-color: $dashboard-modals-overlay-color;
     z-index: calc($dashboard-header-z-index + 1);
+    background-color: $dashboard-modals-overlay-color;
+    inset: 0;
   }
 
   @media #{$screen-min-dashboard-xs} {
@@ -103,6 +107,7 @@
 
     &__title {
       @include h700;
+
       margin-bottom: 16px;
     }
 
@@ -114,6 +119,7 @@
   @media #{$screen-min-dashboard-sm} {
     & {
       padding-block: 64px;
+
       &.scroll-offset {
         margin-top: -($dashboard-header-sum-of-heights);
         padding-top: calc(64px + $dashboard-header-sum-of-heights);
@@ -132,6 +138,7 @@
   @media #{$screen-min-dashboard-md} {
     & {
       padding-block: 96px 80px;
+
       &.scroll-offset {
         margin-top: -($dashboard-header-sum-of-heights);
         padding-top: calc(96px + $dashboard-header-sum-of-heights);
@@ -139,8 +146,8 @@
     }
 
     &__container {
-      padding-inline: 32px;
       grid-template-columns: repeat(2, 1fr);
+      padding-inline: 32px;
 
       &.embedded {
         grid-template-columns: 1fr;
@@ -149,12 +156,13 @@
 
     &__text-wrapper.embedded {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
     }
 
     &__title {
       @include h800;
+
       text-align: start;
 
       &.embedded {
@@ -177,6 +185,7 @@
       gap: 140px;
       grid-template-columns: 40.5% 49%;
     }
+
     &__title {
       @include h900;
     }
