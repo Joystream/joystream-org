@@ -25,6 +25,15 @@ const exchangeOptionsLabels = {
   biconomy: 'Biconomy',
 };
 
+const exchangeOptionsTradingURLs = {
+  bitget: 'https://www.bitget.com/spot/JOYUSDT',
+  gate: 'https://www.gate.io/trade/JOYSTREAM_USDT',
+  bitmart: 'https://www.bitmart.com/trade/en-US?symbol=JOY_USDT&layout=pro',
+  mxc: 'https://www.mexc.com/exchange/JOYSTREAM_USDT?_from=market',
+  xt: 'https://www.xt.com/en/trade/joy_usdt',
+  biconomy: 'https://www.biconomy.com/exchange/JOY_USDT',
+};
+
 export const parseExchangeOptions = (data = {}) => {
   const exchangeOptions = [];
 
@@ -33,6 +42,7 @@ export const parseExchangeOptions = (data = {}) => {
     exchangeOptions.push({
       logo: exchangeOptionsLogos[key],
       name: exchangeOptionsLabels[key],
+      tradingURL: exchangeOptionsTradingURLs[key],
       volume: data[key].volume,
       depthUp2: Math.round(data[key].plus2PercentDepth),
       depthDown2: Math.round(data[key].minus2PercentDepth),
