@@ -110,7 +110,7 @@ export const verifiedMembers = [
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/57.png',
     title: 'verification.title.hrLead',
     socials: {
-      telegram: '@codefikeys',
+      telegram: '@codefikeyz',
       twitter: '@codefikeyz',
       email: 'codefikeyz@gmail.com',
       discord: '@codefikeyz',

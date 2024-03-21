@@ -10,7 +10,7 @@ import useDashboardMedia from '../../../../utils/useDashboardMedia';
 import { ReactComponent as ToggleButtonChevron } from '../../../../assets/svg/dashboard/toggle-button-chevron.svg';
 import { ReactComponent as ExchangePlaceholderIcon } from '../../../../assets/svg/dashboard/exchange-placeholder-icon.svg';
 
-import { parseExchangeOptions, formatNumberWithCommas } from './utils';
+import { parseExchangeOptions, formatNumberWithCommas, exchangeOptionsTradingURLs } from './utils';
 
 import './style.scss';
 
@@ -22,8 +22,8 @@ const exchangeOptionPropTypes = {
   depthDown2: number.isRequired,
 };
 
-export const ExchangeOption = ({ logo, name, volume, depthUp2, depthDown2 }) => {
-  return (
+export const ExchangeOption = ({ logo, name, tradingURL, volume, depthUp2, depthDown2 }) => {
+  const children = (
     <div className="dashboard-token-exchange__option">
       <div
         className="dashboard-token-exchange__option-inner-bg"
@@ -50,6 +50,16 @@ export const ExchangeOption = ({ logo, name, volume, depthUp2, depthDown2 }) => 
       </ul>
     </div>
   );
+
+  if (tradingURL) {
+    return (
+      <a href={tradingURL} target="_blank" rel="noreferrer">
+        {children}
+      </a>
+    );
+  }
+
+  return children;
 };
 
 const ExchangePlaceholder = () => {
