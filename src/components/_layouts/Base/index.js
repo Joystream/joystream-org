@@ -4,6 +4,7 @@ import { node, bool } from 'prop-types';
 import Navbar from '../../Navbar';
 import Footer from '../../Footer';
 import CookiesNotice from '../../CookiesNotice';
+import OneKeyBanner from '../../OneKeyBanner';
 import { ScrollProvider } from '../../_enhancers/ScrollContext';
 
 const propTypes = {
@@ -20,6 +21,7 @@ const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }
     <ScrollProvider>
       <div style={{ overflowX: 'clip' }}>
         <Navbar t={t} primer={primer} light={lightNavbar} />
+        <OneKeyBanner />
         <main>{children}</main>
         <CookiesNotice t={t} />
         <Footer t={t} primer={primer} />

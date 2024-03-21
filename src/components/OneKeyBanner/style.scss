@@ -1,0 +1,79 @@
+@import '../../styles/main';
+
+.OneKeyBanner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  padding: 16px 32px;
+  overflow: hidden;
+  background-color: #0f1114;
+
+  &__content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+      @include t400;
+
+      font-weight: 600;
+      color: #f4f6f8;
+    }
+
+    &__subtitle {
+      @include t200;
+
+      margin-top: 4px;
+      letter-spacing: .005em;
+      color: #7b8a95;
+    }
+  }
+
+  &__controls {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+    &__button {
+      @include t200;
+
+      display: grid;
+      width: 110px;
+      height: 40px;
+      font-weight: 600;
+      letter-spacing: .005em;
+      // padding: 10px 14px;
+      color: #f4f6f8;
+      background-color: rgba(188, 213, 250, .08);
+      border: 1px solid rgba(187, 217, 246, .13);
+      border-radius: 2px;
+      place-items: center;
+
+      &:hover {
+        background-color: rgba(187, 217, 246, .13);
+        border-color: rgba(187, 217, 246, .27);
+      }
+    }
+
+    &__close {
+      width: 11px;
+      height: 11px;
+      margin-left: 18px;
+      color: #f4f6f8;
+      cursor: pointer;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    bottom: 0;
+    left: 150px;
+    z-index: 0;
+    width: 493px;
+    margin: auto;
+  }
+}
