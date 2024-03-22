@@ -11,12 +11,15 @@ const OneKeyBanner = () => {
   const [shouldShow, setShouldShow] = React.useState(true);
 
   useEffect(() => {
-    if (shouldShow === false) {
-      localStorage.setItem(ONE_KEY_LOCAL_STORAGE_KEY, false);
+    if (shouldShow === false && typeof window !== 'undefined') {
+      window.localStorage.setItem(ONE_KEY_LOCAL_STORAGE_KEY, false);
     }
   }, [shouldShow]);
 
-  if (localStorage.getItem(ONE_KEY_LOCAL_STORAGE_KEY) === 'false' || !shouldShow) return null;
+  const localStorageShouldNotShow =
+    typeof window !== 'undefined' && window.localStorage.getItem(ONE_KEY_LOCAL_STORAGE_KEY) === 'false';
+
+  if (localStorageShouldNotShow || !shouldShow) return null;
 
   return (
     <div className="OneKeyBanner">
