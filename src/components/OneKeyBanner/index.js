@@ -7,19 +7,14 @@ import './style.scss';
 
 const ONE_KEY_LOCAL_STORAGE_KEY = 'JOYSTREAM::showOneKeyBanner';
 
+const shouldBannerBeClosed = () => {
+  return typeof window !== 'undefined' && window.localStorage.getItem(ONE_KEY_LOCAL_STORAGE_KEY) === 'false';
+};
+
 const OneKeyBanner = () => {
-  const [shouldShow, setShouldShow] = React.useState(true);
+  const [shouldShow, setShouldShow] = React.useState(!shouldBannerBeClosed() ? true : false);
 
-  useEffect(() => {
-    if (shouldShow === false && typeof window !== 'undefined') {
-      window.localStorage.setItem(ONE_KEY_LOCAL_STORAGE_KEY, false);
-    }
-  }, [shouldShow]);
-
-  const localStorageShouldNotShow =
-    typeof window !== 'undefined' && window.localStorage.getItem(ONE_KEY_LOCAL_STORAGE_KEY) === 'false';
-
-  if (localStorageShouldNotShow || !shouldShow) return null;
+  if (shouldShow === false) return null;
 
   return (
     <div className="OneKeyBanner">
@@ -35,6 +30,7 @@ const OneKeyBanner = () => {
           className="OneKeyBanner__controls__close"
           onClick={() => {
             setShouldShow(false);
+            typeof window !== 'undefined' && window.localStorage.setItem(ONE_KEY_LOCAL_STORAGE_KEY, 'false');
           }}
         />
       </div>
