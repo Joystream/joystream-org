@@ -1,0 +1,82 @@
+@import '../../../styles/_main.scss';
+@import '../../../pages/style.scss';
+
+.TokenPage {
+  &__instant-swap-wrapper {
+    padding: 96px 0;
+    background-color: #000;
+  }
+
+  &__instant-swap {
+    @extend %largeContainer;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 816px;
+      margin: 0 auto;
+
+      &__section-title {
+        @include section-title;
+
+        margin: 0 auto;
+        color: $c_blue-ribbon;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: #f4f6f8;
+        text-align: center;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        margin-top: 16px;
+        color: #b5c1c9;
+        text-align: center;
+      }
+    }
+
+    &__main {
+      display: grid;
+      height: 528px;
+      margin-top: 96px;
+      gap: 24px;
+      grid-template-columns: 1fr 1.2fr;
+
+      &__benefits {
+        display: grid;
+        gap: 24px;
+        grid-template-rows: repeat(4, 1fr);
+
+        &__item {
+          display: flex;
+          align-items: center;
+          padding: 32px 24px;
+          background-color: #111316;
+          border-radius: 8px;
+
+          &__icon-wrapper {
+            display: grid;
+            width: 48px;
+            height: 48px;
+            background-color: #1f252e;
+            border-radius: 999px;
+            place-items: center;
+          }
+
+          &__text {
+            @include h6;
+
+            margin-left: 24px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

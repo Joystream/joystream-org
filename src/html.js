@@ -14,6 +14,11 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@600;700&display=swap"
           rel="stylesheet"
         />
+        <script
+          defer
+          type="text/javascript"
+          src="https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js"
+        ></script>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
