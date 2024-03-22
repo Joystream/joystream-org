@@ -1,0 +1,141 @@
+@import '../../styles/main';
+
+.OneKeyBanner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  padding: 16px 32px;
+  overflow: hidden;
+  background-color: #0f1114;
+
+  &__content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+      @include t400;
+
+      font-weight: 600;
+      color: #f4f6f8;
+    }
+
+    &__subtitle {
+      @include t200;
+
+      margin-top: 4px;
+      letter-spacing: .005em;
+      color: #7b8a95;
+    }
+  }
+
+  &__controls {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+    &__button {
+      @include t200;
+
+      display: grid;
+      width: 110px;
+      height: 40px;
+      font-weight: 600;
+      letter-spacing: .005em;
+      color: #f4f6f8;
+      background-color: rgba(188, 213, 250, .08);
+      border: 1px solid rgba(187, 217, 246, .13);
+      border-radius: 2px;
+      place-items: center;
+
+      &:hover {
+        background-color: rgba(187, 217, 246, .13);
+        border-color: rgba(187, 217, 246, .27);
+      }
+    }
+
+    &__close {
+      width: 11px;
+      height: 11px;
+      margin-left: 18px;
+      color: #f4f6f8;
+      cursor: pointer;
+
+      &--mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    bottom: 0;
+    left: 150px;
+    z-index: 0;
+    width: 493px;
+    margin: auto;
+  }
+
+  @media (max-width: 1440px) {
+    &__background {
+      top: 40px;
+      left: 33%;
+      width: 347px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__background {
+      left: 22%;
+      opacity: .15;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+
+    &__content {
+      padding-right: 35px;
+
+      &__title {
+        @include t300;
+
+        font-weight: 600;
+      }
+    }
+
+    &__controls {
+      margin-top: 16px;
+
+      &__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+      }
+    }
+
+    &__background {
+      top: 0;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__background {
+      left: 35px;
+      min-width: 380px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    &__background {
+      top: 65px;
+      left: -95px;
+      min-width: 550px;
+    }
+  }
+}
