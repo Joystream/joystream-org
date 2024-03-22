@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { node, bool } from 'prop-types';
 
 import Navbar from '../../Navbar';
@@ -16,12 +16,25 @@ const defaultTypes = {
   children: null,
 };
 
+const ONE_KEY_LOCAL_STORAGE_KEY = 'JOYSTREAM::showOneKeyBanner';
+
+const shouldBannerBeClosed = () => {
+  return typeof window !== 'undefined' && window.localStorage.getItem(ONE_KEY_LOCAL_STORAGE_KEY) === 'false';
+};
+
 const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }) => {
+  const [showOneKeyBanner, setShowOneKeyBanner] = useState(!shouldBannerBeClosed());
+
+  const setShouldShow = () => {
+    setShowOneKeyBanner(false);
+    typeof window !== 'undefined' && window.localStorage.setItem(ONE_KEY_LOCAL_STORAGE_KEY, 'false');
+  };
+
   return (
     <ScrollProvider>
       <div style={{ overflowX: 'clip' }}>
         <Navbar t={t} primer={primer} light={lightNavbar} />
-        <OneKeyBanner />
+        {showOneKeyBanner ? <OneKeyBanner setShouldShow={setShouldShow} /> : null}
         <main>{children}</main>
         <CookiesNotice t={t} />
         <Footer t={t} primer={primer} />
