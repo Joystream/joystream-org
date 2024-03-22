@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import OneKeyBackground from '../../assets/images/onekey.webp';
 import { ReactComponent as CloseIcon } from '../../assets/svg/postponed.svg';
@@ -12,7 +12,8 @@ const shouldBannerBeClosed = () => {
 };
 
 const OneKeyBanner = () => {
-  const [shouldShow, setShouldShow] = React.useState(!shouldBannerBeClosed() ? true : false);
+  const isBannerInitiallyClosed = shouldBannerBeClosed();
+  const [shouldShow, setShouldShow] = useState(!isBannerInitiallyClosed);
 
   if (shouldShow) {
     return (
