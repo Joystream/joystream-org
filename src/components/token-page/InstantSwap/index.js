@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { ReactComponent as LockIcon } from '../../../assets/svg/token/lock.svg';
 import { ReactComponent as InvisibilityIcon } from '../../../assets/svg/token/invisibility.svg';
@@ -28,17 +28,19 @@ const InstantSwap = ({ t }) => {
 
         <div className="TokenPage__instant-swap__main">
           <div className="TokenPage__instant-swap__main__benefits">
-            <Benefit icon={<LockIcon />} text="No sign up" />
-            <Benefit icon={<InvisibilityIcon />} text="No KYC" />
-            <Benefit icon={<ClockIcon />} text="Only 2-3 minutes" />
-            <Benefit icon={<TokenIcon />} text="900+ cryptos supported" />
+            <Benefit icon={<LockIcon />} text={t('token.instantSwap.benefits.noSignUp')} />
+            <Benefit icon={<InvisibilityIcon />} text={t('token.instantSwap.benefits.noKYC')} />
+            <Benefit icon={<ClockIcon />} text={t('token.instantSwap.benefits.onlyFewMinutes')} />
+            <Benefit icon={<TokenIcon />} text={t('token.instantSwap.benefits.nineHundredPlusCryptoSupported')} />
           </div>
-          <iframe
-            title="changenow-widget"
-            id="iframe-widget"
-            src="https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=true&amount=1&amountFiat&backgroundColor=272D33&darkMode=true&from=eth&horizontal=false&isFiat=false&lang=en-US&link_id=836b188968aaa8&locales=false&logo=true&primaryColor=4038FF&to=joy&toTheMoon=false"
-            style={{ minHeight: '528px', minWidth: '100%', border: 'none' }}
-          ></iframe>
+          <div className="TokenPage__instant-swap__main__widget">
+            <iframe
+              title="changenow-widget"
+              id="iframe-widget"
+              src="https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=true&amount=1&amountFiat&backgroundColor=272D33&darkMode=true&from=eth&horizontal=false&isFiat=false&lang=en-US&link_id=836b188968aaa8&locales=false&logo=true&primaryColor=4038FF&to=joy&toTheMoon=false"
+              style={{ height: '356px', width: '100%', border: 'none' }}
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>

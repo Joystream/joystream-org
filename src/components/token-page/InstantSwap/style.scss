@@ -8,7 +8,7 @@
   }
 
   &__instant-swap {
-    @extend %largeContainer;
+    @extend %container;
 
     &__header {
       display: flex;
@@ -46,7 +46,7 @@
       height: 528px;
       margin-top: 96px;
       gap: 24px;
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 1fr;
 
       &__benefits {
         display: grid;
@@ -74,6 +74,71 @@
 
             margin-left: 24px;
             color: #fff;
+          }
+        }
+      }
+
+      &__widget {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__instant-swap {
+      &__main {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-width: 585px;
+        margin: 96px auto 0;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__instant-swap-wrapper {
+      padding: 80px 0;
+    }
+
+    &__instant-swap {
+      &__header {
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+
+      &__main {
+        margin-top: 48px;
+        gap: 12px;
+
+        &__benefits {
+          gap: 12px;
+
+          &__item {
+            padding: 24px 16px;
+
+            &__icon-wrapper {
+              width: 32px;
+              height: 32px;
+
+              & > svg {
+                transform: scale(.8);
+              }
+            }
+
+            &__text {
+              @include h7;
+
+              margin-left: 12px;
+            }
           }
         }
       }
