@@ -13,6 +13,7 @@ import Exchanges from '../../components/token-page/Exchanges';
 import Earn from '../../components/token-page/Earn';
 import Utility from '../../components/token-page/Utility';
 import Supply from '../../components/token-page/Supply';
+import InstantSwap from '../../components/token-page/InstantSwap';
 import TokenInformation from '../../components/token-page/TokenInformation';
 
 import ArrowLink from '../../components/ArrowLink';
@@ -48,6 +49,8 @@ const TokensPage = () => {
       {/* <Faucets t={t} /> */}
 
       <Exchanges t={t} />
+
+      <InstantSwap t={t} />
 
       <Earn t={t} />
 

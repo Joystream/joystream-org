@@ -1,0 +1,147 @@
+@import '../../../styles/_main.scss';
+@import '../../../pages/style.scss';
+
+.TokenPage {
+  &__instant-swap-wrapper {
+    padding: 96px 0;
+    background-color: #000;
+  }
+
+  &__instant-swap {
+    @extend %container;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 816px;
+      margin: 0 auto;
+
+      &__section-title {
+        @include section-title;
+
+        margin: 0 auto;
+        color: $c_blue-ribbon;
+      }
+
+      &__title {
+        @include h3;
+
+        margin-top: 4px;
+        color: #f4f6f8;
+        text-align: center;
+      }
+
+      &__subtitle {
+        @include base-1;
+
+        margin-top: 16px;
+        color: #b5c1c9;
+        text-align: center;
+      }
+    }
+
+    &__main {
+      display: grid;
+      height: 528px;
+      margin-top: 96px;
+      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+
+      &__benefits {
+        display: grid;
+        gap: 24px;
+        grid-template-rows: repeat(4, 1fr);
+
+        &__item {
+          display: flex;
+          align-items: center;
+          padding: 32px 24px;
+          background-color: #111316;
+          border-radius: 8px;
+
+          &__icon-wrapper {
+            display: grid;
+            width: 48px;
+            height: 48px;
+            background-color: #1f252e;
+            border-radius: 999px;
+            place-items: center;
+          }
+
+          &__text {
+            @include h6;
+
+            margin-left: 24px;
+            color: #fff;
+          }
+        }
+      }
+
+      &__widget {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media #{$screen-max-md} {
+    &__instant-swap {
+      &__main {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-width: 585px;
+        margin: 96px auto 0;
+      }
+    }
+  }
+
+  @media #{$screen-max-sm} {
+    &__instant-swap-wrapper {
+      padding: 80px 0;
+    }
+
+    &__instant-swap {
+      &__header {
+        &__title {
+          @include h4;
+        }
+
+        &__subtitle {
+          @include base-3;
+        }
+      }
+
+      &__main {
+        margin-top: 48px;
+        gap: 12px;
+
+        &__benefits {
+          gap: 12px;
+
+          &__item {
+            padding: 24px 16px;
+
+            &__icon-wrapper {
+              width: 32px;
+              height: 32px;
+
+              & > svg {
+                transform: scale(.8);
+              }
+            }
+
+            &__text {
+              @include h7;
+
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
