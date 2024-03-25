@@ -183,10 +183,8 @@ function QuarterPanel({ data, glossaryPanel, isSelect, t }) {
     (isPanelAndRelatedActive(currentMilestone) && !isNextItemActive) ||
     (isPanelAndRelatedActive(allMilestones[milestoneIndex - 1]) && isNextItemActive);
 
-  console.log(numberOfItems, activeItem, isNextItemActive);
-
   return (
-    <div>
+    <div style={{ width: '100%' }}>
       {data.quarters.map((res, index) => {
         return (
           <div className="QuarterPanel__main" key={index}>

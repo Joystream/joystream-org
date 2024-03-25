@@ -1,4 +1,4 @@
-@import '../../../styles/_main';
+@import '../../../styles/main';
 @import '../../../styles/common/colors';
 
 $offsetTop: 300px;
@@ -9,16 +9,25 @@ $offsetTopMobile: 200px;
   flex-direction: column;
   gap: 30px;
   grid-gap: 30px;
-  grid-template-columns: 76px 500px;
+  grid-template-columns: 76px 712px;
 
   &__bottom {
     display: grid;
     flex-direction: column;
     gap: 30px;
     grid-gap: 8px;
-    grid-template-columns: 76px 500px;
+    grid-template-columns: 76px 712px;
   }
-  @media (max-width: 1020px) {
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 76px 550px;
+
+    &__bottom {
+      grid-template-columns: 76px 550px;
+    }
+  }
+
+  @media (max-width: 992px) {
     width: 512px;
     grid-gap: 30px;
     grid-template-columns: 40px 427px;
@@ -43,10 +52,10 @@ $offsetTopMobile: 200px;
 .QuarterPanel__main {
   display: grid;
   flex-direction: column;
-  width: 818px;
+  width: 1030px;
   gap: 30px;
   grid-gap: 30px;
-  grid-template-columns: 182px 616px;
+  grid-template-columns: 182px 818px;
 
   &__rigth {
     position: relative;
@@ -201,7 +210,7 @@ $offsetTopMobile: 200px;
   }
 
   &__panel {
-    width: 500px;
+    width: 712px;
     margin-bottom: 48px;
     padding: 24px;
     background: white;
@@ -225,20 +234,20 @@ $offsetTopMobile: 200px;
 
     &__title {
       margin-top: 16px;
-      //styleName: h7;
-      font-size: 20px;
+      font-family: $font-primary;
+      font-size: 28px;
       font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 0;
+      line-height: 36px;
+      // letter-spacing: 0;
       text-align: left;
     }
 
     &__content {
-      margin-top: 4px;
-      //styleName: Base 4;
-      font-size: 14px;
+      margin-top: 8px;
+      font-family: $font-secondary;
+      font-size: 18px;
       font-weight: 400;
-      line-height: 20px;
+      line-height: 24px;
       letter-spacing: 0;
       color: $c_panel_content;
       text-align: left;
@@ -356,7 +365,20 @@ $offsetTopMobile: 200px;
     }
   }
 
-  @media (max-width: 1020px) {
+  @media (max-width: 1200px) {
+    width: 818px;
+    grid-template-columns: 132px 656px;
+
+    &__rigth {
+      width: 132px;
+    }
+
+    &__panel {
+      width: 550px;
+    }
+  }
+
+  @media (max-width: 992px) {
     width: 455px;
     grid-gap: 20px;
     grid-template-columns: 70px 445px;

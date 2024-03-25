@@ -14,7 +14,8 @@
     justify-items: center;
 
     &__goal {
-      max-width: 816px;
+      width: 100%;
+      max-width: 1030px;
     }
   }
 
@@ -138,6 +139,14 @@
     &__links {
       margin-top: -60px;
       gap: 24px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__body {
+      &__goal {
+        max-width: 818px;
+      }
     }
   }
 
