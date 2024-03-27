@@ -28,23 +28,31 @@ $offsetTopMobile: 200px;
   }
 
   @media (max-width: 992px) {
-    width: 512px;
     grid-gap: 30px;
-    grid-template-columns: 40px 427px;
+    grid-template-columns: 40px 540px;
 
     &__bottom {
       width: 475px;
-      grid-template-columns: 40px 427px;
+      grid-template-columns: 40px 540px;
     }
   }
-  @media (max-width: 750px) {
-    width: 275px;
-    gap: 1px;
-    grid-template-columns: 40px 227px;
+
+  @media (max-width: 768px) {
+    width: 432px;
+    gap: 0px;
+    grid-template-columns: 40px auto;
 
     &__bottom {
-      width: 275px;
-      grid-template-columns: 40px 227px;
+      width: 432px;
+      grid-template-columns: 40px auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: auto;
+
+    &__bottom {
+      width: auto;
     }
   }
 }
@@ -379,9 +387,9 @@ $offsetTopMobile: 200px;
   }
 
   @media (max-width: 992px) {
-    width: 455px;
+    width: 700px;
     grid-gap: 20px;
-    grid-template-columns: 70px 445px;
+    grid-template-columns: 70px 610px;
 
     &__subtitle {
       //styleName: h5;
@@ -400,12 +408,12 @@ $offsetTopMobile: 200px;
     }
 
     &__panel {
-      width: 368px;
+      width: 540px;
       padding: 16px;
       gap: 1px;
 
       &__bottom {
-        width: 368px;
+        width: 540px;
         padding: 16px;
       }
     }
@@ -425,10 +433,11 @@ $offsetTopMobile: 200px;
       }
     }
   }
-  @media (max-width: 550px) {
-    width: 355px;
+
+  @media (max-width: 768px) {
+    width: 500px;
     grid-gap: 0;
-    grid-template-columns: 70px 245px;
+    grid-template-columns: 68px 432px;
 
     &__subtitle {
       //styleName: h5;
@@ -447,12 +456,22 @@ $offsetTopMobile: 200px;
     }
 
     &__panel {
-      width: 227px;
+      width: 392px;
       padding: 16px;
       gap: 1px;
 
+      &__title {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      &__content {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
       &__bottom {
-        width: 227px;
+        width: 392px;
         padding: 16px;
       }
     }
@@ -480,6 +499,15 @@ $offsetTopMobile: 200px;
           top: $offsetTopMobile;
         }
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    grid-template-columns: 68px 1fr;
+
+    &__panel {
+      width: auto;
     }
   }
 }

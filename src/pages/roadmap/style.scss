@@ -176,6 +176,12 @@
         }
       }
     }
+
+    &__body {
+      &__goal {
+        max-width: 700px;
+      }
+    }
   }
 
   @media #{$screen-max-sm} {
@@ -210,6 +216,12 @@
         display: block;
       }
     }
+
+    &__body {
+      &__goal {
+        max-width: 500px;
+      }
+    }
   }
 
   @media (max-width: 660px) {
@@ -234,6 +246,20 @@
       &__icon {
         width: 40px;
         height: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__body {
+      display: flex;
+      width: 100%;
+      justify-items: unset;
+
+      &__goal {
+        width: 100%;
+        max-width: unset;
+        padding: 0 20px;
       }
     }
   }
