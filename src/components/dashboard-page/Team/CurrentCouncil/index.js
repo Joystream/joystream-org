@@ -23,7 +23,8 @@ const CurrentCouncil = ({ data }) => {
   const daysInService = data?.termLength;
   const nextElectionDate = data?.nextElectionDate || new Date();
 
-  const daysLeftToNextElection = getDaysLeftToNextElection(nextElectionDate);
+  const daysLeftToNextElection =
+    getDaysLeftToNextElection(nextElectionDate) < 0 ? 0 : getDaysLeftToNextElection(nextElectionDate);
   const remainingDaysInServicePercentage = Math.round((daysLeftToNextElection / daysInService) * 100);
 
   return (
