@@ -43,7 +43,7 @@ const CurrentCouncil = ({ data }) => {
             ></div>
           </div>
           <h4 className="dashboard-team-current-council__info-label">
-            <span>{daysLeftToNextElection}</span>&nbsp;Days until next election
+            <span>{daysLeftToNextElection}</span>&nbsp;Days until next vote
           </h4>
         </div>
         <div>
