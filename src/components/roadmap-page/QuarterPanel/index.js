@@ -1,12 +1,17 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
+import ReactModal from 'react-modal';
 
 import './style.scss';
 import TooltipPanel from '../../Tooltip';
 import MyContext from '../../../utils/useContext';
 import scrollToActiveElement from '../../../utils/scrollToActiveElement';
 
+import { ReactComponent as CloseIcon } from '../../../assets/svg/postponed.svg';
+
 import { iconMap } from '../../../data/quarters';
+
+ReactModal.setAppElement('#___gatsby');
 
 export let offset = 300;
 let PANEL_HIGHLIGHT_OFFSET = 60;
@@ -17,6 +22,11 @@ function QuarterPanel({ data, glossaryPanel, isSelect, t }) {
   const [isNextItemActive, setIsNextItemActive] = useState(false);
   const [dotActiveState, setDotActiveState] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [modalData, setModalData] = useState({
+    isOpen: false,
+    content: '',
+    title: '',
+  });
 
   const glossary = useContext(MyContext);
 
@@ -183,10 +193,10 @@ function QuarterPanel({ data, glossaryPanel, isSelect, t }) {
     (isPanelAndRelatedActive(currentMilestone) && !isNextItemActive) ||
     (isPanelAndRelatedActive(allMilestones[milestoneIndex - 1]) && isNextItemActive);
 
-  console.log(numberOfItems, activeItem, isNextItemActive);
+  const shouldMilestoneContentBeTruncated = milestone => milestone.Content.length > 100 && isMobile;
 
   return (
-    <div>
+    <div style={{ width: '100%' }}>
       {data.quarters.map((res, index) => {
         return (
           <div className="QuarterPanel__main" key={index}>
@@ -268,6 +278,20 @@ function QuarterPanel({ data, glossaryPanel, isSelect, t }) {
                           __html: contentReplace(milestone.Content),
                         }}
                       />
+                      {shouldMilestoneContentBeTruncated(milestone) ? (
+                        <button
+                          onClick={() => {
+                            setModalData({
+                              text: milestone.Content,
+                              title: milestone.title,
+                              isOpen: true,
+                            });
+                          }}
+                          className="QuarterPanel__main__panel__button"
+                        >
+                          Read more
+                        </button>
+                      ) : null}
                     </div>
                   </div>
                 );
@@ -310,6 +334,25 @@ function QuarterPanel({ data, glossaryPanel, isSelect, t }) {
           </div>
         </div>
       </div>
+      <ReactModal
+        className="QuarterPanel__modal"
+        overlayClassName="QuarterPanel__modal__overlay"
+        isOpen={modalData.isOpen && isMobile}
+        onRequestClose={() => setModalData(prev => ({ ...prev, isOpen: false }))}
+        shouldCloseOnEsc
+        shouldCloseOnOverlayClick
+        closeTimeoutMS={350}
+        // shouldReturnFocusAfterClose={false}
+      >
+        <div className="QuarterPanel__modal__top">
+          <div className="QuarterPanel__modal__top__title">{modalData?.title}</div>
+          <CloseIcon
+            className="QuarterPanel__modal__top__close"
+            onClick={() => setModalData(prev => ({ ...prev, isOpen: false }))}
+          />
+        </div>
+        <div className="QuarterPanel__modal__content">{modalData?.text}</div>
+      </ReactModal>
     </div>
   );
 }
