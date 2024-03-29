@@ -132,6 +132,7 @@ const NavbarLinksSection = ({ t, links, isScrollUp, isOpen, light, setIsOpen, is
       >
         {links.map(({ label, isButton, isDropdown, links, href, to, language }) => (
           <NavbarLink
+            key={label}
             label={label}
             isBUtton={isButton}
             isDropdown={isDropdown}

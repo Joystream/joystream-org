@@ -1,6 +1,6 @@
 @import '../../../styles/main';
 @import '../../../pages/style.scss';
-// @import '../../../index-page/shared-styles';
+@import '../../index-page/shared-styles.scss';
 
 $offsetTop: 300px;
 $offsetTopMobile: 200px;
@@ -267,7 +267,7 @@ $offsetTopMobile: 200px;
 
       width: 100%;
       height: 32px;
-      margin-top: 24px;
+      margin-top: 16px;
       padding: 8px 12px;
       font-weight: 500;
       color: #7b8a95;
@@ -293,6 +293,7 @@ $offsetTopMobile: 200px;
       position: absolute;
       bottom: 0;
       left: 50%;
+      z-index: 3;
       width: 240px;
       height: auto;
       margin-bottom: 20px;
@@ -530,35 +531,52 @@ $offsetTopMobile: 200px;
       width: auto;
     }
   }
+
+  @media (max-width: 550px) {
+    &__panel {
+      &__content {
+        @include line-clamp(4);
+
+        margin-top: 4px;
+      }
+    }
+  }
 }
 
-.ReactModal__Content {
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all 350ms ease-in-out;
-}
+.ReactModal {
+  &__Overlay {
+    z-index: 5;
+    opacity: 0;
+    transition: all 350ms ease-in-out;
 
-.ReactModal__Content--after-open {
-  opacity: 1;
-  transform: translateY(0);
-}
+    &--after-open {
+      opacity: 1;
+    }
 
-.ReactModal__Content--before-close {
-  opacity: 0;
-  transform: translateY(100%);
-}
+    &--before-close {
+      opacity: 0;
+    }
+  }
 
-.ReactModal__Overlay {
-  opacity: 0;
-  transition: all 350ms ease-in-out;
-}
+  &__Content {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 350ms ease-in-out;
 
-.ReactModal__Overlay--after-open {
-  opacity: 1;
-}
+    &--after-open {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-.ReactModal__Overlay--before-close {
-  opacity: 0;
+    &--before-close {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+  &__Body--open {
+    overflow: hidden;
+  }
 }
 
 .QuarterPanel__modal {

@@ -195,14 +195,6 @@ function QuarterPanel({ data, glossaryPanel, isSelect, t }) {
 
   const shouldMilestoneContentBeTruncated = milestone => milestone.Content.length > 100 && isMobile;
 
-  const parseMilestoneContent = milestone => {
-    if (shouldMilestoneContentBeTruncated(milestone)) {
-      return contentReplace(milestone.Content.substring(0, 100)) + '...';
-    }
-
-    return contentReplace(milestone.Content);
-  };
-
   return (
     <div style={{ width: '100%' }}>
       {data.quarters.map((res, index) => {
@@ -283,7 +275,7 @@ function QuarterPanel({ data, glossaryPanel, isSelect, t }) {
                       <div
                         className="QuarterPanel__main__panel__content"
                         dangerouslySetInnerHTML={{
-                          __html: parseMilestoneContent(milestone),
+                          __html: contentReplace(milestone.Content),
                         }}
                       />
                       {shouldMilestoneContentBeTruncated(milestone) ? (
