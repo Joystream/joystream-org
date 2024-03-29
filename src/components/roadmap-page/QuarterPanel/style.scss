@@ -1,5 +1,6 @@
-@import '../../../styles/_main';
-@import '../../../styles/common/colors';
+@import '../../../styles/main';
+@import '../../../pages/style.scss';
+@import '../../index-page/shared-styles.scss';
 
 $offsetTop: 300px;
 $offsetTopMobile: 200px;
@@ -9,33 +10,50 @@ $offsetTopMobile: 200px;
   flex-direction: column;
   gap: 30px;
   grid-gap: 30px;
-  grid-template-columns: 76px 500px;
+  grid-template-columns: 76px 712px;
 
   &__bottom {
     display: grid;
     flex-direction: column;
     gap: 30px;
     grid-gap: 8px;
-    grid-template-columns: 76px 500px;
+    grid-template-columns: 76px 712px;
   }
-  @media (max-width: 1020px) {
-    width: 512px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 76px 550px;
+
+    &__bottom {
+      grid-template-columns: 76px 550px;
+    }
+  }
+
+  @media (max-width: 992px) {
     grid-gap: 30px;
-    grid-template-columns: 40px 427px;
+    grid-template-columns: 40px 540px;
 
     &__bottom {
       width: 475px;
-      grid-template-columns: 40px 427px;
+      grid-template-columns: 40px 540px;
     }
   }
-  @media (max-width: 750px) {
-    width: 275px;
-    gap: 1px;
-    grid-template-columns: 40px 227px;
+
+  @media (max-width: 768px) {
+    width: 432px;
+    gap: 0px;
+    grid-template-columns: 40px auto;
 
     &__bottom {
-      width: 275px;
-      grid-template-columns: 40px 227px;
+      width: 432px;
+      grid-template-columns: 40px auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: auto;
+
+    &__bottom {
+      width: auto;
     }
   }
 }
@@ -43,10 +61,10 @@ $offsetTopMobile: 200px;
 .QuarterPanel__main {
   display: grid;
   flex-direction: column;
-  width: 818px;
+  width: 1030px;
   gap: 30px;
   grid-gap: 30px;
-  grid-template-columns: 182px 616px;
+  grid-template-columns: 182px 818px;
 
   &__rigth {
     position: relative;
@@ -201,7 +219,7 @@ $offsetTopMobile: 200px;
   }
 
   &__panel {
-    width: 500px;
+    width: 712px;
     margin-bottom: 48px;
     padding: 24px;
     background: white;
@@ -225,23 +243,43 @@ $offsetTopMobile: 200px;
 
     &__title {
       margin-top: 16px;
-      //styleName: h7;
-      font-size: 20px;
+      font-family: $font-primary;
+      font-size: 28px;
       font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 0;
+      line-height: 36px;
+      // letter-spacing: 0;
       text-align: left;
     }
 
     &__content {
-      margin-top: 4px;
-      //styleName: Base 4;
-      font-size: 14px;
+      margin-top: 8px;
+      font-family: $font-secondary;
+      font-size: 18px;
       font-weight: 400;
-      line-height: 20px;
+      line-height: 24px;
       letter-spacing: 0;
       color: $c_panel_content;
       text-align: left;
+    }
+
+    &__button {
+      @include t100;
+
+      width: 100%;
+      height: 32px;
+      margin-top: 16px;
+      padding: 8px 12px;
+      font-weight: 500;
+      color: #7b8a95;
+      cursor: pointer;
+      background-color: rgba(242, 245, 249, 1);
+      border: 1px solid rgba(222, 227, 233, 1);
+      border-radius: 2px;
+
+      &:hover {
+        background-color: rgba(242, 245, 249, .8);
+        border: 1px solid rgba(222, 227, 233, .8);
+      }
     }
   }
 
@@ -255,6 +293,7 @@ $offsetTopMobile: 200px;
       position: absolute;
       bottom: 0;
       left: 50%;
+      z-index: 3;
       width: 240px;
       height: auto;
       margin-bottom: 20px;
@@ -355,11 +394,23 @@ $offsetTopMobile: 200px;
       background-color: #4038ff26;
     }
   }
+  @media (max-width: 1200px) {
+    width: 818px;
+    grid-template-columns: 132px 656px;
 
-  @media (max-width: 1020px) {
-    width: 455px;
+    &__rigth {
+      width: 132px;
+    }
+
+    &__panel {
+      width: 550px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    width: 700px;
     grid-gap: 20px;
-    grid-template-columns: 70px 445px;
+    grid-template-columns: 70px 610px;
 
     &__subtitle {
       //styleName: h5;
@@ -378,12 +429,12 @@ $offsetTopMobile: 200px;
     }
 
     &__panel {
-      width: 368px;
+      width: 540px;
       padding: 16px;
       gap: 1px;
 
       &__bottom {
-        width: 368px;
+        width: 540px;
         padding: 16px;
       }
     }
@@ -403,10 +454,11 @@ $offsetTopMobile: 200px;
       }
     }
   }
-  @media (max-width: 550px) {
-    width: 355px;
+
+  @media (max-width: 768px) {
+    width: 500px;
     grid-gap: 0;
-    grid-template-columns: 70px 245px;
+    grid-template-columns: 68px 432px;
 
     &__subtitle {
       //styleName: h5;
@@ -425,12 +477,22 @@ $offsetTopMobile: 200px;
     }
 
     &__panel {
-      width: 227px;
+      width: 392px;
       padding: 16px;
       gap: 1px;
 
+      &__title {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      &__content {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
       &__bottom {
-        width: 227px;
+        width: 392px;
         padding: 16px;
       }
     }
@@ -459,6 +521,102 @@ $offsetTopMobile: 200px;
         }
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    grid-template-columns: 68px 1fr;
+
+    &__panel {
+      width: auto;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__panel {
+      &__content {
+        @include line-clamp(4);
+
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+.ReactModal {
+  &__Overlay {
+    z-index: 5;
+    opacity: 0;
+    transition: all 350ms ease-in-out;
+
+    &--after-open {
+      opacity: 1;
+    }
+
+    &--before-close {
+      opacity: 0;
+    }
+  }
+
+  &__Content {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 350ms ease-in-out;
+
+    &--after-open {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &--before-close {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+  &__Body--open {
+    overflow: hidden;
+  }
+}
+
+.QuarterPanel__modal {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: $c_white;
+
+  &__overlay {
+    position: fixed;
+    background-color: rgba(16, 18, 20, .75);
+    inset: 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 24px 0 24px;
+    gap: 40px;
+
+    &__title {
+      @include h500;
+    }
+
+    &__close {
+      width: 12px;
+      height: 12px;
+      min-width: 12px;
+      min-height: 12px;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    @include base-3;
+
+    padding: 24px;
+    color: #5c6475;
   }
 }
 
