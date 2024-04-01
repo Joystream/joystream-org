@@ -85,6 +85,23 @@ function SiteMetadata({ description, lang, meta, title, image }) {
           type: 'text/javascript',
           innerHTML: LiveSessionScript,
         },
+        {
+          type: 'text/javascript',
+          defer: true,
+          src: 'https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js',
+        },
+        {
+          type: 'text/javascript',
+          innerHTML:
+            'window.embeddedChatbotConfig = { chatbotId: "eYESFSAOucd20nOS3ZUAU", domain: "www.chatbase.co" };',
+        },
+        {
+          type: 'text/javascript',
+          src: 'https://www.chatbase.co/embed.min.js',
+          chatbotId: 'eYESFSAOucd20nOS3ZUAU',
+          domain: 'www.chatbase.co',
+          defer: true,
+        },
       ]}
     />
   );
