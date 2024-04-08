@@ -10,6 +10,10 @@
   overflow: hidden;
   background-color: #0f1114;
 
+  &--no-show {
+    display: none;
+  }
+
   &__content {
     z-index: 1;
     display: flex;

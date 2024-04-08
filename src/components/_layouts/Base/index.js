@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { node, bool } from 'prop-types';
 
 import Navbar from '../../Navbar';
@@ -25,7 +25,7 @@ const shouldBannerBeClosed = () => {
 const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }) => {
   const [showOneKeyBanner, setShowOneKeyBanner] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!shouldBannerBeClosed()) {
       setShowOneKeyBanner(true);
     }
@@ -40,7 +40,7 @@ const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }
     <ScrollProvider>
       <div style={{ overflowX: 'clip' }}>
         <Navbar t={t} primer={primer} light={lightNavbar} />
-        {showOneKeyBanner ? <OneKeyBanner setShouldShow={setShouldShow} /> : null}
+        <OneKeyBanner shouldShow={showOneKeyBanner} setShouldShow={setShouldShow} />
         <main>{children}</main>
         <CookiesNotice t={t} />
         <Footer t={t} primer={primer} />
