@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { node, bool } from 'prop-types';
 
 import Navbar from '../../Navbar';
@@ -23,13 +23,7 @@ const shouldBannerBeClosed = () => {
 };
 
 const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }) => {
-  const [showOneKeyBanner, setShowOneKeyBanner] = useState(false);
-
-  useEffect(() => {
-    if (!shouldBannerBeClosed()) {
-      setShowOneKeyBanner(true);
-    }
-  }, []);
+  const [showOneKeyBanner, setShowOneKeyBanner] = useState(!shouldBannerBeClosed());
 
   const setShouldShow = () => {
     setShowOneKeyBanner(false);
