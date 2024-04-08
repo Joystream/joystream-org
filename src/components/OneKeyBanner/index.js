@@ -1,5 +1,4 @@
 import React from 'react';
-import cn from 'classnames';
 
 import OneKeyBackground from '../../assets/images/onekey.webp';
 import { ReactComponent as CloseIcon } from '../../assets/svg/postponed.svg';
@@ -7,12 +6,10 @@ import { ReactComponent as CloseIcon } from '../../assets/svg/postponed.svg';
 import './style.scss';
 
 const OneKeyBanner = ({ shouldShow, setShouldShow }) => {
+  const oneKeyBannerStyles = shouldShow ? {} : { display: 'none' };
+
   return (
-    <div
-      className={cn('OneKeyBanner', {
-        'OneKeyBanner--no-show': !shouldShow,
-      })}
-    >
+    <div className="OneKeyBanner" style={oneKeyBannerStyles}>
       <div className="OneKeyBanner__content">
         <div className="OneKeyBanner__content__title">Joystream Hardware Wallet Sale is Now Live!</div>
         <div className="OneKeyBanner__content__subtitle">Learn more about limited edition OneKey Classic wallet</div>
