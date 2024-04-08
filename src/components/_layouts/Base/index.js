@@ -30,6 +30,8 @@ const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }
     typeof window !== 'undefined' && window.localStorage.setItem(ONE_KEY_LOCAL_STORAGE_KEY, 'false');
   };
 
+  console.log(showOneKeyBanner);
+
   return (
     <ScrollProvider>
       <div style={{ overflowX: 'clip' }}>
