@@ -8,6 +8,9 @@ import Bitmart from '../../../assets/images/token/bitmart-logo.webp';
 import GateIO from '../../../assets/images/token/gateio.webp';
 import XT from '../../../assets/images/token/xt-logo.webp';
 import Biconomy from '../../../assets/images/token/biconomy-logo.webp';
+import ChangeNow from '../../../assets/images/token/changenow.webp';
+import StealthEX from '../../../assets/images/token/stealthex.webp';
+import SimpleSwap from '../../../assets/images/token/simpleswap.webp';
 
 import './style.scss';
 
@@ -80,6 +83,27 @@ const Exchanges = ({ t }) => {
             exchangeName={t('token.exchanges.biconomy.name')}
             exchangeDescription={t('token.exchanges.biconomy.description')}
             exchangeLink="https://www.biconomy.com/exchange/JOY_USDT"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={ChangeNow}
+            exchangeName={t('token.exchanges.changenow.name')}
+            exchangeDescription={t('token.exchanges.changenow.description')}
+            exchangeLink="https://changenow.io/exchange?from=usdterc20&to=joy&fiatMode=true&amount=50"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={StealthEX}
+            exchangeName={t('token.exchanges.stealthex.name')}
+            exchangeDescription={t('token.exchanges.stealthex.description')}
+            exchangeLink="https://stealthex.io/?amount=50&from=usdterc20&to=joy"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={SimpleSwap}
+            exchangeName={t('token.exchanges.simpleswap.name')}
+            exchangeDescription={t('token.exchanges.simpleswap.description')}
+            exchangeLink="https://simpleswap.io/exchange?from=usdterc20&to=joystream&amount=50&rate=floating"
             t={t}
           />
         </div>
