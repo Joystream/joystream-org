@@ -96,14 +96,14 @@ const Token = ({ data, loading }) => {
           </div>
         )}
 
-        {loading || (!data?.roi && !data?.supplyDistribution) ? (
+        {/* {loading || (!data?.roi && !data?.supplyDistribution) ? (
           <RoiSupplyBlockSkeleton />
         ) : (
           <div className="dashboard-token__stats-tables-grid grid-indents">
             <RoiTableWidget data={data?.roi} />
             <SupplyDistributionTableWidget data={data?.supplyDistribution} />
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );
