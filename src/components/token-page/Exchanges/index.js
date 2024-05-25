@@ -11,6 +11,7 @@ import Biconomy from '../../../assets/images/token/biconomy-logo.webp';
 import ChangeNow from '../../../assets/images/token/changenow.webp';
 import StealthEX from '../../../assets/images/token/stealthex.webp';
 import SimpleSwap from '../../../assets/images/token/simpleswap.webp';
+import CoinEx from '../../../assets/images/token/coinex.webp';
 
 import './style.scss';
 
@@ -83,6 +84,13 @@ const Exchanges = ({ t }) => {
             exchangeName={t('token.exchanges.biconomy.name')}
             exchangeDescription={t('token.exchanges.biconomy.description')}
             exchangeLink="https://www.biconomy.com/exchange/JOY_USDT"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={CoinEx}
+            exchangeName={t('token.exchanges.coinex.name')}
+            exchangeDescription={t('token.exchanges.coinex.description')}
+            exchangeLink="https://www.coinex.com/en/exchange/joy-usdt"
             t={t}
           />
           <ExchangeSection
