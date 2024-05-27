@@ -36,7 +36,7 @@ export const ExchangeOption = ({ logo, name, tradingURL, volume, depthUp2, depth
       </div>
 
       <h5 className="dashboard-token-exchange__option-volume-depth">Volume (24h)</h5>
-      <p className="dashboard-token-exchange__option-volume">&#36;{formatNumberWithCommas(volume)}</p>
+      <p className="dashboard-token-exchange__option-volume">&#36;{formatNumberWithCommas(Math.round(volume))}</p>
 
       <ul className="dashboard-token-exchange__option-depths-list">
         <li className="dashboard-token-exchange__option-depths-list-item">
