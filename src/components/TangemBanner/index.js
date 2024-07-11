@@ -13,7 +13,7 @@ const TangemBanner = ({ setShouldShow }) => {
         <div className="TangemBanner__content__subtitle">Learn more about limited edition Tangem wallet</div>
       </div>
       <div className="TangemBanner__controls">
-        <a href="https://blog.joystream.org/limited-edition-onekey-x-joystream/" target="_blank" rel="noreferrer">
+        <a href="https://blog.joystream.org/p/6aa0abe7-3739-4841-bda9-4599e5c35971/" target="_blank" rel="noreferrer">
           <div className="TangemBanner__controls__button">Learn More</div>
         </a>
         <CloseIcon className="TangemBanner__controls__close" onClick={() => setShouldShow()} />
