@@ -105,7 +105,7 @@ export const iconMap = {
 export default [
   { select: { title: 'Version 1', subtitle: '2023-2024 (v1)' }, name: '2023-2024 v1', value: quarters23_24, isNewest: false  },
    { select: { title: 'Version 2', subtitle: '2024 (v2)' }, name: '2024 v2', value: quarters24_v2, isNewest: false  },
-   { select: { title: 'Version 3', subtitle: '2024 (v3)' }, name: '2024 v3', value: quarters24_v3, isNewest: true  },
+   { select: { title: 'Version 3', subtitle: '2024 (v3)' }, name: '2024 v3', value: quarters24_v3, isNewest: false  },
    { select: { title: 'Version 4', subtitle: '2024 (v4)' }, name: '2024 v4', value: quarters24_v4, isNewest: true  },
 
 ];
