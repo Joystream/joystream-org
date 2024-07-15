@@ -83,11 +83,6 @@
               "Content": "This feature will allow for content creators to restrict access for content to users unless they pay a fee, enabling another revenue stream for premium content."
             },
             {
-                "icon": "stakePool",
-                "title": "Staking Nomination Pools",
-                "Content": "Implementation of on-chain nomination pools which will allow for users to far more easily and quickly stake the JOY token for pooled rewards from other users. This will also provide an important revenue stream for wallet developers and make the Joystream project more attractive to be featured on wallets."
-            },
-            {
                 "icon": "smartphone",
                 "title": "Native Mobile App Development",
                 "Content": "Development of a native mobile app for major smartphone platforms."
@@ -112,6 +107,11 @@
                 "icon": "bounty",
                 "title": "Bounties v2",
                 "Content": "Development & deployment of an on-chain bounty management module that will enable bounties to be posted and crowdfunded by users including oracle selection and reward splitting. The council will also have the unique feature of being able to fund bounties that it selects for being of benefit to the platform via the council treasury."
+            },
+            {
+                "icon": "stakePool",
+                "title": "Staking Nomination Pools",
+                "Content": "Implementation of on-chain nomination pools which will allow for users to far more easily and quickly stake the JOY token for pooled rewards from other users. This will also provide an important revenue stream for wallet developers and make the Joystream project more attractive to be featured on wallets."
             },
             {
                 "icon": "premium",
