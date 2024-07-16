@@ -5,6 +5,7 @@ import Navbar from '../../Navbar';
 import Footer from '../../Footer';
 import CookiesNotice from '../../CookiesNotice';
 import OneKeyBanner from '../../OneKeyBanner';
+import TangemBanner from '../../TangemBanner';
 import { ScrollProvider } from '../../_enhancers/ScrollContext';
 
 const propTypes = {
@@ -16,23 +17,23 @@ const defaultTypes = {
   children: null,
 };
 
-const ONE_KEY_LOCAL_STORAGE_KEY = 'JOYSTREAM::showOneKeyBanner';
+const ONE_KEY_LOCAL_STORAGE_KEY = 'JOYSTREAM::showBanner';
 
 const shouldBannerBeClosed = () => {
   return typeof window !== 'undefined' && window.localStorage.getItem(ONE_KEY_LOCAL_STORAGE_KEY) === 'false';
 };
 
 const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }) => {
-  const [showOneKeyBanner, setShowOneKeyBanner] = useState(false);
+  const [shouldShowBanner, setShouldShowBanner] = useState(false);
 
   useEffect(() => {
     if (!shouldBannerBeClosed()) {
-      setShowOneKeyBanner(true);
+      setShouldShowBanner(true);
     }
   }, []);
 
   const setShouldShow = () => {
-    setShowOneKeyBanner(false);
+    setShouldShowBanner(false);
     typeof window !== 'undefined' && window.localStorage.setItem(ONE_KEY_LOCAL_STORAGE_KEY, 'false');
   };
 
@@ -40,7 +41,7 @@ const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }
     <ScrollProvider>
       <div style={{ overflowX: 'clip' }}>
         <Navbar t={t} primer={primer} light={lightNavbar} />
-        {showOneKeyBanner ? <OneKeyBanner setShouldShow={setShouldShow} /> : null}
+        {shouldShowBanner ? <TangemBanner setShouldShow={setShouldShow} /> : null}
         <main>{children}</main>
         <CookiesNotice t={t} />
         <Footer t={t} primer={primer} />
