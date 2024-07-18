@@ -82,7 +82,7 @@ export const verifiedMembers = [
   {
     memberHandle: '0x2bc',
     avatarUrl: 'https://raw.githubusercontent.com/Joystream/founding-members/main/avatars/primary-avatar/28.png',
-    title: 'verification.title.distributionAndStorageWorker',
+    title: 'verification.title.storageWorker',
     socials: {
       telegram: '@nullx2bc',
       twitter: '@nullx2bc',
@@ -207,6 +207,58 @@ export const verifiedMembers = [
       allowed: [
         { text: 'verification.safety.can.items.answerJoystreamRelatedInquiries' },
         { text: 'verification.safety.can.items.promoteGovernance' },
+      ],
+    },
+  },
+  {
+    memberHandle: 'spat_sochi',
+    avatarUrl: 'https://atlas-services.joystream.org/avatars/4f06c97b-b6e5-4994-98a1-2560d0a62fa8.webp',
+    title: 'verification.title.marketer',
+    socials: {
+      telegram: '@spat_sochi',
+      twitter: '@spat_sochi',
+      email: 'spatsochi85@gmail.com',
+      discord: '@spat_sochi',
+    },
+    safety: {
+      notAllowed: [
+        { text: 'verification.safety.willNever.items.askForMoney' },
+        { text: 'verification.safety.willNever.items.askForPasswordsOrSensitiveInformation' },
+        { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
+        {
+          text: 'verification.safety.willNever.items.askToVisitLinks',
+          components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
+        },
+      ],
+      allowed: [
+        { text: 'verification.safety.can.items.inviteToYpp' },
+        { text: 'verification.safety.can.items.offerMarketingSupport' },
+      ],
+    },
+  },
+  {
+    memberHandle: 'marat_mu',
+    avatarUrl: 'https://atlas-services.joystream.org/avatars/migrated/2154.webp',
+    title: 'verification.title.marketer',
+    socials: {
+      telegram: '@MarikJudo',
+      twitter: '@MarikJudo',
+      email: 'headc607@gmail.com',
+      discord: '@marikjudo',
+    },
+    safety: {
+      notAllowed: [
+        { text: 'verification.safety.willNever.items.askForMoney' },
+        { text: 'verification.safety.willNever.items.askForPasswordsOrSensitiveInformation' },
+        { text: 'verification.safety.willNever.items.sendAnythingDangerous' },
+        {
+          text: 'verification.safety.willNever.items.askToVisitLinks',
+          components: [{ link: 'https://www.joystream.org', text: 'Joystream.org' }],
+        },
+      ],
+      allowed: [
+        { text: 'verification.safety.can.items.inviteToYpp' },
+        { text: 'verification.safety.can.items.offerMarketingSupport' },
       ],
     },
   },
