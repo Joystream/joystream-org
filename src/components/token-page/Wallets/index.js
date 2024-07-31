@@ -6,6 +6,7 @@ import OneKeyIcon from '../../../assets/images/token/onekey.png';
 import NovaIcon from '../../../assets/images/token/nova-wallet.webp';
 import SubWalletIcon from '../../../assets/images/token/sub-wallet.webp';
 import TalismanIcon from '../../../assets/images/token/talisman.webp';
+import TangemIcon from '../../../assets/images/token/tangem.webp';
 import { ReactComponent as InfoIcon } from '../../../assets/svg/info.svg';
 
 import './style.scss';
@@ -66,6 +67,13 @@ const Wallets = ({ t }) => {
             walletName={t('token.wallets.subwallet')}
             walletLink="https://subwallet.app/"
             platforms={t('token.wallets.subwalletPlatforms')}
+            t={t}
+          />
+          <WalletSection
+            walletIcon={TangemIcon}
+            walletName={t('token.wallets.tangem')}
+            walletLink="https://tangem.com/"
+            platforms={t('token.wallets.tangemPlatforms')}
             t={t}
           />
         </div>
