@@ -41,7 +41,7 @@ const BaseLayout = ({ children, t, mainnetReminder = true, primer, lightNavbar }
     <ScrollProvider>
       <div style={{ overflowX: 'clip' }}>
         <Navbar t={t} primer={primer} light={lightNavbar} />
-        {shouldShowBanner ? <TangemBanner setShouldShow={setShouldShow} /> : null}
+        {shouldShowBanner ? <OneKeyBanner setShouldShow={setShouldShow} /> : null}
         <main>{children}</main>
         <CookiesNotice t={t} />
         <Footer t={t} primer={primer} />
