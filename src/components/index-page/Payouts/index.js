@@ -142,47 +142,6 @@ const Payouts = ({ t, payouts, priceData }) => {
           </Plx>
         </div>
       </div>
-      <div className="IndexPage__payouts__carousel-title-and-info-wrapper">
-        <div className="IndexPage__payouts__carousel-title-and-info">
-          <h3 className="IndexPage__payouts__carousel-title-and-info__title">{t('landing.payouts.carousel.title')}</h3>
-          <div className="IndexPage__payouts__carousel-title-and-info__info">
-            <div
-              className="IndexPage__payouts__carousel-title-and-info__info__label"
-              // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-              tabIndex={0}
-              aria-describedby="IndexPage__payouts__carousel-title-and-info__info__modal"
-              ref={payoutsCarouselInfoLabelRef}
-            >
-              {t('landing.payouts.carousel.info.label')}
-              <div className="IndexPage__payouts__carousel-title-and-info__info__icon">
-                <InfoIcon />
-              </div>
-            </div>
-            <div
-              role="tooltip"
-              id="IndexPage__payouts__carousel-title-and-info__info__modal"
-              className="IndexPage__payouts__carousel-title-and-info__info__modal"
-            >
-              <Trans i18nKey={'landing.payouts.carousel.info.text'} components={{ exchanges: <Link to="/token#exchanges" /> } } />
-            </div>
-          </div>
-        </div>
-      </div>
-      <section className="IndexPage__payouts-carousel">
-        <div className="IndexPage__payouts-carousel__items-wrapper">
-          {payouts && payouts.length > 0 ? (
-            <Carousel
-              itemsData={payouts?.map(({ createdAt, imageUrl, ...rest }) => ({
-                img: imageUrl,
-                time: parseDateToRelativeTime(createdAt, language),
-                ...rest,
-              }))}
-              priceData={priceData}
-              t={t}
-            />
-          ) : null}
-        </div>
-      </section>
     </section>
   );
 };
