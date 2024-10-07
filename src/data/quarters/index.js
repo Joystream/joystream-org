@@ -1,6 +1,8 @@
 import quarters23_24 from './2023-2024.json';
 import quarters24_v2 from './2024_v2.json';
 import quarters24_v3 from './2024_v3.json';
+import quarters24_v4 from './2024_v4.json';
+import quarters24_v5 from './2024_v5.json';
 
 import playIcon from '../../assets/svg/roadmap/play.svg';
 import searchIcon from '../../assets/svg/roadmap/search.svg';
@@ -49,8 +51,6 @@ import contentGatingIcon from '../../assets/svg/roadmap/icon 33 Premium Content 
 import resolutionsIcon from '../../assets/svg/roadmap/icon 34 Multiple Video Resolutions.svg';
 import metamaskSnapIcon from '../../assets/svg/roadmap/icon 35 Metamask Snap Development.svg';
 
-
-
 export const iconMap = {
   play: playIcon,
   search: searchIcon,
@@ -75,7 +75,7 @@ export const iconMap = {
   emailNotification: emailNotificationIcon,
   contentDelivery: contentDeliveryIcon,
   recommend: recommendIcon,
-  dashboard: dashboardIcon, 
+  dashboard: dashboardIcon,
   subscan: subscanIcon,
   financial: financialIcon,
   curator: curatorIcon,
@@ -97,12 +97,23 @@ export const iconMap = {
   videoCommunity: videoCommunityIcon,
   contentGating: contentGatingIcon,
   resolutions: resolutionsIcon,
-  metamaskSnap: metamaskSnapIcon  
-  
+  metamaskSnap: metamaskSnapIcon,
 };
 
 export default [
-  { select: { title: 'Version 1', subtitle: '2023-2024 (v1)' }, name: '2023-2024 v1', value: quarters23_24, isNewest: false  },
-   { select: { title: 'Version 2', subtitle: '2024 (v2)' }, name: '2024 v2', value: quarters24_v2, isNewest: false  },
-   { select: { title: 'Version 3', subtitle: '2024 (v3)' }, name: '2024 v3', value: quarters24_v3, isNewest: true  },
+  {
+    select: { title: 'Version 1', subtitle: '2023-2024 (v1)' },
+    name: '2023-2024 v1',
+    value: quarters23_24,
+    isNewest: false,
+  },
+  { select: { title: 'Version 2', subtitle: '2024 (v2)' }, name: '2024 v2', value: quarters24_v2, isNewest: false },
+  { select: { title: 'Version 3', subtitle: '2024 (v3)' }, name: '2024 v3', value: quarters24_v3, isNewest: false },
+  { select: { title: 'Version 4', subtitle: '2024 (v4)' }, name: '2024 v4', value: quarters24_v4, isNewest: false },
+  {
+    select: { title: 'Version 5', subtitle: '2024-2025 (v5)' },
+    name: '2024-2025 v5',
+    value: quarters24_v5,
+    isNewest: true,
+  },
 ];

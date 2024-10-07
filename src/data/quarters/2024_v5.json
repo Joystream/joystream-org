@@ -1,0 +1,100 @@
+[
+  {
+    "language": "English",
+    "quarters": [
+      {
+        "year": "2024",
+        "id": "Q4",
+        "deliveryMilestones": [
+          {
+            "icon": "sdk",
+            "title": "Joystream SDK",
+            "Content": "Building on top of Joystream today is still a challenging experience. There are no robust libraries or builder documentation for application development. Offering an excellent experience for developer to build apps, and not just use Atlas off-the shelf, will require a significant investment in building out the SDK. This milestone has as a goal to extract the core of key existing applications, like Atlas and Pioneer, and then to synthesize it all into a new core developer experience, with a suite of excellent tutorials, documentation, examples and also active outreach."
+          },
+          {
+            "icon": "smartphone",
+            "title": "Progressive Web App for Atlas/Gleev",
+            "Content": "Development of a progressive web app for Atlas/Gleev that will allow for the app to be installed on user's smartphones without having to go through app stores."
+          },
+          {
+            "icon": "monitor",
+            "title": "Transcoding & Adaptive Streaming",
+            "Content": "Users access content across a wide range of browser, devices, applications and also under heterogeneous and dynamic bandwidth constraints. As it stands, only a single version of each media asset is represented in our metadata standards and backend node software. This means have now way to represent a broad range of encodings and resolutions for media assets, let alone produce all of these. Introducing server-side transcoding in Orion will unlock this, and many other future benefits that come from server-side post-processing (thumbnail extractions, auto-subtitling, etc.). It will also unlock the ability to do adaptive streaming, where a user with a dynamic connection can more quickly see asset resolve and play, and also be able to watch videos under suboptimal circumstances."
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "id": "Q1",
+        "deliveryMilestones": [
+          {
+            "icon": "play",
+            "title": "Content Recommendations v2",
+            "Content": "Surfacing personalized content for a consumer is a key requirement for any content platform. Key product experiences like home screens, feeds and related content, all depend on having modern Machine learning based content recommendation system. Currently Orion has no infrastructure to produce or serve such recommendations, and app recommendations are being done entirely client-side. The goal of this milestone is to ship the first recommendation capability in Orion, to make Joystream apps much more."
+          },
+          {
+            "icon": "premium",
+            "title": "Premium Video Comments & Tips",
+            "Content": "Add functionality for users to leave comments on videos with a tip attached to them that will be sent to the channel owner. This will also enable functionality for users to tip channels and videos directly."
+          },
+          {
+            "icon": "content",
+            "title": "API-less YouTube Sync",
+            "Content": "This functionality would enable for channels to sync to Joystream via our YouTube Partner Program without relying on YouTube's API."
+          },
+          {
+            "icon": "dollar-sign",
+            "title": "Fiat on-ramp",
+            "Content": "Starting with Joystream is easy with an initial token balance for transaction fees. However, features like purchasing NFTs or CRT require more JOY tokens. To make this seamless, we're introducing an in-app fiat on-ramp for Atlas app users. This allows users to buy JOY directly and use it within the ecosystem."
+          },
+          {
+            "icon": "channelPayout",
+            "title": "Creator Token Improvements",
+            "Content": "Various improvements to creator token functionality such as the addition of public sales, whitelisting and transfer of creator tokens."
+          },
+          {
+            "icon": "smartphone",
+            "title": "Native Mobile App Development",
+            "Content": "Development of a native mobile app for major smartphone platforms."
+          },
+          {
+            "icon": "premium",
+            "title": "Social Collaboration Features",
+            "Content": "The power of Web3 is in the community ownership and leveraging the network effects. Gleev will offer new ways to organise community based on content verticals and individual channels, adding more utility and new use cases for Creator Tokens and Joy tokens. Channel token holders will be offered exclusive ways to connect with creators, and social feed will empower viewers to co-curate the platform's trending content, gain exposure on the platform and earn JOY tokens for active participation."
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "id": "Q2",
+        "deliveryMilestones": [
+          {
+            "icon": "bounty",
+            "title": "Bounties v2",
+            "Content": "Development & deployment of an on-chain bounty management module that will enable bounties to be posted and crowdfunded by users including oracle selection and reward splitting. The council will also have the unique feature of being able to fund bounties that it selects for being of benefit to the platform via the council treasury."
+          },
+          {
+            "icon": "lock",
+            "title": "Content Infrastructure: Authentication & Authorization",
+            "Content": "Proper monetization, both for the DAO and individual creators, depends on being able to practically restrict access to content, or make access conditional. Currently, the infrastructure has no awareness of who the consumer is, or the semantics around what the content is, or any associated authorization policy. The goal of this milestone is to introduce basic authentication and authorization at the content layer, enforced by content delivery nodes. This will allow features such as gating videos to only NFT holders for example."
+          },
+          {
+            "icon": "lock",
+            "title": "Premium Content gating features (pay to view)",
+            "Content": "This feature will allow for content creators to restrict access for content to users unless they pay a fee, enabling another revenue stream for premium content."
+          },
+          {
+            "icon": "stakePool",
+            "title": "Staking Nomination Pools",
+            "Content": "Implementation of on-chain nomination pools which will allow for users to far more easily and quickly stake the JOY token for pooled rewards from other users. This will also provide an important revenue stream for wallet developers and make the Joystream project more attractive to be featured on wallets."
+          },
+          {
+            "icon": "community",
+            "title": "Video Communities v1",
+            "Content": "Launching a new application for your community using Atlas currently requires a lot of deep technical knowledge. You have to obtain hosting and a domain, start the service, configure it, and then maintain it. This is quite difficult. The goal of this milestone is to create the Reddit to phpBB, in terms of the experience of a prospective community creator and moderator. One requires substantially more work and skill. By instead offering a fully hosted and simple point-and-click feature, we can make it orders of magnitude easier to allow third parties to invite their communities to use Joystream."
+          }
+        ]
+      }
+    ]
+  }
+]
