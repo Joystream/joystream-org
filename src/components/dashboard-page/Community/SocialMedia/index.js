@@ -39,9 +39,9 @@ const PrimaryStats = ({ SocialMediaLogo, socialMediaName, mainStats, supplementa
         <SocialMediaLogo height="40px" />
         <h4 className="dashboard-community-social-media__name">{socialMediaName}</h4>
         <p className="dashboard-community-social-media__main-stats font-size-increased">{mainStats}</p>
-        <p className={cn('dashboard-community-social-media__supplemental-stats', { hidden: !supplementalStats })}>
+        {/* <p className={cn('dashboard-community-social-media__supplemental-stats', { hidden: !supplementalStats })}>
           {supplementalStats || ' Last month'}
-        </p>
+        </p> */}
       </div>
     </div>
   );

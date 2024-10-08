@@ -23,9 +23,9 @@ const TractionCard = ({ change, value, infoText, modalText, icon, t }) => {
           </div>
         </div>
         <div className="IndexPage__traction__card__value">{value}</div>
-        <div className="IndexPage__traction__card__change">
+        {/* <div className="IndexPage__traction__card__change">
           +{change}% {t('landing.traction.lastWeek')}
-        </div>
+        </div> */}
       </div>
     </div>
   );
