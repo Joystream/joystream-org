@@ -42,7 +42,8 @@ const exchangeOptionsTradingURLs = {
   xt: 'https://www.xt.com/en/trade/joy_usdt',
   biconomy: 'https://www.biconomy.com/exchange/JOY_USDT',
   coinex: 'https://www.coinex.com/en/exchange/joy-usdt',
-  'uniswap-v3-base': 'https://app.uniswap.org/explore/tokens/base/0x8761155c814c807cd3ccd15b256d69d3c10f198c',
+  'uniswap-v3-base':
+    'https://app.uniswap.org/swap?chain=base&inputCurrency=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&outputCurrency=0x8761155c814c807cD3CcD15B256D69D3C10f198C',
   changenow: '/token#instantSwap',
 };
 
