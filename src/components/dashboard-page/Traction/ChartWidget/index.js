@@ -42,7 +42,7 @@ const ChartWidget = ({
     <div className="dashboard-traction-chart-widget">
       <WidgetHeading heading={heading} termDefinitionKey={termDefinitionKey} />
       <p className="dashboard-traction-chart-widget__indicator-value">{valueOfIndicator}</p>
-      <p className="dashboard-traction-chart-widget__growth-rate">{`${growthRateWithSign}% Changes`}</p>
+      {/* <p className="dashboard-traction-chart-widget__growth-rate">{`${growthRateWithSign}% Changes`}</p> */}
       <h4 className="dashboard-traction-chart-widget__indicator">{`${indicator} per week`}</h4>
       <Chart data={chartData} chartHeight={chartHeight} withYAxisMarginReduced={withYAxisMarginReduced} />
     </div>

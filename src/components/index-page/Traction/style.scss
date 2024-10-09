@@ -41,7 +41,7 @@
     }
 
     &__card-wrapper {
-      height: 416px;
+      height: 378px;
       padding: 1px;
       background: linear-gradient(180deg, #52616b 0%, rgba(82, 97, 107, 0) 100%);
       border-radius: 8px;
@@ -167,7 +167,7 @@
       }
 
       &__card-wrapper {
-        height: 384px;
+        height: 354px;
       }
 
       &__card {
@@ -211,7 +211,7 @@
       }
 
       &__cards {
-        max-height: 1248px;
+        max-height: 1158px;
         margin-top: 56px;
         gap: 16px;
         grid-template-columns: repeat(2, 1fr);
