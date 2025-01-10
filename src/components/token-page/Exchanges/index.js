@@ -12,6 +12,7 @@ import ChangeNow from '../../../assets/images/token/changenow.webp';
 import StealthEX from '../../../assets/images/token/stealthex.webp';
 import SimpleSwap from '../../../assets/images/token/simpleswap.webp';
 import CoinEx from '../../../assets/images/token/coinex.webp';
+import CoinStore from '../../../assets/images/token/coinstore.webp';
 
 import './style.scss';
 
@@ -112,6 +113,13 @@ const Exchanges = ({ t }) => {
             exchangeName={t('token.exchanges.simpleswap.name')}
             exchangeDescription={t('token.exchanges.simpleswap.description')}
             exchangeLink="https://simpleswap.io/exchange?from=usdterc20&to=joystream&amount=50&rate=floating"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={CoinStore}
+            exchangeName={t('token.exchanges.coinstore.name')}
+            exchangeDescription={t('token.exchanges.coinstore.description')}
+            exchangeLink="https://www.coinstore.com/spot/JOYUSDT"
             t={t}
           />
         </div>
