@@ -13,6 +13,7 @@ import StealthEX from '../../../assets/images/token/stealthex.webp';
 import SimpleSwap from '../../../assets/images/token/simpleswap.webp';
 import CoinEx from '../../../assets/images/token/coinex.webp';
 import CoinStore from '../../../assets/images/token/coinstore.webp';
+import Uniswap from '../../../assets/images/token/uniswap.webp';
 
 import './style.scss';
 
@@ -120,6 +121,13 @@ const Exchanges = ({ t }) => {
             exchangeName={t('token.exchanges.coinstore.name')}
             exchangeDescription={t('token.exchanges.coinstore.description')}
             exchangeLink="https://www.coinstore.com/spot/JOYUSDT"
+            t={t}
+          />
+          <ExchangeSection
+            exchangeIcon={Uniswap}
+            exchangeName={t('token.exchanges.uniswap.name')}
+            exchangeDescription={t('token.exchanges.uniswap.description')}
+            exchangeLink="https://app.uniswap.org/swap?chain=base&inputCurrency=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&outputCurrency=0x8761155c814c807cD3CcD15B256D69D3C10f198C"
             t={t}
           />
         </div>
