@@ -51,9 +51,9 @@ const TokensPage = () => {
 
       <Exchanges t={t} />
 
-      <InstantSwap t={t} />
-
       <Uniswap t={t} />
+
+      <InstantSwap t={t} />
 
       <Earn t={t} />
 

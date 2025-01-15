@@ -61,7 +61,11 @@ const Uniswap = ({ t }) => {
               text={t('token.uniswap.benefits.dexScreener')}
               link="https://dexscreener.com/base/0xddbc56322277d3b116643470fb9c7c3b1b47b739"
             />
-            <Benefit icon={<ClockIcon />} text={t('token.uniswap.benefits.onlyFewMinutes')} />
+            <Benefit
+              icon={<ClockIcon />}
+              text={t('token.uniswap.benefits.onlyFewMinutes')}
+              link="https://bridge.joystream.org/"
+            />
             <Benefit icon={<TokenIcon />} text={t('token.uniswap.benefits.nineHundredPlusCryptoSupported')} small />
           </div>
           <div className="TokenPage__uniswap__main__widget">
