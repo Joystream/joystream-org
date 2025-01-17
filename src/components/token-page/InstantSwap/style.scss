@@ -3,7 +3,7 @@
 
 .TokenPage {
   &__instant-swap-wrapper {
-    padding: 0 0 96px 0;
+    padding: 96px 0;
     background-color: #000;
   }
 
@@ -41,29 +41,93 @@
       }
     }
 
+    &__switch-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__switch {
+      @include h8;
+
+      display: flex;
+      margin: 48px auto 0;
+      color: $c_white;
+      border-radius: 8px;
+      gap: 8px;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        padding: 20px;
+        cursor: pointer;
+        background-color: #111316;
+        gap: 12px;
+
+        &--active {
+          cursor: unset;
+          background-color: $c_blue-ribbon;
+        }
+
+        &--changenow {
+          border-bottom-left-radius: 8px;
+          border-top-left-radius: 8px;
+        }
+
+        &--uniswap {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+
+        &__logo {
+          width: 35px;
+          height: 35px;
+          background-color: $c_white;
+          border-radius: 12px;
+        }
+      }
+    }
+
     &__main {
       display: grid;
-      height: 528px;
-      margin-top: 96px;
+      height: 615px;
+      margin-top: 48px;
+      animation: fadeIn .3s ease-in;
       gap: 24px;
       grid-template-columns: 1fr 1fr;
 
       &__benefits {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         gap: 24px;
-        grid-template-rows: repeat(4, 1fr);
 
         &__item {
+          position: relative;
           display: flex;
           align-items: center;
+          height: 117px;
+          max-width: 588px;
           padding: 32px 24px;
           background-color: #111316;
           border-radius: 8px;
+
+          &--copy {
+            cursor: pointer;
+          }
+
+          &__logo {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+          }
 
           &__icon-wrapper {
             display: grid;
             width: 48px;
             height: 48px;
+            min-width: 48px;
             background-color: #1f252e;
             border-radius: 999px;
             place-items: center;
@@ -74,6 +138,38 @@
 
             margin-left: 24px;
             color: #fff;
+          }
+
+          &__arrow-icon {
+            position: absolute;
+            top: 0;
+            right: 24px;
+            bottom: 0;
+            margin: auto;
+            color: $c_white;
+            transform: rotate(-90deg);
+          }
+
+          &__tooltip {
+            @include base-3;
+
+            position: absolute;
+            right: 0;
+            bottom: calc(100% + 8px);
+            padding: 8px;
+            color: $c_white;
+            background-color: #343d44;
+            border-radius: 2px;
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .12), 0 4px 4px 0 rgba(0, 0, 0, .1);
+            transition: visibility .3s linear, opacity .3s linear;
+            transition-delay: .1s;
+
+            &--visible {
+              opacity: 1;
+              visibility: visible;
+            }
           }
         }
       }
@@ -89,19 +185,29 @@
 
   @media #{$screen-max-md} {
     &__instant-swap {
+      &__switch {
+        margin-top: 32px;
+      }
+
       &__main {
         display: flex;
         flex-direction: column;
         height: auto;
         max-width: 585px;
-        margin: 96px auto 0;
+        margin: 32px auto 0;
+
+        &__benefits {
+          &__item {
+            max-width: 585px;
+          }
+        }
       }
     }
   }
 
   @media #{$screen-max-sm} {
     &__instant-swap-wrapper {
-      padding: 0 0 80px 0;
+      padding: 80px 0;
     }
 
     &__instant-swap {
@@ -116,18 +222,19 @@
       }
 
       &__main {
-        margin-top: 48px;
         gap: 12px;
 
         &__benefits {
           gap: 12px;
 
           &__item {
+            height: 80px;
             padding: 24px 16px;
 
             &__icon-wrapper {
               width: 32px;
               height: 32px;
+              min-width: 32px;
 
               & > svg {
                 transform: scale(.8);
@@ -139,9 +246,43 @@
 
               margin-left: 12px;
             }
+
+            &__tooltip {
+              @include base-4;
+            }
           }
         }
       }
     }
+  }
+
+  @media (max-width: 480px) {
+    &__instant-swap {
+      &__switch {
+        flex-direction: column;
+
+        &__item {
+          &--changenow {
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 0;
+          }
+
+          &--uniswap {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
