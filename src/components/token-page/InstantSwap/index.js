@@ -129,8 +129,12 @@ const SWITCH_STATE_UNISWAP = 'uniswap;';
 const SWITCH_STATE_CHANGENOW = 'changenow';
 
 const getInitialSwitchState = () => {
-  const url = new URL(window.location.href);
-  const swap = url.searchParams.get('swap');
+  let swap = '';
+
+  if (typeof window !== 'undefined') {
+    const url = new URL(window.location.href);
+    swap = url.searchParams.get('swap');
+  }
 
   if (swap === 'base') {
     return SWITCH_STATE_UNISWAP;
