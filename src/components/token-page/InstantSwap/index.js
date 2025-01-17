@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import cn from 'classnames';
 
 import Uniswap from '../../../assets/images/token/uniswap.webp';
@@ -125,26 +125,22 @@ const UniswapSection = ({ t }) => {
   );
 };
 
-const SWITCH_STATE_UNISWAP = 'uniswap;';
+const SWITCH_STATE_UNISWAP = 'uniswap';
 const SWITCH_STATE_CHANGENOW = 'changenow';
 
-const getInitialSwitchState = () => {
-  let swap = '';
-
-  if (typeof window !== 'undefined') {
-    const url = new URL(window.location.href);
-    swap = url.searchParams.get('swap');
-  }
-
-  if (swap === 'base') {
-    return SWITCH_STATE_UNISWAP;
-  }
-
-  return SWITCH_STATE_CHANGENOW;
-};
-
 const InstantSwap = ({ t }) => {
-  const [switchState, setSwitchState] = useState(getInitialSwitchState());
+  const [switchState, setSwitchState] = useState(SWITCH_STATE_CHANGENOW);
+
+  useLayoutEffect(() => {
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      const swap = url.searchParams.get('swap');
+
+      if (swap === 'base') {
+        setSwitchState(SWITCH_STATE_UNISWAP);
+      }
+    }
+  }, []);
 
   return (
     <section className="TokenPage__instant-swap-wrapper" id="instantSwap">
