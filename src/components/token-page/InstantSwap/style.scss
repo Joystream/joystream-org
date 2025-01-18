@@ -47,11 +47,8 @@
     }
 
     &__switch {
-      @include h8;
-
       display: flex;
       margin: 48px auto 0;
-      color: $c_white;
       border-radius: 8px;
       gap: 8px;
 
@@ -63,11 +60,26 @@
         padding: 20px;
         cursor: pointer;
         background-color: #111316;
+        transition: background-color .7s;
         gap: 12px;
+
+        &:hover {
+          background-color: #6c6cff;
+          transition: background-color .7s;
+        }
+
+        &--inactive {
+          animation: activeButtonFade .3s ease-in;
+        }
 
         &--active {
           cursor: unset;
           background-color: $c_blue-ribbon;
+          transition: background-color .3s;
+
+          &:hover {
+            background-color: $c_blue-ribbon;
+          }
         }
 
         &--changenow {
@@ -81,10 +93,48 @@
         }
 
         &__logo {
-          width: 35px;
-          height: 35px;
-          background-color: $c_white;
-          border-radius: 12px;
+          position: relative;
+          width: 45px;
+          height: 45px;
+
+          &--with-background {
+            background-color: $c_white;
+            border-radius: 12px;
+          }
+
+          &__image {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+          }
+
+          &__sub-logo {
+            position: absolute;
+            right: -4px;
+            bottom: -4px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+          }
+        }
+
+        &__text-wrapper {
+          display: flex;
+          flex-direction: column;
+          // gap: 2px;
+        }
+
+        &__main {
+          @include h8;
+
+          color: $c_white;
+        }
+
+        &__subtitle {
+          @include base-5;
+
+          font-weight: 400;
+          color: $c_white;
         }
       }
     }
@@ -284,5 +334,15 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes activeButtonFade {
+  0% {
+    background-color: #4038ff;
+  }
+
+  100% {
+    background-color: #111316;
   }
 }

@@ -4,6 +4,8 @@ import cn from 'classnames';
 import Uniswap from '../../../assets/images/token/uniswap.webp';
 import ChangeNow from '../../../assets/images/token/changenow.webp';
 import DEXScreener from '../../../assets/images/token/dex-screener.png';
+import Base from '../../../assets/images/token/base.webp';
+import Joystream from '../../../assets/images/token/joystream.webp';
 
 import { ReactComponent as LockIcon } from '../../../assets/svg/token/lock.svg';
 import { ReactComponent as InvisibilityIcon } from '../../../assets/svg/token/invisibility.svg';
@@ -28,39 +30,43 @@ const Benefit = ({ t, icon, text, link, copy }) => {
     }
   }, [isTooltipVisible]);
 
-  return (
-    <>
-      <div
-        role="presentation"
-        onClick={() => {
-          if (isCopyable) {
-            navigator.clipboard.writeText(copy);
-            setIsTooltipVisible(true);
-          }
-        }}
-        className={cn('TokenPage__instant-swap__main__benefits__item', {
-          'TokenPage__instant-swap__main__benefits__item--copy': isCopyable,
-        })}
-      >
-        <div className="TokenPage__instant-swap__main__benefits__item__icon-wrapper">{icon}</div>
-        <p className={cn('TokenPage__instant-swap__main__benefits__item__text')}>{text}</p>
-        {link ? (
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            <ArrowIcon className="TokenPage__instant-swap__main__benefits__item__arrow-icon" />
-          </a>
-        ) : null}
-        {isCopyable ? (
-          <div
-            className={cn('TokenPage__instant-swap__main__benefits__item__tooltip', {
-              'TokenPage__instant-swap__main__benefits__item__tooltip--visible': isTooltipVisible,
-            })}
-          >
-            {t('token.instantSwap.benefits.addressTooltip')}
-          </div>
-        ) : null}
-      </div>
-    </>
+  const content = (
+    <div
+      role="presentation"
+      onClick={() => {
+        if (isCopyable) {
+          navigator.clipboard.writeText(copy);
+          setIsTooltipVisible(true);
+        }
+      }}
+      className={cn('TokenPage__instant-swap__main__benefits__item', {
+        'TokenPage__instant-swap__main__benefits__item--copy': isCopyable,
+      })}
+    >
+      <div className="TokenPage__instant-swap__main__benefits__item__icon-wrapper">{icon}</div>
+      <p className={cn('TokenPage__instant-swap__main__benefits__item__text')}>{text}</p>
+      {link ? <ArrowIcon className="TokenPage__instant-swap__main__benefits__item__arrow-icon" /> : null}
+      {isCopyable ? (
+        <div
+          className={cn('TokenPage__instant-swap__main__benefits__item__tooltip', {
+            'TokenPage__instant-swap__main__benefits__item__tooltip--visible': isTooltipVisible,
+          })}
+        >
+          {t('token.instantSwap.benefits.addressTooltip')}
+        </div>
+      ) : null}
+    </div>
   );
+
+  if (link) {
+    return (
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        {content}
+      </a>
+    );
+  }
+
+  return content;
 };
 
 const ChangeNowSection = ({ t }) => {
@@ -130,6 +136,7 @@ const SWITCH_STATE_CHANGENOW = 'changenow';
 
 const InstantSwap = ({ t }) => {
   const [switchState, setSwitchState] = useState(SWITCH_STATE_CHANGENOW);
+  const [initialLoad, setInitialLoad] = useState(true);
 
   useLayoutEffect(() => {
     if (typeof window !== 'undefined') {
@@ -155,22 +162,54 @@ const InstantSwap = ({ t }) => {
           <div className="TokenPage__instant-swap__switch">
             <div
               role="presentation"
-              onClick={() => setSwitchState(SWITCH_STATE_CHANGENOW)}
+              onClick={() => {
+                setSwitchState(SWITCH_STATE_CHANGENOW);
+                setInitialLoad(false);
+              }}
               className={cn('TokenPage__instant-swap__switch__item TokenPage__instant-swap__switch__item--changenow', {
                 'TokenPage__instant-swap__switch__item--active': switchState === SWITCH_STATE_CHANGENOW,
+                'TokenPage__instant-swap__switch__item--inactive':
+                  switchState !== SWITCH_STATE_CHANGENOW && !initialLoad,
               })}
             >
-              <img className="TokenPage__instant-swap__switch__item__logo" src={ChangeNow} alt="changenow logo" />
-              Changenow
+              <div className="TokenPage__instant-swap__switch__item__logo">
+                <img
+                  className="TokenPage__instant-swap__switch__item__logo__sub-logo"
+                  src={Joystream}
+                  alt="joystream logo"
+                />
+                <img
+                  className="TokenPage__instant-swap__switch__item__logo__image"
+                  src={ChangeNow}
+                  alt="changenow logo"
+                />
+              </div>{' '}
+              <div className="TokenPage__instant-swap__switch__item__text-wrapper">
+                <p className="TokenPage__instant-swap__switch__item__main">{t('token.instantSwap.switch.changenow')}</p>
+                <p className="TokenPage__instant-swap__switch__item__subtitle">
+                  {t('token.instantSwap.switch.joystream')}
+                </p>
+              </div>
             </div>
             <div
               role="presentation"
-              onClick={() => setSwitchState(SWITCH_STATE_UNISWAP)}
+              onClick={() => {
+                setSwitchState(SWITCH_STATE_UNISWAP);
+                setInitialLoad(false);
+              }}
               className={cn('TokenPage__instant-swap__switch__item TokenPage__instant-swap__switch__item--uniswap', {
                 'TokenPage__instant-swap__switch__item--active': switchState === SWITCH_STATE_UNISWAP,
+                'TokenPage__instant-swap__switch__item--inactive': switchState !== SWITCH_STATE_UNISWAP && !initialLoad,
               })}
             >
-              <img className="TokenPage__instant-swap__switch__item__logo" src={Uniswap} alt="uniswap logo" /> Uniswap
+              <div className="TokenPage__instant-swap__switch__item__logo TokenPage__instant-swap__switch__item__logo--with-background">
+                <img className="TokenPage__instant-swap__switch__item__logo__sub-logo" src={Base} alt="base logo" />
+                <img className="TokenPage__instant-swap__switch__item__logo__image" src={Uniswap} alt="uniswap logo" />
+              </div>
+              <div className="TokenPage__instant-swap__switch__item__text-wrapper">
+                <p className="TokenPage__instant-swap__switch__item__main">{t('token.instantSwap.switch.uniswap')}</p>
+                <p className="TokenPage__instant-swap__switch__item__subtitle">{t('token.instantSwap.switch.base')}</p>
+              </div>
             </div>
           </div>
         </div>
