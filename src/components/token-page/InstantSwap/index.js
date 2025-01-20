@@ -160,8 +160,7 @@ const InstantSwap = ({ t }) => {
 
         <div className="TokenPage__instant-swap__switch-wrapper">
           <div className="TokenPage__instant-swap__switch">
-            <div
-              role="presentation"
+            <button
               onClick={() => {
                 setSwitchState(SWITCH_STATE_CHANGENOW);
                 setInitialLoad(false);
@@ -190,9 +189,8 @@ const InstantSwap = ({ t }) => {
                   {t('token.instantSwap.switch.joystream')}
                 </p>
               </div>
-            </div>
-            <div
-              role="presentation"
+            </button>
+            <button
               onClick={() => {
                 setSwitchState(SWITCH_STATE_UNISWAP);
                 setInitialLoad(false);
@@ -210,7 +208,7 @@ const InstantSwap = ({ t }) => {
                 <p className="TokenPage__instant-swap__switch__item__main">{t('token.instantSwap.switch.uniswap')}</p>
                 <p className="TokenPage__instant-swap__switch__item__subtitle">{t('token.instantSwap.switch.base')}</p>
               </div>
-            </div>
+            </button>
           </div>
         </div>
 
