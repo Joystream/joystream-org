@@ -3,6 +3,7 @@ import quarters24_v2 from './2024_v2.json';
 import quarters24_v3 from './2024_v3.json';
 import quarters24_v4 from './2024_v4.json';
 import quarters24_v5 from './2024_v5.json';
+import quarters25_v1 from './2025_v1.json';
 
 import playIcon from '../../assets/svg/roadmap/play.svg';
 import searchIcon from '../../assets/svg/roadmap/search.svg';
@@ -114,6 +115,11 @@ export default [
     select: { title: 'Version 5', subtitle: '2024-2025 (v5)' },
     name: '2024-2025 v5',
     value: quarters24_v5,
+  },
+  {
+    select: { title: 'Version 6', subtitle: '2025-2026 (v6)' },
+    name: '2025-2026 v1',
+    value: quarters25_v1,
     isNewest: true,
   },
 ];
