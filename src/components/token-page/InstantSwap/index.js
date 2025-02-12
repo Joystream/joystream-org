@@ -123,7 +123,7 @@ const UniswapSection = ({ t }) => {
         <iframe
           title="uniswap-widget"
           id="uniswap-widget"
-          src="https://app.uniswap.org/#/swap?chain=base&inputCurrency=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&outputCurrency=0x8761155c814c807cD3CcD15B256D69D3C10f198C"
+          src="https://app.uniswap.org/#/swap?chain=base&theme=dark&inputCurrency=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&outputCurrency=0x8761155c814c807cD3CcD15B256D69D3C10f198C"
           style={{ height: '615px', width: '100%', border: 'none', borderRadius: '12px' }}
         ></iframe>
       </div>
