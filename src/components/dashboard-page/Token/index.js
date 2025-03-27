@@ -5,19 +5,15 @@ import SectionHeader from '../SectionHeader';
 import PriceChartWidget from './PriceChartWidget';
 import StatsWidget from '../StatsWidget';
 import SupplyWidget from './SupplyWidget';
-// import DashboardJoyCarousel from '../JoyCarousel';
 import Exchange from './Exchange';
 import ReleaseScheduleChartWidget from './ReleaseScheduleChartWidget';
 import AllocationTableWidget from './AllocationTableWidget';
 import MintingChartWidget from './MintingChartWidget';
-import RoiTableWidget from './RoiTableWidget';
-import SupplyDistributionTableWidget from './SupplyDistributionTableWidget';
 import {
   PriceBlockSkeleton,
   SupplyBlockSkeleton,
   AllocationMintingBlockSkeleton,
   SupplyAprBlockSkeleton,
-  RoiSupplyBlockSkeleton,
 } from './Skeletons';
 
 import { getTokenPriceMetrics, parsePercentage } from './utils';
@@ -60,8 +56,6 @@ const Token = ({ data, loading }) => {
         )}
 
         {loading ? <SupplyBlockSkeleton /> : <SupplyWidget data={data} />}
-
-        {/* <DashboardJoyCarousel /> */}
 
         <Exchange data={data?.exchanges} loading={loading} />
 

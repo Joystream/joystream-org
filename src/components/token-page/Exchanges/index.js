@@ -3,7 +3,6 @@ import React from 'react';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 
 import MEXC from '../../../assets/images/token/mexc-logo.webp';
-import Bitget from '../../../assets/images/token/bitget-logo.webp';
 import Bitmart from '../../../assets/images/token/bitmart-logo.webp';
 import GateIO from '../../../assets/images/token/gateio.webp';
 import XT from '../../../assets/images/token/xt-logo.webp';
@@ -58,13 +57,6 @@ const Exchanges = ({ t }) => {
             exchangeName={t('token.exchanges.mexc.name')}
             exchangeDescription={t('token.exchanges.mexc.description')}
             exchangeLink="https://www.mexc.com/exchange/JOYSTREAM_USDT?_from=market"
-            t={t}
-          />
-          <ExchangeSection
-            exchangeIcon={Bitget}
-            exchangeName={t('token.exchanges.bitget.name')}
-            exchangeDescription={t('token.exchanges.bitget.description')}
-            exchangeLink="https://www.bitget.com/spot/JOYUSDT"
             t={t}
           />
           <ExchangeSection
