@@ -3,7 +3,6 @@ import React from 'react';
 import { ReactComponent as Arrow } from '../../../assets/svg/arrow-down-small.svg';
 
 import MEXC from '../../../assets/images/token/mexc-logo.webp';
-import Bitget from '../../../assets/images/token/bitget-logo.webp';
 import Bitmart from '../../../assets/images/token/bitmart-logo.webp';
 import GateIO from '../../../assets/images/token/gateio.webp';
 import XT from '../../../assets/images/token/xt-logo.webp';
