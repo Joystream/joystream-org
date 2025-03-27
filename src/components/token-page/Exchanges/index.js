@@ -61,13 +61,6 @@ const Exchanges = ({ t }) => {
             t={t}
           />
           <ExchangeSection
-            exchangeIcon={Bitget}
-            exchangeName={t('token.exchanges.bitget.name')}
-            exchangeDescription={t('token.exchanges.bitget.description')}
-            exchangeLink="https://www.bitget.com/spot/JOYUSDT"
-            t={t}
-          />
-          <ExchangeSection
             exchangeIcon={Bitmart}
             exchangeName={t('token.exchanges.bitmart.name')}
             exchangeDescription={t('token.exchanges.bitmart.description')}

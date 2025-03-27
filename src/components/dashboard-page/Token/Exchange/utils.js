@@ -11,7 +11,6 @@ import changenowLogo from '../../../../assets/images/dashboard/changenow.png';
 export const formatNumberWithCommas = num => num.toLocaleString('en-US');
 
 const exchangeOptionsLogos = {
-  bitget: bitgetLogo,
   gate: gateIoLogo,
   bitmart: bitmartLogo,
   mxc: mexcLogo,
@@ -23,7 +22,6 @@ const exchangeOptionsLogos = {
 };
 
 const exchangeOptionsLabels = {
-  bitget: 'Bitget',
   gate: 'GateIO',
   bitmart: 'BitMart',
   mxc: 'MEXC',
@@ -35,7 +33,6 @@ const exchangeOptionsLabels = {
 };
 
 const exchangeOptionsTradingURLs = {
-  bitget: 'https://www.bitget.com/spot/JOYUSDT',
   gate: 'https://www.gate.io/trade/JOYSTREAM_USDT',
   bitmart: 'https://www.bitmart.com/trade/en-US?symbol=JOY_USDT&layout=pro',
   mxc: 'https://www.mexc.com/exchange/JOYSTREAM_USDT?_from=market',
@@ -52,14 +49,16 @@ export const parseExchangeOptions = (data = {}) => {
 
   const keys = Object.keys(data);
   for (const key of keys) {
-    exchangeOptions.push({
-      logo: exchangeOptionsLogos[key],
-      name: exchangeOptionsLabels[key],
-      tradingURL: exchangeOptionsTradingURLs[key],
-      volume: data[key].volume,
-      depthUp2: Math.round(data[key].plus2PercentDepth),
-      depthDown2: Math.round(data[key].minus2PercentDepth),
-    });
+    if (key in exchangeOptionsLabels) {
+      exchangeOptions.push({
+        logo: exchangeOptionsLogos[key],
+        name: exchangeOptionsLabels[key],
+        tradingURL: exchangeOptionsTradingURLs[key],
+        volume: data[key].volume,
+        depthUp2: Math.round(data[key].plus2PercentDepth),
+        depthDown2: Math.round(data[key].minus2PercentDepth),
+      });
+    }
   }
 
   return exchangeOptions;
