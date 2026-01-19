@@ -2,8 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Trans } from 'react-i18next';
 import cn from 'classnames';
 
-import GleevLogo from '../../../assets/images/landing/ecosystem-app-icons/gleev.webp';
-import GleevIllustration from '../../../assets/images/landing/browser-mockup-container.webp';
+import L1Logo from '../../../assets/images/landing/ecosystem-app-icons/l1-media.webp';
+import L1Illustration from '../../../assets/images/landing/l1-media-illustration.webp';
+//import GleevLogo from '../../../assets/images/landing/ecosystem-app-icons/gleev.webp';
+//import GleevIllustration from '../../../assets/images/landing/browser-mockup-container.webp';
 import Browser1 from '../../../assets/images/landing/hero/browser-1.webp';
 import Browser2 from '../../../assets/images/landing/hero/browser-2.webp';
 import Browser3 from '../../../assets/images/landing/hero/browser-3.webp';
@@ -252,12 +254,12 @@ const Ecosystem = ({ t }) => {
             <div className="IndexPage__ecosystem__apps__title__app-count">4</div>
           </h3>
           <FeaturedPlatform
-            image={GleevLogo}
-            platformName={t('landing.ecosystem.appsBuiltOnJoystream.gleev.name')}
-            platformDescription={t('landing.ecosystem.appsBuiltOnJoystream.gleev.description')}
-            platforms={t('landing.ecosystem.appsBuiltOnJoystream.gleev.platforms')}
-            link="https://gleev.xyz"
-            illustration={GleevIllustration}
+            image={L1Logo}
+            platformName={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.name')}
+            platformDescription={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.description')}
+            platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
+            link="https://l1.media"
+            illustration={L1Illustration}
             t={t}
           />
           <Carousel t={t} />
