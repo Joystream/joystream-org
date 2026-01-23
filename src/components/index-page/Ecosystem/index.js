@@ -4,8 +4,8 @@ import cn from 'classnames';
 
 import L1Logo from '../../../assets/images/landing/ecosystem-app-icons/l1-media.webp';
 import L1Illustration from '../../../assets/images/landing/l1-media-illustration.webp';
-//import GleevLogo from '../../../assets/images/landing/ecosystem-app-icons/gleev.webp';
-//import GleevIllustration from '../../../assets/images/landing/browser-mockup-container.webp';
+import GleevLogo from '../../../assets/images/landing/ecosystem-app-icons/gleev.webp';
+import GleevIllustration from '../../../assets/images/landing/browser-mockup-container.webp';
 import Browser1 from '../../../assets/images/landing/hero/browser-1.webp';
 import Browser2 from '../../../assets/images/landing/hero/browser-2.webp';
 import Browser3 from '../../../assets/images/landing/hero/browser-3.webp';
@@ -260,6 +260,15 @@ const Ecosystem = ({ t }) => {
             platforms={t('landing.ecosystem.appsBuiltOnJoystream.l1Media.platforms')}
             link="https://l1.media"
             illustration={L1Illustration}
+            t={t}
+          />
+          <FeaturedPlatform
+            image={GleevLogo}
+            platformName={t('landing.ecosystem.appsBuiltOnJoystream.gleev.name')}
+            platformDescription={t('landing.ecosystem.appsBuiltOnJoystream.gleev.description')}
+            platforms={t('landing.ecosystem.appsBuiltOnJoystream.gleev.platforms')}
+            link="https://gleev.xyz"
+            illustration={GleevIllustration}
             t={t}
           />
           <Carousel t={t} />
